@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,21 +15,23 @@ f1_keywords:
 - VC.Project.VCCustomBuildStep.Outputs
 - VC.Project.VCCustomBuildStep.Message
 - VC.Project.VCCustomBuildStep.Command
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>Страница свойств "Общие" пользовательского шага построения
 Для каждого сочетания конфигурации проекта и целевой платформы в проекте можно определить пользовательское действие, которое будет выполняться при сборке проекта.  
@@ -52,7 +55,7 @@ Linux версию этой страницы см. в разделе [Свойс
  Эти параметры определяют, когда пользовательское действие сборки выполняется в процессе сборки относительно перечисленных целевых объектов. Наиболее часто в число целевых объектов входят BuildGenerateSources, BuildCompile и BuildLink, поскольку они представляют основные этапы процесса сборки. Другие часто используемые целевые объекты: Midl, CLCompile и Link.  
   
  Обрабатывать выходные данные как содержимое  
- Этот параметр имеет значение только для приложений Магазина Windows и Windows Phone, включающих все файлы содержимого в пакет .appx.  
+ Этот параметр применяется только для приложений универсальной платформы Windows или Windows Phone, включая все файлы содержимого в пакет AppX.  
   
 ### <a name="to-specify-a-custom-build-step"></a>Задание пользовательского действия сборки  
   

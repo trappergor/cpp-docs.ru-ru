@@ -1,29 +1,31 @@
 ---
-title: "Пошаговое руководство: Создание приложения для магазина Windows с использованием WRL и Media Foundation | Документы Microsoft"
+title: "Пошаговое руководство: Создание приложения UWP, с использованием WRL и Media Foundation | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Пошаговое руководство. Создание приложения для Магазина Windows с использованием WRL и Media Foundation
-Использование среды выполнения C++ шаблон библиотеки Windows (WRL) для создания приложения универсальной платформы Windows, который использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство: Создание приложения UWP, с использованием WRL и Media Foundation
+Использование среды выполнения C++ шаблон библиотеки Windows (WRL) для создания приложения универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  В этом примере создается пользовательский объект Media Foundation, который применяет эффект "оттенки серого" к изображениям, полученным с веб-камеры. Приложение использует C++ для определения пользовательского преобразования и C# для использования компонента и выполнения преобразования захваченного изображения.  
   
@@ -59,13 +61,13 @@ ms.lasthandoff: 12/21/2017
   
 -   Необходимо установить связь между компонентом DLL и runtimeobject.lib. Также укажите [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) в строке компоновщика для создания метаданных Windows.  
   
--   Используйте ссылки проекта, чтобы сделать доступным для приложений универсальной платформы Windows компонентов WRL.  
+-   Используйте ссылки проекта, чтобы сделать доступным для приложений UWP компонентов WRL.  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>Чтобы использовать WRL для создания серого Media Foundation преобразовать компонент  
   
 1.  В Visual Studio создайте **пустое решение** проекта. Задайте имя проекта, например, `MediaCapture`.  
   
-2.  Добавить **DLL (приложения для магазина Windows)** проекта в решение. Задайте имя проекта, например, `GrayscaleTransform`.  
+2.  Добавить **DLL (универсальные приложения Windows)** проекта в решение. Задайте имя проекта, например, `GrayscaleTransform`.  
   
 3.  Добавить **Midl файл (.idl)** файл в проект. Имя файла, например, `GrayscaleTransform.idl`.  
   

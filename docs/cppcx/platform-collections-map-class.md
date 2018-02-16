@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -115,7 +118,7 @@ ref class Map sealed;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="clear"></a>Метод MAP::Clear
+## <a name="clear"></a>  Метод MAP::Clear
 
 Удаляет все пары "ключ-значение" из текущего объекта Map.
 
@@ -125,7 +128,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Метод MAP::First
+## <a name="first"></a>  Метод MAP::First
 
 Возвращает итератор, указывающий первый элемент в сопоставлении или `nullptr`, если сопоставление пусто.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Объект `MapView`.
 
-## <a name="haskey"></a>Метод MAP::HasKey
+## <a name="haskey"></a>  Метод MAP::HasKey
 
 Определяет, содержит ли текущий объект Map указанный ключ.
 
@@ -177,7 +180,7 @@ bool HasKey(K key);
 
 Значение `true`, если ключ найден; в противном случае — значение `false`.
 
-## <a name="insert"></a>Метод MAP::INSERT
+## <a name="insert"></a>  Метод MAP::INSERT
 
 Добавляет в текущий объект Map указанную пару "ключ-значение".
 
@@ -197,7 +200,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false`Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущей карты.
+`true` Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false` Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущей карты.
 
 ## <a name="lookup"></a>  Map::Lookup Method
 
@@ -222,7 +225,7 @@ V Lookup(K key);
 
 Если ключ не существует, то [Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) возникает исключение.
 
-## <a name="ctor"></a>MAP::MAP-конструктор
+## <a name="ctor"></a>  MAP::MAP-конструктор
 
 Инициализирует новый экземпляр класса Map.
 
@@ -272,9 +275,9 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
-Проект приложения для магазина Windows, использующие C# или Visual Basic IMap\<K, V > в качестве IDictionary\<K, V >.
+Проект приложения для среды выполнения Windows, использующие C# или Visual Basic IMap\<K, V > в качестве IDictionary\<K, V >.
 
-## <a name="remove"></a>Метод MAP::Remove
+## <a name="remove"></a>  Метод MAP::Remove
 
 Удаляет указанную пару "ключ-значение" из текущего объекта Map.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-## <a name="size"></a>Метод MAP::size
+## <a name="size"></a>  Метод MAP::size
 
 Возвращает число [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте Map.
 

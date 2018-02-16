@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="type-system-ccx"></a>Система типов (C++/CX)
 С помощью архитектуры среды выполнения Windows, можно использовать C + +/ CX, Visual Basic, Visual C# и JavaScript для написания приложений и компонентов, которые напрямую обращаются к Windows API и взаимодействовать с другими приложениями среды выполнения Windows и компонентов. Универсальные приложения платформы Windows, написанных на C++, компилируются в машинный код, который выполняется непосредственно в ЦП. Универсальные приложения платформы Windows, написанных на языке C# или Visual Basic, компилируются в промежуточный язык Майкрософт (MSIL) и выполняются в среде (CLR). Универсальные приложения платформы Windows, написанных на языке JavaScript выполняются в среде выполнения. Сами компоненты операционной системы среды выполнения Windows написанного на языке C++ и выполняются как машинный код. Все эти компоненты и приложений универсальной платформы Windows взаимодействовать напрямую через двоичный интерфейс приложений (ABI) среды выполнения Windows.  

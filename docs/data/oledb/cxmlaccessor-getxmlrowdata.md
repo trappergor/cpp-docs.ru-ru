@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,33 +14,32 @@ f1_keywords:
 - CXMLAccessor::GetXMLRowData
 - CXMLAccessor.GetXMLRowData
 - GetXMLRowData
-dev_langs: C++
-helpviewer_keywords: GetXMLRowData method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetXMLRowData method
 ms.assetid: 156b66e3-42fd-491c-8943-38cf5e36f687
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1cfd67065b267f01704bb0658b89d9bab2186100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4b0307b649b702ad78ddb90d9985e14df2331b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cxmlaccessorgetxmlrowdata"></a>CXMLAccessor::GetXMLRowData
 Получает все содержимое таблицы по строкам данных строка в формате XML.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
-      HRESULT GetXMLRowData(   
-   CSimpleStringW& strOutput,   
-   bool bAppend = false    
-) throw( );  
+```cpp
+HRESULT GetXMLRowData(CSimpleStringW& strOutput,   
+   bool bAppend = false) throw();  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  Один из стандартных `HRESULT` значения.  
   
 ## <a name="remarks"></a>Примечания  
- Ниже показан способ форматирования данных в строке в формате XML. `DATA`ниже представляет строки данных. С помощью move методы для перемещения требуемой строки.  
+ Ниже показан способ форматирования данных в строке в формате XML. `DATA` ниже представляет строки данных. С помощью move методы для перемещения требуемой строки.  
   
  `<row>`  
   

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
-C++ Accelerated Massive Parallelism (C++ AMP) ускоряет выполнение кода C++, используя преимущества параллельными данными оборудования, например графическом процессоре (GPU) на выделенной видеокарте. С помощью C++ AMP, можно составить код алгоритмы многомерных данных, чтобы с помощью параллелизма на разнородного оборудования можно ускорить выполнение. Модель программирования C++ AMP включает многомерные массивы, индексирование, передачи памяти, мозаичное заполнение и библиотеки математических функций. Расширения языка C++ AMP можно использовать для управления как данные перемещаются из ЦП в GPU и обратно, так что можно улучшить производительность.  
+C++ Accelerated Massive Parallelism (C++ AMP) ускоряет выполнение кода C++, используя преимущества параллельными данными оборудования, например графическом процессоре (GPU) на выделенной видеокарте. С помощью C++ AMP, можно составить код алгоритмы многомерных данных, чтобы с помощью параллелизма на разнородного оборудования можно ускорить выполнение. Модель программирования C++ AMP включает многомерные массивы, индексирование, перенос памяти, мозаичное заполнение и библиотеку математических функций. Расширения языка C++ AMP можно использовать для управления как данные перемещаются из ЦП в GPU и обратно, так что можно улучшить производительность.  
   
 ## <a name="system-requirements"></a>Требования к системе  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] или [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], or [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   Функция уровень DirectX 11 11.0 или более поздней версии оборудования  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Общая память для массива и array_view  
  Общая память — это память, может осуществляться ЦП и сочетания клавиш. Использование общей памяти устраняет и значительно сокращает затраты на копирование данных между центральным Процессором и сочетания клавиш. Несмотря на то, что общий объем памяти, он не может получать одновременно ЦП и сочетания клавиш и благодаря этому неопределенное поведение.  
   
- `array`объекты могут использоваться для указания точного управления использование общей памяти, поддерживают связанные сочетаний клавиш. Поддерживает ли ускоритель общей памяти определяется accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) свойство, которое возвращает `true` при общей памяти поддерживается. Если поддерживается общей памяти, по умолчанию [перечисление access_type](reference/concurrency-namespace-enums-amp.md#access_type) выделения на сочетания клавиш памяти определяется значением `default_cpu_access_type` свойство. По умолчанию `array` и `array_view` принимают объекты на том же `access_type` связанного источника `accelerator`.  
+ `array` объекты могут использоваться для указания точного управления использование общей памяти, поддерживают связанные сочетаний клавиш. Поддерживает ли ускоритель общей памяти определяется accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) свойство, которое возвращает `true` при общей памяти поддерживается. Если поддерживается общей памяти, по умолчанию [перечисление access_type](reference/concurrency-namespace-enums-amp.md#access_type) выделения на сочетания клавиш памяти определяется значением `default_cpu_access_type` свойство. По умолчанию `array` и `array_view` принимают объекты на том же `access_type` связанного источника `accelerator`.  
   
  Установив [данных array::cpu_access_type](reference/array-class.md#cpu_access_type) свойство `array` явно, то можно детально упражнения управлять через как общую память используется, оптимизировать приложения для повышения производительности оборудования характеристики на основе шаблонов доступа к памяти ядра его вычисление. `array_view` Отражает же `cpu_access_type` как `array` , она связана с; или, если array_view создается без источника данных, его `access_type` отражает среду, которая сначала вызывает для выделения памяти. То есть, если сначала осуществляется узлом (ЦП), затем он ведет себя как если бы он были созданы через ЦП источника данных и общих папок `access_type` из `accelerator_view` связанные с записью; тем не менее, если это первый доступ `accelerator_view`, затем он ведет себя как если бы он был созданные за `array` создан, `accelerator_view` и общими `array` `access_type`.  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Короткий вектор библиотеки](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): Определяет набор типов короткого вектора длины 2, 3 и 4 на основе `int`, `uint`, `float`, `double`, [norm](../../parallel/amp/reference/norm-class.md), или [unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>Приложения [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]  
- Как и другие библиотеки C++ можно использовать C++ AMP в вашей [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] приложений. Эти статьи описывают включить код C++ AMP в приложениях, созданный с помощью C++, C#, Visual Basic или JavaScript.  
+## <a name="universal-windows-platform-uwp-apps"></a>Приложений платформы (UWP) для универсальных приложений Windows  
+ Как и другие библиотеки C++ можно использовать C++ AMP в приложениях UWP. Эти статьи описывают включить код C++ AMP в приложениях, созданный с помощью C++, C#, Visual Basic или JavaScript.  
   
-- [Использование C++ AMP в приложениях для Магазина Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Использование C++ AMP в приложениях UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [Пошаговое руководство: Создание базового компонента среды выполнения Windows в C++ и вызов его из JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

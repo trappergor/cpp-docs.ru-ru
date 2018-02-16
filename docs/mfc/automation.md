@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>автоматизация
 Автоматизация (ранее известная как OLE-автоматизация) позволяет одному приложению управлять объектами, реализованными в другом приложении, или выделять объекты для управления.  
@@ -47,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Автоматизация (локальная).  
   
--   [Удаленная автоматизация](../mfc/remote-automation.md) (через сеть с использованием DCOM).  
+-   Удаленная автоматизация (по сети, с помощью распределенных COM и DCOM).  
   
  Предоставление доступа к объектам полезно в том случае, когда приложения предлагают функциональные возможности, полезные для других приложений. Например элемент управления ActiveX — это тип сервера автоматизации. Приложение, в котором размещается элемент управления ActiveX, является клиентом автоматизации этого элемента управления.  
   
@@ -81,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   [Клиенты автоматизации](../mfc/automation-clients.md)  
   
 -   [Серверы автоматизации](../mfc/automation-servers.md)  
-  
--   [Удаленная автоматизация](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

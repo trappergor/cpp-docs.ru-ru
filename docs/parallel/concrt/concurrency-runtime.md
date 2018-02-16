@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 Исполняющая среда с параллелизмом для C++ помогает создавать надежные, масштабируемые, быстро реагирующие параллельные приложения. Она повышает уровень абстракции, чтобы пользователю не приходилось управлять подробностями инфраструктуры, связанными с параллелизмом. Ее также можно использовать для указания политик планирования, соответствующих требованиям качества обслуживания приложений. Эти ресурсы помогут вам начать работу с исполняющей средой с параллелизмом.  
@@ -67,13 +70,13 @@ ms.lasthandoff: 01/03/2018
 |[Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)|Здесь описывается роль отмены в PPL, включая способы создания запросов отмены и реагирования на них.|  
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь демонстрируются два способа отмены работы с параллельными данными.|  
   
-## <a name="windows-store-apps"></a>Приложения для Магазина Windows  
+## <a name="universal-windows-platform-apps"></a>Приложения универсальной платформы Windows  
   
 |||  
 |-|-|  
-|[Создание асинхронных операций в C++ для приложений для Магазина Windows](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Здесь приводится описание некоторых ключевых аспектов, которые надо учитывать при использовании исполняющей среды с параллелизмом для создания асинхронных операций в приложении [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Демонстрация использования задач PPL в сочетании с интерфейсами `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` для отправки запросов HTTP GET и POST веб-сервису в приложении [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Примеры приложений для Магазина Windows](http://code.msdn.microsoft.com/windowsapps)|Содержит загружаемые примеры кода и демонстрационные приложения для [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Примеры на C++ используют функции исполняющей среды с параллелизмом, например задачи PPL, для обработки данных в фоновом режиме с целью сохранения пользовательского интерфейса в откликающемся состоянии.|  
+|[Создание асинхронных операций на C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Описываются некоторые ключевые аспекты, которые следует учитывать при использовании среды выполнения с параллелизмом для создания асинхронных операций в приложении UWP.|  
+|[Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Показано, как объединить задачи PPL с `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` интерфейсы для отправки запросов HTTP GET и POST к веб-службе в приложении UWP.|  
+|[Примеры приложений среды выполнения Windows](http://code.msdn.microsoft.com/windowsapps)|Содержит загружаемые примеры кода и демонстрационные приложения для Windows 8.x. Примеры на C++ используют функции исполняющей среды с параллелизмом, например задачи PPL, для обработки данных в фоновом режиме с целью сохранения пользовательского интерфейса в откликающемся состоянии.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Программирование потоков данных в библиотеке асинхронных агентов  
   
@@ -108,7 +111,7 @@ ms.lasthandoff: 01/03/2018
   
 |||  
 |-|-|  
-|[Шаблоны асинхронного программирования и советы по Hilo (приложения Магазина Windows на C++ и XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Дополнительные сведения о том, как использовалась исполняющая среда с параллелизмом для реализации асинхронных операций в Hilo, приложении [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] , написанном с помощью C++ и XAML.|  
+|[Шаблоны асинхронного программирования и советы по Hilo (приложения Магазина Windows на C++ и XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Узнайте, как мы использовали среду выполнения с параллелизмом для реализации асинхронных операций в Hilo, приложении среды выполнения Windows на C++ и XAML.|  
 |[Примеры кода для выполнения с параллелизмом и библиотеки параллельных шаблонов в Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Примеры приложений и утилит, демонстрирующих исполняющую среду с параллелизмом.|  
 |[Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|  
 |[Параллельные вычислениям в C++ и машинном коде форум](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|  

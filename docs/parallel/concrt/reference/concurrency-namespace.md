@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,19 +24,22 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86513e9196a3bdc8da2f414fcc792cbeb67b706d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 Пространство имен `Concurrency` предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, которая является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Среда выполнения с параллелизмом).  
@@ -137,7 +141,7 @@ namespace concurrency;
 |[Класс task (среда выполнения с параллелизмом)](task-class.md)|Класс `task` библиотеки параллельных шаблонов (PPL). Объект `task` представляет работу, которая может быть выполнена асинхронно и параллельно с другими задачами и параллельной работой, созданной параллельными алгоритмами в среде выполнения с параллелизмом. При успешном завершении он выводи результат типа `_ResultType`. Задачи типа `task<void>` никакого результата не дают. Задачи можно ожидать и отменять независимо от других задач. Также возможно сочетание с другими задачами с помощью шаблонов продолжений (`then`), присоединений (`when_all`) и выбора (`when_any`).|  
 |[Класс task_canceled](task-canceled-class.md)|Этот класс описывает исключение, которое создается уровнем задач PPL для принудительной отмены текущей задачи. Оно также создается методом `get()` метод [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f), для отмененной задачи.|  
 |[Класс task_completion_event](task-completion-event-class.md)|Класс `task_completion_event` позволяет отложить выполнение задачи до выполнения условия или запустить задачу в ответ на внешнее событие.|  
-|[Класс task_continuation_context](task-continuation-context-class.md)|Класс `task_continuation_context` позволяет указать место продолжения выполнения задачи. Этот класс рекомендуется использовать из приложения Магазина Windows. При использовании других приложений контекст выполнения продолжения задачи определяется средой выполнения и не настраивается.|  
+|[Класс task_continuation_context](task-continuation-context-class.md)|Класс `task_continuation_context` позволяет указать место продолжения выполнения задачи. Ключ используется только с помощью этого класса из приложения UWP. Для приложений Windows Runtime контекст выполнения продолжения задачи определяется средой выполнения и не настраивается.|  
 |[Класс task_group](task-group-class.md)|Класс `task_group` представляет коллекцию параллельной работы, для которой возможно ожидание или отмена.|  
 |[Класс task_handle](task-handle-class.md)|Класс `task_handle` представляет отдельный параллельный рабочий элемент. Он инкапсулирует инструкции и данные, необходимые для выполнения части работы.|  
 |[Класс task_options (среда выполнения с параллелизмом)](task-options-class-concurrency-runtime.md)|Представляет допустимые параметры для создания задачи|  
@@ -192,9 +196,9 @@ namespace concurrency;
 |----------|-----------------|  
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|  
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|  
-|[Функция cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|  
-|[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Возвращаемый тип `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|  
-|[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект PPL [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|  
+|[cancel_current_task Function](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|  
+|[create_async Function](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Возвращаемый тип `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|  
+|[create_task Function](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект PPL [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|  
 |[Функция CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Возвращает интерфейс, который представляет одноэлементный экземпляр диспетчера ресурсов среды выполнения с параллелизмом. Диспетчер ресурсов отвечает за назначение ресурсов планировщикам, которым требуется взаимодействовать друг с другом.|  
 |[Функция DisableTracing](concurrency-namespace-functions.md#disabletracing)|Отключает трассировку в среде выполнения с параллелизмом. Эту функция не рекомендуется использовать, поскольку трассировка событий Windows по умолчанию не регистрируется.|  
 |[Функция EnableTracing](concurrency-namespace-functions.md#enabletracing)|Включает трассировку в среде выполнения с параллелизмом. Эта функция не рекомендована к использованию, поскольку трассировка событий Windows теперь по умолчанию включена.|  
@@ -206,9 +210,9 @@ namespace concurrency;
 |[Функция GetProcessorNodeCount](concurrency-namespace-functions.md#getprocessornodecount)|Возвращает число узлов NUMA или пакетов процессора в базовой системе.|  
 |[Функция GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Возвращает уникальный идентификатор, который можно назначить планировщику, реализующему интерфейс `IScheduler`.|  
 |[Функция interruption_point](concurrency-namespace-functions.md#interruption_point)|Создает точку прерывания для отмены. Если отмена выполняется в контексте, где вызывается эта функция, это создает внутреннее исключение, которое прерывает текущую выполняемую параллельную работу. Если отмена не выполняется, функция ничего не делает.|  
-|[Функция is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Возвращает значение, указывающее, находится ли группа задач, которая в данный момент выполняется в текущем контексте во встроенном режиме, в процессе активной отмены (или вскоре перейдет в это состояние). Обратите внимание, что в отсутствие групп задач, выполняющихся в текущем контексте во встроенном режиме, будет возвращено значение `false`.|  
+|[is_current_task_group_canceling Function](concurrency-namespace-functions.md#is_current_task_group_canceling)|Возвращает значение, указывающее, находится ли группа задач, которая в данный момент выполняется в текущем контексте во встроенном режиме, в процессе активной отмены (или вскоре перейдет в это состояние). Обратите внимание, что в отсутствие групп задач, выполняющихся в текущем контексте во встроенном режиме, будет возвращено значение `false`.|  
 |[Функция make_choice](concurrency-namespace-functions.md#make_choice)|Перегружен. Конструирует блок сообщений `choice` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|  
-|[Функция make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Перегружен. Конструирует блок сообщений `greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|  
+|[make_greedy_join Function](concurrency-namespace-functions.md#make_greedy_join)|Перегружен. Конструирует блок сообщений `greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|  
 |[Функция make_join](concurrency-namespace-functions.md#make_join)|Перегружен. Конструирует блок сообщений `non_greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|  
 |[Функция make_task](concurrency-namespace-functions.md#make_task)|Метод фабрики для создания объекта `task_handle`.|  
 |[Функция parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Перегружен. В параллельном режиме упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом. Эта функция семантически аналогична `std::sort` в том, что она является нестабильной сортировкой на месте на основе сравнения, за исключением того, что ей требуется `O(n)` дополнительного пространства и инициализация по умолчанию для сортируемых элементов.|  
@@ -220,14 +224,14 @@ namespace concurrency;
 |[Функция parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Перегружен. В параллельном режиме упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом. Эта функция семантически схожа с `std::sort`, так как она основана на сравнении, неустойчива, сортирует на месте.|  
 |[Функция parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Перегружен. Применяет заданный объект функции к каждому элементу в исходном диапазоне или к паре элементов из двух исходных диапазонов и параллельно копирует возвращаемые значения объекта функции в диапазон назначения. Эта функция семантически эквивалентна `std::transform`.|  
 |[Функция Receive](concurrency-namespace-functions.md#receive)|Перегружен. Общая реализация получения, позволяющая контексту ожидать данные строго из одного источника и фильтровать значения, которые принимаются.|  
-|[Функция run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Немедленно и синхронно выполняет объект функции в контексте заданного токена отмены.|  
+|[run_with_cancellation_token Function](concurrency-namespace-functions.md#run_with_cancellation_token)|Немедленно и синхронно выполняет объект функции в контексте заданного токена отмены.|  
 |[Функция Send](concurrency-namespace-functions.md#send)|Перегружен. Синхронная операции отправки, которая ожидает принятия или отклонения сообщения целевым объектом.|  
 |[Функция set_ambient_scheduler (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#set_ambient_scheduler)||  
-|[Функция set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Перегружен. Ограничивает ресурсы выполнения, используемые внутренними рабочими потоками среды выполнения с параллелизмом, определенным набором сходства.<br /><br /> Этот метод можно вызывать только до создания диспетчера ресурсов или между двумя периодами существования диспетчера ресурсов. Его можно вызывать несколько раз при условии, что в момент вызова диспетчер ресурсов не существует. После задания ограничения сходства оно будет оставаться действительным до следующего допустимого вызова метода `set_task_execution_resources`.<br /><br /> Предоставленная маска сходства не обязана быть подмножеством маски сходства процесса. Сходство процесса обновляется при необходимости.|  
+|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|Перегружен. Ограничивает ресурсы выполнения, используемые внутренними рабочими потоками среды выполнения с параллелизмом, определенным набором сходства.<br /><br /> Этот метод можно вызывать только до создания диспетчера ресурсов или между двумя периодами существования диспетчера ресурсов. Его можно вызывать несколько раз при условии, что в момент вызова диспетчер ресурсов не существует. После задания ограничения сходства оно будет оставаться действительным до следующего допустимого вызова метода `set_task_execution_resources`.<br /><br /> Предоставленная маска сходства не обязана быть подмножеством маски сходства процесса. Сходство процесса обновляется при необходимости.|  
 |[Функция swap](concurrency-namespace-functions.md#swap)|Меняет местами элементы двух объектов `concurrent_vector`.|  
 |[Функция task_from_exception (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#task_from_exception)||  
 |[Функция task_from_result (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#task_from_result)||  
-|[Функция Trace_agents_register_name](concurrency-namespace-functions.md#trace_agents_register_name)|Связывает данное имя с блоком сообщений или агентом в трассировки событий Windows.|  
+|[Trace_agents_register_name Function](concurrency-namespace-functions.md#trace_agents_register_name)|Связывает данное имя с блоком сообщений или агентом в трассировки событий Windows.|  
 |[Функция try_receive](concurrency-namespace-functions.md#try_receive)|Перегружен. Общая реализация проверки-получения, позволяющая контексту выполнять поиск данных строго из одного источника и фильтровать значения, которые принимаются. Если данные не готовы, метод вернет значение False.|  
 |[wait-функция](concurrency-namespace-functions.md#wait)|Приостанавливает текущий контекст на указанный период времени.|  
 |[Функция when_all](concurrency-namespace-functions.md#when_all)|Создает задачу, которая завершается успешно, если все задачи, предоставленные в качестве аргументов, завершаются успешно.|  
@@ -270,7 +274,7 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с виртуальными процессорами.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ List.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
+ **Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>См. также  
  [Ссылки](reference-concurrency-runtime.md)

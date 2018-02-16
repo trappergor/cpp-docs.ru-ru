@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 Представляет упорядоченную коллекцию символов Юникода, используемую для представления текста. Дополнительные сведения и примеры см. в разделе [строки](../cppcx/strings-c-cx.md).  
@@ -73,9 +76,9 @@ public ref class String sealed : Object,
   
 |Метод|Описание:|  
 |------------|-----------------|  
-|[String::BEGIN](#begin)|Возвращает указатель на начало текущей строки.|  
+|[String::Begin](#begin)|Возвращает указатель на начало текущей строки.|  
 |[String::CompareOrdinal](#compareordinal)|Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.|  
-|[String::concat](#concat)|Объединяет значения двух объектов String.|  
+|[String::Concat](#concat)|Объединяет значения двух объектов String.|  
 |[String::Data](#data)|Возвращает указатель на начало текущей строки.|  
 |[String::Dispose](#dispose)|Высвобождает ресурсы.|  
 |[String::End](#end)|Возвращает указатель на позицию после конца текущей строки.|  
@@ -83,7 +86,7 @@ public ref class String sealed : Object,
 |[String::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  
 |[String::IsEmpty](#isempty)|Указывает, является ли объект String пустым.|  
 |[String::IsFastPass](#isfastpass)|Указывает, участвует ли текущий объект String в операции *быстрой передачи* . В операции быстрой передачи подсчет ссылок приостанавливается.|  
-|[String::length](#length)|Получает длину текущего объекта String.|  
+|[String::Length](#length)|Получает длину текущего объекта String.|  
 |[String::ToString](#tostring)|Возвращает объект String, значение которого совпадает со значением текущей строки.|  
   
  **Операторы**  
@@ -95,7 +98,7 @@ public ref class String sealed : Object,
 |[String::operator ==-оператор](#operator-equality)|Указывает, равны ли значения двух указанных объектов String.|  
 |[Оператор operator+](#operator-plus)|Сцепляет два объекта String в новый объект String.|  
 |[String::operator > оператор](#operator-greater-than)|Указывает, является ли значение одного объекта String большим, чем значение второго объекта String.|  
-|[String::operator > =-оператор](#operator-greater-than-or-equals)|Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.|  
+|[String::operator>= Operator](#operator-greater-than-or-equals)|Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.|  
 |[String::operator! =-оператор](#operator-inequality)|Указывает, различны ли значения двух указанных объектов String.|  
 |[String::operator < оператор](#operator-less-than)|Указывает, является ли значение одного объекта String меньшим, чем значение второго объекта String.|  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **Заголовок** vccorlib.h (включается по умолчанию)  
 
  
-## <a name="begin"></a>Метод String::BEGIN
+## <a name="begin"></a>  String::Begin Method
 Возвращает указатель на начало текущей строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на начало текущей строки.  
   
-## <a name="compareordinal"></a>Метод String::CompareOrdinal
+## <a name="compareordinal"></a>  Метод String::CompareOrdinal
 Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -153,7 +156,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>Метод String::concat
+## <a name="concat"></a>  Метод String::concat
 Объединяет значения двух объектов String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>Метод String::Data
+## <a name="data"></a>  Метод String::Data
 Возвращает указатель на начало буфера данных объекта в качестве массива элементов `char16` (`wchar_t`) в стиле языка C.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>Метод String::Dispose
+## <a name="dispose"></a>  Метод String::Dispose
 Высвобождает ресурсы.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -203,7 +206,7 @@ const char16* Data()
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>Метод String::End
+## <a name="end"></a>  Метод String::End
 Возвращает указатель на позицию после конца текущей строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>Метод String::Equals
+## <a name="equals"></a>  Метод String::Equals
 Указывает, совпадает ли значение заданного объекта String со значением текущего объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -246,7 +249,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>Метод String::GetHashCode
+## <a name="gethashcode"></a>  String::GetHashCode Method
 Возвращает хэш-код данного экземпляра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>Метод String::IsEmpty
+## <a name="isempty"></a>  Метод String::IsEmpty
 Указывает, является ли объект String пустым.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -275,7 +278,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>Метод String::IsFastPass
+## <a name="isfastpass"></a>  Метод String::IsFastPass
 Указывает, участвует ли текущий объект String в операции *быстрой передачи* . В операции быстрой передачи подсчет ссылок приостанавливается.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -292,7 +295,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>Метод String::length
+## <a name="length"></a>  String::Length Method
 Получает количество символов в указанном объекте String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>Оператор String::operator +
+## <a name="operator-plus"></a>  String::operator+ Operator
 Сцепляет два [строка](../cppcx/platform-string-class.md) объекты в новый [строка](../cppcx/platform-string-class.md) объекта.
   
 ### <a name="syntax"></a>Синтаксис  
@@ -339,7 +342,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Примечания  
  Этот оператор создает объект `String^`, содержащий данные из двух операндов. Используйте его для удобства, если производительность не играет решающей роли. Несколько вызовов "`+`" в функции, скорее всего, не будут иметь последствий, но если вы имеете дело с большими объектами или текстовыми данными в сложном цикле, используйте стандартные механизмы и типы C++.  
   
-##  <a name="operator-equality"></a>String::operator ==-оператор
+##  <a name="operator-equality"></a> String::operator== Operator
 Указывает, равны ли текстовые значения двух указанных объектов String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -363,7 +366,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>String::operator&gt; 
+##  <a name="operator-greater-than"></a>  String::operator&gt; 
 Указывает, является ли значение одного объекта String большим, чем значение второго объекта String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -387,7 +390,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String::operator&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -408,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a>String::operator! = 
+## <a name="operator-inequality"></a> String::operator!= 
 Указывает, различны ли значения двух указанных объектов String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -428,7 +431,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true`, если значения `str1` и `str2` не равны; в противном случае — `false`.   
 
 
-## <a name="operator-less-than"></a>String::operator&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 Указывает, является ли значение одного объекта String меньшим, чем значение второго объекта String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -447,7 +450,7 @@ bool String::operator<( String^ str1, String^ str2)
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если значение `str1` меньше `str2`; в противном случае — значение `false`.  
   
-## <a name="ctor"></a>Конструктор String::String
+## <a name="ctor"></a> Конструктор String::String
 Инициализирует новый экземпляр класса String с копией входных данных строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String::ToString
+## <a name="tostring"></a> String::ToString
 Возвращает объект String, значение которого совпадает со значением текущей строки.  
   
 ### <a name="syntax"></a>Синтаксис  

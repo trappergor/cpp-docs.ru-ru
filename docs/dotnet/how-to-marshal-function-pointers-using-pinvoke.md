@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], callbacks and delegates
 - interop [C++], callbacks and delegates
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Практическое руководство. Указатели функций маршалирования, использующие PInvoke
 В этом разделе объясняется, как управляемый делегаты можно использовать вместо указателей функций при взаимодействии с неуправляемыми функциями с помощью функции .NET Framework P/Invoke. Тем не менее программистов Visual C++, рекомендуется использовать возможности взаимодействия C++ (когда это возможно), поскольку P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может оказаться трудоемкой для реализации. Если неуправляемый интерфейс API упакован как библиотека DLL и исходный код недоступен, P/Invoke является единственным параметром. В противном случае см. в следующих разделах:  
@@ -42,8 +44,6 @@ ms.lasthandoff: 12/21/2017
  Управляемый модуль определяет делегат, который маршалируется в машинный код как указатель на функцию и использует <xref:System.Runtime.InteropServices.DllImportAttribute> атрибут для предоставления собственной функции TakesCallback управляемому коду. В функцию main создается и передается функции TakesCallback экземпляр делегата. Выходные данные программы показывает, что эта функция выполняется с собственной функции TakesCallback.  
   
  Управляемая функция подавляет сбора мусора для управляемого делегата, чтобы помешать сбору мусора .NET Framework перемещению делегата во время выполнения собственной функции.  
-  
- Управляемый модуль компилируется с параметром/CLR, но/CLR: pure работает также. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
 ```cpp  
 // TraditionalDll5.cpp  

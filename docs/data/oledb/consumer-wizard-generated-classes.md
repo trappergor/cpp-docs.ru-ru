@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attribute-injected classes and methods
 - wizard-generated classes and methods
@@ -17,18 +19,18 @@ helpviewer_keywords:
 - consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ebd53b8b39fb94e4275f5052a74f77bf71bd790
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Классы, создаваемые мастером объекта-получателя
 При создании потребителя с помощью мастера потребителя ATL OLE DB вы можете выбрать использование шаблонов OLE DB или атрибутов OLE DB. В обоих случаях мастер создает класс команд и класс записей пользователя. В классе команд содержится код для открытия источника данных и набора строк, указанных в мастере. Класс записей пользователя содержит сопоставление столбцов для выбранной таблицы базы данных. Однако созданный код в каждом случае отличается.  
@@ -149,7 +151,7 @@ SELECT \
  Наконец, мастер создает объявление класса команд, например следующим образом:  
   
 ```  
-class CProducts : public CCommand<CAccessor<CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
 ## <a name="attribute-injected-user-record-classes"></a>Классы записей пользователя, внедряемые атрибутами  
@@ -182,7 +184,7 @@ public:
  Объявление внедренного класса команд выглядит следующим образом:  
   
 ```  
-class CProducts : public CCommand<CAccessor<_CProductsAccessor> >  
+class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   
  Большая часть внедренного кода аналогична версии на основе шаблона. Основные различия — во внедренных методах, которые описаны в разделе [Методы, создаваемые мастером потребителя](../../data/oledb/consumer-wizard-generated-methods.md).  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Поддержка закладок поставщиками
 В примере в этом разделе добавляется `IRowsetLocate` интерфейс `CMyProviderRowset` класса. В большинстве случаев сначала Добавление интерфейса в существующий COM-объекта. Затем можно проверить его, добавив дополнительные вызовы из шаблонов потребителей. В примере показано, как:  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  Добавление `IRowsetLocate` интерфейс немного отличается от большинства других интерфейсов. Файл vtable линию вверх, OLE DB, чтобы поставщик шаблонов имеют параметр шаблона для обработки производного интерфейса. В следующем коде показано новый список наследования:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ ms.lasthandoff: 12/21/2017
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- Четвертый, пятый и шестой параметры также добавляются. В этом примере используются значения по умолчанию для четвертый и пятый, но указать `IRowsetLocateImpl` качестве шестого параметра. `IRowsetLocateImpl`Это класс шаблона OLE DB, который принимает два параметра шаблона: эти подключения `IRowsetLocate` интерфейс `CMyProviderRowset` класса. Для большинства интерфейсов, можно пропустить этот шаг и перейти к следующей. Только `IRowsetLocate` и `IRowsetScroll` интерфейсы необходимо обрабатывать таким образом.  
+ Четвертый, пятый и шестой параметры также добавляются. В этом примере используются значения по умолчанию для четвертый и пятый, но указать `IRowsetLocateImpl` качестве шестого параметра. `IRowsetLocateImpl` Это класс шаблона OLE DB, который принимает два параметра шаблона: эти подключения `IRowsetLocate` интерфейс `CMyProviderRowset` класса. Для большинства интерфейсов, можно пропустить этот шаг и перейти к следующей. Только `IRowsetLocate` и `IRowsetScroll` интерфейсы необходимо обрабатывать таким образом.  
   
  Затем необходимо указать `CMyProviderRowset` для вызова `QueryInterface` для `IRowsetLocate` интерфейса. Добавьте строку `COM_INTERFACE_ENTRY(IRowsetLocate)` карты. Сопоставление интерфейса для `CMyProviderRowset` должна выглядеть, как показано в следующем коде:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  Для обработки **IColumnsInfo::GetColumnsInfo** вызова, удалите **PROVIDER_COLUMN** сопоставления в `CTextData` класса. Макрос PROVIDER_COLUMN_MAP определяет функцию `GetColumnInfo`. Необходимо определить собственную `GetColumnInfo` функции. Объявление функции должно выглядеть следующим образом:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  Затем реализуйте `GetColumnInfo` функции в файле MyProviderRS.cpp следующим образом:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`сначала проверяет, является ли свойство с именем **DBPROP_IRowsetLocate** имеет значение. OLE DB содержит свойства для каждого дополнительного интерфейса, не объекта набора строк. Если потребителю необходимо использовать один из этих дополнительных интерфейсов, он присваивает свойству значение true. Поставщик можно проверить это свойство и специальные действия на его основе.  
+ `GetColumnInfo` сначала проверяет, является ли свойство с именем **DBPROP_IRowsetLocate** имеет значение. OLE DB содержит свойства для каждого дополнительного интерфейса, не объекта набора строк. Если потребителю необходимо использовать один из этих дополнительных интерфейсов, он присваивает свойству значение true. Поставщик можно проверить это свойство и специальные действия на его основе.  
   
  В такой реализации получение свойства с помощью указателя на объект команды. `pThis` Указатель представляет класс набора или команды. Так как здесь можно использовать шаблоны, необходимо передать в качестве `void` указатель или код не компилируется.  
   
  Укажите статический массив, содержащий сведения о столбце. Если потребитель не столбец закладки, запись в массиве теряется. Можно динамически выделить этот массив, но необходимо обязательно уничтожить его правильно. В этом примере определяется и используется макросы ADD_COLUMN_ENTRY и ADD_COLUMN_ENTRY_EX вставить их в массив. Макросы можно добавить в файл MyProviderRS.H, как показано в следующем коде:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  Чтобы протестировать код в получателе, необходимо внести некоторые изменения, чтобы `OnRun` обработчика. Первое изменение функции — добавить код, чтобы добавить свойство в наборе свойств. В коде устанавливается **DBPROP_IRowsetLocate** значение true, тем самым сообщая поставщика, что необходимо сделать столбец закладки. `OnRun` Обработчик код должен выглядеть следующим образом:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  Также необходимо обновить запись пользователя в объекте-получателе. Добавьте запись в класс для обработки закладки и запись в **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

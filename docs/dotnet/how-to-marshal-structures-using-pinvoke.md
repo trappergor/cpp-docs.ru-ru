@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Практическое руководство. Маршалирование структур с помощью PInvoke
 В этом документе объясняется, как собственных функций, принимающих строки в стиле C может вызываться из управляемых функций, предоставляющих экземпляр <xref:System.String> с помощью P/Invoke. Несмотря на то, что мы рекомендуем использовать возможности взаимодействия C++ вместо P/Invoke, так как P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может быть сложно реализовать, если неуправляемый интерфейс API упакован как библиотека DLL и исходный код не доступно, P/Invoke является единственным параметром. В противном случае см. в следующих документах:  
@@ -48,8 +50,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
  Следующий код состоит из неуправляемый и управляемый модуль. Неуправляемый модуль является библиотекой DLL, определяется структура Location и функция GetDistance, принимающая два экземпляра структуры Location. Второй модуль представляет собой управляемое приложение командной строки, которая импортирует функция GetDistance импортируется, но определяется с помощью управляемого эквивалента структуры Location MLocation. На практике тем же именем будут, скорее всего, использовать для обеих версий структуры. Однако другое имя здесь используется для демонстрации того, что прототип DllImport определен с помощью управляемой версии.  
-  
- Управляемый модуль компилируется с параметром/CLR, но/CLR: pure работает также. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
  Обратите внимание, что никакие компоненты библиотеки DLL не предоставляются для управляемого кода, с помощью стандартной #include. На самом деле DLL осуществляется во время выполнения, поэтому проблемы с функциями, импортированные с помощью DllImport не обнаруживаются во время компиляции.  
   

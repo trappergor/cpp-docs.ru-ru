@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Использование взаимодействия языка C++ (неявный PInvoke)
 В отличие от других языков .NET Visual C++ поддерживает функцию взаимодействия, которая позволяет управляемым и неуправляемым кодом существовать в одном приложении и даже в том же файле (с [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы pragma). Это позволяет разработчикам Visual C++ интегрировать функциональность .NET в существующие приложения Visual C++, не нарушая остальной части приложения.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  Явный вызов PInvoke поддерживается платформой .NET Framework и доступна в большинстве языков .NET. Но как и предполагает его имя, взаимодействия C++ в Visual C++.  
   
 ## <a name="c-interop"></a>взаимодействие C++  
- Так как он обеспечивает более строгую типизацию, обычно менее трудоемок в реализации, более forgiving, если неуправляемый интерфейс API изменяется и позволяет улучшать производительность, которые невозможно с явной взаимодействия C++ предпочтительнее явного вызова PInvoke PInvoke. Тем не менее, взаимодействия C++ невозможна, если неуправляемый исходный код недоступен или при компиляции с параметром **/CLR: safe**. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать. Сведения см. в разделе [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ Так как он обеспечивает более строгую типизацию, обычно менее трудоемок в реализации, более forgiving, если неуправляемый интерфейс API изменяется и позволяет улучшать производительность, которые невозможно с явной взаимодействия C++ предпочтительнее явного вызова PInvoke PInvoke. Однако взаимодействия C++ не возможно в том случае, если неуправляемый исходный код недоступен.  
   
 ## <a name="c-com-interop"></a>COM-взаимодействие в C++  
  Возможности взаимодействия, поддерживаемые Visual C++, имеют определенное преимущество над другими языками .NET при взаимодействии с COM-компонентами. Не ограничиваясь ограничения платформы .NET Framework [Tlbimp.exe (программа импорта библиотек типов)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), таких как ограниченная поддержка типов данных или обязательное предоставление каждого члена интерфейса COM, взаимодействие C++ позволяет COM компоненты для доступен по адресу будет и не требует отдельной сборки взаимодействия. Дополнительные сведения см. в разделе [с помощью COM из .NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15).  

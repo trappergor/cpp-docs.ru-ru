@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>Исключения (C++/CX)
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/22/2018
 
 В программе C++, можно создавать и перехватывать исключения, поступающие от операций среды выполнения Windows, а также исключения, который является производным от `std::exception`, или определяемого пользователем типа. Необходимо только в том случае, если его к примеру, пересекает границы двоичного интерфейса (ABI) приложения, если код, который перехватывает это исключение, написан на языке JavaScript исключения среды выполнения Windows. Когда исключение C++, отличных от Windows среда выполнения достигает границы интерфейса ABI, оно преобразуется в `Platform::FailureException` исключение, которое представляет значение HRESULT E_FAIL. Дополнительные сведения об интерфейсе ABI см. в разделе [создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-Можно объявить класс [Platform::Exception](platform-exception-class.md) с использованием одного или двух конструкторов, принимающих параметр HRESULT либо параметры HRESULT и [Platform::String](platform-string-class.md)^, которые можно передать через интерфейс ABI любому обрабатывающему их приложению для Магазина Windows. Либо можно объявить исключение, воспользовавшись одним из двух перегрузок [метода Exception::CreateException](platform-exception-class.md#createexception) , которые могут принимать параметр HRESULT или параметры HRESULT и `Platform::String^` .
+Можно объявить [Platform::Exception](platform-exception-class.md) с помощью одного или двух конструкторов, принимающих параметр HRESULT либо параметры HRESULT и [Platform::String](platform-string-class.md)^ параметр, который можно передать через Интерфейс ABI в любое приложение среды выполнения Windows, который обрабатывает его. Либо можно объявить исключение, воспользовавшись одним из двух перегрузок [метода Exception::CreateException](platform-exception-class.md#createexception) , которые могут принимать параметр HRESULT или параметры HRESULT и `Platform::String^` .
 
 ## <a name="standard-exceptions"></a>Стандартные исключения
 

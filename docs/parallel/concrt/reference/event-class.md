@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c14cce1f34e4957b8c22bdbb8eab82fb4c0c58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="event-class"></a>Класс event
 Сбрасываемое вручную событие, которое явно учитывает среду выполнения с параллелизмом.  
@@ -72,7 +76,7 @@ class event;
   
  **Пространство имен:** concurrency  
   
-##  <a name="ctor"></a>событие 
+##  <a name="ctor"></a> Событие 
 
  Создает новое событие.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="dtor"></a>~ событий 
+##  <a name="dtor"></a> ~ событий 
 
  Уничтожает событие.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Примечания  
  Ожидается, что нет потоков ожидают события при выполнении деструктора. Разрешение уничтожения события при наличии ожидающих его результатов потоков приводит к неопределенному поведению.  
   
-##  <a name="reset"></a>Сброс 
+##  <a name="reset"></a> Сброс 
 
  Сбрасывает несигнальное состояние события.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>набор 
+##  <a name="set"></a> Набор 
 
  Указывает события.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Примечания  
  Подача сигнала о событии может привести к тому, что произвольное число контекстов будет ожидать, когда событие станет готово к запуску.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Значение, указывающее, что время ожидания никогда не должно истечь.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>Ожидание 
+##  <a name="wait">Ожидание</a> 
 
  Ожидание события в сигнальное.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Если было выполнено ожидания, значение `0` возвращается; в противном случае — значение `COOPERATIVE_WAIT_TIMEOUT` для указания, что истекло время ожидания без получения событием сигнала.  
   
 > [!IMPORTANT]
->  В приложении [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] не следует вызывать `wait` в потоке ASTA, потому что такой вызов может заблокировать текущий поток и приложение перестанет отвечать.  
+>  В приложении универсальной платформы Windows (UWP), не следует вызывать `wait` в потоке ASTA, потому что этот вызов может заблокировать текущий поток и может вызвать зависание приложения.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  Ожидает несколько событий в сигнальное.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Если параметр `_FWaitAll` присвоено значение `true` для указания, что все события должны принять сигнал для удовлетворения ожидания, возвращаемый функцией индекс не переносит специального значения за исключением того, что он не является значением `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  В приложении [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] не следует вызывать `wait_for_multiple` в потоке ASTA, потому что такой вызов может заблокировать текущий поток и приложение перестанет отвечать.  
+>  В приложении универсальной платформы Windows (UWP), не следует вызывать `wait_for_multiple` в потоке ASTA, потому что этот вызов может заблокировать текущий поток и может вызвать зависание приложения.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

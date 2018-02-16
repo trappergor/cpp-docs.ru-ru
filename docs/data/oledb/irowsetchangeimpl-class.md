@@ -4,45 +4,46 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::IRowsetChangeImpl
 - IRowsetChangeImpl
 - ATL.IRowsetChangeImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - updatable providers, immediate update
 - IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b289e20f4714503e0aef6deb2273f6cd12192e7d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetchangeimpl-class"></a>Класс IRowsetChangeImpl
 Реализация шаблонов OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) интерфейса в спецификации OLE DB.  
   
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <  
    class T,   
    class Storage,   
    class BaseInterface = IRowsetChange,   
    class RowClass = CSimpleRow,   
-   class MapClass = CAtlMap < RowClass::KeyType, RowClass* >   
->  
+   class MapClass = CAtlMap <RowClass::KeyType, RowClass*>>  
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
@@ -81,7 +82,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ## <a name="remarks"></a>Примечания  
  Этот интерфейс не отвечает за операции записи непосредственно в хранилище данных. «Immediate» означает, когда конечный пользователь (лицом, использующим потребитель) делает все изменения, эти изменения немедленно переносятся данные хранения (и не может быть отменено).  
   
- `IRowsetChangeImpl`реализует OLE DB `IRowsetChange` интерфейс, позволяющий обновления значений столбцов в существующих строках, удаление строк и вставки новых строк.  
+ `IRowsetChangeImpl` реализует OLE DB `IRowsetChange` интерфейс, позволяющий обновления значений столбцов в существующих строках, удаление строк и вставки новых строк.  
   
  Реализация шаблонов OLE DB поддерживает все базовые методы (`SetData`, `InsertRow`, и `DeleteRows`).  
   

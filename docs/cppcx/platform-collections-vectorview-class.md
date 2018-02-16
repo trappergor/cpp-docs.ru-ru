@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
 - COLLECTION/Platform::Collections::VectorView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::GetMany
 - COLLECTION/Platform::Collections::VectorView::IndexOf
 - COLLECTION/Platform::Collections::VectorView::Size
-dev_langs: C++
-helpviewer_keywords: VectorView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 Представляет доступное только для чтения представление упорядоченной коллекции объектов, в которой возможен доступ к каждому отдельному объекту по его индексу. Тип каждого объекта в коллекции задается параметром шаблона.  
@@ -74,7 +77,7 @@ template <typename T, typename E>
   
  **Пространство имен:** Platform::Collections  
 
-## <a name="first"></a>Vectorview::First-метод
+## <a name="first"></a>  Vectorview::First-метод
 Возвращает итератор, указывающий первый элемент объекта VectorView.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -166,7 +169,7 @@ virtual bool IndexOf(
   
 
 
-## <a name="size"></a>Метод VectorView::Size
+## <a name="size"></a>  Метод VectorView::Size
 Возвращает количество элементов в текущем объекте VectorView.  
   
 ### <a name="syntax"></a>Синтаксис  

@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
 
@@ -117,7 +120,7 @@ template <typename T, typename E>
 
 **Пространство имен:** Platform::Collections
 
-## <a name="append"></a>Метод Vector::append
+## <a name="append"></a>  Метод Vector::append
 
 Вставляет указанный элемент после последнего элемента текущего объекта Vector.
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 Элемент, который требуется вставить в объект Vector. Тип *элемент* определяется *T* typename.
 
-## <a name="clear"></a>Метод Vector::Clear
+## <a name="clear"></a>  Метод Vector::Clear
 
 Удаляет все элементы текущего объекта Vector.
 
@@ -142,7 +145,7 @@ virtual void Append(T item);
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector::First-метод
+## <a name="first"></a>  Vector::First-метод
 
 Возвращает итератор, указывающий первый элемент объекта Vector.
 
@@ -162,7 +165,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 При необходимости пару итераторов, передаваемые функции STL используйте свободные функции [Windows::Foundation:: Collections:: begin](../cppcx/begin-function.md) и [Windows::Foundation::Collections::end](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector::getat-метод
+## <a name="getat"></a>  Vector::getat-метод
 
 Извлекает элемент текущего объекта Vector, указанный заданным индексом.
 
@@ -181,7 +184,7 @@ virtual T GetAt(unsigned int index);
 
 Элемент с заданным *индекс* параметра. Тип элемента определяется *T* typename.
 
-## <a name="getmany"></a>Vector::getmany-метод
+## <a name="getmany"></a>  Vector::getmany-метод
 
 Извлекает последовательность элементов из текущего объекта Vector, начиная с определенного индекса, и копирует их в выделенный вызывающим объектом массив.
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Объект IVectorView.
 
-## <a name="indexof"></a>Vector::IndexOf-метод
+## <a name="indexof"></a>  Vector::IndexOf-метод
 
 Выполняет поиск указанного элемента в текущем объекте Vector и возвращает его индекс, если он найден.
 
@@ -251,7 +254,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 IndexOf использует std::find_if для поиска элемента. Таким образом, типы настраиваемых элементов должны перегрузить оператор == и != для включения сравнений на равенство, которое требуется для find_if.
 
-##  <a name="insertat"></a>Метод Vector::InsertAt
+##  <a name="insertat"></a>  Метод Vector::InsertAt
 
 Вставляет указанный элемент в текущий объект Vector после элемента, указанного заданным индексом.
 
@@ -266,10 +269,10 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
-*элемент*  
+*Элемент*  
 Элемент, вставляемый в объект Vector после элемента, заданного параметром *индекса*. Тип *элемент* определяется *T* typename.
 
-## <a name="removeat"></a>Метод Vector::RemoveAt
+## <a name="removeat"></a>  Метод Vector::RemoveAt
 
 Удаляет элемент, определенный заданным индексом из текущего объекта Vector.
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
-## <a name="removeatend"></a>Метод Vector::RemoveAtEnd
+## <a name="removeatend"></a>  Метод Vector::RemoveAtEnd
 
 Удаляет элемент в конце текущего объекта Vector.
 
@@ -294,7 +297,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Метод Vector::ReplaceAll
+## <a name="replaceall"></a>  Метод Vector::ReplaceAll
 
 Удаляет элементы из текущего объекта Vector, а затем вставляет элементы из указанного массива.
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 Массив объектов, тип которого определяется *T* typename.
 
-## <a name="setat"></a>Метод Vector::SetAt
+## <a name="setat"></a>  Метод Vector::SetAt
 
 Присваивает указанное значение к элементу текущего объекта Vector, определяемому заданным индексом.
 
@@ -324,10 +327,10 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
-*элемент*  
+*Элемент*  
 Значение, присваиваемое указанному элементу. Тип *элемент* определяется *T* typename.
 
-## <a name="size"></a>Метод Vector::size
+## <a name="size"></a>  Метод Vector::size
 
 Возвращает количество элементов в текущем объекте Vector.
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 Количество элементов в текущем объекте Vector.
 
-## <a name="ctor"></a>Vector::Vector-конструктор
+## <a name="ctor"></a>  Vector::Vector-конструктор
 
 Инициализирует новый экземпляр класса Vector.
 

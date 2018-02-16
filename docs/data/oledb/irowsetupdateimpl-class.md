@@ -4,38 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36282ea38922656484b208f3215c881f8ed8cf34
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>Класс IRowsetUpdateImpl
 Реализация шаблонов OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) интерфейса.  
   
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <  
    class T,   
    class Storage,   
@@ -43,13 +45,13 @@ template <
    class RowClass = CSimpleRow,   
    class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
 >  
+
 class IRowsetUpdateImpl : public IRowsetChangeImpl<  
    T,   
    Storage,   
    IRowsetUpdate,   
    RowClass,   
-   MapClass  
->  
+   MapClass>  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -101,7 +103,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="remarks"></a>Примечания  
  Сначала необходимо прочесть и понять, в документации по [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), так как все описанное существует также применяется здесь. Также следует ознакомиться с главе 6 *Справочник программиста OLE DB* о задании данных.  
   
- `IRowsetUpdateImpl`реализует OLE DB `IRowsetUpdate` интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с `IRowsetChange` для источника данных и отменить изменения перед их отправкой.  
+ `IRowsetUpdateImpl` реализует OLE DB `IRowsetUpdate` интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с `IRowsetChange` для источника данных и отменить изменения перед их отправкой.  
   
 > [!IMPORTANT]
 >  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде ЧЕМ пытаться реализации поставщика:  

@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Практическое руководство. Маршалирование строк с помощью PInvoke
 В этом разделе объясняется, как собственных функций, принимающих строки в стиле C может вызываться с помощью строки CLR введите System::String, используя поддержку вызова платформы .NET Framework. Программистам Visual C++, рекомендуется использовать возможности взаимодействия C++ (когда это возможно), поскольку P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может оказаться трудоемкой для реализации. Если неуправляемый интерфейс API упакован как библиотека DLL и исходный код недоступен, P/Invoke является единственным параметром, но см. в противном случае [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -36,8 +38,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
  Следующий код состоит из неуправляемого и управляемого модуля. Неуправляемый модуль является библиотекой DLL, определяется функция TakesAString, принимающая строку ANSI C-стиле, в виде char *. Управляемый модуль является приложением командной строки, импортирующим функцию TakesAString, но определена как принимающая управляемого System.String вместо char\*. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Атрибут используется для указания того, каким образом следует маршалировать управляемая строка при вызове TakesAString.  
-  
- Управляемый модуль компилируется с параметром/CLR, но/CLR: pure работает также.  
   
 ```  
 // TraditionalDll2.cpp  

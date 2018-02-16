@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 Представляет ошибки, происходящие во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.  
@@ -58,7 +61,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Член|Описание:|  
 |------------|-----------------|  
-|[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
+|[Exception::HResult](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|  
   
 ### <a name="requirements"></a>Требования  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Метаданные:** platform.winmd  
 
-## <a name="createexception"></a>Exception::createexception-метод
+## <a name="createexception"></a> Exception::createexception-метод
 Создает Platform::Exception^ из указанного значения HRESULT.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Exception::Exception-конструктор
+## <a name="ctor"></a>  Exception::Exception-конструктор
 Инициализирует новый экземпляр класса Exception.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Exception::HRESULT-свойство
+## <a name="hresult"></a>  Exception::HRESULT-свойство
 Значение HRESULT, соответствующее исключению.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Свойство Exception::Message
+## <a name="message"></a> Свойство Exception::Message
 Сообщение с описанием ошибки.  
   
 ### <a name="syntax"></a>Синтаксис  

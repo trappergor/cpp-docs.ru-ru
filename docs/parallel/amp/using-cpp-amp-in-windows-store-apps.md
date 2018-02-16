@@ -1,30 +1,33 @@
 ---
-title: "Использование C++ AMP в приложениях для магазина Windows | Документы Microsoft"
+title: "Использование C++ AMP в приложениях UWP | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>Использование C++ AMP в приложениях для Магазина Windows
-C++ AMP (C++ Accelerated Massive Parallelism) можно использовать в вашей [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] приложения для выполнения вычислений на GPU (единица обработки графики) или других вычислений сочетания клавиш. Однако C++ AMP не предоставляет интерфейсы API для работы непосредственно с типами среды выполнения Windows, а в среде выполнения Windows нет программы-оболочки для C++ AMP. При использовании в коде типов среды выполнения Windows, включая созданные самостоятельно, необходимо преобразовать их в совместимые с С++ AMP типы.  
+# <a name="using-c-amp-in-uwp-apps"></a>Использование C++ AMP в приложениях UWP
+C++ AMP (C++ Accelerated Massive Parallelism) можно использовать в приложении универсальной платформы Windows (UWP) для выполнения вычислений на GPU (единица обработки графики) или других вычислений сочетания клавиш. Однако C++ AMP не предоставляет интерфейсы API для работы непосредственно с типами среды выполнения Windows, а в среде выполнения Windows нет программы-оболочки для C++ AMP. При использовании в коде типов среды выполнения Windows, включая созданные самостоятельно, необходимо преобразовать их в совместимые с С++ AMP типы.  
   
 ## <a name="performance-considerations"></a>Особенности производительности  
- Если вы используете [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) для создания вашего [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] приложения, рекомендуется использовать типы данных обычного старого (POD) вместе с хранилищем смежных — например, `std::vector` или массивы в стиле языка C — для данных, которые будут использоваться с C++ AMP. Это поможет добиться более высокой производительности, чем с помощью типов, не являющимся POD или контейнеры Windows RT, так как без маршалирования не требуются.  
+ Если вы используете [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) для создания приложения универсальной платформы Windows (UWP), рекомендуется использовать типы данных обычного старого (POD) вместе с хранилищем смежных — например, `std::vector` или массивы в стиле языка C — для данных, который будет использоваться с помощью C++ AMP. Это поможет добиться более высокой производительности, чем с помощью типов, не являющимся POD или контейнеры Windows RT, так как без маршалирования не требуются.  
   
  В C++ AMP ядра, для доступа к данным, которые хранятся таким образом, достаточно поместить `std::vector` массива или массива хранения данных в `concurrency::array_view` и затем использовать представление массива в `concurrency::parallel_for_each` цикл:  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание первого приложения для магазина Windows с помощью C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Создание первого приложения UWP, с помощью C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

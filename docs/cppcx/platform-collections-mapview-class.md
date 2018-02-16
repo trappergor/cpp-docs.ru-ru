@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
 - COLLECTION/Platform::Collections::MapView::First
@@ -14,19 +14,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs: C++
-helpviewer_keywords: MapView Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -49,7 +52,7 @@ ref class MapView sealed;
  Тип значения в паре "ключ-значение".  
   
  `C`  
- Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. По умолчанию [std::less\<K >](../standard-library/less-struct.md).  
+ Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. By default, [std::less\<K>](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Примечания  
  MapView является конкретной реализацией C++ [Windows::Foundation:: Collections:: \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -81,7 +84,7 @@ ref class MapView sealed;
  **Пространство имен:** Platform::Collections  
 
 
-## <a name="first"></a>Метод MapView::First
+## <a name="first"></a> Метод MapView::First
 Возвращает итератор, указывающий первый элемент в представлении сопоставления.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -99,7 +102,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>Метод MapView::HasKey
+## <a name="haskey"></a>  MapView::HasKey Method
 Определяет, содержит ли текущий объект MapView указанный ключ.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -118,7 +121,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a>Метод MapView::Lookup
+##  <a name="lookup"></a> MapView::Lookup Method
 Возвращает значение типа V, связанное с указанным ключом типа K.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -136,7 +139,7 @@ V Lookup(K key);
   
 
 
-##  <a name="ctor"></a>Mapview::mapview-конструктор
+##  <a name="ctor"></a> Mapview::mapview-конструктор
 Инициализирует новый экземпляр класса MapView.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -179,7 +182,7 @@ MapView(
 
 
 
-##  <a name="size"></a>Метод MapView::Size
+##  <a name="size"></a> Метод MapView::Size
 Возвращает количество элементов в текущем объекте MapView.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -194,7 +197,7 @@ virtual property unsigned int Size;
   
 
 
-##  <a name="split"></a>Метод MapView::Split
+##  <a name="split"></a> Метод MapView::Split
 Разделяет текущий объект MapView на два объекта MapView. Этот метод не выполняет никаких действий.  
   
 ### <a name="syntax"></a>Синтаксис  

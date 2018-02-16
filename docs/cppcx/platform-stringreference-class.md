@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 Тип оптимизации, который можно использовать для передачи строковых данных из входных параметров `Platform::String^` в другие методы с минимальным числом операций копирования.  
@@ -58,8 +60,8 @@ class StringReference
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[StringReference::operator =](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
-|[Stringreference:: operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  
+|[StringReference::operator=](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
+|[StringReference::operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  
   
 ### <a name="requirements"></a>Требования  
  **Минимальный поддерживаемый клиент:** Windows 8  
@@ -70,7 +72,7 @@ class StringReference
   
  **Заголовок:** vccorlib.h  
 
-## <a name="data"></a>Метод StringReference::Data
+## <a name="data"></a>  StringReference::Data Method
 Возвращает содержимое этого `StringReference` как массив значений char16.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Метод StringReference::GetHSTRING
+## <a name="gethstring"></a>  StringReference::GetHSTRING Method
 Возвращает содержимое строки как `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Метод StringReference::GetString
+## <a name="getstring"></a>  StringReference::GetString Method
 Возвращает содержимое строки как `Platform::String^`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `Platform::String^`, который содержит строковые данные.  
 
-## <a name="length"></a>Метод StringReference::Length
+## <a name="length"></a>  StringReference::Length Method
 Возвращает число символов в строке.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>StringReference::operator =-оператор
+## <a name="operator-assign"></a>  StringReference::operator= Operator
 Присваивает указанный объект текущему объекту `StringReference`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>Оператор stringreference:: operator()
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 Преобразует объект `StringReference` в объект `Platform::String^`.  
   
 ### <a name="syntax"></a>Синтаксис  

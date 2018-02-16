@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование многие реализации интерфейсов.  
   
-## <a name="syntax"></a>Синтаксис  
-  
-```  
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|Содержит индекс начального набора строк.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRowsetImpl`предоставляет переопределений в виде статических требуемому типу. Методы управления способом, в котором определенного набора строк будет проверять текст команды. Можно создать свой собственный `CRowsetImpl`-класс стиля, делая реализация интерфейсов нескольких наследуется. Это единственный метод, для которого необходимо предоставить реализация **Execute**. В зависимости от того, какой тип набора строк создается, создатель методы ожидаемых различные подписи для **Execute**. Например, если вы используете `CRowsetImpl`-производный класс для реализации набора строк схемы **Execute** метод будет иметь следующую сигнатуру:  
+ `CRowsetImpl` предоставляет переопределений в виде статических требуемому типу. Методы управления способом, в котором определенного набора строк будет проверять текст команды. Можно создать свой собственный `CRowsetImpl`-класс стиля, делая реализация интерфейсов нескольких наследуется. Это единственный метод, для которого необходимо предоставить реализация **Execute**. В зависимости от того, какой тип набора строк создается, создатель методы ожидаемых различные подписи для **Execute**. Например, если вы используете `CRowsetImpl`-производный класс для реализации набора строк схемы **Execute** метод будет иметь следующую сигнатуру:  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="testing-the-read-only-provider"></a>Проверка поставщика в режиме "только для чтения"
 Для проверки поставщика требуется объект-получатель. Это полезно, если потребитель может совпадать с поставщиком. Шаблоны потребителя OLE DB являются оболочками для OLE DB и соответствуют поставщику COM-объектов. Поскольку источник поставляется с шаблонами объектов-получателей, можно легко провести отладку поставщика с ними. Шаблоны потребителя также являются простой и быстрый способ разработки приложения-потребители.  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  Откройте файл заголовка для класса диалогового окна (в случае это, файл TestProvDlg.h). Добавьте следующий код в файл заголовка (вне объявлений классов):  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // TestProvDlg.h  
   
@@ -76,13 +78,13 @@ END_COLUMN_MAP()
   
  Добавьте функцию обработчика событий для **запуска** кнопку, удерживая клавишу CTRL и дважды щелкнув **запуска** кнопки. Поместите следующий код в функцию:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   
 void CtestProvDlg::OnRun()  
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -122,7 +124,7 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
   
  Передайте строку «c:\\\samples\\\myprov\\\MyData.txt» в `table.Open` строки. Если зайти в `Open` вызов, вы видите, что эта строка передается `SetCommandText` метод в поставщике. Обратите внимание, что `ICommandText::Execute` метод, используемый этой строки.  
   
- Чтобы извлечь данные, вызовите `MoveNext` для таблицы. `MoveNext`вызовы **IRowset::GetNextRows**, `GetRowCount`, и `GetData` функции. Если отсутствуют дополнительные строки (то есть текущее положение в наборе строк больше, чем `GetRowCount`), цикл завершается:  
+ Чтобы извлечь данные, вызовите `MoveNext` для таблицы. `MoveNext` вызовы **IRowset::GetNextRows**, `GetRowCount`, и `GetData` функции. Если отсутствуют дополнительные строки (то есть текущее положение в наборе строк больше, чем `GetRowCount`), цикл завершается:  
   
 ```  
 while (table.MoveNext() == S_OK)  

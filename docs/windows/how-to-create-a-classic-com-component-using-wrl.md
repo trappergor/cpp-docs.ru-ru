@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04b84a5deedc5ef112507f4e0f8ccb29af418c28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Практическое руководство. Создание классического компонента COM с помощью WRL
-Среда выполнения C++ шаблон библиотеки Windows (WRL) можно использовать для создания базовые компоненты классической модели COM для использования в классических приложениях, кроме через [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] приложений. Для создания COM-компонентов библиотека шаблонов C++ среды выполнения Windows может потребоваться меньше кода, чем для библиотеки ATL. Дополнительные сведения о подмножестве модели COM, который поддерживает библиотека шаблонов C++ среды выполнения Windows, в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).  
+Среда выполнения C++ шаблон библиотеки Windows (WRL) можно использовать для создания базовые компоненты классической модели COM для использования в классических приложениях только для приложений универсальной платформы Windows (UWP). Для создания COM-компонентов библиотека шаблонов C++ среды выполнения Windows может потребоваться меньше кода, чем для библиотеки ATL. Дополнительные сведения о подмножестве модели COM, который поддерживает библиотека шаблонов C++ среды выполнения Windows, в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
  В этом документе показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового COM-компонента. Хотя можно использовать механизм развертывания, который наилучшим образом соответствует требованиям, в этом документе также показан простой способ регистрации и использования компонента модели COM из обычного приложения для настольных систем.  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  В файле CalculatorComponent.cpp определите класс `CalculatorComponent`. `CalculatorComponent` Класс наследует от [Microsoft::wrl:: runtimeclass](../windows/runtimeclass-class.md). [Microsoft::wrl:: runtimeclassflags\<ClassicCom >](../windows/runtimeclassflags-structure.md) указывает, что класс является производным от [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) и не [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` доступен только для [!INCLUDE[win8_appstore_short](../windows/includes/win8_appstore_short_md.md)] компоненты приложения.) `CoCreatableClass` создает фабрику для класса, который можно использовать с функции например [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
+5.  В файле CalculatorComponent.cpp определите класс `CalculatorComponent`. `CalculatorComponent` Класс наследует от [Microsoft::wrl:: runtimeclass](../windows/runtimeclass-class.md). [Microsoft::wrl:: runtimeclassflags\<ClassicCom >](../windows/runtimeclassflags-structure.md) указывает, что класс является производным от [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) и не [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` доступен только для компонентов приложения среды выполнения Windows.) `CoCreatableClass` создает фабрику для класса, который можно использовать с функции например [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx).  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   

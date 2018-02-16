@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 Наборы строк схемы позволяют пользователям получать информацию о хранилище данных, не зная ее базовую структуру или схему. Например хранилище данных может иметь таблицы, упорядоченные в пользовательской иерархии, поэтому будет гарантировать знаний о схеме, считывая его. (Еще один пример, обратите внимание, что мастера Visual C++ используйте наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю для этого, объект сеанса поставщика представляет методы на [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) интерфейса. В приложениях Visual C++ используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класса для реализации **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`поддерживает следующие методы:  
+ `IDBSchemaRowsetImpl` поддерживает следующие методы:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) проверяет допустимость ограничений относительно набора строк схемы.  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/21/2017
   
 -   **C** *ShortName* **SessionColSchemaRowset** обрабатывает запросы сведений о столбце ( **DBSCHEMA_COLUMNS** набора строк схемы). Мастер предоставляет образцы реализации этих классов, которые возвращают сведения о схеме для поставщика DOS.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** обрабатывает запросы сведений схемы об тип поставщика ( **DBSCHEMA_PROVIDER_TYPES** набор строк схемы). Реализация по умолчанию, предоставляемого мастером возвращает `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** обрабатывает запросы сведений схемы об тип поставщика ( **DBSCHEMA_PROVIDER_TYPES** схемы набор строк). Реализация по умолчанию, предоставляемого мастером возвращает `S_OK`.  
   
  Можно настроить эти классы для обработки сведений о схеме, подходящим для поставщика.  
   
--   В **C***ShortName***SessionTRSchemaRowset**, необходимо заполнить поля каталога, таблицы и описание (**trData.m_szType**, **trData.m_szTable**, и **trData.m_szDesc**). В примере мастера используется только один ряд (таблица). Другие поставщики могут возвращать более одной таблицы.  
+-   В **C***ShortName***SessionTRSchemaRowset**, необходимо заполнить поля каталога, таблицы и описание (**trData.m_szType**, **trData.m_szTable** , и **trData.m_szDesc**). В примере мастера используется только один ряд (таблица). Другие поставщики могут возвращать более одной таблицы.  
   
 -   В **C***ShortName***SessionColSchemaRowset**, вы передаете имя таблицы как **DBID**.  
   
@@ -103,9 +105,9 @@ class CUpdateSessionTRSchemaRowset :
   
 |Ограничение набора строк схемы|Значение ограничения|  
 |-------------------------------|-----------------------|  
-|**ЗНАЧЕНИЯМ TABLE_CATALOG**|0x1 (двоичный 1)|  
+|**TABLE_CATALOG**|0x1 (двоичный 1)|  
 |**TABLE_SCHEMA**|0x2 (двоичный 10)|  
-|**ИМЯ_ТАБЛИЦЫ**|0x4 (двоичный 100)|  
+|**TABLE_NAME**|0x4 (двоичный 100)|  
 |**TABLE_TYPE**|0x8 (двоичный 1000)|  
   
  Далее Обратите внимание, что один бит для каждого ограничения. Так как вы собираетесь поддерживать **TABLE_NAME** только возврат 0x4 в `rgRestrictions` элемент. При поддержке **значениям TABLE_CATALOG** и **TABLE_NAME**, возвратят 0x5 (двоичный 101).  
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
