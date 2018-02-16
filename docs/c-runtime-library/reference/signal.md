@@ -1,13 +1,15 @@
 ---
 title: "signal | Документы Майкрософт"
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>signal
 
@@ -44,9 +50,7 @@ ms.lasthandoff: 01/05/2018
 ## <a name="syntax"></a>Синтаксис
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -54,11 +58,11 @@ _sig_
 Значение сигнала.
 
 _func_  
-Выполняемая функция. Первый параметр указывает значение сигнала, второй параметр — подкод, который можно использовать, если первый параметр — SIGFPE.
+Второй параметр является указателем на функцию для выполнения. Первый параметр указывает значение сигнала, второй параметр — подкод, который можно использовать, если первый параметр — SIGFPE.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`signal`Возвращает предыдущее значение _func_ , связанную с заданным сигналом. Например если предыдущее значение _func_ было `SIG_IGN`, возвращаемое значение также является `SIG_IGN`. Возвращаемое значение `SIG_ERR` отображает ошибку; в этом случае для `errno` устанавливается значение `EINVAL`.
+`signal` Возвращает предыдущее значение func, связанный с заданным сигналом. Например если предыдущее значение _func_ было `SIG_IGN`, возвращаемое значение также является `SIG_IGN`. Возвращаемое значение `SIG_ERR` отображает ошибку; в этом случае для `errno` устанавливается значение `EINVAL`.
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

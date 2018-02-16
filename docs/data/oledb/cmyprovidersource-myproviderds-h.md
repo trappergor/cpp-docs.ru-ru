@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 Классы поставщиков используют множественное наследование. В следующем коде показано цепочку наследования для объекта источника данных:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- Все компоненты COM являются производными от `CComObjectRootEx` и `CComCoClass`. `CComObjectRootEx`предоставляет реализацию для **IUnknown** интерфейса. Он может обрабатывать любой потоковой модели. `CComCoClass`обрабатывает необходима поддержка любые ошибки. Если вы хотите отправить клиенту сведений об ошибках, можно использовать некоторые ошибки API-интерфейсы в `CComCoClass`.  
+ Все компоненты COM являются производными от `CComObjectRootEx` и `CComCoClass`. `CComObjectRootEx` предоставляет реализацию для **IUnknown** интерфейса. Он может обрабатывать любой потоковой модели. `CComCoClass` обрабатывает необходима поддержка любые ошибки. Если вы хотите отправить клиенту сведений об ошибках, можно использовать некоторые ошибки API-интерфейсы в `CComCoClass`.  
   
  Объект источника данных также наследуется от нескольких классов суффиксом «Impl». Каждый класс предоставляет реализацию для интерфейса. Источник данных реализует объект `IPersist`, `IDBProperties`, **IDBInitialize**, и **IDBCreateSession** интерфейсов. Каждый интерфейс необходим OLE DB для реализации объекта источника данных. Вы можете поддерживать или не поддерживать конкретной функции путем наследования от одного из этих классов с суффиксом «Impl». Если вы хотите поддерживать **IDBDataSourceAdmin** интерфейс, наследовать от **IDBDataSourceAdminImpl** класса, чтобы получить функциональность, необходимую.  
   

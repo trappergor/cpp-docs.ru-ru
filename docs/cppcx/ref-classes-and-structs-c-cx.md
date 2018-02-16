@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Классы и структуры ссылки (C++/CX)
 C + +/ CX поддерживает определяемые пользователем *классы* и *структуры ссылок*и пользовательские *значение классы* и *значение структуры*. Эти структуры данных являются основными контейнерами, в которых C + +/ CX поддерживает систему типов среды выполнения Windows. Их содержимое передается в метаданные в соответствии с определенными правилами, что позволяет передавать их между компонентами среды выполнения Windows и приложений универсальной платформы Windows, написанных на C++ и других языках их.  
@@ -100,7 +101,7 @@ C + +/ CX поддерживает определяемые пользовате
   
  При попытке обращения к членам класса, для которого уже запускался деструктор, поведение будет неопределенным; это наиболее вероятная причина сбоя программы. При вызове `delete t` для типа, у которого нет открытого деструктора, ничего не происходит. При вызове `delete this` для типа или базового класса, не имеющих деструктора `private` или `protected private` в иерархии типов, также ничего не происходит.  
   
- При объявлении открытого деструктора компилятор создает код таким образом, чтобы класс ссылки реализовывал интерфейс `Platform::IDisposable` , а деструктор реализовывал метод `Dispose` . `Platform::IDisposable`является C + +/ CX проекцию `Windows::Foundation::IClosable`. Никогда не следует явным образом реализовывать эти интерфейсы.  
+ При объявлении открытого деструктора компилятор создает код таким образом, чтобы класс ссылки реализовывал интерфейс `Platform::IDisposable` , а деструктор реализовывал метод `Dispose` . `Platform::IDisposable` является C + +/ CX проекцию `Windows::Foundation::IClosable`. Никогда не следует явным образом реализовывать эти интерфейсы.  
   
 ## <a name="inheritance"></a>Наследование  
  Platform::Object является универсальным базовым классом для всех классов ссылок. Все классы ссылок неявно преобразуются в Platform::Object и могут переопределять [Object::ToString](../cppcx/platform-object-class.md#tostring). Однако модель наследования среды выполнения Windows не подразумевает как общая модель наследования; в C + +/ CX это означает, что определяемые пользователем открытый класс ссылки не может использоваться как базовый класс.  

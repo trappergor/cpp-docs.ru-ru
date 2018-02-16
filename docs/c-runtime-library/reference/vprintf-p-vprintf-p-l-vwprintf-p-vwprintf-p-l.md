@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _vwprintf_p
 - _vprintf_p
@@ -35,7 +36,8 @@ f1_keywords:
 - vtprintf_p
 - _vtprintf_p
 - _vprintf_p
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _vtprintf_p_l function
 - _vtprintf_p function
@@ -51,16 +53,17 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a33f7c8f834e9e1e67a5322d15494423bf10190e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a18dedf361b3b6c83eb0f4e1a746bc90ca01fbc1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 Записывают форматированные выходные данные, используя указатель на список аргументов, и включает спецификацию порядка, в котором эти аргументы используются.  
@@ -131,7 +134,7 @@ int _vwprintf_p_l(
   
  \* Требуется для совместимости с UNIX V.  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
   
 ## <a name="see-also"></a>См. также  
  [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   

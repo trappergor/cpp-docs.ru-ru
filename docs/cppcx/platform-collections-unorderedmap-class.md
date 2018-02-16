@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -102,7 +104,7 @@ ref class Map sealed;
 
 **Пространство имен:** Platform::Collections
 
-## <a name="clear"></a>Метод UnorderedMap::Clear
+## <a name="clear"></a>  Метод UnorderedMap::Clear
 
 Удаляет все пары "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -112,7 +114,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Метод UnorderedMap::First
+## <a name="first"></a>  Метод UnorderedMap::First
 
 Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элемент в неупорядоченном сопоставлении.
 
@@ -190,7 +192,7 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false`Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущий объект UnorderedMap.
+`true` Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false` Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущий объект UnorderedMap.
 
 ## <a name="lookup"></a>  UnorderedMap::Lookup Method
 
@@ -229,9 +231,9 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
-Приложения для магазина Windows проект, нам C# или Visual Basic IMap\<K, V > в качестве IDictionary\<K, V >.
+Приложения для среды выполнения Windows, нам C# или Visual Basic проект IMap\<K, V > в качестве IDictionary\<K, V >.
 
-## <a name="remove"></a>Метод UnorderedMap::Remove
+## <a name="remove"></a>  Метод UnorderedMap::Remove
 
 Удаляет указанную пару "ключ-значение" из текущего объекта UnorderedMap.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-## <a name="size"></a>Метод UnorderedMap::Size
+## <a name="size"></a>  Метод UnorderedMap::Size
 
 Возвращает число [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте UnorderedMap.
 

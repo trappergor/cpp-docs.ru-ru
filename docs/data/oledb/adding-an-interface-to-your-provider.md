@@ -4,40 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates, object interfaces
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 518cd5e67c734de48d7f021e558c7c4c3a718cdc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Добавление интерфейса в поставщик
 Определения объекта, который требуется добавить интерфейс (обычно данных источника, набора строк, команды или сеанса объекты, созданные мастером поставщика OLE DB). Это возможно, необходимо добавить интерфейс для объекта, не поддерживается поставщиком. В этом случае запустите мастер ATL OLE DB Provider для создания объекта. Щелкните правой кнопкой мыши проект в представлении классов щелкните **добавить класс** из **добавить** меню, а затем нажмите **поставщика ATL OLE DB**. Вы можете разместить код интерфейса в отдельном каталоге, а затем скопируйте файлы в проект поставщика.  
   
  Если вы создали новый класс для поддержки интерфейса, следует наследовать от этого класса объект. Например, можно добавить класс **IRowsetIndexImpl** для объекта набора строк:  
   
-```  
+```cpp  
 template <class Creator>  
 class CAgentRowset :   
-public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,  
-   public IRowsetIndexImpl< ... >   
+    public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,  
+    public IRowsetIndexImpl< ... >   
 ```  
   
  Добавить интерфейс **COM_MAP** в объекте с помощью макроса COM_INTERFACE_ENTRY. Если файл сопоставления отсутствует, создайте его. Пример:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
      COM_INTERFACE_ENTRY(IRowsetIndex)  
 END_COM_MAP()  
@@ -45,7 +48,7 @@ END_COM_MAP()
   
  Объект набора строк цепочки сопоставление родительского объекта, чтобы объект можно делегировать родительского класса. В этом примере добавьте макрос COM_INTERFACE_ENTRY_CHAIN карты:  
   
-```  
+```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
      COM_INTERFACE_ENTRY(IRowsetIndex)  
      COM_INTERFACE_ENTRY_CHAIN(CRowsetImpl)  

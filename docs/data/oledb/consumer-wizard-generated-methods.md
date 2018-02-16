@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Методы, создаваемые мастером объекта-получателя
 Мастер потребителя ATL OLE DB и мастер приложений MFC создают определенные функции, которые следует иметь в виду. Обратите внимание, что по-разному реализованы некоторые методы в проектах с атрибутами предостережений несколько; Ниже описаны все случаи. Сведения о просмотре внедренного кода см. в разделе [Отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Открывает источник данных, наборы строк и включает закладки, если они доступны.  
+-   `OpenAll` Открывает источник данных, наборы строк и включает закладки, если они доступны.  
   
--   `CloseAll`Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
+-   `CloseAll` Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
   
--   `OpenRowset`вызывается методом OpenAll для открытия набора или наборов строк потребителя.  
+-   `OpenRowset` вызывается методом OpenAll для открытия набора или наборов строк потребителя.  
   
--   `GetRowsetProperties`Извлекает указатель на значение свойства в наборе строк с которого могут быть заданы свойства.  
+-   `GetRowsetProperties` Извлекает указатель на значение свойства в наборе строк с которого могут быть заданы свойства.  
   
--   `OpenDataSource`Открывает источник данных, используя заданную в строку инициализации **свойства связи данных** диалоговое окно.  
+-   `OpenDataSource` Открывает источник данных, используя заданную в строку инициализации **свойства связи данных** диалоговое окно.  
   
--   `CloseDataSource`закрывает источник данных подходящим способом.  
+-   `CloseDataSource` закрывает источник данных подходящим способом.  
   
 ## <a name="openall-and-closeall"></a>OpenAll и CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, необязательно вызывать `OpenRowset` Если не требуется для работы с несколькими источниками данных и сеансы либо или строк. `OpenRowset`объявляется в файле заголовка класса команд или таблиц.  
+ **OpenAll** вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, необязательно вызывать `OpenRowset` Если не требуется для работы с несколькими источниками данных и сеансы либо или строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц.  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Этот метод извлекает указатель набора свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties`используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
+ Этот метод извлекает указатель набора свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

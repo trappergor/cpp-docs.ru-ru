@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -27,7 +28,8 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -35,22 +37,23 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 82c8f6eb81e96527c0955d9b19fd8ce931e8d7fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 Определяет, является ли символ начальным байтом многобайтового символа.  
   
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье                  [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,7 +74,7 @@ int _isleadbyte_l(
  Функция `isleadbyte` возвращает ненулевое значение, если аргумент удовлетворяет условию теста, или значение 0 в противном случае. В языковом стандарте "C" и в языковых стандартах однобайтовой кодировки (SBCS) `isleadbyte` всегда возвращает значение 0.  
   
 ## <a name="remarks"></a>Примечания  
- Макрос `isleadbyte` возвращает ненулевое значение, если его аргумент является первым байтом многобайтового символа. `isleadbyte`выдает значимый результат для любого целочисленного аргумента от – 1 (`EOF`) для `UCHAR_MAX` (0xFF) включительно.  
+ Макрос `isleadbyte` возвращает ненулевое значение, если его аргумент является первым байтом многобайтового символа. `isleadbyte` выдает значимый результат для любого целочисленного аргумента от – 1 (`EOF`) для `UCHAR_MAX` (0xFF) включительно.  
   
  Ожидаемый тип аргумента `isleadbyte` — `int`. Если передается символ со знаком, компилятор может преобразовать его в целое число по расширению знака, создавая непредсказуемые результаты.  
   

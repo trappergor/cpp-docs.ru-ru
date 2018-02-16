@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wfopen_s
 - fopen_s
@@ -27,7 +28,8 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 97221d04dcd93fbaa32a3562320d0c098fa001ae
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 Открывает файл. Это версии функций [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -104,7 +107,7 @@ errno_t _wfopen_s(
 ## <a name="unicode-support"></a>Поддержка Юникода  
  `fopen_s` поддерживает файловые потоки Юникода. Чтобы открыть новый или существующий файл Юникода, передайте флаг `ccs`, задающий нужную кодировку, в `fopen_s`:  
   
- `fopen_s(&fp, "newfile.txt", "rw, ccs=`*кодировки*`");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*Кодировки*`");`  
   
  Допустимые значения *кодирование* , `UNICODE`, `UTF-8`, и `UTF-16LE`. Если существует не указано значение для *кодирование*, `fopen_s` использует кодировку ANSI.  
   

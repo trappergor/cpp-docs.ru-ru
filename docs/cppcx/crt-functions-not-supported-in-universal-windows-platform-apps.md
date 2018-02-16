@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows
-Многие функции среды выполнения C (CRT) недоступны при построении приложений универсальной платформы Windows. В некоторых случаях доступны обходные пути, — например, можно использовать API Win32 или среды выполнения Windows. Однако в других случаях функции CRT запрещены, поскольку соответствующие им функции или вспомогательные API не могут применяться к приложениям UWP.  
+Многие функции среды выполнения C (CRT) недоступны при построении приложений универсальной платформы Windows. В некоторых случаях доступны обходные пути, — например, можно использовать API Win32 или среды выполнения Windows. Однако в других случаях функции CRT запрещены, поскольку соответствующие им функции или вспомогательные API не могут применяться к приложениям UWP. Альтернативный метод, поддерживаемый для среды выполнения Windows см. в разделе [альтернативы интерфейсов API Windows в приложениях UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  
   
- В следующей таблице перечислены функции CRT, которые недоступны при построении приложений UWP, и приведены применимые решения.  
+В следующей таблице перечислены функции CRT, которые недоступны при построении приложений UWP, и приведены применимые решения.  
   
 ## <a name="unsupported-crt-functions"></a>Неподдерживаемые функции CRT  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Переменные среды недоступны для приложений UWP.|Обходное решение отсутствует. Чтобы установить часовой пояс, используйте _tzset.|  
 |_loaddll _getdllprocaddr _unloaddll|Эти функции устарели в предыдущих версиях CRT. Кроме того, пользователь не может загружать библиотеки DLL, отличные от DLL из пакета самого приложения.|Для загрузки и использования упакованных DLL следует применять API Win32 `LoadPackagedLibrary`, `GetProcAddress`и `FreeLibrary` .|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|Эта функциональность недоступна для приложений UWP. Приложение UWP не может вызывать другое приложение UWP или классическое приложение.|Обходное решение отсутствует.|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|Эти функции обычно используются для работы с кучей. Однако соответствующие API Win32 не поддерживаются в приложениях UWP. И приложения больше не могут создавать и использовать закрытые кучи.|Обходное решение отсутствует. Но функция `_heapwalk` доступна в DEBUG CRT для целей отладки. Их нельзя использовать в приложениях, загруженных в Магазин Windows.|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|Эти функции обычно используются для работы с кучей. Однако соответствующие API Win32 не поддерживаются в приложениях UWP. И приложения больше не могут создавать и использовать закрытые кучи.|Обходное решение отсутствует. Но функция `_heapwalk` доступна в DEBUG CRT для целей отладки. Их нельзя использовать в приложениях, которые передаются в хранилище Microsoft.|  
   
  Следующие функции доступны в CRT для приложений UWP, но можно использовать только в том случае, если соответствующий Win32 или API среды выполнения Windows не может использоваться, например, при переносе больших объемов кода  
   

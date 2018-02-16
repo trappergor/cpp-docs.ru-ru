@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Параметры компилятора и компоновщика (C++/CX)
 Переменная среды, C + +/ CX параметры компилятора и параметры компоновщика поддерживают построение приложений для среды выполнения Windows.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |Параметр|Описание:|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Помечает исполняемый файл как готовый к запуску в контейнере appcontainer (только).|  
-|/ WINMD [: {НЕТ &#124; ТОЛЬКО}]|Создает WINMD-файл и соответствующий двоичный файл. Этот параметр должен быть передан компоновщику для создания WINMD-файла.<br /><br /> **NO**— не создает WINMD-файл, но создает двоичный файл.<br /><br /> **ONLY**— создает WINMD-файл, но не создает двоичный файл.|  
+|/WINMD[:{NO&#124;ONLY}]|Создает WINMD-файл и соответствующий двоичный файл. Этот параметр должен быть передан компоновщику для создания WINMD-файла.<br /><br /> **NO**— не создает WINMD-файл, но создает двоичный файл.<br /><br /> **ONLY**— создает WINMD-файл, но не создает двоичный файл.|  
 |/WINMDFILE:*имя_файла*|Имя создаваемого WINMD-файла вместо имени WINMD-файла по умолчанию. Если в командной строке указывается несколько имен файлов, используется последнее имя.|  
 |/WINMDDELAYSIGN[:NO]|Частично подписывает WINMD-файл и помещает открытый ключ в двоичный файл.<br /><br /> **NO**— WINMD-файл не подписывается (по умолчанию).<br /><br /> /WINMDDELAYSIGN будет иметь результат, только если также указан параметр /WINMDKEYFILE или /WINMDKEYCONTAINER.|  
 |/WINMDKEYCONTAINER:*имя*|Задает контейнер ключей для подписи сборки. Параметр *имя* соответствует контейнеру ключей, используемому для подписывания файла метаданных.|  

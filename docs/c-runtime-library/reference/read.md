@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -58,7 +63,7 @@ int _read(
   
 ### <a name="parameters"></a>Параметры  
 
-*FD*  
+*fd*  
 Дескриптор файла, ссылающийся на открытый файл.  
   
 *buffer*  
@@ -69,7 +74,7 @@ int _read(
   
 ## <a name="return-value"></a>Возвращаемое значение  
 
-`_read`Возвращает число байтов, чтение, которое может быть меньше, чем *число* Если доступно менее *число* слева байт в файле или если файл был открыт в текстовом режиме, в этом случае каждый возврат каретки-строки перевода пары `\r\n` заменить один символ перевода строки `\n`. Только один символ перевода строки учитывается в возвращаемом значении. Эта замена не влияет на указатель файла.  
+`_read` Возвращает число байтов, чтение, которое может быть меньше, чем *число* Если доступно менее *число* слева байт в файле или если файл был открыт в текстовом режиме, в этом случае каждый возврат каретки-строки перевода пары `\r\n` заменить один символ перевода строки `\n`. Только один символ перевода строки учитывается в возвращаемом значении. Эта замена не влияет на указатель файла.  
   
 Если функция пытается прочитать конечную часть файла, она возвращает 0. Если *fd* — не является допустимым, файл не открыт для чтения, или файл заблокирован, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает `errno` в значение `EBADF`.  
   

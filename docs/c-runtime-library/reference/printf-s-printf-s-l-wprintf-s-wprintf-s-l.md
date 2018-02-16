@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_s_l
 - wprintf_s
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - wprintf_s
 - printf_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wprintf_s function
 - tprintf_s function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26db1617206393b8a3756987233d1e38e8ea79c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2929c79c9ab5cfa5e4455e8a75c76988a1f7cf86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 Выводит форматированные выходные данные в стандартный поток вывода. Это версии функций [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,7 +103,7 @@ int _wprintf_s_l(
   
  Дополнительные сведения о `errno` и кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `printf_s`и `fprintf_s` ведут себя одинаково, за исключением того, что `printf_s` записывает выходные данные `stdout` , а не для назначения типа `FILE`. Дополнительные сведения см. в разделе [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
+ `printf_s` и `fprintf_s` ведут себя одинаково, за исключением того, что `printf_s` записывает выходные данные `stdout` , а не для назначения типа `FILE`. Дополнительные сведения см. в разделе [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
   
  Функция `wprintf_s` — это версия `printf_s` с расширенными символами; `format` — строка расширенных символов. `wprintf_s` и `printf_s` ведут себя одинаково, если поток открыт в режиме ANSI. Функция `printf_s` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
@@ -138,7 +141,7 @@ Line one
 |`printf_s`, `_printf_s_l`|\<stdio.h>|  
 |`wprintf_s`, `_wprintf_s_l`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Пример  
   

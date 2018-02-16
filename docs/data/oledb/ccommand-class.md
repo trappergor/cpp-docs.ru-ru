@@ -4,47 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::CCommand
 - CCommand
 - ATL.CCommand
-dev_langs: C++
-helpviewer_keywords: CCommand class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ec786bff30745a986ecc643cd42f0d8975b0ccf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 Предоставляет методы для установки и выполнить команду.  
   
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template <  
-   class TAccessor = CNoAccessor,  
-   template < typename T > class TRowset = CRowset,  
-   class TMultiple = CNoMultipleResults   
->  
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <class TAccessor = CNoAccessor,  
+          template <typename T> class TRowset = CRowset,  
+          class TMultiple = CNoMultipleResults>  
 class CCommand :   
-   public CAccessorRowset <  
-      TAccessor,   
-      TRowset   
-   >,  
-   public CCommandBase,  
-   public TMultiple  
+           public CAccessorRowset <TAccessor, TRowset>,  
+           public CCommandBase,  
+           public TMultiple  
 ```  
   
 #### <a name="parameters"></a>Параметры  
@@ -71,12 +69,12 @@ class CCommand :
   
 |||  
 |-|-|  
-|[Создание](../../data/oledb/ccommand-create.md)|Создание новой команды для указанного сеанса, а затем задает текст команды.|  
+|[Create](../../data/oledb/ccommand-create.md)|Создание новой команды для указанного сеанса, а затем задает текст команды.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Создание новой команды.|  
 |[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Возвращает список параметров команды, их имена и их типы.|  
 |[Подготовка](../../data/oledb/ccommand-prepare.md)|Проверяет и оптимизирует текущую команду.|  
 |[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Освобождает параметрическим при необходимости, а затем освобождает команды.|  
-|[Метод SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Задает собственный тип каждого параметра команды.|  
+|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Задает собственный тип каждого параметра команды.|  
 |[Аннулирующие](../../data/oledb/ccommand-unprepare.md)|Отменяет план выполнения текущей команды.|  
   
 ## <a name="remarks"></a>Примечания  

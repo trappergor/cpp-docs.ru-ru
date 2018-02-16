@@ -4,34 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: appdomain_cpp
-dev_langs: C++
+f1_keywords:
+- appdomain_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677206e37cb4761112f66dc59dc44b2eccbabaf5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="appdomain"></a>appdomain
 Указывает, что каждый домен приложения в вашем управляемого приложения должен иметь собственную копию заданной глобальной переменной или статической переменной-члена. В разделе [домены приложений и Visual C++](../dotnet/application-domains-and-visual-cpp.md) для получения дополнительной информации.  
   
  В каждом домене приложения имеется собственная копия переменной, создаваемой на уровне домена приложения. Конструктор этой переменной выполняется при загрузке сборки в домен приложения, а деструктор — при выгрузке домена приложения.  
   
- Если вам необходимо, чтобы глобальная переменная использовалась всеми доменами приложения в рамках процесса CLR, используйте модификатор `__declspec(process)`. `__declspec(process)`действует по умолчанию в режиме [/CLR](../build/reference/clr-common-language-runtime-compilation.md) и `__declspec(appdomain)` действует по умолчанию в режиме **/CLR: pure**. `__declspec(appdomain)`применяется в **/CLR: safe**. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
+ Если вам необходимо, чтобы глобальная переменная использовалась всеми доменами приложения в рамках процесса CLR, используйте модификатор `__declspec(process)`. `__declspec(process)` действует по умолчанию в режиме [/CLR](../build/reference/clr-common-language-runtime-compilation.md). Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
- `__declspec(appdomain)`допустимо только когда один из **/CLR** использованы параметры компилятора. Модификатором `__declspec(appdomain)` можно пометить только глобальную переменную, статическую переменную-член или статическую локальную переменную. Применять модификатор `__declspec(appdomain)` к статическим членам управляемых типов будет ошибкой, поскольку они в любом случае имеют имеют соответствующее поведение.  
+ `__declspec(appdomain)` допустимо только когда один из **/CLR** использованы параметры компилятора. Модификатором `__declspec(appdomain)` можно пометить только глобальную переменную, статическую переменную-член или статическую локальную переменную. Применять модификатор `__declspec(appdomain)` к статическим членам управляемых типов будет ошибкой, поскольку они в любом случае имеют имеют соответствующее поведение.  
   
  С помощью `__declspec(appdomain)` похожа на работу с [локальное хранилище потока (TLS)](../parallel/thread-local-storage-tls.md). Как и у доменов приложения, у потоков имеются собственные области памяти. Если используется ключевое слово `__declspec(appdomain)`, то для глобальной переменной гарантированно создается собственная область памяти в каждом домене приложения, созданном для данного приложения.  
   

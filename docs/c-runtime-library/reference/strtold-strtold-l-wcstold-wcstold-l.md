@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 Преобразует строки в значение long двойной точности с плавающей точкой.  
@@ -82,7 +85,7 @@ long double wcstold_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `strtold`Возвращает значение числа с плавающей запятой как `long double`, за исключением случаев, когда представление вызвало бы переполнение — в этом случае функция возвращает`HUGE_VALL`. Знак `HUGE_VALL` соответствует знаку значения, которое не может быть представлено. `strtold` возвращает 0, если преобразование не может быть выполнено или происходит потеря значимости.  
+ `strtold` Возвращает значение числа с плавающей запятой как `long double`, за исключением случаев, когда представление вызвало бы переполнение — в этом случае функция возвращает`HUGE_VALL`. Знак `HUGE_VALL` соответствует знаку значения, которое не может быть представлено. `strtold` возвращает 0, если преобразование не может быть выполнено или происходит потеря значимости.  
   
  Функция `wcstold` возвращает значения аналогично функции `strtold`. Для обеих функций `errno` получает значение `ERANGE` при возникновении переполнения или потери значимости, и вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   

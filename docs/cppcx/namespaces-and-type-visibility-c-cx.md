@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Пространства имен и видимость типов (C++/CX)
 Пространство имен — стандартная конструкция C++, которая предназначена для группирования типов, имеющих связанную функциональность, и для предотвращения конфликтов имен в библиотеках. Система типов среды выполнения Windows требует, что все открытые типы среды выполнения Windows, включая те, в собственном коде, должен быть объявлен в пространстве имен в области видимости пространства имен. Объявление открытых типов в глобальной области видимости или вложенными в другой класс приведет к ошибке времени компиляции.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |private|Режим доступа по умолчанию. То же значение, что и в стандартном C++.|Нет|  
 |protected|То же значение, что и в стандартном C++, как в приложении или компоненте, так и в метаданных.|Да|  
 |public|То же значение, что и в стандартном C++.|Да|  
-|`public protected`- или -`protected public`|Защищенный доступ в метаданных, открытый в приложении или компоненте.|Да|  
+|`public protected` -or- `protected public`|Защищенный доступ в метаданных, открытый в приложении или компоненте.|Да|  
 |`protected private` или `private protected`|Невидим в метаданных; защищенный доступ в приложении или компоненте.||  
 |`internal` или `private public`|Член открыт в приложении или компоненте, но невидим в метаданных.|Нет|  
   

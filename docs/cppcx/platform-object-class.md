@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
-Определяет общее поведение для классов ссылок и структур ссылок в приложениях для Магазина Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
+Определяет общее поведение для классов и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Пространство имен:** Platform  
 
   
-## <a name="equals"></a>Метод Object::Equals
+## <a name="equals"></a> Метод Object::Equals
 Определяет, равен ли заданный объект текущему объекту.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Метод Object::GetHashCode
+## <a name="gethashcode"></a>  Object::GetHashCode Method
 Возвращает значение идентификатора `IUnknown`* для этого экземпляра, если это COM-объект, или вычисляемое хэш-значение, если это не COM-объект.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Метод Object::GetType
+## <a name="gettype"></a>  Метод Object::GetType
 Возвращает [Platform::Type](../cppcx/platform-type-class.md) объекта, который описывает тип среды выполнения объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -133,7 +136,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)   
  [Тип System] (.. /cppcx/Type-System-c-CX.md
   
-## <a name="ctor"></a>Конструктор Object::Object
+## <a name="ctor"></a>  Конструктор Object::Object
 Инициализирует новый экземпляр класса Object.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -142,7 +145,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Метод Object::ReferenceEquals
+## <a name="referenceequals"></a>  Метод Object::ReferenceEquals
 Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты совпадают; в противном случае — значение `false`.  
  
-## <a name="tostring"></a>Метод Object::ToString (C + +/ CX)
+## <a name="tostring"></a>  Метод Object::ToString (C + +/ CX)
 Возвращает строку, представляющую текущий объект.  
   
 ### <a name="syntax"></a>Синтаксис  

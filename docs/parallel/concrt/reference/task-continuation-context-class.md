@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,25 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs: C++
-helpviewer_keywords: task_continuation_context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b78688493bbb8d8bdad0696a7c8fcf467519000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="taskcontinuationcontext-class"></a>Класс task_continuation_context
-Класс `task_continuation_context` позволяет указать место продолжения выполнения задачи. Этот класс рекомендуется использовать из приложения Магазина Windows. При использовании других приложений контекст выполнения продолжения задачи определяется средой выполнения и не настраивается.  
+Класс `task_continuation_context` позволяет указать место продолжения выполнения задачи. Ключ используется только с помощью этого класса из приложения среды выполнения Windows. Для приложений Windows Runtime контекст выполнения продолжения задачи определяется средой выполнения и не настраивается.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,7 +64,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Пространство имен:** concurrency  
 
-## <a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a> get_current_winrt_context
  Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока WinRT.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -80,7 +84,7 @@ static task_continuation_context get_current_winrt_context();
  Этот метод аналогичен `use_current` метода, но он также может использоваться для машинного кода C++ без C + +/ CX поддержки расширения. Он предназначен для использования в сложных пользователей записи C + +/ CX независимой от кода библиотеки машинный код и вызывающие объекты среды выполнения Windows. Если эта функция необходима, мы не рекомендуем `use_current` метод, который доступен только для C + +/ CX клиентов.  
   
   
-##  <a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a> use_arbitrary 
 
  Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.  
   
@@ -94,11 +98,11 @@ static task_continuation_context use_arbitrary();
 ### <a name="remarks"></a>Примечания  
  Если используется этот контекст продолжения продолжение будет выполняться в контексте, который среда выполнения выбирает, даже если предшествующая задача является подразделением виду.  
   
- `use_arbitrary`можно использовать для отключения поведения по умолчанию для продолжение подразделения виду задачи, созданные в однопотоковое подразделение.  
+ `use_arbitrary` можно использовать для отключения поведения по умолчанию для продолжение подразделения виду задачи, созданные в однопотоковое подразделение.  
   
- Этот метод доступен только для приложений для магазина Windows.  
+ Этот метод доступен только в приложениях среды выполнения Windows.  
   
-##  <a name="use_current"></a>use_current 
+##  <a name="use_current"></a> use_current 
 
  Возвращает объект контекста продолжения задачи, представляющий контекст текущего выполнения.  
   
@@ -114,9 +118,9 @@ static task_continuation_context use_current();
   
  Значение, возвращаемое `use_current` может использоваться для указания на среду выполнения, продолжение должно выполняться в контексте записанного (STA и MTA), независимо от того, ли предшествующая задача является подразделением учитывать. Подразделение виду задача — это задача, которая распаковывает среды выполнения Windows `IAsyncInfo` интерфейса или задачу, которая является потомком такой задачи.  
   
- Этот метод доступен только для приложений для магазина Windows.  
+ Этот метод доступен только в приложениях среды выполнения Windows.  
   
-##  <a name="use_default"></a>use_default 
+##  <a name="use_default"></a> use_default 
 
  Создает контекст продолжения задачи по умолчанию.  
   
@@ -128,13 +132,13 @@ static task_continuation_context use_default();
  Контекст продолжения по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- Используется контекст по умолчанию, если вы не укажите контекст продолжения, при вызове `then` метода. В приложениях Windows для Windows 7 и ниже, а также настольных приложений для Windows 8 и более поздних версиях среда выполнения определяет, где будет выполняться продолжений задач. Тем не менее, в приложении для магазина Windows, контекст продолжения по умолчанию для продолжения задачи виду подразделения с является подразделением где `then` вызывается.  
+ Используется контекст по умолчанию, если вы не укажите контекст продолжения, при вызове `then` метода. В приложениях Windows для Windows 7 и ниже, а также настольных приложений для Windows 8 и более поздних версиях среда выполнения определяет, где будет выполняться продолжений задач. Тем не менее, в приложении среды выполнения Windows, контекст продолжения по умолчанию для продолжения задачи виду подразделения с является подразделением где `then` вызывается.  
   
  Подразделение виду задача — это задача, которая распаковывает среды выполнения Windows `IAsyncInfo` интерфейса или задачу, которая является потомком такой задачи. Таким образом Если запланировать продолжение задачи виду подразделения в STA среды выполнения Windows, продолжение будет выполняться в этом однопотоковое подразделение.  
   
  Продолжение не подразделения виду задачи будет выполняться в контексте, который среда выполнения выбирает.  
 
-## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution  
 Возвращает объект контекста продолжения задачи, представляющий контекст синхронного выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  

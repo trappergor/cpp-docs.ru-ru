@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -33,7 +34,8 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -46,16 +48,17 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 19bbe19ed2cf753d07cfe9c7e42fe533bc90a834
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 74f33e1f11eed9b1757da1062fab9b494d43b61f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 Выводит форматированные выходные данные в стандартный поток вывода и обеспечивает задание порядка, в котором параметры используются в строке форматирования.  
@@ -124,7 +127,7 @@ int _wprintf_p_l(
 |`_printf_p`, `_printf_p_l`|\<stdio.h>|  
 |`_wprintf_p`, `_wprintf_p_l`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Пример  
   

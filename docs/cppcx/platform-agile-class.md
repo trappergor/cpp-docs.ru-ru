@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 Представляет объект, имеющий MashalingBehavior = Standard, как объект Agile, который значительно снижает вероятность возникновения в среде выполнения исключений, связанных с потоками. `Agile<T>` позволяет объекту, отличному от Agile, вызывать тот же или другой поток или быть вызванным из этих потоков. Дополнительные сведения см. в разделе [работа с потоками и маршалинг](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -86,7 +89,7 @@ class Agile;
   
  **Заголовок:** agile.h  
 
-## <a name="ctor"></a>Конструктор Agile::Agile
+## <a name="ctor"></a>  Конструктор Agile::Agile
 Инициализирует новый экземпляр класса Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Примечания  
  Первая версия этого конструктора является конструктором по умолчанию. Вторая версия инициализирует новый экземпляра класса Agile из объекта, указанного параметром `object`. Третья версия является конструктором копирования. Четвертая версия является конструктором перемещения. Этот конструктор не может вызывать исключения.  
 
-## <a name="dtor"></a>Agile:: ~ Agile деструктор
+## <a name="dtor"></a>  Agile:: ~ Agile деструктор
 Ликвидирует текущий экземпляр класса Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -126,7 +129,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Примечания  
  Этот деструктор также освобождает объект, представленный текущим объектом Agile.  
   
-## <a name="get"></a>Метод Agile::Get
+## <a name="get"></a>   Agile::Get Method
 Возвращает дескриптор объекта, представленного текущим объектом Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -142,7 +145,7 @@ Agile(Agile<T>&& object);
   
  Тип возвращаемого значения фактически является скрытым внутренним типом. Удобный способ сохранения возвращаемого значения — присвоить его переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Метод Agile::GetAddressOf
+## <a name="getaddressof"></a>  Agile::GetAddressOf Method
 Повторно инициализирует текущий объект Agile и возвращает адрес дескриптора для объекта типа `T`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Примечания  
  Эта операция освобождает текущее представление объекта типа `T`, если имеются; повторно инициализирует члены объекта Agile данных; получает текущий контекст потока и затем возвращает адрес переменной дескриптор для объекта, который может представлять Объект, отличный от agile. Чтобы вызвать экземпляр класса Agile представлял объект, используйте оператор присваивания ([Agile::operator =](#operator-assign)) для назначения объекта экземпляру класса Agile.  
 
-## <a name="getaddressofforinout"></a>Метод Agile::GetAddressOfForInOut
+## <a name="getaddressofforinout"></a>  Agile::GetAddressOfForInOut Method
 Возвращает адрес дескриптора объекта, представленного текущим объектом Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Примечания  
  Эта операция получает текущий контекст потоков, затем возвращает адрес дескриптора основного объекта.  
 
-## <a name="release"></a>Метод Agile::Release
+## <a name="release"></a>  Метод Agile::Release
 Отменяет базовый объект и контекст текущего объекта Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Примечания  
  Выполняется отмена базового объекта и контекста текущего объекта Agile, если они существуют, а затем значению объекта Agile присваивается NULL.  
 
-## <a name="operator-arrow"></a>Agile::operator -&gt; оператор
+## <a name="operator-arrow"></a>  Agile::operator-&gt; Operator
 Извлекает дескриптор объекта, представленного текущим объектом Agile.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -214,7 +217,7 @@ const throw();
   
  Этот оператор фактически возвращает скрытый внутренний тип. Удобный способ сохранения возвращаемого значения — присвоить его переменной, объявленной с **автоматически** ключевое слово выведения типа.  
 
-## <a name="operator-assign"></a>Agile::operator =-оператор
+## <a name="operator-assign"></a>  Agile::operator= Operator
 Присваивает указанный объект текущему объекту Agile.  
   
 ## <a name="syntax"></a>Синтаксис  

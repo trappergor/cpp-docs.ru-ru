@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>Приведение (C++/CX)
 Четыре различных оператора приведения применяются к типам среды выполнения Windows: [оператор static_cast](../cpp/static-cast-operator.md), [оператор dynamic_cast](../cpp/dynamic-cast-operator.md), **оператор safe_cast**, и [ Оператор reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` и `static_cast` вызывают исключение, если преобразование не может быть выполнено; [оператор static_cast](../cpp/static-cast-operator.md) также выполняет проверку типов во время компиляции. `dynamic_cast` возвращает значение `nullptr` , если не удается преобразовать тип. Хотя `reinterpret_cast` возвращает значение, отличное от NULL, оно может быть неверным. По этой причине рекомендуется не использовать `reinterpret_cast` , если нет уверенности, что приведение завершится успешно. Кроме того, мы рекомендуем не использовать C-стиль приведения в C + +/ CX код, поскольку это идентично `reinterpret_cast`.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- Используйте `dynamic_cast` при приведении объекта (в частности, hat `^`) к более производному типу, когда предполагается, целевой объект иногда может быть `nullptr` или когда приведение может завершиться ошибкой, и необходимо обработать это условие как обычный код путь, а не исключение. Например, в шаблоне проекта **Пустое приложение для Магазина Windows** метод `OnLaunched` в `app.xamp.cpp` использует `dynamic_cast` для проверки того, есть ли содержимое в окне приложения. Не является ошибкой при отсутствии содержимого — это ожидаемое условие. `Windows::Current::Content` является `Windows::UI::XAML::UIElement` , а преобразование выполняется в тип `Windows::UI.XAML::Controls::Frame`, который в иерархии наследования является более производным типом.  
+ Используйте `dynamic_cast` при приведении объекта (в частности, hat `^`) к более производному типу, когда предполагается, целевой объект иногда может быть `nullptr` или когда приведение может завершиться ошибкой, и необходимо обработать это условие как обычный код путь, а не исключение. Например, в **пустое приложение (универсальные приложения Windows)** шаблона проекта, `OnLaunched` метод в `app.xamp.cpp` использует `dynamic_cast` для проверки наличия содержимое окна приложения. Не является ошибкой при отсутствии содержимого — это ожидаемое условие. `Windows::Current::Content` является `Windows::UI::XAML::UIElement` , а преобразование выполняется в тип `Windows::UI.XAML::Controls::Frame`, который в иерархии наследования является более производным типом.  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

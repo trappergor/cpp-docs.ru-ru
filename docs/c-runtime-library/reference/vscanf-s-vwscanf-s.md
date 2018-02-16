@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vscanf_s
 - vwscanf_s
@@ -26,18 +27,20 @@ f1_keywords:
 - _vtscanf_s
 - vscanf_s
 - vwscanf_s
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 320d08add01fa6ee277c6f1d676b076ded65f377
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2cc430ec34cd294de0cbabc8553ddda4fedce9e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vscanfs-vwscanfs"></a>vscanf_s, vwscanf_s
 Считывает отформатированные данные из стандартного входного потока. Это версии функций [vscanf, vwscanf](../../c-runtime-library/reference/vscanf-vwscanf.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -96,7 +99,7 @@ int vwscanf_s(
 |`vscanf_s`|\<stdio.h>|  
 |`wscanf_s`|\<stdio.h> или \<wchar.h>|  
   
- Консоль не поддерживается в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout` и `stderr`, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
   
 ## <a name="example"></a>Пример  
   

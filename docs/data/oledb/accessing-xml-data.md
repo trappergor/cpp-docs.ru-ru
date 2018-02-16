@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>Доступ к данным XML
 Существует два отдельных метода получения XML-данных из источника данных: одна использует [CStreamRowset](../../data/oledb/cstreamrowset-class.md) и для других целей [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md).  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- Обычно при вызове `CCommand::Open` (указание, например, `CRowset` как `TRowset` класса), он получает `IRowset` указателя. `ICommand::Execute`Возвращает `IRowset` указатель, который хранится в `m_spRowset` членом `CRowset` объекта. Такие методы, как `MoveFirst`, `MoveNext`, и `GetData` используют этот указатель для получения данных.  
+ Обычно при вызове `CCommand::Open` (указание, например, `CRowset` как `TRowset` класса), он получает `IRowset` указателя. `ICommand::Execute` Возвращает `IRowset` указатель, который хранится в `m_spRowset` членом `CRowset` объекта. Такие методы, как `MoveFirst`, `MoveNext`, и `GetData` используют этот указатель для получения данных.  
   
  В отличие от этого, при вызове `CCommand::Open` (но указать `CStreamRowset` как `TRowset` класса), `ICommand::Execute` возвращает `ISequentialStream` указатель, который хранится в `m_spStream` данными-членом [CStreamRowset](../../data/oledb/cstreamrowset-class.md). Затем используйте `Read` метод для извлечения данных (строка в Юникоде) в формате XML. Пример:  
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  Поддержка XML с использованием `CStreamRowset` работает только с SQL Server 2000 и требует наличия поставщика OLE DB для SQL Server 2000 (устанавливается с компонентами MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Получение XML-данных с помощью CXMLAccessor  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) позволяет обращаться к данным из источника данных как строковые данные при наличии отсутствует информация о схеме хранилища данных. `CXMLAccessor`работает аналогично `CDynamicStringAccessorW` за исключением того, что первый преобразует все данные из хранилища данных в виде XML-данных (с тегом). Имена тегов XML как можно точнее соответствовать имена столбцов в хранилище данных.  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md) позволяет обращаться к данным из источника данных как строковые данные при наличии отсутствует информация о схеме хранилища данных. `CXMLAccessor` работает аналогично `CDynamicStringAccessorW` за исключением того, что первый преобразует все данные из хранилища данных в виде XML-данных (с тегом). Имена тегов XML как можно точнее соответствовать имена столбцов в хранилище данных.  
   
  Используйте `CXMLAccessor` как и любого другого метода доступа класса, передавая его как параметр шаблона для `CCommand` или `CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

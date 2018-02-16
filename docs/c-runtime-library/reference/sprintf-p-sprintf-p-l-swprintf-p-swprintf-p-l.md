@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Запись форматированных данных в строку с возможностью указать порядок использования параметров в строке формата.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` — это двухбайтовая версия `_sprintf_p`; аргументы указателя для `_swprintf_p` представляют собой двухбайтовые строки. Обнаружение ошибок кодирования в `_swprintf_p` может отличаться от обнаружения ошибок в `_sprintf_p`. `_swprintf_p` и `fwprintf_p` ведут себя одинаково за тем исключением, что `_swprintf_p` записывает выходные данные в строку, а не в назначение типа `FILE`, а `_swprintf_p` требует настройки параметра `count`, определяющего максимальное количество символов для записи. Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
- `_sprintf_p` возвращает число байтов, сохраненных в `buffer`, без учета завершающего символа `NULL`. `_swprintf_p`Возвращает число расширенных символов, сохраненных в `buffer`, не считая символы окончания `NULL` расширенный символ. Если `buffer` или `format` является пустым указателем или строка форматирования содержит недопустимые символы форматирования, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
+ `_sprintf_p` возвращает число байтов, сохраненных в `buffer`, без учета завершающего символа `NULL`. `_swprintf_p` Возвращает число расширенных символов, сохраненных в `buffer`, не считая символы окончания `NULL` расширенный символ. Если `buffer` или `format` является пустым указателем или строка форматирования содержит недопустимые символы форматирования, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   

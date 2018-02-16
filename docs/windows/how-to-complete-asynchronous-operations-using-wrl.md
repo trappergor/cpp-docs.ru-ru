@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Практическое руководство. Завершение асинхронных операций с использованием WRL
 В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для запуска асинхронных операций и выполнения работы при завершении операций.  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  Следующие действия запускают асинхронный таймер и ожидают окончания его действия. Далее приведен полный пример.  
   
 > [!WARNING]
->  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` недоступны в приложении универсальной платформы Windows. Дополнительные сведения о типах и функции, которые можно использовать в приложении универсальной платформы Windows см. в разделе [функции CRT не поддерживаются с параметром/zw](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [приложений Win32 и COM для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows (UWP), в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` не доступны из приложения UWP. Дополнительные сведения о типах и функции, которые можно использовать в приложении UWP в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) и [Win32 и COM для приложений UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
   

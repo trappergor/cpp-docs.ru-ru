@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -37,7 +38,8 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -54,23 +56,24 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 868d9d3fc206931b20858ee360c2380cc5f03d61
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Находит следующий токен в строке с использованием текущего или переданного языкового стандарта. Эти версии [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](../../c-runtime-library/reference/strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).  
   
 > [!IMPORTANT]
->  Функции `_mbstok_s` и `_mbstok_s_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbstok_s` и `_mbstok_s_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -120,10 +123,10 @@ unsigned char* _mbstok_s(
 *str*  
 Строка, содержащая токен или токены для поиска.  
   
-*разделители*  
+*delimiters*  
 Набор символов-разделителей для использования.  
   
-*контекст*  
+*context*  
 Используется для хранения данных о положении между вызовами функции.  
   
 *locale*  
@@ -135,7 +138,7 @@ unsigned char* _mbstok_s(
   
 ### <a name="error-conditions"></a>Условия ошибок  
   
-|*str*|*разделители*|*контекст*|Возвращаемое значение|`errno`|  
+|*str*|*delimiters*|*context*|Возвращаемое значение|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
 |`NULL`|any|указатель на указатель NULL|`NULL`|`EINVAL`|  
 |any|`NULL`|any|`NULL`|`EINVAL`|  

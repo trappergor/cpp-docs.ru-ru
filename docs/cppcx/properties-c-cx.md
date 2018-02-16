@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 446f2c4f18f68a4a52614397b697409d34b958de
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="properties-ccx"></a>Свойства (C++/CX)
 Типы среды выполнения Windows предоставляют открытые данные в виде свойств. Клиентский код обращается к свойству как открытым данным-членам. Внутренне свойство реализуется в виде блока, содержащего метод доступа get или set, или оба эти метода. С помощью методов доступа можно выполнять дополнительные действия до или после получения значения; например, можно вызывать события или выполнять проверки.  

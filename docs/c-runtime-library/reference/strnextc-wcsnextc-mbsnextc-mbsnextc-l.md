@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strnextc
 - _mbsnextc_l
@@ -38,7 +39,8 @@ f1_keywords:
 - _ftcsnextc
 - _strnextc
 - wcsnextc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnextc function
 - _tcsnextc function
@@ -51,22 +53,23 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55127289494e6ecd1260078f76ece3d3ae41c31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c77954cd7eefaa1e739622af4ccf1b3d7a43b7ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 Находит следующий символ в строке.  
   
 > [!IMPORTANT]
->  Функции `_mbsnextc` и `_mbsnextc_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsnextc` и `_mbsnextc_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -110,7 +113,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc`и `_wcsnextc` одного байт символа строки и версий строки расширенных символов `_mbsnextc`. `_wcsnextc` возвращает целочисленное значение следующего расширенного символа в `string`; `_strnextc` возвращает целочисленное значение следующего однобайтового символа в `string`. `_strnextc` и `_wcsnextc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
+ `_strnextc` и `_wcsnextc` одного байт символа строки и версий строки расширенных символов `_mbsnextc`. `_wcsnextc` возвращает целочисленное значение следующего расширенного символа в `string`; `_strnextc` возвращает целочисленное значение следующего однобайтового символа в `string`. `_strnextc` и `_wcsnextc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsnextc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   

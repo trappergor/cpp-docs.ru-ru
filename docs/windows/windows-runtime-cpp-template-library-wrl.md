@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
-Среда выполнения C++ шаблон библиотеки Windows (WRL) — это библиотека шаблонов, которая предоставляет низкоуровневый способ создания и использовать компоненты среды выполнения Windows.  
+Библиотека шаблонов C++ среды выполнения Windows (WRL) — это библиотека шаблонов, которая предлагает низкоуровневый способ создания и использования компонентов среды выполнения Windows.  
   
 ## <a name="benefits"></a>Преимущества  
  Библиотека шаблонов C++ среды выполнения Windows дает возможность упрощает реализацию и использование модели объектов компонентов (COM). Она предоставляет такие методы обслуживания, как подсчет ссылок для управления временем существования объектов и проверка значений `HRESULT` для определения успеха или сбоя операции. Для успешного использования библиотека шаблонов C++ среды выполнения Windows, необходимо строго следовать следующим правила и методам.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/03/2018
  Ниже приведены некоторые ресурсы, которые помогут вам начать работу прямо сейчас с библиотека шаблонов C++ среды выполнения Windows.  
   
  [Библиотека среды выполнения Windows (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- В этом видео Channel 9 Дополнительные сведения о том, как библиотека шаблонов C++ среды выполнения Windows помогает записывают приложений универсальной платформы Windows и как создавать и использовать компоненты среды выполнения Windows.  
+ В этом видео Channel 9 Дополнительные сведения о том, как библиотека шаблонов C++ среды выполнения Windows помогает записи приложения универсальной платформы Windows (UWP) и как создавать и использовать компоненты среды выполнения Windows.  
   
  [Как: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для инициализации среды выполнения Windows и активация и использование компонента среды выполнения Windows.  
@@ -57,10 +59,10 @@ ms.lasthandoff: 01/03/2018
  Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для подписки и обрабатывать события объекта среды выполнения Windows.  
   
  [Пошаговое руководство: Создание компонента среды выполнения Windows основные](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового компонента среды выполнения Windows, который добавляет два числа. Также демонстрируется создание событий и использование компонента из приложения универсальной платформы Windows, использующего JavaScript.  
+ Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового компонента среды выполнения Windows, который добавляет два числа. Также демонстрируется создание событий и использование компонента из приложения UWP, использующего JavaScript.  
   
- [Пошаговое руководство. Создание приложения для Магазина Windows с использованием WRL и Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Сведения о создании приложения универсальной платформы Windows, который использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Сведения о создании приложения UWP, в котором используется [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Как: создание классического компонента COM](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового COM-компонента и описание простого способа регистрации и использования COM-компонент из классического приложения.  
@@ -72,10 +74,10 @@ ms.lasthandoff: 01/03/2018
  Демонстрация использования пользовательских компонент среды выполнения Windows из WRL путем создания IDL-файла из метаданных WINMD.  
   
  [Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Показано, как использовать [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) и [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) интерфейсы вместе с задачами отправки запросов HTTP GET и POST к веб-службе в приложении универсальной платформы Windows.  
+ Показано, как использовать [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) и [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) интерфейсы вместе с задачами отправки запросов HTTP GET и POST к веб-службе в приложении UWP.  
   
  [Пример приложения Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Использует `HttpRequest` класс, который определен в [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) в контексте завершения приложения универсальной платформы Windows.  
+ Использует `HttpRequest` класс, который определен в [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) в контексте завершения приложения UWP.  
   
  [Создание компонента DLL среды выполнения Windows с использованием примера C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания внутрипроцессного компонента библиотеки DLL и его использования в C + +/ CX, JavaScript и C#.  
@@ -89,7 +91,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Библиотека шаблонов C++ среды выполнения Windows, по сравнению с библиотекой ATL  
  Библиотека шаблонов C++ среды выполнения Windows напоминает Active Template Library (ATL), поскольку его можно использовать для создания небольших, быстрых COM-объектов. Библиотека шаблонов C++ среды выполнения Windows и ATL также используются общие понятия, например определение объектов в модулях, явная регистрация интерфейсов и открытое создание объектов с помощью фабрик. Могут быть уверены, что справитесь с библиотека шаблонов C++ среды выполнения Windows, если вы знакомы с ATL.  
   
- Библиотека шаблонов C++ среды выполнения Windows поддерживает функциональные возможности модели COM, который требуется для приложений универсальной платформы Windows. Поэтому она отличается от библиотеки ATL, поскольку в последней нет непосредственной поддержки таких функций модели COM, как:  
+ Библиотека шаблонов C++ среды выполнения Windows поддерживает функциональные возможности модели COM, который требуется для приложений UWP. Поэтому она отличается от библиотеки ATL, поскольку в последней нет непосредственной поддержки таких функций модели COM, как:  
   
 -   статистическая обработка  
   

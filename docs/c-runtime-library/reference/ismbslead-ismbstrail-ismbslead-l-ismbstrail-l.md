@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -36,7 +37,8 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -47,22 +49,23 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a3d44722daa76e7409a43887f91d127c732dd6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Выполняет контекстно-зависимые тесты для старших и младших байтов многобайтовой символьной строки и определяет, указывает ли указатель данной подстроки старший или младший байт.  
   
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -98,7 +101,7 @@ int _ismbstrail_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_ismbslead`Возвращает значение -1, если символ является старшим байтом и `_ismbstrail` возвращает -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если один из аргументов имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `NULL` и устанавливают для `errno` значение `EINVAL`.  
+ `_ismbslead` Возвращает значение -1, если символ является старшим байтом и `_ismbstrail` возвращает -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если один из аргументов имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `NULL` и устанавливают для `errno` значение `EINVAL`.  
   
 ## <a name="remarks"></a>Примечания  
  `_ismbslead` и `_ismbstrail` выполняются медленнее, чем версии `_ismbblead` и `_ismbbtrail`, так как учитывает контекст строки.  
