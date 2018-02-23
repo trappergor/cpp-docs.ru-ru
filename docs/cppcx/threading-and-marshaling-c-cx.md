@@ -2,7 +2,6 @@
 title: "Работа с потоками и маршалинг (C + +/ CX) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/30/2016
-ms.prod: windows-client-threshold
 ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +20,11 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d62da6fafccecc8099e3f9611946d1c89a40389
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b1544f18d0d5206e178cf42705d9567fad2423c
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="threading-and-marshaling-ccx"></a>Работа с потоками и маршалинг (C++/CX)
 В большинстве случаев экземпляры классов среды выполнения Windows, как и стандартные объекты C++, может осуществляться из любого потока. Такие классы называются "гибкими". Тем не менее небольшое количество классов среды выполнения Windows, поставляемые с Windows не являются гибкими и должны использоваться скорее как COM-объектов, чем стандартные объекты C++. Для работы с негибкими классами не нужно быть специалистом по COM, однако нужно учитывать модель потоков классов и их механизмы маршалинга. В этой статье приведены общие сведения и инструкции по реализации редких сценариев, в которых приходится использовать экземпляры негибких классов.  

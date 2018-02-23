@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Справочные материалы по ассемблеру Microsoft Macro Assembler
 Microsoft Macro Assembler (MASM) предоставляет несколько преимуществ над встроенной сборки. MASM содержит макрос языка, который имеет функции, такие как обработка строк циклическую обработку, арифметические и текста. MASM также предоставляет больший контроль над оборудования, так как он поддерживает наборы инструкций 386 486 и процессорах Pentium. С помощью MASM, также могут снизить нагрузку на время и память.  
@@ -54,7 +54,7 @@ Microsoft Macro Assembler (MASM) предоставляет несколько �
  Сведения о том, как создавать выходные данные файлы для [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  Ссылки на различные области документацию по Visual Studio и Visual C++.  
   
 ## <a name="see-also"></a>См. также  

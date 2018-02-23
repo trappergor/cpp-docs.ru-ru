@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Регулярные MFC библиотеки DLL, статически компонуемые с MFC
 Обычный, MFC DLL, статически компонуемые с MFC является библиотекой DLL, внутренне использует MFC, а экспортированные функции в DLL может быть вызван MFC или не MFC исполняемых файлов. Как из названия, этот вид библиотек DLL построен с использованием статическая компоновка версии библиотеки MFC. Функции обычно экспортируются из библиотеки DLL MFC, с помощью стандартного интерфейса C обычного. Пример того, как записи, создания и использования регулярных DLL MFC, см. в образце [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  Библиотека DLL, статически компонуемые с MFC также динамически нельзя связать с общей библиотеки DLL MFC. Библиотека DLL, статически компонуемые с MFC динамически привязан к приложению так же, как и любой другой DLL; приложение связывается с ней так же, как и любой другой DLL.  
   
- Стандартные библиотеки статической компоновки MFC присваиваются в соответствии с соглашением, описанным в [соглашения об именовании библиотек DLL MFC](../build/naming-conventions-for-mfc-dlls.md). Тем не менее с MFC версии 3.0 и более поздней версии, он больше не требуется вручную указывать компоновщику версии библиотеки MFC, необходимые в. Вместо этого, файлы заголовков MFC автоматически определять определяет правильную версию библиотеки MFC на основе препроцессора, таких как  **\_отладки** или **_UNICODE**. Файлы заголовков MFC добавьте/DEFAULTLIB директивы для ссылок в определенной версии библиотеки MFC.  
+ Стандартные библиотеки статической компоновки MFC присваиваются в соответствии с соглашением, описанным в [соглашения об именовании библиотек DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions). Тем не менее с MFC версии 3.0 и более поздней версии, он больше не требуется вручную указывать компоновщику версии библиотеки MFC, необходимые в. Вместо этого, файлы заголовков MFC автоматически определять определяет правильную версию библиотеки MFC на основе препроцессора, таких как  **\_отладки** или **_UNICODE**. Файлы заголовков MFC добавьте/DEFAULTLIB директивы для ссылок в определенной версии библиотеки MFC.  
   
 ## <a name="what-do-you-want-to-do"></a>Выберите действие  
   

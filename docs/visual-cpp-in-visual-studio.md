@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
@@ -75,7 +75,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 ## <a name="writing-applications-in-c"></a>Создание приложений на языке C++
 
 [Универсальные приложения Windows](windows/universal-windows-apps-cpp.md)  
-Руководства и справочные материалы в Центре разработчика Windows. Дополнительные сведения о разработке приложений для Магазина Windows см. в разделе [Разработка приложений для Магазина Windows с помощью Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) и [Схема создания приложений для Магазина Windows на С++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Руководства и справочные материалы в Центре разработчика Windows. Сведения о разработке приложений UWP см. в разделах [Введение в универсальную платформу Windows](/windows/uwp/get-started/universal-application-platform-guide) и [Создание первого приложения UWP на C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Классические приложения (C++)](windows/desktop-applications-visual-cpp.md)  
 Создание классических приложений, включающих цикл обработки сообщений и обратные вызовы.
@@ -131,7 +131,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 Массово-параллельные алгоритмы, выполняемые в GPU.
 
 [Библиотека шаблонов среды выполнения Windows (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] .
+Приложения и компоненты универсальной платформы Windows (UWP).
 
 [Программирование .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Программирование для общеязыковой среды выполнения (CLR).

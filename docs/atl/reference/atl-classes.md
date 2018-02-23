@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL-классы
 Active Template Library (ATL) содержит следующие классы. Для поиска определенного класса по категории, в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).  
@@ -53,7 +56,7 @@ Active Template Library (ATL) содержит следующие классы. 
 |[CAtlPreviewCtrlImpl](../../atl/reference/catlpreviewctrlimpl-class.md)|Этот класс представляет собой реализацию ATL окна, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.|atlpreviewctrlimpl.h|  
 |[CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md)|Этот класс реализует службу.|atlbase.h|  
 |[CAtlTemporaryFile](../../atl/reference/catltemporaryfile-class.md)|Этот класс предоставляет методы для создания и использования временного файла.|atlfile.h|  
-|[Catltransactionmanager.](../../atl/reference/catltransactionmanager-class.md)|Этот класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).|atltransactionmanager.h|  
+|[CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)|Этот класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).|atltransactionmanager.h|  
 |[CAtlWinModule](../../atl/reference/catlwinmodule-class.md)|Этот класс обеспечивает поддержку компоненты ATL управления окнами.|atlbase.h|  
 |[CAutoPtr](../../atl/reference/cautoptr-class.md)|Этот класс представляет объект интеллектуального указателя.|atlbase.h|  
 |[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)|Этот класс предоставляет методы, используемые при создании массива интеллектуальных указателей.|atlbase.h|  
@@ -216,7 +219,7 @@ Active Template Library (ATL) содержит следующие классы. 
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|Этот класс предоставляет реализацию по умолчанию `ISupportErrorInfo Interface` интерфейс и может использоваться, если только один интерфейс приводит к возникновению ошибки на объект.|atlcom.h|  
 |[Интерфейс IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)|Этот интерфейс предоставляет методы для настройки пула потоков.|файлов atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|Этот класс реализует **IUnknown** и предоставляет реализацию по умолчанию [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), и [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)интерфейсы.|atlctl.h|  
-|[Интерфейс IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`Представляет интерфейс, реализуемый клиентами [CWorkerThread](../../atl/reference/cworkerthread-class.md) класса.|файлов atlutil.h|  
+|[Интерфейс IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` Представляет интерфейс, реализуемый клиентами [CWorkerThread](../../atl/reference/cworkerthread-class.md) класса.|файлов atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|Этот класс предоставляет оболочки для **CreateWindow** и **CreateWindowEx**.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|Этот класс адаптера аргумент позволяет либо `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется с точки зрения указатели.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|Этот класс адаптера аргумент позволяет либо имена ресурсов (`LPCTSTR`s) или идентификаторы ресурсов (**UINT**s) должны быть переданы функции, не требуя вызывающего объекта, чтобы преобразовать идентификатор в строку с помощью **MAKEINTRESOURCE** макрос.|atlwin.h|  

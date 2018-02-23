@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>Совместимость
 Универсальная библиотека времени выполнения C (UCRT) поддерживает большую часть стандартной библиотеки C, необходимой для соответствия стандарту C++. Она реализует библиотеку C99 (ISO/IEC 9899:1999) за исключением макросов универсального типа, определенных в \<tgmath.h>, и строгой совместимости типов в \<complex.h>. Библиотека UCRT также реализует большое подмножество библиотеки C POSIX.1 (ISO/IEC 9945-1:1996, интерфейс прикладного программирования системы POSIX), но не полностью соответствует какому-либо стандарту POSIX.  Кроме того, UCRT реализует несколько функций и макросов Майкрософт, которые не входят в стандарт.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/29/2018
   
 |Заголовок|Описание:|  
 |-----------|-----------------|  
-|[Приложения для Магазина Windows, среда выполнения Windows и среда выполнения C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Описывает, когда процессы UCRT несовместимы с универсальными приложениями Windows или приложениями Магазина Windows.|  
+|[Приложения UWP, среда выполнения Windows и среда выполнения C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Описывает, когда подпрограммы UCRT несовместимы с универсальными приложениями для Windows или приложениями Microsoft Store.|  
 |[Совместимость ANSI с C](../c-runtime-library/ansi-c-compliance.md)|Описывает именования, соответствующие стандартам, в UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Рекомендации по переносу программ в UNIX.|  
 |[Платформы Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Перечисление операционных систем, поддерживающих CRT.|  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 10/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: ae749fa161dba2957f3e621ce42c610153594e66
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b46ee18fce79c0e1954d37a87f6380c73870fa12
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="custom-build-step-properties-linux-c"></a>Свойства настраиваемого этапа сборки (Linux C++)
 
@@ -29,4 +30,4 @@ ms.lasthandoff: 01/03/2018
 Вывод | Выходной файл, создаваемый пользовательским действием сборки. Этот параметр является обязательным для правильной работы добавочных сборок.
 Дополнительные зависимости | Разделенный точками с запятой список каких-либо дополнительных входных файлов для пользовательского действия сборки.
 Выполнить после и выполнить до | Эти параметры определяют, когда пользовательское действие сборки выполняется в процессе сборки относительно перечисленных целевых объектов. Наиболее часто в число целевых объектов входят BuildGenerateSources, BuildCompile и BuildLink, поскольку они представляют основные этапы процесса сборки. Другие часто используемые целевые объекты: Midl, CLCompile и Link.
-Обрабатывать выходные данные как содержимое | Этот параметр имеет значение только для приложений Магазина Windows и Windows Phone, включающих все файлы содержимого в пакет .appx.
+Обрабатывать выходные данные как содержимое | Этот параметр относится только к приложениям Microsoft Store и Windows Phone, которые включают все файлы содержимого в пакете APPX.
