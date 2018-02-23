@@ -96,7 +96,6 @@
 ### [Импорт и экспорт встраиваемых функций](importing-and-exporting-inline-functions.md)
 ## [Технология Active и библиотеки DLL](active-technology-and-dlls.md)
 ## [Автоматизация в библиотеке DLL](automation-in-a-dll.md)
-## [Соглашения об именовании библиотек DLL MFC](naming-conventions-for-mfc-dlls.md)
 ## [Вызов функций библиотек DLL из приложений Visual Basic](calling-dll-functions-from-visual-basic-applications.md)
 # [Внутренние объекты компилятора и язык ассемблера](../intrinsics/TOC.md)
 # [Создание кода C/C++ в командной строке](building-on-the-command-line.md)
