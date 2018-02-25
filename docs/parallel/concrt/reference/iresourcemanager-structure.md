@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs: C++
-helpviewer_keywords: IResourceManager structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iresourcemanager-structure"></a>Структура IResourceManager
 Интерфейс для диспетчера ресурсов среды выполнения с параллелизмом. Это интерфейс, по которому планировщики взаимодействуют с диспетчером ресурсов.  
@@ -70,7 +74,7 @@ struct IResourceManager;
   
  **Пространство имен:** concurrency  
   
-##  <a name="createnodetopology"></a>Метод IResourceManager::CreateNodeTopology  
+##  <a name="createnodetopology"></a>  IResourceManager::CreateNodeTopology Method  
  Присутствует только в отладочной сборки среды выполнения, этот метод является тестового обработчика, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии без необходимости фактического оборудования, соответствующего конфигурации. Этот метод возвращает с коммерческие сборки среды выполнения, не выполняя никаких действий.  
   
 ```
@@ -99,7 +103,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) создается, если этот метод вызывается, когда другие планировщики существует в процессе.  
   
-##  <a name="getavailablenodecount"></a>Метод IResourceManager::GetAvailableNodeCount  
+##  <a name="getavailablenodecount"></a>  Метод IResourceManager::GetAvailableNodeCount  
  Возвращает количество узлов, доступных диспетчеру ресурсов.  
   
 ```
@@ -109,7 +113,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество узлов, доступных диспетчеру ресурсов.  
   
-##  <a name="getfirstnode"></a>Метод IResourceManager::GetFirstNode  
+##  <a name="getfirstnode"></a>  IResourceManager::GetFirstNode Method  
  Возвращает первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
 ```
@@ -119,14 +123,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
-##  <a name="iresourcemanager__osversion"></a>Перечисление IResourceManager::OSVersion  
+##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
  Перечислимый тип, представляющий версию операционной системы.  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>Метод IResourceManager::Reference  
+##  <a name="reference"></a>  Метод IResourceManager::Reference  
  Увеличивает значение счетчика ссылок на экземпляр диспетчера ресурсов.  
   
 ```
@@ -136,7 +140,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Счетчик ссылок.  
   
-##  <a name="registerscheduler"></a>Метод IResourceManager::RegisterScheduler  
+##  <a name="registerscheduler"></a>  Метод IResourceManager::RegisterScheduler  
  Регистрирует диспетчером ресурсов планировщику. После регистрации планировщика, его необходимо связаться с диспетчером ресурсов с помощью `ISchedulerProxy` интерфейс, который возвращается.  
   
 ```
@@ -160,7 +164,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  Метод создает `invalid_argument` исключения Если параметр `pScheduler` имеет значение `NULL` или, если параметр `version` не является допустимой версией интерфейс связи.  
   
-##  <a name="release"></a>Метод IResourceManager::Release  
+##  <a name="release"></a>  Метод IResourceManager::Release  
  Уменьшает счетчик ссылок на экземпляр диспетчера ресурсов. Диспетчер ресурсов уничтожается, когда число ссылок становится равен `0`.  
   
 ```

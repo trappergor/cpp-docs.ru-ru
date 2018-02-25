@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: output streams [C++], member functions
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: df21f473659577a7175b6a44033ee4d19fb28fee
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="output-file-stream-member-functions"></a>Функции-члены потока выходного файла
 Функции-члены потока вывода делятся на три типа: эквивалентные манипуляторам, выполняющие неформатированные операции записи и изменяющие состояние потока другим образом и при этом не имеющие эквивалентных манипуляторов или операторов вставки. Для последовательного форматированного вывода можно использовать только операторы вставки и манипуляторы. Для двоичного дискового вывода с произвольным доступом следует использовать другие функции-члены с операторами вставки или без них.  

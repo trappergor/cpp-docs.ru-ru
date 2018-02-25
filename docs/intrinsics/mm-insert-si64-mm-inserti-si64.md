@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - insertq instruction
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc85f56660702afe1c05f3626b3b28b0b566dbd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Блок, относящийся только к системам Microsoft**  
@@ -51,13 +54,13 @@ __m128i _mm_inserti_si64(
  [in] `Source1`  
  128-битовое поле с входных данных в его нижней 64 бита, в которые будет вставлено.  
   
- [in]`Source2`  
+ [in]  `Source2`  
  128-битовое поле, с данными для вставки в низкая разряды.  Для `_mm_insert_si64`, также содержит дескриптор поля в его битов высокого уровня.  
   
- [in]`Length`  
+ [in]  `Length`  
  Целочисленная константа, указывающее длину этого поля для вставки.  
   
- [in]`Index`  
+ [in]  `Index`  
  Целочисленная константа, указывающее индекс младший значащий бит поля, в которую будут вставляться данные.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -129,5 +132,5 @@ result3 = 0xfffffffff3210fff
  Авторские права, 2007 дополнительных устройств Micro, Inc. Все права защищены. Воспроизвести с разрешения Дополнительно Micro устройств, Inc.  
   
 ## <a name="see-also"></a>См. также  
- [_mm_extract_si64 _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
+ [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   
  [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

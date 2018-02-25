@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Определяет классы шаблонов и функции, которые программы C++ могут использовать для инкапсуляции и обработки различных культурных контекстов, определяющий представление и формат числовых, денежных и календарных данных, включая поддержку интернационализации для классификации символов и сортировки строк.  
@@ -65,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |[collate](../standard-library/collate-class.md)|Класс шаблона сортировки, предоставляющий аспект для обработки преобразований сортировки строк.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Производный класс шаблона, описывающий объект, который можно использовать как аспект сортировки данного языкового стандарта, предоставляющий возможность извлечения данных касательно сортировки строк по соответствующему культурному региону.|  
 |[ctype](../standard-library/ctype-class.md)|Класс шаблона, предоставляющий аспект для классификации символов, преобразования из верхнего регистра в нижний и наоборот, а также из исходного набора символов с набор символов, применяемый соответствующим языковым стандартом, и наоборот.|  
-|[CType\<char >](../standard-library/ctype-char-class.md)|Класс, который является явной специализацией шаблона класса **ctype\<CharType**> ввода `char`, описывающий объект, который можно использовать в качестве аспекта языкового стандарта для характеристик различных свойств символа типа `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Класс, который является явной специализацией шаблона класса **ctype\<CharType**> ввода `char`, описывающий объект, который можно использовать в качестве аспекта языкового стандарта для характеристик различных свойств символа типа `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Базовый класс для класса ctype, используемый для определения типов перечисления, применяемых для классификации или тестирования символов по отдельности или целыми диапазонами.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта ctype заданного языкового стандарта, позволяющий классифицировать символы и выполнять преобразование символов в другой регистр, а также из внутреннего набора символов в набор символов, заданный для языкового стандарта, и наоборот.|  
 |[locale](../standard-library/locale-class.md)|Класс, описывающий объект языкового стандарта, инкапсулирующий данные по соответствующей культуре в качестве набора аспектов, которые собирательно определяют ту или иную локализованную среду.|  

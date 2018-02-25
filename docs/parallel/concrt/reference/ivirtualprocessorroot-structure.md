@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
 - CONCRTRM/concurrency::IVirtualProcessorRoot
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
 - CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
-dev_langs: C++
-helpviewer_keywords: IVirtualProcessorRoot structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1010517799b9878ff88ddbc68a76ff4a0ed6588f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Структура IVirtualProcessorRoot
 Абстракция для аппаратного потока, в котором может выполняться прокси-поток.  
@@ -63,7 +67,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="activate"></a>Метод IVirtualProcessorRoot::Activate  
+##  <a name="activate"></a>  Метод IVirtualProcessorRoot::Activate  
  Вызывает прокси-поток, связанный с интерфейсом контекста выполнения `pContext` для начала выполнения на этот корневой виртуальный процессор.  
   
 ```
@@ -75,7 +79,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
  Интерфейс для контекста выполнения, который будет передан на этот корневой виртуальный процессор.  
   
 ### <a name="remarks"></a>Примечания  
- Диспетчер ресурсов предоставит прокси-поток, если он не связан с интерфейсом контекста выполнения`pContext`  
+ Диспетчер ресурсов предоставит прокси-поток, если он не связан с интерфейсом контекста выполнения `pContext`  
   
  `Activate` Метод может использоваться для запуска выполнения работы на новый корневой виртуальный процессор, возвращаемых диспетчером ресурсов или возобновить прокси-поток на корневой виртуальный процессор, который отключен или будет отключен. В разделе [IVirtualProcessorRoot::Deactivate](#deactivate) Дополнительные сведения о деактивации. Когда Вы возобновляете отключенный корень виртуального процессора, параметр `pContext` должен быть таким же, как параметр, используемый для отключения корневой виртуальный процессор.  
   
@@ -83,13 +87,13 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  При активации корневой виртуальный процессор, сигнал диспетчеру ресурсов этот корневой виртуальный процессор в данный момент занята работы. Если ваш планировщик не удается найти какой-либо работы для выполнения на этом корне, он должен вызывать `Deactivate` способ информирования диспетчера ресурсов, корневой виртуальный процессор простаивает. Диспетчер ресурсов использует эти данные для системы балансировки нагрузки.  
   
- `invalid_argument`возникает, если аргумент `pContext` имеет значение `NULL`.  
+ `invalid_argument` возникает, если аргумент `pContext` имеет значение `NULL`.  
   
- `invalid_operation`возникает, если аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
+ `invalid_operation` возникает, если аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
   
  Процесс активации корневой виртуальный процессор увеличивает уровень подписки базовой аппаратный поток на единицу. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="deactivate"></a>Метод IVirtualProcessorRoot::Deactivate  
+##  <a name="deactivate"></a>  Метод IVirtualProcessorRoot::Deactivate  
  В результате прокси-поток, выполняющийся на этот корневой виртуальный процессор, чтобы остановить управлять контекстом выполнения. Прокси-поток продолжит выполнение при вызове `Activate` метода.  
   
 ```
@@ -110,13 +114,13 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  Если корневой виртуальный процессор пробуждающий режима сна и возвращаемое значение `Deactivate` метод значение `false`, планировщик должен запросить список выполнения UMS через `IUMSCompletionList::GetUnblockNotifications` метода работы с ней, а затем вызвать `Deactivate`метод снова. Это должно повторяться до тех пор, как `Deactivate` метод возвращает значение `true`.  
   
- `invalid_argument`возникает, если аргумент `pContext` имеет значение `NULL`.  
+ `invalid_argument` возникает, если аргумент `pContext` имеет значение `NULL`.  
   
- `invalid_operation`возникает, если корневой виртуальный процессор не был активирован, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
+ `invalid_operation` возникает, если корневой виртуальный процессор не был активирован, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
   
  Процесс деактивации корневой виртуальный процессор уменьшает уровень подписки базовой аппаратный поток на единицу. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="ensurealltasksvisible"></a>Метод IVirtualProcessorRoot::EnsureAllTasksVisible  
+##  <a name="ensurealltasksvisible"></a>  Метод IVirtualProcessorRoot::EnsureAllTasksVisible  
  В результате данные, хранящиеся в иерархии памяти отдельных процессоров, становятся видимыми для всех процессоров в системе. Это гарантирует, что полная памяти граница выполнена на всех процессорах перед возвратом метода.  
   
 ```
@@ -132,11 +136,11 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  Вызов `EnsureAllTasksVisibleThe` метода должны находиться в пределах `Dispatch` метод контекста выполнения, корневой виртуальный процессор последний раз была активирована с. Другими словами, прокси-поток вызова `EnsureAllTasksVisible` метод должен быть того, который в данный момент на корневой виртуальный процессор. Вызов метода для корневого виртуального процессора, которые не выполняются на может привести к неопределенному поведению.  
   
- `invalid_argument`возникает, если аргумент `pContext` имеет значение `NULL`.  
+ `invalid_argument` возникает, если аргумент `pContext` имеет значение `NULL`.  
   
- `invalid_operation`возникает, если корневой виртуальный процессор не был активирован, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
+ `invalid_operation` возникает, если корневой виртуальный процессор не был активирован, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
   
-##  <a name="getid"></a>Метод IVirtualProcessorRoot::GetId  
+##  <a name="getid"></a>  IVirtualProcessorRoot::GetId Method  
  Возвращает уникальный идентификатор для корневого виртуального процессора.  
   
 ```

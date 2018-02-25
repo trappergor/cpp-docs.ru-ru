@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>Класс priority_queue
 Класс-шаблон адаптера контейнера, который предоставляет ограничение функциональности, ограничивая доступ к верхнему элементу некоторого базового типа контейнера, который всегда является самым большим или имеет высший приоритет. Новые элементы можно добавлять в priority_queue, а верхний элемент priority_queue можно просмотреть или удалить.  
@@ -56,7 +59,7 @@ class priority_queue
  Тип базового контейнера, используемый для реализации priority_queue.  
   
  *Compare*  
- Тип, предоставляющий объект-функцию, который может сравнить два значения элементов как ключи сортировки, чтобы определить их относительный порядок в priority_queue. Этот аргумент — необязательный, в качестве значения по умолчанию используется двоичный предикат **less***\<***typename** *Container***::value_type***>*.  
+ Тип, предоставляющий объект-функцию, который может сравнить два значения элементов как ключи сортировки, чтобы определить их относительный порядок в priority_queue. Этот аргумент является необязательным и бинарный предикат **меньше***\<***typename** *контейнера***:: value_type*** >* значение по умолчанию.  
   
 ## <a name="remarks"></a>Примечания  
  Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  

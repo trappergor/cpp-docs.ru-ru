@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - join
 - AGENTS/concurrency::join
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs: C++
-helpviewer_keywords: join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="join-class"></a>Класс join
 Блок обмена сообщениями `join` — это упорядоченный блок `propagator_block` с несколькими источниками и одной целью, который объединяет сообщения типа `T` от каждого из своих источников.  
@@ -50,7 +54,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  Тип полезных данных сообщений, объединенных и распространенных блоком.  
   
  `_Jtype`  
- Тип объекта `join` это, либо блок `greedy` или`non_greedy`  
+ Тип объекта `join` это, либо блок `greedy` или `non_greedy`  
   
 ## <a name="members"></a>Участники  
   
@@ -93,7 +97,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **Пространство имен:** concurrency  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Принимает сообщение, которое было предложено это `join` блока обмена сообщениями, передавая владение вызывающему объекту.  
   
@@ -108,7 +112,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на `message` объект, вызывающий теперь принадлежит.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Получает сообщение, ранее предложенное `join` блок обмена сообщениями и зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
@@ -126,7 +130,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Примечания  
  Аналогично `accept`, но всегда предшествует вызов `reserve`.  
   
-##  <a name="ctor"></a>соединения 
+##  <a name="ctor"></a> Присоединение 
 
  Создает `join` блока обмена сообщениями.  
   
@@ -175,7 +179,7 @@ join(
   
  Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `join` блока обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
   
-##  <a name="dtor"></a>~ join 
+##  <a name="dtor"></a> ~join 
 
  Уничтожает `join` блока.  
   
@@ -183,7 +187,7 @@ join(
 ~join();
 ```  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Обратный вызов, уведомляющее о том, что новый целевой объект был связан это `join` блока обмена сообщениями.  
   
@@ -191,7 +195,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Асинхронно передает сообщение от `ISource` блока к этому `join` блока обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.  
   
@@ -211,7 +215,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Создает выходное сообщение, содержащее сообщение для ввода из каждого источника, когда все они распространили сообщение. Отправляет это выходное сообщение для каждого из его целевых объектов.  
   
@@ -219,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Освобождает предыдущее резервирование сообщения.  
   
@@ -231,7 +235,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` Из `message` объекта освобождение.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Резервирует сообщение, которое было предложено это `join` блока обмена сообщениями.  
   
@@ -244,12 +248,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` Из предложенных `message` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если сообщение было успешно зарезервированы, `false` в противном случае.  
+ `true` Если сообщение было успешно зарезервированы, `false` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Возобновляет распространение после выпуска резервирования.  
   

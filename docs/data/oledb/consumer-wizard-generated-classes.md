@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 194c71fda245663e648298af17a6ceb874aef4d5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Классы, создаваемые мастером объекта-получателя
 При создании потребителя с помощью мастера потребителя ATL OLE DB вы можете выбрать использование шаблонов OLE DB или атрибутов OLE DB. В обоих случаях мастер создает класс команд и класс записей пользователя. В классе команд содержится код для открытия источника данных и набора строк, указанных в мастере. Класс записей пользователя содержит сопоставление столбцов для выбранной таблицы базы данных. Однако созданный код в каждом случае отличается.  

@@ -1,14 +1,17 @@
 ---
-title: "#<a name=\"import-directive-c--microsoft-docs\"></a>Импортировать директивы (C++) | Документы Microsoft"
+title: "#Импортировать директивы (C++) | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>Директива #import (C++)
 **Конкретных C++**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Примечания  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Порядок поиска имени файла  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Порядок поиска имени файла  
  *Имя файла* при необходимости предваряется спецификацией каталога. Имя файла должно указывать на существующий файл. Различие между двумя синтаксисами — это порядок, в котором препроцессор ищет файлы библиотеки типов, когда путь определен не полностью.  
   
 |Форма синтаксиса|Действие|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Форма в кавычках|Указывает препроцессору искать файлы библиотеки типов сначала в каталоге файла, содержащего оператор `#import`, а затем в каталогах любых файлов, которые включают (`#include`) этого файла. Затем препроцессор выполняет поиск по путям, показанным ниже.|  
 |Форма с угловыми скобками|Указывает препроцессору искать файлы библиотеки типов по следующим путям.<br /><br /> 1.  **Путь** список путей переменной среды<br />2.  **LIB** список путей переменной среды<br />3.  Путь, указанный /I (Дополнительные каталоги включения) параметр компилятора, за исключением его компилятор выполняет поиск библиотеки типов, на который была ссылка из другой библиотеки типов с [no_registry](../preprocessor/no-registry.md) атрибута.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Указание идентификатора локализации и номер версии  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Указание идентификатора локализации и номер версии  
  При определении идентификатора программы можно также указать идентификатор программы локализации и номер версии. Пример:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если не указать номер версии, используется последняя версия.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Заголовочные файлы, созданные импортом  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> Заголовочные файлы, созданные импортом  
  `#import` создает два файла заголовка, которые реконструируют содержимое библиотеки типов в исходном коде на языке C++. Основной файл заголовка аналогичен файлу, создаваемому компилятором MIDL, но с дополнительными создаваемыми компилятором кодом и данными. [Основной файл заголовка](#_predir_the_primary_type_library_header_file) имеет такое же базовое имя, что библиотека типов, а также. TLH расширение. Вторичный файл заголовка имеет такое же базовое имя, что и библиотека типов, с расширением .TLI. Он содержит реализации созданных компилятором функций-членов и включен (`#include`) в соответствующий файл заголовка.  
   
  Если импортировать свойство dispinterface, использующее параметры byref, #import не создает __declspec ([свойство](../cpp/property-cpp.md)) инструкции для функции.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  Директива `#import` также участвует в минимальном перестроении и может быть помещена в предкомпилированный файл заголовка. В разделе [Создание файлов предкомпилированных заголовков](../build/reference/creating-precompiled-header-files.md) для получения дополнительной информации.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>Основной файл библиотеки типов заголовка  
+###  <a name="_predir_the_primary_type_library_header_file"></a> Основной файл библиотеки типов заголовка  
  Основной файл заголовка библиотеки типов состоит из 7 разделов:  
   
 -   Наименование заголовка: состоит из комментариев, оператора `#include` для COMDEF.H (определяющего некоторые стандартные макросы, используемые в заголовке), и других разнообразных сведений о настройке.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Дополнительные сведения см. в статье базы знаний "Методы программы-оболочки #import могут вызвать нарушение прав доступа" (Q242527) или "Ошибки компилятора при использовании #import с XML" (Q269194). Статьи базы знаний можно найти на диске библиотеки MSDN или на [поддержки Майкрософт](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>атрибуты #import  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> атрибуты #import  
  `#import` также может включать один или несколько атрибутов. Эти атрибуты указывают, что компилятор изменяет содержимое заголовка библиотеки типов. Обратная косая черта (**\\**) символ можно использовать для включения дополнительных строк в одном `#import` инструкции. Пример:  
   
 ```  

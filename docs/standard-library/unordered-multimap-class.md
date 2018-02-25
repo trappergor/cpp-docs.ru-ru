@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -54,7 +55,8 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_multimap
 - std::unordered_multimap::allocator_type
@@ -144,16 +146,17 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a0fa73588a2ee2b593e12f98cac387d9d4323ad9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c13e19d920b0b8ae61d3f3bd0ba2ae77cc3477bd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmultimap-class"></a>Класс unordered_multimap
 Этот шаблонный класс описывает объект, управляющий последовательностью элементов типа `std::pair<const Key, Ty>` переменной длины. Последовательность слабо упорядочена хэш-функцией, которая разделяет последовательность в упорядоченный набор подпоследовательностей, называемых блоками. В каждом блоке функция сравнения определяет, упорядочена ли каждая пара элементов соответствующим образом. Каждый элемент содержит два объекта: ключ и значение сортировки. Последовательность представляется в виде, позволяющем выполнять поиск, вставку и удаление произвольного элемента несколькими операциями, которые могут не зависеть от числа элементов в последовательности (постоянное время), по крайней мере, когда все блоки имеют примерно одинаковую длину. В худшем случае, когда все элементы находятся в одном блоке, количество операций пропорционально количеству элементов в последовательности (линейное время). Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.  
@@ -206,7 +209,7 @@ class unordered_multimap;
 |-|-|  
 |Функция-член|Описание:|  
 |[begin](#begin)|Задает начало управляемой последовательности.|  
-|[контейнеров](#bucket)|Получает номер блока для значения ключа.|  
+|[bucket](#bucket)|Получает номер блока для значения ключа.|  
 |[bucket_count](#bucket_count)|Получает количество блоков.|  
 |[bucket_size](#bucket_size)|Получает размер блока.|  
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|  

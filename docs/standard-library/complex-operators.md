@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::operator!=
 - xcomplex/std::operator&gt;&gt;
@@ -15,28 +15,29 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 130bd3bec74ec3ea31c9baca0dfef9fef4a57399
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;операторы&gt; complex
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;&gt;](#op_gt_gt)|[оператор&lt;&lt;](#op_lt_lt)|  
-|[оператор*](#op_star)|[оператор+](#op_add)|[оператор-](#operator-)|  
+|[оператор!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[оператор*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[оператор/](#op_div)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
   
 ```  
@@ -266,7 +267,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_add"></a>  оператор+  
+##  <a name="op_add"></a> operator+  
  Складывает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
   
 ```  
@@ -657,7 +658,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Вставляет указанное комплексное число в выходной поток.  
   
 ```   
@@ -715,7 +716,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет на равенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.  
   
 ```  
@@ -851,7 +852,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_gt_gt"></a>  оператор&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Извлекает комплексное число из входного потока.  
   
 ```  

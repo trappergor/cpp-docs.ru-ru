@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __assume
 - __assume_cpp
-dev_langs: C++
-helpviewer_keywords: __assume keyword [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 890b46f044c018f68226f3698c65603f931f01fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ff952e40110c3f56465b0d897fdd5410c0189f1f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="assume"></a>__assume
 **Блок, относящийся только к системам Microsoft**  
@@ -49,7 +53,7 @@ __assume(
 > [!WARNING]
 >  Программа не должна содержать недействительный оператор `__assume` в достижимом пути. Если компилятор может достигнут недопустимого оператора `__assume`, программа может повести себя непредсказуемо и иметь потенциально опасное поведение.  
   
- `__assume`не является подлинным встроенная функция. Не объявлена как функция и не может использоваться в директиве `#pragma intrinsic`. Несмотря на то, что код не создается, изменяется код, созданный с помощью оптимизатора.  
+ `__assume` не является подлинным встроенная функция. Не объявлена как функция и не может использоваться в директиве `#pragma intrinsic`. Несмотря на то, что код не создается, изменяется код, созданный с помощью оптимизатора.  
   
  Используйте `__assume` в [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) только когда утверждение не может быть восстановлен. Не используйте `__assume` в assert, для которого имеется код восстановления после ошибки, поскольку компилятор может изменить оптимизацию кода обработки ошибок.  
   

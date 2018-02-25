@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Функции пространство имен Concurrency::Graphics:: Direct3D
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  Get интерфейс конечного D3D пробы для данного сочетания клавиш просмотра, представляющий указанный образец объекта.  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель интерфейса IUnknown, соответствующее состоянию пробы D3D, представляющий данного образца.  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель интерфейса IUnknown, соответствующий базовый текстуры текстуры Direct3D.  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  Создайте дискретизатор от указателя интерфейса состояние D3D пробы.  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Дискретизатор представляет предоставленное состояние D3D пробы.  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  Создает [текстуры](texture-class.md) объекта, используя указанные параметры.  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>Возвращаемое значение  
  Текстуры с помощью предоставленного текстуры D3D.  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  Сравнивает значение 4-байтовые ссылки и 8-байтное исходного значения и собирает вектор 4 сумм. Каждая сумма соответствует маскированные сумма абсолютный различия из разных байтов выравнивания значение ссылки и исходное значение.  
   
 ```  
@@ -165,7 +167,7 @@ inline uint4 msad4(
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_graphics.h  
   
- **Пространство имен:** Concurrency::Graphics:: Direct3D 
+ **Namespace:** Concurrency::graphics::direct3d 
 
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm4-class"></a>Класс unorm_4
 Представляет короткий вектор из четырех чисел без знака обычного.  
@@ -329,7 +332,7 @@ class unorm_4;
 |unorm_4::get_wzxy||  
 |unorm_4::get_wzy||  
 |unorm_4::get_wzyx||  
-|unorm_4::get_X||  
+|unorm_4::get_x||  
 |unorm_4::get_xw||  
 |unorm_4::get_xwy||  
 |unorm_4::get_xwyz||  
@@ -401,7 +404,7 @@ class unorm_4;
 |unorm_4::set_wzxy||  
 |unorm_4::set_wzy||  
 |unorm_4::set_wzyx||  
-|unorm_4::set_X||  
+|unorm_4::set_x||  
 |unorm_4::set_xw||  
 |unorm_4::set_xwy||  
 |unorm_4::set_xwyz||  
@@ -456,11 +459,11 @@ class unorm_4;
 |----------|-----------------|  
 |unorm_4::operator-||  
 |unorm_4::operator--||  
-|unorm_4::operator * =||  
-|unorm_4::operator / =||  
-|unorm_4::operator ++||  
-|unorm_4::operator +=||  
-|unorm_4::operator =||  
+|unorm_4::operator*=||  
+|unorm_4::operator/=||  
+|unorm_4::operator++||  
+|unorm_4::operator+=||  
+|unorm_4::operator=||  
 |unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
@@ -474,12 +477,12 @@ class unorm_4;
 |Имя|Описание:|  
 |----------|-----------------|  
 |unorm_4::a||  
-|unorm_4::AB||  
+|unorm_4::ab||  
 |unorm_4::abg||  
 |unorm_4::abgr||  
-|unorm_4::ABR||  
+|unorm_4::abr||  
 |unorm_4::abrg||  
-|unorm_4::AG||  
+|unorm_4::ag||  
 |unorm_4::agb||  
 |unorm_4::agbr||  
 |unorm_4::agr||  
@@ -488,67 +491,67 @@ class unorm_4;
 |unorm_4::arb||  
 |unorm_4::arbg||  
 |unorm_4::arg||  
-|unorm_4::ARGB||  
+|unorm_4::argb||  
 |unorm_4::b||  
-|unorm_4::BA||  
+|unorm_4::ba||  
 |unorm_4::bag||  
 |unorm_4::bagr||  
-|unorm_4::Bar||  
+|unorm_4::bar||  
 |unorm_4::barg||  
-|unorm_4::BG||  
-|unorm_4::BGA||  
+|unorm_4::bg||  
+|unorm_4::bga||  
 |unorm_4::bgar||  
 |unorm_4::bgr||  
 |unorm_4::bgra||  
 |unorm_4::br||  
-|unorm_4::BRA||  
+|unorm_4::bra||  
 |unorm_4::brag||  
 |unorm_4::brg||  
 |unorm_4::brga||  
 |unorm_4::g||  
 |unorm_4::ga||  
-|unorm_4::GAB||  
+|unorm_4::gab||  
 |unorm_4::gabr||  
 |unorm_4::gar||  
 |unorm_4::garb||  
-|unorm_4::GB||  
+|unorm_4::gb||  
 |unorm_4::gba||  
 |unorm_4::gbar||  
-|unorm_4::GBR||  
+|unorm_4::gbr||  
 |unorm_4::gbra||  
-|unorm_4::GR||  
+|unorm_4::gr||  
 |unorm_4::gra||  
 |unorm_4::grab||  
 |unorm_4::grb||  
 |unorm_4::grba||  
 |unorm_4::r||  
-|unorm_4::RA||  
+|unorm_4::ra||  
 |unorm_4::rab||  
 |unorm_4::rabg||  
 |unorm_4::rag||  
 |unorm_4::ragb||  
-|unorm_4::RB||  
+|unorm_4::rb||  
 |unorm_4::rba||  
 |unorm_4::rbag||  
 |unorm_4::rbg||  
 |unorm_4::rbga||  
-|unorm_4::RG||  
+|unorm_4::rg||  
 |unorm_4::rga||  
 |unorm_4::rgab||  
-|unorm_4::RGB||  
-|unorm_4::RGBA||  
+|unorm_4::rgb||  
+|unorm_4::rgba||  
 |unorm_4::w||  
-|unorm_4::WX||  
+|unorm_4::wx||  
 |unorm_4::wxy||  
 |unorm_4::wxyz||  
 |unorm_4::wxz||  
 |unorm_4::wxzy||  
-|unorm_4::WY||  
+|unorm_4::wy||  
 |unorm_4::wyx||  
 |unorm_4::wyxz||  
-|unorm_4::WYZ||  
+|unorm_4::wyz||  
 |unorm_4::wyzx||  
-|unorm_4::wZ||  
+|unorm_4::wz||  
 |unorm_4::wzx||  
 |unorm_4::wzxy||  
 |unorm_4::wzy||  
@@ -559,7 +562,7 @@ class unorm_4;
 |unorm_4::xwyz||  
 |unorm_4::xwz||  
 |unorm_4::xwzy||  
-|unorm_4::XY||  
+|unorm_4::xy||  
 |unorm_4::xyw||  
 |unorm_4::xywz||  
 |unorm_4::xyz||  
@@ -575,7 +578,7 @@ class unorm_4;
 |unorm_4::ywxz||  
 |unorm_4::ywz||  
 |unorm_4::ywzx||  
-|unorm_4::YX||  
+|unorm_4::yx||  
 |unorm_4::yxw||  
 |unorm_4::yxwz||  
 |unorm_4::yxz||  
@@ -606,11 +609,11 @@ class unorm_4;
  `unorm_4`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** amp_short_vectors.h  
+ **Header:** amp_short_vectors.h  
   
- **Пространство имен:** Concurrency::graphics  
+ **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a> unorm_4 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -694,7 +697,7 @@ explicit inline unorm_4(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="unorm_4__size"></a>размер 
+##  <a name="unorm_4__size"></a> Размер 
 
 ```  
 static const int size = 4;  

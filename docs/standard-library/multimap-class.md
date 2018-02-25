@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multimap-class"></a>Класс multimap
 Класс multimap в стандартной библиотеке С++ используется для хранения и извлечения данных из коллекции, в которой каждый элемент является парой, хранящей значение данных и ключ сортировки. Значение ключа может не быть уникальным и применяется для автоматической сортировки данных. Значение элементов в multimap, но не связанное с ним значение ключа, можно изменить напрямую. Значения ключей, связанные со старыми элементами, необходимо удалить и вставить новые значения ключей, связанные с новыми элементами.  
@@ -391,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>Примечания  
  Тип `const_iterator`нельзя использовать для изменения значения элемента.  
   
- `const_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ `const_iterator` Определяемый multimap точками объектам [value_type](#value_type), которые имеют тип `pair` * \< * **const ключ**, **Тип *** >*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
   
  Для разыменования `const_iterator` `cIter` наведите указатель на элемент в множественное сопоставление, используйте  **->**  оператор.  
   
@@ -471,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>Примечания  
  Тип `const_reverse_iterator` не может изменять значение элемента и используется для перебора мультиотображения в обратном порядке.  
   
- `const_reverse_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ `const_reverse_iterator` Определяемый multimap точками объектам [value_type](#value_type), которые имеют тип `pair` * \< * **const ключ**, **Тип *** >*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
   
  Для разыменования `const_reverse_iterator` `crIter` наведите указатель на элемент в множественное сопоставление, используйте  **->**  оператор.  
   
@@ -1298,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- **Итератор**, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ **Итератор** определяемый multimap точками объектам [value_type](#value_type), которые имеют тип `pair` * \< * **const ключ**, **Тип *** >*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
   
  Для разыменования **итератора**`Iter`, указывающего на элемент мультиотображения, используйте оператор **->**.  
   
@@ -2017,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Примечания  
  Тип `reverse_iterator` используется для перебора мультиотображения в обратном порядке.  
   
- `reverse_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ `reverse_iterator` Определяемый multimap точками объектам [value_type](#value_type), которые имеют тип `pair` * \< * **const ключ**, **Тип *** >*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
   
  Для разыменования `reverse_iterator` `rIter` наведите указатель на элемент в множественное сопоставление, используйте оператор "->".  
   

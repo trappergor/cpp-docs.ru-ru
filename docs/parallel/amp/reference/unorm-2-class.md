@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::unnorm_2::y
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::get_x
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d050e819361175f1808a440671de684499ebfa3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 80e5cf0a1a1c3e2a4e10520772ebea931fdf3634
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm2-class"></a>Класс unorm_2
 Представляет короткого вектора из двух чисел без знака обычного.  
@@ -73,7 +76,7 @@ class unorm_2;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|unorm_2::get_X||  
+|unorm_2::get_x||  
 |unorm_2::get_xy||  
 |unorm_2::get_y||  
 |unorm_2::get_yx||  
@@ -81,7 +84,7 @@ class unorm_2;
 |unorm_2::ref_r||  
 |unorm_2::ref_x||  
 |unorm_2::ref_y||  
-|unorm_2::set_X||  
+|unorm_2::set_x||  
 |unorm_2::set_xy||  
 |unorm_2::set_y||  
 |unorm_2::set_yx||  
@@ -91,11 +94,11 @@ class unorm_2;
 |Имя|Описание:|  
 |----------|-----------------|  
 |unorm_2::operator--||  
-|unorm_2::operator * =||  
+|unorm_2::operator*=||  
 |unorm_2::operator / =||  
-|unorm_2::operator ++||  
-|unorm_2::operator +=||  
-|unorm_2::operator =||  
+|unorm_2::operator++||  
+|unorm_2::operator+=||  
+|unorm_2::operator=||  
 |unorm_2::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
@@ -109,23 +112,23 @@ class unorm_2;
 |Имя|Описание:|  
 |----------|-----------------|  
 |unorm_2::g||  
-|unorm_2::GR||  
+|unorm_2::gr||  
 |unorm_2::r||  
-|unorm_2::RG||  
+|unorm_2::rg||  
 |unorm_2::x||  
-|unorm_2::XY||  
+|unorm_2::xy||  
 |unorm_2::y||  
-|unorm_2::YX||  
+|unorm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `unorm_2`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** amp_short_vectors.h  
+ **Header:** amp_short_vectors.h  
   
- **Пространство имен:** Concurrency::graphics  
+ **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a> unorm_2 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -199,7 +202,7 @@ explicit inline unorm_2(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="unorm_2__size"></a>размер 
+##  <a name="unorm_2__size"></a> Размер 
 
 ```  
 static const int size = 2;  

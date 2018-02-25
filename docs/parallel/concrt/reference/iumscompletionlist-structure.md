@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
-dev_langs: C++
-helpviewer_keywords: IUMSCompletionList structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 378eccbc0e29a9356ffd89699039b9877c76c751
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumscompletionlist-structure"></a>Структура IUMSCompletionList
 Представляет список выполнения UMS. Когда поток UMS блокируется, отправляется назначенный планировщиком контекст планирования для принятия решения о том, что нужно запланировать для корня базового виртуального процессора, пока исходный поток заблокирован. Когда снимается блокировка исходного потока, операционная система ставит его в очередь списка выполнения, который доступен через этот интерфейс. Планировщик может запросить список выполнения в назначенном контексте планирования или в другом месте, в котором он выполняет поиск работы.  
@@ -53,7 +57,7 @@ struct IUMSCompletionList;
   
  **Пространство имен:** concurrency  
   
-##  <a name="getunblocknotifications"></a>Метод IUMSCompletionList::GetUnblockNotifications  
+##  <a name="getunblocknotifications"></a>  Метод IUMSCompletionList::GetUnblockNotifications  
  Извлекает цепочки `IUMSUnblockNotification` интерфейсов, представляющих контексты выполнения, чьи связанные потоки прокси разблокированы со времени последнего этот метод был вызван.  
   
 ```

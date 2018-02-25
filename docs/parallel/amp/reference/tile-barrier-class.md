@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -15,19 +16,22 @@ f1_keywords:
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
-dev_langs: C++
-helpviewer_keywords: tile_barrier class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1f6066422056efc17052afb11d01580abc340976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tilebarrier-class"></a>Класс tile_barrier
 Синхронизирует выполнение потоков, выполняющихся в группы потоков (плитку) с помощью `wait` методы. Только в среде выполнения можно создать экземпляр этого класса.  
@@ -63,7 +67,7 @@ class tile_barrier;
   
  **Пространство имен** : Concurrency  
 
-## <a name="tile_barrier__ctor"></a>Конструктор tile_barrier  
+## <a name="tile_barrier__ctor">Конструктор tile_barrier</a>  
  Инициализирует новый экземпляр класса путем копирования существующего.  
   
 ### <a name="syntax"></a>Синтаксис 
@@ -77,7 +81,7 @@ tile_barrier(
  `_Other`  
  `tile_barrier` Объект, подлежащий копированию.  
 
-## <a name="wait"></a>Ожидание 
+## <a name="wait">Ожидание</a> 
 Указывает, что все потоки в группы потоков (плитки) для остановки выполнения до завершения всех потоков в плитке ожидания.  
   
 ### <a name="syntax"></a>Синтаксис 
@@ -86,7 +90,7 @@ tile_barrier(
 void wait() const restrict(amp);  
 ```    
 
-## <a name="wait_with_all_memory_fence"></a>wait_with_all_memory_fence   
+## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence   
 Блокирует выполнение всех потоков в мозаике, пока все потоки в плитке достигнут этого вызова. Это гарантирует, что все попытки доступа к памяти являются видимыми для других потоков в поток плитки что были выполнены в порядке программы.  
   
 ### <a name="syntax"></a>Синтаксис 
@@ -96,7 +100,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 ```  
   
 
-## <a name="wait_with_global_memory_fence"></a>wait_with_global_memory_fence   
+## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence   
 Блокирует выполнение всех потоков в мозаике, пока все потоки в плитке достигнут этого вызова. Это гарантирует, что все попытки доступа к глобальной памяти являются видимыми для других потоков в поток плитки что были выполнены в порядке программы.  
   
 ### <a name="syntax"></a>Синтаксис 
@@ -105,7 +109,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);  
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>wait_with_tile_static_memory_fence   
+## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence   
 Блокирует выполнение всех потоков в мозаике, пока все потоки в плитке достигнут этого вызова. Это гарантирует, что `tile_static` памяти доступов являются видимыми для других потоков в поток мозаики, а также были выполнены в порядке программы.  
   
 ### <a name="syntax"></a>Синтаксис 

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
 - CONCRT/concurrency::Concrt_TraceFlags
@@ -16,18 +16,20 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-enums"></a>перечисления имен параллелизма
 ||||  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>Перечисление agent_status  
+##  <a name="agent_status"></a>  agent_status Enumeration  
  Допустимые состояния для объекта `agent`.  
   
 ```
@@ -60,7 +62,7 @@ enum agent_status;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="agents_eventtype"></a>Перечисление Agents_EventType  
+##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
  Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.  
   
 ```
@@ -83,7 +85,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="concrt_eventtype"></a>Перечисление ConcRT_EventType  
+##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
  Типы событий, которые можно отслеживать с помощью функций трассировки, обеспечиваемых средой выполнения с параллелизмом.  
   
 ```
@@ -106,7 +108,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h **пространство имен:** параллелизма
 
-##  <a name="concrt_traceflags"></a>Перечисление Concrt_TraceFlags  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
  Флажки трассировки для типов событий  
   
 ```
@@ -127,7 +129,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="criticalregiontype"></a>Перечисление CriticalRegionType  
+##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
  Тип критической области, внутри которой находится контекст.  
   
 ```
@@ -144,7 +146,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>Перечисление DynamicProgressFeedbackType  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
  Используется политикой `DynamicProgressFeedback` для описания того, будет ли к ресурсам планировщика применена повторная балансировка в соответствии со статистическими данными, полученными из планировщика, или только на основе перехода виртуальных процессоров в состояние бездействия и из него через вызовы методов `Activate` и `Deactivate` для интерфейса `IVirtualProcessorRoot`. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -156,7 +158,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|Планировщик не выполняет сбор сведений о ходе выполнения. Перераспределения выполняется на основе исключительно на уровень подписки базовой аппаратный поток. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Это значение зарезервировано для использования средой выполнения.|  
 |`ProgressFeedbackEnabled`|Планировщик собирает сведения о ходе выполнения и передает его в диспетчер ресурсов. Диспетчер ресурсов будет использовать эти статистические данные для балансирования ресурсов от имени планировщика в дополнение к уровень подписки базовой аппаратный поток. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="join_type"></a>Перечисление join_type  
+##  <a name="join_type"></a>  join_type Enumeration  
  Тип блока обмена сообщениями `join`.  
   
 ```
@@ -172,7 +174,7 @@ enum join_type;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** agents.h  
 
-##  <a name="message_status"></a>Перечисление message_status  
+##  <a name="message_status"></a>  message_status Enumeration  
  Допустимые ответы на предложение объекта `message` блоку.  
   
 ```
@@ -190,7 +192,7 @@ enum message_status;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** agents.h  
 
-##  <a name="policyelementkey"></a>Перечисление PolicyElementKey  
+##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
  Ключи политики, описывающие аспекты поведения планировщика. Каждый элемент политики описан с помощью пары «ключ — значение». Дополнительные сведения о политиках планировщика и их влиянии на планировщики см. в разделе [планировщик](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -200,22 +202,22 @@ enum PolicyElementKey;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|`ContextPriority`|Приоритет потоков операционной системы каждого контекста в планировщике. Если этот ключ присвоено значение `INHERIT_THREAD_PRIORITY` контекстов в планировщике наследуют приоритет потока, который создал планировщик.<br /><br /> Допустимые значения: любые допустимые значения для Windows `SetThreadPriority` функции и специальное значение`INHERIT_THREAD_PRIORITY`<br /><br /> Значение по умолчанию:`THREAD_PRIORITY_NORMAL`|  
+|`ContextPriority`|Приоритет потоков операционной системы каждого контекста в планировщике. Если этот ключ присвоено значение `INHERIT_THREAD_PRIORITY` контекстов в планировщике наследуют приоритет потока, который создал планировщик.<br /><br /> Допустимые значения: любые допустимые значения для Windows `SetThreadPriority` функции и специальное значение `INHERIT_THREAD_PRIORITY`<br /><br /> Значение по умолчанию: `THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|Размер зарезервированного стека для каждого контекста в планировщике в килобайтах.<br /><br /> Допустимые значения: положительные целые числа<br /><br /> Значение по умолчанию: `0`, указывающее, использовать процесса по умолчанию размер стека.|  
-|`DynamicProgressFeedback`|Определяет, является ли ресурсы для планировщика будет применена повторная Балансировка в соответствии с статистические данные собираются из планировщика или только на основании уровня подписки базовых аппаратных потоков. Дополнительные сведения см. в разделе [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Допустимые значения: член `DynamicProgressFeedbackType` перечисления, либо `ProgressFeedbackEnabled` или`ProgressFeedbackDisabled`<br /><br /> Значение по умолчанию:`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|При `SchedulingProtocol` ключ политики присвоено значение `EnhanceScheduleGroupLocality`, указывает максимальное количество работоспособным контекстам разрешено кэшировать в в локальных очередях виртуального процессора. Таких контекстов обычно выполняются в порядке (LIFO) последним пришел первым вышел виртуального процессора, которая привела к запуску. Обратите внимание, что данный параметр политики не то есть когда `SchedulingProtocol` ключа задано значение `EnhanceForwardProgress`.<br /><br /> Допустимые значения: неотрицательные целые числа<br /><br /> Значение по умолчанию:`8`|  
-|`MaxConcurrency`|Максимальный уровень параллелизма, необходимый планировщику. Диспетчер ресурсов будет пытаться изначально выделить это количество виртуальных процессоров. Специальное значение [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) указывает, что нужный уровень параллельности совпадает с числом аппаратных потоков на компьютере. Если значение, указанное для `MinConcurrency` больше, чем число аппаратных потоков на компьютере и `MaxConcurrency` указывается как `MaxExecutionResources`, значение для `MaxConcurrency` вызывается для сопоставления, что задано для `MinConcurrency`.<br /><br /> Допустимые значения: положительные целые числа и специальные значения`MaxExecutionResources`<br /><br /> Значение по умолчанию:`MaxExecutionResources`|  
+|`DynamicProgressFeedback`|Определяет, является ли ресурсы для планировщика будет применена повторная Балансировка в соответствии с статистические данные собираются из планировщика или только на основании уровня подписки базовых аппаратных потоков. Дополнительные сведения см. в разделе [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Допустимые значения: член `DynamicProgressFeedbackType` перечисления, либо `ProgressFeedbackEnabled` или `ProgressFeedbackDisabled`<br /><br /> Значение по умолчанию: `ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|При `SchedulingProtocol` ключ политики присвоено значение `EnhanceScheduleGroupLocality`, указывает максимальное количество работоспособным контекстам разрешено кэшировать в в локальных очередях виртуального процессора. Таких контекстов обычно выполняются в порядке (LIFO) последним пришел первым вышел виртуального процессора, которая привела к запуску. Обратите внимание, что данный параметр политики не то есть когда `SchedulingProtocol` ключа задано значение `EnhanceForwardProgress`.<br /><br /> Допустимые значения: неотрицательные целые числа<br /><br /> Значение по умолчанию: `8`|  
+|`MaxConcurrency`|Максимальный уровень параллелизма, необходимый планировщику. Диспетчер ресурсов будет пытаться изначально выделить это количество виртуальных процессоров. Специальное значение [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) указывает, что нужный уровень параллельности совпадает с числом аппаратных потоков на компьютере. Если значение, указанное для `MinConcurrency` больше, чем число аппаратных потоков на компьютере и `MaxConcurrency` указывается как `MaxExecutionResources`, значение для `MaxConcurrency` вызывается для сопоставления, что задано для `MinConcurrency`.<br /><br /> Допустимые значения: положительные целые числа и специальные значения `MaxExecutionResources`<br /><br /> Значение по умолчанию: `MaxExecutionResources`|  
 |`MaxPolicyElementKey`|Максимальный ключ элемента политики. Не допустимый ключ элемента.|  
-|`MinConcurrency`|Минимальный уровень параллелизма, которые предоставляются диспетчером ресурсов планировщику. Число виртуальных процессоров, назначенных планировщику никогда не перейдет ниже минимума. Специальное значение [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) указывает минимальный уровень параллелизма совпадает число аппаратных потоков на компьютере. Если значение, указанное для `MaxConcurrency` меньше, чем число аппаратных потоков на компьютере и `MinConcurrency` указывается как `MaxExecutionResources`, значение для `MinConcurrency` уменьшается для сопоставления, что задано для `MaxConcurrency`.<br /><br /> Допустимые значения: неотрицательные целые числа и специальные значения `MaxExecutionResources`. Обратите внимание, что для политик планировщика, используемых для создания планировщиков исполняющей среды с параллелизмом, значение `0` недопустимо.<br /><br /> Значение по умолчанию:`1`|  
+|`MinConcurrency`|Минимальный уровень параллелизма, которые предоставляются диспетчером ресурсов планировщику. Число виртуальных процессоров, назначенных планировщику никогда не перейдет ниже минимума. Специальное значение [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) указывает минимальный уровень параллелизма совпадает число аппаратных потоков на компьютере. Если значение, указанное для `MaxConcurrency` меньше, чем число аппаратных потоков на компьютере и `MinConcurrency` указывается как `MaxExecutionResources`, значение для `MinConcurrency` уменьшается для сопоставления, что задано для `MaxConcurrency`.<br /><br /> Допустимые значения: неотрицательные целые числа и специальные значения `MaxExecutionResources`. Обратите внимание, что для политик планировщика, используемых для создания планировщиков исполняющей среды с параллелизмом, значение `0` недопустимо.<br /><br /> Значение по умолчанию: `1`|  
 |`SchedulerKind`|Тип потоков, которые будет использовать планировщик для базовых контекстов выполнения. Дополнительные сведения см. в разделе [SchedulerType](#schedulertype).<br /><br /> Допустимые значения: элемент перечисления `SchedulerType`, например `ThreadScheduler`<br /><br /> Значение по умолчанию: `ThreadScheduler`. Это преобразует в Win32 потоки во всех операционных системах.|  
-|`SchedulingProtocol`|Описывает, какой алгоритм планирования будет использоваться планировщиком. Дополнительные сведения см. в разделе [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Допустимые значения: член `SchedulingProtocolType` перечисления, либо `EnhanceScheduleGroupLocality` или`EnhanceForwardProgress`<br /><br /> Значение по умолчанию:`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|Под вопросом число виртуальных процессоров на аппаратного потока. Коэффициент переподписки целевого объекта при необходимости может быть увеличен диспетчером ресурсов для обеспечения `MaxConcurrency` аппаратными потоками на компьютере.<br /><br /> Допустимые значения: положительные целые числа<br /><br /> Значение по умолчанию:`1`|  
+|`SchedulingProtocol`|Описывает, какой алгоритм планирования будет использоваться планировщиком. Дополнительные сведения см. в разделе [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Допустимые значения: член `SchedulingProtocolType` перечисления, либо `EnhanceScheduleGroupLocality` или `EnhanceForwardProgress`<br /><br /> Значение по умолчанию: `EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|Под вопросом число виртуальных процессоров на аппаратного потока. Коэффициент переподписки целевого объекта при необходимости может быть увеличен диспетчером ресурсов для обеспечения `MaxConcurrency` аппаратными потоками на компьютере.<br /><br /> Допустимые значения: положительные целые числа<br /><br /> Значение по умолчанию: `1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
 
-##  <a name="schedulertype"></a>Перечисление SchedulerType  
+##  <a name="schedulertype"></a>  Перечисление SchedulerType  
  Используется политикой `SchedulerKind` для описания типа потоков, которые должен использовать планировщик для базовых контекстов выполнения. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -232,7 +234,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>Перечисление SchedulingProtocolType  
+##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
  Используется политикой `SchedulingProtocol` для описания того, какой алгоритм планирования будет использоваться для планировщика. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -248,7 +250,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
  
-##  <a name="switchingproxystate"></a>Перечисление SwitchingProxyState  
+##  <a name="switchingproxystate"></a>  Перечисление SwitchingProxyState  
  Используется для обозначения состояния прокси-потока, когда он выполняет совместное переключение контекста на другой прокси-поток.  
   
 ```
@@ -267,7 +269,7 @@ enum SwitchingProxyState;
   
  Дополнительные сведения об использовании этого типа см. в разделе [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="task_group_status"></a>Перечисление task_group_status  
+##  <a name="task_group_status"></a>  task_group_status Enumeration  
  Описывает состояние выполнения объекта `task_group` или `structured_task_group`. Значение этого типа возвращается многочисленными методами, которые ожидают выполнения задач, запланированных для завершения группой задач.  
   
 ```
@@ -284,7 +286,7 @@ enum task_group_status;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>Перечисление WinRTInitializationType  
+##  <a name="winrtinitializationtype"></a>  Перечисление WinRTInitializationType  
  Используется политикой `WinRTInitialization` для описания того, будет ли среда выполнения Windows инициализирована в потоках планировщика для приложения, которое работает в операционных системах Windows с версии 8 или выше, и каким образом это будет выполняться. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```

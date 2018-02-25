@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>Класс bitset
 Описывает тип объекта, который хранит последовательность, состоящую из фиксированного числа битов, предоставляющих компактный способ хранения флагов для набора элементов или условий. Класс bitset поддерживает операции над объектами типа bitset, которые содержат коллекцию битов и обеспечивают доступ в константном времени к каждому биту.  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  Копия измененного битового массива, для которого была вызвана функция-член.  
   
 ### <a name="remarks"></a>Примечания  
- Вторая функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md), если позиция, указанная в качестве параметра, больше, чем размер *N* **битового массива\<***N*  **>** , биты которого были инвертированы.  
+ Вторая функция-член вызывает [out_of_range](../standard-library/out-of-range-class.md) исключение, если позиции, указанной в качестве параметра больше, чем размер *N* из **bitset\<***N***  >**  был инвертированный битом.  
   
 ### <a name="example"></a>Пример  
   
@@ -1173,7 +1176,7 @@ public:
  Ссылка на бит в битовом массиве, заданный позицией аргумента для первой, второй и пятой функций — членов класса reference, и значение **true** или **false**, чтобы отразить значение измененного бита в массиве битов для третьей и четвертой функции — члена класса reference.  
   
 ### <a name="remarks"></a>Примечания  
- Класс `reference` существует только как вспомогательный класс для битового массива `operator[]`. Класс member описывает объект, который может получать доступ к отдельному биту в битовом массиве. Предположим, *b* — объект типа `bool`, *x* и *y* — объекты типа **bitset\<***N***>** и *i* и *j* — допустимые позиции внутри такого объекта. Обозначение *x [i]* ссылается на бит в позиции *i* в битовом массиве *x*. Функции — члены класса `reference` предоставляют по порядку следующие операции.  
+ Класс `reference` существует только как вспомогательный класс для битового массива `operator[]`. Класс member описывает объект, который может получать доступ к отдельному биту в битовом массиве. Разрешить *b* быть объектом типа `bool`, *x* и *y* объектов типа **bitset\<***N*** >** , и *я* и *j* Разрешенные позиции в течение такого объекта. Обозначение *x [i]* ссылается на бит в позиции *i* в битовом массиве *x*. Функции — члены класса `reference` предоставляют по порядку следующие операции.  
   
 |Операция|Определение|  
 |---------------|----------------|  

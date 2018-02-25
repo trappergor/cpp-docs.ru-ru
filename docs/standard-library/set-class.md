@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::set
 - set/std::set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::set [C++]
 - std::set [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c2eba982b48181dee284bed63d3bab978d624fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="set-class"></a>Класс set
 Набор класса контейнеров стандартной библиотеки C++ используется для хранения и извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей, согласно которым данные автоматически упорядочиваются. Значение элемента в наборе нельзя изменить напрямую. Вместо этого старые значения необходимо удалить и вставить элементы с новыми значениями.  
@@ -126,7 +129,7 @@ class set
  В C++ 14 вы можете включить разнородный поиск, указав предикат `std::less<>` или `std::greater<>`, не имеющий параметров типа. Дополнительные сведения см. в статье [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для набора. Этот аргумент является необязательным, значение по умолчанию — **allocator***\<Key>.*  
+ Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для набора. Этот аргумент является необязательным, и значение по умолчанию — **распределителя ***\<ключа >.*  
   
 ## <a name="remarks"></a>Примечания  
  Набор стандартной библиотеки C++ — это:  

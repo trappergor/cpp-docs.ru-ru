@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
 - vc-attr.db_column
@@ -15,21 +16,23 @@ f1_keywords:
 - vc-attr.db_table
 - vc.templates.ole
 - vc-attr.db_source
-dev_langs: C++
-helpviewer_keywords: OLE DB consumer templates, classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29f833f6a598b9028506fb11d163be49212bd998
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Ссылка на шаблоны потребителя OLE DB
 Шаблоны потребителей OLE DB содержит следующие классы. Справочные материалы также содержатся разделы о [макросы для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
@@ -121,7 +124,7 @@ ms.lasthandoff: 12/21/2017
  Использовать в качестве аргумента шаблона для шаблона классов, таких как `CCommand` и `CTable`, которые принимают аргумент класса метода доступа. Используйте `CNoAccessor` не выполнять класс для поддержки параметров или выходные столбцы.  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- Используется в качестве аргумента шаблона для `CCommand` шаблон при необходимости команды для обработки один набор строк. `CNoMultipleResults`значение по умолчанию для аргумента шаблона.  
+ Используется в качестве аргумента шаблона для `CCommand` шаблон при необходимости команды для обработки один набор строк. `CNoMultipleResults` значение по умолчанию для аргумента шаблона.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
  Используется в качестве аргумента шаблона для `CCommand` или `CTable` Если команд или таблиц не возвращает набор строк.  

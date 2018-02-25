@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: amp_math/Concurrency::fast_math
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- amp_math/Concurrency::fast_math
+dev_langs:
+- C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Пространство имен Concurrency::fast_math
 Функции в `fast_math` пространство имен имеет точность ниже, поддерживают только одинарной точности (`float`) и вызывать встроенные функции DirectX. Существуют две версии каждой функции, например `cos` и `cosf`. Обе версии, принимающие и возвращающие `float`, однако каждый вызов одной DirectX встроенная функция.  
@@ -66,7 +70,7 @@ namespace fast_math;
 |[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Вычисляет остаток с плавающей запятой от _X/_Y|  
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Возвращает мантисса и степень из _X|  
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Возвращает мантисса и степень из _X|  
-|[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Определяет, имеет ли аргумент конечное значение|  
+|[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Определяет, имеет ли аргумент конечное значение|  
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Определяет, является ли аргумент бесконечности|  
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Определяет, является ли аргумент NaN|  
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Вычисляет вещественное число от мантисса и степень|  
@@ -105,7 +109,7 @@ namespace fast_math;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_math.h  
   
- **Пространство имен:** Concurrency::fast_math  
+ **Namespace:** Concurrency::fast_math  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

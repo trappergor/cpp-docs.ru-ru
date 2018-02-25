@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Ссылка на шаблоны поставщика OLE DB
 Классы и интерфейсы для шаблонов поставщика OLE DB могут быть сгруппированы в следующие категории. Справочные материалы также включает информацию о [макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование многие реализации интерфейсов. Это единственный метод, для которого необходимо предоставить реализация **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Предоставляет реализацию по умолчанию для дескриптора строки, которая используется в `IRowsetImpl` класса. Дескриптор строки логически представляет собой уникальный тег для строки результата. `IRowsetImpl`Создает новый `CSimpleRow` для запрашиваемого каждой строки в `IRowsetImpl::GetNextRows`.  
+ Предоставляет реализацию по умолчанию для дескриптора строки, которая используется в `IRowsetImpl` класса. Дескриптор строки логически представляет собой уникальный тег для строки результата. `IRowsetImpl` Создает новый `CSimpleRow` для запрашиваемого каждой строки в `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB требует, чтобы реализовать поставщики **HACCESSOR**, являющееся тег в массив **DBBINDING** структуры. Предоставляет **HACCESSOR**, которые адреса **BindType** структуры. Обязателен для наборов строк и команд.  
@@ -63,7 +67,7 @@ ms.lasthandoff: 12/21/2017
  Реализует OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) интерфейс, позволяющий обновления значений столбцов в существующих строках, удаление строк и вставки новых строк.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Этот класс наследует от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`выполняет те же функции, как `IObjectWithSite` , но и обеспечивает свойства OLE DB **DBPROPCANSCROLLBACKWARDS** и **DBPROPCANFETCHBACKWARDS**.  
+ Этот класс наследует от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` выполняет те же функции, как `IObjectWithSite` , но и обеспечивает свойства OLE DB **DBPROPCANSCROLLBACKWARDS** и **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Реализует **IRowsetIdentity** интерфейс, который позволяет сравнивать ли две строки данных идентичны, или нет.  
@@ -103,7 +107,7 @@ ms.lasthandoff: 12/21/2017
  Создает и удаляет соединения с потребителем. Обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`— обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей. Тем не менее если перечислитель предоставляет **IDBInitialize**, он должен предоставлять `IDBProperties` (свойства в источнике данных).  
+ `IDBProperties` — обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей. Тем не менее если перечислитель предоставляет **IDBInitialize**, он должен предоставлять `IDBProperties` (свойства в источнике данных).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Получает указатель интерфейса на объект источника данных. Обязательный интерфейс для сеанса.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashset-class"></a>Класс hash_set
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  Тип данных элемента, который будет сохранен в hash_set.  
   
  `Traits`  
- Тип, который включает два объекта-функции. Одна, класса compare, является бинарным предикатом, который может сравнивать два значения элементов в качестве ключей сортировки для определения их относительного порядка. Другая — хэш-функция, является унарным предикатом и сопоставляет ключевые значения элементов беззнаковым целым числам типа **size_t**. Этот аргумент является необязательным, значение по умолчанию — `hash_compare`*<Key,* **less***\<Key> >*.  
+ Тип, который включает два объекта-функции. Одна, класса compare, является бинарным предикатом, который может сравнивать два значения элементов в качестве ключей сортировки для определения их относительного порядка. Другая — хэш-функция, является унарным предикатом и сопоставляет ключевые значения элементов беззнаковым целым числам типа **size_t**. Этот аргумент является необязательным и `hash_compare` *< Key,* **менее ***\<ключ >>* значение по умолчанию.  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_set. Этот аргумент является необязательным, значение по умолчанию — **allocator***\<Key>.*  
+ Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_set. Этот аргумент является необязательным, и значение по умолчанию — **распределителя ***\<ключа >.*  
   
 ## <a name="remarks"></a>Примечания  
  hash_set это:  

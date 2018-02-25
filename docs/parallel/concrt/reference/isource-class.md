@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ISource
 - AGENTS/concurrency::ISource
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::ISource::reserve
 - AGENTS/concurrency::ISource::unlink_target
 - AGENTS/concurrency::ISource::unlink_targets
-dev_langs: C++
-helpviewer_keywords: ISource class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6db1fe614de8a3f47bae989ccb26512c375cec50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="isource-class"></a>Класс ISource
 Класс `ISource` является интерфейсом для всех блоков источников. Блоки источников распространяют сообщения в блоки `ITarget`.  
@@ -65,9 +69,9 @@ class ISource;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[принять](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
+|[accept](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
 |[acquire_ref](#acquire_ref)|При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.|  
-|[использовать](#consume)|При переопределении в производном классе, получает сообщение было предложено это `ISource` блокировку и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
+|[Использовать](#consume)|При переопределении в производном классе, получает сообщение было предложено это `ISource` блокировку и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
 |[link_target](#link_target)|При переопределении в производном классе связывает целевой блок это `ISource` блока.|  
 |[release](#release)|При переопределении в производном классе освобождает предыдущее успешное резервирование сообщения.|  
 |[release_ref](#release_ref)|При переопределении в производном классе освобождает значение счетчика ссылок на это `ISource` блока.|  
@@ -86,7 +90,7 @@ class ISource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="accept"></a>принять 
+##  <a name="accept"></a> Принять 
 
  При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.  
   
@@ -109,7 +113,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>Примечания  
  `accept` Метод вызывается методом целевой объект, пока сообщение предлагается это `ISource` блока. Сообщение указатель, возвращенный может отличаться от того, переданные в `propagate` метод `ITarget` блокировать, если этот источник решает создать копию сообщения.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.  
   
@@ -124,7 +128,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объекту, связанному этого источника во время `link_target` метод.  
   
-##  <a name="consume"></a>использовать 
+##  <a name="consume">Использовать</a> 
 
  При переопределении в производном классе, получает сообщение было предложено это `ISource` блокировку и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
@@ -147,7 +151,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>Примечания  
  `consume` Аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` , которые вернули `true`.  
   
-##  <a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  Уничтожает `ISource` объекта.  
   
@@ -155,7 +159,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  При переопределении в производном классе связывает целевой блок это `ISource` блока.  
   
@@ -167,7 +171,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Указатель на целевой блок, связываемый с это `ISource` блока.  
   
-##  <a name="release"></a>выпуск 
+##  <a name="release"></a> выпуск 
 
  При переопределении в производном классе освобождает предыдущее успешное резервирование сообщения.  
   
@@ -184,7 +188,7 @@ virtual void release(
  `_PTarget`  
  Указатель на целевой блок, который вызывает `release` метод.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  При переопределении в производном классе освобождает значение счетчика ссылок на это `ISource` блока.  
   
@@ -199,7 +203,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объект, который является, связь которого с этим источником. Блок источника может освободить ресурсы, зарезервированные для целевой блок.  
   
-##  <a name="reserve"></a>Резерв 
+##  <a name="reserve"></a> Резерв 
 
  При переопределении в производном классе резервирует сообщение, которое было предложено это `ISource` блока.  
   
@@ -217,12 +221,12 @@ virtual bool reserve(
  Указатель на целевой блок, который вызывает `reserve` метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если сообщение было успешно зарезервированы, `false` в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.  
+ `true` Если сообщение было успешно зарезервированы, `false` в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.  
   
 ### <a name="remarks"></a>Примечания  
  После вызова метода `reserve`, если он завершается успешно, следует вызвать `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  При переопределении в производном классе удаляет связь целевой блок из этого `ISource` блокировать, если найден связываемых ранее.  
   
@@ -234,7 +238,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  Указатель на целевой блок, связь которого с это `ISource` блока.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  При переопределении в производном классе удаляет связь всех целевых блоков из этого `ISource` блока.  
   

@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Алфавитный список встроенных функций
 В следующих разделах описаны характерные для Майкрософт встроенные функции, доступные на некоторых или всех архитектурах. Другие поддерживаемые встроенные функции описаны производителями процессоров, в файлах заголовков или на веб-узлах. В разделе [встроенные функции ARM](../intrinsics/arm-intrinsics.md), [x86 встроенные функции](../intrinsics/x86-intrinsics-list.md), и [x64 встроенные функции](../intrinsics/x64-amd64-intrinsics-list.md) разделы для ссылки на документацию производителя. Функции библиотеки времени выполнения (CRT) C, которые имеют встроенные функции, реализованные для них не документированы. Эти функции описаны в [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md).  

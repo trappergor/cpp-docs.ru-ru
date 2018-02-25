@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>Структура ITopologyNode
 Интерфейс для узла топологии, как определено диспетчером ресурсов. Узел содержит один или несколько ресурсов выполнения.  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **Пространство имен:** concurrency  
   
-##  <a name="getexecutionresourcecount"></a>Метод ITopologyNode::GetExecutionResourceCount  
+##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method  
  Возвращает количество ресурсов выполнения, сгруппированных в этом узле.  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество ресурсов выполнения, сгруппированных в этом узле.  
   
-##  <a name="getfirstexecutionresource"></a>Метод ITopologyNode::GetFirstExecutionResource  
+##  <a name="getfirstexecutionresource"></a>  ITopologyNode::GetFirstExecutionResource Method  
  Возвращает первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.  
   
-##  <a name="getid"></a>Метод ITopologyNode::GetId  
+##  <a name="getid"></a>  ITopologyNode::GetId Method  
  Возвращает уникальный идентификатор диспетчера ресурсов для данного узла.  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  Количество узлов, которые могут быть получены из функции [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="getnext"></a>Метод ITopologyNode::GetNext  
+##  <a name="getnext"></a>  ITopologyNode::GetNext Method  
  Возвращает интерфейс следующего узла топологии в порядке перечисления.  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Интерфейс следующего узла в порядке перечисления. Если в порядке перечисления топологии системы больше нет узлов, этот метод возвращает значение `NULL`.  
   
-##  <a name="getnumanode"></a>Метод ITopologyNode::GetNumaNode  
+##  <a name="getnumanode"></a>  ITopologyNode::GetNumaNode Method  
  Возвращает Windows назначенный номер узла NUMA, к которому относится данный узел которые ресурсов.  
   
 ```

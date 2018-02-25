@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>Структура scheduler_ptr
 Представляет указатель на планировщик. Этот класс существует для того, чтобы обеспечить возможность использования спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.  
@@ -47,7 +50,7 @@ struct scheduler_ptr;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[scheduler_ptr::Get](#get)|Возвращает необработанный указатель планировщику|  
+|[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **Пространство имен:** concurrency  
   
-##  <a name="get"></a>Метод scheduler_ptr::Get  
+##  <a name="get"></a>  scheduler_ptr::get Method  
  Возвращает необработанный указатель планировщику  
   
 ```
@@ -73,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="operator_bool"></a>scheduler_ptr::operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool   
  Проверьте, является ли указатель планировщика отличным от null  
   
 ''' bool() оператор const;

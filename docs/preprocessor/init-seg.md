@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **Конкретных C++**  
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  Параметры для **init_seg** pragma являются:  
   
- **компилятор**  
+ **compiler**  
  Зарезервирован для инициализации библиотеки времени выполнения Microsoft C. Объекты в этой группе создаются первыми.  
   
- **LIB**  
+ **lib**  
  Доступен для инициализаций поставщиков сторонних библиотек классов. Объекты в этой группе создаются после того, как отмечаются как **компилятора** , но перед любыми другими.  
   
- **пользователь**  
+ **user**  
  Доступен для любого пользователя. Объекты в этой группе создаются последними.  
   
- *Имя раздела*  
+ *section-name*  
  Позволяет явно определить раздел инициализации. Объекты в указанном пользователем *имя раздела* создаются неявно; однако их адреса размещаются в разделе с *имя раздела*.  
   
  В разделе с указанным именем будут содержаться указатели на вспомогательные функции, которые будут создавать глобальные объекты, объявленные в данном модуле после прагма-директивы.  
   
  Список имен не следует использовать при создании раздела см. в разделе [/SECTION](../build/reference/section-specify-section-attributes.md).  
   
- *func имя*  
+ *func-name*  
  Определяет функцию, вызываемую вместо функции `atexit` при выходе из программы. Эта вспомогательная функция также вызывает [atexit](../c-runtime-library/reference/atexit.md) с указателем на деструктор для глобального объекта. Если в прагма-директиве формы указывается идентификатор функции  
   
 ```  

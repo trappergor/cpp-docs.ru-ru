@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::timed_mutex
 - mutex/std::timed_mutex::timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::timed_mutex::try_lock_for
 - mutex/std::timed_mutex::try_lock_until
 - mutex/std::timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: b8b27489ce275cde4d0493a496980afd844f2378
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec0d34d83d19185730216af6ca9280fa14246214
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timedmutex-class"></a>Класс timed_mutex
 Представляет *тип мьютекса с ограничением по времени*. Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе.  
@@ -69,7 +72,7 @@ class timed_mutex;
   
  **Пространство имен:** std  
   
-##  <a name="lock"></a>timed_mutex::LOCK
+##  <a name="lock"></a>  timed_mutex::lock
  Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.  
   
 ```cpp  
@@ -96,7 +99,7 @@ timed_mutex();
 ### <a name="remarks"></a>Примечания  
  Если при выполнении деструктора объект заблокирован, поведение не определено.  
   
-##  <a name="try_lock"></a>timed_mutex::try_lock
+##  <a name="try_lock"></a>  timed_mutex::try_lock
  Попытки получить права владельца объекта `mutex` без блокировки.  
   
 ```cpp  
@@ -109,7 +112,7 @@ bool try_lock();
 ### <a name="remarks"></a>Примечания  
  Если вызывающий поток уже является владельцем `mutex`, поведение не определено.  
   
-##  <a name="try_lock_for"></a>timed_mutex::try_lock_for
+##  <a name="try_lock_for"></a>  timed_mutex::try_lock_for
  Попытки получить права владельца объекта `mutex` без блокировки.  
   
 ```cpp  
@@ -127,7 +130,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>Примечания  
  Если вызывающий поток уже является владельцем `mutex`, поведение не определено.  
   
-##  <a name="try_lock_until"></a>timed_mutex::try_lock_until
+##  <a name="try_lock_until"></a>  timed_mutex::try_lock_until
  Попытки получить права владельца объекта `mutex` без блокировки.  
   
 ```cpp  
@@ -147,7 +150,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>Примечания  
  Если вызывающий поток уже является владельцем `mutex`, поведение не определено.  
   
-##  <a name="unlock"></a>timed_mutex::Unlock
+##  <a name="unlock"></a>  timed_mutex::unlock
  Освобождает права владения объектом `mutex`.  
   
 ```cpp  

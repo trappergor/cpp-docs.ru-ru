@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::set_xy
 - amp_short_vectors/Concurrency::graphics::uint_2::y
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d7b3b494460e0f254f46ed197e09d6d8d485b5e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uint2-class"></a>Класс uint_2
 Представляет короткого вектора двух целых чисел без знака.  
@@ -73,7 +76,7 @@ class uint_2;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|uint_2::get_X||  
+|uint_2::get_x||  
 |uint_2::get_xy||  
 |uint_2::get_y||  
 |uint_2::get_yx||  
@@ -81,7 +84,7 @@ class uint_2;
 |uint_2::ref_r_Method||  
 |uint_2::ref_x_Method||  
 |uint_2::ref_y_Method||  
-|uint_2::set_X||  
+|uint_2::set_x||  
 |uint_2::set_xy||  
 |uint_2::set_y||  
 |uint_2::set_yx||  
@@ -91,19 +94,19 @@ class uint_2;
 |Имя|Описание:|  
 |----------|-----------------|  
 |uint_2::operator--||  
-|uint_2::operator % =||  
-|uint_2::operator & =||  
-|uint_2::operator * =||  
-|uint_2::operator / =||  
-|uint_2::operator ^ =||  
-|uint_2::operator &#124; =||  
-|uint_2::operator ~||  
-|uint_2::operator ++||  
-|uint_2::operator +=||  
-|uint_2::operator <\<=||  
-|uint_2::operator =||  
+|uint_2::operator%=||  
+|uint_2::operator&=||  
+|uint_2::operator*=||  
+|uint_2::operator/=||  
+|uint_2::operator^=||  
+|uint_2::operator&#124;=||  
+|uint_2::operator~||  
+|uint_2::operator++||  
+|uint_2::operator+=||  
+|uint_2::operator<\<=||  
+|uint_2::operator=||  
 |uint_2::operator-=||  
-|uint_2::operator >> =||  
+|uint_2::operator>>=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
@@ -116,23 +119,23 @@ class uint_2;
 |Имя|Описание:|  
 |----------|-----------------|  
 |uint_2::g||  
-|uint_2::GR||  
+|uint_2::gr||  
 |uint_2::r||  
-|uint_2::RG||  
+|uint_2::rg||  
 |uint_2::x||  
-|uint_2::XY||  
+|uint_2::xy||  
 |uint_2::y||  
-|uint_2::YX||  
+|uint_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `uint_2`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** amp_short_vectors.h  
+ **Header:** amp_short_vectors.h  
   
- **Пространство имен:** Concurrency::graphics  
+ **Namespace:** Concurrency::graphics  
   
-##  <a name="ctor"></a>uint_2 
+##  <a name="ctor"></a> uint_2 
 
  По умолчанию конструктор инициализирует все элементы с 0.  
   
@@ -195,7 +198,7 @@ explicit inline uint_2(
  `_Other`  
  Объект, используемый для инициализации.  
   
-##  <a name="uint_2__size"></a>размер 
+##  <a name="uint_2__size"></a> Размер 
 
 ```  
 static const int size = 2;  

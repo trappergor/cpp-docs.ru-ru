@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6049d92ab2ca1f7f724f3e27037c5df5c4304ea6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Использование операторов вставки и управление форматом
 В этой статье описывается, как управлять форматом и как создавать операторы вставки для собственных классов. Оператор вставки (**<<**), который изначально включен во все стандартные типы данных C++, отправляет байты в объект потока вывода. Операторы вставки работают с предопределенными "манипуляторами" — элементами, которые изменяют формат целочисленных аргументов, заданный по умолчанию.  

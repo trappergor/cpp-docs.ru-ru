@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ICommandImpl
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 80cc82023131a23ebfea33c5264cf83fdafb1b36
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec1c9bb3a430b30350ca3940fc7c90e6758d7c40
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 Предоставляет реализацию для [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) интерфейса.  
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |||  
 |-|-|  
 |[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|Отмена выполнения текущей команды.|  
-|[Cancel](../../data/oledb/icommandimpl-cancel.md)|Отмена выполнения текущей команды.|  
+|[Отмена](../../data/oledb/icommandimpl-cancel.md)|Отмена выполнения текущей команды.|  
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|Создает объект набора строк.|  
 |[Execute](../../data/oledb/icommandimpl-execute.md)|Выполняет команду.|  
 |[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|Возвращает указатель на интерфейс для сеанса, создавшего команду.|  

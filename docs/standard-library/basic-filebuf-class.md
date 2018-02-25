@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_filebuf
 - fstream/std::basic_filebuf::char_type
@@ -26,7 +27,8 @@ f1_keywords:
 - fstream/std::basic_filebuf::sync
 - fstream/std::basic_filebuf::uflow
 - fstream/std::basic_filebuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_filebuf [C++]
 - std::basic_filebuf [C++], char_type
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicfilebuf-class"></a>Класс basic_filebuf
 Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную во внешнем файле, и из нее.  
@@ -463,7 +466,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  Если функция не может выполниться успешно, она возвращает **traits_type::eof**. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Примечания  
- Если _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная виртуальная функция-член пытается вставить элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной буфер. Для этого существует несколько способов.  
+ Если _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенных виртуальной функции-члена написана вставляется элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) в буфер вывода. Для этого существует несколько способов.  
   
 -   Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.  
   

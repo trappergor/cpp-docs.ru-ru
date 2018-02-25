@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Записи пользователя
 Чтобы использовать статический метод доступа (то есть, производным от **CAccessor)**, потребитель должен иметь запись пользователя. Запись пользователя — это класс C++, который содержит элементы данных для обработки ввода или вывода. Мастер потребителя ATL OLE DB создает запись пользователя для поставщика. Можно добавить методы для записи пользователя для дополнительных задач, таких как обработка команд.  
   
- Ниже приведен образец записи, которая обрабатывает команды. В записи пользователя `BEGIN_COLUMN_MAP` представляет набор строк данных, передаваемых потребителю от поставщика. `BEGIN_PARAM_MAP`Представляет набор параметров команды. В этом примере используется [CCommand](../../data/oledb/ccommand-class.md) класса для обработки параметров команды. Члены данных в записях карты представляют собой смещения в один непрерывный блок памяти для каждого экземпляра класса. `COLUMN_ENTRY` Соответствуют макросы `PROVIDER_COLUMN_ENTRY` макросы на стороне поставщика.  
+ Ниже приведен образец записи, которая обрабатывает команды. В записи пользователя `BEGIN_COLUMN_MAP` представляет набор строк данных, передаваемых потребителю от поставщика. `BEGIN_PARAM_MAP` Представляет набор параметров команды. В этом примере используется [CCommand](../../data/oledb/ccommand-class.md) класса для обработки параметров команды. Члены данных в записях карты представляют собой смещения в один непрерывный блок памяти для каждого экземпляра класса. `COLUMN_ENTRY` Соответствуют макросы `PROVIDER_COLUMN_ENTRY` макросы на стороне поставщика.  
   
  Дополнительные сведения о **COLUMN_MAP** и **PARAM_MAP** макросов в разделе [макросы для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

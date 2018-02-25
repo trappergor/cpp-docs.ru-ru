@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: ppltasks/concurrency::task_options
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- ppltasks/concurrency::task_options
+dev_langs:
+- C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23fe15f95782fc2aead89614143786a845becd62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ad83e9e0a871ddc2d8f2c767cb0690da1e6f349
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Класс task_options (среда выполнения с параллелизмом)
 Представляет допустимые параметры для создания задачи  
@@ -58,7 +62,7 @@ class task_options;
   
  **Пространство имен:** concurrency  
   
-##  <a name="get_cancellation_token"></a>Метод task_options::get_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="get_cancellation_token">Метод task_options::get_cancellation_token (среда выполнения с параллелизмом)</a>  
  Возвращает токен отмены  
   
 ```
@@ -67,7 +71,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="get_continuation_context"></a>Метод task_options::get_continuation_context (среда выполнения с параллелизмом)  
+##  <a name="get_continuation_context">Метод task_options::get_continuation_context (среда выполнения с параллелизмом)</a>  
  Возвращает контекст продолжения  
   
 ```
@@ -76,7 +80,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="get_scheduler"></a>Метод task_options::get_scheduler (среда выполнения с параллелизмом)  
+##  <a name="get_scheduler">Метод task_options::get_scheduler (среда выполнения с параллелизмом)</a>  
  Возвращает планировщик  
   
 ```
@@ -85,7 +89,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="has_cancellation_token"></a>Метод task_options::has_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="has_cancellation_token">Метод task_options::has_cancellation_token (среда выполнения с параллелизмом)</a>  
  Показывает, был ли определен токен отмены пользователем  
   
 ```
@@ -94,7 +98,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="has_scheduler"></a>Метод task_options::has_scheduler (среда выполнения с параллелизмом)  
+##  <a name="has_scheduler">Метод task_options::has_scheduler (среда выполнения с параллелизмом)</a>  
  Показывает, был ли определен планировщик n пользователем  
   
 ```
@@ -103,7 +107,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="set_cancellation_token"></a>Метод task_options::set_cancellation_token (среда выполнения с параллелизмом)  
+##  <a name="set_cancellation_token">Метод task_options::set_cancellation_token (среда выполнения с параллелизмом)</a>  
  Задает токен в параметрах  
   
 ```
@@ -113,7 +117,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>Параметры  
  `_Token`  
   
-##  <a name="set_continuation_context"></a>Метод task_options::set_continuation_context (среда выполнения с параллелизмом)  
+##  <a name="set_continuation_context">Метод task_options::set_continuation_context (среда выполнения с параллелизмом)</a>  
  Задает контекст данного продолжения в параметрах  
   
 ```
@@ -123,7 +127,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 ### <a name="parameters"></a>Параметры  
  `_ContinuationContext`  
   
-##  <a name="ctor"></a>Конструктор task_options::task_options (среда выполнения с параллелизмом)  
+##  <a name="ctor">Конструктор task_options::task_options (среда выполнения с параллелизмом)</a>  
  Заданный по умолчанию список параметров создания задачи  
   
 ```

@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - extrq instruction
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cc28de10a2a0d53ee87920d511ea894ad517a79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4bc65289ce52be9acb1cfe01d1149480a8381e3b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 **Блок, относящийся только к системам Microsoft**  
@@ -50,13 +53,13 @@ __m128i _mm_extracti_si64(
  [in] `Source`  
  128-битовое поле, входных данных в его нижней 64 бита.  
   
- [in]`Descriptor`  
+ [in]  `Descriptor`  
  128-битовое поле, описывающее битовое поле для извлечения.  
   
- [in]`Length`  
+ [in]  `Length`  
  Целое число, указывающее длину этого поля для извлечения.  
   
- [in]`Index`  
+ [in]  `Index`  
  Целое число, указывающее индекс поля для извлечения  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -119,5 +122,5 @@ result3 = 0x30eca86
  Авторские права, 2007 дополнительных устройств Micro, Inc. Все права защищены. Воспроизвести с разрешения Дополнительно Micro устройств, Inc.  
   
 ## <a name="see-also"></a>См. также  
- [_mm_insert_si64 _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
+ [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
  [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - propagator_block
 - AGENTS/concurrency::propagator_block
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::propagator_block::send_message
 - AGENTS/concurrency::propagator_block::unlink_source
 - AGENTS/concurrency::propagator_block::unlink_sources
-dev_langs: C++
-helpviewer_keywords: propagator_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="propagatorblock-class"></a>Класс propagator_block
 Класс `propagator_block` — это абстрактный базовый класс для блоков сообщений, которые являются одновременно блоками источников и целевыми блоками. Он объединяет функциональные возможности обоих классов, `source_block` и `target_block`.  
@@ -113,7 +117,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  **Пространство имен:** concurrency  
   
-##  <a name="decline_incoming_messages"></a>decline_incoming_messages 
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages 
 
  Указывает блоку, что новые сообщения должны быть отклонены.  
   
@@ -124,7 +128,7 @@ void decline_incoming_messages();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается деструктором, чтобы убедиться, что новые сообщения отклоняются во время уничтожения.  
   
-##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
+##  <a name="initialize_source_and_target"></a> initialize_source_and_target 
 
  Инициализирует базовый объект. В частности `message_processor` необходимо инициализировать объект.  
   
@@ -141,7 +145,7 @@ void initialize_source_and_target(
  `_PScheduleGroup`  
  Группа расписаний, которая будет использоваться для планирования задач.  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  Связывает указанный исходный блок этого `propagator_block` объекта.  
   
@@ -153,7 +157,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  Указатель на `ISource` блок, который должен быть связан.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Обработка входных сообщений. Подходит только для блоков распространения, производных от source_block.  
   
@@ -164,7 +168,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ### <a name="parameters"></a>Параметры  
  `_PMessage`  
   
-##  <a name="propagate"></a>распространение 
+##  <a name="propagate">распространение</a> 
 
  Асинхронно передает сообщение из исходного блока данному целевому блоку.  
   
@@ -189,7 +193,7 @@ virtual message_status propagate(
   
  Метод создает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключение, если параметр `_PMessage` или `_PSource` параметр `NULL`.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  При переопределении в производном классе этот метод асинхронно передает сообщение от `ISource` блока к этому `propagator_block` объекта. Он вызывается по `propagate` метод при вызове исходного блока.  
   
@@ -209,7 +213,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
   
-##  <a name="ctor"></a>propagator_block 
+##  <a name="ctor"></a> propagator_block 
 
  Создает объект `propagator_block`.  
   
@@ -217,7 +221,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```  
   
-##  <a name="dtor"></a>~ propagator_block 
+##  <a name="dtor"></a> ~ propagator_block 
 
  Уничтожает объект `propagator_block`.  
   
@@ -225,7 +229,7 @@ propagator_block();
 virtual ~propagator_block();
 ```  
   
-##  <a name="register_filter"></a>register_filter 
+##  <a name="register_filter"></a> register_filter 
 
  Регистрирует метод фильтра, который будет вызываться для каждого полученного сообщения.  
   
@@ -237,7 +241,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  Метод фильтра.  
   
-##  <a name="remove_network_links"></a>remove_network_links 
+##  <a name="remove_network_links"></a> remove_network_links 
 
  Удаляет все исходной и целевой сети ссылки из этого `propagator_block` объекта.  
   
@@ -245,7 +249,7 @@ void register_filter(filter_method const& _Filter);
 void remove_network_links();
 ```  
   
-##  <a name="send"></a>Отправить 
+##  <a name="send"></a> Отправить 
 
  Синхронно инициирует сообщения в этот блок. Вызывается методом `ISource` блока. По завершении этой функции сообщение уже будет распространено в блок.  
   
@@ -268,7 +272,7 @@ virtual message_status send(
 ### <a name="remarks"></a>Примечания  
  Этот метод создает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) исключение, если параметр `_PMessage` или `_PSource` параметр `NULL`.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  При переопределении в производном классе этот метод синхронно передает сообщение от `ISource` блока к этому `propagator_block` объекта. Он вызывается по `send` метод при вызове исходного блока.  
   
@@ -284,7 +288,7 @@ virtual message_status send_message(
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот блок возвращает `declined` Если иное не переопределено в производном классе.  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  Удаляет связь указанного блока источника из этого `propagator_block` объекта.  
   
@@ -296,7 +300,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  Указатель на `ISource` блок, который должен быть удалена.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  Удаляет связь всех исходных блоков из этого `propagator_block` объекта.  
   

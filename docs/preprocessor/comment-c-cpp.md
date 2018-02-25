@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comment-cc"></a>комментарий (C/C++)
 Вставляет запись комментария в объектный или исполняемый файл.  
@@ -41,20 +44,20 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Примечания  
  *Тип комментария* является одним из предопределенных идентификаторов, описанных ниже, которое указывает тип записи комментария. Необязательный параметр `commentstring` обозначает строковый литерал, который содержит дополнительную информацию (для некоторых типов комментариев). Поскольку `commentstring` является строковым литералом, она подчиняется всем правилам для строковых литералов в отношении escape-символы, внедренные кавычки (**»**) и объединения.  
   
- **компилятор**  
+ **compiler**  
  Задает в объектном файле имя и номер версии компилятора. Эта запись комментария игнорируется компоновщиком. Если для этого типа записи будет указан параметр `commentstring`, компилятор выведет предупреждение.  
   
- **опускаются**  
+ **exestr**  
  Задает в объектном файле `commentstring`, которая во время компоновки помещается в исполняемый файл. Эта строка не загружается в память вместе с исполняемым файлом, однако ее можно обнаружить при помощи программы, которая находит в файлах печатаемые строки. Записи комментариев этого типа позволяют, в частности, вставлять в исполняемый файл информацию о номере версии и т. д.  
   
  Использовать параметр `exestr` не рекомендуется; в следующих выпусках он будет удален. Компоновщик не обрабатывает эту запись комментария.  
   
- **LIB**  
+ **lib**  
  Задает в объектном файле запись поиска библиотеки. Этот тип комментария должен сопровождаться `commentstring` с именем библиотеки, которую должен найти компоновщик. В нем также можно указать путь к ней. Имя библиотеки следует записей поиска библиотеки по умолчанию в объектном файле; Компоновщик ищет эту библиотеку так же как если бы его в командной строке при условии, что библиотека не была задана с [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). В один и тот же исходный файл можно вставить несколько записей поиска библиотеки. В объектном файле они будут располагаться в том же порядке, что и в исходном.  
   
  Если важен порядок библиотеки по умолчанию и добавленные библиотеки, компиляции с параметром [/Zl](../build/reference/zl-omit-default-library-name.md) будет вставлено имя библиотеки по умолчанию размещение в объектном модуле. Далее можно вставить еще одну директиву #pragma comment и с ее помощью добавить имя библиотеки по умолчанию уже после добавленной библиотеки. Библиотеки, добавленные при помощи этих директив, будут находиться в объектном модуле в том же порядке, в каком они указаны в исходном коде.  
   
- **Компоновщик**  
+ **linker**  
  Окружение [компоновщика](../build/reference/linker-options.md) в объектном файле. Благодаря этому параметр компоновщика можно не передавать из командной строки и не указывать в среде разработки, а задать непосредственно в комментарии. Например, в нем можно задать параметр /include, чтобы принудительно включить символ:  
   
 ```  
@@ -63,19 +66,19 @@ ms.lasthandoff: 12/21/2017
   
  Только следующие (*тип комментария*) должен быть передан идентификатор компоновщика доступны параметры компоновщика:  
   
--   [/ DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
+-   [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
   
--   [И ЭКСПОРТА](../build/reference/export-exports-a-function.md)  
+-   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
 -   [/ INCLUDE](../build/reference/include-force-symbol-references.md)  
   
 -   [/ MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/ MERGE](../build/reference/merge-combine-sections.md)  
+-   [/MERGE](../build/reference/merge-combine-sections.md)  
   
 -   [/ SECTION](../build/reference/section-specify-section-attributes.md)  
   
- **пользователь**  
+ **user**  
  Вставляет в объектный файл комментарий общего рода. `commentstring` содержит текст комментария. Эта запись комментария игнорируется компоновщиком.  
   
  Следующая директива pragma указывает компоновщику найти библиотеку EMAPI.LIB во время компоновки. Сначала компоновщик ищет ее в текущем рабочем каталоге, а затем по пути, заданном в переменной среды LIB.  

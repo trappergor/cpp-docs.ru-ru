@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
 - AMP/Concurrency::index::rank
-dev_langs: C++
-helpviewer_keywords: index structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04a10524a46fe7351b881e436d7aaf422b2a9acb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-class"></a>Класс index
 Определяет *N*-pographics-cpp-amp.md измерений индекса.  
@@ -52,7 +56,7 @@ class index;
 |Имя|Описание:|  
 |----------|-----------------|  
 |[оператор--](#operator--)|Уменьшает значение каждого элемента `index` объекта.|  
-|[Operator(MOD) =](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении на ряд этого элемента.|  
+|[operator(mod)=](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении на ряд этого элемента.|  
 |[оператор*=](#operator_star_eq)|Умножает каждый элемент `index` объекта по номеру.|  
 |[оператор/=](#operator_div_eq)|Делит каждый элемент `index` объекта по номеру.|  
 |[index::operator\[\]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
@@ -80,7 +84,7 @@ class index;
  **Пространство имен** : Concurrency  
 
 
-## <a name="index_ctor"></a>Индекс конструктора
+## <a name="index_ctor">Индекс конструктора</a>
 Инициализирует новый экземпляр класса индекса.
 
 ```  
@@ -114,7 +118,7 @@ explicit index(
 
 _Array  
 Одномерный массив с ранжирующие значения.  
-НЕ_Т  
+_I  
 Индекс в одномерный индекс.  
 _I0  
 Длина наиболее значимых измерения.  
@@ -125,7 +129,7 @@ _I2
 _Other  
 Индекс объекта, на котором основан новый объект индекса.  
 
-## <a name="operator--"></a>оператор--
+## <a name="operator--"></a>  оператор--
 Уменьшает значение каждого элемента или объекта индекса.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -137,7 +141,7 @@ index operator--(
 ### <a name="return-values"></a>Возвращаемые значения
 Для оператора префикс объект индекса (* это). Для оператора суффикс новый объект индекса.
 
-## <a name="operator_mod_eq"></a>Operator(MOD) =   
+## <a name="operator_mod_eq"></a>  Operator(MOD) =   
 Вычисляет модуль (остаток от деления) каждого элемента в объект индекса при делении на указанное число этого элемента.
 
 ```  
@@ -149,7 +153,7 @@ index<_Rank>& operator%=(
 _Rhs число, которое необходимо разделить, чтобы найти остаток.
 Возвращаемое значение индекс объекта.
 
-## <a name="operator_star_eq"></a>оператор * =   
+## <a name="operator_star_eq"></a>  оператор * =   
 Умножает каждый элемент в объект индекса, заданного числа.
 ```
 index<_Rank>& operator*=(
@@ -160,7 +164,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>Параметры
 _Rhs число для перемножения.
 
-## <a name="operator_div_eq"></a>оператор / = 
+## <a name="operator_div_eq"></a>  оператор / = 
 Делит каждый элемент в объект индекса заданного числа.
 
 ```
@@ -200,7 +204,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>Operator ++   
+## <a name="operator_add_add"></a>  Operator ++   
 Увеличивает значение каждого элемента или объекта индекса.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -212,7 +216,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>Возвращаемое значение
 Для оператора префикс объект индекса (* это). Для оператора суффикс новый объект индекса.
 
-## <a name="operator_add_eq"></a>оператор +=   
+## <a name="operator_add_eq"></a>  оператор +=   
 Добавляет указанный номер каждого элемента или объекта индекса.
 ```  
 index<_Rank>& operator+=(
@@ -242,7 +246,7 @@ _Other объект для копирования из индекса.
 ### <a name="return-value"></a>Возвращаемое значение
 Ссылка на этот объект индекса.
 
-## <a name="operator_-_eq"></a>оператор-=
+## <a name="operator_-_eq"></a>  оператор-=
 Вычитает из каждого элемента или объекта индекса заданного числа.
 ```  
 index<_Rank>& operator-=(
@@ -259,7 +263,7 @@ _Rhs номер для вычитания.
 ### <a name="return-value"></a>Возвращаемое значение
 Индекс объекта.   
 
-## <a name="rank"></a>Ранг  
+## <a name="rank"></a>  Ранг  
   Возвращает ранг объекта индекса.
 ```
 static const int rank = _Rank;

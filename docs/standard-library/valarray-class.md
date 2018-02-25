@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -20,7 +21,8 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="valarray-class"></a>Класс valarray
 Класс шаблона описывает объект, который управляет последовательностью элементов типа **Type**. Эти элементы хранятся в виде массива, предназначены для быстрого выполнения математических операций и оптимизированы для повышения производительности вычислений.  
@@ -1189,7 +1192,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
  Ссылка на элемент или его значение для указанного индекса или подмножества.  
   
 ### <a name="remarks"></a>Примечания  
- Оператор-член перегружен. Это позволяет предоставить несколько способов для выбора последовательностей элементов из тех элементов, которые находятся под управлением *\****this**. Первая группа из пяти операторов-членов совместно с различными перегрузками [operator=](#op_eq) (и другими операторами присваивания) позволяют осуществить выборочную замену (фрагментирование) в управляемой последовательности. Выбранные элементы должны существовать.  
+ Оператор-член перегружен, чтобы предоставить несколько способов выбора последовательностей элементов из тех, которые управляются *\****это**. Первая группа из пяти операторов-членов совместно с различными перегрузками [operator=](#op_eq) (и другими операторами присваивания) позволяют осуществить выборочную замену (фрагментирование) в управляемой последовательности. Выбранные элементы должны существовать.  
   
  При компиляции с флагом [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами объекта valarray.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  
   

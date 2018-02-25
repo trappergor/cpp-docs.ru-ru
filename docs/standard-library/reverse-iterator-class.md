@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::reverse_iterator::reference
 - iterator/std::reverse_iterator::base
 - iterator/std::reverse_iterator::operator_star
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reverse_iterator [C++]
 - std::reverse_iterator [C++], difference_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72f9bc378c37eed6660091f04dfabc01bc5d4c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reverseiterator-class"></a>Класс reverse_iterator
 Класс шаблона является адаптером итератора, описывающим объект обратного итератора, поведение которого аналогично поведению итератора произвольного доступа или двунаправленного итератора, но в обратном порядке. Он включает прохождение через диапазон в обратном порядке.  
@@ -57,7 +60,7 @@ class reverse_iterator
   
  Диапазон итератора [*первый*, *последнего*), где квадратная скобка слева указывает Включение *первый* и указывает скобки справа Включение элементов, но не включая *последний* сам. Те же элементы, включенные в обращенной последовательности [ **rev** - *первый*, **rev** - *последний*), Если *последний* — один прошлом конца элемента в последовательности, затем первый элемент **rev** - *первый* в обращенной последовательности указывает \*(*последний* - 1). Идентификатор, который связывает все обратные итераторы с их базовыми итераторами:  
   
- &\*( **reverse_iterator** ( *я* )) == &\*( *я* - 1).  
+ &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).  
   
  На практике это означает, что в обращенной последовательности reverse_iterator будет ссылаться на элемент, позиция которого на единицу превышает позицию элемента, на который итератор ссылается в исходной последовательности (т. е. находится справа от данного элемента). Поэтому если итератор обращался к элементу 6 в последовательности (2, 4, 6, 8), то итератор `reverse_iterator` будет обращаться к элементу 4 в обращенной последовательности (8, 6, 4, 2).  
   
@@ -114,7 +117,7 @@ RandomIterator base() const;
 ### <a name="remarks"></a>Примечания  
  Идентификатор, который связывает все обратные итераторы с их базовыми итераторами:  
   
- &\*( `reverse_iterator` ( *я* )) == &\*( *я* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  На практике это означает, что в обращенной последовательности `reverse_iterator` будет ссылаться на элемент, позиция которого на единицу превышает позицию элемента, на который итератор ссылается в исходной последовательности (т. е. находится справа от данного элемента). Поэтому если итератор обращался к элементу 6 в последовательности (2, 4, 6, 8), то итератор `reverse_iterator` будет обращаться к элементу 4 в обращенной последовательности (8, 6, 4, 2).  
   
@@ -932,7 +935,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 ### <a name="remarks"></a>Примечания  
  Идентификатор, который связывает все обратные итераторы с их базовыми итераторами:  
   
- &\*( `reverse_iterator` ( *я* )) == &\*( *я* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  На практике это означает, что в обращенной последовательности reverse_iterator будет ссылаться на элемент, позиция которого на единицу превышает позицию элемента, на который итератор ссылается в исходной последовательности (т. е. находится справа от данного элемента). Поэтому если итератор обращался к элементу 6 в последовательности (2, 4, 6, 8), то итератор `reverse_iterator` будет обращаться к элементу 4 в обращенной последовательности (8, 6, 4, 2).  
   

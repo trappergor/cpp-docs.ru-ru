@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d44a347f8f6cf6e502d3cc22435ed441a000f894
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bbee11b792ccdb67e33c9936475d0e701d5f3204
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="intrinsic"></a>intrinsic
 Указывает, что функции, заданные в списка аргументов этой директивы, вызываются как встроенные.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  Программы, в которых используются встроенные функции, выполняются быстрее, поскольку они не порождают дополнительную нагрузку, связанную с вызовом функций. Однако они могут иметь больший размер, поскольку в них создается дополнительный код.  
   
- **x86 конкретных**  
+ **x86 Specific**  
   
  Встроенные функции _disable и _enable создают инструкции режима ядра, включающие и отключающие прерывания. Они могут использоваться в драйверах, работающих в режиме ядра.  
   

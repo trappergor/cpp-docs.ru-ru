@@ -1,13 +1,13 @@
 ---
 title: "Класс CDynamicParameterAccessor | Документы Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/14/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor
 - ATL::CDynamicParameterAccessor
@@ -24,54 +24,58 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c0bf234bd0f8a3de96c545e2bbdfe492822d627
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
-ms.translationtype: HT
+ms.openlocfilehash: 18f53ca6d95d215ad41c6b2501245be0e470bbb1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Класс CDynamicParameterAccessor
-Аналогичен классу [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) , однако получает сведения о задаваемых параметрах путем вызова интерфейса [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) .  
-  
+
+Аналогично [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) , но получает сведения о параметрах для задания, вызвав [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) интерфейса.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class CDynamicParameterAccessor : public CDynamicAccessor  
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-cdynamicparameteraccessor.md)|Конструктор.|  
-|[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)|Получает данные параметров из буфера.|  
-|[GetParamCount](../../data/oledb/cdynamicparameteraccessor-getparamcount.md)|Получает число параметров в методе доступа.|  
-|[GetParamIO](../../data/oledb/cdynamicparameteraccessor-getparamio.md)|Определяет, является ли указанный параметр входным или выходным.|  
-|[GetParamLength](../../data/oledb/cdynamicparameteraccessor-getparamlength.md)|Получает длину указанного параметра, сохраненного в буфере.|  
-|[GetParamName](../../data/oledb/cdynamicparameteraccessor-getparamname.md)|Получает имя указанного параметра.|  
-|[GetParamStatus](../../data/oledb/cdynamicparameteraccessor-getparamstatus.md)|Получает состояние указанного параметра, сохраненного в буфере.|  
-|[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)|Получает строковые данные указанного параметра, сохраненного в буфере.|  
-|[GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)|Получает тип данных указанного параметра.|  
-|[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)|Задает буфер, используя данные параметра.|  
-|[SetParamLength](../../data/oledb/cdynamicparameteraccessor-setparamlength.md)|Задает длину указанного параметра, сохраненного в буфере.|  
-|[SetParamStatus](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|Задает состояние указанного параметра, сохраненного в буфере.|  
-|[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|Задает строковые данные указанного параметра, сохраненного в буфере.|  
-  
-## <a name="remarks"></a>Примечания  
- Для использования этого класса поставщик должен поддерживать интерфейс `ICommandWithParameters` для потребителя.  
-  
- Сведения о параметрах хранятся в буфере, создаваемом и управляемом данным классом. Получить данные параметров из буфера можно с помощью методов [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) и [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).  
-  
- Пример, демонстрирующий использование этого класса для выполнения хранимой процедуры SQL Server и получения значений выходных параметров, см. в статье базы знаний Q058860, HOWTO: Execute Stored Procedure using CDynamicParameterAccessor (Практическое руководство. Выполнение хранимой процедуры с помощью метода CDynamicParameterAccessor). Статьи базы знаний доступны в документации по Visual Studio библиотеки MSDN или на веб-сайте [http://support.microsoft.com/](http://support.microsoft.com).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:**atldbcli.h  
-  
-## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor-класс](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
- [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)
+class CDynamicParameterAccessor : public CDynamicAccessor
+```
+
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-cdynamicparameteraccessor.md)|Конструктор.|
+|[GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md)|Получает данные параметров из буфера.|
+|[GetParamCount](../../data/oledb/cdynamicparameteraccessor-getparamcount.md)|Получает число параметров в методе доступа.|
+|[GetParamIO](../../data/oledb/cdynamicparameteraccessor-getparamio.md)|Определяет, является ли указанный параметр входным или выходным.|
+|[GetParamLength](../../data/oledb/cdynamicparameteraccessor-getparamlength.md)|Получает длину указанного параметра, сохраненного в буфере.|
+|[GetParamName](../../data/oledb/cdynamicparameteraccessor-getparamname.md)|Получает имя указанного параметра.|
+|[GetParamStatus](../../data/oledb/cdynamicparameteraccessor-getparamstatus.md)|Получает состояние указанного параметра, сохраненного в буфере.|
+|[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)|Получает строковые данные указанного параметра, сохраненного в буфере.|
+|[GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)|Получает тип данных указанного параметра.|
+|[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)|Задает буфер, используя данные параметра.|
+|[SetParamLength](../../data/oledb/cdynamicparameteraccessor-setparamlength.md)|Задает длину указанного параметра, сохраненного в буфере.|
+|[SetParamStatus](../../data/oledb/cdynamicparameteraccessor-setparamstatus.md)|Задает состояние указанного параметра, сохраненного в буфере.|
+|[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)|Задает строковые данные указанного параметра, сохраненного в буфере.|
+
+## <a name="remarks"></a>Примечания
+
+Для использования этого класса поставщик должен поддерживать интерфейс `ICommandWithParameters` для потребителя.
+
+Сведения о параметрах хранятся в буфере, создаваемом и управляемом данным классом. Получить данные параметров из буфера можно с помощью методов [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) и [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md).
+
+Пример, демонстрирующий использование этого класса для выполнения хранимой процедуры SQL Server и получения значений выходных параметров см. в разделе [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) пример кода в [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) репозитория в GitHub.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:**atldbcli.h
+
+## <a name="see-also"></a>См. также
+
+[Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)  
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
+[Класс CAccessor](../../data/oledb/caccessor-class.md)  
+[Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
+[Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>Структура IThreadProxy
 Абстракция для потока выполнения. В зависимости от ключа политики `SchedulerType` созданного планировщика, диспетчер ресурсов предоставит прокси-поток, поддерживаемый обычным потоком Win32 или потоком планировщика пользовательского режима (UMS). Потоки UMS поддерживаются в 64-разрядных операционных системах Windows 7 и более поздних версий.  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **Пространство имен:** concurrency  
   
-##  <a name="getid"></a>Метод IThreadProxy::GetId  
+##  <a name="getid"></a>  IThreadProxy::GetId Method  
  Возвращает уникальный идентификатор для прокси-поток.  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Уникальный целочисленный идентификатор.  
   
-##  <a name="switchout"></a>Метод IThreadProxy::SwitchOut  
+##  <a name="switchout"></a>  Метод IThreadProxy::SwitchOut  
  Отсоединяет контекст от базового корневого виртуального процессора.  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Повторно инициализированный корневой виртуальный процессор ничем не отличается от абсолютно нового виртуального процессора, выделенного диспетчером ресурсов планировщику. Его можно использовать для выполнения, активировав его с контекстом выполнения с помощью `IVirtualProcessorRoot::Activate`.  
   
- `SwitchOut`должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены.  
+ `SwitchOut` должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены.  
   
  В библиотеках и заголовках, поставляемых вместе с Visual Studio 2010, этот метод не принимает параметров и не инициализирует повторно корневой виртуальный процессор. Для сохранения старого поведения значение параметра по умолчанию задано как `Blocking`.  
   
-##  <a name="switchto"></a>Метод IThreadProxy::SwitchTo  
+##  <a name="switchto"></a>  Метод IThreadProxy::SwitchTo  
  Выполняет совместное переключение контекста с текущего выполняемого контекста на другую страницу.  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  Используйте значение `Nesting` Если необходимо временно отсоединить этот прокси-поток от корневого виртуального процессора, выполняется на и планировщик, который обслуживается для. Вызов `SwitchTo` с параметром `switchState` значение `Nesting` приведет к контексту выполнения `pContext` для запуска, выполнения и текущего прокси-поток также продолжит выполняться без необходимости корневой виртуальный процессор. Прокси-поток считается покинувшим планировщик до вызывает [IThreadProxy::SwitchOut](#switchout) метод позднее времени. `IThreadProxy::SwitchOut` Метод может заблокировать прокси-поток, пока корневой виртуальный процессор доступен для повторного планирования его.  
   
- `SwitchTo`должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены. Эта функция создает `invalid_argument` Если параметр `pContext` равно `NULL`.  
+ `SwitchTo` должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены. Эта функция создает `invalid_argument` Если параметр `pContext` равно `NULL`.  
   
-##  <a name="yieldtosystem"></a>Метод IThreadProxy::YieldToSystem  
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
  Позволяет вызвавшему потоку передать выполнение другому потоку, готовому к использованию на текущем процессоре. Операционная система выбирает следующий поток для выполнения.  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>Примечания  
  При вызове с помощью прокси-поток, поддерживаемый Обычный поток Windows, `YieldToSystem` ведет себя так же, как функции Windows `SwitchToThread`. Тем не менее, при вызове из планируемые потоки пользовательского режима (UMS), `SwitchToThread` функции делегирует задачу подбора следующего потока для запуска планировщика режима пользователя, не операционной системы. Для достижения желаемого эффекта переключения на другой поток готов в системе, используйте `YieldToSystem`.  
   
- `YieldToSystem`должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены.  
+ `YieldToSystem` должен быть вызван для `IThreadProxy` интерфейс, который представляет текущий выполняемый поток или результаты не определены.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

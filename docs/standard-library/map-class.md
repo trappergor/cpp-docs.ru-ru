@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="map-class"></a>Класс map
 Используется для хранения и извлечения данных из коллекции, в которой каждый элемент является парой, обладающей одновременно значением данных и ключом сортировки. Значение ключа уникально и применяется для автоматической сортировки данных.  
@@ -1504,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- **Итератор**, определенный сопоставлением, указывает на элементы, которые являются объектами [value_type](#value_type) типа `pair`*\<***constKey**, **Type***>*, первый член которых — ключ элемента, а второй — сопоставленные данные, хранящиеся в элементе.  
+ **Итератор** определяется точек карты для элементов, которые являются объектами [value_type](#value_type), то есть типа `pair` * \< * **constKey** , **Тип *** >*, которого первый элемент — это ключ к элементу и которого второй член является сопоставленных datum, удерживаемые элемента.  
   
  Для разыменования **итератора**`Iter`, указывающего на элемент сопоставления, используйте оператор **->**.  
   
@@ -2310,7 +2313,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>Примечания  
  Тип `reverse_iterator` не может изменять значение элемента и используется для перебора сопоставления в обратном порядке.  
   
- `reverse_iterator`, определенный сопоставлением, указывает на элементы, которые являются объектами [value_type](#value_type) типа `pair`*\<***constKey**, **Type***>*, первый член которых — ключ элемента, а второй — сопоставленные данные, хранящиеся в элементе.  
+ `reverse_iterator` Определяется точек карты для элементов, которые являются объектами [value_type](#value_type), то есть типа `pair` * \< * **constKey**, * *Тип *** >*, которого первый элемент — это ключ к элементу и которого второй член является сопоставленных datum, удерживаемые элемента.  
   
  Для разыменования `reverse_iterator` `rIter` указывает на элемент в сопоставлении, используйте  **->**  оператор.  
   

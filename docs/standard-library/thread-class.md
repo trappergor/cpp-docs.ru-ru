@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::thread
 - thread/std::thread::id Class
@@ -18,9 +19,10 @@ f1_keywords:
 - thread/std::thread::joinable
 - thread/std::thread::native_handle
 - thread/std::thread::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,12 +36,13 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 2e2d9d1bd19b34cd4b542d0325b06ad57e1a7c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a681e61888653c0abada81c5b35ff3b96b75200
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-class"></a>Класс thread
 Определяет объект, который позволяет наблюдать за потоком выполнения в приложении и управлять этим потоком.  
@@ -73,7 +76,7 @@ class thread;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[отсоединение](#detach)|Отсоединяет связанный поток от объекта `thread`.|  
+|[detach](#detach)|Отсоединяет связанный поток от объекта `thread`.|  
 |[get_id](#get_id)|Возвращает уникальный идентификатор связанного потока.|  
 |[hardware_concurrency](#hardware_concurrency)|Статический. Возвращает приблизительное число контекстов аппаратного потока.|  
 |[join](#join)|Блокируется до завершения соответствующего потока.|  
@@ -92,7 +95,7 @@ class thread;
   
  **Пространство имен:** std  
   
-##  <a name="detach"></a>Thread::Detach
+##  <a name="detach"></a>  Thread::Detach
  Отсоединяет связанный поток. Операционная система становится ответственной за освобождение ресурсов потока при завершении.  
   
 ```
@@ -106,7 +109,7 @@ void detach();
   
  Если поток, связанный с вызывающим объектом, является недопустимым, функция создает ошибку `system_error` с кодом `no_such_process`.  
   
-##  <a name="get_id"></a>Thread::get_id
+##  <a name="get_id"></a>  thread::get_id
  Возвращает уникальный идентификатор связанного потока.  
   
 ```
@@ -116,7 +119,7 @@ id get_id() const noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [thread::id](#id_class), уникально идентифицирующий связанный поток, или `thread::id()`, если с объектом не связан никакой поток.  
   
-##  <a name="hardware_concurrency"></a>Thread::hardware_concurrency
+##  <a name="hardware_concurrency"></a>  Thread::hardware_concurrency
  Статический метод, который возвращает приблизительное число контекстов аппаратного потока.  
   
 ```
@@ -140,7 +143,7 @@ class thread::id {
   
  Все созданные конструктором по умолчанию объекты `thread::id` равны.  
   
-##  <a name="join"></a>Thread::JOIN
+##  <a name="join"></a>  Thread::JOIN
  Блокируется до завершения потока выполнения, связанного с вызывающим объектом.  
   
 ```
@@ -150,7 +153,7 @@ void join();
 ### <a name="remarks"></a>Примечания  
  Если вызов завершается успешно, последующие вызовы [get_id](#get_id) для вызывающего объекта возвращают значение по умолчанию [thread::id](#id_class), которое не равно значению `thread::id` ни одного из существующих потоков; если вызов завершается неудачно, возвращаемое `get_id` значение остается неизменным.  
   
-##  <a name="joinable"></a>Thread::joinable
+##  <a name="joinable"></a>  Thread::joinable
  Указывает, возможно ли *присоединение* связанного потока.  
   
 ```
@@ -163,7 +166,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>Примечания  
  Объект потока *присоединяем*, если `get_id() != id()`.  
   
-##  <a name="native_handle"></a>Thread::native_handle
+##  <a name="native_handle"></a>  Thread::native_handle
  Возвращает тип реализации, представляющий дескриптор потока. Дескриптор потока может использоваться разными способами в зависимости от реализации.  
   
 ```
@@ -192,7 +195,7 @@ thread& operator=(thread&& Other) noexcept;
   
  После установления связи `Other` присваивается состояние, созданное по умолчанию.  
   
-##  <a name="swap"></a>Thread::Swap
+##  <a name="swap"></a>  Thread::Swap
  Заменяет состояние потока состоянием заданного объекта `thread`.  
   
 ```

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 51d501139d0610d670f7d646dc985a694a5b741c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e8d47e6376b3786b27305e65bdb55f0c292995d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-directives"></a>Директивы OpenMP
 Ссылки на директивы использования в OpenMP API.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |[master](../../../parallel/openmp/reference/master.md)|Указывает, что только master threadshould выполняться части программы.|  
 |[упорядоченные](../../../parallel/openmp/reference/ordered-openmp-directives.md)|Указывает, код под Параллелизованный цикл должен выполняться как последовательный цикл.|  
 |[parallel](../../../parallel/openmp/reference/parallel.md)|Определяет параллельной области, который является код, который будет выполняться несколько потоков параллельно.|  
-|[разделы](../../../parallel/openmp/reference/sections-openmp.md)|Определяет разделы кода, чтобы разделить между всеми потоками.|  
+|[Разделы](../../../parallel/openmp/reference/sections-openmp.md)|Определяет разделы кода, чтобы разделить между всеми потоками.|  
 |[single](../../../parallel/openmp/reference/single.md)|Позволяет указать, что фрагмент кода должна выполняться в одном потоке, не обязательно главного потока.|  
 |[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|Указывает, что переменная является закрытым в поток.|  
   

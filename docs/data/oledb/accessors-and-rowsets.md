@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>Методы доступа и наборы строк
 Для установки и извлечения данных, шаблоны OLE DB используют метод доступа и набор строк с помощью [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) класса. Этот класс может обрабатывать несколько методов доступа к разным типам.  
   
 ## <a name="accessor-types"></a>Типы методов доступа  
- Все методы доступа являются производными от [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`предоставляет параметр и привязка к столбцу.  
+ Все методы доступа являются производными от [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` предоставляет параметр и привязка к столбцу.  
   
  На следующем рисунке показана типы методов доступа.  
   
  ![Типы методов доступа](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Классы методов доступа  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) используйте этот метод доступа, если известно структуры источника базы данных во время разработки. `CAccessor`статически связывает запись базы данных, которая содержит буфер, к источнику данных.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) используйте этот метод доступа, если известно структуры источника базы данных во время разработки. `CAccessor` статически связывает запись базы данных, которая содержит буфер, к источнику данных.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) используйте этот метод доступа, если вы не знаете структуры базы данных во время разработки. `CDynamicAccessor`вызовы `IColumnsInfo::GetColumnInfo` Чтобы получить сведения о столбцах базы данных. Создает и управляет методом доступа и буфером.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) используйте этот метод доступа, если вы не знаете структуры базы данных во время разработки. `CDynamicAccessor` вызовы `IColumnsInfo::GetColumnInfo` Чтобы получить сведения о столбцах базы данных. Создает и управляет методом доступа и буфером.  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) использовать этот метод доступа для обработки типов Неизвестная команда. При подготовке команд `CDynamicParameterAccessor` можно получить сведения о параметрах из `ICommandWithParameters` интерфейс, если поставщик поддерживает `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), и [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) эти классы используются, если у вас нет сведений о схеме базы данных. `CDynamicStringAccessorA`Получает данные в виде строк ANSI; `CDynamicStringAccessorW` получает данные в виде строки в Юникоде.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), и [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) эти классы используются, если у вас нет сведений о схеме базы данных. `CDynamicStringAccessorA` Получает данные в виде строк ANSI; `CDynamicStringAccessorW` получает данные в виде строки в Юникоде.  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) с этим классом, можно использовать любые типы данных, если поставщик может преобразовать типы. Он обрабатывает результирующих столбцов и параметров команды.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multiset [C++]
 - std::multiset [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8953fd24b62784e36f12fb96e3005e21a86bc62
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multiset-class"></a>Класс multiset
 Класс multiset в стандартной библиотеке C++ используется для хранения и извлечения данных из коллекции, в которой значения содержащихся элементов не обязательно должны быть уникальными и в котором они выступают в качестве ключевых значений, в соответствии с которыми данные автоматически упорядочиваются. Значение ключа элемента в мультинаборе нельзя изменить напрямую. Вместо этого старые значения необходимо удалить и вставить элементы с новыми значениями.  
@@ -124,7 +127,7 @@ class multiset
  В C++ 14 вы можете включить разнородный поиск, указав предикат `std::less<>` или `std::greater<>`, не имеющий параметров типа. Дополнительные сведения см. в статье [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для мультинабора. Значение по умолчанию — **allocator***\<Key>.*  
+ Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для мультинабора. Значение по умолчанию — **распределителя ***\<ключа >.*  
   
 ## <a name="remarks"></a>Примечания  
  Класс multiset стандартной библиотеки C++ — это:  

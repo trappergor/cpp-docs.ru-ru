@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>Объектная модель OLE DB
 Объектная модель OLE DB содержит следующие объекты и компоненты. Первые четыре объекта и компонентов, перечисленных (источники данных, сеансы, команды и наборы строк) позволяют подключиться к источнику данных и просмотреть его. Остальные, начиная с помощью методов доступа, относятся к работе с данными, при его отображении.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="accessors"></a>Методы доступа  
  Только OLE DB использует понятие методов доступа. Метод доступа описывает, каким образом данные хранятся в потребителе. Он содержит набор привязок (называемый сопоставлением столбцов) между полями набора строк (столбцов) и элементы данных, объявляется в объекте-получателе.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Транзакции  
+##  <a name="vcconoledbcomponents_transactions"></a> Транзакции  
  Объекты транзакции используются при фиксации или отмене вложенных транзакций на отличный от самого нижнего уровня. Транзакция является неделимой единицей работы определен с помощью теста ACID. ACID расшифровывается следующим образом.  
   
 -   Атомарность: не удается разделить на более мелкие единицы работы.  

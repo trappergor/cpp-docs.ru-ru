@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
 - AMP_MATH/Concurrency::acosf
@@ -138,18 +139,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Пространство имен Concurrency::precise_math
 Функции в `precise_math` пространства имен являются совместимыми C99. Оба одиночной точности, а также включаются двойной точности версии каждой функции. Например `acos` версия двойной точности и `acosf` версия одиночной точности. Эти функции, включая функции одиночной точности, требуется расширенная поддержка двойной точности на сочетания клавиш. Можно использовать [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) для определения, если эти функции можно запустить на определенных сочетаний клавиш. 
@@ -232,7 +235,7 @@ namespace precise_math;
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Вычисляет квадратный корень из суммы квадратов _X и _Y|  
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Перегружен. Извлеките экспоненты _X как значение типа int со знаком|  
 |[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Извлеките экспоненты _X как значение типа int со знаком|  
-|[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Перегружен. Определяет, имеет ли аргумент конечное значение|  
+|[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Перегружен. Определяет, имеет ли аргумент конечное значение|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Перегружен. Определяет, является ли аргумент бесконечности|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Перегружен. Определяет, является ли аргумент NaN|  
 |[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Перегружен. Определяет, является ли аргумент нормаль|  
@@ -258,7 +261,7 @@ namespace precise_math;
 |[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Округляет аргумент целочисленного значения в формате с плавающей запятой, используя текущее направление округления.|  
 |[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Перегружен. Определить Далее представимым значением в типе функции, после _X в направлении _Y|  
 |[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Определить Далее представимым значением в типе функции, после _X в направлении _Y|  
-|[PHI](concurrency-precise-math-namespace-functions.md#phi)|Перегружен. Возвращает интегральную функцию распределения аргумента|  
+|[phi](concurrency-precise-math-namespace-functions.md#phi)|Перегружен. Возвращает интегральную функцию распределения аргумента|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Возвращает интегральную функцию распределения аргумента|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Перегружен. Вычисляет _X, возведенное в степень _Y|  
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|Вычисляет _X, возведенное в степень _Y|  

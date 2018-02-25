@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - call
 - AGENTS/concurrency::call
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: call class
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="call-class"></a>Класс call
 Блок обмена сообщениями `call` — это упорядоченный блок `target_block` с несколькими источниками, который вызывает заданную функцию при получении сообщения.  
@@ -53,7 +57,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[вызов](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
+|[call](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
@@ -81,7 +85,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **Пространство имен:** concurrency  
   
-##  <a name="ctor"></a>вызов 
+##  <a name="ctor"></a> Вызов 
 
  Создает `call` блока обмена сообщениями.  
   
@@ -132,7 +136,7 @@ call(
   
  Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `call` блока обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
   
-##  <a name="dtor"></a>~ вызова 
+##  <a name="dtor"></a> ~ вызова 
 
  Уничтожает `call` блока обмена сообщениями.  
   
@@ -140,7 +144,7 @@ call(
 ~call();
 ```  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  Выполняет функцию вызвать для входящих сообщений.  
   
@@ -151,7 +155,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>Параметры  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  Обрабатывает сообщение, которое было принято данным `call` блока обмена сообщениями.  
   
@@ -163,7 +167,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  Указатель на сообщение, которое будет обрабатываться.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Асинхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `propagate` метод при вызове исходного блока.  
   
@@ -183,7 +187,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Синхронно передает сообщение от `ISource` блока к этому `call` блока обмена сообщениями. Он вызывается по `send` метод при вызове исходного блока.  
   
@@ -203,7 +207,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [message_status](concurrency-namespace-enums.md) , указывающее, что целевой объект решил сделать с сообщением.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.  
   

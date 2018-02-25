@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_map/stdext::hash_multimap::swap
 - hash_map/stdext::hash_multimap::upper_bound
 - hash_map/stdext::hash_multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multimap
 - stdext::hash_multimap::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6474bd6cdbb8baa2819d80f122b5a17792251bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultimap-class"></a>Класс hash_multimap
 > [!NOTE]
@@ -475,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Примечания  
  Тип `const_iterator`нельзя использовать для изменения значения элемента.  
   
- `const_iterator` определяется hash_multimap, указывающим на объекты [value_type](#value_type) типа `pair`*\<***constKey, Type***>*. Значение ключа доступно через первый элемент пары, а значение сопоставленного элемента — через второй элемент пары.  
+ `const_iterator` Определяемый точками hash_multimap объектам [value_type](#value_type), которые имеют тип `pair`  *\< ***constKey тип*** >* . Значение ключа доступно через первый элемент пары, а значение сопоставленного элемента — через второй элемент пары.  
   
  Для разыменования `const_iterator` `cIter` указывает на элемент в объекте hash_multimap, используйте  **->**  оператор.  
   
@@ -2533,7 +2536,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `value_type`объявляется как пары\<const [key_type](#key_type), [mapped_type](#mapped_type)> и не сопряжение\<key_type mapped_type > Поскольку ключи ассоциативный контейнер не может быть изменен с помощью неконстантного итератора или ссылку.  
+ `value_type` объявляется как пары\<const [key_type](#key_type), [mapped_type](#mapped_type)> и не сопряжение\<key_type mapped_type > Поскольку ключи ассоциативный контейнер не может быть изменен с помощью неконстантного итератора или ссылку.  
   
    
   

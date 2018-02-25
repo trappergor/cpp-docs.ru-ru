@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2dc0c58414587316a9a63d08bf2116d4159fca20
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Перебор простого набора строк
 В следующем примере показано быстрый и простой базы данных доступа, не связанных с командами. Следующий код потребителя, в проект ATL извлекает записи из таблицы с именем *исполнители* в Microsoft Access, базы данных с помощью поставщика Microsoft OLE DB для ODBC. Код создает [CTable](../../data/oledb/ctable-class.md) таблицы с методом доступа на основе класса записей пользователя `CArtists`. Открывает подключение, открывает сеанс для подключения и открывает таблицу в сеансе.  

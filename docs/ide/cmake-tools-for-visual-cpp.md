@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Проекты Visual C++ CMake
 
@@ -161,7 +165,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![Ошибки в файлах CMakeLists.txt](media/cmake-cmakelists-error.png "CMakeLists.txt ошибок")
 
-## <a name="cmake_settings"></a>Параметры CMake и настраиваемые конфигурации
+## <a name="cmake_settings"></a> Параметры CMake и настраиваемые конфигурации
 
 По умолчанию Visual Studio предоставляет шесть CMake конфигурации по умолчанию («x86-отладка», «x86 выпуск», «x64-отладка», «x64-выпуск», «Linux отладка» и «Linux выпуск»). Эти конфигурации определяют, как вызывается CMake.exe создать CMake кэш для данного проекта. Чтобы изменить эти настройки или создания новой пользовательской конфигурации, выберите **CMake | Изменение параметров CMake**и выберите файл CMakeLists.txt, которому применяются параметры. **Изменение параметров CMake** команда также доступна в контекстном меню файла в **обозревателе решений**. Эта команда создает файл CMakeSettings.json в папке проекта. Этот файл используется для повторного создания файла кэша CMake, например после **Очистить** операции. 
 
@@ -215,13 +219,13 @@ JSON IntelliSense помогает изменить файл CMakeSettings.json:
 CMakeSettings.json также поддерживает много переменных среды в любые свойства, упомянутых выше. Синтаксис для использования `${env.FOO}` для расширения среды % переменная % FOO.
 Также имеют доступ к встроенных макросов внутри данного файла:
 
-- `${workspaceRoot}`— предоставляет полный путь папки рабочей области
-- `${workspaceHash}`— хэш расположение рабочей области; полезно для создания уникального идентификатора для текущей рабочей области (например, для использования в пути папки)
-- `${projectFile}`— Полный путь к корневому файлу CMakeLists.txt
-- `${projectDir}`— Полный путь к папке CMakeLists.txt корневого файла
-- `${thisFile}`— Полный путь к файлу CMakeSettings.json
-- `${name}`— Имя конфигурации
-- `${generator}`— имя генератора CMake, используемый в этой конфигурации
+- `${workspaceRoot}` — предоставляет полный путь папки рабочей области
+- `${workspaceHash}` — хэш расположение рабочей области; полезно для создания уникального идентификатора для текущей рабочей области (например, для использования в пути папки)
+- `${projectFile}` — Полный путь к корневому файлу CMakeLists.txt
+- `${projectDir}` — Полный путь к папке CMakeLists.txt корневого файла
+- `${thisFile}` — Полный путь к файлу CMakeSettings.json
+- `${name}` — Имя конфигурации
+- `${generator}` — имя генератора CMake, используемый в этой конфигурации
 
 ### <a name="ninja-command-line-arguments"></a>Аргументы командной строки ниндзя
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w FLAG  | Настройка предупреждений (-w предупреждений списка в список)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Наследуемые сред (Visual Studio 2017 г. версия 15,5)
-
-CmakeSettings.json теперь поддерживает наследуемые сред. Эта функция позволяет (1) наследуют сред по умолчанию и (2) создайте пользовательские переменные, которые передаются CMake.exe при запуске.
+CMakeSettings.json теперь поддерживает наследуемые сред. Эта функция позволяет (1) наследуют сред по умолчанию и (2) создайте пользовательские переменные, которые передаются CMake.exe при запуске.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ CmakeSettings.json теперь поддерживает наследуемые 
 |msvc_arm64_x64|Компилировать для ARM64 с помощью средств 64-разрядная версия|
 
 ### <a name="custom-environment-variables"></a>Пользовательские переменные.
-В CmakeSettings.json, можно определить пользовательские переменные глобально или для каждой конфигурации в **среды** свойство. В следующем примере определяется одну глобальную переменную **BuildDir**, которая наследуется в конфигурациях отладки x86 и x64-Debug. Каждая конфигурация использует переменную для указания значения для **buildRoot** для этой конфигурации. Обратите внимание, как каждая конфигурация использует **inheritEnvironments** свойство, чтобы указать переменную, которая применяется только к этой конфигурации.
+В CMakeSettings.json, можно определить пользовательские переменные глобально или для каждой конфигурации в **среды** свойство. В следующем примере определяется одну глобальную переменную **BuildDir**, которая наследуется в конфигурациях отладки x86 и x64-Debug. Каждая конфигурация использует переменную для указания значения для **buildRoot** для этой конфигурации. Обратите внимание, как каждая конфигурация использует **inheritEnvironments** свойство, чтобы указать переменную, которая применяется только к этой конфигурации.
 
 ```json
 {
@@ -290,8 +293,7 @@ CmakeSettings.json теперь поддерживает наследуемые 
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ CmakeSettings.json теперь поддерживает наследуемые 
 }
 ```
 
-## <a name="cmake-configure-step"></a>Шаг настройки Cmake
+## <a name="cmake-configure-step"></a>Шаг настройки CMake
 
 При существенных изменений CMakeSettings.json или CMakeLists.txt файлы, Visual Studio автоматически повторно выполняет CMake настроить шаг. Если настройка шаг завершается без ошибок, собранных данных доступна в C++ IntelliSense и языковые службы и Кроме того, в построения и отладки операций.
 

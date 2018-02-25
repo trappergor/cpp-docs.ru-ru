@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <future>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <future>
+dev_langs:
+- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f52f0e08d5612f5230f859c034825591af5ebd79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Включить стандартный заголовок \<future> для определения классов шаблонов и вспомогательных шаблонов, которые упрощают работу функции — возможно, в отдельном потоке — и получение результата. Результатом является значение, возвращаемое функцией, или исключение, которое вызывается функцией, но не перехватывается в функции.  
@@ -86,7 +90,7 @@ ms.lasthandoff: 12/21/2017
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|Предоставляет символические имена для всех ошибок, о которых сообщает класс `future_error`.|  
 |[future_status](../standard-library/future-enums.md#future_status)|Предоставляет символические имена по причинам, которые может возвращать привязанная по времени функция wait.|  
-|[Запуск](../standard-library/future-enums.md#launch)|Представляет тип битовой маски, который описывает возможные режимы для функции-шаблона `async`.|  
+|[launch](../standard-library/future-enums.md#launch)|Представляет тип битовой маски, который описывает возможные режимы для функции-шаблона `async`.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

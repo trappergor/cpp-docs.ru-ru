@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSUnblockNotification
 - CONCRTRM/concurrency::IUMSUnblockNotification
 - CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetContext
 - CONCRTRM/concurrency::IUMSUnblockNotification::IUMSUnblockNotification::GetNextUnblockNotification
-dev_langs: C++
-helpviewer_keywords: IUMSUnblockNotification structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3febe10f7c71e1c1d478dd6f6b6f565c4134e033
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9058b2f16532f99e1beea8133fd5187ac296920e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsunblocknotification-structure"></a>Структура IUMSUnblockNotification
 Представляет уведомление диспетчера ресурсов о том, что прокси-поток, который заблокировал и запустил возврат к заданному контексту планирования планировщика, разблокирован и готов для планирования. Этот интерфейс является недопустимым, когда связанный с прокси-потоком контекст выполнения, возвращенный из метода `GetContext`, переносится.  
@@ -52,7 +56,7 @@ struct IUMSUnblockNotification;
   
  **Пространство имен:** concurrency  
   
-##  <a name="getcontext"></a>Метод IUMSUnblockNotification::GetContext  
+##  <a name="getcontext"></a>  IUMSUnblockNotification::GetContext Method  
  Возвращает `IExecutionContext` интерфейс для контекста выполнения, связанного с прокси-поток, который был разблокирован. Когда этот метод возвращает базовый контекст выполнения поставлена через вызов `IThreadProxy::SwitchTo` метод, этот интерфейс больше не является допустимым.  
   
 ```
@@ -62,7 +66,7 @@ virtual IExecutionContext* GetContext() = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  `IExecutionContext` Интерфейс для контекста выполнения на прокси-поток, который был разблокирован.  
   
-##  <a name="getnextunblocknotification"></a>Метод IUMSUnblockNotification::GetNextUnblockNotification  
+##  <a name="getnextunblocknotification"></a>  IUMSUnblockNotification::GetNextUnblockNotification Method  
  Возвращает следующий `IUMSUnblockNotification` интерфейс в цепочке, возвращенный методом `IUMSCompletionList::GetUnblockNotifications`.  
   
 ```

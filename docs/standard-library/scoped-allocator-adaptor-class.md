@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
@@ -18,7 +19,8 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcfc9d5ca7b988be2dad0451aa2f58aacd15c789
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedallocatoradaptor-class"></a>Класс scoped_allocator_adaptor
 Представляет вложенные распределители.  
@@ -119,7 +122,7 @@ class scoped_allocator_adaptor;
   
  **Пространство имен:** std  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor::allocate
+##  <a name="allocate"></a>  scoped_allocator_adaptor::allocate
  Выделяет память, используя распределитель `Outer`.  
   
 ```cpp  
@@ -136,7 +139,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>Возвращаемое значение  
  Первая функция-член возвращает значение `Outer_traits::allocate(outer_allocator(), count)`. Вторая функция-член возвращает значение `Outer_traits::allocate(outer_allocator(), count, hint)`.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor::construct
+##  <a name="construct"></a>  scoped_allocator_adaptor::construct
  Создает объект.  
   
 ```cpp  
@@ -197,7 +200,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  Шестой метод работает так же, как `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor::DEALLOCATE
+##  <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
  Освобождает объекты, используя внешний распределитель.  
   
 ```cpp  
@@ -211,7 +214,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  Количество освобождаемых объектов.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor::destroy
+##  <a name="destroy"></a>  scoped_allocator_adaptor::destroy
  Удаляет указанный объект.  
   
 ```cpp  
@@ -226,7 +229,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>Возвращаемое значение  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
  Извлекает ссылку на сохраненный объект типа `inner_allocator_type`.  
   
 ```cpp  
@@ -237,7 +240,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на сохраненный объект типа `inner_allocator_type`.  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor::max_size
+##  <a name="max_size"></a>  scoped_allocator_adaptor::max_size
  Определяет максимальное число объектов, которые могут быть распределены внешним распределителем.  
   
 ```cpp  
@@ -247,7 +250,7 @@ size_type max_size();
 ### <a name="return-value"></a>Возвращаемое значение  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
  Извлекает ссылку на сохраненный объект типа `outer_allocator_type`.  
   
 ```cpp  
@@ -298,7 +301,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>Примечания  
  Первый конструктор по умолчанию создает сохраненные объекты распределителя. Каждый из трех следующих конструкторов создает сохраненные объекты распределителя из соответствующих объектов в `right`. Последний конструктор создает сохраненные объекты распределителя из соответствующих аргументов в списке.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
  Создает новый объект `scoped_allocator_adaptor` с каждым сохраненным объектом распределителя, который инициализируется вызовом метода `select_on_container_copy_construction` для каждого соответствующего распределителя.  
   
 ```cpp  

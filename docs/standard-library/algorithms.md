@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 369479614174e1e66d91e39e3decacaf24268a08
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="algorithms"></a>Алгоритмы
 Алгоритмы являются важнейшей частью стандартной библиотеки C++. Алгоритмы работают с контейнерами не самостоятельно, а с помощью итераторов. Поэтому один и тот же алгоритм можно использовать с большинством, а то и со всеми контейнерами стандартной библиотеки C++. В этом разделе рассматриваются правила и терминология алгоритмов стандартной библиотеки C++.  

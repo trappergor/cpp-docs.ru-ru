@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 4fcd6f0d72d31823a0d35108f087f2ad680e2f48
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.openlocfilehash: e9d6b5fa1588809b99b26d30234337a890b08157
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lthashsetgt-functions"></a>Функции &lt;hash_set&gt;
 |||  
@@ -26,7 +26,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Выполняет обмен элементами между двумя объектами hash_set.  
   
@@ -58,7 +58,7 @@ void swap(
 ##  <a name="swap_hash_multiset"></a>  swap (hash_multiset)  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Меняет местами элементы двух объектов hash_multiset.  
   

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb2e18c8b0c5ab110b9818e46e7fc68c08656274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28173b18e1f2ab6e7c916679d5fa5a27c08caaeb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Выбор подходящего метода доступа
 Во время компиляции или во время выполнения, можно определить типы данных для набора строк.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |`CAccessor`|Создайте запись пользователя с `COLUMN_ENTRY` макросы. Макросы для привязки элемента данных этой записи для метода доступа. При создании набора строк, не удается отменить связывание столбцов.|Да, с помощью **PARAM_MAP** запись макроса. После привязки параметров не может быть отменена.|Самый быстрый метод доступа из-за небольшого объема кода.|  
 |`CDynamicAccessor`|Автоматически.|Нет.|Полезно, если вы не знаете тип данных в наборе строк.|  
 |`CDynamicParameterAccessor`|Автоматически, но может быть [переопределении](../../data/oledb/overriding-a-dynamic-accessor.md).|Да, если поставщик поддерживает `ICommandWithParameters`. Автоматическая привязка параметров.|Медленнее, чем `CDynamicAccessor` но полезен для вызова универсальных хранимых процедур.|  
-|**CDynamicStringAccessor [, W]**|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных.|  
+|**CDynamicStringAccessor[A,W]**|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных.|  
 |`CManualAccessor`|Вручную с помощью `AddBindEntry`.|Вручную с помощью `AddParameterEntry`.|Очень быстро; только один раз привязка параметров и столбцов. Можно определить тип данных для использования. (См. [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) образец в качестве примера.) Требуется больше кода, чем `CDynamicAccessor` или `CAccessor`. Это больше похожи на прямой вызов OLE DB.|  
 |`CXMLAccessor`|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных и форматирует их как XML-тегами для данных.|  
   

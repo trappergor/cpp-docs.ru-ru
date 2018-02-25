@@ -5,26 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 9825a0073355700edbe1906e8b2cad4535085bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d5ee8994367332e6e26d70e166bd0549d16fc965
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltunorderedmapgt-operators"></a>Операторы &lt;unordered_map&gt;
 |||||  
 |-|-|-|-|  
 |[оператор!=](#op_neq)|[оператор==](#op_eq_eq)|[оператор!=](#op_neq_multimap)|[оператор==](#op_eq_eq_multimap)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет, не равен ли объект [unordered_map](../standard-library/unordered-map-class.md) в левой части объекту unordered_map в правой части.  
   
 ```
@@ -85,7 +86,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет, равен ли объект [unordered_map](../standard-library/unordered-map-class.md) в левой части объекту unordered_map в правой части.  
   
 ```
@@ -146,7 +147,7 @@ int main( )
   
  `um2 == um3: false`  
   
-##  <a name="op_neq_multimap"></a>  оператор!=  
+##  <a name="op_neq_multimap"></a> operator!=  
  Проверяет, не равен ли объект [unordered_multimap](../standard-library/unordered-multimap-class.md) в левой части объекту unordered_multimap в правой части.  
   
 ```
@@ -208,7 +209,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="op_eq_eq_multimap"></a>  оператор==  
+##  <a name="op_eq_eq_multimap"></a> operator==  
  Проверяет, равен ли объект [unordered_multimap](../standard-library/unordered-multimap-class.md) в левой части объекту unordered_multimap в правой части.  
   
 ```

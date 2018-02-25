@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>Структура IExecutionResource
 Абстракция для аппаратного потока.  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="currentsubscriptionlevel"></a>Метод IExecutionResource::CurrentSubscriptionLevel  
+##  <a name="currentsubscriptionlevel"></a>  IExecutionResource::CurrentSubscriptionLevel Method  
  Возвращает число активированных виртуального процессора корней и подписанные внешние потоки, которые в текущий момент связан с базовой аппаратный поток, который представляет этот ресурс выполнения.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  Диспетчер ресурсов использует сведения уровня подписки как один из способов определить, когда нужно переместить ресурсы между планировщиками.  
   
-##  <a name="getexecutionresourceid"></a>Метод IExecutionResource::GetExecutionResourceId  
+##  <a name="getexecutionresourceid"></a>  IExecutionResource::GetExecutionResourceId Method  
  Возвращает уникальный идентификатор для аппаратного потока, который представляет этот ресурс выполнения.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>Примечания  
  Каждый поток оборудования присваивается уникальный идентификатор среды выполнения с параллелизмом. Если несколько ресурсов выполнения, соответствующее оборудование потока, они будут иметь один и тот же идентификатор ресурса выполнения.  
   
-##  <a name="getnodeid"></a>Метод IExecutionResource::GetNodeId  
+##  <a name="getnodeid"></a>  IExecutionResource::GetNodeId Method  
  Возвращает уникальный идентификатор для узла процессора, к которому принадлежит этот ресурс выполнения.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  Количество узлов, которые могут быть получены из функции [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="remove"></a>Метод IExecutionResource::Remove  
+##  <a name="remove"></a>  Метод IExecutionResource::Remove  
  Возвращает диспетчер ресурсов для данного ресурса выполнения.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  Корни виртуального процессора также могут быть возвращены диспетчеру ресурсов путем вызова метода `Remove`, поскольку интерфейс `IVirtualProcessorRoot` наследуется от интерфейса `IExecutionResource`. Может потребоваться вернуть корневой виртуальный процессор, или в ответ на вызов [IScheduler::RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) метод, или когда вы закончите корень переподписан виртуального процессора, полученный от [ ISchedulerProxy::CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) метод. Корни виртуального процессора, нет никаких ограничений в каком потоке может вызывать `Remove` метод.  
   
- `invalid_argument`вызывается, если параметр `pScheduler` равно `NULL`.  
+ `invalid_argument` вызывается, если параметр `pScheduler` равно `NULL`.  
   
- `invalid_operation`вызывается, если параметр `pScheduler` отличается от планировщика, что этот ресурс выполнения был создан для или с автономным ресурсом выполнения, если текущий поток отличается от потока, который создал подписку потока.  
+ `invalid_operation` вызывается, если параметр `pScheduler` отличается от планировщика, что этот ресурс выполнения был создан для или с автономным ресурсом выполнения, если текущий поток отличается от потока, который создал подписку потока.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

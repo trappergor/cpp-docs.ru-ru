@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception - класс
 Базовый тип для исключений C++ Accelerated Massive параллелизма (AMP) библиотеки.  
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Пространство имен** : Concurrency  
 
-## <a name="runtime_exception__ctor"></a>Конструктор runtime_exception  
+## <a name="runtime_exception__ctor">Конструктор runtime_exception</a>  
 Инициализирует новый экземпляр класса.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `runtime_exception`.  
 
-## <a name="dtor"></a>~ runtime_exception деструктор  
+## <a name="dtor">~ runtime_exception деструктор</a>  
 Удаляет объект.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -106,7 +110,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 Возвращает код ошибки, которая вызвала исключение.  
   
 ### <a name="syntax"></a>Синтаксис  

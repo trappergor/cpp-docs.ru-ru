@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - extent
 - AMP/extent
@@ -15,19 +16,22 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs: C++
-helpviewer_keywords: extent structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 Представляет собой вектор *N* целочисленных значений, указывающих границы *N*-мерном пространстве, который соответствует значение 0. Значения в объекте vector упорядочиваются от наиболее важных до наименее важных.  
@@ -73,7 +77,7 @@ class extent;
 |[оператор%=](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `extent` объекта при делении на ряд этого элемента.|  
 |[оператор*=](#operator_star_eq)|Умножает каждый элемент `extent` объекта по номеру.|  
 |[оператор/=](#operator_min_eq)|Делит каждый элемент `extent` объекта по номеру.|  
-|[Extent::operator\[\]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
+|[extent::operator\[\]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
 |[operator+](#operator_add)|Возвращает новый `extent` объект, который создается путем добавления соответствующего `index` и `extent` элементы.|  
 |[оператор++](#operator_add_add)|Увеличивает значение каждого элемента `extent` объекта.|  
 |[оператор+=](#operator_add_eq)|Добавляет указанный номер каждого элемента `extent` объекта.|  
@@ -91,7 +95,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains"></a>содержит 
+## <a name="contains">содержит</a> 
 
 Указывает, является ли указанный [индекс](index-class.md) значение содержится в объекте «область».  
   
@@ -106,9 +110,9 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
  `index` Проверяемое значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный `index` значение содержится в `extent` объекта; в противном случае `false`.  
+ `true` Если указанный `index` значение содержится в `extent` объекта; в противном случае `false`.  
   
-##  <a name="ctor"></a>экстент 
+##  <a name="ctor"></a> экстент 
 
 Инициализирует новый экземпляр класса «область».  
   
@@ -147,7 +151,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  Если массив используется для создания `extent` объекта длина массива должна соответствовать ранг `extent` объекта.  
   
-##  <a name="operator_mod_eq"></a>оператор % = 
+##  <a name="operator_mod_eq"></a> оператор % = 
 
 Вычисляет модуль (остаток от деления) каждого элемента в экстенте при делении на ряд этого элемента.  
   
@@ -164,7 +168,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `extent`.  
   
-##  <a name="operator_star_eq"></a>оператор * = 
+##  <a name="operator_star_eq"></a> оператор * = 
 
 Умножает каждый элемент в объекте «область» на указанное число.  
   
@@ -181,7 +185,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `extent`.  
   
-## <a name="operator_add"></a>оператор + 
+## <a name="operator_add"></a> оператор + 
 
 Возвращает новый `extent` объект, созданный путем добавления соответствующего `index` и `extent` элементы.  
   
@@ -198,7 +202,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Новый объект `extent`.  
   
-##  <a name="operator_add_add"></a>Operator ++ 
+##  <a name="operator_add_add"></a> Operator ++ 
 
 Увеличивает значение каждого элемента объекта «область».  
   
@@ -212,7 +216,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Для оператора префикс `extent` объекта (`*this`). Для оператора суффикс нового `extent` объекта.  
   
-##  <a name="operator_add_eq"></a>оператор += 
+##  <a name="operator_add_eq"></a> оператор += 
 
 Добавляет указанный номер каждого элемента объекта «область».  
   
@@ -231,7 +235,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Результирующий объект `extent`.  
   
-##  <a name="operator_min"></a>оператор- 
+##  <a name="operator_min"></a> оператор- 
 
 Создает новый `extent` объекта путем вычитания каждого элемента в указанном `index` объект из соответствующего элемента в это `extent` объекта.  
   
@@ -248,7 +252,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Новый объект `extent`.  
   
-##  <a name="operator_min_min"></a>оператор-- 
+##  <a name="operator_min_min"></a> оператор-- 
 
 Уменьшает значение каждого элемента в объекте «область».  
   
@@ -262,7 +266,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Для оператора префикс `extent` объекта (`*this`). Для оператора суффикс нового `extent` объекта.  
   
-##  <a name="operator_div_eq"></a>оператор / = 
+##  <a name="operator_div_eq"></a> оператор / = 
 
 Делит каждый элемент в объекте «область» заданного числа.  
   
@@ -279,7 +283,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `extent`.  
   
-##  <a name="operator_min_eq"></a>оператор-= 
+##  <a name="operator_min_eq"></a> оператор-= 
 
 Вычитает указанный номер из каждого элемента объекта «область».  
   
@@ -298,7 +302,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Результирующий объект `extent`.  
   
-##  <a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a> оператор = 
 
 Копирует содержимое другого объекта «область» в другой.  
   
@@ -315,7 +319,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `extent` объекта.  
   
-##  <a name="operator_at"></a>Extent::operator\[\] 
+##  <a name="operator_at"></a> Extent::operator \[\] 
 Возвращает элемент, расположенный по указанному индексу.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -332,7 +336,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  Элемент, расположенный по указанному индексу.  
   
-##  <a name="rank_constant"></a>Ранг 
+##  <a name="rank_constant"></a> Ранг 
 
 Сохраняет ранг объекта «область».  
   
@@ -342,7 +346,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 static const int rank = _Rank;  
 ```  
   
-##  <a name="size"></a>размер 
+##  <a name="size"></a> Размер 
 
 Возвращает общий размер линейной `extent` объекта (в единицах элементов).  
   
@@ -352,7 +356,7 @@ static const int rank = _Rank;
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile"></a>плитки 
+## <a name="tile">плитки</a> 
 
 Создает объект tiled_extent с плитки указанного измерения.
 
@@ -367,9 +371,9 @@ template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```  
 ### <a name="parameters"></a>Параметры
-`_Dim0`Наиболее значимые компонент разбитом.
-`_Dim1`Далее к старший значащий компонент разбитом.
-`_Dim2`Наименее значащие компонент разбитом.
+`_Dim0` Наиболее значимые компонент разбитом.
+`_Dim1` Далее к старший значащий компонент разбитом.
+`_Dim2` Наименее значащие компонент разбитом.
 
 
   

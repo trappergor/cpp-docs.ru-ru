@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c1baa921f4a12aae40a01995cfd0b638cf614d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 122da4031eff1cacfaf3242000cbd36eb7b75356
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-template-architecture"></a>Архитектура шаблона поставщика OLE DB
 ## <a name="data-sources-and-sessions"></a>Источники данных и сеансы  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Сеанс](../../data/oledb/session-object-interfaces.md)  
   
--   [Набор строк](../../data/oledb/rowset-object-interfaces.md)  
+-   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
 -   [Команда](../../data/oledb/command-object-interfaces.md)  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/21/2017
   
 |Компонент|Интерфейс|Комментарий|  
 |---------------|---------------|-------------|  
-|[Источник данных](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[обязательный] **IDBCreateSession**<br /><br /> [обязательный] **IDBInitialize**<br /><br /> [обязательный]`IDBProperties`<br /><br /> [обязательный]`IPersist`<br /><br /> [необязательно] **IConnectionPointContainer**<br /><br /> [необязательно] **IDBAsynchStatus**<br /><br /> [необязательно] **IDBDataSourceAdmin**<br /><br /> [необязательно] **IDBInfo**<br /><br /> [необязательно]`IPersistFile`<br /><br /> [необязательно] **ISupportErrorInfo**|Подключение от потребителя к поставщику. Объект используется для задания свойств подключения, например имя пользователя, идентификатор, пароль и данные источника. Объект также может использоваться для администрирования источника данных (создания, обновления, удаления таблиц и так далее).|  
-|[Сеанс](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[обязательный] **IGetDataSource**<br /><br /> [обязательный]`IOpenRowset`<br /><br /> [обязательный] **ISessionProperties**<br /><br /> [необязательно] **IAlterIndex**<br /><br /> [необязательно] **IAlterTable**<br /><br /> [необязательно] **IBindResource**<br /><br /> [необязательно] **ICreateRow**<br /><br /> [необязательно] **IDBCreateCommand**<br /><br /> [необязательно] **IDBSchemaRowset**<br /><br /> [необязательно] **IIndexDefinition**<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [необязательно] **ITableCreation**<br /><br /> [необязательно] **ITableDefinition**<br /><br /> [необязательно] **ITableDefinitionWithConstraints**<br /><br /> [необязательно] **ITransaction**<br /><br /> [необязательно] **ITransactionJoin**<br /><br /> [необязательно] **ITransactionLocal**<br /><br /> [необязательно] **ITransactionObject**|Объект сеанса представляет диалоге клиента и поставщика. Он похож на ODBC **HSTMT** тем, что может существовать несколько сеансов active.<br /><br /> Объект сеанса является первичной ссылкой для использования функции OLE DB. Для получения команд, транзакций или объекта набора строк, проходить через объект сеанса.|  
-|[Набор строк](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[обязательный]`IAccessor`<br /><br /> [обязательный]`IColumnsInfo`<br /><br /> [обязательный] **IConvertType**<br /><br /> [обязательный]`IRowset`<br /><br /> [обязательный]`IRowsetInfo`<br /><br /> [необязательно] **IChapteredRowset**<br /><br /> [необязательно] **IColumnsInfo2**<br /><br /> [необязательно] **IColumnsRowset**<br /><br /> [необязательно] **IConnectionPointContainer**<br /><br /> [необязательно] **IDBAsynchStatus**<br /><br /> [необязательно] **IGetRow**<br /><br /> [необязательно]`IRowsetChange`<br /><br /> [необязательно] **IRowsetChapterMember**<br /><br /> [необязательно] **IRowsetCurrentIndex**<br /><br /> [необязательно] **IRowsetFind**<br /><br /> [необязательно] **IRowsetIdentity**<br /><br /> [необязательно] **IRowsetIndex**<br /><br /> [необязательно]`IRowsetLocate`<br /><br /> [необязательно] **IRowsetRefresh**<br /><br /> [необязательно]`IRowsetScroll`<br /><br /> [необязательно]`IRowsetUpdate`<br /><br /> [необязательно] **IRowsetView**<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [необязательно] **IRowsetBookmark**|Объект набора строк представляет данные из источника данных. Объект отвечает за привязок данных и все базовые операции (обновления, выборки, перемещения и другие) на основе данных. Всегда необходимо объект набора строк для хранения и управления данными.|  
-|[Команда](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[обязательный]`IAccessor`<br /><br /> [обязательный]`IColumnsInfo`<br /><br /> [обязательный]`ICommand`<br /><br /> [обязательный] **ICommandProperties**<br /><br /> [обязательный]`ICommandText`<br /><br /> [обязательный] **IConvertType**<br /><br /> [необязательно] **IColumnsRowset**<br /><br /> [необязательно] **ICommandPersist**<br /><br /> [необязательно] **ICommandPrepare**<br /><br /> [необязательно]`ICommandWithParameters`<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [необязательно] **Интерфейса ICommandStream**|Объект команды обрабатывает операции с данными, например запросы. Он может обрабатывать параметризованные или без параметров инструкции.<br /><br /> Объект команды также отвечает за обработку привязки параметров и выходных столбцов. Привязка имеет структуру, содержащую сведения об извлечении столбца из набора строк. Он содержит сведения, такие как порядковый номер, тип данных, длина и состояние.|  
+|[Источник данных](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[обязательный] **IDBCreateSession**<br /><br /> [обязательный] **IDBInitialize**<br /><br /> [обязательный] `IDBProperties`<br /><br /> [обязательный] `IPersist`<br /><br /> [optional] **IConnectionPointContainer**<br /><br /> [необязательно] **IDBAsynchStatus**<br /><br /> [необязательно] **IDBDataSourceAdmin**<br /><br /> [необязательно] **IDBInfo**<br /><br /> [необязательно] `IPersistFile`<br /><br /> [необязательно] **ISupportErrorInfo**|Подключение от потребителя к поставщику. Объект используется для задания свойств подключения, например имя пользователя, идентификатор, пароль и данные источника. Объект также может использоваться для администрирования источника данных (создания, обновления, удаления таблиц и так далее).|  
+|[Сеанс](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[обязательный] **IGetDataSource**<br /><br /> [обязательный] `IOpenRowset`<br /><br /> [обязательный] **ISessionProperties**<br /><br /> [необязательно] **IAlterIndex**<br /><br /> [необязательно] **IAlterTable**<br /><br /> [необязательно] **IBindResource**<br /><br /> [необязательно] **ICreateRow**<br /><br /> [необязательно] **IDBCreateCommand**<br /><br /> [optional] **IDBSchemaRowset**<br /><br /> [необязательно] **IIndexDefinition**<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [необязательно] **ITableCreation**<br /><br /> [необязательно] **ITableDefinition**<br /><br /> [необязательно] **ITableDefinitionWithConstraints**<br /><br /> [необязательно] **ITransaction**<br /><br /> [необязательно] **ITransactionJoin**<br /><br /> [необязательно] **ITransactionLocal**<br /><br /> [необязательно] **ITransactionObject**|Объект сеанса представляет диалоге клиента и поставщика. Он похож на ODBC **HSTMT** тем, что может существовать несколько сеансов active.<br /><br /> Объект сеанса является первичной ссылкой для использования функции OLE DB. Для получения команд, транзакций или объекта набора строк, проходить через объект сеанса.|  
+|[Rowset](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[обязательный] `IAccessor`<br /><br /> [обязательный] `IColumnsInfo`<br /><br /> [обязательный] **IConvertType**<br /><br /> [обязательный] `IRowset`<br /><br /> [обязательный] `IRowsetInfo`<br /><br /> [необязательно] **IChapteredRowset**<br /><br /> [необязательно] **IColumnsInfo2**<br /><br /> [optional] **IColumnsRowset**<br /><br /> [optional] **IConnectionPointContainer**<br /><br /> [необязательно] **IDBAsynchStatus**<br /><br /> [optional] **IGetRow**<br /><br /> [необязательно] `IRowsetChange`<br /><br /> [optional] **IRowsetChapterMember**<br /><br /> [optional] **IRowsetCurrentIndex**<br /><br /> [optional] **IRowsetFind**<br /><br /> [необязательно] **IRowsetIdentity**<br /><br /> [optional] **IRowsetIndex**<br /><br /> [необязательно] `IRowsetLocate`<br /><br /> [необязательно] **IRowsetRefresh**<br /><br /> [необязательно] `IRowsetScroll`<br /><br /> [необязательно] `IRowsetUpdate`<br /><br /> [optional] **IRowsetView**<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [optional] **IRowsetBookmark**|Объект набора строк представляет данные из источника данных. Объект отвечает за привязок данных и все базовые операции (обновления, выборки, перемещения и другие) на основе данных. Всегда необходимо объект набора строк для хранения и управления данными.|  
+|[Команда](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[обязательный] `IAccessor`<br /><br /> [обязательный] `IColumnsInfo`<br /><br /> [обязательный] `ICommand`<br /><br /> [обязательный] **ICommandProperties**<br /><br /> [обязательный] `ICommandText`<br /><br /> [обязательный] **IConvertType**<br /><br /> [optional] **IColumnsRowset**<br /><br /> [необязательно] **ICommandPersist**<br /><br /> [необязательно] **ICommandPrepare**<br /><br /> [необязательно] `ICommandWithParameters`<br /><br /> [необязательно] **ISupportErrorInfo**<br /><br /> [необязательно] **Интерфейса ICommandStream**|Объект команды обрабатывает операции с данными, например запросы. Он может обрабатывать параметризованные или без параметров инструкции.<br /><br /> Объект команды также отвечает за обработку привязки параметров и выходных столбцов. Привязка имеет структуру, содержащую сведения об извлечении столбца из набора строк. Он содержит сведения, такие как порядковый номер, тип данных, длина и состояние.|  
 |[Транзакции](../../data/oledb/transaction-object-interfaces.md) (необязательно)|[обязательный] **IConnectionPointContainer**<br /><br /> [обязательный] **ITransaction**<br /><br /> [необязательно] **ISupportErrorInfo**|Объект транзакции определяет неделимую единицу работы в источнике данных и определяет, как эти единицы работы связаны друг с другом. Этот объект не поддерживается напрямую с помощью шаблонов поставщика OLE DB (то есть, создать собственный объект).|  
   
  Дополнительные сведения см. в следующих разделах:  

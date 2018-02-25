@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::system_clock
 - chrono/std::chrono::system_clock::from_time_t
@@ -14,18 +15,20 @@ f1_keywords:
 - chrono/std::chrono::system_clock::to_time_t
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 757094f61d7f58de4f51da46b28dc90105968a99
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="systemclock-structure"></a>Структура system_clock
 Представляет *тип clock*, использующий данные системных часов в реальном времени.  
@@ -72,11 +75,11 @@ struct system_clock;
 |[Константа system_clock::is_steady](#is_steady_constant)|Указывает, являются ли часы постоянными.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** \<chrono >  
+ **Header:** \<chrono>  
   
  **Пространство имен:** std::chrono  
   
-##  <a name="from_time_t"></a>system_clock::from_time_t
+##  <a name="from_time_t"></a>  system_clock::from_time_t
  Статический метод, возвращающий [time_point](../standard-library/time-point-class.md), которая наиболее точно соответствует времени, представляемому `Tm`.  
   
 ```  
@@ -113,7 +116,7 @@ static const bool is_steady = false;
 ### <a name="remarks"></a>Примечания  
  Часы считаются *постоянными*, если они [монотонны](#is_monotonic_constant) и интервал времени между соседними тактами является постоянной величиной.  
   
-##  <a name="now"></a>system_clock::Now
+##  <a name="now"></a>  system_clock::now
  Статический метод, который возвращает текущее время.  
   
 ```  
@@ -123,7 +126,7 @@ static time_point now() noexcept;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [time_point](../standard-library/time-point-class.md), представляющий текущее время.  
   
-##  <a name="to_time_t"></a>system_clock::to_time_t
+##  <a name="to_time_t"></a>  system_clock::to_time_t
  Статический метод, возвращающий значение [time_t](../c-runtime-library/standard-types.md), которое наиболее точно соответствует времени, представляемому `Time`.  
   
 ```  

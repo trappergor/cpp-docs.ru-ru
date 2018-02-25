@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITarget
 - AGENTS/concurrency::ITarget
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::ITarget::link_source
 - AGENTS/concurrency::ITarget::unlink_source
 - AGENTS/concurrency::ITarget::unlink_sources
-dev_langs: C++
-helpviewer_keywords: ITarget class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itarget-class"></a>Класс ITarget
 Класс `ITarget` является интерфейсом для всех целевых блоков. Целевые блоки потребляют сообщения, предлагаемые ими блоками `ISource`.  
@@ -86,7 +90,7 @@ class ITarget;
   
  **Пространство имен:** concurrency  
   
-##  <a name="dtor"></a>~ ITarget 
+##  <a name="dtor"></a> ~ ITarget 
 
  Уничтожает `ITarget` объекта.  
   
@@ -94,7 +98,7 @@ class ITarget;
 virtual ~ITarget();
 ```  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  При переопределении в производном классе связывает указанный исходный блок это `ITarget` блока.  
   
@@ -109,7 +113,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Примечания  
  Эта функция не должен вызываться непосредственно на `ITarget` блока. Блоки должны быть соединены друг с другом с помощью `link_target` метод `ISource` блоков, который будет вызывать `link_source` метод в соответствующий целевой объект.  
   
-##  <a name="propagate"></a>распространение 
+##  <a name="propagate">распространение</a> 
 
  При переопределении в производном классе асинхронно передает сообщение из исходного блока данному целевому блоку.  
   
@@ -132,7 +136,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>Примечания  
  Метод создает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключение, если параметр `_PMessage` или `_PSource` параметр `NULL`.  
   
-##  <a name="send"></a>Отправить 
+##  <a name="send"></a> Отправить 
 
  При переопределении в производном классе синхронно передает сообщение в целевой блок.  
   
@@ -159,7 +163,7 @@ virtual message_status send(
   
  Если `send` возвращает сообщение либо уже было принято и передачи в блок целевой или было отклонено целевым объектом.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  При переопределении в производном классе возвращает значение true или false в зависимости от того, принимает ли блок сообщений сообщения, предоставляемые не связанным с ним источником. Если переопределенный метод возвращает значение `true`, целевой объект не может отложить предоставленное сообщение, так как для использования отложенного сообщения позже требуется, чтобы источник был определен в реестре ссылок источников.  
   
@@ -170,7 +174,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если блок может принимать сообщения от не связанного с ним источника; в противном случае — значение `false`.  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  При переопределении в производном классе удаляет связь указанного блока источника из этого `ITarget` блока.  
   
@@ -185,7 +189,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Примечания  
  Эта функция не должен вызываться непосредственно на `ITarget` блока. Блоки должен быть отключен с помощью `unlink_target` или `unlink_targets` методы `ISource` блоков, который будет вызывать `unlink_source` метод в соответствующий целевой объект.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  При переопределении в производном классе удаляет связь всех исходных блоков из этого `ITarget` блока.  
   

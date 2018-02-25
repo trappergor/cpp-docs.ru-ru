@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - completion_future
 - AMPRT/completion_future
@@ -18,18 +19,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="completionfuture-class"></a>Класс completion_future
 Представляет будущих соответствующий асинхронную операцию C++ AMP.  
@@ -54,7 +57,7 @@ class completion_future;
 |Имя|Описание:|  
 |----------|-----------------|  
 |[get](#get)|Ожидает завершения указанной асинхронной операции.|  
-|[затем](#then)|Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.|  
+|[then](#then)|Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.|  
 |[to_task](#to_task)|Возвращает `task` объект, соответствующий указанной асинхронной операции.|  
 |[Допустимые](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|  
 |[Ожидание](#wait)|Блокируется до завершения связанного асинхронной операции.|  
@@ -77,7 +80,7 @@ class completion_future;
  **Пространство имен:** concurrency  
 
 
-## <a name="ctor"></a>completion_future 
+## <a name="ctor"></a> completion_future 
 
 Инициализирует новый экземпляр класса `completion_future`.  
   
@@ -105,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр `completion_future` , копируя конструктор.|  
 |`completion_future(completion_future&& _Other);`|Инициализирует новый экземпляр `completion_future` класса путем перемещения конструктора.|  
   
-## <a name="get"></a>Получить 
+## <a name="get"></a> Получить 
 
 Ожидает завершения указанной асинхронной операции. Создается хранимой исключение, если один обнаружена во время асинхронной операции.  
   
@@ -115,7 +118,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a>оператор std::shared_future<void> 
+## <a name="operator_shared_future"></a> оператор std::shared_future<void> 
 
 Неявно преобразует `completion_future` объект `std::shared_future` объекта.  
   
@@ -128,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `std::shared_future`.  
   
-## <a name="operator_eq"></a>оператор = 
+## <a name="operator_eq"></a> оператор = 
 
 Копирует содержимое указанного `completion_future` объекта в другой.  
   
@@ -153,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного `completion_future` объекта в другой, с помощью глубокой копией.|  
 |`completion_future& operator=(completion_future&& _Other);`|Копирует содержимое указанного `completion_future` объекта в другой, с помощью присваивания перемещения.|  
   
-## <a name="then"></a>затем 
+## <a name="then"></a> затем 
 
 Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.  
   
@@ -171,7 +174,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  Объект функции обратного вызова.  
   
-## <a name="to_task"></a>to_task 
+## <a name="to_task"></a> to_task 
 
 Возвращает `task` объект, соответствующий указанной асинхронной операции.  
   
@@ -184,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `task` объект, соответствующий указанной асинхронной операции.  
   
-## <a name="valid"></a>Допустимые 
+## <a name="valid">Допустимые</a> 
 
 Получает логическое значение, которое указывает, связан ли объект с асинхронной операцией.  
   
@@ -195,9 +198,9 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если объект связан с асинхронной операцией; в противном случае `false`.  
+ `true` Если объект связан с асинхронной операцией; в противном случае `false`.  
   
-## <a name="wait"></a>Ожидание 
+## <a name="wait">Ожидание</a> 
 
 Блокируется до завершения связанного асинхронной операции.  
   
@@ -207,7 +210,7 @@ bool valid() const;
 void wait() const;  
 ```  
   
-## <a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a> wait_for 
 
 Блокируется до завершения асинхронной операции, связанные или времени, который задается параметром `_Rel_time` прошло.  
   
@@ -235,13 +238,13 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает:  
   
--   `std::future_status::deferred`Если связанный асинхронная операция не выполняется.  
+-   `std::future_status::deferred` Если связанный асинхронная операция не выполняется.  
   
--   `std::future_status::ready`Если указанной асинхронной операции завершения.  
+-   `std::future_status::ready` Если указанной асинхронной операции завершения.  
   
--   `std::future_status::timeout`Если указанный интервал времени.  
+-   `std::future_status::timeout` Если указанный интервал времени.  
   
-## <a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a> wait_until 
 
 Блокируется до завершения асинхронной операции, связанные или до текущего времени превышает значение, заданное параметром `_Abs_time`.  
   
@@ -269,13 +272,13 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает:  
   
-1.  `std::future_status::deferred`Если связанный асинхронная операция не выполняется.  
+1.  `std::future_status::deferred` Если связанный асинхронная операция не выполняется.  
   
-2.  `std::future_status::ready`Если указанной асинхронной операции завершения.  
+2.  `std::future_status::ready` Если указанной асинхронной операции завершения.  
   
-3.  `std::future_status::timeout`Если задан период времени.  
+3.  `std::future_status::timeout` Если задан период времени.  
   
-## <a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a> ~ completion_future 
 
 Уничтожает `completion_future` объекта.  
   

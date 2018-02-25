@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +25,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbdb3b7faaec99f9893df29e8d368fd05c8fd111
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d22f7877e16946ba5cadf943f3ec4ffaf8fa800
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supporting-notifications"></a>Поддержка уведомлений
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Реализация точки подключения интерфейсов для поставщика и потребителя  
@@ -100,12 +100,12 @@ END_CONNECTION_POINT_MAP()
 |**DBPROP_NOTIFYCOLUMNSET**|`IRowsetChange`|  
 |**DBPROP_NOTIFYROWDELETE**|`IRowsetChange`|  
 |**DBPROP_NOTIFYROWINSERT**|`IRowsetChange`|  
-|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Всегда|  
+|**DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE**|Всегда|  
 |**DBPROP_NOTIFYROWFIRSTCHANGE**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWSETRELEASE**|Всегда|  
-|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|  
-|DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|  
-|DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|  
+|**DBPROP_NOTIFYROWUNDOCHANGE**|`IRowsetUpdate`|  
+|**DBPROP_NOTIFYROWUNDODELETE**|`IRowsetUpdate`|  
+|**DBPROP_NOTIFYROWUNDOINSERT**|`IRowsetUpdate`|  
 |**DBPROP_NOTIFYROWUPDATE**|`IRowsetUpdate`|  
   
  Большая часть реализации уведомлений уже внедрена в шаблоны поставщика OLE DB. Если не добавить `IRowsetNotifyCP` в цепочке наследования, компилятор удаляет весь код из потока компиляции, таким образом, делая его меньшего размера.  

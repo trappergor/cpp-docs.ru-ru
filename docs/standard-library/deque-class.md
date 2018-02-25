@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>Класс deque
 Упорядочивает элементы заданного типа в линейном порядке и, подобно векторам, обеспечивает быстрый произвольный доступ к любому элементу и эффективную вставку и удаление в конце контейнера. Однако в отличие от объекта vector класс `deque` также поддерживает эффективную вставку и удаление в передней части контейнера.  
@@ -121,7 +124,7 @@ class deque
  Тип данных элементов, сохраняемых в объекте deque.  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для deque. Этот аргумент является необязательным. Значение по умолчанию — **allocator\<Type>***.*  
+ Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для deque. Этот аргумент является необязательным, и значение по умолчанию — **распределителя\<типа > ***.*  
   
 ## <a name="remarks"></a>Примечания  
  Выбор типа контейнера должен в общем случае производиться на основе типа поиска и вставки, который требуется приложению. [Векторы](../standard-library/vector-class.md) должны быть предпочитаемыми контейнерами для управления последовательностями, когда важен произвольный доступ к любому элементу, а вставка и удаление элементов требуется лишь в конце последовательности. Производительность контейнера list выше, если эффективные вставки и удаления (в константном времени) в любом расположении в последовательности имеют больший приоритет. Таким операциям в середине последовательности требуются копии элементов и присвоения, пропорциональные количеству элементов в последовательности (линейное время).  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - list/std::operator!=
 - list/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - list/std::operator&lt;
 - list/std::operator&lt;=
 - list/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (list)
@@ -24,19 +25,19 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: f3834fcb728d8faf0a2148a5a0c9449fef7e41c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a45d6e168378ea9a46d7dbaf926f431df0625f10
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlistgt-operators"></a>Операторы &lt;list&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет неравенство объекта-списка слева от оператора объекту-списку справа от оператора.  
   
 ```
@@ -83,7 +84,7 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, меньше ли объект-список слева от оператора, чем объект-список справа от оператора.  
   
 ```
@@ -134,7 +135,7 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Проверяет, что объект-список слева от оператора меньше или равен объекту-списку справа от оператора.  
   
 ```
@@ -185,7 +186,7 @@ List c1 is less than or equal to list c2.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет, равен ли объект-список слева от оператора объекту-списку справа от оператора.  
   
 ```
@@ -232,7 +233,7 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Проверяет, больше ли объект-список слева от оператора, чем объект-список справа от оператора.  
   
 ```
@@ -283,7 +284,7 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Проверяет, что объект-список слева от оператора больше или равен объекту-списку справа от оператора.  
   
 ```
