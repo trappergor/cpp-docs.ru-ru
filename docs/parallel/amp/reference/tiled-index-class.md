@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -22,19 +23,22 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs: C++
-helpviewer_keywords: tiled_index class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 Предоставляет индекс в [tiled_extent](tiled-extent-class.md) объекта. Этот класс содержит свойства для доступа к элементам относительно Плитка локального источника, так и относительно глобального источника. Дополнительные сведения о пространствах Мозаичная см [с помощью плитки](../../../parallel/amp/using-tiles.md).  
@@ -122,7 +126,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Пространство имен** : Concurrency  
 
 
-## <a name="tiled_index__ctor"></a>Конструктор tiled_index  
+## <a name="tiled_index__ctor"></a>  Конструктор tiled_index  
 Инициализирует новый экземпляр класса `tiled_index`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -144,13 +148,13 @@ tiled_index(
  Глобальный [индекс](index-class.md) из сконструированного `tiled_index`.  
   
  `_Local`  
- Локальный [индекс](index-class.md) из сконструированного`tiled_index`  
+ Локальный [индекс](index-class.md) из сконструированного `tiled_index`  
   
  `_Tile`  
- Плитки [индекс](index-class.md) из сконструированного`tiled_index`  
+ Плитки [индекс](index-class.md) из сконструированного `tiled_index`  
   
  `_Tile_origin`  
- Плитка источника [индекс](index-class.md) из сконструированного`tiled_index`  
+ Плитка источника [индекс](index-class.md) из сконструированного `tiled_index`  
   
  `_Barrier`  
  [Tile_barrier](tile-barrier-class.md) сформированный объект `tiled_index`.  
@@ -167,7 +171,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Инициализирует новый экземпляр `tile_index` , копируя указанный `tiled_index` объекта.|  
 
 
-## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -179,7 +183,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Возвращаемое значение  
  `extent` Объект, имеющий значения `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>Барьер   
+## <a name="tiled_index__barrier"></a>  Барьер   
 Магазины [tile_barrier](tile-barrier-class.md) , представляющий барьер в текущий tile потоков.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -188,7 +192,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>глобальные   
+## <a name="tiled_index__global"></a>  global   
 Магазины [индекс](index-class.md) объекта ранга 1, 2 или 3, представляющее индекс глобального объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -197,7 +201,7 @@ const tile_barrier barrier;
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>локальные   
+## <a name="tiled_index__local"></a>  Локальные   
 Магазины [индекс](index-class.md) объекта ранг 1, 2 или 3, представляющий относительный индекс в текущей плитки [tiled_extent](tiled-extent-class.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -206,7 +210,7 @@ const index<rank> global;
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>Ранг   
+## <a name="tiled_index__rank"></a>  Ранг   
 Сохраняет ранг объекта `tiled_index` объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -215,7 +219,7 @@ const index<rank> local;
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>плитки   
+## <a name="tiled_index__tile"></a>  плитки   
 Магазины [индекс](index-class.md) объекта ранга 1, 2 или 3, который представляет координаты относительно текущего расположения, из [tiled_extent](tiled-extent-class.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -224,7 +228,7 @@ static const int rank = _Rank;
 const index<rank> tile;  
 ```  
   
-## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
 Сохраняет длину наиболее значимых измерения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -233,7 +237,7 @@ const index<rank> tile;
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
 Сохраняет длину измерения значительные Далее для большинства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -241,7 +245,7 @@ static const int tile_dim0 = _Dim0;
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
 Сохраняет длину младших измерения.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -249,7 +253,7 @@ static const int tile_dim1 = _Dim1;
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_index__tile_origin"></a>tile_origin   
+## <a name="tiled_index__tile_origin"></a>  tile_origin   
 Магазины [индекс](index-class.md) объекта координат ранг 1, 2 или 3, представляющий глобальный происхождения текущего расположения в [tiled_extent](tiled-extent-class.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -257,7 +261,7 @@ static const int tile_dim2 = _Dim2;
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a>  tile_extent
   Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.  
   
 ## <a name="syntax"></a>Синтаксис  

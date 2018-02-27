@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>Класс combinable
 Объект `combinable<T>` предназначен для предоставления частной для потока копии данных для выполнения локальных для потока вложенных вычислений без блокировки потока в параллельных алгоритмах. В конце выполнения параллельной операции частные для потока вложенные вычисления можно объединить для получения общего результата. Этот класс можно использовать вместо общей переменной, что может позволить улучшить производительность в случае возникновения большого числа конфликтов доступа к этой общей переменной.  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|Очищает все промежуточные вычислительные результаты из предыдущего использования.|  
 |[combine](#combine)|Вычисляет окончательное значение из набора локальных для потока вложенные вычисления, вызывая предоставленный функтор.|  
 |[combine_each](#combine_each)|Вычисляет окончательное значение из набора локальных для потока вложенные вычисления, вызывая предоставленный функтор один раз в локальных для потока вложенные вычисления. Окончательный результат накапливаются объектом функции.|  
-|[локальные](#local)|Перегружен. Возвращает ссылку на частные для потока вложенные вычисления.|  
+|[local](#local)|Перегружен. Возвращает ссылку на частные для потока вложенные вычисления.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **Пространство имен:** concurrency  
   
-##  <a name="clear"></a>Очистить 
+##  <a name="clear"></a> Снимите флажок 
 
  Очищает все промежуточные вычислительные результаты из предыдущего использования.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>combinable 
+##  <a name="ctor"></a> combinable 
 
  Создает новое `combinable` объекта.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  Третий конструктор является конструктором копии.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  Уничтожает объект `combinable`.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>Объединение 
+##  <a name="combine"></a> Объединение 
 
  Вычисляет окончательное значение из набора локальных для потока вложенные вычисления, вызывая предоставленный функтор.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Окончательный результат объединения всех частные для потока вложенные вычисления.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  Вычисляет окончательное значение из набора локальных для потока вложенные вычисления, вызывая предоставленный функтор один раз в локальных для потока вложенные вычисления. Окончательный результат накапливаются объектом функции.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Функтор, который используется для объединения одного вложенных вычислений. Он имеет сигнатуру `void (T)` или `void (const T&)`и должен быть ассоциативными и коммуникативными.  
   
-##  <a name="local"></a>локальные 
+##  <a name="local"></a> Локальные 
 
  Возвращает ссылку на частные для потока вложенные вычисления.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на частные для потока вложенные вычисления.  
   
-##  <a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a> оператор = 
 
  Назначает `combinable` объекта из другого `combinable` объекта.  
   

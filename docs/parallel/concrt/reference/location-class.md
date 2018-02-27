@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - location
 - CONCRT/concurrency::location
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs: C++
-helpviewer_keywords: location class
+dev_langs:
+- C++
+helpviewer_keywords:
+- location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="location-class"></a>Класс location
 Абстракция физического расположения на оборудовании.  
@@ -49,7 +53,7 @@ class location;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[текущий](#current)|Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.|  
+|[current](#current)|Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.|  
 |[from_numa_node](#from_numa_node)|Возвращает объект `location`, представляющий заданный узел NUMA.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
@@ -68,7 +72,7 @@ class location;
   
  **Пространство имен:** concurrency  
   
-##  <a name="dtor"></a>~ расположение 
+##  <a name="dtor"></a> ~ расположение 
 
  Уничтожает объект `location`.  
   
@@ -76,7 +80,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="current"></a>текущий 
+##  <a name="current"></a> Текущий 
 
  Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.  
   
@@ -87,7 +91,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>Возвращаемое значение  
  Расположение, представляющее наиболее определенное место, выполняемое вызывающим потоком.  
   
-##  <a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a> from_numa_node 
 
  Возвращает объект `location`, представляющий заданный узел NUMA.  
   
@@ -102,7 +106,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>Возвращаемое значение  
  Расположение, представляющее узел NUMA, указывается с помощью параметра `_NumaNodeNumber`.  
   
-##  <a name="ctor"></a>расположение 
+##  <a name="ctor">расположение</a> 
 
  Создает объект `location`.  
   
@@ -129,7 +133,7 @@ location(
 ### <a name="remarks"></a>Примечания  
  Созданное расположение по умолчанию представляет систему в целом.  
   
-##  <a name="operator_neq"></a>оператор! = 
+##  <a name="operator_neq"></a> оператор! = 
 
  Определяет, представляют ли два объекта `location` различные расположения.  
   
@@ -143,7 +147,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если расположения различаются; в противном случае — значение `false`.  
   
-##  <a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a> оператор = 
 
  Назначает содержимое другого объекта `location` данному.  
   
@@ -157,7 +161,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="operator_eq_eq"></a>оператор == 
+##  <a name="operator_eq_eq"></a> оператор == 
 
  Определяет неравенство двух `location` объекты представляют местоположения.  
   
@@ -169,7 +173,7 @@ bool operator== (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если в двух местах идентичны, и `false` в противном случае.  
+ `true` Если в двух местах идентичны, и `false` в противном случае.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)

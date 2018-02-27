@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Подмножество MFC предназначен для поддержки модели COM, хотя большинство из Active Template Library (ATL) предназначен для программирования в модели COM. Подразделы в этом разделе описывается поддержка MFC для модели COM.  
@@ -43,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
     -   [Элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md)  
   
-    -   [Обзор: Интернета](../mfc/mfc-internet-programming-basics.md)  
+    -   [Overview: Internet](../mfc/mfc-internet-programming-basics.md)  
   
     -   [Обновление существующего элемента управления ActiveX для использования в Интернете](../mfc/upgrading-an-existing-activex-control.md)  
   
@@ -53,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Автоматизация](../mfc/automation.md) (прежнее название — OLE-автоматизация) делает возможным для одного приложения для работы с объектами, реализованными в другом приложении, или для «предоставления» объекты, поэтому ими можно управлять.  
   
-     Автоматизированный объект может быть локальным или [удаленного](../mfc/remote-automation.md) (на другом компьютере, доступном по сети). Автоматизация доступна для OLE- и COM-объектов.  
+     Автоматизированный объект может быть локальным или удаленным (находиться на другом компьютере, доступном по сети). Автоматизация доступна для OLE- и COM-объектов.  
   
 -   Здесь также приведены сведения о том, как создавать компоненты COM, с помощью MFC, например, в [точки подключения](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ ms.lasthandoff: 12/21/2017
  [Вложение активного документа](../mfc/active-document-containment.md)  
   
  [Автоматизация](../mfc/automation.md)  
-  
- [Удаленная автоматизация](../mfc/remote-automation.md)  
   
  [Точки подключения](../mfc/connection-points.md)  
   
