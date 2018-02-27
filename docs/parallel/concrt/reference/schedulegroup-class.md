@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>Класс ScheduleGroup
 Представляет абстракцию для группы расписаний. Группы расписаний организуют набор связанных работ, которые выигрывают от планирования в непосредственной близости друг от друга: во времени (путем выполнения другой задачи в той же группе перед перемещением в другую группу) или в пространстве (путем выполнения нескольких элементов в той же группе в том же узле NUMA или физическом сокете).  
@@ -49,7 +53,7 @@ class ScheduleGroup;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[Идентификатор](#id)|Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.|  
+|[Id](#id)|Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.|  
 |[Ссылки](#reference)|Увеличивает значение счетчика ссылок группы расписания.|  
 |[Релиз](#release)|Уменьшает значение счетчика ссылок группы планировщика.|  
 |[ScheduleTask](#scheduletask)|Назначает легкое задание в группы расписаний.|  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **Пространство имен:** concurrency  
   
-##  <a name="id"></a>Идентификатор 
+##  <a name="id"></a> Id 
 
  Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.  
   
-##  <a name="operator_delete"></a>оператор delete 
+##  <a name="operator_delete"></a> оператор delete 
 
  Объект `ScheduleGroup` объект уничтожается внутренне средой выполнения при выпуске всех внешних ссылок на него. Его невозможно удалить явно.  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  Указатель на объект для удаления.  
   
-##  <a name="reference"></a>Ссылка 
+##  <a name="reference"></a> Ссылка 
 
  Увеличивает значение счетчика ссылок группы расписания.  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Примечания  
  Обычно используется для управления временем существования группы расписаний для композиции. Когда счетчик ссылок группы расписания становится равным нулю, группа расписаний удаляется средой выполнения. Группе расписаний, создаваемых с помощью [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) метод, или [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) метода начинается с одного счетчик ссылок.  
   
-##  <a name="release"></a>Выпуск 
+##  <a name="release"></a> выпуск 
 
  Уменьшает значение счетчика ссылок группы планировщика.  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  Расписание группы связан с определенным экземпляром планировщика. Необходимо убедиться, что все ссылки на группы расписаний освобождаются до освобождения всех ссылок на планировщик, поскольку последние может привести к уничтожению планировщика. Это приведет к неопределенному поведению.  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Назначает легкое задание в группы расписаний.  
   

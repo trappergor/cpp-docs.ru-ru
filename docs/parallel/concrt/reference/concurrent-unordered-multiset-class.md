@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::key_eq
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::swap
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_multiset::unsafe_erase
-dev_langs: C++
-helpviewer_keywords: concurrent_unordered_multiset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Класс concurrent_unordered_multiset
 `concurrent_unordered_multiset` Класс является параллелизма контейнер, управляющий последовательностью элементов типа K. переменной длины Последовательность представлена таким образом, что позволяет параллельно безопасно операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.  
@@ -122,7 +126,7 @@ template <typename K,
   
  **Пространство имен:** concurrency  
   
-##  <a name="begin"></a>начать 
+##  <a name="begin"></a> начать 
 
  Возвращает итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -135,7 +139,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор на первый элемент в параллельном контейнере.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  Возвращает константный итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -146,7 +150,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Константный итератор на первый элемент в параллельном контейнере.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  Возвращает константный итератор, указывающий на местоположение, следующему за последним элементом в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -157,7 +161,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор const для к месту, следующему за последним элементом в параллельном контейнере.  
   
-##  <a name="clear"></a>Очистить 
+##  <a name="clear"></a> Снимите флажок 
 
  Удаляет все элементы в параллельном контейнере. Эта функция не безопасен в режиме параллелизма.  
   
@@ -165,7 +169,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_unordered_multiset 
+##  <a name="ctor"></a> concurrent_unordered_multiset 
 
  Создает параллельный неупорядоченный мультинабора.  
   
@@ -232,7 +236,7 @@ concurrent_unordered_multiset(
   
  Последний конструктор определяет перемещение параллельный неупорядоченный мультинабор `_Uset`.  
   
-##  <a name="count"></a>Счетчик 
+##  <a name="count"></a> Счетчик 
 
  Подсчитывает количество элементов, соответствующих заданному ключу. Эта функция является безопасен в режиме параллелизма.  
   
@@ -247,7 +251,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество времени, количество появлений ключа в контейнере.  
   
-##  <a name="empty"></a>пустой 
+##  <a name="empty"></a> пустой 
 
  Проверяет отсутствие элементов. Данный метод безопасен в режиме параллелизма.  
   
@@ -256,12 +260,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если параллельный контейнер пуст, `false` в противном случае.  
+ `true` Если параллельный контейнер пуст, `false` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  При наличии параллельных вставок пуста ли параллельном контейнере может измениться сразу после вызова этой функции перед даже считать возвращаемое значение.  
   
-##  <a name="end"></a>конец 
+##  <a name="end"></a> Конец 
 
  Возвращает итератор, указывающий к месту, следующему за последним элементом в параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -274,7 +278,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор к месту, следующему за последним элементом в параллельном контейнере.  
   
-##  <a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a> equal_range 
 
  Находит диапазон, соответствующий указанному ключу. Эта функция является безопасен в режиме параллелизма.  
   
@@ -298,7 +302,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Примечания  
  Это возможно для одновременных операций вставки вызвать дополнительные ключи, вставляемый после начала итератора и перед конечный итератор.  
   
-##  <a name="find"></a>найти 
+##  <a name="find"></a> Найти 
 
  Определяет элемент, соответствующий указанному ключу. Эта функция является безопасен в режиме параллелизма.  
   
@@ -315,7 +319,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий расположение первый элемент, соответствующий ключ, указанный или итератора `end()` Если такого элемента не существует.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Возвращает сохраненный объект распределителя для этом параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -326,7 +330,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Сохраненный объект распределителя для этом параллельном контейнере.  
   
-##  <a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a> hash_function 
 
  Возвращает сохраненный объект хэш-функции.  
   
@@ -337,7 +341,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Сохраненный объект хэш-функции.  
   
-##  <a name="insert"></a>Вставка 
+##  <a name="insert"></a> Вставка 
 
  Добавляет элементы к `concurrent_unordered_multiset` объекта.  
   
@@ -396,7 +400,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Последние две функции-члены работают так же как первым двум, за исключением того, что `value` используется для создания вставленное значение.  
   
-##  <a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a> key_eq 
 
  Объект функции сравнения хранимых равенства.  
   
@@ -407,7 +411,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект функции сравнения хранимых равенства.  
   
-##  <a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a> load_factor 
 
  Вычисляет и возвращает коэффициент загрузки текущего контейнера. Фактор нагрузки — количество элементов в контейнере, деленное на количество блоков.  
   
@@ -418,7 +422,7 @@ float load_factor() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Коэффициент загрузки для контейнера.  
   
-##  <a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a> max_load_factor 
 
  Возвращает или задает коэффициент максимальной нагрузки для контейнера. Коэффициент максимальной нагрузки является наибольшее количество элементов, чем может быть в одном контейнере оказывается перед контейнера роста своей внутренней таблицы.  
   
@@ -434,7 +438,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Возвращаемое значение  
  Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция-член возвращает значение, но создает исключение [out_of_range](../../../standard-library/out-of-range-class.md) исключение, если недопустимый фактор нагрузки...  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  Возвращает максимальный размер параллельном контейнере, определить распределителем. Данный метод безопасен в режиме параллелизма.  
   
@@ -448,7 +452,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Примечания  
  Это значение верхней границы фактически может быть выше, чем то, что еще фактически может содержаться в контейнере.  
   
-##  <a name="operator_eq"></a>оператор = 
+##  <a name="operator_eq"></a> оператор = 
 
  Назначает содержимое другой `concurrent_unordered_multiset` этого объекта. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -468,7 +472,7 @@ concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset)
 ### <a name="remarks"></a>Примечания  
  После удаления всех существующих элементов в параллельный неупорядоченный мультинабора, `operator=` копирует или перемещает содержимое `_Uset` в параллельное неупорядоченное мультинабора.  
   
-##  <a name="rehash"></a>rehash 
+##  <a name="rehash"></a> rehash 
 
  Повторно создает хэш-таблицу.  
   
@@ -485,7 +489,7 @@ void rehash(size_type _Buckets);
   
  Он выдает [out_of_range](../../../standard-library/out-of-range-class.md) исключение, если число контейнеров, является недопустимым (0 или больше, чем максимальное количество блоков).  
   
-##  <a name="size"></a>размер 
+##  <a name="size"></a> Размер 
 
  Возвращает число элементов в этом параллельном контейнере. Данный метод безопасен в режиме параллелизма.  
   
@@ -499,7 +503,7 @@ size_type size() const;
 ### <a name="remarks"></a>Примечания  
  При наличии параллельных вставок число элементов в параллельном контейнере может измениться сразу после вызова этой функции даже до чтения возвращаемого значения.  
   
-##  <a name="swap"></a>Swap 
+##  <a name="swap"></a> swap 
 
  Меняет местами содержимое двух `concurrent_unordered_multiset` объектов. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -511,7 +515,7 @@ void swap(concurrent_unordered_multiset& _Uset);
  `_Uset`  
  Объект `concurrent_unordered_multiset` для обмена.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Возвращает итератор на первый элемент в этом контейнере для конкретного сегмента.  
   
@@ -528,7 +532,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий на начало сегмента.  
   
-##  <a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
  Возвращает индекс сегмента, который сопоставляет указанный ключ в этом контейнере.  
   
@@ -543,7 +547,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс сегмента ключа в этом контейнере.  
   
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count 
 
  Возвращает текущее число блоков в этом контейнере.  
   
@@ -554,7 +558,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее количество сегментов в этом контейнере.  
   
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
  Возвращает количество элементов из конкретного сегмента для этого контейнера.  
   
@@ -569,7 +573,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее количество сегментов в этом контейнере.  
   
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
  Возвращает итератор на первый элемент в этом контейнере для конкретного сегмента.  
   
@@ -584,7 +588,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий на начало сегмента.  
   
-##  <a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a> unsafe_cend 
 
  Возвращает итератор к месту, следующему за последним элементом в конкретного сегмента.  
   
@@ -599,7 +603,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий на начало сегмента.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Возвращает итератор последнего элемента в этом контейнере для конкретного сегмента.  
   
@@ -616,7 +620,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Итератор, указывающий на конец сегмента.  
   
-##  <a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a> unsafe_erase 
 
  Удаляет элементы из `concurrent_unordered_multiset` в указанных позициях. Этот метод не является безопасным в режиме параллелизма.  
   
@@ -649,7 +653,7 @@ size_type unsafe_erase(
   
  Третья функция-член удаляет элементы в диапазоне, ограниченном [equal_range](#equal_range)(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
  Возвращает максимальное количество блоков в этом контейнере.  
   

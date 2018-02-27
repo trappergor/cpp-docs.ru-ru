@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 Абстрактный базовый класс `network_link_registry` управляет связями между блоками источников и целевыми блоками.  
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **Пространство имен:** concurrency  
   
-##  <a name="add"></a>добавить 
+##  <a name="add"></a> Добавить 
 
  При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  Указатель на блок для добавления.  
   
-##  <a name="begin"></a>начать 
+##  <a name="begin"></a> начать 
 
  При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>Примечания  
  Конечное состояние итератора обозначается `NULL` ссылку.  
   
-##  <a name="contains"></a>содержит 
+##  <a name="contains"></a> содержит 
 
  При переопределении в производном классе выполняет `network_link_registry` объекта для указанного блока.  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  Указатель на блок, которая ищется в `network_link_registry` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если блокировка была найдена, `false` в противном случае.  
+ `true` Если блокировка была найдена, `false` в противном случае.  
   
-##  <a name="count"></a>Счетчик 
+##  <a name="count"></a> Счетчик 
 
  При переопределении в производном классе, возвращает количество элементов в `network_link_registry` объекта.  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в `network_link_registry` объекта.  
   
-##  <a name="remove"></a>удалить 
+##  <a name="remove"></a> Удалить 
 
  При переопределении в производном классе удаляет заданный блок из `network_link_registry` объекта.  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если ссылка была найдена и удалена, `false` в противном случае.  
+ `true` Если ссылка была найдена и удалена, `false` в противном случае.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   

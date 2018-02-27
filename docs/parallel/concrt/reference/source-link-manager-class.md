@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 Объект `source_link_manager` управляет сетевыми соединениями блоков обмена сообщениями с блоками `ISource`.  
@@ -64,7 +68,7 @@ class source_link_manager;
 |Имя|Описание:|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Создает объект `source_link_manager`.|  
-|[~ source_link_manager деструктор](#dtor)|Уничтожает `source_link_manager` объекта.|  
+|[~source_link_manager Destructor](#dtor)|Уничтожает `source_link_manager` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -91,7 +95,7 @@ class source_link_manager;
   
  **Пространство имен:** concurrency  
   
-##  <a name="add"></a>добавить 
+##  <a name="add"></a> Добавить 
 
  Добавляет ссылку на источник `source_link_manager` объекта.  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  Указатель на блок для добавления.  
   
-##  <a name="begin"></a>начать 
+##  <a name="begin"></a> начать 
 
  Возвращает итератор на первый элемент в `source_link_manager` объекта.  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>Примечания  
  Конечное состояние итератора обозначается `NULL` ссылку.  
   
-##  <a name="contains"></a>содержит 
+##  <a name="contains"></a> содержит 
 
  Поиск `network_link_registry` в рамках этого `source_link_manager` объекта для указанного блока.  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  Указатель на блок, который необходимо найти в `source_link_manager` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанная блокировка найдена, `false` в противном случае.  
+ `true` Если указанная блокировка найдена, `false` в противном случае.  
   
-##  <a name="count"></a>Счетчик 
+##  <a name="count"></a> Счетчик 
 
  Подсчитывает количество связанных блоков в `source_link_manager` объекта.  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>Возвращаемое значение  
  Число связанных блоков в `source_link_manager` объекта.  
   
-##  <a name="reference"></a>ссылка 
+##  <a name="reference"></a> Ссылка 
 
  Получает ссылку на `source_link_manager` объекта.  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  Регистрирует целевой блок, который содержит это `source_link_manager` объекта.  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  Целевой блок, содержащий это `source_link_manager` объекта.  
   
-##  <a name="release"></a>выпуск 
+##  <a name="release"></a> выпуск 
 
  Освобождает ссылку на `source_link_manager` объекта.  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>удалить 
+##  <a name="remove"></a> Удалить 
 
  Удаляет ссылку из `source_link_manager` объекта.  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если ссылка была найдена и удалена, `false` в противном случае.  
+ `true` Если ссылка была найдена и удалена, `false` в противном случае.  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  Задает максимальное число ссылок источника, который может быть добавлен к этому `source_link_manager` объекта.  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  Максимальное число ссылок.  
   
-##  <a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a> source_link_manager 
 
  Создает объект `source_link_manager`.  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a> ~source_link_manager 
 
  Уничтожает `source_link_manager` объекта.  
   
