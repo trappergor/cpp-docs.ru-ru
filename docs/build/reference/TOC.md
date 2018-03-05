@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew (новые исключения оператора assume)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (подстановка триграфов)](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t (собственный тип wchar_t)](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf (ускоренное создание PDB-файла)](zf.md)
 #### [/Zg (создание прототипов функций)](zg-generate-function-prototypes.md)
 #### [/Zl (опущенное имя библиотеки по умолчанию)](zl-omit-default-library-name.md)
 #### [/Zm (определение ограничения на выделение памяти для предкомпилированного заголовка)](zm-specify-precompiled-header-memory-allocation-limit.md)
