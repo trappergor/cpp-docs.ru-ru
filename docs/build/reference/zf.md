@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8817b72e5e6eb7ba808455113104e8fb5000505
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf (создания быстрее PDB-файла)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/28/2018
 
 **/Zf** параметр включает поддержку компилятора для более быстрое создание PDB-файлы при использовании [/MP (построить с несколькими процессами)](mp-build-with-multiple-processes.md) параметр, или когда система сборки (например, [MSBuild ](/visualstudio/msbuild/msbuild-reference) или [CMake](../../ide/cmake-tools-for-visual-cpp.md)) может выполняться несколько cl.exe компилятора процессы одновременно. Этот параметр вызывает интерфейс компилятора отложить создание типов индексов для каждой записи типа в PDB-файл до конца компиляции, а затем запрашивает их все за один вызов RPC для mspdbsrv.exe вместо внесения запрос RPC для каждой записи. Это может существенно повысить пропускную способность сборки путем снижения нагрузки на процесс mspdbsrv.exe в среде, где одновременно запускать несколько процессов Компилятор cl.exe RPC.
 
-Поскольку **/Zf** применяется только для создания PDF, требует [/ZI](z7-zi-zi-debug-information-format.md) или [/ZI](z7-zi-zi-debug-information-format.md) параметр.
+Поскольку **/Zf** применяется только для создания PDB-файла, требует [/ZI](z7-zi-zi-debug-information-format.md) или [/ZI](z7-zi-zi-debug-information-format.md) параметр.
 
 **/Zf** параметр доступен начиная с версии 15.1 2017 г. Visual Studio и по умолчанию отключена.
 
