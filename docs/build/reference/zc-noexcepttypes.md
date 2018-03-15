@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (c ++ 17 noexcept правила)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="remarks"></a>Примечания
 
-Когда **/Zc:noexceptTypes** параметр указан, компилятор соответствует стандарт C ++ 17 и рассматривает [throw()](../../cpp/exception-specifications-throw-cpp.md) в качестве псевдонима для [noexcept](../../cpp/noexcept-cpp.md), удаляет `throw(<type list>)`и `throw(...)`и позволяет включить определенные типы `noexcept`. **/Zc:noexceptTypes** параметр доступен только тогда, когда [/std: c ++ 17](std-specify-language-standard-version.md) или [/std:latest](std-specify-language-standard-version.md) включен. **/Zc:noexceptTypes** включена по умолчанию в соответствии с ISO стандарт C ++ 17. Отключить этот параметр, указав **/Zc:noexceptTypes-** вернуться к C ++ 14 поведение `noexcept` при **/std::C ++ 17** или **/std::latest** указано.
+Когда **/Zc:noexceptTypes** параметр указан, компилятор соответствует стандарт C ++ 17 и рассматривает [throw()](../../cpp/exception-specifications-throw-cpp.md) в качестве псевдонима для [noexcept](../../cpp/noexcept-cpp.md), удаляет `throw(<type list>)`и `throw(...)`и позволяет включить определенные типы `noexcept`. **/Zc:noexceptTypes** параметр доступен только тогда, когда [/std: c ++ 17](std-specify-language-standard-version.md) или [/std:latest](std-specify-language-standard-version.md) включен. **/Zc:noexceptTypes** включена по умолчанию в соответствии с ISO стандарт C ++ 17. [/ Разрешительным-](permissive-standards-conformance.md) параметр не влияет на **/Zc:noexceptTypes**. Отключить этот параметр, указав **/Zc:noexceptTypes-** вернуться к C ++ 14 поведение `noexcept` при **/std::C ++ 17** или **/std::latest** указано.
 
 Начиная с версии 15,5 2017 г. Visual Studio, компилятор C++ проверяет дополнительные спецификации несоответствующие исключений в объявлениях в C ++ 17 режиме или когда [/ разрешительным-](permissive-standards-conformance.md) параметра.
 
@@ -84,7 +84,7 @@ struct B : A
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-1. Выберите **командной строки** на странице свойств в **C/C++** папки.
+1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
 1. Изменить **Дополнительные параметры** включив **/Zc:noexceptTypes** или **/Zc:noexceptTypes-** и выберите **ОК**.
 

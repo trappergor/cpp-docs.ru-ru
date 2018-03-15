@@ -1,12 +1,9 @@
 ---
 title: "/Zc:externConstexpr (Включить внешние переменные constexpr) | Документы Microsoft"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /Zc:externConstexpr
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84037e5e8a942d51175d97957d0c05bd6f4aa29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6597bc96609ab051df56886ccc580516986f97ed
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Включить внешние переменные constexpr)
 
@@ -34,11 +30,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>Синтаксис
 
-> /Zc:externConstexpr [-]
+> **/Zc:externConstexpr**[**-**]
 
 ## <a name="remarks"></a>Примечания
 
-**/Zc:externConstexpr** параметр компилятора указывает компилятору на необходимость применить к переменным, объявленным с помощью внешней компоновки `extern constexpr`. **/Zc:externConstexpr** параметр доступен, начиная с Visual Studio 2017 г. обновление 15,5. В более ранних версиях Visual Studio и по умолчанию или если **/Zc:externConstexpr-** указан, Visual Studio применяет внутренней компоновки для `constexpr` переменных, даже если `extern` используется ключевое слово.
+**/Zc:externConstexpr** параметр компилятора указывает компилятору на необходимость применить к переменным, объявленным с помощью внешней компоновки `extern constexpr`. В более ранних версиях Visual Studio и по умолчанию или если **/Zc:externConstexpr-** указан, Visual Studio применяет внутренней компоновки для `constexpr` переменных, даже если `extern` используется ключевое слово. **/Zc:externConstexpr** параметр доступен, начиная с Visual Studio 2017 г. обновление 15,6. и по умолчанию отключена. [/ Разрешительным-](permissive-standards-conformance.md) параметр не позволяет включить **/Zc:externConstexpr**.
 
 Если переменная, объявленная в файле заголовка `extern constexpr`, он должен быть помечен [__declspec(selectany)](../../cpp/selectany.md) для слияния повторяющиеся объявления в один экземпляр связанного двоичного файла. В противном случае могут возникнуть ошибки компоновщика, например, LNK2005, нарушения правила одного определения.
 
@@ -46,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-1. В разделе **свойства конфигурации**, разверните **C/C++** и выберите **командной строки**.
+1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
 1. Добавить **/Zc:externConstexpr** или **/Zc:externConstexpr-** для **Дополнительные параметры:** области.
 
