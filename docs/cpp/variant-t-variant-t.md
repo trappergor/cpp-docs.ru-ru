@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cd85a54e9f73352894f6575051fe1ea8be0698fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Блок, относящийся только к системам Microsoft**  
@@ -155,13 +155,13 @@ _variant_t(
  `fCopy`  
  Если значение равно false, предоставленного **VARIANT** объект присоединен к новому `_variant_t` объект без создания копии путем **VariantCopy**.  
   
- *Код sSrc*  
+ *ISrc, sSrc*  
  Целочисленное значение, которое необходимо скопировать в новый объект `_variant_t`.  
   
  `vtSrc`  
  **VARTYPE** для нового `_variant_t` объекта.  
   
- *fltSrc dblSrc*  
+ *fltSrc, dblSrc*  
  Числовое значение, которое необходимо скопировать в новый объект `_variant_t`.  
   
  `cySrc`  
@@ -213,39 +213,39 @@ _variant_t(
   
 -   **_variant_t ()** создает пустой `_variant_t` объекта, `VT_EMPTY`.  
   
--   **_variant_t (VARIANT &***varSrc***)** создает `_variant_t` объекта из копии **VARIANT** объекта. Тип variant сохранен.  
+-   **_variant_t (VARIANT &***varSrc***)** создает `_variant_t` объекта из копии **VARIANT** объекта.     Тип variant сохранен.  
   
--   **_variant_t (VARIANT\****pVarSrc***)** создает `_variant_t` объекта из копии **VARIANT** объекта. Тип variant сохранен.  
+-   **_variant_t (VARIANT\****pVarSrc***)** создает `_variant_t` объекта из копии **VARIANT** объекта.     Тип variant сохранен.  
   
--   **_variant_t (_variant_t &***var_t_Src***)** создает `_variant_t` объекта из другого `_variant_t` объекта. Тип variant сохранен.  
+-   **_variant_t (_variant_t &***var_t_Src***)** создает `_variant_t` объекта из другого `_variant_t` объекта.     Тип variant сохранен.  
   
--   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** создает `_variant_t` объекта из существующего  **VARIANT** объекта. Если `fCopy` — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.  
+-   **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** создает `_variant_t` объекта из существующего  **VARIANT** объекта.       Если `fCopy` — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.  
   
--   **_variant_t (короткое***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** создает `_variant_t` объекта типа `VT_I2` или `VT_BOOL` из **короткие** целочисленное значение. Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
+-   **_variant_t (короткое***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** создает `_variant_t` объекта типа `VT_I2` или `VT_BOOL` из **короткие** целочисленное значение.       Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
   
--   **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** создает `_variant_t` объекта типа `VT_I4`, `VT_BOOL`, или `VT_ERROR` из **длинные** целочисленное значение. Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
+-   **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** создает `_variant_t` объекта типа `VT_I4`, `VT_BOOL`, или `VT_ERROR`из **длинные** целочисленное значение.       Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
   
--   **_variant_t (float**`fltSrc`**)** создает `_variant_t` объекта типа `VT_R4` из **float** числовое значение.  
+-   **_variant_t (float**`fltSrc`**)** создает `_variant_t` объекта типа `VT_R4` из **float** числовое значение.      
   
--   **_variant_t (double** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** создает `_variant_t` объекта типа `VT_R8` или `VT_DATE` из **двойные** числовое значение. Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
+-   **_variant_t (double** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** создает `_variant_t` объекта типа `VT_R8` или `VT_DATE` из **двойные** числовое значение.       Любой другой **VARTYPE** приводит к `E_INVALIDARG` ошибки.  
   
--   **_variant_t (CY &**`cySrc`**)** создает `_variant_t` объекта типа `VT_CY` из **CY** объекта.  
+-   **_variant_t (CY &**`cySrc`**)** создает `_variant_t` объекта типа `VT_CY` из **CY** объекта.      
   
--   **_variant_t (_bstr_t &**`bstrSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из `_bstr_t` объекта. Выделяется новый параметр `BSTR`.  
+-   **_variant_t (_bstr_t &**`bstrSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из `_bstr_t` объекта.     Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** создает `_variant_t` объекта типа `VT_BSTR` строки Юникода. Выделяется новый параметр `BSTR`.  
+-   **_variant_t (wchar_t \***  *wstrSrc***)** создает `_variant_t` объекта типа `VT_BSTR` строки Юникода.   Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (char\***`strSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из строки. Выделяется новый параметр `BSTR`.  
+-   **_variant_t (char\***`strSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из строки.     Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (bool**`bSrc`**)** создает `_variant_t` объекта типа `VT_BOOL` из `bool` значение.  
+-   **_variant_t (bool**`bSrc`**)** создает `_variant_t` объекта типа `VT_BOOL` из `bool` значение.      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объекта типа **VT_UNKNOWN**  из указателя интерфейса СОМ. Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову **выпуска** , который выполняется при `_variant_t` объект удаляется. Можно вызвать **выпуска** в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает право на владение предоставленным указателем на интерфейс, не следует вызывать **выпуска** в предоставленном указателе на интерфейс.  
+-   **_variant_t (IUnknown\***  `pIUknownSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объекта типа **VT_UNKNOWN** из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову **выпуска** , который выполняется при `_variant_t` объект удаляется. Можно вызвать **выпуска** в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает право на владение предоставленным указателем на интерфейс, не следует вызывать **выпуска** в предоставленном указателе на интерфейс.  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объекта типа **VT_DISPATCH**  из указателя интерфейса СОМ. Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову **выпуска** , который выполняется при `_variant_t` объект удаляется. Можно вызвать **выпуска** в предоставленном указателе на интерфейс. Если **fAddRef** имеет значение false, этот конструктор принимает право на владение предоставленным указателем на интерфейс, не следует вызывать **выпуска** в предоставленном указателе на интерфейс.  
+-   **_variant_t (IDispatch\***  `pDispSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объекта типа **VT_DISPATCH** из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову **выпуска** , который выполняется при `_variant_t` объект удаляется. Можно вызвать **выпуска** в предоставленном указателе на интерфейс. Если **fAddRef** имеет значение false, этот конструктор принимает право на владение предоставленным указателем на интерфейс, не следует вызывать **выпуска** в предоставленном указателе на интерфейс.  
   
--   **_variant_t (ДЕСЯТИЧНОЕ &**`decSrc`**)** создает `_variant_t` объекта типа **VT_DECIMAL** из **ДЕСЯТИЧНОЕ** значение.  
+-   **_variant_t (ДЕСЯТИЧНОЕ &**`decSrc`**)** создает `_variant_t` объекта типа **VT_DECIMAL** из **ДЕСЯТИЧНОЕ** значение.      
   
--   **_variant_t (BYTE**`bSrc`**)** создает `_variant_t` объекта типа `VT_UI1` из **БАЙТОВ** значение.  
+-   **_variant_t (BYTE**`bSrc`**)** создает `_variant_t` объекта типа `VT_UI1` из **БАЙТОВ** значение.      
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a800aca290a178e3b193c245df515385311b5593
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="void-c"></a>void (C++)
 Если ключевое слово `void` указывает возвращаемый тип функции, оно означает, что данная функция не возвращает никакого значения. Если оно используется для списка параметров функции, оно означает, что функция не принимает никаких параметров. Если оно используется в объявлении указателя, оно означает, что указатель является "универсальным".  
@@ -54,4 +54,4 @@ int main() {
   
 ## <a name="see-also"></a>См. также  
  [Ключевые слова](../cpp/keywords-cpp.md)   
- [Базовые типы](../cpp/fundamental-types-cpp.md)
+ [Фундаментальные типы](../cpp/fundamental-types-cpp.md)

@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
 Этот класс реализует **IUnknown** неагрегированные объекта.  
@@ -51,14 +51,14 @@ class CComObject : public Base
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Конструктор.|  
-|[CComObject:: ~ CComObject](#dtor)|Деструктор|  
+|[CComObject::~CComObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
 |[CComObject::CreateInstance](#createinstance)|(Статический) Создает новый `CComObject` объекта.|  
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|Уменьшает счетчик ссылок на объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObject`реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта. Однако вызовы `QueryInterface`, `AddRef`, и **выпуска** делегируются `CComObjectRootEx`.  
+ `CComObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта. Однако вызовы `QueryInterface`, `AddRef`, и **выпуска** делегируются `CComObjectRootEx`.  
   
  Дополнительные сведения об использовании `CComObject`, см. в статье [основы объекта ATL COM-объекты](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  Увеличивает счетчик ссылок на объект.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Возвращаемое значение  
  Эта функция возвращает новый счетчик увеличивается ссылок на объект. Это значение может быть полезен для диагностики и тестирования.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  Конструктор увеличивает счетчик блокировки модуля.  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>Параметры  
  **void\***  
- [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
+ [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom *** XXX*`Object`*XXX* конструкторы.  
   
 ### <a name="remarks"></a>Примечания  
  Деструктор уменьшает его.  
   
  Если `CComObject`-успешно производного объекта создается с помощью **новый** оператор, начальное значение счетчика ссылок равно 0. Устанавливает значение счетчика ссылок на соответствующее значение (1), чтобы вызов [AddRef](#addref) функции.  
   
-##  <a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>  CComObject::~CComObject  
  Деструктор  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  Освобождает все выделенные ресурсы, вызовы [FinalRelease](ccomobjectrootex-class.md#finalrelease), и уменьшает счетчик блокировки модуля.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  Эта статическая функция позволяет создать новую **CComObject <** `Base`  **>**  объекта, одновременно снижая издержки [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  Уменьшает счетчик ссылок на объект.  
   
 ```

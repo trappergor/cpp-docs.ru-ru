@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065. Поддержка сдвоенных интерфейсов для серверов автоматизации OLE
 > [!NOTE]
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>Передача указателей на сдвоенные интерфейсы  
- Передача указатель сдвоенных интерфейсов не является простым, особенно в том случае, если необходимо вызвать `CCmdTarget::FromIDispatch`. `FromIDispatch`работает только с MFC `IDispatch` указатели. Является одним из способов обхода этого запроса для исходного `IDispatch` набор указатель вверх по MFC и передать данный указатель функции, которым она необходима. Пример:  
+ Передача указатель сдвоенных интерфейсов не является простым, особенно в том случае, если необходимо вызвать `CCmdTarget::FromIDispatch`. `FromIDispatch` работает только с MFC `IDispatch` указатели. Является одним из способов обхода этого запроса для исходного `IDispatch` набор указатель вверх по MFC и передать данный указатель функции, которым она необходима. Пример:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,7 +306,7 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   В вашем приложении `InitInstance` функцию, найдите вызов `COleObjectFactory::UpdateRegistryAll`. После этого вызова, добавьте вызов `AfxOleRegisterTypeLib`, указав **LIBID** соответствующий свою библиотеку типов, вместе с именем библиотеки типов:  
   
  '' "* / / При запуске серверного приложения автономного рекомендуется * / / чтобы обновить реестр в случае, если он поврежден.  
-    m_server. UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll(); * / / DUAL_SUPPORT_START * / и убедитесь, что библиотека типов зарегистрирована или сдвоенный интерфейс не будет работать.  
 AfxOleRegisterTypeLib(AfxGetInstanceHandle() LIBID_ACDual, _T("AutoClik.TLB")); * / / DUAL_SUPPORT_END  
@@ -355,7 +355,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     pThis -> m_str = newText;  
     Возвращает значение NOERROR;  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e -> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -388,7 +388,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  The following example implements a class defined to support **ISupportErrorInfo**. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:  
   
 ```  
-STDMETHODIMP_(ulong) CAutoClickDoc::XSupportErrorInfo::AddRef()   
+STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
     METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
     Возврат pThis -> ExternalAddRef();

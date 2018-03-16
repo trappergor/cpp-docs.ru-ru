@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>Общие сведения об объявлениях
 Объявление задает интерпретацию и атрибуты набора идентификаторов. Объявление, которое также резервирует область хранения для объекта или функции, именованной идентификатором, называется определением. В языке C объявления переменных, функций и типов имеют следующий синтаксис:  

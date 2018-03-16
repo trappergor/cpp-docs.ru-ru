@@ -44,10 +44,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="valarray-class"></a>Класс valarray
 Класс шаблона описывает объект, который управляет последовательностью элементов типа **Type**. Эти элементы хранятся в виде массива, предназначены для быстрого выполнения математических операций и оптимизированы для повышения производительности вычислений.  
@@ -1702,7 +1702,7 @@ void swap(valarray& right);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`right`|Объект `valarray`, предоставляющий элементы, которые следует поменять местами.|  
   

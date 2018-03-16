@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Приоритет и порядок оценки
 Приоритет и ассоциативность операторов C влияют на группировку и вычисление операндов в выражениях. Приоритет оператора имеет значение только в том случае, если рядом стоят другие операторы с более высоким или более низким приоритетом. Выражения с операторами с наивысшим приоритетом вычисляются первыми. Приоритет может также называться привязкой. Говорят, что операторы с более высоким приоритетом имеют более тесную привязку.  

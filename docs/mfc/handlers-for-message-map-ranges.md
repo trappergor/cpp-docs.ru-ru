@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Обработчики для диапазонов схем сообщений
 В этой статье описывается ряд сообщений сопоставляются функция обработки одного сообщения (а не только одну функцию сопоставления одно сообщение).  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Пример для диапазона идентификаторов элементов управления](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>Создание записи схемы сообщений  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Создание записи схемы сообщений  
  В. CPP файлов, добавьте запись в схеме сообщений, как показано в следующем примере:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
      Третий макрос `ON_CONTROL_RANGE`, принимает дополнительный параметр первый: сообщения уведомление элемента управления, например **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Объявление функции обработчика  
+##  <a name="_core_declaring_the_handler_function"></a> Объявление функции обработчика  
  Добавьте в объявление функции обработчика. H-файл. В следующем коде показано, как может выглядеть, как показано ниже:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о требованиях к параметра для функции обработчика обновления см. в разделе [пример для диапазон команда идентификаторов](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Пример для идентификаторов диапазона команды  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Пример для идентификаторов диапазона команды  
  Когда может использовать диапазоны, одним из примеров является при обработке команды, как и команда увеличения в образце MFC [HIERSVR](../visual-cpp-samples.md). Эта команда устанавливает масштаб представления его масштабирования между 25% и % 300 от нормального размера. Класс представления HIERSVR использует диапазон для обработки команд масштаб с записью карты сообщение наподобие этого:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  Функции обработчика обновления, для одной команды обычно имеют один параметр `pCmdUI`, типа **CCmdUI\***. В отличие от функции обработчика функции обработчика обновления для диапазонов схем сообщений не требуют дополнительного параметра `nID`, типа **UINT**. Идентификатор команды, который необходим для указания команды фактически Выбор пользователя находится в `CCmdUI` объекта.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Пример для управления диапазоном идентификаторов  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Пример для управления диапазоном идентификаторов  
  Другой случай интересных сопоставление сообщений уведомление элемента управления для диапазона идентификаторов элементов управления к одному обработчику. Предположим, что пользователь может щелкнуть любой из 10 кнопок. Чтобы сопоставить все 10 кнопок один обработчик, запись схемы сообщений будет выглядеть следующим образом:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

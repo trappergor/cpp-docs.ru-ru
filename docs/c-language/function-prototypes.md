@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-prototypes"></a>Прототипы функций
 Объявление функции предшествует ее определению и указывает имя, тип возвращаемого значения, класс хранения и другие атрибуты функции. Чтобы объявление функции стало ее прототипом, оно должно также задавать типы и идентификаторы аргументов функции.  

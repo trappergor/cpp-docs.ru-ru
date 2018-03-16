@@ -350,10 +350,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="colecontrol-class"></a>COleControl-класс
 Мощный базовый класс для разработки элементов управления OLE.  
@@ -368,13 +368,13 @@ class COleControl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControl::COleControl](#colecontrol)|Создает объект `COleControl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|  
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|  
@@ -538,7 +538,7 @@ class COleControl : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|  
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|  
@@ -581,7 +581,7 @@ class COleControl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
+##  <a name="ambientbackcolor"></a>  COleControl::AmbientBackColor  
  Возвращает значение свойства BackColor окружения.  
   
 ```  
@@ -594,7 +594,7 @@ OLE_COLOR AmbientBackColor();
 ### <a name="remarks"></a>Примечания  
  Свойства BackColor окружения доступен для всех элементов управления и определяется контейнера. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
+##  <a name="ambientdisplayname"></a>  COleControl::AmbientDisplayName  
  Контейнер для элемента управления назначено имя используется в сообщениях об ошибках, отображаемых для пользователя.  
   
 ```  
@@ -607,7 +607,7 @@ CString AmbientDisplayName();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientfont"></a>COleControl::AmbientFont  
+##  <a name="ambientfont"></a>  COleControl::AmbientFont  
  Возвращает значение свойства шрифта окружения.  
   
 ```  
@@ -620,7 +620,7 @@ LPFONTDISP AmbientFont();
 ### <a name="remarks"></a>Примечания  
  Внешнее свойство шрифта определяется контейнера и доступны для всех элементов управления. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor  
+##  <a name="ambientforecolor"></a>  COleControl::AmbientForeColor  
  Возвращает значение свойства ForeColor окружения.  
   
 ```  
@@ -633,7 +633,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>Примечания  
  Внешнее свойство ForeColor доступна для всех элементов управления и определяется контейнера. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientlocaleid"></a>COleControl::AmbientLocaleID  
+##  <a name="ambientlocaleid"></a>  COleControl::AmbientLocaleID  
  Возвращает идентификатор языка контейнера.  
   
 ```  
@@ -646,7 +646,7 @@ LCID AmbientLocaleID();
 ### <a name="remarks"></a>Примечания  
  Элемент управления можно использовать код языка адаптировать его пользовательский интерфейс для конкретных языков. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
+##  <a name="ambientappearance"></a>  COleControl::AmbientAppearance  
  Извлекает текущую настройку внешнего вида объекта управления.  
   
 ```  
@@ -663,7 +663,7 @@ short AmbientAppearance();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения текущего значения **DISPID_AMBIENT_APPEARANCE** свойства для элемента управления.  
   
-##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
+##  <a name="ambientscaleunits"></a>  COleControl::AmbientScaleUnits  
  Возвращает тип единиц, используемые контейнером.  
   
 ```  
@@ -676,7 +676,7 @@ CString AmbientScaleUnits();
 ### <a name="remarks"></a>Примечания  
  Внешнее свойство ScaleUnits контейнера можно использоваться для отображения позиций или измерений, помеченные выбранный блок, например твипов или сантиметры. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
+##  <a name="ambientshowgrabhandles"></a>  COleControl::AmbientShowGrabHandles  
  Определяет, разрешает ли контейнер элемента управления для отображения маркеры захвата для себя, когда активны.  
   
 ```  
@@ -689,7 +689,7 @@ BOOL AmbientShowGrabHandles();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
+##  <a name="ambientshowhatching"></a>  COleControl::AmbientShowHatching  
  Определяет, разрешает ли контейнер элемента управления для отображения окна с заштрихованного шаблона, когда активный пользовательского интерфейса.  
   
 ```  
@@ -702,7 +702,7 @@ BOOL AmbientShowHatching();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
+##  <a name="ambienttextalign"></a>  COleControl::AmbientTextAlign  
  Определяет выравнивание текста окружения предпочитаемого контейнера элемента управления.  
   
 ```  
@@ -724,7 +724,7 @@ short AmbientTextAlign();
 ### <a name="remarks"></a>Примечания  
  Это свойство доступно для всех внедренные элементы управления и определяется контейнера. Обратите внимание, что контейнер не должен поддерживать это свойство.  
   
-##  <a name="ambientuidead"></a>COleControl::AmbientUIDead  
+##  <a name="ambientuidead"></a>  COleControl::AmbientUIDead  
  Определяет, если контейнер хочет управления реагировать на действия пользовательского интерфейса.  
   
 ```  
@@ -737,7 +737,7 @@ BOOL AmbientUIDead();
 ### <a name="remarks"></a>Примечания  
  Например, контейнер может присвоить это **TRUE** в режиме конструктора.  
   
-##  <a name="ambientusermode"></a>COleControl::AmbientUserMode  
+##  <a name="ambientusermode"></a>  COleControl::AmbientUserMode  
  Определяет, является ли контейнер в режим конструктора или в пользовательском режиме.  
   
 ```  
@@ -750,7 +750,7 @@ BOOL AmbientUserMode();
 ### <a name="remarks"></a>Примечания  
  Например, контейнер может присвоить это **FALSE** в режиме конструктора.  
   
-##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
+##  <a name="boundpropertychanged"></a>  COleControl::BoundPropertyChanged  
  Указывает, изменилось значение связанного свойства.  
   
 ```  
@@ -764,7 +764,7 @@ void BoundPropertyChanged(DISPID dispid);
 ### <a name="remarks"></a>Примечания  
  Оно должно вызываться каждый раз при изменении свойства даже в случаях, где это изменение не было сделано с помощью свойства значение метода. Помните, особенно связанных свойств, которые сопоставляются с переменными-членами. Каждый раз такой член изменения переменных, `BoundPropertyChanged` должен вызываться.  
   
-##  <a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
+##  <a name="boundpropertyrequestedit"></a>  COleControl::BoundPropertyRequestEdit  
  Запрашивает разрешение у `IPropertyNotifySink` интерфейс для изменения значения свойства привязки, предоставляемые элементом управления.  
   
 ```  
@@ -781,7 +781,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 ### <a name="remarks"></a>Примечания  
  Если разрешения, элемент управления не следует допускать значение изменения свойства. Это можно сделать, пропускается или переводя другой действие, которое была предпринята попытка изменить значение свойства.  
   
-##  <a name="clienttoparent"></a>COleControl::ClientToParent  
+##  <a name="clienttoparent"></a>  COleControl::ClientToParent  
  Преобразует координаты `pPoint` в координаты родительского элемента.  
   
 ```  
@@ -800,7 +800,7 @@ virtual void ClientToParent(
 ### <a name="remarks"></a>Примечания  
  На входе `pPoint` относительно начала координат клиентской области элемента управления OLE (верхний левый угол клиентской области элемента управления). На выходе `pPoint` относительно начала координат (верхний левый угол контейнера) родительского элемента.  
   
-##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect  
+##  <a name="clipcaretrect"></a>  COleControl::ClipCaretRect  
  Корректирует прямоугольник курсора, если оно полностью или частично охвачено непрозрачный перекрывающиеся объекты.  
   
 ```  
@@ -821,7 +821,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
   
  Объекты, создание курсор должен отправить прямоугольника, курсор `ClipCaretRect` и использовать настроенную прямоугольник для курсора. Если курсор полностью скрыт, этот метод будет возвращать **FALSE** и курсор не должен отображаться на всех в этом случае.  
   
-##  <a name="colecontrol"></a>COleControl::COleControl  
+##  <a name="colecontrol"></a>  COleControl::COleControl  
  Создает объект `COleControl`.  
   
 ```  
@@ -831,7 +831,7 @@ COleControl();
 ### <a name="remarks"></a>Примечания  
  Эта функция обычно не вызывается напрямую. Вместо этого элемента управления OLE обычно создается путем своей фабрики класса.  
   
-##  <a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
+##  <a name="controlinfochanged"></a>  COleControl::ControlInfoChanged  
  Эта функция вызывается при изменении набора мнемоник, поддерживаемый данным элементом управления.  
   
 ```  
@@ -841,7 +841,7 @@ void ControlInfoChanged();
 ### <a name="remarks"></a>Примечания  
  При получении этого уведомления, контейнер элемента управления получает новый набор мнемоник путем вызова [IOleControl::GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730). Обратите внимание, что контейнер не должен отвечать на это уведомление.  
   
-##  <a name="displayerror"></a>COleControl::DisplayError  
+##  <a name="displayerror"></a>  COleControl::DisplayError  
  Вызывается платформой, после обработки стандартное событие ошибки (если обработчик событий подавить отображение ошибки).  
   
 ```  
@@ -854,7 +854,7 @@ virtual void DisplayError(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *SCODE*  
+ *scode*  
  Значение кода состояния в отчетах. Полный список возможных кодов см. в статье [элементы управления ActiveX: Дополнительные разделы](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -874,7 +874,7 @@ virtual void DisplayError(
   
  Переопределите эту функцию, чтобы настроить способ отображения ошибок.  
   
-##  <a name="doclick"></a>COleControl::DoClick  
+##  <a name="doclick"></a>  COleControl::DoClick  
  Имитирует мыши выберите действие на элементе управления.  
   
 ```  
@@ -886,7 +886,7 @@ void DoClick();
   
  Эта функция поддерживается `COleControl` базовый класс как биржевые метод с именем DoClick. Дополнительные сведения см. в статье [элементы управления ActiveX: методы](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="dopropexchange"></a>COleControl::DoPropExchange  
+##  <a name="dopropexchange"></a>  COleControl::DoPropExchange  
  Вызывается платформой, когда загружается или сохраняется элемент управления из представления постоянное хранилище, например, поток или свойство набора.  
   
 ```  
@@ -902,7 +902,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
   
  При использовании мастера элементов управления для создания проекта элемента управления OLE переопределенная версия этой функции выполняет сериализацию стандартных свойств, поддерживаемых `COleControl` на вызов функции базового класса, `COleControl::DoPropExchange`. Как добавить пользовательские свойства элемента управления OLE необходимо будет изменить эту функцию для сериализации нового свойства. Дополнительные сведения о сериализации см. в статье [элементы управления ActiveX: сериализация](../../mfc/mfc-activex-controls-serializing.md).  
   
-##  <a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
+##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint  
  Перерисовывает элемента управления OLE, подклассом элемента управления Windows Forms.  
   
 ```  
@@ -923,7 +923,7 @@ void DoSuperclassPaint(
   
  Дополнительные сведения о данной функции и создание подкласса элемента управления Windows Forms см. в статье [элементы управления ActiveX: Создание подкласса элемента управления Windows Forms](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-##  <a name="drawcontent"></a>COleControl::DrawContent  
+##  <a name="drawcontent"></a>  COleControl::DrawContent  
  Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.  
   
 ```  
@@ -942,7 +942,7 @@ void DrawContent(
 ### <a name="remarks"></a>Примечания  
  Эта функция напрямую вызывает переопределяемый `OnDraw` функции.  
   
-##  <a name="drawmetafile"></a>COleControl::DrawMetafile  
+##  <a name="drawmetafile"></a>  COleControl::DrawMetafile  
  Вызывается платформой при использовании контексте устройства метафайла.  
   
 ```  
@@ -958,7 +958,7 @@ void DrawMetafile(
  `rc`  
  Прямоугольная область для отрисовки.  
   
-##  <a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
+##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame  
  Позволяет характеристика Простая рамка для элемента управления OLE.  
   
 ```  
@@ -968,7 +968,7 @@ void EnableSimpleFrame();
 ### <a name="remarks"></a>Примечания  
  Эта характеристика позволяет элементу управления для поддержки visual вложения из других элементов управления, но не true вложения OLE. Примером такого с несколькими элементами управления внутри области группы. Эти элементы управления не содержится OLE, но они находятся в одном поле группы.  
   
-##  <a name="exchangeextent"></a>COleControl::ExchangeExtent  
+##  <a name="exchangeextent"></a>  COleControl::ExchangeExtent  
  Сериализует или инициализирует входит в область элемента управления (его измерений в **HIMETRIC** ед.).  
   
 ```  
@@ -985,7 +985,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="remarks"></a>Примечания  
  Эта функция обычно вызывается реализация по умолчанию `COleControl::DoPropExchange`.  
   
-##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
+##  <a name="exchangestockprops"></a>  COleControl::ExchangeStockProps  
  Выполняет сериализацию или инициализирует состояние стандартных свойств элемента управления.  
   
 ```  
@@ -999,7 +999,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>Примечания  
  Эта функция обычно вызывается реализация по умолчанию `COleControl::DoPropExchange`.  
   
-##  <a name="exchangeversion"></a>COleControl::ExchangeVersion  
+##  <a name="exchangeversion"></a>  COleControl::ExchangeVersion  
  Выполняет сериализацию или инициализирует состояние сведения о версии элемента управления.  
   
 ```  
@@ -1027,7 +1027,7 @@ BOOL ExchangeVersion(
   
  Дополнительные сведения о сохраняемости и управления версиями см. в статье [элементы управления ActiveX: сериализация](../../mfc/mfc-activex-controls-serializing.md).  
   
-##  <a name="fireclick"></a>COleControl::FireClick  
+##  <a name="fireclick"></a>  COleControl::FireClick  
  Вызывается платформой при щелчке мышью по активный элемент управления.  
   
 ```  
@@ -1039,7 +1039,7 @@ void FireClick();
   
  Для автоматического срабатывания события Click, схема событий для элемента управления необходимо иметь stock щелкните определенных событий.  
   
-##  <a name="firedblclick"></a>COleControl::FireDblClick  
+##  <a name="firedblclick"></a>  COleControl::FireDblClick  
  Вызывается платформой при двойном щелчке мыши на активный элемент управления.  
   
 ```  
@@ -1051,7 +1051,7 @@ void FireDblClick();
   
  Для автоматического инициирования события Двойное нажатие кнопки, карты события элемента управления должны быть биржевых двойное нажатие кнопки события, определенного.  
   
-##  <a name="fireerror"></a>COleControl::FireError  
+##  <a name="fireerror"></a>  COleControl::FireError  
  Запускает стандартное событие ошибки.  
   
 ```  
@@ -1062,7 +1062,7 @@ void FireError(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *SCODE*  
+ *scode*  
  Значение кода состояния в отчетах. Полный список возможных кодов см. в статье [элементы управления ActiveX: Дополнительные разделы](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1080,7 +1080,7 @@ void FireError(
   
  Чтобы устранить эту проблему, вручную измените `SCODE` параметр в элементе управления. ODL-файла в **длинные**. Кроме того, любое пользовательское событие, метод или свойство, использующий `SCODE` параметра также приводит к тому же проблема.  
   
-##  <a name="fireevent"></a>COleControl::FireEvent  
+##  <a name="fireevent"></a>  COleControl::FireEvent  
  Запускает событие определяемой пользователем из элемента управления с любым количеством необязательных аргументов.  
   
 ```  
@@ -1122,7 +1122,7 @@ void AFX_CDECL FireEvent(
 > [!NOTE]
 >  Дополнительные variant константы определены для всех типов variant, за исключением элемента **VTS_FONT** и **VTS_PICTURE**, обеспечивающие указатель константы данных variant. Эти константы именуются **VTS_P** `constantname` соглашение. Например **VTS_PCOLOR** — это указатель на **VTS_COLOR** константой.  
   
-##  <a name="firekeydown"></a>COleControl::FireKeyDown  
+##  <a name="firekeydown"></a>  COleControl::FireKeyDown  
  Вызывается платформой при нажатии клавиши, во время активного пользовательского интерфейса элемента управления.  
   
 ```  
@@ -1149,7 +1149,7 @@ void FireKeyDown(
   
  Для автоматического срабатывания события KeyDown, карты события элемента управления должны быть биржевых определенные события KeyDown.  
   
-##  <a name="firekeypress"></a>COleControl::FireKeyPress  
+##  <a name="firekeypress"></a>  COleControl::FireKeyPress  
  Вызывается платформой, когда нажимается и отпускается, когда пользовательский элемент управления активен пользовательского интерфейса внутри контейнера ключа.  
   
 ```  
@@ -1167,7 +1167,7 @@ void FireKeyPress(USHORT* pnChar);
   
  Для автоматического срабатывания KeyPress-событие возникает, карты события элемента управления должны быть биржевых KeyPress-событие определено.  
   
-##  <a name="firekeyup"></a>COleControl::FireKeyUp  
+##  <a name="firekeyup"></a>  COleControl::FireKeyUp  
  Вызывается платформой при отпускании клавиши, когда пользовательский элемент управления активен пользовательского интерфейса внутри контейнера.  
   
 ```  
@@ -1194,7 +1194,7 @@ void FireKeyUp(
   
  Для автоматической обработке KeyUp события происходят карты события элемента управления должны быть биржевых KeyUp события, определенного.  
   
-##  <a name="firemousedown"></a>COleControl::FireMouseDown  
+##  <a name="firemousedown"></a>  COleControl::FireMouseDown  
  Вызывается платформой при нажатии кнопки мыши над активного пользовательского элемента управления.  
   
 ```  
@@ -1235,7 +1235,7 @@ void FireMouseDown(
   
  Для автоматического срабатывания MouseDown-событие возникает, карты события элемента управления должны быть биржевых MouseDown-событие определено.  
   
-##  <a name="firemousemove"></a>COleControl::FireMouseMove  
+##  <a name="firemousemove"></a>  COleControl::FireMouseMove  
  Вызывается платформой, когда курсор перемещается над активного пользовательского элемента управления.  
   
 ```  
@@ -1276,7 +1276,7 @@ void FireMouseMove(
   
  Для автоматической обработке происходят события MouseMove карты событий элемента управления должны быть биржевых MouseMove события, определенного.  
   
-##  <a name="firemouseup"></a>COleControl::FireMouseUp  
+##  <a name="firemouseup"></a>  COleControl::FireMouseUp  
  Вызывается платформой при отпускании кнопки мыши над активного пользовательского элемента управления.  
   
 ```  
@@ -1317,7 +1317,7 @@ void FireMouseUp(
   
  Для автоматической обработке происходят события MouseUp карты событий элемента управления должны быть биржевых MouseUp-событие, определенное.  
   
-##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
+##  <a name="firereadystatechange"></a>  COleControl::FireReadyStateChange  
  Инициирует событие с текущим значением состояние готовности элемента управления.  
   
 ```  
@@ -1346,7 +1346,7 @@ void FireReadyStateChange();
   
  [InternalSetReadyState](#internalsetreadystate) примет значение, указанное в состояние готовности, а затем вызывает `FireReadyStateChange`.  
   
-##  <a name="getactivationpolicy"></a>COleControl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  COleControl::GetActivationPolicy  
  Изменяет поведение активации по умолчанию элемент управления, поддерживающий `IPointerInactive` интерфейса.  
   
 ```  
@@ -1388,7 +1388,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="getambientproperty"></a>COleControl::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  COleControl::GetAmbientProperty  
  Возвращает значение внешнее свойство контейнера.  
   
 ```  
@@ -1412,10 +1412,10 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**короткий\***|  
+|`VT_I2`|**short\***|  
 |`VT_I4`|**Long\***|  
-|`VT_R4`|**число с плавающей запятой\***|  
-|`VT_R8`|**Double\***|  
+|`VT_R4`|**Число с плавающей запятой\***|  
+|`VT_R8`|**double\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
 |**VT_DISPATCH**|**LPDISPATCH\***|  
@@ -1429,7 +1429,7 @@ BOOL GetAmbientProperty(
   
  Обратите внимание, что функции уже были предоставлены для общих свойств окружения, такие как [AmbientBackColor](#ambientbackcolor) и [AmbientFont](#ambientfont).  
   
-##  <a name="getappearance"></a>COleControl::GetAppearance  
+##  <a name="getappearance"></a>  COleControl::GetAppearance  
  Реализует функцию Get стандартных свойств внешнего вида элемента управления.  
   
 ```  
@@ -1439,7 +1439,7 @@ short GetAppearance ();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение, указывающее текущую настройку внешнего вида как **короткие** ( `VT_I2`) значение в случае успешного выполнения. Это значение равно нулю, если внешний вид элемента управления является плоской и 1, если внешний вид элемента управления является 3D.  
   
-##  <a name="getbackcolor"></a>COleControl::GetBackColor  
+##  <a name="getbackcolor"></a>  COleControl::GetBackColor  
  Реализует функцию Get стандартное свойство цвет фона элемента управления.  
   
 ```  
@@ -1449,7 +1449,7 @@ OLE_COLOR GetBackColor();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение, указывающее текущий цвет фона, что **OLE_COLOR** значение в случае успешного выполнения. Это значение можно преобразовать в **COLORREF** значение с помощью вызова `TranslateColor`.  
   
-##  <a name="getborderstyle"></a>COleControl::GetBorderStyle  
+##  <a name="getborderstyle"></a>  COleControl::GetBorderStyle  
  Реализует функцию Get стандартное свойство BorderStyle элемента управления.  
   
 ```  
@@ -1459,7 +1459,7 @@ short GetBorderStyle();
 ### <a name="return-value"></a>Возвращаемое значение  
  1, если элемент управления имеет обычный границы; 0, если элемент управления не имеет рамки.  
   
-##  <a name="getcapture"></a>COleControl::GetCapture  
+##  <a name="getcapture"></a>  COleControl::GetCapture  
  Определяет, является ли `COleControl` объект имеет захват мыши.  
   
 ```  
@@ -1474,7 +1474,7 @@ CWnd* GetCapture();
 ### <a name="remarks"></a>Примечания  
  Активированная неоконным получает мыши при записи [SetCapture](#setcapture) вызывается.  
   
-##  <a name="getclassid"></a>COleControl::GetClassID  
+##  <a name="getclassid"></a>  COleControl::GetClassID  
  Вызывается платформой для извлечения идентификатора класса элемента управления OLE.  
   
 ```  
@@ -1491,7 +1491,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ### <a name="remarks"></a>Примечания  
  Обычно реализуется [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).  
   
-##  <a name="getclientoffset"></a>COleControl::GetClientOffset  
+##  <a name="getclientoffset"></a>  COleControl::GetClientOffset  
  Возвращает разницу между в верхний левый угол прямоугольной области элемента управления и в верхнем левом углу клиентской области.  
   
 ```  
@@ -1508,7 +1508,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ### <a name="remarks"></a>Примечания  
  Элемент управления OLE имеет прямоугольную область в пределах своего контейнера. Клиентской области элемента управления — это область элемента управления, за исключением границы и полосы прокрутки. Смещение, извлекается с `GetClientOffset` разницы в верхний левый угол прямоугольной области элемента управления и левой верхней части клиентской области. Если элемент управления имеет неклиентские элементы, отличные от стандартных границ и полос прокрутки, переопределяют эту функцию-член для указания смещения.  
   
-##  <a name="getclientrect"></a>COleControl::GetClientRect  
+##  <a name="getclientrect"></a>  COleControl::GetClientRect  
  Получает размер клиентской области элемента управления.  
   
 ```  
@@ -1519,7 +1519,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
  `lpRect`  
  Указатель на `RECT` структуру, содержащую размеры клиентской области элемента управления без окон, то есть размер элемента управления, за вычетом границы окна, кадры, полосы прокрутки и т. д. `lpRect` Указывает размер клиентской области элемента управления, не его положение.  
   
-##  <a name="getclientsite"></a>COleControl::GetClientSite  
+##  <a name="getclientsite"></a>  COleControl::GetClientSite  
  Запрашивает объект для указателя на текущий сайт клиента в пределах своего контейнера.  
   
 ```  
@@ -1532,7 +1532,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>Примечания  
  Возвращенный указатель указывает на экземпляр `IOleClientSite`. `IOleClientSite` Интерфейс, реализуемый контейнерами, является представлением объекта контекста: где он прикреплен в документе, где он получает свое хранилище, пользовательский интерфейс и другие ресурсы.  
   
-##  <a name="getcontrolflags"></a>COleControl::GetControlFlags  
+##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags  
  Получает флаг настройки элемента управления.  
   
 ```  
@@ -1576,7 +1576,7 @@ enum ControlFlags {
   
  Дополнительные сведения о `GetControlFlags` и другие виды оптимизации, элементов управления OLE, в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="getcontrolsize"></a>COleControl::GetControlSize  
+##  <a name="getcontrolsize"></a>  COleControl::GetControlSize  
  Получает размер окна элемента управления OLE.  
   
 ```  
@@ -1586,7 +1586,7 @@ void GetControlSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *PCX*  
+ *pcx*  
  Задает ширину элемента управления в пикселях.  
   
  *pcy*  
@@ -1595,7 +1595,7 @@ void GetControlSize(
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что все координаты для элемента управления windows относительно верхнего левого угла элемента управления.  
   
-##  <a name="getdc"></a>COleControl::GetDC  
+##  <a name="getdc"></a>  COleControl::GetDC  
  Предоставляет для объекта без окон контекст устройства get экрана (или совместимые) из контейнера.  
   
 ```  
@@ -1621,9 +1621,9 @@ CDC* GetDC(
  Указатель на контекст устройства отображения для контейнера `CWnd` клиентской области Если успешно; в противном случае возвращает значение **NULL**. Контекст устройства отображения можно использовать в последующих функций GDI для рисования в клиентской области окна контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- [ReleaseDC](#releasedc) освобождаемый контекст после рисования необходимо вызвать функцию-член. При вызове `GetDC`, объекты передачи они хотят привлечь в своих собственных клиентских координат прямоугольника. `GetDC`преобразует их в координаты клиентской области контейнера. Объект не должен запросить нужный рисования прямоугольник, превышающий области собственного клиентского прямоугольника, размер которой можно получить с помощью [метода GetClientRect](#getclientrect). Это предотвращает случайно рисование которых они не должно быть объектов.  
+ [ReleaseDC](#releasedc) освобождаемый контекст после рисования необходимо вызвать функцию-член. При вызове `GetDC`, объекты передачи они хотят привлечь в своих собственных клиентских координат прямоугольника. `GetDC` преобразует их в координаты клиентской области контейнера. Объект не должен запросить нужный рисования прямоугольник, превышающий области собственного клиентского прямоугольника, размер которой можно получить с помощью [метода GetClientRect](#getclientrect). Это предотвращает случайно рисование которых они не должно быть объектов.  
   
-##  <a name="getenabled"></a>COleControl::GetEnabled  
+##  <a name="getenabled"></a>  COleControl::GetEnabled  
  Реализует функцию Get элемента управления stock свойство Enabled.  
   
 ```  
@@ -1633,7 +1633,7 @@ BOOL GetEnabled();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент управления включен; в противном случае — 0.  
   
-##  <a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
+##  <a name="getextendedcontrol"></a>  COleControl::GetExtendedControl  
  Получает указатель на объект, который обслуживается контейнер, который представляет элемент управления с расширенный набор свойств.  
   
 ```  
@@ -1648,7 +1648,7 @@ LPDISPATCH GetExtendedControl();
 ### <a name="remarks"></a>Примечания  
  Функция, которая вызывает данную функцию, отвечает за освобождение указатель после завершения работы с объектом. Обратите внимание, что контейнер не требуется для поддержки этого объекта.  
   
-##  <a name="getfocus"></a>COleControl::GetFocus  
+##  <a name="getfocus"></a>  COleControl::GetFocus  
  Определяет, является ли `COleControl` объекте находится фокус.  
   
 ```  
@@ -1663,7 +1663,7 @@ CWnd* GetFocus();
 ### <a name="remarks"></a>Примечания  
  Активированная неоконным получает фокус при [SetFocus](#setfocus) вызывается.  
   
-##  <a name="getfont"></a>COleControl::GetFont  
+##  <a name="getfont"></a>  COleControl::GetFont  
  Реализует свойство Font функцию Get.  
   
 ```  
@@ -1676,7 +1676,7 @@ LPFONTDISP GetFont();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что вызывающий объект должен освободить объект после завершения. В реализации элемента управления, используйте `InternalGetFont` для доступа к объект шрифта элемента управления. Дополнительные сведения об использовании шрифтов в элементе управления см. в статье [элементы управления ActiveX: использование шрифтов в элементе управления ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).  
   
-##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
+##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics  
  Измеряет показатели текст для любого `CFontHolder` объектов, принадлежащих данному элементу управления.  
   
 ```  
@@ -1693,11 +1693,11 @@ void GetFontTextMetrics(
  Ссылка на [CFontHolder](../../mfc/reference/cfontholder-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Можно выбрать с помощью такого шрифта [COleControl::SelectFontObject](#selectfontobject) функции. `GetFontTextMetrics`Инициализирует `TEXTMETRIC` структуры, на который указывает `lptm` с допустимым метрики сведения о `fontHolder`, шрифт в случае успешного выполнения или заполнить структуру нулями, если выполнена успешно. Следует использовать эту функцию вместо [GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941) при визуальное элемент управления, возможно, элементы управления, как и любой внедренного объекта OLE, необходимые для визуализации сами в метафайл.  
+ Можно выбрать с помощью такого шрифта [COleControl::SelectFontObject](#selectfontobject) функции. `GetFontTextMetrics` Инициализирует `TEXTMETRIC` структуры, на который указывает `lptm` с допустимым метрики сведения о `fontHolder`, шрифт в случае успешного выполнения или заполнить структуру нулями, если выполнена успешно. Следует использовать эту функцию вместо [GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941) при визуальное элемент управления, возможно, элементы управления, как и любой внедренного объекта OLE, необходимые для визуализации сами в метафайл.  
   
  `TEXTMETRIC` Структуру для шрифта по умолчанию используется при обновлении [SelectFontObject](#selectfontobject) функция. Следует вызвать метод `GetFontTextMetrics` только после выбора свойство Font для обеспечения сведениями является допустимым.  
   
-##  <a name="getforecolor"></a>COleControl::GetForeColor  
+##  <a name="getforecolor"></a>  COleControl::GetForeColor  
  Реализует функцию Get стандартное свойство цвет переднего плана.  
   
 ```  
@@ -1707,7 +1707,7 @@ OLE_COLOR GetForeColor();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение, указывающее текущий цвет как **OLE_COLOR** значение в случае успешного выполнения. Это значение можно преобразовать в [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение с помощью вызова `TranslateColor`.  
   
-##  <a name="gethwnd"></a>COleControl::GetHwnd  
+##  <a name="gethwnd"></a>  COleControl::GetHwnd  
  Реализует функцию Get свойства биржевых hWnd.  
   
 ```  
@@ -1717,7 +1717,7 @@ OLE_HANDLE GetHwnd();
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор окна элемента управления OLE, при его наличии; в противном случае **NULL**.  
   
-##  <a name="getmessagestring"></a>COleControl::GetMessageString  
+##  <a name="getmessagestring"></a>  COleControl::GetMessageString  
  Вызывается платформой для получения короткую строку с описанием назначения элемента меню, обозначенную `nID`.  
   
 ```  
@@ -1736,7 +1736,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>Примечания  
  Это можно использовать для получения сообщений для отображения в строке состояния, снимая выделения пункта меню. Реализация по умолчанию пытается загрузить строку ресурса с `nID`.  
   
-##  <a name="getnotsupported"></a>COleControl::GetNotSupported  
+##  <a name="getnotsupported"></a>  COleControl::GetNotSupported  
  Запрещает доступ к значению свойства элемента управления для пользователя.  
   
 ```  
@@ -1746,7 +1746,7 @@ void GetNotSupported();
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию вместо функции Get любого свойства, где получение свойства элемента управления пользователем не поддерживается. Примером может служить свойство, которое доступно только для записи.  
   
-##  <a name="getreadystate"></a>COleControl::GetReadyState  
+##  <a name="getreadystate"></a>  COleControl::GetReadyState  
  Возвращает состояние готовности элемента управления.  
   
 ```  
@@ -1774,7 +1774,7 @@ long GetReadyState();
 ### <a name="remarks"></a>Примечания  
  Большая часть простых элементов управления не требуется для различения **LOADED** и `INTERACTIVE`. Тем не менее элементы управления, поддерживающие свойства пути данных не может быть готовые для интерактивного до получения хотя бы некоторые данные асинхронно. Элемент управления должен пытаться стать интерактивный как можно быстрее.  
   
-##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer  
+##  <a name="getrectincontainer"></a>  COleControl::GetRectInContainer  
  Получает координаты прямоугольника элемента управления относительно контейнера, выраженный в единицах устройства.  
   
 ```  
@@ -1791,7 +1791,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 ### <a name="remarks"></a>Примечания  
  Прямоугольник допустимо только в том случае, если элемент управления является активным на месте.  
   
-##  <a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
+##  <a name="getstocktextmetrics"></a>  COleControl::GetStockTextMetrics  
  Измеряет показатели текста для элемента управления свойство Font, которое может быть установлено с [SelectStockFont](#selectstockfont) функции.  
   
 ```  
@@ -1807,7 +1807,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
   
  `TEXTMETRIC` Структуру для шрифта по умолчанию используется при обновлении `SelectStockFont` функция. Эту функцию следует вызывать только после выбора биржевых шрифта, чтобы обеспечить сведения, которые он предоставляет является допустимым.  
   
-##  <a name="gettext"></a>COleControl::GetText  
+##  <a name="gettext"></a>  COleControl::GetText  
  Реализует функцию Get стандартное свойство Text или Caption.  
   
 ```  
@@ -1823,7 +1823,7 @@ BSTR GetText();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что код, вызывающий эту функцию необходимо вызвать `SysFreeString` строки, возвращаемых для свободных ресурсов. В реализации элемента управления, используйте `InternalGetText` для доступа к свойству Text или Caption биржевых элемента управления.  
   
-##  <a name="getwindowlessdroptarget"></a>COleControl::GetWindowlessDropTarget  
+##  <a name="getwindowlessdroptarget"></a>  COleControl::GetWindowlessDropTarget  
  Переопределить `GetWindowlessDropTarget` при необходимости элемент управления без окон для целевого объекта OLE операции перетаскивания.  
   
 ```  
@@ -1838,7 +1838,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
   
  [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
-##  <a name="initializeiids"></a>COleControl::InitializeIIDs  
+##  <a name="initializeiids"></a>  COleControl::InitializeIIDs  
  Информирует базового класса со значениями IID элемент управления будет использовать.  
   
 ```  
@@ -1857,7 +1857,7 @@ void InitializeIIDs(
 ### <a name="remarks"></a>Примечания  
  Вызовите эту функцию в конструктор элемента управления для информирования базового класса элемента управления будет использовать идентификаторы интерфейсов.  
   
-##  <a name="internalgetfont"></a>COleControl::InternalGetFont  
+##  <a name="internalgetfont"></a>  COleControl::InternalGetFont  
  Обращается к свойство Font элемента управления  
   
 ```  
@@ -1867,7 +1867,7 @@ CFontHolder& InternalGetFont();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на [CFontHolder](../../mfc/reference/cfontholder-class.md) , содержащий биржевых объект шрифта.  
   
-##  <a name="internalgettext"></a>COleControl::InternalGetText  
+##  <a name="internalgettext"></a>  COleControl::InternalGetText  
  Обращается к стандартное свойство Text или Caption элемента управления.  
   
 ```  
@@ -1877,7 +1877,7 @@ const CString& InternalGetText();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на элемент управления текстовую строку.  
   
-##  <a name="internalsetreadystate"></a>COleControl::InternalSetReadyState  
+##  <a name="internalsetreadystate"></a>  COleControl::InternalSetReadyState  
  Задает состояние готовности элемента управления.  
   
 ```  
@@ -1906,7 +1906,7 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="remarks"></a>Примечания  
  Большая часть простых элементов управления не требуется для различения **LOADED** и `INTERACTIVE`. Тем не менее элементы управления, поддерживающие свойства пути данных не может быть готовые для интерактивного до получения хотя бы некоторые данные асинхронно. Элемент управления должен пытаться стать интерактивный как можно быстрее.  
   
-##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl  
+##  <a name="invalidatecontrol"></a>  COleControl::InvalidateControl  
  Заставляет элемент управления перерисовывает себя.  
   
 ```  
@@ -1925,7 +1925,7 @@ void InvalidateControl(
 ### <a name="remarks"></a>Примечания  
  Если `lpRect` имеет **NULL** значение, весь элемент управления перерисовывается. Если `lpRect` не **NULL**, это указывает на часть элемента управления прямоугольник, который необходимо сделать недействительным. В случаях, когда элемент управления не имеет окна, или в настоящее время не активен, прямоугольник учитывается, и выполняется вызов для сайта клиента [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337) функции-члена. Используйте эту функцию вместо `CWnd::InvalidateRect` или `InvalidateRect`.  
   
-##  <a name="invalidatergn"></a>COleControl::InvalidateRgn  
+##  <a name="invalidatergn"></a>  COleControl::InvalidateRgn  
  Делает недействительной клиентскую область окном контейнера в пределах заданной области.  
   
 ```  
@@ -1944,7 +1944,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
   
  Если `bErase` — **TRUE** в любой части области обновления удаляются фон всей области не только в данной части.  
   
-##  <a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
+##  <a name="isconvertingvbx"></a>  COleControl::IsConvertingVBX  
  Разрешает специализированные загрузку элемента управления OLE.  
   
 ```  
@@ -1967,7 +1967,7 @@ BOOL IsConvertingVBX();
   
  В элементе управления `DoPropExchange` функции, чтобы проверяет это условие и значение true, если выполнить нагрузки код, предназначенный для этого преобразования (например, приведенных выше примерах). Если элемент управления не преобразуется, чтобы выполнить код обычной нагрузкой. Эта возможность применяется только к элементам управления, выполняется преобразование из VBX аналогами.  
   
-##  <a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  COleControl::IsInvokeAllowed  
  Включает вызов метода автоматизации.  
   
 ```  
@@ -1978,9 +1978,9 @@ BOOL IsInvokeAllowed(DISPID dispid);
  Ненулевое значение, если элемент управления был инициализирован; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация framework **IDispatch::Invoke** вызовы **IsInvokeAllowed** ли заданная функция (определяется `dispid`), могут быть вызваны. По умолчанию для элемента управления OLE выполняется для автоматизации методов для вызова только в том случае, если элемент управления был инициализирован; Тем не менее **IsInvokeAllowed** является виртуальной функции и может быть переопределен при необходимости (например, при использовании элемента управления в качестве сервера автоматизации). Дополнительные сведения см. в статье базы знаний Q166472, «Практическое руководство: использование элемента управления OLE как сервера автоматизации.» Статьи базы знаний можно найти по адресу [http://support.microsoft.com](http://support.microsoft.com/).  
+ Реализация framework **IDispatch::Invoke** вызовы **IsInvokeAllowed** ли заданная функция (определяется `dispid`), могут быть вызваны. По умолчанию для элемента управления OLE выполняется для автоматизации методов для вызова только в том случае, если элемент управления был инициализирован; Тем не менее **IsInvokeAllowed** является виртуальной функции и может быть переопределен при необходимости (например, при использовании элемента управления в качестве сервера автоматизации). Дополнительные сведения см. в статье базы знаний Q166472, «Практическое руководство: использование элемента управления OLE как сервера автоматизации.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).  
   
-##  <a name="ismodified"></a>COleControl::IsModified  
+##  <a name="ismodified"></a>  COleControl::IsModified  
  Определяет, был ли изменен состояние элемента управления.  
   
 ```  
@@ -1993,7 +1993,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>Примечания  
  Состояние элемента управления изменяется при изменении значения свойства.  
   
-##  <a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw  
+##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw  
  Определяет, поддерживает ли контейнер оптимизированное Рисование для текущей операции рисования.  
   
 ```  
@@ -2006,7 +2006,7 @@ BOOL IsOptimizedDraw();
 ### <a name="remarks"></a>Примечания  
  Если поддерживаются оптимизированное рисование элемента управления требуется не выберите старых объектов (перья, кисти, шрифты, т. д.) в контексте устройства после завершения рисования.  
   
-##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
+##  <a name="issubclassedcontrol"></a>  COleControl::IsSubclassedControl  
  Вызывается платформой, чтобы определить, если элемент управления подклассом Windows элементов управления.  
   
 ```  
@@ -2019,7 +2019,7 @@ virtual BOOL IsSubclassedControl();
 ### <a name="remarks"></a>Примечания  
  Необходимо переопределить эту функцию и вернуть **TRUE** Если ваш OLE управления подклассов элемента управления Windows Forms.  
   
-##  <a name="load"></a>COleControl::Load  
+##  <a name="load"></a>  COleControl::Load  
  Сбрасывает все предыдущие данные загружены асинхронно и инициирует новый загрузку асинхронного свойства элемента управления.  
   
 ```  
@@ -2033,7 +2033,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *prop*  
  Объект [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) объект, реализующий свойство асинхронной элемента управления.  
   
-##  <a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
+##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
  Запрещает деактивация управления контейнера.  
   
 ```  
@@ -2050,7 +2050,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что каждый блокировки управления должны составлять пару с разблокирование элемента управления после завершения. Только должна заблокировать элемент управления в течение короткого, такие как при обработке события.  
   
-##  <a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  COleControl::OnAmbientPropertyChange  
  Вызывается платформой при изменении значения внешнее свойство контейнера.  
   
 ```  
@@ -2061,7 +2061,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
  *dispID*  
  Идентификатор диспетчера свойства окружения, изменен, или **DISPID_UNKNOWN** при изменении нескольких свойств.  
   
-##  <a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
+##  <a name="onappearancechanged"></a>  COleControl::OnAppearanceChanged  
  Вызывается платформой, когда изменилось значение свойства Appearance акций.  
   
 ```  
@@ -2071,7 +2071,7 @@ virtual void OnAppearanceChanged ();
 ### <a name="remarks"></a>Примечания  
  Если уведомление после изменения этого свойства требуется переопределите эту функцию. Реализация по умолчанию вызывает `InvalidateControl`.  
   
-##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
+##  <a name="onbackcolorchanged"></a>  COleControl::OnBackColorChanged  
  Вызывается платформой, когда изменилось значение свойства BackColor акций.  
   
 ```  
@@ -2081,7 +2081,7 @@ virtual void OnBackColorChanged();
 ### <a name="remarks"></a>Примечания  
  Если уведомление после изменения этого свойства требуется переопределите эту функцию. Реализация по умолчанию вызывает `InvalidateControl`.  
   
-##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
+##  <a name="onborderstylechanged"></a>  COleControl::OnBorderStyleChanged  
  Вызывается платформой, когда изменилось значение свойства BorderStyle акций.  
   
 ```  
@@ -2093,7 +2093,7 @@ virtual void OnBorderStyleChanged();
   
  Если уведомление после изменения этого свойства требуется переопределите эту функцию.  
   
-##  <a name="onclick"></a>COleControl::OnClick  
+##  <a name="onclick"></a>  COleControl::OnClick  
  Вызывается платформой, когда была нажата кнопка мыши или был вызван метод DoClick.  
   
 ```  
@@ -2115,7 +2115,7 @@ virtual void OnClick(USHORT iButton);
   
  Переопределите эту функцию-член для изменения или расширения обработку по умолчанию.  
   
-##  <a name="onclose"></a>COleControl::OnClose  
+##  <a name="onclose"></a>  COleControl::OnClose  
  Вызывается платформой, когда контейнер элемента управления называется **IOleControl::Close** функции.  
   
 ```  
@@ -2135,7 +2135,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="remarks"></a>Примечания  
  По умолчанию `OnClose` сохраняет объект элемента управления, если он был изменен и `dwSaveOption` либо `OLECLOSE_SAVEIFDIRTY` или `OLECLOSE_PROMPTSAVE`.  
   
-##  <a name="ondoverb"></a>COleControl::OnDoVerb  
+##  <a name="ondoverb"></a>  COleControl::OnDoVerb  
  Вызывается платформой, когда контейнер вызывает **функция IOleObject::DoVerb** функции-члена.  
   
 ```  
@@ -2167,7 +2167,7 @@ virtual BOOL OnDoVerb(
   
  Переопределите эту функцию, чтобы изменить обработку команды по умолчанию.  
   
-##  <a name="ondraw"></a>COleControl::OnDraw  
+##  <a name="ondraw"></a>  COleControl::OnDraw  
  Вызывается платформой для отрисовки элемента управления OLE в ограничивающем прямоугольнике указанного с помощью заданного контекста устройств.  
   
 ```  
@@ -2188,9 +2188,9 @@ virtual void OnDraw(
  Прямоугольная область элемента управления, который является недопустимым.  
   
 ### <a name="remarks"></a>Примечания  
- `OnDraw`обычно вызывается для отображения на экране, передача контекста устройства экрана как `pDC`. `rcBounds` Указывает прямоугольник в контексте целевого устройства (относительно его текущего режима сопоставления). `rcInvalid` Параметра является фактический прямоугольник, который является недопустимым. В некоторых случаях это будет область меньше, чем `rcBounds`.  
+ `OnDraw` обычно вызывается для отображения на экране, передача контекста устройства экрана как `pDC`. `rcBounds` Указывает прямоугольник в контексте целевого устройства (относительно его текущего режима сопоставления). `rcInvalid` Параметра является фактический прямоугольник, который является недопустимым. В некоторых случаях это будет область меньше, чем `rcBounds`.  
   
-##  <a name="ondrawmetafile"></a>COleControl::OnDrawMetafile  
+##  <a name="ondrawmetafile"></a>  COleControl::OnDrawMetafile  
  Вызывается платформой для отрисовки элемента управления OLE в указанный ограничивающий прямоугольник, используя указанный метафайл контекст устройства.  
   
 ```  
@@ -2209,7 +2209,7 @@ virtual void OnDrawMetafile(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию вызывает [OnDraw](#ondraw) функции.  
   
-##  <a name="onedit"></a>COleControl::OnEdit  
+##  <a name="onedit"></a>  COleControl::OnEdit  
  Элемент управления активироваться через UI.  
   
 ```  
@@ -2239,7 +2239,7 @@ virtual BOOL OnEdit(
   
  [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
-##  <a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
+##  <a name="onenabledchanged"></a>  COleControl::OnEnabledChanged  
  Вызывается платформой, когда изменилось значение свойства Enabled акции.  
   
 ```  
@@ -2249,7 +2249,7 @@ virtual void OnEnabledChanged();
 ### <a name="remarks"></a>Примечания  
  Если уведомление после изменения этого свойства требуется переопределите эту функцию. Реализация по умолчанию вызывает [InvalidateControl](#invalidatecontrol).  
   
-##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
+##  <a name="onenumverbs"></a>  COleControl::OnEnumVerbs  
  Вызывается платформой, когда контейнер вызывает **IOleObject::EnumVerbs** функции-члена.  
   
 ```  
@@ -2268,7 +2268,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
  Переопределите эту функцию, чтобы изменить способ перечислением команд по умолчанию.  
   
-##  <a name="oneventadvise"></a>COleControl::OnEventAdvise  
+##  <a name="oneventadvise"></a>  COleControl::OnEventAdvise  
  Вызывается платформой, когда обработчик событий подключения или отключения от элемента управления OLE.  
   
 ```  
@@ -2279,7 +2279,7 @@ virtual void OnEventAdvise(BOOL bAdvise);
  `bAdvise`  
  **Значение TRUE,** указывает, что обработчик событий был связан с элемента управления. **FALSE** указывает, что обработчик событий был отключен от элемента управления.  
   
-##  <a name="onfontchanged"></a>COleControl::OnFontChanged  
+##  <a name="onfontchanged"></a>  COleControl::OnFontChanged  
  Вызывается платформой, когда биржевых значение свойства Font изменилось.  
   
 ```  
@@ -2294,7 +2294,7 @@ virtual void OnFontChanged();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAxCtl#6](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]  
   
-##  <a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
+##  <a name="onforecolorchanged"></a>  COleControl::OnForeColorChanged  
  Вызывается платформой, когда изменилось значение свойства ForeColor биржевых.  
   
 ```  
@@ -2306,7 +2306,7 @@ virtual void OnForeColorChanged();
   
  Если уведомление после изменения этого свойства требуется переопределите эту функцию.  
   
-##  <a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
+##  <a name="onfreezeevents"></a>  COleControl::OnFreezeEvents  
  Вызывается структурой после вызовов контейнера **метод интерфейса IOleControl::FreezeEvents**.  
   
 ```  
@@ -2322,7 +2322,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
   
  Если требуется дополнительное поведение, когда обработка событий заморожен или разморозить переопределите эту функцию.  
   
-##  <a name="ongetcolorset"></a>COleControl::OnGetColorSet  
+##  <a name="ongetcolorset"></a>  COleControl::OnGetColorSet  
  Вызывается платформой, когда контейнер вызывает **IViewObject::GetColorSet** функции-члена.  
   
 ```  
@@ -2350,7 +2350,7 @@ virtual BOOL OnGetColorSet(
   
  Переопределите эту функцию для выполнения специальной обработки этого запроса.  
   
-##  <a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
+##  <a name="ongetcontrolinfo"></a>  COleControl::OnGetControlInfo  
  Вызывается платформой, когда контейнер элемента управления запрашивает сведения об элементе управления.  
   
 ```  
@@ -2366,7 +2366,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
   
  Если элемент управления должен обработать назначенным клавишам переопределите эту функцию.  
   
-##  <a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
+##  <a name="ongetdisplaystring"></a>  COleControl::OnGetDisplayString  
  Вызывается платформой для получения строку, представляющую текущее значение свойства, идентифицируемого по `dispid`.  
   
 ```  
@@ -2388,7 +2388,7 @@ virtual BOOL OnGetDisplayString(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элемент управления имеет свойства, значение которого невозможно напрямую преобразовать в строку и необходимо, чтобы значение свойства для отображения в браузере указанный контейнер свойства.  
   
-##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
+##  <a name="ongetinplacemenu"></a>  COleControl::OnGetInPlaceMenu  
  Вызывается платформой при активации для получения меню, чтобы объединить в существующее меню контейнера пользовательского интерфейса элемента управления.  
   
 ```  
@@ -2401,7 +2401,7 @@ virtual HMENU OnGetInPlaceMenu();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о слиянии ресурсов OLE см. в статье [меню и ресурсы (OLE)](../../mfc/menus-and-resources-ole.md).  
   
-##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
+##  <a name="ongetnaturalextent"></a>  COleControl::OnGetNaturalExtent  
  Вызывается платформой в ответ в контейнер **IViewObjectEx::GetNaturalExtent** запроса.  
   
 ```  
@@ -2418,7 +2418,7 @@ virtual BOOL OnGetNaturalExtent(
  `dwAspect`  
  Указывает способ представления объекта. Представления включают содержимое, значок, эскиза или печатном документе. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**.  
   
- *Индекс*  
+ *lindex*  
  Часть объекта, который представляет интерес. В настоящее время только -1 является допустимым.  
   
  `ptd`  
@@ -2457,7 +2457,7 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию, чтобы вернуть размер отображения объекта ближайшим предлагаемый размер и степени режиме в **DVEXTENTINFO** структуры. Реализация по умолчанию возвращает **FALSE** и делает каких-либо корректировок по размеру.  
   
-##  <a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
+##  <a name="ongetpredefinedstrings"></a>  COleControl::OnGetPredefinedStrings  
  Вызывается платформой для получения набора стандартных строк, представляющих возможные значения для свойства.  
   
 ```  
@@ -2483,7 +2483,7 @@ virtual BOOL OnGetPredefinedStrings(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элемент управления имеет свойство с набором возможных значений, которые могут быть представлены строками. Для каждого элемента, добавляемого `pStringArray`, следует добавить соответствующий элемент «куки-файл для *pCookieArray.* Эти значения «cookie» позже могут быть переданы платформой для `COleControl::OnGetPredefinedValue` функции.  
   
-##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
+##  <a name="ongetpredefinedvalue"></a>  COleControl::OnGetPredefinedValue  
  Вызывается платформой для получения значения, соответствующий одному из стандартных строк были возвращены переопределение `COleControl::OnGetPredefinedStrings`.  
   
 ```  
@@ -2506,7 +2506,7 @@ virtual BOOL OnGetPredefinedValue(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если возвращено в `lpvarOut`; в противном случае — 0.  
   
-##  <a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
+##  <a name="ongetviewextent"></a>  COleControl::OnGetViewExtent  
  Вызывается платформой в ответ в контейнер [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) запроса.  
   
 ```  
@@ -2519,9 +2519,9 @@ virtual BOOL OnGetViewExtent(
   
 ### <a name="parameters"></a>Параметры  
  *dwDrawAspect*  
- `DWORD`описания, какая форма или аспект, объекта будет отображаться. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**.  
+ `DWORD` описания, какая форма или аспект, объекта будет отображаться. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**.  
   
- *Индекс*  
+ *lindex*  
  Часть объекта, который представляет интерес. В настоящее время только -1 является допустимым.  
   
  `ptd`  
@@ -2536,7 +2536,7 @@ virtual BOOL OnGetViewExtent(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элемент управления использует два прохода отрисовки, а его непрозрачный и прозрачный части имеют различные размеры.  
   
-##  <a name="ongetviewrect"></a>COleControl::OnGetViewRect  
+##  <a name="ongetviewrect"></a>  COleControl::OnGetViewRect  
  Вызывается платформой в ответ в контейнер **IViewObjectEx::GetRect** запроса.  
   
 ```  
@@ -2545,9 +2545,9 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
   
 ### <a name="parameters"></a>Параметры  
  `dwAspect`  
- `DWORD`описания, какая форма или аспект, объекта будет отображаться. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**:  
+ `DWORD` описания, какая форма или аспект, объекта будет отображаться. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**:  
   
-- `DVASPECT_CONTENT`Ограничивающий прямоугольник всего объекта целиком. Верхний левый угол источника объекта и размер равен экстента, возвращенных **GetViewExtent***.*  
+- `DVASPECT_CONTENT` Ограничивающий прямоугольник всего объекта целиком. Верхний левый угол источника объекта и размер равен экстента, возвращенных **GetViewExtent ***.*  
   
 - **DVASPECT_OPAQUE** объекты с прямоугольной области непрозрачный возвращают этот прямоугольник. Остальные — ошибочными.  
   
@@ -2562,7 +2562,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="remarks"></a>Примечания  
  Размер объекта преобразуется в `OnGetViewRect` в прямоугольник, начиная с указанной позиции (по умолчанию используется в верхний левый угол отображения). Переопределите эту функцию, если элемент управления использует два прохода отрисовки, а его непрозрачный и прозрачный части имеют различные размеры.  
   
-##  <a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
+##  <a name="ongetviewstatus"></a>  COleControl::OnGetViewStatus  
  Вызывается платформой в ответ в контейнер **IViewObjectEx::GetViewStatus** запроса.  
   
 ```  
@@ -2587,7 +2587,7 @@ virtual DWORD OnGetViewStatus();
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элемент управления использует два прохода отрисовки. Реализация по умолчанию возвращает **VIEWSTATUS_OPAQUE**.  
   
-##  <a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
+##  <a name="onhidetoolbars"></a>  COleControl::OnHideToolBars  
  Вызывается платформой при деактивации пользовательского интерфейса элемента управления.  
   
 ```  
@@ -2597,7 +2597,7 @@ virtual void OnHideToolBars();
 ### <a name="remarks"></a>Примечания  
  Реализация следует скрыть все панели инструментов, отображаемого элементом `OnShowToolbars`.  
   
-##  <a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>  COleControl::OnInactiveMouseMove  
  Вызывается контейнером для неактивного объекта под указателем мыши при получении `WM_MOUSEMOVE` сообщения.  
   
 ```  
@@ -2624,7 +2624,7 @@ virtual void OnInactiveMouseMove(
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что клиентские координаты окна (в пикселях) используются для передачи позиции указателя мыши. Это стало возможным благодаря также передает прямоугольник, ограничивающий объект в той же системе координат.  
   
-##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>  COleControl::OnInactiveSetCursor  
  Вызывается контейнером для неактивного объекта под указателем мыши при получении `WM_SETCURSOR` сообщения.  
   
 ```  
@@ -2658,7 +2658,7 @@ virtual BOOL OnInactiveSetCursor(
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что клиентские координаты окна (в пикселях) используются для передачи позиции указателя мыши. Это стало возможным благодаря также передает прямоугольник, ограничивающий объект в той же системе координат.  
   
-##  <a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
+##  <a name="onkeydownevent"></a>  COleControl::OnKeyDownEvent  
  Вызывается платформой, после обработки события KeyDown акций.  
   
 ```  
@@ -2683,7 +2683,7 @@ virtual void OnKeyDownEvent(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элементу управления требуется доступ к ключевой информации после инициировать событие.  
   
-##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
+##  <a name="onkeypressevent"></a>  COleControl::OnKeyPressEvent  
  Вызывается структурой после бумагу произошло событие Нажатие клавиши.  
   
 ```  
@@ -2699,7 +2699,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
   
  Переопределите эту функцию, если требуется уведомление после возникновения этого события.  
   
-##  <a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
+##  <a name="onkeyupevent"></a>  COleControl::OnKeyUpEvent  
  Вызывается платформой, после обработки события KeyDown акций.  
   
 ```  
@@ -2724,7 +2724,7 @@ virtual void OnKeyUpEvent(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если элементу управления требуется доступ к ключевой информации после инициировать событие.  
   
-##  <a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
+##  <a name="onmappropertytopage"></a>  COleControl::OnMapPropertyToPage  
  Вызывается платформой для получения идентификатора класса страницы свойств, реализующий редактирования указанного свойства.  
   
 ```  
@@ -2750,7 +2750,7 @@ virtual BOOL OnMapPropertyToPage(
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для предоставления способ вызова страницы свойств элемента управления из контейнера свойства браузера.  
   
-##  <a name="onmnemonic"></a>COleControl::OnMnemonic  
+##  <a name="onmnemonic"></a>  COleControl::OnMnemonic  
  Вызывается платформой, когда контейнер было обнаружено, что была нажата назначенная клавиша элемента управления OLE.  
   
 ```  
@@ -2761,7 +2761,7 @@ virtual void OnMnemonic(LPMSG pMsg);
  `pMsg`  
  Указатель на сообщение Windows, созданное нажатием назначенной клавиши.  
   
-##  <a name="onproperties"></a>COleControl::OnProperties  
+##  <a name="onproperties"></a>  COleControl::OnProperties  
  Вызывается платформой, когда вызывается команда свойства элемента управления в контейнере.  
   
 ```  
@@ -2789,7 +2789,7 @@ virtual BOOL OnProperties(
   
  Эта функция используется для отображения страницы свойств элемента управления. Вызвать `OnProperties` функцию, передавая дескриптор родительского элемента управления в `hWndParent` параметра. В этом случае значения `lpMsg` и `lpRect` параметры игнорируются.  
   
-##  <a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
+##  <a name="onqueryhitpoint"></a>  COleControl::OnQueryHitPoint  
  Вызывается платформой в ответ в контейнер **IViewObjectEx::QueryHitPoint** запроса.  
   
 ```  
@@ -2829,9 +2829,9 @@ virtual BOOL OnQueryHitPoint(
  Ненулевое значение, если результат нажатия успешно возвращен; в противном случае — 0. Попадания в точку имеет перекрывающиеся область отображения элемента управления OLE.  
   
 ### <a name="remarks"></a>Примечания  
- Запросы, пересекаются ли прямоугольник отображения объекта заданная точка (попаданий в точку). `QueryHitPoint`можно переопределить для проверки попадания для нестандартной объектов.  
+ Запросы, пересекаются ли прямоугольник отображения объекта заданная точка (попаданий в точку). `QueryHitPoint` можно переопределить для проверки попадания для нестандартной объектов.  
   
-##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
+##  <a name="onqueryhitrect"></a>  COleControl::OnQueryHitRect  
  Вызывается платформой в ответ в контейнер **IViewObjectEx::QueryHitRect** запроса.  
   
 ```  
@@ -2867,9 +2867,9 @@ virtual BOOL OnQueryHitRect(
  Ненулевое значение, если результат нажатия успешно возвращен; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Запросы, пересекаются ли прямоугольник отображения объекта любую точку в данном прямоугольнике (достигает прямоугольник). `QueryHitRect`можно переопределить для проверки попадания для нестандартной объектов.  
+ Запросы, пересекаются ли прямоугольник отображения объекта любую точку в данном прямоугольнике (достигает прямоугольник). `QueryHitRect` можно переопределить для проверки попадания для нестандартной объектов.  
   
-##  <a name="onrenderdata"></a>COleControl::OnRenderData  
+##  <a name="onrenderdata"></a>  COleControl::OnRenderData  
  Вызывается платформой для извлечения данных в указанном формате.  
   
 ```  
@@ -2897,7 +2897,7 @@ virtual BOOL OnRenderData(
   
  Дополнительные сведения см. в разделе **FORMATETC** и **STGMEDIUM** структуры в Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleControl::OnRenderFileData  
  Вызывается платформой для извлечения данных в указанном формате, если среда хранения — это файл.  
   
 ```  
@@ -2923,7 +2923,7 @@ virtual BOOL OnRenderFileData(
   
  Дополнительные сведения см. в разделе **FORMATETC** структуры в Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleControl::OnRenderGlobalData  
  Вызывается платформой для получения данных в указанном формате, если указанный носитель является глобальной памяти.  
   
 ```  
@@ -2951,7 +2951,7 @@ virtual BOOL OnRenderGlobalData(
   
  Дополнительные сведения см. в разделе **FORMATETC** структуры в Windows SDK.  
   
-##  <a name="onresetstate"></a>COleControl::OnResetState  
+##  <a name="onresetstate"></a>  COleControl::OnResetState  
  Вызывается платформой, если свойства элемента управления должны быть установлены в значения по умолчанию.  
   
 ```  
@@ -2963,7 +2963,7 @@ virtual void OnResetState();
   
  Модуль записи управления можно вставить код инициализации для элемента управления OLE в этом overridable. Эта функция вызывается, когда [IPersistStream::Load](http://msdn.microsoft.com/library/windows/desktop/ms680568) или [IPersistStorage::Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) происходит сбой, или [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) или [IPersistStorage: : InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) вызывается без вызова либо **IPersistStream::Load** или **IPersistStorage::Load**.  
   
-##  <a name="onsetclientsite"></a>COleControl::OnSetClientSite  
+##  <a name="onsetclientsite"></a>  COleControl::OnSetClientSite  
  Вызывается платформой, когда контейнер элемента управления называется **IOleControl::SetClientSite** функции.  
   
 ```  
@@ -2975,7 +2975,7 @@ virtual void OnSetClientSite();
   
  Переопределите эту функцию для выполнения специальной обработки данного уведомления. В частности переопределение этой функции должно вызывать базовый класс.  
   
-##  <a name="onsetdata"></a>COleControl::OnSetData  
+##  <a name="onsetdata"></a>  COleControl::OnSetData  
  Вызывается платформой для замены данных элемента управления с заданными данными.  
   
 ```  
@@ -3005,7 +3005,7 @@ virtual BOOL OnSetData(
   
  Дополнительные сведения см. в разделе **FORMATETC** и **STGMEDIUM** структуры в Windows SDK.  
   
-##  <a name="onsetextent"></a>COleControl::OnSetExtent  
+##  <a name="onsetextent"></a>  COleControl::OnSetExtent  
  Вызывается платформой, когда область элемента управления необходимо изменить, в результате вызова [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330).  
   
 ```  
@@ -3024,7 +3024,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
   
  Переопределите эту функцию для изменения по умолчанию изменение размеров элемента управления.  
   
-##  <a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
+##  <a name="onsetobjectrects"></a>  COleControl::OnSetObjectRects  
  Вызывается платформой для вызова реализации [IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767).  
   
 ```  
@@ -3048,7 +3048,7 @@ virtual BOOL OnSetObjectRects(
   
  Переопределите эту функцию, чтобы изменить поведение по умолчанию для данной функции.  
   
-##  <a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
+##  <a name="onshowtoolbars"></a>  COleControl::OnShowToolBars  
  Вызывается платформой, когда элемент управления будет активироваться через UI.  
   
 ```  
@@ -3058,7 +3058,7 @@ virtual void OnShowToolBars();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не выполняет никаких действий.  
   
-##  <a name="ontextchanged"></a>COleControl::OnTextChanged  
+##  <a name="ontextchanged"></a>  COleControl::OnTextChanged  
  Вызывается платформой при изменении стандартных значение свойства заголовок или текст.  
   
 ```  
@@ -3070,7 +3070,7 @@ virtual void OnTextChanged();
   
  Если уведомление после изменения этого свойства требуется переопределите эту функцию.  
   
-##  <a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
+##  <a name="onwindowlessmessage"></a>  COleControl::OnWindowlessMessage  
  Вызывается платформой в ответ в контейнер **IOleInPlaceObjectWindowless::OnWindowMessage** запроса.  
   
 ```  
@@ -3098,11 +3098,11 @@ virtual BOOL OnWindowlessMessage(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Обрабатывает сообщения окна для элементов управления без окон. `COleControl`в `OnWindowlessMessage` можно использовать для окна сообщения, отличные от сообщения мыши и клавиатуры. `COleControl`предоставляет [SetCapture](#setcapture) и [SetFocus](#setfocus) специально для того, чтобы получить фокус клавиатуры и захвата мыши для поддерживающих OLE-объекты.  
+ Обрабатывает сообщения окна для элементов управления без окон. `COleControl`в `OnWindowlessMessage` можно использовать для окна сообщения, отличные от сообщения мыши и клавиатуры. `COleControl` предоставляет [SetCapture](#setcapture) и [SetFocus](#setfocus) специально для того, чтобы получить фокус клавиатуры и захвата мыши для поддерживающих OLE-объекты.  
   
- Поскольку объекты без окон не имеют окна, они должны механизма, позволяющего диспетчеризации сообщений контейнера к ним. Без окон OLE-объекта получает сообщения от своего контейнера, с использованием `OnWindowMessage` метод `IOleInPlaceObjectWindowless` интерфейса (расширение [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) без окон поддержки). `OnWindowMessage`не принимает `HWND` параметра.  
+ Поскольку объекты без окон не имеют окна, они должны механизма, позволяющего диспетчеризации сообщений контейнера к ним. Без окон OLE-объекта получает сообщения от своего контейнера, с использованием `OnWindowMessage` метод `IOleInPlaceObjectWindowless` интерфейса (расширение [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) без окон поддержки). `OnWindowMessage` не принимает `HWND` параметра.  
   
-##  <a name="parenttoclient"></a>COleControl::ParentToClient  
+##  <a name="parenttoclient"></a>  COleControl::ParentToClient  
  Преобразует координаты `pPoint` в клиентских координатах.  
   
 ```  
@@ -3176,7 +3176,7 @@ virtual UINT ParentToClient(
 ### <a name="remarks"></a>Примечания  
  На входе `pPoint` относительно начала координат (верхний левый угол контейнера) родительского элемента. На выходе `pPoint` относительно начала координат клиентской области элемента управления OLE (верхний левый угол клиентской области элемента управления).  
   
-##  <a name="postmodaldialog"></a>COleControl::PostModalDialog  
+##  <a name="postmodaldialog"></a>  COleControl::PostModalDialog  
  Уведомляет контейнера закрыт модального диалогового окна.  
   
 ```  
@@ -3190,7 +3190,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается после отображения любой модальным диалоговым окном. Эту функцию необходимо вызывать, чтобы контейнер можно включить любой окон верхнего уровня отключена `PreModalDialog`. Эта функция должны составлять пару с помощью вызова `PreModalDialog`.  
   
-##  <a name="premodaldialog"></a>COleControl::PreModalDialog  
+##  <a name="premodaldialog"></a>  COleControl::PreModalDialog  
  Уведомляет контейнер, в котором модального диалогового окна будет отображаться.  
   
 ```  
@@ -3204,7 +3204,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается перед отображением любой модальным диалоговым окном. Эту функцию необходимо вызвать, чтобы контейнер можно отключить все его окон верхнего уровня. После отображения модального диалогового окна необходимо вызвать `PostModalDialog`.  
   
-##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
+##  <a name="recreatecontrolwindow"></a>  COleControl::RecreateControlWindow  
  Удаляет и повторно создает окна элемента управления.  
   
 ```  
@@ -3214,7 +3214,7 @@ void RecreateControlWindow();
 ### <a name="remarks"></a>Примечания  
  Это может потребоваться, если необходимо изменить разряды стилей окон.  
   
-##  <a name="refresh"></a>COleControl::Refresh  
+##  <a name="refresh"></a>  COleControl::Refresh  
  Вызывает перерисовку элемента управления OLE.  
   
 ```  
@@ -3224,7 +3224,7 @@ void Refresh();
 ### <a name="remarks"></a>Примечания  
  Эта функция поддерживается `COleControl` базовый класс как биржевые метод с именем обновления. Это позволяет пользователям элемента управления OLE для отрисовки элемента управления в определенное время. Дополнительные сведения об этом см. в статье [элементы управления ActiveX: методы](../../mfc/mfc-activex-controls-methods.md).  
   
-##  <a name="releasecapture"></a>COleControl::ReleaseCapture  
+##  <a name="releasecapture"></a>  COleControl::ReleaseCapture  
  Освобождает захват мыши.  
   
 ```  
@@ -3237,7 +3237,7 @@ BOOL ReleaseCapture();
 ### <a name="remarks"></a>Примечания  
  Если элемент управления в настоящее время имеет захват мыши, освобождается сбора данных. В противном случае эта функция не делает ничего.  
   
-##  <a name="releasedc"></a>COleControl::ReleaseDC  
+##  <a name="releasedc"></a>  COleControl::ReleaseDC  
  Освобождает контекст устройства отображения контейнера элемента управления без окна, делая возможным контекст устройства для использования другими приложениями.  
   
 ```  
@@ -3254,7 +3254,7 @@ int ReleaseDC(CDC* pDC);
 ### <a name="remarks"></a>Примечания  
  Приложение должно вызвать `ReleaseDC` для каждого вызова [GetDC](#getdc).  
   
-##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
+##  <a name="reparentcontrolwindow"></a>  COleControl::ReparentControlWindow  
  Задает родительский объект элемента управления.  
   
 ```  
@@ -3273,7 +3273,7 @@ virtual void ReparentControlWindow(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для сброса родительского окна элемента управления.  
   
-##  <a name="resetstockprops"></a>COleControl::ResetStockProps  
+##  <a name="resetstockprops"></a>  COleControl::ResetStockProps  
  Инициализирует состояние `COleControl` стандартные свойства значениями по умолчанию.  
   
 ```  
@@ -3288,7 +3288,7 @@ void ResetStockProps();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAxCtl#7](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]  
   
-##  <a name="resetversion"></a>COleControl::ResetVersion  
+##  <a name="resetversion"></a>  COleControl::ResetVersion  
  Инициализирует номер версии для указанного значения.  
   
 ```  
@@ -3302,7 +3302,7 @@ void ResetVersion(DWORD dwVersionDefault);
 ### <a name="remarks"></a>Примечания  
  Можно повысить производительность двоичных инициализации элемента управления с помощью `ResetVersion` и `ResetStockProps` для переопределения `COleControl::OnResetState`. Можно найти в [ResetStockProps](#resetstockprops). Дополнительные сведения по оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="scrollwindow"></a>COleControl::ScrollWindow  
+##  <a name="scrollwindow"></a>  COleControl::ScrollWindow  
  Позволяет без окон OLE-объекта для прокрутки области в пределах своего активного изображения на месте на экране.  
   
 ```  
@@ -3326,7 +3326,7 @@ void ScrollWindow(
  `lpClipRect`  
  Указывает на `CRect` объекта или `RECT` структуру, которая задает прямоугольник отсечения для. Оказались лишь пикселей внутри прямоугольника. BITS за пределами прямоугольника не затрагиваются, даже если они находятся в `lpRect` прямоугольник. Если `lpClipRect` — **NULL**, отсечение не выполняется в прямоугольник прокрутки.  
   
-##  <a name="selectfontobject"></a>COleControl::SelectFontObject  
+##  <a name="selectfontobject"></a>  COleControl::SelectFontObject  
  Выбирает шрифт в контексте устройства.  
   
 ```  
@@ -3345,7 +3345,7 @@ CFont* SelectFontObject(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на ранее выбранный шрифт. После завершения всех операций рисования, использующие код, вызывающий *fontHolder,* ранее выбранный шрифт должен повторно выбрать путем передачи его в качестве параметра [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject).  
   
-##  <a name="selectstockfont"></a>COleControl::SelectStockFont  
+##  <a name="selectstockfont"></a>  COleControl::SelectStockFont  
  Выбирает свойство Font в контексте устройства.  
   
 ```  
@@ -3359,7 +3359,7 @@ CFont* SelectStockFont(CDC* pDC);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на ранее выбранным `CFont` объекта. Следует использовать [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) выбрать этот шрифт обратно в контексте устройства при завершении.  
   
-##  <a name="serializeextent"></a>COleControl::SerializeExtent  
+##  <a name="serializeextent"></a>  COleControl::SerializeExtent  
  Выполняет сериализацию или инициализирует состояние места на экране, назначенное элементу управления.  
   
 ```  
@@ -3376,7 +3376,7 @@ void SerializeExtent(CArchive& ar);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAxCtl#8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]  
   
-##  <a name="serializestockprops"></a>COleControl::SerializeStockProps  
+##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps  
  Сериализует или инициализирует состояние `COleControl` стандартные свойства: внешний вид, цвет фона, BorderStyle, заголовков, включено, шрифта, цвет переднего плана и текста.  
   
 ```  
@@ -3392,7 +3392,7 @@ void SerializeStockProps(CArchive& ar);
   
  Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeStockProps`, `SerializeExtent`, и `SerializeVersion` для переопределения **COleControl::Serialize**. Пример см. в разделе кода на [SerializeExtent](#serializeextent). Дополнительные сведения по оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="serializeversion"></a>COleControl::SerializeVersion  
+##  <a name="serializeversion"></a>  COleControl::SerializeVersion  
  Выполняет сериализацию или инициализирует состояние сведения о версии элемента управления.  
   
 ```  
@@ -3418,7 +3418,7 @@ DWORD SerializeVersion(
 ### <a name="remarks"></a>Примечания  
  Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeVersion`, `SerializeExtent`, и `SerializeStockProps` для переопределения **COleControl::Serialize**. Пример см. в разделе кода на [SerializeExtent](#serializeextent). Дополнительные сведения по оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).  
   
-##  <a name="setappearance"></a>COleControl::SetAppearance  
+##  <a name="setappearance"></a>  COleControl::SetAppearance  
  Задает значение свойства, биржевые внешний вид элемента управления.  
   
 ```  
@@ -3432,7 +3432,7 @@ void SetAppearance (short sAppearance);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о стандартных свойств см. в разделе [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="setbackcolor"></a>COleControl::SetBackColor  
+##  <a name="setbackcolor"></a>  COleControl::SetBackColor  
  Задает значение свойства BackColor биржевых элемента управления.  
   
 ```  
@@ -3446,7 +3446,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="setborderstyle"></a>COleControl::SetBorderStyle  
+##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle  
  Задает значение свойства BorderStyle биржевых элемента управления.  
   
 ```  
@@ -3460,7 +3460,7 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="remarks"></a>Примечания  
  Окно управления будет создана повторно и `OnBorderStyleChanged` вызывается.  
   
-##  <a name="setcapture"></a>COleControl::SetCapture  
+##  <a name="setcapture"></a>  COleControl::SetCapture  
  В результате окна контейнера элемента управления необходимо выполнить владения захвата мыши на имени элемента управления.  
   
 ```  
@@ -3473,7 +3473,7 @@ CWnd* SetCapture();
 ### <a name="remarks"></a>Примечания  
  Если элемент управления активирован и без окон, эта функция приводит окна контейнера элемента управления необходимо выполнить владения захвата мыши на имени элемента управления. В противном случае эта функция приводит самим вступили владения захвата мыши элементом управления (то же, что `CWnd::SetCapture`).  
   
-##  <a name="setcontrolsize"></a>COleControl::SetControlSize  
+##  <a name="setcontrolsize"></a>  COleControl::SetControlSize  
  Задает размер окна элемента управления OLE и уведомляет контейнера, в котором изменение сайта элемента управления.  
   
 ```  
@@ -3495,7 +3495,7 @@ BOOL SetControlSize(int cx, int cy);
   
  Обратите внимание, что все координаты для элемента управления windows относительно верхнего левого угла элемента управления.  
   
-##  <a name="setenabled"></a>COleControl::SetEnabled  
+##  <a name="setenabled"></a>  COleControl::SetEnabled  
  Задает значение свойства Enabled элемента управления акции.  
   
 ```  
@@ -3509,7 +3509,7 @@ void SetEnabled(BOOL bEnabled);
 ### <a name="remarks"></a>Примечания  
  После установки этого свойства **OnEnabledChange** вызывается.  
   
-##  <a name="setfocus"></a>COleControl::SetFocus  
+##  <a name="setfocus"></a>  COleControl::SetFocus  
  В результате элемент управления контейнера окно владение фокус ввода от имени элемента управления.  
   
 ```  
@@ -3524,7 +3524,7 @@ CWnd* SetFocus();
   
  Если элемент управления не без окон, эта функция приводит самого вступили владение фокус ввода элемента управления (то же, что `CWnd::SetFocus`).  
   
-##  <a name="setfont"></a>COleControl::SetFont  
+##  <a name="setfont"></a>  COleControl::SetFont  
  Задает свойство Font элемента управления.  
   
 ```  
@@ -3535,7 +3535,7 @@ void SetFont(LPFONTDISP pFontDisp);
  *pFontDisp*  
  Указатель на интерфейс диспетчеризации шрифта.  
   
-##  <a name="setforecolor"></a>COleControl::SetForeColor  
+##  <a name="setforecolor"></a>  COleControl::SetForeColor  
  Задает значение свойства ForeColor биржевых элемента управления.  
   
 ```  
@@ -3549,7 +3549,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).  
   
-##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
+##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats  
  Вызывается платформой для инициализации списка форматов данных, поддерживаемый данным элементом управления.  
   
 ```  
@@ -3559,7 +3559,7 @@ virtual void SetInitialDataFormats();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию указывает два формата: `CF_METAFILEPICT` и постоянного набора свойств.  
   
-##  <a name="setinitialsize"></a>COleControl::SetInitialSize  
+##  <a name="setinitialsize"></a>  COleControl::SetInitialSize  
  Задает размер элемента управления OLE, при первом отображении в контейнере.  
   
 ```  
@@ -3578,7 +3578,7 @@ void SetInitialSize(
 ### <a name="remarks"></a>Примечания  
  Вызовите эту функцию в конструкторе таким образом, чтобы задать исходный размер элемента управления. Начальный размер измеряется в единицы устройства или пикселей. Рекомендуется выполнить, этот вызов в конструктор элемента управления.  
   
-##  <a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  COleControl::SetModifiedFlag  
  Изменяет измененном состоянии элемента управления.  
   
 ```  
@@ -3592,7 +3592,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>Примечания  
  Вызов этой функции при возникновении изменений, может повлиять на постоянное состояние элемента управления. Например, при изменении значения свойства постоянные, вызовите эту функцию с `bModified` **TRUE**.  
   
-##  <a name="setnotpermitted"></a>COleControl::SetNotPermitted  
+##  <a name="setnotpermitted"></a>  COleControl::SetNotPermitted  
  Указывает, что произошел сбой запроса редактирования.  
   
 ```  
@@ -3602,7 +3602,7 @@ void SetNotPermitted();
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию при `BoundPropertyRequestEdit` завершается ошибкой. Эта функция вызывает исключение типа **COleDispScodeException** для указания, что операция установки не была разрешена.  
   
-##  <a name="setnotsupported"></a>COleControl::SetNotSupported  
+##  <a name="setnotsupported"></a>  COleControl::SetNotSupported  
  Предотвращает изменение значения свойства элемента управления для пользователя.  
   
 ```  
@@ -3612,7 +3612,7 @@ void SetNotSupported();
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию вместо функция Set любого свойства, где изменение значения свойства элемента управления пользователем, не поддерживается. Примером может служить свойство, которое доступно только для чтения.  
   
-##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer  
+##  <a name="setrectincontainer"></a>  COleControl::SetRectInContainer  
  Задает координаты прямоугольника элемента управления относительно контейнера, выраженный в единицах устройства.  
   
 ```  
@@ -3629,7 +3629,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 ### <a name="remarks"></a>Примечания  
  Элемент управления является открытым, изменяется; в противном случае контейнера **OnPosRectChanged** функция.  
   
-##  <a name="settext"></a>COleControl::SetText  
+##  <a name="settext"></a>  COleControl::SetText  
  Задает значение стандартного заголовок или текст свойства элемента управления.  
   
 ```  
@@ -3643,7 +3643,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>Примечания  
  Убедитесь, стандартных свойств заголовка и текста как сопоставлены то же значение. Это означает, что любые изменения, внесенные в одно из свойств автоматически изменит оба свойства. Как правило элемент управления должен поддерживать stock заголовок или текст свойства, но не оба.  
   
-##  <a name="throwerror"></a>COleControl::ThrowError  
+##  <a name="throwerror"></a>  COleControl::ThrowError  
  Указывает на возникновение ошибки в элементе управления.  
   
 ```  
@@ -3675,7 +3675,7 @@ void ThrowError(
 ### <a name="remarks"></a>Примечания  
  Эта функция должен вызываться только из внутри функции Get или Set для свойства OLE или реализации метода автоматизации OLE. Если вам нужно указывают ошибки, возникающие в другое время, должен срабатывать стандартное событие ошибки.  
   
-##  <a name="transformcoords"></a>COleControl::TransformCoords  
+##  <a name="transformcoords"></a>  COleControl::TransformCoords  
  Преобразует значения между координат **HIMETRIC** и единицами измерения собственного контейнера.  
   
 ```  
@@ -3706,7 +3706,7 @@ void TransformCoords(
 ### <a name="remarks"></a>Примечания  
  Первые два флаги **XFORMCOORDS_POSITION** и **XFORMCOORDS_SIZE**, указывают ли координаты должны рассматриваться как позиция или размер. Оставшиеся два флага указывают направление преобразования.  
   
-##  <a name="translatecolor"></a>COleControl::TranslateColor  
+##  <a name="translatecolor"></a>  COleControl::TranslateColor  
  Преобразует значение цвета из **OLE_COLOR** тип данных, который [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) тип данных.  
   
 ```  
@@ -3728,7 +3728,7 @@ COLORREF TranslateColor(
 ### <a name="remarks"></a>Примечания  
  Эта функция полезна для преобразования стандартных свойств основной цвет и цвет фона для **COLORREF** типы, используемые [CDC](../../mfc/reference/cdc-class.md) функции-члены.  
   
-##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
+##  <a name="willambientsbevalidduringload"></a>  COleControl::WillAmbientsBeValidDuringLoad  
  Определяет, должен ли элемент управления использовать значения свойствам окружения как значения по умолчанию, если впоследствии загружается из постоянного состояния.  
   
 ```  
@@ -3741,7 +3741,7 @@ BOOL WillAmbientsBeValidDuringLoad();
 ### <a name="remarks"></a>Примечания  
  В некоторые контейнеры, элемент управления может не имеет доступа к свойствам окружения при первом вызове переопределение метода `COleControl::DoPropExchange`. Это происходит, если контейнер вызывает [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) или [IPersistStorage::Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) до вызова метода [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) (то есть, если это не так поддерживать **OLEMISC_SETCLIENTSITEFIRST** бит состояния).  
   
-##  <a name="windowproc"></a>COleControl::WindowProc  
+##  <a name="windowproc"></a>  COleControl::WindowProc  
  Содержит процедуры Windows `COleControl` объекта.  
   
 ```  

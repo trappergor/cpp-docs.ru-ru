@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a85a238d17fe279359a73d3c740406c15b92c34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobjectnolock-class"></a>Класс CComObjectNoLock
 Этот класс реализует **IUnknown** для неагрегированные объекта, но не не инкремента, счетчик блокировок модуля в конструкторе.  
@@ -50,21 +50,21 @@ class CComObjectNoLock : public Base
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Конструктор.|  
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|Деструктор|  
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComObjectNoLock::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
 |[CComObjectNoLock::QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс.|  
 |[CComObjectNoLock::Release](#release)|Уменьшает счетчик ссылок на объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObjectNoLock`Аналогично [CComObject](../../atl/reference/ccomobject-class.md) в том, что он реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта, однако `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.  
+ `CComObjectNoLock` Аналогично [CComObject](../../atl/reference/ccomobject-class.md) в том, что он реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта, однако `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.  
   
  ATL использует `CComObjectNoLock` внутренне для фабрик классов. Как правило не используется этого класса напрямую.  
   
@@ -76,7 +76,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>  CComObjectNoLock::AddRef  
  Увеличивает счетчик ссылок на объект.  
   
 ```
@@ -86,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock  
  Конструктор. В отличие от [CComObject](../../atl/reference/ccomobject-class.md), не увеличивает счетчик блокировки модуля.  
   
 ```
@@ -95,9 +95,9 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Параметры  
  **void\***  
- [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
+ [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom *** XXX*`Object`*XXX* конструкторы.  
   
-##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Деструктор  
   
 ```
@@ -108,7 +108,7 @@ CComObjectNoLock(void* = NULL);
  Освобождает все выделенные ресурсы и вызывает метод [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
-##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -125,7 +125,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>  CComObjectNoLock::Release  
  Уменьшает счетчик ссылок на объект.  
   
 ```
