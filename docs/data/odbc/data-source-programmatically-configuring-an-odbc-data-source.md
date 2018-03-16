@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Источник данных. Программная настройка источника данных ODBC
 В этом разделе объясняется, как программным образом можно настроить имена источников данных Open Database Connectivity (ODBC). Это обеспечивает гибкость для доступа к данным без перезагрузки пользователю явно использовать администратор ODBC или другие программы, чтобы указать имена источников данных.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  Однако многие СУБД позволяют создавать источник данных программными средствами. Некоторые источники данных поддерживают спецификацию каталогов для баз данных. То есть каталог является источником данных, и каждая таблица в источнике данных хранится в отдельном файле (в случае dBASE, каждая таблица имеет DBF-файл). Драйверы для других баз данных ODBC, например Microsoft Access и SQL Server требует, что некоторые определенных критериев, прежде чем можно будет установить источника данных. Например при использовании драйвера ODBC для SQL Server, необходимо было установлено на компьютер SQL Server.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>Пример SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_example"></a> Пример SQLConfigDataSource  
  В следующем примере используется **:: SQLConfigDataSource** функции ODBC API для создания нового источника данных Excel вызывается новый источник данных для Excel:  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Хотя эти сведения можно записать непосредственно в реестр без использования **:: SQLConfigDataSource**, любое приложение, которое делает это полагается на текущий метод, который использует диспетчер драйверов хранит свои данные. Если в более поздней версии диспетчера драйверов ODBC реализует учета источники данных по-разному, любое приложение, которое использует этот метод будет нарушена. Обычно рекомендуется использовать функцию API, если она существует. Например, можно перенести на 16-разрядных на 32-разрядная версия кода при использовании **:: SQLConfigDataSource** работать, так как она всегда корректно записывает данные в файл Odbc.ini или в реестр.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Параметры SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> Параметры SQLConfigDataSource  
  Ниже рассматриваются параметры **:: SQLConfigDataSource** функции. Значительная часть информации, берется из API-интерфейса ODBC *Справочник программиста* вместе с Visual C++ версии 1.5 и более поздних версий.  
   
-###  <a name="_core_function_prototype"></a>Прототип функции  
+###  <a name="_core_function_prototype"></a> Прототип функции  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Примечания  
   
-####  <a name="_core_parameters_and_usage"></a>Параметры и использование  
+####  <a name="_core_parameters_and_usage"></a> Параметры и использование  
  *hwndParent*  
  Окна, указанную как владелец все диалоговые окна, создаваемые диспетчером драйверов ODBC или конкретный драйвер ODBC для получения дополнительных сведений от пользователя о новом источнике данных. Если `lpszAttributes` параметр не предоставляет достаточно сведений, появится диалоговое окно. *HwndParent* параметр может быть **NULL**.  
   

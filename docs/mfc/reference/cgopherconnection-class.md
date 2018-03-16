@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>Класс CGopherConnection
 Управление подключением к интернет-серверу gopher.  
@@ -51,13 +51,13 @@ class CGopherConnection : public CInternetConnection
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CGopherConnection::CGopherConnection](#cgopherconnection)|Создает объект `CGopherConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CGopherConnection::CreateLocator](#createlocator)|Создает [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) объект для поиска файлов на сервере gopher.|  
 |[CGopherConnection::GetAttribute](#getattribute)|Возвращает атрибут информацию об объекте gopher.|  
@@ -82,7 +82,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  Эта функция-член вызывается для создания `CGopherConnection` объекта.  
   
 ```  
@@ -113,7 +113,7 @@ CGopherConnection(
  Указатель на строку, содержащую имя FTP-сервера.  
   
  `dwContext`  
- Идентификатор контекста для операции. `dwContext`Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связана с этим идентификатором контекста.  
+ Идентификатор контекста для операции. `dwContext` Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связана с этим идентификатором контекста.  
   
  `pstrUserName`  
  Указатель на строку с завершающим нулем, указывающее имя пользователя для входа. Если **NULL**, значение по умолчанию является анонимным.  
@@ -134,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>Примечания  
  Никогда не создавайте `CGopherConnection` напрямую. Вместо этого вызовите [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), которая создает `CGopherConnection` объекта и возвращает указатель на него.  
   
-##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
  Вызовите эту функцию-член для создания локатора gopher для поиска или определить файл на сервере gopher.  
   
 ```  
@@ -159,7 +159,7 @@ static CGopherLocator CreateLocator(
  Указатель на строку, содержащую имя gopher документа или папки должны быть получены. Если `pstrDisplayString` параметр **NULL**, возвращается каталог по умолчанию для сервера gopher.  
   
  `pstrSelectorString`  
- Указатель на строку селектор должно отправляться gopher-сервер, чтобы получить элемент. `pstrSelectorString`может быть **NULL**.  
+ Указатель на строку селектор должно отправляться gopher-сервер, чтобы получить элемент. `pstrSelectorString` может быть **NULL**.  
   
  *dwGopherType*  
  Указывает, является ли `pstrSelectorString` ссылается на каталог или документа, и является ли запрос gopher или gopher +. В разделе атрибуты для структуры [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) в Windows SDK.  
@@ -181,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  Чтобы получить данные с сервера gopher, приложение сначала необходимо получить указатель gopher. Приложение затем следует рассматривать как непрозрачный маркер локатора (т. е приложения можно использовать локатора, но не напрямую управлять или сравнить ее). Как правило, приложение использует локатор для вызовов [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) функция-член для извлечения конкретные сведения.  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  Вызовите эту функцию-член для извлечения конкретного атрибута сведения об элементе с сервера gopher.  
   
 ```  
@@ -203,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
   
-##  <a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Вызовите эту функцию-член для открытия файла на сервере gopher.  
   
 ```  

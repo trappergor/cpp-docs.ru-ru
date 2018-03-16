@@ -122,10 +122,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80541bc777d2c77209812cbee621045b7d6c6507
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 Обеспечивает поддержку пользовательских интерфейсов клиентских элементов управления.  
@@ -140,13 +140,13 @@ class COleControlSite : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::COleControlSite](#colecontrolsite)|Создает объект `COleControlSite`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Привязывает свойство по умолчанию размещенного элемента управления к источнику данных.|  
 |[COleControlSite::BindProperty](#bindproperty)|Привязывает свойство размещенного элемента управления к источнику данных.|  
@@ -183,13 +183,13 @@ class COleControlSite : public CCmdTarget
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::GetControlInfo](#getcontrolinfo)|Получает сведения о клавиатуры и мнемоник для размещенного элемента управления.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleControlSite::m_bIsWindowless](#m_biswindowless)|Определяет, является ли размещенный элемент управления элемента управления без окна.|  
 |[COleControlSite::m_ctlInfo](#m_ctlinfo)|Содержит сведения на клавиатуре обработки для элемента управления.|  
@@ -209,7 +209,7 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_rect](#m_rect)|Аналитики сайта элемента управления.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта поддержка является основным средством, с помощью которого внедренный элемент управления ActiveX получает сведения о расположении и узла, его моникер, его пользовательский интерфейс, его свойства окружения и других ресурсов, предоставляемых контейнером. `COleControlSite`полностью реализует [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) интерфейсов. Кроме того также реализуется интерфейс IDispatch (поддержки свойствам окружения и приемники событий).  
+ Эта поддержка является основным средством, с помощью которого внедренный элемент управления ActiveX получает сведения о расположении и узла, его моникер, его пользовательский интерфейс, его свойства окружения и других ресурсов, предоставляемых контейнером. `COleControlSite` полностью реализует [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502), [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706), [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638),  **IBoundObjectSite**, **INotifyDBEvents**, [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md) интерфейсов. Кроме того также реализуется интерфейс IDispatch (поддержки свойствам окружения и приемники событий).  
   
  Чтобы создать сайт элемента управления ActiveX с использованием `COleControlSite`, наследуйте класс от `COleControlSite`. В вашей `CWnd`-переопределения в производном классе для контейнера (например, в диалоговое окно) **CWnd::CreateControlSite** функции.  
   
@@ -223,7 +223,7 @@ class COleControlSite : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxocc.h  
   
-##  <a name="binddefaultproperty"></a>COleControlSite::BindDefaultProperty  
+##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
  Привязывает объект, вызывающий простое стандартное свойство привязки, отмеченное в библиотеке типов, базовый курсор, который определяется свойствами источника данных, имя пользователя, пароль и SQL элемента управления источником данных.  
   
 ```  
@@ -250,7 +250,7 @@ virtual void BindDefaultProperty(
 ### <a name="remarks"></a>Примечания  
  `CWnd` Объекта, на котором эта функция вызывается должен быть элементом управления с привязкой к данным.  
   
-##  <a name="bindproperty"></a>COleControlSite::BindProperty  
+##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
  Привязывает объект, вызывающий простой связанное свойство, отмеченное в библиотеке типов, базовый курсор, который определяется свойствами источника данных, имя пользователя, пароль и SQL элемента управления источником данных.  
   
 ```  
@@ -269,7 +269,7 @@ virtual void BindProperty(
 ### <a name="remarks"></a>Примечания  
  `CWnd` Объекта, на котором эта функция вызывается должен быть элементом управления с привязкой к данным.  
   
-##  <a name="colecontrolsite"></a>COleControlSite::COleControlSite  
+##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
  Создает новое `COleControlSite` объекта.  
   
 ```  
@@ -283,7 +283,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer) функции. Дополнительные сведения о настройке создания контейнеров см. в разделе [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite).  
   
-##  <a name="createcontrol"></a>COleControlSite::CreateControl  
+##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
  Создает элемент управления ActiveX, размещаемую в `COleControlSite` объекта.  
   
 ```  
@@ -356,7 +356,7 @@ virtual HRESULT CreateControl(
   
 - **WS_DISABLED** создает окно, которое изначально отключены. Отключенного окна не может получать входные данные от пользователя. Можно задать, если элемент управления имеет свойство Enabled.  
   
-- `WS_BORDER`Создает окно с тонкой линии границы. Можно задать, если элемент управления имеет свойства BorderStyle.  
+- `WS_BORDER` Создает окно с тонкой линии границы. Можно задать, если элемент управления имеет свойства BorderStyle.  
   
 - **WS_GROUP** определяет первый элемент группы элементов управления. Пользователь может изменить фокус от одного элемента управления в группе к другому с помощью клавиш направления. Все элементы управления, имеющий **WS_GROUP** стиль после первого элемента управления принадлежать одной группе. Следующий элемент управления с **WS_GROUP** стиль завершает группу и запуске следующей группы.  
   
@@ -364,7 +364,7 @@ virtual HRESULT CreateControl(
   
  Создание элементов управления с размерами по умолчанию используйте вторую перегрузку.  
   
-##  <a name="destroycontrol"></a>COleControlSite::DestroyControl  
+##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl  
  Уничтожает `COleControlSite` объекта.  
   
 ```  
@@ -377,7 +377,7 @@ virtual BOOL DestroyControl();
 ### <a name="remarks"></a>Примечания  
  После завершения объект освобождается из памяти и всех указателей на объект больше не являются допустимыми.  
   
-##  <a name="doverb"></a>COleControlSite::DoVerb  
+##  <a name="doverb"></a>  COleControlSite::DoVerb  
  Выполняет указанную команду.  
   
 ```  
@@ -412,7 +412,7 @@ virtual HRESULT DoVerb(
   
  Дополнительные сведения см. в разделе [функция IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) в Windows SDK.  
   
-##  <a name="enabledsc"></a>COleControlSite::EnableDSC  
+##  <a name="enabledsc"></a>  COleControlSite::EnableDSC  
  Включение данных источники для узла элемента управления.  
   
 ```  
@@ -422,7 +422,7 @@ virtual void EnableDSC();
 ### <a name="remarks"></a>Примечания  
  Вызывается платформой для включения и инициализировать данные источники для узла элемента управления. Переопределите эту функцию, чтобы предоставить настраиваемое поведение.  
   
-##  <a name="enablewindow"></a>COleControlSite::EnableWindow  
+##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
  Включает или отключает мыши и клавиатуры для сайта элемента управления.  
   
 ```  
@@ -436,7 +436,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если окно было отключено, иначе — 0.  
   
-##  <a name="freezeevents"></a>COleControlSite::FreezeEvents  
+##  <a name="freezeevents"></a>  COleControlSite::FreezeEvents  
  Указывает, будет ли узел управления обработки или игнорирования события порождаемые из элемента управления.  
   
 ```  
@@ -453,7 +453,7 @@ void FreezeEvents(BOOL bFreeze);
 > [!NOTE]
 >  Элемент управления не является обязательным для остановки вызова событий, если запрошено сайта элемента управления. Он может продолжать активироваться, но все последующие события будут игнорироваться узлом элемента управления.  
   
-##  <a name="getcontrolinfo"></a>COleControlSite::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  COleControlSite::GetControlInfo  
  Извлекает сведения о клавиши и сочетания поведение элемента управления.  
   
 ```  
@@ -463,7 +463,7 @@ void GetControlInfo();
 ### <a name="remarks"></a>Примечания  
  Сведения хранятся в [COleControlSite::m_ctlInfo](#m_ctlinfo).  
   
-##  <a name="getdefbtncode"></a>COleControlSite::GetDefBtnCode  
+##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
  Определяет, является ли элемент управления является кнопкой по умолчанию.  
   
 ```  
@@ -479,7 +479,7 @@ DWORD GetDefBtnCode();
   
 - **0** элемент управления не кнопки.  
   
-##  <a name="getdlgctrlid"></a>COleControlSite::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>  COleControlSite::GetDlgCtrlID  
  Получает идентификатор элемента управления.  
   
 ```  
@@ -489,7 +489,7 @@ virtual int GetDlgCtrlID() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор элемента диалогового окна элемента управления.  
   
-##  <a name="geteventiid"></a>COleControlSite::GetEventIID  
+##  <a name="geteventiid"></a>  COleControlSite::GetEventIID  
  Извлекает указатель на интерфейс событий для элемента управления по умолчанию.  
   
 ```  
@@ -503,7 +503,7 @@ BOOL GetEventIID(IID* piid);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, в случае успеха, иначе — 0. В случае успешного выполнения `piid` содержит идентификатор интерфейса для интерфейса события элемента управления по умолчанию.  
   
-##  <a name="getexstyle"></a>COleControlSite::GetExStyle  
+##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  Извлекает расширенные стили окна.  
   
 ```  
@@ -516,7 +516,7 @@ virtual DWORD GetExStyle() const;
 ### <a name="remarks"></a>Примечания  
  Чтобы получить регулярные стили, вызовите [COleControlSite::GetStyle](#getstyle).  
   
-##  <a name="getproperty"></a>COleControlSite::GetProperty  
+##  <a name="getproperty"></a>  COleControlSite::GetProperty  
  Возвращает свойства элемента управления, указанного в `dwDispID`.  
   
 ```  
@@ -539,7 +539,7 @@ virtual void GetProperty(
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение через `pvProp`.  
   
-##  <a name="getstyle"></a>COleControlSite::GetStyle  
+##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  Извлекает стили элемента управления узла.  
   
 ```  
@@ -552,7 +552,7 @@ virtual DWORD GetStyle() const;
 ### <a name="remarks"></a>Примечания  
  Список возможных значений см. в разделе [стили Windows](../../mfc/reference/styles-used-by-mfc.md#window-styles). Чтобы получить расширенные стили управления сайта, вызовите [COleControlSite::GetExStyle](#getexstyle).  
   
-##  <a name="getwindowtext"></a>COleControlSite::GetWindowText  
+##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
  Получает текущий текст элемента управления.  
   
 ```  
@@ -566,7 +566,7 @@ virtual void GetWindowText(CString& str) const;
 ### <a name="remarks"></a>Примечания  
  Если элемент управления поддерживает стандартное свойство заголовка, возвращается это значение. Если стандартное свойство заголовка не поддерживается, возвращается значение свойства Text.  
   
-##  <a name="invokehelper"></a>COleControlSite::InvokeHelper  
+##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
  Вызывает метод или свойство, указанное `dwDispID`, в контексте, определяемом `wFlags`.  
   
 ```  
@@ -602,7 +602,7 @@ virtual void AFX_CDECL InvokeHelper(
   
  Эта функция преобразует параметры в **VARIANTARG** значения, а затем вызывает **IDispatch::Invoke** метод в элементе управления. Если вызов **IDispatch::Invoke** завершается ошибкой, эта функция будет вызывать исключение. Если код состояния, возвращаемый **IDispatch::Invoke** — `DISP_E_EXCEPTION`, эта функция вызывает **COleDispatchException** объекта, в противном случае он вызывает `COleException`.  
   
-##  <a name="invokehelperv"></a>COleControlSite::InvokeHelperV  
+##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
  Вызывает метод или свойство, указанное `dwDispID`, в контексте, определяемом `wFlags`.  
   
 ```  
@@ -639,7 +639,7 @@ virtual void InvokeHelperV(
   
  Как правило, эта функция вызывается `COleControlSite::InvokeHelper`.  
   
-##  <a name="isdefaultbutton"></a>COleControlSite::IsDefaultButton  
+##  <a name="isdefaultbutton"></a>  COleControlSite::IsDefaultButton  
  Определяет, является ли элемент управления кнопкой по умолчанию.  
   
 ```  
@@ -649,7 +649,7 @@ BOOL IsDefaultButton();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент управления кнопкой по умолчанию для окна, в противном случае — нуль.  
   
-##  <a name="iswindowenabled"></a>COleControlSite::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>  COleControlSite::IsWindowEnabled  
  Определяет, включен ли элемент управления узла.  
   
 ```  
@@ -662,7 +662,7 @@ virtual BOOL IsWindowEnabled() const;
 ### <a name="remarks"></a>Примечания  
  Значение извлекается из стандартное свойство Enabled элемента управления.  
   
-##  <a name="m_biswindowless"></a>COleControlSite::m_bIsWindowless  
+##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
  Определяет, является ли объект элемента управления без окна.  
   
 ```  
@@ -672,7 +672,7 @@ BOOL m_bIsWindowless;
 ### <a name="remarks"></a>Примечания  
  Ненулевое значение, если элемент управления не имеет окна, в противном случае — нуль.  
   
-##  <a name="m_ctlinfo"></a>COleControlSite::m_ctlInfo  
+##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
  Сведения об обработке ввода с клавиатуры элементом управления.  
   
 ```  
@@ -682,14 +682,14 @@ CONTROLINFO m_ctlInfo;
 ### <a name="remarks"></a>Примечания  
  Эти сведения хранятся в [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734) структуры.  
   
-##  <a name="m_dweventsink"></a>COleControlSite::m_dwEventSink  
+##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
  Содержит точку подключения файла cookie из обработчика событий для элемента управления.  
   
 ```  
 DWORD m_dwEventSink;  
 ```  
   
-##  <a name="m_dwmiscstatus"></a>COleControlSite::m_dwMiscStatus  
+##  <a name="m_dwmiscstatus"></a>  COleControlSite::m_dwMiscStatus  
  Содержит различные сведения об элементе управления.  
   
 ```  
@@ -699,91 +699,91 @@ DWORD m_dwMiscStatus;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497)в Windows SDK.  
   
-##  <a name="m_dwpropnotifysink"></a>COleControlSite::m_dwPropNotifySink  
+##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
  Содержит [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) куки-файл.  
   
 ```  
 DWORD m_dwPropNotifySink;  
 ```  
   
-##  <a name="m_dwstyle"></a>COleControlSite::m_dwStyle  
+##  <a name="m_dwstyle"></a>  COleControlSite::m_dwStyle  
  Содержит стили окна элемента управления.  
   
 ```  
 DWORD m_dwStyle;  
 ```  
   
-##  <a name="m_hwnd"></a>COleControlSite::m_hWnd  
+##  <a name="m_hwnd"></a>  COleControlSite::m_hWnd  
  Содержит `HWND` элемента управления, или **NULL** , если элемент управления без окон.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-##  <a name="m_iidevents"></a>COleControlSite::m_iidEvents  
+##  <a name="m_iidevents"></a>  COleControlSite::m_iidEvents  
  Содержит идентификатор интерфейса интерфейс приемника событий для элемента управления по умолчанию.  
   
 ```  
 IID m_iidEvents;  
 ```  
   
-##  <a name="m_nid"></a>COleControlSite::m_nID  
+##  <a name="m_nid"></a>  COleControlSite::m_nID  
  Содержит идентификатор элемента управления диалогового окна элемента.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_pactiveobject"></a>COleControlSite::m_pActiveObject  
+##  <a name="m_pactiveobject"></a>  COleControlSite::m_pActiveObject  
  Содержит [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) интерфейса элемента управления.  
   
 ```  
 LPOLEINPLACEACTIVEOBJECT m_pActiveObject;  
 ```  
   
-##  <a name="m_pctrlcont"></a>COleControlSite::m_pCtrlCont  
+##  <a name="m_pctrlcont"></a>  COleControlSite::m_pCtrlCont  
  Содержит контейнер элемента управления (представляющий формы).  
   
 ```  
 COleControlContainer* m_pCtrlCont;  
 ```  
   
-##  <a name="m_pinplaceobject"></a>COleControlSite::m_pInPlaceObject  
+##  <a name="m_pinplaceobject"></a>  COleControlSite::m_pInPlaceObject  
  Содержит `IOleInPlaceObject` [IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646) интерфейса элемента управления.  
   
 ```  
 LPOLEINPLACEOBJECT m_pInPlaceObject;  
 ```  
   
-##  <a name="m_pobject"></a>COleControlSite::m_pObject  
+##  <a name="m_pobject"></a>  COleControlSite::m_pObject  
  Содержит **IOleObjectInterface** интерфейса элемента управления.  
   
 ```  
 LPOLEOBJECT m_pObject;  
 ```  
   
-##  <a name="m_pwindowlessobject"></a>COleControlSite::m_pWindowlessObject  
+##  <a name="m_pwindowlessobject"></a>  COleControlSite::m_pWindowlessObject  
  Содержит `IOleInPlaceObjectWindowless` [IOleInPlaceObjectWindowless](http://msdn.microsoft.com/library/windows/desktop/ms687304) интерфейса элемента управления.  
   
 ```  
 IOleInPlaceObjectWindowless* m_pWindowlessObject;  
 ```  
   
-##  <a name="m_pwndctrl"></a>COleControlSite::m_pWndCtrl  
+##  <a name="m_pwndctrl"></a>  COleControlSite::m_pWndCtrl  
  Содержит указатель на `CWnd` объект, представляющий самого элемента управления.  
   
 ```  
 CWnd* m_pWndCtrl;  
 ```  
   
-##  <a name="m_rect"></a>COleControlSite::m_rect  
+##  <a name="m_rect"></a>  COleControlSite::m_rect  
  Содержит границы элемента управления относительно контейнера окна.  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="modifystyle"></a>COleControlSite::ModifyStyle  
+##  <a name="modifystyle"></a>  COleControlSite::ModifyStyle  
  Изменение стилей элемента управления.  
   
 ```  
@@ -809,21 +809,21 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Примечания  
  Элемент управления stock свойство Enabled будет изменен для обеспечения соответствия параметр **WS_DISABLED**. Стандартное свойство стиль границы элемента управления будет изменен для обеспечения соответствия необходимых настроек для `WS_BORDER`. Все стили применяются непосредственно к дескриптор окна элемента управления, если он имеется.  
   
- Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить можно комбинировать с помощью побитового или (&#124;) оператор. В разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) функции в Windows SDK для информации о стилях доступном периоде.  
+ Изменение стилей окна элемента управления. Стили, чтобы добавить или удалить можно комбинировать с помощью побитового или ( &#124; ) оператор. В разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) функции в Windows SDK для информации о стилях доступном периоде.  
   
  Если `nFlags` отлично от нуля, `ModifyStyle` вызывает функцию Win32 `SetWindowPos`и на экран окно путем объединения `nFlags` с использованием следующих четырех флагов:  
   
-- `SWP_NOSIZE`Сохраняет текущий размер.  
+- `SWP_NOSIZE` Сохраняет текущий размер.  
   
-- `SWP_NOMOVE`Сохраняет текущую позицию.  
+- `SWP_NOMOVE` Сохраняет текущую позицию.  
   
-- `SWP_NOZORDER`Сохраняет текущего Z-порядка.  
+- `SWP_NOZORDER` Сохраняет текущего Z-порядка.  
   
-- `SWP_NOACTIVATE`Не активирует окно.  
+- `SWP_NOACTIVATE` Не активирует окно.  
   
  Для изменения окна расширенных стилей, вызовите метод [ModifyStyleEx](#modifystyleex).  
   
-##  <a name="modifystyleex"></a>COleControlSite::ModifyStyleEx  
+##  <a name="modifystyleex"></a>  COleControlSite::ModifyStyleEx  
  Изменяет расширенные стили элемента управления.  
   
 ```  
@@ -849,21 +849,21 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Примечания  
  Стандартное свойство внешнего вида элемента управления будет изменен для обеспечения соответствия параметр **WS_EX_CLIENTEDGE**. Все другие расширенные стили окна применяются непосредственно к дескриптор окна элемента управления, если он имеется.  
   
- Изменяет окна расширенные стили объекта сайта элемента управления. Стили, чтобы добавить или удалить можно комбинировать с помощью побитового или (&#124;) оператор. В разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции в Windows SDK для информации о стилях доступном периоде.  
+ Изменяет окна расширенные стили объекта сайта элемента управления. Стили, чтобы добавить или удалить можно комбинировать с помощью побитового или ( &#124; ) оператор. В разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции в Windows SDK для информации о стилях доступном периоде.  
   
  Если `nFlags` отлично от нуля, `ModifyStyleEx` вызывает функцию Win32 `SetWindowPos`и на экран окно путем объединения `nFlags` с использованием следующих четырех флагов:  
   
-- `SWP_NOSIZE`Сохраняет текущий размер.  
+- `SWP_NOSIZE` Сохраняет текущий размер.  
   
-- `SWP_NOMOVE`Сохраняет текущую позицию.  
+- `SWP_NOMOVE` Сохраняет текущую позицию.  
   
-- `SWP_NOZORDER`Сохраняет текущего Z-порядка.  
+- `SWP_NOZORDER` Сохраняет текущего Z-порядка.  
   
-- `SWP_NOACTIVATE`Не активирует окно.  
+- `SWP_NOACTIVATE` Не активирует окно.  
   
  Для изменения окна расширенных стилей, вызовите метод [ModifyStyle](#modifystyle).  
   
-##  <a name="movewindow"></a>COleControlSite::MoveWindow  
+##  <a name="movewindow"></a>  COleControlSite::MoveWindow  
  Изменение положения элемента управления.  
   
 ```  
@@ -887,7 +887,7 @@ virtual void MoveWindow(
  `nHeight`  
  Новая высота окна.  
   
-##  <a name="quickactivate"></a>COleControlSite::QuickActivate  
+##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
  Быстрое активирует элемента управления в контейнере.  
   
 ```  
@@ -902,7 +902,7 @@ virtual BOOL QuickActivate();
   
  `IPersist*::Load` И `IPersist*::InitNew` методов следует вызывать после выполнения быстрого активации. Элемент управления должны устанавливать соединения с помощью приемники контейнера во время быстрой активации. Тем не менее, эти соединения не являются динамическими до `IPersist*::Load` или `IPersist*::InitNew` был вызван.  
   
-##  <a name="safesetproperty"></a>COleControlSite::SafeSetProperty  
+##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
  Задает свойства элемента управления, указанного в `dwDispID`.  
   
 ```  
@@ -929,7 +929,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 > [!NOTE]
 >  В отличие от `SetProperty` и `SetPropertyV`, если возникает ошибка (например, при попытке задать свойство несуществующего), исключение не возникает.  
   
-##  <a name="setdefaultbutton"></a>COleControlSite::SetDefaultButton  
+##  <a name="setdefaultbutton"></a>  COleControlSite::SetDefaultButton  
  Задает элемент управления кнопкой по умолчанию.  
   
 ```  
@@ -945,7 +945,7 @@ void SetDefaultButton(BOOL bDefault);
 > [!NOTE]
 >  Элемент управления должен иметь **OLEMISC_ACTSLIKEBUTTON** состояние бит.  
   
-##  <a name="setdlgctrlid"></a>COleControlSite::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>  COleControlSite::SetDlgCtrlID  
  Изменяет значение идентификатора элемента управления диалогового окна.  
   
 ```  
@@ -961,7 +961,7 @@ virtual int SetDlgCtrlID(int nID);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setfocus"></a>COleControlSite::SetFocus  
+##  <a name="setfocus"></a>  COleControlSite::SetFocus  
  Устанавливает фокус на элемент управления.  
   
 ```  
@@ -976,7 +976,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на окно, ранее имевший фокус.  
   
-##  <a name="setproperty"></a>COleControlSite::SetProperty  
+##  <a name="setproperty"></a>  COleControlSite::SetProperty  
  Задает свойства элемента управления, указанного в `dwDispID`.  
   
 ```  
@@ -1000,7 +1000,7 @@ virtual void AFX_CDECL SetProperty(
   
  Тип исключения определяется значение, возвращаемое попытка установить свойства или метода. Если возвращается значение `DISP_E_EXCEPTION`, **COleDispatchExcpetion** вызываться исключение; в противном случае `COleException`.  
   
-##  <a name="setpropertyv"></a>COleControlSite::SetPropertyV  
+##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
  Задает свойства элемента управления, указанного в `dwDispID`.  
   
 ```  
@@ -1025,7 +1025,7 @@ virtual void SetPropertyV(
   
  Тип исключения определяется значение, возвращаемое попытка установить свойства или метода. Если возвращается значение `DISP_E_EXCEPTION`, **COleDispatchExcpetion** вызываться исключение; в противном случае `COleException`.  
   
-##  <a name="setwindowpos"></a>COleControlSite::SetWindowPos  
+##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  Задает размер, положение и Z-порядку сайта элемента управления.  
   
 ```  
@@ -1060,7 +1060,7 @@ virtual BOOL SetWindowPos(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
   
-##  <a name="setwindowtext"></a>COleControlSite::SetWindowText  
+##  <a name="setwindowtext"></a>  COleControlSite::SetWindowText  
  Задает текст для узла элемента управления.  
   
 ```  
@@ -1074,7 +1074,7 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ### <a name="remarks"></a>Примечания  
  Эта функция сначала пытается задать стандартное свойство заголовка. Если стандартное свойство заголовка не поддерживается, вместо этого устанавливается свойство Text.  
   
-##  <a name="showwindow"></a>COleControlSite::ShowWindow  
+##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
  Задает состояние отображения окна.  
   
 ```  

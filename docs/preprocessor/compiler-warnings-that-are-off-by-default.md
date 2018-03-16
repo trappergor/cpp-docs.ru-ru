@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Выключенные по умолчанию предупреждения компилятора
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
    **/ Wall** включает все предупреждения, отключенные по умолчанию. При использовании этого параметра, можно отключить отдельные предупреждения с помощью [/wd](../build/reference/compiler-option-warning-level.md) параметр.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   Это позволяет предупреждение  *nnnn*  на уровне *l*.
+   Это позволяет предупреждение *nnnn* на уровне *l*.
 
 Следующие предупреждения по умолчанию отключены.
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (уровень 4)|"*class1*": структура объекта в/vd2 изменится из-за виртуального базового "*class2*"|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (уровень 4)|приведение dynamic_cast из виртуального базового "*class1*«to»*class2*" может завершиться ошибкой в некоторых контекстах|
 |C4444 (уровень 3)|директива верхнего уровня "__unaligned" не реализована в этом контексте|
-|C4464 (уровень 4)|относительный путь включения содержит ".."|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (уровень 4)|относительный путь включения содержит ".."|
 |C4472 (уровень 1)|"*идентификатор*" является собственным перечислением: добавьте спецификатор доступа (private/public), чтобы объявить управляемое перечисление|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (уровень 4)|"*функция*": неиспользуемая встроенная функция была удалена|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (уровень 4)|«имя_типа»: имя типа превышает ограничение метаданных "*ограничение*" знаков|
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (уровень 1)|"*функция*": подпись не частного члена содержит частный собственный тип сборки "*частныйТип*"|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (уровень 4)|"*функция*": функция не является встроенной|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (уровень 3)|хранение результатов в памяти в 32-разрядном формате с плавающей запятой, возможно снижение производительности|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|переменное обращение "*выражение*" определяется параметром/volatile:\<iso &#124; ms >; попробуйте использовать встроенные функции __iso_volatile_load/store|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|переменное обращение "*выражение*" определяется параметром/volatile:\<iso&#124;ms >; попробуйте использовать встроенные функции __iso_volatile_load/store|
 |C4749 (уровень 4)|условно поддерживается: нестандартное применение offsetof к non standard макет типа "*типа*"|
 |C4767 (уровень 4)|Имя раздела '*символ*"длиннее, чем 8 символов и будет усечено компоновщиком|
 |C4768 (уровень 3)|атрибуты __declspec перед спецификация компоновки учитываются.|
