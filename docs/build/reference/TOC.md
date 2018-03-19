@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit (потокобезопасная локальная статичная инициализация)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (новые исключения оператора assume)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (подстановка триграфов)](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase- (отключение двухэтапного поиска имени)](zc-twophase.md)
 ##### [/Zc:wchar_t (собственный тип wchar_t)](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf (ускоренное создание PDB-файла)](zf.md)
 #### [/Zg (создание прототипов функций)](zg-generate-function-prototypes.md)
