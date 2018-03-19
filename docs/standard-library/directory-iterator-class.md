@@ -127,7 +127,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```  
   
- Функция-член возвращает значение &**this.  
+ Функция-член возвращает значение &\*\*this.  
   
 ## <a name="directoryiteratoroperator"></a>directory_iterator::operator++  
   

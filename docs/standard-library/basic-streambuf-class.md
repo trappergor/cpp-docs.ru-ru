@@ -617,7 +617,7 @@ int_type sbumpc();
  Текущий элемент.  
   
 ### <a name="remarks"></a>Примечания  
- Если позиция чтения доступна, функция-член возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**\***[gptr](#gptr)) и увеличивает следующий указатель для входного буфера. В противном случае возвращается [uflow](#uflow).  
+ Если позиция чтения доступна, функция-член возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\****[gptr](#gptr)) и увеличивает следующий указатель для входного буфера. В противном случае возвращается [uflow](#uflow).  
   
 ### <a name="example"></a>Пример  
   

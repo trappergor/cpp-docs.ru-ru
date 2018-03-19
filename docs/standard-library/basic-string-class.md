@@ -3491,7 +3491,7 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>Примечания  
  Этот тип является синонимом **allocator_type::pointer**.  
   
- Для типа **string** это эквивалентно **char\***.  
+ Для типа **string** это эквивалентно **char\****.  
   
 ### <a name="example"></a>Пример  
   

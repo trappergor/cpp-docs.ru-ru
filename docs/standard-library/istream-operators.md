@@ -114,7 +114,7 @@ basic_istream<char, Tr>& operator>>(
     basic_istream<char, Tr>& Istr, signed char* str);
 ```  
   
- возвращает `Istr` >> (`char`**\***) `str`.  
+ возвращает `Istr` >> (`char`**\****) `str`.  
   
  Функция-шаблон:  
   
