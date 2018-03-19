@@ -478,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Примечания  
  Тип `const_iterator`нельзя использовать для изменения значения элемента.  
   
- `const_iterator` Определяемый точками hash_multimap объектам [value_type](#value_type), которые имеют тип `pair`  *\< ***constKey тип*** >* . Значение ключа доступно через первый элемент пары, а значение сопоставленного элемента — через второй элемент пары.  
+ `const_iterator` Определяемый точками hash_multimap объектам [value_type](#value_type), которые имеют тип `pair`*\<***constKey тип***>*. Значение ключа доступно через первый элемент пары, а значение сопоставленного элемента — через второй элемент пары.  
   
  Для разыменования `const_iterator` `cIter` указывает на элемент в объекте hash_multimap, используйте  **->**  оператор.  
   
