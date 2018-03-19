@@ -29,7 +29,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/16/2018
 ---
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*: /\*Здесь декларатор является декларатором функции \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* относится только к системам Microsoft */  
+ /\* *attribute-seq* относится только к системам Microsoft \*/  
   
  Параметры прототипа:  
   
