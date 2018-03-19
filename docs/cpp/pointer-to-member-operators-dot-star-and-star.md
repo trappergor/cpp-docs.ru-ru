@@ -1,5 +1,5 @@
 ---
-title: "Операторы указателей на члены:. * и -&gt;* | Документы Microsoft"
+title: "Операторы указателей на члены: .* и -&gt;* | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 03/16/2018
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Операторы указателей на члены:. * и -&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Операторы указателей на члены: .* и -&gt;*
 ## <a name="syntax"></a>Синтаксис  
   
 ```  

@@ -233,7 +233,7 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из `_bstr_t` объекта.     Выделяется новый параметр `BSTR`.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** создает `_variant_t` объекта типа `VT_BSTR` строки Юникода.   Выделяется новый параметр `BSTR`.  
+-   **_variant_t (wchar_t \*** *wstrSrc*  **)** создает `_variant_t` объекта типа `VT_BSTR` строки Юникода.   Выделяется новый параметр `BSTR`.  
   
 -   **_variant_t (char\***`strSrc`**)** создает `_variant_t` объекта типа `VT_BSTR` из строки.     Выделяется новый параметр `BSTR`.  
   

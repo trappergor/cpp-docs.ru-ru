@@ -521,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Примечания  
  Тип `const_iterator`нельзя использовать для изменения значения элемента.  
   
- `const_iterator` Определенные hash_map, указывает на элементы, которые являются объектами [value_type](#value_type), то есть типа `pair`  *\< ***const ключ, тип*** >* , которого первый элемент — это ключ к элементу и которого второй член является сопоставленных datum, удерживаемые элемента.  
+ `const_iterator` Определенные hash_map, указывает на элементы, которые являются объектами [value_type](#value_type), то есть типа `pair`*\<***const ключ, тип***>*, которого первый элемент — это ключ к элементу и которого второй член является сопоставленных datum, удерживаемые элемента.  
   
  Для разыменования `const_iterator` `cIter` указывает на элемент в объекте hash_map, используйте  **->**  оператор.  
   
@@ -2714,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `value_type` объявляется как `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * и не `pair`  **\<key_type mapped_type >** поскольку ключи ассоциативный контейнер не может быть изменен с помощью неконстантного итератора или ссылку.  
+ `value_type` объявляется как `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* и не `pair`**\<key_type mapped_type>** поскольку ключи ассоциативный контейнер не может быть изменен с помощью неконстантного итератора или ссылку.  
   
   
 ### <a name="example"></a>Пример  
