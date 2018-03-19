@@ -1,5 +1,5 @@
 ---
-title: "Как: преобразование типа System::String к wchar_t * или char * | Документы Microsoft"
+title: "Как: преобразование типа System::String к wchar_t* или char* | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

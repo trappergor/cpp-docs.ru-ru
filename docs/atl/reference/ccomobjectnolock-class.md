@@ -95,7 +95,7 @@ CComObjectNoLock(void* = NULL);
   
 ### <a name="parameters"></a>Параметры  
  **void\***  
- [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom *** XXX*`Object`*XXX* конструкторы.  
+ [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
   
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock  
  Деструктор  

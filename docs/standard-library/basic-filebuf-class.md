@@ -466,7 +466,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  Если функция не может выполниться успешно, она возвращает **traits_type::eof**. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Примечания  
- Если _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенных виртуальной функции-члена написана вставляется элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) в буфер вывода. Для этого существует несколько способов.  
+ Если _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенных виртуальной функции-члена написана вставляется элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в буфер вывода. Для этого существует несколько способов.  
   
 -   Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.  
   
