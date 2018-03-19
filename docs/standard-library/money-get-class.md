@@ -293,7 +293,7 @@ explicit money_get(size_t _Refs = 0);
   
  Прямые примеры привести нельзя, так как деструктор защищен.  
   
- Конструктор инициализирует его базовым объектом с **locale::**[аспекта](../standard-library/locale-class.md#facet_class)(**_ *** Refs*).  
+ Конструктор инициализирует его базовым объектом с **locale::**[аспекта](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
   
 ##  <a name="string_type"></a>  money_get::string_type  
  Тип, который описывает строку, содержащую символы типа **CharType**.  
