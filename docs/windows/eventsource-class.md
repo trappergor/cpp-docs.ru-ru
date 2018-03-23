@@ -1,12 +1,12 @@
 ---
-title: "Класс EventSource | Документы Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Класс EventSource | Документы Microsoft
+ms.custom: ''
+ms.date: 03/22/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
@@ -15,28 +15,26 @@ dev_langs:
 helpviewer_keywords:
 - EventSource class
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 705260547d5a42b463d61b79c38592874f9dfa19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 531c4ec218f7e3b694a41cd465090a5b1787c41a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="eventsource-class"></a>EventSource - класс
-Представляет событие. Функции-члены EventSource добавлять, удалять и вызывать обработчики событий.  
+Представляет событие, отличный от agile. Функции-члены EventSource добавлять, удалять и вызывать обработчики событий. Agile события используйте [AgileEventSource](agileeventsource-class.md). 
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<  
-   typename TDelegateInterface  
->  
+template<typename TDelegateInterface>  
 class EventSource;  
 ```  
   
@@ -48,13 +46,13 @@ class EventSource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор EventSource::EventSource](../windows/eventsource-eventsource-constructor.md)|Инициализирует новый экземпляр класса EventSource.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод EventSource::Add](../windows/eventsource-add-method.md)|Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта EventSource.|  
 |[Метод EventSource::GetSize](../windows/eventsource-getsize-method.md)|Возвращает число обработчиков событий, связанных с текущим объектом EventSource|  
@@ -63,7 +61,7 @@ class EventSource;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Элемент данных EventSource::addRemoveLock_](../windows/eventsource-addremovelock-data-member.md)|Синхронизирует доступ к [targets_](../windows/eventsource-targets-data-member.md) массива, при добавлении, удаление или вызывать обработчики событий.|  
 |[Элемент данных EventSource::targets_](../windows/eventsource-targets-data-member.md)|Массив из одного или нескольких обработчиков событий.|  
@@ -79,3 +77,4 @@ class EventSource;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+[AgileEventSource-класс](agileeventsource-class.md)
