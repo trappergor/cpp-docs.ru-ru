@@ -1,12 +1,12 @@
 ---
-title: "strchr, wcschr, _mbschr, _mbschr_l | Документы Майкрософт"
-ms.custom: 
+title: strchr, wcschr, _mbschr, _mbschr_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strchr
@@ -26,6 +26,7 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _ftcschr
@@ -49,23 +50,23 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1cea5b46c48f0660062736f4ffb8bd8999b8c70
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6d9dc85eca176b47987b5b6d065a63f9798bc58e
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
 Находит символ в строке с помощью текущего языкового стандарта или заданной категории состояния преобразования LC_CTYPE.  
   
 > [!IMPORTANT]
->  Функции `_mbschr` и `_mbschr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
+>  Функции `_mbschr` и `_mbschr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -145,7 +146,7 @@ const unsigned char *_mbschr_l(
   
  В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос `_CRT_CONST_CORRECT_OVERLOADS` определяется, если оба `const` и не-`const` доступны версии этих функций. Если требуется не`const` поведение для обоих перегрузки C++ определения символа `_CONST_RETURN`.  
   
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
