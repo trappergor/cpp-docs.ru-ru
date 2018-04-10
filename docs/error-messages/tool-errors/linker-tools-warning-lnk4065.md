@@ -1,12 +1,12 @@
 ---
-title: "Предупреждение средств компоновщика LNK4065 | Документы Microsoft"
-ms.custom: 
+title: Предупреждение средств компоновщика LNK4065 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - LNK4065
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - LNK4065
 ms.assetid: aa5c9e2c-9ad3-4460-8605-4c12bbc6d423
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen

@@ -1,19 +1,19 @@
 ---
-title: "Изменения можно вносить в код по умолчанию (доступ к данным MFC) | Документы Microsoft"
-ms.custom: 
+title: Изменения можно вносить в код по умолчанию (доступ к данным MFC) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
