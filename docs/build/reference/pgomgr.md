@@ -17,10 +17,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 743665bbe0ee9c3df08d197d203e95d08542f613
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/22/2018
 
 ### <a name="parameters"></a>Параметры
 
-*Параметры*<br/>
+*options*<br/>
 Можно указать следующие параметры для **pgomgr**:
 
 - **/ help** или **/?** Выводит доступную **pgomgr** параметры.

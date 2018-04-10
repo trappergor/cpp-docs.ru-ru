@@ -1,12 +1,12 @@
 ---
-title: "Класс CStdioFile | Документы Microsoft"
-ms.custom: 
+title: Класс CStdioFile | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Класс CStdioFile
 Представляет файл потока среды выполнения C, как открытые с помощью функции времени выполнения [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -52,13 +52,13 @@ class CStdioFile : public CFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStdioFile::CStdioFile](#cstdiofile)|Создает `CStdioFile` объекта из пути или файловом указателя.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStdioFile::Open](#open)|Перегружен. Открыть предназначен для использования со значением по умолчанию `CStdioFile` конструктор (переопределяет [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
 |[CStdioFile::ReadString](#readstring)|Считывает одну строку текста.|  
@@ -67,7 +67,7 @@ class CStdioFile : public CFile
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStdioFile::m_pStream](#m_pstream)|Содержит указатель на открытый файл.|  
   
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Создает и инициализирует объект `CStdioFile`.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  `m_pStream` Член данных — указатель на открытый файл, возвращенный функции времени выполнения C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Примечания  
  Это **NULL** Если файл никогда не был открыт или закрыт.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Перегружен. Открыть предназначен для использования со значением по умолчанию `CStdioFile` конструктор.  
   
 ```  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Считывает текстовые данные в буфер, в пределах `nMax`значение -1, символы из файла, связанного с `CStdioFile` объекта.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Перемещает указатель в уже открытого файла.  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Записывает данные из буфера в файл, связанный с `CStdioFile` объекта.  
   
 ```  

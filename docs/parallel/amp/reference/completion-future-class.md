@@ -1,12 +1,12 @@
 ---
-title: "Класс completion_future | Документы Microsoft"
-ms.custom: 
+title: Класс completion_future | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>Класс completion_future
 Представляет будущих соответствующий асинхронную операцию C++ AMP.  
@@ -47,26 +47,26 @@ class completion_future;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор completion_future](#ctor)|Инициализирует новый экземпляр класса `completion_future`.|  
 |[~ completion_future деструктор](#dtor)|Уничтожает `completion_future` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[get](#get)|Ожидает завершения указанной асинхронной операции.|  
 |[then](#then)|Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.|  
 |[to_task](#to_task)|Возвращает `task` объект, соответствующий указанной асинхронной операции.|  
-|[Допустимые](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|  
-|[Ожидание](#wait)|Блокируется до завершения связанного асинхронной операции.|  
+|[valid](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|  
+|[wait](#wait)|Блокируется до завершения связанного асинхронной операции.|  
 |[wait_for](#wait_for)|Блокируется до завершения асинхронной операции, связанные или времени, заданного параметром `_Rel_time` прошло.|  
 |[wait_until](#wait_until)|Блокируется до завершения асинхронной операции, связанные или до текущего времени превышает значение, заданное параметром `_Abs_time`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор std::shared_future\<void >](#operator_shared_future)|Неявно преобразует `completion_future` объект `std::shared_future` объекта.|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного `completion_future` объекта в другой.|  
@@ -102,7 +102,7 @@ completion_future(
   
 ### <a name="overloads-list"></a>Список перегрузок  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |`completion_future();`|Инициализирует новый экземпляр `completion_future` класса|  
 |`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр `completion_future` , копируя конструктор.|  
@@ -151,7 +151,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="overloads-list"></a>Список перегрузок  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного `completion_future` объекта в другой, с помощью глубокой копией.|  
 |`completion_future& operator=(completion_future&& _Other);`|Копирует содержимое указанного `completion_future` объекта в другой, с помощью присваивания перемещения.|  
@@ -187,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `task` объект, соответствующий указанной асинхронной операции.  
   
-## <a name="valid">Допустимые</a> 
+## <a name="valid"></a> Допустимые 
 
 Получает логическое значение, которое указывает, связан ли объект с асинхронной операцией.  
   
@@ -200,7 +200,7 @@ bool valid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если объект связан с асинхронной операцией; в противном случае `false`.  
   
-## <a name="wait">Ожидание</a> 
+## <a name="wait"></a> Ожидание 
 
 Блокируется до завершения связанного асинхронной операции.  
   
@@ -278,7 +278,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout` Если задан период времени.  
   
-## <a name="dtor"></a> ~ completion_future 
+## <a name="dtor"></a> ~completion_future 
 
 Уничтожает `completion_future` объекта.  
   

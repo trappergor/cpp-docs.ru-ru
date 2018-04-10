@@ -1,10 +1,10 @@
 ---
-title: "Функции пространство имен Concurrency (AMP) | Документы Microsoft"
-ms.custom: 
+title: Функции пространство имен Concurrency (AMP) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +20,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Функции пространство имен Concurrency (AMP)
 ||||  
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
  Значение `true`, если операция выполнена успешно; в противном случае — значение `false`.  
   
 
-##  <a name="atomic_exchange">Функция atomic_exchange (C++ AMP)</a>  
+##  <a name="atomic_exchange"></a>  Функция atomic_exchange (C++ AMP)  
  Задает значение целевого расположения в виде атомарной операции.  
   
 ```  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  Исходное значение конечное расположение.  
   
 
-##  <a name="atomic_fetch_add">Функция atomic_fetch_add (C++ AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  Функция atomic_fetch_add (C++ AMP)  
  Единым блоком, добавьте значение к значению ячейки памяти.  
   
 ```  
@@ -152,7 +152,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="atomic_fetch_and">Функция atomic_fetch_and (C++ AMP)</a>  
+##  <a name="atomic_fetch_and"></a>  Функция atomic_fetch_and (C++ AMP)  
  Единым блоком выполняет побитовую операцию и значение и значение ячейки памяти.  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение, хранящееся в указанное место расположения.  
   
-##  <a name="atomic_fetch_or">Функция atomic_fetch_or (C++ AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  Функция atomic_fetch_or (C++ AMP)  
  Единым блоком выполняет операцию побитового или с значение и значение ячейки памяти.  
   
 ```  
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="atomic_fetch_sub">Функция atomic_fetch_sub (C++ AMP)</a>  
+##  <a name="atomic_fetch_sub"></a>  Функция atomic_fetch_sub (C++ AMP)  
  Атомарным образом вычитает значение из ячейки памяти.  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Возвращаемое значение  
  Исходное значение ячейки памяти.  
   
-##  <a name="atomic_fetch_xor">Функция atomic_fetch_xor (C++ AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  Функция atomic_fetch_xor (C++ AMP)  
  Атомарным образом WordRight действует побитовую операцию исключающего или для значения и расположение в памяти.  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Объект tile_barrier  
   
-##  <a name="parallel_for_each">parallel_for_each функции (C++ AMP)</a>  
+##  <a name="parallel_for_each"></a>  parallel_for_each функции (C++ AMP)  
  Выполняет функцию в домене вычислений. Дополнительные сведения см. в разделе [Обзор C++ AMP](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  

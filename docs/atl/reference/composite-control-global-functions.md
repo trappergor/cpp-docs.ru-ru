@@ -1,12 +1,12 @@
 ---
-title: "Глобальные функции составного элемента управления | Документы Microsoft"
-ms.custom: 
+title: Глобальные функции составного элемента управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 Эти функции обеспечивают поддержку для создание диалоговых окон, а также для создания, размещения и лицензирование элементов управления ActiveX.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
  Создает модальное диалоговое окно на основе шаблона диалогового окна, предоставленного пользователем.  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  Дополнительные сведения о диалоговых окнах Общие ссылки [следующейтаблице](http://msdn.microsoft.com/library/windows/desktop/ms645452) и [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) в Windows SDK.  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  Создает немодальное диалоговое окно на основе шаблона диалогового окна, предоставленного пользователем.  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  В разделе [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) и [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) в Windows SDK.  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  Создает элемент управления ActiveX, инициализирует его и размещает в указанном окне.  
   
 
@@ -163,7 +163,7 @@ ATLAPI AtlAxCreateControl(
   
 -   CLSID, например «{8E27C92B-1264-101C-8A2F-040224009C02}»  
   
--   URL-адрес, например «http://www.microsoft.com»  
+-   URL-адрес, такие как «http://www.microsoft.com»  
   
 -   Ссылка для активного документа, такие как «file://\\\Documents\MyDoc.doc»  
   
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  Создание лицензированный элемент управления ActiveX — [AtlAxCreateControlLic](#atlaxcreatecontrollic).  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  Создает элемент управления ActiveX, инициализирует его и размещает в указанном окне. Можно также создать указатель интерфейса и приемник событий для нового элемента управления.  
   
 ```
@@ -211,7 +211,7 @@ ATLAPI AtlAxCreateControlEx(
   
 -   CLSID, например «{8E27C92B-1264-101C-8A2F-040224009C02}»  
   
--   URL-адрес, например «http://www.microsoft.com»  
+-   URL-адрес, такие как «http://www.microsoft.com»  
   
 -   Ссылка для активного документа, такие как «file://\\\Documents\MyDoc.doc»  
   
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlAxCreateControlEx`Аналогично [AtlAxCreateControl](#atlaxcreatecontrol) , но также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
+ `AtlAxCreateControlEx` Аналогично [AtlAxCreateControl](#atlaxcreatecontrol) , но также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
   
  Создание лицензированный элемент управления ActiveX — [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex).  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.  
 
 ```
@@ -266,7 +266,7 @@ ATLAPI AtlAxCreateControlLic(
   
 -   CLSID, например «{8E27C92B-1264-101C-8A2F-040224009C02}»  
   
--   URL-адрес, например «http://www.microsoft.com»  
+-   URL-адрес, такие как «http://www.microsoft.com»  
   
 -   Ссылка для активного документа, такие как «file://\\\Documents\MyDoc.doc»  
   
@@ -293,7 +293,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>Пример  
  В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) образец демонстрирует использование `AtlAxCreateControlLic`.  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне. Можно также создать указатель интерфейса и приемник событий для нового элемента управления.  
   
 ```
@@ -316,7 +316,7 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   CLSID, например «{8E27C92B-1264-101C-8A2F-040224009C02}»  
   
--   URL-адрес, например «http://www.microsoft.com»  
+-   URL-адрес, такие как «http://www.microsoft.com»  
   
 -   Ссылка для активного документа, такие как «file://\\\Documents\MyDoc.doc»  
   
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlAxCreateControlLicEx`Аналогично [AtlAxCreateControlLic](#atlaxcreatecontrollic) , но также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
+ `AtlAxCreateControlLicEx` Аналогично [AtlAxCreateControlLic](#atlaxcreatecontrollic) , но также позволяет получать указатель интерфейса на вновь созданного элемента управления и настроить приемник событий для получения событий, произошедших в элементе управления.  
   
 ### <a name="example"></a>Пример  
  В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) образец демонстрирует использование `AtlAxCreateControlLicEx`.  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  Присоединяет ранее созданный элемент управления к указанному окну.  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  Присоединяемый объект элемента управления необходимо правильно инициализировать перед вызовом `AtlAxAttachControl`.  
   
-##  <a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  Получает прямой указатель интерфейса на контейнер для указанного окна (если имеется) по его указателю.  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  Получает прямой указатель интерфейса на элемент управления, который содержится в заданном окне (на основе его указателя).  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  Вызывайте эту функцию, чтобы задать для сайта дочернего объекта **IUnknown** родительского объекта.  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  Эта функция инициализирует код размещения путем регистрации элемента управления ATL **«AtlAxWin80»** и **«AtlAxWinLic80»** классы окна, а также пару пользовательских сообщений окна.  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>Примечания  
  Эту функцию необходимо вызывать перед использованием элемента управления ATL, API размещения. После вызова этой функции **«AtlAxWin»** класс окна можно использовать в вызовах [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) или [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680), как описано в Windows SDK.  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Эта функция отменяет инициализацию кода размещения, отменив регистрацию элемента управления ATL **«AtlAxWin80»** и **«AtlAxWinLic80»** классов окон.  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  Эта функция вызывается для очистки после уничтожения всех существующих окон узла Если вызван [AtlAxWinInit](#atlaxwininit) и больше не требуется создавать узла windows. Если не вызвать эту функцию, класс окна будет отменена автоматически при завершении процесса.  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  Вызывайте эту функцию для получения сведений об интерфейсе источника по умолчанию для объекта.  
   
 ```
@@ -495,13 +495,13 @@ ATLAPI AtlGetObjectSourceInterface(
  Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlGetObjectSourceInterface`можно предоставить с ИД интерфейса исходный интерфейс по умолчанию, а также идентификатор LIBID и основные и дополнительные номера версии библиотеки типов, описывающие этот интерфейс.  
+ `AtlGetObjectSourceInterface` можно предоставить с ИД интерфейса исходный интерфейс по умолчанию, а также идентификатор LIBID и основные и дополнительные номера версии библиотеки типов, описывающие этот интерфейс.  
   
 > [!NOTE]
 >  Для этой функции для успешного получения необходимые данные, объект, представленный `punkObj` необходимо реализовать `IDispatch` (и возвращают сведения о типе через **IDispatch::GetTypeInfo**), а также он должен также реализации `IProvideClassInfo2` или `IPersist`. Сведения о типе для интерфейса источника должен быть в той же библиотеки типов, как сведения о типе `IDispatch`.  
   
 ### <a name="example"></a>Пример  
- В следующем примере показано, как можно определить класс приемника событий `CEasySink`, которое уменьшает число аргументов шаблона, которые можно передать в `IDispEventImpl` для самые необходимые. `EasyAdvise`и `EasyUnadvise` использовать `AtlGetObjectSourceInterface` для инициализации [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) члены перед вызовом [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) или [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
+ В следующем примере показано, как можно определить класс приемника событий `CEasySink`, которое уменьшает число аргументов шаблона, которые можно передать в `IDispEventImpl` для самые необходимые. `EasyAdvise` и `EasyUnadvise` использовать `AtlGetObjectSourceInterface` для инициализации [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) члены перед вызовом [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) или [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise).  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   
