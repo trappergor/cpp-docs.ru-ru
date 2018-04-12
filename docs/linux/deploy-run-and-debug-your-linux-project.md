@@ -1,12 +1,12 @@
 ---
-title: "Развертывание, запуск и отладка проекта Linux | Документы Майкрософт"
-ms.custom: 
+title: Развертывание, запуск и отладка проекта Linux | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Развертывание, запуск и отладка проекта Linux
 
@@ -29,9 +29,6 @@ ms.lasthandoff: 02/01/2018
 
 * Использование традиционных средств Visual Studio, таких как точки останова, окна контрольных значений и наведение указателя мыши на переменную. С их помощью вы можете выполнять отладку так, как вы делаете это для других типов проектов.
 * Просмотр выходных данных с целевого компьютера в специальном окне "Консоль Linux". Консоль можно также использовать для отправки входных данных на целевой компьютер.
-
-> [!NOTE]
-> Сведения по отладке ARM в Linux см. в записи блога об [отладке внедренного устройства ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="debug-your-linux-project"></a>Отладка проекта Linux
 
@@ -89,6 +86,12 @@ ms.lasthandoff: 02/01/2018
 * Специальные параметры отладчика можно передать в GDB с помощью записи **Дополнительные команды отладчика**.  Например, можно игнорировать сигналы SIGILL (недопустимая инструкция).  Для этого можно использовать команду **handle**.  добавляя следующее в запись **Дополнительные команды отладчика**, как показано выше:
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>Следующие шаги
+
+* Сведения об отладке устройств ARM в Linux см. в записи блога [Отладка встраиваемых устройств ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+
+* Сведения об отладке с использованием команды **Присоединение к процессу** см. в записи блога [Изменения в рабочих нагрузках C++ в Linux для системы проектов, консольного окна Linux, rsync and команды "Присоединение к процессу"](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>См. также
 [Свойства отладки C++ (Linux C++)](../linux/prop-pages/debugging-linux.md).
