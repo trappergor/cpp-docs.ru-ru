@@ -1,12 +1,12 @@
 ---
-title: "Функции — члены потока ввода | Документы Майкрософт"
-ms.custom: 
+title: Функции — члены потока ввода | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="input-stream-member-functions"></a>Функции-члены потока ввода
 Функции — члены потока ввода используются для дисковых операций ввода. К этим функциям относятся:  
@@ -55,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12">Get</a>
+##  <a name="vclrfthegetfunctionanchor12"></a> Get
  Неформатированная функция **get** аналогична оператору **>>** с двумя исключениями. Во-первых, функция **get** включает знаки пробела, а функция извлечения исключает пробелы, если флаг **skipws** установлен (по умолчанию). Во-вторых, функция **get** с меньшей вероятностью вызовет сброс на диск связанного потока вывода (например, `cout`).  
   
  Разновидность функции **get** указывает адрес буфера и максимальное число символов для чтения. Это полезно для ограничения количества символов, отправленных в конкретную переменную, как показано в примере:  
@@ -89,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13">Getline</a>
+##  <a name="vclrfthegetlinefunctionanchor13"></a> Getline
  Функция-член **getline** аналогична функции **get**. Обе функции допускают третий аргумент, который указывает завершающий символ для входных данных. Значение по умолчанию — символ новой строки. Обе функции резервируют один символ для необходимого завершающего символа. Однако **get** оставляет завершающий символ в потоке, а **getline** удаляет его.  
   
  В следующем примере задается завершающий символ для потока ввода:  
@@ -115,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14">Операция чтения</a>
+##  <a name="vclrfthereadfunctionanchor14"></a> Операция чтения
  Функция-член **read** читает байты из файла в указанную область памяти. Аргумент length определяет количество прочтенных байтов. Если этот аргумент не указан, чтение останавливается при достижении физического конца файла или, в случае файла в текстовом режиме, при чтении встроенного символа `EOF`.  
   
  Этот пример считывает двоичную запись из файла заработной платы в структуру:  

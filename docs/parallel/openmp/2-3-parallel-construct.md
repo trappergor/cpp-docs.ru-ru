@@ -1,27 +1,27 @@
 ---
-title: "2.3 конструкция parallel | Документы Microsoft"
-ms.custom: 
+title: 2.3 конструкция parallel | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Конструкция parallel
 Следующая директива определяет параллельной области, являющийся областью программы, которые необходимо выполнить несколько потоков параллельно. Это основные конструкции, которая запускает параллельного выполнения.  
@@ -32,21 +32,21 @@ ms.lasthandoff: 12/21/2017
   
  *Предложение* является одним из следующих:  
   
- **Если (** *скалярное выражение* **)**  
+ **if(** *scalar-expression* **)**  
   
- **закрытый (** *списка переменной* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *списка переменной* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **по умолчанию (общий &#124; нет)**  
+ **по умолчанию (общий &#124; none)**  
   
- **Общие (** *списка переменной* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *списка переменной* **)**  
+ **copyin(** *variable-list* **)**  
   
  **Уменьшение (** *оператор* **:***списка переменной* **)**   
   
- **num_threads (** *целочисленное выражение* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Когда поток обнаруживает параллельные конструкции, группу потоков создается при выполнении одного из следующих случаев:  
   

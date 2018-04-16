@@ -1,10 +1,10 @@
 ---
-title: "Пространство имен Concurrency::Direct3D функции (AMP) | Документы Microsoft"
-ms.custom: 
+title: Пространство имен Concurrency::Direct3D функции (AMP) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +27,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Пространство имен Concurrency::Direct3D функции (AMP)
 ||||  
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/23/2018
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
 |[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[RADIANS](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
@@ -69,7 +69,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает абсолютное значение аргумента.  
   
-##  <a name="clamp"></a>  CLAMP  
+##  <a name="clamp"></a>  clamp  
  Вычисляет значение первого аргумента указанного ограниченный диапазон, определяемый указанным второго и третьего аргументов.  
   
 ```  
@@ -98,7 +98,7 @@ inline int clamp(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение ограниченными `_X`.  
   
-##  <a name="countbits">countbits</a>  
+##  <a name="countbits"></a>  countbits  
  Подсчитывает количество набор бит в _X  
   
 ```  
@@ -188,7 +188,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  Accelerator_view, для которого выполняется снятия блокировки.  
   
-##  <a name="firstbithigh">firstbithigh</a>  
+##  <a name="firstbithigh"></a>  firstbithigh  
  Возвращает расположение первый набор бит _X, начиная с старший бит и перемещение по направлению к младший бит.  
   
 ```  
@@ -241,7 +241,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель интерфейса IUnknown, соответствующий базовый массив буфера Direct3D.  
   
-##  <a name="imax"></a>  iMax  
+##  <a name="imax"></a>  imax  
  Определите максимальное числовое значение аргументов  
   
 ```  
@@ -260,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает максимальное числовое значение аргументов  
   
-##  <a name="imin">imin</a>  
+##  <a name="imin"></a>  imin  
  Определите минимальное числовое значение аргументов  
   
 ```  
@@ -293,7 +293,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Возвращаемое значение  
  Логический флаг, указывающее, запрещен ли accelerator_view указанного времени ожидания.  
   
-##  <a name="mad"></a>  MAD  
+##  <a name="mad"></a>  mad  
  Вычисляет произведение первого и второго заданного аргумента, а затем добавляет указанный третий аргумент.  
   
 ```  
@@ -367,7 +367,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Возвращаемое значение  
  Массив, созданный с помощью предоставленного буфера Direct3D.  
   
-##  <a name="noise"></a>  шума  
+##  <a name="noise"></a>  noise  
  Создает случайное значение с помощью алгоритма шума Перлина  
   
 ```  
@@ -381,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение шума Перлина в диапазоне от -1 до 1  
   
-##  <a name="radians">RADIANS</a>  
+##  <a name="radians"></a>  radians  
  Преобразование _X из градусов в радианы  
   
 ```  
@@ -426,7 +426,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение с обратным в _X порядком бит  
   
-##  <a name="saturate">saturate</a>  
+##  <a name="saturate"></a>  saturate  
  Фиксирует _X в диапазоне от 0 до 1  
   
 ```  
@@ -440,7 +440,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает _X с ограничениями в диапазоне от 0 до 1  
   
-##  <a name="sign"></a>  Вход  
+##  <a name="sign"></a>  sign  
  Определяет знак заданного аргумента.  
   
 ```  
@@ -496,7 +496,7 @@ inline float step(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает 1, если _X больше или равно _Y; в противном случае — 0.  
   
-##  <a name="umax"></a>  UMAX  
+##  <a name="umax"></a>  umax  
  Определите максимальное числовое значение аргументов  
   
 ```  
@@ -515,7 +515,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает максимальное числовое значение аргументов  
   
-##  <a name="umin">umin</a>  
+##  <a name="umin"></a>  umin  
  Определите минимальное числовое значение аргументов  
   
 ```  

@@ -1,10 +1,10 @@
 ---
-title: "пространство имен функции параллелизма | Документы Microsoft"
-ms.custom: 
+title: пространство имен функции параллелизма | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,17 +40,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions"></a>пространство имен функций с параллелизмом
 ||||  
@@ -68,7 +68,7 @@ ms.lasthandoff: 02/23/2018
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Ожидание](#wait)|  
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
 ##  <a name="alloc"></a>  Alloc  
@@ -222,7 +222,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  В приложении UWP Если `_Param` относится к типу Windows::Foundation:: iasyncoperation\<T > ^ или Windows::Foundation:: iasyncoperationwithprogress\<T, P > ^, или функтор, который возвращает один из этих типов, будет иметь созданной задачи Тип `task<T>`. Если `_Param` относится к типу Windows::Foundation:: iasyncaction ^ или Windows::Foundation:: iasyncactionwithprogress\<P > ^, или функтор, который возвращает один из этих типов, созданной задачи будет иметь тип `task<void>`.  
   
-##  <a name="disabletracing">DisableTracing</a>  
+##  <a name="disabletracing"></a>  DisableTracing  
  Отключает трассировку в среде выполнения с параллелизмом. Эту функция не рекомендуется использовать, поскольку трассировка событий Windows по умолчанию не регистрируется.  
   
 ```
@@ -232,7 +232,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>Возвращаемое значение  
  Если трассировка была правильно отключена, `S_OK` возвращается. Если трассировка не была запущена ранее, возвращается `E_NOT_STARTED`  
   
-##  <a name="enabletracing">EnableTracing</a>  
+##  <a name="enabletracing"></a>  EnableTracing  
  Включает трассировку в среде выполнения с параллелизмом. Эта функция не рекомендована к использованию, поскольку трассировка событий Windows теперь по умолчанию включена.  
   
 ```
@@ -242,7 +242,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>Возвращаемое значение  
  Если трассировка была правильно запущена, `S_OK` возвращается; в противном случае — `E_NOT_STARTED` возвращается.  
   
-##  <a name="free">Бесплатно</a>  
+##  <a name="free"></a>  Бесплатно  
  Освобождает блок памяти, ранее выделенный методом `Alloc` для подраспределителя кэширования среды выполнения с параллелизмом.  
   
 ```
@@ -1330,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>Примечания  
  При отмене `cancellation_token` будут активированы все точки прерывания в объекте функции. Явный токен `_Ct` будет изолировать объект `_Func` от родительской отмены, если родитель имеет другой токен или вообще не имеет токена.  
   
-##  <a name="send"></a>  Отправить  
+##  <a name="send"></a>  send  
  Синхронная операции отправки, которая ожидает принятия или отклонения сообщения целевым объектом.  
   
 ```
@@ -1527,7 +1527,7 @@ bool try_receive(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [функции передачи сообщений](../../../parallel/concrt/message-passing-functions.md).  
   
-##  <a name="wait"></a>  Ожидание  
+##  <a name="wait"></a>  wait  
  Приостанавливает текущий контекст на указанный период времени.  
   
 ```

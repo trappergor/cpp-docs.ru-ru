@@ -1,12 +1,12 @@
 ---
-title: "Оптимизация кода | Документы Microsoft"
-ms.custom: 
+title: Оптимизация кода | Документы Microsoft
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++

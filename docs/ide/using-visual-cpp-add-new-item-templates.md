@@ -1,12 +1,12 @@
 ---
-title: "С помощью Visual C++ добавить новый элемент шаблонов | Документы Microsoft"
-ms.custom: 
+title: С помощью Visual C++ добавить новый элемент шаблонов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,24 +16,24 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Шаблоны элементов Visual C++ в диалоговом окне "Добавление нового элемента"
 Можно легко добавить элементы, являющиеся общими для проектов Visual C++ с помощью **Добавление нового элемента** команды. При использовании **Добавление нового элемента** команды `Add New Item` диалоговое окно со списком шаблонов элементов, позволяющих добавить в проект соответствующие файлы.  
   
  Ниже приведен алфавитный список шаблонов Visual C++ добавить новый элемент.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |--------------|-----------------|  
 |Файл ресурсов сборки (.resx)|Создает файл, содержащий ресурсы CLR.|  
 |Файл растрового изображения (.bmp)|Создает файл точечного рисунка Win32.|  

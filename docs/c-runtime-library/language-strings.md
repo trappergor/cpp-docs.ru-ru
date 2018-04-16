@@ -1,12 +1,12 @@
 ---
-title: "Строки языка | Документация Майкрософт"
-ms.custom: 
+title: Строки языка | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.strings
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |chh|zh-HK|  
 |chi|zh-SG|  
 |китайский|zh|  
-|китайский — Гонконг|zh-HK|  
+|ккитайский — Специальный административный регион Гонконг|zh-HK|  
 |китайский — упрощенное письмо|zh-CN|  
 |китайский — Сингапур|zh-SG|  
 |китайский — традиционный|zh-TW|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |норвежский|Нет|  
 |норвежский — букмол|nb-NO|  
 |норвежский — нюнорск|nn-NO|  
-|португальский — бразильский|pt-BR|  
+|бразильский португальский|pt-BR|  
 |испанский — Аргентина|es-AR|  
 |испанский — Боливия|es-BO|  
 |испанский — Чили|es-CL|  

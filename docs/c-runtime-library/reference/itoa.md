@@ -1,12 +1,12 @@
 ---
-title: "itoa | Документы Майкрософт"
-ms.custom: 
+title: itoa | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - itoa
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - itoa function
 ms.assetid: 1a824780-f3fc-48d4-86c4-d8c866eb7d87
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ac473be35faa10cc781575e47caa567dd11bea87
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoa"></a>itoa
 Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_itoa](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) или ее аналог с улучшенной безопасностью [_itoa_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md).

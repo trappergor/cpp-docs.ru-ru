@@ -1,6 +1,6 @@
 ---
-title: "/Zf (создания быстрее PDB-файла) | Документы Microsoft"
-ms.date: 02/22/2018
+title: /Zf (создания быстрее PDB-файла) | Документы Microsoft
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf (создания быстрее PDB-файла)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/08/2018
 
 Поскольку **/Zf** применяется только для создания PDB-файла, требует [/ZI](z7-zi-zi-debug-information-format.md) или [/ZI](z7-zi-zi-debug-information-format.md) параметр.
 
-**/Zf** параметр доступен начиная с версии 15.1 2017 г. Visual Studio и по умолчанию отключена.
+**/Zf** параметр доступна в Visual Studio 2017 г. версия 15.1, где он выключен по умолчанию. Начиная с Visual Studio 2017 г. версия 15,7 предварительной версии 3, этот параметр включен по умолчанию при **/ZI** или **/ZI** включен параметр.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
@@ -46,5 +46,5 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора в алфавитном порядке](compiler-options-listed-alphabetically.md)  
-[/MP (сборка с несколькими процессами)](mp-build-with-multiple-processes.md)  
+[Параметры компилятора в алфавитном порядке](compiler-options-listed-alphabetically.md)<br/>
+[/MP (сборка с несколькими процессами)](mp-build-with-multiple-processes.md)<br/>

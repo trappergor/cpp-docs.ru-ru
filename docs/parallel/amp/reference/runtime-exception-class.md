@@ -1,12 +1,12 @@
 ---
-title: "Класс runtime_exception | Документы Microsoft"
-ms.custom: 
+title: Класс runtime_exception | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - runtime_exception
@@ -18,17 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception - класс
 Базовый тип для исключений C++ Accelerated Massive параллелизма (AMP) библиотеки.  
@@ -43,21 +43,21 @@ class runtime_exception : public std::exception;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор runtime_exception](#ctor)|Инициализирует новый экземпляр класса `runtime_exception`.|  
 |[~ runtime_exception деструктор](#dtor)|Уничтожает `runtime_exception` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[get_error_code](#runtime_exception__get_error_code)|Возвращает код ошибки, которая вызвала исключение.|  
 
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного `runtime_exception` объекта в другой.|  
   
@@ -71,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **Пространство имен** : Concurrency  
 
-## <a name="runtime_exception__ctor">Конструктор runtime_exception</a>  
+## <a name="runtime_exception__ctor"></a>  Конструктор runtime_exception  
 Инициализирует новый экземпляр класса.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -101,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `runtime_exception`.  
 
-## <a name="dtor">~ runtime_exception деструктор</a>  
+## <a name="dtor"></a>  ~ runtime_exception деструктор  
 Удаляет объект.  
   
 ### <a name="syntax"></a>Синтаксис  
