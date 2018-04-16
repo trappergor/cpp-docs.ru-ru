@@ -1,12 +1,12 @@
 ---
-title: "gets_s, _getws_s | Документы Майкрософт"
-ms.custom: 
+title: gets_s, _getws_s | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getws_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1cc1437d826584b89c7c4d9bb513f99af122ca0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
 Получает строку из потока `stdin` . Это версии функций [gets, _getws](../../c-runtime-library/gets-getws.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,24 +91,24 @@ wchar_t *_getws_s(
   
  Если первым считан символ конца файла, в начале `buffer` сохраняется нуль-символ и возвращается значение `NULL`.  
   
- `_getws` — это версия функции `gets_s` для расширенных символов; ее аргумент и возвращаемое значение являются строками расширенных символов.  
+ `_getws_s` — это версия функции `gets_s` для расширенных символов; ее аргумент и возвращаемое значение являются строками расширенных символов.  
   
  Если `buffer` имеет значение `NULL` или `sizeInCharacters` меньше или равно нулю, а также если буфер слишком мал и не вмещает входную строку и завершающий нуль-символ, эти функции вызывают обработчик недопустимого параметра, как описывается в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают `NULL` и устанавливают параметр errno в значение `ERANGE`.  
   
  В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts`|`gets_s`|`gets_s`|`_getws`|  
+|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
   
 ## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
 |-------------|---------------------|  
 |`gets_s`|\<stdio.h>|  
-|`_getws`|\<stdio.h> или \<wchar.h>|  
+|`_getws_s`|\<stdio.h> или \<wchar.h>|  
   
 Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
   

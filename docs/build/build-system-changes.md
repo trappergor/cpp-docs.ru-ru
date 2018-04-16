@@ -1,12 +1,12 @@
 ---
-title: "Изменения системы построения | Документы Microsoft"
-ms.custom: 
+title: Изменения системы построения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vc.msbuild.changes
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Изменения системы построения
 Система MSBuild используется для построения проектов Visual C++. Однако в Visual Studio 2008 и более ранних версий, использовался VCBuild системы. Определенные типы файлов и основные понятия, которые зависят от VCBuild не существуют или представлены по-разному в текущей системе. В этом документе описываются различия в текущей системе сборки.  
   
-## <a name="vcproj-is-now-vcxproj"></a>сейчас VCPROJ-файл с расширением VCXPROJ  
+## <a name="vcproj-is-now-vcxproj"></a>.vcproj is now .vcxproj  
  Файлы проекта теперь невозможно использовать расширение VCPROJ-файл. Visual Studio автоматически преобразует файлы проекта, созданных в более раннем выпуске Visual C++, в формат, используемый в текущей системе. Дополнительные сведения о ручном обновлении проекта см. в разделе [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
   
  В текущем выпуске расширение имени файла для файла проекта — VCXPROJ-файл.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  В текущем выпуске поддерживается наследование, указав значение свойства как объединение один или несколько значений литералов и макросов свойств. **$(Inherit)** и **$(NoInherit)** макросы не поддерживаются.  
   
- В следующем примере свойство на странице свойств назначается список, разделенный точками с запятой. Список состоит из объединения  *\<значение >* литерал и значение `MyProperty` свойство, к которому можно получить с помощью нотации макроса, **$(**  *MyProperty***)**.  
+ В следующем примере свойство на странице свойств назначается список, разделенный точками с запятой. Список состоит из объединения  *\<значение >* литерал и значение `MyProperty` свойство, к которому можно получить с помощью нотации макроса, **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  

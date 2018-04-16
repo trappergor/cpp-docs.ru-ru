@@ -1,12 +1,12 @@
 ---
-title: "Класс Module::GenericReleaseNotifier | Документы Microsoft"
-ms.custom: 
+title: Класс Module::GenericReleaseNotifier | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - GenericReleaseNotifier class
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c87205d1d52c8273ac7eea55fcc5385810349f1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f867b0cff559ead40be9b2e3ff0722fdb9943034
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Класс Module::GenericReleaseNotifier
 Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.  
@@ -34,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
@@ -48,19 +46,19 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор Module::GenericReleaseNotifier::GenericReleaseNotifier](../windows/module-genericreleasenotifier-genericreleasenotifier-constructor.md)|Инициализирует новый экземпляр класса Module::GenericReleaseNotifier.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод Module::GenericReleaseNotifier::Invoke](../windows/module-genericreleasenotifier-invoke-method.md)|Вызывает обработчик событий, связанный с текущим объектом Module::GenericReleaseNotifier.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Элемент данных Module::GenericReleaseNotifier::callback_](../windows/module-genericreleasenotifier-callback-data-member.md)|Содержит лямбда-выражения, функтором или обработчик событий указателя на функцию, связанный с текущим объектом Module::GenericReleaseNotifier.|  
   

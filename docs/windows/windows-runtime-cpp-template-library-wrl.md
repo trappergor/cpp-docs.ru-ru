@@ -1,31 +1,36 @@
 ---
-title: "Библиотека шаблонов C++ среды выполнения Windows (WRL) | Документы Microsoft"
-ms.custom: 
+title: Библиотека шаблонов C++ среды выполнения Windows (WRL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
-Библиотека шаблонов C++ среды выполнения Windows (WRL) — это библиотека шаблонов, которая предлагает низкоуровневый способ создания и использования компонентов среды выполнения Windows.  
+Библиотека шаблонов C++ среды выполнения Windows (WRL) — это библиотека шаблонов, которая предлагает низкоуровневый способ создания и использования компонентов среды выполнения Windows.
+
+> [!NOTE]
+> WRL теперь заменен в C + +/ WinRT, стандартная C ++ 17 языковых проекции для API среды выполнения Windows. C + +/ WinRT доступен в пакете SDK для Windows 10 версии 1803 и далее. C + +/ WinRT реализованы полностью в файлах заголовков и позволят вам с первого класса доступа на современных API Windows.
+
+> С помощью C + +/ WinRT, можно использовать и создавать с помощью любой совместимый со стандартами C ++ 17 компилятор API среды выполнения Windows. C + +/ WinRT обычно работает быстрее и создает меньше двоичные файлы, чем любой другой параметр языка для среды выполнения Windows. Мы продолжим для поддержки C + +/ CX и WRL, но настоятельно рекомендуется, используют новые приложения C + +/ WinRT. Дополнительные сведения см. в разделе [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Преимущества  
  Библиотека шаблонов C++ среды выполнения Windows дает возможность упрощает реализацию и использование модели объектов компонентов (COM). Она предоставляет такие методы обслуживания, как подсчет ссылок для управления временем существования объектов и проверка значений `HRESULT` для определения успеха или сбоя операции. Для успешного использования библиотека шаблонов C++ среды выполнения Windows, необходимо строго следовать следующим правила и методам.  
@@ -57,9 +62,6 @@ ms.lasthandoff: 02/14/2018
   
  [Как: обработка событий](../windows/how-to-handle-events-using-wrl.md)  
  Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для подписки и обрабатывать события объекта среды выполнения Windows.  
-  
- [Пошаговое руководство: Создание компонента среды выполнения Windows основные](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Показано, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового компонента среды выполнения Windows, который добавляет два числа. Также демонстрируется создание событий и использование компонента из приложения UWP, использующего JavaScript.  
   
  [Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Сведения о создании приложения UWP, в котором используется [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -144,7 +146,6 @@ ms.lasthandoff: 02/14/2018
   
 |||  
 |-|-|  
-|[Шаблон проекта библиотеки классов](../windows/wrl-class-library-project-template.md)|Описание способов доступа к шаблону проекта библиотеки классов WRL. Этот шаблон позволяет упростить задачу использования Visual Studio для создания компонентов среды выполнения Windows.|  
 |[Основные API по категориям](../windows/key-wrl-apis-by-category.md)|Выделяет основной типов, функций и макросов библиотека шаблонов C++ среды выполнения Windows.|  
 |[Ссылки](../windows/wrl-reference.md)|Содержит справочную информацию для библиотека шаблонов C++ среды выполнения Windows.|  
 |[Краткий справочник (среда выполнения Windows и Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Краткое описание C + +/ CX компоненты, которые поддерживают среды выполнения Windows.|  

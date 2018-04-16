@@ -1,7 +1,7 @@
 ---
-title: "-NATVIS (Добавить Natvis в PDB-ФАЙЛ) | Документы Microsoft"
+title: -NATVIS (Добавить Natvis в PDB-ФАЙЛ) | Документы Microsoft
 ms.date: 08/10/2017
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.technology:
 - cpp-tools
 ms.topic: article

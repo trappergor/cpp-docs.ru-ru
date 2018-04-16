@@ -29,6 +29,7 @@
 ## [Манипуляция буфером](buffer-manipulation.md)
 ## [Классификация байтов](byte-classification.md)
 ## [Классификация символов](character-classification.md)
+## [Поддержка сложных математических выражений](complex-math-support.md)
 ## [Выравнивание данных](data-alignment.md)
 ## [Преобразование данных](data-conversion.md)
 ## [Процедуры отладки](debug-routines.md)

@@ -1,34 +1,31 @@
 ---
-title: "Как: активация и использование компонента среды выполнения Windows, с использованием WRL | Документы Microsoft"
-ms.custom: 
+title: 'Как: активация и использование компонента среды выполнения Windows, с использованием WRL | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
 В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для инициализации среды выполнения Windows и как активация и использование компонента среды выполнения Windows.  
-  
-> [!NOTE]
->  В этом примере активирует встроенный компонент среды выполнения Windows. Узнайте, как создать собственный компонент, который может активировать аналогичным образом, в разделе [Пошаговое руководство: создание основного компонента среды выполнения Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Для использования компонента необходимо получить указатель интерфейса на тип, который реализуется компонентом. И поскольку лежащие в основе среды выполнения Windows модели объектов компонентов (COM), необходимо соблюдать правила модели COM для поддержки экземпляра типа. Например, необходимо поддерживать *количество ссылок* , определяющий, когда тип удаляется из памяти.  
   

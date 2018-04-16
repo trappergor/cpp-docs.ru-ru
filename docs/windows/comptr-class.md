@@ -1,12 +1,12 @@
 ---
-title: "Класс ComPtr | Документы Microsoft"
-ms.custom: 
+title: Класс ComPtr | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - ComPtr class
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36ecb5fdf292873c18df8f6b2f032865f44bafd2
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 Создает тип *интеллектуальный указатель* , который представляет интерфейс, определяемый параметром шаблона. ComPtr автоматически поддерживает счетчик ссылок для указателя базового интерфейса и освобождает интерфейс, когда счетчик ссылок становится равен нулю.  
@@ -34,14 +34,10 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-template <  
-   typename T  
->  
+template <typename T>  
 class ComPtr;  
   
-template<  
-   class U  
->  
+template<class T>  
 friend class ComPtr;  
 ```  
   
@@ -61,20 +57,20 @@ friend class ComPtr;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`InterfaceType`|Синоним типа, указанного параметром шаблона `T` .|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор ComPtr::ComPtr](../windows/comptr-comptr-constructor.md)|Инициализирует новый экземпляр класса ComPtr. Перегрузки предоставляют конструкторы по умолчанию, конструкторы копирования, перемещения и преобразования.|  
 |[Деструктор ComPtr::~ComPtr](../windows/comptr-tilde-comptr-destructor.md)|Отменяет инициализацию экземпляра ComPtr.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод ComPtr::As](../windows/comptr-as-method.md)|Возвращает объект ComPtr, представляющий интерфейс, определенный указанным параметром шаблона.|  
 |[Метод ComPtr::AsIID](../windows/comptr-asiid-method.md)|Возвращает объект ComPtr, представляющий интерфейс, определенный указанным идентификатором интерфейса.|  
@@ -90,14 +86,14 @@ friend class ComPtr;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод ComPtr::InternalAddRef](../windows/comptr-internaladdref-method.md)|Увеличивает счетчик ссылок интерфейса, связанного с этим объектом ComPtr.|  
 |[Метод ComPtr::InternalRelease](../windows/comptr-internalrelease-method.md)|Выполняет операцию освобождения модели COM для интерфейса, связанного с этим объектом ComPtr.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|Указывает, управляет ли ComPtr временем существования объекта интерфейса.|  
 |[Оператор ComPtr::operator&](../windows/comptr-operator-ampersand-operator.md)|Получает адрес текущего объекта ComPtr.|  
@@ -108,7 +104,7 @@ friend class ComPtr;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Элемент данных ComPtr::ptr_](../windows/comptr-ptr-data-member.md)|Содержит указатель на интерфейс, который связан с данным объектом ComPtr и управляется им.|  
   

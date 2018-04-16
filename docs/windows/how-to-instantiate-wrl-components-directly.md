@@ -1,35 +1,35 @@
 ---
-title: "Как: непосредственно создать экземпляр компонентов WRL | Документы Microsoft"
-ms.custom: 
+title: 'Как: непосредственно создать экземпляр компонентов WRL | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2d307304c103b62ff5ba20e1af25797745bd035
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8069ac8d079a879cb078d9e3e4b759b02817b5f
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Практическое руководство. Непосредственное создание экземпляра компонентов WRL
 Использование среды выполнения C++ шаблон библиотеки Windows (WRL)[Microsoft::wrl:: make](../windows/make-function.md) и [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) функции для создания экземпляра компонента из модуля, оно определено.  
   
  С помощью создания компонентов напрямую можно уменьшить нагрузку, когда нет необходимости использовать фабрики классов или другие механизмы. Можно создавать компонент непосредственно в обоих приложений универсальной платформы Windows и в приложениях для настольных систем.  
   
- Чтобы узнать, как использовать библиотека шаблонов C++ среды выполнения Windows для создания базового компонента среды выполнения Windows и создать его экземпляр из внешнего приложения универсальной платформы Windows, см. [Пошаговое руководство: создание основного компонента среды выполнения Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md). Сведения об использовании библиотека шаблонов C++ среды выполнения Windows для создания классических компонентов COM и создать его экземпляр из внешнего приложения рабочего стола, в разделе [как: создание классического компонента COM](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
+Сведения об использовании библиотека шаблонов C++ среды выполнения Windows для создания классических компонентов COM и создать его экземпляр из внешнего приложения рабочего стола, в разделе [как: создание классического компонента COM](../windows/how-to-create-a-classic-com-component-using-wrl.md).  
   
  Здесь приведено два примера. В первом примере используется функция `Make` для создания экземпляра компонента. Во втором примере для создания компонента, который может создать ошибку во время построения, используется функция `MakeAndInitialize`. (Поскольку модель COM обычно использует значения `HRESULT` вместо исключений, чтобы показать ошибки, тип модели COM обычно не вызывает исключения из своего конструктора. Функция `MakeAndInitialize` позволяет компоненту проверить его аргументы построения с помощью метода `RuntimeClassInitialize`). Оба примера определяют базовый интерфейс ведения журнала и реализуют этот интерфейс, определяя класс, который выводит сообщения в окно консоли.  
   
@@ -60,5 +60,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
- [Microsoft::wrl:: make](../windows/make-function.md)   
+ [Microsoft::WRL::Make](../windows/make-function.md)   
  [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)
