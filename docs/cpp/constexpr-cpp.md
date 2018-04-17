@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ constexpr ctor (params);
 
 ## <a name="return-value"></a>Возвращаемое значение
 
+
  Переменная или функция constexpr должна возвращать [типа литерала](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>переменные constexpr
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>функции constexpr
+## <a name="constexpr_functions"></a> функции constexpr
 
 Объект **constexpr** функцией называется функция, возвращаемое значение может быть вычислено во время компиляции, когда код необходимо.  Если ее аргументы являются **constexpr** значения и кода-потребителя требуется возвращаемое значение во время компиляции, например для инициализации **constexpr** переменной или предоставления аргумента шаблона, не являющегося типом, он Создает константу времени компиляции. При вызове отличным от**constexpr** аргументов, или если его значение не требуется во время компиляции, она создает значение во время выполнения, как и обычные функции.  (Такое двойственное поведение избавляет от необходимости писать **constexpr** и не-**constexpr** версий одной функции.)
 
