@@ -67,7 +67,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Операторы цикла](../cpp/iteration-statements-cpp.md)   
+ [Операторы перебора](../cpp/iteration-statements-cpp.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
  [Оператор while (C++)](../cpp/while-statement-cpp.md)   
  [Оператор for (C++)](../cpp/for-statement-cpp.md)   
