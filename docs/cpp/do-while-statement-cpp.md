@@ -31,7 +31,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C++)
-Выполняет *инструкции* пока указанное условие завершения ( *выражение* ) не станет равно нулю.  
+Выполняет *инструкции* пока указанное условие завершения ( *выражение* ) не станет равно нулю (false).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,4 +71,4 @@ int main()
  [Ключевые слова](../cpp/keywords-cpp.md)   
  [Оператор while (C++)](../cpp/while-statement-cpp.md)   
  [Оператор for (C++)](../cpp/for-statement-cpp.md)   
- [Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)
+ [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md)
