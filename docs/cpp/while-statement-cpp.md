@@ -1,12 +1,12 @@
 ---
-title: "While-оператор (C++) | Документы Microsoft"
-ms.custom: 
+title: Оператор while (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -29,7 +29,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="while-statement-c"></a>Оператор while (C++)
-Выполняет *инструкции* пока *выражение* равняется нулю.  
+Выполняет *statement* (инструкции) циклически, пока *expression* (выражение) не станет равно нулю.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,9 +40,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Проверка *выражение* выполняется перед каждым выполнением цикла; таким образом, `while` цикл выполняется ноль или более раз. *выражение* должен иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
+ Проверка *expression* выполняется перед каждым выполнением цикла; таким образом, цикл `while` выполняется ноль или более раз. Выражение *expression* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
   
- Объект `while` цикла может также прерываться, когда [разрыв](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [возвращают](../cpp/return-statement-cpp.md) внутри оператора выполняется тело. Используйте [Продолжить](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода `while` цикла. **Продолжить** передает управление следующей итерации цикла `while` цикла.  
+ Цикл `while`  также может прерываться, когда внутри его тела выполняется инструкция [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [return](../cpp/return-statement-cpp.md). Используйте [continue](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода из цикла `while`: **continue** передает управление следующей итерации цикла `while`.  
   
  В следующем коде цикл `while` используется для усечения символов подчеркивания в конце строки.  
   
@@ -80,4 +80,4 @@ int main()
  [Ключевые слова](../cpp/keywords-cpp.md)   
  [Оператор do-while (C++)](../cpp/do-while-statement-cpp.md)   
  [Оператор for (C++)](../cpp/for-statement-cpp.md)   
- [Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)
+ [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md)
