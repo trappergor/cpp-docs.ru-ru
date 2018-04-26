@@ -1,12 +1,12 @@
 ---
-title: "_set_abort_behavior | Документы Майкрософт"
-ms.custom: 
+title: _set_abort_behavior | Документы Майкрософт
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_abort_behavior
@@ -37,18 +37,18 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d26f8339772854ab053c08deae3372ac567f9249
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b7ee65b603997a0be4fe9e937299eab9520c6f5b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 Указывает действие, выполняемое при аварийном завершении программы.
 
 > [!NOTE]
-> Не используйте `abort` функции, чтобы завершить работу приложения магазина Microsoft, за исключением сценариев тестирования или отладки. Программный или пользовательского интерфейса способов закрыть приложение магазина, не разрешено согласно [банка политики](http://go.microsoft.com/fwlink/?LinkId=865936). Дополнительные сведения см. в разделе [жизненный цикл приложения UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
+> Не используйте [прервать](abort.md) функции, чтобы завершить работу приложения магазина Microsoft, за исключением сценариев тестирования или отладки. Программный или пользовательского интерфейса способов закрыть приложение магазина, не разрешено согласно [банка политики](http://go.microsoft.com/fwlink/?LinkId=865936). Дополнительные сведения см. в разделе [жизненный цикл приложения UWP](http://go.microsoft.com/fwlink/p/?LinkId=865934).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,11 +61,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Параметры
 
-[in] _флаги_  
-Новое значение флагов `abort`.
+*flags*<br/>
+Новое значение [прервать](abort.md) флаги.
 
-[in] _маски_  
-Маска для битов флагов `abort`, которую требуется задать.
+*Маска*<br/>
+Маска для [прервать](abort.md) флаги установки битов.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -73,13 +73,13 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>Примечания
 
-Существует два флага `abort`: `_WRITE_ABORT_MSG` и `_CALL_REPORTFAULT`. `_WRITE_ABORT_MSG` определяет, будет ли выводиться полезное текстовое сообщение при аварийном завершении программы. Сообщение указывает на то, что приложение вызвало функцию `abort`. По умолчанию сообщение выводится. Если задано, то `_CALL_REPORTFAULT` указывает, что создан аварийный дамп памяти Watson и отчет при вызове функции `abort`. По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
+Существует два [прервать](abort.md) флаги: **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** определяет ли полезные текстовое сообщение будет напечатан, если программа завершается аварийно. В сообщении указывается, что приложение называется [прервать](abort.md) функции. По умолчанию сообщение выводится. **_CALL_REPORTFAULT**, если задано, указывает, что "Доктор Ватсон" аварийного дампа создается отчет при [прервать](abort.md) вызывается. По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`_set_abort_behavior`|\<stdlib.h>|
+|**_set_abort_behavior**|\<stdlib.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -106,4 +106,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>См. также
 
-[abort](../../c-runtime-library/reference/abort.md)  
+[abort](abort.md)<br/>

@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>Параметр /LTCG (создание кода во время компоновки)
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/22/2018
 Указывает, отображает ли компоновщик индикатор хода выполнения, показывающий, какой процент ссылку завершен. По умолчанию эти данные о состоянии не отображаются.
 
 **ОТКЛЮЧЕНИЕ** (необязательно)<br/>
-Отключает создание кода во время компоновки. Это происходит так же, как когда параметр/LTCG не указан в командной строке.
+Отключает создание кода во время компоновки. Это происходит так же, как при **/LTCG** не указан в командной строке.
 
 **PGINSTRUMENT** (необязательно)<br/>
 Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и [/genprofile или/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) Чтобы создать инструментированную сборку для профильной оптимизации. Данные, собранные из инструментированных запусков используется для создания оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](profile-guided-optimizations.md). Краткая форма этого параметра — **/LTCG: PGI**.
@@ -156,7 +156,7 @@ ms.lasthandoff: 03/22/2018
 
 Можно также применить **/LTCG** к конкретным сборкам, выбрав **построения** > **профильной оптимизации** в строке меню или щелкнув один из профиля Профильная оптимизация параметры контекстного меню для проекта.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>.
 

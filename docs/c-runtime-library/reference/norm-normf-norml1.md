@@ -1,7 +1,7 @@
 ---
 title: Норма, normf, norml | Документы Microsoft
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 04/05/2018
 ms.technology:
 - cpp
 - devlang-cpp
@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28c8e05dfc2cc9e42584324a78ba14f37a9b951d
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: e485c609054021fbdb8563ded539aa8f19cc868e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -76,22 +76,22 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки `norm` , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **long двойные** значения. В программе на языке C `norm` всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **norm** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **long double** значения. В программе на языке C **norm** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|`norm`, `normf`, `norml`|\<complex.h>|\<ccomplex>|
+|**Норма**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
 **_Fcomplex**, **_Dcomplex**, и **_Lcomplex** типы являются эквивалентами характерные для Майкрософт нереализованные собственных типов C99 **float _Complex** , **двойные _Complex**, и **long double _Complex**соответственно.  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 
-[Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

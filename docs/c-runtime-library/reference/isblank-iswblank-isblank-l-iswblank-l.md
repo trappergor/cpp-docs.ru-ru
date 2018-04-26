@@ -1,12 +1,12 @@
 ---
-title: "isblank, iswblank, _isblank_l, _iswblank_l | Документы Майкрософт"
-ms.custom: 
+title: isblank, iswblank, _isblank_l, _iswblank_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - isblank
@@ -36,73 +36,77 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3dff4f409fe57c67e00afe24f10cbb69c6f83b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dbf3c55f6a9665d8d6ad046dba653b362d46cd2a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
-Определяет, представляет ли целое число пустой символ.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int isblank(  
-   int c   
-);  
-int iswblank(  
-   wint_t c   
-);  
-int _isblank_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswblank_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Проверяемое целое число.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает ненулевое значение, если `c` является конкретным представлением пробела, символа горизонтальной табуляции или одного из символов языкового набора, которые используются для разделения слов в строке текста. Функция `isblank` возвращает ненулевое значение, если `c` является символом пробела (0x20) или горизонтальной табуляции (0x09). Результат проверки условия для функций `isblank` зависит от настройки категории `LC_CTYPE` для языкового стандарта. Дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Версии с суффиксом `_l` идентичны версиям без него, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
- Функция `iswblank` возвращает ненулевое значение, если `c` представляет собой расширенный символ, соответствующий стандартному пробелу или символу горизонтальной табуляции.  
-  
- Поведение функций `isblank` и `_isblank_l` не определено, если `c` не является концом файла или не находится в диапазоне от 0 по 0xFF включительно. Если используется библиотека отладки CRT и `c` не является одним из этих значений, функции вызывают утверждение.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istblank`|`isblank`|[_ismbcblank](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswblank`|  
-|`_istblank_l`|`_isblank_l`|[_ismbcblank_l](../../c-runtime-library/reference/ismbcgraph-functions.md)|`_iswblank_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`isblank`|\<ctype.h>|  
-|`iswblank`|\<ctype.h> или \<wchar.h>|  
-|`_isblank_l`|\<ctype.h>|  
-|`_iswblank_l`|\<ctype.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Классификация символов](../../c-runtime-library/character-classification.md)   
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Определяет, представляет ли целое число пустой символ.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int isblank(
+   int c
+);
+int iswblank(
+   wint_t c
+);
+int _isblank_l(
+   int c,
+   _locale_t locale
+);
+int _iswblank_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Проверяемое целое число.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждый из этих процедур возвращает ненулевое значение, если *c* — это представление пробел или символ горизонтальной табуляции или является одним из определенного языкового стандарта набор символов, которые используются для разделения слов в строку текста. **isblank** возвращает ненулевое значение, если *c* является символом пробела (0x20) или символ горизонтальной табуляции (0x09). Результат оценки условия теста для **isblank** зависит от функций **LC_CTYPE** категории задании языкового стандарта; Дополнительные сведения см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md). Версии этих функций, у которых нет **_l** используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; версии, которые имеют **_l** суффиксом идентичны, за исключением того, что они используют языковой стандарт, который передается в. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+**iswblank** возвращает ненулевое значение, если *c* расширенный символ, соответствующий стандартный пробел или символ горизонтальной табуляции.
+
+Поведение **isblank** и **_isblank_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**isblank**|\<ctype.h>|
+|**iswblank**|\<ctype.h> или \<wchar.h>|
+|**_isblank_l**|\<ctype.h>|
+|**_iswblank_l**|\<ctype.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Классификация символов](../../c-runtime-library/character-classification.md)<br/>
+[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

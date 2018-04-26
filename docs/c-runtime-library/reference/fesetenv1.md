@@ -1,13 +1,13 @@
 ---
-title: "fesetenv | Документы Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fesetenv | Документы Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fesetenv
@@ -32,54 +32,59 @@ dev_langs:
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2717c0fee2582cac3c9013f3f49ff37744cbde9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 466d37a55cbd0d4fdf3e1fc0eed085cb9fcb5b6a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fesetenv"></a>fesetenv
-Задает текущую среду с плавающей запятой.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int fesetenv(  
-   const fenv_t *penv  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `penv`  
- Указатель на объект `fenv_t`, который содержит среду вычислений с плавающей запятой, установленную вызовом функции [fegetenv](fegetenv1.md) или [feholdexcept](feholdexcept2.md). Кроме того, вы можете указать запускаемую по умолчанию среду вычислений с плавающей запятой с помощью макроса FE_DFL_ENV.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает 0, если среда был успешно установлена. В противном случае возвращается ненулевое значение.  
-  
-## <a name="remarks"></a>Примечания  
- Затем функция `fesetenv` задает текущую среду вычислений с плавающей запятой на основе значения, сохраненного в объекте `fenv_t`, на который указывает `penv`. Среда с плавающей запятой представляет собой набор флагов состояний и режимов управления, влияющих на вычисления с плавающей запятой. Включает режим округления и флаги состояния для исключений с плавающей запятой.  Если `penv` не задается с помощью макроса FE_DFL_ENV или не указывает на допустимый объект `fenv_t`, последующее поведение функции будет неопределенным.  
-  
- Вызов этой функции задает флаги состояния исключений, которые находятся в объекте `penv`, но не вызывает эти исключения.  
-  
- Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Заголовок C|Заголовок C++|  
-|--------------|--------------|------------------|  
-|`fesetenv`|\<fenv.h>|\<cfenv>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
- [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
- [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)
+
+Задает текущую среду с плавающей запятой.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int fesetenv(
+   const fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*penv*<br/>
+Указатель на **fenv_t** объект, содержащий среде с плавающей запятой в виде набора путем вызова [fegetenv](fegetenv1.md) или [feholdexcept](feholdexcept2.md). Можно также указать среду с плавающей запятой загрузки по умолчанию с помощью **FE_DFL_ENV** макрос.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает 0, если среда был успешно установлена. В противном случае возвращается ненулевое значение.
+
+## <a name="remarks"></a>Примечания
+
+**Fesetenv** функция задает текущую среду с плавающей запятой из значения, хранящегося в **fenv_t** объекта, на который указывает *penv*. Среда с плавающей запятой представляет собой набор флагов состояний и режимов управления, влияющих на вычисления с плавающей запятой. Включает режим округления и флаги состояния для исключений с плавающей запятой.  Если *penv* не **FE_DFL_ENV** или не указывает на допустимый **fenv_t** объекта, последующее поведение не определено.
+
+Вызов этой функции задает исключение флаги состояния, которые находятся в *penv* , но не вызывает эти исключения.
+
+Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Заголовок C|Заголовок C++|
+|--------------|--------------|------------------|
+|**fesetenv**|\<fenv.h>|\<cfenv>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[fegetenv](fegetenv1.md)<br/>
+[feclearexcept](feclearexcept1.md)<br/>
+[feholdexcept](feholdexcept2.md)<br/>
+[fesetexceptflag](fesetexceptflag2.md)<br/>

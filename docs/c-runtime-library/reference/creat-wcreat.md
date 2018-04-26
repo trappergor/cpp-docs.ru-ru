@@ -1,12 +1,12 @@
 ---
-title: "_creat _wcreat | Документы Майкрософт"
-ms.custom: 
+title: _creat _wcreat | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _creat
@@ -41,125 +41,130 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0355f28ada6313e201b8d761813767135ee3cbf8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 73ed20925501e9f797e7a5a2b7895ff0f80a5b1a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="creat-wcreat"></a>Функция _creat, _wcreat
-Создание нового файла. Не рекомендуется использовать функции `_creat` и `_wcreat`; вместо них используйте функции [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _creat(   
-   const char *filename,  
-   int pmode   
-);  
-int _wcreat(   
-   const wchar_t *filename,  
-   int pmode   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `filename`  
- Имя нового файла.  
-  
- `pmode`  
- Настройка разрешений.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Эти функции при успешном завершении возвращают дескриптор созданного файла. В противном случае функции возвращают значение -1 и задайте `errno` как показано в следующей таблице.  
-  
-|Значение `errno`|Описание:|  
-|---------------------|-----------------|  
-|`EACCES`|Параметр `filename` определяет существующий файл, доступный только для чтения, или указывает каталог вместо файла.|  
-|`EMFILE`|Больше нет доступных дескрипторов файлов.|  
-|`ENOENT`|Не удалось найти указанный файл.|  
-  
- Если параметр `filename` имеет значение NULL, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают -1.  
-  
- Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_creat` создает новый файл или открывает и обрезает существующий. `_wcreat` — это версия `_creat` с расширенными символами; аргумент `filename` для `_wcreat` — строка расширенных символов. Поведение `_wcreat` и `_creat` идентично в противном случае.  
-  
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcreat`|`_creat`|`_creat`|`_wcreat`|  
-  
- Если файл, указанный параметром `filename`, не существует, будет создан новый открытый для записи файл с заданными настройками разрешений. Если файл уже существует и его настройки разрешений допускают запись, функция `_creat` обрезает файл до длины 0, уничтожая предыдущее содержимое, и открывает его для записи. Настройка разрешений, `pmode`, применяется только к вновь созданным файлам. Новый файл получает указанные настройки разрешений после его первого закрытия. Целочисленное выражение `pmode` содержит одну или обе константы манифеста `_S_IWRITE` и `_S_IREAD`, определенные в SYS\Stat.h. Если указаны обе константы, они объединяются побитовым оператором `OR` ( **&#124;** ). Параметр `pmode` имеет одно из следующих значений.  
-  
-|Значение|Определение|  
-|-----------|----------------|  
-|`_S_IWRITE`|Разрешена запись.|  
-|`_S_IREAD`|Разрешено чтение.|  
-|`_S_IREAD &#124; _S_IWRITE`|Разрешены чтение и запись.|  
-  
- Если разрешение на запись не предоставлено, файл остается доступным только для чтения. Все файлы всегда доступны для чтения; невозможно предоставить разрешение только на запись. Поэтому режимы `_S_IWRITE` и `_S_IREAD | _S_IWRITE` эквивалентны. Файлы, открытые с помощью функции `_creat`, всегда открываются в режиме совместимости (см. раздел [_sopen](../../c-runtime-library/reference/sopen-wsopen.md)) с `_SH_DENYNO`.  
-  
- Прежде чем устанавливать разрешения, функция `_creat` применяет текущую маску разрешений файла к `pmode` (см. раздел [_umask](../../c-runtime-library/reference/umask.md)). Функция `_creat` предоставлена в основном для обеспечения совместимости с предыдущими библиотеками. Вызов функции `_open` со значениями `_O_CREAT` и `_O_TRUNC` в параметре `oflag` эквивалентен вызову функции `_creat` и предпочтителен для нового кода.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|-------------|---------------------|---------------------|  
-|`_creat`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-|`_wcreat`|\<io.h> или \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_creat.c  
-// compile with: /W3  
-// This program uses _creat to create  
-// the file (or truncate the existing file)  
-// named data and open it for writing.  
-  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int fh;  
-  
-   fh = _creat( "data", _S_IREAD | _S_IWRITE ); // C4996  
-   // Note: _creat is deprecated; use _sopen_s instead  
-   if( fh == -1 )  
-      perror( "Couldn't create data file" );  
-   else  
-   {  
-      printf( "Created data file.\n" );  
-      _close( fh );  
-   }  
-}  
-```  
-  
-```Output  
-Created data file.  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)   
- [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_close](../../c-runtime-library/reference/close.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_sopen, _wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [_umask](../../c-runtime-library/reference/umask.md)
+
+Создание нового файла. **_creat** и **_wcreat** являются устаревшими; используйте [_sopen_s, _wsopen_s](sopen-s-wsopen-s.md) вместо него.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _creat(
+   const char *filename,
+   int pmode
+);
+int _wcreat(
+   const wchar_t *filename,
+   int pmode
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*filename*<br/>
+Имя нового файла.
+
+*pmode*<br/>
+Настройка разрешений.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Эти функции при успешном завершении возвращают дескриптор созданного файла. В противном случае функции возвращают значение -1 и задайте **errno** как показано в следующей таблице.
+
+|**errno** параметр|Описание|
+|---------------------|-----------------|
+|**EACCES**|*Имя файла* указывает существующий файл только для чтения или указывает каталог вместо файла.|
+|**EMFILE**|Больше нет доступных дескрипторов файлов.|
+|**ENOENT**|Не удалось найти указанный файл.|
+
+Если *filename* имеет значение NULL, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1.
+
+Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**_Creat** функция создает новый файл или открывает и обрезает существующий. **_wcreat** — это двухбайтовая версия **_creat**; *filename* аргумент **_wcreat** представляет собой строку расширенных символов. **_wcreat** и **_creat** ведут себя идентично.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
+
+Если файл, указанный параметром *filename* не существует, новый файл создается с заданными настройками разрешений и открыт для записи. Если файл уже существует и его настройки разрешений допускают запись, **_creat** обрезает файл до длины 0, уничтожая предыдущее содержимое и открывает его для записи. Настройка разрешений, *pmode*, применяется к только что созданными файлами только. Новый файл получает указанные настройки разрешений после его первого закрытия. Целочисленное выражение *pmode* содержит одну или обе константы манифеста **_S_IWRITE** и **_S_IREAD**, определенная в SYS\Stat.h. Если заданы обе константы, они объединяются побитовым или оператор ( **&#124;** ). *Pmode* параметра присваивается одно из следующих значений.
+
+|Значение|Определение|
+|-----------|----------------|
+|**_S_IWRITE**|Разрешена запись.|
+|**_S_IREAD**|Разрешено чтение.|
+|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Разрешены чтение и запись.|
+
+Если разрешение на запись не предоставлено, файл остается доступным только для чтения. Все файлы всегда доступны для чтения; невозможно предоставить разрешение только на запись. Режимы **_S_IWRITE** и **_S_IREAD** | **_S_IWRITE** затем эквивалентны. Файлы, открытые с помощью **_creat** всегда открывается в режиме совместимости (в разделе [_sopen](sopen-wsopen.md)) с **_SH_DENYNO**.
+
+**_creat** применяет текущую маску разрешений файла к *pmode* перед установкой разрешений (в разделе [_umask](umask.md)). **_creat** предназначена для обеспечения совместимости с предыдущими библиотеками. Вызов **_open** с **_O_CREAT** и **_O_TRUNC** в *oflag* параметр эквивалентен **_creat**и предпочтителен для нового кода.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательный заголовок|
+|-------------|---------------------|---------------------|
+|**_creat**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wcreat**|\<io.h> или \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_creat.c
+// compile with: /W3
+// This program uses _creat to create
+// the file (or truncate the existing file)
+// named data and open it for writing.
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int fh;
+
+   fh = _creat( "data", _S_IREAD | _S_IWRITE ); // C4996
+   // Note: _creat is deprecated; use _sopen_s instead
+   if( fh == -1 )
+      perror( "Couldn't create data file" );
+   else
+   {
+      printf( "Created data file.\n" );
+      _close( fh );
+   }
+}
+```
+
+```Output
+Created data file.
+```
+
+## <a name="see-also"></a>См. также
+
+[Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chmod, _wchmod](chmod-wchmod.md)<br/>
+[_chsize](chsize.md)<br/>
+[_close](close.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_sopen, _wsopen](sopen-wsopen.md)<br/>
+[_umask](umask.md)<br/>

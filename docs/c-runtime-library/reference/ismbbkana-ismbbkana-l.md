@@ -1,12 +1,12 @@
 ---
-title: "_ismbbkana, _ismbbkana_l | Документы Майкрософт"
-ms.custom: 
+title: _ismbbkana, _ismbbkana_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkana_l
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b79df529aacc0e1e4c4a0dcedfceb09912a8ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 35bc19b50f315987c1a0bb8d2871bd8cfebe9ab6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
-Проверяет на наличие символа катакана; относится к кодовой странице 932.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _ismbbkana(  
-   unsigned int c   
-);  
-int _ismbbkana_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Целое число, которое требуется проверить.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_ismbbkana` возвращает ненулевое значение, если целое число `c` является символом катакана, или 0 в противном случае. Функция`_ismbbkana` использует текущий языковой стандарт для получения сведений о символах, зависящих от языкового стандарта. Функция`_ismbbkana_l` идентична, за исключением того, что она использует переданный объект языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_ismbbkana`|\<mbctype.h>|  
-|`_ismbbkana_l`|\<mbctype.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Классификация байтов](../../c-runtime-library/byte-classification.md)   
- [Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)
+
+Проверяет на наличие символа катакана; относится к кодовой странице 932.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _ismbbkana(
+   unsigned int c
+);
+int _ismbbkana_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Целое число, которое требуется проверить.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_ismbbkana** возвращает ненулевое значение, если целое число *c* является символом катакана, или 0, если это не так. **_ismbbkana** использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. **_ismbbkana_l** идентична за исключением того, что она использует переданный объект языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_ismbbkana**|\<mbctype.h>|
+|**_ismbbkana_l**|\<mbctype.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
+[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

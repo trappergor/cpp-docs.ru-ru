@@ -1,12 +1,12 @@
 ---
-title: "_CxxThrowException | Документы Майкрософт"
-ms.custom: 
+title: _CxxThrowException | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CxxThrowException
@@ -31,42 +31,45 @@ helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb59e3e81a9e92d3a692e91c9c25a92fd09603cd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 70746446ec2b943913604d5940d468373c018aa4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
-Создает запись об исключении и вызывает среду выполнения для запуска обработки исключения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-extern "C" void __stdcall _CxxThrowException(  
-   void* pExceptionObject  
-   _ThrowInfo* pThrowInfo  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] `pExceptionObject`  
- Получает объект, который создал событие.  
-  
- [in] `pThrowInfo`  
- Сведения, необходимые для обработки исключения.  
-  
-## <a name="remarks"></a>Примечания  
- Этот метод включается только в файл компилятора, который используется компилятором для обработки исключений. Не вызывайте этот метод напрямую из кода.  
-  
-## <a name="requirements"></a>Требования  
- **Источник:** Throw.cpp  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)
+
+Создает запись об исключении и вызывает среду выполнения для запуска обработки исключения.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+extern "C" void __stdcall _CxxThrowException(
+   void* pExceptionObject
+   _ThrowInfo* pThrowInfo
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*pExceptionObject* объекта, вызвавшего исключение.
+
+*pThrowInfo* сведения, необходимые для обработки исключений.
+
+## <a name="remarks"></a>Примечания
+
+Этот метод включается только в файл компилятора, который используется компилятором для обработки исключений. Не вызывайте этот метод напрямую из кода.
+
+## <a name="requirements"></a>Требования
+
+**Источник:** Throw.cpp
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>

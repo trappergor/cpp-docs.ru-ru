@@ -1,12 +1,12 @@
 ---
-title: "_fputchar, _fputwchar | Документы Майкрософт"
-ms.custom: 
+title: _fputchar, _fputwchar | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fputchar
@@ -42,85 +42,90 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b7e510e978bcffb8b3744f63d5da24ec7afc5a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8ce9209f8ee99ef2f48eeb81c79548ff6e8cbf6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
-Записывает символ в поток `stdout`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _fputchar(  
-   int c   
-);  
-wint_t _fputwchar(  
-   wchar_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Символ, который требуется записать.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает записанный символ. Для `_fputchar` возвращаемое значение `EOF` указывает на ошибку. Для `_fputwchar` возвращаемое значение `WEOF` указывает на ошибку. Если параметр c равен `NULL`, эти функции создают исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают `EOF` (или `WEOF`) и задайте `errno` для `EINVAL`.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Обе эти функции записывают один символ `c` в поток `stdout` и перемещают индикатор соответствующим образом. `_fputchar` равно `fputc( stdout )`. Эта функция эквивалентна `putchar`, но реализуется только как функция, а не как функция и макрос. В отличие от `fputc` и `putchar` эти функции не совместимы со стандартом ANSI.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_fputtchar`|`_fputchar`|`_fputchar`|`_fputwchar`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`_fputchar`|\<stdio.h>|  
-|`_fputwchar`|\<stdio.h> или \<wchar.h>|  
-  
- Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью —`stdin`, `stdout`, и `stderr`— необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_fputchar.c  
-// This program uses _fputchar  
-// to send a character array to stdout.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-    char strptr[] = "This is a test of _fputchar!!\n";  
-    char *p = NULL;  
-  
-    // Print line to stream using _fputchar.   
-    p = strptr;  
-    while( (*p != '\0') && _fputchar( *(p++) ) != EOF )  
-      ;  
-}  
-```  
-  
-```Output  
-This is a test of _fputchar!!  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)
+
+Записывает символ в поток **stdout**.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _fputchar(
+   int c
+);
+wint_t _fputwchar(
+   wchar_t c
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Символ, который требуется записать.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает записанный символ. Для **_fputchar**, возвращаемое значение **EOF** указывает на ошибку. Для **_fputwchar**, возвращаемое значение **WEOF** указывает на ошибку. В случае c **NULL**, эти функции создают исключение недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** (или **WEOF**) и задайте **errno** для **EINVAL**.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+Обе эти функции записывает отдельный знак *c* для **stdout** и перемещает индикатор соответствующим образом. **_fputchar** эквивалентно `fputc( stdout )`. Кроме того, это эквивалентно **putchar**, но реализован только как функция, а не как функция и макрос. В отличие от **fputc** и **putchar**, эти функции не совместимы со стандартом ANSI.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**_fputchar**|\<stdio.h>|
+|**_fputwchar**|\<stdio.h> или \<wchar.h>|
+
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью —**stdin**, **stdout**, и **stderr**— необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_fputchar.c
+// This program uses _fputchar
+// to send a character array to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+    char strptr[] = "This is a test of _fputchar!!\n";
+    char *p = NULL;
+
+    // Print line to stream using _fputchar.
+    p = strptr;
+    while( (*p != '\0') && _fputchar( *(p++) ) != EOF )
+      ;
+}
+```
+
+```Output
+This is a test of _fputchar!!
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>

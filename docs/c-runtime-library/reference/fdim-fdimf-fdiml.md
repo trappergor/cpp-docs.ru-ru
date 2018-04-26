@@ -1,13 +1,13 @@
 ---
-title: "fdim, fdimf, fdiml | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fdim, fdimf, fdiml | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fdim
@@ -40,90 +40,95 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e628f84dcadf7b1e214d526981191036428042
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8cf0036bc35f6e3b87daecf47225e59d2dc8f087
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
-Определяет положительную разность между первым и вторым значениями.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double fdim(  
-   double x,   
-   double y  
-);  
-  
-float fdim(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fdim(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fdimf(  
-   float x,   
-   float y  
-);  
-  
-long double fdiml(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] `x`  
- Первое значение в вычитании.  
-  
- [in] `y`  
- Второе значение в вычитании.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает положительную разность между `x` и `y`:  
-  
-|Возвращаемое значение|Сценарий|  
-|------------------|--------------|  
-|x-y|если x > y|  
-|0|если x <= y|  
-  
- В случае неудачи может возвращать одну из следующих ошибок:  
-  
-|Проблеми|Назад|  
-|-----------|------------|  
-|Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|  
-|Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|  
-|`x` или `y` имеет значение NaN|NaN|  
-  
- Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `fdim`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `fdim` всегда принимает и возвращает значение типа double.  
-  
- За исключением обработки NaN, эта функция эквивалентно `fmax(x - y, 0)`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Заголовок C|Заголовок C++|  
-|--------------|--------------|------------------|  
-|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmax, fmaxf, fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+
+Определяет положительную разность между первым и вторым значениями.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double fdim(
+   double x,
+   double y
+);
+
+float fdim(
+   float x,
+   float y
+); //C++ only
+
+long double fdim(
+   long double x,
+   long double y
+); //C++ only
+
+float fdimf(
+   float x,
+   float y
+);
+
+long double fdiml(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Первое значение в вычитании.
+
+*y*<br/>
+Второе значение в вычитании.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает положительное разницу между *x* и *y*:
+
+|Возвращаемое значение|Сценарий|
+|------------------|--------------|
+|x-y|если x > y|
+|0|если x <= y|
+
+В случае неудачи может возвращать одну из следующих ошибок:
+
+|Проблеми|Назад|
+|-----------|------------|
+|Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
+|Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|
+|*x* или *y* имеет значение NaN|NaN|
+
+Ошибки сообщаются, как указано в [_matherr](matherr.md).
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **fdim** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **fdim** всегда принимает и возвращает **двойные**.
+
+За исключением обработки NaN, эта функция эквивалентно `fmax(x - y, 0)`.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Заголовок C|Заголовок C++|
+|--------------|--------------|------------------|
+|**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[fmax, fmaxf, fmaxl](fmax-fmaxf-fmaxl.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

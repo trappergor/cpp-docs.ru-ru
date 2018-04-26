@@ -1,12 +1,12 @@
 ---
-title: "_finite, _finitef | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: _finite, _finitef | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _finite
@@ -38,53 +38,58 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb904e04e8a99bff242d520f6c0ca3d404a74e89
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 31b34568def8969fea3602e749502beceb989b39
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="finite-finitef"></a>_finite, _finitef
-Определяет, является ли значение с плавающей запятой конечным.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _finite(   
-   double x   
-);  
-  
-int _finitef(   
-   float x   
-); /* x64 and ARM/ARM64 only */  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `x`  
- Проверяемое значение с плавающей запятой.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Оба `_finite` и `_finitef` возвращает ненулевое значение, если аргумент *x* является конечным, то есть, если -INF < `x` < + INF. Возвращает 0, если аргумент является бесконечным или NAN.  
-  
-## <a name="remarks"></a>Примечания  
- Функции `_finite` и `_finitef` относятся только к системам Майкрософт. Функция `_finitef` доступна только в случае компиляции для платформ x86, ARM или ARM64.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|  
-|--------------|---------------------------|-------------------------------|  
-|`_finite`|\<float.h> или \<math.h>|\<float.h>, \<math.h>, \<cfloat> или \<cmath>|  
-|`_finitef`|\<math.h>|\<math.h> или \<cmath>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+
+Определяет, является ли значение с плавающей запятой конечным.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _finite(
+   double x
+);
+
+int _finitef(
+   float x
+); /* x64 and ARM/ARM64 only */
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Проверяемое значение с плавающей запятой.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Оба **_finite** и **_finitef** возвращает ненулевое значение, если аргумент *x* является конечным, то есть, если -INF < *x* < + INF. Возвращает 0, если аргумент является бесконечным или NAN.
+
+## <a name="remarks"></a>Примечания
+
+**_Finite** и **_finitef** функции — только к системам Майкрософт. **_Finitef** функция находятся только доступна, если для x86 ARM и ARM64 платформы.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|--------------|---------------------------|-------------------------------|
+|**_finite**|\<float.h> или \<math.h>|\<float.h>, \<math.h>, \<cfloat> или \<cmath>|
+|**_finitef**|\<math.h>|\<math.h> или \<cmath>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

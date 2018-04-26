@@ -1,12 +1,12 @@
 ---
-title: "_close | Документы Майкрософт"
-ms.custom: 
+title: _close | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-Закрывает файл.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `fd`  
- Дескриптор файла, ссылающийся на открытый файл.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_close` возвращает 0, если файл был успешно закрыт. Возвращаемое значение-1 указывает на ошибку.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_close` закрывает файл, связанный с `fd`.  
-  
- Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, вызывать `CloseHandle` не требуется, если файл был открыт с помощью функции Win32 `CreateFile` и преобразован в дескриптор файлов с помощью `_open_osfhandle`.  
-  
- Эта функция проверяет свои параметры. Если параметр `fd` является недопустимым дескриптором, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение −1 и задают для `errno` значение `EBADF`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для [_open](../../c-runtime-library/reference/open-wopen.md).  
-  
-## <a name="see-also"></a>См. также  
- [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+Закрывает файл.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*fd*<br/>
+Дескриптор файла, ссылающийся на открытый файл.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_Закрыть** возвращает 0, если файл был успешно закрыт. Возвращаемое значение-1 указывает на ошибку.
+
+## <a name="remarks"></a>Примечания
+
+**_Close** функция закрывает файл, связанный с *fd*.
+
+Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, нет необходимости вызывать **CloseHandle** Если файл был открыт с помощью функции Win32 **CreateFile** и преобразуется в файле дескриптора с помощью **_open_osfhandle**.
+
+Эта функция проверяет свои параметры. Если *fd* имеет недопустимый идентификатор файла, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и **errno** равно **EBADF**.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательный заголовок|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для [_open](open-wopen.md).
+
+## <a name="see-also"></a>См. также
+
+[Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

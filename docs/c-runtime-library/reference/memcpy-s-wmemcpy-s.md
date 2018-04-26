@@ -1,12 +1,12 @@
 ---
-title: "memcpy_s, wmemcpy_s | Документы Майкрософт"
-ms.custom: 
+title: memcpy_s, wmemcpy_s | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - memcpy_s
@@ -33,124 +33,129 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16926cfb0f95911b3e272013167e7fa09b072b25
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5442f70e246dd8e82a6f7b3e1e78810c6d197f41
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
-Копирует байты между буферами. Это версии функций [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-errno_t memcpy_s(  
-   void *dest,  
-   size_t destSize,  
-   const void *src,  
-   size_t count   
-);  
-errno_t wmemcpy_s(  
-   wchar_t *dest,  
-   size_t destSize,  
-   const wchar_t *src,  
-   size_t count  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `dest`  
- Новый буфер.  
-  
- `destSize`  
- Размер буфера назначения в байтах для функции memcpy_s и в расширенных символах (wchar_t) для wmemcpy_s.  
-  
- `src`  
- Буфер, из которого происходит копирование.  
-  
- `count`  
- Число копируемых символов.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
-  
-### <a name="error-conditions"></a>Условия ошибок  
-  
-|`dest`|`destSize`|`src`|`count`|Возвращаемое значение|Содержимое `dest`|  
-|------------|----------------|-----------|---|------------------|------------------------|  
-|any|any|any|0|0|Без изменений|  
-|`NULL`|any|any|ненулевое значение|`EINVAL`|Без изменений|  
-|any|any|`NULL`|ненулевое значение|`EINVAL`|`dest` обнуляется|  
-|any|< `count`|any|ненулевое значение|`ERANGE`|`dest` обнуляется|  
-  
-## <a name="remarks"></a>Примечания  
- `memcpy_s` копирует `count` байт из `src` в `dest`; `wmemcpy_s` копирует `count` расширенных символов (двухбайтовых). При перекрытии исходного и конечного буферов поведение `memcpy_s` не определено. Используйте `memmove_s` для обработки перекрывающихся областей.  
-  
- Эти функции проверяют свои параметры. Если параметр `count` имеет ненулевое значение и `dest` или `src` является указателем NULL, либо если `destSize` меньше `count`, эти функции вызывают обработчик недопустимого параметра, как указано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` или `ERANGE` и присваивают параметру `errno` возвращаемое значение.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`memcpy_s`|\<memory.h> или \<string.h>|  
-|`wmemcpy_s`|\<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_memcpy_s.c  
-// Copy memory in a more secure way.  
-  
-#include <memory.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int a1[10], a2[100], i;  
-   errno_t err;  
-  
-   // Populate a2 with squares of integers  
-   for (i = 0; i < 100; i++)  
-   {  
-      a2[i] = i*i;  
-   }  
-  
-   // Tell memcpy_s to copy 10 ints (40 bytes), giving  
-   // the size of the a1 array (also 40 bytes).  
-   err = memcpy_s(a1, sizeof(a1), a2, 10 * sizeof (int) );      
-   if (err)  
-   {  
-      printf("Error executing memcpy_s.\n");  
-   }  
-   else  
-   {  
-     for (i = 0; i < 10; i++)  
-       printf("%d ", a1[i]);  
-   }  
-   printf("\n");  
-}  
-```  
-  
-```Output  
-0 1 4 9 16 25 36 49 64 81   
-```  
-  
-## <a name="see-also"></a>См. также  
- [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr, wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp, wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memmove, wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
+
+Копирует байты между буферами. Это версии функций [memcpy, wmemcpy](memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+errno_t memcpy_s(
+   void *dest,
+   size_t destSize,
+   const void *src,
+   size_t count
+);
+errno_t wmemcpy_s(
+   wchar_t *dest,
+   size_t destSize,
+   const wchar_t *src,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*dest*<br/>
+Новый буфер.
+
+*destSize*<br/>
+Размер буфера назначения в байтах для функции memcpy_s и в расширенных символах (wchar_t) для wmemcpy_s.
+
+*src*<br/>
+Буфер, из которого происходит копирование.
+
+*count*<br/>
+Число копируемых символов.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает нуль в случае успеха или код ошибки в случае неудачи.
+
+### <a name="error-conditions"></a>Условия ошибок
+
+|*dest*|*destSize*|*src*|*count*|Возвращаемое значение|Содержимое *dest*|
+|------------|----------------|-----------|---|------------------|------------------------|
+|any|any|any|0|0|Без изменений|
+|**NULL**|any|any|ненулевое значение|**EINVAL**|Без изменений|
+|any|any|**NULL**|ненулевое значение|**EINVAL**|*dest* обнуляется|
+|any|< *Счетчик*|any|ненулевое значение|**ERANGE**|*dest* обнуляется|
+
+## <a name="remarks"></a>Примечания
+
+**memcpy_s** копии *число* байтов из *src* для *dest*; **wmemcpy_s** копии *число* расширенных символов (два байта). Если источника и назначения перекрываются, то поведение **memcpy_s** не определено. Используйте **memmove_s** для обработки перекрывающихся областей.
+
+Эти функции проверяют свои параметры. Если *число* не равно нулю и *dest* или *src* является пустым указателем, или *destSize* меньше, чем *число*, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** или **ERANGE** и задайте **errno** к возвращаемому значению.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**memcpy_s**|\<memory.h> или \<string.h>|
+|**wmemcpy_s**|\<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_memcpy_s.c
+// Copy memory in a more secure way.
+
+#include <memory.h>
+#include <stdio.h>
+
+int main()
+{
+   int a1[10], a2[100], i;
+   errno_t err;
+
+   // Populate a2 with squares of integers
+   for (i = 0; i < 100; i++)
+   {
+      a2[i] = i*i;
+   }
+
+   // Tell memcpy_s to copy 10 ints (40 bytes), giving
+   // the size of the a1 array (also 40 bytes).
+   err = memcpy_s(a1, sizeof(a1), a2, 10 * sizeof (int) );
+   if (err)
+   {
+      printf("Error executing memcpy_s.\n");
+   }
+   else
+   {
+     for (i = 0; i < 10; i++)
+       printf("%d ", a1[i]);
+   }
+   printf("\n");
+}
+```
+
+```Output
+0 1 4 9 16 25 36 49 64 81
+```
+
+## <a name="see-also"></a>См. также
+
+[Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memchr, wmemchr](memchr-wmemchr.md)<br/>
+[memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>
+[memmove, wmemmove](memmove-wmemmove.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>

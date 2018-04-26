@@ -1,12 +1,12 @@
 ---
-title: "_rmdir, _wrmdir | Документы Майкрософт"
-ms.custom: 
+title: _rmdir, _wrmdir | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wrmdir
@@ -42,78 +42,81 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527b9baa6da22ae33ef0bd14ded46780aecaa0d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f1532aebb588ca67316a1317e0d27184309a5701
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
-Удаляет каталог.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      int _rmdir(  
-   const char *dirname   
-);  
-int _wrmdir(  
-   const wchar_t *dirname   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `dirname`  
- Путь к каталогу, который следует удалить.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает 0, если каталог был успешно удален. Возвращаемое значение-1 указывает на ошибку и `errno` присваивается одно из следующих значений:  
-  
- **ENOTEMPTY**  
- Заданный путь не является каталогом, каталог не является пустым или каталог является текущим рабочим каталогом или корневым каталогом.  
-  
- `ENOENT`  
- Недопустимый путь.  
-  
- **EACCES**  
- Программа имеет открытый дескриптор каталога.  
-  
- Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_rmdir` удаляет каталог, указанный в параметре `dirname`. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.  
-  
- `_wrmdir` — это версия `_rmdir` с расширенными символами; аргумент `dirname` для `_wrmdir` — строка расширенных символов. Поведение `_wrmdir` и `_rmdir` идентично в противном случае.  
-  
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_trmdir`|`_rmdir`|`_rmdir`|`_wrmdir`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_rmdir`|\<direct.h>|  
-|`_wrmdir`|\<direct.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="libraries"></a>Библиотеки  
- Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Пример  
- См. пример для функции [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).  
-  
-## <a name="see-also"></a>См. также  
- [Управление каталогами](../../c-runtime-library/directory-control.md)   
- [_chdir, _wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_mkdir, _wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)
+
+Удаляет каталог.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _rmdir(
+   const char *dirname
+);
+int _wrmdir(
+   const wchar_t *dirname
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*каталог*<br/>
+Путь к каталогу, который следует удалить.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает 0, если каталог был успешно удален. Возвращаемое значение-1 указывает на ошибку и **errno** присваивается одно из следующих значений:
+
+|Значение errno|Условие|
+|-|-|
+**ENOTEMPTY**|Заданный путь не является каталогом, каталог не является пустым или каталог является текущим рабочим каталогом или корневым каталогом.
+**ENOENT**|Недопустимый путь.
+**EACCES**|Программа имеет открытый дескриптор каталога.
+
+Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**_Rmdir** функция удаляет каталог, заданный параметром *dirname*. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.
+
+**_wrmdir** — это двухбайтовая версия **_rmdir**; *dirname* аргумент **_wrmdir** представляет собой строку расширенных символов. **_wrmdir** и **_rmdir** ведут себя идентично.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_rmdir**|\<direct.h>|
+|**_wrmdir**|\<direct.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Пример
+
+См. пример для функции [_mkdir](mkdir-wmkdir.md).
+
+## <a name="see-also"></a>См. также
+
+[Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
+[_chdir, _wchdir](chdir-wchdir.md)<br/>
+[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

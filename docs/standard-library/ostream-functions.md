@@ -1,10 +1,10 @@
 ---
-title: "Функции &lt;ostream&gt; | Документы Майкрософт"
-ms.custom: 
+title: Функции &lt;ostream&gt; | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ostream/std::swap
@@ -12,18 +12,18 @@ f1_keywords:
 - ostream/std::ends
 - ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
-caps.latest.revision: 
+caps.latest.revision: 15
 manager: ghogen
 helpviewer_keywords:
 - std::swap [C++]
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 4693e33563048807cdef1c81cb4d47d4fb455137
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 41463d912b3ab33812a1f7c0a0ea5f8172036e57
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltostreamgt-functions"></a>Функции &lt;ostream&gt;
 
@@ -39,21 +39,18 @@ ms.lasthandoff: 02/23/2018
 Завершает строку и очищает буфер.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& endl(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*  
-Тип элемента.
+*Elem* тип элемента.
 
-*Ostr*  
-Объект типа **basic_ostream**.
+*Ostr* объект типа **basic_ostream**.
 
-*Tr*  
-Признаки символа.
+*TR* признаки символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -86,21 +83,18 @@ testing
 Завершает строку.
 
 ```cpp
-template class<Elem, Tr> 
+template class<Elem, Tr>
 basic_ostream<Elem, Tr>& ends(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*  
-Тип элемента.
+*Elem* тип элемента.
 
-*Ostr*  
-Объект типа **basic_ostream**.
+*Ostr* объект типа **basic_ostream**.
 
-*Tr*  
-Признаки символа.
+*TR* признаки символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -142,14 +136,11 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*  
-Тип элемента.
+*Elem* тип элемента.
 
-*Ostr*  
-Объект типа **basic_ostream**.
+*Ostr* объект типа **basic_ostream**.
 
-*Tr*  
-Признаки символа.
+*TR* признаки символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -190,17 +181,13 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*  
-Тип элемента.
+*Elem* тип элемента.
 
-*Tr*  
-Признаки символа.
+*TR* признаки символов.
 
-*left*  
-Ссылка lvalue на **basic_ostream** объекта.
+*левый* ссылка lvalue на **basic_ostream** объекта.
 
-*right*  
-Ссылка lvalue на **basic_ostream** объекта.
+*правый* ссылка lvalue на **basic_ostream** объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -208,4 +195,4 @@ void swap(
 
 ## <a name="see-also"></a>См. также
 
-[\<ostream>](../standard-library/ostream.md)  
+[\<ostream>](../standard-library/ostream.md)
