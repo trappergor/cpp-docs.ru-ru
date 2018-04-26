@@ -1,12 +1,12 @@
 ---
-title: "fprintf, _fprintf_l, fwprintf, _fwprintf_l | Документы Майкрософт"
-ms.custom: 
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fwprintf
@@ -44,134 +44,139 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ed0a1d2d2368e99b6e920e5236de989afb97981
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3bae34d9e53d0996ea6a2ba78b832e3e34debc09
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
-Печатает форматированные данные в поток. Существуют более безопасные версии этих функций. См. раздел [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int fprintf(   
-   FILE *stream,  
-   const char *format [,  
-   argument ]...  
-);  
-int _fprintf_l(   
-   FILE *stream,  
-   const char *format,  
-   locale_t locale [,  
-   argument ]...  
-);  
-int fwprintf(   
-   FILE *stream,  
-   const wchar_t *format [,  
-   argument ]...  
-);  
-int _fwprintf_l(   
-   FILE *stream,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument ]...  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE` .  
-  
- `format`  
- Строка управления форматом.  
-  
- `argument`  
- Необязательные аргументы.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `fprintf` возвращает число записанных байтов. `fwprintf` возвращает число записанных расширенных символов. В случае ошибки вывода каждая из этих функций возвращает отрицательное значение. Если параметр `stream` или `format` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задают для `errno` значение `EINVAL`. Строка формата не проверяется на допустимые символы форматирования, как при использовании функций `fprintf_s` или `fwprintf_s`.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `fprintf` форматирует и выводит набор символов и значений в выходной поток `stream`. Каждый `argument` функции (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в `format`. Для функции `fprintf` аргумент `format` имеет такой же синтаксис и применение, как и для функции `printf`.  
-  
- `fwprintf` — версия функции `fprintf` для расширенных символов; в функции `fwprintf` параметр `format` — это строка расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `fprintf` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
-  
- Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
-  
+
+Печатает форматированные данные в поток. Существуют более безопасные версии этих функций. См. раздел [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int fprintf(
+   FILE *stream,
+   const char *format [,
+   argument ]...
+);
+int _fprintf_l(
+   FILE *stream,
+   const char *format,
+   locale_t locale [,
+   argument ]...
+);
+int fwprintf(
+   FILE *stream,
+   const wchar_t *format [,
+   argument ]...
+);
+int _fwprintf_l(
+   FILE *stream,
+   const wchar_t *format,
+   locale_t locale [,
+   argument ]...
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+*format*<br/>
+Строка управления форматом.
+
+*Аргумент*<br/>
+Необязательные аргументы.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**fprintf** возвращает число записанных байтов. **fwprintf** возвращает число записанных расширенных символов. В случае ошибки вывода каждая из этих функций возвращает отрицательное значение. Если *поток* или *формат* — **NULL**, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задайте **errno** для **EINVAL**. Строка формата не проверяется наличие допустимых символов форматирования, как при использовании **fprintf_s** или **fwprintf_s**.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**fprintf** форматирует и выводит последовательность символов и значений в выходные данные *поток*. Каждая функция *аргумент* (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в *формат*. Для **fprintf**, *формат* аргумент имеет же синтаксис и применение, в **printf**.
+
+**fwprintf** — это двухбайтовая версия **fprintf**, в **fwprintf**, *формат* представляет собой строку расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fprintf** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
+
+Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
+
 > [!IMPORTANT]
->  Убедитесь, что `format` не является строкой, определяемой пользователем.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ftprintf`|`fprintf`|`fprintf`|`fwprintf`|  
-|`_ftprintf_l`|`_fprintf_l`|`_fprintf_l`|`_fwprintf_l`|  
-  
- Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`fprintf`, `_fprintf_l`|\<stdio.h>|  
-|`fwprintf`, `_fwprintf_l`|\<stdio.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_fprintf.c  
-/* This program uses fprintf to format various  
- * data and print it to the file named FPRINTF.OUT. It  
- * then displays FPRINTF.OUT on the screen using the system  
- * function to invoke the operating-system TYPE command.  
- */  
-  
-#include <stdio.h>  
-#include <process.h>  
-  
-FILE *stream;  
-  
-int main( void )  
-{  
-   int    i = 10;  
-   double fp = 1.5;  
-   char   s[] = "this is a string";  
-   char   c = '\n';  
-  
-   fopen_s( &stream, "fprintf.out", "w" );  
-   fprintf( stream, "%s%c", s, c );  
-   fprintf( stream, "%d\n", i );  
-   fprintf( stream, "%f\n", fp );  
-   fclose( stream );  
-   system( "type fprintf.out" );  
-}  
-```  
-  
-```Output  
-this is a string  
-10  
-1.500000  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)
+> Убедитесь, что *format* не является строкой, определяемой пользователем.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
+|**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
+
+Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**fprintf**, **_fprintf_l**|\<stdio.h>|
+|**fwprintf**, **_fwprintf_l**|\<stdio.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_fprintf.c
+/* This program uses fprintf to format various
+* data and print it to the file named FPRINTF.OUT. It
+* then displays FPRINTF.OUT on the screen using the system
+* function to invoke the operating-system TYPE command.
+*/
+
+#include <stdio.h>
+#include <process.h>
+
+FILE *stream;
+
+int main( void )
+{
+   int    i = 10;
+   double fp = 1.5;
+   char   s[] = "this is a string";
+   char   c = '\n';
+
+   fopen_s( &stream, "fprintf.out", "w" );
+   fprintf( stream, "%s%c", s, c );
+   fprintf( stream, "%d\n", i );
+   fprintf( stream, "%f\n", fp );
+   fclose( stream );
+   system( "type fprintf.out" );
+}
+```
+
+```Output
+this is a string
+10
+1.500000
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>

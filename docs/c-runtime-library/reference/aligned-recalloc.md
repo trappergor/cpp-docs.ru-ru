@@ -1,12 +1,12 @@
 ---
-title: "_aligned_recalloc | Документы Майкрософт"
-ms.custom: 
+title: _aligned_recalloc | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _aligned_recalloc
@@ -32,62 +32,67 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 715c3da97f92007cfda39b8219795ad09d527601
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ae20d71dc3a6e23b29c76166e1a09fab8afaf6f9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
-Изменяет размер блока памяти, который был выделен с помощью [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), и инициализирует память нулями.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void * _aligned_recalloc(  
-   void *memblock,   
-   size_t num,  
-   size_t size,   
-   size_t alignment  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] `memblock`  
- Указатель текущего блока памяти.  
-  
- [входной] `num`  
- Число элементов.  
-  
- [входной] `size`  
- Размер каждого элемента в байтах.  
-  
- [входной] `alignment`  
- Значение выравнивания, которое должно быть целой степенью числа 2.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `_aligned_recalloc` возвращает указатель void на перераспределенный (и, возможно, перемещенный) блок памяти. Возвращаемое значение — `NULL`, если размер равен нулю и аргумент буфера не `NULL`, а также если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.  
-  
- Будет ошибкой повторно выделить память и изменить выравнивание блока.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_aligned_recalloc` основана на функции `malloc`. Дополнительные сведения об использовании `_aligned_offset_malloc` см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  
-  
- Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_recalloc` проверяет свои параметры. Если `alignment` не является степенью числа 2, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_aligned_recalloc`|\<malloc.h>|  
-  
-## <a name="see-also"></a>См. также  
- [Выравнивание данных](../../c-runtime-library/data-alignment.md)   
- [_recalloc](../../c-runtime-library/reference/recalloc.md)   
- [_aligned_offset_recalloc](../../c-runtime-library/reference/aligned-offset-recalloc.md)
+
+Изменяет размер блока памяти, который был выделен с помощью [_aligned_malloc](aligned-malloc.md) или [_aligned_offset_malloc](aligned-offset-malloc.md), и инициализирует память нулями.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void * _aligned_recalloc(
+   void *memblock,
+   size_t num,
+   size_t size,
+   size_t alignment
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*memblock*<br/>
+Указатель текущего блока памяти.
+
+*Номер*<br/>
+Количество элементов
+
+*size*<br/>
+Размер каждого элемента в байтах.
+
+*Выравнивание*<br/>
+Значение выравнивания, которое должно быть целой степенью числа 2.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_aligned_recalloc** возвращает указатель void на перераспределенный (и, возможно, перемещенный) памяти блок. Возвращает значение **NULL** Если размер равен нулю и аргумент буфера не **NULL**, или если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.
+
+Будет ошибкой повторно выделить память и изменить выравнивание блока.
+
+## <a name="remarks"></a>Примечания
+
+**_aligned_recalloc** на основе **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**, в разделе [malloc](malloc.md).
+
+Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, в разделе [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_recalloc** проверяет свои параметры. Если *выравнивание* не является степенью 2, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_aligned_recalloc**|\<malloc.h>|
+
+## <a name="see-also"></a>См. также
+
+[Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>
+[_recalloc](recalloc.md)<br/>
+[_aligned_offset_recalloc](aligned-offset-recalloc.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "getchar, getwchar | Документы Майкрософт"
-ms.custom: 
+title: getchar, getwchar | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - getchar
@@ -36,85 +36,89 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2e3af8fbc613a3c1634e24011e22283dd8520f7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ab9e7dfa0e42bcb6225917be991c43dd0f844da
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
-Считывает символ из стандартного входного потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int getchar();  
-wint_t getwchar();  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает считанный символ. Чтобы указать на ошибку чтения или конец файла, функция `getchar` возвращает `EOF`, а `getwchar` возвращает `WEOF`. Для функции `getchar` следует использовать `ferror` или `feof` для проверки наличия ошибки или достижения конца файла.  
-  
-## <a name="remarks"></a>Примечания  
- Каждая подпрограмма считывает один символ из `stdin` и увеличивает связанный указатель файла, чтобы он указывал на следующий символ. Функция `getchar` идентична функции [_fgetchar](../../c-runtime-library/reference/fgetc-fgetwc.md), однако реализуется как функция и как макрос.  
-  
- Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getchar_nolock, _getwchar_nolock](../../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_gettchar`|`getchar`|`getchar`|`getwchar`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`getchar`|\<stdio.h>|  
-|`getwchar`|\<stdio.h> или \<wchar.h>|  
-  
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_getchar.c  
-// Use getchar to read a line from stdin.  
-  
-#include <stdio.h>  
-  
-int main()  
-{  
-    char buffer[81];  
-    int i, ch;  
-  
-    for (i = 0; (i < 80) && ((ch = getchar()) != EOF)  
-                         && (ch != '\n'); i++)  
-    {  
-        buffer[i] = (char) ch;  
-    }  
-  
-    // Terminate string with a null character   
-    buffer[i] = '\0';  
-    printf( "Input was: %s\n", buffer);  
-}  
-```  
-  
-```Output  
-  
-This textInput was: This text  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [fgetc, fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)   
- [putc, putwc](../../c-runtime-library/reference/putc-putwc.md)   
- [ungetc, ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)
+
+Считывает символ из стандартного входного потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int getchar();
+wint_t getwchar();
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает считанный символ. Для указания ошибки чтения или условие end of file **getchar** возвращает **EOF**, и **getwchar** возвращает **WEOF**. Для **getchar**, используйте **ferror** или **feof** для проверки для ошибку или конец файла.
+
+## <a name="remarks"></a>Примечания
+
+Каждая процедура считывает один символ из **stdin** и увеличивает указатель связанного файла, чтобы он указывал на следующий символ. **GetChar** совпадает со значением [_fgetchar](fgetc-fgetwc.md), но она реализована в виде функции и как макрос.
+
+Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**getchar**|\<stdio.h>|
+|**getwchar**|\<stdio.h> или \<wchar.h>|
+
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_getchar.c
+// Use getchar to read a line from stdin.
+
+#include <stdio.h>
+
+int main()
+{
+    char buffer[81];
+    int i, ch;
+
+    for (i = 0; (i < 80) && ((ch = getchar()) != EOF)
+                         && (ch != '\n'); i++)
+    {
+        buffer[i] = (char) ch;
+    }
+
+    // Terminate string with a null character
+    buffer[i] = '\0';
+    printf( "Input was: %s\n", buffer);
+}
+```
+
+```Output
+
+This textInput was: This text
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>
+[fgetc, fgetwc](fgetc-fgetwc.md)<br/>
+[_getch, _getwch](getch-getwch.md)<br/>
+[putc, putwc](putc-putwc.md)<br/>
+[ungetc, ungetwc](ungetc-ungetwc.md)<br/>

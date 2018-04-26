@@ -1,12 +1,12 @@
 ---
-title: "_getw | Документы Майкрософт"
-ms.custom: 
+title: _getw | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _getw
@@ -32,95 +32,100 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbfba71c98b347cec3ef56143cce34b1550e4149
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2079672548a7f25106e7540580b60ac9fead8a36
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getw"></a>_getw
-Получает значение типа integer из потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _getw(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_getw` возвращает считанное целочисленное значение. Возвращаемое значение `EOF` указывает на ошибку или конец файла. Тем не менее, так как `EOF` также является допустимым целочисленным значением, можно использовать `feof` или `ferror` для проверки наличия ошибки или достижения конца файла. Если параметр `stream` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL`, и функция возвращает значение `EOF`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_getw` считывает следующее двоичное значение типа `int` из файла, связанного с потоком `stream`, и увеличивает соответствующий указатель файла (если есть) таким образом, чтобы он указывал на следующий непрочитанный символ. Функция `_getw` не требует специального выравнивания элементов потока. При использовании функции `_getw` могут возникнуть проблемы с переносом, связанные с размером типа `int` и порядком байтов в типе `int` в разных системах.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_getw`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_getw.c  
-// This program uses _getw to read a word  
-// from a stream, then performs an error check.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   int i;  
-  
-   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )  
-      printf( "Couldn't open file\n" );  
-   else  
-   {  
-      // Read a word from the stream:  
-      i = _getw( stream );  
-  
-      // If there is an error...  
-      if( ferror( stream ) )  
-      {  
-         printf( "_getw failed\n" );  
-         clearerr_s( stream );  
-      }  
-      else  
-         printf( "First data word in file: 0x%.4x\n", i );  
-      fclose( stream );  
-   }  
-}  
-```  
-  
-## <a name="input-crtgetwtxt"></a>Входные данные: crt_getw.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Вывод  
-  
-```  
-First data word in file: 0x656e694c  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [_putw](../../c-runtime-library/reference/putw.md)
+
+Получает значение типа integer из потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _getw(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_getw** возвращает целочисленное значение, для чтения. Возвращаемое значение **EOF** указывает ошибки или конца файла. Тем не менее поскольку **EOF** значение также является законным целочисленное значение, используйте **feof** или **ferror** проверяемое условие end of file или ошибки. Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **EOF**.
+
+## <a name="remarks"></a>Примечания
+
+**_Getw** функция считывает следующий двоичный параметр типа **int** из файла, связанного с *поток* и увеличивает указатель связанного файла (если есть), чтобы он указывал для следующего непрочитанного символа. **_getw** не приобретает все специальные выравнивания элементов в потоке. Могут возникнуть проблемы с переносом с **_getw** из-за размера **int** тип и порядок байтов внутри **int** тип различаться в разных системах.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_getw**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_getw.c
+// This program uses _getw to read a word
+// from a stream, then performs an error check.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   int i;
+
+   if( fopen_s( &stream, "crt_getw.txt", "rb" ) )
+      printf( "Couldn't open file\n" );
+   else
+   {
+      // Read a word from the stream:
+      i = _getw( stream );
+
+      // If there is an error...
+      if( ferror( stream ) )
+      {
+         printf( "_getw failed\n" );
+         clearerr_s( stream );
+      }
+      else
+         printf( "First data word in file: 0x%.4x\n", i );
+      fclose( stream );
+   }
+}
+```
+
+### <a name="input-crtgetwtxt"></a>Входные данные: crt_getw.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+First data word in file: 0x656e694c
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[_putw](putw.md)<br/>

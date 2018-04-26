@@ -1,13 +1,13 @@
 ---
-title: "conj, conjf, conjl | Документы Майкрософт"
-ms.custom: 
+title: conj, conjf, conjl | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - conj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01feb4b30305f915a91d104d9134018c3d5b24e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
-Извлекает комплексно-сопряженную величину комплексного числа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-_Dcomplex conj(   
-   _Dcomplex z   
-);  
-_Fcomplex conj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex conj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex conjf(   
-   _Fcomplex z   
-);  
-_Lcomplex conjl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `z`  
- Комплексное число.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Комплексно сопряженное значение `z`.  Результат имеет такую же действительную и мнимую части, как у `z`, но с противоположным знаком.  
-  
-## <a name="remarks"></a>Примечания  
- Поскольку C++ допускает перегрузку, можно вызывать перегрузки `conj`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `conj` всегда принимает и возвращает значение `_Dcomplex` .  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Заголовок C|Заголовок C++|  
-|-------------|--------------|------------------|  
-|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Извлекает комплексно-сопряженную величину комплексного числа.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+_Dcomplex conj(
+   _Dcomplex z
+);
+_Fcomplex conj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex conj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex conjf(
+   _Fcomplex z
+);
+_Lcomplex conjl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*z*<br/>
+Комплексное число.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Сопряженное число комплексного *z*.  Результат имеет ту же часть вещественной и мнимой как *z*, но с противоположным знаком.
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **conj** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **conj** всегда принимает и возвращает **_Dcomplex** значение.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Заголовок C|Заголовок C++|
+|-------------|--------------|------------------|
+|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>
