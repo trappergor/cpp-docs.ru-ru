@@ -24,7 +24,7 @@
 ## [Параметры ссылок](link-options.md)
 ## [Потенциальные ошибки при передаче объектов CRT через границы DLL](potential-errors-passing-crt-objects-across-dll-boundaries.md)
 ## [Инициализация CRT](crt-initialization.md)
-# [Процедуры среды выполнения по категориям](run-time-routines-by-category.md)
+# [Универсальные подпрограммы среды выполнения C по категориям](run-time-routines-by-category.md)
 ## [Доступ к аргументам](argument-access.md)
 ## [Манипуляция буфером](buffer-manipulation.md)
 ## [Классификация байтов](byte-classification.md)
