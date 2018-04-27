@@ -1,102 +1,678 @@
 ---
-title: "Структура atomic | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Структура atomic | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/20/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atomic/std::atomic
 dev_langs:
 - C++
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5e7de7a5098aec10618c961444eb73b4597d0fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ae025dd124e8091994bea1d6a19a7b55d3984fed
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="atomic-structure"></a>Структура atomic
-Описывает объект, который выполняет атомарные операции с сохраненным значением типа `Ty`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```
+
+Описывает объект, который выполняет атомарные операции для хранится в виде значения типа *Ty*.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <class Ty>
 struct atomic;
-```  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[atomic](http://msdn.microsoft.com/Library/a538c43f-4d48-4308-ae1b-bab1839bccb8)|Создает атомарный объект.|  
-  
-### <a name="public-operators"></a>Открытые операторы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[оператор atomic::operator Ty](http://msdn.microsoft.com/Library/a366c700-c7a0-4bcb-8eb4-4b57dfaea065)|Считывает и возвращает сохраненное значение. ([atomic::load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1))|  
-|[оператор atomic::operator=](http://msdn.microsoft.com/Library/fe161d57-47ae-4bad-92bf-ce32ac8d5953)|Использует указанное значение для замены сохраненного значения. ([atomic::store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b))|  
-|[оператор atomic::operator++](http://msdn.microsoft.com/Library/492959e9-1ea8-4e02-a031-82b1b92e91a0)|Увеличивает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|  
-|[оператор atomic::operator+=](http://msdn.microsoft.com/Library/9ec97aa2-c9d7-436b-943d-2989eb2617dd)|Добавляет указанное значение к сохраненному значению. Используется только специализациями для целочисленных типов и указателей.|  
-|[оператор atomic::operator--](http://msdn.microsoft.com/Library/ad7c1ea7-1f6d-4a54-bf26-07630f749864)|Уменьшает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|  
-|[оператор atomic::operator-=](http://msdn.microsoft.com/Library/902d0d9f-88fd-4500-aa2d-1e50f443e77c)|Вычитает указанное значение из сохраненного значения. Используется только специализациями для целочисленных типов и указателей.|  
-|[оператор atomic::operator&=](http://msdn.microsoft.com/Library/90e730ac-12e1-4abb-98f5-4eadd6861a89)|Выполняет побитовую операцию `and` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
-|[оператор atomic::operator&#124;=](http://msdn.microsoft.com/Library/f105eacc-31a6-4906-abba-f1cf013599b2)|Выполняет побитовую операцию `or` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
-|[оператор atomic::operator^=](http://msdn.microsoft.com/Library/f2a4da9d-67e8-4249-9161-9998e72a33c2)|Выполняет побитовую операцию `exclusive or` с указанным значением и сохраненным значением. Используется только специализациями для целочисленных типов.|  
-  
-### <a name="public-methods"></a>Открытые методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[compare_exchange_strong](http://msdn.microsoft.com/Library/47bbf894-b28c-4ece-959e-67b3863cf4ed)|Выполняет операцию `atomic_compare_and_exchange` с `this` и возвращает результат.|  
-|[compare_exchange_weak](http://msdn.microsoft.com/Library/e15e421a-f7a3-4272-993a-f487d2242e4f)|Выполняет операцию `weak_atomic_compare_and_exchange` с `this` и возвращает результат.|  
-|[fetch_add](http://msdn.microsoft.com/Library/c68b91f2-6e8a-4ffa-8991-6bb6d466e1f3)|Добавляет указанное значение к сохраненному значению.|  
-|[fetch_and](http://msdn.microsoft.com/Library/a9c83001-b72c-4085-9640-f63f866714b9)|Выполняет побитовую операцию `and` с указанным значением и сохраненным значением.|  
-|[fetch_or](http://msdn.microsoft.com/Library/4c532f7f-80c5-432a-b34b-48feacab8dca)|Выполняет побитовую операцию `or` с указанным значением и сохраненным значением.|  
-|[fetch_sub](http://msdn.microsoft.com/Library/8cc80d4b-0942-45a3-9db8-bbf339a903e4)|Вычитает указанное значение из сохраненного значения.|  
-|[fetch_xor](http://msdn.microsoft.com/Library/92bbaff8-ee29-4a1e-aee4-d9d405285bfe)|Выполняет побитовую операцию `exclusive or` с указанным значением и сохраненным значением.|  
-|[is_lock_free](http://msdn.microsoft.com/Library/b99d5130-cdda-40a2-b14c-152b13a8ba45)|Указывает, являются ли атомарные операции с `this` *неблокирующими*. Атомарный тип является *неблокирующим*, если никакие атомарные операции с этим типом не используют блокировки.|  
-|[load](http://msdn.microsoft.com/Library/05212726-cf8a-46fe-83d2-c16ac2abb7d1)|Считывает и возвращает сохраненное значение.|  
-|[store](http://msdn.microsoft.com/Library/84759413-d664-47ef-a1f3-a73c5a62007b)|Использует указанное значение для замены сохраненного значения.|  
-  
-## <a name="remarks"></a>Примечания  
- Тип `Ty` должен быть *доступен для простого копирования*. То есть при использовании [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) для копирования его байтов должен создаваться допустимый объект `Ty`, эквивалентный исходному объекту. Функции-члены `compare_exchange_weak` и `compare_exchange_strong` используют [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) для определения, равны ли два значения `Ty`. Эти функции не будут использовать заданный в `Ty` `operator==`. Функции-члены `atomic` используют `memcpy` для копирования значений типа `Ty`.  
-  
- Частичная специализация `atomic<Ty *>` существует для всех типов указателей. Специализация позволяет добавлять смещение к значению управляемого указателя или вычитать из него смещение. Арифметические операции принимают аргумент типа `ptrdiff_t` и настраивают этот аргумент в соответствии с размером `Ty` для согласования с обычным вычислением адресов.  
-  
- Специализация существует для любого целочисленного типа, кроме `bool`. Каждая специализация предоставляет широкий набор методов для атомарных арифметических и логических операций.  
-  
-||||  
-|-|-|-|  
-|`atomic<char>`|`atomic<signed char>`|`atomic<unsigned char>`|  
-|`atomic<char16_t>`|`atomic<char32_t>`|`atomic<wchar_t>`|  
-|`atomic<short>`|`atomic<unsigned short>`|`atomic<int>`|  
-|`atomic<unsigned int>`|`atomic<long>`|`atomic<unsigned long>`|  
-|`atomic<long long>`|`atomic<unsigned long long>`|  
-  
- Специализации для целочисленных типов являются производными от соответствующих типов `atomic_integral`. Например, `atomic<unsigned int>` является производной от `atomic_uint`.  
-  
-## <a name="requirements"></a>Требования  
- **Header:** \<atomic>  
-  
- **Пространство имен:** std  
-  
-## <a name="see-also"></a>См. также  
- [\<atomic>](../standard-library/atomic.md)   
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+```
 
+## <a name="members"></a>Участники
 
+|Член|Описание|
+|----------|-----------------|
+|**Конструктор**||
+|[atomic](#atomic)|Создает атомарный объект.|
+|**Операторы**||
+|[atomic::operator Ty](#op_ty)|Считывает и возвращает сохраненное значение. ([atomic::load](#load))|
+|[atomic::operator =](#op_eq)|Использует указанное значение для замены сохраненного значения. ([atomic::store](#store))|
+|[atomic::operator ++](#op_inc)|Увеличивает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|
+|[оператор atomic::operator +=](#op_add_eq)|Добавляет указанное значение к сохраненному значению. Используется только специализациями для целочисленных типов и указателей.|
+|[atomic::operator--](#op_dec)|Уменьшает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|
+|[atomic::operator-=](#op_sub_eq)|Вычитает указанное значение из сохраненного значения. Используется только специализациями для целочисленных типов и указателей.|
+|[atomic::operator & =](#op_and_eq)|Выполняет побитовую операцию и указанное значение и сохраненное значение. Используется только специализациями для целочисленных типов.|
+|[atomic::operator&#124;=](#op_or_eq)|Выполняет побитовую операцию или указанное значение и сохраненное значение. Используется только специализациями для целочисленных типов.|
+|[atomic::operator ^ =](#op_xor_eq)|Выполняет побитовое исключающее или в указанное значение и сохраненное значение. Используется только специализациями для целочисленных типов.|
+|**Функции**||
+|[compare_exchange_strong](#compare_exchange_strong)|Выполняет *atomic_compare_and_exchange* операции **это** и возвращает результат.|
+|[compare_exchange_weak](#compare_exchange_weak)|Выполняет *weak_atomic_compare_and_exchange* операции **это** и возвращает результат.|
+|[fetch_add](#fetch_add)|Добавляет указанное значение к сохраненному значению.|
+|[fetch_and](#fetch_and)|Выполняет побитовую операцию и указанное значение и сохраненное значение.|
+|[fetch_or](#fetch_or)|Выполняет побитовую операцию или указанное значение и сохраненное значение.|
+|[fetch_sub](#fetch_sub)|Вычитает указанное значение из сохраненного значения.|
+|[fetch_xor](#fetch_xor)|Выполняет побитовое исключающее или в указанное значение и сохраненное значение.|
+|[is_lock_free](#is_lock_free)|Указывает ли атомарных операций с **это** , *блокировки свободного*. Атомарный тип является *неблокирующим*, если никакие атомарные операции с этим типом не используют блокировки.|
+|[Нагрузки](#load)|Считывает и возвращает сохраненное значение.|
+|[store](#store)|Использует указанное значение для замены сохраненного значения.|
 
+## <a name="remarks"></a>Примечания
+
+Тип *Ty* должно быть *тривиально копируемых*. То есть с использованием [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) для копирования его байтов должен быть допустимым *Ty* объект, который сравнивает его с исходным объектом. [Compare_exchange_weak](#compare_exchange_weak) и [compare_exchange_strong](#compare_exchange_strong) использование функции-члены [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) для определения двух *Ty* значения равны. Эти функции не будет использовать *Ty*-определенные **оператор ==**. Функции-члены **atomic** использовать **memcpy** для копирования значений типа *Ty*.
+
+Частичная специализация ** atomic\<Ty * > **, существует для всех типов указателей. Специализация позволяет добавлять смещение к значению управляемого указателя или вычитать из него смещение. Арифметические операции принимает аргумент типа **ptrdiff_t** и настроить в соответствии с размером этого аргумента *Ty* для согласования с обычным адрес арифметические.
+
+Для любого целочисленного типа, кроме существует специализацию **bool**. Каждая специализация предоставляет широкий набор методов для атомарных арифметических и логических операций.
+
+||||
+|-|-|-|
+|**atomic\<char >**|**atomic\<подписан char >**|**atomic\<unsigned char >**|
+|**atomic\<char16_t >**|**atomic\<char32_t >**|**atomic\<wchar_t >**|
+|**atomic\<короткий >**|**atomic\<short без знака >**|**atomic\<int >**|
+|**atomic\<unsigned int >**|**atomic\<long >**|**atomic\<unsigned long >**|
+|**atomic\<long long >**|**atomic\<long long без знака >**|
+
+Целочисленный специализации являются производными от соответствующего **atomic_integral** типов. Например **atomic\<unsigned int >** является производным от **atomic_uint**.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<atomic >
+
+**Пространство имен:** std
+
+## <a name="atomic"></a> atomic::atomic
+
+Создает атомарный объект.
+
+```cpp
+atomic();
+atomic( const atomic& );
+atomic( Ty Value ) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение инициализации.
+
+### <a name="remarks"></a>Примечания
+
+Атомарные объекты не копируются или перемещаются.
+
+Объекты, которые являются атомарными экземпляров\<*Ty*> можно инициализировать только с конструктор, который принимает аргумент типа *Ty* , а не с помощью агрегатной инициализации. Однако объекты atomic_integral можно инициализировать только с помощью агрегатной инициализации.
+
+```cpp
+atomic<int> ai0 = ATOMIC_VAR_INIT(0);
+atomic<int> ai1(0);
+```
+
+## <a name="op_ty"></a> atomic::operator *за этот год*
+
+Оператор для типа, указанного в шаблоне atomic\<*Ty*>. Получает значение, хранимых в  **\*это**.
+
+```cpp
+atomic<Ty>::operator Ty() const volatile noexcept;
+atomic<Ty>::operator Ty() const noexcept;
+```
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор применяется **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_eq"></a> atomic::operator =
+
+Сохраняет указанное значение.
+
+```cpp
+Ty operator=(
+   Ty Value
+) volatile noexcept;
+Ty operator=(
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Объект *Ty* объекта.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает *значение*.
+
+## <a name="op_inc"></a> atomic::operator ++
+
+Увеличивает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.
+
+```cpp
+Ty atomic<Ty>::operator++(int) volatile noexcept;
+Ty atomic<Ty>::operator++(int) noexcept;
+Ty atomic<Ty>::operator++() volatile noexcept;
+Ty atomic<Ty>::operator++() noexcept;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Первые два операторы возвращают Увеличиваемое значение; последние два операторы возвращают значение перед приращение. Используйте операторы **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_add_eq"></a> оператор atomic::operator +=
+
+Добавляет указанное значение к сохраненному значению. Используется только специализациями для целочисленных типов и указателей.
+
+```cpp
+Ty atomic<Ty>::operator+=(
+   Ty Value
+) volatile noexcept;
+Ty atomic<Ty>::operator+=(
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение целочисленного или указателя.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат сложения.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор используется **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_dec"></a> atomic::operator--
+
+Уменьшает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.
+
+```cpp
+Ty atomic<Ty>::operator--(int) volatile noexcept;
+Ty atomic<Ty>::operator--(int) noexcept;
+Ty atomic<Ty>::operator--() volatile noexcept;
+Ty atomic<Ty>::operator--() noexcept;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Первые два операторы возвращают уменьшенное значение; последние два операторы возвращают значение перед декремента. Используйте операторы **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_sub_eq"></a> atomic::operator-=
+
+Вычитает указанное значение из сохраненного значения. Используется только специализациями для целочисленных типов и указателей.
+
+```cpp
+Ty atomic<Ty>::operator-=(
+   Ty Value
+) volatile noexcept;
+Ty atomic<Ty>::operator-=(
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение целочисленного или указателя.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат вычитания.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор используется **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_and_eq"></a> atomic::operator & =
+
+Выполняет побитовую операцию и на указанное значение и сохраненное значение  **\*это**. Используется только специализациями для целочисленных типов.
+
+```cpp
+atomic<Ty>::operator&= (
+   Ty Value
+) volatile noexcept;
+atomic<Ty>::operator&= (
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Результат битовой операции и.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с побитовой операции и *значение* и текущие значения, хранящиеся в  **\*это**, в пределах ограничений, наложенных на **memory_order_seq_cst** [memory_order](atomic-enums.md).
+
+## <a name="op_or_eq"></a> atomic::operator&#124;=
+
+Выполняет побитовую операцию или на указанное значение и сохраненное значение  **\*это**. Используется только специализациями для целочисленных типов.
+
+```cpp
+atomic<Ty>::operator|= (
+   Ty Value
+) volatile noexcept;
+atomic<Ty>::operator|= (
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Результат битовой операции или.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с помощью битового оператора или из *значение* и текущие значения, хранящиеся в  **\*это**, в пределах ограничений, наложенных на **memory_order_seq_cst** [memory_order](atomic-enums.md) ограничения.
+
+## <a name="op_xor_eq"></a> atomic::operator ^ =
+
+Выполняет побитовое исключающее или на указанное значение и сохраненное значение  **\*это**. Используется только специализациями для целочисленных типов.
+
+```cpp
+atomic<Ty>::operator^= (
+   Ty Value
+) volatile noexcept;
+atomic<Ty>::operator^= (
+   Ty Value
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Результат побитовое исключающее или.
+
+### <a name="remarks"></a>Примечания
+
+Этот оператор выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с побитовое исключающее или для *значение* и текущие значения, хранящиеся в  **\*это**, в пределах ограничений, наложенных на **memory_order_seq_cst** [memory_order](atomic-enums.md) ограничения.
+
+## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
+
+Выполняет атомарную операцию сравнения и обмена на  **\*это**.
+
+```cpp
+bool compare_exchange_strong(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1,
+   memory_order Order2
+) volatile noexcept;
+bool compare_exchange_strong(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1,
+   memory_order Order2
+) noexcept;
+bool compare_exchange_strong(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1 = memory_order_seq_cst
+) volatile noexcept;
+bool compare_exchange_strong(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1 = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Exp*<br/>
+Значение типа *Ty*.
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Order1*<br/>
+Первый аргумент **memory_order**.
+
+*Order2*<br/>
+Второй **memory_order** аргумент.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект **bool** , показывающее результат сравнения значений.
+
+### <a name="remarks"></a>Примечания
+
+Это атомарной операции сравнения и обмена сравнивает значение, которое хранится в  **\*это** с *Exp*. Если значения равны, операция заменяет значение, которое хранится в  **\*это** с *значение* , используя операцию чтения, изменения и записи и применяя порядок ограничения памяти, которые заданные *Order1*. Если значения не равны, в операции используется значение, которое хранится в  **\*это** заменить *Exp* и применяет порядок ограничения памяти, которые определяются *Order2* .
+
+Перегрузки, которые не имеют секунды **memory_order** использовать неявную *Order2* , основанный на значении *Order1*. Если *Order1* — **memory_order_acq_rel**, *Order2* — **memory_order_acquire**. Если *Order1* — **memory_order_release**, *Order2* — **memory_order_relaxed**. Во всех остальных случаях *Order2* равен *Order1*.
+
+Для перегрузок, которые принимают два **memory_order** параметров, значение *Order2* не должно быть **memory_order_release** или **memory_order_acq_rel**и не может быть надежнее, чем значение *Order1*.
+
+## <a name="compare_exchange_weak"></a> atomic::compare_exchange_weak
+
+Выполняет слабое atomic сравнение и обмен операцию на  **\*это**.
+
+```cpp
+bool compare_exchange_weak(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1,
+   memory_order Order2
+) volatile noexcept;
+bool compare_exchange_weak(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1,
+   memory_order Order2
+) noexcept;
+bool compare_exchange_weak(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1 = memory_order_seq_cst
+) volatile noexcept;
+bool compare_exchange_weak(
+   Ty& Exp,
+   Ty Value,
+   memory_order Order1 = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Exp*<br/>
+Значение типа *Ty*.
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Order1*<br/>
+Первый аргумент **memory_order**.
+
+*Order2*<br/>
+Второй **memory_order** аргумент.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект **bool** , показывающее результат сравнения значений.
+
+### <a name="remarks"></a>Примечания
+
+Это атомарной операции сравнения и обмена сравнивает значение, которое хранится в  **\*это** с *Exp*. Если значения равны, операция заменяет значение, которое хранится в  **\*это** с*значение* , используя операцию чтения, изменения и записи и применяя порядок ограничения памяти, которые заданные *Order1*. Если значения не равны, в операции используется значение, которое хранится в  **\*это** заменить *Exp* и применяет порядок ограничения памяти, которые определяются *Order2* .
+
+Сравните weak atomic и выполняет операции обмена exchange, если сравниваемые значения равны. Если значения не равны, операция не обязательно выполнять exchange.
+
+Перегрузки, которые не имеют секунды **memory_order** использовать неявную *Order2* , основанный на значении *Order1*. Если *Order1* — **memory_order_acq_rel**, *Order2* — **memory_order_acquire**. Если *Order1* — **memory_order_release**, *Order2* — **memory_order_relaxed**. Во всех остальных случаях *Order2* равен *Order1*.
+
+Для перегрузок, которые принимают два **memory_order** параметров, значение *Order2* не должно быть **memory_order_release** или **memory_order_acq_rel**и не может быть надежнее, чем значение *Order1*.
+
+## <a name="exchange"></a> atomic::Exchange
+
+Использует указанное значение для замены сохраненного значения  **\*это**.
+
+```cpp
+Ty atomic<Ty>::exchange(
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::exchange(
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Сохраненное значение  **\*это** до exchange.
+
+### <a name="remarks"></a>Примечания
+
+Эта операция не выполняет операции чтения, изменения и записи для использования *значение* заменить значение, которое хранится в  **\*это**, в пределах ограничений памяти, определяемые  *Порядок*.
+
+## <a name="fetch_add"></a> atomic::fetch_add
+
+Получает значение, хранящееся в  **\*это**, а затем добавляет указанное значение с сохраненным значением.
+
+```cpp
+Ty atomic<Ty>::fetch_add (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::fetch_add (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий значение, хранящееся в  **\*это** перед добавлением.
+
+### <a name="remarks"></a>Примечания
+
+**Fetch_add** метод выполняет чтение изменение запись операцию атомарным образом добавить *значение* с сохраненным значением в  **\*это**и применяет память ограничения, которые определяются *порядок*.
+
+## <a name="fetch_and"></a> atomic::fetch_and
+
+Выполняет побитовую операцию и на значение и существующее значение, которое хранится в  **\*это**.
+
+```cpp
+Ty atomic<Ty>::fetch_and (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::fetch_and (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат битовой операции и.
+
+### <a name="remarks"></a>Примечания
+
+**Fetch_and** метод выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с побитовой операции и *значение* и текущий значение, хранящееся в  **\*это**, в пределах ограничений памяти, определяемые *порядок*.
+
+## <a name="fetch_or"></a> atomic::fetch_or
+
+Выполняет побитовую операцию или на значение и существующее значение, которое хранится в  **\*это**.
+
+```cpp
+Ty atomic<Ty>::fetch_or (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::fetch_or (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат битовой операции или.
+
+### <a name="remarks"></a>Примечания
+
+**Fetch_or** метод выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с помощью битового оператора или из *значение* и текущее значение которое хранится в  **\*это**, в пределах ограничений памяти, определяемые *порядок*.
+
+## <a name="fetch_sub"></a> atomic::fetch_sub
+
+Вычитает указанное значение из сохраненного значения.
+
+```cpp
+Ty atomic<Ty>::fetch_sub (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::fetch_sub (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат вычитания.
+
+### <a name="remarks"></a>Примечания
+
+**Fetch_sub** метод выполняет чтение изменение запись операцию Вычитаемый атомарным образом *значение* из значения, хранимые в  **\*это**, в памяти ограничения, которые определяются *порядок*.
+
+## <a name="fetch_xor"></a> atomic::fetch_xor
+
+Выполняет побитовое исключающее или на значение и существующее значение, которое хранится в  **\*это**.
+
+```cpp
+Ty atomic<Ty>::fetch_xor (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+Ty atomic<Ty>::fetch_xor (
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Значение типа *Ty*.
+
+*Порядок*<br/>
+Перечисление **memory_order**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект *Ty* объект, содержащий результат побитовое исключающее или.
+
+### <a name="remarks"></a>Примечания
+
+**Fetch_xor** метод выполняет операцию чтения, изменения и записи, чтобы заменить сохраненное значение  **\*это** с побитовое исключающее или для *значение* и Текущее значение, которое хранится в  **\*это**и применяет ограничения памяти, которые определяются *порядок*.
+
+## <a name="is_lock_free"></a> atomic::is_lock_free
+
+Указывает, является ли атомарных операций с  **\*это** являются блокировки свободного.
+
+```cpp
+bool is_lock_free() const volatile noexcept;
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+значение true, если атомарные операции над  **\*это** являются блокировки свободного; в противном случае — значение false.
+
+### <a name="remarks"></a>Примечания
+
+Является атомарным типом — блокировка бесплатно, если нет атомарные операции для этого типа используют блокировки.
+
+## <a name="load"></a> atomic::Load
+
+Получает значение, хранимых в  **\*это**, в пределах ограничений заданной памяти.
+
+```cpp
+Ty atomic::load(
+   memory_order Order = memory_order_seq_cst
+) const volatile noexcept;
+Ty atomic::load(
+   memory_order Order = memory_order_seq_cst
+) const noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Порядок*<br/>
+Перечисление **memory_order**. *Порядок* не должно быть **memory_order_release** или **memory_order_acq_rel**.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Полученное значение, которое хранится в  **\*это**.
+
+## <a name="store"></a> atomic::Store
+
+Сохраняет указанное значение.
+
+```cpp
+void atomic<Ty>::store(
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) volatile noexcept;
+void atomic<Ty>::store(
+   Ty Value,
+   memory_order Order = memory_order_seq_cst
+) noexcept;
+```
+
+### <a name="parameters"></a>Параметры
+
+*Значение*<br/>
+Объект *Ty* объекта.
+
+*Порядок*<br/>
+Объект **memory_order** ограничение.
+
+### <a name="remarks"></a>Примечания
+
+Эта функция-член атомарным образом хранит *значение* в `*this`, в пределах ограничений памяти, определяемые *порядок*.
+
+## <a name="see-also"></a>См. также
+
+[\<atomic>](../standard-library/atomic.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>

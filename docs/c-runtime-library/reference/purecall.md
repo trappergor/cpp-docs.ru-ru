@@ -1,12 +1,12 @@
 ---
-title: "_purecall | Документы Майкрософт"
-ms.custom: 
+title: _purecall | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _purecall
@@ -32,35 +32,39 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c19324cde907f31ab18a312f3039c2da7a3a40c7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bfcd454aa6a4053ff30eef27b9c9c7d3d8bf7b34
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="purecall"></a>_purecall
-Обработчик ошибок вызовов чистой виртуальной функции по умолчанию. При вызове чистой виртуальной функции-члена компилятор создает код для вызова этой функции.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-extern "C" int __cdecl _purecall();  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_purecall` является частью реализации компилятора Microsoft Visual C++, использующейся в системах Майкрософт. Эта функция не предназначена для вызова непосредственно из кода и не содержит объявление открытого заголовка. Она описана здесь, так как это общий экспорт библиотеки времени выполнения C.  
-  
- Вызов чистой виртуальной функции является ошибкой, так как она не имеет реализации. При вызове чистой виртуальной функции компилятор создает код для вызова этой функции обработчика ошибок `_purecall`. По умолчанию `_purecall` завершает программу. Перед завершением работы функция `_purecall` вызывает функцию `_purecall_handler`, если функция была задана для процесса. Можно установить собственный обработчик ошибок для вызовов чистых виртуальных функций, который будет перехватывать их в целях отладки или ведения отчетности. Чтобы использовать собственный обработчик ошибок, создайте функцию с сигнатурой `_purecall_handler`, а затем с помощью функции [_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) установите ее в качестве текущего обработчика.  
-  
-## <a name="requirements"></a>Требования  
- Функция `_purecall` не имеет объявления заголовка. Функция `_purecall_handler` typedef определяется в \<stdlib.h>.  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_get_purecall_handler, _set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)
+
+Обработчик ошибок вызовов чистой виртуальной функции по умолчанию. При вызове чистой виртуальной функции-члена компилятор создает код для вызова этой функции.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+extern "C" int __cdecl _purecall();
+```
+
+## <a name="remarks"></a>Примечания
+
+**_Purecall** функция является реализации версию компилятора Microsoft Visual C++. Эта функция не предназначена для вызова непосредственно из кода и не содержит объявление открытого заголовка. Она описана здесь, так как это общий экспорт библиотеки времени выполнения C.
+
+Вызов чистой виртуальной функции является ошибкой, так как она не имеет реализации. Компилятор создает код для вызова **_purecall** функция обработчика ошибок, при вызове чистой виртуальной функции. По умолчанию **_purecall** завершает программу. Перед завершением работы, **_purecall** функция вызывает **_purecall_handler** функционировать, если она была настроена для процесса. Можно установить собственный обработчик ошибок для вызовов чистых виртуальных функций, который будет перехватывать их в целях отладки или ведения отчетности. Чтобы использовать собственный обработчик ошибок, создайте функцию, которая имеет **_purecall_handler** подпись, затем с помощью [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) вносить текущий обработчик.
+
+## <a name="requirements"></a>Требования
+
+**_Purecall** функция не имеет объявления заголовка. **_Purecall_handler** typedef определяется в \<stdlib.h >.
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[_get_purecall_handler, _set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>

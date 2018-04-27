@@ -1,12 +1,12 @@
 ---
-title: "_RTC_SetErrorType | Документы Майкрософт"
-ms.custom: 
+title: _RTC_SetErrorType | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _RTC_SetErrorType
@@ -32,59 +32,64 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f6aaeaabe07f84a10167057ff94b45f91af0c93
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f9fcca983247f0f5e0c09899e7ebec2774ca92e6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
-Связывает обнаруженную проверкой во время выполнения ошибку (RTC) с типом. Обработчик ошибок определяет способ вывода ошибок указанного типа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      int _RTC_SetErrorType(  
-   _RTC_ErrorNumber errnum,  
-   int ErrType   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *errnum*  
- Число от нуля до единицы и меньше значения, возвращаемого [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md).  
-  
- *ErrType*  
- Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если вы используете `_CrtDbgReport` в качестве обработчика ошибок, *ErrType* может быть только одним из символов, определенных в [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.  
-  
- *ErrType* для _RTC_ERRTYPE_IGNORE имеет специальное значение для `_CrtSetReportMode`; ошибка игнорируется.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Предыдущее значение для типа ошибки `type`.  
-  
-## <a name="remarks"></a>Примечания  
- По умолчанию для всех ошибок задается значение *ErrType* = 1, которое соответствует **_CRT_ERROR**. Дополнительные сведения о типах ошибок по умолчанию, таких как **_CRT_ERROR**, см. в статье об [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).  
-  
- Перед тем, как вы сможете вызвать эту функцию, необходимо сначала вызвать одну из функций инициализации проверок на ошибки во время выполнения; см. статью [Использование проверок во время выполнения без библиотеки времени выполнения C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_RTC_SetErrorType`|\<rtcapi.h>|  
-  
- Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Библиотеки  
- Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>См. также  
- [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Проверка ошибок во время выполнения](../../c-runtime-library/run-time-error-checking.md)
+
+Связывает обнаруженную проверкой во время выполнения ошибку (RTC) с типом. Обработчик ошибок определяет способ вывода ошибок указанного типа.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _RTC_SetErrorType(
+   _RTC_ErrorNumber errnum,
+   int ErrType
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*errnum*<br/>
+Число от нуля до единицы и меньше значения, возвращаемого [_RTC_NumErrors](rtc-numerrors.md).
+
+*ErrType*<br/>
+Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если вы используете **_CrtDbgReport** как обработчик ошибок, *ErrType* может быть только один из символов, определенных в [_CrtSetReportMode](crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.
+
+*ErrType* для _RTC_ERRTYPE_IGNORE имеет специальное значение для **_CrtSetReportMode**; Ошибка игнорируется.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Предыдущее значение для типа ошибки *типа*.
+
+## <a name="remarks"></a>Примечания
+
+По умолчанию для всех ошибок задается значение *ErrType* = 1, которое соответствует **_CRT_ERROR**. Дополнительные сведения о типах ошибок по умолчанию, таких как **_CRT_ERROR**, см. в статье об [_CrtDbgReport](crtdbgreport-crtdbgreportw.md).
+
+Перед тем, как вы сможете вызвать эту функцию, необходимо сначала вызвать одну из функций инициализации проверок на ошибки во время выполнения; см. статью [Использование проверок во время выполнения без библиотеки времени выполнения C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_RTC_SetErrorType**|\<rtcapi.h>|
+
+Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>См. также
+
+[_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
+[Проверка ошибок во время выполнения](../../c-runtime-library/run-time-error-checking.md)<br/>
