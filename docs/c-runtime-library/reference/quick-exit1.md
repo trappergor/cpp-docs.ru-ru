@@ -1,13 +1,13 @@
 ---
-title: "quick_exit1 | Документы Майкрософт"
-ms.custom: 
+title: quick_exit1 | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - quick_exit
@@ -33,57 +33,62 @@ dev_langs:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30c8ae3290ac4b15247b88b0b2201634e42b560b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fde06fc83b27b8bba43e3fa929cc8b97bb68dd06
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="quickexit"></a>quick_exit
-Приводит к завершению работы программы в обычном режиме.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-__declspec(noreturn) void quick_exit(  
-    int status  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- status  
- Код состояния, возвращаемый средой размещения.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `quick_exit` не может вернуть управление вызывающему объекту.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `quick_exit` приводит к завершению работы программы в обычном режиме. Она не вызывает функции, зарегистрированные `atexit`, `_onexit` или обработчики сигналов, зарегистрированные функцией `signal` . Поведение не определено, если `quick_exit` вызывается несколько раз или если также вызывается функция `exit` .  
-  
- Функция `quick_exit` вызывает в порядке поступления (LIFO) функции, зарегистрированные `at_quick_exit`, за исключением функций, которые уже были вызваны на тот момент, когда функция была зарегистрирована.  Поведение не определено, если вызов [longjmp](../../c-runtime-library/reference/longjmp.md) осуществляется во время вызова зарегистрированной функции, который привел бы к прерыванию вызова функции.  
-  
- После вызова зарегистрированных функций `quick_exit` вызывает `_Exit` с использованием значения `status` , чтобы вернуть управление среде размещения.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`quick_exit`|\<process.h> или \<stdlib.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+Приводит к завершению работы программы в обычном режиме.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+__declspec(noreturn) void quick_exit(
+    int status
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*status*<br/>
+Код состояния, возвращаемый средой размещения.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**Quick_exit** функция не может возвращать вызывающему.
+
+## <a name="remarks"></a>Примечания
+
+**Quick_exit** функции приводит к завершению программы в обычном режиме. Он не вызывает функции, зарегистрированные с **atexit**, **_onexit** или обработчики сигналов, зарегистрированные с **сигнала** функции. Если поведение не определено **quick_exit** вызывается несколько раз или если **выхода** вызывается функция.
+
+**Quick_exit** вызовы функций, в последней в порядке поступления (LIFO), функции, зарегистрированные **at_quick_exit**, за исключением того, для тех функций, которые уже вызывается, когда функция была зарегистрирована.  Поведение не определено, если вызов [longjmp](longjmp.md) осуществляется во время вызова зарегистрированной функции, который привел бы к прерыванию вызова функции.
+
+После вызова зарегистрированных функций **quick_exit** вызывает **_Exit** с помощью *состояние* чтобы вернуть управление среде размещения.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**quick_exit**|\<process.h> или \<stdlib.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

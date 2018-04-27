@@ -1,12 +1,12 @@
 ---
-title: "_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Документы Майкрософт"
-ms.custom: 
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsicoll_l
@@ -60,107 +60,112 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56f045d7f06740287f7e7e59efcf89db3fefeb59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2f14f2b96867450e2299cb73fe0a71603e1ec000
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
-Сравнивает строки на основе данных языкового стандарта.  
-  
+
+Сравнивает строки на основе данных языкового стандарта.
+
 > [!IMPORTANT]
->  Функции `_mbsicoll` и `_mbsicoll_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _stricoll(  
-   const char *string1,  
-   const char *string2   
-);  
-int _wcsicoll(  
-   const wchar_t *string1,  
-   const wchar_t *string2   
-);  
-int _mbsicoll(  
-   const unsigned char *string1,  
-   const unsigned char *string2   
-);  
-int _stricoll_l(  
-   const char *string1,  
-   const char *string2,  
-   _locale_t locale  
-);  
-int _wcsicoll_l(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   _locale_t locale  
-);  
-int _mbsicoll_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `string1, string2`  
- Строки с завершающим нулем для сравнения.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает значение, показывающее связь между `string1` для `string2`, как показано ниже.  
-  
-|Возвращаемое значение|Отношение string1 к string2|  
-|------------------|----------------------------------------|  
-|< 0|`string1` меньше `string2`|  
-|0|`string1` идентично `string2`|  
-|> 0|`string1` больше `string2`|  
-|`_NLSCMPERROR`|Произошла ошибка.|  
-  
- Каждая из этих функций возвращает `_NLSCMPERROR`. Для использования `_NLSCMPERROR` включите `STRING.H` или `MBSTRING.H`. `_wcsicoll` может завершиться ошибкой, если `string1` или `string2` содержит коды расширенных символов, не входящие в последовательность сортировки. При возникновении ошибки `_wcsicoll` может присвоить параметру `errno` значение `EINVAL`. Чтобы убедиться, не возникает ли ошибка при вызове функции `_wcsicoll`, присвойте параметру `errno` значение 0 и проверьте `errno` после вызова функции `_wcsicoll`.  
-  
-## <a name="remarks"></a>Примечания  
- Каждая из этих функций сравнивает без учета регистра строки `string1` и `string2` в соответствии с используемой в настоящее время кодовой страницей. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.  
-  
- `_stricmp` отличается от `_stricoll` тем, что на сравнение `_stricmp` влияет `LC_CTYPE`, тогда как `_stricoll` сравнение осуществляется в соответствии с категориями `LC_CTYPE` и `LC_COLLATE` языкового стандарта. Дополнительные сведения о категории `LC_COLLATE` см. в разделах [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) и [Категории языкового стандарта](../../c-runtime-library/locale-categories.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт. Версии с суффиксом `_l` идентичны им, но они используют языковой стандарт, переданный в качестве аргумента. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
- Все эти функции проверяют свои параметры. Если `string1` или `string2` — указатели `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `_NLSCMPERROR` и устанавливают для `errno` значение `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsicoll`|`_stricoll`|`_mbsicoll`|`_wcsicoll`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_stricoll`, `_stricoll_l`|\<string.h>|  
-|`_wcsicoll`, `_wcsicoll_l`|\<wchar.h>, \<string.h>|  
-|`_mbsicoll`, `_mbsicoll_l`|\<mbstring.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [Функции strcoll](../../c-runtime-library/strcoll-functions.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+> **_mbsicoll** и **_mbsicoll_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _stricoll(
+   const char *string1,
+   const char *string2
+);
+int _wcsicoll(
+   const wchar_t *string1,
+   const wchar_t *string2
+);
+int _mbsicoll(
+   const unsigned char *string1,
+   const unsigned char *string2
+);
+int _stricoll_l(
+   const char *string1,
+   const char *string2,
+   _locale_t locale
+);
+int _wcsicoll_l(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   _locale_t locale
+);
+int _mbsicoll_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*string1*, *строка2*<br/>
+Строки с завершающим нулем для сравнения.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает значение, показывающее связь между *string1* для *string2*, как показано ниже.
+
+|Возвращаемое значение|Отношение string1 к string2|
+|------------------|----------------------------------------|
+|< 0|*string1* меньше, чем *строка2*|
+|0|*string1* идентичен *строка2*|
+|> 0|*string1* больше *строка2*|
+|**_NLSCMPERROR**|Произошла ошибка.|
+
+Каждая из этих функций возвращает **_NLSCMPERROR**. Для использования **_NLSCMPERROR**, либо включить \<string.h > или \<mbstring.h >. **_wcsicoll** может завершиться ошибкой, если *string1* или *string2* содержит коды расширенных символов, за пределами домена упорядоченной последовательности. При возникновении ошибки **_wcsicoll** может задать **errno** для **EINVAL**. Для проверки ошибки во время вызова **_wcsicoll**, задайте **errno** 0 и проверьте **errno** после вызова **_wcsicoll**.
+
+## <a name="remarks"></a>Примечания
+
+Каждая из этих функций выполняет сравнение без учета регистра *string1* и *string2* согласно кодовой странице в настоящий момент. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.
+
+**_stricmp** отличается от **_stricoll** в том, что **_stricmp** сравнения определяется **LC_CTYPE**, тогда как **_stricoll** сравнения с учетом **LC_CTYPE** и **LC_COLLATE** категории языкового стандарта. Дополнительные сведения о **LC_COLLATE** категории, в разделе [setlocale](setlocale-wsetlocale.md) и [категории языкового стандарта](../../c-runtime-library/locale-categories.md). Версии этих функций без **_l** используйте суффикс текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+Все эти функции проверяют свои параметры. Если параметр *string1* или *string2* , **NULL** вызывается указатели, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **_NLSCMPERROR** и задайте **errno** для **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_stricoll**, **_stricoll_l**|\<string.h>|
+|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
+|**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Функции strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[localeconv](localeconv.md)<br/>
+[_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

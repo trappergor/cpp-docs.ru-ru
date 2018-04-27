@@ -1,12 +1,12 @@
 ---
-title: "Класс moneypunct_byname | Документы Майкрософт"
-ms.custom: 
+title: Класс moneypunct_byname | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50e841af6ca158e431d29bf6a139fd9534748bd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 86106d6352e7e3153d5afbfab855a2a05c630c0d
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="moneypunctbyname-class"></a>Класс moneypunct_byname
-Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта `moneypunct` для заданного языкового стандарта, для возможности форматирования полей ввода или вывода денежной суммы.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```
+
+Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта `moneypunct` для заданного языкового стандарта, для возможности форматирования полей ввода или вывода денежной суммы.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <class CharType, bool Intl = false>
 class moneypunct_byname : public moneypunct<CharType, Intl>
 {
@@ -49,18 +50,18 @@ protected:
     virtual ~moneypunct_byname();
 
 };
-```  
-  
-## <a name="remarks"></a>Примечания  
- Его поведение определяется именованным языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
-  
- **Пространство имен:** std  
-  
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+## <a name="remarks"></a>Примечания
 
+Его поведение определяется именованным языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).
 
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<locale>
+
+**Пространство имен:** std
+
+## <a name="see-also"></a>См. также
+
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

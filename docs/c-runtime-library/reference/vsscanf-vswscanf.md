@@ -1,12 +1,12 @@
 ---
-title: "vsscanf, vswscanf | Документы Майкрософт"
-ms.custom: 
+title: vsscanf, vswscanf | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - vsscanf
@@ -33,130 +33,135 @@ helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e44deb1faee27ea571151c45945b44dac647c2d3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5303129527d390cdbd5dc0a01253320b96b668c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
-Считывают форматированные данные из строки. Существуют более безопасные версии этих функций; см. статью [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int vsscanf(  
-   const char *buffer,  
-   const char *format,  
-   va_list arglist  
-);  
-int vswscanf(  
-   const wchar_t *buffer,  
-   const wchar_t *format,  
-   va_list arglist  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `buffer`  
- Сохраненные данные  
-  
- `format`  
- Строка управления форматом. Дополнительные сведения см. в разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).  
-  
- `arglist`  
- Список аргументов переменных.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Если до первого преобразования возникает ошибка или достигается конец строки, возвращается значение `EOF`.  
-  
- Если `buffer` или `format` является указателем `NULL`, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжать выполнение, эти функции возвращают -1 и задают `errno` значение `EINVAL`.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `vsscanf` считывает данные из `buffer` в расположения, указанные аргументами в списке аргументов `arglist`. Каждый аргумент в списке должен быть указателем на переменную, которая имеет тип, соответствующий спецификатору типа в параметре `format`. Аргумент `format` определяет интерпретацию полей входных данных и имеет такую же форму и функцию, как аргумент `format` для функции `scanf`. Если копирование производится между перекрывающимися строками, поведение не определено.  
-  
+
+Считывают форматированные данные из строки. Существуют более безопасные версии этих функций; см. статью [vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int vsscanf(
+   const char *buffer,
+   const char *format,
+   va_list arglist
+);
+int vswscanf(
+   const wchar_t *buffer,
+   const wchar_t *format,
+   va_list arglist
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*buffer*<br/>
+Сохраненные данные
+
+*format*<br/>
+Строка управления форматом. Дополнительные сведения см. в разделе [Поля спецификации формата — функции scanf и wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
+
+*arglist*<br/>
+Список аргументов переменных.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Возвращает значение **EOF** при возникновении ошибки или при достижении конца строки до первого преобразования.
+
+Если *буфера* или *формат* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**Vsscanf** функция считывает данные из *буфера* в расположения, заданные каждым аргументом *arglist* список аргументов. Каждый аргумент в списке должен быть указатель на переменную, которая имеет тип, соответствующий спецификатору типа в *формат*. *Формат* элементы управления аргумент интерпретацию входных данных, поля и имеет те же форму и функциональные возможности, что *формат* аргумент для **scanf** функции. Если копирование производится между перекрывающимися строками, поведение не определено.
+
 > [!IMPORTANT]
->  При использовании `vsscanf` для чтения строки всегда следует указывать ширину для формата `%s` (например, `"%32s"` вместо `"%s"`); в противном случае ввод в неправильном формате может привести к переполнению буфера.  
-  
- `vswscanf` — это двухбайтовая версия `vsscanf`; аргументы для `vswscanf` представляют собой двухбайтовые строки. `vsscanf` не обрабатывает многобайтовые шестнадцатеричные символы. `vswscanf` не обрабатывает шестнадцатеричные символы Юникода полной ширины и символы "зоны совместимости". В противном случае поведение `vswscanf` и `vsscanf` идентично.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vstscanf`|`vsscanf`|`vsscanf`|`vswscanf`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`vsscanf`|\<stdio.h>|  
-|`vswscanf`|\<stdio.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_vsscanf.c  
-// compile with: /W3  
-// This program uses vsscanf to read data items  
-// from a string named tokenstring, then displays them.  
-  
-#include <stdio.h>  
-#include <stdarg.h>  
-  
-int call_vsscanf(char *tokenstring, char *format, ...)  
-{  
-    int result;  
-    va_list arglist;  
-    va_start(arglist, format);  
-    result = vsscanf(tokenstring, format, arglist);  
-    va_end(arglist);  
-    return result;  
-}  
-  
-int main( void )  
-{  
-    char  tokenstring[] = "15 12 14...";  
-    char  s[81];  
-    char  c;  
-    int   i;  
-    float fp;  
-  
-    // Input various data from tokenstring:  
-    // max 80 character string:  
-    call_vsscanf(tokenstring, "%80s", s);  
-    call_vsscanf(tokenstring, "%c", &c);  
-    call_vsscanf(tokenstring, "%d", &i);  
-    call_vsscanf(tokenstring, "%f", &fp);  
-  
-    // Output the data read  
-    printf("String    = %s\n", s);  
-    printf("Character = %c\n", c);  
-    printf("Integer:  = %d\n", i);  
-    printf("Real:     = %f\n", fp);  
-}  
-```  
-  
-```Output  
-String    = 15  
-Character = 1  
-Integer:  = 15  
-Real:     = 15.000000  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md)
+> При использовании **vsscanf** Чтобы выполнить чтение строки, всегда указывайте ширину для **%s** формат (например, **«% 32s»** вместо **«%s»**); в противном случае неправильного формата входных данных может привести к переполнению буфера.
+
+**vswscanf** — это двухбайтовая версия **vsscanf**; аргументы для **vswscanf** представляют собой строки расширенных символов. **vsscanf** не обрабатывает многобайтовые шестнадцатеричных символов. **vswscanf** не обрабатывает шестнадцатеричное число полных Юникода или символы «зону совместимости». В противном случае **vswscanf** и **vsscanf** ведут себя одинаково.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**vsscanf**|\<stdio.h>|
+|**vswscanf**|\<stdio.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_vsscanf.c
+// compile with: /W3
+// This program uses vsscanf to read data items
+// from a string named tokenstring, then displays them.
+
+#include <stdio.h>
+#include <stdarg.h>
+
+int call_vsscanf(char *tokenstring, char *format, ...)
+{
+    int result;
+    va_list arglist;
+    va_start(arglist, format);
+    result = vsscanf(tokenstring, format, arglist);
+    va_end(arglist);
+    return result;
+}
+
+int main( void )
+{
+    char  tokenstring[] = "15 12 14...";
+    char  s[81];
+    char  c;
+    int   i;
+    float fp;
+
+    // Input various data from tokenstring:
+    // max 80 character string:
+    call_vsscanf(tokenstring, "%80s", s);
+    call_vsscanf(tokenstring, "%c", &c);
+    call_vsscanf(tokenstring, "%d", &i);
+    call_vsscanf(tokenstring, "%f", &fp);
+
+    // Output the data read
+    printf("String    = %s\n", s);
+    printf("Character = %c\n", c);
+    printf("Integer:  = %d\n", i);
+    printf("Real:     = %f\n", fp);
+}
+```
+
+```Output
+String    = 15
+Character = 1
+Integer:  = 15
+Real:     = 15.000000
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[vsscanf_s, vswscanf_s](vsscanf-s-vswscanf-s.md)<br/>
