@@ -1,27 +1,22 @@
 ---
-title: "Справочник по ассемблеру ARM | Документы Microsoft"
-ms.custom: 
+title: Справочник по ассемблеру ARM | Документы Microsoft
+ms.custom: ''
 ms.date: 08/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb3a9d47e0814eb6bd918aea95738785e3bb21
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 198e38547258837999c3e11903bc98575fdb036f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-reference"></a>Справочник по ассемблеру ARM
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 02/14/2018
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Справочник по командной строке ассемблера ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Описание параметров командной строки armasm.|  
 |[Диагностические сообщения ассемблера ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Описывает часто встречающихся armasm предупреждения и сообщения об ошибках.|  
