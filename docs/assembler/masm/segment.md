@@ -1,12 +1,9 @@
 ---
-title: "СЕГМЕНТ | Документы Microsoft"
-ms.custom: 
+title: СЕГМЕНТ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - SEGMENT
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="segment"></a>SEGMENT
 Определяет сегмент программы вызывается *имя* наличие атрибутов сегмента  
@@ -50,15 +45,15 @@ name ENDS
 |**DWORD**|Следующий адрес доступных двойное слово (4 байта на двойное слово).|  
 |**АБЗАЦ**|Адрес следующего абзаца доступные (16 байт на абзаца).|  
 |**PAGE**|Следующий адрес страницы (256 байт на страницу).|  
-|**ALIGN**(*n*)|Далее доступных *n*th байтам адреса. См. раздел Примечания для получения дополнительной информации.|  
+|**ВЫРОВНЯТЬ**(*n*)|Далее доступных *n*th байтам адреса. См. раздел Примечания для получения дополнительной информации.|  
   
  Если этот параметр не указан, **PARA** используется по умолчанию.  
   
  *combine*  
  **ОТКРЫТЫЙ**, **стека**, **Общие**, **памяти**, **в *** адрес*, **ЗАКРЫТЫЙ**  
   
- *use*  
- **USE16**, **USE32**, **FLAT**  
+ *Используйте*  
+ **USE16**, **USE32**, **ПЛОСКИЙ**  
   
  `characteristics`  
  **Сведения о**, **чтения**, **записи**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, и **ОТМЕНИТЬ**  
