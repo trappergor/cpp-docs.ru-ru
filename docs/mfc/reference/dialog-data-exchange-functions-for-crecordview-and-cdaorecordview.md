@@ -35,11 +35,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 82585f9f2c727d7189633091429aef6742cdd00b
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 В этом разделе перечислены DDX_Field-функции, используемые для обмена данными между [CRecordset](../../mfc/reference/crecordset-class.md) и [CRecordView](../../mfc/reference/crecordview-class.md) формы или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) и [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) формы.  
@@ -87,7 +87,7 @@ void AFXAPI DDX_FieldCBIndex(
  `nIDC`  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
- *index*  
+ *Индекс*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
  `pRecordset`  
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
  `nIDC`  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
- *index*  
+ *Индекс*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
  `pRecordset`  
@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- *nIDC\**  
+ `nIDC`  
  Идентификатор первого в группе (стилем **WS_GROUP**) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
@@ -445,7 +445,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>Имя = «ddx_fieldslider» ></a> DDX_FieldSlider
 `DDX_FieldSlider` Функция синхронизирует положение бегунка элемента управления "ползунок" в представлении записей и `int` элемента данных поля в наборе записей, связанные с представления записей (или любые целочисленной переменной, необходимо сопоставить его с).  
    
 ### <a name="syntax"></a>Синтаксис  

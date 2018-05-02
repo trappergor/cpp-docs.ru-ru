@@ -1,11 +1,12 @@
 ---
-title: "Символ Sets2 | Документы Microsoft"
-ms.custom: 
+title: Символ Sets2 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - Character sets
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="character-sets"></a>Кодировки
 Текст программы C++ хранится в исходных файлах, использующих определенную кодировку символов. Стандарт C++ указывает основную кодировку исходного кода для исходных файлов и основную кодировку выполнения для скомпилированных файлов. Visual C++ позволяет использовать дополнительный набор символов, определяемых языковым стандартом, в исходных и скомпилированных файлах.  

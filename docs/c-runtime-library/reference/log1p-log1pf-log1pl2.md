@@ -1,13 +1,13 @@
 ---
-title: "log1p, log1pf, log1pl2 | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: log1p, log1pf, log1pl2 | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - log1p
@@ -38,84 +38,89 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f99c09efd055cc60162e88e52e938df690929a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cf512bcf898a202eee771318afb022642d432b4f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
-Вычисляет натуральный логарифм суммы указанного значения и 1.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double log1p(  
-   double x  
-);  
-  
-float log1p(  
-   float x  
-); //C++ only  
-  
-long double log1p(  
-   long double x  
-); //C++ only  
-  
-float log1pf(  
-   float x  
-);  
-  
-long double log1pl(  
-   long double x  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `x`  
- Аргумент с плавающей запятой.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- В случае успеха возвращает натуральный логарифм (по основанию e) выражения (`x`+1).  
-  
- В случае неудачи может возвращать одно из следующих значений:  
-  
-|Входные данные|Результат|Исключение SEH|errno|  
-|-----------|------------|-------------------|-----------|  
-|+inf|+inf|||  
-|Денормализованные числа|Аналогично входным данным|UNDERFLOW||  
-|±0|Аналогично входным данным|||  
-|-1|-inf|DIVBYZERO|ERANGE|  
-|< –1|nan|INVALID|EDOM|  
-|-inf|nan|INVALID|EDOM|  
-|±SNaN|Аналогично входным данным|INVALID||  
-|±QNaN, не ограничена|Аналогично входным данным|||  
-  
- `errno` имеет значение ERANGE, если `x` = –1. `errno` EDOM присвоено значение, если `x` < -1.  
-  
-## <a name="remarks"></a>Примечания  
- Точность функции `log1p` можно повысить, используя выражение log(`x`+1) при значении x, близких к 0.  
-  
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `log1p`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `log1p` всегда принимает и возвращает значение типа double.  
-  
- Если `x` является натуральным числом, эта функция возвращает логарифм факториала (`x`–1).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Заголовок C|Заголовок C++|  
-|--------------|--------------|------------------|  
-|`log1p`,                `log1pf`, `log1pl`|\<math.h>|\<cmath>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
- [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)
+
+Вычисляет натуральный логарифм суммы указанного значения и 1.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double log1p(
+   double x
+);
+
+float log1p(
+   float x
+); //C++ only
+
+long double log1p(
+   long double x
+); //C++ only
+
+float log1pf(
+   float x
+);
+
+long double log1pl(
+   long double x
+);
+
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Аргумент с плавающей запятой.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+В случае успешного выполнения возвращает натуральный (базовый -*e*) журнала (*x* + 1).
+
+В случае неудачи может возвращать одно из следующих значений:
+
+|Входные данные|Результат|Исключение SEH|errno|
+|-----------|------------|-------------------|-----------|
+|+inf|+inf|||
+|Денормализованные числа|Аналогично входным данным|UNDERFLOW||
+|±0|Аналогично входным данным|||
+|-1|-inf|DIVBYZERO|ERANGE|
+|< –1|nan|INVALID|EDOM|
+|-inf|nan|INVALID|EDOM|
+|±SNaN|Аналогично входным данным|INVALID||
+|±QNaN, не ограничена|Аналогично входным данным|||
+
+**Errno** ERANGE присвоено значение, если *x* = -1. **Errno** имеет значение **EDOM** Если *x* < -1.
+
+## <a name="remarks"></a>Примечания
+
+**Log1p** могут быть более точной, чем с помощью функции `log(x + 1)` при *x* приближается к 0.
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **log1p** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **log1p** всегда принимает и возвращает **двойные**.
+
+Если *x* является числом естественного, эта функция возвращает логарифм факториала (*x* - 1).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Заголовок C|Заголовок C++|
+|--------------|--------------|------------------|
+|**log1p**, **log1pf**, **log1pl**|\<math.h>|\<cmath>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[log2, log2f, log2l](log2-log2f-log2l.md)<br/>
+[log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "Страница свойств каталогов VC ++ | Документы Microsoft"
-ms.custom: 
-ms.date: 03/09/2018
-ms.reviewer: 
-ms.suite: 
+title: Страница свойств каталогов VC ++ | Документы Microsoft
+ms.custom: ''
+ms.date: 04/26/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
@@ -22,17 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-caps.latest.revision: 
+caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: 8931ecd34acfa1aba0287274acb45d362bdec2cf
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>Каталоги страница свойств VC ++ (Windows)
 
@@ -111,7 +111,7 @@ Linux версию этой страницы см. в разделе [катал
 Каталоги, в которых необходимо искать исходные файлы, предназначенные для IntelliSense.
 
 **Исключить папки**<br/>
-Каталоги, в которых не следует выполнять поиск при проверке зависимостей сборки.
+Перед каждой компиляции Visual Studio запрашивает метку времени для всех файлов, чтобы определить ли любой были изменены с момента предыдущей компиляции. Если проект содержит большой стабильный библиотеки, вы потенциально ускорить время сборки, исключив эти каталоги из проверки отметок времени.
 
 ## <a name="sharing-the-settings"></a>Общий доступ к параметрам
 

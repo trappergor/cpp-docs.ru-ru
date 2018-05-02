@@ -1,12 +1,12 @@
 ---
-title: "_heapwalk | Документы Майкрософт"
-ms.custom: 
+title: _heapwalk | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _heapwalk
@@ -33,169 +33,160 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b2a69fba87d86b01c4f4e3b8ad140e2bcde3ef
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab80252b599d0a6d7a50e3b113824adc8d8d9926
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="heapwalk"></a>_heapwalk
-Выполняет обход кучи и возвращает сведения о следующей записи.  
-  
+
+Выполняет обход кучи и возвращает сведения о следующей записи.
+
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows, за исключением отладочных сборок. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _heapwalk(   
-   _HEAPINFO *entryinfo   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `entryinfo`  
- Буфер, который будет содержать данные кучи.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_heapwalk` возвращает одну из следующих целочисленных констант манифеста, определенных в файле Malloc.h.  
-  
- `_HEAPBADBEGIN`  
- Начальные сведения о заголовке недопустимы или не найдены.  
-  
- `_HEAPBADNODE`  
- Куча повреждена или обнаружен плохой узел.  
-  
- `_HEAPBADPTR`  
- Поле `_pentry` структуры `_HEAPINFO` не содержит допустимый указатель на кучу или `entryinfo` — указатель NULL.  
-  
- `_HEAPEND`  
- Успешно достигнут конец кучи.  
-  
- `_HEAPEMPTY`  
- Куча еще не инициализирована.  
-  
- `_HEAPOK`  
- Пока без ошибок; `entryinfo` обновляется информацией о следующей записи кучи.  
-  
- Кроме того, при возникновении ошибки функция `_heapwalk` устанавливает для параметра `errno` значение `ENOSYS`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_heapwalk` помогает при отладке в программах проблем, связанных с кучей. Функция выполняет обход кучи, проходя по одной записи при каждом вызове, и возвращает указатель на структуру типа `_HEAPINFO`, содержащую сведения о следующей записи кучи. Тип `_HEAPINFO`, определенный в файле Malloc.h, содержит следующие элементы.  
-  
- `int *_pentry`  
- Указатель записи кучи.  
-  
- `size_t _size`  
- Размер записи кучи.  
-  
- `int _useflag`  
- Флаг, указывающий, используется ли запись кучи.  
-  
- Вызов функции `_heapwalk`, возвращающий `_HEAPOK`, сохраняет размер записи в поле `_size` и устанавливает в поле `_useflag` значение `_FREEENTRY` или `_USEDENTRY` (обе константы определены в файле Malloc.h). Для доступа к этой информации о первой записи в куче следует передать в функцию `_heapwalk` указатель на структуру `_HEAPINFO`, в которой член `_pentry` имеет значение `NULL`. Если операционная система не поддерживает функцию `_heapwalk` (например, Windows 98), эта функция возвращает `_HEAPEND` и устанавливает для параметра `errno` значение `ENOSYS`.  
-  
- Эта функция проверяет свои параметры. Если параметр `entryinfo` является указателем NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL`, и функция возвращает значение `_HEAPBADPTR`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|-------------|---------------------|---------------------|  
-|`_heapwalk`|\<malloc.h>|\<errno.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_heapwalk.c  
-  
-// This program "walks" the heap, starting  
-// at the beginning (_pentry = NULL). It prints out each  
-// heap entry's use, location, and size. It also prints  
-// out information about the overall state of the heap as  
-// soon as _heapwalk returns a value other than _HEAPOK  
-// or if the loop has iterated 100 times.  
-  
-#include <stdio.h>  
-#include <malloc.h>  
-  
-void heapdump(void);  
-  
-int main(void)  
-{  
-    char *buffer;  
-  
-    heapdump();  
-    if((buffer = (char *)malloc(59)) != NULL)  
-    {  
-        heapdump();  
-        free(buffer);  
-    }  
-    heapdump();  
-}  
-  
-void heapdump(void)  
-{  
-    _HEAPINFO hinfo;  
-    int heapstatus;  
-    int numLoops;  
-    hinfo._pentry = NULL;  
-    numLoops = 0;  
-    while((heapstatus = _heapwalk(&hinfo)) == _HEAPOK &&  
-          numLoops < 100)  
-    {  
-        printf("%6s block at %Fp of size %4.4X\n",  
-               (hinfo._useflag == _USEDENTRY ? "USED" : "FREE"),  
-               hinfo._pentry, hinfo._size);  
-        numLoops++;  
-    }  
-  
-    switch(heapstatus)  
-    {  
-    case _HEAPEMPTY:  
-        printf("OK - empty heap\n");  
-        break;  
-    case _HEAPEND:  
-        printf("OK - end of heap\n");  
-        break;  
-    case _HEAPBADPTR:  
-        printf("ERROR - bad pointer to heap\n");  
-        break;  
-    case _HEAPBADBEGIN:  
-        printf("ERROR - bad start of heap\n");  
-        break;  
-    case _HEAPBADNODE:  
-        printf("ERROR - bad node in heap\n");  
-        break;  
-    }  
-}  
-```  
-  
-```Output  
-  USED block at 00310650 of size 0100  
-  USED block at 00310758 of size 0800  
-  USED block at 00310F60 of size 0080  
-  FREE block at 00310FF0 of size 0398  
-  USED block at 00311390 of size 000D  
-  USED block at 003113A8 of size 00B4  
-  USED block at 00311468 of size 0034  
-  USED block at 003114A8 of size 0039  
-...  
-  USED block at 00312228 of size 0010  
-  USED block at 00312240 of size 1000  
-  FREE block at 00313250 of size 1DB0  
-OK - end of heap  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
- [_heapadd](../../c-runtime-library/heapadd.md)   
- [_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_heapset](../../c-runtime-library/heapset.md)
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows, за исключением отладочных сборок. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _heapwalk( _HEAPINFO *entryinfo );
+```
+
+### <a name="parameters"></a>Параметры
+
+*entryinfo*<br/>
+Буфер, который будет содержать данные кучи.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_heapwalk** возвращает одно из следующих целочисленных констант манифеста определенных в файле Malloc.h.
+
+|Возвращаемое значение|Значение|
+|-|-|
+|**_HEAPBADBEGIN**| Начальные сведения о заголовке недопустимы или не найдены.|
+|**_HEAPBADNODE**| Куча повреждена или обнаружен плохой узел.|
+|**_HEAPBADPTR**| **_Pentry** поле **_HEAPINFO** структура не содержит допустимый указатель на кучу или *entryinfo* является пустым указателем.|
+|**_HEAPEND**| Успешно достигнут конец кучи.|
+|**_HEAPEMPTY**| Куча еще не инициализирована.|
+|**_HEAPOK**| Пока; без ошибок *entryinfo* обновляется информацией о следующей записи кучи.|
+
+Кроме того, если происходит ошибка **_heapwalk** задает **errno** для **ENOSYS**.
+
+## <a name="remarks"></a>Примечания
+
+**_Heapwalk** функция помогает при отладке проблемы с кучей в программах. Функция выполняет обход кучи, проходя по одной записи на один вызов и возвращает указатель на структуру типа **_HEAPINFO** , содержащий сведения о следующей записи кучи. **_HEAPINFO** типы, определенные в файле Malloc.h, содержит следующие элементы.
+
+|Поле|Значение|
+|-|-|
+|`int *_pentry`|Указатель записи кучи.|
+|`size_t _size`|Размер записи кучи.|
+|`int _useflag`|Флаг, указывающий, используется ли запись кучи.|
+
+Вызов **_heapwalk** , возвращающий **_HEAPOK** сохраняет размер записи в **ра_змер** и устанавливает **_useflag** поле либо **_FREEENTRY** или **_USEDENTRY** (оба являются константы, определенные в файле Malloc.h). Для получения этих сведений о первой записи в куче следует передать **_heapwalk** указатель **_HEAPINFO** структура которого **_pentry** член является **значение NULL** . Если операционная система не поддерживает **_heapwalk**(например, Windows 98), функция возвращает **_HEAPEND** и задает **errno** для **ENOSYS**.
+
+Эта функция проверяет свои параметры. Если *entryinfo* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **_HEAPBADPTR**.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательный заголовок|
+|-------------|---------------------|---------------------|
+|**_heapwalk**|\<malloc.h>|\<errno.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_heapwalk.c
+
+// This program "walks" the heap, starting
+// at the beginning (_pentry = NULL). It prints out each
+// heap entry's use, location, and size. It also prints
+// out information about the overall state of the heap as
+// soon as _heapwalk returns a value other than _HEAPOK
+// or if the loop has iterated 100 times.
+
+#include <stdio.h>
+#include <malloc.h>
+
+void heapdump(void);
+
+int main(void)
+{
+    char *buffer;
+
+    heapdump();
+    if((buffer = (char *)malloc(59)) != NULL)
+    {
+        heapdump();
+        free(buffer);
+    }
+    heapdump();
+}
+
+void heapdump(void)
+{
+    _HEAPINFO hinfo;
+    int heapstatus;
+    int numLoops;
+    hinfo._pentry = NULL;
+    numLoops = 0;
+    while((heapstatus = _heapwalk(&hinfo)) == _HEAPOK &&
+          numLoops < 100)
+    {
+        printf("%8s block at %Fp of size %4.4X\n",
+               (hinfo._useflag == _USEDENTRY ? "USED" : "FREE"),
+               hinfo._pentry, hinfo._size);
+        numLoops++;
+    }
+
+    switch(heapstatus)
+    {
+    case _HEAPEMPTY:
+        printf("OK - empty heap\n");
+        break;
+    case _HEAPEND:
+        printf("OK - end of heap\n");
+        break;
+    case _HEAPBADPTR:
+        printf("ERROR - bad pointer to heap\n");
+        break;
+    case _HEAPBADBEGIN:
+        printf("ERROR - bad start of heap\n");
+        break;
+    case _HEAPBADNODE:
+        printf("ERROR - bad node in heap\n");
+        break;
+    }
+}
+```
+
+```Output
+    USED block at 00310650 of size 0100
+    USED block at 00310758 of size 0800
+    USED block at 00310F60 of size 0080
+    FREE block at 00310FF0 of size 0398
+    USED block at 00311390 of size 000D
+    USED block at 003113A8 of size 00B4
+    USED block at 00311468 of size 0034
+    USED block at 003114A8 of size 0039
+...
+    USED block at 00312228 of size 0010
+    USED block at 00312240 of size 1000
+    FREE block at 00313250 of size 1DB0
+OK - end of heap
+```
+
+## <a name="see-also"></a>См. также
+
+[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[_heapadd](../../c-runtime-library/heapadd.md)<br/>
+[_heapchk](heapchk.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_heapset](../../c-runtime-library/heapset.md)<br/>

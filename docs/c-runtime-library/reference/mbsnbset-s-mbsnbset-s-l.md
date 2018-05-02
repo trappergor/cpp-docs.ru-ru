@@ -1,12 +1,12 @@
 ---
-title: "_mbsnbset_s, _mbsnbset_s_l | Документы Майкрософт"
-ms.custom: 
+title: _mbsnbset_s, _mbsnbset_s_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbset_s_l
@@ -41,129 +41,134 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fb1219bbe7343ad3644f64f8f3d017b45d1b51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d37c7bf59e35a33247ecab3b02c0545f88921ec8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
-Устанавливает для первых `n` байтов строки многобайтовых символов значение указанного символа. Эти версии функции [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md) отличаются повышенной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
+
+Задает первый **n** байтов строки многобайтовых символов значение указанного символа. Эти версии функции [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) отличаются повышенной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-errno_t _mbsnbset_s(  
-   unsigned char *str,  
-   size_t size,  
-   unsigned int c,  
-   size_t count   
-);  
-errno_t _mbsnbset_s_l(  
-   unsigned char *str,  
-   size_t size,  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-errno_t _mbsnbset_s(  
-   unsigned char (&str)[size],  
-   unsigned int c,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-errno_t _mbsnbset_s_l(  
-   unsigned char (&str)[size],  
-   unsigned int c,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `str`  
- Строка, которую требуется изменить.  
-  
- `size`  
- Размер строкового буфера.  
-  
- `c`  
- Однобайтовый или многобайтовый параметр.  
-  
- `count`  
- Число байтов, которые нужно задать.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Ноль в случае успешного выполнения; в противном случае — код ошибки.  
-  
-## <a name="remarks"></a>Примечания  
- Функции `_mbsnbset_s` и `_mbsnbset_s_l` устанавливают максимум первые несколько байт (`count`) `str` до `c`. Если значение `count` больше длины строки `str`, вместо параметра `count` используется длина строки `str`. Если `c` является многобайтовым символом и не помещается полностью в последний байт, установленный параметром `count`, последний байт дополняется символом пробела. `_mbsnbset_s` и `_mbsnbset_s_l` не добавляют завершающий символ null в конце `str`.  
-  
- `_mbsnbset_s` и `_mbsnbset_s_l` напоминают `_mbsnset` за тем исключением, что задают количество байт `count`, а не количество символов `count` для параметра `c`.  
-  
- Если `str` имеет значение `NULL` или значение `count` равно нулю, эта функция создает исключение недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`. Кроме того, если `c` не является допустимым многобайтовым символом, вместо него используется пробел, а параметру `errno` присваивается значение `EINVAL`.  
-  
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия `_mbsnbset_s` этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версия `_mbsnbset_s_l` работает аналогично, но использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
- В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устранена необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnset_s`|`_strnset_s`|`_mbsnbset_s`|`_wcsnset_s`|  
-|`_tcsnset_s_l`|`_strnset_s _l`|`_mbsnbset_s_l`|`_wcsnset_s_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_mbsnbset_s`|\<mbstring.h>|  
-|`_mbsnbset_s_l`|\<mbstring.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_mbsnbset_s.c  
-#include <mbstring.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[15] = "This is a test";  
-   /* Set not more than 4 bytes of string to be *'s */  
-   printf( "Before: %s\n", string );  
-   _mbsnbset_s( string, sizeof(string), '*', 4 );  
-   printf( "After:  %s\n", string );  
-}  
-```  
-  
-## <a name="output"></a>Вывод  
-  
-```Output  
-Before: This is a test  
-After:  **** is a test  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](../../c-runtime-library/reference/strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+errno_t _mbsnbset_s(
+   unsigned char *str,
+   size_t size,
+   unsigned int c,
+   size_t count
+);
+errno_t _mbsnbset_s_l(
+   unsigned char *str,
+   size_t size,
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+errno_t _mbsnbset_s(
+   unsigned char (&str)[size],
+   unsigned int c,
+   size_t count
+); // C++ only
+template <size_t size>
+errno_t _mbsnbset_s_l(
+   unsigned char (&str)[size],
+   unsigned int c,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*<br/>
+Строка, которую требуется изменить.
+
+*size*<br/>
+Размер строкового буфера.
+
+*c*<br/>
+Однобайтовый или многобайтовый параметр.
+
+*count*<br/>
+Число байтов, которые нужно задать.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Ноль в случае успешного выполнения; в противном случае — код ошибки.
+
+## <a name="remarks"></a>Примечания
+
+**_Mbsnbset_s** и **_mbsnbset_s_l** максимум, функции задают первый *число* байт *str* для *c*. Если *число* больше, чем длина *str*, длина *str* используется вместо *число*. Если *c* Многобайтовый символ и не может устанавливаться полностью в последний байт, который задается параметром *число*, последний байт дополняется символом пробела. **_mbsnbset_s** и **_mbsnbset_s_l** не добавляют завершающий символ null в конце *str*.
+
+**_mbsnbset_s** и **_mbsnbset_s_l** напоминают **_mbsnset**, за исключением того, что задают *число* байт вместо *число* символы *c*.
+
+Если *str* — **NULL** или *число* равен нулю, эта функция создает исключение недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **NULL**. Кроме того Если *c* не является допустимым многобайтовым символом, **errno** равно **EINVAL** и вместо него используется пробел.
+
+Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md) для получения дополнительной информации. **_Mbsnbset_s** версия этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbsnbset_s_l** версии идентичен, за исключением того, что она использует параметр языкового стандарта с Переданный. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устранена необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
+|**_tcsnset_s_l**|`_strnset_s _l`|**_mbsnbset_s_l**|**_wcsnset_s_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_mbsnbset_s**|\<mbstring.h>|
+|**_mbsnbset_s_l**|\<mbstring.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_mbsnbset_s.c
+#include <mbstring.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[15] = "This is a test";
+   /* Set not more than 4 bytes of string to be *'s */
+   printf( "Before: %s\n", string );
+   _mbsnbset_s( string, sizeof(string), '*', 4 );
+   printf( "After:  %s\n", string );
+}
+```
+
+## <a name="output"></a>Вывод
+
+```Output
+Before: This is a test
+After:  **** is a test
+```
+
+## <a name="see-also"></a>См. также
+
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

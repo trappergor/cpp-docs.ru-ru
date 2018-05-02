@@ -1,12 +1,12 @@
 ---
-title: "islower, iswlower, _islower_l, _iswlower_l | Документы Майкрософт"
-ms.custom: 
+title: islower, iswlower, _islower_l, _iswlower_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswlower
@@ -50,73 +50,77 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14cbb62fcdb23983b7c3167e400ddbe7e8b6f480
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
-Определяет, представляет ли целое число символ в нижнем регистре.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int islower(  
-   int c   
-);  
-int iswlower(  
-   wint_t c   
-);  
-int islower_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswlower_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Проверяемое целое число.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа в нижнем регистре. `islower` возвращает ненулевое значение, если `c` является строчные буквы (– z). Функция `iswlower` возвращает ненулевое значение только в том случае, если `c` является расширенным символом, соответствующим букве в нижнем регистре, или если `c` принадлежит определяемому реализацией набору расширенных символов, для которых `iswcntrl`, `iswdigit`, `iswpunct`или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
-  
- Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
- Поведение функций `islower` и `_islower_l` не определено, если `c` не является концом файла или не находится в диапазоне от 0 по 0xFF включительно. Если используется библиотека отладки CRT и `c` не является одним из этих значений, функции вызывают утверждение.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_istlower`|`islower`|[_ismbclower](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`iswlower`|  
-|`_istlower_l`|`_islower _l`|[_ismbclower_l](../../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|`_liswlower_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`islower`|\<ctype.h>|  
-|`iswlower`|\<ctype.h> или \<wchar.h>|  
-|`_islower_l`|\<ctype.h>|  
-|`_swlower_l`|\<ctype.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Классификация символов](../../c-runtime-library/character-classification.md)   
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)
+
+Определяет, представляет ли целое число символ в нижнем регистре.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int islower(
+   int c
+);
+int iswlower(
+   wint_t c
+);
+int islower_l(
+   int c,
+   _locale_t locale
+);
+int _iswlower_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Проверяемое целое число.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждый из этих процедур возвращает ненулевое значение, если *c* — конкретное представление строчные буквы. **islower** возвращает ненулевое значение, если *c* является строчные буквы (– z). **iswlower** возвращает ненулевое значение, если *c* является расширенным символом, соответствующий буквой в нижнем регистре, или если *c* является одним из определенного реализацией набора расширенных символов, для которых ни одна из **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** имеет ненулевое значение. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+
+Версии этих функций, имеющих **_l** суффикс используют языковой стандарт, передаваемый в вместо текущего языкового стандарта для их поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+Поведение **islower** и **_islower_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_istlower**|**islower**|[_ismbclower](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswlower**|
+|**_istlower_l**|`_islower _l`|[_ismbclower_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_liswlower_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**islower**|\<ctype.h>|
+|**iswlower**|\<ctype.h> или \<wchar.h>|
+|**_islower_l**|\<ctype.h>|
+|**_swlower_l**|\<ctype.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Классификация символов](../../c-runtime-library/character-classification.md)<br/>
+[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

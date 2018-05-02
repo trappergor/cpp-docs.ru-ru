@@ -1,12 +1,12 @@
 ---
-title: "устаревшие (C++) | Документы Microsoft"
-ms.custom: 
+title: устаревшие (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Этот раздел посвящен Майкрософт рекомендуется к использованию declspec объявления. Сведения о C ++ 14 `[[deprecated]]` атрибут и рекомендации по использованию этого атрибута и declspec характерные для Майкрософт или директивы pragma в разделе [стандартные атрибуты C++](attributes2.md).
+Этот раздел посвящен Майкрософт рекомендуется к использованию declspec объявления. Сведения о C ++ 14 `[[deprecated]]` атрибут и рекомендации по использованию этого атрибута и declspec характерные для Майкрософт или директивы pragma в разделе [стандартные атрибуты C++](attributes.md).
 
  За исключением указанных ниже **устаревшими** объявление предоставляет те же возможности, как [устаревшими](../preprocessor/deprecated-c-cpp.md) директивы pragma:  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Макросы только могут быть помечены как устаревшие с **устаревшими** pragma.  
   
- Если компилятор обнаруживает использование нерекомендуемого идентификатора или стандарт [ `[[deprecated]]` ](attributes2.md) атрибута [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) выдается предупреждение.  
+ Если компилятор обнаруживает использование нерекомендуемого идентификатора или стандарт [ `[[deprecated]]` ](attributes.md) атрибута [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) выдается предупреждение.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как отметить функции как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемая функция.  

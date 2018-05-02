@@ -1,12 +1,12 @@
 ---
-title: "&lt;shared_mutex&gt; | Документы Майкрософт"
-ms.custom: 
+title: '&lt;shared_mutex&gt; | Документы Майкрософт'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <shared_mutex>
@@ -54,31 +54,31 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d657a95822d66d34a6173cc775f99c80411f12
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ded646a4581e522fad7be9f3f66fc073d0df61f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex>
+# <a name="ltsharedmutex"></a>&lt;shared_mutex >
 
 &lt;Shared_mutex > заголовок предоставляет примитивы синхронизации, для защиты общих данных, которые доступны из нескольких потоков. Помимо монопольного доступа, предоставляемого классами mutex, классы shared mutex также предоставляют возможность совместного владения из нескольких потоков для неисключительного доступа. Общие мьютексы можно использовать для управления ресурсами, которые могут считываться несколькими потоками без возникновения состязания, однако должны записываться строго одним потоком.
 
 Заголовок &lt;shared_mutex > определяет классы `shared_mutex` и `shared_timed_mutex`, класс шаблона `shared_lock`и функцию шаблона `swap` для общих поддержки мьютекса.
 
-|Классы|Описание:|
+|Классы|Описание|
 |-------------|-----------------|
 |[Класс shared_mutex](../standard-library/shared-mutex.md#class_shared_mutex)|Тип общего мьютекса, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
 |[Класс shared_timed_mutex](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Тип общего мьютекса с ограничением по времени, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
 |[Класс shared_lock](../standard-library/shared-mutex.md#class_shared_lock)|Класс шаблонов, создающий программу-оболочку для общего мьютекса, чтобы обеспечить поддержку операций блокировки с ограничением по времени и совместное использование несколькими агентами с неисключительными правами.|
 
-|Функции|Описание:|
+|Функции|Описание|
 |---------------|-----------------|
 |[swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|
 
@@ -229,7 +229,7 @@ private:
 
 ## <a name="functions"></a>Функции
 
-###  <a name="function_swap"></a> swap
+###  <a name="function_swap"></a> Поменять местами
 
 Меняет местами объекты `shared_lock`.
 
@@ -242,11 +242,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="requirements"></a>Требования
 
- **Заголовок:** &lt;shared_mutex>
+**Заголовок:** &lt;shared_mutex>
 
- **Пространство имен:** std
+**Пространство имен:** std
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)  
-[&lt;mutex>](../standard-library/mutex.md)
+[Файлы заголовка ссылаются](../standard-library/cpp-standard-library-header-files.md)
+[&lt;мьютекс >](../standard-library/mutex.md)

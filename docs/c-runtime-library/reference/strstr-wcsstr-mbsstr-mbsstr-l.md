@@ -53,164 +53,168 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-caps.latest.revision: ''
+caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d56fc0f254a426eea10abec979ff7d656659bd82
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 0a85bf579dd5146e9f18627d9335f2fae408a7bb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
-Возвращает указатель на первое вхождение искомой строки в строке.  
-  
+Возвращает указатель на первое вхождение искомой строки в строке.
+
 > [!IMPORTANT]
->  Функции `_mbsstr` и `_mbsstr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-char *strstr(  
-   const char *str,  
-   const char *strSearch   
-); // C only  
-char *strstr(  
-   char *str,  
-   const char *strSearch   
-); // C++ only  
-const char *strstr(  
-   const char *str,  
-   const char *strSearch   
-); // C++ only  
-wchar_t *wcsstr(  
-   const wchar_t *str,  
-   const wchar_t *strSearch   
-); // C only  
-wchar_t *wcsstr(  
-   wchar_t *str,  
-   const wchar_t *strSearch   
-); // C++ only  
-const wchar_t *wcsstr(  
-   const wchar_t *str,  
-   const wchar_t *strSearch   
-); // C++ only  
-unsigned char *_mbsstr(  
-   const unsigned char *str,  
-   const unsigned char *strSearch   
-); // C only  
-unsigned char *_mbsstr(  
-   unsigned char *str,  
-   const unsigned char *strSearch   
-); // C++ only  
-const unsigned char *_mbsstr(  
-   const unsigned char *str,  
-   const unsigned char *strSearch   
-); // C++ only  
-unsigned char *_mbsstr_l(  
-   const unsigned char *str,  
-   const unsigned char *strSearch,  
-   _locale_t locale  
-); // C only  
-unsigned char *_mbsstr_l(  
-   unsigned char *str,  
-   const unsigned char *strSearch,  
-   _locale_t locale  
-); // C++ only  
-const unsigned char *_mbsstr_l(  
-   const unsigned char *str,  
-   const unsigned char *strSearch,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `str`  
- Строка для поиска, завершающаяся символом NULL.  
-  
- `strSearch`  
- Искомая строка, завершающаяся символом NULL.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на первое вхождение `strSearch` в `str` или `NULL`, если `strSearch` не найдена в `str`. Если `strSearch` указывает на строку нулевой длины, функция возвращает `str`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `strstr` возвращает указатель на первое вхождение `strSearch` в `str`. Поиск не включает завершающие нуль-символы. `wcsstr` является версией `strstr` с расширенными символами, а `_mbsstr` — версией с многобайтовыми символами. Аргументы и возвращаемое значение `wcsstr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsstr` представляют собой многобайтовые строки. `_mbsstr` проверяет свои параметры. Если параметр `str` или `strSearch` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `_mbsstr` принимает значение `errno`, а функция `EINVAL` возвращает значение 0. Функции `strstr` и `wcsstr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.  
-  
+> **_mbsstr** и **_mbsstr_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+char *strstr(
+   const char *str,
+   const char *strSearch
+); // C only
+char *strstr(
+   char *str,
+   const char *strSearch
+); // C++ only
+const char *strstr(
+   const char *str,
+   const char *strSearch
+); // C++ only
+wchar_t *wcsstr(
+   const wchar_t *str,
+   const wchar_t *strSearch
+); // C only
+wchar_t *wcsstr(
+   wchar_t *str,
+   const wchar_t *strSearch
+); // C++ only
+const wchar_t *wcsstr(
+   const wchar_t *str,
+   const wchar_t *strSearch
+); // C++ only
+unsigned char *_mbsstr(
+   const unsigned char *str,
+   const unsigned char *strSearch
+); // C only
+unsigned char *_mbsstr(
+   unsigned char *str,
+   const unsigned char *strSearch
+); // C++ only
+const unsigned char *_mbsstr(
+   const unsigned char *str,
+   const unsigned char *strSearch
+); // C++ only
+unsigned char *_mbsstr_l(
+   const unsigned char *str,
+   const unsigned char *strSearch,
+   _locale_t locale
+); // C only
+unsigned char *_mbsstr_l(
+   unsigned char *str,
+   const unsigned char *strSearch,
+   _locale_t locale
+); // C++ only
+const unsigned char *_mbsstr_l(
+   const unsigned char *str,
+   const unsigned char *strSearch,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*<br/>
+Строка для поиска, завершающаяся символом NULL.
+
+*strSearch*<br/>
+Искомая строка, завершающаяся символом NULL.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на первое вхождение *strSearch* в *str*, или **NULL** Если *strSearch* не отображается в *str* . Если *strSearch* указывает на строку нулевой длины, функция возвращает *str*.
+
+## <a name="remarks"></a>Примечания
+
+**Strstr** функция возвращает указатель на первое вхождение *strSearch* в *str*. Поиск не включает завершающие нуль-символы. **wcsstr** — это двухбайтовая версия **strstr** и **_mbsstr** версия многобайтовых символов. Аргументы и возвращаемое значение **wcsstr** являются двухбайтовые строки; аргументы **_mbsstr** представляют собой строки многобайтовых символов. **_mbsstr** проверяет свои параметры. Если *str* или *strSearch* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbsstr** задает **errno** для **EINVAL** и возвращает 0. **strstr** и **wcsstr** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+
 > [!IMPORTANT]
->  Эти функции могут создать угрозу в связи с проблемой переполнения буфера. Проблемы переполнения буфера могут использоваться для атаки на систему, поскольку они могут допустить выполнение произвольного кода, приводящего к несанкционированному повышению прав доступа. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не `const`, возвращает указатель на не `const`. Макрос `_CRT_CONST_CORRECT_OVERLOADS` определяется, если оба `const` и не-`const` доступны версии этих функций. Если требуется не`const` поведение для обоих перегрузки C++ определения символа `_CONST_RETURN`.  
-  
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта; версии с суффиксом `_l` идентичны версиям без этого суффикса, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
-|**Н/Д**|**Н/Д**|`_mbsstr_l`|**Н/Д**|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`strstr`|\<string.h>|  
-|`wcsstr`|\<string.h> или \<wchar.h>|  
-|`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|  
-  
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```C  
-// crt_strstr.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-char str[] =    "lazy";  
-char string[] = "The quick brown dog jumps over the lazy fox";  
-char fmt1[] =   "         1         2         3         4         5";  
-char fmt2[] =   "12345678901234567890123456789012345678901234567890";  
-  
-int main( void )  
-{  
-   char *pdest;  
-   int  result;  
-   printf( "String to be searched:\n   %s\n", string );  
-   printf( "   %s\n   %s\n\n", fmt1, fmt2 );  
-   pdest = strstr( string, str );  
-   result = (int)(pdest - string + 1);  
-   if ( pdest != NULL )  
-      printf( "%s found at position %d\n", str, result );  
-   else  
-      printf( "%s not found\n", str );  
-}  
-```  
-  
-```Output  
-String to be searched:  
-   The quick brown dog jumps over the lazy fox  
-            1         2         3         4         5  
-   12345678901234567890123456789012345678901234567890  
-  
-lazy found at position 36  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [basic_string::find](../../standard-library/basic-string-class.md#find)  
+> Эти функции могут создать угрозу в связи с проблемой переполнения буфера. Проблемы переполнения буфера могут использоваться для атаки на систему, поскольку они могут допустить выполнение произвольного кода, приводящего к несанкционированному повышению прав доступа. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+В языке C, эти функции принимают ** const ** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, которая принимает указатель на ** const ** возвращает указатель на **const **; версия, которая принимает указатель на отличных**const ** возвращает указатель на отличных**const **. Макрос **_CRT_CONST_CORRECT_OVERLOADS** определяется, если оба **const ** и не-** const ** доступны версии этих функций. Если требуется не**const ** поведение для обоих перегрузки C++ определения символа **_CONST_RETURN**.
+
+Выходное значение зависит от настройки категории языкового стандарта **LC_CTYPE**; Дополнительные сведения см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md). Версии этих функций, у которых нет **_l** используют текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии **_l** суффиксом идентичны, за исключением того, что они используют Переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsstr**|**strstr**|**_mbsstr**|**wcsstr**|
+|**Н/Д**|**Н/Д**|**_mbsstr_l**|**Н/Д**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**strstr**|\<string.h>|
+|**wcsstr**|\<string.h> или \<wchar.h>|
+|**_mbsstr**, **_mbsstr_l**|\<mbstring.h>|
+
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_strstr.c
+
+#include <string.h>
+#include <stdio.h>
+
+char str[] =    "lazy";
+char string[] = "The quick brown dog jumps over the lazy fox";
+char fmt1[] =   "         1         2         3         4         5";
+char fmt2[] =   "12345678901234567890123456789012345678901234567890";
+
+int main( void )
+{
+   char *pdest;
+   int  result;
+   printf( "String to be searched:\n   %s\n", string );
+   printf( "   %s\n   %s\n\n", fmt1, fmt2 );
+   pdest = strstr( string, str );
+   result = (int)(pdest - string + 1);
+   if ( pdest != NULL )
+      printf( "%s found at position %d\n", str, result );
+   else
+      printf( "%s not found\n", str );
+}
+```
+
+```Output
+String to be searched:
+   The quick brown dog jumps over the lazy fox
+            1         2         3         4         5
+   12345678901234567890123456789012345678901234567890
+
+lazy found at position 36
+```
+
+## <a name="see-also"></a>См. также
+
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[basic_string::find](../../standard-library/basic-string-class.md#find)<br/>

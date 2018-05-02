@@ -1,12 +1,12 @@
 ---
-title: "-FC (полный путь к файлу исходного кода в диагностике) | Документы Microsoft"
-ms.custom: 
+title: -FC (полный путь к файлу исходного кода в диагностике) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UseFullPaths
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b055b5431d41bc09fbdd2750c01d3efca8f21287
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bddc92d8c013fd3b4e2425b7f85b084651cdafe
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (полный путь к файлу исходного кода в папке Diagnostics)
 
@@ -54,21 +54,19 @@ int main( ) {
 
 С **/FC**, диагностическое сообщение будет похоже на следующее диагностическое:
 
-- c:\test\compiler_option_FC.cpp(5): ошибка C2143: синтаксическая ошибка: отсутствует «;» до "}"
+- c:\test\compiler_option_fc.cpp(5): ошибка C2143: синтаксическая ошибка: отсутствует «;» до "}"
 
-**/FC** требуется также в том случае, если вы хотите просмотреть полное имя файла, при использовании &#95; &#95; ФАЙЛ &#95; &#95; макрос.  В разделе [предустановленные макросы](../../preprocessor/predefined-macros.md) для Дополнительные сведения о &#95; &#95; ФАЙЛ &#95; &#95;.
+ **/FC** требуется также в том случае, если вы хотите просмотреть полное имя файла, при использовании &#95; &#95;ФАЙЛ&#95; &#95; макрос. В разделе [предустановленные макросы](../../preprocessor/predefined-macros.md) Дополнительные сведения о &#95; &#95;ФАЙЛ&#95;&#95;.
 
 **/FC** подразумевается параметр **/ZI**. Дополнительные сведения о **/ZI**, в разделе [/Z7, / Zi, /ZI (формат отладочной информации)](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+**/FC** выводит полные пути в нижнем регистре.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
 
-1. Разверните **свойства конфигурации** узла.
-
-1. Разверните **C/C++** узла.
-
-1. Выберите **Дополнительно** страницу свойств.
+1. Выберите **свойства конфигурации** > **C/C++** > **Дополнительно** страницу свойств.
 
 1. Изменить **использовать полные пути** свойство.
 

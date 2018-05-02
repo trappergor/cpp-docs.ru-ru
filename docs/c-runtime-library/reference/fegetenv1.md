@@ -1,13 +1,13 @@
 ---
-title: "fegetenv1 | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fegetenv | Документы Microsoft
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fetegenv
@@ -32,50 +32,54 @@ dev_langs:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025b934ec6a2d9bc98d46cabbd13b93e263cd777
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3569b015784f41fae4a4a91b6a32fe08dd57284
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fegetenv"></a>fegetenv
-Сохраняет текущую среду с плавающей запятой в указанном объекте.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int fegetenv(  
-   fenv_t *penv  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `penv`  
- Указатель на объект `fenv_t`, содержащий текущие значения среды с плавающей запятой.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает 0, если среда с плавающей запятой успешно сохранена в `penv`. В противном случае возвращается ненулевое значение.  
-  
-## <a name="remarks"></a>Примечания  
- Затем функция `fegetenv` задает текущую среду с плавающей запятой в объекте, указанном с помощью функции `penv`. Среда с плавающей запятой представляет собой набор флагов состояний и режимов управления, влияющих на вычисления с плавающей запятой. Включает режим направления округления и флаги состояния для исключений с плавающей запятой.  Если `penv` не указывает на допустимый объект `fenv_t`, последующее поведение функции будет неопределенным.  
-  
- Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Заголовок C|Заголовок C++|  
-|--------------|--------------|------------------|  
-|`fegetenv`|\<fenv.h>|\<cfenv>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fesetenv](../../c-runtime-library/reference/fesetenv1.md)
+
+Сохраняет текущую среду с плавающей запятой в указанном объекте.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int fegetenv(
+   fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*penv*<br/>
+Указатель на **fenv_t** объект, содержащий текущие значения с плавающей запятой среды.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает 0, если в среде с плавающей запятой было успешно сохранено в *penv*. В противном случае возвращается ненулевое значение.
+
+## <a name="remarks"></a>Примечания
+
+**Fegetenv** функция сохраняет текущую среду с плавающей запятой в объекте, на который указывает *penv*. Среда с плавающей запятой представляет собой набор флагов состояний и режимов управления, влияющих на вычисления с плавающей запятой. Включает режим направления округления и флаги состояния для исключений с плавающей запятой.  Если *penv* не указывает на допустимый **fenv_t** объекта, последующее поведение не определено.
+
+Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Заголовок C|Заголовок C++|
+|--------------|--------------|------------------|
+|**fegetenv**|\<fenv.h>|\<cfenv>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[fesetenv](fesetenv1.md)<br/>

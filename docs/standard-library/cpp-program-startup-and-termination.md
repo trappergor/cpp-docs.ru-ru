@@ -1,12 +1,12 @@
 ---
-title: "Запуск и завершение программ C++ | Документы Майкрософт"
-ms.custom: 
+title: Запуск и завершение программ C++ | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,37 +18,37 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42baa08777e8e898ee4c6e49ce74b03c293c9b96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eec5c6d72152f2aaea8d77df7ca65bf5f5f5565b
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-program-startup-and-termination"></a>Запуск и завершение программ C++
-Программы на языке C++ выполняет те же операции, что и программы на языке C при запуске программы и при завершении программы, а также несколько дополнительных операций, описанных здесь.  
-  
- Перед вызовом целевой средой функции `main` и после сохранения всех константных начальных значений, указанных вами во всех объектах, имеющих статическую длительность, программа выполняет все оставшиеся конструкторы для таких статических объектов. Порядок выполнения разных записей преобразования не указан, но тем не менее можно предположить, что некоторые объекты [iostreams](../standard-library/iostreams-conventions.md) правильно инициализированы для использования этими статическими конструкторами. Это следующие управляющие текстовые потоки.  
-  
--   [cin](../standard-library/iostream.md#cin) — для стандартного ввода.  
-  
--   [cout](../standard-library/iostream.md#cout) — для стандартного вывода.  
-  
--   [cerr](../standard-library/iostream.md#cerr) — для стандартного вывода ошибки без буферизации.  
-  
--   [clog](../standard-library/iostream.md#clog) — для стандартного вывода ошибки буферизацией.  
-  
- Эти объекты также можно использовать в деструкторах, вызываемых для статических объектов, во время завершения программы.  
-  
- Как и в C, возврат из `main` или вызов `exit` вызывает все функции, зарегистрированные с `atexit`, в обратном порядке из реестра. Исключение, созданное такой зарегистрированной функцией, вызывает `terminate`.  
-  
-## <a name="see-also"></a>См. также  
- [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+Программы на языке C++ выполняет те же операции, что и программы на языке C при запуске программы и при завершении программы, а также несколько дополнительных операций, описанных здесь.
 
+Перед вызовом целевой средой функции `main` и после сохранения всех константных начальных значений, указанных вами во всех объектах, имеющих статическую длительность, программа выполняет все оставшиеся конструкторы для таких статических объектов. Порядок выполнения разных записей преобразования не указан, но тем не менее можно предположить, что некоторые объекты [iostreams](../standard-library/iostreams-conventions.md) правильно инициализированы для использования этими статическими конструкторами. Это следующие управляющие текстовые потоки.
+
+- [cin](../standard-library/iostream.md#cin) — для стандартного ввода.
+
+- [cout](../standard-library/iostream.md#cout) — для стандартного вывода.
+
+- [cerr](../standard-library/iostream.md#cerr) — для стандартного вывода ошибки без буферизации.
+
+- [clog](../standard-library/iostream.md#clog) — для стандартного вывода ошибки буферизацией.
+
+Эти объекты также можно использовать в деструкторах, вызываемых для статических объектов, во время завершения программы.
+
+Как и в C, возврат из `main` или вызов `exit` вызывает все функции, зарегистрированные с `atexit`, в обратном порядке из реестра. Исключение, созданное такой зарегистрированной функцией, вызывает `terminate`.
+
+## <a name="see-also"></a>См. также
+
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "fabs, fabsf, fabsl | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fabs, fabsf, fabsl | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fabsf
@@ -41,67 +41,73 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 707e75f1036421d5392d2e7ecb2273760088e22c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 95f34d81045aef90832a1d05090c548c1bf27dec
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
-Вычисляет абсолютное значение аргумента с плавающей точкой.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double fabs(   
-   double x   
-);  
-float fabs(  
-   float x   
-); // C++ only  
-long double fabs(  
-   long double x  
-); // C++ only  
-float fabsf(   
-   float x   
-);  
-long double fabsl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `x`  
- Значение с плавающей запятой.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функции `fabs` возвращают абсолютное значение аргумента `x`. Ошибка не возвращается.  
-  
-|Ввод|Исключение SEH|Исключение Matherr|  
-|-----------|-------------------|-----------------------|  
-|± QNAN,IND|Нет|_DOMAIN|  
-  
-## <a name="remarks"></a>Примечания  
- C++ допускает перегрузку, поэтому можно вызывать перегрузки `fabs`, если включен заголовок \<cmath>. В программе на языке C `fabs` всегда принимает и возвращает двойное значение.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок C|Обязательный заголовок C++|  
-|--------------|-----------------------|---------------------------|  
-|`fabs`, `fabsf`, `fabsl`|\<math.h>|\<cmath> или \<math.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для [abc](../../c-runtime-library/reference/abs-labs-llabs-abs64.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [abs, labs, llabs, _abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)   
- [_cabs](../../c-runtime-library/reference/cabs.md)   
+
+Вычисляет абсолютное значение аргумента с плавающей точкой.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double fabs(
+   double x
+);
+float fabs(
+   float x
+); // C++ only
+long double fabs(
+   long double x
+); // C++ only
+float fabsf(
+   float x
+);
+long double fabsl(
+   long double x
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Значение с плавающей запятой.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**Fabs** функции возвращают абсолютное значение аргумента *x*. Ошибка не возвращается.
+
+|Ввод|Исключение SEH|Исключение Matherr|
+|-----------|-------------------|-----------------------|
+|± QNAN,IND|Нет|_DOMAIN|
+
+## <a name="remarks"></a>Примечания
+
+C++ допускает перегрузки, поэтому можно вызывать перегрузки **fabs** при включении \<cmath > заголовок. В программе на языке C **fabs** всегда принимает и возвращает **двойные**.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок C|Обязательный заголовок C++|
+|--------------|-----------------------|---------------------------|
+|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> или \<math.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для [abc](abs-labs-llabs-abs64.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
+[_cabs](cabs.md)<br/>
