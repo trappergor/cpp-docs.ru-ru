@@ -2,11 +2,8 @@
 title: __int8, __int16, __int32, __int64 | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __int8_cpp
@@ -23,21 +20,19 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 957e2483d61855c442780440ccf87441f00cb1c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8083d37d2526820ccd75104f9ee8a748eb5d33bc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
- В Microsoft C/C++ поддерживаются целочисленные типы с указанием размера. 8-, 16-, 32- или 64-разрядные целочисленные переменные можно объявить с помощью **__int**  *n*  спецификатор, где  *n*  8, 16, 32 или 64.  
+ В Microsoft C/C++ поддерживаются целочисленные типы с указанием размера. Можно объявить с помощью 8-, 16-, 32- или 64-разрядные целочисленные переменные **__int *** n* спецификатор, где *n* 8, 16, 32 или 64.  
   
  В следующем примере объявляется по одной переменной каждого из этих целочисленных типов с указанием размера:  
   

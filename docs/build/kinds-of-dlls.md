@@ -1,13 +1,10 @@
 ---
-title: "Виды библиотек DLL | Документы Microsoft"
-ms.custom: 
+title: Виды библиотек DLL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>Виды библиотек DLL
 В этом разделе сведения для определения типа библиотеки DLL для сборки.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>Различные доступные виды библиотек DLL  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> Различные доступные виды библиотек DLL  
  Visual C++ позволяет создавать библиотеки DLL Win32 на C или C++, следует использовать библиотеку Microsoft Foundation Class (MFC). Можно создать проект MFC DLL с помощью мастера приложений Win32.  
   
  Сама библиотека MFC доступна в библиотеках статической компоновки или в библиотеках DLL, с помощью мастера DLL MFC. Если библиотека DLL использует MFC, Visual C++ поддерживает три различных сценария разработки библиотеки DLL:  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Какой тип используемой библиотеки DLL](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>Выбор типа используемой библиотеки DLL  
+##  <a name="_core_which_kind_of_dll_to_use"></a> Выбор типа используемой библиотеки DLL  
  Если библиотека DLL не использует MFC, используйте Visual C++ для сборок не - MFC DLL-Библиотеки Win32. Связывание с MFC библиотеки DLL (статически или динамически) занимает значительное место на диске и памяти. Не следует связывать с MFC, если библиотека DLL использует MFC.  
   
  Если библиотека DLL будет использовать MFC и будет использоваться MFC или не являющимися MFC приложениями, необходимо построить обычной MFC DLL, динамически привязано к MFC или обычной MFC DLL, статически связанной с MFC. В большинстве случаев, возможно, понадобится обычной MFC DLL, динамически связанной с MFC, так как размер файла библиотеки DLL будет намного меньше и экономия места в памяти с помощью общедоступной версии MFC могут оказаться значительными. Если статически связываются с MFC размер файла библиотеки DLL быть больше и потенциально занимают дополнительную память, так как он загружает собственную частную копию кода библиотеки MFC.  

@@ -1,12 +1,9 @@
 ---
-title: "средства извлечения _variant_t | Документы Microsoft"
-ms.custom: 
+title: средства извлечения _variant_t | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>Средства извлечения _variant_t
 **Блок, относящийся только к системам Microsoft**  
@@ -119,9 +114,9 @@ operator unsigned __int64() const;
   
 -   **(оператор _bstr_t)** извлекает строку, которая инкапсулируется в `_bstr_t` объекта.  
   
--   **Operator IDispatch\*()** извлекает указатель на disp-интерфейса из инкапсулированного **VARIANT**. `AddRef`вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
+-   **Operator IDispatch\*()** извлекает указатель на disp-интерфейса из инкапсулированного **VARIANT**. `AddRef` вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
   
--   **Operator IUnknown\*()** извлекает из инкапсулированного указателя интерфейса СОМ **VARIANT**. `AddRef`вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
+-   **Operator IUnknown\*()** извлекает из инкапсулированного указателя интерфейса СОМ **VARIANT**. `AddRef` вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

@@ -1,12 +1,9 @@
 ---
-title: "оператор __alignof | Документы Microsoft"
-ms.custom: 
+title: оператор __alignof | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-operator"></a>Оператор __alignof
 В C++ 11 имеется оператор `alignof`, возвращающий выравнивание (в байтах) заданного типа. Для обеспечения максимальной переносимости кода следует использовать оператор alignof вместо оператора __alignof, тесно связанного с системами Майкрософт.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 |**__alignof (char)**|1|  
 |**__alignof (краткое).**|2|  
 |**__alignof (int)**|4|  
-|**__alignof( \__int64 )**|8|  
+|**__alignof ( \__int64)**|8|  
 |**__alignof (float)**|4|  
 |**__alignof (double)**|8|  
 |**__alignof (char\* )**|4|  

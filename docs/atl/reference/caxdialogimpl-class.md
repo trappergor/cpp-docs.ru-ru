@@ -2,11 +2,8 @@
 title: Класс CAxDialogImpl | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3e1b7d4f88428060f4aa4d01180bce1e970b650
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxdialogimpl-class"></a>Класс CAxDialogImpl
 Этот класс реализует диалоговое окно (модальные и немодальные), на котором размещены элементы управления ActiveX.  
@@ -62,7 +57,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Этот метод используется для соединения или разъединения всех записей в схеме событий карты приемника объекта.|  
 |[CAxDialogImpl::Create](#create)|Этот метод используется для создания немодального диалогового окна.|  
@@ -75,14 +70,14 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CAxDialogImpl::m_bModal](#m_bmodal)|Переменную, которая существует только в отладочной сборки и задано значение true, если является модальным диалоговым окном.|  
   
 ## <a name="remarks"></a>Примечания  
- `CAxDialogImpl`позволяет модальное или немодальное диалоговое окно создания. `CAxDialogImpl`предоставляет процедуру диалогового окна, который использует схему сообщений по умолчанию для направления сообщений для соответствующих обработчиков.  
+ `CAxDialogImpl` позволяет модальное или немодальное диалоговое окно создания. `CAxDialogImpl` предоставляет процедуру диалогового окна, который использует схему сообщений по умолчанию для направления сообщений для соответствующих обработчиков.  
   
- `CAxDialogImpl`является производным от `CDialogImplBaseT`, который в свою очередь является производным от *TBase* (по умолчанию `CWindow`) и `CMessageMap`.  
+ `CAxDialogImpl` является производным от `CDialogImplBaseT`, который в свою очередь является производным от *TBase* (по умолчанию `CWindow`) и `CMessageMap`.  
   
  Класс необходимо определить член прямой Международной, задает идентификатор ресурса шаблона диалогового окна Например, добавление объекта ATL диалогового окна с помощью **добавить класс** диалоговое окно автоматически добавляет следующую строку в класс:  
   
@@ -110,7 +105,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap  
  Этот метод используется для соединения или разъединения всех записей в схеме событий карты приемника объекта.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>  CAxDialogImpl::Create  
  Этот метод используется для создания немодального диалогового окна.  
   
 ```
@@ -139,7 +134,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
  `dwInitParam`  
  [in] Указывает значение для передачи в диалоговом окне `lParam` параметр **WM_INITDIALOG** сообщения.  
   
- **RECT &**  
+ **RECT &AMP;**  
  Этот параметр не используется. Этот параметр передается с `CComControl`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -150,7 +145,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  Второй переопределение предоставляется только в том случае, чтобы можно было использовать диалоговые окна с [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
-##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow  
  Этот метод вызывается для уничтожения немодального диалогового окна.  
   
 ```
@@ -163,7 +158,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>Примечания  
  Не следует вызывать `DestroyWindow` для уничтожения модального диалогового окна. Вызовите [EndDialog](#enddialog) вместо него.  
   
-##  <a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>  CAxDialogImpl::DoModal  
  Этот метод используется для создания модального диалогового окна.  
   
 ```
@@ -187,7 +182,7 @@ INT_PTR DoModal(
   
  Чтобы создать немодального диалогового окна, вызовите [создать](#create).  
   
-##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog  
  Этот метод вызывается для уничтожения модального диалогового окна.  
   
 ```
@@ -202,12 +197,12 @@ BOOL EndDialog(int nRetCode);
  Значение TRUE, если диалоговое окно удаляется; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- `EndDialog`должен вызываться через процедуру диалогового окна. После удаления диалоговым окном Windows использует значение `nRetCode` как возвращаемое значение для `DoModal`, создавшего диалоговым окном.  
+ `EndDialog` должен вызываться через процедуру диалогового окна. После удаления диалоговым окном Windows использует значение `nRetCode` как возвращаемое значение для `DoModal`, создавшего диалоговым окном.  
   
 > [!NOTE]
 >  Не следует вызывать `EndDialog` для уничтожения немодального диалогового окна. Вызовите [DestroyWindow](#destroywindow) вместо него.  
   
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc  
  Этот метод вызывается для получения указателя на `DialogProc` функции обратного вызова.  
   
 ```
@@ -220,7 +215,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>Примечания  
  `DialogProc` Функция — это функция обратного вызова, определяемые приложением.  
   
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>  CAxDialogImpl::GetIDD  
  Вызовите этот метод, чтобы получить идентификатор ресурса шаблона диалогового окна  
   
 ```
@@ -230,7 +225,7 @@ int GetIDD();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает идентификатор ресурса шаблона диалогового окна  
   
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage  
  Этот метод вызывается для определения, предназначено ли сообщение для этого диалогового и обрабатывает сообщение, если он является.  
   
 ```
@@ -247,7 +242,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>Примечания  
  Этот метод предназначен для вызова из в цикле обработки сообщений.  
   
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal  
  Переменную, которая существует только в отладочной сборки и задано значение true, если является модальным диалоговым окном.  
   
 ```

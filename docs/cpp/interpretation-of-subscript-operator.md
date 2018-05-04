@@ -1,12 +1,9 @@
 ---
-title: "Интерпретация оператора индекса | Документы Microsoft"
-ms.custom: 
+title: Интерпретация оператора индекса | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - interpreting subscript operators [C++]
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9bba312c6969acf95be8899f58f65e31c75386c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interpretation-of-subscript-operator"></a>Интерпретация оператора индекса
 Как и другие операторы, оператор индекса (**[]**) может быть переопределен пользователем. Поведение оператора индекса по умолчанию, если он не перегружен, — совмещать имя массива и индекс с помощью следующего метода.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  **((**   
  ***имя массива* ) + ()**   
- ***Индекс* 1***max*2  *\* max*3*.. .max*n)  **+**  *индекс*2  *\* max*3*.. .max*n). . . *+**индекс*n))  
+ ***Индекс* 1***max*2  *\* max*3 *.. .max*n) **+** *индекс*2  *\* max*3 *.. .max*n).   . . *+* *Индекс*n))  
   
 ## <a name="see-also"></a>См. также  
  [Массивы](../cpp/arrays-cpp.md)

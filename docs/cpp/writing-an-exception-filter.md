@@ -1,29 +1,24 @@
 ---
-title: "Написание фильтра исключений | Документы Microsoft"
-ms.custom: 
+title: Написание фильтра исключений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>Написание фильтра исключений
 Исключение можно обработать посредством перехода на уровень обработчика исключений или путем продолжения выполнения. Вместо использования кода обработчика исключений для обработки исключения и передачи управления дальше, можно использовать *фильтра* устранить проблему и возвращая значение -1, возобновить Обычный поток без очистки стека.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  Рекомендуется использовать вызов функции в *фильтра* выражение всякий раз, когда *фильтра* должен выполнить какие-либо сложные. Вычисление выражения приводит к выполнению функции, в данном случае — `Eval_Exception`.  
   
- Обратите внимание на использование [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) для определения исключения. Эту функцию необходимо вызывать внутри фильтра. `Eval_Exception`не удается вызвать **GetExceptionCode**, но должна содержать передаваемый ей код исключения.  
+ Обратите внимание на использование [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) для определения исключения. Эту функцию необходимо вызывать внутри фильтра. `Eval_Exception` не удается вызвать **GetExceptionCode**, но должна содержать передаваемый ей код исключения.  
   
  Если исключение не вызвано переполнением при операции с целыми числами или числами с плавающей запятой, этот обработчик передает управление другому обработчику. В этом случае обработчик вызывает функцию (`ResetVars` — это только пример, а не функция API), чтобы сбросить некоторые глобальные переменные. *Оператор блок-2*, в этом примере является пустым, никогда не запускается из-за `Eval_Exception` никогда не возвращает результат EXCEPTION_EXECUTE_HANDLER (1).  
   

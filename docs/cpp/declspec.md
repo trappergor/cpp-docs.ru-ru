@@ -1,12 +1,9 @@
 ---
-title: "__declspec | Документы Microsoft"
-ms.custom: 
+title: __declspec | Документы Microsoft
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -33,17 +29,17 @@ ms.lasthandoff: 01/25/2018
 
 ## <a name="grammar"></a>Грамматика
 
-*decl-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
+*спецификатор decl*:  
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***расширенных последовательность модификаторов объявления***)** 
 
 *extended-decl-modifier-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*модификатор расширенного объявления*<sub>необязательно</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*модификатор расширенного объявления* *расширенных последовательность модификаторов объявления*
 
 *extended-decl-modifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Выравнивание (** *#* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**выделить («** *segname* **»)**  
+&nbsp;&nbsp;&nbsp;&nbsp;**домен приложения**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**Рекомендуется использовать**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
@@ -55,14 +51,14 @@ ms.lasthandoff: 01/25/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**noreturn**  
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**  
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
-&nbsp;&nbsp;&nbsp;&nbsp;**процесс**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Процесс**  
 &nbsp;&nbsp;&nbsp;&nbsp;**свойство (** { **получить =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**Ограничения**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
 &nbsp;&nbsp;&nbsp;&nbsp;**поток**  
-&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**  
+&nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **»)**  
 
 Пробел отделяет последовательность модификаторов объявления. Примеры приведены в дальнейших разделах.
 
@@ -88,7 +84,7 @@ class __declspec(dllimport) X {};
 
 Общие рекомендации по использованию **__declspec** атрибут для простых объявлений является следующим образом:
 
-*decl-specifier-seq* *init-declarator-list*;
+*decl-specifier-seq* *список деклараторов*;
 
 *Decl-specifier-seq* должен содержать, помимо прочего, базовый тип (например **int**, **float**, **typedef**, или имя класса), класс хранения (например **статических**, **extern**), или **__declspec** расширения. *Список деклараторов* должен содержать, помимо прочего, часть объявления указателя. Пример:
 

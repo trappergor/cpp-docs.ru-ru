@@ -1,12 +1,9 @@
 ---
-title: "Класс интерфейс IObjectWithSiteImpl | Документы Microsoft"
-ms.custom: 
+title: Класс интерфейс IObjectWithSiteImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Интерфейс IObjectWithSiteImpl класса
 Этот класс предоставляет методы, что объект для взаимодействия со своим сайтом.  
@@ -51,7 +46,7 @@ template <class T>
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::GetSite](#getsite)|Запросы на сайт для указателя на интерфейс.|  
 |[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Предоставляет объект, на сайте **IUnknown** указателя.|  
@@ -59,14 +54,14 @@ template <class T>
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет сайта **IUnknown** указателя.|  
   
 ## <a name="remarks"></a>Примечания  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) интерфейс позволяет объекту обмениваться данными со своим сайтом. Класс `IObjectWithSiteImpl` предоставляет стандартную реализацию этого интерфейса и реализует **IUnknown** , отправляя сведения в дамп устройства в отладочных построений.  
   
- `IObjectWithSiteImpl`Определяет два метода. Первый клиент вызывает метод `SetSite`, передача на сайте **IUnknown** указателя. Этот указатель сохранен внутри объекта и более поздней версии можно получить путем вызова `GetSite`.  
+ `IObjectWithSiteImpl` Определяет два метода. Первый клиент вызывает метод `SetSite`, передача на сайте **IUnknown** указателя. Этот указатель сохранен внутри объекта и более поздней версии можно получить путем вызова `GetSite`.  
   
  Как правило, являются производными от класса `IObjectWithSiteImpl` при создании объекта, не является элементом управления. Для элементов управления, производных от класса [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), предоставляющее указатель сайта. Не являющиеся производными класса как из `IObjectWithSiteImpl` и `IOleObjectImpl`.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  Запрашивает сайта для указателя на интерфейс, определенный `riid`.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  В разделе [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) в Windows SDK.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  Управляет сайта **IUnknown** указателя.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_spUnkSite`Сначала получит этот указатель посредством вызова [SetSite](#setsite).  
+ `m_spUnkSite` Сначала получит этот указатель посредством вызова [SetSite](#setsite).  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  Предоставляет объект, на сайте **IUnknown** указателя.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK`.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  Предоставляет объект, на сайте **IUnknown** указателя.  
   
 ```

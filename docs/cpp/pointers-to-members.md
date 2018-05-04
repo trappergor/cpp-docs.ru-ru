@@ -1,12 +1,9 @@
 ---
-title: "Указатели на члены | Документы Microsoft"
-ms.custom: 
+title: Указатели на члены | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>Указатели на члены
 Объявления указателей на члены — это особый случай объявлений указателей.  Они объявляются с помощью следующей последовательности:  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/16/2018
   
     -   Оператор ::.  
   
-    -    **\***  Оператор.  
+    -   **\*** Оператор.  
   
     -   Необязательный **const** и/или `volatile` спецификаторы.  
   
@@ -61,9 +56,9 @@ ms.lasthandoff: 03/16/2018
   
     -   Необязательный инициализатор:  
   
-  **=**  Оператор.  
+ **=** Оператор.  
   
-  **&**  Оператор.  
+ **&** Оператор.  
   
  Полное имя класса.  
   
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- Разница между **.\***  и  **-> \***  (операторами указателя на член) является то, что **.\***  выбирает члены указанному объекту или по ссылке объекта, а  **-> \***  выбирает члены с помощью указателя. (Дополнительные сведения об этих операторах см. в разделе [выражения с операторами указателя на член](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ Разница между **.\***  и **-> \*** (операторами указателя на член) является то, что **.\***  выбирает члены указанному объекту или по ссылке объекта, а **-> \*** выбирает члены с помощью указателя. (Дополнительные сведения об этих операторах см. в разделе [выражения с операторами указателя на член](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  Результатом операторов указателя на член является тип члена — в этом случае **char \*** .  
   

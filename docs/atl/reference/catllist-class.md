@@ -1,12 +1,9 @@
 ---
-title: "Класс CAtlList | Документы Microsoft"
-ms.custom: 
+title: Класс CAtlList | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlList
@@ -46,17 +43,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d26ba7107e21e64ad65ec53264b4f3740fd13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bfe961ef3ac02a0ed068b8cc2b74f2a6cce22ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catllist-class"></a>Класс CAtlList
 Этот класс предоставляет методы для создания и управления объекта списка.  
@@ -79,20 +74,20 @@ class CAtlList
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlList::INARGTYPE](#inargtype)||  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlList::CAtlList](#catllist)|Конструктор.|  
 |[CAtlList:: ~ CAtlList](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlList::AddHead](#addhead)|Этот метод используется для добавления элемента в начало списка.|  
 |[CAtlList::AddHeadList](#addheadlist)|Этот метод используется для добавления существующего списка в начало списка.|  
@@ -124,16 +119,16 @@ class CAtlList
 |[CAtlList::SwapElements](#swapelements)|Вызовите этот метод, чтобы поменять местами элементы в списке.|  
   
 ## <a name="remarks"></a>Примечания  
- `CAtlList` Класса поддерживает упорядоченные списки неуникальных объектов, доступные последовательно или по значению. `CAtlList`списки ведут себя как двунаправленный список. Каждый список имеет головы и хвоста, и новые элементы (или списки в некоторых случаях) можно добавлять либо конца списка, или вставляться до или после определенных элементов.  
+ `CAtlList` Класса поддерживает упорядоченные списки неуникальных объектов, доступные последовательно или по значению. `CAtlList` списки ведут себя как двунаправленный список. Каждый список имеет головы и хвоста, и новые элементы (или списки в некоторых случаях) можно добавлять либо конца списка, или вставляться до или после определенных элементов.  
   
- Большинство `CAtlList` метода используют значение позиции. Это значение используется методами ссылаться на фактический объем памяти расположение, где элементы сохраняются и не рассчитываются и прогнозировать напрямую. Если это необходимо, чтобы получить доступ к  *n* й элемент в списке, а метод [CAtlList::FindIndex](#findindex) возвращает соответствующее значение позиции для указанного индекса. Методы [CAtlList::GetNext](#getnext) и [CAtlList::GetPrev](#getprev) может использоваться для прохода по объектам в списке.  
+ Большинство `CAtlList` метода используют значение позиции. Это значение используется методами ссылаться на фактический объем памяти расположение, где элементы сохраняются и не рассчитываются и прогнозировать напрямую. Если это необходимо, чтобы получить доступ к *n*й элемент в списке, а метод [CAtlList::FindIndex](#findindex) возвращает соответствующее значение позиции для указанного индекса. Методы [CAtlList::GetNext](#getnext) и [CAtlList::GetPrev](#getprev) может использоваться для прохода по объектам в списке.  
   
  Дополнительные сведения о классы коллекций, доступных с библиотекой ATL см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="addhead"></a>CAtlList::AddHead  
+##  <a name="addhead"></a>  CAtlList::AddHead  
  Этот метод используется для добавления элемента в начало списка.  
   
 ```
@@ -154,7 +149,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
-##  <a name="addheadlist"></a>CAtlList::AddHeadList  
+##  <a name="addheadlist"></a>  CAtlList::AddHeadList  
  Этот метод используется для добавления существующего списка в начало списка.  
   
 ```
@@ -171,7 +166,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CAtlList::AddTail  
+##  <a name="addtail"></a>  CAtlList::AddTail  
  Этот метод используется для добавления элемента к концу списка этого списка.  
   
 ```
@@ -192,7 +187,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
-##  <a name="addtaillist"></a>CAtlList::AddTailList  
+##  <a name="addtaillist"></a>  CAtlList::AddTailList  
  Этот метод используется для добавления существующего списка к концу списка этого списка.  
   
 ```
@@ -209,7 +204,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
-##  <a name="assertvalid"></a>CAtlList::AssertValid  
+##  <a name="assertvalid"></a>  CAtlList::AssertValid  
  Вызовите этот метод, чтобы убедиться, что он действителен.  
   
 ```
@@ -222,7 +217,7 @@ void AssertValid() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
-##  <a name="catllist"></a>CAtlList::CAtlList  
+##  <a name="catllist"></a>  CAtlList::CAtlList  
  Конструктор.  
   
 ```
@@ -239,7 +234,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
-##  <a name="dtor"></a>CAtlList:: ~ CAtlList  
+##  <a name="dtor"></a>  CAtlList:: ~ CAtlList  
  Деструктор  
   
 ```
@@ -251,7 +246,7 @@ CAtlList(UINT nBlockSize = 10) throw();
   
  В отладочных построениях, возникает сбой утверждения, если список по-прежнему содержит некоторые элементы после вызова `RemoveAll`.  
   
-##  <a name="find"></a>CAtlList::Find  
+##  <a name="find"></a>  CAtlList::Find  
  Этот метод используется для поиска в списке для указанного элемента.  
   
 ```
@@ -274,7 +269,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
-##  <a name="findindex"></a>CAtlList::FindIndex  
+##  <a name="findindex"></a>  CAtlList::FindIndex  
  Этот метод используется для получения позиции элемента, заданного значением индекса.  
   
 ```
@@ -289,14 +284,14 @@ POSITION FindIndex(size_t iElement) const throw();
  Возвращает соответствующее значение ПОЗИЦИИ или значение NULL, если `iElement` выходит за пределы диапазона.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод возвращает ПОЗИЦИЮ, соответствующему значению данного индекса, доступ к  *n* й элемент в списке.  
+ Этот метод возвращает ПОЗИЦИЮ, соответствующему значению данного индекса, доступ к *n*й элемент в списке.  
   
  В отладочных построениях Сбой утверждения происходит, если объект-список не является допустимым.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
-##  <a name="getat"></a>CAtlList::GetAt  
+##  <a name="getat"></a>  CAtlList::GetAt  
  Этот метод используется для возвращения элемента в указанной позиции в списке.  
   
 ```
@@ -321,7 +316,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::FindIndex](#findindex).  
   
-##  <a name="getcount"></a>CAtlList::GetCount  
+##  <a name="getcount"></a>  CAtlList::GetCount  
  Этот метод используется для возврата числа объектов в списке.  
   
 ```
@@ -334,7 +329,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::Find](#find).  
   
-##  <a name="gethead"></a>CAtlList::GetHead  
+##  <a name="gethead"></a>  CAtlList::GetHead  
  Вызовите этот метод, чтобы возвратить элемент в начало списка.  
   
 ```
@@ -355,7 +350,7 @@ const E& GetHead() const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::AddHead](#addhead).  
   
-##  <a name="getheadposition"></a>CAtlList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition  
  Этот метод вызывается для получения позиции в начало списка.  
   
 ```
@@ -371,7 +366,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CAtlList::GetNext  
+##  <a name="getnext"></a>  CAtlList::GetNext  
  Этот метод используется для возврата к следующему элементу в списке.  
   
 ```
@@ -394,7 +389,7 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::GetHeadPosition](#getheadposition).  
   
-##  <a name="getprev"></a>CAtlList::GetPrev  
+##  <a name="getprev"></a>  CAtlList::GetPrev  
  Этот метод используется для возврата предыдущего элемента в списке.  
   
 ```
@@ -417,7 +412,7 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::GetTailPosition](#gettailposition).  
   
-##  <a name="gettail"></a>CAtlList::GetTail  
+##  <a name="gettail"></a>  CAtlList::GetTail  
  Этот метод используется для возвращения элемента в конце списка.  
   
 ```
@@ -438,7 +433,7 @@ const E& GetTail() const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::AddTail](#addtail).  
   
-##  <a name="gettailposition"></a>CAtlList::GetTailPosition  
+##  <a name="gettailposition"></a>  CAtlList::GetTailPosition  
  Этот метод вызывается для получения позиции конца списка.  
   
 ```
@@ -454,14 +449,14 @@ POSITION GetTailPosition() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
-##  <a name="inargtype"></a>CAtlList::INARGTYPE  
+##  <a name="inargtype"></a>  CAtlList::INARGTYPE  
  Тип, используемый при передаче элемента в качестве входного аргумента.  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="insertafter"></a>CAtlList::InsertAfter  
+##  <a name="insertafter"></a>  CAtlList::InsertAfter  
  Этот метод служит для вставки нового элемента в списке после указанной позиции.  
   
 ```
@@ -484,7 +479,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
-##  <a name="insertbefore"></a>CAtlList::InsertBefore  
+##  <a name="insertbefore"></a>  CAtlList::InsertBefore  
  Этот метод служит для вставки нового элемента в списке до указанной позиции.  
   
 ```
@@ -507,7 +502,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
-##  <a name="isempty"></a>CAtlList::IsEmpty  
+##  <a name="isempty"></a>  CAtlList::IsEmpty  
  Этот метод используется для определения, если список пуст.  
   
 ```
@@ -520,7 +515,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
-##  <a name="movetohead"></a>CAtlList::MoveToHead  
+##  <a name="movetohead"></a>  CAtlList::MoveToHead  
  Этот метод используется для перемещения указанного элемента в начало списка.  
   
 ```
@@ -537,7 +532,7 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
-##  <a name="movetotail"></a>CAtlList::MoveToTail  
+##  <a name="movetotail"></a>  CAtlList::MoveToTail  
  Этот метод используется для перемещения указанного элемента конца списка.  
   
 ```
@@ -554,7 +549,7 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::MoveToHead](#movetohead).  
   
-##  <a name="removeall"></a>CAtlList::RemoveAll  
+##  <a name="removeall"></a>  CAtlList::RemoveAll  
  Вызовите этот метод, чтобы удалить все элементы из списка.  
   
 ```
@@ -567,7 +562,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="removeat"></a>CAtlList::RemoveAt  
+##  <a name="removeat"></a>  CAtlList::RemoveAt  
  Вызовите этот метод, чтобы удалить один элемент из списка.  
   
 ```
@@ -586,7 +581,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
-##  <a name="removehead"></a>CAtlList::RemoveHead  
+##  <a name="removehead"></a>  CAtlList::RemoveHead  
  Этот метод используется для удаления элемента в начало списка.  
   
 ```
@@ -602,7 +597,7 @@ E RemoveHead();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
-##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
+##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn  
  Вызовите этот метод, чтобы удалить элемент в начало списка без возврата значения.  
   
 ```
@@ -615,7 +610,7 @@ void RemoveHeadNoReturn() throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="removetail"></a>CAtlList::RemoveTail  
+##  <a name="removetail"></a>  CAtlList::RemoveTail  
  Этот метод используется для удаления элемента в конце списка.  
   
 ```
@@ -631,7 +626,7 @@ E RemoveTail();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
-##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
+##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn  
  Этот метод используется для удаления элемента в конце списка без возврата значения.  
   
 ```
@@ -644,7 +639,7 @@ void RemoveTailNoReturn() throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlList::IsEmpty](#isempty).  
   
-##  <a name="setat"></a>CAtlList::SetAt  
+##  <a name="setat"></a>  CAtlList::SetAt  
  Этот метод используется для задания значения элемента в заданной позиции в списке.  
   
 ```
@@ -664,7 +659,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
-##  <a name="swapelements"></a>CAtlList::SwapElements  
+##  <a name="swapelements"></a>  CAtlList::SwapElements  
  Вызовите этот метод, чтобы поменять местами элементы в списке.  
   
 ```

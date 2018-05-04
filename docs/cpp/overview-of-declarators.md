@@ -1,29 +1,24 @@
 ---
-title: "Общие сведения о Деклараторах | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о Деклараторах | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>Общие сведения о деклараторах
 Деклараторы — это компоненты объявления, которые определяют имена объектов или функций. Деклараторы также указывают, является ли именованный объект массивом, объектом, указателем или ссылкой.  Хотя деклараторы и не задают базовый тип, однако они изменяют хранящуюся в нем информацию о типе, что позволяет определять производные типы, например указатели, ссылки и массивы.  Применительно к функциям декларатор действует на спецификатор типа. Это дает возможность полностью определить тип возвращаемого функцией значения: объект, указатель или ссылка. (Спецификаторы, о которых говорится в [объявления и определения](declarations-and-definitions-cpp.md), передают такие свойства, такие как тип и класс хранения. Модификаторы, которые рассматриваются в этом разделе и в [модификаторы, используемые Microsoft](../cpp/microsoft-specific-modifiers.md), изменяют деклараторы.) На следующем рисунке представлено полное объявление функции `MyFunction` и указаны входящие в него компоненты.  

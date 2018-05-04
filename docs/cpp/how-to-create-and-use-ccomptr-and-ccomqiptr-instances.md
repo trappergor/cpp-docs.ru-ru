@@ -1,27 +1,22 @@
 ---
-title: "Как: Создание и использование экземпляров CComPtr и CComQIPtr | Документы Microsoft"
-ms.custom: 
+title: 'Как: Создание и использование экземпляров CComPtr и CComQIPtr | Документы Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 6c63eb1657cd00580197e0571a40e9a7545688dd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
 В классическом программировании Windows библиотеки часто реализуются как COM-объекты (или, более точно, как COM-серверы). Многие компоненты операционной системы Windows реализованы в виде COM-серверов, и большинство разработчиков предоставляют библиотеки в этой форме. Сведения об основах COM см. в разделе [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
@@ -33,7 +28,7 @@ ms.lasthandoff: 01/25/2018
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr`и его родственники являются частью библиотеки ATL и определяются в \<atlcomcli.h >. `_com_ptr_t`объявляется в \<comip.h >. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.  
+ `CComPtr` и его родственники являются частью библиотеки ATL и определяются в \<atlcomcli.h >. `_com_ptr_t` объявляется в \<comip.h >. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.  
   
 ## <a name="example"></a>Пример  
  Кроме того, библиотека ATL предоставляет указатель `CComQIPtr`с более простым синтаксисом запросов к COM-объекту для получения новых интерфейсов. Однако рекомендуется использовать `CComPtr` , так как он поддерживает все возможности `CComQIPtr` и семантически более совместим с необработанными указателями на интерфейс СОМ. Если запрос на интерфейс выполняется с помощью `CComPtr` , указатель на новый интерфейс помещается в выходной параметр. Если вызов завершается ошибкой, возвращается значение HRESULT, которое является стандартным шаблоном COM. В случае с `CComQIPtr`возвращаемым значением является сам указатель, и при сбое вызова внутреннее возвращаемое значение HRESULT будет недоступно. В следующих двух строках показано различие механизмов обработки ошибок `CComPtr` и `CComQIPtr` .  
