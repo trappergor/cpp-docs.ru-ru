@@ -1,12 +1,12 @@
 ---
-title: "__max | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: __max | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __max
@@ -32,52 +32,54 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1868106e4224e05d661aba5bfb0ed4dca31f508a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
-ms.translationtype: MT
+ms.openlocfilehash: 5bc89f74bb98b8fb51dc652ab57c57d37a46d5a0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="max"></a>__max
-Возвращает большее из двух значений.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-type __max(  
-   type a,  
-   type b   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `type`  
- Любой числовой тип данных.  
-  
- `a, b`  
- Сравниваемые значения любого числового типа данных.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `__max` возвращает больший из двух своих аргументов.  
-  
-## <a name="remarks"></a>Примечания  
- Макрос `__max` сравнивает два значения и возвращает значение большего. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`__max`|\<stdlib.h>|  
-  
-## <a name="example"></a>Пример  
- Дополнительные сведения см. в приведенных ниже примерах для функции [__min](../../c-runtime-library/reference/min.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [__min](../../c-runtime-library/reference/min.md)
+
+Макрос препроцессора, который возвращает большее из двух значений.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+#define __max(a,b) (((a) > (b)) ? (a) : (b))
+```
+
+### <a name="parameters"></a>Параметры
+
+*a*, *b*<br/>
+Сравниваемые значения любого числового типа данных.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**__max-** возвращает большее из его аргументов.
+
+## <a name="remarks"></a>Примечания
+
+**__Max-** макрос сравнивает два значения и возвращает значение больше одного. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.
+
+Аргумента, возвращаемого вычисляется дважды макросом. Это может привести к непредвиденным результатам, если аргумент представляет собой выражение, изменяет его значение, когда оно вычисляется, такие как `*p++`.
+
+## <a name="requirements"></a>Требования
+
+|Макрос|Обязательный заголовок|
+|-------------|---------------------|
+|**__max**|\<stdlib.h>|
+
+## <a name="example"></a>Пример
+
+Дополнительные сведения см. в приведенных ниже примерах для функции [__min](min.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[__min](min.md)<br/>
