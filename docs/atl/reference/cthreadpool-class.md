@@ -1,12 +1,9 @@
 ---
-title: "Класс CThreadPool | Документы Microsoft"
-ms.custom: 
+title: Класс CThreadPool | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CThreadPool
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64a165bdffa9f37241991af919d60de2e0dc7a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cthreadpool-class"></a>Класс CThreadPool
 Этот класс предоставляет пул рабочих потоков, обрабатывающих очередь рабочих элементов.  
@@ -62,14 +57,14 @@ class CThreadPool : public IThreadPoolConfig
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CThreadPool::CThreadPool](#cthreadpool)|Конструктор для пула потоков.|  
 |[CThreadPool:: ~ CThreadPool](#dtor)|Деструктор для пула потоков.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CThreadPool::AddRef](#addref)|Реализация `IUnknown::AddRef`.|  
 |[CThreadPool::GetNumThreads](#getnumthreads)|Этот метод вызывается для получения количества потоков в пуле.|  
@@ -105,7 +100,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
   
-##  <a name="addref"></a>CThreadPool::AddRef  
+##  <a name="addref"></a>  CThreadPool::AddRef  
  Реализация `IUnknown::AddRef`.  
   
 ```
@@ -118,7 +113,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 ### <a name="remarks"></a>Примечания  
  Этот класс не реализует управление жизненным циклом, с помощью подсчета ссылок.  
   
-##  <a name="cthreadpool"></a>CThreadPool::CThreadPool  
+##  <a name="cthreadpool"></a>  CThreadPool::CThreadPool  
  Конструктор для пула потоков.  
   
 ```
@@ -128,7 +123,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Примечания  
  Инициализирует значение времени ожидания для `ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT`. Время по умолчанию — 36 секунд. При необходимости можно определить собственные положительное целое значение для этого символа перед включением файлов atlutil.h.  
   
-##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool  
+##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool  
  Деструктор для пула потоков.  
   
 ```
@@ -138,7 +133,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [CThreadPool::Shutdown](#shutdown).  
   
-##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
+##  <a name="getnumthreads"></a>  CThreadPool::GetNumThreads  
  Этот метод вызывается для получения количества потоков в пуле.  
   
 ```
@@ -148,7 +143,7 @@ int GetNumThreads() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число потоков в пуле.  
   
-##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
+##  <a name="getqueuehandle"></a>  CThreadPool::GetQueueHandle  
  Вызовите этот метод, чтобы получить дескриптор порта завершения ввода-ВЫВОДА, используемого в очередь рабочих элементов.  
   
 ```
@@ -158,7 +153,7 @@ HANDLE GetQueueHandle() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор очереди или значение NULL, если пул потоков не инициализирован.  
   
-##  <a name="getsize"></a>CThreadPool::GetSize  
+##  <a name="getsize"></a>  CThreadPool::GetSize  
  Этот метод вызывается для получения количества потоков в пуле.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="gettimeout"></a>CThreadPool::GetTimeout  
+##  <a name="gettimeout"></a>  CThreadPool::GetTimeout  
  Этот метод используется для получения максимальное время в миллисекундах, которое пула потоков будет ожидать завершения работы потока.  
   
 ```
@@ -189,7 +184,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="remarks"></a>Примечания  
  Это значение времени ожидания используется [CThreadPool::Shutdown](#shutdown) никаких других значений, предоставленных для этого метода.  
   
-##  <a name="initialize"></a>CThreadPool::Initialize  
+##  <a name="initialize"></a>  CThreadPool::Initialize  
  Этот метод вызывается для инициализации пула потоков.  
   
 ```
@@ -220,7 +215,7 @@ HRESULT Initialize(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="queryinterface"></a>CThreadPool::QueryInterface  
+##  <a name="queryinterface"></a>  CThreadPool::QueryInterface  
  Реализация **IUnknown::QueryInterface**.  
   
 ```
@@ -230,7 +225,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 ### <a name="remarks"></a>Примечания  
  Объекты этого класса можно успешно запрашивать **IUnknown** и [IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md) интерфейсов.  
   
-##  <a name="queuerequest"></a>CThreadPool::QueueRequest  
+##  <a name="queuerequest"></a>  CThreadPool::QueueRequest  
  Этот метод в очередь рабочий элемент может быть обработано потоков в пуле.  
   
 ```
@@ -247,7 +242,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет рабочий элемент в очередь. Потоков в пуле выбрать элементы из очереди в порядке их получения.  
   
-##  <a name="release"></a>CThreadPool::Release  
+##  <a name="release"></a>  CThreadPool::Release  
  Реализация `IUnknown::Release`.  
   
 ```
@@ -260,7 +255,7 @@ ULONG STDMETHODCALLTYPE Release() throw();
 ### <a name="remarks"></a>Примечания  
  Этот класс не реализует управление жизненным циклом, с помощью подсчета ссылок.  
   
-##  <a name="setsize"></a>CThreadPool::SetSize  
+##  <a name="setsize"></a>  CThreadPool::SetSize  
  Вызовите этот метод, чтобы задать количество потоков в пуле.  
   
 ```
@@ -281,7 +276,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="remarks"></a>Примечания  
  Если количество указанных потоков меньше числа потоков в настоящее время в пуле, объект помещает в очередь, чтобы быть принята ожидающий поток сообщения о завершении работы. Когда ожидающий поток получает сообщение из очереди, он сообщает пула потоков и завершает процедуру потока. Этот процесс повторяется, пока не достигнет заданного числа потоков в пуле, или пока ни один поток не завершился в течение времени, заданного свойством [GetTimeout](#gettimeout)/ [SetTimeout](#settimeout). В этом случае метод возвратит значение HRESULT, соответствующее для **WAIT_TIMEOUT** и сообщения о завершении работы ожидающие отменяется.  
   
-##  <a name="settimeout"></a>CThreadPool::SetTimeout  
+##  <a name="settimeout"></a>  CThreadPool::SetTimeout  
  Вызовите этот метод, чтобы задать максимальное время в миллисекундах, которое пула потоков будет ожидать завершения работы потока.  
   
 ```
@@ -300,7 +295,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
   
  Обратите внимание, что `dwMaxWait` — это время, которое пуле ожидает один поток завершить работу. Максимальное время, которое может выполняться для удаления нескольких потоков из пула может быть немного меньше, чем `dwMaxWait` умноженное на количество потоков.  
   
-##  <a name="shutdown"></a>CThreadPool::Shutdown  
+##  <a name="shutdown"></a>  CThreadPool::Shutdown  
  Этот метод вызывается для завершения работы пула потоков.  
   
 ```

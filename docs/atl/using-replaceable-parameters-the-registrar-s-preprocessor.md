@@ -1,13 +1,10 @@
 ---
-title: "Использование подстановочных параметров (регистратор ATL) | Документы Microsoft"
-ms.custom: 
+title: Использование подстановочных параметров (регистратор ATL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AddReplacement
 - ClearReplacements
@@ -16,22 +13,20 @@ dev_langs:
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91deabfd14d89c4a26384a14445fc51edbb3ac94
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Использование подстановочных параметров (регистратор &#39; препроцессор s)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Использование подстановочных параметров (регистратор&#39;препроцессор s)
 Подстановочные параметры позволяют клиенту регистратора указания данных во время выполнения. Чтобы сделать это, регистратор поддерживает замены карты, в которую он входит в значения, связанные с подстановочные параметры в скрипте. Регистратор делает эти записи во время выполнения.  
   
-##  <a name="_atl_using_.25.module.25"></a>С помощью МОДУЛЯ %  
+##  <a name="_atl_using_.25.module.25"></a> С помощью МОДУЛЯ %  
  [Мастер элементов управления ATL](../atl/reference/atl-control-wizard.md) автоматически формирует скрипт, который использует `%MODULE%`. ATL использует этот подставляемый фактическое расположение библиотеки DLL или EXE-файла на сервере.  
   
 ## <a name="concatenating-run-time-data-with-script-data"></a>Объединение данных во время выполнения с помощью данных сценария  

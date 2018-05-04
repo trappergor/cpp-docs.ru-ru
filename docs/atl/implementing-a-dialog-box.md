@@ -1,13 +1,10 @@
 ---
-title: "Реализация диалогового | Документы Microsoft"
-ms.custom: 
+title: Реализация диалогового | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>Реализация диалоговое окно
 Существует два способа диалоговое окно добавления в проект ATL: используйте мастер диалоговых окон ATL или добавить ее вручную.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  При создании диалоговое окно, используя мастер диалоговых окон ATL, мастер автоматически добавляет `IDD` элемент в качестве `enum` типа.  
   
- `CDialogImpl`позволяет реализовать модального или немодального диалогового окна, элементы управления Windows. `CAxDialogImpl`позволяет реализовать модального или немодального диалогового окна, элементы управления ActiveX и Windows.  
+ `CDialogImpl` позволяет реализовать модального или немодального диалогового окна, элементы управления Windows. `CAxDialogImpl` позволяет реализовать модального или немодального диалогового окна, элементы управления ActiveX и Windows.  
   
  Создание модального диалогового окна, создайте экземпляр вашего `CDialogImpl`-производным (или `CAxDialogImpl`-производного) класса, а затем вызвать [DoModal](../atl/reference/cdialogimpl-class.md#domodal) метод. Чтобы закрыть модальное диалоговое окно, вызовите [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) метод из обработчика сообщений. Чтобы создать немодального диалогового окна, вызовите [создать](../atl/reference/cdialogimpl-class.md#create) вместо метода `DoModal`. Чтобы окончательно удалить немодального диалогового окна, вызовите [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   

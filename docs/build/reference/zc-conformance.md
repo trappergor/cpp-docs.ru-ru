@@ -1,10 +1,10 @@
 ---
-title: "/Zc (соответствие) | Документы Microsoft"
-ms.custom: 
+title: /Zc (соответствие) | Документы Microsoft
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zc-conformance"></a>/Zc (соответствие)
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 03/15/2018
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Включить внешнюю компоновку для `constexpr` переменных (отключено по умолчанию).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Обеспечить выполнение стандартным C++ `for` правила области видимости (на по умолчанию).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Включение неявного `noexcept` на требуемые функции (на по умолчанию).|
-|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Удалите неиспользуемые функции или данные, если она COMDAT или имеют только внутреннюю связь (отключено по умолчанию).|
+|[Встроенная\[-\]](zc-inline-remove-unreferenced-comdat.md)|Удалите неиспользуемые функции или данные, если она COMDAT или имеют только внутреннюю связь (отключено по умолчанию).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Принудительное применение C ++ 17 noexcept правил (на по умолчанию в C ++ 17 или более поздней версии).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Временный определяемого пользователем ТИПА не будет привязан к ссылки lvalue неконстантной (отключено по умолчанию).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Принудительное применение правил преобразования явного типа Standard C++ (отключено по умолчанию).|
@@ -56,7 +55,7 @@ ms.lasthandoff: 03/15/2018
 |[троичный\[-\]](zc-ternary.md)|Принудительное применение правил условного оператора на типы операндов (отключено по умолчанию).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Включение потокобезопасной локальной статичной инициализации (на по умолчанию).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Предположим, `operator new` сбое (отключено по умолчанию).|
-|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Включите триграфы (устаревший, отключение по умолчанию).|
+|[триграфов\[-\]](zc-trigraphs-trigraphs-substitution.md)|Включите триграфы (устаревший, отключение по умолчанию).|
 |[twoPhase-](zc-twophase.md)|Используйте шаблон, не соответствующих разбор (соответствующий по умолчанию).|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` Это собственный тип не является определением типа (на по умолчанию).|
 

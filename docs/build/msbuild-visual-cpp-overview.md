@@ -2,28 +2,23 @@
 title: Общие сведения о MSBuild (Visual C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>Общие сведения о MSBuild (Visual C++)  
   
@@ -82,17 +77,17 @@ A *параметр задачи* свойство класса задачи, о
   
 По умолчанию основные файлы поддержки Visual C++ расположены в следующих каталогах. Каталоги в Microsoft Visual Studio используются Visual Studio 2017 г. и более поздних версий, пока каталоги в MSBuild используются Visual Studio 2015 и более ранних версий.  
   
-|Каталог|Описание:|  
+|Каталог|Описание|  
 |---------------|-----------------|  
-|*диск*: \Program Files *(x86)*\Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*диск*: \Program Files *(x86)*\v4.0 \MSBuild\Microsoft.Cpp (x86)\\*версии*\ |Содержит основные файлы целевых (с расширением TARGETS) и файлы свойств (с расширением PROPS), используемые целевыми объектами. По умолчанию макрос $(VCTargetsPath) ссылается на этот каталог.|  
-|*диск*: \Program Files *(x86)*\Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ Платформы\\*платформы*\ <br /><br />*диск*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*версии*\Platforms\\*платформы*\ |Содержит файлы цель и свойство платформы, которые переопределяют целевые объекты и свойства в родительском каталоге. Эта папка также содержит библиотеку DLL, которая определяет задачи, которые используются в целевые объекты в этом каталоге.<br /><br /> *Платформы* представляет заполнитель, ARM, Win32 или x64 подкаталог.|  
-|*диск*: \Program Files *(x86)*\Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ Платформы\\*платформы*\PlatformToolsets\\*набора инструментов*\ <br /><br />*диск*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*версии*\Platforms\\*платформы*\ PlatformToolsets\\*набора инструментов*\ <br /><br />*диск*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*платформы*\PlatformToolsets\\*набора инструментов*\ |Содержит каталоги, которые обеспечивают построение приложений Visual C++ с помощью заданного *набор инструментов*.<br /><br /> *Года* и *выпуск* заполнители используются Visual Studio 2017 г. и более поздней версии. *Версии* заполнителем является V110 для Visual Studio 2012, V120 для Visual Studio 2013 или V140 для Visual Studio 2015. *Платформы* представляет заполнитель, ARM, Win32 или x64 подкаталог. *Набор инструментов* заполнитель представляет подкаталог набора инструментов, например, v140 для создания приложений Windows с помощью набора инструментов Visual Studio 2015, v120_xp для создания приложений для Windows XP, с помощью набора средств Visual Studio 2013 или v110_wp80 для Создание приложений Windows Phone 8.0 с помощью набора инструментов Visual Studio 2012.<br /><br />Путь, содержащий каталоги, которые обеспечивают построение приложений Visual C++ 2008 или Visual C++ 2010 не включает *версии*и *платформы* заполнитель Itanium, Win32 или x64 подкаталог. *Набор инструментов* заполнитель представляет подкаталог v90 или v100 набор инструментов.|  
+|*диск*: \Program Files *(x86)* \Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*диск*: \Program Files *(x86)* \v4.0 \MSBuild\Microsoft.Cpp (x86)\\*версии*\ |Содержит основные файлы целевых (с расширением TARGETS) и файлы свойств (с расширением PROPS), используемые целевыми объектами. По умолчанию макрос $(VCTargetsPath) ссылается на этот каталог.|  
+|*диск*: \Program Files *(x86)* \Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ Платформы\\*платформы*\ <br /><br />*диск*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*версии*\Platforms\\*платформы*\ |Содержит файлы цель и свойство платформы, которые переопределяют целевые объекты и свойства в родительском каталоге. Эта папка также содержит библиотеку DLL, которая определяет задачи, которые используются в целевые объекты в этом каталоге.<br /><br /> *Платформы* представляет заполнитель, ARM, Win32 или x64 подкаталог.|  
+|*диск*: \Program Files *(x86)* \Microsoft Visual Studio\\*года*\\*edition*\Common7\IDE\VC\VCTargets\ Платформы\\*платформы*\PlatformToolsets\\*набора инструментов*\ <br /><br />*диск*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*версии*\Platforms\\*платформы*\ PlatformToolsets\\*набора инструментов*\ <br /><br />*диск*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*платформы*\PlatformToolsets\\*набора инструментов*\ |Содержит каталоги, которые обеспечивают построение приложений Visual C++ с помощью заданного *набор инструментов*.<br /><br /> *Года* и *выпуск* заполнители используются Visual Studio 2017 г. и более поздней версии. *Версии* заполнителем является V110 для Visual Studio 2012, V120 для Visual Studio 2013 или V140 для Visual Studio 2015. *Платформы* представляет заполнитель, ARM, Win32 или x64 подкаталог. *Набор инструментов* заполнитель представляет подкаталог набора инструментов, например, v140 для создания приложений Windows с помощью набора инструментов Visual Studio 2015, v120_xp для создания приложений для Windows XP, с помощью набора средств Visual Studio 2013 или v110_wp80 для Создание приложений Windows Phone 8.0 с помощью набора инструментов Visual Studio 2012.<br /><br />Путь, содержащий каталоги, которые обеспечивают построение приложений Visual C++ 2008 или Visual C++ 2010 не включает *версии*и *платформы* заполнитель Itanium, Win32 или x64 подкаталог. *Набор инструментов* заполнитель представляет подкаталог v90 или v100 набор инструментов.|  
   
 ### <a name="support-files"></a>Файлы поддержки  
   
 Каталоги файлов поддержки содержит файлы с такими расширениями:  
   
-|Расширение|Описание:|  
+|Расширение|Описание|  
 |---------------|-----------------|  
 |.targets|Содержит `Target` элементы XML, которые задают задачи, выполняемые целевым объектом. Может также содержать `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`, и определяемых пользователем `Item` элементов, используемых для назначения параметров задачи файлы и параметры командной строки.<br /><br /> Дополнительные сведения см. в разделе [элемент Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|  
 |.props|Содержит `Property Group` и определяемых пользователем `Property` XML-элементов, укажите файл и параметры, которые используются во время построения.<br /><br /> Может также содержать `ItemDefinitionGroup` и определяемых пользователем `Item` XML-элементы, задающие Дополнительные параметры. Элементы, определенные в группу определений элемента напоминают свойства, но нельзя получить доступ из командной строки. Файлы проекта Visual C++ часто вместо свойств используются элементы для представления параметров.<br /><br /> Дополнительные сведения см. в разделе [элемент ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [элемент ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), и [элемент Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|  
@@ -130,7 +125,7 @@ A *параметр задачи* свойство класса задачи, о
   
 В следующей таблице перечислены несколько полезных целей, ориентированные на пользователей.  
   
-|целевого объекта|Описание:|  
+|целевого объекта|Описание|  
 |------------|-----------------|  
 |BscMake|Выполняет программу Microsoft Обзор программы управления информацией bscmake.exe.|  
 |Построить|Выполняет построение проекта.<br /><br /> Это является целевым объектом по умолчанию для проекта.|  

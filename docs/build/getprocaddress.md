@@ -1,13 +1,10 @@
 ---
-title: "GetProcAddress | Документы Microsoft"
-ms.custom: 
+title: GetProcAddress | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-Процессы, явно связанные до вызова функции DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) для получения адреса экспортированной функции в DLL. Используйте указатель возвращаемой вызов функции DLL. **GetProcAddress** принимает в качестве параметров дескриптор модуля DLL (возвращенных либо **LoadLibrary**, `AfxLoadLibrary`, или **GetModuleHandle**) и принимает имя функции вы необходимость в вызов функции экспорта порядковый номер.  
+Процессы, явно связанные до вызова функции DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) для получения адреса экспортированной функции в DLL. Используйте указатель возвращаемой вызов функции DLL. **GetProcAddress** принимает в качестве параметров дескриптор модуля DLL (возвращенных либо **LoadLibrary**, `AfxLoadLibrary`, или **GetModuleHandle**) и принимает имя нужную функцию для вызова или функции экспорта порядковый номер.  
   
  Поскольку вы вызываете функции DLL через указатель и нет проверку типов во время компиляции, убедитесь, что правильность параметров в функцию, чтобы не превысить памяти, выделенной в стеке и вызывает нарушение прав доступа. Для просмотра прототипы экспортированных функций и создать соответствующие определения типов для указателей на функции — один из способов обеспечения безопасности типа. Пример:  
   

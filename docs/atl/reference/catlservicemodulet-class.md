@@ -2,11 +2,8 @@
 title: Класс CAtlServiceModuleT | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlServiceModuleT
@@ -44,17 +41,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d059a990b9b01cdfc959284d9fe20f3dfd12af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c81df88dfdf2b40b5196d219159b48023d9db6d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 Этот класс реализует службу.  
@@ -80,13 +75,13 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::Handler](#handler)|Подпрограмму обработчика для службы.|  
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Предоставляет значение по умолчанию параметры безопасности для службы.|  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Флаг, указывающий, что программа выполняется как служба.|  
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Идентификатор потока хранения переменной-члена.|  
@@ -122,7 +117,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 |[CAtlServiceModuleT::m_szServiceName](#m_szservicename)|Имя регистрируемой службы.|  
   
 ## <a name="remarks"></a>Примечания  
- `CAtlServiceModuleT`, производный от [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md), реализующего модуль ATL службы. `CAtlServiceModuleT`Предоставляет методы для обработки в командной строке, установки, регистрации и удаления. При необходимости дополнительные функциональные возможности, можно переопределить эти и другие методы.  
+ `CAtlServiceModuleT`, производный от [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md), реализующего модуль ATL службы. `CAtlServiceModuleT` Предоставляет методы для обработки в командной строке, установки, регистрации и удаления. При необходимости дополнительные функциональные возможности, можно переопределить эти и другие методы.  
   
  Этот класс заменяет устаревшее [CComModule-класс](../../atl/reference/ccommodule-class.md) использовалась в предыдущих версиях библиотеки ATL. В разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
   
@@ -140,7 +135,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="catlservicemodulet"></a>CAtlServiceModuleT::CAtlServiceModuleT  
+##  <a name="catlservicemodulet"></a>  CAtlServiceModuleT::CAtlServiceModuleT  
  Конструктор.  
   
 ```
@@ -150,7 +145,7 @@ CAtlServiceModuleT() throw();
 ### <a name="remarks"></a>Примечания  
  Инициализирует данные-члены и задает начальное состояние.  
   
-##  <a name="handler"></a>CAtlServiceModuleT::Handler  
+##  <a name="handler"></a>  CAtlServiceModuleT::Handler  
  Подпрограмму обработчика для службы.  
   
 ```
@@ -176,7 +171,7 @@ void Handler(DWORD dwOpcode) throw();
   
  Службу создан ATL по умолчанию обрабатывает только инструкция stop. Если диспетчер управления Службами передает инструкция stop, службы показывает диспетчера управления Службами, программа собирается остановиться. После этого служба `PostThreadMessage` Чтобы отправить сообщение о выходе к самому себе. Это завершает цикл обработки сообщений и службы в конечном счете будет закрыт.  
   
-##  <a name="initializesecurity"></a>CAtlServiceModuleT::InitializeSecurity  
+##  <a name="initializesecurity"></a>  CAtlServiceModuleT::InitializeSecurity  
  Предоставляет значение по умолчанию параметры безопасности для службы.  
   
 ```
@@ -199,7 +194,7 @@ HRESULT InitializeSecurity() throw();
   
  [!code-cpp[NVC_ATL_ServiceAttrib#1](../../atl/reference/codesnippet/cpp/catlservicemodulet-class_2.cpp)]  
   
-##  <a name="install"></a>CAtlServiceModuleT::Install  
+##  <a name="install"></a>  CAtlServiceModuleT::Install  
  Устанавливает и создает службу.  
   
 ```
@@ -212,7 +207,7 @@ BOOL Install() throw();
 ### <a name="remarks"></a>Примечания  
  Устанавливает службы в базе данных диспетчера управления службами (SCM), а затем создает объект службы. Если не удается создать службу, появляется окно сообщения, а метод возвращает значение FALSE.  
   
-##  <a name="isinstalled"></a>CAtlServiceModuleT::IsInstalled  
+##  <a name="isinstalled"></a>  CAtlServiceModuleT::IsInstalled  
  Подтверждает, что служба установлена.  
   
 ```
@@ -222,7 +217,7 @@ BOOL IsInstalled() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если служба не установлена, значение FALSE в противном случае.  
   
-##  <a name="logevent"></a>CAtlServiceModuleT::LogEvent  
+##  <a name="logevent"></a>  CAtlServiceModuleT::LogEvent  
  Записывает в журнал событий.  
   
 ```
@@ -239,7 +234,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод записывает сведения в журнал событий, используя функцию [ReportEvent](http://msdn.microsoft.com/library/windows/desktop/aa363679). Если служба не работает, строки выводятся на консоль.  
   
-##  <a name="m_bservice"></a>CAtlServiceModuleT::m_bService  
+##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService  
  Флаг, указывающий, что программа выполняется как служба.  
   
 ```
@@ -249,7 +244,7 @@ BOOL m_bService;
 ### <a name="remarks"></a>Примечания  
  Используются для различения EXE службы из EXE-файла приложения.  
   
-##  <a name="m_dwthreadid"></a>CAtlServiceModuleT::m_dwThreadID  
+##  <a name="m_dwthreadid"></a>  CAtlServiceModuleT::m_dwThreadID  
  Идентификатор потока службы хранения переменной-члена.  
   
 ```
@@ -259,7 +254,7 @@ DWORD m_dwThreadID;
 ### <a name="remarks"></a>Примечания  
  Эта переменная хранит идентификатор текущего потока.  
   
-##  <a name="m_hservicestatus"></a>CAtlServiceModuleT::m_hServiceStatus  
+##  <a name="m_hservicestatus"></a>  CAtlServiceModuleT::m_hServiceStatus  
  Дескриптор структуры сведения состояния текущей службы хранения переменной-члена.  
   
 ```
@@ -269,7 +264,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 ### <a name="remarks"></a>Примечания  
  [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) структура содержит сведения о службе.  
   
-##  <a name="m_status"></a>CAtlServiceModuleT::m_status  
+##  <a name="m_status"></a>  CAtlServiceModuleT::m_status  
  Сохранение состояния структуры сведения для текущей службы переменной-члена.  
   
 ```
@@ -279,7 +274,7 @@ SERVICE_STATUS m_status;
 ### <a name="remarks"></a>Примечания  
  [SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996) структура содержит сведения о службе.  
   
-##  <a name="m_szservicename"></a>CAtlServiceModuleT::m_szServiceName  
+##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName  
  Имя регистрируемой службы.  
   
 ```
@@ -289,42 +284,42 @@ TCHAR [256] m_szServiceName;
 ### <a name="remarks"></a>Примечания  
  Нулем строка которого содержит имя службы.  
   
-##  <a name="oncontinue"></a>CAtlServiceModuleT::OnContinue  
+##  <a name="oncontinue"></a>  CAtlServiceModuleT::OnContinue  
  Переопределите этот метод, чтобы продолжить работу службы.  
   
 ```
 void OnContinue() throw();
 ```  
   
-##  <a name="oninterrogate"></a>CAtlServiceModuleT::OnInterrogate  
+##  <a name="oninterrogate"></a>  CAtlServiceModuleT::OnInterrogate  
  Переопределите этот метод для запроса службы.  
   
 ```
 void OnInterrogate() throw();
 ```  
   
-##  <a name="onpause"></a>CAtlServiceModuleT::OnPause  
+##  <a name="onpause"></a>  CAtlServiceModuleT::OnPause  
  Переопределите этот метод, чтобы приостановить службу.  
   
 ```
 void OnPause() throw();
 ```  
   
-##  <a name="onshutdown"></a>CAtlServiceModuleT::OnShutdown  
+##  <a name="onshutdown"></a>  CAtlServiceModuleT::OnShutdown  
  Переопределите этот метод, чтобы завершить работу службы.  
   
 ```
 void OnShutdown() throw();
 ```  
   
-##  <a name="onstop"></a>CAtlServiceModuleT::OnStop  
+##  <a name="onstop"></a>  CAtlServiceModuleT::OnStop  
  Переопределите этот метод, чтобы остановить службу.  
   
 ```
 void OnStop() throw();
 ```  
   
-##  <a name="onunknownrequest"></a>CAtlServiceModuleT::OnUnknownRequest  
+##  <a name="onunknownrequest"></a>  CAtlServiceModuleT::OnUnknownRequest  
  Переопределите этот метод для обработки неизвестного запросов к службе.  
   
 ```
@@ -332,10 +327,10 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- */\*dwOpcode\*/*  
+ */\* dwOpcode \*/*  
  Зарезервировано.  
   
-##  <a name="parsecommandline"></a>CAtlServiceModuleT::ParseCommandLine  
+##  <a name="parsecommandline"></a>  CAtlServiceModuleT::ParseCommandLine  
  Выполняет синтаксический анализ командной строки и при необходимости выполняет регистрацию.  
   
 ```
@@ -355,7 +350,7 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="remarks"></a>Примечания  
  Выполняет синтаксический анализ командной строки и регистрирует или отменяет регистрацию предоставленного RGS-файл, если это необходимо. Этот метод вызывает метод [CAtlExeModuleT::ParseCommandLine](../../atl/reference/catlexemodulet-class.md#parsecommandline) для проверки **/regserver** и **/unregserver**. Добавляет аргумент **- / Service** будет зарегистрировать службу.  
   
-##  <a name="premessageloop"></a>CAtlServiceModuleT::PreMessageLoop  
+##  <a name="premessageloop"></a>  CAtlServiceModuleT::PreMessageLoop  
  Этот метод вызывается сразу перед вводом в цикл обработки сообщений.  
   
 ```
@@ -372,7 +367,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы добавить пользовательский код инициализации службы.  
   
-##  <a name="registerappid"></a>CAtlServiceModuleT::RegisterAppId  
+##  <a name="registerappid"></a>  CAtlServiceModuleT::RegisterAppId  
  Регистрирует службу в реестре.  
   
 ```
@@ -386,7 +381,7 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="run"></a>CAtlServiceModuleT::Run  
+##  <a name="run"></a>  CAtlServiceModuleT::Run  
  Запускает службу.  
   
 ```
@@ -403,7 +398,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="remarks"></a>Примечания  
  После вызова, **запуска** вызовы [CAtlServiceModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop), и [CAtlExeModuleT:: PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop).  
   
-##  <a name="servicemain"></a>CAtlServiceModuleT::ServiceMain  
+##  <a name="servicemain"></a>  CAtlServiceModuleT::ServiceMain  
  Этот метод вызывается диспетчером управления службами.  
   
 ```
@@ -422,7 +417,7 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
   
  После SCM вызывает `ServiceMain`, службы необходимо предоставить SCM функцию обработчика событий. Эта функция позволяет SCM получения состояния службы и передачи специальные инструкции (например, приостановка или остановка). Впоследствии [CAtlServiceModuleT::Run](#run) вызывается для выполнения основных работу службы. **Запустите** продолжает выполняться, пока служба остановлена.  
   
-##  <a name="setservicestatus"></a>CAtlServiceModuleT::SetServiceStatus  
+##  <a name="setservicestatus"></a>  CAtlServiceModuleT::SetServiceStatus  
  Этот метод обновляет состояние службы.  
   
 ```
@@ -436,7 +431,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="remarks"></a>Примечания  
  Обновляет сведения о состоянии диспетчера управления службами для службы. Вызывается методом [CAtlServiceModuleT::Run](#run), [CAtlServiceModuleT::ServiceMain](#servicemain) и другие методы обработчика. Состояние также сохраняется в переменной-члена [CAtlServiceModuleT::m_status](#m_status).  
   
-##  <a name="start"></a>CAtlServiceModuleT::Start  
+##  <a name="start"></a>  CAtlServiceModuleT::Start  
  Вызывается методом `CAtlServiceModuleT::WinMain` при запуске службы.  
   
 ```
@@ -453,7 +448,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="remarks"></a>Примечания  
  [CAtlServiceModuleT::WinMain](#winmain) метод регистрации и установки, а также задачи, участвующих в удаление записей реестра и удаление модуля. При запуске служба `WinMain` вызовы **запустить**.  
   
-##  <a name="uninstall"></a>CAtlServiceModuleT::Uninstall  
+##  <a name="uninstall"></a>  CAtlServiceModuleT::Uninstall  
  Останавливает и удаляет службу.  
   
 ```
@@ -466,7 +461,7 @@ BOOL Uninstall() throw();
 ### <a name="remarks"></a>Примечания  
  Останавливает службу запуска и удаляет его из базы данных диспетчера управления службами.  
   
-##  <a name="unlock"></a>CAtlServiceModuleT::Unlock  
+##  <a name="unlock"></a>  CAtlServiceModuleT::Unlock  
  Уменьшает на единицу счетчик блокировок службы.  
   
 ```
@@ -476,7 +471,7 @@ LONG Unlock() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число блокировок, который может быть полезно для диагностики и отладки.  
   
-##  <a name="unregisterappid"></a>CAtlServiceModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>  CAtlServiceModuleT::UnregisterAppId  
  Удаляет службу из реестра.  
   
 ```
@@ -486,7 +481,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="winmain"></a>CAtlServiceModuleT::WinMain  
+##  <a name="winmain"></a>  CAtlServiceModuleT::WinMain  
  Этот метод реализует код, необходимый для запуска службы.  
   
 ```

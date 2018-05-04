@@ -1,29 +1,24 @@
 ---
-title: "Реализация страницы свойств (ATL) | Документы Microsoft"
-ms.custom: 
+title: Реализация страницы свойств (ATL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-implementing-a-property-page"></a>Пример: Реализация страницы свойств
 В этом примере показано, как построить страница свойств, которая отображает (и позволяет изменять) свойства [классы документов](../mfc/document-classes.md) интерфейса.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Создание макроса](#vcconcreating_a_macro) , проверить на странице свойств.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a>Добавление класса страницы свойств ATL  
+##  <a name="vcconusing_the_atl_object_wizard"></a> Добавление класса страницы свойств ATL  
  Во-первых, создайте новый проект ATL для сервера библиотеки DLL, названного `ATLPages7`. Теперь с помощью [мастер страницы свойств ATL](../atl/reference/atl-property-page-wizard.md) для создания страницы свойств. Присвойте странице свойство **короткое имя** из **DocProperties** переключитесь в **строки** страницу, чтобы задать особые для страницы свойств элементов, как показано в следующей таблице.  
   
 |Элемент|Значение|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Нажмите кнопку **ОК** чтобы мастер создания страницы свойств.  
   
-##  <a name="vcconediting_the_dialog_resource"></a>Изменение ресурса диалогового окна  
+##  <a name="vcconediting_the_dialog_resource"></a> Изменение ресурса диалогового окна  
  Теперь, когда был создан на странице свойств, необходимо добавить несколько элементов управления в ресурс диалогового окна, представляющий страницу. Добавьте текстовое поле, статического текста и типа "флажок" и укажите их идентификаторы, как показано ниже:  
   
  ![Изменение ресурса диалогового окна](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Ресурс диалогового окна не включает кадра или команду кнопки, а также имеет вид с вкладками, можно было бы ожидать. Эти функции предоставляются с помощью свойства фрейма страницы, такой файл создан путем вызова [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
-##  <a name="vcconadding_message_handlers"></a>Добавление обработчиков сообщений  
+##  <a name="vcconadding_message_handlers"></a> Добавление обработчиков сообщений  
  С элементами управления на месте можно добавить обработчики сообщений, чтобы обновить состояние «грязные» страницы при изменении значения любого из элементов управления.  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  В собственных страницы свойств может потребоваться для отслеживания точно свойства, которые были изменены пользователем, чтобы избежать обновления свойств, которые еще не были изменены. Этот пример реализует этот код с отслеживает исходные значения свойств и сравнение их с текущими значениями из пользовательского интерфейса, когда придет время для применения изменений.  
   
-##  <a name="vcconhousekeeping"></a>Вспомогательные  
+##  <a name="vcconhousekeeping"></a> Вспомогательные  
  Теперь добавьте несколько `#import` DocProperties.h инструкции, чтобы компилятор знает об **документа** интерфейс:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>Переопределение IPropertyPageImpl::SetObjects  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Переопределение IPropertyPageImpl::SetObjects  
  Первый `IPropertyPageImpl` — метод, который необходимо переопределить [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Здесь вы добавите код, чтобы проверить прохождение только один объект, и что он поддерживает **документа** интерфейс, который вы ожидаете:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Смысл поддерживает только один объект для этой страницы, так как позволяет пользователю задавать имя файла объекта, может существовать только один файл, все в одном месте.  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>Переопределение IPropertyPageImpl::Activate  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Переопределение IPropertyPageImpl::Activate  
  Следующим шагом является инициализировать страницу свойств со значениями свойств базового объекта при создании страницы.  
   
  В этом случае следует добавить следующие члены класса, так как вы также будете использовать исходные значения свойств для сравнения при пользователей страницы применять изменения:  
@@ -116,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
  Этот код использует методы COM **документа** интерфейс для получения свойств, которые вас интересуют. Затем он использует оболочки Win32 API, предоставляемые [CDialogImpl](../atl/reference/cdialogimpl-class.md) и его базовых классов для отображения значений свойств для пользователя.  
   
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a>Переопределение IPropertyPageImpl::Apply  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Переопределение IPropertyPageImpl::Apply  
  Если требуется применять изменения к объектам сайта страницы свойств будет вызывать [применить](../atl/reference/ipropertypageimpl-class.md#apply) метод. Это место, выполните обратное кода в **активировать** , тогда как **активировать** заняло значения из объекта, при передаче их в элементах управления на странице свойств **применить** принимает значения из элементов управления на странице свойств и помещает их в объект.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
@@ -127,7 +122,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 > **Документ** предоставляет **FullName** как свойство только для чтения. Чтобы обновить имя файла документа, основанные на изменения, внесенные на странице свойств, необходимо использовать **Сохранить** метод, чтобы сохранить файл с другим именем. Таким образом, код на странице свойств не нужно задать ограничение на получение или установку свойств.  
   
-##  <a name="vccontesting_the_property_page"></a>Отображение страницы свойств  
+##  <a name="vccontesting_the_property_page"></a> Отображение страницы свойств  
  Чтобы открыть эту страницу, необходимо создать простой вспомогательный объект. Вспомогательный объект будет предоставляют метод, который упрощает **OleCreatePropertyFrame** API-Интерфейс для отображения на одной странице подключены к одному объекту. Этот вспомогательный будет разработана, чтобы его можно использовать из Visual Basic.  
   
  Используйте [диалоговое окно "Добавление класса"](../ide/add-class-dialog-box.md) и [мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md) для создания нового класса и использования `Helper` короткого имени. После создания добавьте метод, как показано в следующей таблице.  
@@ -143,7 +138,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a>Создание макроса  
+##  <a name="vcconcreating_a_macro"></a> Создание макроса  
  После создания проекта, можно проверить на странице свойств, а также вспомогательный объект, с помощью простой макрос, который можно создать и выполнить в среде разработки Visual Studio. Этот макрос создаст вспомогательный класс объекта, а затем вызвать его **ShowPage** метода с помощью ProgID **DocProperties** страницу свойств и **IUnknown** указатель документа активных в настоящий момент в редакторе Visual Studio. Ниже приведен исходный код, необходимый для этого макроса:  
   
 ```  

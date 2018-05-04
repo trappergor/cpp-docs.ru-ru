@@ -1,13 +1,10 @@
 ---
-title: "-vd (отключение смещений при выполнении конструктора) | Документы Microsoft"
-ms.custom: 
+title: -vd (отключение смещений при выполнении конструктора) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (отключение смещений при выполнении конструктора)
 ## <a name="syntax"></a>Синтаксис  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Примечания  
  Эти параметры применяются только для кода C++, используются виртуальные базовые классы.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]реализует поддержку смещения построения C++ в ситуациях, где используется виртуальное наследование. Смещений решить проблему, возникающую, когда виртуальная функция, объявленному в виртуальном базовом и переопределения в производном классе, вызывается из конструктора во время построения дальнейшей производного класса.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] реализует поддержку смещения построения C++ в ситуациях, где используется виртуальное наследование. Смещений решить проблему, возникающую, когда виртуальная функция, объявленному в виртуальном базовом и переопределения в производном классе, вызывается из конструктора во время построения дальнейшей производного класса.  
   
  Проблема заключается в том, что виртуальная функция может быть передан неправильный `this` указателя в результате несоответствия между смещениями виртуальной базы класса и смещениями его производных классов. Это решение предоставляет смещения одиночное коррекции, называемое полем vtordisp для каждого виртуального базового класса.  
   

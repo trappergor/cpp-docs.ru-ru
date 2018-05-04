@@ -1,10 +1,9 @@
 ---
-title: "/ Tc, /Tp /TC, /TP (определение типа исходного файла) | Документы Microsoft"
+title: / Tc, /Tp /TC, /TP (определение типа исходного файла) | Документы Microsoft
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,14 +21,13 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>Параметры /Tc, /Tp, /TC, /TP (определение типа исходного файла)
 
@@ -39,8 +37,8 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/Tc** _filename_  
-> **/Tp** _filename_  
+> **/TC** _имя файла_  
+> **/TP** _имя файла_  
 > **/TC**  
 > **/TP**  
 

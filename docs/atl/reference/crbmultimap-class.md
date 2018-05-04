@@ -1,12 +1,9 @@
 ---
-title: "Класс CRBMultiMap | Документы Microsoft"
-ms.custom: 
+title: Класс CRBMultiMap | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmultimap-class"></a>Класс CRBMultiMap
 Этот класс представляет структуру сопоставления, которая позволяет каждый ключ может быть сопоставлен более одного значения, с помощью двоичного дерева красный-черный.  
@@ -64,14 +59,14 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Конструктор.|  
 |[CRBMultiMap:: ~ CRBMultiMap](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Вызовите этот метод, чтобы определить позицию первого элемента с указанным ключом.|  
 |[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Этот метод вызывается для получения значения, связанного с данным ключом и обновите значение позиции.|  
@@ -80,7 +75,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMultiMap::RemoveKey](#removekey)|Этот метод используется для удаления всех элементов ключ значение для указанного ключа.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRBMultiMap`предоставляет поддержку для массива сопоставление любого конкретного типа управления упорядоченный массив ключей элементов и значений. В отличие от [CRBMap](../../atl/reference/crbmap-class.md) класс, каждый ключ может быть сопоставлен более одного значения.  
+ `CRBMultiMap` предоставляет поддержку для массива сопоставление любого конкретного типа управления упорядоченный массив ключей элементов и значений. В отличие от [CRBMap](../../atl/reference/crbmap-class.md) класс, каждый ключ может быть сопоставлен более одного значения.  
   
  Элементы (состоящей из ключа и значения) хранятся в двоичное дерево структуры с помощью [CRBMultiMap::Insert](#insert) метод. Элементы можно удалить с помощью [CRBMultiMap::RemoveKey](#removekey) метод, который удаляет все элементы, которые соответствуют указанным ключом.  
   
@@ -88,7 +83,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `KTraits` И `VTraits` являются классов признаки, которые содержат любой дополнительный код, необходимые для копирования или перемещения элементов.  
   
- `CRBMultiMap`является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует двоичного дерева с помощью алгоритма красный-черный. Это альтернатива `CRBMultiMap` и `CRBMap` предлагаемых [CAtlMap](../../atl/reference/catlmap-class.md) класса. Когда небольшое количество элементов должно быть сохранено, рассмотрите возможность использования [CSimpleMap](../../atl/reference/csimplemap-class.md) вместо этого класс.  
+ `CRBMultiMap` является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует двоичного дерева с помощью алгоритма красный-черный. Это альтернатива `CRBMultiMap` и `CRBMap` предлагаемых [CAtlMap](../../atl/reference/catlmap-class.md) класса. Когда небольшое количество элементов должно быть сохранено, рассмотрите возможность использования [CSimpleMap](../../atl/reference/csimplemap-class.md) вместо этого класс.  
   
  Более полное описание различных классов коллекций и их возможности и характеристики производительности см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -100,7 +95,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap  
  Конструктор.  
   
 ```
@@ -119,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap  
  Деструктор  
   
 ```
@@ -131,7 +126,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
  Вызовите этот метод, чтобы определить позицию первого элемента с указанным ключом.  
   
 ```
@@ -153,7 +148,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
  Этот метод вызывается для получения значения, связанного с данным ключом и обновите значение позиции.  
   
 ```
@@ -183,7 +178,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
  Этот метод вызывается для получения элемента, связанного с данным ключом и обновите значение позиции.  
   
 ```
@@ -210,7 +205,7 @@ CPair* GetNextWithKey(
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>  CRBMultiMap::Insert  
  Этот метод служит для вставки пары элементов в сопоставление.  
   
 ```
@@ -233,7 +228,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
-##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
  Этот метод используется для удаления всех элементов ключ значение для указанного ключа.  
   
 ```
@@ -248,7 +243,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
  Возвращает количество значений, связанных с указанным ключом.  
   
 ### <a name="remarks"></a>Примечания  
- `RemoveKey`Удаляет все элементы ключ значение с ключом, который соответствует `key`.  
+ `RemoveKey` Удаляет все элементы ключ значение с ключом, который соответствует `key`.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   

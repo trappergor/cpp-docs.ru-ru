@@ -1,12 +1,9 @@
 ---
-title: "Класс IRunnableObjectImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IRunnableObjectImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IRunnableObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1ac939d723596f4b0fc3f1013dd3f02cf2aa06b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a08fec0fd38e30729c9131def1831e5e5d8f633e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="irunnableobjectimpl-class"></a>Класс IRunnableObjectImpl
 Этот класс реализует **IUnknown** и предоставляет реализацию по умолчанию [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) интерфейса.  
@@ -58,7 +53,7 @@ class IRunnableObjectImpl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Возвращает CLSID выполнение элемента управления. Реализация ATL задает CLSID `GUID_NULL` и возвращает **E_UNEXPECTED**.|  
 |[IRunnableObjectImpl::IsRunning](#isrunning)|Определяет, выполняется ли элемент управления. Возвращает реализацию ATL **TRUE**.|  
@@ -79,7 +74,7 @@ class IRunnableObjectImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass  
+##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass  
  Возвращает CLSID выполнение элемента управления.  
   
 ```
@@ -92,7 +87,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 ### <a name="remarks"></a>Примечания  
  В разделе [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) в Windows SDK.  
   
-##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
+##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning  
  Определяет, выполняется ли элемент управления.  
   
 ```
@@ -105,7 +100,7 @@ virtual BOOL IsRunning();
 ### <a name="remarks"></a>Примечания  
  В разделе [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) в Windows SDK.  
   
-##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
+##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning  
  Блокирует элемент управления в запущенном состоянии.  
   
 ```
@@ -118,7 +113,7 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ### <a name="remarks"></a>Примечания  
  В разделе [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) в Windows SDK.  
   
-##  <a name="run"></a>IRunnableObjectImpl::Run  
+##  <a name="run"></a>  IRunnableObjectImpl::Run  
  Заставляет элемент управления для выполнения.  
   
 ```
@@ -131,7 +126,7 @@ HRESULT Run(LPBINDCTX lpbc);
 ### <a name="remarks"></a>Примечания  
  В разделе [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) в Windows SDK.  
   
-##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
+##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject  
  Указывает, что элемент управления внедрен.  
   
 ```

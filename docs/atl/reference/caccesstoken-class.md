@@ -1,12 +1,9 @@
 ---
-title: "Класс CAccessToken | Документы Microsoft"
-ms.custom: 
+title: Класс CAccessToken | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 Этот класс является оболочкой для токена доступа.  
@@ -89,13 +84,13 @@ class CAccessToken
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[CAccessToken::~CAccessToken](#dtor)|Деструктор|  
+|[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAccessToken::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем дескриптора маркера доступ.|  
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Этот метод вызывается для включения в указанный идентификатор SID `CAccessToken` объекта.|  
@@ -165,7 +160,7 @@ void Attach(HANDLE hToken) throw();
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если `CAccessToken` объект уже имеет права владения маркер доступа.  
   
-##  <a name="dtor"></a>  CAccessToken::~CAccessToken  
+##  <a name="dtor"></a>  CAccessToken:: ~ CAccessToken  
  Деструктор  
   
 ```
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateImpersonationToken`вызовы [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) , чтобы создать новый маркер олицетворения.  
+ `CreateImpersonationToken` вызовы [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) , чтобы создать новый маркер олицетворения.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Этот метод используется для создания нового основного маркера.  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- `CreatePrimaryToken`вызовы [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.  
+ `CreatePrimaryToken` вызовы [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Этот метод вызывается для создания нового процесса, запущенная в контексте безопасности пользователя, представленного `CAccessToken` объекта.  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateRestrictedToken`использует [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.  
+ `CreateRestrictedToken` использует [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.  
   
 > [!IMPORTANT]
 >  При использовании `CreateRestrictedToken`, убедитесь в следующем: существующий маркер является допустимым (и не введенное пользователем) и `SidsToDisable` и `PrivilegesToDelete` являются допустимое (и не введенное пользователем). Если метод возвращает значение false, запретите функциональные возможности.  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- `OpenThreadToken`Аналогично [CAccessToken::GetThreadToken](#getthreadtoken), но задает уровень олицетворения перед инициализацией `CAccessToken` из потока маркер доступа.  
+ `OpenThreadToken` Аналогично [CAccessToken::GetThreadToken](#getthreadtoken), но задает уровень олицетворения перед инициализацией `CAccessToken` из потока маркер доступа.  
   
  [Класса CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены олицетворенного доступа токены, созданные, задав `bImpersonate` флаг *true*.  
   

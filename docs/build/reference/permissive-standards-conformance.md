@@ -1,9 +1,9 @@
 ---
-title: "-разрешительным - (соответствие стандартам) | Документы Microsoft"
+title: -разрешительным - (соответствие стандартам) | Документы Microsoft
 ms.date: 11/11/2016
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ разрешительным-(соответствие стандартам)
 
@@ -33,7 +31,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/permissive-**
+> **/ разрешительным-**
 
 ## <a name="remarks"></a>Примечания
 
@@ -275,7 +273,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-Нет важное исключение для этой общей схемой при T представляет собой один из типов, идентифицирующий (например, `const char *`, `const char16_t *`и так далее) и фактического аргумента `?:` представляет собой строку литерала соответствующего типа. Семантика c ++ 17 изменено с C ++ 14. В результате код в примере 2 принимается под **/std: c ++ 14** и отклоненные под **/std: c ++ 17** при **/Zc:ternary** или **/permissive-**используется.
+Нет важное исключение для этой общей схемой при T представляет собой один из типов, идентифицирующий (например, `const char *`, `const char16_t *`и так далее) и фактического аргумента `?:` представляет собой строку литерала соответствующего типа. Семантика c ++ 17 изменено с C ++ 14. В результате код в примере 2 принимается под **/std: c ++ 14** и отклоненные под **/std: c ++ 17** при **/Zc:ternary** или **/permissive-** используется.
 
 ```cpp
 // Example 2: exception from the above

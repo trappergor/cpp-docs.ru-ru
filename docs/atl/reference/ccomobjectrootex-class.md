@@ -1,12 +1,9 @@
 ---
-title: "Класс CComObjectRootEx | Документы Microsoft"
-ms.custom: 
+title: Класс CComObjectRootEx | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b147f0ad3f1a54c2ae640b6bf2426bcddf060b35
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-класс
 Этот класс предоставляет методы для обработки объекта управления счетчиками ссылок для неагрегированные и статистические объекты.  
@@ -93,7 +88,7 @@ class CComObjectRootEx : public CComObjectRootBase
 |[m_pOuterUnknown](#m_pouterunknown)|С `m_dwRef`, часть объединения. Используется, когда объект является статистическим выражением, чтобы хранить указатель внешняя Неизвестная строка.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObjectRootEx`обрабатывает объект управления счетчиками ссылок для неагрегированные и статистические объекты. Она содержит счетчик ссылок объекта, если объект не выполняется статистическая обработка и хранит указатель на внешняя Неизвестная строка, если объект выполняется статистическая обработка. Для статистических объектов `CComObjectRootEx` методы могут использоваться для обработки удалось создать внутренний объект, а для защиты внешний объект от удаления при выпуске внутреннего интерфейсов или внутренний объект удаляется.  
+ `CComObjectRootEx` обрабатывает объект управления счетчиками ссылок для неагрегированные и статистические объекты. Она содержит счетчик ссылок объекта, если объект не выполняется статистическая обработка и хранит указатель на внешняя Неизвестная строка, если объект выполняется статистическая обработка. Для статистических объектов `CComObjectRootEx` методы могут использоваться для обработки удалось создать внутренний объект, а для защиты внешний объект от удаления при выпуске внутреннего интерфейсов или внутренний объект удаляется.  
   
  Класс, который реализует COM-сервера должен наследовать от `CComObjectRootEx` или [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
@@ -110,14 +105,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>  CComObjectRootEx::CComObjectRootEx  
  Конструктор инициализирует счетчик ссылок на 0.  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComObjectRootEx::FinalConstruct  
  Этот метод можно переопределить в производном классе для выполнения любой инициализации, необходимые для объекта.  
   
 ```
@@ -157,7 +152,7 @@ HRESULT FinalConstruct();
   
 -   Переопределить `FinalRelease` для освобождения **IUnknown** указателя.  
   
-##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>  CComObjectRootEx::FinalRelease  
  Этот метод можно переопределить в производном классе позволяет выполнить очистку, необходимые для объекта.  
   
 ```
@@ -169,7 +164,7 @@ void FinalRelease();
   
  Выполнение очистки в `FinalRelease` рекомендуется добавить код деструктор класса, поскольку объект по-прежнему полностью создан в той точке, с которой `FinalRelease` вызывается. Это позволяет осуществлять безопасный доступ к методы, предоставляемые наиболее производного класса. Это особенно важно для освобождения любые статистические объекты перед удалением.  
   
-##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>  CComObjectRootEx::InternalAddRef  
  Увеличивает счетчик ссылок объекта неагрегированные на 1.  
   
 ```
@@ -182,7 +177,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>Примечания  
  Если модель является многопоточным, **InterlockedIncrement** используется для предотвращения изменения счетчик ссылок в то же время более чем одним потоком.  
   
-##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -212,7 +207,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>Примечания  
  `InternalQueryInterface` обрабатывает интерфейсы только в таблице сопоставлений COM. Если объект является статистическим выражением, `InternalQueryInterface` не делегировать внешняя Неизвестная строка. Вы можете ввести интерфейсы в таблицу сопоставлений COM с помощью макроса [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) или одного из его вариантов.  
   
-##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>  CComObjectRootEx::InternalRelease  
  Уменьшает счетчик ссылок объекта неагрегированные на 1.  
   
 ```
@@ -225,7 +220,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>Примечания  
  Если модель является многопоточным, **InterlockedDecrement** используется для предотвращения изменения счетчик ссылок в то же время более чем одним потоком.  
   
-##  <a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>  CComObjectRootEx::Lock  
  Если модель является многопоточным, этот метод вызывает функцию Win32 API [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), которого ожидает, пока поток может стать владельцем объект критической секции, полученного через закрытый элемент данных.  
   
 ```
@@ -237,7 +232,7 @@ void Lock();
   
  Если модель поток выполняется в одном потоке, этот метод не выполняет никаких действий.  
   
-##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>  CComObjectRootEx::m_dwRef  
  Часть объединение, которое обращается к памяти четыре байта.  
   
 ```
@@ -259,7 +254,7 @@ long m_dwRef;
   
  Если объект не является статистическим выражением, счетчик ссылок недоступна для `AddRef` и **выпуска** хранится в `m_dwRef`. Если объект является статистическим выражением, указатель на внешняя Неизвестная строка сохраняется в [m_pOuterUnknown](#m_pouterunknown).  
   
-##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>  CComObjectRootEx::m_pOuterUnknown  
  Часть объединение, которое обращается к памяти четыре байта.  
   
 ```
@@ -282,7 +277,7 @@ IUnknown*
   
  Если объект является статистическим выражением, указатель на внешняя Неизвестная строка сохраняется в `m_pOuterUnknown`. Если объект не является статистическим выражением, счетчик ссылок недоступна для `AddRef` и **выпуска** хранится в [m_dwRef](#m_dwref).  
   
-##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>  CComObjectRootEx::ObjectMain  
  Для каждого класса, перечисленных в [схеме объекта](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f), эта функция вызывается один раз при инициализации модуля, и еще раз при его выполнение завершается.  
   
 ```
@@ -296,12 +291,12 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Примечания  
  Значение `bStarting` параметр указывает, является ли модуль инициализируется или завершен. Реализация по умолчанию `ObjectMain` не выполняет никаких действий, но можно переопределить эту функцию в классе для инициализации или освобождения ресурсов, которые нужно выделить для класса. Обратите внимание, что `ObjectMain` вызывается перед запрашиваются все экземпляры класса.  
   
- `ObjectMain`вызывается из точки входа библиотеки DLL, поэтому ограничен тип операции, которые может выполнить функцию точки входа. Дополнительные сведения об этих ограничениях см. в разделе [библиотек DLL и Visual C++ поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain` вызывается из точки входа библиотеки DLL, поэтому ограничен тип операции, которые может выполнить функцию точки входа. Дополнительные сведения об этих ограничениях см. в разделе [библиотек DLL и Visual C++ поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>  CComObjectRootEx::OuterAddRef  
  Увеличивает счетчик ссылок внешняя Неизвестная строка статистической обработки.  
   
 ```
@@ -311,7 +306,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>  CComObjectRootEx::OuterQueryInterface  
  Извлекает косвенный указатель на запрошенный интерфейс.  
   
 ```
@@ -328,7 +323,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>Возвращаемое значение  
  Один из стандартных `HRESULT` значения.  
   
-##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>  CComObjectRootEx::OuterRelease  
  Уменьшает значение счетчика ссылок для внешняя Неизвестная строка статистической обработки.  
   
 ```
@@ -338,7 +333,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>Возвращаемое значение  
  В неотладочных сборках всегда возвращает 0. В отладочных построениях возвращает значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>  CComObjectRootEx::Unlock  
  Если модель является многопоточным, этот метод вызывает функцию Win32 API [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), какие выпуски владельцем объекта критической секции, полученного через закрытый элемент данных.  
   
 ```

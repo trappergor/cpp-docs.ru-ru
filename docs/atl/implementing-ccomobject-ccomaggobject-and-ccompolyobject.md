@@ -1,13 +1,10 @@
 ---
-title: "Реализация CComObject, CComAggObject и CComPolyObject | Документы Microsoft"
-ms.custom: 
+title: Реализация CComObject, CComAggObject и CComPolyObject | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CComPolyObject
 - CComAggObject
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Реализация CComObject, CComAggObject и CComPolyObject
 Классы шаблонов [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), и [CComPolyObject](../atl/reference/ccompolyobject-class.md) всегда являются наиболее производные классы в цепочке наследования. Обрабатывать все методы в их обязанность **IUnknown**: `QueryInterface`, `AddRef`, и **выпуска**. Кроме того `CComAggObject` и `CComPolyObject` (при использовании для объектов, статистические) предоставляют специальные подсчет ссылок на и `QueryInterface` семантику, необходимые для внутреннего unknown.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |Макрос|Действие|  
 |-----------|------------|  
 |`DECLARE_NOT_AGGREGATABLE`|Всегда использует `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Использует `CComAggObject` Если объект является статистическим выражением и `CComObject` Если это не так. `CComCoClass`Этот макрос содержит, если ни одна из **DECLARE_\*_AGGREGATABLE** макросы объявлены в классе, используется по умолчанию.|  
+|`DECLARE_AGGREGATABLE`|Использует `CComAggObject` Если объект является статистическим выражением и `CComObject` Если это не так. `CComCoClass` Этот макрос содержит, если ни одна из **DECLARE_\*_AGGREGATABLE** макросы объявлены в классе, используется по умолчанию.|  
 |`DECLARE_ONLY_AGGREGATABLE`|Всегда использует `CComAggObject`. Возвращает ошибку, если объект не является статистическим выражением.|  
 |`DECLARE_POLY_AGGREGATABLE`|ATL создает экземпляр **CComPolyObject\<окне отслеживания TRACE появляется >** при **IClassFactory::CreateInstance** вызывается. Во время создания проверяется значение внешняя Неизвестная строка. Если это **NULL**, **IUnknown** реализуется для неагрегированные объекта. Если внешняя Неизвестная строка не **NULL**, **IUnknown** реализуется для вычисляемого объекта.|  
   

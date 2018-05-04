@@ -1,12 +1,9 @@
 ---
-title: "Класс IOleControlImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IOleControlImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iolecontrolimpl-class"></a>Класс IOleControlImpl
 Этот класс предоставляет реализацию по умолчанию **IOleControl** интерфейса и реализует **IUnknown**.  
@@ -53,7 +48,7 @@ class IOleControlImpl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IOleControlImpl::FreezeEvents](#freezeevents)|Указывает ли контейнер игнорирует и не принимает события из элемента управления.|  
 |[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Заполняет сведения о поведении клавиатуры элемента управления. Возвращает реализацию ATL **E_NOTIMPL**.|  
@@ -73,7 +68,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
  В реализации ATL `FreezeEvents` увеличивает класс элемента управления `m_nFreezeEvents` член данных Если `bFreeze` — **TRUE**и уменьшает `m_nFreezeEvents` Если `bFreeze` — **FALSE**.  
   
 ```
@@ -81,11 +76,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `FreezeEvents`Возвращает `S_OK`.  
+ `FreezeEvents` Возвращает `S_OK`.  
   
  В разделе [метод интерфейса IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) в Windows SDK.  
   
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Заполняет сведения о поведении клавиатуры элемента управления.  
   
 ```
@@ -98,7 +93,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
   
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  Информирует элемент управления, что изменился один или несколько свойств внешнего контейнера.  
   
 ```
@@ -111,7 +106,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>Примечания  
  В разделе [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) в Windows SDK.  
   
-##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Информирует элемент управления о том, что пользователь нажал указанного нажатие клавиши.  
   
 ```

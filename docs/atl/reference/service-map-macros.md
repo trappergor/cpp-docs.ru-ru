@@ -2,11 +2,8 @@
 title: Макросы схемы службы | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>Макросы схемы службы
 Эти макросы определяют схем услуг и записи.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  Отмечает начало карты службы.  
   
 ```
@@ -62,7 +57,7 @@ BEGIN_SERVICE_MAP(theClass)
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  Отмечает конец схемы услуг.  
   
 ```
@@ -72,7 +67,7 @@ END_SERVICE_MAP()
 ### <a name="example"></a>Пример  
  Далее приведен пример [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  Указывает, что объект поддерживает службы идентификатором, указанным параметром *SID*.  
   
 ```
@@ -86,7 +81,7 @@ SERVICE_ENTRY( SID )
 ### <a name="example"></a>Пример  
  Далее приведен пример [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  Указывает, что [IServiceProviderImpl::QueryService](#queryservice) в цепочке для объекта, указанного параметром `punk`.  
   
 ```
@@ -100,7 +95,7 @@ SERVICE_ENTRY_CHAIN( punk )
 ### <a name="example"></a>Пример  
  Далее приведен пример [BEGIN_SERVICE_MAP](#begin_service_map).  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [IN]`guidService`  
+ [IN] `guidService`  
  Указатель на идентификатор службы (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Идентификатор интерфейса, к которому вызывающий объект для получения доступа.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Косвенный указатель на запрошенный интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Требуемый интерфейс не является частью этой службы или службы неизвестно.|  
   
 ### <a name="remarks"></a>Примечания  
- `QueryService`Возвращает косвенный указатель на запрошенный интерфейс в указанной службы. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.  
+ `QueryService` Возвращает косвенный указатель на запрошенный интерфейс в указанной службы. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.  
   
  При вызове `QueryService`, передать идентификатор службы ( `guidService`) и идентификатор интерфейса ( `riid`). `guidService` Указывает службу, к которому вы хотите получить доступ, и `riid` определяет интерфейс, который является частью службы. В ответ будет получен косвенный указатель на интерфейс.  
   

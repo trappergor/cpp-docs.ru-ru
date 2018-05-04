@@ -1,36 +1,31 @@
 ---
-title: "Как: Создание и использование экземпляров unique_ptr | Документы Microsoft"
-ms.custom: 
+title: 'Как: Создание и использование экземпляров unique_ptr | Документы Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Практическое руководство. Создание и использование экземпляров unique_ptr
 Объект [unique_ptr](../standard-library/unique-ptr-class.md) общего доступа к указателю. Не может быть скопирован в другое `unique_ptr`, передаваемые по значению функции или использовать в любой алгоритм стандартной библиотеки C++, предполагающем создание копий будут сделаны. `unique_ptr` можно только переместить. Это означает, что владение ресурсов памяти переносится в другое `unique_ptr` и оригинал `unique_ptr` больше им не владеет. Рекомендуется ограничить объект одним владельцем, поскольку множественное владение усложняет логику программы. Таким образом, при необходимости интеллектуального указателя для простого объекта C++, используйте `unique_ptr`, и при построении `unique_ptr`, используйте [make_unique](../standard-library/memory-functions.md#make_unique) вспомогательную функцию.  
   
  Следующая схема иллюстрирует передачу прав собственности между двумя экземплярами `unique_ptr`.  
   
- ![Перемещение владения уникальный &#95; ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![Перемещение владения уникальный&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr`определен в `<memory>` заголовка в стандартной библиотеке C++. Именно это эффективна, как и необработанный указатель и может использоваться в контейнеры стандартной библиотеки C++. Добавление `unique_ptr` экземпляров для контейнеров стандартной библиотеки C++ эффективна, так как конструктор перемещения `unique_ptr` избавляет от необходимости для операции копирования.  
+ `unique_ptr` определен в `<memory>` заголовка в стандартной библиотеке C++. Именно это эффективна, как и необработанный указатель и может использоваться в контейнеры стандартной библиотеки C++. Добавление `unique_ptr` экземпляров для контейнеров стандартной библиотеки C++ эффективна, так как конструктор перемещения `unique_ptr` избавляет от необходимости для операции копирования.  
   
 ## <a name="example"></a>Пример  
  В следующем примере описывается порядок создания экземпляров `unique_ptr` и передачи их между функциями.  

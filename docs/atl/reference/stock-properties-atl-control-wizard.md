@@ -1,29 +1,24 @@
 ---
-title: "Свойства хранения, ATL элементов управления мастер | Документы Microsoft"
-ms.custom: 
+title: Свойства хранения, ATL элементов управления мастер | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.stockprops
 dev_langs:
 - C++
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Свойства стеков, мастер элементов управления ATL
 Эта страница мастера определяет стандартных свойств, поддерживаемых для элемента управления. По умолчанию свойства не определяются.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
  **Поддерживается**  
  Определяет свойства, которые в настоящее время поддерживаются для элемента управления.  
   
-|Кнопка перемещения|Описание:|  
+|Кнопка перемещения|Описание|  
 |---------------------|-----------------|  
 |**>**|Добавляет **поддерживаемые** имя свойства, выбранного в списке **не поддерживается** списка.|  
 |**>>**|Добавляет **поддерживаемые** список имен всех свойств, доступных в **не поддерживается** списка.|  

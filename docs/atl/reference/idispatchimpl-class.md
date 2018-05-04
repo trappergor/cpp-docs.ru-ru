@@ -1,12 +1,9 @@
 ---
-title: "Класс IDispatchImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IDispatchImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispatchImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3008d42986fcdc4b98ba6a1f9c85c437f2d335c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fddf556eba07264f6ea0b01edea3e3d1e8a3a7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispatchimpl-class"></a>Класс IDispatchImpl
 Предоставляет реализацию по умолчанию для `IDispatch` частью сдвоенный интерфейс.  
@@ -76,13 +71,13 @@ class ATL_NO_VTABLE IDispatchImpl : public T
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IDispatchImpl::IDispatchImpl](#idispatchimpl)|Конструктор. Вызовы `AddRef` для защищенного члена переменной, которая управляет данными типа сдвоенный интерфейс. Деструктор вызывает `Release`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|Сопоставляет набор имен соответствующему набору идентификаторов диспетчеризации.|  
 |[IDispatchImpl::GetTypeInfo](#gettypeinfo)|Извлекает сведения о типе для сдвоенный интерфейс.|  
@@ -90,7 +85,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 |[IDispatchImpl::Invoke](#invoke)|Предоставляет доступ к методам и свойствам, предоставляемым сдвоенный интерфейс.|  
   
 ## <a name="remarks"></a>Примечания  
- `IDispatchImpl`предоставляет реализацию по умолчанию для `IDispatch` частью любой сдвоенный интерфейс для объекта. Сдвоенный интерфейс является производным от `IDispatch` и использует только типы, совместимые с Automation. Как и disp-интерфейса сдвоенный интерфейс поддерживает связывание раннее и позднее связывание; Тем не менее сдвоенный интерфейс поддерживает также связывание vtable.  
+ `IDispatchImpl` предоставляет реализацию по умолчанию для `IDispatch` частью любой сдвоенный интерфейс для объекта. Сдвоенный интерфейс является производным от `IDispatch` и использует только типы, совместимые с Automation. Как и disp-интерфейса сдвоенный интерфейс поддерживает связывание раннее и позднее связывание; Тем не менее сдвоенный интерфейс поддерживает также связывание vtable.  
   
  Пример типичной реализации `IDispatchImpl`.  
   
@@ -98,7 +93,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
   
  По умолчанию `IDispatchImpl` класс осуществляет поиск сведений о типе `T` в реестре. Чтобы реализовать Незарегистрированный интерфейс, можно использовать `IDispatchImpl` класс без доступа к реестру с помощью стандартных номер_версии. При создании `IDispatchImpl` объект, имеющий значение 0xFFFF `wMajor` до 0xFFFF как значение для `wMinor`, `IDispatchImpl` класс извлекает библиотеку типов из DLL-файл вместо реестра.  
   
- `IDispatchImpl`содержит статический член типа `CComTypeInfoHolder` , управляющий сведения о типе для сдвоенный интерфейс. Если у вас есть несколько объектов, реализующих же два интерфейса, только один экземпляр `CComTypeInfoHolder` используется.  
+ `IDispatchImpl` содержит статический член типа `CComTypeInfoHolder` , управляющий сведения о типе для сдвоенный интерфейс. Если у вас есть несколько объектов, реализующих же два интерфейса, только один экземпляр `CComTypeInfoHolder` используется.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `T`  
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames  
  Сопоставляет набор имен соответствующему набору идентификаторов диспетчеризации.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>Примечания  
  В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в Windows SDK.  
   
-##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo  
  Извлекает сведения о типе для сдвоенный интерфейс.  
   
 ```
@@ -136,7 +131,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>Примечания  
  В разделе [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) в Windows SDK.  
   
-##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount  
  Определяет, существует ли сведения о типе для сдвоенный интерфейс.  
   
 ```
@@ -146,14 +141,14 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>Примечания  
  В разделе `IDispatch::GetTypeInfoCount` в Windows SDK.  
   
-##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
+##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl  
  Конструктор. Вызовы `AddRef` для защищенного члена переменной, которая управляет данными типа сдвоенный интерфейс. Деструктор вызывает **выпуска**.  
   
 ```
 IDispatchImpl();
 ```  
   
-##  <a name="invoke"></a>IDispatchImpl::Invoke  
+##  <a name="invoke"></a>  IDispatchImpl::Invoke  
  Предоставляет доступ к методам и свойствам, предоставляемым сдвоенный интерфейс.  
   
 ```

@@ -2,11 +2,8 @@
 title: Несколько базовых классов | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>Несколько базовых классов
 Как описано в [множественное наследование](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), класс может быть производным от более чем одного базового класса. В модели множественного наследования (где классы являются производными от более чем одного базового класса) базовые классы задаются с помощью *базового списка* элемента грамматики. Например, объявление класса для `CollectionOfBook`, производного от `Collection` и `Book`, можно указать следующим образом.  
@@ -69,7 +64,7 @@ class CollectionOfBook : public Book, public Collection {
   
  Как видно на рисунке, класс `Queue` является базовым для двух других классов: `CashierQueue` и `LunchQueue`. Однако когда эти два класса объединяются и образуют класс `LunchCashierQueue`, возникает следующая проблема: новый класс содержит два подчиненных объекта типа `Queue` — один из `CashierQueue`, а другой из `LunchQueue`. На следующем рисунке показана концептуальная структура памяти (фактическая структура памяти может быть оптимизирована).  
   
- ![Имитации &#45; объекта строки](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![Имитируемые обед&#45;объекта строки](../cpp/media/vc38xp2.gif "vc38XP2")  
 Смоделированный объект Lunch-Line  
   
  Обратите внимание, что в объекте `Queue` имеется два подчиненных объекта `LunchCashierQueue`. В следующем коде содержится объявление `Queue` как виртуального базового класса:  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  Благодаря ключевому слову `virtual` будет включена только одна копия подчиненного объекта `Queue` (см. следующий рисунок).  
   
- ![Имитации &#45; объекта строки, виртуальные базовые классы](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![Имитируемые обед&#45;объекта строки, виртуальные базовые классы](../cpp/media/vc38xp3.gif "vc38XP3")  
 Имитация объекта Lunch-Line с виртуальными базовыми классами  
   
  Класс может иметь как виртуальный, так и невиртуальный компонент заданного типа. Это происходит при условиях, которые иллюстрирует следующий рисунок.  

@@ -1,12 +1,9 @@
 ---
-title: "Класс IEnumOnSTLImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IEnumOnSTLImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de4bdd0d07e694303f850d6298d77afe3322214
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ienumonstlimpl-class"></a>Класс IEnumOnSTLImpl
 Этот класс определяет перечислитель интерфейс на основе коллекции стандартной библиотеки C++.  
@@ -67,7 +62,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::Clone](#clone)|Реализация [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
 |[IEnumOnSTLImpl::Init](#init)|Инициализирует перечислитель.|  
@@ -77,14 +72,14 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::m_iter](#m_iter)|Итератор, который представляет текущей позиции перечислителя в пределах коллекции.|  
 |[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Указатель контейнера стандартной библиотеки C++, содержащего элементы для перечисления.|  
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|**IUnknown** указатель объекта, предоставляющего коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- `IEnumOnSTLImpl`предоставляет реализацию для COM-интерфейса перечислителя, где перечисляемые элементы хранятся в контейнере совместимое библиотеки C++ Standard. Этот класс является аналогом [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) класс, который предоставляет реализацию для интерфейса перечислитель на основе массива.  
+ `IEnumOnSTLImpl` предоставляет реализацию для COM-интерфейса перечислителя, где перечисляемые элементы хранятся в контейнере совместимое библиотеки C++ Standard. Этот класс является аналогом [CComEnumImpl](../../atl/reference/ccomenumimpl-class.md) класс, который предоставляет реализацию для интерфейса перечислитель на основе массива.  
   
 > [!NOTE]
 >  В разделе [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init) подробности дальнейшей различия между `CComEnumImpl` и `IEnumOnSTLImpl`.  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>  IEnumOnSTLImpl::Init  
  Инициализирует перечислитель.  
   
 ```
@@ -125,7 +120,7 @@ HRESULT Init(
   
  Перед передачей указатель на интерфейс перечислителя обратно в любых клиентов, необходимо вызвать этот метод.  
   
-##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>  IEnumOnSTLImpl::Clone  
  Этот метод предоставляет реализацию [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) метод путем создания объекта типа `CComEnumOnSTL`, инициализирует его с тем же коллекции и итераторов, используемые текущим объектом и возврат интерфейс на вновь созданный объект.  
   
 ```
@@ -139,7 +134,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>  IEnumOnSTLImpl::m_spUnk  
  **IUnknown** указатель объекта, предоставляющего коллекции.  
   
 ```
@@ -149,7 +144,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>Примечания  
  Этого интеллектуального указателя содержит ссылку на объект, передаваемый в [IEnumOnSTLImpl::Init](#init), гарантируя, что оно остается активным в течение времени существования перечислителя.  
   
-##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>  IEnumOnSTLImpl::m_pcollection  
  Этот элемент указывает коллекцию, которая содержит данные, представленные реализацию интерфейса перечислителя.  
   
 ```
@@ -159,14 +154,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>Примечания  
  Этот член инициализируется путем вызова [IEnumOnSTLImpl::Init](#init).  
   
-##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>  IEnumOnSTLImpl::m_iter  
  Этот член содержит итератор позволяет пометить текущую позицию в коллекции, а также переходить на последующие элементы.  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>  IEnumOnSTLImpl::Next  
  Этот метод предоставляет реализацию [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) метод.  
   
 ```
@@ -189,7 +184,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>  IEnumOnSTLImpl::Reset  
  Этот метод предоставляет реализацию [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) метод.  
   
 ```
@@ -199,7 +194,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>  IEnumOnSTLImpl::Skip  
  Этот метод предоставляет реализацию [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) метод.  
   
 ```

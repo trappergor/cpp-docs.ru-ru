@@ -1,13 +1,10 @@
 ---
-title: "-DYNAMICBASE (использование адреса места случайный выбор макета) | Документы Microsoft"
-ms.custom: 
+title: -DYNAMICBASE (использование адреса места случайный выбор макета) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.RandomizedBaseAddress
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1458070f85678d30c716622bf57740d90feb65d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85af66c4ce05057eff63292061b66202aeebe160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (использование технологии Address Space Layout Randomization (ASRL))
 Указывает, следует ли создавать исполняемый образ, который может быть случайным образом перемещен во время загрузки с помощью функции randomization (ASLR) макет пространства адресов из [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Примечания  
  По умолчанию/DYNAMICBASE включен.  
   
- Этот параметр изменяет заголовок исполняемого файла для указания, следует ли приложение случайным образом перемещен во время загрузки.  
+ Этот параметр изменяет заголовок исполняемого файла, чтобы указать, требуется ли случайным образом переместить изменения из одной ветви в другую для приложения во время загрузки.  
   
  Поддерживается случайный выбор макета пространства адресов на [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)].  
   

@@ -1,12 +1,9 @@
 ---
-title: "Класс CA2WEX | Документы Microsoft"
-ms.custom: 
+title: Класс CA2WEX | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2WEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218e0d8f5e93a9e6c41ff855ff086cc7bfa6c766
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2wex-class"></a>Класс CA2WEX
 Этот класс используется макросы преобразования строк `CA2TEX`, `CA2CTEX`, `CT2WEX`, и `CT2CWEX`и определение типа **CA2W**.  
@@ -52,20 +47,20 @@ class CA2WEX
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CA2WEX::CA2WEX](#ca2wex)|Конструктор.|  
 |[CA2WEX:: ~ CA2WEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CA2WEX::operator LPWSTR](#operator_lpwstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CA2WEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
 |[CA2WEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|  
@@ -101,7 +96,7 @@ class CA2WEX
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlconv.h  
   
-##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
+##  <a name="ca2wex"></a>  CA2WEX::CA2WEX  
  Конструктор.  
   
 ```
@@ -119,7 +114,7 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Выделяет буфера, используемого в процессе перевода.  
   
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+##  <a name="dtor"></a>  CA2WEX:: ~ CA2WEX  
  Деструктор  
   
 ```
@@ -129,21 +124,21 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Освобождает выделенный буфер.  
   
-##  <a name="m_psz"></a>CA2WEX::m_psz  
+##  <a name="m_psz"></a>  CA2WEX::m_psz  
  Элемент данных, который хранит исходную строку.  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer  
  Статический буфер, используемый для хранения преобразованную строку.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>  CA2WEX::operator LPWSTR  
  Оператор преобразования.  
   
 ```  

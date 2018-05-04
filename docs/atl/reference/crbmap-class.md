@@ -1,12 +1,9 @@
 ---
-title: "Класс CRBMap | Документы Microsoft"
-ms.custom: 
+title: Класс CRBMap | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32b21c8785bb5e28058c51f2345c5ffcb6de1f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmap-class"></a>Класс CRBMap
 Этот класс представляет сопоставление структуры, с помощью двоичного дерева красный-черный.  
@@ -62,27 +57,27 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRBMap::CRBMap](#crbmap)|Конструктор.|  
 |[CRBMap:: ~ CRBMap](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRBMap::Lookup](#lookup)|Вызовите этот метод для поиска разделов или значений в `CRBMap` объекта.|  
 |[CRBMap::RemoveKey](#removekey)|Этот метод вызывается для удаления элемента из `CRBMap` объекту, заданному ключу.|  
 |[CRBMap::SetAt](#setat)|Этот метод служит для вставки пары элементов в сопоставление.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRBMap`предоставляет поддержку для любого конкретного типа управления упорядоченный массив ключевые элементы и связанные с ними значения массива сопоставления. Каждый раздел может содержать только один связанного значения. Элементы (состоящей из ключа и значения) хранятся в двоичное дерево структуры с помощью [CRBMap::SetAt](#setat) метод. Элементы можно удалить с помощью [CRBMap::RemoveKey](#removekey) метод, который удаляет элемент с заданным значением ключа.  
+ `CRBMap` предоставляет поддержку для любого конкретного типа управления упорядоченный массив ключевые элементы и связанные с ними значения массива сопоставления. Каждый раздел может содержать только один связанного значения. Элементы (состоящей из ключа и значения) хранятся в двоичное дерево структуры с помощью [CRBMap::SetAt](#setat) метод. Элементы можно удалить с помощью [CRBMap::RemoveKey](#removekey) метод, который удаляет элемент с заданным значением ключа.  
   
  Обход дерева стало возможным с помощью методов например [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), и [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue).  
   
  `KTraits` И `VTraits` являются классов признаки, которые содержат любой дополнительный код, необходимые для копирования или перемещения элементов.  
   
- `CRBMap`является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует двоичного дерева с помощью алгоритма красный-черный. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) представляет собой вариант, который допускает несколько значений для каждого ключа. Он слишком является производным от `CRBTree`и поэтому имеет множество функций с `CRBMap`.  
+ `CRBMap` является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует двоичного дерева с помощью алгоритма красный-черный. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) представляет собой вариант, который допускает несколько значений для каждого ключа. Он слишком является производным от `CRBTree`и поэтому имеет множество функций с `CRBMap`.  
   
  Как альтернатива `CRBMap` и `CRBMultiMap` предлагаемых [CAtlMap](../../atl/reference/catlmap-class.md) класса. Когда небольшое количество элементов должно быть сохранено, рассмотрите возможность использования [CSimpleMap](../../atl/reference/csimplemap-class.md) вместо этого класс.  
   
@@ -96,7 +91,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
   
-##  <a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>  CRBMap::CRBMap  
  Конструктор.  
   
 ```
@@ -115,7 +110,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>  CRBMap:: ~ CRBMap  
  Деструктор  
   
 ```
@@ -127,7 +122,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
-##  <a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>  CRBMap::Lookup  
  Вызовите этот метод для поиска разделов или значений в `CRBMap` объекта.  
   
 ```
@@ -152,7 +147,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMap::RemoveKey  
  Этот метод вызывается для удаления элемента из `CRBMap` объекту, заданному ключу.  
   
 ```
@@ -172,7 +167,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>  CRBMap::SetAt  
  Этот метод служит для вставки пары элементов в сопоставление.  
   
 ```
@@ -192,7 +187,7 @@ POSITION SetAt(
  Возвращает позицию пары ключ значение элемента в `CRBMap` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- `SetAt`заменяет существующий элемент, если найден соответствующий ключ. Если ключ не найден, создается новый пара ключ значение.  
+ `SetAt` заменяет существующий элемент, если найден соответствующий ключ. Если ключ не найден, создается новый пара ключ значение.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   

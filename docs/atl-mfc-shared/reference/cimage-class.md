@@ -1,12 +1,9 @@
 ---
-title: "CImage-класс | Документы Microsoft"
-ms.custom: 
+title: CImage-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage-класс
-`CImage`предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).  
+`CImage` Предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -91,13 +86,13 @@ class CImage
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImage::CImage](#cimage)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|Отображает растровых изображений, имеющих пикселей прозрачным или полупрозрачным.|  
 |[CImage::Attach](#attach)|Присоединяет `HBITMAP` для `CImage` объекта. Можно использовать с растровые изображения не DIB раздела или растровые изображения DIB раздела.|  
@@ -141,12 +136,12 @@ class CImage
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HBITMAP CImage::operator](#operator_hbitmap)|Возвращает дескриптор Windows, присоединенного к `CImage` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CImage`принимает точечные рисунки, — это либо участки аппаратно независимый точечный рисунок (DIB) или нет; Тем не менее, можно использовать [создать](#create) или [CImage::Load](#load) с только разделы DIB. Можно присоединить растровое изображение не DIB раздел для `CImage` с помощью [присоединение](#attach), но их нельзя использовать следующие `CImage` методы, которые поддерживают только растровые изображения DIB раздела:  
+ `CImage` принимает точечные рисунки, — это либо участки аппаратно независимый точечный рисунок (DIB) или нет; Тем не менее, можно использовать [создать](#create) или [CImage::Load](#load) с только разделы DIB. Можно присоединить растровое изображение не DIB раздел для `CImage` с помощью [присоединение](#attach), но их нельзя использовать следующие `CImage` методы, которые поддерживают только растровые изображения DIB раздела:  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  С помощью глобального `CImage` объектов в библиотеке DLL не рекомендуется. Если необходимо использовать глобальный `CImage` объектов в библиотеке DLL, вызов [CImage::ReleaseGDIPlus](#releasegdiplus) явно освободить ресурсы, используемые в GDI +.  
   
- `CImage`не могут быть выбраны в новую [CDC](../../mfc/reference/cdc-class.md). `CImage`создает свой собственный **HDC** для изображения. Поскольку `HBITMAP` может быть выбран только в одну **HDC** одновременно, `HBITMAP` связанных с `CImage` не могут быть выбраны в другой **HDC**. Если вам требуется `CDC`, получить **HDC** из `CImage` и присвойте ему [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.md#cdc__fromhandle.  
+ `CImage` не могут быть выбраны в новую [CDC](../../mfc/reference/cdc-class.md). `CImage` создает свой собственный **HDC** для изображения. Поскольку `HBITMAP` может быть выбран только в одну **HDC** одновременно, `HBITMAP` связанных с `CImage` не могут быть выбраны в другой **HDC**. Если вам требуется `CDC`, получить **HDC** из `CImage` и присвойте ему [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.md#cdc__fromhandle.  
   
 ## <a name="example"></a>Пример  
 ```cpp  
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  Параметр *strExporter* имеет следующий формат:  
   
- файл description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... описание файла  *n* &#124;\*. ext  *n* &#124; &#124;  
+ файл description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. описание .file *n*&#124;\*.ext *n*&#124;&#124;  
   
- где "&#124;" указан разделитель `chSeparator`. Пример:  
+ где "&#124;" знак разделителя задается `chSeparator`. Пример:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку на общее сохранения файла диалоговое окно.  
+ Разделитель по умолчанию "&#124;" Если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку на общее сохранения файла диалоговое окно.  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  Получает высоту в пикселях.  
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  Параметр *strImporter* имеет следующий формат:  
   
- файл description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... описание файла  *n* &#124;\*. ext  *n* &#124; &#124;  
+ файл description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;.. описание .file *n*&#124;\*.ext *n*&#124;&#124;  
   
- где "&#124;" указан разделитель `chSeparator`. Пример:  
+ где "&#124;" знак разделителя задается `chSeparator`. Пример:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку в общую **Открытие файла** диалоговое окно.  
+ Разделитель по умолчанию "&#124;" Если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку в общую **Открытие файла** диалоговое окно.  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Получает максимальное количество записей в таблице цветов.  
@@ -1123,7 +1118,7 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Примечания  
  Этот метод применим к Windows NT версии 4.0 и более поздних версий.  
   
-##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  HBITMAP CImage::operator  
  Этот оператор используется для получения вложенного дескриптор Windows GDI `CImage` объекта. Этот оператор — оператор приведения, который поддерживает прямое использование `HBITMAP` объекта.  
   
 ##  <a name="plgblt"></a>  CImage::PlgBlt  
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **Значение TRUE,** в случае успеха, в противном случае **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
- `TransparentBlt`поддерживается для точечные рисунки источника 4 битов на пиксель и 8 бит на пиксель. Используйте [CImage::AlphaBlend](#alphablend) указание 32 бита на пиксель растровые изображения с прозрачностью.  
+ `TransparentBlt` поддерживается для точечные рисунки источника 4 битов на пиксель и 8 бит на пиксель. Используйте [CImage::AlphaBlend](#alphablend) указание 32 бита на пиксель растровые изображения с прозрачностью.  
   
   
 ### <a name="example"></a>Пример  

@@ -2,12 +2,9 @@
 title: -ALLOWISOLATION (поиск манифеста) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
 - VC.Project.VCLinkerTool.AllowIsolation
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (поиск манифеста)
 Задает поведение нахождения файлов манифеста.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  **/ ALLOWISOLATION** значение по умолчанию.  
   
- При отключении изоляции для исполняемого файла загрузчик Windows не будет пытаться обнаружить манифест приложения для нового процесса. Новый процесс не будет контекста активации по умолчанию, даже если отсутствует манифест в исполняемый файл или размещено в том же каталоге, что и исполняемый файл с именем *имя исполняемого файла***. exe.manifest**.  
+ При отключении изоляции для исполняемого файла загрузчик Windows не будет пытаться обнаружить манифест приложения для нового процесса. Новый процесс не будет контекста активации по умолчанию, даже если отсутствует манифест в исполняемый файл или размещено в том же каталоге, что и исполняемый файл с именем * исполняемый-name ***. exe.manifest**.  
   
  Дополнительные сведения см. в разделе [файлы манифеста ссылаются](http://msdn.microsoft.com/library/aa375632).  
   
