@@ -1,12 +1,9 @@
 ---
-title: "Класс CComDynamicUnkArray | Документы Microsoft"
-ms.custom: 
+title: Класс CComDynamicUnkArray | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>Класс CComDynamicUnkArray
 Этот класс содержит массив **IUnknown** указатели.  
@@ -52,14 +47,14 @@ class CComDynamicUnkArray
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Конструктор. Инициализирует значений в коллекции **NULL** и размера коллекции равным нулю.|  
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::Add](#add)|Вызовите этот метод для добавления `IUnknown` указатель на массив.|  
 |[CComDynamicUnkArray::begin](#begin)|Возвращает указатель на первый `IUnknown` указатель в коллекции.|  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  В разделе [Добавление подключения указывает на объект](../../atl/adding-connection-points-to-an-object.md) подробные сведения об автоматизации создания соединения привязка прокси-серверов.  
   
 > [!NOTE]
-> **Примечание** класса **CComDynamicUnkArray** используется **добавить класс** мастер при создании элемента управления, который имеет точек подключения. Если вы хотите указать количество точек подключения вручную, измените ссылку с **CComDynamicUnkArray** для `CComUnkArray<`  *n*  `>`, где  *n*  число необходимых точки подключения.  
+> **Примечание** класса **CComDynamicUnkArray** используется **добавить класс** мастер при создании элемента управления, который имеет точек подключения. Если вы хотите указать количество точек подключения вручную, измените ссылку с **CComDynamicUnkArray** для `CComUnkArray<` *n* `>`, где *n*число необходимых точки подключения.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  Вызовите этот метод для добавления **IUnknown** указатель на массив.  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает куки-файл, связанный с вновь добавленный указателя.  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  Возвращает указатель на начало коллекции **IUnknown** указателей на интерфейс.  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  Перед использованием **IUnknown** интерфейс, должна проверять, что он не **NULL**.  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  Очищает массива.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  Конструктор.  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Примечания  
  Задает размер коллекции нулю и инициализирует значения для **NULL**. Деструктор освобождает коллекции, но при необходимости.  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  Деструктор  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>Примечания  
  Освобождает ресурсы, выделенные конструктором класса.  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  Возвращает указатель на элемент, следующий за последние **IUnknown** указатель в коллекции.  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на **IUnknown** указатель на интерфейс.  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  Извлекает элемент по указанному индексу.  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) интерфейса.  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  Этот метод вызывается для получения файлов cookie, связанные с данной **IUnknown** указателя.  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>Примечания  
  Если имеется несколько экземпляров одной и той же **IUnknown** указателем, эта функция возвращает куки-файл для первого.  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  Возвращает длину массива.  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Длина массива.  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  Этот метод вызывается для получения **IUnknown** указатель, связанный с данной куки-файл.  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **IUnknown** указатель или значение NULL, если соответствующие объекты cookie не найден.  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  Этот метод вызывается для удаления **IUnknown** указателя из массива.  
   
 ```

@@ -2,11 +2,8 @@
 title: Функции strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcstok_s_l
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be62937a5c687c93f0280a8f3ca9d8acc955567
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -156,7 +151,7 @@ unsigned char* _mbstok_s(
 
 Поскольку *контекста* параметра заменяет статические буферы, используемые в **strtok** и **_strtok_l**, можно анализировать две строки одновременно в одном потоке.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale](setlocale-wsetlocale.md) для получения дополнительной информации. Версии этих функций без **_l** суффикс использовать языкового стандарта текущего потока для данного поведения, зависящего от языкового стандарта. Версии с **_l** суффиксом идентичны, за исключением того, что они используют *языкового стандарта* параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без **_l** суффикс использовать языкового стандарта текущего потока для данного поведения, зависящего от языкового стандарта. Версии с **_l** суффиксом идентичны, за исключением того, что они используют *языкового стандарта* параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

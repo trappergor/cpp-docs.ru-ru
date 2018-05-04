@@ -1,12 +1,9 @@
 ---
-title: "Класс CComTearOffObject | Документы Microsoft"
-ms.custom: 
+title: Класс CComTearOffObject | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 Этот класс реализует интерфейс перемещаемые.  
@@ -56,14 +51,14 @@ class CComTearOffObject : public Base
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Конструктор.|  
 |[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComTearOffObject::AddRef](#addref)|Увеличивает счетчик ссылок для `CComTearOffObject` объекта.|  
 |[CComTearOffObject::QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс на перемещаемые класс или класс-владелец.|  
@@ -82,9 +77,9 @@ class CComTearOffObject : public Base
 |[m_pOwner](#m_powner)|Указатель на `CComObject` производный от класса владельца.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComTearOffObject`реализует интерфейс перемещаемые как отдельный объект, экземпляр которого создается только в том случае, когда запрашиваются этот интерфейс. Перемещаемое удаляется, если число ссылок становится равным нулю. Как правило при построении перемещаемые интерфейса для интерфейса, который используется редко, так как с помощью перемещаемое сохраняет указатель vtable во всех экземплярах основного объекта.  
+ `CComTearOffObject` реализует интерфейс перемещаемые как отдельный объект, экземпляр которого создается только в том случае, когда запрашиваются этот интерфейс. Перемещаемое удаляется, если число ссылок становится равным нулю. Как правило при построении перемещаемые интерфейса для интерфейса, который используется редко, так как с помощью перемещаемое сохраняет указатель vtable во всех экземплярах основного объекта.  
   
- Необходимо создать производный класс, реализующий перемещаемое из `CComTearOffObjectBase` и из любого интерфейсы должны объекта перемещаемые для поддержки. `CComTearOffObjectBase`шаблонизируется класс-владелец и потоковую модель. Класс владельца является класс объекта, для которого перемещаемое реализуется. Если модель не указан, используется модель потока по умолчанию.  
+ Необходимо создать производный класс, реализующий перемещаемое из `CComTearOffObjectBase` и из любого интерфейсы должны объекта перемещаемые для поддержки. `CComTearOffObjectBase` шаблонизируется класс-владелец и потоковую модель. Класс владельца является класс объекта, для которого перемещаемое реализуется. Если модель не указан, используется модель потока по умолчанию.  
   
  Необходимо создать сопоставление COM для класса перемещаемые. Когда перемещаемое создает ATL, он создаст **CComTearOffObject\<CYourTearOffClass >** или **CComCachedTearOffObject\<CYourTearOffClass >**.  
   
@@ -100,7 +95,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>  CComTearOffObject::AddRef  
  Увеличивает число ссылок `CComTearOffObject` объекта на единицу.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, которое может быть полезно для диагностики и тестирования.  
   
-##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject  
  Конструктор.  
   
 ```
@@ -124,7 +119,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Примечания  
  Увеличивает счетчик ссылок владельца на единицу.  
   
-##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
  Деструктор  
   
 ```
@@ -134,7 +129,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы, вызывающий модуль FinalRelease и уменьшает счетчик блокировки.  
   
-##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  Конструктор.  
   
 ```
@@ -144,7 +139,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>Примечания  
  Инициализирует [m_pOwner](#m_powner) члена **NULL**.  
   
-##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
  Указатель на [CComObject](../../atl/reference/ccomobject-class.md) объект, производный от *владельца*.  
   
 ```
@@ -158,7 +153,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>Примечания  
  При инициализации указатель **NULL** во время построения.  
   
-##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -178,7 +173,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>Примечания  
  Сначала запрашивает для интерфейсов класса перемещаемые. Если интерфейс не установлен, запросы для интерфейса на объект-владелец. Если запрошенный интерфейс **IUnknown**, возвращает **IUnknown** владельца.  
   
-##  <a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>  CComTearOffObject::Release  
  Уменьшает число ссылок на единицу и, если счетчик ссылок равен нулю, удаляет `CComTearOffObject`.  
   
 ```

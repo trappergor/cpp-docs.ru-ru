@@ -1,12 +1,9 @@
 ---
-title: "Этот указатель | Документы Microsoft"
-ms.custom: 
+title: Этот указатель | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-pointer"></a>Указатель this
 **Это** указатель является указателем, доступный только в нестатических функциях-членах **класса**, `struct`, или **объединение** типа. Он указывает на объект, для которого вызывается функция-член. Статические функции-члены имеют **это** указателя.  
@@ -183,7 +178,7 @@ int main()
   
  Тип **это** в члене функции описан с помощью следующего синтаксиса, где *список cv квалификаторов* определяется из декларатора функций-членов и может быть **const**или **volatile** (или оба), и *типа класса* имя класса:  
   
- *тип класса [cv список квалификаторов]*  **\* const это**   
+ *тип класса [cv список квалификаторов]* **\* const это**  
   
  Другими словами **это** всегда является указателем const; не может быть переназначен.  **Const** или `volatile` квалификаторы, используется в объявлении члена функции применяются к экземпляру класса, на который указывает **это** в области видимости данной функции.  
   

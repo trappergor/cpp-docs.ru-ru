@@ -2,26 +2,21 @@
 title: Использование регистров | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6792fcf035ee698767c9dd099cb7b84f5b784616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-usage"></a>Использование регистров
 Архитектура [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] предоставляет 16 регистров общего назначения (которые далее называются целочисленными регистрами), а также 16 регистров XMM/YMM для значений с плавающей запятой. Переменные регистры — это оперативные регистры, которые вызывающий объект считает очищаемыми во время вызова. Неизменяемые регистры должны сохранять свое значение во время вызова функции и при использовании должны сохраняться вызываемым объектом.  

@@ -1,13 +1,10 @@
 ---
-title: "Командные файлы компилятора CL | Документы Microsoft"
-ms.custom: 
+title: Командные файлы компилятора CL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-command-files"></a>Командные файлы компилятора CL
 Командный файл имеет текстовый файл, содержащий параметры и имена файлов, в противном случае следует ввести на [командной строки](../../build/reference/compiler-command-line-syntax.md) или указать с помощью [переменной среды компилятора CL](../../build/reference/cl-environment-variables.md). CL принимает командный файл в качестве аргумента в переменной среды компилятора CL или в командной строке. В отличие от командной строки или переменной среды компилятора CL, командный файл позволяет использовать несколько строк для параметров и имен файлов.  

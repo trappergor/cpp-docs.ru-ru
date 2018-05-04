@@ -1,12 +1,9 @@
 ---
-title: "Интерфейс IAxWinHostWindowLic | Документы Microsoft"
-ms.custom: 
+title: Интерфейс IAxWinHostWindowLic | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bd50d5602812cc70ccc3201e9df255f469604a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41b4d7891d1bb00f4ee689477d1056dbf2bf28cf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Интерфейс IAxWinHostWindowLic
 Этот интерфейс предоставляет методы для управления лицензированный элемент управления и его объект узла.  
@@ -49,7 +44,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |[CreateControlLicEx](#createcontrollicex)|Создает лицензированный элемент управления и прикрепляет его к объекту узла при необходимости устанавливает обработчик события.|  
   
 ## <a name="remarks"></a>Примечания  
- `IAxWinHostWindowLic`наследует от [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) и добавляет методы, поддерживающие создание Лицензированные элементы управления.  
+ `IAxWinHostWindowLic` наследует от [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) и добавляет методы, поддерживающие создание Лицензированные элементы управления.  
   
  В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий члены этого интерфейса.  
   
@@ -61,7 +56,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |IDL|ATLIFace.idl|  
 |C++|См (также входит в состав ATLBase.h)|  
   
-##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
+##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic  
  Создает лицензированный элемент управления, инициализирует его и размещает в окна, обозначенную `hWnd`.  
   
 ```
@@ -84,7 +79,7 @@ STDMETHOD(CreateControlLic)(
 ### <a name="example"></a>Пример  
  В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLic`.  
   
-##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx  
  Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).  
   
 ```

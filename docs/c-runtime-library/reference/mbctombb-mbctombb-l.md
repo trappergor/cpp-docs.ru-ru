@@ -2,11 +2,8 @@
 title: _mbctombb, _mbctombb_l | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctombb_l
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45567a2486a0783cd4b1f82e5a81046e529c49df
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
@@ -84,7 +79,7 @@ unsigned int _mbctombb_l(
 
 **_Mbctombb** и **_mbctombb_l** функции преобразуют определенный Многобайтовый символ в соответствующий Многобайтовый символ однобайтовый. Символы должны соответствовать однобайтовые символы в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF для преобразования.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale](setlocale-wsetlocale.md) для получения дополнительной информации. Версия этой функции без **_l** суффикс использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии с **_l** суффикс идентична, но использует переданный параметр языкового стандарта в вместо него. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без **_l** суффикс использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии с **_l** суффикс идентична, но использует переданный параметр языкового стандарта в вместо него. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В предыдущих версиях **_mbctombb** был вызван **zentohan**. Используйте **_mbctombb** вместо него.
 

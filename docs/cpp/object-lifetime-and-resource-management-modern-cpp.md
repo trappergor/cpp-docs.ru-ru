@@ -2,26 +2,21 @@
 title: Времени жизни объекта и управления ресурсами (современный C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2b48630fab9d27bf5db442617a5184bd26de5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>Управление временем жизни и ресурсами объекта (современный C++)
 В отличие от управляемых языков C++ нет сборщик мусора (GC), который автоматически освобождает ресурсы, нет больше используемых памяти во время выполнения программы. В C++ управление ресурсами непосредственно связаны с временем жизни объекта. В этом документе описываются факторы, которые влияют на время существования объекта в C++ и как управлять им.  

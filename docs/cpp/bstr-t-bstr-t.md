@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t::_bstr_t | Документы Microsoft"
-ms.custom: 
+title: _bstr_t::_bstr_t | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t::_bstr_t
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _bstr_t method [C++]
 - _bstr_t class
 ms.assetid: 116d994e-5a72-4351-afbe-866c80b4c165
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0dc49e5fa6b8899e4c9ca6bb15feeebb9cc0fe3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Блок, относящийся только к системам Microsoft**  
@@ -78,7 +73,7 @@ _bstr_t(
 ## <a name="remarks"></a>Примечания  
  В следующей таблице описываются конструкторы объекта `_bstr_t`.  
   
-|Конструктор|Описание:|  
+|Конструктор|Описание|  
 |-----------------|-----------------|  
 |`_bstr_t( )`|Создает значение по умолчанию `_bstr_t` объекта, который инкапсулирует неопределенный `BSTR` объекта.|  
 |`_bstr_t( _bstr_t&`  `s1`  `)`|Создает объект `_bstr_t` как копию другого объекта.<br /><br /> Это *неполную* копия, которая увеличивает счетчик ссылок инкапсулированного `BSTR` объекта вместо создания новой.|  

@@ -1,13 +1,10 @@
 ---
-title: "-EH (модель обработки исключений) | Документы Microsoft"
-ms.custom: 
+title: -EH (модель обработки исключений) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>Параметр /EH (модель обработки исключений)
 Указывает тип обработки исключений, используемый компилятором, условия отказа от проверки исключений для оптимизации работы, а также необходимость уничтожения объектов C++, которые выходят за пределы области видимости в результате исключения. Если параметр **/EH** не указан, компилятор перехватывает как асинхронные структурированные исключения, так и исключения C++, но не удаляет объекты C++, которые выходят за пределы области видимости из-за асинхронного исключения.  

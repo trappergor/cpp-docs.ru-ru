@@ -2,11 +2,8 @@
 title: _mbsnbcat, _mbsnbcat_l | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -111,7 +106,7 @@ unsigned char *_mbsnbcat_l(
 
 **_Mbsnbcat** функция добавляют не более, первый *число* байт *src* для *dest*. Если байт непосредственно перед нуль-символ в *dest* является старшим байтом, начальный байт строки *src* перезаписывает этот старший байт. В противном случае начальный байт строки *src* перезаписывает завершающий нуль-символ из *dest*. Если байт null встречается в *src* перед *число* добавлены байты, **_mbsnbcat** добавляет все байты из *src*, до нуль-символа. Если *число* больше, чем длина *src*, длина *src* используется вместо *число*. Результирующая строка завершается нуль-символом. Если копирование производится между перекрывающимися строками, поведение не определено.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale](setlocale-wsetlocale.md) для получения дополнительной информации. **_Mbsnbcat** версии функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbsnbcat_l** версии идентичен, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). **_Mbsnbcat** версии функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbsnbcat_l** версии идентичен, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 **Примечание о безопасности.** Следует использовать строку, оканчивающуюся нуль-символом. Длина строки, завершающейся нуль-символом, не должна превышать размер буфера назначения. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 

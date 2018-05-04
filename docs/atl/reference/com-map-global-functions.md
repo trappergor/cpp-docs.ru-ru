@@ -1,12 +1,9 @@
 ---
-title: "Глобальные функции COM-карты | Документы Microsoft"
-ms.custom: 
+title: Глобальные функции COM-карты | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a0a02e46906ae8d3b6c62b8cc1b9147d396966
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-map-global-functions"></a>Глобальные функции COM карты
 Эти функции обеспечивают поддержку для сопоставления COM **IUnknown** реализации.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
 
-##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
+##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -73,7 +68,7 @@ HRESULT AtlInternalQueryInterface(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
-##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
+##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
  Вызывайте эту функцию для особого случая тестирования для **IUnknown**.  
   
 ```

@@ -1,29 +1,24 @@
 ---
-title: "Признаки окна ATL | Документы Microsoft"
-ms.custom: 
+title: Признаки окна ATL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71fbf5b3c4c3f1aa95070cbc0d30beb9e1321348
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-window-traits"></a>Основные сведения об окне признаки
 Окно признаки классы предоставляют простой способ для стандартизации стили, используемые для создания объекта ATL окна. Признаки окна могут использоваться в качестве параметров шаблона, [CWindowImpl](../atl/reference/cwindowimpl-class.md) и другие классы окон ATL как способа предоставления стили окна на уровне класса по умолчанию.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="atl-window-traits-templates"></a>Шаблоны признаки окон ATL  
  Библиотека ATL предоставляет два шаблона окна признаки, которые позволяют задавать стили по умолчанию во время компиляции, с помощью их параметров шаблона.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |[CWinTraits](../atl/reference/cwintraits-class.md)|Используйте этот шаблон, когда вы хотите предоставить по умолчанию стили окна, которые будут использоваться только в том случае, если нет другие стили, указаны в вызове **создать**. Стили, предоставленных во время выполнения имеет приоритет над стилями, заданными во время компиляции.|  
 |[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|Этот класс используется в том случае, если вы хотите указать стили, которые всегда должны быть заданы для класса окна. Стили, предоставленных во время выполнения объединяются со стилями, заданными во время компиляции с помощью оператора побитового или.|  

@@ -1,12 +1,9 @@
 ---
-title: "Глобальные функции безопасности | Документы Microsoft"
-ms.custom: 
+title: Глобальные функции безопасности | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>Глобальные функции безопасности
 Эти функции предоставляют поддержку для изменения ИД безопасности и ACL объекта.  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  Вызывайте эту функцию для получения данных списка управления доступом на уровне пользователя (DACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если параметр `hObject` или `pDacl` является недопустимым.  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  Вызывайте эту функцию для задания данных списка управления доступом на уровне пользователя (DACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -122,7 +117,7 @@ inline bool AtlSetDacl(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  Вызывайте эту функцию для извлечения идентификатора безопасности (SID) группы для объекта.  
   
 > [!IMPORTANT]
@@ -151,7 +146,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  Вызывайте эту функцию для задания идентификатора безопасности (SID) группы для объекта.  
   
 > [!IMPORTANT]
@@ -180,7 +175,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  Вызывайте эту функцию для извлечения идентификатора безопасности (SID) владельца для объекта.  
   
 > [!IMPORTANT]
@@ -209,7 +204,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  Вызывайте эту функцию для задания идентификатора безопасности (SID) владельца для объекта.  
   
 > [!IMPORTANT]
@@ -238,7 +233,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  Вызывайте эту функцию для получения данных системного списка управления доступом (SACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -274,7 +269,7 @@ inline bool AtlGetSacl(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  Вызывайте эту функцию для задания данных системного списка управления доступом (SACL) указанного объекта.  
   
 > [!IMPORTANT]
@@ -316,7 +311,7 @@ inline bool AtlSetSacl(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  Вызывайте эту функцию для извлечения дескриптора безопасности заданного объекта.  
   
 > [!IMPORTANT]

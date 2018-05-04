@@ -1,12 +1,9 @@
 ---
-title: "Класс CSize | Документы Microsoft"
-ms.custom: 
+title: Класс CSize | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSize
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac18decc8a2bb6bbc2d9e9677640eba67c85077e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18c48ccf2d1d7f424ca9b95f9dcbf7a2953a52aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csize-class"></a>Класс CSize
 Аналог структуры [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.  
@@ -45,13 +40,13 @@ class CSize : public tagSIZE
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSize::CSize](#csize)|Создает объект `CSize`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSize::operator-](#operator_-)|Вычитает два размера.|  
 |[CSize::operator! =](#operator_neq)|Проверяет на неравенство между `CSize` и размер.|  
@@ -76,7 +71,7 @@ class CSize : public tagSIZE
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltypes.h  
   
-##  <a name="csize"></a>CSize::CSize  
+##  <a name="csize"></a>  CSize::CSize  
  Создает объект `CSize`.  
   
 ```  
@@ -101,7 +96,7 @@ CSize( DWORD dwSize) throw();
  [ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` объект, используемый для инициализации `CSize`.  
   
  `dwSize`  
- `DWORD`используется для инициализации `CSize`. Младшее слово **cx** член и старшее слово является **cy** член.  
+ `DWORD` используется для инициализации `CSize`. Младшее слово **cx** член и старшее слово является **cy** член.  
   
 ### <a name="remarks"></a>Примечания  
  Если аргументы не указаны, **cx** и **cy** инициализируются нулевым значением.  
@@ -109,7 +104,7 @@ CSize( DWORD dwSize) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CSize::operator ==  
+##  <a name="operator_eq_eq"></a>  CSize::operator ==  
  Проверяет равенство двух размеров.  
   
 ```   
@@ -122,7 +117,7 @@ BOOL operator==(SIZE size) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]  
   
-##  <a name="operator_neq"></a>CSize::operator! =  
+##  <a name="operator_neq"></a>  CSize::operator! =  
  Проверяет неравенство двух размеров.  
   
 ```   
@@ -135,7 +130,7 @@ BOOL operator!=(SIZE size) const throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]  
   
-##  <a name="operator_add_eq"></a>CSize::operator +=  
+##  <a name="operator_add_eq"></a>  CSize::operator +=  
  Добавляет в этот размер `CSize`.  
   
 ```   
@@ -145,7 +140,7 @@ void operator+=(SIZE size) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]  
   
-##  <a name="operator_-_eq"></a>CSize::operator-=  
+##  <a name="operator_-_eq"></a>  CSize::operator-=  
  Вычитает размер из этого `CSize`.  
   
 ```   
@@ -155,7 +150,7 @@ void operator-=(SIZE size) throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]  
   
-##  <a name="operator_add"></a>CSize::operator +  
+##  <a name="operator_add"></a>  CSize::operator +  
  Добавить эти операторы `CSize` значение со значением параметра.  
   
 ```   
@@ -167,16 +162,16 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="remarks"></a>Примечания  
  См. в следующих описаниях отдельных операторов:  
   
-- **оператор + (** `size` **)**эта операция добавляет два `CSize` значения.  
+- **оператор + (** `size` **)** эта операция добавляет два `CSize` значения.  
   
-- **оператор + (** `point` **)**этой операции смещения (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) (или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) значение в этом `CSize` значение. **Cx** и **cy** членов этой `CSize` значения добавляются в **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор + (** `point` **)** этой операции смещения (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) (или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) значение в этом `CSize` значение. **Cx** и **cy** членов этой `CSize` значения добавляются в **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
-- **оператор + (** `lpRect` **)**этой операции смещения (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (или [CRect](../../atl-mfc-shared/reference/crect-class.md)) значение в этом `CSize` значение. **Cx** и **cy** членов этой `CSize` значения добавляются в **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор + (** `lpRect` **)** этой операции смещения (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) (или [CRect](../../atl-mfc-shared/reference/crect-class.md)) значение в этом `CSize` значение. **Cx** и **cy** членов этой `CSize` значения добавляются в **левой**, **верхней**, **справа**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]  
   
-##  <a name="operator_-"></a>CSize::operator-  
+##  <a name="operator_-"></a>  CSize::operator-  
  Первые три из этих операторов вычесть это `CSize` значение со значением параметра.  
   
 ```   
@@ -189,13 +184,13 @@ CSize operator-() const throw();
 ### <a name="remarks"></a>Примечания  
  Четвертый оператор унарного минуса, изменяет знак `CSize` значение. См. в следующих описаниях отдельных операторов:  
   
-- **оператор-(** `size` **)**этой операции вычитает два `CSize` значения.  
+- **оператор-(** `size` **)** этой операции вычитает два `CSize` значения.  
   
-- **оператор-(** `point` **)**этой операции смещения (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** этого `CSize` значение вычитается из **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор-(** `point` **)** этой операции смещения (перемещается) [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** этого `CSize` значение вычитается из **x** и **y** данные-члены **ТОЧКИ**  значение. Он аналогичен версии [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
-- **оператор-(** `lpRect` **)**этой операции смещения (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) или [CRect](../../atl-mfc-shared/reference/crect-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** членов этой `CSize` значение вычитается из **левой**, **верхней**, **вправо**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
+- **оператор-(** `lpRect` **)** этой операции смещения (перемещается) [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) или [CRect](../../atl-mfc-shared/reference/crect-class.md) значение аддитивную инверсию `CSize` значение. **Cx** и **cy** членов этой `CSize` значение вычитается из **левой**, **верхней**, **вправо**, и **нижней** данные-члены `RECT` значение. Он аналогичен версии [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) , который принимает [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) параметра.  
   
-- **оператор-()**эта операция Возвращает аддитивную инверсию `CSize` значение.  
+- **оператор-()** эта операция Возвращает аддитивную инверсию `CSize` значение.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#103](../../atl-mfc-shared/codesnippet/cpp/csize-class_7.cpp)]  

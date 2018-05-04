@@ -1,13 +1,10 @@
 ---
-title: "-openmp (Включение поддержки OpenMP 2.0) | Документы Microsoft"
-ms.custom: 
+title: -openmp (Включение поддержки OpenMP 2.0) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: fe64011f48255a18aa8f8ccab7571533540a598a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (включение поддержки OpenMP 2.0)
 Указывает компилятору на необходимость обработки `#pragma` [omp](../../preprocessor/omp.md).  
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `#pragma omp`используется для указания [директивы](../../parallel/openmp/reference/openmp-directives.md) и [предложения](../../parallel/openmp/reference/openmp-clauses.md). Если **/OpenMP** не указан во время компиляции, компилятор игнорирует предложения и директивы OpenMP. [OpenMP-функция](../../parallel/openmp/reference/openmp-functions.md) даже если компилятор обрабатывает вызовы **/OpenMP** не указан.  
+ `#pragma omp` используется для указания [директивы](../../parallel/openmp/reference/openmp-directives.md) и [предложения](../../parallel/openmp/reference/openmp-clauses.md). Если **/OpenMP** не указан во время компиляции, компилятор игнорирует предложения и директивы OpenMP. [OpenMP-функция](../../parallel/openmp/reference/openmp-functions.md) даже если компилятор обрабатывает вызовы **/OpenMP** не указан.  
   
  Приложения, скомпилированные с **/OpenMP** и **/CLR** могут выполняться только в процессе домена одним приложением, не поддерживаются несколько доменов приложений. То есть, при выполнении конструктора модуля (.cctor) будет определять, процесс компилируется с **/OpenMP** и если приложение загружается в среде выполнения не по умолчанию. Дополнительные сведения см. в разделе [appdomain](../../cpp/appdomain.md), [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md), и [Инициализация смешанных сборок](../../dotnet/initialization-of-mixed-assemblies.md).  
   

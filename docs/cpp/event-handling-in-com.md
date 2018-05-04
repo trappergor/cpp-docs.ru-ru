@@ -1,12 +1,9 @@
 ---
-title: "Обработка событий в COM | Документы Microsoft"
-ms.custom: 
+title: Обработка событий в COM | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>Обработка событий в COM
 Обработка событий COM, необходимо настроить событие источник и приемник событий с помощью [event_source](../windows/event-source.md) и [event_receiver](../windows/event-receiver.md) атрибуты, соответственно, указав `type` = **com**. Эти атрибуты вводят соответствующий код для пользовательского, сдвоенного интерфейса и интерфейса диспетчеризации, чтобы позволить классам, к которым они применяются, запускать и обрабатывать события через точки подключения COM.  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Макет зависимых COM-событий  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> Макет зависимых COM-событий  
  Зависимость от макета становится проблемой только в программировании COM. При обработке событий в собственном и управляемом коде подписи (возвращаемый тип, соглашение о вызовах и аргументы) обработчиков должны соответствовать их событиям, однако имена обработчиков не обязательно должны соответствовать событиям.  
   
  Тем не менее, при обработке событий COM, при установке *layout_dependent* параметр **event_receiver** для **true**, обеспечивается совпадение имени и подписи. Это означает, что имена и подписи обработчиков в приемнике событий должны точно соответствовать именам и подписям событий, к которым они прикреплены.  

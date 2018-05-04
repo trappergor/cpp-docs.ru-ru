@@ -2,11 +2,8 @@
 title: Класс CLocalHeap | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CLocalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clocalheap-class"></a>Класс CLocalHeap
 Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций Win32 локальной куче.  
@@ -48,7 +43,7 @@ class CLocalHeap : public IAtlMemMgr
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CLocalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|  
 |[CLocalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|  
@@ -56,7 +51,7 @@ class CLocalHeap : public IAtlMemMgr
 |[CLocalHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- `CLocalHeap`реализует функции выделения памяти с помощью функций Win32 локальной куче.  
+ `CLocalHeap` реализует функции выделения памяти с помощью функций Win32 локальной куче.  
   
 > [!NOTE]
 >  Локальная куча функции выполняются медленнее, чем другие функции управления памятью и не имеют меньше возможностей. Таким образом, новые приложения должны использовать [кучи функции](http://msdn.microsoft.com/library/windows/desktop/aa366711). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса.  
@@ -72,7 +67,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlmem.h  
   
-##  <a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>  CLocalHeap::Allocate  
  Вызовите этот метод, чтобы выделить блок памяти.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  Реализовано с помощью [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) с параметром флага **LMEM_FIXED**.  
   
-##  <a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>  CLocalHeap::Free  
  Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>Примечания  
  Реализовано с помощью [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
   
-##  <a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>  CLocalHeap::GetSize  
  Этот метод используется для получения размера, выделенного блока памяти, выделенной данным диспетчером памяти.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>Примечания  
  Реализовано с помощью [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
   
-##  <a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
  Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.  
   
 ```

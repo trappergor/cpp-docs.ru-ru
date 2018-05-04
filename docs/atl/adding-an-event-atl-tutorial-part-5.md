@@ -1,27 +1,22 @@
 ---
-title: "Добавление события (ATL учебника, часть 5) | Документы Microsoft"
-ms.custom: 
+title: Добавление события (ATL учебника, часть 5) | Документы Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Добавление события (учебник ATL, часть 5)
 На этом шаге вы добавите `ClickIn` и `ClickOut` событий для элемента управления ATL. Будет срабатывать `ClickIn` событие, если пользователь щелкает внутри многоугольника и противопожарного `ClickOut` при щелчке за пределами. Ниже приведены задачи, чтобы добавить событие.  
@@ -134,7 +129,7 @@ ms.lasthandoff: 12/21/2017
   
  Далее вы добавите страницу свойств.  
   
- [Вернитесь к шагу 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [На шаге 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [Вернитесь к шагу 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [на шаге 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
 ## <a name="see-also"></a>См. также  
  [Учебник](../atl/active-template-library-atl-tutorial.md)

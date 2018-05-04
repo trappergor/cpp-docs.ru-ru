@@ -1,12 +1,9 @@
 ---
-title: "Класс CAtlFileMappingBase | Документы Microsoft"
-ms.custom: 
+title: Класс CAtlFileMappingBase | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>Класс CAtlFileMappingBase
 Этот класс представляет файл, размещенный в памяти.  
@@ -53,14 +48,14 @@ class CAtlFileMappingBase
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Конструктор.|  
 |[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Этот метод используется для копирования из объект сопоставления файлов.|  
 |[CAtlFileMappingBase::GetData](#getdata)|Этот метод вызывается для получения данных из объекта сопоставления файлов.|  
@@ -73,7 +68,7 @@ class CAtlFileMappingBase
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlFileMappingBase::operator =](#operator_eq)|Задает текущий объект сопоставления файлов на другой объект сопоставления файлов.|  
   
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  Конструктор.  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  Деструктор  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все ресурсы, выделенные класса и вызывает [CAtlFileMappingBase::Unmap](#unmap) метод.  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  Этот метод используется для копирования из объект сопоставления файлов.  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  Этот метод вызывается для получения данных из объекта сопоставления файлов.  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на данные.  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  Этот метод возвращает дескриптор в объект сопоставления файлов.  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор в объект сопоставления файлов.  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  Этот метод вызывается для получения размера сопоставления из объекта сопоставления файлов.  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  Вызовите этот метод, чтобы открыть или создать объект сопоставления файлов для указанного файла.  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>Параметры  
  `hFile`  
- Дескриптор файла, из которого необходимо создать объект сопоставления. `hFile`должен быть допустимым и не может быть значение INVALID_HANDLE_VALUE.  
+ Дескриптор файла, из которого необходимо создать объект сопоставления. `hFile` должен быть допустимым и не может быть значение INVALID_HANDLE_VALUE.  
   
  `nMappingSize`  
  Размер сопоставления. Если значение равно 0, объект сопоставления файлов максимальный размер равен текущий размер файла, определенного *hFile.*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>Пример  
  Далее приведен пример [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  Вызовите этот метод, чтобы создать объект сопоставления файлов, который предоставляет полный доступ ко всем процессам.  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>Параметры  
  `nMappingSize`  
- Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер определяется объект сопоставления файлов`szName.`  
+ Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер определяется объект сопоставления файлов `szName.`  
   
  `szName`  
  Имя объекта сопоставления.  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>Примечания  
  **MapShareMem** позволяет существующий объект сопоставления файлов, созданных [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), чтобы одновременно несколькими процессами.  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Вызовите этот метод, чтобы открыть именованный объект сопоставления файлов для указанного файла.  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  Имя объекта сопоставления. Если имеется открытый дескриптор в объект сопоставления файлов с таким именем и дескриптор безопасности для объекта сопоставления не конфликтует с `dwViewDesiredAccess` параметр, откройте операция выполнена успешно.  
   
  `nMappingSize`  
- Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер определяется объект сопоставления файлов`szName.`  
+ Размер сопоставления. Если значение равно 0, максимальный размер объекта сопоставления файлов равен текущий размер определяется объект сопоставления файлов `szName.`  
   
  `nOffset`  
  Смещение файла, в котором начинается сопоставления. Значение смещения должно быть кратно гранулярность выделения памяти в системе.  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях произойдет ошибка утверждения, если входные параметры являются недопустимыми.  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  Задает текущий объект сопоставления файлов на другой объект сопоставления файлов.  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на текущий объект.  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  Этот метод вызывается для отмены сопоставления объект сопоставления файлов.  
   
 ```

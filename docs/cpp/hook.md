@@ -1,12 +1,9 @@
 ---
-title: "__hook | Документы Microsoft"
-ms.custom: 
+title: __hook | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d46a9c593826e804c62ab67b8afa894912d15bd8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hook"></a>__hook
 Связывает метод обработчика с событием.  
@@ -48,7 +43,7 @@ long __hook(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Указатель на метод события, к которому присоединяется метод обработчика событий.  
   
 -   События неуправляемого C++: *SourceClass* является исходным классом и *EventMethod* событие.  
@@ -60,7 +55,7 @@ long __hook(
  `interface`  
  Имя интерфейса, присоединяемого к `receiver`, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **true**.  
   
- *источник*  
+ *Источник*  
  Указатель на экземпляр источника события. В зависимости от кода `type` указано в **event_receiver**, *источника* может принимать одно из следующих действий:  
   
 -   Собственный указатель на объект источника события.  
@@ -69,7 +64,7 @@ long __hook(
   
 -   Указатель на управляемый объект (для управляемых событий).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Указатель на метод обработчика событий, который необходимо присоединить к событию. Обработчик определяется как метод класса или ссылка на этот класс, и если не указать имя класса, `__hook` считает классом тот класс, в котором он вызван.  
   
 -   События неуправляемого C++: *ReceiverClass* является классом приемника событий и `HandlerMethod` является обработчиком.  
@@ -89,7 +84,7 @@ long __hook(
   
  Существует две формы `__hook`. Можно использовать первую форму (четыре аргумента) в большинстве случаев, в частности, для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **false** .  
   
- В таких случаях не требуется присоединять все методы в интерфейсе перед порождением события в одном из методов; достаточно присоединить только метод, обрабатывающий событие. Можно использовать второй форме (с двумя аргументами) `__hook` только для приемника событий COM, в котором *layout_dependent***= true**.  
+ В таких случаях не требуется присоединять все методы в интерфейсе перед порождением события в одном из методов; достаточно присоединить только метод, обрабатывающий событие. Можно использовать второй форме (с двумя аргументами) `__hook` только для приемника событий COM, в котором * layout_dependent ***= true**.  
   
  Функция `__hook` возвращает значение long. Ненулевое возвращаемое значение указывает на наличие ошибки (управляемые события создают исключение).  
   

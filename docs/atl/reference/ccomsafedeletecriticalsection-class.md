@@ -1,12 +1,9 @@
 ---
-title: "Класс CComSafeDeleteCriticalSection | Документы Microsoft"
-ms.custom: 
+title: Класс CComSafeDeleteCriticalSection | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>Класс CComSafeDeleteCriticalSection
 Этот класс предоставляет методы для получения и освобождения владения объект критической секции.  
@@ -46,14 +41,14 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Конструктор.|  
 |[CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComSafeDeleteCriticalSection::Init](#init)|Создает и инициализирует объект критической секции.|  
 |[CComSafeDeleteCriticalSection::Lock](#lock)|Получает права владельца объекта критической секции.|  
@@ -66,7 +61,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|Флаги ли внутренний **CRITICAL_SECTION** объект был инициализирован.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComSafeDeleteCriticalSection`является производным от класса [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем не менее `CComSafeDeleteCriticalSection` обеспечивает дополнительную безопасность механизмы [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
+ `CComSafeDeleteCriticalSection` является производным от класса [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем не менее `CComSafeDeleteCriticalSection` обеспечивает дополнительную безопасность механизмы [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).  
   
  При создании экземпляра `CComSafeDeleteCriticalSection` выходит за пределы области или явным образом удалено из памяти, базовый объект критической секции будут автоматически очищены Если по-прежнему действителен. Кроме того [CComSafeDeleteCriticalSection::Term](#term) метод завершит свою работу, если базовый объект критической секции не была выделена или уже был выпущен из памяти.  
   
@@ -80,7 +75,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  Конструктор.  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Примечания  
  Наборы [m_bInitialized](#m_binitialized) данные-члены **false**.  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  Деструктор  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>Примечания  
  Освобождает внутренний **CRITICAL_SECTION** объекта из памяти, если [m_bInitialized](#m_binitialized) член данных имеет значение **true**.  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  Вызывает реализацию базового класса [Init](/visualstudio/debugger/init) и задает [m_bInitialized](#m_binitialized) для **true** в случае успешного выполнения.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает результат [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 Вызывает реализацию базового класса [блокировки](ccomcriticalsection-class.md#lock).  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  Дополнительные сведения о работе функции см. [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  Флаги ли внутренний **CRITICAL_SECTION** объект был инициализирован.  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>Примечания  
  **M_bInitialized** член данных используется для отслеживания действия базового **CRITICAL_SECTION** объекта, связанного с [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) класса. Базовый **CRITICAL_SECTION** объект не будет предпринято обновляться из памяти, если этот флаг не установлен **true**.  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  Вызывает реализацию базового класса [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) если внутренний **CRITICAL_SECTION** объект является допустимым.  
   
 ```

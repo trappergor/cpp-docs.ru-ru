@@ -2,11 +2,8 @@
 title: Класс CComAllocator | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomallocator-class"></a>Класс CComAllocator
 Этот класс предоставляет методы для управления памяти с помощью COM памяти подпрограммы.  
@@ -44,7 +39,7 @@ class CComAllocator
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|Вызовите статический метод для выделения памяти.|  
 |[CComAllocator::Free](#free)|Вызовите статический метод для освобождения выделенной памяти.|  
@@ -56,7 +51,7 @@ class CComAllocator
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>  CComAllocator::Allocate  
  Вызовите эту статическую функция для выделения памяти.  
   
 ```
@@ -73,7 +68,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Примечания  
  Выделяет память. В разделе [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) для получения дополнительных сведений.  
   
-##  <a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>  CComAllocator::Free  
  Вызовите эту статическую функцию, чтобы освободить выделенную память.  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает выделенную память. В разделе [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) для получения дополнительных сведений.  
   
-##  <a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Вызовите эту статическую функцию для повторного выделения памяти.  
   
 ```

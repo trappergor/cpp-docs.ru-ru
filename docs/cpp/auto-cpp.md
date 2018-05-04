@@ -1,12 +1,9 @@
 ---
-title: "Auto (C++) | Документы Microsoft"
-ms.custom: 
+title: Auto (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-c"></a>Auto (C++)
 Выводит тип объявленной переменной из выражения инициализации.  
@@ -131,7 +126,7 @@ int main()
 ## <a name="restrictions-and-error-messages"></a>Ограничения и сообщения об ошибках  
  В приведенной ниже таблице перечислены ограничения на использование ключевого слова `auto` и соответствующие диагностические сообщения об ошибках, которые выводит компилятор.  
   
-|Номер ошибки|Описание:|  
+|Номер ошибки|Описание|  
 |------------------|-----------------|  
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|Ключевое слово `auto` не может использоваться в сочетании с другим спецификатором типа.|  
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|Символ, объявленный с помощью ключевого слова `auto`, должен иметь инициализатор.|  
@@ -227,7 +222,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [auto Keyword](../cpp/auto-keyword.md)   
+ [Ключевое слово Auto](../cpp/auto-keyword.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
  [/ Zc: auto (выведение типа переменной)](../build/reference/zc-auto-deduce-variable-type.md)   
  [Оператор sizeof](../cpp/sizeof-operator.md)   

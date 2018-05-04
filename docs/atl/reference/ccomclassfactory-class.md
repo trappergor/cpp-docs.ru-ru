@@ -1,12 +1,9 @@
 ---
-title: "Класс CComClassFactory | Документы Microsoft"
-ms.custom: 
+title: Класс CComClassFactory | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a144f4ff9902a633933ae556df872a9d55a5409
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory-class"></a>Класс CComClassFactory
 Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейса.  
@@ -45,13 +40,13 @@ class CComClassFactory
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComClassFactory::CreateInstance](#createinstance)|Создает объект для указанного идентификатора CLSID.|  
 |[CComClassFactory::LockServer](#lockserver)|Блокирует фабрики класса в памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComClassFactory`реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс, который содержит методы для создания объекта конкретного CLSID, а также блокировки фабрики класса в памяти и позволяют быстрее создавать новые объекты. **IClassFactory** должен быть реализован для каждого класса, зарегистрированный в системном реестре и которые присваивают CLSID.  
+ `CComClassFactory` реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс, который содержит методы для создания объекта конкретного CLSID, а также блокировки фабрики класса в памяти и позволяют быстрее создавать новые объекты. **IClassFactory** должен быть реализован для каждого класса, зарегистрированный в системном реестре и которые присваивают CLSID.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет `CComClassFactory` как фабрика класса по умолчанию. Чтобы переопределить это поведение по умолчанию, укажите один из `DECLARE_CLASSFACTORY` *XXX* макросы в определении класса. Например [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) макрос использует указанный класс фабрики класса:  
   
@@ -70,7 +65,7 @@ class CComClassFactory
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  
  Создает объект для указанного идентификатора CLSID и возвращает указатель интерфейса на этот объект.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
   
-##  <a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory::LockServer  
  Увеличение и уменьшение, счетчик блокировок модуля путем вызова **_Module::Lock** и **_Module::Unlock**соответственно.  
   
 ```

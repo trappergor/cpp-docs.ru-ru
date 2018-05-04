@@ -2,11 +2,8 @@
 title: Класс CDynamicChain | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>Класс CDynamicChain
 Этот класс предоставляет методы, поддерживающие динамические цепочки схемы сообщений.  
@@ -50,27 +45,27 @@ class CDynamicChain
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Конструктор.|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDynamicChain::CallChain](#callchain)|Направляет сообщение Windows для схемы сообщений другим объектом.|  
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет элемент карты сообщений из коллекции.|  
 |[CDynamicChain::SetChainEntry](#setchainentry)|Добавляет в коллекцию элемент карты сообщений или изменяет существующую запись.|  
   
 ## <a name="remarks"></a>Примечания  
- `CDynamicChain`Управляет коллекцией схемы сообщений, позволяя сообщение Windows направить во время выполнения, в схеме сообщений другим объектом.  
+ `CDynamicChain` Управляет коллекцией схемы сообщений, позволяя сообщение Windows направить во время выполнения, в схеме сообщений другим объектом.  
   
  Чтобы добавить поддержку для динамического построения цепочки для схем сообщений, выполните следующее:  
   
 -   Создайте производный класс от `CDynamicChain`. В схеме сообщений, укажите [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос, привязанные к схеме сообщений по умолчанию другого объекта.  
   
--   Каждый класс, который требуется существует цепочки от [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`позволяет объекту предоставлять его схемы сообщений с другими объектами.  
+-   Каждый класс, который требуется существует цепочки от [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` позволяет объекту предоставлять его схемы сообщений с другими объектами.  
   
 -   Вызовите `CDynamicChain::SetChainEntry` для которого объект и сопоставления сообщений, вы хотите цепочки для идентификации.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Направляет сообщение Windows для схемы сообщений другим объектом.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>Примечания  
  Для вызова процедуры окна `CallChain`, необходимо указать [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщений. Пример см. в разделе [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Обзор.  
   
- `CallChain`требуется предыдущего вызова [SetChainEntry](#setchainentry) связываемый `dwChainID` значение с объектом и схему сообщений.  
+ `CallChain` требуется предыдущего вызова [SetChainEntry](#setchainentry) связываемый `dwChainID` значение с объектом и схему сообщений.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Конструктор.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  Деструктор  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  Удаляет указанное сообщение карты из коллекции.  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если сопоставление сообщений успешно удален из коллекции. В противном случае **FALSE**.  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  Карта указанное сообщение добавляется в коллекцию.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Класс CPathT | Документы Microsoft"
-ms.custom: 
+title: Класс CPathT | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CPathT
@@ -58,17 +55,15 @@ dev_langs:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37f669ddc7912f45222d52f10311ff70110e170f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 Этот класс представляет путь.  
@@ -91,7 +86,7 @@ class CPathT
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPathT::PCXSTR](#pcxstr)|Тип постоянной строки.|  
 |[CPathT::PXSTR](#pxstr)|Тип строки.|  
@@ -99,13 +94,13 @@ class CPathT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPathT::CPathT](#cpatht)|Конструктор для пути.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPathT::AddBackslash](#addbackslash)|Этот метод служит для добавления обратной косой черты до конца строки для создания правильного синтаксиса для пути.|  
 |[CPathT::AddExtension](#addextension)|Вызовите этот метод, чтобы добавить расширение файла с путем.|  
@@ -147,7 +142,7 @@ class CPathT
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Этот оператор позволяет объекту рассматриваться как строка.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Этот оператор позволяет объекту рассматриваться как строка.|  
@@ -156,7 +151,7 @@ class CPathT
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPathT::m_strPath](#m_strpath)|Путь.|  
   
@@ -172,7 +167,7 @@ class CPathT
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlpath.h  
   
-##  <a name="addbackslash"></a>CPathT::AddBackslash  
+##  <a name="addbackslash"></a>  CPathT::AddBackslash  
  Этот метод служит для добавления обратной косой черты до конца строки для создания правильного синтаксиса для пути. Если путь уже содержит обратную косую черту, будет добавлен без обратной косой черты.  
   
 ```
@@ -182,7 +177,7 @@ void AddBackslash();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
-##  <a name="addextension"></a>CPathT::AddExtension  
+##  <a name="addextension"></a>  CPathT::AddExtension  
  Вызовите этот метод, чтобы добавить расширение файла с путем.  
   
 ```
@@ -199,7 +194,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
-##  <a name="append"></a>CPathT::Append  
+##  <a name="append"></a>  CPathT::Append  
  Вызовите этот метод, чтобы добавить строку к текущему пути.  
   
 ```
@@ -216,7 +211,7 @@ BOOL Append(PCXSTR pszMore);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
-##  <a name="buildroot"></a>CPathT::BuildRoot  
+##  <a name="buildroot"></a>  CPathT::BuildRoot  
  Этот метод используется для создания корневого пути из нескольких заданного диска.  
   
 ```
@@ -230,7 +225,7 @@ void BuildRoot(int iDrive);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
-##  <a name="canonicalize"></a>CPathT::Canonicalize  
+##  <a name="canonicalize"></a>  CPathT::Canonicalize  
  Этот метод вызывается для преобразования пути в каноническую форму.  
   
 ```
@@ -240,7 +235,7 @@ void Canonicalize();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
-##  <a name="combine"></a>CPathT::Combine  
+##  <a name="combine"></a>  CPathT::Combine  
  Этот метод используется для сцепления строку, представляющую имя каталога и строка, представляющая путь файла в один путь.  
   
 ```
@@ -257,7 +252,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).  
   
-##  <a name="commonprefix"></a>CPathT::CommonPrefix  
+##  <a name="commonprefix"></a>  CPathT::CommonPrefix  
  Этот метод используется для определения, имеет ли указанный путь общего префикса с текущего пути.  
   
 ```
@@ -274,7 +269,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="remarks"></a>Примечания  
  Префикс — один из этих типов: «C:\\\\«,». «,».. «,».. \\\\". Дополнительные сведения см. в разделе [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
-##  <a name="compactpath"></a>CPathT::CompactPath  
+##  <a name="compactpath"></a>  CPathT::CompactPath  
  Этот метод используется для усечения путь к файлу в соответствии с размерами ширину данного точек, заменив компоненты пути с многоточием.  
   
 ```
@@ -294,7 +289,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
-##  <a name="compactpathex"></a>CPathT::CompactPathEx  
+##  <a name="compactpathex"></a>  CPathT::CompactPathEx  
  Этот метод используется для усечения путь к файлу в соответствии с размерами заданного числа знаков, заменив компоненты пути с многоточием.  
   
 ```
@@ -314,7 +309,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
   
-##  <a name="cpatht"></a>CPathT::CPathT  
+##  <a name="cpatht"></a>  CPathT::CPathT  
  Конструктор.  
   
 ```
@@ -330,7 +325,7 @@ CPathT() throw();
  *path*  
  Строка пути.  
   
-##  <a name="fileexists"></a>CPathT::FileExists  
+##  <a name="fileexists"></a>  CPathT::FileExists  
  Вызовите этот метод, чтобы проверить, существует ли файл в этот путь.  
   
 ```
@@ -343,7 +338,7 @@ BOOL FileExists() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
-##  <a name="findextension"></a>CPathT::FindExtension  
+##  <a name="findextension"></a>  CPathT::FindExtension  
  Вызовите этот метод, чтобы определить позицию расширение файла в пути.  
   
 ```
@@ -356,7 +351,7 @@ int FindExtension() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
-##  <a name="findfilename"></a>CPathT::FindFileName  
+##  <a name="findfilename"></a>  CPathT::FindFileName  
  Вызовите этот метод, чтобы определить позицию имени файла в пути.  
   
 ```
@@ -369,7 +364,7 @@ int FindFileName() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
-##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
+##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber  
  Вызовите этот метод для поиска по пути для букву диска в диапазоне от «A» до «Z» и возвращает соответствующий номер диска.  
   
 ```
@@ -382,7 +377,7 @@ int GetDriveNumber() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
-##  <a name="getextension"></a>CPathT::GetExtension  
+##  <a name="getextension"></a>  CPathT::GetExtension  
  Этот метод используется для получения расширения файла из пути.  
   
 ```
@@ -392,7 +387,7 @@ StringType GetExtension() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает расширение файла.  
   
-##  <a name="isdirectory"></a>CPathT::IsDirectory  
+##  <a name="isdirectory"></a>  CPathT::IsDirectory  
  Этот метод вызывается для проверки, является ли путь является допустимым каталогом.  
   
 ```
@@ -405,7 +400,7 @@ BOOL IsDirectory() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).  
   
-##  <a name="isfilespec"></a>CPathT::IsFileSpec  
+##  <a name="isfilespec"></a>  CPathT::IsFileSpec  
  Вызовите этот метод для поиска по пути для символы разделителя пути (например, ":" или "\\"). Если не используются никакие символы разделителя пути отсутствует, путь считается путь спецификация файла.  
   
 ```
@@ -418,7 +413,7 @@ BOOL IsFileSpec() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
-##  <a name="isprefix"></a>CPathT::IsPrefix  
+##  <a name="isprefix"></a>  CPathT::IsPrefix  
  Вызовите этот метод, чтобы определить, содержит ли путь допустимый префикс типа, передаваемый по `pszPrefix`.  
   
 ```
@@ -435,7 +430,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
-##  <a name="isrelative"></a>CPathT::IsRelative  
+##  <a name="isrelative"></a>  CPathT::IsRelative  
  Этот метод используется для определения, если путь является относительным.  
   
 ```
@@ -448,7 +443,7 @@ BOOL IsRelative() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
-##  <a name="isroot"></a>CPathT::IsRoot  
+##  <a name="isroot"></a>  CPathT::IsRoot  
  Вызовите этот метод, чтобы определить, является ли путь корневого каталога.  
   
 ```
@@ -461,7 +456,7 @@ BOOL IsRoot() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
-##  <a name="issameroot"></a>CPathT::IsSameRoot  
+##  <a name="issameroot"></a>  CPathT::IsSameRoot  
  Вызовите этот метод, чтобы определить, имеет ли другой путь общий корневой компонент с текущего пути.  
   
 ```
@@ -478,7 +473,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
-##  <a name="isunc"></a>CPathT::IsUNC  
+##  <a name="isunc"></a>  CPathT::IsUNC  
  Вызовите этот метод, чтобы определить, является ли путь допустимый путь UNC (соглашения об универсальных именах) для сервера и совместно использовать.  
   
 ```
@@ -491,7 +486,7 @@ BOOL IsUNC() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
-##  <a name="isuncserver"></a>CPathT::IsUNCServer  
+##  <a name="isuncserver"></a>  CPathT::IsUNCServer  
  Вызовите этот метод, чтобы определить, является ли путь для сервера только допустимый путь UNC (соглашения об универсальных именах).  
   
 ```
@@ -504,7 +499,7 @@ BOOL IsUNCServer() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
-##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
+##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare  
  Вызовите этот метод, чтобы определить, является ли путь допустимый путь общего ресурса UNC (соглашения об универсальных именах), \\ \  *сервера*\ *совместное использование*.  
   
 ```
@@ -517,7 +512,7 @@ BOOL IsUNCServerShare() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
   
-##  <a name="m_strpath"></a>CPathT::m_strPath  
+##  <a name="m_strpath"></a>  CPathT::m_strPath  
  Путь.  
   
 ```
@@ -525,9 +520,9 @@ StringType m_strPath;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `StringType`— параметр шаблона для `CPathT`.  
+ `StringType` — параметр шаблона для `CPathT`.  
   
-##  <a name="makepretty"></a>CPathT::MakePretty  
+##  <a name="makepretty"></a>  CPathT::MakePretty  
  Этот метод используется для преобразования всех символов нижнего регистра, чтобы предоставить путь согласованного внешнего вида пути.  
   
 ```
@@ -540,7 +535,7 @@ BOOL MakePretty();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
-##  <a name="matchspec"></a>CPathT::MatchSpec  
+##  <a name="matchspec"></a>  CPathT::MatchSpec  
  Вызовите этот метод для поиска по пути для строка, содержащая тип совпадения подстановочный знак.  
   
 ```
@@ -557,7 +552,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
-##  <a name="operator_add_eq"></a>CPathT::operator +=  
+##  <a name="operator_add_eq"></a>  CPathT::operator +=  
  Этот оператор добавляет строку к пути.  
   
 ```
@@ -571,7 +566,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный путь.  
   
-##  <a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;  
+##  <a name="operator_const_stringtype_amp"></a>  CPathT::operator const StringType &amp;  
  Этот оператор позволяет объекту рассматриваться как строка.  
   
 ```
@@ -581,7 +576,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает строку, представляющую текущий путь, управляемых этим объектом.  
   
-##  <a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
+##  <a name="operator_cpatht__pcxstr"></a>  CPathT::operator CPathT::PCXSTR  
  Этот оператор позволяет объекту рассматриваться как строка.  
   
 ```
@@ -591,7 +586,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает строку, представляющую текущий путь, управляемых этим объектом.  
   
-##  <a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
+##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;  
  Этот оператор позволяет объекту рассматриваться как строка.  
   
 ```
@@ -601,7 +596,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает строку, представляющую текущий путь, управляемых этим объектом.  
   
-##  <a name="pcxstr"></a>CPathT::PCXSTR  
+##  <a name="pcxstr"></a>  CPathT::PCXSTR  
  Тип постоянной строки.  
   
 ```
@@ -609,9 +604,9 @@ typedef StringType::PCXSTR PCXSTR;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `StringType`— параметр шаблона для `CPathT`.  
+ `StringType` — параметр шаблона для `CPathT`.  
   
-##  <a name="pxstr"></a>CPathT::PXSTR  
+##  <a name="pxstr"></a>  CPathT::PXSTR  
  Тип строки.  
   
 ```
@@ -619,9 +614,9 @@ typedef StringType::PXSTR PXSTR;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `StringType`— параметр шаблона для `CPathT`.  
+ `StringType` — параметр шаблона для `CPathT`.  
   
-##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
+##  <a name="quotespaces"></a>  CPathT::QuoteSpaces  
  Вызовите этот метод, чтобы заключить путь в кавычки, если он содержит пробелы.  
   
 ```
@@ -631,7 +626,7 @@ void QuoteSpaces();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
   
-##  <a name="relativepathto"></a>CPathT::RelativePathTo  
+##  <a name="relativepathto"></a>  CPathT::RelativePathTo  
  Этот метод используется для создания относительный путь из одного файла или папки в другую.  
   
 ```
@@ -661,7 +656,7 @@ BOOL RelativePathTo(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
   
-##  <a name="removeargs"></a>CPathT::RemoveArgs  
+##  <a name="removeargs"></a>  CPathT::RemoveArgs  
  Вызовите этот метод, чтобы удалить все аргументы командной строки из пути.  
   
 ```
@@ -671,7 +666,7 @@ void RemoveArgs();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
-##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
+##  <a name="removebackslash"></a>  CPathT::RemoveBackslash  
  Этот метод используется для удаления из пути обратную косую черту.  
   
 ```
@@ -681,7 +676,7 @@ void RemoveBackslash();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
-##  <a name="removeblanks"></a>CPathT::RemoveBlanks  
+##  <a name="removeblanks"></a>  CPathT::RemoveBlanks  
  Вызовите этот метод, чтобы удалить все начальные и конечные пробелы из пути.  
   
 ```
@@ -691,7 +686,7 @@ void RemoveBlanks();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
-##  <a name="removeextension"></a>CPathT::RemoveExtension  
+##  <a name="removeextension"></a>  CPathT::RemoveExtension  
  Вызовите этот метод, чтобы удалить расширение файла из пути, если таковой имеется.  
   
 ```
@@ -701,7 +696,7 @@ void RemoveExtension();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
-##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
+##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec  
  Этот метод для удаления конечные имя файла и обратную косую черту из пути, если они указаны.  
   
 ```
@@ -714,7 +709,7 @@ BOOL RemoveFileSpec();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
-##  <a name="renameextension"></a>CPathT::RenameExtension  
+##  <a name="renameextension"></a>  CPathT::RenameExtension  
  Этот метод используется для замены нового расширения расширение имени файла в пути. Если имя файла не содержит расширения, расширения будут присоединены в конце пути.  
   
 ```
@@ -731,7 +726,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
-##  <a name="skiproot"></a>CPathT::SkipRoot  
+##  <a name="skiproot"></a>  CPathT::SkipRoot  
  Вызовите этот метод для синтаксического анализа пути, игнорирование букву диска или части пути UNC (соглашения об универсальных именах) общий ресурс сервера.  
   
 ```
@@ -744,7 +739,7 @@ int SkipRoot() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
-##  <a name="strippath"></a>CPathT::StripPath  
+##  <a name="strippath"></a>  CPathT::StripPath  
  Вызовите этот метод, чтобы удалить часть пути полный путь и имя файла.  
   
 ```
@@ -754,7 +749,7 @@ void StripPath();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
-##  <a name="striptoroot"></a>CPathT::StripToRoot  
+##  <a name="striptoroot"></a>  CPathT::StripToRoot  
  Этот метод используется для удаления всех составляющих Кроме сведений о корневой путь.  
   
 ```
@@ -767,7 +762,7 @@ BOOL StripToRoot();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
-##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
+##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces  
  Этот метод используется для удаления кавычки в начале и конце пути.  
   
 ```
@@ -777,7 +772,7 @@ void UnquoteSpaces();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
-##  <a name="xchar"></a>CPathT::XCHAR  
+##  <a name="xchar"></a>  CPathT::XCHAR  
  Тип символа.  
   
 ```
@@ -785,7 +780,7 @@ typedef StringType::XCHAR XCHAR;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `StringType`— параметр шаблона для `CPathT`.  
+ `StringType` — параметр шаблона для `CPathT`.  
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../atl/reference/atl-classes.md)   

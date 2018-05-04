@@ -1,13 +1,10 @@
 ---
-title: "Что такое библиотеки ATL размещение элементов управления API? | Документы Майкрософт"
-ms.custom: 
+title: Что такое библиотеки ATL размещение элементов управления API? | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>Что такое библиотеки ATL размещение элементов управления API?
 ATL, размещение элементов управления API — это набор функций, позволяющий любое окно в качестве контейнера элементов управления ActiveX. Эти функции могут быть статически или динамически связан в проект, так как они доступны в виде исходного кода и предоставляемые ATL90.dll. В следующей таблице перечислены функции размещение элементов управления.  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Создает объект узла, подключает его указанного окна, а затем присоединяет существующий элемент управления.|  
 |[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Создает объект узла, подключает его указанного окна, а затем загружает в элемент управления.|  

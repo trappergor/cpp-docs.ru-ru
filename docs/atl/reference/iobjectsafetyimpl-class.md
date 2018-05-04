@@ -2,11 +2,8 @@
 title: Класс IObjectSafetyImpl | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectsafetyimpl-class"></a>Класс IObjectSafetyImpl
 Этот класс предоставляет реализацию по умолчанию `IObjectSafety` интерфейс, позволяющий клиенту получить и задать уровни безопасности объекта.  
@@ -62,14 +57,14 @@ class IObjectSafetyImpl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Возвращает параметры безопасности, поддерживаемые объектом, а также параметры безопасности, установленным для объекта.|  
 |[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|При этом объект становится безопасным для инициализации или сценариев.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|  
   
@@ -88,7 +83,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
  Возвращает параметры безопасности, поддерживаемые объектом, а также параметры безопасности, установленным для объекта.  
   
 ```
@@ -106,14 +101,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  В разделе [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) в Windows SDK.  
   
-##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  Сохраняет текущий уровень безопасности объекта.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
  При этом объект становится безопасным для инициализации или скриптов, задав [m_dwCurrentSafety](#m_dwcurrentsafety) член соответствующее значение.  
   
 ```

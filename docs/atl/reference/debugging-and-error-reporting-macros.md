@@ -1,12 +1,9 @@
 ---
-title: "Макросы, отладка и отчеты об ошибках | Документы Microsoft"
-ms.custom: 
+title: Макросы, отладка и отчеты об ошибках | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы, отладка и отчеты об ошибках
 Эти макросы предоставляют полезные средства отладки и трассировки.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[ATLTRACE](#alttrace)|Сообщает о предупреждениях для выходного устройства, например окна отладчика, в соответствии с указанных флагов и уровней. Включено для обеспечения обратной совместимости.|  
 |[ATLTRACE2](#atltrace2)|Сообщает о предупреждениях для выходного устройства, например окна отладчика, в соответствии с указанных флагов и уровней.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  Определить этот макрос перед включением любые файлы заголовков ATL. для отслеживания всех `AddRef` и **выпуска** вызывает по интерфейсам компонентов в окне вывода.  
   
 ```
@@ -72,9 +67,9 @@ ms.lasthandoff: 12/21/2017
  Сведения, указанные здесь прямо сопоставляется с описано в предыдущей инструкции трассировки, чтобы вы могли изучить количество ссылок в течение всего времени существования интерфейс преобразователя. Кроме того предусмотрена значение, указывающее максимальное количество ссылок на этот интерфейс преобразователя.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`можно использовать в окончательных сборках.  
+> `_ATL_DEBUG_INTERFACES` можно использовать в окончательных сборках.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  Записывает все вызовы `QueryInterface` в окне вывода.  
   
 ```
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  *Имя интерфейса* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT` Макрос выполняет ту же функциональность, что [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) макрос, найденный в библиотеке времени выполнения C.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  Этот макрос используется для проверки параметров, передаваемых в функцию.  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  В отладочных построениях ATL отправляет строку " `funcname` не реализован» устройство хранения и возвращает **E_NOTIMPL**.  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  Сообщает о предупреждениях для выходного устройства, например окна отладчика, в соответствии с указанных флагов и уровней. Включено для обеспечения обратной совместимости.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>Примечания  
  В разделе [ATLTRACE2](#atltrace2) описание **ATLTRACE**. **ATLTRACE** и `ATLTRACE2` имеют одинаковое поведение **ATLTRACE** включена для обратной совместимости.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  Сообщает о предупреждениях для выходного устройства, например окна отладчика, в соответствии с указанных флагов и уровней.  
   
 ```
@@ -215,7 +210,7 @@ ATLTRACE2(
   
 ### <a name="atl-trace-flags"></a>Флаги трассировки ATL  
   
-|Категория ATL|Описание:|  
+|Категория ATL|Описание|  
 |------------------|-----------------|  
 |`atlTraceGeneral`|Отчеты на все приложения ATL. По умолчанию.|  
 |`atlTraceCOM`|Отчеты в методах COM.|  
@@ -233,7 +228,7 @@ ATLTRACE2(
   
 ### <a name="mfc-trace-flags"></a>Флаги трассировки MFC  
   
-|Категория MFC|Описание:|  
+|Категория MFC|Описание|  
 |------------------|-----------------|  
 |**traceAppMsg**|Общее назначение сообщения MFC. Рекомендуется всегда.|  
 |**traceDumpContext**|Сообщения от [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|  
@@ -264,7 +259,7 @@ ATLTRACE2(
   
  В сборках выпуска `ATLTRACE2` компилируется в `(void) 0`.  
   
- `ATLTRACE2`ограничивает содержимое строки должно отправляться устройство хранения не более 1023 знаков после форматирования.  
+ `ATLTRACE2` ограничивает содержимое строки должно отправляться устройство хранения не более 1023 знаков после форматирования.  
   
  **ATLTRACE** и `ATLTRACE2` имеют одинаковое поведение **ATLTRACE** включена для обратной совместимости.  
   

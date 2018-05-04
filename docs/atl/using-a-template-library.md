@@ -1,29 +1,24 @@
 ---
-title: "С помощью библиотеки шаблонов (ATL) | Документы Microsoft"
-ms.custom: 
+title: С помощью библиотеки шаблонов (ATL) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - template libraries
 ms.assetid: 5e80ec6e-a61c-41ce-b34b-9a6252c46265
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5232d2169ae9442a945b48ba141a609003611a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48d7a8838097c862e3d4c16e15ec951441b72794
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-a-template-library"></a>С помощью библиотеки шаблонов
 Шаблон — подобно макроса. Как и в случае с помощью макроса шаблона в результате вызова расширения (с помощью соответствующего параметра подстановки) в код, который вы написали. Тем не менее делает больше, чем этот параметр, чтобы разрешить создание новых классов на основе типов, которые можно передавать в качестве параметров шаблона. Эти новые классы реализуют типобезопасный способов выполнения операции, выраженное в коде шаблона.  

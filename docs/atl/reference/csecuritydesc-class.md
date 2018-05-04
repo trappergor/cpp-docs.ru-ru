@@ -1,12 +1,9 @@
 ---
-title: "Класс CSecurityDesc | Документы Microsoft"
-ms.custom: 
+title: Класс CSecurityDesc | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityDesc
@@ -43,17 +40,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: a6963c04e3bd0ba06f8cc2beb9cb77447e2acd81
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 Этот класс является оболочкой для **SECURITY_DESCRIPTOR** структуры.  
@@ -71,14 +66,14 @@ class CSecurityDesc
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Конструктор.|  
-|[CSecurityDesc::~CSecurityDesc](#dtor)|Деструктор|  
+|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSecurityDesc::FromString](#fromstring)|Преобразует формат строки дескриптора безопасности в дескриптор безопасности допустимый, режим работы.|  
 |[CSecurityDesc::GetControl](#getcontrol)|Извлекает задать сведения из дескриптора безопасности.|  
@@ -109,7 +104,7 @@ class CSecurityDesc
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Возвращает указатель на **SECURITY_DESCRIPTOR** структуры.|  
 |[CSecurityDesc::operator =](#operator_eq)|Оператор присвоения.|  
@@ -140,7 +135,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CSecurityDesc` Можно при необходимости создать объект с помощью **SECURITY_DESCRIPTOR** структуры или ранее определенную `CSecurityDesc` объекта.  
   
-##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc:: ~ CSecurityDesc  
  Деструктор  
   
 ```
@@ -460,7 +455,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>Примечания  
  Дескриптор безопасности в абсолютном формате содержит указатели на данные, содержащиеся в нем, а не содержащий сами сведения. Дескриптор безопасности в относительном формате сведения в непрерывный блок памяти. В дескрипторе безопасности относительный **SECURITY_DESCRIPTOR** структуры всегда начинается сведения, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Компоненты дескриптора безопасности вместо адреса памяти, идентифицируются смещения от начала дескриптор безопасности. Этот формат удобно в тех случаях, когда дескриптор безопасности должна хранящихся на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [Absolute и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  Оператор присвоения.  
   
 ```
@@ -475,7 +470,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CSecurityDesc` объекта.  
   
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
  Приводит значение к указателю на **SECURITY_DESCRIPTOR** структуры.  
   
 ```  
@@ -575,7 +570,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *Sacl*  
+ *Системный список управления доступом*  
  Указатель на `CSacl` объект, указывающий системного списка управления ДОСТУПОМ для дескриптора безопасности. Этот параметр не должен иметь значение NULL и должен быть объектом CSacl. В отличие от DACL нет никаких различий между NULL и пустые системного списка управления ДОСТУПОМ, как объекты SACL определяют права доступа, только аудит сведения.  
   
  `bDefaulted`  

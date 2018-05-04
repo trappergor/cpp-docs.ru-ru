@@ -1,12 +1,12 @@
 ---
-title: "Страницы свойств компоновщика | Документы Microsoft"
-ms.custom: 
+title: Страницы свойств компоновщика | Документы Microsoft
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>Страницы свойств компоновщика
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="per-user-redirection"></a>Перенаправление по пользователям
 
-Регистрация в Visual Studio традиционно была выполнена в раздел HKEY_CLASSES_ROOT (HKCR). С [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], доступ к HKCR отсутствует, необходимо запустить Visual Studio в режиме с повышенными правами. Разработчикам не всегда требуется запустить в режиме с повышенными правами, но по-прежнему должен работать с регистрацией. Перенаправление по пользователям позволяет выполнять регистрацию без запуска в этом режиме.
+Регистрация в Visual Studio традиционно была выполнена в раздел HKEY_CLASSES_ROOT (HKCR). С Windows Vista и более поздних операционных системах для доступа к разделу HKCR необходимо запустить Visual Studio в режиме с повышенными правами. Разработчикам не всегда требуется запустить в режиме с повышенными правами, но по-прежнему должен работать с регистрацией. Перенаправление по пользователям позволяет выполнять регистрацию без запуска в этом режиме.
 
 Перенаправление по пользователям приводит к смещению запись HKCR перенаправлены в HKEY\_текущей\_пользователя (HKCU). Если перенаправление по пользователям отключено, это может вызвать [Error построения проекта PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) при попытке записать для HKCR отсутствует.
 

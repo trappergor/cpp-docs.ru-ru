@@ -1,27 +1,22 @@
 ---
-title: "Ошибки и исключения обработки (современный C++) | Документы Microsoft"
-ms.custom: 
+title: Ошибки и исключения обработки (современный C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Обработка ошибок и исключений (современный C++)
 В современном C++, в большинстве случаев предпочтительным способом для отчетов и обработки логические ошибки и ошибки времени выполнения является в использовании исключений. Это особенно важно в тех случаях, когда стек может содержать несколько вызовов функций между функция, которая обнаруживает ошибку и функция, которая имеет контекст о том, как его обработки. Исключения обеспечивают формальных, четко определенных для кода, который сообщает об ошибках для передачи информации по стеку вызовов.  
