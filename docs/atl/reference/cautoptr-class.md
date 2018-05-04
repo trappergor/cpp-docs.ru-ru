@@ -1,12 +1,9 @@
 ---
-title: "Класс CAutoPtr | Документы Microsoft"
-ms.custom: 
+title: Класс CAutoPtr | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 Этот класс представляет объект интеллектуального указателя.  
@@ -54,14 +49,14 @@ class CAutoPtr
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoPtr::CAutoPtr](#cautoptr)|Конструктор.|  
 |[CAutoPtr:: ~ CAutoPtr](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
 |[CAutoPtr::Detach](#detach)|Вызовите этот метод для освобождения владения указателя.|  
@@ -69,7 +64,7 @@ class CAutoPtr
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoPtr::operator T *](#operator_t_star)|Оператор приведения.|  
 |[CAutoPtr::operator =](#operator_eq)|Оператор присваивания.|  
@@ -77,7 +72,7 @@ class CAutoPtr
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoPtr::m_p](#m_p)|Переменная члена данных указателя.|  
   
@@ -86,9 +81,9 @@ class CAutoPtr
   
  Кроме того, `CAutoPtr`конструктор копирования и передать владение оператор назначения указателя, копирование исходного указателя на указатель назначения и задав исходного указателя NULL. Поэтому невозможно иметь два `CAutoPtr` объекты каждого хранения тот же указатель и повышает вероятность удаления тот же указатель дважды.  
   
- `CAutoPtr`также упрощает создание коллекции указателей. Вместо создания производного класса коллекции, а также путем переопределения деструктор, проще сделать из коллекции `CAutoPtr` объектов. При удалении коллекции `CAutoPtr` будет выходят за пределы области действия и автоматически удалять сами объекты.  
+ `CAutoPtr` также упрощает создание коллекции указателей. Вместо создания производного класса коллекции, а также путем переопределения деструктор, проще сделать из коллекции `CAutoPtr` объектов. При удалении коллекции `CAutoPtr` будет выходят за пределы области действия и автоматически удалять сами объекты.  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md) и варианты работать так же, как `CAutoPtr`, за исключением того, что они выделяют и освобождают память, вместо функций различных кучи C++ **новый** и **удаление** операторы. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) аналогичен `CAutoPtr`, единственное отличие состоит в том, что она использует **vector new []** и **вектор delete []** выделения и освобождения памяти.  
+ [CHeapPtr](../../atl/reference/cheapptr-class.md) и варианты работать так же, как `CAutoPtr`, за исключением того, что они выделяют и освобождают память, вместо функций различных кучи C++ **новый** и **удалить** операторы. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) аналогичен `CAutoPtr`, единственное отличие состоит в том, что она использует **vector new []** и **вектор delete []** выделения и освобождения памяти.  
   
  См. также [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) и [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) при требуются массивов или списков интеллектуальных указателей.  
   
@@ -98,7 +93,7 @@ class CAutoPtr
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>  CAutoPtr::Attach  
  Вызовите этот метод, чтобы стать владельцем существующего указателя.  
   
 ```
@@ -117,7 +112,7 @@ void Attach(T* p) throw();
 ### <a name="example"></a>Пример  
  См. пример в [CAutoPtr Обзор](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr  
  Конструктор.  
   
 ```
@@ -144,7 +139,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="example"></a>Пример  
  См. пример в [CAutoPtr Обзор](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr  
  Деструктор  
   
 ```
@@ -154,7 +149,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все ресурсы, выделенные. Вызовы [CAutoPtr::Free](#free).  
   
-##  <a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>  CAutoPtr::Detach  
  Вызовите этот метод для освобождения владения указателя.  
   
 ```
@@ -170,7 +165,7 @@ T* Detach() throw();
 ### <a name="example"></a>Пример  
  См. пример в [CAutoPtr Обзор](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>  CAutoPtr::Free  
  Этот метод вызывается для удаления объекта, на который указывает `CAutoPtr`.  
   
 ```
@@ -180,7 +175,7 @@ void Free() throw();
 ### <a name="remarks"></a>Примечания  
  Объект, на который указывает `CAutoPtr` освобождается и [CAutoPtr::m_p](#m_p) переменной-члена данных задано значение NULL.  
   
-##  <a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>  CAutoPtr::m_p  
  Переменная члена данных указателя.  
   
 ```
@@ -190,7 +185,7 @@ T* m_p;
 ### <a name="remarks"></a>Примечания  
  Эта переменная-член содержит информацию об указателях.  
   
-##  <a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoPtr::operator =  
  Оператор присваивания.  
   
 ```
@@ -217,7 +212,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 ### <a name="example"></a>Пример  
  См. пример в [CAutoPtr Обзор](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
  Оператор указателя на член.  
   
 ```
@@ -233,7 +228,7 @@ T* operator->() const throw();
 ### <a name="example"></a>Пример  
  См. пример в [CAutoPtr Обзор](../../atl/reference/cautoptr-class.md).  
   
-##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T *  
  Оператор приведения.  
   
 ```  

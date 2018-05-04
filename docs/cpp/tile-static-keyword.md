@@ -1,12 +1,9 @@
 ---
-title: "Ключевое слово tile_static | Документы Microsoft"
-ms.custom: 
+title: Ключевое слово tile_static | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - tile_static_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tilestatic-keyword"></a>Ключевое слово tile_static
 Ключевое слово `tile_static` используется для объявления переменной, которая может быть доступна всем потокам в мозаике потоков. Время существования переменной начинается, когда при выполнении достигается точка объявления, и завершается при возврате из функции ядра. Дополнительные сведения об использовании плиток см. в разделе [с помощью плитки](../parallel/amp/using-tiles.md).  

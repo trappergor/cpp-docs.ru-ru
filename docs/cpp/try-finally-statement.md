@@ -2,11 +2,8 @@
 title: Оператор try-finally | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 **Блок, относящийся только к системам Microsoft**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>Грамматика  
  *try-finally-statement*:  
- `__try`*составной оператор*  
+ `__try` *составной оператор*  
   
- `__finally`*составной оператор*  
+ `__finally` *составной оператор*  
   
  Оператор `try-finally` является расширением Microsoft для языков C и С++ и позволяет целевым приложениям гарантировать выполнение кода очистки при прерывании выполнения блока кода. Очистка включает такие задачи, как отмена распределения памяти, закрытие файлов и освобождение их дескрипторов. Оператор `try-finally` особенно полезен для подпрограмм, в которых в нескольких местах выполняется проверка на наличие ошибок, способных вызвать преждевременное возвращение из подпрограммы.  
   
@@ -80,7 +75,7 @@ __finally {
   
  Например, предположим, ряд вызовов функций связывает функцию А с функцией D, как показано на следующем рисунке. Каждая функция имеет один обработчик завершения. Если исключение создается в функции D и обрабатывается в функции А, обработчики завершения вызываются в том порядке, в котором система освобождает стек: D, C и B.  
   
- ![Порядок завершения &#45; выполнение обработчика](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![Порядок завершения&#45;выполнение обработчика](../cpp/media/vc38cx1.gif "vc38CX1")  
 Порядок выполнения обработчиков завершения  
   
 > [!NOTE]

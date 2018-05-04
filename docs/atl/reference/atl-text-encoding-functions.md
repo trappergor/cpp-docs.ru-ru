@@ -1,10 +1,7 @@
 ---
-title: "Кодировка функции ATL текста | Документы Microsoft"
-ms.custom: 
+title: Кодировка функции ATL текста | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>Кодировка функции ATL текста
 Эти функции поддерживают текст кодирования и декодирования.
@@ -69,7 +65,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файла atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 Вызывайте эту функцию для получения числового значения шестнадцатеричной цифры.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Числовое значение входного символа, интерпретируется как шестнадцатеричная цифра. Например входных данных "0" возвращает значение 0 и входным «A» возвращает значение 10. Если входной символ не является шестнадцатеричной цифрой, эта функция возвращает -1.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 Вызывайте эту функцию, чтобы получить версию библиотеки ATL, вы используете.  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 Декодирует строку данных, которая была закодирована как шестнадцатеричный текст, например предыдущим вызовом [AtlHexEncode](#atlhexencode).  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в байтах) буфера, который может содержать декодированные данные из шестнадцатеричной кодированной строки указанной длины.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Число байтов, необходимых для буфера, который может содержать декодированную строку из `nSrcLen` символов.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 Вызывайте эту функции для кодирования некоторых данных в виде строки шестнадцатеричного текста.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>Примечания  
  Каждый байт исходные данные кодируются как 2 шестнадцатеричных символов.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в символах) буфера, который может содержать строку, закодированную из данных указанного размера.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество символов, необходимых для буфера, который может содержать закодированные данные `nSrcLen` байт.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 Вызывайте эту функцию для получения числового значения шестнадцатеричной цифры.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Числовое значение входного символа, интерпретируется как шестнадцатеричная цифра. Например входных данных "0" возвращает значение 0 и входным «A» возвращает значение 10. Если входной символ не является шестнадцатеричной цифрой, эта функция возвращает -1.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Вызывайте эту функцию для преобразования строки Юникода в UTF-8.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>Примечания  
  Чтобы определить размер буфера, необходимый для преобразованной строки, вызовите эту функцию, значение 0 `szDest` и `nDest`.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 Вызывайте эту функцию для преобразования некоторых данных с использованием кодировки "B".  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2047 схеме кодировки «B» ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 Вызывайте эту функцию для получения размера (в символах) буфера, который может содержать строку, закодированную из данных указанного размера.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2047 схеме кодировки «B» ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 Вызывайте эту функцию для преобразования символов, небезопасных для использования в XML, в их безопасные эквиваленты.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  ATL_ESC флаги, описывающие, как преобразование не будет выполняться. 
 
-- `ATL_ESC_FLAG_NONE`Поведение по умолчанию. Квота метки и апострофы не преобразуются.
-- `ATL_ESC_FLAG_ATTR`Квота метки и апострофы преобразуются в `&quot;` и `&apos;` соответственно.
+- `ATL_ESC_FLAG_NONE` Поведение по умолчанию. Квота метки и апострофы не преобразуются.
+- `ATL_ESC_FLAG_ATTR` Квота метки и апострофы преобразуются в `&quot;` и `&apos;` соответственно.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 Вызывайте эту функцию для получения количества символов национального алфавита в строке.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество расширенных символов, найдено в строке определяется [IsExtendedChar](#isextendedchar).  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 Вызывайте эту функцию для определения, является ли заданный символ символом национального алфавита (меньше 32, больше 126 и не является символом табуляции, перевода строки или возврата каретки).  
   
 ```  
@@ -360,13 +356,13 @@ inline int IsExtendedChar(char ch) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *CH*  
+ *ch*  
  Символ, который необходимо протестировать  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если расширенный символ, **FALSE** в противном случае.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 Вызывайте эту функцию для преобразования некоторых данных с использованием кодировки "Q".  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2047 схеме кодировки «Q» ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 Вызывайте эту функцию для получения размера (в символах) буфера, который может содержать строку, закодированную из данных указанного размера.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2047 схеме кодировки «Q» ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 Декодирует строку данных, которая была закодирована в quoted-printable формате, например предыдущим вызовом [QPEncode](#qpencode).  
   
 ```  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2045 quoted-printable схему кодирования ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в байтах) буфера, который может содержать декодированные данные из строки указанной длины, закодированной в печатаемом формате с кавычками (quoted-printable).  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2045 quoted-printable схему кодирования ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 Вызывайте эту функцию для кодирования некоторых данных в печатаемом формате с кавычками (quoted-printable).  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  ATLSMTP_QPENCODE флаги, описывающие, как преобразование не будет выполняться. 
-- `ATLSMTP_QPENCODE_DOT`Если период появляется в начале строки, он добавлен к выходу обеспечении, кодировке.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`Добавляет `=\r\n` закодированная строка.
+- `ATLSMTP_QPENCODE_DOT` Если период появляется в начале строки, он добавлен к выходу обеспечении, кодировке.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` Добавляет `=\r\n` закодированная строка.
 
 Описывается в схеме кодировки quoted-printable [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
   
@@ -513,7 +509,7 @@ inline BOOL QPEncode(
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2045 quoted-printable схему кодирования ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в символах) буфера, который может содержать строку, закодированную из данных указанного размера.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Примечания  
  Описано в RFC 2045 quoted-printable схему кодирования ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 Декодирует строку данных, которая была закодирована в кодировке UUENCODE например предыдущим вызовом [UUEncode](#uuencode).  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>Примечания  
  Эта реализация uuencoding соответствует спецификации POSIX P1003.2b/D11.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в байтах) буфера, который может содержать декодированные данные из строки указанной длины в кодировке UUEncode.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>Примечания  
  Эта реализация uuencoding соответствует спецификации POSIX P1003.2b/D11.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 Вызывайте эту функцию для кодирования данных в кодировке UUEncode.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  Флаги управления поведением этой функции. 
-- `ATLSMTP_UUENCODE_HEADE`Заголовок будет закодировано.
-- `ATLSMTP_UUENCODE_END`Конец кодируется.
-- `ATLSMTP_UUENCODE_DOT`Запечатыванием данных будет выполняться.  
+- `ATLSMTP_UUENCODE_HEADE` Заголовок будет закодировано.
+- `ATLSMTP_UUENCODE_END` Конец кодируется.
+- `ATLSMTP_UUENCODE_DOT` Запечатыванием данных будет выполняться.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>Примечания  
  Эта реализация uuencoding соответствует спецификации POSIX P1003.2b/D11.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 Вызывайте эту функцию для получения размера (в символах) буфера, который может содержать строку, закодированную из данных указанного размера.  
   
 ```  

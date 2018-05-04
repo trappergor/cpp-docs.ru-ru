@@ -1,12 +1,9 @@
 ---
-title: "Класс CFixedStringT | Документы Microsoft"
-ms.custom: 
+title: Класс CFixedStringT | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>Класс CFixedStringT
 Этот класс представляет строковый объект с буфером символов фиксированной.  
@@ -51,13 +46,13 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFixedStringT::CFixedStringT](#cfixedstringt)|Конструктор объекта string.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFixedStringT::operator =](#eq)|Присваивает новое значение для `CFixedStringT` объекта.|  
   
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   Буфер символов для `CFixedStringT` объект всегда имеют одинаковую длину поля ( *t_nChars*). Нет ограничений на размер буфера для `CStringT` объектов.  
   
--   Диспетчер памяти для `CFixedStringT` настраивается таким образом, что общий доступ к [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) объекта между двумя или несколькими `CFixedStringT` objectsis не допускается. `CStringT`объекты не имеют этого ограничения.  
+-   Диспетчер памяти для `CFixedStringT` настраивается таким образом, что общий доступ к [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) объекта между двумя или несколькими `CFixedStringT` objectsis не допускается. `CStringT` объекты не имеют этого ограничения.  
   
  Дополнительные сведения о настройке `CFixedStringT` и управление памятью для строковых объектов см. в общем случае [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
@@ -84,7 +79,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>Требования  
  **Заголовок:** cstringt.h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  Создает объект `CFixedStringT`.  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>Примечания  
  Поскольку конструкторы копирования входных данных в новое хранилище, выделенное, следует иметь в виду, что память может привести к исключения. Обратите внимание, что некоторые из этих конструкторов действуют как функции преобразования.  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  Повторно инициализирует существующий `CFixedStringT` объекта с новыми данными.  
   
 ```

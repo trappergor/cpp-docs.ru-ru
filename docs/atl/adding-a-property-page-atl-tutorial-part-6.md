@@ -1,27 +1,22 @@
 ---
 title: Добавление страницы свойств (ATL учебника, часть 6) | Документы Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Добавление страницы свойств (учебник ATL, часть 6)
 Страницы свойств реализуются как отдельные объекты COM, которые позволят им можно было использовать при необходимости. На этом шаге необходимо выполнить следующие задачи, чтобы добавить страницу свойств для элемента управления:  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  Создаются следующие три файла:  
   
-|Файл|Описание:|  
+|Файл|Описание|  
 |----------|-----------------|  
 |PolyProp.h|Содержит класс C++ `CPolyProp`, который реализует страницу свойств.|  
 |PolyProp.cpp|Включает файл PolyProp.h.|  
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  Код теперь проверяет эту настройку `Sides` факт свойство. В случае неудачи, код отображает окно сообщения, отображающее сведения об ошибке из **IErrorInfo** интерфейса. Как правило, контейнер запрашивает объект для **ISupportErrorInfo** интерфейс и вызовы `InterfaceSupportsErrorInfo` первой, чтобы определить, поддерживает ли объект параметра сведений об ошибках. Эту задачу можно пропустить.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) помогает обрабатывая автоматически подсчет ссылок, поэтому не нужно вызывать `Release` в интерфейсе. `CComBSTR`поможет вам с `BSTR` обработки, поэтому необходимо выполнить окончательное `SysFreeString` вызова. Можно также использовать один из различные классы преобразования строк, поэтому можно преобразовать `BSTR` при необходимости (поэтому `USES_CONVERSION` макрос находится в начале функции).  
+ [CComPtr](../atl/reference/ccomptr-class.md) помогает обрабатывая автоматически подсчет ссылок, поэтому не нужно вызывать `Release` в интерфейсе. `CComBSTR` поможет вам с `BSTR` обработки, поэтому необходимо выполнить окончательное `SysFreeString` вызова. Можно также использовать один из различные классы преобразования строк, поэтому можно преобразовать `BSTR` при необходимости (поэтому `USES_CONVERSION` макрос находится в начале функции).  
   
  Также необходимо установить флаг «грязные» страницы свойств для указания того, что **применить** кнопка должна быть включена. Это происходит, когда пользователь изменяет значение в **сторон** "Правка".  
   
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`будет вызван при **WM_COMMAND** сообщение отправляется с **EN_CHANGE** уведомления для `IDC_SIDES` элемента управления. `OnEnChangeSides`затем вызывает `SetDirty` и передает `TRUE` для указания свойства страницы теперь содержит "грязные" и **применить** кнопка должна быть включена.  
+ `OnEnChangeSides` будет вызван при **WM_COMMAND** сообщение отправляется с **EN_CHANGE** уведомления для `IDC_SIDES` элемента управления. `OnEnChangeSides` затем вызывает `SetDirty` и передает `TRUE` для указания свойства страницы теперь содержит "грязные" и **применить** кнопка должна быть включена.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>Добавление страницы свойств для элемента управления  
  Мастер добавления класса ATL и мастер страницы свойств ATL не добавляют страницы свойств в элемент управления для вас автоматически, поскольку в проекте может быть несколько элементов управления. Необходимо добавить запись в схеме сопоставления свойств элемента управления.  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  Далее будет поместить элемент управления на веб-странице.  
   
- [Вернитесь к шагу 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [На шаге 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [Вернитесь к шагу 5](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [на шаге 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>См. также  
  [Учебник](../atl/active-template-library-atl-tutorial.md)

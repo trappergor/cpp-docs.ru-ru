@@ -1,27 +1,22 @@
 ---
-title: "Как: конструктора для исключения безопасности | Документы Microsoft"
-ms.custom: 
+title: 'Как: конструктора для исключения безопасности | Документы Microsoft'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbad81c5014c2aa3bcf10b083fa974615e4669e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-design-for-exception-safety"></a>Практическое руководство. Разработка с учетом безопасности исключений
 Одно из преимуществ механизм обработки исключений является исполнения, а также данные об исключении, переход непосредственно из инструкции, вызвавшей исключение с первым catch инструкцию, которая обрабатывает его. Обработчик может быть любое количество уровней вверх в стеке вызовов. Функции, вызываемые между оператор try и оператор throw не требуются какие-либо об исключении, которое выдается.  Тем не менее они должны быть разработано таким образом, чтобы их можно выхода из области «неожиданно» в любой точке, где могут распространяться вверх от ниже исключение и таким образом, не выходя из позади частично созданный объектов, утечки памяти или структур данных, которые находятся в состоянии, непригодном для использования.  

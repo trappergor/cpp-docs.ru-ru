@@ -1,12 +1,12 @@
 ---
-title: "Сведения о приложении и управления | Документы Microsoft"
-ms.custom: 
+title: Сведения о приложении и управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vc.mfc.macros
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3007e2fbae5bb0cee4472b6488be8ceb614bc1f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 54265814b4b60b08bed780a39ecadcace3242202
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 При написании приложения, создается один [CWinApp](../../mfc/reference/cwinapp-class.md)-производного объекта. В некоторых случаях требуется получить сведения об этом объекте из вне `CWinApp`-производного объекта. Или может потребоваться доступ к объектам другие глобальные «диспетчер».
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="afxbeginthread"></a>AfxBeginThread  
+##  <a name="afxbeginthread"></a>  AfxBeginThread  
  Эта функция вызывается для создания нового потока.  
   
 ```   
@@ -121,7 +121,7 @@ CWinThread* AfxBeginThread(
 ### <a name="remarks"></a>Примечания  
  Первая форма `AfxBeginThread` создает рабочий поток. Вторая форма создает поток, который может быть записан как потока пользовательского интерфейса или рабочий поток.  
   
- `AfxBeginThread`Создает новый `CWinThread` объекта, вызывает его [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) для запуска выполнения потока и возвращает указатель на поток. Проверяет вносятся во всей процедуры, убедитесь, что все объекты, освобожденных должным образом вызывать любую часть создания. Чтобы завершить поток, вызовите [AfxEndThread](#afxendthread) из потока или возврата из функции управления рабочего потока.  
+ `AfxBeginThread` Создает новый `CWinThread` объекта, вызывает его [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) для запуска выполнения потока и возвращает указатель на поток. Проверяет вносятся во всей процедуры, убедитесь, что все объекты, освобожденных должным образом вызывать любую часть создания. Чтобы завершить поток, вызовите [AfxEndThread](#afxendthread) из потока или возврата из функции управления рабочего потока.  
   
  Многопоточность необходимо включить для приложения; в противном случае функция завершится ошибкой. Дополнительные сведения о включении многопоточность посвящены [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) под *параметры компилятора Visual C++*.  
   
@@ -133,7 +133,7 @@ CWinThread* AfxBeginThread(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
 
-## <a name="afxcontextmenumanager"></a>AfxContextMenuManager
+## <a name="afxcontextmenumanager"></a> AfxContextMenuManager
 Указатель на глобальную [контекстное меню диспетчера](ccontextmenumanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -147,7 +147,7 @@ CContextMenuManager* afxContextMenuManager;
  [Класс CContextMenuManager](ccontextmenumanager-class.md)
 
   
-##  <a name="afxendthread"></a>AfxEndThread  
+##  <a name="afxendthread"></a>  AfxEndThread  
  Эта функция вызывается для завершения текущего потока.  
   
 ```   
@@ -188,7 +188,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
  Дескриптор модуля, содержащего ресурс.  
    
 ### <a name="remarks"></a>Примечания  
- `AfxFindResourceHandle`Находит определенного ресурса и возвращает дескриптор модуля, содержащего ресурс. Ресурс может быть из любого расширения MFC DLL, вы загрузили. `AfxFindResourceHandle`Указывает, какой из них имеет ресурса.  
+ `AfxFindResourceHandle` Находит определенного ресурса и возвращает дескриптор модуля, содержащего ресурс. Ресурс может быть из любого расширения MFC DLL, вы загрузили. `AfxFindResourceHandle` Указывает, какой из них имеет ресурса.  
   
  Модули ищутся в следующем порядке:  
   
@@ -208,7 +208,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="see-also"></a>См. также  
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
   
-##  <a name="afxfreelibrary"></a>AfxFreeLibrary  
+##  <a name="afxfreelibrary"></a>  AfxFreeLibrary  
  Оба `AfxFreeLibrary` и `AfxLoadLibrary` поддерживает счетчик ссылок для каждого модуля загрузить библиотеки.  
   
 ```   
@@ -223,7 +223,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
  **Значение TRUE,** Если функция выполнена успешно; в противном случае **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
- `AfxFreeLibrary`уменьшает счетчик ссылок модуля загрузить библиотеку динамической компоновки (DLL). Когда число ссылок достигает нуля, модуль не сопоставляется с адресном пространстве вызывающего процесса и дескриптор недействителен. Этот счетчик увеличивается каждый раз `AfxLoadLibrary` вызывается.  
+ `AfxFreeLibrary` уменьшает счетчик ссылок модуля загрузить библиотеку динамической компоновки (DLL). Когда число ссылок достигает нуля, модуль не сопоставляется с адресном пространстве вызывающего процесса и дескриптор недействителен. Этот счетчик увеличивается каждый раз `AfxLoadLibrary` вызывается.  
   
  До отмены сопоставления модуля библиотеки, система включает библиотеку DLL для отсоединения от процессов, используя его. Это дает возможность очистить ресурсы, выделенные текущего процесса, библиотеки DLL. После возврата функции точки входа, модуль библиотеки удаляется из адресного пространства текущего процесса.  
   
@@ -237,7 +237,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdll_.h  
   
-##  <a name="afxgetapp"></a>AfxGetApp  
+##  <a name="afxgetapp"></a>  AfxGetApp  
  Указатель, возвращаемый этой функцией можно использовать для доступа к сведений о приложении, например код основного диспетчеризации сообщений или самое верхнее окно.  
   
 ```   
@@ -256,7 +256,7 @@ CWinApp* AFXAPI AfxGetApp();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxgetappname"></a>AfxGetAppName  
+##  <a name="afxgetappname"></a>  AfxGetAppName  
  Эта функция возвращает строку можно использовать для диагностических сообщений или в качестве корня для имен временной строки.  
   
 ```   
@@ -272,7 +272,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxgetinstancehandle"></a>AfxGetInstanceHandle  
+##  <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle  
  Эта функция позволяет получить дескриптор экземпляра текущего приложения.  
   
 ```   
@@ -283,7 +283,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
  `HINSTANCE` Для текущего экземпляра приложения. При вызове из библиотеки DLL, связанном с версией USRDLL MFC, `HINSTANCE` возвращается к библиотеке DLL.  
   
 ### <a name="remarks"></a>Примечания  
- `AfxGetInstanceHandle`всегда возвращает `HINSTANCE` исполняемого файла (. (EXE), если она вызывается из библиотеки DLL связанные с версией USRDLL MFC. В этом случае он возвращает `HINSTANCE` на библиотеку DLL.  
+ `AfxGetInstanceHandle` всегда возвращает `HINSTANCE` исполняемого файла (. (EXE), если она вызывается из библиотеки DLL связанные с версией USRDLL MFC. В этом случае он возвращает `HINSTANCE` на библиотеку DLL.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]  
@@ -291,7 +291,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxgetmainwnd"></a>AfxGetMainWnd  
+##  <a name="afxgetmainwnd"></a>  AfxGetMainWnd  
  Если приложение является OLE-сервер, эта функция вызывается для получения указатель active главного окна приложения, а не непосредственно ссылается на [m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd) члена объекта приложения.  
   
 ```   
@@ -314,7 +314,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxgetperuserregistration"></a>AfxGetPerUserRegistration  
+##  <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration  
  Эта функция используется для определения, перенаправляет ли приложение доступ к реестру на **HKEY_CURRENT_USER** ( **HKCU**) узла.  
   
 ```  
@@ -322,7 +322,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
+ `TRUE` Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Примечания  
  Если включить перенаправление системного реестра, платформа перенаправляет доступ из **HKCR** для **HKEY_CURRENT_USER\Software\Classes**. Только платформы MFC и ATL, подвержены перенаправления.  
@@ -332,7 +332,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxstat_.h    
   
-##  <a name="afxgetresourcehandle"></a>AfxGetResourceHandle  
+##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle  
  Используйте `HINSTANCE` дескриптор, возвращаемый этой функцией, напрямую получать доступ к ресурсам приложения, например, в вызовах функции Windows **FindResource**.  
   
 ```   
@@ -348,7 +348,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxgetthread"></a>AfxGetThread  
+##  <a name="afxgetthread"></a>  AfxGetThread  
  Эта функция вызывается для получения указателя на [CWinThread](../../mfc/reference/cwinthread-class.md) объект, представляющий текущий выполняемый поток.  
   
 ```   
@@ -370,7 +370,7 @@ CWinThread* AfxGetThread();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxinitrichedit"></a>AfxInitRichEdit  
+##  <a name="afxinitrichedit"></a>  AfxInitRichEdit  
  Эта функция вызывается для инициализации элемента управления форматированным редактированием (версия 1.0) для приложения.  
   
 ```   
@@ -380,7 +380,7 @@ BOOL AFXAPI AfxInitRichEdit();
 ### <a name="remarks"></a>Примечания  
  Эта функция предназначена для обеспечения обратной совместимости. Новые приложения должны использовать [AfxInitRichEdit2](#afxinitrichedit2).  
   
- `AfxInitRichEdit`Загружает RICHED32. Библиотеки DLL для инициализации версии 1.0 управления rich edit. Для использования версии 2.0 и 3.0 элемента управления rich edit, библиотеки RICHED20. Библиотека DLL должна быть загружена. Это достигается с помощью вызова [AfxInitRichEdit2](#afxinitrichedit2).  
+ `AfxInitRichEdit` Загружает RICHED32. Библиотеки DLL для инициализации версии 1.0 управления rich edit. Для использования версии 2.0 и 3.0 элемента управления rich edit, библиотеки RICHED20. Библиотека DLL должна быть загружена. Это достигается с помощью вызова [AfxInitRichEdit2](#afxinitrichedit2).  
   
  Чтобы обновить элементы управления форматированным редактированием в существующих приложениях Visual C++ до версии 2.0, откройте. RC-файле как текст, измените имя класса каждого управления rich edit из «RICHEDIT» на «RichEdit20a». Затем замените вызов `AfxInitRichEdit` с `AfxInitRichEdit2`.  
   
@@ -389,7 +389,7 @@ BOOL AFXAPI AfxInitRichEdit();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxinitrichedit2"></a>AfxInitRichEdit2  
+##  <a name="afxinitrichedit2"></a>  AfxInitRichEdit2  
  Эта функция вызывается для инициализации элемента управления форматированным редактированием (версии 2.0 или более поздней версии) для приложения.  
   
 ```   
@@ -402,7 +402,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
 
-  ## <a name="afxisextendedframeclass"></a>AfxIsExtendedFrameClass
+  ## <a name="afxisextendedframeclass"></a>  AfxIsExtendedFrameClass
 Определяет, является ли заданное окно расширенным объектом фрейма.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -414,7 +414,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
  Указатель на объект, который является производным от `CWnd`.  
    
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если предоставленное окно является расширенным объектом фрейма; в противном случае `FALSE`.  
+ `TRUE` Если предоставленное окно является расширенным объектом фрейма; в противном случае `FALSE`.  
    
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `TRUE` , если `pWnd` является производным от одного из следующих классов:  
@@ -438,7 +438,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
  [CWnd-класс](cwnd-class.md)   
  [Класс CFrameWndEx](cframewndex-class.md)   
 
-## <a name="afxismfctoolbar"></a>AfxIsMFCToolBar
+## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 Определяет, является ли заданное окно объект панели инструментов.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -450,7 +450,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
  Указатель на объект, который является производным от `CWnd`.  
    
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если предоставленное окно является объект панели инструментов; в противном случае `FALSE`.  
+ `TRUE` Если предоставленное окно является объект панели инструментов; в противном случае `FALSE`.  
    
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `TRUE` Если `pWnd` является производным от `CMFCToolBar`. Этот метод полезен, когда необходимо проверить, является ли параметр функции или метода `CMFCToolBar` объекта.  
@@ -463,7 +463,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
  [Класс CMFCToolBar](cmfctoolbar-class.md)
 
  
-## <a name="afxkeyboardmanager"></a>AfxKeyboardManager
+## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 Указатель на глобальную [manager клавиатуры](ckeyboardmanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -479,7 +479,7 @@ CKeyboardManager* afxKeyboardManager;
  [Класс CKeyboardManager](ckeyboardmanager-class.md)
 
 
-##  <a name="afxloadlibrary"></a>AfxLoadLibrary  
+##  <a name="afxloadlibrary"></a>  AfxLoadLibrary  
  Используйте `AfxLoadLibrary` для сопоставления модуль DLL.  
   
 ```   
@@ -510,7 +510,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
  Если функция выполняется успешно, возвращается дескриптор для модуля. Если функция завершается с ошибкой, возвращается значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращает дескриптор, который может использоваться в [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) при получении адреса функции DLL. `AfxLoadLibrary`может также использоваться для сопоставления другие исполняемые модули.  
+ Возвращает дескриптор, который может использоваться в [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) при получении адреса функции DLL. `AfxLoadLibrary` может также использоваться для сопоставления другие исполняемые модули.  
   
  Каждый процесс поддерживает счетчик ссылок для каждого модуля загрузить библиотеки. Этот счетчик увеличивается каждый раз `AfxLoadLibrary` вызывается и уменьшается на единицу при каждом `AfxFreeLibrary` вызывается. Когда число ссылок достигает нуля, модуль не сопоставляется с адресном пространстве вызывающего процесса и дескриптор недействителен.  
   
@@ -526,7 +526,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdll_.h  
    
-## <a name="afxmenutearoffmanager"></a>AfxMenuTearOffManager
+## <a name="afxmenutearoffmanager"></a> AfxMenuTearOffManager
 Указатель на глобальную [отделяемого меню диспетчер](cmenutearoffmanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -539,7 +539,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ### <a name="see-also"></a>См. также     
  [Класс CMenuTearOffManager](cmenutearoffmanager-class.md)
  
-## <a name="afxmousemanager"></a>AfxMouseManager
+## <a name="afxmousemanager"></a>  AfxMouseManager
 Указатель на глобальную [мыши manager](cmousemanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис  
@@ -554,7 +554,7 @@ CMouseManager* afxMouseManager;
  
 
   
-##  <a name="afxregisterclass"></a>AfxRegisterClass  
+##  <a name="afxregisterclass"></a>  AfxRegisterClass  
  Эту функцию можно используйте для регистрации классов окон в библиотеке DLL, которое использует MFC.  
   
 ```   
@@ -579,7 +579,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxregisterwndclass"></a>AfxRegisterWndClass  
+##  <a name="afxregisterwndclass"></a>  AfxRegisterWndClass  
  Позволяет регистрировать свои собственные классы окон.  
   
 ```  
@@ -612,7 +612,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
  Указывает дескриптор ресурс значка, устанавливаемые в каждом окне, созданные на основе класса окна. Если используется значение по умолчанию для **0**, появится значок эмблемы Windows стандартные, нетерпеливых флаг.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Нулем строка, содержащая имя класса. Можно передать имя класса для **создать** функции-члена `CWnd` или других **CWnd -**производные классы для создания окна. Имя создается путем библиотеки классов Microsoft Foundation.  
+ Нулем строка, содержащая имя класса. Можно передать имя класса для **создать** функции-члена `CWnd` или других **CWnd -** производные классы для создания окна. Имя создается путем библиотеки классов Microsoft Foundation.  
   
 > [!NOTE]
 >  Возвращаемое значение является указателем на статический буфер. Чтобы сохранить эту строку, назначьте его `CString` переменной.  
@@ -632,7 +632,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxsetperuserregistration"></a>AfxSetPerUserRegistration  
+##  <a name="afxsetperuserregistration"></a>  AfxSetPerUserRegistration  
  Задает, перенаправляет ли приложение доступ к реестру на **HKEY_CURRENT_USER** ( **HKCU**) узла.  
   
 ```  
@@ -641,10 +641,11 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
+ `TRUE` Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Примечания  
- Прежде чем [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], приложения, доступ к реестру, обычно используют **HKEY_CLASSES_ROOT** узла. Однако в [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)], необходимо запустить приложение в режиме с повышенными правами на запись в **HKCR**.  
+
+Прежде чем Windows Vista, приложения, доступ к реестру обычно используется **HKEY_CLASSES_ROOT** узла. Тем не менее, с Windows Vista или более поздних операционных системах, необходимо запустить приложение в режиме с повышенными правами на запись в **HKCR**.  
   
  Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из **HKCR** для **HKCU**. Дополнительные сведения см. в разделе [страницы свойств компоновщика](../../ide/linker-property-pages.md).  
   
@@ -655,7 +656,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxstat_.h    
   
-##  <a name="afxsetresourcehandle"></a>AfxSetResourceHandle  
+##  <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle  
  Эта функция позволяет задать `HINSTANCE` дескриптор, который определяет, где загружаются по умолчанию ресурсы приложения.  
   
 ```  
@@ -672,7 +673,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
 
-## <a name="afxshellmanager"></a>AfxShellManager
+## <a name="afxshellmanager"></a>  AfxShellManager
 Указатель на глобальную [диспетчер оболочки](cshellmanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -686,7 +687,7 @@ CShellManager* afxShellManager;
 ### <a name="see-also"></a>См. также  
  [Класс CShellManager](cshellmanager-class.md)
   
-##  <a name="afxsocketinit"></a>AfxSocketInit  
+##  <a name="afxsocketinit"></a>  AfxSocketInit  
  Вызовите эту функцию в вашей `CWinApp::InitInstance` переопределение, чтобы инициализировать Windows Sockets.  
   
 ```  
@@ -706,7 +707,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxsock.h  
 
-## <a name="afxusertoolsmanager"></a>AfxUserToolsManager
+## <a name="afxusertoolsmanager"></a>  AfxUserToolsManager
 Указатель на глобальную [средства диспетчера пользователей](cusertoolsmanager-class.md).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -721,7 +722,7 @@ CUserToolsManager* afxUserToolsManager;
  [Класс CUserToolsManager](cusertoolsmanager-class.md)
  
   
-##  <a name="afxwininit"></a>AfxWinInit  
+##  <a name="afxwininit"></a>  AfxWinInit  
  Эта функция вызывается с библиотека MFC предоставляет `WinMain` функции как часть [CWinApp](../../mfc/reference/cwinapp-class.md) инициализации Графическим пользовательским интерфейсом приложения для инициализации MFC.  
   
 ```  

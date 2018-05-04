@@ -1,12 +1,9 @@
 ---
-title: "Классы ATL | Документы Microsoft"
-ms.custom: 
+title: Классы ATL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,22 +11,20 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>ATL-классы
 Active Template Library (ATL) содержит следующие классы. Для поиска определенного класса по категории, в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).  
   
-|Класс|Описание:|Файл заголовка|  
+|Класс|Описание|Файл заголовка|  
 |-----------|-----------------|-----------------|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Этот класс используется макросы преобразования строк `CA2TEX` и `CT2AEX`и определение типа **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Этот класс используется макросы преобразования строк `CA2CTEX` и `CT2CAEX`и определение типа **CA2CA**.|atlconv.h|  
@@ -56,7 +51,7 @@ Active Template Library (ATL) содержит следующие классы. 
 |[CAtlPreviewCtrlImpl](../../atl/reference/catlpreviewctrlimpl-class.md)|Этот класс представляет собой реализацию ATL окна, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.|atlpreviewctrlimpl.h|  
 |[CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md)|Этот класс реализует службу.|atlbase.h|  
 |[CAtlTemporaryFile](../../atl/reference/catltemporaryfile-class.md)|Этот класс предоставляет методы для создания и использования временного файла.|atlfile.h|  
-|[CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)|Этот класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).|atltransactionmanager.h|  
+|[Catltransactionmanager.](../../atl/reference/catltransactionmanager-class.md)|Этот класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).|atltransactionmanager.h|  
 |[CAtlWinModule](../../atl/reference/catlwinmodule-class.md)|Этот класс обеспечивает поддержку компоненты ATL управления окнами.|atlbase.h|  
 |[CAutoPtr](../../atl/reference/cautoptr-class.md)|Этот класс представляет объект интеллектуального указателя.|atlbase.h|  
 |[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)|Этот класс предоставляет методы, используемые при создании массива интеллектуальных указателей.|atlbase.h|  

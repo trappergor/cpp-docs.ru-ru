@@ -1,13 +1,10 @@
 ---
-title: "Статически компонуемые с MFC библиотеки DLL MFC регулярного | Документы Microsoft"
-ms.custom: 
+title: Статически компонуемые с MFC библиотеки DLL MFC регулярного | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: c48fdfb0b10541c1643ec49038e29cfa60c633d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Регулярные MFC библиотеки DLL, статически компонуемые с MFC
 Обычный, MFC DLL, статически компонуемые с MFC является библиотекой DLL, внутренне использует MFC, а экспортированные функции в DLL может быть вызван MFC или не MFC исполняемых файлов. Как из названия, этот вид библиотек DLL построен с использованием статическая компоновка версии библиотеки MFC. Функции обычно экспортируются из библиотеки DLL MFC, с помощью стандартного интерфейса C обычного. Пример того, как записи, создания и использования регулярных DLL MFC, см. в образце [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

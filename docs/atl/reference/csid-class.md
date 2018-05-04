@@ -1,12 +1,9 @@
 ---
-title: "Класс CSid | Документы Microsoft"
-ms.custom: 
+title: Класс CSid | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>Класс CSid
 Этот класс является оболочкой для `SID` структуры (идентификатором безопасности).  
@@ -58,20 +53,20 @@ class CSid
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSid::CSidArray](#csidarray)|Массив объектов `CSid`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Конструктор.|  
 |[CSid::~CSid](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSid::AccountName](#accountname)|Возвращает имя учетной записи, связанной с `CSid` объекта.|  
 |[CSid::Domain](#domain)|Возвращает имя домена, связанного с `CSid` объекта.|  
@@ -99,9 +94,9 @@ class CSid
 |-|-|  
 |[оператор ==](#operator_eq_eq)|Проверяет два объекта дескриптора безопасности для проверки на равенство|  
 |[оператор! =](#operator_neq)|Проверяет два объекта дескриптора безопасности для проверки на неравенство|  
-|[оператор\<](#operator_lt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
+|[Оператор \<](#operator_lt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
 |[оператор >](#operator_gt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
-|[оператор\<=](#operator_lt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
+|[Оператор \<=](#operator_lt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
 |[оператор > =](#operator_gt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -342,7 +337,7 @@ bool LoadAccount(
  Возвращает **true** при успешном выполнении **false** при сбое. Чтобы получить расширенные сведения об ошибке, вызовите функцию `GetLastError`.  
   
 ### <a name="remarks"></a>Примечания  
- `LoadAccount`пытается найти идентификатор безопасности для указанного имени. В разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) для получения дополнительных сведений.  
+ `LoadAccount` пытается найти идентификатор безопасности для указанного имени. В разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) для получения дополнительных сведений.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  Оператор присвоения.  
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если дескрипторы безопасности равны; в противном случае **false**.  
   
-##  <a name="operator_neq"></a>CSid::operator! =  
+##  <a name="operator_neq"></a>  CSid::operator! =  
  Проверяет два объекта дескриптора безопасности для проверки на неравенство.  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если `lhs` больше или равно `rhs`, в противном случае **false**.  
   
-##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
  Приведение `CSid` объекта в указатель на `SID` структуры (идентификатором безопасности).  
   
 ```  
@@ -503,7 +498,7 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение члена данных, в которой хранится значение, описывающее состояние `CSid` объекта.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |SidTypeUser|Указывает пользователя `SID` (идентификатором безопасности).|  
 |SidTypeGroup|Указывает группу `SID`.|  
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|Указывает `SID` для компьютера.|  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите [CSid::LoadAccount](#loadaccount) обновление `CSid` объект перед вызовом метода `SidNameUse` для возврата состояния. `SidNameUse`не изменять состояние объекта (путем вызова для **LookupAccountName** или **LookupAccountSid**), но только возвращает текущее состояние.  
+ Вызовите [CSid::LoadAccount](#loadaccount) обновление `CSid` объект перед вызовом метода `SidNameUse` для возврата состояния. `SidNameUse` не изменять состояние объекта (путем вызова для **LookupAccountName** или **LookupAccountSid**), но только возвращает текущее состояние.  
   
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   

@@ -1,13 +1,10 @@
 ---
-title: "Экспорт из библиотеки DLL с помощью __declspec(dllexport) | Документы Microsoft"
-ms.custom: 
+title: Экспорт из библиотеки DLL с помощью __declspec(dllexport) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Экспорт из библиотеки DLL с использованием __declspec(dllexport)
 Представленные Microsoft **__export** в версии 16-разрядный компилятор Visual C++, чтобы разрешить или запретить компилятору автоматически создавать экспортируемые имена и помещать их в LIB-файл. Этот LIB-файл может использоваться как статический LIB-файл для связи с библиотекой DLL.  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`не может применяться в функцию с `__clrcall` соглашение о вызовах.  
+>  `__declspec(dllexport)` не может применяться в функцию с `__clrcall` соглашение о вызовах.  
   
  При построении библиотеки DLL, обычно создается файл заголовка, который содержит прототипы функций или классов экспортируются и добавить **__declspec(dllexport)** к объявлениям в файле заголовка. Чтобы сделать код более удобочитаемым, определить макрос для **__declspec(dllexport)** и использовать его каждый символ, который экспортируется:  
   

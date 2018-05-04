@@ -1,12 +1,9 @@
 ---
-title: "Класс CRect | Документы Microsoft"
-ms.custom: 
+title: Класс CRect | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRect
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crect-class"></a>CRect-класс
 Аналогично Windows [RECT](../../mfc/reference/rect-structure1.md) структуры.  
@@ -68,13 +63,13 @@ class CRect : public tagRECT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRect::CRect](#crect)|Создает объект `CRect`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRect::BottomRight](#bottomright)|Возвращает точку в правой нижней `CRect`.|  
 |[CRect::CenterPoint](#centerpoint)|Возвращает centerpoint из `CRect`.|  
@@ -84,7 +79,7 @@ class CRect : public tagRECT
 |[CRect::Height](#height)|Вычисляет высоту `CRect`.|  
 |[CRect::InflateRect](#inflaterect)|Увеличение ширины и высоты `CRect`.|  
 |[CRect::IntersectRect](#intersectrect)|Наборы `CRect` равно пересечение двух прямоугольников.|  
-|[CRect::IsRectEmpty](#isrectempty)|Определяет, является ли `CRect` пуст. `CRect`пусто, если ширина или высота равна 0.|  
+|[CRect::IsRectEmpty](#isrectempty)|Определяет, является ли `CRect` пуст. `CRect` пусто, если ширина или высота равна 0.|  
 |[CRect::IsRectNull](#isrectnull)|Определяет ли **верхней**, **нижней**, **левой**, и **правой** переменных-членов, все равно 0.|  
 |[CRect::MoveToX](#movetox)|Перемещает `CRect` на указанной оси x.|  
 |[CRect::MoveToXY](#movetoxy)|Перемещает `CRect` для указанной координаты x и y-.|  
@@ -101,14 +96,14 @@ class CRect : public tagRECT
 |[CRect::Width](#width)|Вычисляет ширину `CRect`.|  
   
 ### <a name="public-operators"></a>Открытые операторы    
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRect::operator-](#operator_-)|Вычитает заданного смещения из `CRect` или уменьшение объема `CRect` и возвращает итоговое `CRect`.|  
 |[LPCRECT CRect::operator](#operator_lpcrect)|Преобразует `CRect` для **LPCRECT**.|  
 |[CRect::operator LPRECT](#operator_lprect)|Преобразует `CRect` в `LPRECT`.|  
 |[CRect::operator! =](#operator_neq)|Определяет, является ли `CRect` не равно прямоугольник.|  
-|[CRect::operator&amp;](#operator_amp)|Создает пересечение `CRect` и прямоугольник и возвращает итоговое `CRect`.|  
-|[CRect::operator&amp;=](#operator_amp_eq)|Наборы `CRect` равно пересечение `CRect` и прямоугольник.|  
+|[CRect::operator &amp;](#operator_amp)|Создает пересечение `CRect` и прямоугольник и возвращает итоговое `CRect`.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|Наборы `CRect` равно пересечение `CRect` и прямоугольник.|  
 |[CRect::operator |](#operator_or)|Создает объединение `CRect` и прямоугольник и возвращает итоговое `CRect`.|  
 |[CRect::operator |=](#operator_or_eq)|Наборы `CRect` равно объединение `CRect` и прямоугольник.|  
 |[CRect::operator +](#operator_add)|Добавление заданного смещения к `CRect` или увеличивает `CRect` и возвращает итоговое `CRect`.|  
@@ -118,7 +113,7 @@ class CRect : public tagRECT
 |[CRect::operator ==](#operator_eq_eq)|Определяет, является ли `CRect` равен прямоугольник.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRect`также включает функции-члены для управления `CRect` объектов и Windows `RECT` структуры.  
+ `CRect` также включает функции-члены для управления `CRect` объектов и Windows `RECT` структуры.  
   
  Объект `CRect` можно передавать в качестве параметра функции везде, где `RECT` структуры **LPCRECT**, или `LPRECT` могут быть переданы.  
   
@@ -142,7 +137,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltypes.h  
   
-##  <a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>  CRect::BottomRight  
  Координаты возвращаются как ссылка на [CPoint](cpoint-class.md) объект, который содержится в `CRect`.  
   
 ```  
@@ -181,7 +176,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>  CRect::CenterPoint 
  Вычисляет centerpoint из `CRect` добавив значения влево и вправо и деления на 2 и значения верхней и нижней и деления на два.  
   
 ```  
@@ -242,7 +237,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>  CRect::CopyRect  
  Копирует `lpSrcRect` прямоугольника в `CRect`.  
   
 ```  
@@ -275,7 +270,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>  CRect::CRect  
  Создает объект `CRect`.  
   
 ```  
@@ -312,7 +307,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  `size`  
  Указывает смещение от верхнего левого угла в нижний правый угол прямоугольника создаваться.  
   
- *topLeft*  
+ *TopLeft*  
  Задает позицию верхнего левого края `CRect`.  
   
  *bottomRight*  
@@ -361,8 +356,8 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="deflaterect"></a>CRect::DeflateRect  
- `DeflateRect`Уменьшение объема `CRect` , перемещая его стороны к ее центру.  
+##  <a name="deflaterect"></a>  CRect::DeflateRect  
+ `DeflateRect` Уменьшение объема `CRect` , перемещая его стороны к ее центру.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -415,7 +410,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>  CRect::EqualRect  
  Определяет, является ли `CRect` равен заданного прямоугольника.  
   
 ```  
@@ -450,7 +445,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="height"></a>CRect::Height  
+##  <a name="height"></a>  CRect::Height  
  Вычисляет высоту `CRect` путем вычитания верхнее значение из минимальное значение.  
   
 ```  
@@ -480,8 +475,8 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="inflaterect"></a>CRect::InflateRect  
- `InflateRect`увеличивает `CRect` , перемещая его стороны от ее центра.  
+##  <a name="inflaterect"></a>  CRect::InflateRect  
+ `InflateRect` увеличивает `CRect` , перемещая его стороны от ее центра.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -529,7 +524,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>  CRect::IntersectRect  
  Делает `CRect` равно пересечение двух прямоугольников существующий.  
   
 ```  
@@ -572,7 +567,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>  CRect::IsRectEmpty  
  Определяет, является ли `CRect` пуст.  
   
 ```  
@@ -603,7 +598,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>  CRect::IsRectNull  
  Определяет, является ли слева, сверху вниз и правой значения `CRect` , все равно 0.  
   
 ```  
@@ -632,7 +627,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>  CRect::MoveToX  
  Вызывайте эту функцию, чтобы переместить прямоугольник в абсолютные координаты x, заданные *x*.  
   
 ```  
@@ -656,7 +651,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>  CRect::MoveToXY  
  Вызывайте эту функцию, чтобы переместить прямоугольник в абсолютные координаты x и y-указан.  
   
 ```  
@@ -687,7 +682,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>  CRect::MoveToY  
  Вызывайте эту функцию, чтобы переместить прямоугольник абсолютный координату по оси y, заданные *y*.  
   
 ```  
@@ -711,7 +706,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="normalizerect"></a>CRect::NormalizeRect  
+##  <a name="normalizerect"></a>  CRect::NormalizeRect  
  Нормализует `CRect` таким образом, высоту и ширину положительным.  
   
 ```  
@@ -719,10 +714,10 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Прямоугольник нормализуется для позиционирования четвертый квадрант, которой обычно используется Windows для координат. `NormalizeRect`Сравнивает значения верхней и нижней и меняет местами, если верхней больше нижней. Аналогичным образом меняет значения влево и вправо, если слева больше, чем вправо. Эта функция используется при работе с режимами другого сопоставления и инвертированный прямоугольники.  
+ Прямоугольник нормализуется для позиционирования четвертый квадрант, которой обычно используется Windows для координат. `NormalizeRect` Сравнивает значения верхней и нижней и меняет местами, если верхней больше нижней. Аналогичным образом меняет значения влево и вправо, если слева больше, чем вправо. Эта функция используется при работе с режимами другого сопоставления и инвертированный прямоугольники.  
   
 > [!NOTE]
->  Следующие `CRect` функции-члены требуют нормализованный прямоугольники для правильной работы: [высота](#height), [ширина](#width), [размер](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [оператор ==](#operator_eq_eq), [оператор! =](#operator_neq), [оператор &#124;](#operator_or), [оператор &#124; =](#operator_or_eq), [оператор &](#operator_amp), и [оператор & =](#operator_amp_eq).  
+>  Следующие `CRect` функции-члены требуют нормализованный прямоугольники для правильной работы: [высота](#height), [ширина](#width), [размер](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [оператор ==](#operator_eq_eq), [оператор! =](#operator_neq), [оператор &#124; ](#operator_or), [оператор &#124;=](#operator_or_eq), [оператор &](#operator_amp), и [оператор & =](#operator_amp_eq).  
   
 ### <a name="example"></a>Пример  
 ```cpp  
@@ -737,7 +732,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>  CRect::OffsetRect  
  Перемещает `CRect` с заданными смещениями.  
   
 ```  
@@ -776,7 +771,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>Преобразует LPCRECT CRect::operator `CRect` для [LPCRECT](../../mfc/reference/data-types-mfc.md).  
+##  <a name="operator_lpcrect"></a>  Преобразует LPCRECT CRect::operator `CRect` для [LPCRECT](../../mfc/reference/data-types-mfc.md).  
 
   
 ```  
@@ -787,7 +782,7 @@ operator LPCRECT() const throw();
  При использовании этой функции не требуется взятия адреса (**&**) оператор. Этот оператор будет автоматически использоваться при передаче `CRect` в функцию, ожидающую **LPCRECT**.  
   
 
-##  <a name="operator_lprect"></a>CRect::operator LPRECT  
+##  <a name="operator_lprect"></a>  CRect::operator LPRECT  
  Преобразует `CRect` для [LPRECT](../../mfc/reference/data-types-mfc.md).  
 
   
@@ -801,7 +796,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRect::operator LPCRECT](#operator_lpcrect).  
   
-##  <a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>  CRect::operator =  
  Назначает *srcRect* для `CRect`.  
   
 ```  
@@ -826,7 +821,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="operator_eq_eq"></a>CRect::operator ==  
+##  <a name="operator_eq_eq"></a>  CRect::operator ==  
  Определяет, является ли `rect` равен `CRect` , сравнивая координаты их левого верхнего и нижнего правого угла.  
   
 ```  
@@ -868,7 +863,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>  CRect::operator! =  
  Определяет, является ли `rect` не равен `CRect` , сравнивая координаты их левого верхнего и нижнего правого угла.  
   
 ```  
@@ -909,7 +904,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="operator_add_eq"></a>CRect::operator +=  
+##  <a name="operator_add_eq"></a>  CRect::operator +=  
  Первые две перегрузки переместить `CRect` с заданными смещениями.  
   
 ```  
@@ -948,7 +943,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="operator_-_eq"></a>CRect::operator-=  
+##  <a name="operator_-_eq"></a>  CRect::operator-=  
  Первые две перегрузки переместить `CRect` с заданными смещениями.  
   
 ```  
@@ -987,7 +982,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
  Наборы `CRect` равно пересечение `CRect` и `rect`.  
   
 ```  
@@ -1007,7 +1002,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRect::IntersectRect](#intersectrect).  
   
-##  <a name="operator_or_eq"></a>CRect::operator &#124; =  
+##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
  Наборы `CRect` равно объединение `CRect` и `rect`.  
   
 ```  
@@ -1040,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>  CRect::operator +  
  Первые две перегрузки возвращают `CRect` объекта, равное `CRect` смещаются с заданными смещениями.  
   
 ```  
@@ -1079,7 +1074,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>  CRect::operator-  
  Первые две перегрузки возвращают `CRect` объекта, равное `CRect` смещаются с заданными смещениями.  
   
 ```  
@@ -1118,7 +1113,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>  CRect::operator &amp;  
  Возвращает `CRect` , пересечение `CRect` и *rect2*.  
   
 ```  
@@ -1150,7 +1145,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="operator_or"></a>CRect::operator &#124;  
+##  <a name="operator_or"></a>  CRect::operator&#124;  
  Возвращает `CRect` , представляющее собой объединение `CRect` и *rect2*.  
   
 ```   
@@ -1188,7 +1183,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>  CRect::PtInRect  
  Определяет, находится ли заданная точка в пределах `CRect`.  
   
 ```   
@@ -1235,7 +1230,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>  CRect::SetRect  
  Задает размеры `CRect` в указанные координаты.  
   
 ```   
@@ -1267,7 +1262,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
  Делает `CRect` прямоугольник, установив все координаты нулевое значение null.  
   
 ```  
@@ -1283,7 +1278,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>  CRect::SIZE 
  `cx` И `cy` содержат члены возвращаемого значения высоты и ширины `CRect`.  
   
 ```  
@@ -1306,7 +1301,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>  CRect::SubtractRect  
  Делает размеры **CRect** равно вычитании смещения `lpRectSrc2` из `lpRectSrc1`.  
   
 ```  
@@ -1330,7 +1325,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
   
  Например если `lpRectSrc1` были (10,10, 100,100) и `lpRectSrc2` были (50,50, 150,150) прямоугольника, на который указывает `lpRectSrc1` бы без изменений при возврате функции. Если `lpRectSrc1` были (10,10, 100,100) и `lpRectSrc2` были (50,10, 150,150), однако прямоугольника, на который указывает `lpRectSrc1` будет содержать координаты (10,10, 50,100) при возврате функции.  
   
- `SubtractRect`не является таким же, как [оператор -](#operator_-) , ни [оператор-=](#operator_-_eq). Ни один из этих операторов никогда не вызывает `SubtractRect`.  
+ `SubtractRect` не является таким же, как [оператор -](#operator_-) , ни [оператор-=](#operator_-_eq). Ни один из этих операторов никогда не вызывает `SubtractRect`.  
   
 > [!NOTE]
 >  Оба прямоугольника должны быть нормализованы или эта функция может завершиться ошибкой. Можно вызвать [NormalizeRect](#normalizerect) нормализовать прямоугольники перед вызовом этой функции.  
@@ -1368,7 +1363,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>  CRect::TopLeft  
  Координаты возвращаются как ссылка на [CPoint](cpoint-class.md) объект, который содержится в `CRect`.  
   
 ```  
@@ -1385,7 +1380,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>Пример  
  Далее приведен пример [CRect::CenterPoint](#centerpoint).  
   
-##  <a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>  CRect::UnionRect  
  Делает размеры `CRect` равно объединение двух исходных прямоугольники.  
   
 ```  
@@ -1421,7 +1416,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="width"></a>CRect::Width  
+##  <a name="width"></a>  CRect::Width  
  Вычисляет ширину `CRect` путем вычитания значение слева от правильного значения.  
   
 ```  

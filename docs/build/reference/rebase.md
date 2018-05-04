@@ -1,13 +1,10 @@
 ---
-title: "-REBASE | Документы Microsoft"
-ms.custom: 
+title: -REBASE | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |Модификатор|Действие|  
 |--------------|------------|  
-|БАЗОВЫЙ**=***адрес*|Предоставляет начальный адрес для переназначения базовых адресов в файлы. Укажите *адрес* в десятичное или нотации языка. Если BASE не указан, по умолчанию, начиная с базового адреса используется 0x400000. Если используется, БАЗОВОГО СПИСКА должен быть задан, и *адрес* задает конец диапазона базовых адресов.|  
+|BASE **= *** адрес*|Предоставляет начальный адрес для переназначения базовых адресов в файлы. Укажите *адрес* в десятичное или нотации языка. Если BASE не указан, по умолчанию, начиная с базового адреса используется 0x400000. Если используется, БАЗОВОГО СПИСКА должен быть задан, и *адрес* задает конец диапазона базовых адресов.|  
 |BASEFILE|Создает файл с именем COFFBASE. TXT, — это текстовый файл в формат, ожидаемый ссылки/BASE параметр.|  
 |ВНИЗ|Указывает EDITBIN переназначить базовые адреса вниз от конечного адреса. Файлы будут переданы в порядке, указанном с помощью первый файл, расположенный в наибольший возможный адрес ниже конец диапазона адресов. BASE должен использоваться с вниз для гарантировать достаточное адресное пространство для размещения файлов. Чтобы определить адресное пространство, требуемое для указанных файлов, запустите EDITBIN с параметром/REBASE файлов и добавьте 64 КБ отображается общий размер.|  
   

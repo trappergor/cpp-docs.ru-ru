@@ -2,26 +2,21 @@
 title: Тип системы C++ (современный C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 82c017b7048c8b62f58068d22b8efefd72f31d4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-type-system-modern-c"></a>Тип системы C++ (современный C++)
 Понятие *тип* очень важно в C++. Каждая переменная, аргумент функции и возвращаемое значение функции должны иметь тип, чтобы их можно было скомпилировать. Кроме того, перед вычислением каждого выражения (включая литеральные значения) компилятор неявно назначает ему тип. Некоторые примеры типов `int` для хранения целых значений `double` для хранения значений с плавающей запятой (также известный как *скалярные* типы данных), или класс стандартной библиотеки [std::basic_string](../standard-library/basic-string-class.md) для хранения текста. Можно создать собственный тип, определив `class` или `struct`. Тип определяет объем памяти, выделяемой для переменной (или результата выражения), типы значений, которые могут храниться в этой переменной, способ интерпретации значений (например, битовые шаблоны), и операции, допустимые с переменной. Эта статья содержит неформальный обзор основных особенностей системы типов C++.  

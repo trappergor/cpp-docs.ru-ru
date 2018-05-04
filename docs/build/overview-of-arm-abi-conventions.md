@@ -1,27 +1,22 @@
 ---
-title: "Обзор соглашений ABI ARM | Документы Microsoft"
-ms.custom: 
+title: Обзор соглашений ABI ARM | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Обзор соглашений ABI ARM
 Двоичный интерфейс приложения (ABI) для кода, скомпилированного для Windows на процессорах ARM, основан на стандартном встроенном двоичном интерфейсе приложения ARM. В этой статье указаны различия между системой Windows на устройствах ARM и стандартной системой. Дополнительные сведения о стандартных встроенном двоичном интерфейсе приложения ARM см. в разделе [приложения двоичного интерфейса (ABI) для архитектуры ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

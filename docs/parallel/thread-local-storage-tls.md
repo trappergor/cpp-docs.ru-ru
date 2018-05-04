@@ -1,12 +1,12 @@
 ---
-title: "Локальное хранилище потока (TLS) | Документы Microsoft"
-ms.custom: 
+title: Локальное хранилище потока (TLS) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>Локальное хранилище потока (TLS)
 Локальное хранилище потока (TLS) — это механизм, с помощью которого каждый поток в указанном многопоточном процессе может выделять расположения для хранения данных определенного потока. Динамически данные привязки (во время выполнения) определенного потока поддерживаются посредством TLS API ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), и [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Дополнительные сведения о реализации локального хранилища потока в Windows см. в разделе [локальное хранилище потока (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 и компилятор Visual C++ теперь поддерживают статически привязываемые (во время загрузки) данные потока, в дополнение к существующей реализации API.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>Реализация компилятора для TLS  
+##  <a name="_core_compiler_implementation_for_tls"></a> Реализация компилятора для TLS  
  **C ++ 11:** `thread_local` спецификатор класса хранения — рекомендуемый способ указать локальное хранилище потока для объектов и членов класса. Дополнительные сведения см. в разделе [классы хранения (C++)](../cpp/storage-classes-cpp.md).  
   
  Visual C++ также предоставляет атрибут систем Майкрософт, [поток](../cpp/thread.md), как расширенный модификатор класса хранилища. Используйте `__declspec` ключевое слово для объявления **поток** переменной. В следующем примере кода показано, как объявлять целочисленную локальную переменную потока и инициализировать её некоторым значением:  
@@ -119,7 +119,7 @@ __declspec( thread ) int tls_i = 1;
   
      C++ не допускает такой динамической инициализации данных потока из-за возможных будущих улучшений локального хранилища потока.  
   
--   В операционных системах Windows до [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] `__declspec`(thread) имеет некоторые ограничения. Если библиотека DLL объявляет любые данные или объекты как `__declspec`(thread), это может привести к сбою защиты при динамической загрузке. После загрузки библиотеки DLL с [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), сбой в системе всякий раз, когда код ссылается на `__declspec`данных (thread). Поскольку пространство глобальных переменных для потока выделяется во время выполнения, размер данного пространства основан на расчете требований приложению, а также требований всех библиотек DLL, которые привязываются статически. При использовании `LoadLibrary` невозможно расширить это пространство, чтобы объявлять локальные переменные потока с помощью `__declspec`(thread). Используйте API-интерфейсы TLS, например [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), библиотеки DLL, чтобы выделить TLS, если библиотека DLL может загружаться с помощью `LoadLibrary`.  
+-   В операционных системах Windows до Windows Vista `__declspec`(thread) имеет некоторые ограничения. Если библиотека DLL объявляет любые данные или объекты как `__declspec`(thread), это может привести к сбою защиты при динамической загрузке. После загрузки библиотеки DLL с [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), сбой в системе всякий раз, когда код ссылается на `__declspec`данных (thread). Поскольку пространство глобальных переменных для потока выделяется во время выполнения, размер данного пространства основан на расчете требований приложению, а также требований всех библиотек DLL, которые привязываются статически. При использовании `LoadLibrary` невозможно расширить это пространство, чтобы объявлять локальные переменные потока с помощью `__declspec`(thread). Используйте API-интерфейсы TLS, например [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), библиотеки DLL, чтобы выделить TLS, если библиотека DLL может загружаться с помощью `LoadLibrary`.  
   
 ## <a name="see-also"></a>См. также  
  [Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)   

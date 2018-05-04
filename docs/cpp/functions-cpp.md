@@ -2,11 +2,8 @@
 title: Функции (C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>Функции (C++)
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< Заголовок
-4. Помимо использования само возвращаемое значение, можно «вернуть» значения путем определения любое количество параметров для использования передачи по ссылке, чтобы функция может изменить или инициализации значений объектов, вызывающим. Дополнительные сведения см. в разделе [аргументы функции ссылочного типа](reference-type-function-arguments.md).  
-  
-## <a name="function-pointers"></a>Указатели на функции  
- Как и в C, в C++ поддерживаются указатели на функции. Однако более типобезопасной альтернативой обычно служит использование объекта-функции.  
-  
- При объявлении функции, которая возвращает тип указателя на функцию, рекомендуется использовать ключевое слово `typedef`, чтобы объявить псевдоним для типа указателя на функцию.  Пример  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- Если оно не используется, то правильный синтаксис объявления функции можно вывести из синтаксиса декларатора для указателя на функцию, заменив идентификатор (в приведенном выше примере — `fp`) на имя функции и список аргументов, как показано выше:  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- Это объявление эквивалентно объявлению при помощи ключевого слова typedef, которое приводилось выше.  
-  
-## <a name="see-also"></a>См. также  
- [Перегрузка функции](../cpp/function-overloading.md)   
- [Функции со списками аргументов переменных](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [Явно заданные и удаленные функции](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [Поиск имени с зависимостью от аргументов (поиск Koenig) функций](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [Аргументы по умолчанию](../cpp/default-arguments.md)   
- [Встроенные функции](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>Возвращение несколько значений из функции
 
 Существует несколько способов для получения более одного значения из функции:
@@ -475,4 +441,3 @@ int (*myFunction(char* s))(int);
 - [Поиск имен функций с зависимостью от аргументов (поиск Koenig)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Аргументы по умолчанию](../cpp/default-arguments.md)
 - [Встраиваемые функции](../cpp/inline-functions-cpp.md)
->>>>>>> master

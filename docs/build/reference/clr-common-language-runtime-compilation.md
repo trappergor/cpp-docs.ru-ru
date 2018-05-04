@@ -1,13 +1,10 @@
 ---
-title: "-clr (компиляция CLR) | Документы Microsoft"
-ms.custom: 
+title: -clr (компиляция CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a754e6c2fd8c709fd0397a2c0f78a7385819c586
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1284d0300fcea3adc5f2884a7d1eff7862ff2b65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 Позволяет приложениям и компонентам использовать возможности из среды CLR.  
@@ -69,7 +64,7 @@ ms.lasthandoff: 02/14/2018
   
  Управляемая программа, которая не содержит метаданных сборки в манифесте, называется *модулем*. Параметр **noAssembly** можно использовать только для создания модуля. Если компиляция выполняется с параметром [/c](../../build/reference/c-compile-without-linking.md) и **/clr:noAssembly**, укажите параметр [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) на фазе компоновщика, чтобы создать модуль.  
   
- До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр**/LD** подразумевается при указании **/clr:noAssembly**.  
+ До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.  
   
  **/clr:initialAppDomain**  
  Позволяет приложению [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] работать в среде CLR версии 1. Если вы используете **initialAppDomain**, могут возникнуть некоторые проблемы, которые рассматриваются в [ошибки: исключение AppDomainUnloaded при использовании управляемых расширений для компонентов Visual C++](http://go.microsoft.com/fwlink/p/?linkid=169465) Майкрософт Поддержка веб-сайта.  
@@ -90,7 +85,7 @@ ms.lasthandoff: 02/14/2018
   
  В куче сбора мусора будут созданы экземпляры только типов среды CLR. Дополнительные сведения см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).  
   
- По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md). Параметр**/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.  
+ По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md). Параметр **/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.  
   
  Если компиляция выполняется с помощью **/c**, можно указать тип среды CLR выходного файла с [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).  
   

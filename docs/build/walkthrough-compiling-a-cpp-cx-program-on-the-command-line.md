@@ -1,27 +1,22 @@
 ---
-title: "Пошаговое руководство: Компиляция C + +/ CX программа в командной строке | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Компиляция C + +/ CX программа в командной строке | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0963f70047ea42893b1169c5da7c614766406280
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Пошаговое руководство. Компиляция программы на языке C++/CX из командной строки
 Можно создавать программы Visual C++ для среды выполнения Windows и компилировать их в командной строке. Visual C++ поддерживает расширения компонентов Visual C++ (C++/CX) с дополнительными типами и операторами, предназначенными для программной модели среды выполнения Windows. Можно использовать C + +/ CX для создания приложений для универсальной платформы Windows (UWP), Windows Phone 8.1 и Windows desktop. Дополнительные сведения см. в разделе [Обзор из c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) и [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  

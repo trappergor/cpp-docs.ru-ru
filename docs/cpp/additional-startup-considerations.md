@@ -1,12 +1,9 @@
 ---
-title: "Дополнительные сведения о запуске | Документы Microsoft"
-ms.custom: 
+title: Дополнительные сведения о запуске | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c05ce0fa1a80de8f5ab8b9335bbab22628f3f158
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additional-startup-considerations"></a>Дополнительные сведения о запуске
 В языке C++ при создании и уничтожении объекта может выполняться пользовательский код. Таким образом, важно понимать, какие инициализации выполняются перед входом в **основной** и какие деструкторы вызываются после выхода из **основной**. (Дополнительные сведения о создании и уничтожении объектов см. в разделе [конструкторы](../cpp/constructors-cpp.md) и [деструкторы](../cpp/destructors-cpp.md).)  

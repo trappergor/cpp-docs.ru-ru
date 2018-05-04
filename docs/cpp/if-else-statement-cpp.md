@@ -1,12 +1,9 @@
 ---
-title: "Оператор if-else (C++) | Документы Microsoft"
-ms.custom: 
+title: Оператор if-else (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>Оператор if-else (C++)
 Управляет условным ветвлением. Операторы в *блок if* выполняются только в том случае, если *выражение if* имеет ненулевое значение (или `true`). Если значение *выражение* отлично от нуля, *Выражение1* -блок else, если он имеется, пропускается и выполнения любых операторов в блоке. Если значение *выражение* равно нулю, то блок if пропускается и -блок else, если он имеется, выполняется. Выражения, вычисляемые в ненулевое значение —
@@ -176,7 +171,7 @@ int main()
  **Else** предложения `if...else` оператор связан с ближайшим предыдущих **Если** инструкции в той же области, у которого нет соответствующего **else** инструкция.   
 
 ## <a name="constexpr-if-statements"></a>constexpr Если инструкций
-**Visual Studio 2017 г 15,3 и более поздних версий** (с [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): В шаблонах функций, можно использовать **constexpr Если** инструкции для принятия решений ветвления во время компиляции не приходится прибегать к несколько перегрузок функции. Например можно написать одной функции, дескрипторы параметра при распаковке (не требуется ни одна перегрузка параметра нулевого): 
+**Visual Studio 2017 г 15,3 и более поздних версий** (с [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): В шаблонах функций, можно использовать **constexpr Если** инструкции для принятия решений ветвления компиляции без не прибегать к несколько перегрузок функции. Например можно написать одной функции, дескрипторы параметра при распаковке (не требуется ни одна перегрузка параметра нулевого): 
 
 ```cpp
 template <class T, class... Rest>

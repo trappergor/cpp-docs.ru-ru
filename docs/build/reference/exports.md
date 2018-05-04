@@ -1,13 +1,10 @@
 ---
-title: "ЭКСПОРТЫ | Документы Microsoft"
-ms.custom: 
+title: ЭКСПОРТЫ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - EXPORTS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f9a8e902e42d44ffa292b9f821839b8e948d7a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc7a9995fdc5be786712752e30015337b9f1607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exports"></a>EXPORTS
 Начинает раздел, состоящий из одного или нескольких определений экспорта, в которых указываются имена или порядковые номера экспортируемых функций или данных. Каждое определение должно находиться в отдельной строке.  
@@ -77,7 +72,7 @@ EXPORTS
   
 3.  [И экспорт](../../build/reference/export-exports-a-function.md) спецификации в команде LINK  
   
-4.  Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, формы`#pragma comment(linker, "/export: definition ")`  
+4.  Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, формы `#pragma comment(linker, "/export: definition ")`  
   
  Все эти методы можно использовать в одной программе. Когда программа LINK создает программу, содержащую экспорты, она также создает библиотеку импорта (если только при построении не используется файл EXP).  
   

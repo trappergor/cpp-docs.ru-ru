@@ -2,12 +2,9 @@
 title: Основные принципы работы COM-объекты ATL | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Основные принципы работы COM-объекты ATL
 На следующем рисунке показана связь между классы и интерфейсы, которые используются для определения ATL COM-объекта.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  На этой диаграмме показано, что `CComObject` является производным от `CYourClass` в то время как `CComAggObject` и `CComPolyObject` включают `CYourClass` как переменную-член.  
   
- Существует три способа определения ATL COM-объекта. Стандартный вариант — использовать `CComObject` класс, производный от `CYourClass`. Второй параметр — Создание вычисляемого объекта с помощью `CComAggObject` класса. Третий вариант — использовать `CComPolyObject` класса. `CComPolyObject`выступает в качестве гибридной: он может работать как `CComObject` класса или как `CComAggObject` класса, в зависимости от того, как он впервые создается. Дополнительные сведения об использовании `CComPolyObject` см. в описании [CComPolyObject класса](../atl/reference/ccompolyobject-class.md).  
+ Существует три способа определения ATL COM-объекта. Стандартный вариант — использовать `CComObject` класс, производный от `CYourClass`. Второй параметр — Создание вычисляемого объекта с помощью `CComAggObject` класса. Третий вариант — использовать `CComPolyObject` класса. `CComPolyObject` выступает в качестве гибридной: он может работать как `CComObject` класса или как `CComAggObject` класса, в зависимости от того, как он впервые создается. Дополнительные сведения об использовании `CComPolyObject` см. в описании [CComPolyObject класса](../atl/reference/ccompolyobject-class.md).  
   
  При использовании стандартных ATL COM, можно использовать два объекта: объект внешнего и внутреннего объекта. Внешним клиентам доступ к функциям внутреннего объекта через функции-оболочки, которые определены в внешнего объекта. Внешний объект имеет тип `CComObject`.  
   

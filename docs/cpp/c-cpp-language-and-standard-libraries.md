@@ -1,34 +1,29 @@
 ---
-title: "Стандартные библиотеки и язык C/C++ | Документы Microsoft"
-ms.custom: 
+title: Стандартные библиотеки и язык C/C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc58bcbff7be7b3b595f5b46882d5434dc314
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66baee038c9ea1d46daff80250e007bd059c2e85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-language-and-standard-libraries"></a>Стандартные библиотеки и язык C/C++
 Этот раздел документации содержит рекомендации и справочные материалы для реализации Майкрософт стандартов ISO C и C++.  
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Возвращение к C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Описание и рекомендации для современных идиомами программирования C++.|  
 |[Справочник по языку C++](../cpp/cpp-language-reference.md)|Справочные материалы по языкам C++.|  

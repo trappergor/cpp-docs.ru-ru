@@ -2,11 +2,8 @@
 title: Общие сведения о трансляции файлов | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>Общие сведения о трансляции файлов
 Программы на языке C++ подобно программам на языке C состоят из одного или нескольких файлов. Каждый из этих файлов преобразуется в указанном ниже концептуальном порядке (реальный порядок соответствует правилу "как если бы": преобразование должно происходить так, как если бы соблюдался следующий порядок действий).  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Один предустановленный макрос **__cplusplus**, определяется только для C++. В разделе [предустановленные макросы](../preprocessor/predefined-macros.md) в *справочника по препроцессору* для получения дополнительной информации.  
   
--   Препроцессор C не распознает операторы C++: **.\*** ,  **-> \*** , и `::`. В разделе [операторы](../cpp/cpp-built-in-operators-precedence-and-associativity.md) и [выражений](../cpp/expressions-cpp.md), Дополнительные сведения об операторах.  
+-   Препроцессор C не распознает операторы C++: **.\*** , **-> \***, и `::`. В разделе [операторы](../cpp/cpp-built-in-operators-precedence-and-associativity.md) и [выражений](../cpp/expressions-cpp.md), Дополнительные сведения об операторах.  
   
 ## <a name="see-also"></a>См. также  
  [Лексические соглашения](../cpp/lexical-conventions.md)

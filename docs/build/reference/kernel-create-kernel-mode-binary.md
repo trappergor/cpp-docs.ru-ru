@@ -1,30 +1,25 @@
 ---
-title: "-ядра (создать ядра двоичный режим) | Документы Microsoft"
-ms.custom: 
+title: -ядра (создать ядра двоичный режим) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (создание двоичного режима ядра)
 Создает двоичный файл, который может выполняться в ядре Windows.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **/ kernel**  
+ **/kernel**  
  Код в текущий проект компилируется и компонуется с помощью набора правил языка C++, относящиеся к коду, который будет выполняться в режиме ядра.  
   
  **/kernel-**  
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  Некоторые следующие сочетания целевой архитектуры и **/arch** параметр сообщает об ошибке, если они используются с **/kernel**:  
   
--   **/ arch: {SSE &#124; SSE2 &#124; AVX}** x86 не поддерживаются. Только **/arch:IA32** поддерживается с **/kernel** на x86.  
+-   **/ arch: {SSE&#124;SSE2&#124;AVX}** x86 не поддерживаются. Только **/arch:IA32** поддерживается с **/kernel** на x86.  
   
 -   **/ arch: AVX** не поддерживается с **/kernel** на x64.  
   
@@ -91,7 +86,7 @@ class NONPAGESECTION MyNonPagedClass
     ||**/ kernel** obj|**/kernel-** obj MASM obj или cvtresed|Сочетание **/kernel** и **/kernel-** objs|  
     |-|----------------------|-----------------------------------------------|-------------------------------------------------|  
     |**/ kernel ссылку**|Да|Да|Да, с помощью предупреждение LNK4257|  
-    |**ссылка**|Да|Да|Да|  
+    |**Ссылка**|Да|Да|Да|  
   
      **Связующий объект LNK4257 не компилируется с параметром/kernel; образ нельзя запустить**  
   

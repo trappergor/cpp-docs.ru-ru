@@ -1,27 +1,27 @@
 ---
-title: "Приложения UWP, среда выполнения Windows и среда выполнения C | Microsoft Docs"
-ms.custom: 
+title: Приложения UWP, среда выполнения Windows и среда выполнения C | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9e6053cdcd7797319379e1e5e7290bcff373b6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Приложения UWP, среда выполнения Windows и среда выполнения C
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/14/2018
 
 - Большая часть функций CRT, связанных с неподдерживаемой функциональностью.
 
-   Например, приложение UWP не может создать процесс с помощью семейств подпрограмм `exec` и `spawn`.
+   Например, приложение UWP не может создать процесс с помощью семейств подпрограмм **exec** и **spawn**.
 
    Если функция CRT не поддерживается в приложении UWP, это будет отражено в справочной статье по этой функции.
 
@@ -58,4 +58,7 @@ ms.lasthandoff: 02/14/2018
 Полный список функций CRT, которые недоступны в приложениях UWP, и предлагаемые альтернативы см. в статье [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="see-also"></a>См. также
- [Совместимость](../c-runtime-library/compatibility.md) [Функции CRT, которые не поддерживаются средой выполнения Windows](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)
+
+[Совместимость](../c-runtime-library/compatibility.md)<br/>
+[Функции CRT, которые не поддерживаются средой выполнения Windows](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "Параметры, мастер страницы свойств ATL | Документы Microsoft"
-ms.custom: 
+title: Параметры, мастер страницы свойств ATL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbc27457fa3ace7b1cdfad4894bbd296739de2ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8e7edfb2cb4040238985c6cd78e8f1e5756f4d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
 Эта страница мастера позволяет определить потоковую модель и уровень агрегирования страницы свойств, который вы создаете.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  В разделе [указание потоковой модели проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для получения дополнительной информации.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`Single`|На странице свойств выполняется только в основном потоке COM.|  
 |**Подразделение**|На странице свойств могут создаваться в любом однопотоковом подразделении. По умолчанию.|  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  **Статистическая обработка**  
  Добавляет поддержку статистической обработки для страницы свойств, который вы создаете. В разделе [статистической обработки](../../atl/aggregation.md) для получения дополнительной информации.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Да**|Создание страницы свойств, который может быть статистически вычислена.|  
 |**No**|Создание страницы свойств, невозможно выполнить статистическую обработку.|  

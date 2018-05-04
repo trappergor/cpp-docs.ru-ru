@@ -2,26 +2,21 @@
 title: Определяемые пользователем литералы (C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>Определяемые пользователем литералы (C++)
 Существует пять основных категорий литералов: целое число, символ, число с плавающей запятой, строка, логическое значение и указатель.  Начиная с версии C++ 11, можно определять собственные литералы на основе этих категорий для создания синтаксических ярлыков для общих идиом и повышения безопасности типов. Например, предположим, имеется класс "Расстояние". Можно определить один литерал для километров и еще один — для миль и требовать от пользователя указывать явно единицы измерения, написав: auto d = 42,0_km или auto d = 42,0_mi. Определяемые пользователем литералы не дают выигрыша в производительности. Они служат, главным образом, для удобства и для определения типов во время компиляции. Стандартная библиотека содержит определяемые пользователем литералы для std: String, std::complex и единиц времени и продолжительности операций в \<chrono > заголовка:  

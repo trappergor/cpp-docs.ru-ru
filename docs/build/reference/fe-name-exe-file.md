@@ -1,13 +1,10 @@
 ---
-title: "-Fe (именование EXE-файла) | Документы Microsoft"
-ms.custom: 
+title: -Fe (именование EXE-файла) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fe
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74892ef670ed53e68701730fdb71554989a495c
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fe-name-exe-file"></a>/Fe (именование EXE-файла)
 
@@ -37,12 +32,12 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/Fe**[_pathname_]  
-> **/Fe:** _pathname_  
+> **/FE**[_pathname_]  
+> **-Fe:** _pathname_  
 
 ### <a name="arguments"></a>Аргументы
 
-*pathname*<br/>
+*PathName*<br/>
 Абсолютный или относительный путь и имя базового файла или относительный или абсолютный путь к каталогу или базовое имя файла для создаваемого исполняемого файла.
 
 ## <a name="remarks"></a>Примечания

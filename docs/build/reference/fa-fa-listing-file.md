@@ -1,13 +1,10 @@
 ---
-title: "/ FA, /Fa (файл листинга) | Документы Microsoft"
-ms.custom: 
+title: / FA, /Fa (файл листинга) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (файл листинга)
 Создает файл листинга, содержащего кода на языке ассемблера.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 `s`  
 Необязательный. В списке, включает исходный код.  
   
-`u`Необязательный параметр. Файл списка в формате UTF-8 и содержит метку порядка байтов. По умолчанию файл кодировке ANSI. Используйте `u` Чтобы создать файл листинга, который будет правильно отображать в любой системе, или если вы используете Юникода файлы исходного кода в качестве входного для компилятора.  
+`u` Необязательный. Файл списка в формате UTF-8 и содержит метку порядка байтов. По умолчанию файл кодировке ANSI. Используйте `u` Чтобы создать файл листинга, который будет правильно отображать в любой системе, или если вы используете Юникода файлы исходного кода в качестве входного для компилятора.  
   
 Если оба `s` и `u` были указаны, а если файл исходного кода использует кодировку Юникод, отличного от UTF-8, то строки кода в файле ASM могут отображаться неправильно.  
   
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
 *файл имяфайла.расширение*  
 Файл с именем *файл имяфайла.расширение* помещается в текущем каталоге. Это допустимо только при компиляции одного файла исходного кода.  
   
-*каталог*\  
+*Каталог*\  
 Один *файл с именем исходный_файл*ASM-файл, который помещается в указанном *каталога* для каждого файла исходного кода при компиляции. Обратите внимание, требуется обратную косую черту. Разрешены только пути на текущем диске.  
   
 *каталог*\\*filename* файл с именем *filename*.asm помещается в указанный *каталога*. Это допустимо только при компиляции одного файла исходного кода.  

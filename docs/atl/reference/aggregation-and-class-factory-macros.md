@@ -1,12 +1,9 @@
 ---
-title: "Агрегирование и макросы фабрики класса | Документы Microsoft"
-ms.custom: 
+title: Агрегирование и макросы фабрики класса | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::DECLARE_AGGREGATABLE
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d18afdfe08a97a7a685b373b1f8951799836ab1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8569d4ecbbd74a6d2d37701a4ec22e56cbe9f100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Агрегирование и макросы фабрики класса
 Эти макросы обеспечивают способы управления статистической обработки и объявления фабрик классов.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
    
-##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
+##  <a name="declare_aggregatable"></a>  DECLARE_AGGREGATABLE  
  Указывает, что объект может быть статистически вычислена.  
   
 ```
@@ -76,7 +71,7 @@ DECLARE_AGGREGATABLE( x )
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
+##  <a name="declare_classfactory"></a>  DECLARE_CLASSFACTORY  
  Объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) быть фабрики класса.  
   
 ```
@@ -89,7 +84,7 @@ DECLARE_CLASSFACTORY()
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
-##  <a name="ccomclassfactory_class"></a>Класс CComClassFactory  
+##  <a name="ccomclassfactory_class"></a>  Класс CComClassFactory  
  Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейса.  
   
 ```
@@ -98,7 +93,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CComClassFactory`реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс, который содержит методы для создания объекта конкретного CLSID, а также блокировки фабрики класса в памяти и позволяют быстрее создавать новые объекты. **IClassFactory** должен быть реализован для каждого класса, зарегистрированный в системном реестре и которые присваивают CLSID.  
+ `CComClassFactory` реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейс, который содержит методы для создания объекта конкретного CLSID, а также блокировки фабрики класса в памяти и позволяют быстрее создавать новые объекты. **IClassFactory** должен быть реализован для каждого класса, зарегистрированный в системном реестре и которые присваивают CLSID.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет `CComClassFactory` как фабрика класса по умолчанию. Чтобы переопределить это поведение по умолчанию, укажите один из `DECLARE_CLASSFACTORY` *XXX* макросы в определении класса. Например [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) макрос использует указанный класс фабрики класса:  
   
@@ -114,7 +109,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) использует [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), который создает один [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) объекта.  
   
-##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
+##  <a name="declare_classfactory_ex"></a>  DECLARE_CLASSFACTORY_EX  
  Объявляет `cf` быть фабрики класса.  
   
 ```
@@ -133,7 +128,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]  
   
-##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
+##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2  
  Объявляет [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) быть фабрики класса.  
   
 ```
@@ -150,7 +145,7 @@ DECLARE_CLASSFACTORY2( lic )
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
-##  <a name="ccomclassfactory2_class"></a>Класс CComClassFactory2  
+##  <a name="ccomclassfactory2_class"></a>  Класс CComClassFactory2  
  Этот класс реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейса.  
   
 ```
@@ -161,7 +156,7 @@ class  CComClassFactory2 : public IClassFactory2,
 ```    
   
 ### <a name="parameters"></a>Параметры  
- *лицензии*  
+ *Лицензии*  
  Класс, реализующий следующие статические функции:  
   
 - **статические VerifyLicenseKey BOOL (BSTR** `bstr` **);**  
@@ -171,7 +166,7 @@ class  CComClassFactory2 : public IClassFactory2,
 - **статические BOOL IsLicenseValid ();**  
   
 ### <a name="remarks"></a>Примечания  
- `CComClassFactory2`реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение для [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** создавать с помощью лицензии объекта элементов управления. Выполнения фабрики класса лицензированных компьютера можно ввести ключ лицензии во время выполнения. Это лицензионный ключ позволяет приложению для создания экземпляров объектов, при полной машины лицензии не существует.  
+ `CComClassFactory2` реализует [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) интерфейс, который представляет собой расширение для [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). **IClassFactory2** создавать с помощью лицензии объекта элементов управления. Выполнения фабрики класса лицензированных компьютера можно ввести ключ лицензии во время выполнения. Это лицензионный ключ позволяет приложению для создания экземпляров объектов, при полной машины лицензии не существует.  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрика класса по умолчанию. Для использования `CComClassFactory2`, укажите [DECLARE_CLASSFACTORY2](#declare_classfactory2) макроса в определении класса объекта. Пример:  
   
@@ -181,9 +176,9 @@ class  CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]  
   
- `CComClassFactory2`наследует от **CComClassFactory2Base** и *лицензии*. **CComClassFactory2Base**, в свою очередь, является производным от **IClassFactory2** и **CComObjectRootEx\< CComGlobalsThreadModel >**.  
+ `CComClassFactory2` наследует от **CComClassFactory2Base** и *лицензии*. **CComClassFactory2Base**, в свою очередь, является производным от **IClassFactory2** и **CComObjectRootEx\< CComGlobalsThreadModel >**.  
   
-##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
+##  <a name="declare_classfactory_auto_thread"></a>  DECLARE_CLASSFACTORY_AUTO_THREAD  
  Объявляет [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) быть фабрики класса.  
   
 ```
@@ -198,7 +193,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="ccomclassfactoryautothread_class"></a>Класс CComClassFactoryAutoThread  
+##  <a name="ccomclassfactoryautothread_class"></a>  Класс CComClassFactoryAutoThread  
  Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейса и позволяет создавать в нескольких подразделениях объекты.  
   
 > [!IMPORTANT]
@@ -210,13 +205,13 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CComClassFactoryAutoThread`Аналогично [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), но позволяет объектам должен быть создан в нескольких подразделениях. Чтобы воспользоваться преимуществами этой поддержки, являются производными модуля exe-ФАЙЛ из [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ `CComClassFactoryAutoThread` Аналогично [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), но позволяет объектам должен быть создан в нескольких подразделениях. Чтобы воспользоваться преимуществами этой поддержки, являются производными модуля exe-ФАЙЛ из [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрика класса по умолчанию. Для использования `CComClassFactoryAutoThread`, укажите [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread) макроса в определении класса объекта. Пример:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
+##  <a name="declare_classfactory_singleton"></a>  DECLARE_CLASSFACTORY_SINGLETON  
  Объявляет [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) быть фабрики класса.  
   
 ```
@@ -233,7 +228,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="ccomclassfactorysingleton_class"></a>Класс CComClassFactorySingleton  
+##  <a name="ccomclassfactorysingleton_class"></a>  Класс CComClassFactorySingleton  
  Этот класс является производным от [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) и использует [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) для создания объекта.  
   
 > [!IMPORTANT]
@@ -248,14 +243,14 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  Класс.  
   
- `CComClassFactorySingleton`является производным от [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) и использует [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) для создания объекта. Каждый вызов `CreateInstance` метод просто запрашивает этот объект для указателя на интерфейс.  
+ `CComClassFactorySingleton` является производным от [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) и использует [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) для создания объекта. Каждый вызов `CreateInstance` метод просто запрашивает этот объект для указателя на интерфейс.  
   
 ### <a name="remarks"></a>Примечания  
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](#declare_classfactory), который объявляет `CComClassFactory` как фабрика класса по умолчанию. Для использования `CComClassFactorySingleton`, укажите [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) макроса в определении класса объекта. Пример:  
   
  [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
+##  <a name="declare_get_controlling_unknown"></a>  DECLARE_GET_CONTROLLING_UNKNOWN  
  Объявляет виртуальную функцию `GetControllingUnknown`.  
   
 ```
@@ -265,7 +260,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 ### <a name="remarks"></a>Примечания  
  Добавьте этот макрос в объект, если вы получаете сообщение об ошибке компилятора `GetControllingUnknown` не определен (например, в **CComAggregateCreator**).  
   
-##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
+##  <a name="declare_not_aggregatable"></a>  DECLARE_NOT_AGGREGATABLE  
  Указывает, что невозможно выполнить статистическую обработку объекта.  
   
 ```
@@ -277,14 +272,14 @@ DECLARE_NOT_AGGREGATABLE( x )
  [in] Имя класса объекта, который был определен как невозможна.  
   
 ### <a name="remarks"></a>Примечания  
- `DECLARE_NOT_AGGREGATABLE`вызывает `CreateInstance` будут возвращать ошибку ( **CLASS_E_NOAGGREGATION**) при попытке для статистической обработки на объект.  
+ `DECLARE_NOT_AGGREGATABLE` вызывает `CreateInstance` будут возвращать ошибку ( **CLASS_E_NOAGGREGATION**) при попытке для статистической обработки на объект.  
   
  По умолчанию [CComCoClass](../../atl/reference/ccomcoclass-class.md) содержит [DECLARE_AGGREGATABLE](#declare_aggregatable) макросом, который указывает, что объект может быть статистически вычислена. Чтобы переопределить это поведение по умолчанию, включите `DECLARE_NOT_AGGREGATABLE` в определении класса.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
+##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE  
  Указывает, что ваш объект должен быть агрегатом.  
   
 ```
@@ -296,15 +291,15 @@ DECLARE_ONLY_AGGREGATABLE( x )
  [in] Имя класса объекта, который был определен как только статистическую обработку.  
   
 ### <a name="remarks"></a>Примечания  
- `DECLARE_ONLY_AGGREGATABLE`вызывает ошибку ( **E_FAIL**), если предпринята попытка **CoCreate** объект как неагрегированные объект.  
+ `DECLARE_ONLY_AGGREGATABLE` вызывает ошибку ( **E_FAIL**), если предпринята попытка **CoCreate** объект как неагрегированные объект.  
   
  По умолчанию [CComCoClass](../../atl/reference/ccomcoclass-class.md) содержит [DECLARE_AGGREGATABLE](#declare_aggregatable) макросом, который указывает, что объект может быть статистически вычислена. Чтобы переопределить это поведение по умолчанию, включите `DECLARE_ONLY_AGGREGATABLE` в определении класса.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#125](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]  
   
-##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
- Указывает, что экземпляр **CComPolyObject \<**  *x*  **>**  создается при создании объекта.  
+##  <a name="declare_poly_aggregatable"></a>  DECLARE_POLY_AGGREGATABLE  
+ Указывает, что экземпляр **CComPolyObject \<**  *x* **>** создается при создании объекта.  
   
 ```
 DECLARE_POLY_AGGREGATABLE( x )
@@ -321,7 +316,7 @@ DECLARE_POLY_AGGREGATABLE( x )
   
  `DECLARE_POLY_AGGREGATABLE` Макрос автоматически объявляются в объекте при использовании мастер элементов управления ATL, чтобы создать полный доступ.  
   
-##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT  
 
  Защищает от удаления, если объект (во время [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) внутренний объект агрегированных увеличивает счетчик ссылок, а затем уменьшает число 0.  
   
@@ -329,7 +324,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```  
   
-##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
+##  <a name="declare_view_status"></a>  DECLARE_VIEW_STATUS  
  Поместите этот макрос в элемент управления ActiveX библиотеки ATL класс элемента управления, чтобы указать **Просмотр СОСТОЯНИЯ** флаги в контейнер.  
   
 ```

@@ -2,12 +2,9 @@
 title: -EXPORT (экспортирует функцию) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (экспортирует функцию)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Примечания  
  В этом случае функцию можно экспортировать из программы, чтобы другие программы можно вызвать функцию. Можно также экспортировать данные. Экспорт обычно определяется в библиотеке DLL.  
   
- *Имя* является имя элемента данных или функции, как он будет использоваться вызывающей программой. `ordinal`Задает индекс в таблице экспорта в диапазоне от 1 до 65 535; Если вы не укажете `ordinal`, будет назначен командой LINK. **NONAME** ключевое слово экспортирует функцию только по порядковому номеру, без *имя*.  
+ *Имя* является имя элемента данных или функции, как он будет использоваться вызывающей программой. `ordinal` Задает индекс в таблице экспорта в диапазоне от 1 до 65 535; Если вы не укажете `ordinal`, будет назначен командой LINK. **NONAME** ключевое слово экспортирует функцию только по порядковому номеру, без *имя*.  
   
  **Данные** ключевое слово указывает, что экспортированный элемент является элементом данных. Элемент данных в клиентской программе должен быть объявлен с помощью **extern __declspec(dllimport)**.  
   

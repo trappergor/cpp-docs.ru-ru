@@ -2,11 +2,8 @@
 title: Класс CWndClassInfo | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 878d6065f3a158ac4404620205ef9c60912d89ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwndclassinfo-class"></a>Класс CWndClassInfo
 Этот класс предоставляет методы для регистрации сведений о для класса окна.  
@@ -69,13 +64,13 @@ class CWndClassInfo
 |[pWndProc](#pwndproc)|Указывает процедуру окна существующего класса окна.|  
   
 ## <a name="remarks"></a>Примечания  
- `CWndClassInfo`Управляет данными класса окна. Как правило, используется `CWndClassInfo` посредством одного из трех макросов `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, или `DECLARE_WND_SUPERCLASS`, как описано в следующей таблице:  
+ `CWndClassInfo` Управляет данными класса окна. Как правило, используется `CWndClassInfo` посредством одного из трех макросов `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, или `DECLARE_WND_SUPERCLASS`, как описано в следующей таблице:  
   
-|Макрос|Описание:|  
+|Макрос|Описание|  
 |-----------|-----------------|  
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`Регистрирует сведения для нового класса окна.|  
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`Регистрирует сведения для нового класса окна, включая параметры класса.|  
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo`Регистрирует сведения для класса окна, который основан на существующем классе, но использует другую процедуру окна. Этот прием называется создание суперклассов.|  
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` Регистрирует сведения для нового класса окна.|  
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` Регистрирует сведения для нового класса окна, включая параметры класса.|  
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` Регистрирует сведения для класса окна, который основан на существующем классе, но использует другую процедуру окна. Этот прием называется создание суперклассов.|  
   
  По умолчанию [CWindowImpl](../../atl/reference/cwindowimpl-class.md) включает `DECLARE_WND_CLASS` макрос для создания окна на основании нового класса окна. DECLARE_WND_CLASS предоставляет стили по умолчанию и цвет фона для элемента управления. Если требуется задать стиль и цвет фона самостоятельно вашей создайте класс, производный от `CWindowImpl` и включать `DECLARE_WND_CLASS_EX` макроса в определении класса.  
   
@@ -90,14 +85,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
-##  <a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>  CWndClassInfo::m_atom  
  Содержит уникальный идентификатор класса зарегистрированного окна.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor  
  Если **TRUE**, курсор на системном ресурсе будут загружаться при регистрации класса окна.  
   
 ```
@@ -107,9 +102,9 @@ BOOL m_bSystemCursor;
 ### <a name="remarks"></a>Примечания  
  В противном случае курсор ресурсов, содержащихся в модуле будут загружены.  
   
- `CWndClassInfo`использует `m_bSystemCursor` только если [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (по умолчанию в [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) или [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) указан макрос. В этом случае `m_bSystemCursor` инициализируется **TRUE**. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
+ `CWndClassInfo` использует `m_bSystemCursor` только если [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (по умолчанию в [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) или [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) указан макрос. В этом случае `m_bSystemCursor` инициализируется **TRUE**. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
   
-##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID  
  Задает имя ресурса курсор или идентификатор ресурса в младшее слово и ноль в word высокого порядка.  
   
 ```
@@ -119,9 +114,9 @@ LPCTSTR m_lpszCursorID;
 ### <a name="remarks"></a>Примечания  
  При регистрации класса окна, дескриптор курсора определяется `m_lpszCursorID` извлекается и хранятся в [m_wc](#m_wc).  
   
- `CWndClassInfo`использует `m_lpszCursorID` только если [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (по умолчанию в [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) или [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) указан макрос. В этом случае `m_lpszCursorID` инициализируется **IDC_ARROW**. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
+ `CWndClassInfo` использует `m_lpszCursorID` только если [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (по умолчанию в [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) или [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) указан макрос. В этом случае `m_lpszCursorID` инициализируется **IDC_ARROW**. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
   
-##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName  
  Содержит имя существующего класса окна.  
   
 ```
@@ -129,9 +124,9 @@ LPCTSTR m_lpszOrigName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CWndClassInfo`использует `m_lpszOrigName` только при включении [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макроса в определении класса. В этом случае `CWndClassInfo` регистрирует класс окна на основе класса с именем `m_lpszOrigName`. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
+ `CWndClassInfo` использует `m_lpszOrigName` только при включении [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макроса в определении класса. В этом случае `CWndClassInfo` регистрирует класс окна на основе класса с именем `m_lpszOrigName`. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
   
-##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName  
  Содержит имя класса окна.  
   
 ```
@@ -139,9 +134,9 @@ TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CWndClassInfo`использует `m_szAutoName` только тогда, когда **NULL** передается `WndClassName` параметр [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) или [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL формируется имя при регистрации класса окна.  
+ `CWndClassInfo` использует `m_szAutoName` только тогда, когда **NULL** передается `WndClassName` параметр [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) или [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass). ATL формируется имя при регистрации класса окна.  
   
-##  <a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
  Хранит сведения о классе окна в [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) структуры.  
   
 ```
@@ -153,7 +148,7 @@ WNDCLASSEX m_wc;
   
  Если вы указали [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос, `m_wc` содержит сведения о суперклассе — класс окна, который основан на существующем классе, но использует другую процедуру окна. [m_lpszOrigName](#m_lpszorigname) и [pWndProc](#pwndproc) сохранить имя существующего класса окна и процедуру окна, соответственно.  
   
-##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc  
  Указывает процедуру окна существующего класса окна.  
   
 ```
@@ -161,9 +156,9 @@ WNDPROC pWndProc;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `CWndClassInfo`использует `pWndProc` только при включении [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макроса в определении класса. В этом случае `CWndClassInfo` регистрирует класс окна, который основан на существующем классе, но использует другую процедуру окна. Оконная функция существующий класс окна сохраняется в `pWndProc`. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
+ `CWndClassInfo` использует `pWndProc` только при включении [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макроса в определении класса. В этом случае `CWndClassInfo` регистрирует класс окна, который основан на существующем классе, но использует другую процедуру окна. Оконная функция существующий класс окна сохраняется в `pWndProc`. Дополнительные сведения см. в разделе [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) Обзор.  
   
-##  <a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>  CWndClassInfo::Register  
  Вызывается методом [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) зарегистрировать класс окна, если он не был зарегистрирован.  
   
 ```

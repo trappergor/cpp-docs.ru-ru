@@ -1,12 +1,9 @@
 ---
-title: "Числовые, логические литералы и литералы-указатели (C++) | Документы Microsoft"
-ms.custom: 
+title: Числовые, логические литералы и литералы-указатели (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Числовые, логические литералы и литералы-указатели (C++)
 Литерал — это элемент программы, который непосредственно представляет значение. В этой статье описываются литералы целого типа, с плавающей запятой, логического типа и типа указателя. Сведения о строковых и символьных литералах см. в разделе [строковые и символьные литералы (C++)](../cpp/string-and-character-literals-cpp.md). Можно также определить собственные литералы на основе любого из этих категорий; Дополнительные сведения см. [определяемые пользователем литералы (C++)](../cpp/user-defined-literals-cpp.md)  
