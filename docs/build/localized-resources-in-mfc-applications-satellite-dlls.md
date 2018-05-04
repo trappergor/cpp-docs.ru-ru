@@ -1,13 +1,10 @@
 ---
-title: "Локализованные ресурсы в приложениях MFC: вспомогательные библиотеки DLL | Документы Microsoft"
-ms.custom: 
+title: 'Локализованные ресурсы в приложениях MFC: вспомогательные библиотеки DLL | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Локализованные ресурсы в приложениях MFC. Вспомогательные библиотеки DLL
 MFC версии 7.0 и более поздних версий обеспечивает расширенную поддержку спутниковой связи DLL и функцию, которая позволяет создавать приложения, локализированные на различные языки. Вспомогательная DLL — [Библиотеку ресурсов](../build/creating-a-resource-only-dll.md) , содержащий ресурсы приложения, локализованные для определенного языка. При запуске приложения с помощью MFC автоматически загружает локализованные ресурсы, соответствующие для среды. Например можно создать приложение с ресурсами на английском языке две вспомогательные библиотеки DLL, одна из которых содержит перевода для французского языка ресурсы, а в другом немецкого языков. При запуске приложения в системе английского языка, он использует ресурсы на английском языке. Если запустить в системе, он использует французские ресурсы; Если запустить немецком системе, он использует ресурсы на немецком языке.  

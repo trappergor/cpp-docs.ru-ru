@@ -1,34 +1,29 @@
 ---
-title: "Общие сведения о x64 соглашения о вызовах | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о x64 соглашения о вызовах | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Общие сведения о соглашениях о вызовах для архитектуры x64
 Два важных отличия между x86 и [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] является возможность адресации 64-разрядной и плоский набор 16 64-битных регистров общего назначения. Предоставляя расширенный набор регистров, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] использует [__fastcall](../cpp/fastcall.md) соглашение о вызовах и модель RISC-архитектуры обработки исключений. `__fastcall` Соглашение использует регистры для первых четырех аргументов и кадр стека для передачи дополнительных аргументов.  
   
  Следующий параметр компилятора позволяет оптимизировать приложение для [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/ favor (оптимизация для особенностей архитектуры)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (оптимизация для особенностей архитектуры)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Соглашение о вызовах  
  [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] Двоичный интерфейс приложений (ABI) по умолчанию использует соглашение о вызовах fast вызов четыре регистра. Выделяется место в стеке вызовов в качестве теневого хранилища для вызывающих объектов для сохранения этих регистров. Имеется точное однозначное соответствие между аргументами в вызове функции и регистров, используемых для этих аргументов. Любой аргумент, который не умещается в 8 байт или не является 1, 2, 4 или 8 байт должны передаваться по ссылке. Нет не пытается разместить один аргумент по нескольким регистрам. X87 стек регистра не используется. Он может использоваться вызываемым, но должен быть временным при вызове функций. Число с плавающей запятой, все операции осуществляются с помощью 16 регистров XMM. Целочисленные аргументы передаются в регистрах RCX, RDX, R8 и R9. Число с плавающей запятой, что аргументы передаются в XMM0L, XMM1L, XMM2L и XMM3L. 16-байтовые аргументы передаются по ссылке. Передача параметров подробно описывается в [передача параметров](../build/parameter-passing.md). Регистры RAX, R10, R11, XMM4 и XMM5 считаются временными. Все остальные регистры являются долговременного. Использование регистров подробно рассматривается в [зарегистрировать использование](../build/register-usage.md) и [сохраненные регистры вызываемого и вызывающего объектов](../build/caller-callee-saved-registers.md).  

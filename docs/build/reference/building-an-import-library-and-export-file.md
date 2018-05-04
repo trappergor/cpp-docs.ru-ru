@@ -1,13 +1,10 @@
 ---
-title: "Построение библиотеки импорта и файла экспорта | Документы Microsoft"
-ms.custom: 
+title: Построение библиотеки импорта и файла экспорта | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>Построение библиотеки импорта и файла экспорта
 Построение библиотеки импорта и экспорта файла, используйте следующий синтаксис:  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  Спецификации/Export:*имя* в командной строке LIB  
   
-3.  Определение в **ЭКСПОРТОВ** инструкции`deffile`  
+3.  Определение в **ЭКСПОРТОВ** инструкции `deffile`  
   
  Это те же методы, используемые для указания экспортов при компоновке экспортирующей программы. Программа может использовать более одного метода. Можно указывать части команды LIB (например, несколько *объектных* или спецификации/export) в файле команд в команде LIB, подобно тому, как можно в команде LINK.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  *Имя* является имя элемента данных или функции, как он будет использоваться вызывающей программой. Кроме того, можно указать *внутреннееимя* как функции, известной определяющей программе; по умолчанию *внутреннееимя* совпадает со значением *имя*. `ordinal` Задает индекс в таблице экспорта в диапазоне от 1 до 65 535; Если вы не укажете `ordinal`, LIB назначает один. **NONAME** ключевое слово экспортирует функцию только по порядковому номеру, без *имя*. **Данные** ключевое слово используется для экспорта только для данных объектов.  
   
- / INCLUDE:`symbol`  
+ / INCLUDE: `symbol`  
  Добавляет указанный символ в таблицу символов. Этот параметр полезен для принудительного применения объект библиотеки, в противном случае не будет включен.  
   
  Обратите внимание, что при создании библиотеки импорта в предварительном этапе перед созданием DLL-файла, вам необходимо использовать тот же набор объектных файлов при построении DLL-файл, как пройденный при сборке библиотеки импорта.  

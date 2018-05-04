@@ -1,12 +1,9 @@
 ---
-title: "Перенос исключений между потоками | Документы Microsoft"
-ms.custom: 
+title: Перенос исключений между потоками | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>Перенос исключений между потоками
 Visual C++ поддерживает *передачу исключения* из одного потока в другой. Передача исключений позволяет перехватывать исключение в одном потоке и затем обеспечить видимость того, что исключение возникло в другом потоке. Например, эту возможность можно использовать для создания многопоточного приложения, где первостепенный поток обрабатывает все исключения, создаваемые его второстепенными потоками. Передача исключений в основном полезна для разработчиков, создающих системы или библиотеки параллельного программирования. Для реализации передачи исключений Visual C++ предоставляет [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) типа и [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), и [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) функции.  
@@ -53,7 +48,7 @@ namespace std
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`unspecified`|Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.|  
 |`p`|Объект `exception_ptr`, который ссылается на исключение.|  
@@ -259,4 +254,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>См. также  
  [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)     
  [Параметр /EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md)   
- [/ CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)

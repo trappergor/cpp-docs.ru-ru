@@ -2,11 +2,8 @@
 title: Класс CAtlFile | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>Класс CAtlFile
 Этот класс предоставляет тонкую оболочку вокруг Windows API обработки файлов.  
@@ -57,13 +52,13 @@ class CAtlFile : public CHandle
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlFile::CAtlFile](#catlfile)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlFile::Create](#create)|Этот метод используется для создания или открытия файла.|  
 |[CAtlFile::Flush](#flush)|Этот метод вызывается для удаления буферов для файла и потере всех буферизованных данных для записи в файл.|  
@@ -79,7 +74,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|  
   
@@ -94,7 +89,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  Конструктор.  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>Примечания  
  Конструктор копии передает право владения дескриптора файла из исходных `CAtlFile` в созданный объект.  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  Этот метод используется для создания или открытия файла.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>Примечания  
  Вызовы [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) для создания или открытия файла.  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  Этот метод вызывается для удаления буферов для файла и потере всех буферизованных данных для записи в файл.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439) очистки буферизованных данных в файл.  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  Этот метод вызывается для получения результатов операции перекрывающихся в файле.  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>Примечания  
  Вызовы [GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209) для получения результатов операции перекрывающихся в файле.  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  Этот метод используется для получения текущего положения указателя файла.  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для получения текущего положения указателя файла.  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  Этот метод вызывается для получения размера файла в байтах.  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955) получить размер файла в байтах.  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  Этот метод вызывается для блокировки области в файле, чтобы предотвратить доступ к нему другими процессами.  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) для блокировки области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать более одной области файла, но не перекрывающихся областей разрешены. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должно точно соответствовать ранее заблокированной области. `LockRange`не объединять смежных областей; Если заблокированные две области располагаются рядом, необходимо разблокировать каждого отдельно.  
+ Вызовы [LockFile](http://msdn.microsoft.com/library/windows/desktop/aa365202) для блокировки области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать более одной области файла, но не перекрывающихся областей разрешены. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должно точно соответствовать ранее заблокированной области. `LockRange` не объединять смежных областей; Если заблокированные две области располагаются рядом, необходимо разблокировать каждого отдельно.  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  Указатель на `CAtlTransactionManager` объект.  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  Этот метод вызывается для чтения данных из файла, начиная с позиции, указываемой параметром указателя файла.  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>Примечания  
  Первые три формы вызвать [ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467), последний [ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468) для чтения данных из файла. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  Этот метод используется для перемещения файла указателя файла.  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) для перемещения указателя файла.  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  Этот метод используется для изменения размера файла.  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541) и [SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531) для изменения размера файла. При возвращении указатель файла помещается в конец файла.  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  Этот метод используется для снятия блокировки области файла.  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715) для разблокировки области файла.  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  Этот метод используется для записи данных в файл, начиная с позиции, указываемой параметром указателя файла.  
   
 ```

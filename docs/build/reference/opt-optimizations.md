@@ -2,12 +2,9 @@
 title: -OPT (оптимизация) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
 - /opt
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: f8ac107f8a5654601f0c974f82fa83ae6aa83518
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opt-optimizations"></a>Параметр /OPT (оптимизация)
 Управляет оптимизацией, выполняемой во время сборки с помощью программы LINK.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
  Указание **/OPT: ICF** не включает **/OPT: ref** параметр.  
   
- **ICF [=** `iterations` **] &AMP;#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**  
  Используйте **/OPT: ICF [=**`iterations`**]** Чтобы выполнить аналогичное свертывание записей COMDAT. Избыточные записи COMDAT можно удалить из выходных данных компоновщика. Необязательный параметр `iterations` определяет количество проходов символов для поиска дубликатов. По умолчанию используется значение 2. При большем числе итераций возможно обнаружение дополнительных дубликатов, появляющихся после свертывания в предыдущих итерациях.  
   
  Компоновщик ведет себя по-разному при **/OPT: ref** указан — и **ICF** действует по умолчанию — не так, когда **/OPT: REF, ICF** определяются явно. Форме **ICF** с поддержкой с **/OPT: ref** отдельно не свертывает данных только для чтения — Сюда входят .rdata, pdata и xdata. Это приводит к уменьшению числа свертываемых функций при создании образов для [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], поскольку эти модули больше зависят от данных только для чтения (например, PDATA и XDATA). Чтобы получить полное **ICF** поведение, свертывания явно указать **/OPT: ICF**.  

@@ -1,12 +1,9 @@
 ---
-title: "Лямбда-выражения в C++ | Документы Microsoft"
-ms.custom: 
+title: Лямбда-выражения в C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1cfcb210d3de7ce818d39ecf1703299defedc5d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lambda-expressions-in-c"></a>Лямбда-выражения в C++
 В C ++ 11 и более поздних версиях лямбда-выражение — часто называют *лямбда-выражение*— это удобный способ определения анонимного объекта-функции ( *замыкание*) непосредственно в месте, где его вызова или передана в качестве аргумента в функцию. Обычно лямбда-выражения используются для инкапсуляции нескольких строк кода, передаваемых алгоритмам или асинхронным методам. В этой статье приводится определение лямбда-выражений, их сравнение с другими методами программирования, описание их преимуществ и простой пример.  

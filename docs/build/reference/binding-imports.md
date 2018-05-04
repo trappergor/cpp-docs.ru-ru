@@ -1,30 +1,25 @@
 ---
-title: "Привязка Imports | Документы Microsoft"
-ms.custom: 
+title: Привязка Imports | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - /DELAY:NOBIND linker option
 - DELAY:NOBIND linker option
 ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f462eeea9f2bca566745d425b84bd1506f52fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7519fb18ac7f24e79a5f7f664cb35f8eb5b3fd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-imports"></a>Привязка Imports
 По умолчанию компоновщик выполняется для создания связанной таблицы адресов импорта для библиотеки DLL, загружаемых с задержкой. Если библиотека DLL привязана, то вспомогательная функция будет пытаться использовать данные привязки вместо вызова метода **GetProcAddress** для каждого из импортов, на который указывает ссылка. Если отметка времени или предпочтительный адрес соответствуют таковым в загружаемой библиотеке DLL, вспомогательная функция будет предполагать, связанная таблица адресов импорта является устаревшим и будет продолжена, как если бы он не существует.  

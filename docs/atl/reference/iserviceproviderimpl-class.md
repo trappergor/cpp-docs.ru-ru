@@ -1,12 +1,9 @@
 ---
-title: "Класс IServiceProviderImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IServiceProviderImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>Класс IServiceProviderImpl
 Этот класс предоставляет реализацию по умолчанию `IServiceProvider` интерфейса.  
@@ -48,7 +43,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IServiceProviderImpl::QueryService](#queryservice)|Создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.|  
   
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl** указывает один из методов: [QueryService](#queryservice), который создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.  
   
- `IServiceProviderImpl`использует схемы услуг, начиная с [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) и заканчивая [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
+ `IServiceProviderImpl` использует схемы услуг, начиная с [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) и заканчивая [END_SERVICE_MAP](service-map-macros.md#end_service_map).  
   
  Сопоставление службы содержит две записи: [SERVICE_ENTRY](service-map-macros.md#service_entry), указывающая идентификатор указанной службы (SID), поддерживаемые объектом, и [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), который вызывает `QueryService` цепочку в другой объект.  
   
@@ -69,7 +64,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  Создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [IN]`guidService`  
+ [IN] `guidService`  
  Указатель на идентификатор службы (SID).  
   
- [IN]`riid`  
+ [IN] `riid`  
  Идентификатор интерфейса, к которому вызывающий объект для получения доступа.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  Косвенный указатель на запрошенный интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|Требуемый интерфейс не является частью этой службы или службы неизвестно.|  
   
 ### <a name="remarks"></a>Примечания  
- `QueryService`Возвращает косвенный указатель на запрошенный интерфейс в указанной службы. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.  
+ `QueryService` Возвращает косвенный указатель на запрошенный интерфейс в указанной службы. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.  
   
  При вызове `QueryService`, передать идентификатор службы ( `guidService`) и идентификатор интерфейса ( `riid`). `guidService` Указывает службу, к которому вы хотите получить доступ, и `riid` определяет интерфейс, который является частью службы. В ответ будет получен косвенный указатель на интерфейс.  
   

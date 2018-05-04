@@ -1,12 +1,9 @@
 ---
-title: "Использование структурированной обработки исключений с C++ | Документы Microsoft"
-ms.custom: 
+title: Использование структурированной обработки исключений с C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - C++ exception handling, mixed with SEH
 - structured exception handling [C++], with C++ exception handling
 ms.assetid: ec34b528-8c26-4429-b24a-6a68553aaa91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5d067a391512d56a2d01ce3052ac3fab061f28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71ce64a067ed75c29d83913adababe2d97dba6f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Использование структурированной обработки исключений с C++
 Структурированная обработка исключений, описанная в этих статьях, работает с файлами исходного кода на языках C и C++. Однако она не была разработана специально для языка C++ и ее использование не рекомендуется. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, механизм обработки исключений языка C++ обеспечивает более высокую гибкость, поскольку может обрабатывать исключения любого типа.  
