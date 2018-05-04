@@ -2,12 +2,9 @@
 title: Общие сведения о LIB | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>Общие сведения о LIB
 LIB создает стандартные библиотеки, библиотеки импорта и экспорта файлов можно использовать с [ССЫЛКУ](../../build/reference/linker-options.md) при сборке программы. LIB запускается из командной строки.  
@@ -78,7 +73,7 @@ LIB создает стандартные библиотеки, библиоте
   
  Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **/ ПАРАМЕТР LTCG**  
+ **/LTCG**  
  В результате библиотеки для сборки с помощью создания кода во время компоновки.  
   
  Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
@@ -113,7 +108,7 @@ LIB создает стандартные библиотеки, библиоте
   
  Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **/ SUBSYSTEM**  
+ **/SUBSYSTEM**  
  Указывает операционной системе, как запустить программу, созданную путем связывания с выходной библиотеки.  
   
  Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
@@ -123,7 +118,7 @@ LIB создает стандартные библиотеки, библиоте
   
  Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **/ WX**  
+ **/WX**  
  Обрабатывать предупреждения как ошибки.  
   
  Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  

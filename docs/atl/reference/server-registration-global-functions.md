@@ -1,12 +1,9 @@
 ---
-title: "Глобальные функции регистрации сервера | Документы Microsoft"
-ms.custom: 
+title: Глобальные функции регистрации сервера | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>Глобальные функции для регистрации сервера
 Эти функции обеспечивают поддержку для регистрации и отмены регистрации серверных объектов в карте объектов.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  Эта функция вызывается для регистрации каждого из объектов в карте объектов.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlComModuleRegisterServer`проходит по карте объектов ATL автоматически формируемые и регистрирует каждый объект в карте. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` зарегистрирован; в противном случае все объекты зарегистрированы.  
+ `AtlComModuleRegisterServer` проходит по карте объектов ATL автоматически формируемые и регистрирует каждый объект в карте. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` зарегистрирован; в противном случае все объекты зарегистрированы.  
   
  Эта функция вызывается [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  Эта функция вызывается для отмены регистрации каждого из объектов в карте объектов.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlComModuleUnregisterServer`проходит по схеме объекта ATL и отменяет регистрацию каждого объекта в схеме. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` отменена; в противном случае все объекты, не зарегистрированы.  
+ `AtlComModuleUnregisterServer` проходит по схеме объекта ATL и отменяет регистрацию каждого объекта в схеме. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` отменена; в противном случае все объекты, не зарегистрированы.  
   
  Эта функция вызывается [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  Эта функция вызывается для регистрации объектов класса.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  Эта функция вызывается для удаления фабрики или фабрик класса из таблицы запущенных объектов.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  Эта функция вызывается для получения фабрики класса.  
   
 ```

@@ -1,29 +1,24 @@
 ---
-title: "Реализация коллекции на основе библиотеки C++ Standard | Документы Microsoft"
-ms.custom: 
+title: Реализация коллекции на основе библиотеки C++ Standard | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a09f54598b525346a65b56a335711f114878cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Реализация коллекции на основе библиотеки C++ Standard
 Библиотека ATL предоставляет `ICollectionOnSTLImpl` интерфейс, позволяющий быстро реализовать интерфейсы коллекций на основе стандартной библиотеки C++ для ваших объектов. Чтобы понять, как работает этот класс, будет работать через простой пример (см. ниже), использует этот класс для реализации коллекции только для чтения, предназначенных для клиентов автоматизации.  
@@ -46,10 +41,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [Добавьте код для заполнения коллекции](#vcconpopulate_the_collection).  
   
-##  <a name="vccongenerating_an_object"></a>Создание нового простого объекта  
+##  <a name="vccongenerating_an_object"></a> Создание нового простого объекта  
  Создайте новый проект, гарантируя, что снят флажок «атрибуты» в разделе параметров приложения. Используйте диалоговое окно Добавление класса ATL и простой объект мастер для создания простого объекта вызывается `Words`. Убедитесь, что сдвоенный интерфейс с именем `IWords` создается. Объекты созданного класса будет использоваться для представления коллекции слова (то есть, строки).  
   
-##  <a name="vcconedit_the_idl"></a>Редактирование файла IDL  
+##  <a name="vcconedit_the_idl"></a> Редактирование файла IDL  
  Теперь откройте IDL-файл и добавьте три свойства, необходимые для включения `IWords` в интерфейс только для чтения коллекция, как показано ниже:  
   
  [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  Значение, используемое для DISPID **число** свойство произвольными. Нет стандартных DISPID для этого свойства не существует.  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a>Создание определения типов для хранения данных и данных  
+##  <a name="vcconstorage_and_exposure_typedefs"></a> Создание определения типов для хранения данных и данных  
  После определения интерфейса коллекции необходимо решить, каким образом будут храниться данные и как данные будут предоставлены через перечислитель.  
   
  Ответы на эти вопросы могут быть предоставлены в виде числа определения типов, которые можно добавить в верхней части файла заголовка для созданного класса:  
@@ -79,26 +74,26 @@ ms.lasthandoff: 12/21/2017
   
  Поскольку поддержка Visual Basic крайне важно для успеха этот интерфейс, возвращенный перечислитель `_NewEnum` свойство должно поддерживать **IEnumVARIANT** интерфейса. Это интерфейс только перечислителя воспринимает Visual Basic.  
   
-##  <a name="vcconcopy_classes"></a>Создание определения типов для классов политики копирования  
+##  <a name="vcconcopy_classes"></a> Создание определения типов для классов политики копирования  
  Определения типов, созданных до сих предоставляют сведения, необходимые для дальнейшего создания определения типов для классов копирования, которые будут использоваться перечислителя и коллекции:  
   
  [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
  В этом примере можно использовать пользовательский `GenericCopy` класс, определенный в файле VCUE_Copy.h и VCUE_CopyString.h из [ATLCollections](../visual-cpp-samples.md) образца. Этот класс можно использовать в другой код, но может потребоваться определить дальнейшей специализации `GenericCopy` для поддержки типов данных, используемых в собственные коллекции. Дополнительные сведения см. в разделе [классов политики копирования ATL](../atl/atl-copy-policy-classes.md).  
   
-##  <a name="vcconenumeration_and_collection"></a>Создание определения типов для перечисления и коллекции  
+##  <a name="vcconenumeration_and_collection"></a> Создание определения типов для перечисления и коллекции  
  Теперь все параметры шаблона необходимо настроить `CComEnumOnSTL` и `ICollectionOnSTLImpl` классы в этом случае были предоставлены в виде определения типов. Чтобы упростить использование специализации, создайте два определения типов, как показано ниже:  
   
  [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
  Теперь `CollectionType` является синонимом для специализации `ICollectionOnSTLImpl` , реализующий `IWords` интерфейса, определенные ранее и предоставляет перечислитель, поддерживаемые **IEnumVARIANT**.  
   
-##  <a name="vcconedit_the_generated_code"></a>Вносить изменения в код, созданный мастером  
+##  <a name="vcconedit_the_generated_code"></a> Вносить изменения в код, созданный мастером  
  Теперь необходимо создать производный `CWords` от реализации интерфейса, представленного `CollectionType` typedef вместо `IWords`, как показано ниже:  
   
  [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a>Добавление кода для заполнения коллекции  
+##  <a name="vcconpopulate_the_collection"></a> Добавление кода для заполнения коллекции  
  Единственное, что остается заключается в заполнении вектор с данными. В этом простом примере можно добавить несколько слов к коллекции в конструктор для класса:  
   
  [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  

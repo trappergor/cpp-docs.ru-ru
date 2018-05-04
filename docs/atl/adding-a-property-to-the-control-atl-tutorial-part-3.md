@@ -1,30 +1,25 @@
 ---
-title: "Добавление свойства в элемент управления (ATL учебника, часть 3) | Документы Microsoft"
-ms.custom: 
+title: Добавление свойства в элемент управления (ATL учебника, часть 3) | Документы Microsoft
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>Добавление свойства в элемент управления (учебник ATL, часть 3)
-`IPolyCtl`является интерфейсом, который содержит элемент управления пользовательские методы и свойства, и к нему будет добавлено свойство.  
+`IPolyCtl` является интерфейсом, который содержит элемент управления пользовательские методы и свойства, и к нему будет добавлено свойство.  
   
 ### <a name="to-add-a-property-using-the-add-property-wizard"></a>Чтобы добавить свойство, используя мастер добавления свойства  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Теперь у вас есть свойство с именем `Sides`. На следующем шаге будет изменить код рисования для его использования.  
   
- [Вернитесь к шагу 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [Шагу 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [Вернитесь к шагу 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [шагу 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
 ## <a name="see-also"></a>См. также  
  [Учебник](../atl/active-template-library-atl-tutorial.md)

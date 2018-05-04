@@ -1,29 +1,24 @@
 ---
-title: "Реализация пользовательских строка Manager (Дополнительно метод) | Документы Microsoft"
-ms.custom: 
+title: Реализация пользовательских строка Manager (Дополнительно метод) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Реализация пользовательских строка Manager (расширенный метод)
 В специальных ситуациях может потребоваться реализовать пользовательскую строку диспетчер, который больше, чем просто изменить какие-либо кучи используется для выделения памяти. В этом случае необходимо вручную реализовать [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) интерфейс как руководитель настраиваемой строки.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) это поле указывает на `IAtlStringMgr` интерфейс, используемый для управления этими данными строки. Когда `CStringT` необходимо повторно выделить или освободить буфер строки, он вызывает перераспределения или произвольным методы этого интерфейса, передавая `CStringData` структуры в качестве параметра. При выделении `CStringData` структуры в ваш руководитель строки необходимо установить это поле для указания настраиваемой строки руководителю.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) в этом поле содержится текущего логического длину строки, сохраненного в буфере, за исключением конечное значение null. `CStringT`Это поле обновляется при изменении длину строки. При выделении `CStringData` структуры, руководителю строки необходимо задать это поле в ноль. При перераспределении `CStringData` структуры руководителю настраиваемой строки, оставьте это поле без изменений.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) в этом поле содержится текущего логического длину строки, сохраненного в буфере, за исключением конечное значение null. `CStringT` Это поле обновляется при изменении длину строки. При выделении `CStringData` структуры, руководителю строки необходимо задать это поле в ноль. При перераспределении `CStringData` структуры руководителю настраиваемой строки, оставьте это поле без изменений.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) это поле содержит максимальное число символов (не считая завершающий нуль-символ), которые могут храниться в этом буфере строки без ее перераспределения. Всякий раз, когда `CStringT` необходимости увеличения логический длина строки, он сначала проверяет это поле, чтобы убедиться, что имеется достаточно места в буфере. Если проверка завершается неудачно, `CStringT` вызовы руководителю пользовательской строки в перераспределении буфера. При выделении или перераспределения `CStringData` структуры, необходимо установить это поле по крайней мере число символов, запрашиваемый в **nChars** параметр [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) или [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate). Если имеется больше места в буфере, чем запрошено, можно задать это значение, чтобы отразить фактический объем доступного места. Это позволяет `CStringT` расти строку на все выделенное место до того, как его обратный вызов диспетчер строки в перераспределении буфера.  
   

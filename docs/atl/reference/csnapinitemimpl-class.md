@@ -2,11 +2,8 @@
 title: Класс CSnapInItemImpl | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 Этот класс предоставляет методы для реализации объект узла оснастки.  
@@ -72,13 +67,13 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Добавляет пункты меню в контекстное меню.|  
 |[CSnapInItemImpl::Command](#command)|Вызывается средой консоль, при выборе пункта меню.|  
@@ -96,14 +91,14 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Имя объекта оснастки.|  
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows **RESULTDATAITEM** структура, используемая `CSnapInItemImpl` объекта.|  
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM** структура, используемая `CSnapInItemImpl` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CSnapInItemImpl`Предоставляет базовую реализацию для объекта оснастки узла, например добавление пунктов меню и панелей инструментов и команд для узла оснастки в соответствующий обработчик функцию перенаправления. Эти возможности реализуются с помощью нескольких разных интерфейсов и сопоставления типов. Реализация по умолчанию обрабатывает уведомлений, отправляемых путем определения правильный экземпляр производного класса, а затем перенаправить сообщение на правильный экземпляр объекта узла.  
+ `CSnapInItemImpl` Предоставляет базовую реализацию для объекта оснастки узла, например добавление пунктов меню и панелей инструментов и команд для узла оснастки в соответствующий обработчик функцию перенаправления. Эти возможности реализуются с помощью нескольких разных интерфейсов и сопоставления типов. Реализация по умолчанию обрабатывает уведомлений, отправляемых путем определения правильный экземпляр производного класса, а затем перенаправить сообщение на правильный экземпляр объекта узла.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  Этот метод реализует функцию Win32 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841).  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** объект данных имеет недопустимый тип.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  Этот метод реализует функцию Win32 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842).  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** объект данных имеет недопустимый тип.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  Этот метод реализует функцию Win32 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846).  
   
 ```
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** объект данных имеет недопустимый тип.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  Создает объект `CSnapInItemImpl`.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  Эта функция вызывается для получения сведений об элементе.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>Примечания  
  Чтобы правильно реализовать эту функцию, скопируйте правильные сведения в поток ( `pStream`), в зависимости от формата буфера обмена, обозначенном `cf`.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  Вызывайте эту функцию для извлечения типа представления для объекта оснастки панель результатов.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 позволяет параметры представления по умолчанию.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  Эта функция вызывается для получения **SCOPEDATAITEM** структуры оснастки.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] Указатель на **SCOPEDATAITEM** структуры `CSnapInItemImpl` объекта.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  Эта функция вызывается для получения **RESULTDATAITEM** структуры оснастки.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] Указатель на **RESULTDATAITEM** структуры `CSnapInItemImpl` объекта.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  Содержит строку, отображаемую для элемента узла.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM` Структура объекта данных оснастки.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) структуру объекта данных оснастки.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  Вызывается, когда объект оснастки ответных пользователем.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** объект данных имеет недопустимый тип.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  Вызывается, чтобы узнать, поддерживает ли узел оснастки страницы свойств.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  Вызывайте эту функцию, чтобы изменить меню вставки флаги, заданные `pInsertionAllowed`, для объекта оснастки.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  Не следует пытаться установки битов в `pInsertionAllowed` , изначально были очищены. Будущие версии MMC может использовать bits, в настоящее время не определен, поэтому не следует изменять битов, которые в настоящее время не определены.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  Эта функция вызывается для изменения любого стиля кнопок панели инструментов объекта оснастки до создания панели инструментов.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] Флаги состояния кнопки. Может иметь одно или несколько из следующих:  
   
-- `TBSTATE_CHECKED`Эта кнопка имеет **TBSTYLE_CHECKED** стиля и нажат.  
+- `TBSTATE_CHECKED` Эта кнопка имеет **TBSTYLE_CHECKED** стиля и нажат.  
   
-- `TBSTATE_ENABLED`Кнопки, принимающее вводимые пользователем данные. Кнопка, которая не поддерживает это состояние не принимает ввод данных пользователем и отображается серым цветом.  
+- `TBSTATE_ENABLED` Кнопки, принимающее вводимые пользователем данные. Кнопка, которая не поддерживает это состояние не принимает ввод данных пользователем и отображается серым цветом.  
   
-- `TBSTATE_HIDDEN`Кнопка не отображается и не может реагировать на действия пользователя.  
+- `TBSTATE_HIDDEN` Кнопка не отображается и не может реагировать на действия пользователя.  
   
-- `TBSTATE_INDETERMINATE`Кнопка отображается серым цветом.  
+- `TBSTATE_INDETERMINATE` Кнопка отображается серым цветом.  
   
-- `TBSTATE_PRESSED`Кнопка нажата.  
+- `TBSTATE_PRESSED` Кнопка нажата.  
   
-- `TBSTATE_WRAP`Кнопки ставится разрыв строки. Кнопки также должен иметь `TBSTATE_ENABLED`.  
+- `TBSTATE_WRAP` Кнопки ставится разрыв строки. Кнопки также должен иметь `TBSTATE_ENABLED`.  
   
  *Тип_файловой_системы*  
  [in] Флаги состояния кнопки. Может иметь одно или несколько из следующих:  
   
-- `TBSTYLE_BUTTON`Создает стандартные клавиши.  
+- `TBSTYLE_BUTTON` Создает стандартные клавиши.  
   
-- `TBSTYLE_CHECK`Создает кнопку переключения между нажатия и не нажата состояния при каждом щелчке по нему. Эта кнопка имеет другой цвет фона, когда он находится в нажатом состоянии.  
+- `TBSTYLE_CHECK` Создает кнопку переключения между нажатия и не нажата состояния при каждом щелчке по нему. Эта кнопка имеет другой цвет фона, когда он находится в нажатом состоянии.  
   
-- `TBSTYLE_CHECKGROUP`Создает кнопку с галочкой, остается в нажатом положении, пока не нажата кнопка другой группы.  
+- `TBSTYLE_CHECKGROUP` Создает кнопку с галочкой, остается в нажатом положении, пока не нажата кнопка другой группы.  
   
-- `TBSTYLE_GROUP`Создает кнопку, которая остается в нажатом положении, пока не нажата кнопка другой группы.  
+- `TBSTYLE_GROUP` Создает кнопку, которая остается в нажатом положении, пока не нажата кнопка другой группы.  
   
-- `TBSTYLE_SEP`Создает разделителя, предоставляя небольшой разрыв между группы кнопок. Кнопки, которая имеет этот стиль не реагировать на действия пользователя.  
+- `TBSTYLE_SEP` Создает разделителя, предоставляя небольшой разрыв между группы кнопок. Кнопки, которая имеет этот стиль не реагировать на действия пользователя.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  Эта функция вызывается для изменения пункта меню перед его вставкой в контекстное меню объекта оснастки.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** отключает пункт меню, чтобы он не может быть выбран, но флаг не серого цвета, его.  
   
-- `MF_ENABLED`Включает элемент меню, ее можно будет выбрать, восстановив его из состояния выделена серым цветом.  
+- `MF_ENABLED` Включает элемент меню, ее можно будет выбрать, восстановив его из состояния выделена серым цветом.  
   
 - **MF_GRAYED** отключает пункт меню, неподходящие идентификаторы, не могут быть выбраны.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** и **MF_UNCHECKED**.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  Вызывайте эту функцию, чтобы изменить кнопки панели инструментов, объекта оснастки, перед отображением.  
   
 ```

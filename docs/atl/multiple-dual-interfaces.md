@@ -1,12 +1,9 @@
 ---
-title: "Несколько сдвоенные интерфейсы | Документы Microsoft"
-ms.custom: 
+title: Несколько сдвоенные интерфейсы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d87164439a4128ff6205ea6bc3ee3d9cc5573a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-dual-interfaces"></a>Несколько сдвоенные интерфейсы
 Вы можете сочетать преимущества сдвоенный интерфейс (то есть, гибкость vtable и позднее связывание, таким образом сделать класс доступным для языков скриптов, а также язык C++) с помощью метода множественное наследование.  
