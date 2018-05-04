@@ -1,12 +1,9 @@
 ---
-title: "Класс CSecurityAttributes | Документы Microsoft"
-ms.custom: 
+title: Класс CSecurityAttributes | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityAttributes
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecurityattributes-class"></a>Класс CSecurityAttributes
 Этот класс является тонкой оболочкой для структуры атрибуты безопасности.  
@@ -46,13 +41,13 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSecurityAttributes::Set](#set)|Этот метод вызывается для установки атрибутов `CSecurityAttributes` объекта.|  
   
@@ -69,7 +64,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
  Конструктор.  
   
 ```
@@ -84,7 +79,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.  
   
-##  <a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>  CSecurityAttributes::Set  
  Этот метод вызывается для установки атрибутов `CSecurityAttributes` объекта.  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "Fr -FR,-(создать. SBR-файл) | Документы Microsoft"
-ms.custom: 
+title: Fr -FR,-(создать. SBR-файл) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BrowseInformation
 - VC.Project.VCCLCompilerTool.BrowseInformation
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 911ab24407f74391186568df58f5111253c41cae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6f61a3360c820a2d47d54f7c174af484079d154
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (создать SBR-файл)
 Создает SBR-файлы.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  Если не указать `filename`, SBR-файл получает такое же базовое имя, как у исходного файла.  
   
- Использовать параметр**/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).  
+ Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).  
   
 > [!NOTE]
 >  Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.  

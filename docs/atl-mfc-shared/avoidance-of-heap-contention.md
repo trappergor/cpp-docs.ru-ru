@@ -1,29 +1,24 @@
 ---
-title: "Предотвращение конфликтов кучи | Документы Microsoft"
-ms.custom: 
+title: Предотвращение конфликтов кучи | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - heap contention
 ms.assetid: 797129d7-5f8c-4b0e-8974-bb93217e9ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f17f73efc8fba19bb129e3b118f8a4357444aad0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 731fcb2328f789e5c487dc56510bbd6f7ec049ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="avoidance-of-heap-contention"></a>Предотвращение конфликтов кучи
 Диспетчеры строки по умолчанию, предоставляемых MFC и ATL являются простыми оболочками поверх глобальной кучи. Этот глобальный кучи потокобезопасен полностью, это означает, что несколько потоков можно выделить и освободить память из него одновременно без повреждения кучи. Для обеспечения потокобезопасности кучи имеет сериализации доступа к самому себе. Обычно это выполняется с критической секции или похожий механизм блокировки. Каждый раз, когда два потока пытаются одновременно получить доступ к куче, один поток будет заблокирован до завершения другого потока запроса. Для многих приложений такая ситуация возникает редко, и механизм блокировки кучи влияние на производительность незначительно. Однако для приложений, которые часто обращаются к куче из нескольких потоков за блокировки кучи может привести к приложение будет работать медленнее, чем если бы они были одним потоком (даже на компьютерах с несколькими ЦП).  
