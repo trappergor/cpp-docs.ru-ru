@@ -2,12 +2,9 @@
 title: Обработка уведомлений о настройке | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>Обработка уведомлений о настройке
 Стандартный элемент управления панели инструментов Windows имеет встроенную функциональность настройки, в том числе системное диалоговое окно настроек, которое позволяет пользователю вставлять, удалять и переупорядочивать кнопки панели управления. Приложение определяет, доступны ли функции настройки, и контролирует степень, в которой пользователь может настроить панель инструментов.  
@@ -169,7 +164,7 @@ ms.lasthandoff: 12/21/2017
  Индекс кнопки, связанной с уведомлением.  
   
  **tbButton**  
- `TBBUTTON`Структура, содержащая сведения о кнопке панели инструментов, связанные с уведомлением.  
+ `TBBUTTON` Структура, содержащая сведения о кнопке панели инструментов, связанные с уведомлением.  
   
  **cchText**  
  Число символов в тексте кнопки.  

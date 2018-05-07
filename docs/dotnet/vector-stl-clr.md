@@ -1,12 +1,9 @@
 ---
-title: "вектор (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: вектор (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/vector> header [STL/CLR]
 - <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de5d09d569933dc06666ed2008081703d59c1564
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с произвольного доступа. Используйте контейнер `vector` для управления последовательностью элементов как непрерывный блок памяти. Блок реализуется как массив, который увеличивается по требованию.  
@@ -57,7 +52,7 @@ template<typename Value>
   
 ## <a name="members"></a>Члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -73,7 +68,7 @@ template<typename Value>
 |[vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Заменяет все элементы.|  
 |[vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Обращается к элементу в указанной позиции.|  
@@ -97,12 +92,12 @@ template<typename Value>
 |[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
 |[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Создает объект контейнера.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Обращается к последнему элементу.|  
 |[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[vector::operator (STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Обращается к элементу в указанной позиции.|  
@@ -115,7 +110,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  

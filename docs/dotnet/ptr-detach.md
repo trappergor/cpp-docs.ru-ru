@@ -1,12 +1,9 @@
 ---
-title: "PTR::Detach | Документы Microsoft"
-ms.custom: 
+title: PTR::Detach | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 Отдает владения объектом COM, возвращающая указатель на объект.  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  На внутреннем уровне `QueryInterface` будет вызван на собственный объект COM и любая ошибка `HRESULT` преобразуется в исключение по <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Примечания  
- `Detach`Сначала добавляется ссылка на COM-объект, от имени вызывающего объекта, а затем освобождает все ссылки, принадлежащих `com::ptr`.  В конечном счете, вызывающий объект должен освободить уничтожить его возвращаемый объект.  
+ `Detach` Сначала добавляется ссылка на COM-объект, от имени вызывающего объекта, а затем освобождает все ссылки, принадлежащих `com::ptr`.  В конечном счете, вызывающий объект должен освободить уничтожить его возвращаемый объект.  
   
 ## <a name="example"></a>Пример  
  В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта.  `DetachDocument` Функция-член вызывает `Detach` перестает быть владельцем COM-объекта и возвращает указатель в вызывающий объект.  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CArchiveException | Документы Microsoft"
-ms.custom: 
+title: Класс CArchiveException | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>Класс CArchiveException
 Представляет условие исключения сериализации  
@@ -46,13 +41,13 @@ class CArchiveException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArchiveException::CArchiveException](#carchiveexception)|Создает объект `CArchiveException`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArchiveException::m_cause](#m_cause)|Указывает причину исключения.|  
 |[CArchiveException::m_strFileName](#m_strfilename)|Указывает имя файла для данного условия исключения.|  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>Примечания  
  `CArchiveException` Класс включает это открытый элемент данных, указывающее причину исключения.  
   
- `CArchiveException`создания объектов и вызывается внутри [CArchive](../../mfc/reference/carchive-class.md) функции-члены. Эти объекты в области доступны **ПЕРЕХВАТЫВАТЬ** выражение. Код причины не зависит от операционной системы. Дополнительные сведения об обработке исключений см. в разделе [обработки исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ `CArchiveException` создания объектов и вызывается внутри [CArchive](../../mfc/reference/carchive-class.md) функции-члены. Эти объекты в области доступны **ПЕРЕХВАТЫВАТЬ** выражение. Код причины не зависит от операционной системы. Дополнительные сведения об обработке исключений см. в разделе [обработки исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +67,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  Создает `CArchiveException` объекта, при сохранении значения `cause` в объекте.  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  Не используйте этот конструктор напрямую. Вместо этого вызовите глобальную функцию `AfxThrowArchiveException`.  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  Указывает причину исключения.  
   
 ```  
@@ -125,7 +120,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic** является устаревшим. Используйте **genericException** вместо него. Если **универсального** приложения и построения с/CLR, будет синтаксических ошибок, которые не являются нелегко расшифровать.  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  Указывает имя файла для данного условия исключения.  
   
 ```  

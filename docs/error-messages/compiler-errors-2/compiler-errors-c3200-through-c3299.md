@@ -1,12 +1,9 @@
 ---
-title: "Компилятора C3200 ошибки через C3299 | Документы Microsoft"
-ms.custom: 
+title: Компилятора C3200 ошибки через C3299 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Компилятора C3200 ошибки через C3299
 
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="error-messages"></a>Сообщения об ошибках
 
-|Error|Сообщение|
+|Ошибка|Сообщение|
 |-----------|-------------|
 |[Ошибка компилятора C3200](compiler-error-c3200.md)|"*тип*": недопустимый аргумент шаблона для параметра шаблона "*параметр*", требуется класс-шаблон|
 |[Ошибка компилятора C3201](compiler-error-c3201.md)|список параметров шаблона для шаблона класса "*шаблона*«не совпадает со списком параметров шаблона для параметра шаблона»*параметр*"|
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[Ошибка компилятора C3271](compiler-error-c3271.md)|"*поле*": недопустимое значение "*номер*" для атрибута FieldOffset|
 |[Ошибка компилятора C3272](compiler-error-c3272.md)|"*символ*": символу требуется атрибут FieldOffset, так как он входит структура или класс *type_name* определенным с помощью StructLayout(LayoutKind::Explicit)|
 |[Ошибка компилятора C3273](compiler-error-c3273.md)|"*ключевое слово*": не допускается для блока try C++|
-|[Ошибка компилятора C3274](compiler-error-c3274.md)|Наконец / &#95; &#95; finally без соответствующего try|
+|[Ошибка компилятора C3274](compiler-error-c3274.md)|Наконец /&#95;&#95;finally без соответствующего try|
 |[Ошибка компилятора C3275](compiler-error-c3275.md)|"*идентификатор*": нельзя использовать этот символ без квалификатора|
-|[Ошибка компилятора C3276](compiler-error-c3276.md)|"*ключевое слово*": переходить из finally или &#95; &#95; наконец блок не определено поведение при обработке завершения|
+|[Ошибка компилятора C3276](compiler-error-c3276.md)|"*ключевое слово*": переходить из finally или&#95;&#95;наконец блок не определено поведение при обработке завершения|
 |[Ошибка компилятора C3277](compiler-error-c3277.md)|не удается определить неуправляемый enum "*перечисления*«внутри управляемых»*типа*"|
 |[Ошибка компилятора C3278](compiler-error-c3278.md)|прямой вызов метода интерфейса или чистого метода "*функция*" приведет к сбою во время выполнения|
 |[Ошибка компилятора C3279](compiler-error-c3279.md)|Частичные и явные специализации, а также явные создания экземпляров шаблонов классов, объявленные в пространстве имен CLI, запрещены|
