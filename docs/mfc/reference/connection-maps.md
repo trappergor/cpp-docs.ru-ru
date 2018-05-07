@@ -1,13 +1,10 @@
 ---
-title: "Схемы подключения | Документы Microsoft"
-ms.custom: 
+title: Схемы подключения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>Схемы подключения
 Элементы управления OLE, могут предоставлять интерфейсы другим приложениям. Эти интерфейсы только разрешить доступ из контейнера в этот элемент управления. Если элемента управления OLE хочет получить доступ к внешних интерфейсов другими объектами OLE, необходимо установить точку подключения. Эта точка соединения позволяет контролировать исходящий доступ к внешней подготовки к отправке карт, таких как схемы событий или функции уведомления.  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxConnectionAdvise](#afxconnectionadvise)|Устанавливает соединение между источником и приемником.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Разрывает соединение между источником и приемником.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  Используйте `BEGIN_CONNECTION_PART` макрос, чтобы начать определение дополнительного соединения точек за точки подключения уведомления события и свойства.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  Завершает объявления точки подключения.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  Используйте между `BEGIN_CONNECTION_PART` и `END_CONNECTION_PART` макросы, чтобы определить идентификатор интерфейса для точки подключения, поддерживаемые элементом управления OLE.  
   
 ```   
@@ -101,7 +96,7 @@ CONNECTION_IID(iid)
  Идентификатор интерфейса интерфейса, называется точкой подключения.  
   
 ### <a name="remarks"></a>Примечания  
- `iid` Аргумент — это интерфейс, идентификатор, используемый для определения интерфейса, который будет вызывать точки подключения на его подключенных приемники. Пример:  
+ `iid` Аргумент — это интерфейс, идентификатор, используемый для определения интерфейса, который будет вызывать точки подключения на его подключенных приемники. Например:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  Каждый `COleControl`-производный класс в программе можно указать сопоставление подключения для указания точки дополнительного соединения, которые поддерживает элемент управления.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  Каждый `COleControl`-производный класс в программе может предоставить сопоставление подключения для указания точки подключения, которые будут поддерживать элемент управления.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  Завершает определение карте соединения.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  Сопоставляет точку подключения для элемента управления OLE с идентификатором определенный интерфейс.  
   
 ```   
@@ -171,7 +166,7 @@ CONNECTION_PART(theClass, iid, localClass)
  Задает имя локального класса, который реализует точку подключения.  
   
 ### <a name="remarks"></a>Примечания  
- Пример:  
+ Например:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  Эта функция вызывается для установления соединения между исходным, определяемое `pUnkSrc`и приемником, определяемое `pUnkSink`.  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  Вызывайте эту функцию, чтобы разорвать подключение между исходным, определяемое `pUnkSrc`и приемником, определяемое `pUnkSink`.  
   
 ```   

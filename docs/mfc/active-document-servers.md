@@ -1,13 +1,10 @@
 ---
-title: "Серверы активных документов | Документы Microsoft"
-ms.custom: 
+title: Серверы активных документов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>Серверы активных документов
 Серверы активных документов, таких как Microsoft Word, Excel или PowerPoint размещаются документы других типов приложений вызывается активные документы. В отличие от OLE внедренными объектами (которые просто отображаются на странице другого документа), активные документы предоставляют полный интерфейс и полные функции собственного серверного приложения, который создает их. Пользователи могут создавать документы с помощью всю мощь приложений (если они включены активного документа), еще можно считать итоговый проект одной сущности.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  MFC поддерживает активные документы с [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) класс, производный от [CCmdTarget](../mfc/reference/ccmdtarget-class.md), и [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), который является производным от [ COleServerItem](../mfc/reference/coleserveritem-class.md). MFC поддерживает контейнеры активных документов с [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) класс, производный от [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer`сопоставляет интерфейсы активный документ и инициализирует и активирует активного документа. MFC также предоставляет макросы для обработки, маршрутизация команд в АКТИВНЫЕ документы. Чтобы использовать активные документы в приложении, включите AfxDocOb.h в файл StdAfx.h.  
+ `CDocObjectServer` сопоставляет интерфейсы активный документ и инициализирует и активирует активного документа. MFC также предоставляет макросы для обработки, маршрутизация команд в АКТИВНЫЕ документы. Чтобы использовать активные документы в приложении, включите AfxDocOb.h в файл StdAfx.h.  
   
  Регулярные сервером MFC подключает свой собственный `COleServerItem`-производного класса. Мастер приложений MFC создает этот класс для вас, если выбрать **минисерверные** или **полный сервер** флажок, чтобы предоставить серверу приложений поддержку составных документов. Если выбран **сервера активных документов** флажок установлен, мастер приложений MFC создает класс, производный от `CDocObjectServerItem` вместо него.  
   

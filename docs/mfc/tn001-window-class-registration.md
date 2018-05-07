@@ -1,13 +1,10 @@
 ---
-title: "TN001: Регистрация класса Window | Документы Microsoft"
-ms.custom: 
+title: 'TN001: Регистрация класса Window | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.registration
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn001-window-class-registration"></a>TN001. Регистрация класса Window
 Эта заметка описывает MFC подпрограммы, которые регистрируют специальные [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es, необходимые для Microsoft Windows. Определенные `WNDCLASS` описаны атрибуты, используемые MFC и Windows.  
@@ -48,9 +43,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="wndclass-fields"></a>Например, WNDCLASS поля  
  `WNDCLASS` Структура состоит из различных полей, которые описывают класс окна. В следующей таблице показаны поля и указывает, как они используются в приложениях MFC:  
   
-|Поле|Описание:|  
+|Поле|Описание|  
 |-----------|-----------------|  
-|`lpfnWndProc`|Процедура окна должен быть`AfxWndProc`|  
+|`lpfnWndProc`|Процедура окна должен быть `AfxWndProc`|  
 |`cbClsExtra`|не используется (должно быть равно нулю)|  
 |`cbWndExtra`|не используется (должно быть равно нулю)|  
 |`hInstance`|автоматически заполняется [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  Два значка поддержки приложений MDI с типами одного документа: один значок для основного приложения, другой значок для преобразованного в значок документа или MDIChild windows. Для нескольких типов документов с помощью разных значков, необходимо зарегистрировать дополнительные `WNDCLASS`es или используйте [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) функции.  
   
- `CFrameWnd::LoadFrame`Регистрирует `WNDCLASS` с помощью идентификатора значок, который указан в качестве первого параметра и следующие стандартные атрибуты:  
+ `CFrameWnd::LoadFrame` Регистрирует `WNDCLASS` с помощью идентификатора значок, который указан в качестве первого параметра и следующие стандартные атрибуты:  
   
 -   стиль класса: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
   
@@ -106,12 +101,12 @@ pWnd->Create(strWndClass, ...);
 ...  
 ```  
   
- `AfxRegisterWndClass`вызывает исключение [CResourceException](../mfc/reference/cresourceexception-class.md) Если класс окна не удалось зарегистрировать (из-за некорректных параметров, или недостаточно памяти Windows).  
+ `AfxRegisterWndClass` вызывает исключение [CResourceException](../mfc/reference/cresourceexception-class.md) Если класс окна не удалось зарегистрировать (из-за некорректных параметров, или недостаточно памяти Windows).  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass и функции AfxRegisterClass  
  Если вы хотите сделать что-либо более сложными чем `AfxRegisterWndClass` предоставляет, можно вызвать Windows API `RegisterClass` или функции MFC `AfxRegisterClass`. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` функции принимают `lpszClassName` строковое имя для класс окна в качестве первого параметра. Можно использовать любое имя класса окна зарегистрированных, независимо от метода, который использовался для его регистрации.  
   
- Очень важно использовать `AfxRegisterClass` (или `AfxRegisterWndClass`) в библиотеке DLL для Win32. Win32 не может отменить регистрацию автоматически классы зарегистрированы библиотекой DLL, поэтому необходимо явно отменить регистрацию классов при завершении библиотеки DLL. С помощью `AfxRegisterClass` вместо `RegisterClass` это выполняется автоматически. `AfxRegisterClass`хранит список уникальных классов зарегистрирован для библиотеки DLL и автоматически отменять их при завершении библиотеки DLL. При использовании `RegisterClass` в библиотеку DLL, необходимо убедиться, что все классы не зарегистрированы, при завершении библиотеки DLL (в вашей [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) функции). Невыполнение этого требования может привести к `RegisterClass` неожиданному сбою, когда другое клиентское приложение пытается использовать библиотеку DLL.  
+ Очень важно использовать `AfxRegisterClass` (или `AfxRegisterWndClass`) в библиотеке DLL для Win32. Win32 не может отменить регистрацию автоматически классы зарегистрированы библиотекой DLL, поэтому необходимо явно отменить регистрацию классов при завершении библиотеки DLL. С помощью `AfxRegisterClass` вместо `RegisterClass` это выполняется автоматически. `AfxRegisterClass` хранит список уникальных классов зарегистрирован для библиотеки DLL и автоматически отменять их при завершении библиотеки DLL. При использовании `RegisterClass` в библиотеку DLL, необходимо убедиться, что все классы не зарегистрированы, при завершении библиотеки DLL (в вашей [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) функции). Невыполнение этого требования может привести к `RegisterClass` неожиданному сбою, когда другое клиентское приложение пытается использовать библиотеку DLL.  
   
 ## <a name="see-also"></a>См. также  
  [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   

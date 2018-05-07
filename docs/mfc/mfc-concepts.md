@@ -1,33 +1,29 @@
 ---
-title: "Основные понятия MFC | Документы Microsoft"
-ms.custom: 
+title: Основные понятия MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - Concepts
 dev_langs:
 - C++
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe9431f1641ff658e1000b4bf4399024138438d
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: d0e7d0208e901e453a0ee7566d998a4cb4461980
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-concepts"></a>Основные понятия MFC
 
 В этом разделе содержатся разделы общие и на основе задач, чтобы программировании с использованием библиотеки Microsoft Foundation Class (MFC).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание раздела
 
 [Общие разделы по MFC](../mfc/general-mfc-topics.md)  
 Обсуждаются технические детали библиотеки MFC.

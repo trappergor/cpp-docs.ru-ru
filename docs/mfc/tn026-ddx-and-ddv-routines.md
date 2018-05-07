@@ -1,13 +1,10 @@
 ---
-title: "Tn026: процедуры DDX и DDV подпрограммы | Документы Microsoft"
-ms.custom: 
+title: 'Tn026: процедуры DDX и DDV подпрограммы | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026. Процедуры DDX и DDV
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  Начальные значения данных задаются в конструкторе standard C++ обычно в блоке с `//{{AFX_DATA_INIT` и `//}}AFX_DATA_INIT` комментарии.  
   
- `CWnd::UpdateData`Операция, которая выполняет инициализации и вокруг вызова обработки ошибок `DoDataExchange`.  
+ `CWnd::UpdateData` Операция, которая выполняет инициализации и вокруг вызова обработки ошибок `DoDataExchange`.  
   
  Можно вызвать `CWnd::UpdateData` в любое время для выполнения обмена данными и проверки. По умолчанию `UpdateData`(TRUE), вызывается в значение по умолчанию `CDialog::OnOK` обработчика и `UpdateData`(FALSE) вызывается в значение по умолчанию `CDialog::OnInitDialog`.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: Окно (обычно диалоговое окно), содержащий элементы управления. Это предотвращает вызывающих объектов глобальные функции DDX_ и DDV_ от необходимости передавать «this» каждые DDX/DDV подпрограмму.  
   
-- `PrepareCtrl`, и `PrepareEditCtrl`: подготавливает управления диалогового окна для обмена данными. Сохраняет дескриптор элемента управления для фокусировки, если проверка не пройдена. `PrepareCtrl`используется для элементов управления nonedit и `PrepareEditCtrl` используется для редактирования.  
+- `PrepareCtrl`, и `PrepareEditCtrl`: подготавливает управления диалогового окна для обмена данными. Сохраняет дескриптор элемента управления для фокусировки, если проверка не пройдена. `PrepareCtrl` используется для элементов управления nonedit и `PrepareEditCtrl` используется для редактирования.  
   
 - **Сбой**: вызывается после переноса выводится сообщение, информирующее пользователя ошибок на входе. Эта процедура приведет к восстановлению фокуса на последний элемент управления (последнего вызова `PrepareCtrl` / `PrepareEditCtrl`) и создает исключение. Эта функция-член может вызываться из процедур DDX_ и DDV_.  
   

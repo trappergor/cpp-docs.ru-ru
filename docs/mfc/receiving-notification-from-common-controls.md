@@ -1,13 +1,10 @@
 ---
-title: "Получение уведомления от стандартных элементов управления | Документы Microsoft"
-ms.custom: 
+title: Получение уведомления от стандартных элементов управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58131874ed039378a312acaaa238388f335f8e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notification-from-common-controls"></a>Получение уведомления от стандартных элементов управления
 Стандартные элементы управления являются дочерних окон, отправки сообщений уведомления в родительское окно, когда происходят события, такие как входные данные пользователя, в элементе управления.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  Нет простого способа это сделать, вызвав `CWnd::GetCurrentMessage`. Однако этот метод извлекает только позицию курсора во время отправки сообщения. Поскольку курсор был перемещен, так как было отправлено сообщение, необходимо вызвать **CWnd::GetCursorPos** для получения текущей позиции курсора.  
   
 > [!NOTE]
->  `CWnd::GetCurrentMessage`должен вызываться только в пределах обработчика сообщений.  
+>  `CWnd::GetCurrentMessage` должен вызываться только в пределах обработчика сообщений.  
   
  Добавьте следующий код в теле обработчика сообщений уведомления (в этом примере **NM_RCLICK**):  
   

@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления ActiveX MFC: Сериализация | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления ActiveX MFC: Сериализация | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - _wVerMinor
 - DoPropExchange
@@ -24,20 +21,18 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34b8f0520d1f071bb408f782b0f2370ef29f528e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-serializing"></a>Элементы управления ActiveX в MFC. Сериализация
-В этой статье описывается, как для сериализации элемента управления ActiveX. Сериализация — это процесс чтение или запись на носитель постоянное хранилище, например файл на диске. Библиотека Microsoft Foundation Class (MFC) предоставляет встроенную поддержку сериализации в классе `CObject`. `COleControl`расширяет эту функцию на элементы управления ActiveX с помощью механизма обмена свойство.  
+В этой статье описывается, как для сериализации элемента управления ActiveX. Сериализация — это процесс чтение или запись на носитель постоянное хранилище, например файл на диске. Библиотека Microsoft Foundation Class (MFC) предоставляет встроенную поддержку сериализации в классе `CObject`. `COleControl` расширяет эту функцию на элементы управления ActiveX с помощью механизма обмена свойство.  
   
  Сериализация для элементов управления ActiveX реализуется путем переопределения [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Эта функция вызывается во время загрузки и сохранения объект управления хранит все свойства, реализуемые с переменной-члена или переменную-член с уведомления об изменениях.  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Реализация поддержки версии](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a>Для реализации функции DoPropExchange  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Для реализации функции DoPropExchange  
  При использовании мастера элементов управления ActiveX для создания проекта элемента управления, несколько функций обработчик по умолчанию автоматически добавляются в класс элемента управления, включая реализацию по умолчанию [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). В примере показан код, добавленный к классам, созданных с помощью мастера элементов управления ActiveX:  
   
  [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
@@ -80,10 +75,10 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения об этих функциях свойства exchange см. в разделе [сохраняемости OLE элементов управления](../mfc/reference/persistence-of-ole-controls.md) в *Справочник по библиотеке MFC*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a>Настройка поведения по умолчанию DoPropExchange  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Настройка поведения по умолчанию DoPropExchange  
  Реализация по умолчанию **DoPropertyExchange** (как показано в предыдущем разделе) вызывает метод базового класса `COleControl`. Это сериализует набор свойств, автоматически поддерживаемые `COleControl`, которая использует больше места, чем сериализации только пользовательские свойства элемента управления. Удаление этого вызова позволяет объекта для сериализации только свойств, которую вы считаете важной. Все состояния стандартное свойство реализации элемента управления не будут сериализованы при сохранении или загрузке объект элемента управления, можно явно добавить **PX_** вызывает для них.  
   
-##  <a name="_core_implementing_version_support"></a>Реализация поддержки версии  
+##  <a name="_core_implementing_version_support"></a> Реализация поддержки версии  
  Поддержка версий позволяет измененный элемент ActiveX для добавления новых свойств постоянных и по-прежнему сможет обнаружить и загрузить постоянное состояние, созданные в более ранней версии элемента управления. Чтобы изменить версию элемента управления в рамках постоянные данные, вызовите [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) в элементе управления `DoPropExchange` функции. Этот вызов будет автоматически вставлен, если элемент управления ActiveX был создан с помощью мастера элементов управления ActiveX. Можно удалить, если не требуется поддержка версий. Тем не менее, размер элемента управления обходится очень мелкий (4 байта) для более гибкие, обеспечивающий поддержку версии.  
   
  Если элемент управления не была создана с помощью мастера элементов управления ActiveX, добавьте вызов `COleControl::ExchangeVersion` , вставив следующую строку в начале вашей `DoPropExchange` функции (перед вызовом `COleControl::DoPropExchange`):  

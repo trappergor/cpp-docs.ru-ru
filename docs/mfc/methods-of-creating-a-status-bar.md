@@ -1,13 +1,10 @@
 ---
-title: "Способы создания строки состояния | Документы Microsoft"
-ms.custom: 
+title: Способы создания строки состояния | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - methods [MFC]
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce14870db466727f93daea15b60c99d975783e87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0428bfc906ba6e8a1ecc7bd7c198327e8c31505
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-a-status-bar"></a>Способы создания строки состояния
-MFC предоставляет две классы для создания строки состояния: [CStatusBar](../mfc/reference/cstatusbar-class.md) и [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). `CStatusBar`предоставляет все функциональные возможности, строки состояния, стандартного элемента управления, он автоматически взаимодействует с меню и панелей инструментов и обрабатывает многие необходимые общие параметры управления и структуры. Однако полученный исполняемый файл обычно будет больше, созданные с помощью `CStatusBarCtrl`.  
+MFC предоставляет две классы для создания строки состояния: [CStatusBar](../mfc/reference/cstatusbar-class.md) и [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). `CStatusBar` предоставляет все функциональные возможности, строки состояния, стандартного элемента управления, он автоматически взаимодействует с меню и панелей инструментов и обрабатывает многие необходимые общие параметры управления и структуры. Однако полученный исполняемый файл обычно будет больше, созданные с помощью `CStatusBarCtrl`.  
   
- `CStatusBarCtrl`обычно приводит к исполняемый объект меньшего размера и может потребоваться `CStatusBarCtrl` Если вы не собираетесь интегрировать в архитектуру MFC в строке состояния. Если вы планируете использовать `CStatusBarCtrl` и интегрировать в строке состояния в MFC архитектуру, должны быть дополнительные меры предосторожности, состоянии панели управления манипуляций с MFC. Эта связь не является сложным; Однако это дополнительную работу, которая ненужные при использовании `CStatusBar`.  
+ `CStatusBarCtrl` обычно приводит к исполняемый объект меньшего размера и может потребоваться `CStatusBarCtrl` Если вы не собираетесь интегрировать в архитектуру MFC в строке состояния. Если вы планируете использовать `CStatusBarCtrl` и интегрировать в строке состояния в MFC архитектуру, должны быть дополнительные меры предосторожности, состоянии панели управления манипуляций с MFC. Эта связь не является сложным; Однако это дополнительную работу, которая ненужные при использовании `CStatusBar`.  
   
  Visual C++ предоставляет два способа, чтобы воспользоваться преимуществами общие строки состояния.  
   

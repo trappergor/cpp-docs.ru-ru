@@ -1,12 +1,9 @@
 ---
-title: "Класс классе Mfceditbrowsectrl | Документы Microsoft"
-ms.custom: 
+title: Класс классе Mfceditbrowsectrl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс классе Mfceditbrowsectrl
 `CMFCEditBrowseCtrl` Класс поддерживает Обзор элемента управления редактирования, используемый редактируемых текстовых полей, которые дополнительно содержат кнопку обзора. Когда пользователь нажимает кнопку обзора, элемент управления выполняет настраиваемое действие или отображает стандартное диалоговое окно, содержащее браузер файла или папки в браузере.  
@@ -56,18 +51,18 @@ ms.lasthandoff: 12/21/2017
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Конструктор по умолчанию.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Включает или отключает (скрывает) кнопку обзора.|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Кнопка «Обзор» и помещает в поле редактирования обзора *Обзор файлов* режим.|  
@@ -134,7 +129,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
  Отображает или не отображает кнопку обзора для текущего элемента управления Правка обзора.  
   
 ```  
@@ -145,7 +140,7 @@ void EnableBrowseButton(
   
 ### <a name="parameters"></a>Параметры  
  `bEnable`  
- `TRUE`для отображения кнопки "Обзор". `FALSE` не требуется отображать кнопку обзора. Значение по умолчанию — `TRUE`.  
+ `TRUE` для отображения кнопки "Обзор". `FALSE` не требуется отображать кнопку обзора. Значение по умолчанию — `TRUE`.  
   
  `szLabel`  
  Надпись, отображаемая на кнопку обзора. Значение по умолчанию — " **...** ".  
@@ -155,7 +150,7 @@ void EnableBrowseButton(
   
  Если `bEnable` параметр `TRUE`, находится в режиме просмотра элемента управления `BrowseMode_Default`; в противном случае — режим просмотра `BrowseMode_None`. Дополнительные сведения о режимах просмотра см. в разделе [GetMode](#getmode) метод.  
   
-##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
  Отображает кнопку обзора для текущего элемента управления Правка обзора и переводит элемент управления в *Обзор файлов* режим.  
   
 ```  
@@ -180,7 +175,7 @@ void EnableFileBrowseButton(
   
  Полный список доступных флагов см. в разделе [структура OPENFILENAME](https://msdn.microsoft.com/library/ms646839.aspx).  
   
-##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  Отображает кнопку обзора для текущего элемента управления Правка обзора и переводит элемент управления в *обзора папок* режим.  
   
 ```  
@@ -190,7 +185,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>Примечания  
  Если поле редактирования обзора находится в режиме просмотра папок и пользователь нажимает кнопку обзора, элемент управления отображает диалоговое окно выбора стандартные папки.  
   
-##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
  Возвращает режим обзора текущего элемента управления обзора.  
   
 ```  
@@ -202,7 +197,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`. Выполняется действие, определяемые программистом.|  
 |`BrowseMode_File`|`file mode`. Откроется диалоговое окно браузера стандартный файл.|  
@@ -212,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>Примечания  
  По умолчанию `CMFCEditBrowseCtrl` для инициализации объекта `BrowseMode_None` режим. Изменение режима обзора с [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), и [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) методы.  
   
-##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
  Вызывается структурой после редактирования элемента управления обзора обновляется с результатом действия обзора.  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы реализовать пользовательское действие.  
   
-##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
  Вызывается платформой при нажатии кнопки "Обзор" Обзор элемента управления.  
   
 ```  
@@ -232,7 +227,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для выполнения пользовательского кода, когда пользователь нажимает кнопку обзора Обзор элемента управления. Создать собственный класс, от `CMFCEditBrowseCtrl` класса и переопределить его `OnBrowse` метод. В этом методе реализовать пользовательское действие просмотра и при необходимости измените текстовое поле элемента управления обзора. В приложении, используйте [EnableBrowseButton](#enablebrowsebutton) метод, чтобы поместить в поле редактирования обзора *пользовательские обзора* режим.  
   
-##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
  Перерисовывает текущего элемента управления Правка обзора.  
   
 ```  
@@ -242,7 +237,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод при режиме просмотра для обзора редактирования контроля изменений. Дополнительные сведения см. в разделе [CMFCEditBrowseCtrl::GetMode](#getmode).  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
  Вызывается платформой для отрисовки «Обзор» в поле редактирования обзора.  
   
 ```  
@@ -261,15 +256,15 @@ virtual void OnDrawBrowseButton(
  Ограничивающий прямоугольник "Обзор".  
   
  `bIsButtonPressed`  
- `TRUE`При нажатии кнопки; в противном случае `FALSE`.  
+ `TRUE` При нажатии кнопки; в противном случае `FALSE`.  
   
  `bIsButtonHot`  
- `TRUE`Если кнопка выделена; в противном случае `FALSE`.  
+ `TRUE` Если кнопка выделена; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию в производном классе, чтобы настроить внешний вид «Обзор».  
   
-##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
  Задает пользовательского изображения на кнопке обзора Обзор элемента управления.  
   
 ```  
@@ -296,12 +291,12 @@ void SetBrowseButtonImage(UINT uiBmpResId);
  Идентификатор ресурса точечного рисунка.  
   
  `bAutoDestroy`  
- `TRUE`для удаления указанного значка или точечного рисунка, если этот метод завершает работу; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE` для удаления указанного значка или точечного рисунка, если этот метод завершает работу; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для применения образа к кнопке обзора. По умолчанию платформа получает стандартный образ, при возможности редактирования элемента управления обзора *Обзор файлов* или *обзора папок* режим.  
   
-##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
  Вызывается платформой, если было введено недопустимое имя файла в поле редактирования.  
   
 ```  

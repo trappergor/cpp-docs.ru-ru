@@ -1,29 +1,24 @@
 ---
-title: "Оптимизация рисования элементов управления | Документы Microsoft"
-ms.custom: 
+title: Оптимизация рисования элементов управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>Оптимизация рисования элементов управления
 Если элемент управления является нарисовать сам себя в контексте устройства указан контейнер, он обычно выбирает объекты GDI (например, перья, кисти и шрифты) в контексте устройства, выполняет операции рисования и восстанавливает предыдущие объекты GDI. Если контейнер содержит несколько элементов управления, которые должны отображаться в один и тот же контекст устройства, а каждый элемент управления выбирает необходимые объекты GDI, времени могут быть сохранены, если элементы управления не следует восстанавливать по отдельности ранее выбранные объекты. После отображения всех элементов управления контейнера можно автоматически восстановить исходные объекты.  

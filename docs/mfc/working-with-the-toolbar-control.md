@@ -1,13 +1,10 @@
 ---
-title: "Работа с элементом управления панели инструментов | Документы Microsoft"
-ms.custom: 
+title: Работа с элементом управления панели инструментов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>Работа с элементом управления панели инструментов
 В этой статье объясняется, как можно доступ к [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) основным [CToolBar](../mfc/reference/ctoolbar-class.md) для большего контроля над панелей инструментов. Это довольно сложная тема.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Вызовите [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl`Возвращает ссылку на [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекта. Ссылку можно использовать для вызова функции-члены класса элемента управления панели инструментов.  
+ `GetToolBarCtrl` Возвращает ссылку на [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекта. Ссылку можно использовать для вызова функции-члены класса элемента управления панели инструментов.  
   
 > [!CAUTION]
 >  При вызове `CToolBarCtrl` **получить** функции безопасна, соблюдайте осторожность при вызове **задать** функции. Это довольно сложная тема. Обычно вам не потребуется доступ к базовому элементу управления панели инструментов.  

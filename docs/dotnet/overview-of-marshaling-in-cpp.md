@@ -1,12 +1,9 @@
 ---
-title: "Общие сведения о маршалировании в C++ | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о маршалировании в C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-marshaling-in-c"></a>Общие сведения о маршалировании в C++
-В смешанном режиме иногда необходимо выполнять маршалинг данных между неуправляемыми и управляемыми типами. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]представленные библиотеке маршалинга для упаковки и преобразования данных в простой способ.  
+В смешанном режиме иногда необходимо выполнять маршалинг данных между неуправляемыми и управляемыми типами. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] представленные библиотеке маршалинга для упаковки и преобразования данных в простой способ.  
   
  Библиотека маршалинга можно использовать с или без [класс marshal_context](../dotnet/marshal-context-class.md). Некоторые преобразования требуется контекст. Другие преобразования может осуществляться с помощью [marshal_as](../dotnet/marshal-as.md) функции. В следующей таблице перечислены текущего преобразования, поддерживаемые, требуется ли контекст и какой файл маршалирование необходимо включить:  
   

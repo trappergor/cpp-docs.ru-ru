@@ -1,12 +1,9 @@
 ---
-title: "Проверка на совместимость с OLE DB передача | Документы Microsoft"
-ms.custom: 
+title: Проверка на совместимость с OLE DB передача | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 11677e6295956de768c7ebc0c113d775b066bb0c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Проверка на совместимость с OLE DB
 Чтобы обеспечить единообразие поставщиков, пакет SDK для доступа к данным предоставляет набор тестов на совместимость с OLE DB. Тесты проверяют все аспекты поставщика и дают возможность разумного гарантию того, что ваш поставщик работает правильно. Проверка на совместимость OLE DB можно найти в пакете Microsoft Data Access SDK. В этом разделе описываются действия, которые нужно выполнить для проверки на совместимость. Сведения о выполнении тестов на совместимость OLE DB см. в SDK.  
