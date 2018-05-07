@@ -1,13 +1,10 @@
 ---
-title: "Способы создания панели инструментов | Документы Microsoft"
-ms.custom: 
+title: Способы создания панели инструментов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93f8e43c933e9c8054e798c11754cc48bf54a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052f1578386746f9a4d9892576f09b3b61547289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="methods-of-creating-a-toolbar"></a>Способы создания панели инструментов
-MFC предоставляет две классы для создания панелей инструментов: [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). `CToolBar`предоставляет все функциональные возможности стандартного элемента панели инструментов управления и обрабатывает многие необходимые общие параметры управления и структуры. Однако полученный исполняемый файл обычно будет больше, созданные с помощью `CToolBarCtrl`.  
+MFC предоставляет две классы для создания панелей инструментов: [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). `CToolBar` предоставляет все функциональные возможности стандартного элемента панели инструментов управления и обрабатывает многие необходимые общие параметры управления и структуры. Однако полученный исполняемый файл обычно будет больше, созданные с помощью `CToolBarCtrl`.  
   
- `CToolBarCtrl`обычно приводит к исполняемый объект меньшего размера и может потребоваться `CToolBarCtrl` Если вы не собираетесь интегрировать в архитектуру MFC панели инструментов. Если вы планируете использовать `CToolBarCtrl` и интегрировать в архитектуру MFC панели инструментов, вы должны быть дополнительные меры предосторожности для взаимодействия инструментов управления манипуляций с MFC. Эта связь не является сложным; Однако это дополнительную работу, которая ненужные при использовании `CToolBar`.  
+ `CToolBarCtrl` обычно приводит к исполняемый объект меньшего размера и может потребоваться `CToolBarCtrl` Если вы не собираетесь интегрировать в архитектуру MFC панели инструментов. Если вы планируете использовать `CToolBarCtrl` и интегрировать в архитектуру MFC панели инструментов, вы должны быть дополнительные меры предосторожности для взаимодействия инструментов управления манипуляций с MFC. Эта связь не является сложным; Однако это дополнительную работу, которая ненужные при использовании `CToolBar`.  
   
  Visual C++ предоставляет два способа использовать преимущества стандартного элемента управления панели инструментов.  
   

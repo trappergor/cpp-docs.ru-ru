@@ -2,11 +2,8 @@
 title: C4000 предупреждения компилятора через C4199 | Документы Microsoft
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +95,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 62f99b7be82ccd786bf2b2a5d18ed24a3e3211ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>C4000 предупреждения компилятора через C4199
 
@@ -241,7 +236,7 @@ ms.lasthandoff: 04/28/2018
 |Предупреждение компилятора (уровень 1) C4163|«Идентификатор»: недоступна в качестве подставляемой функции|
 |Предупреждение компилятора (уровень 1) C4164|«функция»: подставляемая функция не объявлена|
 |Предупреждение компилятора (уровень 1) предупреждение C4165.|«HRESULT» преобразуется в «bool»; Вы уверены, что это желаемый?|
-|Предупреждение компилятора (уровень 1) C4166|недопустимое соглашение о вызове для конструктора или деструктора|
+|Предупреждение компилятора (уровень 1) C4166|недопустимое соглашение о вызовах для конструктора или деструктора|
 |Предупреждение компилятора (уровень 1) C4167|«функция»: недоступна в качестве подставляемой функции|
 |Предупреждение компилятора (уровень 1) C4168|ограничение компилятора: не хватает типов для отладчика; удалите базу данных программы «database» и перестройте|
 |[Предупреждение компилятора (уровень 1) C4172](../../error-messages/compiler-warnings/compiler-warning-level-1-c4172.md)|возвращение адреса локальной переменной или временной|

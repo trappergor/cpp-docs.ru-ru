@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Collections:: Vector | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: Vector | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
 
@@ -81,13 +76,13 @@ template <typename T, typename E>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Инициализирует новый экземпляр класса Vector.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Append](#append)|Вставляет указанный элемент после последнего элемента текущего объекта Vector.|
 |[Vector::Clear](#clear)|Удаляет все элементы текущего объекта Vector.|
@@ -107,7 +102,7 @@ template <typename T, typename E>
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |событие [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Происходит при изменении объекта Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -132,7 +127,7 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Параметры
 
-*index*  
+*Индекс*  
 Элемент, который требуется вставить в объект Vector. Тип *элемент* определяется *T* typename.
 
 ## <a name="clear"></a>  Метод Vector::Clear
@@ -177,7 +172,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Параметры
 
-*index*  
+*Индекс*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -212,7 +207,7 @@ virtual unsigned int GetMany(
 
 Эта функция не предназначена для прямого использования в клиентском коде. Используется внутренним образом в [функция to_vector](../cppcx/to-vector-function.md) , обеспечивая эффективное преобразование экземпляров Platform::Vector в экземпляры std::vector.
 
-## <a name="getview"></a>  Vector::GetView Method
+## <a name="getview"></a>  Vector::GetView-метод
 
 Возвращает доступное только для чтения представление объекта Vector, то есть интерфейс IVectorView.
 
@@ -241,7 +236,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *значение*  
 Элемент, который нужно найти.
 
-*index*  
+*Индекс*  
 Отсчитываемый от нуля индекс элемента, если параметр *значение* найден; в противном случае — 0.
 
 *Индекс* имеет значение 0, если элемент является первым элементом вектора или элемент не найден. Если возвращаемое значение — `true`, элемент найден и является первым элементом; в противном случае элемент не найден.
@@ -266,7 +261,7 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Параметры
 
-*index*  
+*Индекс*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 *Элемент*  
@@ -284,7 +279,7 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Параметры
 
-*index*  
+*Индекс*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 ## <a name="removeatend"></a>  Метод Vector::RemoveAtEnd
@@ -324,7 +319,7 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Параметры
 
-*index*  
+*Индекс*  
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 *Элемент*  
@@ -396,10 +391,10 @@ Vector(std::initializer_list<T> il);
 *ptr*  
 Указатель на объект `std::vector`, используемый для инициализации текущего объекта Vector.
 
-*first*  
+*Первый*  
 Первый элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *первый* передается с помощью параметра *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*  
+*последний*  
 Последний элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *последний* передается с помощью параметра *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>См. также

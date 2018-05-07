@@ -1,12 +1,9 @@
 ---
-title: "Ошибка компилятора C2396 | Документы Microsoft"
-ms.custom: 
+title: Ошибка компилятора C2396 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2396
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2396
 ms.assetid: 1b515ef6-7af4-400f-b4ed-564313ea15f6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cabcb0acf6f9b0a476df35de887fc3c9e0efb01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd9007d15cb5b6f9badf8f0962c8c1aa29df5bf7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2396"></a>Ошибка компилятора C2396
 ":: operator'type '': среды CLR или WinRT допустимый functionnot определенного пользователем преобразования. Необходимо преобразовать из или в: «T^», «T^%», «T^&», где T = your_type  

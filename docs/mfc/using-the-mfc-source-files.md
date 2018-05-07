@@ -1,13 +1,10 @@
 ---
-title: "Использование MFC исходные файлы | Документы Microsoft"
-ms.custom: 
+title: Использование MFC исходные файлы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930c205ffd690c190f68766f7a51c83b68ef8d2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73177d8b73d5f4be6d886b0bda84f1e1241488cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-mfc-source-files"></a>Использование файлов с исходным кодом MFC
 Библиотека Microsoft Foundation Class (MFC) предоставляет полный исходный код. Файлы заголовков (.h) находятся в каталоге \atlmfc\include; файлы реализации (.cpp) находятся в каталоге \atlmfc\src\mfc.  

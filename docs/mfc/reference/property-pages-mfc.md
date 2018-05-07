@@ -1,13 +1,10 @@
 ---
-title: "Страницы свойств (MFC) | Документы Microsoft"
-ms.custom: 
+title: Страницы свойств (MFC) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>Страницы свойств (MFC)
 Страницы свойств отобразить текущие значения свойств элемента управления OLE в настраиваемый графический интерфейс для просмотра и редактирования, поддерживая механизм сопоставления данных, основанный на обмен данными (диалоговых окон DDX).  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |[END_PROPPAGEIDS](#end_proppageids)|Завершает список кодов страницы свойств.|  
 |[PROPPAGEID](#proppageid)|Объявляет страницы свойств класса элемента управления.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функция синхронизации значение целочисленное свойство с индекс текущего выделенного фрагмента в поле со списком на странице свойств.  
   
 ```   
@@ -90,7 +85,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции для синхронизации с текущее выделение в поле со списком на странице свойств значение строкового свойства.  
   
 ```  
@@ -120,7 +115,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции для синхронизации значение строковое свойство, точно соответствует текущее выделение в поле со списком на странице свойств.  
   
 ```  
@@ -150,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>  DDP_Check  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции для синхронизации значение свойства с элементом управления "флажок" страница связанного свойства.  
   
 ```   
@@ -180,7 +175,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функция синхронизации значение целочисленное свойство с индекс текущего выделенного фрагмента в списке на странице свойств.  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции для синхронизации значение строкового свойства текущее выделение в списке на странице свойств.  
   
 ```   
@@ -240,7 +235,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции для синхронизации значение строковое свойство, точно соответствует текущее выделение в списке на странице свойств.  
   
 ```   
@@ -270,7 +265,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
  Вызывайте эту функцию на странице свойств `DoDataExchange` функции завершения передачи значений свойств на странице свойств в элемент управления при сохранении значений свойств.  
   
 ```   
@@ -289,7 +284,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>  DDP_Radio  
  Эта функция вызывается в элементе управления `DoPropExchange` функции для синхронизации с связанного свойства страницы переключателя значение свойства.  
   
 ```   
@@ -319,7 +314,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_Text  
+##  <a name="ddp_text"></a>  DDP_Text  
  Эта функция вызывается в элементе управления `DoDataExchange` функции для синхронизации с элементом управления связанного свойства страницы значение свойства.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
  Начинается определение списка элемента управления на странице свойств идентификаторов.  
   
 ```   
@@ -413,7 +408,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
  Завершает определение списка идентификатор страницы свойств.  
   
 ```   
@@ -427,7 +422,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>  PROPPAGEID  
  Добавляет страницу свойств для использования элемента управления OLE.  
   
 ```   

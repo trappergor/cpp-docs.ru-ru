@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCRibbonStatusBarPane | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCRibbonStatusBarPane | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3d5059adf0ebbd1ed651d57354ae73beadb919f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Класс CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Класс реализует элемент ленты, можно добавить в строку статуса ленты.  
@@ -66,13 +61,13 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Создает и инициализирует объект `CMFCRibbonStatusBarPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Возвращает строку, которая определяет длинного строку текста, который может быть отображен в области без усечения.|  
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Возвращает текущее значение выравнивания текста.|  
@@ -88,7 +83,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Вызывается платформой при остановке анимации, которая назначается на панель.|  
   
@@ -109,7 +104,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxribbonstatusbarpane.h  
   
-##  <a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
+##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
  Создание объекта панели в строке состояния.  
   
 ```  
@@ -167,7 +162,7 @@ CMFCRibbonStatusBarPane(
  [in] `uiAnimationListResID`  
  Указывает идентификатор ресурса из списка изображений, используемое для анимации.  
   
-##  <a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
+##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Возвращает Максимальная длина строки текста для отображения панели строки состояния.  
   
 ```  
@@ -177,7 +172,7 @@ LPCTSTR GetAlmostLargeText() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Максимальная длина строки текста для отображения панели строки состояния.  
   
-##  <a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
+##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign  
  Возвращает текущее значение параметра Выравнивание текста метки панели строки состояния.  
   
 ```  
@@ -193,7 +188,7 @@ int GetTextAlign() const;
   
 -   TA_RIGHT.  
   
-##  <a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
+##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation  
  Определяет, является ли анимация хода выполнения.  
   
 ```  
@@ -201,9 +196,9 @@ BOOL IsAnimation() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если анимация выполняется; `FALSE` в противном случае.  
+ `TRUE` Если анимация выполняется; `FALSE` в противном случае.  
   
-##  <a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
+##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended  
  Определите, находится ли область в расширенной области строки состояния ленты.  
   
 ```  
@@ -211,9 +206,9 @@ BOOL IsExtended() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель строки расширенной области состояния. В противном случае — значение `FALSE`.  
+ `TRUE` Если панель строки расширенной области состояния. В противном случае — значение `FALSE`.  
   
-##  <a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -225,7 +220,7 @@ virtual void OnDrawBorder(CDC*);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -239,7 +234,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
+##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
  Этот метод вызывается платформой при завершении анимации, которая назначается на панель.  
   
 ```  
@@ -247,9 +242,9 @@ virtual void OnFinishAnimation();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `StopAnimation`вызовы метода `OnFinishAnimation` метод, который можно использовать для очистки данных после окончания анимации.  
+ `StopAnimation` вызовы метода `OnFinishAnimation` метод, который можно использовать для очистки данных после окончания анимации.  
   
-##  <a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
+##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
  Определите длинную строку текста, который может быть отображен в панели строки состояния без усечения.  
   
 ```  
@@ -263,7 +258,7 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="remarks"></a>Примечания  
  Библиотека вычисляет размер текста, `lpszAlmostLargeText` указывает и соответствующим образом изменяет размер панели. Текст усекается, если он по-прежнему не умещается в области.  
   
-##  <a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
+##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Присоединяет панели строки состояния списка изображений, который можно использовать для анимации.  
   
 ```  
@@ -292,9 +287,9 @@ BOOL SetAnimationList(
  Указывает идентификатор ресурса для списка изображений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если список изображений успешно подключился к панели строки состояния; `FALSE` в противном случае.  
+ `TRUE` Если список изображений успешно подключился к панели строки состояния; `FALSE` в противном случае.  
   
-##  <a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
+##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign  
  Задает выравнивание текста метки панели строки состояния.  
   
 ```  
@@ -306,15 +301,15 @@ void SetTextAlign(int nAlign);
  Задает выравнивание текста.  
   
 ### <a name="remarks"></a>Примечания  
- `nAlign`может принимать одно из следующих значений:  
+ `nAlign` Может принимать одно из следующих значений:  
   
 - `TA_LEFT`: левому краю  
   
-- `TA_CENTER:`Выравнивание по центру  
+- `TA_CENTER:` Выравнивание по центру  
   
-- `TA_RIGHT:`Выравнивание по правому краю  
+- `TA_RIGHT:` Выравнивание по правому краю  
   
-##  <a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
+##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
  Запуск анимации, которые назначены области.  
   
 ```  
@@ -333,7 +328,7 @@ void StartAnimation(
 ### <a name="remarks"></a>Примечания  
  Необходимо указать дескриптор для списка изображений, перед вызовом метода `StartAnimation` с помощью `SetAnimationList`.  
   
-##  <a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
+##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  
  Останавливает анимации, которая назначена панели строки состояния.  
   
 ```  

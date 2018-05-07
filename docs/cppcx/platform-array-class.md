@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Array | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::Array | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array - класс
 Представляет изменяемый одномерный массив, который можно получать и передавать через двоичный интерфейс приложений (ABI).  
@@ -45,7 +40,7 @@ private ref class Array<TArg, 1> :
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструкторы массивов](#ctor)|Инициализирует одномерный изменяемый массив типов, указанных в параметре шаблона класса *T*.|  
   
@@ -112,7 +107,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Элемент массива, заданный параметром `index`.  
   
-## <a name="value"></a>  Array::Value Property
+## <a name="value"></a>  Свойство Array::value
 Получает дескриптор текущего массива.  
   
 ## <a name="syntax"></a>Синтаксис  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CPropExchange | Документы Microsoft"
-ms.custom: 
+title: Класс CPropExchange | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>Класс CPropExchange
 Поддерживает реализацию сохранения элементов управления OLE.  
@@ -56,7 +51,7 @@ class AFX_NOVTABLE CPropExchange
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Меняет свойства больших двоичных объектов (BLOB).|  
 |[CPropExchange::ExchangeFontProp](#exchangefontprop)|Меняет свойства шрифта.|  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|Указывает, выполняется ли свойства загрузки в элемент управления или сохранения из него.|  
   
 ## <a name="remarks"></a>Примечания  
- `CPropExchange`не имеет базового класса.  
+ `CPropExchange` не имеет базового класса.  
   
  Устанавливает контекст и направление exchange свойство.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  Это платформа передает указатель `CPropExchange` объект для элемента управления `DoPropExchange` функции. При использовании мастера для создания начальный набор файлов для элемент управления, элемент управления имеет `DoPropExchange` вызовов функций `COleControl::DoPropExchange`. Версия базового класса меняет стандартных свойств элемента управления; Измените версию производного класса к свойствам exchange были добавлены в элемент управления.  
   
- `CPropExchange`можно использовать для сериализации свойства элемента управления или инициализировать свойства элемента управления, после загрузки или создания элементов управления. `ExchangeProp` И `ExchangeFontProp` функции-члены `CPropExchange` могут свойства, чтобы сохранить и загрузить их с другой носитель.  
+ `CPropExchange` можно использовать для сериализации свойства элемента управления или инициализировать свойства элемента управления, после загрузки или создания элементов управления. `ExchangeProp` И `ExchangeFontProp` функции-члены `CPropExchange` могут свойства, чтобы сохранить и загрузить их с другой носитель.  
   
  Дополнительные сведения об использовании `CPropExchange`, см. в статье [элементы управления MFC ActiveX: страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  Сериализует свойство, которое сохраняет данные больших двоичных объектов (BLOB).  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  Функции **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, и **CPropsetPropExchange::ExchangeBlobProp** переопределения Это чистой виртуальной функции.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  Меняет свойства шрифта между носителя и элементом управления.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  Функции **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, и **CPropsetPropExchange::ExchangeFontProp** переопределения Это чистой виртуальной функции.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  Меняет свойства между элементом управления и файл.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  Функции **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, и **CPropsetPropExchange::ExchangePersistentProp** переопределить это чистой виртуальной функции.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  Меняет свойства между носителя и элементом управления.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  Функции **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, и **CPropsetPropExchange::ExchangeProp** этом чисто переопределения виртуальная функция.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  Вызывается платформой для обработки сохраняемости номера версии.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  Вызывайте эту функцию, чтобы получить номер версии элемента управления.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>Возвращаемое значение  
  Номер версии элемента управления.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  Определяет свойство обмен выполняются асинхронно.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если свойства обмен асинхронно, в противном случае — значение FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  Эта функция вызывается для определения, выполняется ли свойства загрузки в элемент управления или сохранения из него.  
   
 ```  

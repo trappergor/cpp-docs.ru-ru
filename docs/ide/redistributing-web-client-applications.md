@@ -1,13 +1,10 @@
 ---
-title: "Распространение клиентских веб-приложений | Документы Microsoft"
-ms.custom: 
+title: Распространение клиентских веб-приложений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Internet applications [C++], redistributing
 - application deployment [C++], Web applications
 ms.assetid: fe05988b-dee8-4a46-b381-016b5103a6bf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e764e42cb558d2e13e0609cb139e9538a72d09ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-web-client-applications"></a>Распространение клиентских веб-приложений
 Если приложение использует классы MFC, реализуя элемент управления WebBrowser (например, `CHtmlView` или `CHtmlEditView`), Microsoft Internet Explorer 4.0 или более поздней версии необходимо по крайней мере минимальный установить на целевом компьютере.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Q185375, Практическое руководство: Создание одного исполняемого файла установки обозревателя Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
   
- Статьи базы знаний можно найти в библиотеке MSDN или на [http://support.microsoft.com](http://support.microsoft.com).  
+ Статьи базы знаний можно найти в библиотеке MSDN или на [ http://support.microsoft.com ](http://support.microsoft.com).  
   
 ## <a name="see-also"></a>См. также  
  [Развертывание приложений для настольных систем](../ide/deploying-native-desktop-applications-visual-cpp.md)

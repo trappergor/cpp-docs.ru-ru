@@ -1,12 +1,9 @@
 ---
-title: "Класс COleChangeSourceDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleChangeSourceDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 Используется для диалогового окна OLE "Изменить источник".  
@@ -58,13 +53,13 @@ class COleChangeSourceDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|Создает объект `COleChangeSourceDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменить источник.|  
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Возвращает отображаемое имя полного исходного.|  
@@ -76,7 +71,7 @@ class COleChangeSourceDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|  
   
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  Эта функция создает `COleChangeSourceDialog` объекта.  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры и [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в Windows SDK.  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна OLE изменить источник.  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  Эта функция вызывается для получения полное отображаемое имя для элемента связанного клиента.  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>Возвращаемое значение  
  Отображаемое имя полного исходного (специальное имя) для [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанного в конструкторе.  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  Эта функция вызывается для получения части файла моникер отображаемое имя для элемента связанного клиента.  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>Примечания  
  Моникер файла вместе с моникера элемента дает полное отображаемое имя.  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  Эта функция вызывается для получения предыдущей строки префикса для источника.  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  Эта функция вызывается для получения части моникера элемента отображаемое имя для элемента связанного клиента.  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>Примечания  
  Моникер файла вместе с моникера элемента дает полное отображаемое имя.  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  Эта функция вызывается для получения новой строки префикса для источника.  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  Этот член данных — структура типа [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `OLEUICHANGESOURCE`используется для управления поведением диалогового окна OLE изменить источник. Члены этой структуры можно изменять непосредственно.  
+ `OLEUICHANGESOURCE` используется для управления поведением диалогового окна OLE изменить источник. Члены этой структуры можно изменять непосредственно.  
   
  Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  Эта функция вызывается для определения допустимости нового источника.  
   
 ```  

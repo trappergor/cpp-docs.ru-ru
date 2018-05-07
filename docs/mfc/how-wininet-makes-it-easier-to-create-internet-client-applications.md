@@ -1,13 +1,10 @@
 ---
-title: "Использование Wininet для упрощения создания клиентских приложений в Интернете | Документы Microsoft"
-ms.custom: 
+title: Использование Wininet для упрощения создания клиентских приложений в Интернете | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Использование WinInet для упрощения создания клиентских приложений в Интернете
 Расширения Интернета Win32 или WinInet, обеспечивают доступ к распространенные протоколы Интернета, включая HTTP, FTP и gopher. WinInet можно написать клиентских приложений в Интернете на более высоком уровне программирования без необходимости работать с WinSock TCP/IP и сведения о конкретных протоколы Интернета. WinInet предоставляет согласованный набор функций для всех трех протоколов, знакомый интерфейс Win32 API. Это согласованности сводит к минимуму изменения кода, необходимо внести изменение базового протокола (например, из FTP, HTTP).  

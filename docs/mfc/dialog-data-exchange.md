@@ -1,13 +1,10 @@
 ---
-title: "Обмен данными диалоговых окон | Документы Microsoft"
-ms.custom: 
+title: Обмен данными диалоговых окон | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>Обмен данными диалоговых окон
 При использовании механизма DDX можно задать начальные значения диалогового окна переменных-членов объекта, обычно в вашей `OnInitDialog` обработчик или диалогового окна конструктора. Непосредственно перед отображением диалогового окна механизм DDX перемещает значения переменных-членов для элементов управления в диалоговом окне, где они отображаются при самого окна появляется в ответ на `DoModal` или **создать** . Реализация по умолчанию `OnInitDialog` в `CDialog` вызовы `UpdateData` функции-члена класса `CWnd` для инициализации элементов управления в диалоговом окне.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  ![Обмен данными](../mfc/media/vc379d1.gif "vc379d1")  
 Обмен данными диалоговых окон  
   
- `UpdateData`работает в обоих направлениях, определяемое параметром **BOOL** ей передан параметр. Для выполнения обмена, `UpdateData` настраивает `CDataExchange` и вызывает переопределение класса диалогового окна `CDialog` `DoDataExchange` функции-члена. `DoDataExchange`принимает аргумент типа `CDataExchange`. `CDataExchange` Передаваемый объект `UpdateData` представляет контекст exchange, определение такие сведения как направление exchange.  
+ `UpdateData` работает в обоих направлениях, определяемое параметром **BOOL** ей передан параметр. Для выполнения обмена, `UpdateData` настраивает `CDataExchange` и вызывает переопределение класса диалогового окна `CDialog` `DoDataExchange` функции-члена. `DoDataExchange` принимает аргумент типа `CDataExchange`. `CDataExchange` Передаваемый объект `UpdateData` представляет контекст exchange, определение такие сведения как направление exchange.  
   
  Когда вы (или мастера создания кода) переопределить `DoDataExchange`, укажите вызова одной функции DDX на каждый элемент данных (элемент управления). Каждая функция DDX знает, как обмен данными в обоих направлениях, в зависимости от контекста, предоставляемые `CDataExchange` аргумент, передаваемый вашей `DoDataExchange` по `UpdateData`.  
   

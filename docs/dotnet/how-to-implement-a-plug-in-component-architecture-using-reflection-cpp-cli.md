@@ -1,31 +1,26 @@
 ---
-title: "Реализации архитектуры подключаемых модулей (C + +/ CLI) | Документы Microsoft"
-ms.custom: 
+title: Реализации архитектуры подключаемых модулей (C + +/ CLI) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - plug-ins [C++]
 - reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e001ef88af0727a994c309d45167787d3e6677b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Практическое руководство. Реализация архитектуры с подключаемыми компонентами с помощью отражения (C++/CLI)
 В следующем примере кода показано использование отражения для реализации простой «подключаемой» архитектуры. Первый листинг — это приложение, а второй — подключаемый модуль. Приложение является формой нескольких документов, которые заполняются с помощью любого форм классы, находящиеся в библиотеке DLL подключаемого модуля, предоставленный аргумент командной строки.  

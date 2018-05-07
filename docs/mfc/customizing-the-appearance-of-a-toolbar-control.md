@@ -1,13 +1,10 @@
 ---
-title: "Настройка внешнего вида элемента управления Toolbar | Документы Microsoft"
-ms.custom: 
+title: Настройка внешнего вида элемента управления Toolbar | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Настройка внешнего вида элементов управления панели инструментов
 Класс `CToolBarCtrl` предоставляет множество типов, которые влияют на внешний вид (и, в некоторых случаях поведение) объекта панели инструментов. Изменить объект панели инструментов, задав `dwCtrlStyle` параметр `CToolBarCtrl::Create` (или `CToolBar::CreateEx`) функция-член, при создании элемента управления toolbar.  
@@ -57,11 +52,11 @@ ms.lasthandoff: 12/21/2017
   
  Остальные стили, которые влияют на визуальные и невизуальные аспекты объект панели инструментов:  
   
--   `TBSTYLE_WRAPABLE`Создает панель инструментов, которая может содержать несколько строк кнопок. Кнопки панели инструментов может «обернуться» на следующую строку при становится слишком узкий, чтобы включить все кнопки в той же строке панели инструментов. Перенос возникает на nongroup границы и разделение.  
+-   `TBSTYLE_WRAPABLE` Создает панель инструментов, которая может содержать несколько строк кнопок. Кнопки панели инструментов может «обернуться» на следующую строку при становится слишком узкий, чтобы включить все кнопки в той же строке панели инструментов. Перенос возникает на nongroup границы и разделение.  
   
 -   **TBSTYLE_CUSTOMERASE** формирует **NM_CUSTOMDRAW** сообщений уведомления при обработке `WM_ERASEBKGND` сообщений.  
   
--   `TBSTYLE_TOOLTIPS`Создание элемента управления всплывающей подсказки, приложение может использовать для отображения описательный текст для кнопок на панели инструментов.  
+-   `TBSTYLE_TOOLTIPS` Создание элемента управления всплывающей подсказки, приложение может использовать для отображения описательный текст для кнопок на панели инструментов.  
   
  Полный расширенные стили и инструментов, в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439) и [инструментов расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb760430) в Windows SDK.  
   

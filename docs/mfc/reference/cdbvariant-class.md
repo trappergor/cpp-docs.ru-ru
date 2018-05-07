@@ -1,12 +1,9 @@
 ---
-title: "CDBVariant-класс | Документы Microsoft"
-ms.custom: 
+title: CDBVariant-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBVariant
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c100dc1a101d1c880dd5bd44e0986690728b4e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 Представляет вариантный тип данных для классов MFC ODBC.  
@@ -64,29 +59,29 @@ ms.lasthandoff: 12/21/2017
 class CDBVariant  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в данный момент сохраненного значения. Введите `DWORD`.|  
   
 ### <a name="public-union-members"></a>Открытые члены объединения  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|  
 |[CDBVariant::m_chVal](#m_chval)|Содержит значение типа `unsigned char`.|  
@@ -101,9 +96,9 @@ class CDBVariant
 |[CDBVariant::m_pstringW](#m_pstringw)|Содержит указатель на уровне [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CDBVariant`не имеет базового класса.  
+ `CDBVariant` не имеет базового класса.  
   
- `CDBVariant`Аналогично [COleVariant](../../mfc/reference/colevariant-class.md), однако `CDBVariant` не использует OLE. `CDBVariant`позволяет хранить значения, не беспокоясь о типами данных. `CDBVariant`отслеживает текущее значение, которое хранится в объединении тип данных.  
+ `CDBVariant` Аналогично [COleVariant](../../mfc/reference/colevariant-class.md), однако `CDBVariant` не использует OLE. `CDBVariant` Позволяет хранить значения, не беспокоясь о типами данных. `CDBVariant` отслеживает текущее значение, которое хранится в объединении тип данных.  
   
  Класс [CRecordset](../../mfc/reference/crecordset-class.md) использует `CDBVariant` объектов в трех функций-членов: `GetFieldValue`, `GetBookmark`, и `SetBookmark`. Например `GetFieldValue` позволяет динамически извлекать данные в столбце. Так как тип данных столбца не может быть известен во время выполнения `GetFieldValue` использует `CDBVariant` объект для хранения данных в столбце.  
   
@@ -113,7 +108,7 @@ class CDBVariant
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="cdbvariant"></a>CDBVariant::CDBVariant  
+##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
  Создает значение NULL `CDBVariant` объекта.  
   
 ```  
@@ -123,7 +118,7 @@ CDBVariant();
 ### <a name="remarks"></a>Примечания  
  Наборы [m_dwType](#m_dwtype) данные-члены **DBVT_NULL**.  
   
-##  <a name="clear"></a>CDBVariant::Clear  
+##  <a name="clear"></a>  CDBVariant::Clear  
  Вызовите эту функцию-член для очистки `CDBVariant` объекта.  
   
 ```  
@@ -135,25 +130,25 @@ void Clear();
   
  `CDBVariant` Вызовы деструктора **снимите**.  
   
-##  <a name="m_boolval"></a>CDBVariant::m_boolVal  
+##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Сохраняет значение типа **BOOL**.  
   
 ### <a name="remarks"></a>Примечания  
  **M_boolVal** элемент данных относится к объединению. Перед обращением к **m_boolVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_BOOL**, затем **m_boolVal** будет содержать допустимое значение; в противном случае доступ к **m_boolVal** приведет к недостоверным результатам.  
   
-##  <a name="m_chval"></a>CDBVariant::m_chVal  
+##  <a name="m_chval"></a>  CDBVariant::m_chVal  
  Сохраняет значение типа `unsigned char`.  
   
 ### <a name="remarks"></a>Примечания  
  **M_chVal** элемент данных относится к объединению. Перед обращением к **m_chVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_UCHAR**, затем **m_chVal** содержит допустимое значение; в противном случае доступ к **m_chVal** приведет к недостоверным результатам.  
   
-##  <a name="m_dblval"></a>CDBVariant::m_dblVal  
+##  <a name="m_dblval"></a>  CDBVariant::m_dblVal  
  Сохраняет значение типа **двойные**.  
   
 ### <a name="remarks"></a>Примечания  
  **M_dblVal** элемент данных относится к объединению. Перед обращением к **m_dblVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_DOUBLE**, затем **m_dblVal** содержит допустимое значение; в противном случае доступ к **m_dblVal** приведет к недостоверным результатам.  
   
-##  <a name="m_dwtype"></a>CDBVariant::m_dwType  
+##  <a name="m_dwtype"></a>  CDBVariant::m_dwType  
  Этот элемент данных содержит тип данных для значения, которое в настоящее время хранятся в `CDBVariant` члену объекта объединения данных.  
   
 ### <a name="remarks"></a>Примечания  
@@ -174,31 +169,31 @@ void Clear();
 |**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
 |**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
   
-##  <a name="m_fltval"></a>CDBVariant::m_fltVal  
+##  <a name="m_fltval"></a>  CDBVariant::m_fltVal  
  Сохраняет значение типа **float**.  
   
 ### <a name="remarks"></a>Примечания  
  **M_fltVal** элемент данных относится к объединению. Перед обращением к **m_fltVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_SINGLE**, затем **m_fltVal** содержит допустимое значение; в противном случае доступ к **m_fltVal** приведет к недостоверным результатам.  
   
-##  <a name="m_ival"></a>CDBVariant::m_iVal  
+##  <a name="m_ival"></a>  CDBVariant::m_iVal  
  Сохраняет значение типа **короткие**.  
   
 ### <a name="remarks"></a>Примечания  
  **M_iVal** элемент данных относится к объединению. Перед обращением к **m_iVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_SHORT**, затем **m_iVal** содержит допустимое значение; в противном случае доступ к **m_iVal** приведет к недостоверным результатам.  
   
-##  <a name="m_lval"></a>CDBVariant::m_lVal  
+##  <a name="m_lval"></a>  CDBVariant::m_lVal  
  Сохраняет значение типа **длинные**.  
   
 ### <a name="remarks"></a>Примечания  
  **M_lVal** элемент данных относится к объединению. Перед обращением к **m_lVal**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_LONG**, затем **m_lVal** содержит допустимое значение; в противном случае доступ к **m_lVal** приведет к недостоверным результатам.  
   
-##  <a name="m_pbinary"></a>CDBVariant::m_pbinary  
+##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary  
  Содержит указатель на объект типа [CLongBinary](../../mfc/reference/clongbinary-class.md).  
   
 ### <a name="remarks"></a>Примечания  
  **M_pbinary** элемент данных относится к объединению. Перед обращением к **m_pbinary**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_BINARY**, затем **m_pbinary** содержит допустимый указатель; в противном случае доступ к **m_pbinary** приведет к недостоверным результатам.  
   
-##  <a name="m_pdate"></a>CDBVariant::m_pdate  
+##  <a name="m_pdate"></a>  CDBVariant::m_pdate  
  Содержит указатель на объект типа **TIMESTAMP_STRUCT**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -206,19 +201,19 @@ void Clear();
   
  Дополнительные сведения о **TIMESTAMP_STRUCT** тип данных, см. в разделе [типы данных C](https://msdn.microsoft.com/library/ms714556.aspx) в приложении D *справочнике программиста ODBC* в Windows SDK.  
   
-##  <a name="m_pstring"></a>CDBVariant::m_pstring  
+##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
  Содержит указатель на объект типа [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
 ### <a name="remarks"></a>Примечания  
  **M_pstring** элемент данных относится к объединению. Перед обращением к **m_pstring**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_STRING**, затем **m_pstring** содержит допустимый указатель; в противном случае доступ к **m_pstring** приведет к недостоверным результатам.  
   
-##  <a name="m_pstringa"></a>CDBVariant::m_pstringA  
+##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA  
  Содержит указатель на ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
  **M_pstringA** элемент данных относится к объединению. Перед обращением к **m_pstringA**, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` равно **DBVT_ASTRING**, затем **m_pstringA** содержит допустимый указатель; в противном случае доступ к **m_pstringA** приведет к недостоверным результатам.  
   
-##  <a name="m_pstringw"></a>CDBVariant::m_pstringW  
+##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW  
  Содержит указатель на уровне [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  

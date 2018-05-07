@@ -1,13 +1,10 @@
 ---
-title: "Мастер добавления члена функции | Документы Microsoft"
-ms.custom: 
+title: Мастер добавления члена функции | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.function.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-function-wizard"></a>Мастер добавления функции-члена
 Этот мастер добавляет объявления функции-члена в файл заголовка и заглушки реализации функции-члена в файл реализации для выбранного класса.  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
  Проверьте ли новый функция-член является статическим или виртуальный и является встроенной или чистого. Если значение быть чистыми, функция-член `Virtual` установлен флажок и **встроенного** станет недоступным. Значение по умолчанию — это функция невиртуальные нестатического члена.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |[Статические](../cpp/storage-classes-cpp.md)|Указывает, что функция работает как глобальная и может быть вызван вне класса — даже без создания экземпляра класса. Функция-член не имеет доступа к нестатическим членам. Функция-член, указанный как `Static` не может быть виртуальным.|  
 |[Виртуальный](../cpp/virtual-cpp.md)|Гарантирует, что правильный элемент функция вызывается для объекта, независимо от того, выражение, используемое для вызова функции члена. Функция-член, указанный как `Virtual` не может быть статическим.|  

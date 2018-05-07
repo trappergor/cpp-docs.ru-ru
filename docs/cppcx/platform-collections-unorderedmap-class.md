@@ -1,26 +1,21 @@
 ---
-title: "Класс Platform::Collections:: unorderedmap | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: unorderedmap | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -46,7 +41,7 @@ ref class Map sealed;
 Тип значения в паре "ключ-значение".
 
 *C*  
-Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. By default,  [std::equal_to\<K>](../standard-library/equal-to-struct.md).
+Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -70,13 +65,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[UnorderedMap::UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[UnorderedMap::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[UnorderedMap::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -91,8 +86,8 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
-|[Map::MapChanged](#mapchanged) event|Происходит при изменении объекта Map.|
+|name|Описание|
+|[MAP::MapChanged](#mapchanged) событий|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -134,7 +129,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>  UnorderedMap::GetView Method
+## <a name="getview"></a>  Метод UnorderedMap::GetView
 
 Возвращает доступное только для чтения представление текущего объекта unorderedmap; то есть [класс Platform::Collections:: unorderedmapview](../cppcx/platform-collections-unorderedmapview-class.md) , реализующий [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) интерфейса.
 
@@ -148,7 +143,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Объект `UnorderedMapView`.
 
-## <a name="haskey"></a>  UnorderedMap::HasKey Method
+## <a name="haskey"></a>  Метод UnorderedMap::HasKey
 
 Определяет, содержит ли текущий объект UnorderedMap указанный ключ.
 
@@ -194,7 +189,7 @@ virtual bool Insert(
 
 `true` Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false` Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущий объект UnorderedMap.
 
-## <a name="lookup"></a>  UnorderedMap::Lookup Method
+## <a name="lookup"></a>  Метод UnorderedMap::Lookup
 
 Возвращает значение типа V, связанное с указанным ключом типа K.
 
@@ -364,10 +359,10 @@ UnorderedMap(
 
 *IL* A [std::initializer_list](../standard-library/initializer-list-class.md) из [std::pair](../standard-library/pair-structure.md) объекты, которые используются для инициализации сопоставления.
 
-*first*  
+*Первый*  
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта UnorderedMap.
 
-*last*  
+*последний*  
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта UnorderedMap.
 
 ## <a name="see-also"></a>См. также

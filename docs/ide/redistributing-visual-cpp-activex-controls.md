@@ -1,30 +1,25 @@
 ---
-title: "Распространение элементов управления ActiveX в Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Распространение элементов управления ActiveX в Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Распространение элементов управления ActiveX в Visual C++
 Visual C++ 6.0 предоставляет элементы управления ActiveX, которые можно использовать в приложениях, распространяемых. Эти элементы управления больше не включены в Visual C++. Согласно лицензионным соглашениям по Visual C++ 6.0 распространение этих элементов управления в приложениях, разработанных в Visual C++.  
@@ -46,7 +41,7 @@ Visual C++ 6.0 предоставляет элементы управления 
   
 -   stdole2.tlb  
   
- Если эти библиотеки DLL не доступны в конечной системе, необходимо обновить их с помощью установленного механизма для обновления соответствующей операционной системе. Можно загрузить последний пакет обновления для операционных систем Windows из [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
+ Если эти библиотеки DLL не доступны в конечной системе, необходимо обновить их с помощью установленного механизма для обновления соответствующей операционной системе. Можно загрузить последний пакет обновления для операционных систем Windows из [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com).  
   
  Если приложение использует один из элементов управления ActiveX, подключается к базе данных, необходимо иметь компоненты доступа к данным (MDAC) Microsoft, установлены в системе. Дополнительные сведения см. в разделе [повторное распространение файлов поддержки базы данных](../ide/redistributing-database-support-files.md).  
   

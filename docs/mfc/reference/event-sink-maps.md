@@ -1,13 +1,10 @@
 ---
-title: "Maps приемника событий | Документы Microsoft"
-ms.custom: 
+title: Maps приемника событий | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309474220f081a0eca67d0f83ead21c59eb649e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-sink-maps"></a>Схемы приемников событий
 Если внедренный элемент управления OLE инициирует событие, контейнер элемента управления получает событие, используя механизм, называемый «картой приемника событий, «предоставляемые MFC. На этой карте приемника событий указывает функции обработчика для каждого конкретного события, а также параметры этих событий. Дополнительные сведения о схемы приемников событий см. в статье [контейнеры элементов управления ActiveX](../../mfc/activex-control-containers.md).  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|Определяет обработчик для обработки уведомлений свойство из набора элементов управления OLE.|  
 |[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.|  
   
-##  <a name="begin_eventsink_map"></a>BEGIN_EVENTSINK_MAP  
+##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
  Начинается определение карте приемника событий.  
   
 ```   
@@ -66,7 +61,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="declare_eventsink_map"></a>DECLARE_EVENTSINK_MAP  
+##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
  OLE-контейнер может предоставить картой приемника событий для задания событий, которые будет уведомлен о контейнера.  
   
 ```   
@@ -81,7 +76,7 @@ DECLARE_EVENTSINK_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="end_eventsink_map"></a>END_EVENTSINK_MAP  
+##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
  Завершает определение карте приемника событий.  
   
 ```   
@@ -91,7 +86,7 @@ END_EVENTSINK_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="on_event"></a>ON_EVENT  
+##  <a name="on_event"></a>  ON_EVENT  
  Используйте `ON_EVENT` макрос, чтобы определить функцию обработчика событий для события, создаваемые элемента управления OLE.  
   
 ```   
@@ -115,7 +110,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
  Последовательность **VTS_** констант, указывающих типы параметров для события. Это же константы, которые используются в операциях карты диспетчеризации, таких как `DISP_FUNCTION`.  
   
 ### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Пример:  
+ `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Например:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
@@ -126,7 +121,7 @@ ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="on_event_range"></a>ON_EVENT_RANGE  
+##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
  Используйте `ON_EVENT_RANGE` макрос, чтобы определить функцию обработчика событий для события, создаваемые любого элемента управления OLE, имеющих идентификатор элемента управления на непрерывный диапазон идентификаторов.  
   
 ```   
@@ -153,7 +148,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
  Последовательность **VTS_** констант, указывающих типы параметров для события. Тип должен быть первая константа **VTS_I4**, для идентификатора элемента управления Это же константы, которые используются в операциях карты диспетчеризации, таких как `DISP_FUNCTION`.  
   
 ### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Пример:  
+ `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Например:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
@@ -173,7 +168,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="on_event_reflect"></a>ON_EVENT_REFLECT  
+##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
  `ON_EVENT_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, получает событий, произошедших в элементе управления, прежде чем они будут обработаны с контейнера элемента управления.  
   
 ```   
@@ -196,7 +191,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="remarks"></a>Примечания  
  `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы.  
   
- Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Пример:  
+ Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Например:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
@@ -207,7 +202,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="on_propnotify"></a>ON_PROPNOTIFY  
+##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
  Используйте `ON_PROPNOTIFY` макрос, чтобы определять запись карты приемник событий для обработки уведомления о свойств из элемента управления OLE.  
   
 ```   
@@ -232,7 +227,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  Указатель на функцию-член, который обрабатывает **OnChanged** уведомления для этого свойства. Функция должна иметь **BOOL** тип возвращаемого значения и **UINT** параметра. Данная функция должна возвращать **TRUE** для указания, что уведомление было обработано; в противном случае **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
- `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Пример:  
+ `vtsParams` Аргумент является разделенный пробелами список значений из **VTS_** константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Например:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
@@ -240,7 +235,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
   
  Список **VTS_** константы, в разделе [EVENT_CUSTOM](event-maps.md#event_custom).  
   
-##  <a name="on_propnotify_range"></a>ON_PROPNOTIFY_RANGE  
+##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
  Используйте `ON_PROPNOTIFY_RANGE` макрос, чтобы определять запись карты приемник событий для обработки уведомлений свойства из любого элемента управления OLE, имеющих идентификатор элемента управления на непрерывный диапазон идентификаторов.  
   
 ```  
@@ -271,7 +266,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="on_propnotify_reflect"></a>ON_PROPNOTIFY_REFLECT  
+##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
  `ON_PROPNOTIFY_REFLECT` Макрос, при использовании событий приемником сопоставления класса-оболочки элемента управления OLE, Получает свойство уведомлений, отправленных с помощью элемента управления, прежде чем они будут обработаны с контейнера элемента управления.  
   
 ```  

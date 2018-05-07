@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCToolBar | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCToolBar | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBar
@@ -320,17 +317,15 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 870f2e53688f4ea45bbf61c8f41dd30606670d6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 `CMFCToolBar` Похож [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку функций пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
@@ -343,18 +338,18 @@ ms.lasthandoff: 12/21/2017
 class CMFCToolBar : public CMFCBaseToolBar  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCToolBar::CMFCToolBar`|Конструктор по умолчанию.|  
 |`CMFCToolBar::~CMFCToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Добавляет в список команд, которые отображаются всегда, когда пользователь открывает меню команды меню.|  
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Увеличивает на единицу счетчик, который связан с данной команды.|  
@@ -506,7 +501,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Определяет, отображается ли панель инструментов в списке на **панели инструментов** области **Настройка** диалоговое окно.|  
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет максимальное Высота кнопки на панели инструментов.|  
@@ -517,7 +512,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Указывает необходимость масштабирования или не изображениям значков панели инструментов в режиме высокого уровня точек на ДЮЙМ.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Указывает соотношение между измерением (высота или ширина) больших изображений и измерение обычных образов.|  
@@ -533,7 +528,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  Для вставки отдельную кнопку, например, поле со списком или раскрывающимся списком, резервируют фиктивный кнопки в родительский ресурс, а заменить фиктивный кнопку во время выполнения с помощью [CMFCToolBar::ReplaceButton](#replacebutton). Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../walkthrough-putting-controls-on-toolbars.md).  
   
- `CMFCToolBar`является базовым классом для классов библиотеки MFC [класса CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [класс CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), и [CMFCDropDownToolBar класса](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
+ `CMFCToolBar` является базовым классом для классов библиотеки MFC [класса CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [класс CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), и [CMFCDropDownToolBar класса](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует использование различных методов `CMFCToolBar` класса. В примере показано задание текста метки окна панели инструментов, границ, задать стиль панели и включить **добавить или удалить кнопки** , расположенную на краю панели инструментов. Этот фрагмент кода является частью [IE демонстрационный пример](../../visual-cpp-samples.md).  
@@ -559,7 +554,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  `CMFCToolBar`  
   
-##  <a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
+##  <a name="addbasiccommand"></a>  CMFCToolBar::AddBasicCommand  
  Добавляет в список команд, которые отображаются всегда, когда пользователь открывает меню команды меню.  
   
 ```  
@@ -575,7 +570,7 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
   
  Используйте [CMFCToolBar::SetBasicCommands](#setbasiccommands) метод, чтобы задать список команд, которые отображаются всегда, когда пользователь открывает меню. Используйте [CMFCToolBar::GetBasicCommands](#getbasiccommands) метод, чтобы получить список основных команд, используемый вашим приложением.  
   
-##  <a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
+##  <a name="addcommandusage"></a>  CMFCToolBar::AddCommandUsage  
  Увеличивает на единицу счетчик, который связан с данной команды.  
   
 ```  
@@ -593,7 +588,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
   
  Этот метод увеличивает на единицу счетчик команд с помощью [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) метод.  
   
-##  <a name="addtoolbarforimagecollection"></a>CMFCToolBar::AddToolBarForImageCollection  
+##  <a name="addtoolbarforimagecollection"></a>  CMFCToolBar::AddToolBarForImageCollection  
  Добавляет коллекцию изображений в приложении изображений из ресурсы пользовательского интерфейса.  
   
 ```  
@@ -626,12 +621,12 @@ static BOOL __stdcall AddToolBarForImageCollection(
  Идентификатор ресурса точечного рисунка с отключенным изображениям значков меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; `FALSE` Если `uiResID` или `uiBmpResID` задают допустимые ресурсы или другой ошибки.  
+ `TRUE` Если метод выполнен успешно; `FALSE` Если `uiResID` или `uiBmpResID` задают допустимые ресурсы или другой ошибки.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для загрузки растрового изображения с изображениям значков панели инструментов и добавьте его к коллекции изображений панели инструментов. Этот метод создает объект временные панели инструментов и вызовы [CMFCToolBar::LoadToolBar](#loadtoolbar).  
   
-##  <a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout  
  Повторно вычисляет размер и положение панели инструментов.  
   
 ```  
@@ -645,7 +640,7 @@ virtual void AdjustLayout();
   
  Переопределите этот метод для предоставления собственных динамического макета в классах, производных от `CMFCToolbar`.  
   
-##  <a name="adjustsize"></a>CMFCToolBar::AdjustSize  
+##  <a name="adjustsize"></a>  CMFCToolBar::AdjustSize  
  Повторно вычисляет размер панели инструментов.  
   
 ```  
@@ -657,7 +652,7 @@ void AdjustSize();
   
  [CMFCToolBar::AdjustLayout](#adjustlayout) метод вызывает этот метод, чтобы повторно вычислить размер, если родительский панели инструментов не `CMFCReBar` объекта.  
   
-##  <a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>  CMFCToolBar::AllowChangeTextLabels  
  Указывает, может ли отображаться текстовые метки в разделе изображения на кнопке панели инструментов.  
   
 ```  
@@ -665,7 +660,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если она разрешена для отображения текстовых меток под изображениями; в противном случае `FALSE`.  
+ `TRUE` Если она разрешена для отображения текстовых меток под изображениями; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, чтобы определить, следует ли включить диалоговое окно настроек **отображение текстовых меток** флажок на **панели инструментов** страницы для выбранной панели инструментов.  
@@ -674,7 +669,7 @@ virtual BOOL AllowChangeTextLabels() const;
   
  Переопределите этот метод в объект, производный от `CMFCToolBar` и возвращают `FALSE` когда требуется запретить пользователю решить, отображаются ли кнопки панели инструментов в списке изображений текстовые метки.  
   
-##  <a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>  CMFCToolBar::AllowShowOnList  
  Определяет, отображается ли панель инструментов в списке панели инструментов на **панели инструментов** области **Настройка** диалоговое окно.  
   
 ```  
@@ -682,14 +677,14 @@ virtual BOOL AllowShowOnList() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если объект панели инструментов могут отображаться в списке на странице настройки панели инструментов; в противном случае `FALSE`.  
+ `TRUE` Если объект панели инструментов могут отображаться в списке на странице настройки панели инструментов; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой, чтобы определить, следует ли включать в списке на странице настройки инструментов конкретный объект, производный от `CMFCToolBar`.  
   
  Реализация по умолчанию всегда возвращает значение `TRUE`. Переопределите этот метод, если не хотите, чтобы отображались в списке панели инструментов в диалоговом окне настройки панели инструментов.  
   
-##  <a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
+##  <a name="aretextlabels"></a>  CMFCToolBar::AreTextLabels  
  Указывает, отображаются ли в данный момент текстовых меток в разделе изображения на кнопке панели инструментов.  
   
 ```  
@@ -697,12 +692,12 @@ BOOL AreTextLabels() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопки панели инструментов отображаются метки текст под изображениями; в противном случае `FALSE`.  
+ `TRUE` Если кнопки панели инструментов отображаются метки текст под изображениями; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CMFCToolBar::EnableTextLabels](#enabletextlabels) для указания, будет ли отображаться текст. Значение по умолчанию — `FALSE`. Вызовите [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) для указания, является ли пользователь может изменить этот параметр в диалоговом окне настройки.  
   
-##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
+##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages  
  Включение или отключение автоматического создания образов неактивная кнопка.  
   
 ```  
@@ -727,7 +722,7 @@ static void AutoGrayInactiveImages(
   
  Дополнительные сведения о `nGrayImagePercentage` параметр, в разделе [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
-##  <a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
+##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
  Возвращает индекс указанного объекта [CMFCToolBarButton класс](../../mfc/reference/cmfctoolbarbutton-class.md) объекта в этой панели инструментов.  
   
 ```  
@@ -741,7 +736,7 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс `pButton` во внутреннем списке кнопки панели инструментов; или значение -1, если на этой панели инструментов не указанную кнопку.  
   
-##  <a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
  Вычисляет размер панели инструментов по горизонтали.  
   
 ```  
@@ -752,10 +747,10 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bStretch`  
- `TRUE`Увеличение размера родительского фрейма для панели инструментов.  
+ `TRUE` Увеличение размера родительского фрейма для панели инструментов.  
   
  [in] `bHorz`  
- `TRUE`Чтобы расположить панели инструментов по горизонтали; `FALSE` пользователям панели инструментов по вертикали.  
+ `TRUE` Чтобы расположить панели инструментов по горизонтали; `FALSE` пользователям панели инструментов по вертикали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CSize` объект, который определяет размер панели инструментов.  
@@ -765,7 +760,7 @@ virtual CSize CalcFixedLayout(
   
  См. в образце VisualStudioDemo пример использования этого метода.  
   
-##  <a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
+##  <a name="calcmaxbuttonheight"></a>  CMFCToolBar::CalcMaxButtonHeight  
  Вычисляет Максимальная высота кнопки на панели инструментов.  
   
 ```  
@@ -780,7 +775,7 @@ virtual int CalcMaxButtonHeight();
   
  Переопределите этот метод в класс, производный от `CMFCToolBar` для предоставления вычисления высоты.  
   
-##  <a name="calcsize"></a>CMFCToolBar::CalcSize  
+##  <a name="calcsize"></a>  CMFCToolBar::CalcSize  
  Вызывается платформой как часть процесса вычисления макета.  
   
 ```  
@@ -789,7 +784,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bVertDock`  
- `TRUE`Чтобы указать, по вертикали; закрепления панели инструментов `FALSE` для указания по горизонтали закрепления панели инструментов.  
+ `TRUE` Чтобы указать, по вертикали; закрепления панели инструментов `FALSE` для указания по горизонтали закрепления панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CSize` объект, который задает общий размер кнопок на панели инструментов.  
@@ -799,7 +794,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
  Если панель инструментов содержит кнопки не, этот метод возвращает зарезервированный размер одной кнопки с помощью [CMFCToolBar::GetButtonSize](#getbuttonsize) метод.  
   
-##  <a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
+##  <a name="canbeclosed"></a>  CMFCToolBar::CanBeClosed  
  Указывает, является ли пользователь может закрыть панель инструментов.  
   
 ```  
@@ -807,14 +802,14 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов может быть закрыт пользователем; в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов может быть закрыт пользователем; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод, чтобы определить, может ли пользователь закрыть панель инструментов. Если метод возвращает `TRUE`, платформа позволяет SC_CLOSE команды в меню "система" на панели инструментов, и пользователь может закрыть панель инструментов с помощью флажка в списке панели инструментов в диалоговом окне настройки.  
   
  Реализация по умолчанию возвращает значение `TRUE`. Переопределите этот метод в класс, производный от `CMFCToolBar` вносить объектов панели инструментов, которые не закрыты пользователем.  
   
-##  <a name="canberestored"></a>CMFCToolBar::CanBeRestored  
+##  <a name="canberestored"></a>  CMFCToolBar::CanBeRestored  
  Определяет ли система восстановить панель инструментов в исходное состояние после настройки.  
   
 ```  
@@ -822,7 +817,7 @@ virtual BOOL CanBeRestored() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов, которые могут быть восстановлены из ресурсов приложения. в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов, которые могут быть восстановлены из ресурсов приложения. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод, чтобы определить, может ли панель инструментов возвращен в исходное состояние после настройки. Исходное состояние загружается из ресурсов приложения.  
@@ -833,7 +828,7 @@ virtual BOOL CanBeRestored() const;
   
  Можно переопределить `CanBeRestored` для настройки этого поведения в производных классах.  
   
-##  <a name="canfocus"></a>CMFCToolBar::CanFocus  
+##  <a name="canfocus"></a>  CMFCToolBar::CanFocus  
  Указывает, является ли область может получать фокус.  
   
 ```  
@@ -846,7 +841,7 @@ virtual BOOL CanFocus() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию базового класса, [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), так как объектов панели инструментов не может получить фокус.  
   
-##  <a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
+##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings  
  Определяет, расположена ли панель инструментов и панель того же уровня в одной области.  
   
 ```  
@@ -861,7 +856,7 @@ BOOL CanHandleSiblings();
   
  Использование этого метода обычно не требуется. Чтобы включить **Настройка** кнопки, которая появляется на панели инструментов, вызовите [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) метод. Чтобы включить **Отображать кнопки на одной строке** или **Отображать кнопки на двух строках** , вызовите метод [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
+##  <a name="cleanupimages"></a>  CMFCToolBar::CleanUpImages  
  Освобождает системные ресурсы, выделенные для изображений на панели инструментов.  
   
 ```  
@@ -871,7 +866,7 @@ static void CMFCToolBar::CleanUpImages();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой, когда приложение завершает работу.  
   
-##  <a name="cleanuplockedimages"></a>CMFCToolBar::CleanUpLockedImages  
+##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages  
  Освобождает системные ресурсы, выделенные для изображений, заблокированные панели инструментов.  
   
 ```  
@@ -881,7 +876,7 @@ void CleanUpLockedImages();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается при изменении визуального стиля приложения. См. в образце VisualStudioDemo пример использования этого метода.  
   
-##  <a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex  
  Возвращает индекс кнопки на панели инструментов с указанным идентификатором команды.  
   
 ```  
@@ -905,7 +900,7 @@ int CommandToIndex(
   
  Если `iIndex` больше 0, этот метод не учитывает любую кнопку на панели инструментов, которая имеет индекс меньше, чем `iIndex`.  
   
-##  <a name="create"></a>CMFCToolBar::Create  
+##  <a name="create"></a>  CMFCToolBar::Create  
  Создает объект `CMFCToolBar`.  
   
 ```  
@@ -926,12 +921,12 @@ virtual BOOL Create(
  Идентификатор дочернего окна панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если этот метод выполнен успешно; в противном случае `FALSE`.  
+ `TRUE` Если этот метод выполнен успешно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод создает панель элементов управления и прикрепляет его к панели инструментов. Он создает панель элементов управления со `TBSTYLE_FLAT` стиля. Вызовите [CMFCToolBar::CreateEx](#createex) Если стиль панели другой элемент управления.  
   
-##  <a name="createex"></a>CMFCToolBar::CreateEx  
+##  <a name="createex"></a>  CMFCToolBar::CreateEx  
  Создает `CMFCToolBar` объект, который использует стиль Дополнительные параметры, такие как крупные значки.  
   
 ```  
@@ -976,7 +971,7 @@ virtual BOOL CreateEx(
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="deactivate"></a>CMFCToolBar::Deactivate  
+##  <a name="deactivate"></a>  CMFCToolBar::Deactivate  
  Деактивирует панели инструментов.  
   
 ```  
@@ -986,7 +981,7 @@ virtual void Deactivate();
 ### <a name="remarks"></a>Примечания  
  Этот метод деактивирует панели инструментов путем удаления фокуса с выделенной кнопки. Платформа вызывает этот метод при панели инструментов теряет фокус и удаляется.  
   
-##  <a name="dopaint"></a>CMFCToolBar::DoPaint  
+##  <a name="dopaint"></a>  CMFCToolBar::DoPaint  
  Перерисовывает панель инструментов.  
   
 ```  
@@ -1002,7 +997,7 @@ virtual void DoPaint(CDC* pDC);
   
  Переопределите этот метод для настройки внешнего вида объекта, производного от `CMFCToolBar`.  
   
-##  <a name="drawbutton"></a>CMFCToolBar::DrawButton  
+##  <a name="drawbutton"></a>  CMFCToolBar::DrawButton  
  Перерисовывает кнопки панели инструментов.  
   
 ```  
@@ -1025,20 +1020,20 @@ virtual BOOL DrawButton(
  Указатель изображениям значков панели инструментов.  
   
  [in] `bHighlighted`  
- `TRUE`Если кнопка выделена; в противном случае `FALSE`.  
+ `TRUE` Если кнопка выделена; в противном случае `FALSE`.  
   
  [in] `bDrawDisabledImages`  
- `TRUE`Если недоступны отключенных кнопок; в противном случае `FALSE`.  
+ `TRUE` Если недоступны отключенных кнопок; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если был окрашивание кнопки; `FALSE` скрытые кнопки.  
+ `TRUE` Если был окрашивание кнопки; `FALSE` скрытые кнопки.  
   
 ### <a name="remarks"></a>Примечания  
  [CMFCToolBar::DrawButton](#drawbutton) метод вызывает этот метод при необходимо перерисовать кнопки панели инструментов.  
   
  Переопределите этот метод, если вы хотите настроить внешний вид кнопки на панели инструментов.  
   
-##  <a name="drawseparator"></a>CMFCToolBar::DrawSeparator  
+##  <a name="drawseparator"></a>  CMFCToolBar::DrawSeparator  
  Перерисовывает разделителя на панели инструментов.  
   
 ```  
@@ -1056,14 +1051,14 @@ virtual void DrawSeparator(
  Ограничивающий прямоугольник расположение, в котором рисуется разделителя в пикселях.  
   
  [in] `bHorz`  
- `TRUE`Если разделитель является горизонтальным, `FALSE` при вертикальный разделитель.  
+ `TRUE` Если разделитель является горизонтальным, `FALSE` при вертикальный разделитель.  
   
 ### <a name="remarks"></a>Примечания  
- [CMFCToolBar::DoPaint](#dopaint) вызывает этот метод для каждого [CMFCToolBar::DrawSeparator](#drawseparator) объекта, имеющего `TBBS_SEPARATOR` стиля, вместо вызова метода [CMFCToolBar::DrawButton](#drawbutton) для Эти кнопки.  
+ [CMFCToolBar::DoPaint](#dopaint) вызывает этот метод для каждого [CMFCToolBar::DrawSeparator](#drawseparator) объекта, имеющего `TBBS_SEPARATOR` стиля, вместо вызова метода [CMFCToolBar::DrawButton](#drawbutton) для тех, кто кнопки.  
   
  Переопределите этот метод в класс, производный от [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) для настройки внешнего вида разделителей в панели инструментов. Реализация по умолчанию вызывает [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) для рисования, вид определяется текущий диспетчер визуального разделителя.  
   
-##  <a name="enablecustomizebutton"></a>CMFCToolBar::EnableCustomizeButton  
+##  <a name="enablecustomizebutton"></a>  CMFCToolBar::EnableCustomizeButton  
  Включает или отключает кнопку Настройка, которая отображается на панели инструментов.  
   
 ```  
@@ -1104,7 +1099,7 @@ void EnableCustomizeButton(
   
  Платформа динамически добавляет в меню кнопок, которые не помещаются в область панели инструментов перед элементом, который задается параметром `iCustomizeCmd`. Значок отображается рядом со стрелкой вниз.  
   
-##  <a name="enabledocking"></a>CMFCToolBar::EnableDocking  
+##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
  Включает закрепления панели для главного фрейма.  
   
 ```  
@@ -1118,7 +1113,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), установив `CBasePane::m_dwControlBarStyle` данные-члены `AFX_CBRS_FLOAT`. Этот метод передает `dwAlignment` реализацию базового класса.  
   
-##  <a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
+##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
  Включает или отключает крупных значков на кнопки панели инструментов.  
   
 ```  
@@ -1127,12 +1122,12 @@ void EnableLargeIcons(BOOL bEnable);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы включить крупные значки `FALSE` отключение крупных значков.  
+ `TRUE` Чтобы включить крупные значки `FALSE` отключение крупных значков.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию включены крупных значков.  
   
-##  <a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
+##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization  
  Включает или отключает быстрого настройки панелей инструментов, чтобы пользователь может нажать **Alt** ключа и перетащите кнопку в новое место.  
   
 ```  
@@ -1141,9 +1136,9 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы обеспечить быстрый настройки `FALSE` Отключение быстрого настройки.  
+ `TRUE` Чтобы обеспечить быстрый настройки `FALSE` Отключение быстрого настройки.  
   
-##  <a name="enablereflections"></a>CMFCToolBar::EnableReflections  
+##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  Включает или отключает команду отражения.  
   
 ```  
@@ -1152,14 +1147,14 @@ void EnableReflections(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы включить команду отражения; `FALSE` отключение команда отражения.  
+ `TRUE` Чтобы включить команду отражения; `FALSE` отключение команда отражения.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для включения команды отражения для кнопок панели инструментов, который содержит внедренные элементы управления, такие как поля со списком.  
   
  Дополнительные сведения об отражении команда см. в разделе [TN062: сообщение отражения для элементов управления Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-##  <a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
+##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels  
  Включает или отключает текстовых меток в изображения для кнопок панели инструментов.  
   
 ```  
@@ -1168,12 +1163,12 @@ void EnableTextLabels(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  `bEnable`  
- `TRUE`Если текстовые метки отображаются под изображения кнопки панели инструментов; в противном случае `FALSE`.  
+ `TRUE` Если текстовые метки отображаются под изображения кнопки панели инструментов; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если включены текстовые метки, чтобы предоставить место для меток, отображаемых в списке изображений увеличены все кнопки на панели инструментов. В диалоговом окне настройки **Показать текстовая метка** флажок на **панели инструментов** страницы. Когда пользователь выбирает панели инструментов и проверяет этот параметр, платформа вызывает `EnableTextLabels` выбранной панели инструментов. Вы можете отключить флажок для объекта, производного от [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , возвращая `FALSE` из [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .  
   
-##  <a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent  
  Извлекает указатель на `CMFCToolBar` объект, содержащий дескриптор данного окна.  
   
 ```  
@@ -1190,7 +1185,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ### <a name="remarks"></a>Примечания  
  Этот общий метод просматривает каждой панели инструментов в приложении для `CMFCToolBar` объект, содержащий дескриптор данного окна.  
   
-##  <a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
+##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons  
  Возвращает список только для чтения кнопок на панели инструментов.  
   
 ```  
@@ -1200,7 +1195,7 @@ const CObList& GetAllButtons() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Постоянную ссылку на [класс CObList](../../mfc/reference/coblist-class.md) объект, который содержит коллекцию [CMFCToolBarButton класс](../../mfc/reference/cmfctoolbarbutton-class.md) объектов.  
   
-##  <a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
+##  <a name="getalltoolbars"></a>  CMFCToolBar::GetAllToolbars  
  Возвращает список только для чтения всех панелей инструментов в приложении.  
   
 ```  
@@ -1210,7 +1205,7 @@ static const CObList& GetAllToolbars();
 ### <a name="return-value"></a>Возвращаемое значение  
  Константную ссылку [класс CObList](../../mfc/reference/coblist-class.md) объект, содержащий коллекцию `CMFCToolBar` объектов.  
   
-##  <a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
+##  <a name="getbasiccommands"></a>  CMFCToolBar::GetBasicCommands  
  Возвращает доступную только для чтения список базовых команд, определенных в приложении.  
   
 ```  
@@ -1223,7 +1218,7 @@ static const CList<UINT,UINT>& GetBasicCommands();
 ### <a name="remarks"></a>Примечания  
  Добавить основные команды путем вызова [CMFCToolBar::AddBasicCommand](#addbasiccommand) или [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="getbutton"></a>CMFCToolBar::GetButton  
+##  <a name="getbutton"></a>  CMFCToolBar::GetButton  
  Возвращает указатель на [CMFCToolBarButton класса](../../mfc/reference/cmfctoolbarbutton-class.md) объект по указанному индексу.  
   
 ```  
@@ -1237,7 +1232,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на кнопку панели инструментов, если он существует; или `NULL` Если нет такой кнопки.  
   
-##  <a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CMFCToolBar::GetButtonInfo  
  Возвращает идентификатор команды, стиль и индекс образа кнопки по указанному индексу.  
   
 ```  
@@ -1266,7 +1261,7 @@ void GetButtonInfo(
   
  Если кнопки по указанному индексу в списке отсутствует, платформа задает `nID` и `nStyle` 0, и `iImage` значение -1 при возврате метода.  
   
-##  <a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
  Возвращает измерения каждого кнопки на панели инструментов.  
   
 ```  
@@ -1279,7 +1274,7 @@ CSize GetButtonSize() const;
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetSizes](#setsizes) или [CMFCToolBar::SetLockedSizes](#setlockedsizes) Чтобы изменить размеры каждой кнопки на панели инструментов.  
   
-##  <a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle  
  Возвращает текущий стиль кнопки панели инструментов, расположенный по указанному индексу.  
   
 ```  
@@ -1296,7 +1291,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetButtonStyle](#setbuttonstyle) требуется задать стиль кнопки панели инструментов  
   
-##  <a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText  
  Возвращает текстовую подпись кнопки с указанным индексом.  
   
 ```  
@@ -1320,7 +1315,7 @@ void GetButtonText(
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetButtonText](#setbuttontext) или [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) для текстовой метки.  
   
-##  <a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
+##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages  
  Возвращает указатель на коллекцию новых инструментов кнопка изображений в приложении.  
   
 ```  
@@ -1333,7 +1328,7 @@ static CMFCToolBarImages* GetColdImages();
 ### <a name="remarks"></a>Примечания  
  Холодные образы — образы, которые используются, когда пользователь не взаимодействует с помощью кнопок панели инструментов. Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) или [CMFCToolBar::LoadBitmap](#loadbitmap) для загрузки новых образов.  
   
-##  <a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth  
  Возвращает ширину кнопки панели инструментов.  
   
 ```  
@@ -1346,7 +1341,7 @@ virtual int GetColumnWidth() const;
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод для вычисления макет панели инструментов. Переопределите этот метод в производном классе, чтобы указать ширину другого столбца для панели инструментов.  
   
-##  <a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
+##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons  
  Возвращает список кнопок, которые имеют указанный идентификатор команды из всех панелей инструментов в приложении.  
   
 ```  
@@ -1365,7 +1360,7 @@ static int GetCommandButtons(
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество кнопок, которые имеют указанный идентификатор команды.  
   
-##  <a name="getcount"></a>CMFCToolBar::GetCount  
+##  <a name="getcount"></a>  CMFCToolBar::GetCount  
  Возвращает число кнопок и разделители на панели инструментов.  
   
 ```  
@@ -1375,7 +1370,7 @@ int GetCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число кнопок и разделители на панели инструментов.  
   
-##  <a name="getcustomizebutton"></a>CMFCToolBar::GetCustomizeButton  
+##  <a name="getcustomizebutton"></a>  CMFCToolBar::GetCustomizeButton  
  Извлекает указатель на `CMFCCustomizeButton` объект, связанный с панелью инструментов.  
   
 ```  
@@ -1390,7 +1385,7 @@ CMFCCustomizeButton* GetCustomizeButton();
   
  Можно вызвать [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) метод, чтобы определить, является ли панель инструментов содержит допустимый `CMFCCustomizeButton` объекта.  
   
-##  <a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
+##  <a name="getdefaultimage"></a>  CMFCToolBar::GetDefaultImage  
  Возвращает индекс изображения по умолчанию для кнопки панели инструментов с указанным идентификатором команды.  
   
 ```  
@@ -1407,7 +1402,7 @@ static int GetDefaultImage(UINT uiID);
 ### <a name="remarks"></a>Примечания  
  Этот общий метод используется для извлечения индекса изображение по умолчанию для кнопки панели инструментов с указанным идентификатором команды. Возвращает значение индекса в общей коллекции изображений кнопки панели инструментов для всех панелей инструментов в приложении. Вызовите [CMFCToolBar::GetImages](#getimages) метод, чтобы получить указатель на эту коллекцию.  
   
-##  <a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
+##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages  
  Возвращает указатель на коллекцию изображений, используемых для отключенных кнопок панели инструментов в приложении.  
   
 ```  
@@ -1420,7 +1415,7 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 ### <a name="remarks"></a>Примечания  
  Загрузить изображения кнопок панели инструментов отключено с помощью [класса CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md) и [CMFCToolBar::LoadBitmap](#loadbitmap) методы.  
   
-##  <a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
+##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages  
  Возвращает указатель на коллекцию изображений, используемых для кнопок меню отключено в приложении.  
   
 ```  
@@ -1433,7 +1428,7 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ### <a name="remarks"></a>Примечания  
  Загрузка изображений отключено с помощью [CMFCToolBarEditBoxButton класса](../../mfc/reference/cmfctoolbareditboxbutton-class.md) метод.  
   
-##  <a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
+##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu  
  Извлекает указатель на объект кнопки меню, в данный момент отображается границей дочернего меню.  
   
 ```  
@@ -1450,7 +1445,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ### <a name="remarks"></a>Примечания  
  Если этот метод возвращает значение, отличное от `NULL` значение и `pIndex` не `NULL`, значение, на который указывает `pIndex` имеет значение индекса в коллекции кнопок панели инструментов кнопки меню.  
   
-##  <a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
+##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
  Определяет, должны ли образы отключенных кнопок затененный версии изображений обычная кнопка, или из коллекции образов отключенной кнопки.  
   
 ```  
@@ -1458,12 +1453,12 @@ BOOL GetGrayDisabledButtons() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Чтобы dim изображения кнопок отключено; `FALSE` для получения изображений из коллекции изображений отключено.  
+ `TRUE` Чтобы dim изображения кнопок отключено; `FALSE` для получения изображений из коллекции изображений отключено.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) для переключения между серым цветом изображения и изображения из коллекции изображений отключено.  
   
-##  <a name="gethighlightedbutton"></a>CMFCToolBar::GetHighlightedButton  
+##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton  
  Возвращает указатель на кнопку панели инструментов, выделенную в данный момент.  
   
 ```  
@@ -1476,7 +1471,7 @@ CMFCToolBarButton* GetHighlightedButton() const;
 ### <a name="remarks"></a>Примечания  
  Кнопки панели инструментов выделяется в том случае, если фокус клавиатуры. Кнопки панели инструментов также выделяется при нахождении в этом приложении кнопки панели инструментов (Дополнительные сведения см. в разделе [CMFCToolBar::GetHotBorder](#gethotborder) и [CMFCToolBar::SetHotBorder](#sethotborder)) и мыши Указывает на его при элемент кнопки или меню не инструментов имеет фокус клавиатуры.  
   
-##  <a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
+##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder  
  Определяет, являются ли кнопки панели инструментов *выделенного*. Если кнопка, отслеживаемого выделяется при перемещении указателя мыши над ним.  
   
 ```  
@@ -1484,12 +1479,12 @@ BOOL GetHotBorder() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопки панели инструментов отслеженного; в противном случае `FALSE`.  
+ `TRUE` Если кнопки панели инструментов отслеженного; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию для кнопки панели инструментов, отслеживаемого.  
   
-##  <a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
+##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor  
  Возвращает цвет текста кнопки панели инструментов выделенный.  
   
 ```  
@@ -1502,7 +1497,7 @@ static COLORREF GetHotTextColor();
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetHotTextColor](#sethottextcolor) для установки нового цвета текста для выделенной кнопки.  
   
-##  <a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
+##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus  
  Возвращает дескриптор окна, которое имеет фокус ввода, непосредственно перед была панели инструментов.  
   
 ```  
@@ -1515,7 +1510,7 @@ HWND GetHwndLastFocus() const;
 ### <a name="remarks"></a>Примечания  
  Когда `CMFCToolBar` элемент управления получает фокус ввода, он сохраняет дескриптор окна, который потерял фокус, чтобы его можно восстановить позднее.  
   
-##  <a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
+##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText  
  Указывает, будут ли игнорироваться вызовы для установки метки кнопки.  
   
 ```  
@@ -1523,11 +1518,11 @@ BOOL GetIgnoreSetText() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если задать метки кнопки вызовы учитываются; в противном случае `FALSE`.  
+ `TRUE` Если задать метки кнопки вызовы учитываются; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getimages"></a>CMFCToolBar::GetImages  
+##  <a name="getimages"></a>  CMFCToolBar::GetImages  
  Возвращает указатель в коллекцию по умолчанию изображения кнопки в приложении.  
   
 ```  
@@ -1540,7 +1535,7 @@ static CMFCToolBarImages* GetImages();
 ### <a name="remarks"></a>Примечания  
  Этот общий метод предоставляет доступ к коллекции по умолчанию все изображениям значков панели инструментов для приложения. Вызовите [CMFCToolBar::LoadBitmap](#loadbitmap) метод для добавления изображения в коллекции.  
   
-##  <a name="getimagesize"></a>CMFCToolBar::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize  
  Возвращает текущий размер изображения для кнопок панели инструментов.  
   
 ```  
@@ -1550,7 +1545,7 @@ CSize GetImageSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [класс CSize](../../atl-mfc-shared/reference/csize-class.md) объект, представляющий текущий размер изображения для кнопок панели инструментов.  
   
-##  <a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
+##  <a name="getimagesoffset"></a>  CMFCToolBar::GetImagesOffset  
  Возвращает смещение индекса, используемый для поиска изображения для кнопок панели инструментов для этой панели инструментов в глобальном списке изображения для кнопок панели инструментов.  
   
 ```  
@@ -1567,7 +1562,7 @@ int GetImagesOffset() const;
   
  Вызовите [CMFCToolBar::GetImages](#getimages) для получения указателя к коллекции изображений панели инструментов.  
   
-##  <a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
+##  <a name="getinvalidateitemrect"></a>  CMFCToolBar::GetInvalidateItemRect  
  Извлекает область клиентской области, требуется перерисовка для кнопки с указанным индексом.  
   
 ```  
@@ -1586,7 +1581,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="remarks"></a>Примечания  
  `lpRect` Параметр не должен иметь `NULL`. Если кнопка не существует по указанному индексу `lpRect` получает `RECT` объект, который инициализируется нулевым значением.  
   
-##  <a name="getitemid"></a>CMFCToolBar::GetItemID  
+##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
  Возвращает идентификатор команды кнопки панели инструментов по указанному индексу.  
   
 ```  
@@ -1600,7 +1595,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор команды кнопки панели инструментов. или нуль, если кнопка с указанным индексом не существует.  
   
-##  <a name="getitemrect"></a>CMFCToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CMFCToolBar::GetItemRect  
  Возвращает прямоугольник, ограничивающий кнопки по указанному индексу.  
   
 ```  
@@ -1625,7 +1620,7 @@ virtual void GetItemRect(
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
-##  <a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
+##  <a name="getlargecoldimages"></a>  CMFCToolBar::GetLargeColdImages  
  Возвращает указатель на коллекцию больших холодного инструментов кнопка изображений в приложении.  
   
 ```  
@@ -1638,7 +1633,7 @@ static CMFCToolBarImages* GetLargeColdImages();
 ### <a name="remarks"></a>Примечания  
  Холодные образы — образы, которые используются, когда пользователь не взаимодействует с помощью кнопок панели инструментов. Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) для загрузки новых больших изображений.  
   
-##  <a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
+##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages  
  Возвращает указатель на коллекцию больших отключенные инструментов кнопка изображений в приложении.  
   
 ```  
@@ -1651,7 +1646,7 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 ### <a name="remarks"></a>Примечания  
  Большие изображения — это большой версии изображения кнопок панели инструментов регулярного. Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) или [CMFCToolBar::LoadBitmap](#loadbitmap) для загрузки больших изображений.  
   
-##  <a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
+##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages  
  Возвращает указатель на коллекцию изображений кнопки панели инструментов в приложении.  
   
 ```  
@@ -1664,7 +1659,7 @@ static CMFCToolBarImages* GetLargeImages();
 ### <a name="remarks"></a>Примечания  
  Большие изображения — это большой версии изображения кнопок панели инструментов регулярного. Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) для загрузки больших изображений.  
   
-##  <a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
+##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages  
  Возвращает указатель на коллекцию заблокированных холодного изображений на панели инструментов.  
   
 ```  
@@ -1681,7 +1676,7 @@ CMFCToolBarImages* GetLockedColdImages();
   
  Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) метод для загрузки заблокированного новых образов.  
   
-##  <a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
+##  <a name="getlockeddisabledimages"></a>  CMFCToolBar::GetLockedDisabledImages  
  Возвращает указатель на коллекцию заблокированных изображений отключено на панели инструментов.  
   
 ```  
@@ -1698,7 +1693,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
   
  Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) метод для загрузки заблокированного отключены изображения.  
   
-##  <a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
+##  <a name="getlockedimages"></a>  CMFCToolBar::GetLockedImages  
  Возвращает указатель на коллекцию изображений, заблокированную кнопку на панели инструментов.  
   
 ```  
@@ -1713,7 +1708,7 @@ CMFCToolBarImages* GetLockedImages();
   
  Этот метод возвращает `NULL` Если панель инструментов не заблокирован. Этот метод также приводит к возникновению ошибки сбой утверждения в отладочных построениях Если панель инструментов не заблокирован. Дополнительные сведения о заблокированные панели инструментов см. в разделе [CMFCToolBar::IsLocked](#islocked).  
   
-##  <a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
+##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize  
  Возвращает размер изображений заблокированные панели инструментов по умолчанию.  
   
 ```  
@@ -1730,7 +1725,7 @@ CSize GetLockedImageSize() const;
   
  Вызовите [CMFCToolBar::SetLockedSizes](#setlockedsizes) метод, чтобы задать размер заблокированные изображения.  
   
-##  <a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
+##  <a name="getlockedmenuimages"></a>  CMFCToolBar::GetLockedMenuImages  
  Возвращает указатель на коллекцию, заблокированные панели инструментов меню изображения на панели инструментов.  
   
 ```  
@@ -1747,7 +1742,7 @@ CMFCToolBarImages* GetLockedMenuImages();
   
  Вызовите [CMFCToolBar::LoadBitmapEx](#loadbitmapex) метод для загрузки изображений заблокированные меню.  
   
-##  <a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
+##  <a name="getmenubuttonsize"></a>  CMFCToolBar::GetMenuButtonSize  
  Возвращает размер кнопок меню в приложении.  
   
 ```  
@@ -1762,7 +1757,7 @@ static CSize GetMenuButtonSize();
   
  Вызовите [CMFCToolBar::SetMenuSizes](#setmenusizes) для установки этой глобальной переменной.  
   
-##  <a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
+##  <a name="getmenuimages"></a>  CMFCToolBar::GetMenuImages  
  Возвращает указатель на коллекцию изображения кнопок меню в приложении.  
   
 ```  
@@ -1777,7 +1772,7 @@ static CMFCToolBarImages* GetMenuImages();
   
  Вызовите [CMFCToolBar::SetMenuSizes](#setmenusizes) метод, чтобы задать размер кнопок и изображений.  
   
-##  <a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
+##  <a name="getmenuimagesize"></a>  CMFCToolBar::GetMenuImageSize  
  Возвращает размер изображения кнопок меню в приложении.  
   
 ```  
@@ -1790,7 +1785,7 @@ static CSize GetMenuImageSize();
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает размер изображений в меню кнопки панели инструментов, который ведется для глобальной переменной. Вызовите [CMFCToolBar::SetMenuSizes](#setmenusizes) для установки этой глобальной переменной.  
   
-##  <a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
+##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons  
  Извлекает коллекцию ненастроенные кнопок на панели инструментов.  
   
 ```  
@@ -1805,7 +1800,7 @@ const CObList& GetOrigButtons() const;
   
  Чтобы задать список исходного кнопки панели инструментов, вызовите [CMFCToolBar::SetOrigButtons](#setorigbuttons) метод.  
   
-##  <a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
+##  <a name="getorigresetbuttons"></a>  CMFCToolBar::GetOrigResetButtons  
  Извлекает коллекцию ненастроенные сброса кнопок панели инструментов.  
   
 ```  
@@ -1820,7 +1815,7 @@ const CObList& GetOrigResetButtons() const;
   
  [CMFCToolBar::SetButtons](#setbuttons) метод добавляет копия каждой кнопки панели инструментов в список исходного кнопки сброса после вызова [CMFCToolBar::OnReset](#onreset) метод. Можно переопределить [CMFCToolBar::OnReset](#onreset) метод, чтобы настроить внешний вид кнопки после нажатия пользователем **Сброс** кнопки.  
   
-##  <a name="getresourceid"></a>CMFCToolBar::GetResourceID  
+##  <a name="getresourceid"></a>  CMFCToolBar::GetResourceID  
  Извлекает идентификатор ресурса панели инструментов.  
   
 ```  
@@ -1833,7 +1828,7 @@ UINT GetResourceID() const;
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) метод, чтобы задать идентификатор ресурса панели инструментов.  
   
-##  <a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
+##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame  
  Определяет, какой объект и родительского фрейма для владельца, отправляет команды на панель инструментов.  
   
 ```  
@@ -1848,7 +1843,7 @@ BOOL GetRouteCommandsViaFrame();
   
  Если этот метод возвращает ненулевое значение, указатель кадра к родительскому объекту можно получить с помощью `CMFCToolBar::GetCommandTarget` метод. См. в образце VisualStudioDemo пример использования этого метода.  
   
-##  <a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCToolBar::GetRowHeight  
  Возвращает высоту кнопки панели инструментов.  
   
 ```  
@@ -1861,7 +1856,7 @@ virtual int GetRowHeight() const;
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод для вычисления макет панели инструментов. Переопределите этот метод в производном классе, чтобы указать другой высоту для панели инструментов.  
   
-##  <a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
+##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips  
  Указывает, отображаются ли всплывающие подсказки для кнопки панели инструментов.  
   
 ```  
@@ -1869,12 +1864,12 @@ static BOOL GetShowTooltips();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если отображаться всплывающие подсказки для кнопки панели инструментов; в противном случае `FALSE`.  
+ `TRUE` Если отображаться всплывающие подсказки для кнопки панели инструментов; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию отображаются всплывающие подсказки. Этот флаг static можно изменить с помощью [CMFCToolBar::SetShowTooltips](#setshowtooltips).  
   
-##  <a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
+##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar  
  Извлекает одноуровневый элемент панели инструментов.  
   
 ```  
@@ -1887,7 +1882,7 @@ CMFCToolBar* GetSiblingToolBar();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о включении **Отображать кнопки на одной строке** и **Отображать кнопки на двух строках** кнопки, в разделе [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="getuserimages"></a>CMFCToolBar::GetUserImages  
+##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages  
  Возвращает указатель на коллекцию пользовательских панелей инструментов кнопка изображений в приложении.  
   
 ```  
@@ -1900,7 +1895,7 @@ static CMFCToolBarImages* GetUserImages();
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetUserImages](#setuserimages) метод, чтобы задать коллекцию пользовательских изображений в приложении.  
   
-##  <a name="hittest"></a>CMFCToolBar::HitTest  
+##  <a name="hittest"></a>  CMFCToolBar::HitTest  
  Возвращает индекс кнопки панели инструментов, расположенный в указанной позиции.  
   
 ```  
@@ -1914,7 +1909,7 @@ virtual int HitTest(CPoint point);
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс кнопки, которая расположена в указанной позиции или -1, если нет такого кнопку или является знаком-разделителем.  
   
-##  <a name="insertbutton"></a>CMFCToolBar::InsertButton  
+##  <a name="insertbutton"></a>  CMFCToolBar::InsertButton  
  Вставляет кнопку на панели инструментов.  
   
 ```  
@@ -1943,7 +1938,7 @@ virtual int InsertButton(
   
  Вызовите [CMFCToolBar::InsertSeparator](#insertseparator) метод разделителей в панели инструментов.  
   
-##  <a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCToolBar::InsertSeparator  
  Вставляет в панели инструментов разделитель.  
   
 ```  
@@ -1964,7 +1959,7 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
   
  Вызовите [CMFCToolBar::InsertButton](#insertbutton) метод для вставки кнопки в панели инструментов.  
   
-##  <a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
+##  <a name="invalidatebutton"></a>  CMFCToolBar::InvalidateButton  
  Делает недействительным клиентской области кнопки панели инструментов, существующий по указанному индексу.  
   
 ```  
@@ -1981,7 +1976,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при обновлении клиентской области, связанный с кнопкой панели инструментов. Он вызывает [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) метод с клиентском прямоугольнике элемента `CMFCToolBarButton` объект, расположенный по указанному индексу.  
   
-##  <a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
+##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize  
  Определяет, является ли пользователь можно добавить или удалить кнопки панели инструментов с помощью **Настройка** пункт меню.  
   
 ```  
@@ -1989,11 +1984,11 @@ BOOL IsAddRemoveQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если пользователь может воспользоваться **Настройка** меню, чтобы изменять панель инструментов; в противном случае `FALSE`.  
+ `TRUE` Если пользователь может воспользоваться **Настройка** меню, чтобы изменять панель инструментов; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
+##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode  
  Указывает, является ли *возможностью* используется перетащить кнопку. При включенной возможностью пользователь может нажмите и удерживайте клавишу Alt и перетащите кнопку в новое место.  
   
 ```  
@@ -2001,11 +1996,11 @@ static BOOL __stdcall IsAltCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если используется возможностью перетащить кнопку; в противном случае `FALSE`.  
+ `TRUE` Если используется возможностью перетащить кнопку; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
+##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages  
  Указывает, включено ли автоматическое создание образов неактивная кнопка (без подсветки).  
   
 ```  
@@ -2013,12 +2008,12 @@ static BOOL IsAutoGrayInactiveImages();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если включен параметр, чтобы автоматически dim неактивные изображений; в противном случае `FALSE`.  
+ `TRUE` Если включен параметр, чтобы автоматически dim неактивные изображений; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Можно включить или отключить автоматическое затемнение неактивного изображения путем вызова [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).  
   
-##  <a name="isbasiccommand"></a>CMFCToolBar::IsBasicCommand  
+##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand  
  Определяет, является ли команда в списке базовых команд.  
   
 ```  
@@ -2030,12 +2025,12 @@ static BOOL IsBasicCommand(UINT uiCmd);
  Указывает команду для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанная команда входит в перечень основных команд; в противном случае `FALSE`.  
+ `TRUE` Если указанная команда входит в перечень основных команд; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот статический метод определяет, является ли команда, указанная в `uiCmd` относится к глобальному списку основные команды. Список основных команд можно изменить путем вызова [CMFCToolBar::AddBasicCommand](#addbasiccommand) или [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
  Определяет, можно ли панели инструментов отображаются кнопки, расширена границы.  
   
 ```  
@@ -2043,14 +2038,14 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель может содержать кнопки с размером лишние границы; в противном случае `FALSE`.  
+ `TRUE` Если панель может содержать кнопки с размером лишние границы; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Возвращает объект панели инструментов `TRUE` , если он может отображать кнопки, расширена границы. Кнопки панели инструментов вызывает этот метод, когда он обрабатывает [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) уведомления и задайте размер его внутренней границы дополнительный флаг соответствующим образом. Этот внутренний флаг может быть извлечен в дальнейшем путем вызова [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
  Переопределите этот метод в класс, производный от `CMFCToolBar` и возвращают `TRUE` Если можно отображать кнопки на панели инструментов с размером лишние границы и вернуться на панель `FALSE` в противном случае. Реализация по умолчанию возвращает значение `TRUE`.  
   
-##  <a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>  CMFCToolBar::IsButtonHighlighted  
  Определяет, выделяется ли указанную кнопку.  
   
 ```  
@@ -2062,11 +2057,11 @@ BOOL IsButtonHighlighted(int iButton) const;
  Указывает индекс кнопки панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если выделена указанную кнопку; в противном случае `FALSE`.  
+ `TRUE` Если выделена указанную кнопку; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="iscommandpermitted"></a>CMFCToolBar::IsCommandPermitted  
+##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted  
  Определяет, разрешены ли команды.  
   
 ```  
@@ -2078,14 +2073,14 @@ static BOOL IsCommandPermitted(UINT uiCmd);
  Указывает команду для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанная команда разрешена; в противном случае `FALSE`.  
+ `TRUE` Если указанная команда разрешена; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот статический метод определяет, является ли команда, указанная в `uiCmd` относится к глобальному списку команд не допускается.  
   
  Можно изменить список команд, не допускается, вызвав [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
-##  <a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
+##  <a name="iscommandrarelyused"></a>  CMFCToolBar::IsCommandRarelyUsed  
  Определяет, используется ли команда редко.  
   
 ```  
@@ -2097,7 +2092,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
  Указывает команду для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанная команда редко используется. в противном случае `FALSE`.  
+ `TRUE` Если указанная команда редко используется. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  `IsCommandRarelyUsed` Возвращает метод `FALSE` при возникновении одного или нескольких из следующих условий:  
@@ -2112,7 +2107,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
   
 -   Более 20% команда вызывает являются вызовы указанную команду.  
   
-##  <a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
+##  <a name="iscustomizemode"></a>  CMFCToolBar::IsCustomizeMode  
  Указывает, является ли панель инструментов framework режим настройки.  
   
 ```  
@@ -2120,14 +2115,14 @@ static BOOL IsCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если платформа находится в режиме настройки. в противном случае `FALSE`.  
+ `TRUE` Если платформа находится в режиме настройки. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы переключить режим настройки путем вызова [CMFCToolBar::SetCustomizeMode](#setcustomizemode).  
   
  Платформа изменяет режим, когда пользователь вызывает диалоговое окно настроек ( [CMFCToolBarsCustomizeDialog класса](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
   
-##  <a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
+##  <a name="isdragbutton"></a>  CMFCToolBar::IsDragButton  
  Определяет, является, перетаскиваемый кнопки панели инструментов.  
   
 ```  
@@ -2139,11 +2134,11 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
  Указатель на кнопку панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если перетащить указанную кнопку; в противном случае `FALSE`.  
+ `TRUE` Если перетащить указанную кнопку; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isexistcustomizebutton"></a>CMFCToolBar::IsExistCustomizeButton  
+##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton  
  Определяет, содержит ли панель инструментов **Настройка** кнопки.  
   
 ```  
@@ -2151,14 +2146,14 @@ BOOL IsExistCustomizeButton();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов содержит **Настройка** кнопки; в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов содержит **Настройка** кнопки; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если этот метод возвращает `TRUE`, [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) метод возвращает указатель на **Настройка** , расположенную в конце панели инструментов.  
   
  Используйте [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) метод, чтобы добавить **Настройка** кнопку на панель инструментов.  
   
-##  <a name="isfloating"></a>CMFCToolBar::IsFloating  
+##  <a name="isfloating"></a>  CMFCToolBar::IsFloating  
  Определяет, является ли перемещаемой панели инструментов.  
   
 ```  
@@ -2166,9 +2161,9 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель открывается как плавающее окно; в противном случае `FALSE`.  
+ `TRUE` Если панель открывается как плавающее окно; в противном случае `FALSE`.  
   
-##  <a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
+##  <a name="islargeicons"></a>  CMFCToolBar::IsLargeIcons  
  Указывает ли панелей инструментов в приложение в настоящее время отображения крупных значков.  
   
 ```  
@@ -2176,14 +2171,14 @@ static BOOL IsLargeIcons();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если приложение использует крупные значки; в противном случае `FALSE`.  
+ `TRUE` Если приложение использует крупные значки; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCToolBar::SetLargeIcons](#setlargeicons) для переключения между крупные значки и обычных значков.  
   
  Платформа автоматически изменяет режим, когда пользователь переключает **крупные значки** флажок на **параметры** страница **настройки** диалоговое окно.  
   
-##  <a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
+##  <a name="islastcommandfrombutton"></a>  CMFCToolBar::IsLastCommandFromButton  
  Определяет последнее выполнена команда было отправлено с указанной кнопки.  
   
 ```  
@@ -2195,12 +2190,12 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
  Указатель на кнопку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если последняя команда было отправлено с помощью кнопки, `pButton` указывает; в противном случае `FALSE`.  
+ `TRUE` Если последняя команда было отправлено с помощью кнопки, `pButton` указывает; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод получает указатель [структура MSG](../../mfc/reference/msg-structure1.md) путем вызова `CWnd::GetCurrentMessage`. Затем он сравнивает `HWND` кнопки с `MSG::lParam` и `MSG::hwnd` элементы, чтобы определить, была ли кнопка источник команды.  
   
-##  <a name="islocked"></a>CMFCToolBar::IsLocked  
+##  <a name="islocked"></a>  CMFCToolBar::IsLocked  
  Определяет, заблокирован ли панель инструментов.  
   
 ```  
@@ -2208,14 +2203,14 @@ BOOL IsLocked() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов заблокирован; в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов заблокирован; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `TRUE` при пользователь не может выполнять задачи настройки, такие как изменение положения кнопки панели инструментов.  
   
  Заблокированные панели инструментов используйте списки отдельный образ. Дополнительные сведения об этих списков изображений см. в разделе [CMFCToolBar::LoadBitmapEx](#loadbitmapex).  
   
-##  <a name="isonerowwithsibling"></a>CMFCToolBar::IsOneRowWithSibling  
+##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling  
  Определяет, расположены ли панель инструментов и его одноуровневый элемент панели инструментов в той же строке.  
   
 ```  
@@ -2223,14 +2218,14 @@ BOOL IsOneRowWithSibling();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов и родственные располагаются в той же строке; в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов и родственные располагаются в той же строке; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) метод вызывает этот метод для определения способа отображения **Настройка** всплывающего меню. Если этот метод возвращает `TRUE`, платформа отображает **Отображать кнопки на одной строке** кнопки. В противном случае платформа отображает **Отображать кнопки на двух строках** кнопки.  
   
  Использование этого метода обычно не требуется. Чтобы включить **Отображать кнопки на одной строке** или **Отображать кнопки на двух строках** , вызовите метод [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
+##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged  
 
   
 ```  
@@ -2241,7 +2236,7 @@ virtual BOOL IsResourceChanged() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="issibling"></a>CMFCToolBar::IsSibling  
+##  <a name="issibling"></a>  CMFCToolBar::IsSibling  
 
   
 ```  
@@ -2252,7 +2247,7 @@ BOOL IsSibling();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isuserdefined"></a>CMFCToolBar::IsUserDefined  
+##  <a name="isuserdefined"></a>  CMFCToolBar::IsUserDefined  
  Указывает, является ли панель инструментов определяемой пользователем.  
   
 ```  
@@ -2260,9 +2255,9 @@ BOOL IsUserDefined() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель инструментов был создан пользователем; в противном случае `FALSE`.  
+ `TRUE` Если панель инструментов был создан пользователем; в противном случае `FALSE`.  
   
-##  <a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CMFCToolBar::LoadBitmap  
  Загружает изображения значков панели инструментов из ресурсов приложения.  
   
 ```  
@@ -2286,7 +2281,7 @@ virtual BOOL LoadBitmap(
  Идентификатор ресурса точечного рисунка, который относится к обычным изображениям значков меню.  
   
  [in] `bLocked`  
- `TRUE`для закрепления панели инструментов; в противном случае `FALSE`.  
+ `TRUE` для закрепления панели инструментов; в противном случае `FALSE`.  
   
  [in] `uiDisabledResID`  
  Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков панели инструментов.  
@@ -2302,7 +2297,7 @@ virtual BOOL LoadBitmap(
   
  Вызовите метод `LoadBitmapEx` , чтобы загрузить дополнительные изображения после создания панели инструментов.  
   
-##  <a name="loadbitmapex"></a>CMFCToolBar::LoadBitmapEx  
+##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx  
 
   
 ```  
@@ -2319,7 +2314,7 @@ virtual BOOL LoadBitmapEx(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="loadlargeiconsstate"></a>CMFCToolBar::LoadLargeIconsState  
+##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState  
 
   
 ```  
@@ -2333,7 +2328,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="loadparameters"></a>CMFCToolBar::LoadParameters  
+##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters  
  Загружает параметры главной панели инструментов из реестра Windows.  
   
 ```  
@@ -2352,7 +2347,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
   
  [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) метод вызывает этот метод как часть процесса инициализации приложения.  
   
-##  <a name="loadstate"></a>CMFCToolBar::LoadState  
+##  <a name="loadstate"></a>  CMFCToolBar::LoadState  
  Загружает сведения о состоянии панели инструментов из реестра Windows.  
   
 ```  
@@ -2378,7 +2373,7 @@ virtual BOOL LoadState(
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод как часть процесса инициализации приложения. Дополнительные сведения см. в разделе [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="loadtoolbar"></a>CMFCToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar  
  Загружает панели инструментов из ресурсов приложения.  
   
 ```  
@@ -2426,7 +2421,7 @@ virtual BOOL LoadToolBar(
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
+##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx  
  Загружает панели инструментов из ресурсов приложения с помощью `CMFCToolBarInfo` вспомогательный класс, чтобы включить приложение для использования больших изображений.  
   
 ```  
@@ -2452,7 +2447,7 @@ virtual BOOL LoadToolBarEx(
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для загрузки изображений панели инструментов из ресурсов приложения.  
   
-##  <a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
+##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio  
  Указывает соотношение между измерением (высота или ширина) больших изображений и измерение обычных образов.  
   
 ```  
@@ -2464,7 +2459,7 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
   
  Платформа использует этот элемент данных, не указывая набор больших изображений. Например если предоставить только ряд небольших изображений с размером 16 x 16 и требуется больших изображений будет иметь размер 24 x 24, значение этого элемента данных 1.5.  
   
-##  <a name="nextmenu"></a>CMFCToolBar::NextMenu  
+##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu  
 
   
 ```  
@@ -2475,7 +2470,7 @@ virtual BOOL NextMenu();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onbeforeremovebutton"></a>CMFCToolBar::OnBeforeRemoveButton  
+##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton  
 
   
 ```  
@@ -2495,7 +2490,7 @@ virtual BOOL OnBeforeRemoveButton(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot  
  Вызывается платформой, когда пользователь выбирает кнопку на панели инструментов.  
   
 ```  
@@ -2509,7 +2504,7 @@ virtual void OnChangeHot(int iHot);
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы процесс уведомления о том, что пользователь выбрал кнопку на панели инструментов.  
   
-##  <a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager  
 
   
 ```  
@@ -2518,7 +2513,7 @@ virtual void OnChangeVisualManager();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onfillbackground"></a>CMFCToolBar::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground  
  Вызывается платформой из [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) для заполнения фона панели инструментов.  
   
 ```  
@@ -2534,7 +2529,7 @@ virtual void OnFillBackground(CDC* pDC);
   
  Переопределите этот метод для рисования пользовательского фона в производных классах.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBar::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged  
 
   
 ```  
@@ -2543,7 +2538,7 @@ virtual void OnGlobalFontsChanged();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onreset"></a>CMFCToolBar::OnReset  
+##  <a name="onreset"></a>  CMFCToolBar::OnReset  
  Восстанавливает исходное состояние панели инструментов.  
   
 ```  
@@ -2555,7 +2550,7 @@ virtual void OnReset();
   
  Реализация по умолчанию не выполняет никаких действий. Переопределить `OnReset` в классе, производном от `CMFCToolBar` когда панели инструментов имеет фиктивное кнопок, которые должны быть заменены при панели инструментов возвращает в исходное состояние.  
   
-##  <a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData  
 
   
 ```  
@@ -2569,7 +2564,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onsetdefaultbuttontext"></a>CMFCToolBar::OnSetDefaultButtonText  
+##  <a name="onsetdefaultbuttontext"></a>  CMFCToolBar::OnSetDefaultButtonText  
  Восстанавливает состояние по умолчанию текст кнопки панели инструментов.  
   
 ```  
@@ -2581,14 +2576,14 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  Указывает кнопки, текст которого задается значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если текст успешно восстановлена; в противном случае `FALSE`.  
+ `TRUE` Если текст успешно восстановлена; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для процесса уведомления, что текст кнопки панели инструментов изменяется значение по умолчанию.  
   
  Реализация по умолчанию загружает текст кнопки из ресурсов приложения.  
   
-##  <a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
+##  <a name="onusertooltip"></a>  CMFCToolBar::OnUserToolTip  
  Вызывается платформой при отображаться подсказки для кнопки.  
   
 ```  
@@ -2605,14 +2600,14 @@ virtual BOOL OnUserToolTip(
  Ссылку на `CString` объект, получающий текст всплывающей подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если `strTTText` заполненная текст всплывающей подсказки; в противном случае `FALSE`.  
+ `TRUE` Если `strTTText` заполненная текст всплывающей подсказки; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при отобразится всплывающая подсказка для кнопки панели инструментов. Если `OnUserToolTip` возвращает `TRUE`, платформа отображает всплывающей подсказки, которая содержит текст, возвращенный `OnUserToolTip` в `strTTText`. В противном случае содержит текст кнопки всплывающая подсказка.  
   
  Переопределить `OnUserToolTip` для настройки всплывающие подсказки для кнопки панели инструментов. Реализация по умолчанию вызывает [CMFCToolBar::OnUserToolTip](#onusertooltip) для получения текста всплывающей подсказки.  
   
-##  <a name="prevmenu"></a>CMFCToolBar::PrevMenu  
+##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu  
 
   
 ```  
@@ -2623,7 +2618,7 @@ virtual BOOL PrevMenu();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="processcommand"></a>CMFCToolBar::ProcessCommand  
+##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
  В блогах `WM_COMMAND` сообщение в окно, которому принадлежит панели инструментов.  
   
 ```  
@@ -2642,7 +2637,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
   
  Используйте [ON_COMMAND](message-map-macros-mfc.md#on_command) макрос для сопоставления `WM_COMMAND` сообщение на функцию-член.  
   
-##  <a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
  Удаляет все кнопки и разделители из панели инструментов.  
   
 ```  
@@ -2652,7 +2647,7 @@ virtual void RemoveAllButtons();
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод, когда он повторно создает или уничтожает панели инструментов.  
   
-##  <a name="removebutton"></a>CMFCToolBar::RemoveButton  
+##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton  
  Удаляет из панели инструментов кнопки, которая имеет по указанному индексу.  
   
 ```  
@@ -2664,14 +2659,14 @@ virtual BOOL RemoveButton(int iIndex);
  Задает отсчитываемый от нуля индекс кнопки для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно, или `FALSE` Если указанный индекс является недопустимым, или индекс указывает **Настройка** кнопки.  
+ `TRUE` Если метод выполнен успешно, или `FALSE` Если указанный индекс является недопустимым, или индекс указывает **Настройка** кнопки.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод обновляет атрибуты дополнительных инструментов, затрагиваемые удаление кнопки. Например этот метод удаляет ненужные разделители из панели инструментов и перестраивает таблицу сочетаний клавиш.  
   
  Дополнительные сведения о **Настройка** кнопку см. в разделе [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
+##  <a name="removestatefromregistry"></a>  CMFCToolBar::RemoveStateFromRegistry  
  Удаляет сведения о состоянии для панели инструментов из реестра Windows.  
   
 ```  
@@ -2699,7 +2694,7 @@ virtual BOOL RemoveStateFromRegistry(
   
  Переопределите этот метод, если Дополнительные сведения о состоянии хранятся в реестре Windows.  
   
-##  <a name="replacebutton"></a>CMFCToolBar::ReplaceButton  
+##  <a name="replacebutton"></a>  CMFCToolBar::ReplaceButton  
  Кнопки панели инструментов заменяет другую кнопку панели инструментов.  
   
 ```  
@@ -2731,7 +2726,7 @@ int ReplaceButton(
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
-##  <a name="resetall"></a>CMFCToolBar::ResetAll  
+##  <a name="resetall"></a>  CMFCToolBar::ResetAll  
  Восстанавливает все панели инструментов в исходное состояние.  
   
 ```  
@@ -2741,7 +2736,7 @@ static void __stdcall ResetAll();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) метода на панели инструментов в приложении, которое может быть восстановлена. Она использует [CMFCToolBar::CanBeRestored](#canberestored) метод, чтобы определить, является ли панель инструментов может быть восстановлена.  
   
-##  <a name="resetallimages"></a>CMFCToolBar::ResetAllImages  
+##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages  
  Очищает все коллекции изображений панели инструментов в приложении.  
   
 ```  
@@ -2751,7 +2746,7 @@ static void __stdcall ResetAllImages();
 ### <a name="remarks"></a>Примечания  
  Этот метод очищает наборов изображений, которые инициализируются по [CMFCToolBar::LoadToolBar](#loadtoolbar) и [CMFCToolBar::LoadBitmap](#loadbitmap) методы.  
   
-##  <a name="resetimages"></a>CMFCToolBar::ResetImages  
+##  <a name="resetimages"></a>  CMFCToolBar::ResetImages  
 
   
 ```  
@@ -2760,7 +2755,7 @@ virtual void ResetImages();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="restorefocus"></a>CMFCToolBar::RestoreFocus  
+##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus  
 
   
 ```  
@@ -2769,7 +2764,7 @@ virtual void RestoreFocus();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="restoreoriginalstate"></a>CMFCToolBar::RestoreOriginalState  
+##  <a name="restoreoriginalstate"></a>  CMFCToolBar::RestoreOriginalState  
  Восстанавливает первоначальное состояние панели инструментов.  
   
 ```  
@@ -2784,7 +2779,7 @@ virtual BOOL RestoreOriginalState();
   
  Этот метод вызывается платформой, когда пользователь выбирает **сбросить все** кнопку **панели инструментов** страницы диалогового окна настройки.  
   
-##  <a name="saveparameters"></a>CMFCToolBar::SaveParameters  
+##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters  
 
   
 ```  
@@ -2798,7 +2793,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="savestate"></a>CMFCToolBar::SaveState  
+##  <a name="savestate"></a>  CMFCToolBar::SaveState  
  Сохраняет сведения о состоянии для панели инструментов в реестре Windows.  
   
 ```  
@@ -2824,7 +2819,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при сохраняет состояние приложения в реестре. Дополнительные сведения см. в разделе [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
+##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands  
  Задает список команд, которые отображаются всегда, когда пользователь открывает меню.  
   
 ```  
@@ -2842,7 +2837,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
   
  См. в образце Explorer пример использования этого метода.  
   
-##  <a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CMFCToolBar::SetButtonInfo  
  Задает идентификатор команды, стиль и идентификатор изображения кнопки панели инструментов.  
   
 ```  
@@ -2873,7 +2868,7 @@ void SetButtonInfo(
   
  Вызовите [CMFCToolBar::SetButtonStyle](#setbuttonstyle) метод, чтобы задать стиль кнопки.  
   
-##  <a name="setbuttons"></a>CMFCToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CMFCToolBar::SetButtons  
  Задает кнопки панели инструментов.  
   
 ```  
@@ -2901,7 +2896,7 @@ virtual BOOL SetButtons(
   
  Этот метод добавляет **Настройка** кнопки на панели инструментов и отправляет `AFX_WM_RESETTOOLBAR` сообщения в родительское окно панели инструментов. Дополнительные сведения о **Настройка** кнопку см. в разделе [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
  Задает стиль кнопки панели инструментов по указанному индексу.  
   
 ```  
@@ -2920,7 +2915,7 @@ virtual void SetButtonStyle(
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет `TBBS_PRESSED` стиля при `nStyle` — `TBBS_DISABLED` , так как пользователь не может нажать кнопку отключенной кнопки.  
   
-##  <a name="setbuttontext"></a>CMFCToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText  
  Задает текстовую подпись кнопки панели инструментов.  
   
 ```  
@@ -2937,12 +2932,12 @@ BOOL SetButtonText(
  Текстовая подпись кнопки панели инструментов. Должно быть не `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+ `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `FALSE` , если указанный индекс не ссылается на допустимый инструментов.  
   
-##  <a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
+##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions  
  Указывает, когда используются редко команды не отображаются в меню приложения.  
   
 ```  
@@ -2959,14 +2954,14 @@ static BOOL SetCommandUsageOptions(
  Процент времени, которое необходимо выполнить команду считается недавно использованные команды.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `FALSE`Если `nMinUsagePercentage` равно или больше 100; в противном случае `TRUE`.  
+ `FALSE` Если `nMinUsagePercentage` равно или больше 100; в противном случае `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для настройки алгоритма, который использует framework, чтобы определить, как базовый и недавно использовавшихся элементов меню отображаются. Дополнительные сведения о базовых команд см. в разделе [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
   
  Этот класс использует `CMFCCmdUsageCount` класс, чтобы отслеживать счетчик использования команд. Дополнительные сведения об этом классе см. в разделе [CMFCCmdUsageCount класса](../../mfc/reference/cmfccmdusagecount-class.md).  
   
-##  <a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
+##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode  
  Включает или отключает режим настройки для всех панелей инструментов в приложении.  
   
 ```  
@@ -2978,12 +2973,12 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
  Логическое значение, указывающее, следует ли включить или отключить режим настройки. Присвойте этому параметру значение `TRUE` для перехода в режим настройки или `FALSE` отключить ее.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`При вызове этого метода изменяет режим настройки; в противном случае `FALSE`.  
+ `TRUE` При вызове этого метода изменяет режим настройки; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод настраивает макет и перерисовывает каждой панели инструментов в приложении. Вызовите [CMFCToolBar::IsCustomizeMode](#iscustomizemode) метод, чтобы определить, является ли приложение в режим настройки  
   
-##  <a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
+##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons  
  Указывает ли недоступны недоступностью кнопок на панели инструментов, или же используются недоступна кнопка изображения.  
   
 ```  
@@ -2997,7 +2992,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ### <a name="remarks"></a>Примечания  
  По умолчанию недоступны кнопки недоступны.  
   
-##  <a name="setheight"></a>CMFCToolBar::SetHeight  
+##  <a name="setheight"></a>  CMFCToolBar::SetHeight  
  Задает высоту панели инструментов.  
   
 ```  
@@ -3011,7 +3006,7 @@ void SetHeight(int cyHeight);
 ### <a name="remarks"></a>Примечания  
  Этот метод перерисовывает панели инструментов, после его высота.  
   
-##  <a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
+##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode  
 
   
 ```  
@@ -3023,7 +3018,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sethot"></a>CMFCToolBar::SetHot  
+##  <a name="sethot"></a>  CMFCToolBar::SetHot  
 
   
 ```  
@@ -3037,7 +3032,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sethotborder"></a>CMFCToolBar::SetHotBorder  
+##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder  
  Указывает, являются ли кнопки панели инструментов выделенного.  
   
 ```  
@@ -3053,7 +3048,7 @@ void SetHotBorder(BOOL bShowHotBorder);
   
  Вызовите [CMFCToolBar::GetHotBorder](#gethotborder) метод, чтобы определить ли панель инструментов горячей дорожки ее кнопок.  
   
-##  <a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
+##  <a name="sethottextcolor"></a>  CMFCToolBar::SetHotTextColor  
  Задает цвет текста для кнопки панели инструментов горячей.  
   
 ```  
@@ -3067,7 +3062,7 @@ static void SetHotTextColor(COLORREF clrText);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о кнопках панели инструментов, отслеживаемого в разделе [CMFCToolBar::GetHotBorder](#gethotborder) и [CMFCToolBar::SetHotBorder](#sethotborder).  
   
-##  <a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText  
+##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText  
 
   
 ```  
@@ -3079,7 +3074,7 @@ void SetIgnoreSetText(BOOL bValue);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setlargeicons"></a>CMFCToolBar::SetLargeIcons  
+##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons  
  Отображение кнопки панели инструментов крупных значков.  
   
 ```  
@@ -3097,7 +3092,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
   
  Дополнительные сведения о **Настройка** диалоговое окно, в разделе [CMFCToolBarsCustomizeDialog класса](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
+##  <a name="setlockedsizes"></a>  CMFCToolBar::SetLockedSizes  
  Задает размеры заблокированные образов и заблокированные кнопок на панели инструментов.  
   
 ```  
@@ -3122,7 +3117,7 @@ void SetLockedSizes(
   
  Вызовите [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) метод для получения размера заблокирован изображения. Вызовите [CMFCToolBar::GetButtonSize](#getbuttonsize) метод для получения размера заблокирован кнопки панели инструментов.  
   
-##  <a name="setmaskmode"></a>CMFCToolBar::SetMaskMode  
+##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode  
 
   
 ```  
@@ -3134,7 +3129,7 @@ void SetMaskMode(BOOL bMasked);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
+##  <a name="setmenusizes"></a>  CMFCToolBar::SetMenuSizes  
  Задает размер кнопок панели инструментов меню и изображений.  
   
 ```  
@@ -3157,7 +3152,7 @@ static void __stdcall SetMenuSizes(
   
  Просмотрите образцы IEDemo и MSMoneyDemo показаны примеры использования этого метода.  
   
-##  <a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
+##  <a name="setnonpermittedcommands"></a>  CMFCToolBar::SetNonPermittedCommands  
  Задает список команд, которые не может быть выполнена пользователем.  
   
 ```  
@@ -3173,7 +3168,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
   
  Этот метод очищает предыдущего списка команд не допускается. По умолчанию список команд не допускается пуст.  
   
-##  <a name="setonerowwithsibling"></a>CMFCToolBar::SetOneRowWithSibling  
+##  <a name="setonerowwithsibling"></a>  CMFCToolBar::SetOneRowWithSibling  
  Помещает панель инструментов и родственные на той же строке.  
   
 ```  
@@ -3187,7 +3182,7 @@ void SetOneRowWithSibling();
   
  Платформа вызывает [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling) метод, когда пользователь щелкает **Отображать кнопки на двух строках** кнопки.  
   
-##  <a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
+##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons  
 
   
 ```  
@@ -3199,7 +3194,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setpermament"></a>CMFCToolBar::SetPermament  
+##  <a name="setpermament"></a>  CMFCToolBar::SetPermament  
  Указывает, является ли пользователь может закрыть панель инструментов.  
   
 ```  
@@ -3215,7 +3210,7 @@ void SetPermament(BOOL bPermament=TRUE);
   
  Вызовите [CMFCToolBar::CanBeClosed](#canbeclosed) метод, чтобы определить, является ли пользователь может закрыть панель инструментов.  
   
-##  <a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
+##  <a name="setroutecommandsviaframe"></a>  CMFCToolBar::SetRouteCommandsViaFrame  
  Отправка родительского фрейма или владелец команды на панель инструментов.  
   
 ```  
@@ -3229,7 +3224,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ### <a name="remarks"></a>Примечания  
  По умолчанию родительского фрейма отправляет команды на панель инструментов. Вызовите [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) метод, чтобы определить, является ли родительского фрейма или владелец отправляет команды на панель инструментов.  
   
-##  <a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
+##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips  
  Указывает, является ли платформа отображает всплывающие подсказки.  
   
 ```  
@@ -3245,7 +3240,7 @@ static void SetShowTooltips(BOOL bValue);
   
  Вызовите [CMFCToolBar::GetShowTooltips](#getshowtooltips) метод, чтобы определить, отображает ли платформа всплывающие подсказки.  
   
-##  <a name="setsiblingtoolbar"></a>CMFCToolBar::SetSiblingToolBar  
+##  <a name="setsiblingtoolbar"></a>  CMFCToolBar::SetSiblingToolBar  
  Указывает одноуровневый элемент панели инструментов.  
   
 ```  
@@ -3263,7 +3258,7 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
   
  Для получения того же уровня панели инструментов, вызовите [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).  
   
-##  <a name="setsizes"></a>CMFCToolBar::SetSizes  
+##  <a name="setsizes"></a>  CMFCToolBar::SetSizes  
  Задает размеры кнопки и изображений на всех панелях инструментов.  
   
 ```  
@@ -3284,7 +3279,7 @@ static void __stdcall SetSizes(
   
  Вызовите [CMFCToolBar::GetImageSize](#getimagesize) метод для извлечения размер изображения для кнопок панели инструментов. Вызовите [CMFCToolBar::GetButtonSize](#getbuttonsize) метод для извлечения размер кнопок панели инструментов.  
   
-##  <a name="settoolbarbtntext"></a>CMFCToolBar::SetToolBarBtnText  
+##  <a name="settoolbarbtntext"></a>  CMFCToolBar::SetToolBarBtnText  
  Указывает свойства кнопки на панели инструментов.  
   
 ```  
@@ -3313,7 +3308,7 @@ void SetToolBarBtnText(
   
  В отладочных построениях, этот метод создает Сбой утверждения, если `nBtnIndex` не ссылается на допустимый панель инструментов кнопки панели инструментов или является знаком-разделителем.  
   
-##  <a name="settworowswithsibling"></a>CMFCToolBar::SetTwoRowsWithSibling  
+##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling  
  Помещает панель инструментов и родственные на отдельных строках.  
   
 ```  
@@ -3327,7 +3322,7 @@ void SetTwoRowsWithSibling();
   
  Платформа вызывает [CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling) метод, когда пользователь щелкает **Отображать кнопки на одной строке** кнопки.  
   
-##  <a name="setuserimages"></a>CMFCToolBar::SetUserImages  
+##  <a name="setuserimages"></a>  CMFCToolBar::SetUserImages  
  Задает коллекцию изображений, определяемых пользователем в приложении.  
   
 ```  
@@ -3350,7 +3345,7 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
   
  Вызовите [CMFCToolBar::GetUserImages](#getuserimages) метод позволяет получить коллекцию пользовательских изображений в приложении.  
   
-##  <a name="stretchpane"></a>CMFCToolBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCToolBar::StretchPane  
  Растягивает панель по вертикали или по горизонтали и перемещает кнопки, при необходимости.  
   
 ```  
@@ -3374,7 +3369,7 @@ virtual CSize StretchPane(
   
  Возвращаемое значение определяется путем вызова [CMFCToolBar::CalcSize](#calcsize).  
   
-##  <a name="translatechar"></a>CMFCToolBar::TranslateChar  
+##  <a name="translatechar"></a>  CMFCToolBar::TranslateChar  
  Выполняет команду кнопки, если указанный код соответствует допустимые сочетания клавиш.  
   
 ```  
@@ -3386,12 +3381,12 @@ virtual BOOL TranslateChar(UINT nChar);
  Указывает виртуальному коду клавиши. Список стандартных кодов виртуального ключа см. в разделе Winuser.h  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `FALSE`Если указанный код непечатаемые или не соответствует допустимым сочетания клавиш; `TRUE` , если указанный код соответствует параметру раскрывающееся меню; в противном случае возвращаемое значение из [CMFCToolBar::ProcessCommand](#processcommand).  
+ `FALSE` Если указанный код непечатаемые или не соответствует допустимым сочетания клавиш; `TRUE` , если указанный код соответствует параметру раскрывающееся меню; в противном случае возвращаемое значение из [CMFCToolBar::ProcessCommand](#processcommand).  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при нажатии клавиши вместе с клавишей Alt.  
   
-##  <a name="updatebutton"></a>CMFCToolBar::UpdateButton  
+##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton  
  Обновляет состояние указанную кнопку.  
   
 ```  
@@ -3404,7 +3399,7 @@ void UpdateButton(int nIndex);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
+##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar  
  Перемещает кнопки панели инструментов в пределах данного измерения.  
   
 ```  
@@ -3429,7 +3424,7 @@ int WrapToolBar(
  [in] `nColumnWidth`  
  Ширина кнопки. Если значение-1, используется текущая ширина.  
   
- [in] m`nRowHeight`  
+ [in] m `nRowHeight`  
  Высота кнопки. Если значение-1, используется текущая высота.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3438,7 +3433,7 @@ int WrapToolBar(
 ### <a name="remarks"></a>Примечания  
  Этот метод изменяет положение кнопки в панели инструментов, упаковки кнопок дополнительные строки, при необходимости.  
   
-##  <a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
+##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages  
  Указывает, следует ли выполнить масштабирование изображений на панели инструментов в режиме высокого уровня точек на ДЮЙМ.  
   
 ```  

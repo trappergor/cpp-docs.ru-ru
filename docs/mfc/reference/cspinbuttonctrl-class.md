@@ -1,12 +1,9 @@
 ---
-title: "CSpinButtonCtrl-класс | Документы Microsoft"
-ms.custom: 
+title: CSpinButtonCtrl-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "счетчик" Windows.  
@@ -62,17 +57,17 @@ ms.lasthandoff: 12/21/2017
 class CSpinButtonCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Создает объект `CSpinButtonCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::Create](#create)|Создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.|  
 |[CSpinButtonCtrl::CreateEx](#createex)|Создает счетчик-элемент управления с указанным расширенные стили Windows и прикрепляет его к `CSpinButtonCtrl` объекта.|  
@@ -112,7 +107,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
  Создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта...  
   
 ```  
@@ -144,7 +139,7 @@ virtual BOOL Create(
   
  Чтобы создать счетчик-элемент управления с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо **создать**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CSpinButtonCtrl` объекта.  
   
 ```  
@@ -178,14 +173,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Создает объект `CSpinButtonCtrl`.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
  Извлекает сведения о ускорение для счетчик-элемент управления.  
   
 ```  
@@ -204,7 +199,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>Возвращаемое значение  
  Получить число структур сочетаний клавиш.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
  Извлекает базе текущий счетчик-элемент управления.  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее базовое значение.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
  Извлекает указатель на текущее окно контактному лицу.  
   
 ```  
@@ -224,7 +219,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на текущее окно контактному лицу.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
  Получает текущее положение счетчик-элемент управления.  
   
 ```  
@@ -243,7 +238,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="remarks"></a>Примечания  
  При обработке возвращаемое значение, элемент управления обновляет ее текущей позиции, основанной на заголовок окна контактному лицу. Элемент управления возвращает ошибку, если нет окна контактному лицу или заголовок указывает недопустимое или вне диапазона значение.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
  Возвращает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".  
   
 ```  
@@ -271,7 +266,7 @@ void GetRange32(
 ### <a name="remarks"></a>Примечания  
  Функция-член `GetRange32` извлекает диапазон кнопки элемента управления "Счетчик" как 32-разрядное целое число.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
  Задает ускорение для счетчик-элемент управления.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL SetAccel(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
  Задает основание счетчик-элемент управления.  
   
 ```  
@@ -307,7 +302,7 @@ int SetBase(int nBase);
 ### <a name="remarks"></a>Примечания  
  Базовое значение определяет, отображаются ли в связанном окне в десятичное или шестнадцатеричное цифр номера. Шестнадцатеричные числа всегда не имеют знака; десятичные числа подписываются.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
  Задает в связанном окне для счетчик-элемент управления.  
   
 ```  
@@ -324,7 +319,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="remarks"></a>Примечания  
  Элемент управления "Счетчик" почти всегда связан с другое окно, такие как элемент управления, отображающий некоторое содержимое. Это другое окно называется «контакт» элемента управления "Счетчик".  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
  Задает текущую позицию для счетчик-элемент управления.  
   
 ```  
@@ -340,9 +335,9 @@ int SetPos32(int nPos);
  Предыдущей позиции (16-разрядной точности для `SetPos`32- разрядная точность для `SetPos32`).  
   
 ### <a name="remarks"></a>Примечания  
- `SetPos32`Задает положение 32-разрядной.  
+ `SetPos32` Задает положение 32-разрядной.  
   
-##  <a name="setrange"></a>CSpinButtonCtrl::SetRange  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
  Задает верхний и нижний пределы (диапазон) для элемента управления button "Счетчик".  
   
 ```  
@@ -358,7 +353,7 @@ void SetRange32(
   
 ### <a name="parameters"></a>Параметры  
  `nLower` и `nUpper`.  
- Верхняя и нижняя границы для элемента управления. Для `SetRange`, ни ограничение может быть больше, чем **UD_MAXVAL** или меньше, чем **UD_MINVAL**; Кроме того, не может превышать разницу между двумя ограничениями **UD_MAXVAL**. `SetRange32`не накладывает ограничений на ограничения; Используйте любой целых чисел.  
+ Верхняя и нижняя границы для элемента управления. Для `SetRange`, ни ограничение может быть больше, чем **UD_MAXVAL** или меньше, чем **UD_MINVAL**; Кроме того, не может превышать разницу между двумя ограничениями **UD_MAXVAL**. `SetRange32` не накладывает ограничений на ограничения; Используйте любой целых чисел.  
   
 ### <a name="remarks"></a>Примечания  
  Функция-член `SetRange32` задает 32-разрядным диапазоном для кнопки элемента управления "Счетчик".  

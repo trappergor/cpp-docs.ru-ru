@@ -1,13 +1,10 @@
 ---
-title: "Вызовы кода со стороны платформы | Документы Microsoft"
-ms.custom: 
+title: Вызовы кода со стороны платформы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-calls-your-code"></a>Вызовы к коду со стороны платформы
 Очень важно понимать взаимосвязь между исходный код и код в платформе MFC. При запуске приложения, большая часть потока управления находится в коде платформы. Среда управляет цикл обработки сообщений, которая получает сообщения от Windows, пользователь выбирает команды и изменении данных в представлении. События, которые можно обрабатывать платформа сама по себе не следует полагаться на коде вообще. Например платформа знает, как закрыть окна и как выход из приложения в ответ на команды пользователя. Как он обрабатывает эти задачи, платформа использует дать вам возможность реагировать на эти события, а также обработчики сообщений и виртуальных функций C++. Код находится не в элемент управления, однако; Платформа —.  

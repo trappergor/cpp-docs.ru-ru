@@ -1,13 +1,10 @@
 ---
-title: "Обновление текса на панели строки состояния | Документы Microsoft"
-ms.custom: 
+title: Обновление текса на панели строки состояния | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Обновление текса на панели строки состояния
 В этой статье объясняется, как изменить текст, отображаемый в панели строки состояния MFC. Строка состояния — объект window класса [CStatusBar](../mfc/reference/cstatusbar-class.md) — содержит несколько «областей». Каждая область — прямоугольной области строки состояния, можно использовать для отображения информации. Например во многих приложениях отображать состояние CAPS LOCK, NUM LOCK и другие ключи в крайней правой области. Приложения часто также отображаются информативные текста в левой панели (0), иногда называется «панель сообщений». Например строки состояния MFC по умолчанию использует панель сообщений для отображения строка, объясняющая выбранного пункта меню или панели инструментов кнопки. Рисунок в [строки состояния](../mfc/status-bar-implementation-in-mfc.md) показывает строку состояния из приложения, созданные с помощью мастера приложений MFC.  

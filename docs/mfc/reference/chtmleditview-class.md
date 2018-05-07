@@ -1,12 +1,9 @@
 ---
-title: "Класс CHtmlEditView | Документы Microsoft"
-ms.custom: 
+title: Класс CHtmlEditView | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98964a48be8b8c36a3d6d5bd708a51b9963ae105
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditview-class"></a>Класс CHtmlEditView
 Предоставляет функции платформы редактирования WebBrowser в контексте архитектуры документов или представлений MFC.  
@@ -48,13 +43,13 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHtmlEditView::CHtmlEditView](#chtmleditview)|Создает объект `CHtmlEditView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|Создает новый объект окна.|  
 |[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Возвращает **IHTMLDocument2** интерфейс для текущего документа.|  
@@ -82,14 +77,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
  Создает объект `CHtmlEditView`.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>  CHtmlEditView::Create  
  Создает новый объект окна.  
   
 ```  
@@ -128,7 +123,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  Этот метод также вызывает автономной WebBrowser **Navigate** метод, чтобы загрузить документ по умолчанию (в разделе [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  Возвращает **IHTMLDocument2** интерфейс для текущего документа.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса.  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  Возвращает имя документа по умолчанию для этого представления.  
   
 ```  

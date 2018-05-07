@@ -1,12 +1,9 @@
 ---
-title: "hash_set (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: hash_set (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - hash_set class [STL/CLR]
 - <hash_set> header [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c46b212f200b2ef7d46afae567efdf3f5bcef0f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63b43a116848ff67deb9c62c04849aa5afc6dbc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `hash_set` для управления последовательностью элементов хэш-таблицы, каждая запись в таблице хранения двунаправленный связанный список узлов и каждый узел хранения одного элемента. Значение каждого элемента используется в качестве ключа для упорядочения последовательности.  
@@ -57,7 +52,7 @@ template<typename Key>
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[hash_set::const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[hash_set::const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -77,7 +72,7 @@ template<typename Key>
 |[hash_set::value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)|Подсчитывает количество сегментов.|  
@@ -105,13 +100,13 @@ template<typename Key>
 |[hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[hash_set::value_comp (STL/CLR)](../dotnet/hash-set-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Доступ к объекту хранимых делегата, путем вызова функции-члена [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Объект делегата необходимо определить соответствующий порядок ключей типа [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y) && key_comp()(Y, X)` имеет значение true, затем `X` и `Y` говорят, что имеют соответствующий порядок.  
   
@@ -137,7 +132,7 @@ template<typename Key>
   
  Объект определяет в каком сегменте должен содержать указанного ключа сортировки, вызвав хранимую делегат типа [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Доступ к этому сохраненному объекту путем вызова функции-члена [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` получить целое значение, которое зависит от значения ключа. Объект хранимых делегата можно указать при создании объекта hash_set; При указании объект делегата отсутствует значение по умолчанию — функция `System::Object::hash_value(key_type)`. Это означает, что для любых ключей `X` и `Y`:  
   
- `hash_delegate()(X)`Возвращает один и тот же целочисленный результат при каждом вызове.  
+ `hash_delegate()(X)` Возвращает один и тот же целочисленный результат при каждом вызове.  
   
  Если `X` и `Y` имеют соответствующий порядок, затем `hash_delegate()(X)` должна возвращать целочисленный аналогична `hash_delegate()(Y)`.  
   

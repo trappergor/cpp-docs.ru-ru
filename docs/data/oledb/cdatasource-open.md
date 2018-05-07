@@ -1,12 +1,9 @@
 ---
-title: "CDataSource::Open | Документы Microsoft"
-ms.custom: 
+title: CDataSource::Open | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 Открывает подключение к источнику данных с помощью **CLSID**, **ProgID**, или `CEnumerator` моникер или отображает диалоговое окно обнаружения.  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  Стандартный `HRESULT`.  
   
 ## <a name="remarks"></a>Примечания  
- Эта перегрузка метода, использующая параметр `hWnd`, открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию функций компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB на [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Эта перегрузка метода, использующая параметр `hWnd`, открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию функций компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д. Дополнительные сведения см. в разделе «Службы OLE DB» справочника программиста OLE DB на [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  Перегрузки метода, которые не используют параметр `hWnd`, открывают объект источника данных без использования компонентов службы oledb32.dll. Объект [CDataSource](../../data/oledb/cdatasource-class.md) открытый с помощью этих перегрузок функций не сможет использовать возможности компонентов службы.  
   

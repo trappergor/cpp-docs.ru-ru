@@ -1,13 +1,10 @@
 ---
-title: "Источник данных: Программная настройка источника данных ODBC | Документы Microsoft"
-ms.custom: 
+title: 'Источник данных: Программная настройка источника данных ODBC | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Источник данных. Программная настройка источника данных ODBC
 В этом разделе объясняется, как программным образом можно настроить имена источников данных Open Database Connectivity (ODBC). Это обеспечивает гибкость для доступа к данным без перезагрузки пользователю явно использовать администратор ODBC или другие программы, чтобы указать имена источников данных.  
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   Для 32-разрядных найти ключ **HKEY_CURRENT_USER\Software\ODBC\ODBC. Источники данных INI\ODBC** в левой области.  
   
-         В правой части перечислены записи в формате: «pub: REG_SZ:*<data source name>*», где  *<data source name>*  является источником данных, который уже был настроен с требуемыми параметрами для используемого драйвера для использования. Выберите источник данных, который требуется, например, SQL Server. Элементы за строкой «pub:» являются имя параметра и значение для использования в вашей `lpszAttributes` параметра.  
+         В правой части перечислены записи в формате: «pub: REG_SZ:*<data source name>*», где *<data source name>* является источником данных, который уже был настроен с требуемыми параметрами для используемого драйвера для использования. Выберите источник данных, который требуется, например, SQL Server. Элементы за строкой «pub:» являются имя параметра и значение для использования в вашей `lpszAttributes` параметра.  
   
     -   В 16-разрядных найдите раздел в файле Odbc.ini, помеченного [*\<источник данных >*].  
   

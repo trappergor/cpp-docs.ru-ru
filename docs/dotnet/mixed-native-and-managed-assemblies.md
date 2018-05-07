@@ -1,13 +1,10 @@
 ---
-title: "Смешанные (собственные и управляемые) сборки | Документы Microsoft"
-ms.custom: 
+title: Смешанные (собственные и управляемые) сборки | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Смешанные (собственные и управляемые) сборки
 Смешанные сборки может содержать неуправляемый машинных инструкций и инструкций MSIL. Это позволяет им вызывать и вызываться компоненты .NET, сохраняя совместимость с компонентами, которые полностью неуправляемыми. С помощью смешанных сборок, разработчики могут создавать приложения, используя сочетание управляемых и неуправляемых функций. Благодаря этому смешанные сборки идеально подходит для переноса существующих приложений Visual C++ на платформу .NET.  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
  [Практическое руководство. Создание приложения с частичным доверием путем удаления зависимости от библиотеки DLL CRT](../dotnet/create-a-partially-trusted-application.md)  
  В этом разделе рассматривается создание с помощью Visual C++ путем удаления зависимости от библиотеки msvcm90.dll общеязыковая среда выполнения приложения с частичным доверием.  
   
- Дополнительные сведения о рекомендации по программированию для смешанных сборок см. в статье MSDN «Общие сведения о из управляемый или неуправляемый код взаимодействия» в [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
+ Дополнительные сведения о рекомендации по программированию для смешанных сборок см. в статье MSDN «Общие сведения о из управляемый или неуправляемый код взаимодействия» в [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp).  
   
 ## <a name="see-also"></a>См. также  
  [Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)

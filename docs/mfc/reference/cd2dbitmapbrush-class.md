@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DBitmapBrush | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DBitmapBrush | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBitmapBrush
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd588a26b73fb6e5f1b205b20f21aab8272c439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbitmapbrush-class"></a>Класс CD2DBitmapBrush
 Программа-оболочка для ID2D1BitmapBrush.  
@@ -72,18 +67,18 @@ ms.lasthandoff: 12/21/2017
 class CD2DBitmapBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Перегружен. Создает объект CD2DBitmapBrush из файла.|  
 |[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Деструктор Вызывается при уничтожении объекта D2D кисти растрового изображения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DBitmapBrush::CREATE](#create)|Создает CD2DBitmapBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -101,19 +96,19 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::CommonInit](#commoninit)|Инициализирует объект|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Возвращает интерфейс ID2D1BitmapBrush|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Содержит указатель на объект CD2DBitmap.|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Хранит указатель на объект ID2D1BitmapBrush.|  
@@ -131,14 +126,14 @@ class CD2DBitmapBrush : public CD2DBrush;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
+##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush  
  Деструктор Вызывается при уничтожении объекта D2D кисти растрового изображения.  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
  Присоединяет существующий ресурс интерфейс для объекта  
   
 ```  
@@ -149,7 +144,7 @@ void Attach(ID2D1BitmapBrush* pResource);
  `pResource`  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
  Создает объект CD2DBitmapBrush.  
   
 ```  
@@ -204,7 +199,7 @@ CD2DBitmapBrush(
  `lpszImagePath`  
  Указатель на завершающуюся значением null строка, содержащая имя файла.  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
  Инициализирует объект  
   
 ```  
@@ -215,7 +210,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
  `pBitmapBrushProperties`  
  Указатель свойства кисти растрового изображения.  
   
-##  <a name="create"></a>CD2DBitmapBrush::CREATE  
+##  <a name="create"></a>  CD2DBitmapBrush::CREATE  
  Создает CD2DBitmapBrush.  
   
 ```  
@@ -229,14 +224,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::destroy  
+##  <a name="destroy"></a>  CD2DBitmapBrush::destroy  
  Уничтожает объект CD2DBitmapBrush.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
  Отсоединяет интерфейса ресурсов из объекта  
   
 ```  
@@ -246,7 +241,7 @@ ID2D1BitmapBrush* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
  Возвращает интерфейс ID2D1BitmapBrush  
   
 ```  
@@ -256,7 +251,7 @@ ID2D1BitmapBrush* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1BitmapBrush или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
  Возвращает растровое изображение источника, который использует данную кисть для рисования  
   
 ```  
@@ -266,7 +261,7 @@ CD2DBitmap* GetBitmap();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на объект CD2DBitmap или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
  Возвращает метод, с помощью которого кисть по горизонтали плитки тех областей, которые выходящих за его растрового изображения  
   
 ```  
@@ -276,7 +271,7 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, указывающее, как кисть по горизонтали плитки тех областей, которые выходящих за его растрового изображения  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
  Возвращает метод, с помощью которого кисть по вертикали плитки тех областей, которые выходящих за его растрового изображения  
   
 ```  
@@ -286,7 +281,7 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, указывающее, как кисть по вертикали плитки тех областей, которые выходящих за его растрового изображения  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
  Возвращает метод интерполяции, используемый при повернутых или масштабированных кисти точечного рисунка  
   
 ```  
@@ -296,28 +291,28 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Метод интерполяции, использовавшейся повернутых или масштабированных кисти точечного рисунка  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
  Содержит указатель на объект CD2DBitmap.  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
  Хранит указатель на объект ID2D1BitmapBrush.  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
  Битовая карта, свойства кисти.  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *  
  Возвращает интерфейс ID2D1BitmapBrush  
   
 ```  
@@ -327,7 +322,7 @@ operator ID2D1BitmapBrush*();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1BitmapBrush или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
  Источник точечного рисунка, который использует данную кисть для рисования  
   
 ```  
@@ -338,7 +333,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
  `pBitmap`  
  Источник растрового изображения, используемые кисти  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
  Указывает, как кисть по горизонтали плитки тех областей, которые выходящих за его растрового изображения  
   
 ```  
@@ -349,7 +344,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
  `extendModeX`  
  Значение, указывающее, как кисть по горизонтали плитки тех областей, которые выходящих за его растрового изображения  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
  Указывает, как кисть по вертикали плитки тех областей, которые выходящих за его растрового изображения  
   
 ```  
@@ -360,7 +355,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
  `extendModeY`  
  Значение, указывающее, как кисть по вертикали плитки тех областей, которые выходящих за его растрового изображения  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
  Указывает режим интерполяции, используемый при повернутых или масштабированных кисти точечного рисунка  
   
 ```  

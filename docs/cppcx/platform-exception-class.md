@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Exception | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::Exception | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 Представляет ошибки, происходящие во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.  
@@ -45,23 +40,23 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 ### <a name="constructors"></a>Конструкторы  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|  
   
 ### <a name="methods"></a>Методы  
  Класс `Exception` наследует методы `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`и `ToString()` из [Platform::Object Class](../cppcx/platform-object-class.md). Класс `Exception` содержит также следующий метод.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[Exception::CreateException](#createexception)|Создает исключение, представляющее указанное значение HRESULT.|  
   
 ### <a name="properties"></a>Свойства  
  Класс Exception также содержит следующие свойства.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
-|[Exception::HResult](#hresult)|Значение HRESULT, соответствующее исключению.|  
+|[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|  
   
 ### <a name="requirements"></a>Требования  

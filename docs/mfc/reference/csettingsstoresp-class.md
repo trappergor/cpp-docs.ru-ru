@@ -1,12 +1,9 @@
 ---
-title: "Класс CSettingsStoreSP | Документы Microsoft"
-ms.custom: 
+title: Класс CSettingsStoreSP | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>Класс CSettingsStoreSP
 `CSettingsStoreSP` Класс — это вспомогательный класс, который можно использовать для создания экземпляров [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
@@ -46,20 +41,20 @@ class CSettingsStoreSP
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Создает объект `CSettingsStoreSP`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSettingsStoreSP::Create](#create)|Создает экземпляр класса, который является производным от `CSettingsStore`.|  
 |[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Задает класс среды выполнения. `Create` Метод использует класс среды выполнения, чтобы определить, какому классу объектов для создания.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |`m_dwUserData`|Пользовательские данные, хранящиеся в `CSettingsStoreSP` объекта. Ввести эти данные в конструкторе `CSettingsStoreSP` объекта.|  
 |`m_pRegistry`|`CSettingsStore`-Производного объекта, `Create` методом.|  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  Каждый раз, когда платформа обычно будет доступ к реестру, он будет динамически создать экземпляр пользовательского класса и использовать его для чтения или записи данных.  
   
- `CSettingsStoreSP::SetRuntimeClass`использует глобальной статической переменной. Таким образом только один настраиваемое хранилище доступен одновременно.  
+ `CSettingsStoreSP::SetRuntimeClass` использует глобальной статической переменной. Таким образом только один настраиваемое хранилище доступен одновременно.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  Создает новый экземпляр объекта, который является производным от [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
   
 ```  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  Создает [CSettingsStoreSP класс](../../mfc/reference/csettingsstoresp-class.md) объекта.  
   
 ```  
@@ -127,7 +122,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>Примечания  
  `CSettingsStoreSP` Объект сохраняет данные из `dwUserData` в переменной защищенный элемент `m_dwUserData`.  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Задает класс среды выполнения. Метод [CSettingsStoreSP::Create](#create) использует класс среды выполнения для определения типа создаваемого объекта.  
   
 ```  
@@ -139,7 +134,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
  Указатель на сведения о классе среды выполнения для класса, производного от [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`в случае успешного выполнения; `FALSE` Если определить класс с `pRTI` не является производным от `CSettingsStore`.  
+ `TRUE` в случае успешного выполнения; `FALSE` Если определить класс с `pRTI` не является производным от `CSettingsStore`.  
   
 ### <a name="remarks"></a>Примечания  
  Можно использовать [класса CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) для формирования классов из `CSettingsStore`. Используйте метод `SetRuntimeClass` необходимо создать пользовательский класс, производный от объектов `CSettingsStore`.  

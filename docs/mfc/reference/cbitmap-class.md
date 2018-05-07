@@ -1,12 +1,9 @@
 ---
-title: "CBitmap-класс | Документы Microsoft"
-ms.custom: 
+title: CBitmap-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap-класс
 Инкапсулирует растровое изображение интерфейса графических устройств Windows (GDI) и предоставляет функции-члены для манипулирования этим растровым изображением.  
@@ -68,13 +63,13 @@ class CBitmap : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBitmap::CBitmap](#cbitmap)|Создает объект `CBitmap`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBitmap::CreateBitmap](#createbitmap)|Инициализирует объект с растровым изображением зависящие от устройства памяти, который имеет заданную ширину, высоту и битовый шаблон.|  
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Инициализирует объект с точечным рисунком ширину, высоту и битовый шаблон (если оно указано), заданный в **растрового ИЗОБРАЖЕНИЯ** структуры.|  
@@ -92,7 +87,7 @@ class CBitmap : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HBITMAP CBitmap::operator](#operator_hbitmap)|Возвращает дескриптор Windows, присоединенного к `CBitmap` объекта.|  
   
@@ -111,7 +106,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  Создает объект `CBitmap`.  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>Примечания  
  Полученный объект необходимо инициализировать с помощью одной из функций инициализации члена.  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  Инициализируется аппаратно зависимая битовая карта памяти, имеющая заданную ширину, высоту и битовый шаблон.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  Дополнительные сведения см. в описании поля **bmBits** в структуре **BITMAP** . [Растрового ИЗОБРАЖЕНИЯ](../../mfc/reference/bitmap-structure.md) структура рассматривается в разделе [CBitmap::CreateBitmapIndirect](#createbitmapindirect) функции-члена.  
   
-##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect  
  Инициализирует точечного рисунка, который имеет ширину, высоту и битовый шаблон (если оно указано) в структуре, на который указывает `lpBitmap`.  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  После завершения работы с `CBitmap` объектом, созданным с помощью `CreateBitmapIndirect` функции, сначала выберите битовую карту из контекста устройства, а затем удалите `CBitmap` объекта.  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  Инициализирует точечного рисунка, который совместим с устройстве с `pDC`.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  После завершения работы с `CBitmap` объектом, созданным с помощью `CreateCompatibleBitmap` функции, сначала выберите битовую карту из контекста устройства, а затем удалите `CBitmap` объекта.  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  Инициализирует удаляемое точечного рисунка, который совместим с контекста устройства, обозначенную `pDC`.  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  После завершения работы с `CBitmap` объектом, созданным с помощью `CreateDiscardableBitmap` функции, сначала выберите битовую карту из контекста устройства, а затем удалите `CBitmap` объекта.  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  Возвращает указатель на `CBitmap` объект для заданного дескриптора точечного рисунка Windows GDI.  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>Примечания  
  Если `CBitmap` объект уже не присоединен к дескриптору, временный `CBitmap` объект создается и прикрепляется. Этот временный `CBitmap` , допустимо только до следующей приложение имеет время простоя в его цикл событий, после чего график все временные объекты удаляются. Другими словами является, что временный объект допустима только во время обработки одного окна сообщения.  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  Извлекает свойства изображения для вложенного растрового изображения.  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  Копирует битов растрового изображения, вложенные в указанный буфер.  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>Примечания  
  Используйте [CBitmap::GetBitmap](#getbitmap) определить необходимый размер буфера.  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  Возвращает ширину и высоту точечного рисунка.  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>Примечания  
  Высота и ширина предполагается, что были заданы ранее с помощью [SetBitmapDimension](#setbitmapdimension) функции-члена.  
   
-##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
  Загружает точечный рисунок ресурс с именем `lpszResourceName` или определены номер идентификатора в `nIDResource` из исполняемого файла приложения.  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  Эти битовые карты не найдены в драйверы устройств для Windows версии 3.0 и более ранних версий. Полный список растровых изображений и отображение их внешний вид см. в Windows SDK.  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  Вызовите эту функцию-член для загрузки растрового изображения и сопоставления для текущей цветовой палитры цветов.  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  Сведения о создании сопоставленных растровое изображение в описании функции Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) структуры в Windows SDK.  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Загружает предварительно определенных растровое изображение, используемое операционной системой Windows.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  Обратите внимание, что константа **OEMRESOURCE** должен быть определен перед включением WINDOWS. H, чтобы использовать любой из **OBM_** константы.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CBitmap::operator  
+##  <a name="operator_hbitmap"></a>  HBITMAP CBitmap::operator  
  Этот оператор используется для получения вложенного дескриптор Windows GDI `CBitmap` объекта.  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в Windows SDK.  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  Задает биты растрового изображения для битовых значений, предоставленных `lpBits`.  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>Возвращаемое значение  
  Число байтов, используемых при задании биты растрового изображения; 0, если функция завершается с ошибкой.  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  Назначает ширина и Высота растрового изображения в единицах миллиметра 0,1.  
   
 ```  

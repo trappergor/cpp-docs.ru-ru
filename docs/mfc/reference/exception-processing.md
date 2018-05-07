@@ -1,13 +1,10 @@
 ---
-title: "Исключение при обработке | Документы Microsoft"
-ms.custom: 
+title: Исключение при обработке | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>Обработка исключений
 Когда программа выполняется, может возникнуть ряд нештатных ситуаций и ошибки называемые «исключения». Это могут быть нехватка памяти, ошибки выделения ресурсов и не удалось найти файлы.  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[AfxAbort](#afxabort)|Вызывается для завершения приложения при Неустранимая ошибка возникает.|  
   
-##  <a name="try"></a>ПОПРОБУЙТЕ  
+##  <a name="try"></a>  ПОПРОБУЙТЕ  
  Настраивает **ПОВТОРИТЕ** блока.  
   
 ```   
@@ -119,7 +114,7 @@ TRY
 ### <a name="requirements"></a>Требования
 Заголовок: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  Определяет блок кода, который перехватывает первый тип исключения, возникшие в предыдущем **ПОВТОРИТЕ** блока.  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
+##  <a name="catch_all"></a>  CATCH_ALL  
  Определяет блок кода, который перехватывает все типы исключений, вызванных в предыдущем **ПОВТОРИТЕ** блока.  
   
 ```   
@@ -174,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
+##  <a name="and_catch"></a>  AND_CATCH  
  Определяет блок кода для перехвата типы дополнительные исключения, исключение в предыдущем **ПОВТОРИТЕ** блока.  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>Примечания  
  Используйте **ПЕРЕХВАТЫВАТЬ** макрос для перехвата один тип исключения, то `AND_CATCH` макрос для перехвата всех последующих типов. Конец **ПОВТОРИТЕ** блоке с `END_CATCH` макрос.  
   
- Код обработки исключения может запрашивать объекта исключения, при необходимости получить дополнительные сведения о конкретной причины исключения. Вызовите `THROW_LAST` макрос в `AND_CATCH` блока обработки на следующий кадр внешнее исключение shift. `AND_CATCH`отмечает конец предыдущего **ПЕРЕХВАТЫВАТЬ** или `AND_CATCH` блока.  
+ Код обработки исключения может запрашивать объекта исключения, при необходимости получить дополнительные сведения о конкретной причины исключения. Вызовите `THROW_LAST` макрос в `AND_CATCH` блока обработки на следующий кадр внешнее исключение shift. `AND_CATCH` отмечает конец предыдущего **ПЕРЕХВАТЫВАТЬ** или `AND_CATCH` блока.  
   
 > [!NOTE]
 >  `AND_CATCH` Блока определяется как область C++ (пользователь, фигурные скобки). При объявлении переменных в этой области, помните, что доступный только внутри этой области. Это также относится к *exception_object_pointer_name* переменной.  
@@ -201,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  Определяет блок кода для перехвата типы дополнительные исключения, исключение в предыдущем **ПОВТОРИТЕ** блока.  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>Примечания  
  Используйте **ПЕРЕХВАТЫВАТЬ** макрос для перехвата один тип исключения, то `AND_CATCH_ALL` макрос для перехвата всех остальных последующих типов. Если вы используете `AND_CATCH_ALL`, end **ПОВТОРИТЕ** блоке с `END_CATCH_ALL` макрос.  
   
- Код обработки исключения может запрашивать объекта исключения, при необходимости получить дополнительные сведения о конкретной причины исключения. Вызовите `THROW_LAST` макрос в `AND_CATCH_ALL` блока обработки на следующий кадр внешнее исключение shift. `AND_CATCH_ALL`отмечает конец предыдущего **ПЕРЕХВАТЫВАТЬ** или `AND_CATCH_ALL` блока.  
+ Код обработки исключения может запрашивать объекта исключения, при необходимости получить дополнительные сведения о конкретной причины исключения. Вызовите `THROW_LAST` макрос в `AND_CATCH_ALL` блока обработки на следующий кадр внешнее исключение shift. `AND_CATCH_ALL` отмечает конец предыдущего **ПЕРЕХВАТЫВАТЬ** или `AND_CATCH_ALL` блока.  
   
 > [!NOTE]
 >  `AND_CATCH_ALL` Блока определяется как область C++ (пользователь, фигурные скобки). При объявлении переменных в этой области, помните, что доступный только внутри этой области.  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>  END_CATCH  
  Отмечает конец последнего **ПЕРЕХВАТЫВАТЬ** или `AND_CATCH` блока.  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
  Отмечает конец последнего `CATCH_ALL` или `AND_CATCH_ALL` блока.  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>  THROW (MFC)  
  Выдает указанное исключение.  
   
 ```   
@@ -265,7 +260,7 @@ THROW(exception_object_pointer)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>  THROW_LAST  
  Создает исключение обратно к следующему внешнего **ПЕРЕХВАТЫВАТЬ** блока.  
   
 ```   
@@ -283,7 +278,7 @@ THROW_LAST()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
  Создает исключение архива.  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
  Исключение файла.  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 Создает исключение недопустимого аргумента.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -346,7 +341,7 @@ void AfxThrowInvalidArgException( );
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
  Исключение памяти.  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
  Создает исключение, являющееся результатом запроса неподдерживаемой возможности.  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
  Исключение ресурсов.  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
  Создает исключение для остановки операции пользователя.  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
  Эта функция используется для создания исключения в пределах функции автоматизации OLE.  
   
 ```   
@@ -432,7 +427,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
  Создает объект типа `COleException` и создает исключение.  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
  Эта функция вызывается для создания исключения типа [CDaoException](../../mfc/reference/cdaoexception-class.md) из собственного кода.  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
  Эта функция вызывается для создания исключения типа `CDBException` из собственного кода.  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
+##  <a name="afxabort"></a>  AfxAbort  
  Функция завершения по умолчанию, предоставляемые MFC.  
   
 ```   
@@ -513,7 +508,7 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `AfxAbort`можно вызвать изнутри функциями-членами MFC, при наличии Неустранимая ошибка, например неперехваченное исключение, которое невозможно обработать. Можно вызвать `AfxAbort` в тех редких случаях, если возникла неустранимая ошибка, невозможно восстановить.  
+ `AfxAbort` можно вызвать изнутри функциями-членами MFC, при наличии Неустранимая ошибка, например неперехваченное исключение, которое невозможно обработать. Можно вызвать `AfxAbort` в тех редких случаях, если возникла неустранимая ошибка, невозможно восстановить.  
   
 ### <a name="example"></a>Пример  
  Далее приведен пример [ПЕРЕХВАТЫВАТЬ](#catch).  

@@ -1,13 +1,10 @@
 ---
-title: "Сокеты Windows: Работа сокетов с архивами | Документы Microsoft"
-ms.custom: 
+title: 'Сокеты Windows: Работа сокетов с архивами | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Сокеты Windows. Работа сокетов с архивами
 В этой статье объясняется, как [CSocket](../mfc/reference/csocket-class.md) объекта, [CSocketFile](../mfc/reference/csocketfile-class.md) объекта и [CArchive](../mfc/reference/carchive-class.md) объекта объединяются и упрощают отправку и получение данных с помощью Windows Сокет.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  Объект `CArchive` управляет буфером. При заполнении буфера хранения архива (отправка), связанный с ним `CFile` объекта записывает содержимое буфера. Очистка буфера архив подключенное к разъему соответствует отправку сообщения. При переполнении буфера архив загрузка (получение) `CFile` объекта остановлено считывание, пока буфер не освободится.  
   
- Класс `CSocketFile` является производным от `CFile`, но не поддерживает [CFile](../mfc/reference/cfile-class.md) члена функции, такие как функции размещения (`Seek`, `GetLength`, `SetLength`и так далее), блокировка функции () `LockRange`, `UnlockRange`), или `GetPosition` функции. Все [CSocketFile](../mfc/reference/csocketfile-class.md) объекта необходимо сделать — записи или чтения последовательности байтов или из связанного `CSocket` объекта. Так как файл не используется, операций, таких как `Seek` и `GetPosition` не имеет смысла. `CSocketFile`является производным от `CFile`, поэтому он обычно наследует все эти функции-члены. Чтобы это предотвратить, неподдерживаемое `CFile` функции-члены переопределяются в `CSocketFile` создаст [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
+ Класс `CSocketFile` является производным от `CFile`, но не поддерживает [CFile](../mfc/reference/cfile-class.md) члена функции, такие как функции размещения (`Seek`, `GetLength`, `SetLength`и так далее), блокировка функции () `LockRange`, `UnlockRange`), или `GetPosition` функции. Все [CSocketFile](../mfc/reference/csocketfile-class.md) объекта необходимо сделать — записи или чтения последовательности байтов или из связанного `CSocket` объекта. Так как файл не используется, операций, таких как `Seek` и `GetPosition` не имеет смысла. `CSocketFile` является производным от `CFile`, поэтому он обычно наследует все эти функции-члены. Чтобы это предотвратить, неподдерживаемое `CFile` функции-члены переопределяются в `CSocketFile` создаст [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md).  
   
  `CSocketFile` Объект вызывает член функции его `CSocket` объект для отправки и получения данных.  
   

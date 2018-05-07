@@ -1,13 +1,10 @@
 ---
-title: "Созданные классы, мастер приложений MFC | Документы Microsoft"
-ms.custom: 
+title: Созданные классы, мастер приложений MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Создаваемые классы, мастер приложений MFC
 В этом разделе перечислены имена базовых классов и файлов, создаваемых в проекте. По умолчанию имена создаются на основе имени проекта, который указан в **диалоговое окно нового проекта**. Большинство этих имен можно изменить, как описано здесь:  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  **h-файл**  
  Имя файла заголовка класса, выбранного в **созданные классы** списка. Если текстовое поле активно, можно изменить имя файла заголовка.  
   
- **Базовый класс**  
+ **базовый класс**  
  Имя класса базового класса, выбранного в **созданные классы** списка. Если поле активно, в списке можно выбрать другой класс для базового класса.  
   
  **CPP-файл**  

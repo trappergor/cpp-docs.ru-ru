@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления ActiveX MFC: Использование привязки данных в элементе управления ActiveX | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления ActiveX MFC: Использование привязки данных в элементе управления ActiveX | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 Одним из применений более мощных элементов управления ActiveX — привязки к данным, позволяющую свойства нужно привязать элемент управления с определенным полем в базе данных. Когда пользователь изменяет данные в этом связанное свойство, элемент управления уведомляет базы данных и обновить поле записи запросов. Базы данных уведомляет элемент управления об успехе или сбое запроса.  
   
  В этой статье рассматриваются управления части задачи. Реализация привязки данных взаимодействия с базой данных отвечает контейнера элемента управления. Как управлять взаимодействие с базой данных в контейнере выходит за рамки данной документации. В оставшейся части этой статьи объясняется способ подготовки элемента управления для привязки данных.  
   
- ![Концептуальная схема данных &#45; привязанного элемента управления](../mfc/media/vc374v1.gif "vc374v1")  
+ ![Концептуальная схема данных&#45;связанного элемента управления](../mfc/media/vc374v1.gif "vc374v1")  
 Концептуальная схема элемента управления с привязкой к данным  
   
  `COleControl` Класс предоставляет две функции-члены, предоставляющие простой процесс, для реализации привязки. Первая функция [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), будет использоваться для запроса разрешений, чтобы изменить значение свойства. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), вторая функция вызывается после успешного изменения значения свойства.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Создание метода привязываемых Get и Set.](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>Создание стандартного привязываемые свойства  
+##  <a name="vchowcreatingbindablestockproperty"></a> Создание стандартного привязываемые свойства  
  Имеется возможность создать стандартное свойство с привязкой к данным, несмотря на то, что скорее всего, будет необходимо [метод привязываемых get и set](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  Теперь можно построить проект, который будет зарегистрировать элемент управления. При вставке элемента управления в диалоговом окне, **поля данных** и **источника данных** будут добавлены свойства и теперь можно выбрать источник данных и поле для отображения в элементе управления.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>Создание метода привязываемых Get и Set.  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> Создание метода привязываемых Get и Set.  
  Помимо привязкой к данным метода get или set, можно также создавать [привязываемых стандартное свойство](#vchowcreatingbindablestockproperty).  
   
 > [!NOTE]

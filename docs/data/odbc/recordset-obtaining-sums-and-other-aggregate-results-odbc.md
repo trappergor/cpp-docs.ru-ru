@@ -1,13 +1,10 @@
 ---
-title: "Набор записей: Определение сумм и других статистических результатов (ODBC) | Документы Microsoft"
-ms.custom: 
+title: 'Набор записей: Определение сумм и других статистических результатов (ODBC) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Набор записей. Определение сумм и других статистических результатов (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  Чтобы получить статистические сведения о записях в источнике данных, а не для получения записей из источника данных используются эти функции SQL. Набор записей обычно состоит из одной записи (если все столбцы являются статистическими выражениями), содержащий значение. (Может существовать несколько записей при использовании **GROUP BY** предложение.) Это значение является результатом вычисления или извлечения, выполненного с помощью функции SQL.  
   
 > [!TIP]
->  Чтобы добавить SQL **GROUP BY** предложение (и, возможно, **HAVING** предложение) для инструкции SQL, добавьте его в конец **m_strFilter**. Пример:  
+>  Чтобы добавить SQL **GROUP BY** предложение (и, возможно, **HAVING** предложение) для инструкции SQL, добавьте его в конец **m_strFilter**. Например:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  

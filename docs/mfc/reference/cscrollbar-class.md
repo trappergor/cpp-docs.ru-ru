@@ -1,12 +1,9 @@
 ---
-title: "Класс CScrollBar | Документы Microsoft"
-ms.custom: 
+title: Класс CScrollBar | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollBar
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollbar-class"></a>Класс CScrollBar
 Предоставляет функции элемента управления полосой прокрутки Windows.  
@@ -64,13 +59,13 @@ class CScrollBar : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CScrollBar::CScrollBar](#cscrollbar)|Создает объект `CScrollBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CScrollBar::Create](#create)|Создает полосой прокрутки Windows и прикрепляет его к `CScrollBar` объекта.|  
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|Включает или выключает одну или обе стрелки полосы прокрутки.|  
@@ -109,7 +104,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>  CScrollBar::Create  
  Создает полосой прокрутки Windows и прикрепляет его к `CScrollBar` объекта.  
   
 ```  
@@ -152,7 +147,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
  Создает объект `CScrollBar`.  
   
 ```  
@@ -165,7 +160,7 @@ CScrollBar();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
  Включает или выключает одну или обе стрелки полосы прокрутки.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
  Возвращает сведения, **SCROLLBARINFO** структура поддерживает о полосе прокрутки.  
   
 ```  
@@ -207,7 +202,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) сообщения, как описано в Windows SDK.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
  Извлекает данные о полосе прокрутки, содержащиеся в структуре `SCROLLINFO`.  
   
 ```  
@@ -227,16 +222,16 @@ BOOL GetScrollInfo(
  Если сообщение извлечено все значения, возвращается **TRUE**. В противном случае это **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
- `GetScrollInfo`позволяет приложениям использовать позиции прокрутки 32-разрядной.  
+ `GetScrollInfo` позволяет приложениям использовать позиции прокрутки 32-разрядной.  
   
  [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структура содержит сведения о полосы прокрутки, включая минимальной и максимальной прокрутки позиций, размер страницы и положение полосы прокрутки (бегунком). В разделе `SCROLLINFO` раздел структуры в Windows SDK, Дополнительные сведения об изменении структуры значения по умолчанию.  
   
- Обработчики, которые указывают на расположение полосы прокрутки, сообщения MFC Windows [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), предоставляют только 16 бит данных позиции. `GetScrollInfo`и `SetScrollInfo` предоставляют 32 бита полосы данных позиции прокрутки. Таким образом, приложение может вызвать `GetScrollInfo` при обработке либо `CWnd::OnHScroll` или `CWnd::OnVScroll` для получения данных позиции прокрутки 32-разрядной панели.  
+ Обработчики, которые указывают на расположение полосы прокрутки, сообщения MFC Windows [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), предоставляют только 16 бит данных позиции. `GetScrollInfo` и `SetScrollInfo` предоставляют 32 бита полосы данных позиции прокрутки. Таким образом, приложение может вызвать `GetScrollInfo` при обработке либо `CWnd::OnHScroll` или `CWnd::OnVScroll` для получения данных позиции прокрутки 32-разрядной панели.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
  Получает максимально прокрутки положение полосы прокрутки.  
   
 ```  
@@ -249,7 +244,7 @@ int GetScrollLimit();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
  Извлекает текущее положение ползунка.  
   
 ```  
@@ -265,7 +260,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
  Копирует текущие минимальное и максимальное полосы прокрутки положения указанной полосы прокрутки в расположениях, указанных в `lpMinPos` и `lpMaxPos`.  
   
 ```  
@@ -287,7 +282,7 @@ void GetScrollRange(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
  Задает сведения, `SCROLLINFO` структура поддерживает о полосе прокрутки.  
   
 ```  
@@ -314,7 +309,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
  Задает текущее положение ползунка значению, указанному `nPos` и, если указано, перерисовывает полосу прокрутки, чтобы отразить новое место.  
   
 ```  
@@ -339,7 +334,7 @@ int SetScrollPos(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
  Задает для указанной полосы прокрутки положения минимума и максимума.  
   
 ```  
@@ -371,7 +366,7 @@ void SetScrollRange(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
  Показывает или скрывает полосу прокрутки.  
   
 ```  

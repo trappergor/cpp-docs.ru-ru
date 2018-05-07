@@ -1,35 +1,30 @@
 ---
-title: "Упаковка-преобразование (C + +/ CLI) | Документы Microsoft"
-ms.custom: 
+title: Упаковка-преобразование (C + +/ CLI) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e49c6f82099e6d7dbcfc47079d19228d7a91dc05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9898b4a640d2f3aa4e38ceb621521ffb301fed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boxing-ccli"></a>упаковка-преобразование (C++/CLI)
 Упаковка-преобразование — это процесс преобразования типа значения в тип `object` или любой другой тип интерфейса, который реализуется типом значения. Когда тип значения упаковывается общеязыковой среды выполнения (CLR), то он инкапсулирует значение в `System.Object` и сохраняет его в управляемой куче. Операция распаковки извлекает тип значения из объекта. Упаковка является неявной; распаковка является явной.  
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Явный запрос упаковки-преобразования](../dotnet/how-to-explicitly-request-boxing.md)|Описывает способ явного запроса на преобразование для переменной.|  
 |[Практическое руководство. Использование gcnew для создания типов значений и использование неявной упаковки-преобразования](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Показано, как использовать `gcnew` для создания тип упакованного значения, который может быть размещен в куче, управляемая и сбора мусора.|  

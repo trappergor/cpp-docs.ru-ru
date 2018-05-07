@@ -1,13 +1,10 @@
 ---
-title: "Схемы событий DHTML | Документы Microsoft"
-ms.custom: 
+title: Схемы событий DHTML | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.macros.shared
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-event-maps"></a>Схемы событий DHTML
 Следующие макросы можно использовать для обработки событий DHTML.  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP  
  Отмечает начало карты событий DHTML при помещении в исходном файле для класса, обозначенную `className`.  
   
 ```   
@@ -114,7 +109,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
  Отмечает начало карты событий DHTML в определении класса для `className`.  
   
 ```   
@@ -136,7 +131,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
   **Заголовок** afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP  
  Объявляет событие DHTML карты в определении класса.  
   
 ```   
@@ -155,7 +150,7 @@ DECLARE_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT  
+##  <a name="dhtml_event"></a>  DHTML_EVENT  
  Обрабатывает (на уровне документа), событие, обозначенное `dispid` с HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -178,7 +173,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
  Обрабатывает событие, обозначенное `dispid` , инициированные с помощью элемента управления ActiveX, определяемый `controlName`.  
   
 ```   
@@ -201,7 +196,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
  Обрабатывает (на уровне документа), событие, обозначенное `dispid` была создана с любой HTML-элемент с помощью класса CSS, определяемый `elemName`.  
   
 ```   
@@ -224,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
  Обрабатывает (на элемент, идентифицируемый `elemName`) событие, обозначенное `dispid`.  
   
 ```   
@@ -251,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
  Обрабатывает (на уровне документа) **onafterupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -271,7 +266,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
  Обрабатывает (на уровне документа) **onbeforeupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -291,7 +286,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
  Обрабатывает (на уровне элемента) **onblur** событий. Это событие nonbubbling.  
   
 ```   
@@ -311,7 +306,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE  
  Обрабатывает (на уровне элемента) `onchange` событий. Это событие nonbubbling.  
   
 ```   
@@ -331,7 +326,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
  Обрабатывает (на уровне документа) **onclick** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -351,7 +346,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
  Обрабатывает (на уровне документа) **ondataavailable** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -371,7 +366,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
  Обрабатывает (на уровне документа) **ondatasetchanged** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -391,7 +386,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
  Обрабатывает (на уровне документа) **ondatasetcomplete** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -412,7 +407,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
  Обрабатывает (на уровне документа) **ondblclick** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -432,7 +427,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
  Обрабатывает (на уровне документа) **ondragstart** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -452,7 +447,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
  Обрабатывает (на уровне документа) **onerrorupdate** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```   
@@ -473,7 +468,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
  Обрабатывает (на уровне документа) **onfilterchange** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -495,7 +490,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
  Обрабатывает (на уровне элемента) **onfocus** событий. Это событие nonbubbling.  
   
 ```  
@@ -517,7 +512,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
  Обрабатывает (на уровне документа) `onhelp` возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -539,7 +534,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
  Обрабатывает (на уровне документа) **onkeydown** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -561,7 +556,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
  Обрабатывает (на уровне документа) **onkeypress** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -583,7 +578,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
  Обрабатывает (на уровне документа) **onkeyup** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -605,7 +600,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
  Обрабатывает (на уровне документа) **onmousedown** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -627,7 +622,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
  Обрабатывает (на уровне документа) `onmousemove` возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -649,7 +644,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
  Обрабатывает (на уровне документа) **onmouseout** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -671,7 +666,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
  Обрабатывает (на уровне документа) **onmouseover** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -693,7 +688,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
  Обрабатывает (на уровне документа) **onmouseup** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -715,7 +710,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
  Обрабатывает (на уровне элемента) **onresize** событий. Это событие nonbubbling.  
   
 ```  
@@ -737,7 +732,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
  Обрабатывает (на уровне документа) **onrowenter** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -759,7 +754,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
  Обрабатывает (на уровне документа) **onrowexit** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -781,7 +776,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
  Обрабатывает (на уровне документа) **onselectstart** возникло событие HTML-элемент, идентифицируемый `elemName`.  
   
 ```  
@@ -803,7 +798,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
  Обрабатывает (на уровне документа), событие, обозначенное `dispid` была создана с любой HTML-элемент с HTML-тегом, обозначенную `elemName`.  
   
 ```   
@@ -826,7 +821,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP  
  Отмечает конец DHTML-схема событий.  
   
 ```   
@@ -839,7 +834,7 @@ END_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP  
  Запускает многостраничное диалоговое окно Определение сопоставления событий DHTML и URL-адрес.  
   
 ```  
@@ -856,7 +851,7 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP  
  Запускает определение внедренного карта событий DHTML многостраничное диалоговое окно.  
   
 ```  
@@ -884,7 +879,7 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES  
  Запускает Определение сопоставления URL-адрес запись событий в многостраничное диалоговое окно.  
   
 ```  
@@ -905,7 +900,7 @@ BEGIN_URL_ENTRIES(className)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP  
  Объявляет схема событий DHTML и URL-адрес в определении класса.  
   
 ```  
@@ -921,7 +916,7 @@ DECLARE_DHTML_URL_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP  
  Отмечает конец карты событий DHTML и URL-адрес.  
   
 ```  
@@ -939,7 +934,7 @@ END_DHTML_URL_EVENT_MAP(className)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP  
  Отмечает конец внедренного карта событий DHTML.  
   
 ```  
@@ -953,7 +948,7 @@ END_EMBED_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES  
  Отмечает конец карты запись событий URL-адрес.  
   
 ```  
@@ -967,7 +962,7 @@ END_URL_ENTRIES()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY  
  Сопоставляет ресурс URL-адрес или HTML-страницу в многостраничное диалоговое окно.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Классы на основе шаблона | Документы Microsoft"
-ms.custom: 
+title: Классы на основе шаблона | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - template-based collection classes [MFC]
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2beb417bdedab6196ff6d27a387c4b61f083c4ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68d44a66f328465f2c59fb361f9bb6b2a76efa82
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="template-based-classes"></a>Классы на основе шаблонов
 В этой статье описываются классы строго типизированную коллекцию на основе шаблона с MFC версии 3.0 и более поздней версии. Использовать эти шаблоны для создания строго типизированные коллекции является более удобным и позволяет более эффективно, чем использование классов коллекций, которые не основаны на шаблоны являются типобезопасными.  
@@ -60,10 +55,10 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о шаблонах C++ см. в разделе [шаблоны](../cpp/templates-cpp.md) в *Справочник по языку C++*.  
   
-##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a>С помощью простого массива, список и сопоставление шаблонов  
+##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> С помощью простого массива, список и сопоставление шаблонов  
  Использование простой коллекции шаблонов, необходимо знать, какие данные можно хранить в эти коллекции и какие параметры для использования в объявлениях коллекции.  
   
-###  <a name="_core_simple_array_and_list_usage"></a>Простого массива и использование списка  
+###  <a name="_core_simple_array_and_list_usage"></a> Простого массива и использование списка  
  Простого массива и классы списков [CArray](../mfc/reference/carray-class.md) и [CList](../mfc/reference/clist-class.md), принимают два параметра: *тип* и `ARG_TYPE`. Эти классы можно хранить данные любого типа, которое задается в *тип* параметр:  
   
 -   Типы данных основных C++, такие как `int`, `char`, и **число с плавающей запятой**  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCCollections#2](../mfc/codesnippet/cpp/template-based-classes_2.cpp)]  
   
-###  <a name="_core_simple_map_usage"></a>Использование простой схемы  
+###  <a name="_core_simple_map_usage"></a> Использование простой схемы  
  Класс простой схемы [CMap](../mfc/reference/cmap-class.md), принимает четыре параметра: *ключ*, `ARG_KEY`, *значение*, и `ARG_VALUE`. Как классы array и list классы сопоставления можно хранить объекты любого типа данных. В отличие от массивов и списков, которые индекса и порядок выполнения они сохраняют данные, связать карты ключей и значений: доступ значения, хранящегося в карту путем указания значения соответствующего ключа. *Ключ* параметр задает тип данных, ключей, используемых для доступа к данным, хранящимся в схеме. Если тип *ключ* — это структура или класс, `ARG_KEY` параметра обычно является ссылкой на тип, указанный в *ключ*. *Значение* параметр указывает тип элементов, которые хранятся в схеме. Если тип `ARG_VALUE` — это структура или класс, `ARG_VALUE` параметра обычно является ссылкой на тип, указанный в *значение*. Пример:  
   
  [!code-cpp[NVC_MFCCollections#3](../mfc/codesnippet/cpp/template-based-classes_3.cpp)]  
@@ -91,10 +86,10 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCCollections#4](../mfc/codesnippet/cpp/template-based-classes_4.cpp)]  
   
-##  <a name="_core_using_typed.2d.pointer_collection_templates"></a>С помощью шаблонов коллекции типизированный указатель  
+##  <a name="_core_using_typed.2d.pointer_collection_templates"></a> С помощью шаблонов коллекции типизированный указатель  
  Для работы с шаблонами коллекцию типизированных указателей, необходимо знать, какие виды данных можно хранить в эти коллекции и какие параметры для использования в объявлениях коллекции.  
   
-###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a>Массив типизированных указателей и использование списка  
+###  <a name="_core_typed.2d.pointer_array_and_list_usage"></a> Массив типизированных указателей и использование списка  
  Массив типизированных указателей и классы списков [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md) и [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md), принимают два параметра: `BASE_CLASS` и *ТИПА*. Эти классы можно хранить данные любого типа, которое задается в *ТИПА* параметра. Они являются производными от одного из классов коллекций нешаблонных, которые хранит указатели; Укажите этот базовый класс в `BASE_CLASS`. Для массивов, используйте `CObArray` или `CPtrArray`. Для списков, используйте `CObList` или `CPtrList`.  
   
  По сути, при объявлении коллекции на основании сказать `CObList`, новый класс наследует не только члены базового класса, но также объявляет ряд дополнительных строго типизированный элемент функций и операторов, которые помогают обеспечить безопасность типов, инкапсулируя вызовы к членам базового класса. Эти encapsulations управление преобразование всех необходимых типов. Пример:  
@@ -103,9 +98,9 @@ ms.lasthandoff: 12/21/2017
   
  В первом примере объявляется массив типизированных указателей, `myArray`, который является производным от `CObArray`. Массив сохраняет и возвращает указатели на `CPerson` объектов (где `CPerson` класс, производный от `CObject`). Можно вызывать любые `CObArray` функции-члена, либо вызвать новый типобезопасный `GetAt` и `ElementAt` функции или использовать строго типизированный **[]** оператор.  
   
- Во втором примере объявляется список типизированных указателей, `myList`, который является производным от `CPtrList`. В списке сохраняет и возвращает указатели на `MY_STRUCT` объектов. На основе класса `CPtrList` используется для хранения указателей на объекты, не является производным от `CObject`. `CTypedPtrList`имеется ряд функций-членов типобезопасный: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, и `GetAt`.  
+ Во втором примере объявляется список типизированных указателей, `myList`, который является производным от `CPtrList`. В списке сохраняет и возвращает указатели на `MY_STRUCT` объектов. На основе класса `CPtrList` используется для хранения указателей на объекты, не является производным от `CObject`. `CTypedPtrList` имеется ряд функций-членов типобезопасный: `GetHead`, `GetTail`, `RemoveHead`, `RemoveTail`, `GetNext`, `GetPrev`, и `GetAt`.  
   
-###  <a name="_core_typed.2d.pointer_map_usage"></a>Использование карты типизированный указатель  
+###  <a name="_core_typed.2d.pointer_map_usage"></a> Использование карты типизированный указатель  
  Класс map типизированный указатель, [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md), принимает три параметра: `BASE_CLASS`, *ключ*, и *значение*. `BASE_CLASS` Указывает класс, от которого новый класс: `CMapPtrToWord`, `CMapPtrToPtr`, `CMapStringToPtr`, `CMapWordToPtr`, `CMapStringToOb`, и т. д. *КЛЮЧ* является аналогом *ключ* в `CMap`: это задает тип ключа, используемого для уточняющих запросов. *ЗНАЧЕНИЕ* является аналогом *значение* в `CMap`: это задает тип объекта, хранящегося в схеме. Пример:  
   
  [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]  

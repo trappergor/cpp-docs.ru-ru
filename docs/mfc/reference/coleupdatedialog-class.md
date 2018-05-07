@@ -1,12 +1,9 @@
 ---
-title: "Класс COleUpdateDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleUpdateDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleupdatedialog-class"></a>Класс COleUpdateDialog
 Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.  
@@ -44,13 +39,13 @@ class COleUpdateDialog : public COleLinksDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Создает объект `COleUpdateDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleUpdateDialog::DoModal](#domodal)|Отображает **изменить ссылки** диалоговое окно в режиме обновления.|  
   
@@ -77,7 +72,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
  Создает объект `COleUpdateDialog`.  
   
 ```  
@@ -104,7 +99,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>Примечания  
  Эта функция создает только `COleUpdateDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Этот класс должен использоваться вместо `COleLinksDialog` при необходимости обновления только существующих связанных или внедренных элементов.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
  Появляется диалоговое окно Изменение связей в режим обновления.  
   
 ```  

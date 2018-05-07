@@ -1,12 +1,9 @@
 ---
-title: "минус (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: минус (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::minus
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - minus function [STL/CLR]
 ms.assetid: 810ec6fd-ed0e-446b-b18e-1e612fb1fff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 950f0fb677094c368f580fff28dd920733b9ac93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 655dda0dc23b603e06870ff9f70941fb5156a1cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 Класс шаблона описывает функтор, при вызове возвращает первый аргумент минус за секунду. Она используется укажите объект функции, с точки зрения его типа аргумента.  
@@ -60,18 +55,18 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |delegate_type|Тип универсального метода-делегата.|  
 |first_argument_type|Тип первого аргумента функтор.|  
 |result_type|Тип результата функтор.|  
 |second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |minus|Создает функтор.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |delegate_type оператор ^|Приводит функтора к делегату.|  

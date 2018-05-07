@@ -1,13 +1,10 @@
 ---
-title: "Просмотр классов (Windows) | Документы Microsoft"
-ms.custom: 
+title: Просмотр классов (Windows) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>Классы представления (Windows)
-`CView`и его производные классы дочерних окон, которые представляют клиентской области окна фрейма. Представления отображают данные и принимать входные данные для документа.  
+`CView` и его производные классы дочерних окон, которые представляют клиентской области окна фрейма. Представления отображают данные и принимать входные данные для документа.  
   
  Класс представления связан с классом документа и класс окна фрейма, используя объект шаблона документа.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Представление, содержащее дерево элемента управления Windows (в разделе [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Дерево отображает иерархический список значков и метки организованы так же, как к левой панели проводника.  
   
 ## <a name="related-classes"></a>Связанные классы  
- `CSplitterWnd`можно иметь несколько представлений в одном окне фрейма. `CPrintDialog`и `CPrintInfo` поддерживают возможность печати и предварительного просмотра представлений. `CRichEditDoc`и `CRichEditCntrItem` используются с `CRichEditView` для реализации возможностей контейнера OLE.  
+ `CSplitterWnd` можно иметь несколько представлений в одном окне фрейма. `CPrintDialog` и `CPrintInfo` поддерживают возможность печати и предварительного просмотра представлений. `CRichEditDoc` и `CRichEditCntrItem` используются с `CRichEditView` для реализации возможностей контейнера OLE.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  Окно, которое пользователь может разбить на несколько областей. Эти области могут быть пользователем или фиксированного размера с раскрывающимися списками.  

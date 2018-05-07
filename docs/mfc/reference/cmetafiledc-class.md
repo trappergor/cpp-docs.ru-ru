@@ -1,12 +1,9 @@
 ---
-title: "CMetaFileDC-класс | Документы Microsoft"
-ms.custom: 
+title: CMetaFileDC-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC-класс
 Реализует метафайл Windows, который содержит последовательность команд интерфейса графических устройств (GDI), которые можно воспроизвести для создания нужного изображения или текста.  
@@ -50,13 +45,13 @@ class CMetaFileDC : public CDC
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMetaFileDC::CMetaFileDC](#cmetafiledc)|Создает объект `CMetaFileDC`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMetaFileDC::Close](#close)|Закрывает контекст устройства и создает дескриптор метафайла.|  
 |[CMetaFileDC::CloseEnhanced](#closeenhanced)|Закрывает контекст устройства расширенного метафайла и создает дескриптор расширенного метафайла.|  
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  Закрывает контексте устройства метафайла и создает дескриптор метафайла Windows, который можно использовать для воспроизведения с помощью метафайла [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) функции-члена.  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  Удалить метафайла после использования, вызвав Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537) функции.  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  Закрывает контекст устройства расширенного метафайла и возвращает дескриптор, который идентифицирует расширенный формат метафайла.  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  Если приложение больше не нужна дескриптор расширенного метафайла, он должен освободить дескриптор, вызывая функцию Win32 **DeleteEnhMetaFile** функции.  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  Создать `CMetaFileDC` объекта в два этапа.  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>Примечания  
  Во-первых, вызовите `CMetaFileDC`, затем вызовите **создать**, который создает контекст устройства метафайла Windows и прикрепляет его к `CMetaFileDC` объекта.  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  Создать `CMetaFileDC` объекта в два этапа.  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>Примечания  
  Во-первых, вызовите конструктор `CMetaFileDC`, затем вызовите **создать**, который создает контекст устройства метафайла Windows и прикрепляет его к `CMetaFileDC` объекта.  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  Создает контекст устройства для расширенного формата метафайла.  
   
 ```  

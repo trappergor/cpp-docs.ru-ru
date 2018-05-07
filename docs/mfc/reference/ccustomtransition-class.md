@@ -1,12 +1,9 @@
 ---
-title: "Класс CCustomTransition | Документы Microsoft"
-ms.custom: 
+title: Класс CCustomTransition | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCustomTransition
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccustomtransition-class"></a>Класс CCustomTransition
 Реализует пользовательский переход.  
@@ -54,17 +49,17 @@ ms.lasthandoff: 12/21/2017
 class CCustomTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Создает объект пользовательский переход.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCustomTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Задает начальное значение будет применяться к переменной анимации, связанные с этот переход.|  
@@ -72,7 +67,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Указывает, задан ли параметр начального значения с SetInitialValue.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Указывает, задан ли параметр с SetInitialVelocity начальной скоростью.|  
@@ -93,7 +88,7 @@ class CCustomTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="ccustomtransition"></a>CCustomTransition::CCustomTransition  
+##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition  
  Создает объект пользовательский переход.  
   
 ```  
@@ -104,7 +99,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Указатель на пользовательские интерполятор.  
   
-##  <a name="create"></a>CCustomTransition::Create  
+##  <a name="create"></a>  CCustomTransition::Create  
  Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -122,42 +117,42 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  Этот метод также можно задать начальное значение и Начальная скорость для применения к переменной анимации, связанный с этот переход. Для этого необходимо вызвать SetInitialValue и SetInitialVelocity, прежде чем платформа создает инкапсулированный перехода COM-объекта (это происходит при вызове CAnimationController::AnimateGroup).  
   
-##  <a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified  
+##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified  
  Указывает, задан ли параметр начального значения с SetInitialValue.  
   
 ```  
 BOOL m_bInitialValueSpecified;  
 ```  
   
-##  <a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified  
+##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified  
  Указывает, задан ли параметр с SetInitialVelocity начальной скоростью.  
   
 ```  
 BOOL m_bInitialVelocitySpecified;  
 ```  
   
-##  <a name="m_initialvalue"></a>CCustomTransition::m_initialValue  
+##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue  
  Хранит начальное значение.  
   
 ```  
 DOUBLE m_initialValue;  
 ```  
   
-##  <a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity  
+##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity  
  Хранит начальной скоростью.  
   
 ```  
 DOUBLE m_initialVelocity;  
 ```  
   
-##  <a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator  
+##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator  
  Содержит указатель на пользовательские интерполятор.  
   
 ```  
 CCustomInterpolator* m_pInterpolator;  
 ```  
   
-##  <a name="setinitialvalue"></a>CCustomTransition::SetInitialValue  
+##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue  
  Задает начальное значение будет применяться к переменной анимации, связанные с этот переход.  
   
 ```  
@@ -167,7 +162,7 @@ void SetInitialValue(DOUBLE initialValue);
 ### <a name="parameters"></a>Параметры  
  `initialValue`  
   
-##  <a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity  
+##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Задает начальную скорость, которой будет применяться к переменной анимации, связанные с этот переход.  
   
 ```  

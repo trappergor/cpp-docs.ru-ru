@@ -1,13 +1,10 @@
 ---
-title: "Обработка уведомлений всплывающих подсказок | Документы Microsoft"
-ms.custom: 
+title: Обработка уведомлений всплывающих подсказок | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-tool-tip-notifications"></a>Обработка уведомлений всплывающих подсказок
 При указании `TBSTYLE_TOOLTIPS` стиль панели инструментов для создания и управления элемента управления всплывающей подсказки. Во всплывающей подсказке является небольшое всплывающее окно, которое содержит строку текста, описывающая кнопки панели инструментов. Появляется, только когда пользователь помещает курсор на кнопке панели инструментов и оставляет его на примерно половину во-вторых будет скрыта всплывающая подсказка. Всплывающая подсказка отображается рядом с курсором.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  В дополнение к **TTN_NEEDTEXT** уведомления, всплывающая подсказка можно отправлять следующие уведомления элемента управления панели инструментов:  
   
-|Уведомление|Значение|  
+|Уведомление|Смысл|  
 |------------------|-------------|  
 |**TTN_NEEDTEXTA**|Всплывающая подсказка требуется текст ASCII (только для Windows 95)|  
 |**TTN_NEEDTEXTW**|Всплывающая подсказка требуется текст в кодировке Юникод (только для Windows NT)|  

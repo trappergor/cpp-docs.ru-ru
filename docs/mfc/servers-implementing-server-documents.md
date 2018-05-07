@@ -1,13 +1,10 @@
 ---
-title: "Серверы: Реализация документов сервера | Документы Microsoft"
-ms.custom: 
+title: 'Серверы: Реализация документов сервера | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>Серверы. Реализация документов сервера
 В этой статье описаны шаги необходимо выполнить для успешной реализации серверного документа, если вы не указали параметр OLE-сервера в мастере приложений.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  Реализуйте `OnGetEmbeddedItem` функции-члена класса документа вашего сервера.  
   
-     `OnGetEmbeddedItem`вызывается, если пользователь приложения контейнер создает или изменяет встроенного элемента. Она должна возвращать элемент, представляющий весь документ. Это должен быть объект вашей `COleServerItem`-производного класса.  
+     `OnGetEmbeddedItem` вызывается, если пользователь приложения контейнер создает или изменяет встроенного элемента. Она должна возвращать элемент, представляющий весь документ. Это должен быть объект вашей `COleServerItem`-производного класса.  
   
 4.  Переопределить `Serialize` функции-члена для сериализации содержимого документа. Необходимо сериализовать список элементов сервера, если вы не используете их для представления данных в собственном в документе. Дополнительные сведения см. в разделе *реализации элементы сервера* в статье [серверов: элементы сервера](../mfc/servers-server-items.md).  
   

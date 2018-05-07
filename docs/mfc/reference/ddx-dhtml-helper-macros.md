@@ -1,12 +1,9 @@
 ---
-title: "Макросы вспомогательный DDX_DHtml | Документы Microsoft"
-ms.custom: 
+title: Макросы вспомогательный DDX_DHtml | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - AFXDHTML/DDX_DHtml_ElementValue
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a69e08d06a53dcb2f3a4be58618e9829e8c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml вспомогательных макросов
 Макросы вспомогательный DDX_DHtml обеспечения быстрого доступа к часто используемые свойства элементов управления в HTML-страницы.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 Задает или получает конечная точка URL-адрес или привязки.  
   
   
@@ -82,7 +77,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>Примечания  
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLANCHORELEMENT_HREF отправки идентификатора.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
  Задает или получает целевое окно или фрейм.  
     
 ```  
@@ -105,7 +100,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>Примечания  
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLANCHORELEMENT_TARGET отправки идентификатора.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
  Задает или получает HTML-код между тегами начала и окончания текущего элемента.  
   
   
@@ -131,7 +126,7 @@ DDX_DHtml_ElementInnerHtml(
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLELEMENT_INNERHTML отправки идентификатора.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 Задает или получает текст между открывающий и закрывающий теги текущего элемента.  
   
   
@@ -156,7 +151,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>Примечания  
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLELEMENT_INNERTEXT отправки идентификатора. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
 Задает или получает значение свойства выбранного элемента управления.  
  
 ```  
@@ -181,7 +176,7 @@ DDX_DHtml_ElementValue(
   
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_A_VALUE отправки идентификатора.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
 Задает или получает URL-адрес связанном с ним кадре.  
   
 ```  
@@ -204,7 +199,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>Примечания  
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLFRAMEBASE_SRC отправки идентификатора.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
 Задает или получает URL-адрес связанном с ним кадре.  
   
   

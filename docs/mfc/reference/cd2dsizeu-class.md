@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DSizeU | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DSizeU | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DSizeU
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb2f18426394c63dc6ce45870d394ed536d6031
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
 Программа-оболочка для D2D1_SIZE_U.  
@@ -44,19 +39,19 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Перегружен. Создает `CD2DSizeU` объекта из `D2D1_SIZE_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DSizeU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DSizeU::operator CSize](#operator_csize)|Преобразует `CD2DSizeU` для `CSize` объекта.|  
   
@@ -68,7 +63,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
  Создает объект CD2DSizeU из CSize объекта.  
   
 ```  
@@ -92,7 +87,7 @@ CD2DSizeU(
  `cy`  
  Высота источника  
   
-##  <a name="isnull"></a>CD2DSizeU::ISNULL  
+##  <a name="isnull"></a>  CD2DSizeU::ISNULL  
  Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).  
   
 ```  
@@ -102,7 +97,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ширина и Высота пустой. в противном случае — значение FALSE.  
   
-##  <a name="operator_csize"></a>CD2DSizeU::operator CSize  
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
  Преобразует CD2DSizeU CSize.  
   
 ```  

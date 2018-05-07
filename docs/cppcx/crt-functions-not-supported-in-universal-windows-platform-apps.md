@@ -1,24 +1,19 @@
 ---
-title: "Функции CRT не поддерживаются в приложениях универсальной платформы Windows | Документы Microsoft"
-ms.custom: 
+title: Функции CRT не поддерживаются в приложениях универсальной платформы Windows | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ed8b5c150632d035060b0e34f3962f2e903990a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows
 Многие функции среды выполнения C (CRT) недоступны при построении приложений универсальной платформы Windows. В некоторых случаях доступны обходные пути, — например, можно использовать API Win32 или среды выполнения Windows. Однако в других случаях функции CRT запрещены, поскольку соответствующие им функции или вспомогательные API не могут применяться к приложениям UWP. Альтернативный метод, поддерживаемый для среды выполнения Windows см. в разделе [альтернативы интерфейсов API Windows в приложениях UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  

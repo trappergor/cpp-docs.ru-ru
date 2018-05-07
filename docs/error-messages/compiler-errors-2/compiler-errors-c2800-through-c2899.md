@@ -1,12 +1,9 @@
 ---
-title: "Ошибки компилятора C2800 – C2899 | Документы Microsoft"
-ms.custom: 
+title: Ошибки компилятора C2800 – C2899 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Ошибки компилятора C2800 – C2899
 
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
 |[Ошибка компилятора C2812](compiler-error-c2812.md)|#import не поддерживается с параметром/clr: pure и/CLR: safe|
 |[Ошибка компилятора C2813](compiler-error-c2813.md)|директива #import не поддерживается с параметром /MP|
 |[Ошибка компилятора C2814](compiler-error-c2814.md)|"*член*": собственный тип не могут быть вложенными в пределах типа managed WinRT "*класс*"|
-|[Ошибка компилятора C2815](compiler-error-c2815.md)|«operator delete»: первый формальный параметр должен быть "void *", но "*типа *" было использовано|
+|[Ошибка компилятора C2815](compiler-error-c2815.md)|«operator delete»: первый формальный параметр должен быть "void *", но "* типа *" было использовано|
 |C2816 ошибки компилятора|Является устаревшей.|
 |[Ошибка компилятора C2817](compiler-error-c2817.md)|Тип возвращаемого значения для «operator delete» должен быть «void»|
 |[Ошибка компилятора C2818](compiler-error-c2818.md)|Применение перегруженного «operator ->» является рекурсивным через тип "*класс*"|

@@ -1,12 +1,9 @@
 ---
-title: "несколько карт (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: несколько карт (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/map> header [STL/CLR]
 - multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168c6afec0f8f195d1315a54eff2794f7e3fd07e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `multimap` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента. Элемент состоит из ключа, для упорядочения последовательности и сопоставленные значение, которое происходит расстояния.  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  Здесь:  
   
- `GKey`совпадает со значением `Key` Если последний является типом ссылки, в этом случае он является`Key^`  
+ `GKey` совпадает со значением `Key` Если последний является типом ссылки, в этом случае он является `Key^`  
   
- `GMapped`совпадает со значением `Mapped` Если последний является типом ссылки, в этом случае он является`Mapped^`  
+ `GMapped` совпадает со значением `Mapped` Если последний является типом ссылки, в этом случае он является `Mapped^`  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,7 +64,7 @@ template<typename Key,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[multimap::const_iterator (STL/CLR)](../dotnet/multimap-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[multimap::const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -89,7 +84,7 @@ template<typename Key,
 |[multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|Удаляет все элементы.|  
@@ -112,7 +107,7 @@ template<typename Key,
 |[multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[multimap::value_comp (STL/CLR)](../dotnet/multimap-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|Определяет, если `multimap` объект не равен другому `multimap` объекта.|  
@@ -124,7 +119,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -140,7 +135,7 @@ template<typename Key,
   
  Объект делегата должен применить строгого слабое упорядочение на ключах типа [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y)` имеет значение true, затем `key_comp()(Y, X)` должен иметь значение false.  
   

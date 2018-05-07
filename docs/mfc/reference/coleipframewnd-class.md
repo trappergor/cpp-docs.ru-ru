@@ -1,12 +1,9 @@
 ---
-title: "Класс COleIPFrameWnd | Документы Microsoft"
-ms.custom: 
+title: Класс COleIPFrameWnd | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>Класс COleIPFrameWnd
 Основа для окна редактирования приложения "на месте".  
@@ -46,13 +41,13 @@ class COleIPFrameWnd : public CFrameWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Создает объект `COleIPFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Вызывается платформой, когда элемент активируется для встроенного редактирования.|  
 |[COleIPFrameWnd::RepositionFrame](#repositionframe)|Вызывается платформой для изменения положения окна редактирования по месту.|  
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  Создает `COleIPFrameWnd` объекта и инициализирует его сведения о состоянии на месте, которое хранится в структуре типа **OLEINPLACEFRAMEINFO**.  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) в Windows SDK.  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  Платформа вызывает `OnCreateControlBars` работать, когда элемент активируется для встроенного редактирования.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не выполняет никаких действий. Переопределите эту функцию для выполнения специальной обработки при создании панелей элементов управления.  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  Платформа вызывает `RepositionFrame` функции-члена для размещения панелей элементов управления и изменить положение окна редактирования по месту, все его видимым.  
   
 ```  

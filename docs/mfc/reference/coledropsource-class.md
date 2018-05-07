@@ -1,12 +1,9 @@
 ---
-title: "Класс COleDropSource | Документы Microsoft"
-ms.custom: 
+title: Класс COleDropSource | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>Класс COleDropSource
 Позволяет перетаскивать конечное расположение сброса данные.  
@@ -48,13 +43,13 @@ class COleDropSource : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDropSource::COleDropSource](#coledropsource)|Создает объект `COleDropSource`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDropSource::GiveFeedback](#givefeedback)|Изменение курсора во время операции перетаскивания и вставки.|  
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Захват мыши обрабатываются во время операции перетаскивания и вставки.|  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  Создает объект `COleDropSource`.  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  Вызывается структурой после вызова [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) или [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  Эффект, который вы хотите отображать для пользователя, как правило, позволяющее определить, что произойдет при перетаскивании на этом этапе с помощью выбранных данных. Как правило, это значение, возвращаемое последний вызов [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) или [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Может быть один или несколько из следующих:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` Удаление не допускается.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
-- `DROPEFFECT_SCROLL`Операции перетаскивания прокрутки о или происходит в целевом объекте.  
+- `DROPEFFECT_SCROLL` Операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **DRAGDROP_S_USEDEFAULTCURSORS** Если в ходе выполнения, перетащив **значение NOERROR** Если это не так.  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  Дополнительные сведения см. в разделе [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723), [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129), и [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) в Windows SDK.  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  Вызывается методом framework, когда происходит событие, которое может начать операцию перетаскивания, например нажатие левой кнопки мыши.  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если вы хотите изменить способ запуска перетаскивания процесса. Реализация по умолчанию захватывает мышь и остается в режиме перетаскивания, пока пользователь нажимает кнопку мыши влево или вправо или достигает ESC, после чего он отпускает кнопку мыши.  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  После начала перетаскивания, эта функция вызывается платформой несколько раз до отмены или выполнить операции перетаскивания.  
   
 ```  

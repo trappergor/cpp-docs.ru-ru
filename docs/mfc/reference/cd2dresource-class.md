@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DResource | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DResource | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DResource
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6b80803cbddcbd05655a8f9620c102aef3e9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dresource-class"></a>Класс CD2DResource
 Абстрактный класс, который предоставляет интерфейс для создания и управления ресурсы D2D, например кистей, слоев и текстов.  
@@ -52,18 +47,18 @@ ms.lasthandoff: 12/21/2017
 class CD2DResource : public CObject;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DResource::CD2DResource](#cd2dresource)|Создает объект CD2DResource.|  
 |[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Деструктор Вызывается при уничтожении объекта D2D ресурсов.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DResource::CREATE](#create)|Создает CD2DResource.|  
 |[CD2DResource::destroy](#destroy)|Уничтожает объект CD2DResource.|  
@@ -71,14 +66,14 @@ class CD2DResource : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DResource::IsAutoDestroy](#isautodestroy)|Проверка автоматического уничтожить флаг.|  
 |[CD2DResource::ReCreate](#recreate)|Повторно создает CD2DResource.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет destoyed владельцем (CRenderTarget)|  
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Указатель на родительский CRenderTarget)|  
@@ -91,14 +86,14 @@ class CD2DResource : public CObject;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource  
  Деструктор Вызывается при уничтожении объекта D2D ресурсов.  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource  
  Создает объект CD2DResource.  
   
 ```  
@@ -114,7 +109,7 @@ CD2DResource(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
-##  <a name="create"></a>CD2DResource::CREATE  
+##  <a name="create"></a>  CD2DResource::CREATE  
  Создает CD2DResource.  
   
 ```  
@@ -128,14 +123,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
   
-##  <a name="destroy"></a>CD2DResource::destroy  
+##  <a name="destroy"></a>  CD2DResource::destroy  
  Уничтожает объект CD2DResource.  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy  
  Проверка автоматического уничтожить флаг.  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если объект будет уничтожен его владельцу. в противном случае — значение FALSE.  
   
-##  <a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>  CD2DResource::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -155,21 +150,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy  
  Ресурс будет destoyed владельцем (CRenderTarget)  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget  
  Указатель на родительский CRenderTarget)  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>  CD2DResource::ReCreate  
  Повторно создает CD2DResource.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCAutoHideBar | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCAutoHideBar | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf8ae6346335b54e22170d4397ac95e8918470
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebar-class"></a>Класс CMFCAutoHideBar
 Класс `CMFCAutoHideBar` — это специальный класс панели инструментов, реализующий функцию автоматического скрытия.  
@@ -69,17 +64,17 @@ ms.lasthandoff: 12/21/2017
 class CMFCAutoHideBar : public CPane  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|  
@@ -98,7 +93,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Временную задержку между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) до момента, когда платформа показано соответствующее окно.|  
   
@@ -130,7 +125,7 @@ class CMFCAutoHideBar : public CPane
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
  Добавляет в окно `CDockablePane` функциональные возможности, которые позволяют ему выполнять автоматическое скрытие.  
   
 ```  
@@ -159,7 +154,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -170,7 +165,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
  Создает объект CMFCAutoHideBar.  
   
 ```  
@@ -196,7 +191,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -223,7 +218,7 @@ virtual BOOL Create(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
  Возвращает указатель на первое окно автоматического скрытия в приложении.  
   
 ```  
@@ -235,7 +230,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
  Получает количество видимых кнопок автоматического скрытия.  
   
 ```  
@@ -247,7 +242,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
  Временную задержку между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) до момента, когда платформа показано соответствующее окно.  
   
 ```  
@@ -257,7 +252,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>Примечания  
  Когда пользователь наводит указатель мыши на `CMFCAutoHideButton`, имеется небольшая задержка, прежде чем платформа отображает соответствующее окно. Этот параметр определяет интервал этой задержки в миллисекундах.  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
@@ -271,7 +266,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
  Удаляет и уничтожает окно автоматического скрытия.  
   
 ```  
@@ -279,7 +274,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- CDockablePane *`pAutoHideWnd`  
+ CDockablePane * `pAutoHideWnd`  
  Удаляемое окно автоматического скрытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -287,7 +282,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
  Помечает строку автоматического скрытия как активную.  
   
 ```  
@@ -295,13 +290,13 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] BOOL`bActive`  
+ [in] BOOL `bActive`  
  Значение TRUE, чтобы задать как активную; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  В разделе [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
@@ -313,7 +308,7 @@ void SetRecentVisibleState(BOOL bState);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
  Показывает окно автоматического скрытия.  
   
 ```  
@@ -324,11 +319,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] CDockablePane *`pAutoHideWnd`  
- [in] BOOL`bShow`  
+ [in] CDockablePane * `pAutoHideWnd`  
+ [in] BOOL `bShow`  
  Значение TRUE для отображения окна.  
   
- [in] BOOL`bDelay`  
+ [in] BOOL `bDelay`  
  Этот параметр не учитывается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -336,7 +331,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
  Изменение размеров строки автоматического скрытия в свернутом состоянии в соответствии с размерами объекта `CMFCAutoHideButton` .  
   
 ```  
@@ -358,7 +353,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>Примечания  
  Производные классы могут переопределять этот метод для настройки поведения.  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
  Отключает режим автоматического скрытия для группы строк автоматического скрытия.  
   
 ```  
@@ -371,7 +366,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
  Вызывается платформой при необходимости перерисовать строку автоматического скрытия.  
   
 ```  

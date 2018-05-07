@@ -1,26 +1,21 @@
 ---
-title: "Класс Platform::Collections:: unorderedmapview | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: unorderedmapview | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec6b1541eff80b6aac4d8d82bfb7ea6ceb977843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -43,7 +38,7 @@ ref class UnorderedMapView sealed;
  Тип значения в паре "ключ-значение".  
   
  `C`  
- Тип, предоставляющий объект функции, который может сравнивать два ключевых значения для определения равенства. By default, [std::equal_to\<K>](../standard-library/equal-to-struct.md)  
+ Тип, предоставляющий объект функции, который может сравнивать два ключевых значения для определения равенства. По умолчанию [std::equal_to\<K >](../standard-library/equal-to-struct.md)  
   
 ### <a name="remarks"></a>Примечания  
  UnorderedMapView — это конкретная реализация C++ из [Windows::Foundation:: Collections::\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -52,13 +47,13 @@ ref class UnorderedMapView sealed;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|  

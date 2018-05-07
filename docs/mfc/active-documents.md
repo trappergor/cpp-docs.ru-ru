@@ -1,13 +1,10 @@
 ---
-title: "Активные документы | Документы Microsoft"
-ms.custom: 
+title: Активные документы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Активные документы
 Активные документы расширить составных документов технологии OLE. Эти расширения предоставляются в виде дополнительные интерфейсы управления представления, чтобы объекты могли работать в контейнерах и еще сохранить контроль над их отображения и печати функции. Этот процесс позволяет отображать документы как внешний кадров (например, Microsoft Office Binder или Microsoft Internet Explorer), так и в кадры машинного кода (например, порты представление продукта собственные).  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  Активного документа можно создать один или несколько типов [представления](#requirements_for_view_objects) его данные (например, обычный, структуры, вид страницы и так далее). Представления действуют как фильтры, через которые можно просматривать данные. Даже если документ содержит только один тип представления, могут по-прежнему требуется поддерживать несколько представлений, служащими для поддержки новых функциональных возможностей окна (например, **новое окно** товара **окна** меню в Office приложения).  
   
-##  <a name="requirements_for_active_documents"></a>Требования для активных документов  
+##  <a name="requirements_for_active_documents"></a> Требования для активных документов  
  Активный документ, который может быть отображен в контейнер активного документа необходимо:  
   
 -   Использовать составных файлов OLE в качестве механизма хранения, реализуя `IPersistStorage`.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  В этих требований подразумевается базы знаний, когда и как использовать интерфейсы стороне контейнера.  
   
-##  <a name="requirements_for_view_objects"></a>Требования для представления объектов  
+##  <a name="requirements_for_view_objects"></a> Требования для представления объектов  
  Активного документа можно создать одно или несколько представлений данных. Функционально эти представления представляют собой порты на конкретный метод для отображения данных. Если активный документ поддерживает только одно представление, активный документ и что единое представление может осуществляться с помощью одного класса. **IOleDocument::CreateView** возвращает тот же объект `IOleDocumentView` указатель на интерфейс.  
   
  Представляются в контейнер активного документа, поддерживал компонент представления **IOleInPlaceObject** и **IOleInPlaceActiveObject** в дополнение к `IOleDocumentView`:  

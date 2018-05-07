@@ -1,12 +1,9 @@
 ---
-title: "CPalette-класс | Документы Microsoft"
-ms.custom: 
+title: CPalette-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPalette
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486338d579f304a6de1a54674a7711bb6c56f38c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpalette-class"></a>CPalette-класс
 Инкапсулирует цветовую палитру Windows.  
@@ -56,17 +51,17 @@ ms.lasthandoff: 12/21/2017
 class CPalette : public CGdiObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPalette::CPalette](#cpalette)|Создает `CPalette` объект с присоединенного палитры Windows. Необходимо инициализировать `CPalette` объекта с помощью одного из функции-члены инициализации, прежде чем можно будет использовать.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPalette::AnimatePalette](#animatepalette)|Заменяет записей в логическую палитру, обозначенную `CPalette` объекта. Приложение не нужно обновлять свою клиентскую область поскольку Windows немедленно сопоставляет новых записей в системной палитры.|  
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Создает полутоновой палитры для контекста устройства и прикрепляет его к `CPalette` объекта.|  
@@ -80,7 +75,7 @@ class CPalette : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HPALETTE CPalette::operator](#operator_hpalette)|Возвращает `HPALETTE` присоединяется к `CPalette`.|  
   
@@ -101,7 +96,7 @@ class CPalette : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
  Заменяет записей в логическую палитру, присоединенные к `CPalette` объекта.  
   
 ```  
@@ -126,7 +121,7 @@ void AnimatePalette(
   
  `AnimatePalette` Функция изменяется только операции с **PC_RESERVED** значение в соответствующем флага **palPaletteEntry** членом [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структуры присоединенный к `CPalette` объекта. В разделе **LOGPALETTE** в Windows SDK, Дополнительные сведения об этой структуры.  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>  CPalette::CPalette  
  Создает объект `CPalette`.  
   
 ```  
@@ -136,7 +131,7 @@ CPalette();
 ### <a name="remarks"></a>Примечания  
  Объект не имеет подключенных палитры до вызова `CreatePalette` для присоединения один.  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
  Создает полутоновой палитры для контекста устройств.  
   
 ```  
@@ -155,7 +150,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  См. в Windows SDK, Дополнительные сведения `CreateHalftonePalette` и **StretchDIBits**.  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
  Инициализирует `CPalette` объекта путем создания логических цветовую палитру Windows и подключения его к `CPalette` объекта.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>Примечания  
  См. в Windows SDK, Дополнительные сведения **LOGPALETTE** структуры.  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
  Возвращает указатель на `CPalette` объект для заданного дескриптора объекта палитру Windows.  
   
 ```  
@@ -189,7 +184,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>Примечания  
  Если `CPalette` объект уже присоединен палитры Windows временную `CPalette` объект создается и прикрепляется. Этот временный `CPalette` , допустимо только до следующей приложение имеет время простоя в его цикл событий, после чего график все временные объекты удаляются. Другими словами временный объект является допустимым только во время обработки одного окна сообщения.  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
  Вызовите эту функцию-член для получения числа записей в данной логическую палитру.  
   
 ```  
@@ -199,7 +194,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество записей в логическую палитру.  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
  Возвращает индекс элемента в логическую палитру, который наиболее близко соответствует значению указанным цветом.  
   
 ```  
@@ -213,7 +208,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс записи в логическую палитру. Запись содержит цвет, наиболее точно соответствующий указанным цветом.  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
  Извлекает диапазон записей палитру в логическую палитру.  
   
 ```  
@@ -236,7 +231,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>Возвращаемое значение  
  Число записей, полученных из логическую палитру; 0, если не удалось выполнить функцию.  
   
-##  <a name="operator_hpalette"></a>HPALETTE CPalette::operator  
+##  <a name="operator_hpalette"></a>  HPALETTE CPalette::operator  
  Этот оператор используется для получения вложенного дескриптор Windows GDI `CPalette` объекта.  
   
 ```  
@@ -251,7 +246,7 @@ operator HPALETTE() const;
   
  Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в Windows SDK.  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  Изменяет размер логическую палитру, присоединенные к `CPalette` объекта в число записей, заданные `nNumEntries`.  
   
 ```  
@@ -270,7 +265,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Дополнительные сведения об Windows API `ResizePalette`, в разделе [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) в Windows SDK.  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  Задает значения цвета RGB и флаги в диапазоне элементов в логическую палитру.  
   
 ```  

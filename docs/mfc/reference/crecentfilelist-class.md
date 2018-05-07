@@ -2,11 +2,8 @@
 title: Класс CRecentFileList | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecentfilelist-class"></a>Класс CRecentFileList
 Поддерживает элемент управления последнего использовавшегося списка файлов (MRU).  
@@ -56,13 +51,13 @@ class CRecentFileList
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecentFileList::CRecentFileList](#crecentfilelist)|Создает объект `CRecentFileList`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecentFileList::Add](#add)|Добавляет файл в список последних Выбиравшихся файлов.|  
 |[CRecentFileList::GetDisplayName](#getdisplayname)|Предоставляет отображаемое имя для отображения меню файла последних выбиравшихся файлов.|  
@@ -74,7 +69,7 @@ class CRecentFileList
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CRecentFileList::operator]](#operator_at)|Возвращает `CString` объекта в заданной позиции.|  
   
@@ -91,7 +86,7 @@ class CRecentFileList
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>  CRecentFileList::Add  
  Добавляет файл в списке недавно использовавшихся файлов (MRU).  
   
 ```  
@@ -137,7 +132,7 @@ void Add(
 ### <a name="remarks"></a>Примечания  
  Имя файла будет добавлено в верхнюю часть списка. Если имя файла уже существует в данном списке, перемещается в начало.  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  Создает объект `CRecentFileList`.  
   
 ```  
@@ -168,7 +163,7 @@ CRecentFileList(
 ### <a name="remarks"></a>Примечания  
  Строка формата, на который указывает `lpszEntryFormat` должен содержать «%d», который будет использоваться для замены индекс каждого элемента последних выбиравшихся файлов. Например, если строка формата является `"file%d"` затем записи будет называться `file0`, `file1`, и т. д.  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  Получает отображаемое имя для файла в список последних Использованных файлов для использования при отображении меню список последних выбиравшихся файлов.  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>Примечания  
  Если файл находится в текущем каталоге, функция оставляет directory отключать отображение. Если имя файла слишком велик, каталогов и расширение вырезаются. Если имя файла слишком длинное, отображаемое имя задано равным пустой строке Если `bAtLeastName` имеет ненулевое значение.  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
  Возвращает число файлов в списке последних Выбиравшихся файлов.  
   
 ```  
@@ -212,7 +207,7 @@ int GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число файлов в текущем самые последние использовавшиеся списка файлов (MRU).  
   
-##  <a name="operator_at"></a>[CRecentFileList::operator]  
+##  <a name="operator_at"></a>  [CRecentFileList::operator]  
  Перегруженные нижнего индекса ( `[]`) оператор возвращает один `CString` заданные отсчитываемый от нуля индекс в `nIndex`.  
   
 ```  
@@ -223,14 +218,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  Отсчитываемый от нуля индекс `CString` в наборе `CString`s.  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
  Считывает список последних использовавшихся списка файлов (MRU) в реестре или приложения. INI-файл.  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>  CRecentFileList::Remove  
  Удаляет файл из списка последних Использованных файлов.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  Отсчитываемый от нуля индекс удаляемого из списка недавно использовавшихся файлов (MRU) файла.  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
  Обновляет список последних Использованных файлов отображения меню.  
   
 ```  
@@ -252,7 +247,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  Указатель на [CCmdUI](../../mfc/reference/ccmdui-class.md) объект для недавно использовавшихся меню списка файлов (MRU).  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
  Записывает список последних использовавшихся списка файлов (MRU) в реестре или приложения. INI-файл.  
   
 ```  

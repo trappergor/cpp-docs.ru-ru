@@ -1,13 +1,10 @@
 ---
-title: "Как: перенести - clr | Документы Microsoft"
-ms.custom: 
+title: 'Как: перенести - clr | Документы Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Переход на /clr
 В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) для получения дополнительной информации). **/ CLR** позволяет модулям Visual C++ для вызова неуправляемого кода и вызывать из сборок .NET, сохраняя совместимость с неуправляемыми модулями. В разделе [сборки смешанный (машинный и управляемый код)](../dotnet/mixed-native-and-managed-assemblies.md) и [машинного кода и .NET-взаимодействии](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  Собственные типы являются закрытыми по умолчанию. Это может привести собственный тип, не являются видимыми вне библиотеки DLL. Устранить эту ошибку, добавив `public` для этих типов.  
   
 ### <a name="floating-point-and-alignment-issues"></a>С плавающей запятой и проблем с выравниванием  
- `__controlfp`не поддерживается в среде CLR (в разделе [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) для получения дополнительной информации). Среда CLR также не будут использовать [выравнивание](../cpp/align-cpp.md).  
+ `__controlfp` не поддерживается в среде CLR (в разделе [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) для получения дополнительной информации). Среда CLR также не будут использовать [выравнивание](../cpp/align-cpp.md).  
   
 ### <a name="com-initialization"></a>Инициализация COM  
  Общеязыковая среда выполнения автоматически инициализирует COM при инициализации модуля (Если автоматическая инициализация COM производится в режиме многопотокового Подразделения). В результате явной инициализации COM будут коды возврата, указывающее, что COM уже инициализирована. Явно инициализировать COM с одной потоковой модели, когда среда CLR уже инициализирован COM иной потоковой модели может привести к сбою приложения.  

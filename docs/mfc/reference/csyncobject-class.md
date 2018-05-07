@@ -1,12 +1,9 @@
 ---
-title: "Класс CSyncObject | Документы Microsoft"
-ms.custom: 
+title: Класс CSyncObject | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>Класс CSyncObject
 Чисто виртуальный класс, обеспечивающий общую функциональность объектов синхронизации Win32.  
@@ -48,26 +43,26 @@ class CSyncObject : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSyncObject::CSyncObject](#csyncobject)|Создает объект `CSyncObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSyncObject::Lock](#lock)|Улучшение доступа к объекту синхронизации.|  
 |[CSyncObject::Unlock](#unlock)|Улучшение доступа к объекту синхронизации.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSyncObject::operator ДЕСКРИПТОРА](#operator_handle)|Предоставляет доступ к объекту синхронизации.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSyncObject::m_hObject](#m_hobject)|Дескриптор для базового объекта синхронизации.|  
   
@@ -84,7 +79,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  Создает объект синхронизации, с указанным именем.  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  Имя объекта. Если **NULL**, *pstrName* будет иметь значение null.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  Эта функция вызывается для доступа к ресурсу, управляются объектом синхронизации.  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>Примечания  
  Если объект синхронизации, получает сигнал, `Lock` возвратит успешно и поток теперь принадлежит объект. Если объект синхронизации является несигнальным (недоступна), `Lock` ожидает объекта синхронизации в сигнальное вплоть до указанного числа миллисекунд в *dwTimeOut* параметра. Если объект синхронизации не был отправлен сигнал за указанный период времени, `Lock` возвращает сбой.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  Дескриптор для базового объекта синхронизации.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator ДЕСКРИПТОРА  
+##  <a name="operator_handle"></a>  CSyncObject::operator ДЕСКРИПТОРА  
  Этот оператор используется для получения дескриптора `CSyncObject` объекта.  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>Примечания  
  Дескриптор можно использовать для прямого вызова API-интерфейсов Windows.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  Объявление `Unlock` без параметров является чистой виртуальной функции и должны быть переопределены все классы, производные от `CSyncObject`.  
   
 ```  

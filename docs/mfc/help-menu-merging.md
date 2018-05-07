@@ -1,13 +1,10 @@
 ---
-title: "Слияние меню \"Справка\" | Документы Microsoft"
-ms.custom: 
+title: Слияние меню "Справка" | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>Слияние меню "Справка"
 При включенном в контейнере объекта слияние протокола OLE документов меню предоставляет объект полный контроль над **справки** меню. В результате разделы справки контейнера недоступны, если пользователь отключает объект. Архитектура вложения активного документа расширяет правила для слияния для контейнера и активного документа, которая является активной в то же меню меню на месте. Новые правила, просто дополнительных соглашения о какой компонент, которому принадлежит какой-либо части меню и создание общего меню.  

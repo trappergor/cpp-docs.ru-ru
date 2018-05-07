@@ -1,13 +1,10 @@
 ---
-title: "Функции обмена полями записи | Документы Microsoft"
-ms.custom: 
+title: Функции обмена полями записи | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>Функции обмена данными полями записей
 В этом разделе перечислены обмен полями записей (RFX Bulk RFX и DFX) функции, которые используются для автоматизации передачи данных между объектом набора записей и источником данных и выполнения других операций с данными.  
@@ -438,7 +433,7 @@ void RFX_Text(
  Используется главным образом для параметров. Целое число, указывающее тип данных параметра. Тип является типом данных ODBC формы **SQL_XXX**.  
   
  `nScale`  
- Задает масштаб для значения типа ODBC **SQL_DECIMAL** или **SQL_NUMERIC**. `nScale`полезно только при задании значения параметров. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в приложении D *справочнике программиста ODBC SDK*.  
+ Задает масштаб для значения типа ODBC **SQL_DECIMAL** или **SQL_NUMERIC**. `nScale` полезно только при задании значения параметров. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в приложении D *справочнике программиста ODBC SDK*.  
   
 ### <a name="remarks"></a>Примечания  
  Сопоставления данных в источнике данных всех этих типов в / из `CString` в наборе записей.  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  Сопоставления между типом данных **DAO_DATE** DAO и типу [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) в наборе записей.  
   
 > [!NOTE]
->  `COleDateTime`заменяет [CTime](../../atl-mfc-shared/reference/ctime-class.md) и **TIMESTAMP_STRUCT** в классы DAO для этой цели. `CTime`и **TIMESTAMP_STRUCT** все еще используется для классов доступа к данным на основе ODBC.  
+>  `COleDateTime` заменяет [CTime](../../atl-mfc-shared/reference/ctime-class.md) и **TIMESTAMP_STRUCT** в классы DAO для этой цели. `CTime` и **TIMESTAMP_STRUCT** все еще используется для классов доступа к данным на основе ODBC.  
   
 ### <a name="example"></a>Пример  
  В разделе [DFX_Text](#dfx_text).  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
 ### <a name="remarks"></a>Примечания  
- `DFX_LongBinary`обеспечивает совместимость с использованием классов MFC ODBC. `DFX_LongBinary` Функция передает данные больших двоичных-объектов (BLOB) с помощью класса `CLongBinary` между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных. Сопоставления между типом данных **DAO_BYTES** DAO и типу [CLongBinary](clongbinary-class.md) в наборе записей.  
+ `DFX_LongBinary` обеспечивает совместимость с использованием классов MFC ODBC. `DFX_LongBinary` Функция передает данные больших двоичных-объектов (BLOB) с помощью класса `CLongBinary` между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных. Сопоставления между типом данных **DAO_BYTES** DAO и типу [CLongBinary](clongbinary-class.md) в наборе записей.  
   
 ### <a name="example"></a>Пример  
  В разделе [DFX_Text](#dfx_text).  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  Сопоставления между типом данных **DAO_I2** DAO и типу **короткие** в наборе записей.  
   
 > [!NOTE]
->  `DFX_Short`эквивалентно [RFX_Int](#rfx_int) для классов на основе ODBC.  
+>  `DFX_Short` эквивалентно [RFX_Int](#rfx_int) для классов на основе ODBC.  
   
 ### <a name="example"></a>Пример  
  В разделе [DFX_Text](#dfx_text).  

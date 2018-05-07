@@ -1,12 +1,9 @@
 ---
-title: "Класс CMiniFrameWnd | Документы Microsoft"
-ms.custom: 
+title: Класс CMiniFrameWnd | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
 Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.  
@@ -46,13 +41,13 @@ class CMiniFrameWnd : public CFrameWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Создает объект `CMiniFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMiniFrameWnd::Create](#create)|Создает `CMiniFrameWnd` объект после создания экземпляра.|  
 |[CMiniFrameWnd::CreateEx](#createex)|Создает `CMiniFrameWnd` объекта (с дополнительными параметрами) после построения.|  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  Создает `CMiniFrameWnd` объекта, но не удалось создать окно.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>Примечания  
  Для создания окна, вызовите [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Создает окно области Windows и прикрепляет его к `CMiniFrameWnd` объекта.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** запрещают доступ к меню системы и элемента управления меню и преобразует их в часть заголовка (заголовок).  
   
- В разделе [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание значений стилей окон невозможно. Типичные сочетание, используемый для окна **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**.  
+ В разделе [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание значений стилей окон невозможно. Типичные сочетание, используемый для окна **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
  Объект `RECT` структуры, указав нужные размеры окна.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  **Создание** инициализирует окна имя класса и имя окна и регистрирует значения по умолчанию для его стиль и родительского элемента.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  Создает объект `CMiniFrameWnd`.  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateEx` Параметры определяют **WNDCLASS**, стиль окна и (необязательно) начальное положение и размер окна. `CreateEx`также указывает окна родительского (если таковые имеются) и идентификатор.  
+ `CreateEx` Параметры определяют **WNDCLASS**, стиль окна и (необязательно) начальное положение и размер окна. `CreateEx` также указывает окна родительского (если таковые имеются) и идентификатор.  
   
  Когда `CreateEx` выполняет Windows отправляет [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) сообщения в окно.  
   
  Чтобы расширить возможности обработки сообщений по умолчанию, создайте класс, производный от `CMiniFrameWnd`, добавить схему сообщений к новому классу, а функции-члены для сообщениях выше. Переопределить `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
   
- Переопределить дальнейшей **на***сообщение* обработчиков для обеспечения дополнительной функциональности производного класса сообщений.  
+ Переопределить дальнейшей **на *** сообщение* обработчиков для обеспечения дополнительной функциональности производного класса сообщений.  
   
  Если **WS_VISIBLE** задан стиль, Windows посылает окне все необходимые для активации и отображение окна сообщения. Если стиль окна указывает строку заголовка, заголовок окна указывает `lpszWindowName` параметр отображается в заголовке окна.  
   

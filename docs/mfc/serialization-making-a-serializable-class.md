@@ -1,13 +1,10 @@
 ---
-title: "Сериализация: Создание сериализуемого класса | Документы Microsoft"
-ms.custom: 
+title: 'Сериализация: Создание сериализуемого класса | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>Сериализация. Создание сериализуемого класса
 Пять основных шагов необходимы, чтобы сделать класс сериализуемым. Они перечислены ниже и описаны в следующих разделах:  
@@ -52,10 +47,10 @@ ms.lasthandoff: 12/21/2017
   
  При вызове метода `Serialize` напрямую, а не через >> и << операторы [CArchive](../mfc/reference/carchive-class.md), последние три действия не требуются для сериализации.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>Класса, производного от CObject  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Класса, производного от CObject  
  Базовая сериализация протокола и функциональные возможности определены в `CObject` класса. Путем наследования класса из `CObject` (или из класса, производного от `CObject`), как показано в следующем объявлении класса `CPerson`, можно получить доступ к сериализации протокола и функциональность `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>Переопределение сериализации функции-члена  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Переопределение сериализации функции-члена  
  `Serialize` Функции-члена, который определен в `CObject` класс, ответственный за фактически сериализации данных, необходимые для отслеживания текущего состояния объекта. `Serialize` Функция имеет `CArchive` аргумент, который используется для чтения и записи данных объекта. [CArchive](../mfc/reference/carchive-class.md) объект имеет функцию-член, `IsStoring`, которое указывает ли `Serialize` хранения (записи данных) или загрузке (чтение данных). Использование результатов `IsStoring` как, либо вставке данных объекта в `CArchive` объекта с помощью оператора вставки (**<\<**) или извлечения данных с помощью оператора извлечения ( **>>**).  
   
  Рассмотрим класс, производный от `CObject` и имеет две новые переменные-члены, типов `CString` и **WORD**. В следующем фрагменте объявление класса показан новый член переменных и объявление переопределенного `Serialize` функции-члена:  
@@ -74,12 +69,12 @@ ms.lasthandoff: 12/21/2017
   
  Можно также использовать [CArchive::Read](../mfc/reference/carchive-class.md#read) и [CArchive::Write](../mfc/reference/carchive-class.md#write) функции-члены для чтения и записи больших объемов нетипизированных данных.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>С помощью DECLARE_SERIAL-макрос  
+##  <a name="_core_using_the_declare_serial_macro"></a> С помощью DECLARE_SERIAL-макрос  
  `DECLARE_SERIAL` Макрос является обязательным в объявления классов, которые будут поддерживать сериализацию, как показано ниже:  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>Определение конструктора без аргументов  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Определение конструктора без аргументов  
  MFC требуется конструктор по умолчанию, при повторном создании объектов при их десериализации (загружен с диска). В процессе десериализации заполнит все переменные-члены значения, необходимые для повторного создания объекта.  
   
  Этот конструктор может быть объявлен как открытый, защищенный или закрытый. Если вы вносите защищенным, либо закрытым, поможет убедитесь в том, что он будет использоваться только функциями сериализации. Конструктор должен поместить объект в состоянии, которое позволяет удалить при необходимости.  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Если вы забудете определение конструктора без аргументов в класс, который использует `DECLARE_SERIAL` и `IMPLEMENT_SERIAL` макросы, вы получите предупреждение компилятора «нет конструктора по умолчанию» в строке где `IMPLEMENT_SERIAL` используется макрос.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>Использование в файле реализации IMPLEMENT_SERIAL-макрос  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> Использование в файле реализации IMPLEMENT_SERIAL-макрос  
  `IMPLEMENT_SERIAL` Макрос используется для определения различных функций, необходимых при наследовании из сериализуемого класса `CObject`. Используйте этот макрос в файле реализации (. CPP) для своего класса. Первые два аргумента в макрос — это имя класса и имя его непосредственно к базовому классу.  
   
  Третий аргумент этот макрос является номером схемы. Число схемы — по существу номер версии для объектов класса. Используйте целое число больше или равно 0 для некоторых схем. (Не путайте этот номер схемы с терминологии связанных баз данных).  

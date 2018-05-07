@@ -1,13 +1,10 @@
 ---
-title: "Создание и использование элементов управления | Документы Microsoft"
-ms.custom: 
+title: Создание и использование элементов управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaae665311db47a7129ecaaef816dc3c3b546d45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60cf03eb655e1eb26351ed300f27c1965bbfa281
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="making-and-using-controls"></a>Создание и использование элементов управления
 Сделать большинство элементов управления диалоговых окон в Visual C++ [редактор диалоговых окон](../windows/dialog-editor.md). Однако можно также создать элементы управления в любой диалогового окна или окна.  

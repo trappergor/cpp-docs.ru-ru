@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DGeometry | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DGeometry | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometry-class"></a>Класс CD2DGeometry
 Программа-оболочка для ID2D1Geometry.  
@@ -80,14 +75,14 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Создает объект CD2DGeometry.|  
 |[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Деструктор Вызывается при уничтожении объекта geometry D2D.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DGeometry::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Эта геометрия с заданной геометрий объединяет и сохраняет результат в ID2D1SimplifiedGeometrySink.|  
@@ -110,13 +105,13 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Возвращает интерфейс ID2D1Geometry|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|Указатель на ID2D1Geometry.|  
   
@@ -130,14 +125,14 @@ class CD2DGeometry : public CD2DResource;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
  Деструктор Вызывается при уничтожении объекта geometry D2D.  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
  Присоединяет существующий ресурс интерфейс для объекта  
   
 ```  
@@ -148,7 +143,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
  Создает объект CD2DGeometry.  
   
 ```  
@@ -164,7 +159,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
  Эта геометрия с заданной геометрий объединяет и сохраняет результат в ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -195,7 +190,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
  Описывает пересечение между этой и указанным геометрий. Сравнение выполняется с заданным допуском обработки прозрачности.  
   
 ```  
@@ -218,7 +213,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
  Вычисляется площадь геометрию после ее преобразования с заданной матрицы и выпрямления с заданным допуском.  
   
 ```  
@@ -241,7 +236,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
  Вычисляет длину геометрии, как если бы каждый сегмент был развернутые в строку.  
   
 ```  
@@ -264,7 +259,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
  Вычисляет тангенс и точки вектора на заданном расстоянии вдоль геометрического объекта после ее преобразования с заданной матрицы и выпрямления с заданным допуском.  
   
 ```  
@@ -295,14 +290,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="destroy"></a>CD2DGeometry::destroy  
+##  <a name="destroy"></a>  CD2DGeometry::destroy  
  Уничтожает объект CD2DGeometry.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::Detach  
+##  <a name="detach"></a>  CD2DGeometry::Detach  
  Отсоединяет интерфейса ресурсов из объекта  
   
 ```  
@@ -312,7 +307,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
  Указывает ли область, заполняемую геометрию будет содержать указанной точки, заданной обработки заданного допуска.  
   
 ```  
@@ -339,7 +334,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>  CD2DGeometry::Get  
  Возвращает интерфейс ID2D1Geometry  
   
 ```  
@@ -349,7 +344,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Geometry или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -363,7 +358,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
  Возвращает границы геометрического объекта после его расширенная объектом stroke указанного ширину и стиль и преобразовать заданную матрицу.  
   
 ```  
@@ -394,7 +389,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -404,14 +399,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
  Указатель на ID2D1Geometry.  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *  
  Возвращает интерфейс ID2D1Geometry  
   
 ```  
@@ -421,7 +416,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Geometry или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
  Вычисляет структуры геометрии и записывает результат ID2D1SimplifiedGeometrySink.  
   
 ```  
@@ -444,7 +439,7 @@ BOOL Outline(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
  Создает упрощенную версию, содержащий только линий и кривых Безье (необязательно) третьего и записывает результат ID2D1SimplifiedGeometrySink геометрии.  
   
 ```  
@@ -471,7 +466,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
  Определяет, содержит ли обводки геометрии указанной точки, заданной толщину обводки указанного, стиль и преобразования.  
   
 ```  
@@ -506,7 +501,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
  Создает набор повернутых по часовой стрелке треугольников, покрывающих геометрию после ее преобразования с использованием заданной матрицы и выпрямления с заданным допуском.  
   
 ```  
@@ -529,7 +524,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="widen"></a>CD2DGeometry::Widen  
+##  <a name="widen"></a>  CD2DGeometry::Widen  
  Расширяет геометрического объекта с указанным штриха и записывает результат ID2D1SimplifiedGeometrySink после ее преобразования с заданной матрицы и выпрямления с заданным допуском.  
   
 ```  

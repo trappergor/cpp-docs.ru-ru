@@ -1,12 +1,9 @@
 ---
-title: "Класс COleBusyDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleBusyDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>Класс COleBusyDialog
 Используется для диалоговых окон OLE "Сервер не отвечает" или "Сервер занят".  
@@ -44,24 +39,24 @@ ms.lasthandoff: 12/21/2017
 class COleBusyDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleBusyDialog::COleBusyDialog](#colebusydialog)|Создает объект `COleBusyDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleBusyDialog::DoModal](#domodal)|Отображает диалоговое окно OLE, сервер занят.|  
 |[COleBusyDialog::GetSelectionType](#getselectiontype)|Определяет, выбранных в диалоговом окне.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleBusyDialog::m_bz](#m_bz)|Структура типа **OLEUIBUSY** , управляет поведением окна.|  
   
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  Только эта функция создает `COleBusyDialog` объекта.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  Дополнительные сведения см. в разделе [OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) структуры в Windows SDK.  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна OLE, сервер занят или сервер не отвечает.  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  Если `DoModal` возвращает **IDOK**, можно вызывать другой член функции для получения параметров или сведения, введенных пользователем в диалоговом окне.  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  Эта функция вызывается для получения выбора типа, выбранного пользователем в диалоговом окне, сервер занят.  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked** вызов, чтобы активировать сервер стал разблокирован.  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  Структура типа **OLEUIBUSY** используется для управления поведением диалогового окна «сервер занят».  
   
 ```  

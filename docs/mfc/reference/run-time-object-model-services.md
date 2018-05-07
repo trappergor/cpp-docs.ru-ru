@@ -1,13 +1,10 @@
 ---
-title: "Службы модели объекта во время выполнения | Документы Microsoft"
-ms.custom: 
+title: Службы модели объекта во время выполнения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff506d559ab44ba4034e982bb909db763917594
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 Классы [CObject](../../mfc/reference/cobject-class.md) и [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) инкапсуляции нескольких объектов служб, включая доступ к сведениям о классе во время выполнения, сериализации и динамическое создание объектов. Все классы, производные от `CObject` наследуют эти функциональные возможности.  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|Реализует **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.|  
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|Либо этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должен быть указан в файле реализации для любого класса, который использует `DECLARE_OLECREATE`. |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 Определяет, реализует ли общие элементы управления библиотеки указанного API.  
    
 ### <a name="syntax"></a>Синтаксис  
@@ -99,7 +94,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="see-also"></a>См. также  
  [Изоляция MFC Общие элементы управления библиотеки](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 Определяет, реализует ли общие элементы управления библиотеки указанный API (это версия Юникода [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -121,7 +116,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
  Добавляет возможность доступа к среде выполнения сведения о классе объекта при наследовании от класса `CObject`.  
   
 ```
@@ -147,7 +142,7 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
  Включает объекты `CObject`-производные классы создаваться динамически во время выполнения.  
   
 ```
@@ -221,7 +216,7 @@ DECLARE_PROPPAGEIDS( class_name )
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
  Создает заголовок код C++, необходимые для `CObject`-производного класса, который может быть сериализован.  
   
 ```
@@ -253,7 +248,7 @@ DECLARE_SERIAL(class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-##  <a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC  
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC  
  Создает код C++, необходимые для динамического `CObject`-производного класса во время выполнения доступ к имени класса и положение в иерархии.  
   
 ```
@@ -280,7 +275,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
  Включает объекты `CObject`-производные классы динамически создаваемых при запуске время при использовании с `DECLARE_DYNCREATE` макрос.  
   
 ```
@@ -311,7 +306,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
 Либо этот макрос или [IMPLEMENT_OLECREATE](#implement_olecreate) должен быть указан в файле реализации для любого класса, который использует `DECLARE_OLECREATE`.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -330,12 +325,12 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  `nFlags`  
  Содержит один или несколько из следующих флагов:  
   
--   `afxRegInsertable`Позволяет элементу управления отображаются в диалоговом окне Вставка объекта OLE-объекты.    
--   `afxRegApartmentThreading`Задает модель потоков в реестре, ThreadingModel = подразделения.    
+-   `afxRegInsertable` Позволяет элементу управления отображаются в диалоговом окне Вставка объекта OLE-объекты.    
+-   `afxRegApartmentThreading` Задает модель потоков в реестре, ThreadingModel = подразделения.    
 -   **afxRegFreeThreading** задает потоковую модель в реестре, ThreadingModel = Free.  
   
      Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` для задания ThreadingModel = Both. В разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в Windows SDK, Дополнительные сведения о потоковой модели регистрации.    
- *l*, *w1*, *w2*, *b1*, *В2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ *l*, *w1*, *w2*, *b1*, *В2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Компоненты класса **CLSID**.  
    
 ### <a name="remarks"></a>Примечания  
@@ -356,7 +351,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  [Раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 Реализует **GetUserTypeNameID** и `GetMiscStatus` функции-члены класса элемента управления.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -376,7 +371,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="remarks"></a>Примечания  
  В дополнение к `IMPLEMENT_OLECTLTYPE`, необходимо добавить **DECLARE_OLECTLTYPE** макрос к объявлению класса элемента управления.  
   
- **GetUserTypeNameID** функция-член возвращает строку ресурса, определяющий класса элемента управления. `GetMiscStatus`Возвращает **OLEMISC, ПОЗВОЛЯЯ** bits для элемента управления. Это перечисление указывает набор параметров, определяющих различные характеристики элемента управления. Полное описание **OLEMISC, ПОЗВОЛЯЯ** параметров, в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) в Windows SDK.  
+ **GetUserTypeNameID** функция-член возвращает строку ресурса, определяющий класса элемента управления. `GetMiscStatus` Возвращает **OLEMISC, ПОЗВОЛЯЯ** bits для элемента управления. Это перечисление указывает набор параметров, определяющих различные характеристики элемента управления. Полное описание **OLEMISC, ПОЗВОЛЯЯ** параметров, в разделе [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) в Windows SDK.  
   
 > [!NOTE]
 >  Настройки по умолчанию, используемые автоматически ActiveX: **OLEMISC_ACTIVATEWHENVISIBLE**, **OLEMISC_SETCLIENTSITEFIRST**, **OLEMISC_INSIDEOUT**, **OLEMISC_CANTLINKINSIDE**, и **OLEMISC_RECOMPOSEONRESIZE**.  
@@ -388,7 +383,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
  Создает код C++, необходимые для динамического `CObject`-производного класса во время выполнения доступ к имени класса и положение в иерархии.  
   
 ```
@@ -420,7 +415,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
  Возвращает структуру класса среды выполнения от имени для класса C++.  
   
 ```
@@ -432,7 +427,7 @@ RUNTIME_CLASS(class_name)
  Фактическое имя класса (не заключен в кавычки).  
   
 ### <a name="remarks"></a>Примечания  
- `RUNTIME_CLASS`Возвращает указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) структура для класса, указанного параметром *class_name*. Только `CObject`-производных классов, объявленные с `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, или `DECLARE_SERIAL` возвращает указатели на `CRuntimeClass` структуры.  
+ `RUNTIME_CLASS` Возвращает указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) структура для класса, указанного параметром *class_name*. Только `CObject`-производных классов, объявленные с `DECLARE_DYNAMIC`, `DECLARE_DYNCREATE`, или `DECLARE_SERIAL` возвращает указатели на `CRuntimeClass` структуры.  
   
  Дополнительные сведения см. в разделе [разделы класс CObject](../../mfc/using-cobject.md).  
   
@@ -442,7 +437,7 @@ RUNTIME_CLASS(class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
  Включает объекты `CCmdTarget`-производные классы для создания с помощью OLE-автоматизации.  
   
 ```
@@ -463,7 +458,7 @@ DECLARE_OLECREATE(class_name)
 ### <a name="requirements"></a>Требования  
  **Заголовок**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
  Либо этот макрос или [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) должен быть указан в файле реализации для любого класса, который использует `DECLARE_OLECREATE`.  
   
 ```
@@ -477,7 +472,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *Параметры external_name*  
  Имя объекта, другим приложениям (заключенная в кавычки).  
   
- *l*, *w1*, *w2*, *b1*, *В2*, *b3*, *b4*, *b5*, *b6*, *b7*, *b8*  
+ *l*, *w1*, *w2*, *b1*, *В2*, *b3*, *b4* , *b5*, *b6*, *b7*, *b8*  
  Компоненты класса **CLSID**.  
   
 ### <a name="remarks"></a>Примечания  

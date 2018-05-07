@@ -1,13 +1,10 @@
 ---
-title: "Реализация панели инструментов MFC | Документы Microsoft"
-ms.custom: 
+title: Реализация панели инструментов MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-toolbar-implementation"></a>Реализация панели инструментов MFC
 Панель инструментов представляет [панель элементов управления](../mfc/control-bars.md) , содержащий растровых изображений элементов управления. Эти образы могут вести себя как кнопок, флажки и переключатели. MFC предоставляет класс [CToolbar](../mfc/reference/ctoolbar-class.md) для управления панели инструментов.  
@@ -64,12 +59,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [Рисунок панели](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a>Кнопки панели инструментов  
+##  <a name="_core_toolbar_buttons"></a> Кнопки панели инструментов  
  Кнопки на панели инструментов аналогичны пунктов меню. Оба типа объектов пользовательского интерфейса создавать команды, которые обрабатывает программы, предоставляя функции обработчика. Часто кнопки панели инструментов дублируют функциональные возможности команд меню, предоставляя альтернативный пользовательский интерфейс те же функции. Такие дублирования упорядочивается просто в виде кнопки и пунктом меню тот же идентификатор.  
   
  Можно сделать кнопки на панели инструментов режим поведения кнопок, флажки и переключатели. Дополнительные сведения см. в разделе класса [CToolBar](../mfc/reference/ctoolbar-class.md).  
   
-##  <a name="_core_docking_and_floating_toolbars"></a>Закрепленные и плавающие панели инструментов  
+##  <a name="_core_docking_and_floating_toolbars"></a> Закрепленные и плавающие панели инструментов  
  Панели инструментов MFC можно:  
   
 -   Оставаться в границах вдоль одной стороны родительского окна.  
@@ -82,10 +77,10 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения см. в статье [стыковка и плавающей панели инструментов](../mfc/docking-and-floating-toolbars.md).  
   
-##  <a name="_core_toolbars_and_tool_tips"></a>Панели инструментов и всплывающие подсказки  
+##  <a name="_core_toolbars_and_tool_tips"></a> Панели инструментов и всплывающие подсказки  
  Панели инструментов MFC также могут быть созданы для отображения «подсказки» — очень мала всплывающие окна, содержащий краткое описание назначения кнопки панели инструментов. При наведении указателя мыши на кнопке панели инструментов, подсказки будет отображена предоставляет подсказку. Дополнительные сведения см. в статье [всплывающие подсказки панели инструментов](../mfc/toolbar-tool-tips.md).  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>CToolBar и классы CToolBarCtrl  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> CToolBar и классы CToolBarCtrl  
  Управление панели инструментов приложения через класс [CToolBar](../mfc/reference/ctoolbar-class.md). Начиная с версии 4.0, MFC `CToolBar` была изменена для использования инструментов стандартного элемента управления в Windows 95 или более поздней версии и Windows NT 3.51 или более поздней версии.  
   
  Это повторная реализация приводит меньше кода MFC для панели инструментов, так как MFC делает использование поддержки операционной системы. Повторная реализация также расширяет возможности. Можно использовать `CToolBar` функции-члены для управления панели инструментов, или можно получить ссылку на базовый [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекта и вызов функций-членов, ее для настройки панели инструментов и дополнительные функциональные возможности.  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
  Также см. в образце MFC Общие [DOCKTOOL ПОКАЗАНА](../visual-cpp-samples.md).  
   
-##  <a name="_core_the_toolbar_bitmap"></a>Рисунок панели  
+##  <a name="_core_the_toolbar_bitmap"></a> Рисунок панели  
  После своего создания `CToolBar` объект создает изображение кнопки панели инструментов, загрузив один точечный рисунок, который содержит одно изображение для каждой кнопки. В мастере приложений создает точечный рисунок стандартной панели инструментов, которые можно настроить с помощью Visual C++ [редактор панелей инструментов](../windows/toolbar-editor.md).  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  

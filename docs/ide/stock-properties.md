@@ -1,35 +1,30 @@
 ---
-title: "Стандартные свойства | Документы Microsoft"
-ms.custom: 
+title: Стандартные свойства | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stock-properties"></a>Свойства хранения
 При добавлении свойства в MFC disp-интерфейса с помощью [мастер добавления свойств](../ide/idl-attributes-add-property-wizard.md), можно выбрать из стандартного свойства **имя свойства** списка в [имена](../ide/names-add-property-wizard.md) страницы мастер. Список содержит следующие свойства.  
   
-|Имя свойства.|Описание:|  
+|Имя свойства.|Описание|  
 |-------------------|-----------------|  
 |**Внешний вид**|Возвращает или задает значение, определяющее внешний вид элемента управления. Элемент управления **внешний вид** свойства можно включить или исключить объемным. Это свойство окружения чтения и записи.|  
 |`BackColor`|Возвращает или задает элемент управления окружения `BackColor` цветовой палитры (RGB), так и системные свойства. По умолчанию его значение соответствует цвет переднего плана для контейнера элемента управления. Это свойство окружения чтения и записи.|  

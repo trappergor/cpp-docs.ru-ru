@@ -1,13 +1,10 @@
 ---
-title: "TN048: Написание программ настройки ODBC и администрирования для приложений баз данных MFC | Документы Microsoft"
-ms.custom: 
+title: 'TN048: Написание программ настройки ODBC и администрирования для приложений баз данных MFC | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Приложения, использующие классы баз данных MFC потребуется программу установки, которая устанавливает компоненты ODBC. Также может понадобиться программы администрирования ODBC, который будет извлекать сведения о доступных драйверов, чтобы указать драйверов по умолчанию и настроить источники данных. Эта заметка описывает использование API-интерфейса установщика ODBC для записи этих программ.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>Запись программы установки ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Запись программы установки ODBC  
  Приложения баз данных MFC требуется диспетчер драйверов ODBC (ODBC. Библиотека DLL) и драйверы ODBC, чтобы иметь возможность получить к источникам данных. Многие драйверы ODBC также требуют дополнительных библиотек сети и обмен данными. Большинство драйверы ODBC поставляются с программы установки, которая используется для установки необходимых компонентов ODBC. Разработчики приложений с помощью MFC-классы баз данных можно:  
   
 -   Использовать программу установки драйвера для установки компонентов ODBC. Для этого потребуется никаких дальнейших действий со стороны разработчика — можно просто повторно распространить программы установки драйвера.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о ODBC. INF, ODBCINST. INI и с помощью установщика API, в разделе ODBC SDK *Справочник программиста* Глава 19, установка программного обеспечения ODBC.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>Запись администратора ODBC  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Запись администратора ODBC  
  Приложения базы данных MFC можно установить и настроить источники данных ODBC в одном из двух способов, следующим образом:  
   
 -   Используйте администратор ODBC (доступно как программа или компонент панели управления).  

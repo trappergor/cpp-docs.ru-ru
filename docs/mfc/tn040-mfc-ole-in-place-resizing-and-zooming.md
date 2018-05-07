@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE по месту изменение размеров и масштабирование | Документы Microsoft"
-ms.custom: 
+title: 'TN040: MFC OLE по месту изменение размеров и масштабирование | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040. Изменение размеров и масштабирование MFC/OLE по месту
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Пример правильно масштабирования см. Пример MFC OLE [HIERSVR](../visual-cpp-samples.md). Увеличение HIERSVR осложняется тем, что он отображает текст и текст, как правило, не масштабируется в линейном порядке (подсказки, обозначения, разработки ширины и высоты усложнить заключается в). Тем не менее, HIERSVR разумного ссылку для реализации масштабирования правильно, как и учебник MFC [SCRIBBLE](../visual-cpp-samples.md) (шаг 7).  
   
- `COleServerDoc::GetZoomFactor`Определяет масштаб на основе количества различных показателей, из контейнера или от реализации вашей `COleServerItem` и `COleServerDoc` классы. Иными словами текущий масштаб определяется по следующей формуле:  
+ `COleServerDoc::GetZoomFactor` Определяет масштаб на основе количества различных показателей, из контейнера или от реализации вашей `COleServerItem` и `COleServerDoc` классы. Иными словами текущий масштаб определяется по следующей формуле:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  ОБЛАСТЬ КОНТЕЙНЕРА немного более сложными для вычисления. Если контейнер называется `COleServerItem::OnSetExtent` (с помощью вызова `COleClientItem::SetExtent`), то ЭКСТЕНТ КОНТЕЙНЕРА — это значение, преобразуются в пиксельные на основе числа пикселей на логический дюйм по оси. Если контейнер не вызван SetExtent (которая обычно является регистр), то ЭКСТЕНТ КОНТЕЙНЕР — это размер, возвращенный `COleServerItem::OnGetExtent`. Таким образом, если контейнер не вызван SetExtent, платформа предполагается, если как контейнер будет вызвали его со 100% естественным экстента (значение, возвращаемое из **COleServerItem::GetExtent**). Другим способом, указанным платформа предполагает отображении 100% (не более того, не меньше) элемента контейнера.  
   
- Важно отметить, что хотя `COleServerItem::OnSetExtent` и `COleServerItem::OnGetExtent` имеют одинаковые имена, они не работают один и тот же атрибут элемента. `OnSetExtent`вызывается, чтобы разрешить серверу знать, сколько объекта отображается в контейнере (вне зависимости от коэффициента масштабирования) и `OnGetExtent` вызывается контейнером, чтобы определить наилучший размер объекта.  
+ Важно отметить, что хотя `COleServerItem::OnSetExtent` и `COleServerItem::OnGetExtent` имеют одинаковые имена, они не работают один и тот же атрибут элемента. `OnSetExtent` вызывается, чтобы разрешить серверу знать, сколько объекта отображается в контейнере (вне зависимости от коэффициента масштабирования) и `OnGetExtent` вызывается контейнером, чтобы определить наилучший размер объекта.  
   
  Анализируя каждый из используемых API, можно получить более точную картину:  
   

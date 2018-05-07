@@ -1,12 +1,9 @@
 ---
-title: "Класс COleDocObjectItem | Документы Microsoft"
-ms.custom: 
+title: Класс COleDocObjectItem | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 Реализует хранение активных документов.  
@@ -58,13 +53,13 @@ class COleDocObjectItem : public COleClientItem
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Для печати из приложения контейнера с использованием параметров принтера по умолчанию.|  
 |[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, заданное пользователем.|  
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  Вызовите эту функцию-член для инициализации `COleDocObjectItem` объекта.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  Указатель на `COleDocument` объект выступает в роли контейнера активного документа. Этот параметр должен быть **NULL** для включения **IMPLEMENT_SERIALIZE**. Обычно элементы OLE создаются с не поддерживающими **NULL** указатель документа.  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  Вызывается платформой для документа, используя параметры по умолчанию.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объекта, который описывает задание на печать.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  Вызовите эту функцию-член для выполнения команды, заданные пользователем.  
   
 ```  
@@ -154,13 +149,13 @@ HRESULT ExecCommand(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` в случае успешного выполнения; в противном случае возвращает с одним из следующих кодов ошибки.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|Произошла непредвиденная ошибка.|  
 |**E_FAIL**|Произошла ошибка.|  
 |**E_NOTIMPL**|Указывает MFC сам следует попытаться перевести и отправляет команду.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`не является **NULL** , но не указана группа распознано в качестве команды.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`не является допустимой команды в pGroup группы.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` не является **NULL** , но не указана группа распознано в качестве команды.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` не является допустимой команды в pGroup группы.|  
 |**OLECMDERR_DISABLED**|Команду по `nCmdID` отключена и не может быть выполнена.|  
 |**OLECMDERR_NOHELP**|Вызывающий объект запрашивает справки на команду по `nCmdID` , но Справка недоступна.|  
 |**OLECMDERR_CANCELLED**|Выполнение отменено пользователем.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>Примечания  
  `pguidCmdGroup` И `nCmdID` параметров, которые совместно однозначно идентифицируют команду, вызываемую. `nCmdExecOpt` Указывает точное предпринять действия.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Вызовите эту функцию-член для получения указателя на `IOleDocumentView` интерфейс активного представления.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>Примечания  
  Счетчик ссылок для полученного `IOleDocumentView` указатель не увеличивается, возвращаемую этой функцией.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  Вызовите эту функцию-член для извлечения номера страниц в документе.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  Эта функция-член вызывается платформой для подготовки для печати документа.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  Эта функция-член вызывается платформой для печати документа.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  Указывает, является ли на печать всего документа.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>Примечания  
  Эта функция-член эмулирует работу [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) метода, как описано в Windows SDK.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  Освобождает соединение для связанного элемента OLE и закрывает его, если он был открыт. Уничтожает клиентский элемент.  
   
 ```  

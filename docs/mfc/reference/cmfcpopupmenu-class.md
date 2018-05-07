@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCPopupMenu | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCPopupMenu | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenu
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 Реализует возможности всплывающего меню Windows и расширяет его, добавляя такие возможности как перемещаемые меню и подсказки.
@@ -195,13 +190,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Создает объект `CMFCPopupMenu`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||  
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Задает включение в пустой записей о определенные пользователем инструменты всплывающего меню.|  
@@ -279,7 +274,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||  
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||  
@@ -309,7 +304,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxpopupmenu.h  
   
-##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
+##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu  
 
   
 ```  
@@ -326,7 +321,7 @@ static BOOL __stdcall ActivatePopupMenu(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
+##  <a name="alwaysshowemptytoolsentry"></a>  CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
  Задает включение в пустой записей о определенные пользователем инструменты всплывающего меню.  
   
 ```  
@@ -335,9 +330,9 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bShow`  
- `TRUE`Если во всплывающем меню можно отобразить пустые записи; `FALSE` в противном случае.  
+ `TRUE` Если во всплывающем меню можно отобразить пустые записи; `FALSE` в противном случае.  
   
-##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
+##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
   
 ```  
@@ -348,7 +343,7 @@ BOOL AreAllCommandsShown() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="checkarea"></a>CMFCPopupMenu::CheckArea  
+##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea  
  Определяет положение точки относительно во всплывающем меню.  
   
 ```  
@@ -377,7 +372,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   МЕНЮ - `ptScreen` по команде.  
   
-##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
+##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
   
 ```  
@@ -389,7 +384,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
+##  <a name="cmfcpopupmenu"></a>  CMFCPopupMenu::CMFCPopupMenu  
  Создает [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
   
 ```  
@@ -408,7 +403,7 @@ CMFCPopupMenu(
 ### <a name="remarks"></a>Примечания  
  Этот метод выделяет ресурсы для `CMFCPopupMenu`. Для создания всплывающего меню, вызовите [CMFCPopupMenu::Create](#create).  
   
-##  <a name="create"></a>CMFCPopupMenu::Create  
+##  <a name="create"></a>  CMFCPopupMenu::Create  
  Создание всплывающего меню и прикрепляет его к [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
   
 ```  
@@ -435,23 +430,23 @@ virtual BOOL Create(
  Дескриптор ресурса меню.  
   
  [in] `bLocked`  
- Логический параметр, указывает ли меню можно настраивать. `FALSE`Указывает, настраиваемые во всплывающем меню.  
+ Логический параметр, указывает ли меню можно настраивать. `FALSE` Указывает, настраиваемые во всплывающем меню.  
   
  [in] `bOwnMessage`  
  Логический параметр, указывает, каким образом платформа перенаправляет сообщения меню. Дополнительные сведения см.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+ `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bOwnMessage` — `TRUE`, платформа перенаправляет любые сообщения, меню `pWndParent`. `pWndParent`не должно быть `NULL` Если `bOwnMessage` — `TRUE.` Если `bOwnMessage` — `FALSE`, платформа перенаправляет сообщения меню родительского во всплывающем меню.  
+ Если `bOwnMessage` — `TRUE`, платформа перенаправляет любые сообщения, меню `pWndParent`. `pWndParent` не должно быть `NULL` Если `bOwnMessage` — `TRUE.` Если `bOwnMessage` — `FALSE`, платформа перенаправляет сообщения меню родительского во всплывающем меню.  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется использование `Create` метод `CMFCPopuMenu` класса. Этот фрагмент кода является частью [образец пользовательские страницы](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
-##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar  
 
   
 ```  
@@ -470,7 +465,7 @@ virtual CPane* CreateTearOffBar(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
+##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose  
 
   
 ```  
@@ -481,7 +476,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
+##  <a name="enablemenulogo"></a>  CMFCPopupMenu::EnableMenuLogo  
  Инициализирует эмблемы для всплывающего меню.  
   
 ```  
@@ -502,7 +497,7 @@ void EnableMenuLogo(
   
  Возможные значения параметра `nLogoLocation` MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP и MENU_LOGO_BOTTOM.  
   
-##  <a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
+##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  Включение звука меню.  
   
 ```  
@@ -511,12 +506,12 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы включить звук, `FALSE` в противном случае.  
+ `TRUE` Чтобы включить звук, `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  Если включить звук, платформа вызывает [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) метод, когда пользователь открывает контекстное меню или выбирает команду меню. Эта функция включена по умолчанию.  
   
-##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
+##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 
   
 ```  
@@ -528,7 +523,7 @@ void EnableResize(CSize sizeMinResize);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
+##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling  
 
   
 ```  
@@ -540,7 +535,7 @@ void EnableScrolling(BOOL = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
+##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize  
 
   
 ```  
@@ -552,7 +547,7 @@ void EnableVertResize(int nMinResize);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
+##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand  
 
   
 ```  
@@ -566,7 +561,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
+##  <a name="getactivemenu"></a>  CMFCPopupMenu::GetActiveMenu  
  Возвращает текущий активный меню.  
   
 ```  
@@ -579,7 +574,7 @@ static CMFCPopupMenu* GetActiveMenu();
 ### <a name="remarks"></a>Примечания  
  Каждое приложение может иметь не более одного активного всплывающего меню.  
   
-##  <a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed  
  Возвращает скорость анимации в контекстных меню.  
   
 ```  
@@ -592,7 +587,7 @@ static UINT GetAnimationSpeed();
 ### <a name="remarks"></a>Примечания  
  Скорость анимации является глобальной переменной. Используйте [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) Чтобы изменить скорость анимации в контекстных меню.  
   
-##  <a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
+##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType  
  Возвращает текущий тип всплывающей анимации.  
   
 ```  
@@ -623,7 +618,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  ЭФФЕКТ ЗАТУХАНИЯ  
  Во всплывающем меню сначала отображается прозрачным и постепенно solidifies.  
   
-##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
+##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection  
 
   
 ```  
@@ -634,7 +629,7 @@ DROP_DIRECTION GetDropDirection() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
+##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus  
  Указывает, возвращаются ли фокуса меню при отображении всплывающего меню.  
   
 ```  
@@ -642,12 +637,12 @@ static BOOL GetForceMenuFocus();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если фокус ввода возвращается в строку меню, когда появится всплывающее меню; `FALSE` Если всплывающего меню сохраняет фокус.  
+ `TRUE` Если фокус ввода возвращается в строку меню, когда появится всплывающее меню; `FALSE` Если всплывающего меню сохраняет фокус.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию приложение не возвращает фокус в строку меню. Чтобы изменить этот параметр, используйте [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus).  
   
-##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
+##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow  
 
   
 ```  
@@ -658,14 +653,14 @@ static BOOL __stdcall GetForceShadow();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
+##  <a name="gethmenu"></a>  CMFCPopupMenu::GetHMenu  
  Возвращает дескриптор ресурса вложенного меню.  
   
 ```  
 HMENU GetHMenu();
 ```  
   
-##  <a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar  
  Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) внедренные во всплывающем меню.  
   
 ```  
@@ -678,7 +673,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>Примечания  
  Во всплывающем меню имеет встроенный `CMFCPopupMenuBar` объекта. При использовании другого внедренного класса необходимо переопределить этот метод в производном классе.  
   
-##  <a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
+##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem  
  Возвращает указатель на пункт меню по указанному индексу.  
   
 ```  
@@ -690,12 +685,12 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
  Отсчитываемый от нуля индекс элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на пункт меню. `NULL`Если индекс является недопустимым.  
+ Указатель на пункт меню. `NULL` Если индекс является недопустимым.  
   
 ### <a name="remarks"></a>Примечания  
  Пункты меню, представляются [CMFCToolBarMenuButton класса](../../mfc/reference/cmfctoolbarmenubutton-class.md). При вызове этот метод возвращает указатель на соответствующий `CMFCToolBarMenuButton`.  
   
-##  <a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMFCPopupMenu::GetMenuItemCount  
  Возвращает число элементов во всплывающем меню.  
   
 ```  
@@ -705,7 +700,7 @@ int GetMenuItemCount() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в меню.  
   
-##  <a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
+##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd  
  Возвращает указатель на окно, где платформа перенаправляет сообщения во всплывающем меню.  
   
 ```  
@@ -718,7 +713,7 @@ CWnd* GetMessageWnd() const;
 ### <a name="remarks"></a>Примечания  
  При использовании метода [CMFCPopupMenu::Create](#create) Создание всплывающего меню, укажите, какие получит сообщения меню.  
   
-##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
+##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea  
 
   
 ```  
@@ -732,7 +727,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCPopupMenu::GetParentButton  
  Возвращает указатель на кнопку панели инструментов родительского.  
   
 ```  
@@ -740,14 +735,14 @@ CMFCToolBarMenuButton* GetParentButton() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на кнопку панели инструментов родительского. `NULL`Если во всплывающем меню нет родительского кнопки панели инструментов.  
+ Указатель на кнопку панели инструментов родительского. `NULL` Если во всплывающем меню нет родительского кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
  Объект `CMFCPopupMenu` можно связать с кнопкой меню. В этом случае во всплывающем меню отображается при выборе пользователем кнопки панели инструментов родительского.  
   
  Если во всплывающем меню, контекстное меню будет нет родительского кнопки панели инструментов.  
   
-##  <a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu  
  Возвращает указатель на родительский во всплывающем меню.  
   
 ```  
@@ -760,7 +755,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ### <a name="remarks"></a>Примечания  
  Во всплывающем меню есть родительский элемент `CMFCPopupMenu` объекта, если это подменю.  
   
-##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
+##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement  
 
   
 ```  
@@ -771,7 +766,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCPopupMenu::GetParentToolBar  
  Возвращает указатель на панель инструментов родительского.  
   
 ```  
@@ -779,12 +774,12 @@ CMFCToolBar* GetParentToolBar() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель инструментов родительского. `NULL`Если во всплывающем меню нет родительского панели инструментов.  
+ Указатель на панель инструментов родительского. `NULL` Если во всплывающем меню нет родительского панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
  Если `CMFCPopupMenu` является контекстное меню, то он имеет нет родительской панели инструментов.  
   
-##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
+##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType  
 
   
 ```  
@@ -795,7 +790,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
+##  <a name="getselitem"></a>  CMFCPopupMenu::GetSelItem  
  Возвращает указатель на команду меню выбранного.  
   
 ```  
@@ -808,7 +803,7 @@ CMFCToolBarMenuButton* GetSelItem();
 ### <a name="remarks"></a>Примечания  
  Команды меню, всплывающих меню, представляются [класса CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md), или класс, производный от `CMFCToolBarMenuButton`.  
   
-##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
+##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized  
 
   
 ```  
@@ -819,7 +814,7 @@ BOOL HasBeenResized() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
+##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands  
  Указывает ли всплывающего меню можно скрыть редко используемых команд.  
   
 ```  
@@ -827,12 +822,12 @@ BOOL HideRarelyUsedCommands() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если во всплывающем меню можно скрыть редко используемые команды; в противном случае `FALSE`.  
+ `TRUE` Если во всплывающем меню можно скрыть редко используемые команды; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод определяет, что только ли всплывающего меню можно скрыть редко используемые команды, не в том случае, если включена эта конфигурация. Во всплывающем меню можно скрыть редко используемых команд, если имеет кнопку родительского и родительское окно является производным от [CMFCMenuBar класса](../../mfc/reference/cmfcmenubar-class.md). Используйте [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) для включения этой функции и [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) для определения, если эта функция включена в данный момент. Оба эти метода должны вызывать для родительского окна.  
   
-##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
+##  <a name="incommand"></a>  CMFCPopupMenu::InCommand  
 
   
 ```  
@@ -843,7 +838,7 @@ virtual BOOL InCommand();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="insertitem"></a>CMFCPopupMenu::InsertItem  
+##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem  
  Вставляет элемент в всплывающего меню в указанном месте.  
   
 ```  
@@ -865,7 +860,7 @@ int InsertItem(
 ### <a name="remarks"></a>Примечания  
  Этот метод завершится ошибкой, если указано недопустимое значение для `iInsertAt`, такие как целое число больше числа элементов в данный момент всплывающего меню.  
   
-##  <a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  Вставляет разделитель в всплывающего меню в указанном месте.  
   
 ```  
@@ -884,7 +879,7 @@ int InsertSeparator(int iInsertAt = -1);
   
  Этот метод завершается ошибкой, если `iInsertAt` является недопустимым значением.  
   
-##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
+##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
   
 ```  
@@ -895,7 +890,7 @@ virtual BOOL IsAlwaysClose() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
+##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
 
   
 ```  
@@ -906,7 +901,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
+##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane  
  Указывает, работает ли всплывающего меню в качестве **QuickCustomizePane**.  
   
 ```  
@@ -914,14 +909,14 @@ BOOL IsCustomizePane();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если всплывающего окна **QuckCustomizePane**; в противном случае `FALSE`.  
+ `TRUE` Если всплывающего окна **QuckCustomizePane**; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте **QuickCustomizePane** , чтобы разрешить пользователям напрямую изменять во всплывающем меню. **QuickCustomizePane** — `CMFCPopupMenu` , появляющийся при нажатии на кнопку панели инструментов для непосредственного редактирования.  
   
  Приложение должно вызывать этот метод во время [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane).  
   
-##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
+##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose  
 
   
 ```  
@@ -932,7 +927,7 @@ BOOL IsEscClose();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isidle"></a>CMFCPopupMenu::IsIdle  
+##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle  
  Указывает, является ли в настоящее время простоя во всплывающем меню.  
   
 ```  
@@ -940,12 +935,12 @@ virtual BOOL IsIdle() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если во всплывающем меню находится в режиме простоя. в противном случае `FALSE`.  
+ `TRUE` Если во всплывающем меню находится в режиме простоя. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию во всплывающем меню находится в режиме простоя, если анимация отображения завершена и пользователь не прокрутке во всплывающем меню.  
   
-##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
+##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound  
 
   
 ```  
@@ -956,7 +951,7 @@ static UINT __stdcall IsMenuSound();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
+##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize  
  Определяет, является ли связанный [CMFCToolBarMenuButton класса](../../mfc/reference/cmfctoolbarmenubutton-class.md) находится в режиме QuickCustomize.  
   
 ```  
@@ -964,12 +959,12 @@ BOOL IsQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопка «связанным меню» в режиме QuickCustomize. в противном случае `FALSE`. Этот метод также возвращает `FALSE` Если всплывающего меню не связан с `CMFCToolBarMenuButton`.  
+ `TRUE` Если кнопка «связанным меню» в режиме QuickCustomize. в противном случае `FALSE`. Этот метод также возвращает `FALSE` Если всплывающего меню не связан с `CMFCToolBarMenuButton`.  
   
 ### <a name="remarks"></a>Примечания  
  В QuickCustomize режиме пользователь выбирает кнопку на панель инструментов, чтобы напрямую настраивать кнопки.  
   
-##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
+##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble  
 
   
 ```  
@@ -980,7 +975,7 @@ BOOL IsResizeble() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
+##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign  
  Указывает, является ли меню по правому краю или по левому краю.  
   
 ```  
@@ -988,14 +983,14 @@ BOOL IsRightAlign() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если меню по правому краю; `FALSE` Если меню по левому краю.  
+ `TRUE` Если меню по правому краю; `FALSE` Если меню по левому краю.  
   
 ### <a name="remarks"></a>Примечания  
  Можно использовать [CMFCPopupMenu::SetRightAlign](#setrightalign) выравнивание меню. По умолчанию всплывающие меню используйте выравнивания по левому краю.  
   
  Выравнивание меню не является глобальным параметром и может различаться для разных всплывающих меню.  
   
-##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
+##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable  
 
   
 ```  
@@ -1006,7 +1001,7 @@ BOOL IsScrollable() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
+##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg  
  Указывает ли платформа уведомляет родительского фрейма, когда пользователь выбирает команду из контекстного меню.  
   
 ```  
@@ -1014,12 +1009,12 @@ static BOOL IsSendMenuSelectMsg();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если платформа уведомляет родительского фрейма; в противном случае `FALSE`.  
+ `TRUE` Если платформа уведомляет родительского фрейма; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа уведомляет родительского фрейма путем отправки их `WM_MENUSELECT` сообщение, когда используется выбирает команду меню.  
   
-##  <a name="isshown"></a>CMFCPopupMenu::IsShown  
+##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  Указывает, во всплывающем меню отображается ли в данный момент.  
   
 ```  
@@ -1027,9 +1022,9 @@ BOOL IsShown() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если во всплывающем меню является видимым. в противном случае `FALSE`.  
+ `TRUE` Если во всплывающем меню является видимым. в противном случае `FALSE`.  
   
-##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
+##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo  
 
   
 ```  
@@ -1041,7 +1036,7 @@ void MoveTo(const CPoint& pt);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot  
 
   
 ```  
@@ -1053,7 +1048,7 @@ virtual void OnChangeHot(int nHot);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
+##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem  
 
   
 ```  
@@ -1065,7 +1060,7 @@ virtual void OnChooseItem(UINT uidCmdID);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg  
 
   
 ```  
@@ -1086,7 +1081,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
+##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand  
 
   
 ```  
@@ -1100,7 +1095,7 @@ BOOL PostCommand(UINT uiCommandID);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage  
 
   
 ```  
@@ -1114,7 +1109,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout  
 
   
 ```  
@@ -1126,14 +1121,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems  
  Удаляет все элементы из всплывающего меню.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-##  <a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
+##  <a name="removeitem"></a>  CMFCPopupMenu::RemoveItem  
  Удаляет заданный элемент из всплывающего меню.  
   
 ```  
@@ -1145,12 +1140,12 @@ BOOL RemoveItem(int iIndex);
  Отсчитываемый от нуля индекс элемента для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если метод выполнен успешно; в противном случае `FALSE`.  
+ `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод автоматически упорядочивает каких-либо разделителей, затрагиваемые при удалении элемента. Дополнительные сведения о как платформа упорядочение разделители в разделе [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton).  
   
-##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
+##  <a name="savestate"></a>  CMFCPopupMenu::SaveState  
 
   
 ```  
@@ -1159,7 +1154,7 @@ virtual void SaveState();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed  
  Задает скорость анимации в контекстных меню.  
   
 ```  
@@ -1175,7 +1170,7 @@ static void SetAnimationSpeed(UINT nElapse);
   
  По умолчанию этот параметр имеет значение 30 миллисекунд. Диапазон допустимых значений для `nElapse` — от 0 до 200.  
   
-##  <a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
+##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  Задает тип анимации для этого всплывающего меню.  
   
 ```  
@@ -1189,7 +1184,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="remarks"></a>Примечания  
  В разделе [CMFCPopupMenu::GetAnimationType](#getanimationtype) список допустимых значений для `type`.  
   
-##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
   
 ```  
@@ -1201,7 +1196,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMFCPopupMenu::SetDefaultItem  
  Задает команду по умолчанию для контекстного меню.  
   
 ```  
@@ -1215,7 +1210,7 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="remarks"></a>Примечания  
  Команда по умолчанию, во всплывающем меню является, выбранной в появившемся всплывающем меню.  
   
-##  <a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
+##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus  
  Принудительно фокус ввода, чтобы вернуться в меню при отображении всплывающего меню.  
   
 ```  
@@ -1224,12 +1219,12 @@ static void SetForceMenuFocus(BOOL bValue);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bValue`  
- `TRUE`Если требуется, чтобы платформа для принудительного фокус ввода в строку меню, когда всплывающего меню отображается. `FALSE`Если вы хотите всплывающего меню, чтобы сохранить фокус.  
+ `TRUE` Если требуется, чтобы платформа для принудительного фокус ввода в строку меню, когда всплывающего меню отображается. `FALSE` Если вы хотите всплывающего меню, чтобы сохранить фокус.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод устанавливает флаг, который является глобальным для всех всплывающих меню в приложении. По умолчанию эта функция не включена.  
   
-##  <a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
+##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow  
  Принудительно структурой для прорисовки shadows меню, если раскрывающиеся меню отображаться за пределами главного фрейма.  
   
 ```  
@@ -1238,12 +1233,12 @@ static void SetForceShadow(BOOL bValue);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bValue`  
- `TRUE`Если требуется, чтобы платформа для отрисовки тени меню `FALSE` в противном случае.  
+ `TRUE` Если требуется, чтобы платформа для отрисовки тени меню `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  При вызове этого метода, он устанавливает глобальный флаг в приложении. Этот флаг затрагивает все всплывающие меню в приложении.  
   
-##  <a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
+##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth  
  Задайте максимальную ширину для всплывающего меню.  
   
 ```  
@@ -1257,7 +1252,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="remarks"></a>Примечания  
  Если текст, связанный с командой меню не умещается в максимальную ширину, дробная часть отбрасывается и часть, которая не соответствует заменяется тремя точками.  
   
-##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
+##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd  
 
   
 ```  
@@ -1269,7 +1264,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
+##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement  
 
   
 ```  
@@ -1281,7 +1276,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
+##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType  
 
   
 ```  
@@ -1293,7 +1288,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
+##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode  
 
   
 ```  
@@ -1302,7 +1297,7 @@ void SetQuickMode();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
+##  <a name="setrightalign"></a>  CMFCPopupMenu::SetRightAlign  
  Задает выравнивание меню в контекстных меню.  
   
 ```  
@@ -1311,12 +1306,12 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bRightAlign`  
- Логическое значение, указывающее выравнивание меню. `TRUE`Указывает выравнивание по правому краю, `FALSE` Указывает выравнивание по левому краю.  
+ Логическое значение, указывающее выравнивание меню. `TRUE` Указывает выравнивание по правому краю, `FALSE` Указывает выравнивание по левому краю.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию для всех раскрывающиеся меню по левому краю.  
   
-##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
+##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg  
  Задает флаг, который управляет ли всплывающего меню уведомляет его родительского фрейма, когда пользователь выбирает команду.  
   
 ```  
@@ -1325,12 +1320,12 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bSet`  
- `TRUE`Если во всплывающем меню уведомляет его родительского фрейма `FALSE` в противном случае.  
+ `TRUE` Если во всплывающем меню уведомляет его родительского фрейма `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  Это глобальный параметр в контекстных меню в приложении. Если он включен, будет отправлять всплывающие меню `WM_MENUSELECT` сообщение родительского фрейма, когда пользователь выбирает команду.  
   
-##  <a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
+##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands  
  Принудительно всплывающего меню, чтобы отобразить все команды.  
   
 ```  
@@ -1340,7 +1335,7 @@ void ShowAllCommands();
 ### <a name="remarks"></a>Примечания  
  Это не является глобальным параметром и влияет на текущий всплывающего меню.  
   
-##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
+##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize  
 
   
 ```  
@@ -1349,7 +1344,7 @@ void TriggerResize();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
+##  <a name="updateallshadows"></a>  CMFCPopupMenu::UpdateAllShadows  
  Обновляет тени для всех открытых всплывающего меню.  
   
 ```  
@@ -1363,7 +1358,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>Примечания  
  Этот метод полезен при отображении всплывающих меню над анимированных элементов управления или других окон, имеющих динамического содержимого.  
   
-##  <a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
+##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow  
  Обновляет тени всплывающего меню.  
   
 ```  

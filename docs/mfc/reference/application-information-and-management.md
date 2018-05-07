@@ -2,12 +2,9 @@
 title: Сведения о приложении и управления | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54265814b4b60b08bed780a39ecadcace3242202
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 41b6aa602956c6dcdeda8f6b8c24c1be48c58ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 При написании приложения, создается один [CWinApp](../../mfc/reference/cwinapp-class.md)-производного объекта. В некоторых случаях требуется получить сведения об этом объекте из вне `CWinApp`-производного объекта. Или может потребоваться доступ к объектам другие глобальные «диспетчер».

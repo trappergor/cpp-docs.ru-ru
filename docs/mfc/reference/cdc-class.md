@@ -2,11 +2,8 @@
 title: CDC-класс | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC-класс
 Определяет класс объектов контекста устройства.  
@@ -436,13 +431,13 @@ class CDC : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDC::CDC](#cdc)|Создает объект `CDC`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDC::AbortDoc](#abortdoc)|Завершает текущее задание печати, все приложение написано на устройстве с момента последнего вызова метода для удаления `StartDoc` функции-члена.|  
 |[CDC::AbortPath](#abortpath)|Закрывает и удаляет все пути в контексте устройства.|  
@@ -479,7 +474,7 @@ class CDC : public CObject
 |[CDC::EndPage](#endpage)|Сообщает драйверу устройства, конца страницы.|  
 |[CDC::EndPath](#endpath)|Закрывает скобка пути и выбирает путь, определенный в контексте устройства выражение в квадратных скобках.|  
 |[CDC::EnumObjects](#enumobjects)|Перечисляет перьев и кистей в контекст устройства.|  
-|[CDC::Escape](#escape)|Позволяет приложениям получать доступ к средства, которые не доступны непосредственно из конкретного устройства через интерфейс GDI. Также обеспечивает доступ к функциям Windows escape. Escape-вызовов, сделанных приложением переводятся и отправляемые драйвера устройства.|  
+|[CDC::escape](#escape)|Позволяет приложениям получать доступ к средства, которые не доступны непосредственно из конкретного устройства через интерфейс GDI. Также обеспечивает доступ к функциям Windows escape. Escape-вызовов, сделанных приложением переводятся и отправляемые драйвера устройства.|  
 |[CDC::ExcludeClipRect](#excludecliprect)|Создает новую область обрезки, состоящий из области обрезки минус заданного прямоугольника.|  
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Предотвращает рисования внутри недопустимый области окна, исключив из области отсечения обновленные области в окне.|  
 |[CDC::ExtFloodFill](#extfloodfill)|Заполняет область текущей кисти. Обеспечивает большую гибкость, чем [CDC::FloodFill](#floodfill) функции-члена.|  
@@ -564,7 +559,7 @@ class CDC : public CObject
 |[CDC::LPtoHIMETRIC](#lptohimetric)|Преобразует логические устройства в **HIMETRIC** единицы.|  
 |[CDC::MaskBlt](#maskblt)|Объединяет данные о цвете для исходного и конечного точечных рисунков, с помощью заданного mask и выполнению растровую операцию.|  
 |[CDC::ModifyWorldTransform](#modifyworldtransform)|Изменяет мировое преобразование для контекста устройства, используя указанный режим.|  
-|[CDC::MoveTo](#moveto)|Перемещает текущую позицию.|  
+|[CDC::moveTo](#moveto)|Перемещает текущую позицию.|  
 |[CDC::OffsetClipRgn](#offsetcliprgn)|Перемещает отсеченную область данного устройства.|  
 |[CDC::OffsetViewportOrg](#offsetviewportorg)|Изменяет начало координат окна просмотра относительно координаты текущего окна просмотра источника.|  
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Изменяет начало координат окна относительно координат происхождения окна.|  
@@ -642,13 +637,13 @@ class CDC : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDC::operator HDC](#operator_hdc)|Извлекает дескриптор контекста устройства.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDC::m_hAttribDC](#m_hattribdc)|Контекст атрибута устройства, используемые этим `CDC` объекта.|  
 |[CDC::m_hDC](#m_hdc)|Контекст выходного устройства, используемые этим `CDC` объекта.|  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  Задает высоту в логических единицах исходного прямоугольника.  
   
- *blend*  
+ *Blend*  
  Указывает [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1370,7 +1365,7 @@ void Draw3dRect(
  *y*  
  Указывает логический Координата y верхнего левого угла прямоугольника трехмерного.  
   
- cx  
+ CX  
  Задает ширину трехмерного прямоугольника.  
   
  CY  
@@ -1954,7 +1949,7 @@ int EnumObjects(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
-##  <a name="escape"></a>  CDC::Escape  
+##  <a name="escape"></a>  CDC::escape  
  Эта функция-член не практически используется для программирования Win32.  
   
 ```  
@@ -5233,9 +5228,9 @@ int SetArcDirection(int nArcDirection);
   
 |Дуги|Круговая|  
 |---------|---------|  
-|`ArcTo`|**Rectangle**|  
+|`ArcTo`|**Прямоугольник**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**эллипс**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  Вызовите эту функцию для задания атрибутов контекста устройства, `m_hAttribDC`.  
@@ -5706,7 +5701,7 @@ int SetStretchBltMode(int nStretchMode);
  *nStretchMode*  
  Указывает режим растягивания. Он может иметь любое из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**BLACKONWHITE**|Выполняет операцию логического и с помощью значения цветов для точек исключенные и существующих. Если растровое изображение монохромный точечный рисунок, этот режим сохраняет черных точек за счет белый пикселей.|  
 |**COLORONCOLOR**|Удаляет пикселей. В этом режиме удаляет все исключенные строки пикселей без попытки сохранить свои данные.|  

@@ -1,13 +1,10 @@
 ---
-title: "Набор записей: Параметризация набора записей (ODBC) | Документы Microsoft"
-ms.custom: 
+title: 'Набор записей: Параметризация набора записей (ODBC) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Набор записей. Параметризация набора записей (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Как передать сведения о параметрах для объекта набора записей во время выполнения](#_core_passing_parameter_values_at_run_time).  
   
-##  <a name="_core_parameterized_recordsets"></a>Параметризированные наборы записей  
+##  <a name="_core_parameterized_recordsets"></a> Параметризированные наборы записей  
  Параметризированные наборы записей позволяют передавать сведения о параметрах во время выполнения. Эта процедура двумя преимуществами:  
   
 -   Он может привести к более высокую скорость выполнения.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  При вызове **откройте** для выполнения запроса, набор записей использует сведения о параметрах для завершения его **SQL SELECT** инструкции. Можно параметризировать любого набора записей.  
   
-##  <a name="_core_when_to_use_parameters"></a>Когда следует использовать параметры  
+##  <a name="_core_when_to_use_parameters"></a> Когда следует использовать параметры  
  Обычно параметры используются следующие.  
   
 -   Передача аргументов времени выполнения для предопределенного запроса.  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о фильтрах см. в разделе [набор записей: фильтрация записей (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>Параметризация класса набора записей  
+##  <a name="_core_parameterizing_your_recordset_class"></a> Параметризация класса набора записей  
   
 > [!NOTE]
 >  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовая выборка не был реализован. При использовании групповой выборки строк реализации параметров — это аналогичный процесс. Дополнительные сведения см. в разделе [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
@@ -149,7 +144,7 @@ ms.lasthandoff: 12/21/2017
 
 >  Строка, скорее всего, для работы с является строка, указанная (если таковые имеются) для класса [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) член данных, но некоторые драйверы ODBC могут допускать параметры в других предложениях языка SQL.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>Передача значений параметров во время выполнения  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> Передача значений параметров во время выполнения  
  Необходимо указать значения параметров перед вызовом метода **откройте** (для нового объекта набора записей) или **Requery** (для существующего).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>Для передачи значений параметров для объекта набора записей во время выполнения  

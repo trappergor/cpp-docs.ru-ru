@@ -1,12 +1,9 @@
 ---
-title: "Класс CAnimationSize | Документы Microsoft"
-ms.custom: 
+title: Класс CAnimationSize | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationSize
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationsize-class"></a>Класс CAnimationSize
 Реализует функции объекта размера, размеры которого могут быть анимированы.  
@@ -60,13 +55,13 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationSize::CAnimationSize](#canimationsize)|Перегружен. Создает объект размера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationSize::AddTransition](#addtransition)|Добавляет переходы для ширины и высоты.|  
 |[CAnimationSize::GetCX](#getcx)|Предоставляет доступ к CAnimationVariable, представляющее ширину.|  
@@ -77,20 +72,20 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationSize::operator CSize](#operator_csize)|Преобразует CAnimationSize CSize.|  
 |[CAnimationSize::operator =](#operator_eq)|Назначает szSrc CAnimationSize.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|Инкапсулированный анимации переменной, представляющей шириной анимации.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|Переменная инкапсулированный анимации, представляющий высоту анимации.|  
@@ -108,7 +103,7 @@ class CAnimationSize : public CAnimationBaseObject;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
  Добавляет переходы для ширины и высоты.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>Примечания  
  Эта функция используется для добавления указанного переходов во внутренний список переходов применяться к переменным анимации для ширины и высоты. При добавлении переходов, они не, в силу немедленно и сохраняются во внутренний список. Переходы применяются (Добавление раскадровки для определенного значения) при вызове CAnimationController::AnimateGroup. Если не нужно применить переход к одному из измерений, можно передать значение NULL.  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
  Создает объект размера анимации.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationSize(
 ### <a name="remarks"></a>Примечания  
  Объект создается со значениями по умолчанию для ширины, высоты объекта, идентификатор и идентификатор группы, которому будет задано значение 0. Они могут быть изменены во время выполнения с помощью SetDefaultValue и SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
  Помещает инкапсулированный анимации переменные в список.  
   
 ```  
@@ -170,7 +165,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  Когда функция возвращает значение, он содержит указатели на два объекта CAnimationVariable, представляющая ширину и высоту.  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
  Предоставляет доступ к CAnimationVariable, представляющее ширину.  
   
 ```  
@@ -183,7 +178,7 @@ CAnimationVariable& GetCX();
 ### <a name="remarks"></a>Примечания  
  Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее ширину.  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
  Предоставляет доступ к CAnimationVariable, представляющий высоту.  
   
 ```  
@@ -196,7 +191,7 @@ CAnimationVariable& GetCY();
 ### <a name="remarks"></a>Примечания  
  Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющий высоту.  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
  Возвращает значения по умолчанию для ширины и высоты.  
   
 ```  
@@ -209,7 +204,7 @@ CSize GetDefaultValue();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения по умолчанию значение, которое было установлено ранее, конструктор или SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
  Возвращает текущее значение.  
   
 ```  
@@ -226,21 +221,21 @@ BOOL GetValue(CSize& szValue);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения текущего значения размера анимации. Если этот метод завершается ошибкой или базовые объекты COM для ширины и размер не был инициализирован, szValue содержит значение по умолчанию, которое ранее было задано в конструкторе или SetDefaultValue.  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
  Инкапсулированный анимации переменной, представляющей шириной анимации.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
  Переменная инкапсулированный анимации, представляющий высоту анимации.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
  Преобразует CAnimationSize CSize.  
   
 ```  
@@ -253,7 +248,7 @@ operator CSize();
 ### <a name="remarks"></a>Примечания  
  Эта функция автоматически вызывает GetValue. Если GetValue для какой-либо причине происходит сбой, возвращаемого размера будет содержать значения по умолчанию для ширины и высоты.  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
+##  <a name="operator_eq"></a>  CAnimationSize::operator =  
  Назначает szSrc CAnimationSize.  
   
 ```  
@@ -267,7 +262,7 @@ void operator=(const CSize& szSrc);
 ### <a name="remarks"></a>Примечания  
  Назначает szSrc CAnimationSize. Рекомендуется сделать это до начала анимации, так как этот оператор вызывает SetDefaultValue, который воссоздает базовые объекты COM для ширины и высоты, если они были созданы. Если подписка данного объекта анимации для события (ValueChanged или IntegerValueChanged), необходимо повторно включить эти события.  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
  Задает значение по умолчанию.  
   
 ```  

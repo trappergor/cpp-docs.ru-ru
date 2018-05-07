@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCFontComboBox | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCFontComboBox | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 `CMFCFontComboBox` Класс создает поле со списком, содержащее список шрифтов.  
@@ -46,18 +41,18 @@ ms.lasthandoff: 12/21/2017
 class CMFCFontComboBox : public CComboBox  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Создает объект `CMFCFontComboBox`.|  
 |`CMFCFontComboBox::~CMFCFontComboBox`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCFontComboBox::CompareItem`|Вызывается платформой для определения относительной позиции нового элемента в поле отсортированный список текущего шрифта поле со списком. (Переопределяет [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
 |`CMFCFontComboBox::DrawItem`|Вызывается платформой для отрисовки указанный элемент в текущий шрифт поле со списком. (Переопределяет [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
@@ -69,7 +64,7 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Указывает шрифт, используемый для отрисовки метки элемента в поле со списком текущий шрифт для платформы.|  
   
@@ -90,7 +85,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  Создает объект `CMFCFontComboBox`.  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  Извлекает сведения о текущего выбранного шрифта.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  Указывает шрифт, используемый для отрисовки метки элемента в поле со списком текущий шрифт для платформы.  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для направления платформе используется шрифт для отрисовки каждой подписи. Значение этого элемента `FALSE` для направления структурой для прорисовки каждой подписи с помощью шрифта, имя которого совпадает с метки. Значение по умолчанию для этого элемента — `FALSE`.  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  Выбирает шрифт, который удовлетворяет указанным критериям, в поле со списком Шрифт.  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  Указывает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент в поле со списком шрифтов соответствующего объекта описания указанного шрифта или имя шрифта и charset; в противном случае `FALSE`.  
+ `TRUE` Если элемент в поле со списком шрифтов соответствующего объекта описания указанного шрифта или имя шрифта и charset; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для выбора и прокрутки элемента в поле со списком шрифтов, соответствующий заданным шрифтом.  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  Инициализирует список элементов в поле со списком шрифтов.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  Указывает шрифт шаг и семейство. Значение по умолчанию — DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если поле со списком шрифтов был инициализирован успешно. в противном случае `FALSE`.  
+ `TRUE` Если поле со списком шрифтов был инициализирован успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод инициализирует поле со списком шрифтов, перечисление установленных шрифтов, которые совпадают с указанными параметрами и вставляя их имена шрифтов в поле со списком шрифтов.  

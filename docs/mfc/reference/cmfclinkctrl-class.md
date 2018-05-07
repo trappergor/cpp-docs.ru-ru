@@ -2,11 +2,8 @@
 title: Класс CMFCLinkCtrl | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>Класс CMFCLinkCtrl
 `CMFCLinkCtrl` Класс отображает кнопку в виде гиперссылки и вызывает целевой объект связи при нажатии кнопки.  
@@ -48,7 +43,7 @@ class CMFCLinkCtrl : public CMFCButton
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::SetURL](#seturl)|Отображает указанный URL-адрес в виде текста кнопки.|  
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Задает протокол, неявное (например, «http:») URL-адреса.|  
@@ -56,7 +51,7 @@ class CMFCLinkCtrl : public CMFCButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Вызывается платформой перед рисованием прямоугольника фокуса кнопки.|  
   
@@ -85,7 +80,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  Вызывается платформой перед рисованием прямоугольника фокуса кнопки.  
   
 ```  
@@ -104,7 +99,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, если вы хотите использовать собственный код для отрисовки прямоугольника фокуса кнопки.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  Отображает указанный URL-адрес в виде текста кнопки.  
   
 ```  
@@ -117,7 +112,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  Задает протокол, неявное (например, «http:») URL-адреса.  
   
 ```  
@@ -131,7 +126,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы задать префикс URL-адреса. Префикс не отображается на поверхности кнопок, но его можно использовать для перейдите к целевой URL-адрес.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  Изменение размеров кнопки для хранения текста кнопки или точечного рисунка.  
   
 ```  
@@ -142,10 +137,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bVCenter`  
- `TRUE`Чтобы центрировать текст и кнопки растрового изображения по вертикали между верхней и нижней части элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
+ `TRUE` Чтобы центрировать текст и кнопки растрового изображения по вертикали между верхней и нижней части элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
  [in] `bHCenter`  
- `TRUE`Чтобы центрировать текст и кнопки растрового изображения по горизонтали между левой и правой стороны элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
+ `TRUE` Чтобы центрировать текст и кнопки растрового изображения по горизонтали между левой и правой стороны элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) , содержащий новый размер элемента управления ссылки.  

@@ -1,13 +1,10 @@
 ---
-title: "Создание приложения MFC в стиле браузера веб | Документы Microsoft"
-ms.custom: 
+title: Создание приложения MFC в стиле браузера веб | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Создание приложения MFC в стиле браузера
 Веб-приложении обозревателя доступны сведения из Интернета (например, HTML или активные документы) или интрасети, а также папки в локальной файловой системе и в сети. Путем создания производного класса представления приложения из [CHtmlView](../../mfc/reference/chtmlview-class.md), эффективно сделать приложение веб-браузер, создавая представление с элементом управления WebBrowser.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  Поскольку `CHtmlView` просто реализует элемент управления браузера Microsoft Web, поддерживаются ли для печати не как другой [CView](../../mfc/reference/cview-class.md)-производные классы. Вместо этого элемент управления WebBrowser реализует пользовательский интерфейс принтера и печати. В результате `CHtmlView` does не поддерживает предварительный просмотр и платформа не предоставляет функции для поддержки других печати: например, [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), и [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), они доступны в других приложениях MFC.  
   
- `CHtmlView`действует как оболочка для элемента управления браузера, который снабжает приложение представлением веб- или HTML-страницы. Мастер создает переопределение, чтобы [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) функции в классе представления, предоставляя ссылку навигации для Microsoft Visual C++, веб-сайт:  
+ `CHtmlView` действует как оболочка для элемента управления браузера, который снабжает приложение представлением веб- или HTML-страницы. Мастер создает переопределение, чтобы [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) функции в классе представления, предоставляя ссылку навигации для Microsoft Visual C++, веб-сайт:  
   
 ```  
 void CWebView::OnInitialUpdate()  

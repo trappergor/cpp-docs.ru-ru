@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::ArrayReference | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::ArrayReference | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0987511b6653bee85b6cc5c4c680331d12519450
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c8e4183c400cf45a23f24a98292b68f6df537da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarrayreference-class"></a>Класс Platform::ArrayReference
 `ArrayReference` — тип оптимизации, который можно заменить на [Platform::Array^](../cppcx/platform-array-class.md) во входных параметрах, если требуется заполнить входными данными массив в стиле языка C.  
@@ -39,13 +34,13 @@ class ArrayReference
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[ArrayReference::ArrayReference](#ctor)|Инициализирует новый экземпляр класса `ArrayReference`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор ArrayReference::operator()](#operator-call)|Преобразует этот объект `ArrayReference` в `Platform::Array<T>^*`.|  
 |[Оператор ArrayReference::operator=](#operator-assign)|Назначает содержимое другой ссылки `ArrayReference` этому экземпляру.|  
@@ -89,7 +84,7 @@ ArrayReference(ArrayReference&& otherArg)
   
 
 
-## <a name="operator-assign"></a>  ArrayReference::operator= Operator
+## <a name="operator-assign"></a>  ArrayReference::operator =-оператор
 Присваивает указанный объект текущему [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) объекта с помощью семантики перемещения.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -112,7 +107,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
   
 
 
-## <a name="operator-call"></a>  ArrayReference::operator() Operator
+## <a name="operator-call"></a>  Оператор arrayreference:: operator()
 Преобразует текущий [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) объекта обратно в [Platform::Array](../cppcx/platform-array-class.md) класса.  
   
 ### <a name="syntax"></a>Синтаксис  

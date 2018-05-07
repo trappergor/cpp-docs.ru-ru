@@ -2,12 +2,9 @@
 title: 'Набор записей: Закладки и абсолютное позиционирование (ODBC) | Документы Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Набор записей. Закладки и абсолютное позиционирование (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Как задать текущей записи при помощи абсолютное позиционирование](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>Закладки в MFC ODBC  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> Закладки в MFC ODBC  
  Закладка однозначно определяет запись. При переходе по набору записей нельзя всегда полагаться на абсолютное положение записи, поскольку записи могут быть удалены из набора записей. Надежный способ для отслеживания позиции записи является использование закладок. Класс `CRecordset` предоставляет функции-члены для:  
   
 -   Установка закладки для текущей записи, его можно сохранить в переменной ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  В зависимости от драйвера ODBC и тип набора записей закладки может быть прекращена. Можно легко определить, поддерживаются ли закладки, вызвав [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Кроме того, поддерживаются ли закладки, необходимо явно выбрать их реализации, указав **CRecordset::useBookmarks** в диалоговом окне [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) функции-члена. Необходимо также проверить наличие закладок после определенных операций по набору записей. Например если вы **Requery** набор записей закладки могут нет сохраниться. Вызовите [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) для проверки, можно ли осуществить безопасный вызов `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Абсолютное позиционирование ODBC в библиотеке MFC  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Абсолютное позиционирование ODBC в библиотеке MFC  
  Помимо закладок класс `CRecordset` позволяет использовать текущую запись, указав его порядковому номеру. Это называется абсолютного позиционирования.  
   
 > [!NOTE]

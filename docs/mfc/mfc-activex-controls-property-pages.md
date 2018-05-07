@@ -1,13 +1,10 @@
 ---
-title: "Элементов управления MFC ActiveX: Страницы свойств | Документы Microsoft"
-ms.custom: 
+title: 'Элементов управления MFC ActiveX: Страницы свойств | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Элементы управления ActiveX в MFC. Страницы свойств
 Страницы свойств позволяют пользователю элемента управления ActiveX для просмотра и изменения свойств элемента управления ActiveX. Эти свойства осуществляется путем вызова диалогового окна свойств элемента управления, которое содержит один или несколько страниц свойств, предоставляющих настраиваемый графический интерфейс для просмотра и редактирования свойств элемента управления.  
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
  Сведения об использовании страницы свойств в приложении MFC, отличные от элемента управления ActiveX см. в разделе [свойств](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a>Реализация по умолчанию страницы свойств  
+##  <a name="_core_implementing_the_default_property_page"></a> Реализация по умолчанию страницы свойств  
  При использовании мастера элементов управления ActiveX для создания проекта элемента управления, мастер элементов управления ActiveX предоставляет класс страницы свойств по умолчанию для элемента управления, производного от [COlePropertyPage класса](../mfc/reference/colepropertypage-class.md). Изначально эта страница свойств является пустым, но к нему можно добавить любой управления диалогового окна или набор элементов. Поскольку мастера элементов управления ActiveX создает класс страницы только одно свойство по умолчанию, классы страницу дополнительных свойств (который также является производным от `COlePropertyPage`) должен быть создан с помощью представления классов. Дополнительные сведения об этой процедуре см. в разделе [элементы управления MFC ActiveX: добавление другой настраиваемой свойства страницы](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
  Реализация свойства страницы (в данном случае это значение по умолчанию) имеет три этапа:  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
  Например целей, в следующих процедурах использовать простой элемент управления (с именем «Образец»). Образец был создан с помощью мастера элементов управления ActiveX и содержит только стандартное свойство заголовка.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a>Добавление элементов управления на странице свойств  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Добавление элементов управления на странице свойств  
   
 #### <a name="to-add-controls-to-a-property-page"></a>Для добавления элементов управления страницы свойств  
   
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
  Теперь, когда пользовательский интерфейс был изменен, необходимо связать со свойством заголовок поля ввода. Это делается в следующем разделе, изменив `CSamplePropPage::DoDataExchange` функции.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a>Настройка DoDataExchange-функция  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Настройка DoDataExchange-функция  
  На странице свойств [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) функция позволяет связывать значения свойств страницы с фактическими значениями свойств в элементе управления. Для установления связи, необходимо сопоставить поля страницы соответствующее свойство их соответствующим свойствам элемента управления.  
   
  Эти сопоставления реализуются с помощью страницы свойств **DDP_** функции. **DDP_** функции работают как **DDX_** функций, используемых в стандартных диалоговых окон MFC, за одним исключением. Помимо ссылку на переменную-член **DDP_** функции принимают имя свойства элемента управления. Ниже приведен типичный запись в `DoDataExchange` функции для страницы свойств.  

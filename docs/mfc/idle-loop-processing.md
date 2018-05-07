@@ -1,13 +1,10 @@
 ---
-title: "Обработка пустых циклов | Документы Microsoft"
-ms.custom: 
+title: Обработка пустых циклов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baabba60ffaf886b7a34acfbff5b923a4495fa1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idle-loop-processing"></a>Обработка пустых циклов
 Во многих приложениях выполнения продолжительной обработки «в фоновом режиме». Иногда вопросы производительности могут предписывать Использование многопоточности для такой работы. Потоки включают дополнительные издержки, поэтому их не рекомендуется для простых задач вроде рабочего времени простоя, выполняющий MFC в [OnIdle](../mfc/reference/cwinthread-class.md#onidle) функции. Эта статья посвящена обработка бездействия. Дополнительные сведения о многопоточности см [многопоточность](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Внедрение другой **PeekMessage** цикл в другом месте в приложении.  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a>PeekMessage в цикл обработки сообщений MFC  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage в цикл обработки сообщений MFC  
  В приложение, разработанное с MFC, цикл основного сообщения в `CWinThread` класс содержит цикл обработки сообщений, который вызывает [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API. Это также цикла вызовы `OnIdle` функцию-член `CWinThread` между сообщениями. Приложение может обработать в это время простоя, переопределив `OnIdle` функции.  
   
 > [!NOTE]
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о выполнении обработка бездействия. в разделе [OnIdle](../mfc/reference/cwinthread-class.md#onidle) в *Справочник по библиотеке MFC*.  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a>PeekMessage в другом месте в приложении  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage в другом месте в приложении  
  Другой способ выполнения простоя обработки в приложении включает в себя внедрение цикл обработки сообщений в одной из функций. Этот цикл обработки сообщений очень похожа на MFC основной цикл обработки сообщений, в [CWinThread::Run](../mfc/reference/cwinthread-class.md#run). Это означает, что цикл в приложение, разработанное с MFC должен выполнять многие функции основной цикл обработки сообщений. В следующем фрагменте кода демонстрируется запись цикл обработки сообщений, совместимый с MFC:  
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  

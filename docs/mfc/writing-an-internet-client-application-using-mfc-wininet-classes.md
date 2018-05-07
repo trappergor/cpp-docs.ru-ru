@@ -1,13 +1,10 @@
 ---
-title: "Создание клиентских приложений в Интернете с использованием классов MFC WinInet | Документы Microsoft"
-ms.custom: 
+title: Создание клиентских приложений в Интернете с использованием классов MFC WinInet | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Создание клиентских приложений в Интернете с использованием классов MFC WinInet
 Основой каждой клиентских веб-приложений является Интернет-сеанс. Реализация MFC сеансов Интернета как объекты класса [CInternetSession](../mfc/reference/cinternetsession-class.md). С помощью этого класса, можно создать один сеанс Интернета или несколько параллельных сеансов.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Для Интернет-сеанс, необходимо создать экземпляр [CInternetSession](../mfc/reference/cinternetsession-class.md).  
   
--   Если Интернет-сеанс считывает или записывает данные, необходимо создать экземпляр `CInternetFile` (или его подклассов [CHttpFile](../mfc/reference/chttpfile-class.md) или [CGopherFile](../mfc/reference/cgopherfile-class.md)). Самый простой способ чтения данных является вызов [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Эта функция выполняет синтаксический анализ универсальных ресурсов URL-адрес предоставленные вами, открывает подключение к серверу, указанному в URL-адрес и возвращает только для чтения `CInternetFile` объекта. `CInternetSession::OpenURL`не относится к типу одного протокола, и тем же вызовом работает для любого gopher, HTTP или FTP URL-адреса. `CInternetSession::OpenURL`даже работает с локальными файлами (возврат `CStdioFile` вместо `CInternetFile`).  
+-   Если Интернет-сеанс считывает или записывает данные, необходимо создать экземпляр `CInternetFile` (или его подклассов [CHttpFile](../mfc/reference/chttpfile-class.md) или [CGopherFile](../mfc/reference/cgopherfile-class.md)). Самый простой способ чтения данных является вызов [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). Эта функция выполняет синтаксический анализ универсальных ресурсов URL-адрес предоставленные вами, открывает подключение к серверу, указанному в URL-адрес и возвращает только для чтения `CInternetFile` объекта. `CInternetSession::OpenURL` не относится к типу одного протокола, и тем же вызовом работает для любого gopher, HTTP или FTP URL-адреса. `CInternetSession::OpenURL` даже работает с локальными файлами (возврат `CStdioFile` вместо `CInternetFile`).  
   
 -   Если к Интернету сеанса не чтение и запись данных, но выполняет другие задачи, например при удалении файла в каталоге FTP, не может потребоваться создать экземпляр `CInternetFile`.  
   

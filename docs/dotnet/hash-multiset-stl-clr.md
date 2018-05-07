@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: hash_multiset (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - hash_multiset class [STL/CLR]
 - <hash_set> header [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f07e2e063be9c5a30a63b445d06100124e4250a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 819dd9835f173c15b23831e32d6c3a207a3d07c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `hash_multiset` для управления последовательностью элементов хэш-таблицы, каждая запись в таблице хранения двунаправленный связанный список узлов и каждый узел хранения одного элемента. Значение каждого элемента используется в качестве ключа для упорядочения последовательности.  
@@ -55,9 +50,9 @@ template<typename Key>
  Ключ  
  Тип ключевым компонентом любого элемента в управляемой последовательности.  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[hash_multiset::const_iterator (STL/CLR)](../dotnet/hash-multiset-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[hash_multiset::const_reference (STL/CLR)](../dotnet/hash-multiset-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -77,7 +72,7 @@ template<typename Key>
 |[hash_multiset::value_compare (STL/CLR)](../dotnet/hash-multiset-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)|Подсчитывает количество сегментов.|  
@@ -105,13 +100,13 @@ template<typename Key>
 |[hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[hash_multiset::value_comp (STL/CLR)](../dotnet/hash-multiset-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Operator|Описание|  
 |--------------|-----------------|  
 |[hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
   
-## <a name="interfaces"></a>интерфейсов,  
+## <a name="interfaces"></a>Интерфейсы  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Доступ к объекту хранимых делегата, путем вызова функции-члена [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Объект делегата необходимо определить соответствующий порядок ключей типа [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y) && key_comp()(Y, X)` имеет значение true, затем `X` и `Y` говорят, что имеют соответствующий порядок.  
   
@@ -137,7 +132,7 @@ template<typename Key>
   
  Объект определяет в каком сегменте должен содержать указанного ключа сортировки, вызвав хранимую делегат типа [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Доступ к этому сохраненному объекту путем вызова функции-члена [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` получить целое значение, которое зависит от значения ключа. Объект хранимых делегата можно указать при создании объекта hash_set; При указании объект делегата отсутствует значение по умолчанию — функция `System::Object::hash_value(key_type)`. Это означает, что для любых ключей `X` и `Y`:  
   
- `hash_delegate()(X)`Возвращает один и тот же целочисленный результат при каждом вызове.  
+ `hash_delegate()(X)` Возвращает один и тот же целочисленный результат при каждом вызове.  
   
  Если `X` и `Y` имеют соответствующий порядок, затем `hash_delegate()(X)` должна возвращать целочисленный аналогична `hash_delegate()(Y)`.  
   

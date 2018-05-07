@@ -1,13 +1,10 @@
 ---
-title: "Маршрутизация команд | Документы Microsoft"
-ms.custom: 
+title: Маршрутизация команд | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>маршрутизация команд
 Ваши действия при работе с командами ограничиваются установкой связей между командами и их функциями обработчиков на схеме сообщений — задачей, для выполнения которой используется окно свойств. Вам также необходимо написать большинство обработчиков команд.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 |Когда объект этого типа получает команду. . .|Он и другие целевые объекты команды сначала пытаются самостоятельно обработать команду в следующем порядке:|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|Окно области MDI (`CMDIFrameWnd`)|1.  Активный`CMDIChildWnd`<br />2.  Это окно области<br />3.  Приложение (`CWinApp` объекта)|  
+|Окно области MDI (`CMDIFrameWnd`)|1.  Активный `CMDIChildWnd`<br />2.  Это окно области<br />3.  Приложение (`CWinApp` объекта)|  
 |Окно области документа (`CFrameWnd`, `CMDIChildWnd`)|1.  Активное представление<br />2.  Это окно области<br />3.  Приложение (`CWinApp` объекта)|  
 |Просмотр|1.  Это представление<br />2.  Документ, прикрепленный к представлению|  
 |Document|1.  Этот документ<br />2.  Шаблон документа, прикрепленный к документу|  

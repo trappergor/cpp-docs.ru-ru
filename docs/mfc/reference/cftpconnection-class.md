@@ -1,12 +1,9 @@
 ---
-title: "Класс классе CFtpConnection | Документы Microsoft"
-ms.custom: 
+title: Класс классе CFtpConnection | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43df1cb610c785688db982be2ddc4a19cf140b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpconnection-class"></a>Класс классе CFtpConnection
 Управляет FTP-подключением к Интернет-серверу и позволяет напрямую управлять каталогов и файлов на этом сервере.  
@@ -64,13 +59,13 @@ class CFtpConnection : public CInternetConnection
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFtpConnection::CFtpConnection](#cftpconnection)|Создает объект `CFtpConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFtpConnection::Command](#command)|Отправляет команду напрямую на FTP-сервер.|  
 |[CFtpConnection::CreateDirectory](#createdirectory)|Создает каталог на сервере.|  
@@ -104,7 +99,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection  
  Эта функция-член вызывается для создания `CFtpConnection` объекта.  
   
 ```  
@@ -136,7 +131,7 @@ CFtpConnection(
  Указатель на строку, содержащую имя FTP-сервера.  
   
  `dwContext`  
- Идентификатор контекста для операции. `dwContext`Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связана с этим идентификатором контекста.  
+ Идентификатор контекста для операции. `dwContext` Определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связана с этим идентификатором контекста.  
   
  `pstrUserName`  
  Указатель на строку с завершающим нулем, указывающее имя пользователя для входа. Если **NULL**, значение по умолчанию является анонимным.  
@@ -160,7 +155,7 @@ CFtpConnection(
 ### <a name="remarks"></a>Примечания  
  Никогда не создавайте `CFtpConnection` объекта напрямую. Вместо этого необходимо вызвать [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), которая создает **CFptConnection** объекта.  
   
-##  <a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>  CFtpConnection::Command  
  Отправляет команду напрямую на FTP-сервер.  
   
 ```  
@@ -196,7 +191,7 @@ CInternetFile* Command(
   
  В случае ошибки MFC вызывает исключение типа [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
-##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory  
  Вызовите эту функцию-член для создания каталога на подключенном сервере.  
   
 ```  
@@ -213,9 +208,9 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>Примечания  
  Используйте `GetCurrentDirectory` определить текущий рабочий каталог для этого подключения к серверу. Не следует предполагать, что удаленной системе подключен вы в корневой каталог.  
   
- `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `CreateDirectory`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `CreateDirectory` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="getcurrentdirectory"></a>CFtpConnection::GetCurrentDirectory  
+##  <a name="getcurrentdirectory"></a>  CFtpConnection::GetCurrentDirectory  
  Вызовите эту функцию-член для получения имени текущего каталога.  
   
 ```  
@@ -247,9 +242,9 @@ BOOL GetCurrentDirectory(
 ### <a name="remarks"></a>Примечания  
  Чтобы получить имя каталога URL-адрес, вызовите [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
   
- Параметры `pstrDirName` или `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetCurrentDirectory`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ Параметры `pstrDirName` или `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetCurrentDirectory` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="getcurrentdirectoryasurl"></a>CFtpConnection::GetCurrentDirectoryAsURL  
+##  <a name="getcurrentdirectoryasurl"></a>  CFtpConnection::GetCurrentDirectoryAsURL  
  Вызовите эту функцию-член для получения имени текущего каталога, как URL-адрес.  
   
 ```  
@@ -279,11 +274,11 @@ BOOL GetCurrentDirectoryAsURL(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- `GetCurrentDirectoryAsURL`работает так же, как [GetCurrentDirectory](#getcurrentdirectory)  
+ `GetCurrentDirectoryAsURL` работает так же, как [GetCurrentDirectory](#getcurrentdirectory)  
   
- Параметр `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetCurrentDirectoryAsURL`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ Параметр `strDirName` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetCurrentDirectoryAsURL` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>  CFtpConnection::GetFile  
  Вызовите эту функцию-член для получения файла с FTP-сервера и их сохранения на локальном компьютере.  
   
 ```  
@@ -335,15 +330,15 @@ BOOL GetFile(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- `GetFile`Это высокоуровневое подпрограмму, которая обрабатывает все дополнительные расходы, связанные с чтением файла с FTP-сервера и сохранить их локально. Приложения, только для извлечения файлов данных или требуют закрыть контроль над передачи файла, должны использовать `OpenFile` и [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) вместо него.  
+ `GetFile` Это высокоуровневое подпрограмму, которая обрабатывает все дополнительные расходы, связанные с чтением файла с FTP-сервера и сохранить их локально. Приложения, только для извлечения файлов данных или требуют закрыть контроль над передачи файла, должны использовать `OpenFile` и [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) вместо него.  
   
  Если `dwFlags` FILE_TRANSFER_TYPE_ASCII преобразования из файла данных также преобразует управления и форматирование символов для эквивалентов Windows. Передача по умолчанию является двоичном режиме, где файл загружается в тот же формат, хранящегося на сервере.  
   
- Оба `pstrRemoteFile` и `pstrLocalFile` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetFile`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ Оба `pstrRemoteFile` и `pstrLocalFile` может быть либо частичные имена файлов относительно текущего каталога или полное. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `GetFile` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
  Переопределить `dwContext` по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста связан с этой определенной операции `CFtpConnection` объектом, созданным с его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние операции, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>  CFtpConnection::OpenFile  
  Вызовите эту функцию-член для открытия файла на FTP-сервера для чтения или записи.  
   
 ```  
@@ -375,7 +370,7 @@ CInternetFile* OpenFile(
  Указатель на [классе CInternetFile](../../mfc/reference/cinternetfile-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
- `OpenFile`следует использовать в следующих ситуациях:  
+ `OpenFile` следует использовать в следующих ситуациях:  
   
 -   Приложение имеет данные, которые должны быть отправлены и создан в виде файла с FTP-сервера, но, что данные не в локальном файле. Один раз `OpenFile` открывает файл, используемых приложением [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) для отправки данных в файле FTP на сервер.  
   
@@ -385,11 +380,11 @@ CInternetFile* OpenFile(
   
  После вызова метода `OpenFile` и до вызова метода **CInternetConnection::Close**, приложение может вызывать только [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), **CInternetConnection::Close**, или [CFtpFileFind::FindFile](../../mfc/reference/cftpfilefind-class.md#findfile). Для вызовов других функций FTP на один сеанс FTP не удастся и задать код ошибки для FTP_ETRANSFER_IN_PROGRESS.  
   
- `pstrFileName` Параметр может быть именем частичные файла, относительным для текущего каталога или полным путем. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `OpenFile`Преобразует разделителей имя каталога в соответствующие символы перед его использованием.  
+ `pstrFileName` Параметр может быть именем частичные файла, относительным для текущего каталога или полным путем. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `OpenFile` Преобразует разделителей имя каталога в соответствующие символы перед его использованием.  
   
  Переопределить `dwContext` по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста связан с этой определенной операции `CFtpConnection` объектом, созданным с его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние операции, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>  CFtpConnection::PutFile  
  Вызовите эту функцию-член для сохранения файла на FTP-сервере.  
   
 ```  
@@ -417,11 +412,11 @@ BOOL PutFile(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- `PutFile`Это высокоуровневое подпрограмму, которая отвечает за выполнение всех операций, связанных с хранением файлов с FTP-сервера. Приложения, которые только отправляют данные или требуют более тщательно контролировать передачу файла, должны использовать [OpenFile](#openfile) и [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
+ `PutFile` Это высокоуровневое подпрограмму, которая отвечает за выполнение всех операций, связанных с хранением файлов с FTP-сервера. Приложения, которые только отправляют данные или требуют более тщательно контролировать передачу файла, должны использовать [OpenFile](#openfile) и [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
   
  Переопределить `dwContext` по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста связан с этой определенной операции `CFtpConnection` объектом, созданным с его [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта. Возвращаемое значение на [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние операции, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>  CFtpConnection::Remove  
  Вызовите эту функцию-член для удаления указанного файла из подключенного сервера.  
   
 ```  
@@ -438,7 +433,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>Примечания  
  `pstrFileName` Параметр может быть именем частичные файла, относительным для текущего каталога или полным путем. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. **Удалить** функция преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
  Вызовите эту функцию-член для удаления указанного каталога из подключенного сервера.  
   
 ```  
@@ -455,9 +450,9 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>Примечания  
  Используйте [GetCurrentDirectory](#getcurrentdirectory) определить текущий рабочий каталог на сервере. Не следует предполагать, что удаленной системе подключен вы в корневой каталог.  
   
- `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `RemoveDirectory`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `RemoveDirectory` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>  CFtpConnection::Rename  
  Вызовите эту функцию-член можно переименовать файл, указанный на подключенном сервере.  
   
 ```  
@@ -479,7 +474,7 @@ BOOL Rename(
 ### <a name="remarks"></a>Примечания  
  `pstrExisting` И `pstrNew` параметров может быть именем частичные файла, относительным для текущего каталога или полным путем. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. **Переименование** преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
-##  <a name="setcurrentdirectory"></a>CFtpConnection::SetCurrentDirectory  
+##  <a name="setcurrentdirectory"></a>  CFtpConnection::SetCurrentDirectory  
  Вызовите эту функцию-член для изменения в другой каталог на FTP-сервере.  
   
 ```  
@@ -494,7 +489,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `SetCurrentDirectory`Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
+ `pstrDirName` Параметр может быть либо частично или полностью уточненное имя файла относительно текущего каталога. Обратная косая черта (\\) или косой черты (/) можно использовать в качестве разделителя каталогов для либо имя. `SetCurrentDirectory` Преобразует разделителей имя каталога в соответствующие символы перед их использованием.  
   
  Используйте [GetCurrentDirectory](#getcurrentdirectory) определить текущий рабочий каталог на FTP-сервер. Не следует предполагать, что удаленной системе подключен вы в корневой каталог.  
   

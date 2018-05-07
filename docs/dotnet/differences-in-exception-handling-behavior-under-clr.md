@@ -2,35 +2,30 @@
 title: Различия в поведении в среде CLR - при обработке исключений | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Различия в поведении при обработке исключений в /CLR
 [Основные понятия использование управляемых исключений](../dotnet/basic-concepts-in-using-managed-exceptions.md) Описание обработки исключений в управляемых приложениях. В этом разделе подробно обсуждаются отличия от стандартного поведения обработки исключений и некоторых ограничений. Дополнительные сведения см. в разделе [_set_se_translator функция](../c-runtime-library/reference/set-se-translator.md).  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>Выход из блока Finally  
+##  <a name="vcconjumpingoutofafinallyblock"></a> Выход из блока Finally  
  В машинном коде C/C++ при переходе из __**наконец** структурированной обработки исключений (SEH) с использованием допустимых для блока, несмотря на то, что он выдает предупреждение.  В разделе [/CLR](../build/reference/clr-common-language-runtime-compilation.md), выход из **наконец** блок вызывает ошибку:  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>Создание исключений в фильтре исключений  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> Создание исключений в фильтре исключений  
  Если исключение возникает во время обработки [фильтра исключений](../cpp/writing-an-exception-filter.md) управляемого кода исключения перехватываются и обрабатываются, как если бы фильтр возвращает значение 0.  
   
  Это отличается от поведения в машинном коде, где вложенное исключение возникает, **ExceptionRecord** в **EXCEPTION_RECORD** структуры (возвращенные [ GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) имеет значение и **ExceptionFlags** поле устанавливает бит 0x10. В следующем примере демонстрируется это различие в поведении:  
@@ -107,7 +102,7 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>Повторно создает этом отдельные  
+##  <a name="vccondisassociatedrethrows"></a> Повторно создает этом отдельные  
  **/ CLR** не поддерживает повторное создание исключения вне обработчика catch (известный как этом отдельные rethrow). Исключения этого типа рассматриваются как стандартная rethrow C++. При этом отдельные rethrow встречается при обнаружении active управляемого исключения, исключение, упакованная в качестве исключения C++, а затем выдаваться повторно. Исключения этого типа может быть перехвачен только как исключение типа [System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx).  
   
  В следующем примере демонстрируется управляемое исключение повторно создается как исключения C++:  
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>Фильтры исключений и EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> Фильтры исключений и EXCEPTION_CONTINUE_EXECUTION  
  Если фильтр возвращает `EXCEPTION_CONTINUE_EXECUTION` в управляемом приложении, он рассматривается как фильтр вернул `EXCEPTION_CONTINUE_SEARCH`. Дополнительные сведения об этих констант см. в разделе [try-except инструкции](../cpp/try-except-statement.md).  
   
  В следующем примере показано это различие:  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>_Set_se_translator-функция  
+##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator-функция  
  Функция-преобразователь, задайте с помощью вызова `_set_se_translator`, затрагивает только перехватываются в неуправляемом коде. В следующем примере демонстрируется это ограничение:  
   
 ```  

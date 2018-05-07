@@ -1,35 +1,30 @@
 ---
-title: "Созданные мастером поставщика файлы | Документы Microsoft"
-ms.custom: 
+title: Созданные мастером поставщика файлы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9cfcce4242cf985b8ffa50b9df234d609cfe7f3f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-wizard-generated-files"></a>Созданные мастером поставщика файлы
 Мастер поставщика ATL OLE DB создает следующие файлы. В последующих разделах используется короткое имя «MyProvider», но конкретные имена файлов зависят от выбора, внесенные при создании поставщика.  
   
-|Имя файла|Описание:|  
+|Имя файла|Описание|  
 |---------------|-----------------|  
 |MyProviderRS.cpp|Содержит вспомогательные команды `Execute` метод и сопоставления столбца поставщика.|  
 |MyProviderDS.h|Реализует объект источника данных. Файл заголовка содержит сопоставление свойств для свойств источника данных.|  

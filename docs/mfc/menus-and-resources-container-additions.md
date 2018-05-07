@@ -1,13 +1,10 @@
 ---
-title: "Меню и ресурсы: добавление контейнеров | Документы Microsoft"
-ms.custom: 
+title: 'Меню и ресурсы: добавление контейнеров | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>Меню и ресурсы. Добавление контейнеров
 В этой статье описываются изменения, которые должны быть выполнены с меню и другими ресурсами в приложении контейнера визуального редактирования.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Строка таблицы дополнения](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>Добавление контейнеров меню  
+##  <a name="_core_container_menu_additions"></a> Добавление контейнеров меню  
  В меню "Правка", необходимо добавить следующие элементы:  
   
 |Элемент|Цель|  
@@ -66,16 +61,16 @@ ms.lasthandoff: 12/21/2017
   
  Если требуется для поддержки активации по месту вложенные элементы, необходимо создать новое меню для приложения-контейнера. Это меню состоит из того же меню "файл" и окно во всплывающих меню, используемые, когда файлы открыты, но он имеет два разделителя, который располагается между ними. Эти разделители используются для указания, где элемент сервера (компонент) (приложение) следует помещать его меню при активации на месте. Дополнительные сведения об этом приеме слияние меню см. в разделе [меню и ресурсы: слияние меню](../mfc/menus-and-resources-menu-merging.md).  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>Добавление таблицы сочетаний клавиш приложения контейнеров  
+##  <a name="_core_container_application_accelerator_table_additions"></a> Добавление таблицы сочетаний клавиш приложения контейнеров  
  Небольшие изменения в приложение контейнера ресурсами таблиц сочетаний клавиш необходимы, если вы поддерживаете активации на месте. Первое изменение позволяет пользователю клавишу ESC для выхода из режима редактирования по месту. Добавьте следующую запись в таблице сочетаний клавиш основной:  
   
-|ID|Ключ|Тип|  
+|Идентификатор|Ключ|Тип|  
 |--------|---------|----------|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
  Второе изменение является создание новой таблицы сочетаний клавиш, которая соответствует новый ресурс меню, созданных для активации на месте. Эта таблица содержит записи для меню «файл» и «окна в дополнение к **VK_ESCAPE** выше записью. В следующем примере представлен таблицу сочетаний клавиш для активации на месте в образце MFC [КОНТЕЙНЕРА](../visual-cpp-samples.md):  
   
-|ID|Ключ|Тип|  
+|Идентификатор|Ключ|Тип|  
 |--------|---------|----------|  
 |`ID_FILE_NEW`|CTRL+N|**VIRTKEY**|  
 |`ID_FILE_OPEN`|CTRL+O|**VIRTKEY**|  
@@ -85,10 +80,10 @@ ms.lasthandoff: 12/21/2017
 |**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>Строка таблицы дополнения для приложения контейнера  
+##  <a name="_core_string_table_additions_for_container_applications"></a> Строка таблицы дополнения для приложения контейнера  
  Большинство изменений в строку таблицы для приложения контейнера соответствует дополнительных пунктов, упомянутых в [добавления меню контейнера](#_core_container_menu_additions). Они указать текст, отображаемый в строке состояния, при отображении каждым пунктом меню. Например Вот таблица строк записи, которые создает мастер приложений.  
   
-|ID|String|  
+|Идентификатор|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|Не удалось выполнить инициализацию OLE. Убедитесь в наличии правильной версии библиотек OLE.|  
 |**IDP_FAILED_TO_CREATE**|Не удалось создать объект. Убедитесь, что он занесен в системный реестр.|  

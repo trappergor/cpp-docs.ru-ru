@@ -1,13 +1,10 @@
 ---
-title: "Использование диалоговой панели с элементом управления главной панели | Документы Microsoft"
-ms.custom: 
+title: Использование диалоговой панели с элементом управления главной панели | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - WM_EX_TRANSPARENT
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4eb47da7c3866e01ee563b9f6b42fa21ada109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Использование диалоговой панели с элементом управления главной панели
 Как упоминалось в [главной панели элементов управления и зоны](../mfc/rebar-controls-and-bands.md), каждый диапазон может содержать только один дочернего окна (или элемента управления). Это может быть ограничением, если вы хотите иметь более одного дочернего окна на аппаратного контроллера управления. Удобное решение — Создание ресурса панели диалогового окна с несколькими элементами управления, а затем добавьте элемент управления главной панели аппаратного контроллера управления главной панели (содержащий диалоговой панели).  

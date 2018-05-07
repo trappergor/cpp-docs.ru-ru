@@ -1,12 +1,9 @@
 ---
-title: "Класс CAnimationController | Документы Microsoft"
-ms.custom: 
+title: Класс CAnimationController | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationController
@@ -112,17 +109,15 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 Реализует контроллер анимации, который обеспечивает центральный интерфейс для создания анимации и управления ею.  
@@ -133,18 +128,18 @@ ms.lasthandoff: 12/21/2017
 class CAnimationController : public CObject;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|  
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет объект анимации в группу, к которой принадлежит контроллер анимации.|  
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорный кадр.|  
@@ -187,14 +182,14 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный класс, который очищает группе.|  
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой при анимации для указанной группы только что был запланирован.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Ключевой кадр, который представляет запуск раскадровки.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот член имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|  
@@ -216,14 +211,14 @@ class CAnimationController : public CObject;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
+##  <a name="_dtorcanimationcontroller"></a>  CAnimationController:: ~ CAnimationController  
  Деструктор Вызывается при уничтожении объекта контроллера анимации.  
   
 ```  
 virtual ~CAnimationController(void);
 ```   
   
-##  <a name="addanimationobject"></a>CAnimationController::AddAnimationObject  
+##  <a name="addanimationobject"></a>  CAnimationController::AddAnimationObject  
  Добавляет объект анимации в группу, к которой принадлежит контроллер анимации.  
   
 ```  
@@ -240,7 +235,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод для добавления объекта анимации контроллер анимации. Объект будет добавлен в группу в соответствии с GroupID объекта (см. CAnimationBaseObject::SetID). Если это первый объект, добавляемый с указанным идентификатором GroupID контроллер анимации создаст новую группу. Только одна анимация контроллеры добавляемыми объекта анимации. Если необходимо добавить объект к другому контроллеру, сначала вызовите RemoveAnimationObject. При вызове метода SetID с новой GroupID для объекта, который уже был добавлен в группу, объект будет удален из старой группе и добавлена в другую группу с указанным идентификатором.  
   
-##  <a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup  
+##  <a name="addkeyframetogroup"></a>  CAnimationController::AddKeyframeToGroup  
  Добавляет группу опорный кадр.  
   
 ```  
@@ -262,7 +257,7 @@ BOOL AddKeyframeToGroup(
 ### <a name="remarks"></a>Примечания  
  Обычно не нужно вызывать этот метод, используйте CAnimationController::CreateKeyframe вместо, который создает и автоматически добавляет в группу созданном опорном кадре.  
   
-##  <a name="animategroup"></a>CAnimationController::AnimateGroup  
+##  <a name="animategroup"></a>  CAnimationController::AnimateGroup  
  Подготавливает группы для выполнения анимации и планирует его при необходимости.  
   
 ```  
@@ -284,14 +279,14 @@ BOOL AnimateGroup(
 ### <a name="remarks"></a>Примечания  
  Этот метод не выполняет фактическую работу Создание раскадровки, Добавление анимации переменных, Применение переходов и установка опорных кадров. Возможна задержка планирования, если bScheduleNow задано значение FALSE. В этом случае для указанной группы хранения раскадровки, которые были настроены для анимации. На этом этапе можно настроить события для переменных анимации и раскадровки. Если действительно нужны для выполнения вызова анимации CAnimationController::ScheduleGroup.  
   
-##  <a name="canimationcontroller"></a>CAnimationController::CAnimationController  
+##  <a name="canimationcontroller"></a>  CAnimationController::CAnimationController  
  Создает контроллер анимации.  
   
 ```  
 CAnimationController(void);
 ```   
   
-##  <a name="cleanupgroup"></a>CAnimationController::CleanUpGroup  
+##  <a name="cleanupgroup"></a>  CAnimationController::CleanUpGroup  
  Вызывается платформой для очистки группе при анимации был запланирован.  
   
 ```  
@@ -309,7 +304,7 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет все переходы и опорные кадры из указанной группы, так как они не относятся после анимации был запланирован.  
   
-##  <a name="createkeyframe"></a>CAnimationController::CreateKeyframe  
+##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe  
  Создает опорный кадр, зависящий от перехода, и добавляет его в указанную группу.  
   
 ```  
@@ -341,9 +336,9 @@ CKeyFrame* CreateKeyframe(
  Указатель на только что созданный опорный кадр, если функция выполнена успешно.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращенный указатель можно сохранить и основывать другие опорные кадры на только что созданном опорном кадре (см. вторую перегрузку). Можно начинать переходы на опорных кадрах — см. раздел, посвященный CBaseTransition::SetKeyframes. Удалять созданные таким образом опорные кадры не нужно, так как они автоматически удаляются группами анимации. При создании опорных кадров на основе других опорных кадров и переходов будьте внимательны и избегайте циклических ссылок.  
+ Возвращенный указатель можно сохранить и основывать другие опорные кадры на только что созданном опорном кадре (см. вторую перегрузку). Можно начинать переходы на опорных кадрах — см. раздел, посвященный CBaseTransition::SetKeyframes. Удалять созданные таким образом опорные кадры не нужно, так как они автоматически удаляются группами анимации. При создании опорных кадров на основе других опорных кадров и переходов будьте внимательны и избегайте циклических ссылок.  
   
-##  <a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent  
+##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent  
  Задает или освобождает обработчик вызывается при изменении состояния диспетчера анимации.  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>Примечания  
  Если обработчик установлен (по умолчанию) анимацию Windows вызывает OnAnimationManagerStatusChanged при изменении состояния диспетчера анимации.  
   
-##  <a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler  
+##  <a name="enableanimationtimereventhandler"></a>  CAnimationController::EnableAnimationTimerEventHandler  
  Задает или освобождает обработчик для события времени и обработчик для времени обновления.  
   
 ```  
@@ -382,7 +377,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ### <a name="remarks"></a>Примечания  
  При обработчики устанавливаются (по умолчанию) вызовы Windows API анимации OnAnimationTimerPreUpdate, OnAnimationTimerPostUpdate OnRenderingTooSlow методы. Необходимо включить анимации таймеры разрешить раскадровки обновления Windows API анимации. В противном случае необходимо вызвать CAnimationController::UpdateAnimationManager, чтобы направить анимации диспетчера, чтобы обновить значения всех переменных анимации.  
   
-##  <a name="enableprioritycomparisonhandler"></a>Метода CAnimationController::EnablePriorityComparisonHandler  
+##  <a name="enableprioritycomparisonhandler"></a>  Метода CAnimationController::EnablePriorityComparisonHandler  
  Задает или освобождает обработчик сравнения приоритета, вызываемый для определения запланированная раскадровка может быть отменена, подтвердила, усекаются или сжатые.  
   
 ```  
@@ -399,7 +394,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ### <a name="remarks"></a>Примечания  
  Если обработчик установлен (по умолчанию) анимацию Windows вызывает следующие виртуальные методы в зависимости от dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler может представлять собой сочетание следующих флагов: UI_ANIMATION_PHT_NONE - выпуске все обработчики UI_ANIMATION_PHT_CANCEL - значение "Отмена" обработчик сравнения UI_ANIMATION_PHT_CONCLUDE - задать обработчик сравнения Conclude UI_ANIMATION_PHT_COMPRESS — набор Обработчик сравнения compress UI_ANIMATION_PHT_TRIM - задание обработчика Trim сравнения UI_ANIMATION_PHT_CANCEL_REMOVE - удаление обработчика отмены сравнения UI_ANIMATION_PHT_CONCLUDE_REMOVE - удаление обработчика сравнения Conclude UI_ANIMATION_PHT_COMPRESS_ УДАЛИТЬ — удаление обработчика сравнения Compress UI_ANIMATION_PHT_TRIM_REMOVE - удаление обработчика Trim сравнения  
   
-##  <a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler  
+##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler  
  Задает или освобождает обработчик для события состояния и обновление раскадровки.  
   
 ```  
@@ -421,7 +416,7 @@ virtual BOOL EnableStoryboardEventHandler(
 ### <a name="remarks"></a>Примечания  
  При установить обработчик API анимации в Windows (по умолчанию) вызывает OnStoryboardStatusChanges и OnStoryboardUpdated виртуальные методы. Обработчик необходимо задавать после CAnimationController::Animate был вызван для группы указанного анимации, так как она создает инкапсулированный объект IUIAnimationStoryboard.  
   
-##  <a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup  
+##  <a name="findanimationgroup"></a>  CAnimationController::FindAnimationGroup  
  Находит группу анимации по его идентификатору группы.  
   
 ```  
@@ -442,7 +437,7 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы найти группу анимации во время выполнения. Группы создается и добавляется во внутренний список групп анимации при добавлении первого объекта анимации с определенной GroupID контроллер анимации.  
   
-##  <a name="findanimationobject"></a>CAnimationController::FindAnimationObject  
+##  <a name="findanimationobject"></a>  CAnimationController::FindAnimationObject  
  Находит объект анимации, содержащих переменную с указанным анимации.  
   
 ```  
@@ -468,14 +463,14 @@ BOOL FindAnimationObject(
 ### <a name="remarks"></a>Примечания  
  Вызывается из обработчиков событий, когда это необходимо для поиска объекта анимации из входящих переменной анимации.  
   
-##  <a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart  
+##  <a name="g_keyframestoryboardstart"></a>  CAnimationController::gkeyframeStoryboardStart  
  Ключевой кадр, который представляет запуск раскадровки.  
   
 ```  
 static CBaseKeyFrame gkeyframeStoryboardStart;  
 ```  
   
-##  <a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart  
+##  <a name="getkeyframestoryboardstart"></a>  CAnimationController::GetKeyframeStoryboardStart  
  Возвращает ключевой кадр, который определяет начало раскадровки.  
   
 ```  
@@ -488,7 +483,7 @@ static CBaseKeyFrame* GetKeyframeStoryboardStart();
 ### <a name="remarks"></a>Примечания  
  Получите этот опорных кадров на основе других опорных кадров или переходов на момент времени, когда начинается раскадровки.  
   
-##  <a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager  
+##  <a name="getuianimationmanager"></a>  CAnimationController::GetUIAnimationManager  
  Предоставляет доступ к объекту инкапсулированный IUIAnimationManager.  
   
 ```  
@@ -501,7 +496,7 @@ IUIAnimationManager* GetUIAnimationManager();
 ### <a name="remarks"></a>Примечания  
  Если текущая операционная система не поддерживает Windows API анимации, этот метод возвращает значение NULL, и после этого все последующие вызовы CAnimationController::IsValid возвращаться значение FALSE. Может потребоваться доступ к IUIAnimationManager, чтобы вызывать его методы интерфейса, которые не помещаются в контроллер анимации.  
   
-##  <a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer  
+##  <a name="getuianimationtimer"></a>  CAnimationController::GetUIAnimationTimer  
  Предоставляет доступ к объекту инкапсулированный IUIAnimationTimer.  
   
 ```  
@@ -514,7 +509,7 @@ IUIAnimationTimer* GetUIAnimationTimer();
 ### <a name="remarks"></a>Примечания  
  Если текущая операционная система не поддерживает Windows API анимации, этот метод возвращает значение NULL, и после этого все последующие вызовы CAnimationController::IsValid возвращаться значение FALSE.  
   
-##  <a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory  
+##  <a name="getuitransitionfactory"></a>  CAnimationController::GetUITransitionFactory  
  Указатель на интерфейс IUIAnimationTransitionFactory или значение NULL, если не удалось создать библиотеку перехода.  
   
 ```  
@@ -527,7 +522,7 @@ IUIAnimationTransitionFactory* GetUITransitionFactory();
 ### <a name="remarks"></a>Примечания  
  Если текущая операционная система не поддерживает Windows API анимации, этот метод возвращает значение NULL, и после этого все последующие вызовы CAnimationController::IsValid возвращаться значение FALSE.  
   
-##  <a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary  
+##  <a name="getuitransitionlibrary"></a>  CAnimationController::GetUITransitionLibrary  
  Предоставляет доступ к объекту инкапсулированный IUIAnimationTransitionLibrary.  
   
 ```  
@@ -540,7 +535,7 @@ IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 ### <a name="remarks"></a>Примечания  
  Если текущая операционная система не поддерживает Windows API анимации, этот метод возвращает значение NULL, и после этого все последующие вызовы CAnimationController::IsValid возвращаться значение FALSE.  
   
-##  <a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress  
+##  <a name="isanimationinprogress"></a>  CAnimationController::IsAnimationInProgress  
  Указывает, воспроизводится ли хотя бы одна группа анимации.  
   
 ```  
@@ -553,7 +548,7 @@ virtual BOOL IsAnimationInProgress();
 ### <a name="remarks"></a>Примечания  
  Проверяет состояния диспетчера анимации и возвращает значение TRUE, если состояние UI_ANIMATION_MANAGER_BUSY.  
   
-##  <a name="isvalid"></a>CAnimationController::IsValid  
+##  <a name="isvalid"></a>  CAnimationController::IsValid  
  Указывает, является ли допустимым контроллер анимации.  
   
 ```  
@@ -566,56 +561,56 @@ BOOL IsValid() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает значение FALSE, только в том случае, если Windows API анимации не поддерживается в текущей операционной системы и создание диспетчера анимации не удалось, так как он не зарегистрирован. Необходимо вызвать GetUIAnimationManager по крайней мере один раз после инициализации библиотеки COM, чтобы привести значение этого флага.  
   
-##  <a name="m_bisvalid"></a>CAnimationController::m_bIsValid  
+##  <a name="m_bisvalid"></a>  CAnimationController::m_bIsValid  
  Указывает, является ли контроллер анимации допустимым. Этот член имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.  
   
 ```  
 BOOL m_bIsValid;  
 ```  
   
-##  <a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups  
+##  <a name="m_lstanimationgroups"></a>  CAnimationController::m_lstAnimationGroups  
  Список групп анимации, относящиеся к этому контроллеру анимации.  
   
 ```  
 CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;  
 ```  
   
-##  <a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager  
+##  <a name="m_panimationmanager"></a>  CAnimationController::m_pAnimationManager  
  Содержит указатель на объект COM диспетчера анимации.  
   
 ```  
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;  
 ```  
   
-##  <a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer  
+##  <a name="m_panimationtimer"></a>  CAnimationController::m_pAnimationTimer  
  Содержит указатель на COM-таймера анимации объекта.  
   
 ```  
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;  
 ```  
   
-##  <a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd  
+##  <a name="m_prelatedwnd"></a>  CAnimationController::m_pRelatedWnd  
  Указатель на связанный объект CWnd можно будет перерисовываться автоматически во время возникновения события после обновления или изменение состояния диспетчера анимации. Может иметь значение NULL.  
   
 ```  
 CWnd* m_pRelatedWnd;  
 ```  
   
-##  <a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory  
+##  <a name="m_ptransitionfactory"></a>  CAnimationController::m_pTransitionFactory  
  Содержит указатель на объект COM фабрики перехода.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;  
 ```  
   
-##  <a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary  
+##  <a name="m_ptransitionlibrary"></a>  CAnimationController::m_pTransitionLibrary  
  Содержит указатель на COM-библиотеки перехода объекта.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;  
 ```  
   
-##  <a name="onafterschedule"></a>CAnimationController::OnAfterSchedule  
+##  <a name="onafterschedule"></a>  CAnimationController::OnAfterSchedule  
  Вызывается платформой при анимации для указанной группы только что был запланирован.  
   
 ```  
@@ -629,7 +624,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию удаляет опорные кадры из указанной группы и переходит из анимации переменные, принадлежащие к указанной группе. Можно переопределить в производном классе, чтобы выполнить дополнительные действия на основании расписания анимации.  
   
-##  <a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged  
+##  <a name="onanimationintegervaluechanged"></a>  CAnimationController::OnAnimationIntegerValueChanged  
  Вызывается платформой при изменении целочисленное значение переменной анимации.  
   
 ```  
@@ -660,7 +655,7 @@ virtual void OnAnimationIntegerValueChanged(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если с именем переменной определенного анимации или анимации объекта EnableIntegerValueChangedEvent включить события переменной анимации. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged  
+##  <a name="onanimationmanagerstatuschanged"></a>  CAnimationController::OnAnimationManagerStatusChanged  
  Вызывается платформой в ответ на событие StatusChanged от диспетчера анимации.  
   
 ```  
@@ -679,7 +674,7 @@ virtual void OnAnimationManagerStatusChanged(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включена анимация диспетчера событий с EnableAnimationManagerEvent. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Реализация по умолчанию обновляет связанные окна, если оно было задано с SetRelatedWnd.  
   
-##  <a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate  
+##  <a name="onanimationtimerpostupdate"></a>  CAnimationController::OnAnimationTimerPostUpdate  
  Вызывается платформой, после завершения обновления анимации.  
   
 ```  
@@ -689,7 +684,7 @@ virtual void OnAnimationTimerPostUpdate();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включена обработчика событий таймера, с помощью EnableAnimationTimerEventHandler. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate  
+##  <a name="onanimationtimerpreupdate"></a>  CAnimationController::OnAnimationTimerPreUpdate  
  Вызывается платформой перед началом обновления анимации.  
   
 ```  
@@ -699,7 +694,7 @@ virtual void OnAnimationTimerPreUpdate();
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включена обработчика событий таймера, с помощью EnableAnimationTimerEventHandler. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerRenderingTooSlow  
+##  <a name="onanimationtimerrenderingtooslow"></a>  CAnimationController::OnAnimationTimerRenderingTooSlow  
  Вызывается платформой при визуализации частота кадров анимации минимального частоту кадров минимальное нежелательно.  
   
 ```  
@@ -713,7 +708,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включена обработчика событий таймера, с помощью EnableAnimationTimerEventHandler. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Частота кадров минимальное желательно указывается путем вызова IUIAnimationTimer::SetFrameRateThreshold.  
   
-##  <a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged  
+##  <a name="onanimationvaluechanged"></a>  CAnimationController::OnAnimationValueChanged  
  Вызывается платформой при изменении значения переменной анимации.  
   
 ```  
@@ -744,7 +739,7 @@ virtual void OnAnimationValueChanged(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если с именем переменной определенного анимации или анимации объекта EnableValueChangedEvent включить события переменной анимации. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart  
+##  <a name="onbeforeanimationstart"></a>  CAnimationController::OnBeforeAnimationStart  
  Вызывается платформой вправо до запланированного анимации.  
   
 ```  
@@ -758,7 +753,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>Примечания  
  Этот вызов направляется в связанных CWnd и могут переопределяться в производном классе для выполнения дополнительных действий перед запуском анимации для указанной группы.  
   
-##  <a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel  
+##  <a name="onhasprioritycancel"></a>  CAnimationController::OnHasPriorityCancel  
  Вызывается платформой для решения конфликтов планирования.  
   
 ```  
@@ -782,9 +777,9 @@ virtual BOOL OnHasPriorityCancel(
  Должно возвращаться значение TRUE, если приоритет принадлежит раскадровке, входящей в группу pGroupNew. Должно возвращаться значение FALSE, если приоритет принадлежит раскадровке, входящей в группу pGroupScheduled.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами см. в документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
+ Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress  
+##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress  
  Вызывается платформой для решения конфликтов планирования.  
   
 ```  
@@ -808,9 +803,9 @@ virtual BOOL OnHasPriorityCompress(
  Должно возвращаться значение TRUE, если приоритет принадлежит раскадровке, входящей в группу pGroupNew. Должно возвращаться значение FALSE, если приоритет принадлежит раскадровке, входящей в группу pGroupScheduled.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами см. в документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
+ Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude  
+##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude  
  Вызывается платформой для решения конфликтов планирования.  
   
 ```  
@@ -834,9 +829,9 @@ virtual BOOL OnHasPriorityConclude(
  Должно возвращаться значение TRUE, если приоритет принадлежит раскадровке, входящей в группу pGroupNew. Должно возвращаться значение FALSE, если приоритет принадлежит раскадровке, входящей в группу pGroupScheduled.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами см. в документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
+ Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim  
+##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim  
  Вызывается платформой для решения конфликтов планирования.  
   
 ```  
@@ -860,9 +855,9 @@ virtual BOOL OnHasPriorityTrim(
  Должно возвращаться значение TRUE, если приоритет принадлежит раскадровке, входящей в группу pGroupNew. Должно возвращаться значение FALSE, если приоритет принадлежит раскадровке, входящей в группу pGroupScheduled.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами см. в документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
+ Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Дополнительные сведения об управлении конфликтами документации по API анимации в Windows (http://msdn.microsoft.com/library/dd371759(VS.85).aspx).  
   
-##  <a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged  
  Вызывается платформой при изменении состояния раскадровки.  
   
 ```  
@@ -885,7 +880,7 @@ virtual void OnStoryboardStatusChanged(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включен с помощью CAnimationController::EnableStoryboardEventHandler события раскадровки. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>  CAnimationController::OnStoryboardUpdated  
  Вызывается платформой при обновлении раскадровки.  
   
 ```  
@@ -899,7 +894,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается, если включен с помощью CAnimationController::EnableStoryboardEventHandler события раскадровки. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе.  
   
-##  <a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups  
+##  <a name="removeallanimationgroups"></a>  CAnimationController::RemoveAllAnimationGroups  
  Удаляет все группы анимации с анимацией контроллера.  
   
 ```  
@@ -909,7 +904,7 @@ void RemoveAllAnimationGroups();
 ### <a name="remarks"></a>Примечания  
  Все группы, будут удалены, их указателем, если хранятся на уровне приложения, необходимо станут недействительными. Если CAnimationGroup::m_bAutodestroyAnimationObjects для удаления группы имеет значение TRUE, будут удалены все объекты анимации, входящую в эту группу; в противном случае их ссылки на родительский анимации контроллер будет иметь значение NULL, и могут быть добавлены к другому контроллеру.  
   
-##  <a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup  
+##  <a name="removeanimationgroup"></a>  CAnimationController::RemoveAnimationGroup  
  Удаляет группу анимации с указанным Идентификатором из контроллер анимации.  
   
 ```  
@@ -923,7 +918,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет группу анимации из внутреннего списка групп и удаляет его, поэтому если вы сохранили указатель в эту группу анимации, его необходимо станут недействительными. Если CAnimationGroup::m_bAutodestroyAnimationObjects имеет значение TRUE, будут удалены все объекты анимации, входящую в эту группу; в противном случае их ссылки на родительский анимации контроллер будет иметь значение NULL, и могут быть добавлены к другому контроллеру.  
   
-##  <a name="removeanimationobject"></a>CAnimationController::RemoveAnimationObject  
+##  <a name="removeanimationobject"></a>  CAnimationController::RemoveAnimationObject  
  Удалите объекта анимации с анимацией контроллера.  
   
 ```  
@@ -942,7 +937,7 @@ void RemoveAnimationObject(
 ### <a name="remarks"></a>Примечания  
  Удаляет объект анимации из контроллер анимации и группы анимации. Эта функция вызывается в том случае, если не больше анимации определенного объекта или если необходимо перенести на другой контроллер анимации объекта. В последней bNoDelete вариантов должно быть TRUE.  
   
-##  <a name="removetransitions"></a>CAnimationController::RemoveTransitions  
+##  <a name="removetransitions"></a>  CAnimationController::RemoveTransitions  
  Удаляет переходы из объектов анимации, принадлежащие к указанной группе.  
   
 ```  
@@ -956,7 +951,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ### <a name="remarks"></a>Примечания  
  Группа обрабатывает в цикле его анимации объектов и вызывает ClearTransitions(FALSE) для каждого объекта анимации. Этот метод вызывается платформой после анимации был запланирован.  
   
-##  <a name="schedulegroup"></a>CAnimationController::ScheduleGroup  
+##  <a name="schedulegroup"></a>  CAnimationController::ScheduleGroup  
  Планирует анимации.  
   
 ```  
@@ -978,7 +973,7 @@ BOOL ScheduleGroup(
 ### <a name="remarks"></a>Примечания  
  С помощью параметра bScheduleNow равным FALSE предыдущих ScheduleGroup необходимо вызвать AnimateGroup. Можно указать время требуемой анимации, полученный от IUIAnimationTimer::GetTime. Если параметр времени равен 0,0, анимация запланирована текущее время.  
   
-##  <a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd  
+##  <a name="setrelatedwnd"></a>  CAnimationController::SetRelatedWnd  
  Устанавливает связь между контроллер анимации и окна.  
   
 ```  
@@ -992,7 +987,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ### <a name="remarks"></a>Примечания  
  Если связанный объект CWnd, контроллер анимации можно автоматически обновлять его (отправлять сообщения WM_PAINT) при изменении состояния диспетчера анимации или события таймера post обновления.  
   
-##  <a name="updateanimationmanager"></a>CAnimationController::UpdateAnimationManager  
+##  <a name="updateanimationmanager"></a>  CAnimationController::UpdateAnimationManager  
  Направляет диспетчера анимации, чтобы обновить значения всех переменных анимации.  
   
 ```  

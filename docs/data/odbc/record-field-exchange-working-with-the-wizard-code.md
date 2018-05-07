@@ -1,13 +1,10 @@
 ---
-title: "Обмен полями записей: Работа с кодом мастера | Документы Microsoft"
-ms.custom: 
+title: 'Обмен полями записей: Работа с кодом мастера | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Обмен данными с полями записей (RFX). Работа с кодом мастера
 В этом разделе объясняется, мастер приложений MFC и **добавить класс** (как описано в [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) для поддержки RFX и способ изменить этот код.  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   Объявления элементов данных полей набора записей в классе набора записей  
   
--   Переопределение`CRecordset::DoFieldExchange`  
+-   Переопределение `CRecordset::DoFieldExchange`  
   
 -   Инициализация элементов данных полей набора записей в конструкторе класса набора записей  
   
-##  <a name="_core_the_field_data_member_declarations"></a>Объявления элементов данных полей  
+##  <a name="_core_the_field_data_member_declarations"></a> Объявления элементов данных полей  
  Мастер прописывает объявления класса набора записей в h-файле, подобное приведенному ниже, для класса `CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  Кроме того, обратите внимание, что мастер переопределяет `DoFieldExchange` функции-члена класса `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange переопределения  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange переопределения  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) является сердцем RFX. Платформа вызывает `DoFieldExchange` любое время, необходимое для перемещения данных из источника данных в набор записей, либо из набора записей в источник данных. `DoFieldExchange`также поддерживает получение сведений о поле членов данных с помощью [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) и [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) функции-члены.  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) является сердцем RFX. Платформа вызывает `DoFieldExchange` любое время, необходимое для перемещения данных из источника данных в набор записей, либо из набора записей в источник данных. `DoFieldExchange` также поддерживает получение сведений о поле членов данных с помощью [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) и [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) функции-члены.  
   
  Следующие `DoFieldExchange` — переопределение для `CSections` класса. Мастер записывает функцию в CPP-файл для класса набора записей.  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   `pFX` Указатель [разделе](../../mfc/reference/cfieldexchange-class.md) объект, который передается платформой, когда она вызывает `DoFieldExchange`. `CFieldExchange` Объекта указывает операцию, `DoFieldExchange` выполнить, направление передачи и другой контекстной информации.  
   
-##  <a name="_core_the_recordset_constructor"></a>Конструктор набора записей  
+##  <a name="_core_the_recordset_constructor"></a> Конструктор набора записей  
  Написанный мастером конструктор набора записей содержит две вещи, относящиеся к RFX:  
   
 -   Инициализацию для каждого элемента данных поля  

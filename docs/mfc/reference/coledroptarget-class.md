@@ -1,12 +1,9 @@
 ---
-title: "Класс COleDropTarget | Документы Microsoft"
-ms.custom: 
+title: Класс COleDropTarget | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>Класс COleDropTarget
 Предоставляет механизм взаимодействия между окном и библиотеками OLE.  
@@ -58,13 +53,13 @@ class COleDropTarget : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Создает объект `COleDropTarget`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDropTarget::OnDragEnter](#ondragenter)|Вызывается, когда курсор в первый раз входит окна.|  
 |[COleDropTarget::OnDragLeave](#ondragleave)|Вызывается, когда курсор перемещается за пределы окна.|  
@@ -92,7 +87,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  Создает объект класса `COleDropTarget`.  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>Примечания  
  Вызовите [зарегистрировать](#register) для связи этого объекта с окном.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  Вызывается платформой, когда курсор сначала перетаскивается в окне.  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>Возвращаемое значение  
  Эффект, который создается в результате перетаскивания была предпринята попытка в расположении, заданном `point`. Может быть один или несколько из следующих:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` Удаление не допускается.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
-- `DROPEFFECT_SCROLL`Операции перетаскивания прокрутки о или происходит в целевом объекте.  
+- `DROPEFFECT_SCROLL` Операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы разрешить операции удаления в окне. Реализация по умолчанию вызывает [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), возвращающая просто значение `DROPEFFECT_NONE` по умолчанию.  
   
  Дополнительные сведения см. в разделе [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) в Windows SDK.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Вызывается платформой, когда курсор покидает окно при операции перетаскивания.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  Дополнительные сведения см. в разделе [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) в Windows SDK.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Вызывается платформой, когда курсор перемещается над окном.  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>Возвращаемое значение  
  Эффект, который создается в результате перетаскивания была предпринята попытка в расположении, заданном `point`. Может быть один или несколько из следующих:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` Удаление не допускается.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
-- `DROPEFFECT_SCROLL`Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
+- `DROPEFFECT_SCROLL` Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы разрешить операции удаления в окне, следует переопределить эту функцию. Реализация по умолчанию эта функция вызывает [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), который возвращает `DROPEFFECT_NONE` по умолчанию. Поскольку эта функция вызывается часто во время операции перетаскивания и вставки, ее следует оптимизировать максимальной.  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  Вызывается платформой перед вызовом [OnDragEnter](#ondragenter) или [OnDragOver](#ondragover) для определения ли `point` находится в области прокрутки.  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>Возвращаемое значение  
  Эффект, который создается в результате перетаскивания была предпринята попытка в расположении, заданном `point`. Может быть один или несколько из следующих:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` Удаление не допускается.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
-- `DROPEFFECT_SCROLL`Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
+- `DROPEFFECT_SCROLL` Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если вы хотите предоставить особое поведение для данного события. Реализация по умолчанию эта функция вызывает [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), который возвращает `DROPEFFECT_NONE` и прокрутка окна при перетаскивании курсор в область прокрутки по умолчанию внутри границы окна.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  Вызывается платформой при операции удаления.  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  Эффект, который пользователь выбрал для операции удаления. Может быть один или несколько из следующих:  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
  `point`  
  Содержит расположение курсора в пикселях относительно экрана.  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  Дополнительные сведения см. в разделе [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) в Windows SDK.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Вызывается платформой при операции удаления.  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  Эффектов перетаскивания описаны действия, связанные с операцией перетаскивания. Ниже представлен список эффектов перетаскивания:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` Удаление не допускается.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` Операция копирования будет выполнена.  
   
-- `DROPEFFECT_MOVE`Выполняется операция перемещения.  
+- `DROPEFFECT_MOVE` Выполняется операция перемещения.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
   
-- `DROPEFFECT_SCROLL`Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
+- `DROPEFFECT_SCROLL` Указывает, что операции перетаскивания прокрутки о или происходит в целевом объекте.  
   
  Дополнительные сведения см. в разделе [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) в Windows SDK.  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  Эта функция вызывается для регистрации вашего окна OLE библиотек DLL допустимым местом назначения.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  Дополнительные сведения см. в разделе [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) в Windows SDK.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Вызывайте эту функцию перед удалением любого окна, который был зарегистрирован в качестве цели перетаскивания путем вызова [зарегистрировать](#register) Чтобы удалить его из списка мест перетаскивания.  
   
 ```  

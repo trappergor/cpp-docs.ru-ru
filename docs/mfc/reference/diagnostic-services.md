@@ -1,13 +1,10 @@
 ---
-title: "Диагностические службы | Документы Microsoft"
-ms.custom: 
+title: Диагностические службы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 Библиотека Microsoft Foundation Class предоставляет множество служб диагностики, которые упрощают отладку программ. Эти службы включают в себя макросы и глобальные функции, позволяющие отслеживать выделение памяти для программы, записывать дамп содержимого объектов во время выполнения и печатать сообщения отладки во время выполнения. Макросы и глобальные функции диагностических служб сгруппированы в следующие категории:  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Подавляет предупреждения компилятора для использования устаревших функций MFC.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 Подавляет предупреждения компилятора для использования устаревших функций MFC.  
    
 ### <a name="syntax"></a>Синтаксис   
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>Функция AfxDebugBreak
+## <a name="afxdebugbreak"></a> Функция AfxDebugBreak
 Эта функция вызывается для привести к сбою (в месте вызова `AfxDebugBreak`) в процессе выполнения отладочной версии приложения MFC.  
 
 ### <a name="syntax"></a>Синтаксис    
@@ -137,7 +132,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>Примечания  
- `AfxDebugBreak`не оказывает влияния в версии приложения MFC и должна быть удалена. Эта функция должна использоваться только в приложениях MFC. Используйте версию API-интерфейса Win32, **DebugBreak**, чтобы привести к сбою в приложениях, не являющихся MFC.  
+ `AfxDebugBreak` не оказывает влияния в версии приложения MFC и должна быть удалена. Эта функция должна использоваться только в приложениях MFC. Используйте версию API-интерфейса Win32, **DebugBreak**, чтобы привести к сбою в приложениях, не являющихся MFC.  
    
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxver_.h   
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  Указывает объект класса, производного от `CObject` с переопределение `AssertValid` функции-члена.  
   
 ### <a name="remarks"></a>Примечания  
- `ASSERT_VALID`вызовы `AssertValid` функции-члена объекта передана в качестве аргумента.  
+ `ASSERT_VALID` вызовы `AssertValid` функции-члена объекта передана в качестве аргумента.  
   
  В окончательной версии MFC `ASSERT_VALID` не выполняет никаких действий. В отладочной версии, он проверяет указатель, проверяет **NULL**и вызывает метод объекта собственные `AssertValid` функции-члены. Если любой из этих тестов завершается с ошибкой, так же, как отображается предупреждающее сообщение [ASSERT](#assert).  
   
@@ -273,7 +268,7 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h
 
- ### <a name="ensure"></a>УБЕДИТЕСЬ, что и ENSURE_VALID
+ ### <a name="ensure"></a>  УБЕДИТЕСЬ, что и ENSURE_VALID
 Используйте для проверки правильности данных.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [ПРОВЕРЬТЕ](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a> THIS_FILE
 Имя файла, скомпилированного при развертывании.  
    
 ### <a name="syntax"></a>Синтаксис    
@@ -380,7 +375,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext в MFC)  
+##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext в MFC)  
  Предоставляет базовые возможности формирование дампа объекта в приложении.  
   
 ```   
@@ -388,7 +383,7 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `afxDump`— Это стандартный [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объект, который позволяет отправлять `CDumpContext` данных в окне вывода или терминал отладки. Как правило, указывается `afxDump` как параметр `CObject::Dump`.  
+ `afxDump` — Это стандартный [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объект, который позволяет отправлять `CDumpContext` данных в окне вывода или терминал отладки. Как правило, указывается `afxDump` как параметр `CObject::Dump`.  
   
  В Windows NT и всех версиях Windows `afxDump` выходные данные направляются в окно выходных данных отладки Visual C++ при отладке приложения.  
   
@@ -401,7 +396,7 @@ CDumpContext  afxDump;
  **Заголовок:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump (внутренний)
+## <a name="afxdump"></a> AfxDump (внутренний)
 Внутренняя функция, который используется библиотекой MFC для помещения в дамп состояния объекта во время отладки.  
 
 ### <a name="syntax"></a>Синтаксис    
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `afxMemDF`может иметь следующие значения, заданные в перечислении `afxMemDF`:  
+ `afxMemDF` может иметь следующие значения, заданные в перечислении `afxMemDF`:  
   
 - **allocMemDF** Включение отладки распределителя (по умолчанию в отладочной библиотеке).  
   
@@ -502,7 +497,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
  Вызывайте эту функцию в отладчике для помещения в дамп состояния объекта во время отладки.  
   
 ```   
@@ -598,14 +593,14 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Например в следующей таблице описаны первая часть приведенных выше выходных данных:  
   
-|Вывод|Описание:|  
+|Вывод|Описание|  
 |------------|-----------------|  
 |`00427D55:`|Обратный адрес последнем вызове функции.|  
 |`DUMP2\DEBUG\DUMP2.EXE!`|Полный путь к модулю, содержащему вызов функции.|  
 |`void AfxDumpStack(unsigned long)`|Прототип функции вызывается.|  
 |`+ 181 bytes`|Смещение в байтах от адреса прототип функции (в этом случае `void AfxDumpStack(unsigned long)`) в обратный адрес (в данном случае `00427D55`).|  
   
- `AfxDumpStack`доступна в версиях отладки и отладки библиотеки MFC; Однако функция всегда компонуется статически, даже в том случае, если исполняемый файл использует MFC в общей библиотеке DLL. В реализациях общую библиотеку функция находится в MFCS42. Библиотека LIB (и его вариантов).  
+ `AfxDumpStack` доступна в версиях отладки и отладки библиотеки MFC; Однако функция всегда компонуется статически, даже в том случае, если исполняемый файл использует MFC в общей библиотеке DLL. В реализациях общую библиотеку функция находится в MFCS42. Библиотека LIB (и его вариантов).  
   
  Для успешного использования этой функции:  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
  Включает и выключает дамп утечки памяти в деструкторе `AFX_DEBUG_STATE` .  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Определение библиотек DLL для распространения | Документы Microsoft"
-ms.custom: 
+title: Определение библиотек DLL для распространения | Документы Microsoft
+ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Определение библиотек DLL для распространения
 
@@ -53,18 +48,18 @@ ms.lasthandoff: 03/16/2018
 
 |Библиотека Visual C++|Описание|Применение|
 |--------------------------|-----------------|----------------|
-|vcruntime*version*.dll|Библиотека времени выполнения для машинного кода.|Приложения, использующие обычный C и C++ языка запуска и завершения работы службы.|
-|vccorlib*version*.dll|Библиотека времени выполнения для управляемого кода.|Приложения, использующие службы языка C++ для управляемого кода.|
+|vcruntime*версии*.dll|Библиотека времени выполнения для машинного кода.|Приложения, использующие обычный C и C++ языка запуска и завершения работы службы.|
+|vccorlib*версии*.dll|Библиотека времени выполнения для управляемого кода.|Приложения, использующие службы языка C++ для управляемого кода.|
 |msvcp*версии*DLL- и msvcp*версии*_*dotnumber*.dll|Стандартная библиотека C++ для машинного кода.|Приложения, использующие [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md).|
 |concrt*версии*.dll|Библиотека времени выполнения с параллелизмом для машинного кода.|Приложения, использующие [среда выполнения с параллелизмом](../parallel/concrt/concurrency-runtime.md).|
-|mfc*version*.dll|Библиотека Microsoft Foundation Class (MFC).|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md).|
-|mfc*version* *language*.dll|Microsoft Foundation классы ресурсов библиотеки (MFC).|Приложения, использующие ресурсы для конкретного языка для MFC.|
-|mfc*version*u.dll|Библиотека MFC с поддержкой Юникода.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) и требующие поддержки Юникода.|
+|MFC*версии*.dll|Библиотека Microsoft Foundation Class (MFC).|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md).|
+|MFC*версии* *языка*.dll|Microsoft Foundation классы ресурсов библиотеки (MFC).|Приложения, использующие ресурсы для конкретного языка для MFC.|
+|MFC*версии*u.dll|Библиотека MFC с поддержкой Юникода.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) и требующие поддержки Юникода.|
 |mfcmifc80.dll|Библиотека управляемых интерфейсов MFC.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) с [элементов управления Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*version*.dll|Управляемая библиотека MFC.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) с [элементов управления Windows Forms](/dotnet/framework/winforms/controls/index).|
-|mfcm*version*u.dll|Управляемая библиотека MFC с поддержкой Юникода.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) с [элементов управления Windows Forms](/dotnet/framework/winforms/controls/index) и требующие поддержки Юникода.|
-|vcamp*version*.dll|Библиотека управления Устройством для машинного кода.|Приложения, использующие [библиотеки C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) кода.|
-|vcomp*version*.dll|Библиотеки OpenMP для машинного кода.|Приложения, использующие [библиотеки C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) кода.|
+|mfcm*версии*.dll|Управляемая библиотека MFC.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) с [элементов управления Windows Forms](/dotnet/framework/winforms/controls/index).|
+|mfcm*версии*u.dll|Управляемая библиотека MFC с поддержкой Юникода.|Приложения, использующие [библиотеки MFC](../mfc/mfc-desktop-applications.md) с [элементов управления Windows Forms](/dotnet/framework/winforms/controls/index) и требующие поддержки Юникода.|
+|vcamp*версии*.dll|Библиотека управления Устройством для машинного кода.|Приложения, использующие [библиотеки C++ AMP](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) кода.|
+|vcomp*версии*.dll|Библиотеки OpenMP для машинного кода.|Приложения, использующие [библиотеки C++ OpenMP](../parallel/openmp/openmp-in-visual-cpp.md) кода.|
 
 > [!NOTE]
 > Библиотеку шаблонных классов ATL больше не требуется повторно распространять в качестве отдельного DLL-файла. Ее функции были переданы заголовкам и статической библиотеке.

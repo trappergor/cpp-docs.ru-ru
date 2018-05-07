@@ -1,13 +1,10 @@
 ---
-title: "Классы простых типов данных | Документы Microsoft"
-ms.custom: 
+title: Классы простых типов данных | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - data classes [MFC]
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simple-data-type-classes"></a>Классы простых типов данных
-Следующие классы инкапсулируют рисования координат, символьных строк и время, и сведения о дате, что позволяет удобным использовать синтаксис C++. Эти объекты широко используются в качестве параметров для функции-члены классов Windows в библиотеке классов. Поскольку `CPoint`, `CSize`, и `CRect` соответствуют **ТОЧКИ**, **размер**, и `RECT` структур, соответственно, в Windows SDK, можно использовать объекты из них Везде, где можно использовать эти структуры языка C, классы C++. Классы предоставляют полезные интерфейсов с помощью функций-членов. `CStringT`предоставляет очень гибкие динамический символ строки. `CTime`, `COleDateTime`, `CTimeSpan`, и **COleTimeSpan** представления значений даты и времени. Дополнительные сведения об этих классах см. в статье [даты и времени](../atl-mfc-shared/date-and-time.md).  
+Следующие классы инкапсулируют рисования координат, символьных строк и время, и сведения о дате, что позволяет удобным использовать синтаксис C++. Эти объекты широко используются в качестве параметров для функции-члены классов Windows в библиотеке классов. Поскольку `CPoint`, `CSize`, и `CRect` соответствуют **ТОЧКИ**, **размер**, и `RECT` структур, соответственно, в Windows SDK, можно использовать объекты из них Везде, где можно использовать эти структуры языка C, классы C++. Классы предоставляют полезные интерфейсов с помощью функций-членов. `CStringT` предоставляет очень гибкие динамический символ строки. `CTime`, `COleDateTime`, `CTimeSpan`, и **COleTimeSpan** представления значений даты и времени. Дополнительные сведения об этих классах см. в статье [даты и времени](../atl-mfc-shared/date-and-time.md).  
   
  Классы, которые начинаются с «**COle**» являются encapsulations типов данных, предоставляемых OLE. Эти типы данных можно использовать в приложениях Windows, независимо от того, используются ли другие функции OLE.  
   

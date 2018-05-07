@@ -1,13 +1,10 @@
 ---
-title: "Контейнеры: Проблемы пользовательского интерфейса | Документы Microsoft"
-ms.custom: 
+title: 'Контейнеры: Проблемы пользовательского интерфейса | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c037d1b433344b0b831be11b0972ffb475f29f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c683b7f9d021056b88bbddb43e7da085356755d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-user-interface-issues"></a>Контейнеры. Проблемы пользовательского интерфейса
 Пользовательский интерфейс приложения-контейнера для адекватно управления связанные и внедренные элементы необходимо добавить несколько функций. Эти функции включают изменения в структуре меню и на события, которые приложение обрабатывает. Подробные сведения о них см. в следующих статьях:  

@@ -1,13 +1,10 @@
 ---
-title: "Классы диалоговых окон | Документы Microsoft"
-ms.custom: 
+title: Классы диалоговых окон | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>Классы диалоговых окон
 Класс `CDialog` и его производные классы инкапсулируют функциональность диалогового окна. Поскольку диалоговое окно — это особый тип окна, `CDialog` является производным от `CWnd`. Производные классы из диалогового окна `CDialog` или воспользуйтесь одним из классы общих диалоговых окон для стандартных диалоговых окон, таких как открытие или сохранение файла, печать, Выбор шрифта или цвета, запуск операции поиска и замены или с помощью различных связанные с OLE операции.  
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/09/2018
  OLE добавляет некоторые общие диалоговые окна Windows. Эти классы инкапсулируют общие диалоговые окна OLE.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Используется платформой для хранения типичные реализации всех диалоговых окон OLE. Все классы диалоговых окон в категории пользовательского интерфейса являются производными от этого базового класса. `COleDialog`нельзя использовать напрямую.  
+ Используется платформой для хранения типичные реализации всех диалоговых окон OLE. Все классы диалоговых окон в категории пользовательского интерфейса являются производными от этого базового класса. `COleDialog` нельзя использовать напрямую.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Отображает диалоговое окно «Вставить объект», стандартный пользовательский интерфейс для вставки новых OLE связанных или внедренных элементов.  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCToolBarFontComboBox | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCToolBarFontComboBox | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Класс CMFCToolBarFontComboBox
 Кнопка панели инструментов, который содержит поле со списком, позволяющий пользователю выбрать шрифт из списка системных шрифтов.  
@@ -46,13 +41,13 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Создает объект `CMFCToolBarFontComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Возвращает указатель на `CMFCFontInfo` объект для указанного индекса в поле со списком.|  
 |[CMFCToolBarFontComboBox::SetFont](#setfont)|Выбирает шрифт в поле со списком шрифтов согласно либо имя шрифта или префикс и набор символов шрифта.|  
@@ -88,7 +83,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  Создает [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) объекта.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
  Возвращает указатель на `CMFCFontInfo` объект для указанного индекса в поле со списком.  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на объект `CMFCFontInfo`. Если `iIndex` указывается индекс допустимый элемент, возвращается значение `NULL`.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Высота в пикселях символов в поле со списком шрифтов, если поле со списком имеет стиль рисования владельцем.  
   
 ```  
@@ -176,7 +171,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>Примечания  
  Если `m_nFontHeight` переменной равно 0, высота вычисляется автоматически в соответствии с шрифт по умолчанию в поле со списком. Высота относится и восхождение символов выше базовых показателей и спуск символов под базовой линии.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
  Выбирает шрифт в поле со списком шрифтов согласно имя шрифта и символ набор, указываются в параметрах.  
   
 ```  

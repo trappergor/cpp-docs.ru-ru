@@ -1,12 +1,9 @@
 ---
-title: "Класс CUIntArray | Документы Microsoft"
-ms.custom: 
+title: Класс CUIntArray | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>Класс CUIntArray
 Поддерживает массивы целых чисел без знака.  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 class CUIntArray : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
  Функции-члены `CUIntArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель как параметр функции или возвращаемого значения, замените **UINT**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
@@ -83,13 +78,13 @@ class CUIntArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -111,14 +106,14 @@ class CUIntArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
   
 ## <a name="remarks"></a>Примечания  
  Целое число без знака или **UINT**, отличается от слов и двойных слов в том, что физический размер **UINT** может меняться в зависимости от целевой операционной среде. Объект **UINT** такого же размера, как двойное слово соответственно.  
   
- `CUIntArray`включает в себя [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) макрос для поддержки доступа типа во время выполнения и Сохранение дампа [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объекта. Если вам требуется дамп отдельных целое число без знака элементов, необходимо задать глубины контекста дампа 1 или выше. Невозможно сериализовать массивы целое число без знака.  
+ `CUIntArray` включает в себя [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) макрос для поддержки доступа типа во время выполнения и Сохранение дампа [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объекта. Если вам требуется дамп отдельных целое число без знака элементов, необходимо задать глубины контекста дампа 1 или выше. Невозможно сериализовать массивы целое число без знака.  
   
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  

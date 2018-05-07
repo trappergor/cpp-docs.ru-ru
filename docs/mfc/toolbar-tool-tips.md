@@ -1,13 +1,10 @@
 ---
-title: "Всплывающие подсказки панели инструментов | Документы Microsoft"
-ms.custom: 
+title: Всплывающие подсказки панели инструментов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,28 +19,26 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248c975c51a2f44f6c9b17094d6b05082a9016a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-tool-tips"></a>Всплывающие подсказки панели инструментов
 Всплывающие подсказки являются очень мала всплывающих окон, которые представляют приведено краткое описание назначения кнопки панели инструментов при наведении указателя мыши на кнопку в течение заданного времени. При создании приложения с помощью мастера приложений, который содержит панель инструментов средства совет поддержка предоставляется автоматически. В этой статье объясняется средство совет поддержки как создаются в мастере приложений и как добавить поддержку совет средство в приложение.  
   
- В этой статье рассматриваются:  
+ В этой статье рассматриваются следующие действия:  
   
 -   [Активация всплывающие подсказки](#_core_activating_tool_tips)  
   
 -   [Обновление строки состояния flyby](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a>Активация всплывающие подсказки  
+##  <a name="_core_activating_tool_tips"></a> Активация всплывающие подсказки  
  Чтобы активировать всплывающих подсказок в приложении, необходимо выполнить два действия:  
   
 -   Добавить `CBRS_TOOLTIPS` стиль другие стили (такие как **WS_CHILD**, **WS_VISIBLE**и другие **CBRS_** стили) передается в качестве `dwStyle` параметра [ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) функции или в [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Запись строки таблицы с тем же Идентификатором как дочерний элемент управления в файле ресурсов содержит строку подсказки средство.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a>Обновление строки состояния flyby  
+##  <a name="_core_fly_by_status_bar_updates"></a> Обновление строки состояния flyby  
  Функции, связанные с всплывающие подсказки — строки обновление состояния «flyby». По умолчанию сообщения в строке состояния описывает только конкретная кнопка, при нажатии кнопки. Включив `CBRS_FLYBY` в ваш список стилей, переданный `CToolBar::Create`, у вас есть эти сообщения, обновляется, когда указатель мыши помещается над панели инструментов без фактически активации кнопки.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  

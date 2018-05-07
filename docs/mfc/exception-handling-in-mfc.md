@@ -1,13 +1,10 @@
 ---
-title: "Обработка исключений в MFC | Документы Microsoft"
-ms.custom: 
+title: Обработка исключений в MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>Обработка исключений в MFC
 В этой статье описываются способы обработки исключений, доступные в MFC. Доступны два механизма.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [Дополнительные сведения об исключениях](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>Условия использования исключений  
+##  <a name="_core_when_to_use_exceptions"></a> Условия использования исключений  
  Три категории результатов может возникнуть при вызове функции во время выполнения программы: нормальное выполнение, ошибочного выполнения или аварийное выполнение. Каждой категории описаны ниже.  
   
 -   Обычное выполнение  
@@ -95,7 +90,7 @@ ms.lasthandoff: 01/03/2018
   
  Использование исключений особенно хорошо подходят для выполнения нестандартных.  
   
-##  <a name="_core_mfc_exception_support"></a>Поддержка исключений MFC  
+##  <a name="_core_mfc_exception_support"></a> Поддержка исключений MFC  
  Использовать исключения C++ напрямую или использовать макросы исключений MFC, будет использовать [класса CException](../mfc/reference/cexception-class.md) или `CException`-производных объектов, которые могут быть созданы платформой или приложением.  
   
  В следующей таблице показаны стандартные исключения, предоставляемая MFC.  
@@ -116,7 +111,7 @@ ms.lasthandoff: 01/03/2018
 > [!NOTE]
 >  MFC поддерживает исключения C++ и макросов исключений MFC. MFC непосредственно не поддерживает Windows NT структурированные обработчики исключений (SEH), как описано в [структурированную обработку исключений](http://msdn.microsoft.com/library/windows/desktop/ms680657).  
   
-##  <a name="_core_further_reading_about_exceptions"></a>Дополнительные сведения об исключениях  
+##  <a name="_core_further_reading_about_exceptions"></a> Дополнительные сведения об исключениях  
  Следующие статьи описывается с помощью библиотеки MFC для обработки исключений:  
   
 -   [Исключения. Перехват и удаление исключений](../mfc/exceptions-catching-and-deleting-exceptions.md)  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMapStringToString | Документы Microsoft"
-ms.custom: 
+title: Класс CMapStringToString | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtostring-class"></a>Класс CMapStringToString
 Поддерживает сопоставления объектов `CString` , зашифрованных объектами `CString` .  
@@ -83,19 +78,19 @@ class CMapStringToString : public CObject
   
 ### <a name="public-structures"></a>Открытые структуры  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMapStringToString::CPair](#cpair)|Вложенную структуру, содержащую значение ключа и значения связанных строковых объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|  
@@ -116,12 +111,12 @@ class CMapStringToString : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, если карта хранится в архив с помощью перегруженных вставки (  **<<** ) оператор или с `Serialize` функции-члена.  
+ `CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, если карта хранится в архив с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функции-члена.  
   
  Если вам требуется дамп отдельных `CString` -  `CString` элементов, необходимо задать глубины контекста дампа 1 или больше.  
   
@@ -137,7 +132,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcoll.h  
   
-##  <a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>  CMapStringToString::CPair  
  Содержит значение ключа и значения связанных строковых объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -154,7 +149,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>Пример  
   Пример использования см. пример для [CMapStringToString::PLookup](#plookup).  
   
-##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
  Возвращает первый элемент объекта карты.  
   
 ```  
@@ -172,7 +167,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
  Извлекает элемент карты, на который указывает `pAssocRec`.  
   
 ```  
@@ -194,7 +189,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>  CMapStringToString::PLookup  
  Ищет значение сопоставлен с данным ключом.  
   
 ```  

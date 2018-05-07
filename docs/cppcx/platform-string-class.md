@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::String | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::String | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 Представляет упорядоченную коллекцию символов Юникода, используемую для представления текста. Дополнительные сведения и примеры см. в разделе [строки](../cppcx/strings-c-cx.md).  
@@ -54,7 +49,7 @@ public ref class String sealed : Object,
 ## <a name="iterators"></a>Итераторы  
  Две функции итераторов, не являющиеся членами класса String, можно использовать с функциями шаблона `std::for_each` для перечисления символов в объекте String.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`const char16* begin(String^ s)`|Возвращает указатель на начало указанного объекта String.|  
 |`const char16* end(String^ s)`|Возвращает указатель на позицию после окончания указанного объекта String.|  
@@ -66,7 +61,7 @@ public ref class String sealed : Object,
   
  **Конструкторы**  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[String::String](#ctor)|Инициализирует новый экземпляр класса String.|  
   
@@ -74,7 +69,7 @@ public ref class String sealed : Object,
   
  Класс String наследует методы Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() и ToString() от класса [Platform::Object Class](../cppcx/platform-object-class.md). Класс String содержит также следующие методы.  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |------------|-----------------|  
 |[String::Begin](#begin)|Возвращает указатель на начало текущей строки.|  
 |[String::CompareOrdinal](#compareordinal)|Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.|  
@@ -93,12 +88,12 @@ public ref class String sealed : Object,
   
  Класс String имеет следующие операторы.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[String::operator ==-оператор](#operator-equality)|Указывает, равны ли значения двух указанных объектов String.|  
 |[Оператор operator+](#operator-plus)|Сцепляет два объекта String в новый объект String.|  
 |[String::operator > оператор](#operator-greater-than)|Указывает, является ли значение одного объекта String большим, чем значение второго объекта String.|  
-|[String::operator>= Operator](#operator-greater-than-or-equals)|Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.|  
+|[String::operator > =-оператор](#operator-greater-than-or-equals)|Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.|  
 |[String::operator! =-оператор](#operator-inequality)|Указывает, различны ли значения двух указанных объектов String.|  
 |[String::operator < оператор](#operator-less-than)|Указывает, является ли значение одного объекта String меньшим, чем значение второго объекта String.|  
   
@@ -112,7 +107,7 @@ public ref class String sealed : Object,
  **Заголовок** vccorlib.h (включается по умолчанию)  
 
  
-## <a name="begin"></a>  String::Begin Method
+## <a name="begin"></a>  Метод String::BEGIN
 Возвращает указатель на начало текущей строки.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  Метод String::GetHashCode
 Возвращает хэш-код данного экземпляра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -295,7 +290,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>  String::Length Method
+## <a name="length"></a>  Метод String::length
 Получает количество символов в указанном объекте String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  Оператор String::operator +
 Сцепляет два [строка](../cppcx/platform-string-class.md) объекты в новый [строка](../cppcx/platform-string-class.md) объекта.
   
 ### <a name="syntax"></a>Синтаксис  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>Примечания  
  Этот оператор создает объект `String^`, содержащий данные из двух операндов. Используйте его для удобства, если производительность не играет решающей роли. Несколько вызовов "`+`" в функции, скорее всего, не будут иметь последствий, но если вы имеете дело с большими объектами или текстовыми данными в сложном цикле, используйте стандартные механизмы и типы C++.  
   
-##  <a name="operator-equality"></a> String::operator== Operator
+##  <a name="operator-equality"></a> String::operator ==-оператор
 Указывает, равны ли текстовые значения двух указанных объектов String.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String::operator! = 
 Указывает, различны ли значения двух указанных объектов String.  
   
 ### <a name="syntax"></a>Синтаксис  

@@ -1,12 +1,9 @@
 ---
-title: "equal_to (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: equal_to (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::equal_to
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_to function [STL/CLR]
 ms.assetid: 9dd6e27d-e695-470f-b7a7-19a6db970ee5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 824fe03c771e0da40f9a587ad076df03604fd53c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 492398ab8d82b7b97a4116766d7b1e98be525aae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equalto-stlclr"></a>equal_to (STL/CLR)
 Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент равен второму. Она используется укажите объект функции, с точки зрения его типа аргумента.  
@@ -60,18 +55,18 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |delegate_type|Тип универсального метода-делегата.|  
 |first_argument_type|Тип первого аргумента функтор.|  
 |result_type|Тип результата функтор.|  
 |second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |equal_to|Создает функтор.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |оператор delegate_type^()|Приводит функтора к делегату.|  

@@ -2,12 +2,9 @@
 title: 'Набор записей: Прокрутка (ODBC) | Документы Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>Набор записей. Прокрутка (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [В разделе что обстоятельствах прокрутки и не поддерживается](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>Переход от одной записи в другую  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> Переход от одной записи в другую  
  Класс `CRecordset` предоставляет **переместить** функции-члены для прокрутки в наборе записей. Эти функции текущая запись перемещается по строкам. Если применяется выборка строк, **переместить** операция изменяет положение набора записей по размеру набора строк. При получении вызова строк не реализована **переместить** функция изменяет положение набора записей по одной записи каждый раз. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`возвращает ненулевое значение, если набор записей располагается за последней записью. `IsBOF`возвращает ненулевое значение, если набор записей располагается перед первой записью (перед всеми записями). В любом случае отсутствует текущая запись. для работы с. При вызове метода `MovePrev` при `IsBOF` уже **TRUE** или вызвать `MoveNext` при `IsEOF` уже **TRUE**, платформа создает `CDBException`. Можно также использовать `IsBOF` и `IsEOF` для проверки на пустой набор записей.  
+ `IsEOF` возвращает ненулевое значение, если набор записей располагается за последней записью. `IsBOF` возвращает ненулевое значение, если набор записей располагается перед первой записью (перед всеми записями). В любом случае отсутствует текущая запись. для работы с. При вызове метода `MovePrev` при `IsBOF` уже **TRUE** или вызвать `MoveNext` при `IsEOF` уже **TRUE**, платформа создает `CDBException`. Можно также использовать `IsBOF` и `IsEOF` для проверки на пустой набор записей.  
   
  Дополнительные сведения о перемещении по набору записей см. в разделе [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a>Когда поддерживается перемещение  
+##  <a name="_core_when_scrolling_is_supported"></a> Когда поддерживается перемещение  
  Изначально SQL обеспечивалось только перемещение вперед, однако ODBC расширяет возможности переходов. Возможный уровень поддержки перемещения зависит от драйверов ODBC, приложение работает с помощью драйвера ODBC, уровня API соответствия и ли загружаются в память библиотека курсоров ODBC. Дополнительные сведения см. в разделе [ODBC](../../data/odbc/odbc-basics.md) и [ODBC: библиотека курсоров ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]

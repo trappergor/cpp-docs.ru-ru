@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления MFC ActiveX: Реализация свойств Дополнительные | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления MFC ActiveX: Реализация свойств Дополнительные | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Элементы управления ActiveX в MFC. Реализация расширенных свойств
 В этой статье описываются разделы, относящиеся к реализации дополнительных свойств в элементе управления ActiveX.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Возврат кодов ошибок из свойства](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>Свойства только для чтения и только для записи  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Свойства только для чтения и только для записи  
  Мастер добавления свойств предоставляет быстрый и простой способ реализации свойств только для чтения или только для записи для элемента управления.  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>Реализация свойства только для чтения или только для записи  
@@ -63,19 +58,19 @@ ms.lasthandoff: 12/21/2017
   
  Если вы хотите изменить существующее свойство только для чтения или только для записи, можно вручную изменить карту распределения и удалите ненужные функции Set или Get из класса элемента управления.  
   
- Если требуется, чтобы свойство было условно только для чтения или только для записи (например, только в том случае, когда элемент управления работает в определенном режиме), можно задать функцию Set или Get в обычном режиме и вызвать `SetNotSupported` или `GetNotSupported` функционировать, если это уместно. Пример:  
+ Если требуется, чтобы свойство было условно только для чтения или только для записи (например, только в том случае, когда элемент управления работает в определенном режиме), можно задать функцию Set или Get в обычном режиме и вызвать `SetNotSupported` или `GetNotSupported` функционировать, если это уместно. Например:  
   
  [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
  Этот пример кода вызывает `SetNotSupported` Если `m_bReadOnlyMode` член данных — **TRUE**. Если **FALSE**, то свойство задается новое значение.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>Возврат кодов ошибок из свойства  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Возврат кодов ошибок из свойства  
  Чтобы показать, что произошла ошибка при попытке получить или задать свойство, используйте `COleControl::ThrowError` функцию, которая принимает `SCODE` (код состояния) как параметр. Можно использовать предварительно определенную `SCODE` или определить один из собственных. Список стандартных `SCODE`s и инструкции по созданию пользовательских `SCODE`s, в разделе [обработка ошибок в свой элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX статьи: Дополнительные разделы.  
   
  Существуют вспомогательные функции для наиболее частых предопределенные `SCODE`s, таких как [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), и [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError`предназначены для использования только с точки зрения возврат из-за ошибки в свойство Get или Set функцию или метод автоматизации. Это только представляют время, которые будут подходящего обработчика исключений в стеке.  
+>  `ThrowError` предназначены для использования только с точки зрения возврат из-за ошибки в свойство Get или Set функцию или метод автоматизации. Это только представляют время, которые будут подходящего обработчика исключений в стеке.  
   
  Дополнительные сведения об отчетности исключения в другие области кода см. в разделе [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) и разделе [обработка ошибок в свой элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в статье элементы управления ActiveX: Дополнительно Разделы.  
   

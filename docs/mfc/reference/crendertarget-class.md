@@ -1,12 +1,9 @@
 ---
-title: "Класс CRenderTarget | Документы Microsoft"
-ms.custom: 
+title: Класс CRenderTarget | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRenderTarget
@@ -123,17 +120,15 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 Программа-оболочка для ID2D1RenderTarget.  
@@ -148,14 +143,14 @@ class CRenderTarget : public CObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRenderTarget::CRenderTarget](#crendertarget)|Создает объект CRenderTarget.|  
 |[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CRenderTarget::BeginDraw](#begindraw)|Инициирует рисования в этом целевом объекте отрисовки.|  
@@ -209,19 +204,19 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRenderTarget::VerifyResource](#verifyresource)|Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Возвращает интерфейс ID2D1RenderTarget|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|Список указателей на объекты CD2DResource.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Указатель на объект ID2D1RenderTarget.|  
@@ -235,14 +230,14 @@ class CRenderTarget : public CObject;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="_dtorcrendertarget"></a>CRenderTarget:: ~ CRenderTarget  
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget  
  Деструктор Вызывается при уничтожении целевой объект отрисовки.  
   
 ```  
 virtual ~CRenderTarget();
 ```  
   
-##  <a name="attach"></a>CRenderTarget::Attach  
+##  <a name="attach"></a>  CRenderTarget::Attach  
  Присоединяет существующую отрисовки интерфейса целевой объект  
   
 ```  
@@ -253,14 +248,14 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
  `pRenderTarget`  
  Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
   
-##  <a name="begindraw"></a>CRenderTarget::BeginDraw  
+##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
  Инициирует рисования в этом целевом объекте отрисовки.  
   
 ```  
 void BeginDraw();
 ```  
   
-##  <a name="clear"></a>CRenderTarget::Clear  
+##  <a name="clear"></a>  CRenderTarget::Clear  
  Очищает область рисования указанного цвета.  
   
 ```  
@@ -271,7 +266,7 @@ void Clear(D2D1_COLOR_F color);
  `color`  
  Цвет, который очищается области рисования.  
   
-##  <a name="colorref_to_d2dcolor"></a>CRenderTarget::COLORREF_TO_D2DCOLOR  
+##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
  Преобразует значения цвета и альфа-GDI D2D1_COLOR_F объекта.  
   
 ```  
@@ -289,7 +284,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение D2D1_COLOR_F.  
   
-##  <a name="createcompatiblerendertarget"></a>CRenderTarget::CreateCompatibleRenderTarget  
+##  <a name="createcompatiblerendertarget"></a>  CRenderTarget::CreateCompatibleRenderTarget  
  Создает новый целевой объект отрисовки растрового изображения для использования во время промежуточного созданного рисунка, которая совместима с текущей целевой объект отрисовки.  
   
 ```  
@@ -320,14 +315,14 @@ BOOL CreateCompatibleRenderTarget(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.  
   
-##  <a name="crendertarget"></a>CRenderTarget::CRenderTarget  
+##  <a name="crendertarget"></a>  CRenderTarget::CRenderTarget  
  Создает объект CRenderTarget.  
   
 ```  
 CRenderTarget();
 ```  
   
-##  <a name="destroy"></a>CRenderTarget::Destroy  
+##  <a name="destroy"></a>  CRenderTarget::Destroy  
  Удаляет один или несколько ресурсов  
   
 ```  
@@ -341,7 +336,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE  
   
-##  <a name="detach"></a>CRenderTarget::Detach  
+##  <a name="detach"></a>  CRenderTarget::Detach  
  Отсоединяет интерфейса отрисовки целевого объекта  
   
 ```  
@@ -351,7 +346,7 @@ ID2D1RenderTarget* Detach ();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на отсоединенной отрисовки интерфейс целевого объекта.  
   
-##  <a name="drawbitmap"></a>CRenderTarget::DrawBitmap  
+##  <a name="drawbitmap"></a>  CRenderTarget::DrawBitmap  
  Рисует форматированный текст, описанной заданным объектом IDWriteTextLayout.  
   
 ```  
@@ -379,7 +374,7 @@ void DrawBitmap(
  `pRectSrc`  
  Размер и положение в аппаратно независимых пикселях в координатное пространство растрового изображения, области в растровое изображение для отрисовки.  
   
-##  <a name="drawellipse"></a>CRenderTarget::DrawEllipse  
+##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
  Рисование контура указанным эллипса с использованием стиля, указанного штриха.  
   
 ```  
@@ -403,7 +398,7 @@ void DrawEllipse(
  `strokeStyle`  
  Стиль штриха для применения контура эллипса, или значение NULL для закрашивания сплошной штриха.  
   
-##  <a name="drawgeometry"></a>CRenderTarget::DrawGeometry  
+##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
  Рисование контура указанным геометрического объекта с использованием стиля, указанного штриха.  
   
 ```  
@@ -427,7 +422,7 @@ void DrawGeometry(
  `strokeStyle`  
  Стиль штриха для применения структуры геометрии, или значение NULL для закрашивания сплошной штриха.  
   
-##  <a name="drawglyphrun"></a>CRenderTarget::DrawGlyphRun  
+##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
  Рисует указанный глифов.  
   
 ```  
@@ -451,7 +446,7 @@ void DrawGlyphRun(
  `measuringMode`  
  Значение, указывающее, как метрики глифа используются для определения текста, при форматировании. Значение по умолчанию — DWRITE_MEASURING_MODE_NATURAL.  
   
-##  <a name="drawline"></a>CRenderTarget::DrawLine  
+##  <a name="drawline"></a>  CRenderTarget::DrawLine  
  Проводит линию между заданными точками, с использованием стиля, указанного штриха.  
   
 ```  
@@ -479,7 +474,7 @@ void DrawLine(
  `strokeStyle`  
  Стиль штриха рисования, или значение NULL для закрашивания сплошная линия.  
   
-##  <a name="drawrectangle"></a>CRenderTarget::DrawRectangle  
+##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
  Рисование контура прямоугольника, который имеет заданные размеры и стиль штриха.  
   
 ```  
@@ -503,7 +498,7 @@ void DrawRectangle(
  `strokeStyle`  
  Стиль штриха рисования, или значение NULL для закрашивания сплошной штриха.  
   
-##  <a name="drawroundedrectangle"></a>CRenderTarget::DrawRoundedRectangle  
+##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
  Рисование контура прямоугольника с закругленными углами указанным с использованием стиля, указанного штриха.  
   
 ```  
@@ -527,7 +522,7 @@ void DrawRoundedRectangle(
  `strokeStyle`  
  Стиль штриха Скругленный прямоугольник, или значение NULL для закрашивания сплошной штриха. Значение по умолчанию — NULL.  
   
-##  <a name="drawtext"></a>CRenderTarget::DrawText  
+##  <a name="drawtext"></a>  CRenderTarget::DrawText  
  Рисует заданный текст, используя сведения о форматировании, предоставляемые IDWriteTextFormat объекта.  
   
 ```  
@@ -559,7 +554,7 @@ void DrawText(
  `measuringMode`  
  Значение, указывающее, как метрики глифа используются для определения текста, при форматировании. Значение по умолчанию — DWRITE_MEASURING_MODE_NATURAL.  
   
-##  <a name="drawtextlayout"></a>CRenderTarget::DrawTextLayout  
+##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
  Рисует форматированный текст, описанной заданным объектом IDWriteTextLayout.  
   
 ```  
@@ -583,7 +578,7 @@ void DrawTextLayout(
  `options`  
  Значение, указывающее, должны быть привязаны текст к границам ячейки и должно быть обрезано текст в прямоугольник размещения. Значение по умолчанию — D2D1_DRAW_TEXT_OPTIONS_NONE, который указывает, что текст должны быть привязаны к границам ячейки, и он не будет обрезано в прямоугольник размещения.  
   
-##  <a name="enddraw"></a>CRenderTarget::EndDraw  
+##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
  Завершает операций рисования в целевом объекте отрисовки и указывает текущее состояние ошибки и связанные с ними теги.  
   
 ```  
@@ -593,7 +588,7 @@ HRESULT EndDraw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
   
-##  <a name="fillellipse"></a>CRenderTarget::FillEllipse  
+##  <a name="fillellipse"></a>  CRenderTarget::FillEllipse  
  Заполняет внутреннюю часть эллипса, заданного.  
   
 ```  
@@ -609,7 +604,7 @@ void FillEllipse(
  `pBrush`  
  Кисть, используемую для рисования внутренней части эллипса.  
   
-##  <a name="fillgeometry"></a>CRenderTarget::FillGeometry  
+##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
  Закрашивает внутреннюю часть указанного geometry.  
   
 ```  
@@ -629,7 +624,7 @@ void FillGeometry(
  `pOpacityBrush`  
  Маски непрозрачности для применения к геометрии; Значение NULL для маски непрозрачности отсутствуют. Если указан маски непрозрачности (параметр opacityBrush), кисти должен быть ID2D1BitmapBrush, который имеет значение D2D1_EXTEND_MODE_CLAMP режимов расширить x и y. Дополнительные сведения см. в разделе "Примечания".  
   
-##  <a name="fillmesh"></a>CRenderTarget::FillMesh  
+##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
  Закрашивает внутреннюю часть указанного сетки.  
   
 ```  
@@ -645,7 +640,7 @@ void FillMesh(
  `pBrush`  
  Кисть для отрисовки сетки.  
   
-##  <a name="fillopacitymask"></a>CRenderTarget::FillOpacityMask  
+##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
  Применяет маску непрозрачности, описываемых в указанном точечном рисунке кисти которая затем используется для заполнения области целевого объекта отрисовки.  
   
 ```  
@@ -673,7 +668,7 @@ void FillOpacityMask(
  `rectSrc`  
  Область растрового изображения для использования в качестве маску непрозрачности в аппаратно независимых пикселях.  
   
-##  <a name="fillrectangle"></a>CRenderTarget::FillRectangle  
+##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
  Заполняет внутреннюю часть заданного прямоугольника.  
   
 ```  
@@ -689,7 +684,7 @@ void FillRectangle(
  `pBrush`  
  Фона элемента кисть, используемую для отрисовки прямоугольника.  
   
-##  <a name="fillroundedrectangle"></a>CRenderTarget::FillRoundedRectangle  
+##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
  Закрашивает внутреннюю часть указанного Скругленный прямоугольник.  
   
 ```  
@@ -705,7 +700,7 @@ void FillRoundedRectangle(
  `pBrush`  
  Кисть, используемую для рисования внутренней прямоугольника с закругленными углами.  
   
-##  <a name="flush"></a>CRenderTarget::Flush  
+##  <a name="flush"></a>  CRenderTarget::Flush  
  Выполняет всех ожидающих применения команд рисования.  
   
 ```  
@@ -721,7 +716,7 @@ void Flush(
  `tag2`  
  Содержит тег для рисования, вызвавших ошибки или 0, если ошибки отсутствуют. Этот параметр передается неинициализированным.  
   
-##  <a name="getantialiasmode"></a>CRenderTarget::GetAntialiasMode  
+##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
  Получает текущий режим сглаживания для нетекстовых графических операций.  
   
 ```  
@@ -731,7 +726,7 @@ D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущий режим сглаживания для нетекстовых операций рисования.  
   
-##  <a name="getdpi"></a>CRenderTarget::GetDpi  
+##  <a name="getdpi"></a>  CRenderTarget::GetDpi  
  Возвращает целевой точек на дюйм (DPI) для подготовки к просмотру  
   
 ```  
@@ -741,7 +736,7 @@ CD2DSizeF GetDpi() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Целевой объект отрисовки точек на дюйм (DPI).  
   
-##  <a name="getmaximumbitmapsize"></a>CRenderTarget::GetMaximumBitmapSize  
+##  <a name="getmaximumbitmapsize"></a>  CRenderTarget::GetMaximumBitmapSize  
  Возвращает максимальный размер в единицах зависящие от устройства (в пикселях), любое измерение одного точечного рисунка, поддерживаемые в целевом объекте отрисовки  
   
 ```  
@@ -751,7 +746,7 @@ UINT32 GetMaximumBitmapSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Максимальный размер в пикселях любого измерения одного точечного рисунка, поддерживаемые в целевом объекте отрисовки  
   
-##  <a name="getpixelformat"></a>CRenderTarget::GetPixelFormat  
+##  <a name="getpixelformat"></a>  CRenderTarget::GetPixelFormat  
  Возвращает режим формат и альфа-пиксель целевого объекта отрисовки  
   
 ```  
@@ -761,7 +756,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Формат и альфа-режим пиксель целевого объекта отрисовки  
   
-##  <a name="getpixelsize"></a>CRenderTarget::GetPixelSize  
+##  <a name="getpixelsize"></a>  CRenderTarget::GetPixelSize  
  Возвращает размер целевого объекта отрисовки в пикселях устройства  
   
 ```  
@@ -771,7 +766,7 @@ CD2DSizeU GetPixelSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер целевого объекта отрисовки в пикселях устройства  
   
-##  <a name="getrendertarget"></a>CRenderTarget::GetRenderTarget  
+##  <a name="getrendertarget"></a>  CRenderTarget::GetRenderTarget  
  Возвращает интерфейс ID2D1RenderTarget  
   
 ```  
@@ -781,7 +776,7 @@ ID2D1RenderTarget* GetRenderTarget();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1RenderTarget или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="getsize"></a>CRenderTarget::GetSize  
+##  <a name="getsize"></a>  CRenderTarget::GetSize  
  Возвращает размер целевого объекта отрисовки в аппаратно независимых пикселях  
   
 ```  
@@ -791,7 +786,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущий размер целевого объекта отрисовки в аппаратно независимых пикселях  
   
-##  <a name="gettags"></a>CRenderTarget::GetTags  
+##  <a name="gettags"></a>  CRenderTarget::GetTags  
  Возвращает метку для последующих операций рисования.  
   
 ```  
@@ -807,7 +802,7 @@ void GetTags(
  `tag2`  
  Содержит второй метки для последующих операций рисования. Этот параметр передается неинициализированным. Если задано значение NULL, значение не извлекается для этого параметра.  
   
-##  <a name="gettextantialiasmode"></a>CRenderTarget::GetTextAntialiasMode  
+##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
  Возвращает текущий режим сглаживания для текста и операций рисования глифов.  
   
 ```  
@@ -817,7 +812,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущий режим сглаживания для текста и операций рисования глифов.  
   
-##  <a name="gettextrenderingparams"></a>CRenderTarget::GetTextRenderingParams  
+##  <a name="gettextrenderingparams"></a>  CRenderTarget::GetTextRenderingParams  
  Возвращает целевой объект отрисовки текущие параметры отрисовки текста.  
   
 ```  
@@ -828,7 +823,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
  `textRenderingParams`  
  По возвращении из этого метода textRenderingParamscontains адрес указателя в целевом объекте отрисовки текущего параметры отрисовки текста.  
   
-##  <a name="gettransform"></a>CRenderTarget::GetTransform  
+##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
  Применяет указанное преобразование в целевом объекте отрисовки, заменив существующий преобразования. Все последующие операции рисования происходят в преобразованный пространства.  
   
 ```  
@@ -839,7 +834,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
  `transform`  
  Преобразования для применения в целевом объекте отрисовки.  
   
-##  <a name="issupported"></a>CRenderTarget::IsSupported  
+##  <a name="issupported"></a>  CRenderTarget::IsSupported  
  Указывает, поддерживает ли целевой объект отрисовки указанные свойства  
   
 ```  
@@ -853,7 +848,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если свойства целевого объекта отрисовки указанного поддерживаются этот целевой объект отрисовки; в противном случае — значение FALSE  
   
-##  <a name="isvalid"></a>CRenderTarget::IsValid  
+##  <a name="isvalid"></a>  CRenderTarget::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -863,28 +858,28 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="m_lstresources"></a>CRenderTarget::m_lstResources  
+##  <a name="m_lstresources"></a>  CRenderTarget::m_lstResources  
  Список указателей на объекты CD2DResource.  
   
 ```  
 CObList m_lstResources;  
 ```  
   
-##  <a name="m_prendertarget"></a>CRenderTarget::m_pRenderTarget  
+##  <a name="m_prendertarget"></a>  CRenderTarget::m_pRenderTarget  
  Указатель на объект ID2D1RenderTarget.  
   
 ```  
 ID2D1RenderTarget* m_pRenderTarget;  
 ```  
   
-##  <a name="m_ptextformatdefault"></a>CRenderTarget::m_pTextFormatDefault  
+##  <a name="m_ptextformatdefault"></a>  CRenderTarget::m_pTextFormatDefault  
  Указатель на объект CD2DTextFormat, который содержит текстовый формат по умолчанию.  
   
 ```  
 CD2DTextFormat* m_pTextFormatDefault;  
 ```  
   
-##  <a name="operator_id2d1rendertarget_star"></a>CRenderTarget::operator ID2D1RenderTarget *  
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *  
  Возвращает интерфейс ID2D1RenderTarget  
   
 ```  
@@ -894,21 +889,21 @@ operator ID2D1RenderTarget*();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1RenderTarget или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="popaxisalignedclip"></a>CRenderTarget::PopAxisAlignedClip  
+##  <a name="popaxisalignedclip"></a>  CRenderTarget::PopAxisAlignedClip  
  Удаляет последний выровненный по осям клип из целевого объекта отрисовки. После вызова этого метода, клип больше не применяется для последующих операций рисования.  
   
 ```  
 void PopAxisAlignedClip();
 ```  
   
-##  <a name="poplayer"></a>CRenderTarget::PopLayer  
+##  <a name="poplayer"></a>  CRenderTarget::PopLayer  
  Останавливает перенаправление операций рисования с уровнем, определяется последней PushLayer вызова.  
   
 ```  
 void PopLayer();
 ```  
   
-##  <a name="pushaxisalignedclip"></a>CRenderTarget::PushAxisAlignedClip  
+##  <a name="pushaxisalignedclip"></a>  CRenderTarget::PushAxisAlignedClip  
  Удаляет последний выровненный по осям клип из целевого объекта отрисовки. После вызова этого метода, клип больше не применяется для последующих операций рисования.  
   
 ```  
@@ -924,7 +919,7 @@ void PushAxisAlignedClip(
  `mode`  
  Режим сглаживания, который используется для отрисовки краев clip прямоугольники, имеют субточечное границы и blend клип с содержимым сцены. Наложение выполняется после при вызывается метод PopAxisAlignedClip и не относится к каждый примитив, на уровне.  
   
-##  <a name="pushlayer"></a>CRenderTarget::PushLayer  
+##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
  Добавляет указанный слой в целевом объекте отрисовки, чтобы он получает все последующие операции рисования, пока не будет вызван PopLayer.  
   
 ```  
@@ -940,7 +935,7 @@ void PushLayer(
  `layer`  
  Уровень, который получает последующих операций рисования.  
   
-##  <a name="restoredrawingstate"></a>CRenderTarget::RestoreDrawingState  
+##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
  Задает состояние рисования целевой объект отрисовки, указанным ID2D1DrawingStateBlock.  
   
 ```  
@@ -951,7 +946,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
  `drawingStateBlock`  
  Новое состояние рисования целевого объекта отрисовки.  
   
-##  <a name="savedrawingstate"></a>CRenderTarget::SaveDrawingState  
+##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
  Сохраняет текущее состояние отображения для указанного ID2D1DrawingStateBlock.  
   
 ```  
@@ -962,7 +957,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
  `drawingStateBlock`  
  По возвращении из этого метода содержит текущее состояние отображения целевого объекта отрисовки. Этот параметр необходимо инициализировать перед передачей его в метод.  
   
-##  <a name="setantialiasmode"></a>CRenderTarget::SetAntialiasMode  
+##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
  Задает режим сглаживания целевого объекта отрисовки. Режим сглаживания применяет все последующие операции рисования, за исключением текста и операций рисования глифов.  
   
 ```  
@@ -973,7 +968,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
  `antialiasMode`  
  Режим сглаживания для будущих операций рисования.  
   
-##  <a name="setdpi"></a>CRenderTarget::SetDpi  
+##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
  Задает размер в точках на дюйм (DPI) целевого объекта отрисовки.  
   
 ```  
@@ -984,7 +979,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
  `sizeDPI`  
  Значение больше или равно 0, указывающее горизонтальное/verticalDPI целевого объекта отрисовки.  
   
-##  <a name="settags"></a>CRenderTarget::SetTags  
+##  <a name="settags"></a>  CRenderTarget::SetTags  
  Задает метку для последующих операций рисования.  
   
 ```  
@@ -1000,7 +995,7 @@ void SetTags(
  `tag2`  
  Метку для применения для последующих операций рисования.  
   
-##  <a name="settextantialiasmode"></a>CRenderTarget::SetTextAntialiasMode  
+##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
  Задает режим сглаживания, который будет использоваться для последующего текста и операции рисования глифов.  
   
 ```  
@@ -1011,7 +1006,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
  `textAntialiasMode`  
  Режим сглаживания, используемый для последующего текста и операций рисования глифов.  
   
-##  <a name="settextrenderingparams"></a>CRenderTarget::SetTextRenderingParams  
+##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
  Указывает параметры отрисовки текста, применяемые ко всем весь последующий текст и операций рисования глифов.  
   
 ```  
@@ -1022,7 +1017,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
  `textRenderingParams`  
  Параметры отрисовки текста, применяемые ко всем весь последующий текст и глиф операции; Значение NULL, чтобы очистить текущие параметры отрисовки текста.  
   
-##  <a name="settransform"></a>CRenderTarget::SetTransform  
+##  <a name="settransform"></a>  CRenderTarget::SetTransform  
  Применяет указанное преобразование в целевом объекте отрисовки, заменив существующий преобразования. Все последующие операции рисования происходят в преобразованный пространства.  
   
 ```  
@@ -1034,7 +1029,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
  `transform`  
  Преобразования для применения в целевом объекте отрисовки.  
   
-##  <a name="verifyresource"></a>CRenderTarget::VerifyResource  
+##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
  Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.  
   
 ```  

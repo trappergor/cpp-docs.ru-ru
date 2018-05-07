@@ -1,13 +1,10 @@
 ---
-title: "Пошаговое руководство: Отладка проекта (C++) | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Отладка проекта (C++) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Пошаговое руководство. Отладка проекта (C++)
 В этом пошаговом руководстве рассматривается изменение программы для устранения проблем, обнаруженных при проверке проекта.  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
 7.  Выполните шаг с заходом в программе до ее завершения, или оставить его запустить, выбрав **отладки**, **запуска** в строке меню или нажав клавишу F5.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- **Предыдущие:** [Пошаговое руководство: тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Далее:**[Пошаговое руководство: развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **Предыдущие:** [Пошаговое руководство: тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **далее:**[Пошаговое руководство: развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку C++](../cpp/cpp-language-reference.md)   

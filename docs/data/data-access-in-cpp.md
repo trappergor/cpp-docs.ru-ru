@@ -1,13 +1,10 @@
 ---
-title: "Доступ к данным в Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Доступ к данным в Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Доступ к данным в Visual C++
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 
 [Использование хранилища BLOB-объектов из C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) хранилища больших двоичных объектов Azure — это служба, неструктурированные данные хранятся в облаке как большие двоичные объекты и объекты. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.
 
-[Справочник по программированию ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) интерфейса ODBC предназначен для использования с языка программирования. Использование интерфейса ODBC охватывает три области: инструкции SQL, вызовы функций ODBC и программирование на языке C.
+[ Справочник по программированию ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference) интерфейса ODBC предназначен для использования с языка программирования. Использование интерфейса ODBC охватывает три области: инструкции SQL, вызовы функций ODBC и программирование на языке C.
 
 ## <a name="see-also"></a>См. также
 [Visual C++](../visual-cpp-in-visual-studio.md)

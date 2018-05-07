@@ -1,12 +1,9 @@
 ---
-title: "not_equal_to (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: not_equal_to (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::not_equal_to
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae79c521f7edcc055ec6eee5907a6102ebf26134
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8046b4723a6e4e725662db2cce9e3981155748b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент не равен второму. Она используется укажите объект функции, с точки зрения его типа аргумента.  
@@ -60,18 +55,18 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |delegate_type|Тип универсального метода-делегата.|  
 |first_argument_type|Тип первого аргумента функтор.|  
 |result_type|Тип результата функтор.|  
 |second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |not_equal_to|Создает функтор.|  
   
-|Оператор|Описание:|  
+|Operator|Описание|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |delegate_type оператор ^|Приводит функтора к делегату.|  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CDockablePane | Документы Microsoft"
-ms.custom: 
+title: Класс CDockablePane | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePane
@@ -141,17 +138,15 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb32fc827c576830def3901389d400450b79f5ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0b00c40ded45d1d71b42c126e2461c404eb5223
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Реализует область, которую можно закрепить на сайте закрепления или включить в область с вкладками.  
@@ -166,13 +161,13 @@ class CDockablePane : public CPane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::CDockablePane](#cdockablepane)|Создает и инициализирует объект `CDockablePane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Присоединяет области в другую область. При этом создается область с вкладками.|  
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Возвращает размер прямоугольника области.|  
@@ -242,7 +237,7 @@ class CDockablePane : public CPane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Определяет, является ли скрытым закрепляемой области (в режиме автоматического скрытия).|  
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Определяет, когда автоматического скрытия закрепляемой области следует остановить со скользящим.|  
@@ -252,14 +247,14 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Если определяет поведение окна области находится в режиме автоматического скрытия.|  
 |[CDockablePane::m_nSlideSteps](#m_nslidesteps)|Указывает скорость анимации области, при отображении и скрытии в режиме автоматического скрытия.|  
   
 ## <a name="remarks"></a>Примечания  
- `CDockablePane`реализует следующие возможности:  
+ `CDockablePane` реализует следующие возможности:  
   
 -   Закрепление панели в окне главного фрейма.  
   
@@ -321,7 +316,7 @@ class CDockablePane : public CPane
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxDockablePane.h  
   
-##  <a name="attachtotabwnd"></a>CDockablePane::AttachToTabWnd  
+##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd  
  Присоединяет текущую область в целевой области, создание области с вкладками.  
   
 ```  
@@ -333,14 +328,14 @@ virtual CDockablePane* AttachToTabWnd(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out]`pTabControlBarAttachTo`  
+ [in] [out] `pTabControlBarAttachTo`  
  Указывает целевой области, которая подключает текущую область. В целевой области должен быть закрепляемую панель.  
   
  [in] `dockMethod`  
  Задает метод закрепления.  
   
  [in] `bSetActive`  
- `TRUE`Чтобы активировать панель с вкладками после операции присоединения; в противном случае `FALSE`.  
+ `TRUE` Чтобы активировать панель с вкладками после операции присоединения; в противном случае `FALSE`.  
   
  [выходной] `ppTabbedControlBar`  
  Содержит панель с вкладками, полученный в результате операции присоединения.  
@@ -369,7 +364,7 @@ virtual CDockablePane* AttachToTabWnd(
   
  Первая область должны закрепляться перед присоединением к нему другой области.  
   
-##  <a name="calcfixedlayout"></a>CDockablePane::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CDockablePane::CalcFixedLayout  
  Возвращает размер прямоугольника области.  
   
 ```  
@@ -388,7 +383,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CSize` , содержащий размер прямоугольника области.  
   
-##  <a name="canacceptminiframe"></a>CDockablePane::CanAcceptMiniFrame  
+##  <a name="canacceptminiframe"></a>  CDockablePane::CanAcceptMiniFrame  
  Определяет ли указанный мини-рамки можно прикреплять к области.  
   
 ```  
@@ -400,9 +395,9 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
  Указатель на `CPaneFrameWnd` объект.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если `pMiniFrame` можно закрепить на панели; в противном случае — `FALSE`.  
+ `TRUE` Если `pMiniFrame` можно закрепить на панели; в противном случае — `FALSE`.  
   
-##  <a name="canacceptpane"></a>CDockablePane::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
  Определяет закреплением другой области для текущей области.  
   
 ```  
@@ -414,7 +409,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
  Указывает область для прикрепления к текущей области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанной панели можно прикреплять к этой панели; в противном случае `FALSE`.  
+ `TRUE` Если указанной панели можно прикреплять к этой панели; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой перед панель прикрепляется к текущей области.  
@@ -423,7 +418,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  По умолчанию этот метод возвращает `TRUE` при любом `pBar` или его родительский элемент находится типа `CDockablePane`.  
   
-##  <a name="canautohide"></a>CDockablePane::CanAutoHide  
+##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
  Определяет ли области можно автоматического скрытия.  
   
 ```  
@@ -431,10 +426,10 @@ virtual BOOL CanAutoHide() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если область может автоматического скрытия; в противном случае `FALSE`.  
+ `TRUE` Если область может автоматического скрытия; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- `CDockablePane::CanAutoHide`Возвращает `FALSE` ни в одном из следующих ситуаций:  
+ `CDockablePane::CanAutoHide` Возвращает `FALSE` ни в одном из следующих ситуаций:  
   
 -   Область не имеет родителя.  
   
@@ -442,7 +437,7 @@ virtual BOOL CanAutoHide() const;
   
 -   Области не может быть закреплен.  
   
-##  <a name="canbeattached"></a>CDockablePane::CanBeAttached  
+##  <a name="canbeattached"></a>  CDockablePane::CanBeAttached  
  Определяет закреплением текущей области в другую область.  
   
 ```  
@@ -450,12 +445,12 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель можно закрепить на другую панель или окно главного фрейма; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель можно закрепить на другую панель или окно главного фрейма; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод всегда возвращает `TRUE`. Переопределите этот метод в производном классе, чтобы включить или отключить закрепление без вызова [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).  
   
-##  <a name="cdockablepane"></a>CDockablePane::CDockablePane  
+##  <a name="cdockablepane"></a>  CDockablePane::CDockablePane  
  Создает и инициализирует [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта.  
   
 ```  
@@ -465,7 +460,7 @@ CDockablePane();
 ### <a name="remarks"></a>Примечания  
  После создания объекта закрепляемую панель вызвать [CDockablePane::Create](#create) или [CDockablePane::CreateEx](#createex) для его создания.  
   
-##  <a name="converttotabbeddocument"></a>CDockablePane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CDockablePane::ConvertToTabbedDocument  
  Преобразует одного или нескольких закрепляемых областей в документы с вкладками MDI.  
   
 ```  
@@ -476,7 +471,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
  [in] `bActiveTabOnly`  
  При преобразовании `CTabbedPane`, укажите `TRUE` для преобразования только активной вкладки. Укажите `FALSE` для преобразования всех вкладок на панели.  
   
-##  <a name="checkautohidecondition"></a>CDockablePane::CheckAutoHideCondition  
+##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Определяет, скрыт ли закрепляемой области (также известный как режим автоматического скрытия).  
   
 ```  
@@ -484,14 +479,14 @@ virtual BOOL CheckAutoHideCondition();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если скрыть условия; в противном случае `FALSE`.  
+ `TRUE` Если скрыть условия; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа использует таймер для периодической проверки, следует ли скрывать автоматически скрывать закрепляемую панель. Метод возвращает `TRUE` при области не активен, области не изменяется в размере и указатель мыши по области не.  
   
  Если предыдущие условия выполняются, платформа вызывает [CDockablePane::Slide](#slide) скрыть область.  
   
-##  <a name="checkstopslidecondition"></a>CDockablePane::CheckStopSlideCondition  
+##  <a name="checkstopslidecondition"></a>  CDockablePane::CheckStopSlideCondition  
  Определяет, когда автоматическое скрытие закрепляемой области следует остановить со скользящим.  
   
 ```  
@@ -500,17 +495,17 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bDirection`  
- `TRUE`Если область является видимым. `FALSE` скрытые области.  
+ `TRUE` Если область является видимым. `FALSE` скрытые области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`если соблюдено условие остановки. в противном случае `FALSE`.  
+ `TRUE` если соблюдено условие остановки. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Когда закрепляемую панель устанавливается режим автоматического скрытия, платформа использует скользящий эффекты для отображения или скрытия панели. Эта функция вызывается платформой при скользящий области. `CheckStopSlideCondition`Возвращает `TRUE` при полностью отображается область или если он полностью скрыт.  
+ Когда закрепляемую панель устанавливается режим автоматического скрытия, платформа использует скользящий эффекты для отображения или скрытия панели. Эта функция вызывается платформой при скользящий области. `CheckStopSlideCondition` Возвращает `TRUE` при полностью отображается область или если он полностью скрыт.  
   
  Переопределите этот метод в производном классе, чтобы реализовать пользовательские автоматическое скрытие эффекты.  
   
-##  <a name="copystate"></a>CDockablePane::CopyState  
+##  <a name="copystate"></a>  CDockablePane::CopyState  
  Копирует состояние закрепляемую панель.  
   
 ```  
@@ -522,7 +517,7 @@ virtual void CopyState(CDockablePane* pOrgBar);
  Указатель на закрепляемую панель.  
   
 ### <a name="remarks"></a>Примечания  
- `CDockablePane::CopyState`Копирует состояние `pOrgBar` в текущей области путем вызова следующих методов:  
+ `CDockablePane::CopyState` Копирует состояние `pOrgBar` в текущей области путем вызова следующих методов:  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -534,7 +529,7 @@ virtual void CopyState(CDockablePane* pOrgBar);
   
 - [CDockablePane::IsAutohideAllEnabled](#isautohideallenabled)  
   
-##  <a name="create"></a>CDockablePane::Create  
+##  <a name="create"></a>  CDockablePane::Create  
  Создает элемент управления Windows и прикрепляет его к [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта.  
   
 ```  
@@ -565,14 +560,14 @@ virtual BOOL Create(
  [in] `lpszCaption`  
  Задает имя окна.  
   
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Указывает родительского окна.  
   
  [in] `rect`  
  Задает размер и положение окна в клиентские координаты `pParentWnd`.  
   
  [in] `bHasGripper`  
- `TRUE`для создания области с заголовком; в противном случае `FALSE`.  
+ `TRUE` для создания области с заголовком; в противном случае `FALSE`.  
   
  [in] `nID`  
  Указывает идентификатор дочернего окна. Это значение должно быть уникальным, если требуется сохранить состояние закрепления для этой области закрепления.  
@@ -586,7 +581,7 @@ virtual BOOL Create(
  [in] `dwControlBarStyle`  
  Задает стиль дополнительные атрибуты.  
   
- [in] [out]`pContext`  
+ [in] [out] `pContext`  
  Указывает контекст создания окна.  
   
  [in] `lpszWindowName`  
@@ -596,7 +591,7 @@ virtual BOOL Create(
  Указывает размер окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель успешно создан; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель успешно создан; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Создает область Windows и прикрепляет его к `CDockablePane` объекта.  
@@ -605,7 +600,7 @@ virtual BOOL Create(
   
  Если `dwTabbedStyle` параметр имеет `AFX_CBRS_OUTLOOK_TABS` флаг указан области создает области с вкладками стиле Outlook, при присоединении к этой панели с помощью другой области [CDockablePane::AttachToTabWnd](#attachtotabwnd) метод. По умолчанию закрепляемых областей создавать регулярные вкладки типа [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="createdefaultpanedivider"></a>CDockablePane::CreateDefaultPaneDivider  
+##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
  Создает разделитель по умолчанию для области, как она закреплена область окна.  
   
 ```  
@@ -629,16 +624,16 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
  Этот метод возвращает указатель на только что созданный разделитель или `NULL` при сбое создания разделителя.  
   
 ### <a name="remarks"></a>Примечания  
- `dwAlignment`может иметь любое из следующих значений.  
+ `dwAlignment` может иметь любое из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Область прикрепляется к верхней части клиентской области окна фрейма.|  
 |`CBRS_ALIGN_BOTTOM`|Область прикрепляется к нижней части клиентской области окна фрейма.|  
 |`CBRS_ALIGN_LEFT`|Панель закрепляется левого края клиентской области окна фрейма.|  
 |`CBRS_ALIGN_RIGHT`|Область прикрепляется к правой части клиентской области окна фрейма.|  
   
-##  <a name="createex"></a>CDockablePane::CreateEx  
+##  <a name="createex"></a>  CDockablePane::CreateEx  
  Создает элемент управления Windows и прикрепляет его к [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта.  
   
 ```  
@@ -662,14 +657,14 @@ virtual BOOL CreateEx(
  [in] `lpszCaption`  
  Задает имя окна.  
   
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Указывает родительского окна.  
   
  [in] `rect`  
  Задает размер и положение окна в клиентские координаты `pParentWnd`.  
   
  [in] `bHasGripper`  
- `TRUE`для создания области с заголовком; в противном случае `FALSE`.  
+ `TRUE` для создания области с заголовком; в противном случае `FALSE`.  
   
  [in] `nID`  
  Указывает идентификатор дочернего окна. Это значение должно быть уникальным, если требуется сохранить состояние стыковки для этой области закрепления.  
@@ -683,11 +678,11 @@ virtual BOOL CreateEx(
  [in] `dwControlBarStyle`  
  Указывает стиль дополнительные атрибуты.  
   
- [in] [out]`pContext`  
+ [in] [out] `pContext`  
  Указывает контекст создания окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель успешно создан; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель успешно создан; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Создает область Windows и прикрепляет его к `CDockablePane` объекта.  
@@ -696,7 +691,7 @@ virtual BOOL CreateEx(
   
  Если `dwTabbedStyle` параметр имеет `AFX_CBRS_OUTLOOK_TABS` флаг указан области создает области с вкладками стиле Outlook, при присоединении к этой панели с помощью другой области [CDockablePane::AttachToTabWnd](#attachtotabwnd) метод. По умолчанию закрепляемых областей создавать регулярные вкладки типа [CTabbedPane](../../mfc/reference/ctabbedpane-class.md).  
   
-##  <a name="createtabbedpane"></a>CDockablePane::CreateTabbedPane  
+##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
  Создает область с вкладками в текущей области.  
   
 ```  
@@ -713,7 +708,7 @@ virtual CTabbedPane* CreateTabbedPane();
   
  Области с вкладками создается согласно информация о классе среды выполнения хранятся в `m_pTabbedControlBarRTC` член, который инициализируется [CDockablePane::CreateEx](#createex) метод.  
   
-##  <a name="dockpanecontainer"></a>CDockablePane::DockPaneContainer  
+##  <a name="dockpanecontainer"></a>  CDockablePane::DockPaneContainer  
  Закрепляет контейнер области.  
   
 ```  
@@ -728,25 +723,25 @@ virtual BOOL DockPaneContainer(
  Ссылка на диспетчер контейнеров для контейнера, который будет закреплен.  
   
  [in] `dwAlignment`  
- `DWORD`задающий части панели, к которому подключено контейнера.  
+ `DWORD` задающий части панели, к которому подключено контейнера.  
   
  [in] `dockMethod`  
  Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если контейнер был успешно прикреплять к области. в противном случае `FALSE`.  
+ `TRUE` Если контейнер был успешно прикреплять к области. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- `dwAlignment`может иметь любое из следующих значений.  
+ `dwAlignment` может иметь любое из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Контейнер прикрепляется к верхней части области.|  
 |`CBRS_ALIGN_BOTTOM`|Контейнер прикрепляется к нижней части области.|  
 |`CBRS_ALIGN_LEFT`|Контейнер закрепляется на левой панели.|  
 |`CBRS_ALIGN_RIGHT`|Контейнер прикрепляется к правому краю области.|  
   
-##  <a name="dockpanestandard"></a>CDockablePane::DockPaneStandard  
+##  <a name="dockpanestandard"></a>  CDockablePane::DockPaneStandard  
  Закрепляет область с помощью структуры (standard) закрепления.  
   
 ```  
@@ -760,7 +755,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если область была закреплена окно с вкладками или окно с вкладками был создан в результате закрепления, этот метод возвращает указатель в окно с вкладками. Если панель была в противном случае успешно закреплены, этот метод возвращает `this` указателя. Если не удалось закрепления, этот метод возвращает `NULL`.  
   
-##  <a name="docktorecentpos"></a>CDockablePane::DockToRecentPos  
+##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
  Закрепляет область его сохраненную позицию закрепления.  
   
 ```  
@@ -768,12 +763,12 @@ BOOL CDockablePane::DockToRecentPos();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если область успешно закреплена; в противном случае `FALSE`.  
+ `TRUE` Если область успешно закреплена; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Закрепляемых областей хранения последние сведения о закреплении в [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md) объекта.  
   
-##  <a name="docktowindow"></a>CDockablePane::DockToWindow  
+##  <a name="docktowindow"></a>  CDockablePane::DockToWindow  
  Закрепляет одну область закрепления в другую область закрепления.  
   
 ```  
@@ -784,7 +779,7 @@ virtual BOOL DockToWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out]`pTargetWindow`  
+ [in] [out] `pTargetWindow`  
  Указывает закрепляемую панель закрепление этой панели.  
   
  [in] `dwAlignment`  
@@ -794,12 +789,12 @@ virtual BOOL DockToWindow(
  Указывает закрепления прямоугольник для области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если область была закреплена успешно. в противном случае `FALSE`.  
+ `TRUE` Если область была закреплена успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод, чтобы закрепить одной области в другую область с выравниванием, определяемым значением `dwAlignment`.  
   
-##  <a name="drawcaption"></a>CDockablePane::DrawCaption  
+##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
  Рисует заголовок закрепляемой области (также называемый захвата).  
   
 ```  
@@ -820,7 +815,7 @@ virtual void DrawCaption(
   
  Переопределите этот метод в производном классе, чтобы настроить внешний вид заголовка.  
   
-##  <a name="enableautohideall"></a>CDockablePane::EnableAutohideAll  
+##  <a name="enableautohideall"></a>  CDockablePane::EnableAutohideAll  
  Включает или отключает режим автоматического скрытия для этой панели, а также для других областей в контейнере.  
   
 ```  
@@ -829,14 +824,14 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы включить автоматическое скрытие всех возможностей закрепляемую панель; в противном случае `FALSE`.  
+ `TRUE` Чтобы включить автоматическое скрытие всех возможностей закрепляемую панель; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если пользователь удерживает `Ctrl` ключ и нажмет кнопку, кнопку закрепления для переключения в режим автоматического скрытия, все остальные области, в том же контейнере область также переключаются на режим автоматического скрытия.  
   
  Вызов этого метода с `bEnable` значение `FALSE` для отключения этой функции для конкретной области.  
   
-##  <a name="enablegripper"></a>CDockablePane::EnableGripper  
+##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
  Отображение или скрытие заголовка (также называемые захвата).  
   
 ```  
@@ -845,14 +840,14 @@ virtual void EnableGripper(BOOL bEnable);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`для включения заголовка; в противном случае `FALSE`.  
+ `TRUE` для включения заголовка; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если платформа создает закрепляемых областей, они не имеют **WS_STYLE** даже в том случае, если задан стиль окна. Это означает, что панель заголовка неклиентской области, которые управляются инфраструктурой, но эта область отличается от стандартного заголовка окна.  
   
  Можно отобразить или скрыть заголовок в любое время. Платформа скрывает заголовок при добавлении области в виде вкладки окна с вкладками, или когда область перемещается в плавающем окне.  
   
-##  <a name="getahrestoredrect"></a>CDockablePane::GetAHRestoredRect  
+##  <a name="getahrestoredrect"></a>  CDockablePane::GetAHRestoredRect  
  Задает положение панели в режиме автоматического скрытия.  
   
 ```  
@@ -864,7 +859,7 @@ CRect GetAHRestoredRect() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getahslidemode"></a>CDockablePane::GetAHSlideMode  
+##  <a name="getahslidemode"></a>  CDockablePane::GetAHSlideMode  
  Возвращает режим автоматического скрытия слайдов для области.  
   
 ```  
@@ -876,7 +871,7 @@ virtual UINT GetAHSlideMode() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getcaptionheight"></a>CDockablePane::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CDockablePane::GetCaptionHeight  
  Возвращает высоту в пикселях текущего заголовка.  
   
 ```  
@@ -889,7 +884,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>Примечания  
  Высота заголовка равно 0, если заголовок был скрыт [CDockablePane::EnableGripper](#enablegripper) метода, или если области не имеет заголовка.  
   
-##  <a name="getdefaultpanedivider"></a>CDockablePane::GetDefaultPaneDivider  
+##  <a name="getdefaultpanedivider"></a>  CDockablePane::GetDefaultPaneDivider  
  Возвращает разделитель по умолчанию для области контейнера.  
   
 ```  
@@ -902,7 +897,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о панели разделителей см. в разделе [CPaneDivider класса](../../mfc/reference/cpanedivider-class.md).  
   
-##  <a name="getdockingstatus"></a>CDockablePane::GetDockingStatus  
+##  <a name="getdockingstatus"></a>  CDockablePane::GetDockingStatus  
  Определяет возможность закрепления панели в зависимости от расположения предоставленного указателя.  
   
 ```  
@@ -935,7 +930,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
   
  Для отложенной закрепление состояния ( `CS_DELAY_DOCK` и `CS_DELAY_DOCK_TO_TAB`), платформа не выполняет закрепления, пока пользователь отпускает кнопку мыши. Если используется панель `DT_STANDARD` закрепления режим, платформа отображает прямоугольник в проецируемых место закрепления. Если используется панель `DT_SMART` закрепления режим, платформа отображает интеллектуальных маркеров закрепления и прозрачных прямоугольников в проецируемых место закрепления. Чтобы указать режим закрепления для своей области, вызовите [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode) метод. Дополнительные сведения о смарт-закрепления см. в разделе [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams).  
   
-##  <a name="getdragsensitivity"></a>CDockablePane::GetDragSensitivity  
+##  <a name="getdragsensitivity"></a>  CDockablePane::GetDragSensitivity  
  Возвращает чувствительности закрепляемой области перетаскивания.  
   
 ```  
@@ -945,7 +940,7 @@ static const CSize& GetDragSensitivity();
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) , содержащий ширину и высоту в пикселях прямоугольника с центром в точке перетаскивания. Не запущена операция перетаскивания, пока указатель мыши перемещается за пределами этого прямоугольника.  
   
-##  <a name="getlastpercentinpanecontainer"></a>CDockablePane::GetLastPercentInPaneContainer  
+##  <a name="getlastpercentinpanecontainer"></a>  CDockablePane::GetLastPercentInPaneContainer  
  Получает процент пространства, которое занимает область в его контейнере ( [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md)).  
   
 ```  
@@ -958,7 +953,7 @@ int GetLastPercentInPaneContainer() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод используется, когда контейнер изменяет его макет.  
   
-##  <a name="gettabarea"></a>CDockablePane::GetTabArea  
+##  <a name="gettabarea"></a>  CDockablePane::GetTabArea  
  Извлекает область вкладки области.  
   
 ```  
@@ -969,15 +964,15 @@ virtual void GetTabArea(
   
 ### <a name="parameters"></a>Параметры  
  [in] `rectTabAreaTop`  
- `GetTabArea`Если находятся в верхней части области вкладки, заполняет область вкладки этой переменной. Если вкладки расположены в нижней части панели, этой переменной заполняется пустой прямоугольник.  
+ `GetTabArea` Если находятся в верхней части области вкладки, заполняет область вкладки этой переменной. Если вкладки расположены в нижней части панели, этой переменной заполняется пустой прямоугольник.  
   
  [in] `rectTabAreaBottom`  
- `GetTabArea`Если находятся в нижней части области вкладки, заполняет область вкладки этой переменной. Если в верхней части области вкладки, этой переменной заполняется пустой прямоугольник.  
+ `GetTabArea` Если находятся в нижней части области вкладки, заполняет область вкладки этой переменной. Если в верхней части области вкладки, этой переменной заполняется пустой прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется только в классах, которые являются производными от `CDockablePane` и вкладок. Дополнительные сведения см. в разделе [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) и [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
   
-##  <a name="gettabbedpanertc"></a>CDockablePane::GetTabbedPaneRTC  
+##  <a name="gettabbedpanertc"></a>  CDockablePane::GetTabbedPaneRTC  
  Возвращает сведения о классе среды выполнения о окна с вкладками, созданный при закрепляет другой области для текущей области.  
   
 ```  
@@ -992,7 +987,7 @@ CRuntimeClass* GetTabbedPaneRTC() const;
   
  Можно задать сведения о классе среды выполнения путем вызова [CDockablePane::SetTabbedPaneRTC](#settabbedpanertc) метод.  
   
-##  <a name="hasautohidemode"></a>CDockablePane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>  CDockablePane::HasAutoHideMode  
  Указывает, является ли закрепляемой области можно переключить режим автоматического скрытия.  
   
 ```  
@@ -1000,12 +995,12 @@ virtual BOOL HasAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель можно переключить режим автоматического скрытия; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель можно переключить режим автоматического скрытия; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы отключить режим автоматического скрытия для конкретных закрепляемую панель.  
   
-##  <a name="hittest"></a>CDockablePane::HitTest  
+##  <a name="hittest"></a>  CDockablePane::HitTest  
  Указывает расположение панели, когда пользователь нажимает кнопку мыши.  
   
 ```  
@@ -1019,22 +1014,22 @@ virtual int HitTest(
  Указывает точки для проверки.  
   
  [in] `bDetectCaption`  
- `TRUE`Если `HTCAPTION` должны быть возвращены, если точка находится на панели заголовка; в противном случае `FALSE`.  
+ `TRUE` Если `HTCAPTION` должны быть возвращены, если точка находится на панели заголовка; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из следующих значений:  
   
-- `HTNOWHERE`Если `point` не находится в закрепляемую панель.  
+- `HTNOWHERE` Если `point` не находится в закрепляемую панель.  
   
-- `HTCLIENT`Если `point` находится в клиентской области закрепляемую панель.  
+- `HTCLIENT` Если `point` находится в клиентской области закрепляемую панель.  
   
-- `HTCAPTION`Если `point` находится в области заголовка закрепляемую панель.  
+- `HTCAPTION` Если `point` находится в области заголовка закрепляемую панель.  
   
-- `AFX_HTCLOSE`Если `point` является "Закрыть".  
+- `AFX_HTCLOSE` Если `point` является "Закрыть".  
   
-- `HTMAXBUTTON`Если `point` на кнопку закрепления.  
+- `HTMAXBUTTON` Если `point` на кнопку закрепления.  
   
-##  <a name="isautohideallenabled"></a>CDockablePane::IsAutohideAllEnabled  
+##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
  Указывает, является ли области закрепления и другими областями в контейнере можно переключить режим автоматического скрытия.  
   
 ```  
@@ -1042,14 +1037,14 @@ virtual BOOL IsAutohideAllEnabled() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель, а все остальные области в контейнере, можно переключить режим автоматического скрытия; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель, а все остальные области в контейнере, можно переключить режим автоматического скрытия; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Пользователь включает режим автоматического скрытия, нажав кнопку закрепления ПИН-код, удерживая при этом **Ctrl** ключ  
   
  Чтобы включить или отключить это поведение, вызовите [CDockablePane::EnableAutohideAll](#enableautohideall) метод.  
   
-##  <a name="isautohidemode"></a>CDockablePane::IsAutoHideMode  
+##  <a name="isautohidemode"></a>  CDockablePane::IsAutoHideMode  
  Определяет, является ли область в режим автоматического скрытия.  
   
 ```  
@@ -1057,9 +1052,9 @@ virtual BOOL IsAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель находится в режим автоматического скрытия; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель находится в режим автоматического скрытия; в противном случае `FALSE`.  
   
-##  <a name="isdocked"></a>CDockablePane::IsDocked  
+##  <a name="isdocked"></a>  CDockablePane::IsDocked  
  Определяет, закреплена ли текущей области.  
   
 ```  
@@ -1067,12 +1062,12 @@ virtual BOOL IsDocked() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель не принадлежит плавающего окна, или его с плавающей запятой плавающего окна с другой областью. `FALSE`Если область является потомком плавающего окна, а не принадлежащие к плавающего окна области.  
+ `TRUE` Если закрепляемую панель не принадлежит плавающего окна, или его с плавающей запятой плавающего окна с другой областью. `FALSE` Если область является потомком плавающего окна, а не принадлежащие к плавающего окна области.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы определить, закреплена ли области основную область окна, вызовите [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider). Если метод возвращает указатель отличное от NULL, области закрепляется на фрейма главного окна.  
   
-##  <a name="ishideinautohidemode"></a>CDockablePane::IsHideInAutoHideMode  
+##  <a name="ishideinautohidemode"></a>  CDockablePane::IsHideInAutoHideMode  
  Определяет поведение область, в которой находится в режим автоматического скрытия, если она видима (или скрыта) путем вызова [CDockablePane::ShowPane](#showpane).  
   
 ```  
@@ -1080,7 +1075,7 @@ virtual BOOL IsHideInAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель должен быть скрыт в режим автоматического скрытия; в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель должен быть скрыт в режим автоматического скрытия; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если режим автоматического скрытия закрепляемую панель, он ведет себя по-разному при вызове `ShowPane` скрытие или отображение панели. Это поведение управляется статический член [CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode). Если данный элемент является `TRUE`, закрепляемую панель и его связанные автоматическое скрытие панели инструментов или кнопка autohide скрыто или показано при вызове `ShowPane`. В противном случае активируется или деактивируется закрепляемую панель и его связанные автоматическое скрытие панели инструментов или кнопка autohide отображается всегда.  
@@ -1089,7 +1084,7 @@ virtual BOOL IsHideInAutoHideMode() const;
   
  По умолчанию для объекта `m_bHideInAutoHideMode` установлено значение `FALSE`.  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CDockablePane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CDockablePane::IsInFloatingMultiPaneFrameWnd  
  Указывает, является ли область в окне фрейма несколькими областями ( [CMultiPaneFrameWnd класса](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
@@ -1097,11 +1092,11 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель в окне фрейма несколькими областями. в противном случае `FALSE`.  
+ `TRUE` Если панель в окне фрейма несколькими областями. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isresizable"></a>CDockablePane::IsResizable  
+##  <a name="isresizable"></a>  CDockablePane::IsResizable  
  Указывает, является ли область с раскрывающимися списками.  
   
 ```  
@@ -1109,14 +1104,14 @@ virtual BOOL IsResizable() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель можно изменять; в противном случае `FALSE`.  
+ `TRUE` Если панель можно изменять; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию закрепляемых областей с раскрывающимися списками. Чтобы предотвратить изменение размера, переопределите этот метод в производном классе и возвращают `FALSE`. Обратите внимание, что `FALSE` приводит значение к сбоя `ASSERT` в [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane). Используйте [CDockingManager::AddPane](../../mfc/reference/cdockingmanager-class.md#addpane) вместо этого, чтобы закрепить панель внутри родительского фрейма.  
   
  Не может областей, которые невозможно изменить размер число с плавающей запятой, ни в режим автоматического скрытия и всегда находятся на внешней границе родительского фрейма.  
   
-##  <a name="istablocationbottom"></a>CDockablePane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>  CDockablePane::IsTabLocationBottom  
  Указывает, расположены ли вкладки в верхней или нижней части области.  
   
 ```  
@@ -1124,12 +1119,12 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если вкладки расположены в нижней части области. `FALSE` Если вкладок в верхней части области.  
+ `TRUE` Если вкладки расположены в нижней части области. `FALSE` Если вкладок в верхней части области.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom).  
   
-##  <a name="istracked"></a>CDockablePane::IsTracked  
+##  <a name="istracked"></a>  CDockablePane::IsTracked  
  Определяет, перемещается ли панель пользователем.  
   
 ```  
@@ -1137,9 +1132,9 @@ BOOL IsTracked() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если перемещается области; в противном случае `FALSE`.  
+ `TRUE` Если перемещается области; в противном случае `FALSE`.  
   
-##  <a name="isvisible"></a>CDockablePane::IsVisible  
+##  <a name="isvisible"></a>  CDockablePane::IsVisible  
  Определяет, видима ли текущей области.  
   
 ```  
@@ -1147,7 +1142,7 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если закрепляемую панель видима. в противном случае `FALSE`.  
+ `TRUE` Если закрепляемую панель видима. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод, чтобы определить, будет ли видна закрепляемую панель. Этот метод можно использовать вместо вызова метода [CWnd::IsWindowVisible](../../mfc/reference/cwnd-class.md#iswindowvisible) или тестирование `WS_VISIBLE` стиля. Зависит от состояния возвращаемый видимости, включен или отключен режим автоматического скрытия и значение [CDockablePane::IsHideInAutoHideMode](#ishideinautohidemode) свойство.  
@@ -1158,14 +1153,14 @@ virtual BOOL IsVisible() const;
   
  Если закрепляемую панель не режим автоматического скрытия, состояние видимости определяется [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) метод.  
   
-##  <a name="m_bdisableanimation"></a>CDockablePane::m_bDisableAnimation  
+##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Указывает, отключено ли автоматическое скрытие анимация закрепляемую панель.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDisableAnimation;  
 ```  
   
-##  <a name="m_bhideinautohidemode"></a>CDockablePane::m_bHideInAutoHideMode  
+##  <a name="m_bhideinautohidemode"></a>  CDockablePane::m_bHideInAutoHideMode  
  Определяет поведение панели, если панель находится в режим автоматического скрытия.  
   
 ```  
@@ -1179,7 +1174,7 @@ AFX_IMPORT_DATA static BOOL m_bHideInAutoHideMode;
   
  Если значение этого элемента `FALSE`, закрепляемых областей активируется или деактивируется при вызове [CDockablePane::ShowPane](#showpane).  
   
-##  <a name="m_nslidesteps"></a>CDockablePane::m_nSlideSteps  
+##  <a name="m_nslidesteps"></a>  CDockablePane::m_nSlideSteps  
  Указывает скорость анимации области, когда он находится в режим автоматического скрытия.  
   
 ```  
@@ -1189,7 +1184,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
 ### <a name="remarks"></a>Примечания  
  Чтобы быстрее эффект анимации Уменьшите это значение. Медленнее эффект анимации Увеличьте это значение.  
   
-##  <a name="onafterchangeparent"></a>CDockablePane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1201,7 +1196,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onafterdockfromminiframe"></a>CDockablePane::OnAfterDockFromMiniFrame  
+##  <a name="onafterdockfromminiframe"></a>  CDockablePane::OnAfterDockFromMiniFrame  
  Вызывается платформой при закрепляет плавающей закрепляемую панель в окне фрейма.  
   
 ```  
@@ -1211,7 +1206,7 @@ virtual void OnAfterDockFromMiniFrame();
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
   
-##  <a name="onbeforechangeparent"></a>CDockablePane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>  CDockablePane::OnBeforeChangeParent  
  Этот метод вызывается платформой перед изменением родительской области.  
   
 ```  
@@ -1225,14 +1220,14 @@ virtual void OnBeforeChangeParent(
  Указатель на новый родительского окна.  
   
  [in] `bDelay`  
- `BOOL`который указывает, требуется ли отложить повторное вычисление макете закрепления, если панель закреплена. Дополнительные сведения см. в разделе [CDockablePane::UndockPane](#undockpane).  
+ `BOOL` который указывает, требуется ли отложить повторное вычисление макете закрепления, если панель закреплена. Дополнительные сведения см. в разделе [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Примечания  
  Если панель закреплена и новый родительский объект не допускает закрепления, этот метод открепляется области.  
   
  Если области преобразуется в документ с вкладками, этот метод сохраняет последние закрепленного положения. Платформа использует последние положение закрепления восстановить положение области, когда она преобразуется обратно в состоянии.  
   
-##  <a name="onbeforefloat"></a>CDockablePane::OnBeforeFloat  
+##  <a name="onbeforefloat"></a>  CDockablePane::OnBeforeFloat  
  Платформа вызывает этот метод раньше областью переходов состояния с плавающей запятой.  
   
 ```  
@@ -1249,12 +1244,12 @@ virtual BOOL OnBeforeFloat(
  Задает метод закрепления. В разделе [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) список возможных значений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если область может быть перемещается; в противном случае `FALSE`.  
+ `TRUE` Если область может быть перемещается; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой, когда область о к float. Если вы хотите выполнить обработку перед смещает области, можно переопределить этот метод в производном классе.  
   
-##  <a name="onpressbuttons"></a>CDockablePane::OnPressButtons  
+##  <a name="onpressbuttons"></a>  CDockablePane::OnPressButtons  
  Вызывается, когда пользователь нажимает кнопки заголовка, отличный от `AFX_HTCLOSE` и `AFX_HTMAXBUTTON` кнопки.  
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void OnPressButtons(UINT nHit);
 ### <a name="remarks"></a>Примечания  
  Если добавить кнопку к заголовку закрепляемую панель, переопределите этот метод для получения уведомлений, когда пользователь нажимает кнопку.  
   
-##  <a name="onslide"></a>CDockablePane::OnSlide  
+##  <a name="onslide"></a>  CDockablePane::OnSlide  
  Вызывается платформой для анимации области, когда он находится в режим автоматического скрытия.  
   
 ```  
@@ -1277,12 +1272,12 @@ virtual void OnSlide(BOOL bSlideOut);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bSlideOut`  
- `TRUE`Чтобы отобразить область; `FALSE` скрыть область.  
+ `TRUE` Чтобы отобразить область; `FALSE` скрыть область.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы реализовать пользовательские автоматическое скрытие эффекты.  
   
-##  <a name="removefromdefaultpanedividier"></a>CDockablePane::RemoveFromDefaultPaneDividier  
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier  
  Платформа вызывает этот метод при вне дока областью.  
   
 ```  
@@ -1292,7 +1287,7 @@ void RemoveFromDefaultPaneDividier();
 ### <a name="remarks"></a>Примечания  
  Этот метод задает разделитель по умолчанию `NULL` и удаляет область из его контейнера.  
   
-##  <a name="replacepane"></a>CDockablePane::ReplacePane  
+##  <a name="replacepane"></a>  CDockablePane::ReplacePane  
  Заменяет области указанной области.  
   
 ```  
@@ -1313,9 +1308,9 @@ BOOL ReplacePane(
  Если `TRUE`, новая область зарегистрирован в диспетчере закрепления родительского элемента области старого. Новая область вставляется по индексу старые панели в списке панелей, поддерживаемое в диспетчере закрепления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если замена выполнена успешно; в противном случае `FALSE`.  
+ `TRUE` Если замена выполнена успешно; в противном случае `FALSE`.  
   
-##  <a name="restoredefaultpanedivider"></a>CDockablePane::RestoreDefaultPaneDivider  
+##  <a name="restoredefaultpanedivider"></a>  CDockablePane::RestoreDefaultPaneDivider  
  При десериализации областью платформа вызывает этот метод, чтобы восстановить разделитель области по умолчанию.  
   
 ```  
@@ -1325,7 +1320,7 @@ void RestoreDefaultPaneDivider();
 ### <a name="remarks"></a>Примечания  
  Разделитель области по умолчанию восстановленной заменяет разделитель текущей области по умолчанию, если он существует.  
   
-##  <a name="setautohidemode"></a>CDockablePane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>  CDockablePane::SetAutoHideMode  
  Переключение области закрепления между видимым и режим автоматического скрытия.  
   
 ```  
@@ -1338,12 +1333,12 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bMode`  
- `TRUE`Чтобы включить режим автоматического скрытия; `FALSE` Включение обычный режим закрепления.  
+ `TRUE` Чтобы включить режим автоматического скрытия; `FALSE` Включение обычный режим закрепления.  
   
  [in] `dwAlignment`  
  Задает выравнивание панели автоматически скрывать, чтобы создать.  
   
- [in] [out]`pCurrAutoHideBar`  
+ [in] [out] `pCurrAutoHideBar`  
  Указатель на панель инструментов автоматически скрывать текущего. Может быть `NULL`.  
   
  [in] `bUseTimer`  
@@ -1357,7 +1352,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
   
  Этот метод используется для переключения закрепляемую панель режим автоматического скрытия программными средствами. Области должно быть закреплено основную область окна ( [CDockablePane::GetDefaultPaneDivider](#getdefaultpanedivider) должен возвращать допустимый указатель на [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-##  <a name="setautohideparents"></a>CDockablePane::SetAutoHideParents  
+##  <a name="setautohideparents"></a>  CDockablePane::SetAutoHideParents  
  Задает кнопки автоматического скрытия и автоматическое скрытие панели инструментов области.  
   
 ```  
@@ -1373,7 +1368,7 @@ void SetAutoHideParents(
  [in] `pBtn`  
  Указатель на кнопку автоматического скрытия.  
   
-##  <a name="setlastpercentinpanecontainer"></a>CDockablePane::SetLastPercentInPaneContainer  
+##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Задает процент пространства, которое занимает область в его контейнера.  
   
 ```  
@@ -1387,7 +1382,7 @@ void SetLastPercentInPaneContainer(int n);
 ### <a name="remarks"></a>Примечания  
  Платформа регулирует области, чтобы использовать новое значение при пересчете макета.  
   
-##  <a name="setrestoreddefaultpanedivider"></a>CDockablePane::SetRestoredDefaultPaneDivider  
+##  <a name="setrestoreddefaultpanedivider"></a>  CDockablePane::SetRestoredDefaultPaneDivider  
  Задает разделитель области восстановленной по умолчанию.  
   
 ```  
@@ -1401,7 +1396,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ### <a name="remarks"></a>Примечания  
  Разделитель области восстановленной по умолчанию получается при десериализации области. Дополнительные сведения см. в разделе [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
   
-##  <a name="settabbedpanertc"></a>CDockablePane::SetTabbedPaneRTC  
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC  
  Задает сведения о классе среды выполнения для окна с вкладками, которое создается, когда две области закрепления друг с другом.  
   
 ```  
@@ -1425,7 +1420,7 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
   
  Затем этот метод с указателем его сведения о классе среды выполнения.  
   
-##  <a name="showpane"></a>CDockablePane::ShowPane  
+##  <a name="showpane"></a>  CDockablePane::ShowPane  
  Показывает или скрывает панель.  
   
 ```  
@@ -1437,18 +1432,18 @@ virtual void ShowPane(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bShow`  
- `TRUE`Чтобы отобразить область; `FALSE` скрыть область.  
+ `TRUE` Чтобы отобразить область; `FALSE` скрыть область.  
   
  [in] `bDelay`  
- `TRUE`Чтобы отложить подгонки макета закрепления; `FALSE` для настройки макета закрепления немедленно.  
+ `TRUE` Чтобы отложить подгонки макета закрепления; `FALSE` для настройки макета закрепления немедленно.  
   
  [in] `bActivate`  
- `TRUE`Чтобы активировать область при отображении; в противном случае `FALSE`.  
+ `TRUE` Чтобы активировать область при отображении; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вместо [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) при отображении или скрытии закрепляемых областей.  
   
-##  <a name="slide"></a>CDockablePane::Slide  
+##  <a name="slide"></a>  CDockablePane::Slide  
  Анимирует область, в которой находится в режим автоматического скрытия.  
   
 ```  
@@ -1459,17 +1454,17 @@ virtual void Slide(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bSlideOut`  
- `TRUE`Чтобы отобразить область; `FALSE` скрыть область.  
+ `TRUE` Чтобы отобразить область; `FALSE` скрыть область.  
   
  [in] `bUseTimer`  
- `TRUE`Чтобы отобразить или скрыть панель с эффектом автоматически скрывать; `FALSE` для отображения или скрытия панели немедленно.  
+ `TRUE` Чтобы отобразить или скрыть панель с эффектом автоматически скрывать; `FALSE` для отображения или скрытия панели немедленно.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод, чтобы анимировать область, в которой находится в режим автоматического скрытия.  
   
  Этот метод использует `CDockablePane::m_nSlideDefaultTimeOut` значения для определения времени ожидания для эффект скольжения. Значение по умолчанию для времени ожидания-1. Если настраивать алгоритм автоматически скрывать измените этот элемент, чтобы изменить время ожидания.  
   
-##  <a name="toggleautohide"></a>CDockablePane::ToggleAutoHide  
+##  <a name="toggleautohide"></a>  CDockablePane::ToggleAutoHide  
  Переключает область между всегда видны и режима автоматического скрытия.  
   
 ```  
@@ -1479,7 +1474,7 @@ virtual void ToggleAutoHide();
 ### <a name="remarks"></a>Примечания  
  Этот метод переключает режим автоматического скрытия области путем вызова [CDockablePane::SetAutoHideMode](#setautohidemode).  
   
-##  <a name="undockpane"></a>CDockablePane::UndockPane  
+##  <a name="undockpane"></a>  CDockablePane::UndockPane  
  Открепляется области из контейнера плавающего окна или фрейма главного окна.  
   
 ```  
@@ -1488,7 +1483,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bDelay`  
- `TRUE`Чтобы отложить вычисление макет закрепления; `FALSE` немедленно пересчитать макет закрепления.  
+ `TRUE` Чтобы отложить вычисление макет закрепления; `FALSE` немедленно пересчитать макет закрепления.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод, чтобы отменить закрепление панели, от фрейма главного окна или из контейнера multi плавающего окна (панель открывается как плавающее окно в одном плавающего окна с другими областями).  

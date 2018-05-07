@@ -2,11 +2,8 @@
 title: collection_adapter (STL/CLR) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - collection_adapter class [STL/CLR]
 ms.assetid: 31964058-1f50-48bf-82c2-b0b3cc8a7887
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fb5dc48175d755771960e9121c3371a0292595
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Инкапсулирует коллекцию .NET для использования в качестве контейнера STL/CLR. Объект `collection_adapter` — это класс шаблона, описывающий простого объекта-контейнера STL/CLR. Он инкапсулирует интерфейс библиотеки базовых классов (BCL) и возвращает пару итератор, который позволяет управлять управляемой последовательности.  
@@ -70,7 +65,7 @@ template<typename Key,
   
 ## <a name="specializations"></a>Специализации  
   
-|Специализация|Описание:|  
+|Специализация|Описание|  
 |--------------------|-----------------|  
 |IEnumerable|Последовательности элементов.|  
 |ICollection|Поддерживает группу элементов.|  
@@ -83,7 +78,7 @@ template<typename Key,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[collection_adapter::difference_type (STL/CLR)](../dotnet/collection-adapter-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[collection_adapter::iterator (STL/CLR)](../dotnet/collection-adapter-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
@@ -93,7 +88,7 @@ template<typename Key,
 |[collection_adapter::size_type (STL/CLR)](../dotnet/collection-adapter-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[collection_adapter::value_type (STL/CLR)](../dotnet/collection-adapter-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)|Обозначает упакованного интерфейса BCL.|  
 |[collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
@@ -102,7 +97,7 @@ template<typename Key,
 |[collection_adapter::size (STL/CLR)](../dotnet/collection-adapter-size-stl-clr.md)|Подсчитывает количество элементов.|  
 |[collection_adapter::swap (STL/CLR)](../dotnet/collection-adapter-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)|Заменяет дескриптор хранимых BCL.|  
   

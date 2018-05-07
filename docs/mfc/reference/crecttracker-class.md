@@ -1,12 +1,9 @@
 ---
-title: "CRectTracker-класс | Документы Microsoft"
-ms.custom: 
+title: CRectTracker-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRectTracker
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecttracker-class"></a>CRectTracker-класс
 Позволяет элементу отображаются, перемещать и изменять размер различными способами.  
@@ -72,13 +67,13 @@ class CRectTracker
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRectTracker::CRectTracker](#crecttracker)|Создает объект `CRectTracker`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRectTracker::AdjustRect](#adjustrect)|Вызывается, когда размер прямоугольника.|  
 |[CRectTracker::Draw](#draw)|Отрисовывает прямоугольник.|  
@@ -94,7 +89,7 @@ class CRectTracker
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Определяет размер маркеров изменения размера.|  
 |[CRectTracker::m_nStyle](#m_nstyle)|Текущий style(s) средство отслеживания.|  
@@ -102,11 +97,11 @@ class CRectTracker
 |[CRectTracker::m_sizeMin](#m_sizemin)|Определяет минимальное прямоугольников ширины и высоты.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRectTracker`не имеет базового класса.  
+ `CRectTracker` не имеет базового класса.  
   
  Несмотря на то что `CRectTracker` класс предназначена для взаимодействия с OLE-элементы с помощью графического интерфейса пользователя, его использование не ограничено для приложений с поддержкой OLE. Он может использоваться в любом интерфейс пользователя не требуется.  
   
- `CRectTracker`границы могут быть сплошной или пунктирными линиями. Элемент может быть заданному штриховой границей или накладывается заштрихованного шаблон для указания различных состояний элемента. Можно поместить восемь маркеров изменения размера на внешней или внутренней границы элемента. (Описание маркеры изменения размера, в разделе [GetHandleMask](#gethandlemask).) Наконец `CRectTracker` позволяет изменение ориентации элемента при изменении размера.  
+ `CRectTracker` границы могут быть сплошной или пунктирными линиями. Элемент может быть заданному штриховой границей или накладывается заштрихованного шаблон для указания различных состояний элемента. Можно поместить восемь маркеров изменения размера на внешней или внутренней границы элемента. (Описание маркеры изменения размера, в разделе [GetHandleMask](#gethandlemask).) Наконец `CRectTracker` позволяет изменение ориентации элемента при изменении размера.  
   
  Для использования `CRectTracker`, создания `CRectTracker` и укажите, какие состояния отображения инициализируются. Затем этот интерфейс можно использовать для предоставления пользователю визуальную обратную связь на текущее состояние объекта OLE, связанные с `CRectTracker` объекта.  
   
@@ -118,7 +113,7 @@ class CRectTracker
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
  Вызывается платформой при изменении размеров прямоугольника отслеживания с помощью маркер изменения размера.  
   
 ```  
@@ -141,7 +136,7 @@ virtual void AdjustRect(
   
  Специальные функции, которые не поддерживаются напрямую `CRectTracker`, такие как сетку привязки или сохранять--пропорции, можно реализовать путем переопределения этой функции.  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  Создает и инициализирует `CRectTracker` объекта.  
   
 ```  
@@ -175,7 +170,7 @@ CRectTracker(
 ### <a name="remarks"></a>Примечания  
  Конструктор по умолчанию инициализирует `CRectTracker` со значениями из `lpSrcRect` и инициализирует других размеров параметры системы по умолчанию. Если объект создается без параметров, `m_rect` и `m_nStyle` данные-члены не инициализированы.  
   
-##  <a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>  CRectTracker::Draw  
  Эта функция вызывается для рисования внешней линий и внутренняя область прямоугольника.  
   
 ```  
@@ -189,7 +184,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>Примечания  
  Стиль окна инспектора определяет, как выполняется рисование. В разделе конструктор для `CRectTracker` Дополнительные сведения о доступных стилей.  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
  Вызывается платформой при каждом изменении позиции инспектор while внутри `Track` или `TrackRubberBand` функции-члена.  
   
 ```  
@@ -218,7 +213,7 @@ virtual void DrawTrackerRect(
   
  Переопределите эту функцию для предоставления отзывов различных во время операции отслеживания.  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
  Платформа вызывает эту функцию-член для извлечения маску для прямоугольника маркеры изменения размера.  
   
 ```  
@@ -231,7 +226,7 @@ virtual UINT GetHandleMask() const;
 ### <a name="remarks"></a>Примечания  
  Маркеры изменения размера появляются на сторонах углов прямоугольника и разрешить пользователю контролировать форму и размер прямоугольника.  
   
- Прямоугольник имеет 8 маркеры изменения размера с номерами от 0 до 7. Каждый маркер изменения размера представленного бита в маске; значение бита равно 2 ^  *n* , где  *n*  номер маркер изменения размера. Биты 0-3 соответствуют маркеры изменения размера угла, начиная с верхней левой перемещение по часовой стрелке. Бит 4-7 соответствуют стороне изменить размер маркеров, начиная сверху стрелке. На следующем рисунке показано маркеры изменения размера прямоугольника и соответствующие им изменить дескриптор числа и значения:  
+ Прямоугольник имеет 8 маркеры изменения размера с номерами от 0 до 7. Каждый маркер изменения размера представленного бита в маске; значение бита равно 2 ^ *n*, где *n* номер маркер изменения размера. Биты 0-3 соответствуют маркеры изменения размера угла, начиная с верхней левой перемещение по часовой стрелке. Бит 4-7 соответствуют стороне изменить размер маркеров, начиная сверху стрелке. На следующем рисунке показано маркеры изменения размера прямоугольника и соответствующие им изменить дескриптор числа и значения:  
   
  ![Числа маркера изменения размера](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
@@ -239,7 +234,7 @@ virtual UINT GetHandleMask() const;
   
  Переопределите эту функцию-член, чтобы скрыть или отобразить выбранный маркеры изменения размера.  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
  Вызывайте эту функцию для извлечения координат прямоугольника.  
   
 ```  
@@ -253,7 +248,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>Примечания  
  Размеры прямоугольника включают высоту и ширину все маркеры изменения размера, расположенных на внешней границы. При возвращении, `lpTrueRect` всегда представляет собой нормализованное прямоугольник в координатах устройства.  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
  Вызывайте эту функцию, чтобы узнать, является ли пользователь захвачено маркер изменения размера.  
   
 ```  
@@ -287,7 +282,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
  Размер в пикселях от `CRectTracker` маркеры изменения размера.  
   
 ```  
@@ -297,14 +292,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>Примечания  
  Инициализирован системы по умолчанию.  
   
-##  <a name="m_rect"></a>CRectTracker::m_rect  
+##  <a name="m_rect"></a>  CRectTracker::m_rect  
  Текущая позиция прямоугольника в клиентские координаты (в пикселях).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
  Минимальный размер прямоугольника.  
   
 ```  
@@ -314,7 +309,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>Примечания  
  Оба значения по умолчанию **cx** и **cy**, вычисляются на основе системы по умолчанию для ширины границы. Этот член данных используется только `AdjustRect` функции-члена.  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  Текущий стиль прямоугольника.  
   
 ```  
@@ -324,7 +319,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>Примечания  
  В разделе [CRectTracker::CRectTracker](#crecttracker) список возможных стилей.  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
  Вызовите эту функцию для преобразования потенциально инвертированный дескриптор.  
   
 ```  
@@ -341,7 +336,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>Примечания  
  Когда `CRectTracker::Track` или `CRectTracker::TrackRubberBand` вызывается с Инверсия допускается, существует возможность прямоугольник обратные на оси x и оси y. В этом случае `HitTest` будет возвращать маркеры, которые также обратным по отношению к прямоугольника. Это не подходит для рисования курсоров, так как отзывы зависит от позиции экрана прямоугольника, а не часть структуры данных прямоугольник, который будет изменен.  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
  Вызывается платформой при каждом прямоугольнике отслеживания был изменен во время вызова `Track`.  
   
 ```  
@@ -357,7 +352,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  Переопределите эту функцию, если вы хотите выполнить действия после был изменен размер прямоугольника.  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
  Эта функция вызывается для изменения формы курсора, когда оно находится над `CRectTracker` области объекта.  
   
 ```  
@@ -379,7 +374,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию из внутри функции окна, который обрабатывает `WM_SETCURSOR` сообщений (обычно `OnSetCursor`).  
   
-##  <a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>  CRectTracker::Track  
  Эта функция вызывается для отображения пользовательского интерфейса для изменения размеров прямоугольника.  
   
 ```  
@@ -413,7 +408,7 @@ BOOL Track(
   
  Если `bAllowInvert` — **TRUE**, прямоугольник отслеживания могут быть инвертированы на оси x или оси y.  
   
-##  <a name="trackrubberband"></a>CRectTracker::TrackRubberBand  
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
  Вызовите эту функцию, чтобы сделать выбор эластичное.  
   
 ```  

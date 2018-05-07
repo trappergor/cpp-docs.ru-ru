@@ -1,24 +1,19 @@
 ---
-title: "События (C + +/ CX) | Документы Microsoft"
-ms.custom: 
+title: События (C + +/ CX) | Документы Microsoft
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef32e8310454005fa01a3e23dcd8739dcdbaa647
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-ccx"></a>События (C++/CX)
 Среды выполнения Windows может объявлять (то публиковать) события, а код клиента в том же компоненте или в других компонентах может подписываться на эти события, связывая методы, вызываемые *обработчики событий* с событием. С одним событием можно связать несколько обработчиков событий. Когда публикующий объект создает событие, это вызывает срабатывание все обработчиков событий. Таким образом, подписывающийся класс может выполнять любые действия, зависящие от конкретной ситуации, когда публикующий объект создает событие. Событие имеет тип делегата, определяющего сигнатуру, которую должны иметь все обработчики событий, чтобы подписаться на данное событие.  

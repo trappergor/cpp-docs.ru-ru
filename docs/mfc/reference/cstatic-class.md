@@ -1,12 +1,9 @@
 ---
-title: "Класс CStatic | Документы Microsoft"
-ms.custom: 
+title: Класс CStatic | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatic
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3319535bdcf3693fcf9427572e3902f96261d33e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d3b1a5dcfc8481727bffd8b80e0bb1b230d56ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatic-class"></a>Класс CStatic
 Предоставляет функции статического элемента управления Windows.  
@@ -58,17 +53,17 @@ ms.lasthandoff: 12/21/2017
 class CStatic : public CWnd  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatic::CStatic](#cstatic)|Создает объект `CStatic`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatic::Create](#create)|Создает статический элемент управления Windows и прикрепляет его к `CStatic` объекта.|  
 |[CStatic::DrawItem](#drawitem)|Переопределите, чтобы нарисовать определяемый владельцем статический элемент управления.|  
@@ -102,7 +97,7 @@ class CStatic : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="create"></a>CStatic::Create  
+##  <a name="create"></a>  CStatic::Create  
  Создает статический элемент управления Windows и прикрепляет его к `CStatic` объекта.  
   
 ```  
@@ -159,7 +154,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="cstatic"></a>CStatic::CStatic  
+##  <a name="cstatic"></a>  CStatic::CStatic  
  Создает объект `CStatic`.  
   
 ```  
@@ -169,7 +164,7 @@ CStatic();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CStatic::DrawItem  
+##  <a name="drawitem"></a>  CStatic::DrawItem  
  Вызывается платформой для отрисовки определяемый владельцем статический элемент управления.  
   
 ```  
@@ -183,7 +178,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию для реализации отрисовки рисуемого владельцем **CStatic** объект (элемент управления имеет стиль **SS_OWNERDRAW**).  
   
-##  <a name="getbitmap"></a>CStatic::GetBitmap  
+##  <a name="getbitmap"></a>  CStatic::GetBitmap  
  Возвращает дескриптор растрового изображения, при помощи [SetBitmap](#setbitmap), связанные с `CStatic`.  
   
 ```  
@@ -196,7 +191,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="getcursor"></a>CStatic::GetCursor  
+##  <a name="getcursor"></a>  CStatic::GetCursor  
  Возвращает дескриптор курсора при помощи [SetCursor](#setcursor), связанные с `CStatic`.  
   
 ```  
@@ -209,7 +204,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
+##  <a name="getenhmetafile"></a>  CStatic::GetEnhMetaFile  
  Возвращает дескриптор расширенного метафайла, при помощи [SetEnhMetafile](#setenhmetafile), связанные с `CStatic`.  
   
 ```  
@@ -222,7 +217,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="geticon"></a>CStatic::GetIcon  
+##  <a name="geticon"></a>  CStatic::GetIcon  
  Возвращает дескриптор значка, при помощи [SetIcon](#seticon), связанные с `CStatic`.  
   
 ```  
@@ -235,7 +230,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="setbitmap"></a>CStatic::SetBitmap  
+##  <a name="setbitmap"></a>  CStatic::SetBitmap  
  Связывает новое растровое изображение с статического элемента управления.  
   
 ```  
@@ -260,7 +255,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 -   MFC предоставляет класс `CBitmap`, который можно использовать при наличии более с растровым изображением, чем просто вызвать Win32 функции `LoadBitmap`. `CBitmap`, содержащий одного типа объектов GDI, часто используется вместе с `CStatic`, который является `CWnd` класс, который используется для отображения графического объекта в качестве статического элемента управления.  
   
- `CImage`является классом ATL и MFC, который позволяет легко работать с независимыми растровые изображения устройства (DIB). Дополнительные сведения см. в разделе [CImage-класс](../../atl-mfc-shared/reference/cimage-class.md).  
+ `CImage` является классом ATL и MFC, который позволяет легко работать с независимыми растровые изображения устройства (DIB). Дополнительные сведения см. в разделе [CImage-класс](../../atl-mfc-shared/reference/cimage-class.md).  
   
 -   Обычно используется для предоставления `CStatic::SetBitmap` объект GDI, возвращенный оператор HBITMAP `CBitmap` или `CImage` объекта. Код для этого, похожий на следующий.  
   
@@ -272,7 +267,7 @@ MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="setcursor"></a>CStatic::SetCursor  
+##  <a name="setcursor"></a>  CStatic::SetCursor  
  Связывает новый образ курсора с помощью статического элемента управления.  
   
 ```  
@@ -298,7 +293,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
+##  <a name="setenhmetafile"></a>  CStatic::SetEnhMetaFile  
  Связывает новый образ Metafile — расширенный метафайл с статического элемента управления.  
   
 ```  
@@ -322,7 +317,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="seticon"></a>CStatic::SetIcon  
+##  <a name="seticon"></a>  CStatic::SetIcon  
  Связывает новое изображение значка с статического элемента управления.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Класс COM::PTR | Документы Microsoft"
-ms.custom: 
+title: Класс COM::PTR | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - com::ptr
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comptr-class"></a>Класс com::ptr
 Программа-оболочка для COM-объекта, который можно использовать в качестве члена класса среды CLR.  Оболочки также позволяет автоматизировать управление временем существования COM-объекта, освобождая все принадлежащие ссылки на объект при вызове его деструктора. Аналогично [класс CComPtr](../atl/reference/ccomptr-class.md).  

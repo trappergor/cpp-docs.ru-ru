@@ -1,13 +1,10 @@
 ---
-title: "Пошаговое руководство: Развертывание программы (C++) | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Развертывание программы (C++) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Пошаговое руководство. Развертывание программы (C++)
 Теперь, когда вы создали приложение, выполнив ранее связанные пошаговые руководства, перечисленных в [с помощью интегрированной среды разработки Visual Studio для разработки классических приложений C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), последним шагом является создание установщика, чтобы другие пользователи могли Установите это приложение на своих компьютерах. Для этого вам необходимо добавить новый проект в имеющееся решение. Выходным файлом этого проекта будет являться файл setup.exe, который служит для установки приложения на другом компьютере.  

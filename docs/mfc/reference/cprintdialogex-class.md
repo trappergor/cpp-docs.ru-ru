@@ -1,12 +1,9 @@
 ---
-title: "Класс CPrintDialogEx | Документы Microsoft"
-ms.custom: 
+title: Класс CPrintDialogEx | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>Класс CPrintDialogEx
 Инкапсулирует службы, предоставляемые вкладкой свойств печати Windows.  
@@ -72,13 +67,13 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|Создает объект `CPrintDialogEx`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|  
 |[CPrintDialogEx::DoModal](#domodal)|Отображает диалоговое окно и дает пользователю возможность выбора.|  
@@ -97,7 +92,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialogEx::m_pdex](#m_pdex)|Структура, используемая для настройки `CPrintDialogEx` объекта.|  
   
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Примечания  
  Создает контекст устройства принтера (DC) из [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
   
- `GetDefaults`не отображать окно свойств печати. Вместо этого он задает **hDevNames** и **hDevMode** члены [m_pdex](#m_pdex) дескрипторам [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES ](../../mfc/reference/devnames-structure.md) структуры, которые инициализируются для на принтере по умолчанию. Оба **hDevNames** и **hDevMode** должен иметь значение NULL, или `GetDefaults` завершается ошибкой.  
+ `GetDefaults` не отображать окно свойств печати. Вместо этого он задает **hDevNames** и **hDevMode** члены [m_pdex](#m_pdex) дескрипторам [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES ](../../mfc/reference/devnames-structure.md) структуры, которые инициализируются для на принтере по умолчанию. Оба **hDevNames** и **hDevMode** должен иметь значение NULL, или `GetDefaults` завершается ошибкой.  
   
  Если **PD_RETURNDC** флаг установлен, эта функция не вернет только **hDevNames** и **hDevMode** (расположенный в **m_pdex.hDevNames** и **m_pdex.hDevMode**) вызывающему объекту, но также возвращает принтера в **m_pdex.hDC**. Отвечает вызывающего объекта, чтобы удалить принтер контроллера домена, а вызовите Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) функция дескрипторах при завершении работы с `CPrintDialogEx` объекта.  
   

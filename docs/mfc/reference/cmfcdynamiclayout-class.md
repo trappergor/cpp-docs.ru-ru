@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCDynamicLayout | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCDynamicLayout | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDynamicLayout
@@ -24,17 +21,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdynamiclayout-class"></a>Класс CMFCDynamicLayout
 Определяет порядок перемещения и изменения размеров элементов управления при изменении размеров окна.  
@@ -56,7 +51,7 @@ class CMFCDynamicLayout : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCDynamicLayout::AddItem](#additem)|Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).|  
 |[CMFCDynamicLayout::Adjust](#adjust)|Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).|  
@@ -79,7 +74,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>Вложенные типы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Структура CMFCDynamicLayout::MoveSettings](#movesettings_structure)|Инкапсулирует данные перемещения для элементов управления в динамическом макете.|  
 |[Структура CMFCDynamicLayout::SizeSettings](#sizesettings_structure)|Инкапсулирует данные об изменении размера элементов управления в динамическом макете.|  
@@ -94,7 +89,7 @@ class CMFCDynamicLayout : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxlayout.h  
   
-##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem  
  Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).  
   
 ```  
@@ -127,7 +122,7 @@ BOOL AddItem(
 ### <a name="remarks"></a>Примечания  
  Положение и размер дочернего элемента управления динамически меняются при изменении размера главного окна.  
   
-##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
+##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust  
  Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).  
   
 ```  
@@ -137,7 +132,7 @@ void Adjust();
 ### <a name="remarks"></a>Примечания  
  Положение и размер дочернего элемента управления динамически меняются при изменении размера главного окна.  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
  Хранит и проверяет главное окно.  
   
 ```  
@@ -153,7 +148,7 @@ BOOL Create(CWnd* pHostWnd);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
  Возвращает указатель на главное окно.  
   
 ```  
@@ -166,7 +161,7 @@ CWnd* GetHostWnd();
 ### <a name="remarks"></a>Примечания  
  По умолчанию положения всех дочерних элементов управления пересчитываются относительно этого окна.   
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
  Возвращает минимальный размер окна для макета.  
   
 ```  
@@ -179,7 +174,7 @@ CSize GetMinSize();
 ### <a name="remarks"></a>Примечания  
  Положение и размер дочернего элемента управления динамически меняются при изменении размера главного окна, однако существует минимальный допустимый размер для макета. Пользователь может сделать окно меньше этого значения, но тогда определенные части окна будут скрыты.  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
  Извлекает прямоугольник для текущей клиентской области окна.  
   
 ```  
@@ -192,7 +187,7 @@ void GetHostWndRect(CRect& rect,);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem  
  Проверяет, добавлялся ли дочерний элемент управления в динамический макет.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL HasItem(HWND hwnd);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty  
  Проверяет, что в динамический макет не добавлялись дочерние окна.  
   
 ```  
@@ -220,7 +215,7 @@ BOOL IsEmpty();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
  Считывает динамический макет из ресурса AFX_DIALOG_LAYOUT и применяет его для главного окна.  
   
 ```  
@@ -244,7 +239,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
+##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal  
  Возвращает [MoveSettings](#movesettings_structure) значение, которое определяет, сколько дочерний элемент управления будет перемещаться по горизонтали при изменении пользователем размера его главного окна.  
   
 ```  
@@ -260,7 +255,7 @@ static MoveSettings MoveHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
+##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical  
  Возвращает [MoveSettings](#movesettings_structure) значение, которое определяет, сколько дочерний элемент управления будет перемещаться по горизонтали при изменении пользователем размера его главного окна.  
   
 ```  
@@ -279,7 +274,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
+##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone  
  Возвращает [MoveSettings](#movesettings_structure) значение, соответствующее нулевому перемещению вертикальной или горизонтальной дочернего элемента управления.  
   
 ```  
@@ -291,7 +286,7 @@ static MoveSettings MoveNone();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="movesettings_structure"></a>Структура CMFCDynamicLayout::MoveSettings  
+##  <a name="movesettings_structure"></a>  Структура CMFCDynamicLayout::MoveSettings  
  Инкапсулирует данные перемещения для элементов управления в динамическом макете.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если объект `MoveSettings` задает ненулевое перемещение по вертикали.  
 
-##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
+##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical  
  Возвращает [MoveSettings](#movesettings_structure) значение, которое определяет, сколько дочерний элемент управления будет перемещаться по вертикали при изменении пользователем размера его главного окна.  
   
 ```  
@@ -348,7 +343,7 @@ static MoveSettings MoveVertical(int nRatio);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
  Задает минимальный размер окна для макета.  
   
 ```  
@@ -362,7 +357,7 @@ void SetMinSize(const CSize& size);
 ### <a name="remarks"></a>Примечания  
  Положение и размер дочернего элемента управления динамически меняются при изменении размера главного окна, однако существует минимальный допустимый размер для макета. Пользователь может сделать окно меньше этого значения, но тогда определенные части окна будут скрыты.  
   
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
+##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal  
  Возвращает [SizeSettings](#sizesettings_structure) значение, которое определяет, сколько дочернего элемента управления размер по горизонтали при изменении пользователем размера его главного окна.  
   
 ```  
@@ -378,7 +373,7 @@ static SizeSettings SizeHorizontal(int nRatio);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
+##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical  
  Возвращает [SizeSettings](#sizesettings_structure) значение, которое определяет, сколько дочернего элемента управления размер по горизонтали при изменении пользователем размера его главного окна.  
   
 ```  
@@ -397,7 +392,7 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
+##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone  
  Возвращает [SizeSettings](#sizesettings_structure) значение, соответствующее нулевому изменению размера дочернего элемента управления.  
   
 ```  
@@ -409,7 +404,7 @@ static SizeSettings SizeNone();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sizesettings_structure"></a>Структура CMFCDynamicLayout::SizeSettings  
+##  <a name="sizesettings_structure"></a>  Структура CMFCDynamicLayout::SizeSettings  
  Инкапсулирует данные об изменении размера элементов управления в динамическом макете.  
   
 ```  
@@ -449,7 +444,7 @@ BOOL IsVertical() const
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если объект `SizeSettings` задает ненулевое изменение размера по вертикали.  
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
+##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical  
  Возвращает [SizeSettings](#sizesettings_structure) значение, которое определяет, сколько дочернего элемента управления размер по вертикали при изменении пользователем размера его главного окна.  
   
 ```  

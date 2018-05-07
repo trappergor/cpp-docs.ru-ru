@@ -1,12 +1,9 @@
 ---
-title: "Класс CInternetConnection | Документы Microsoft"
-ms.custom: 
+title: Класс CInternetConnection | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>Класс CInternetConnection
 Управление подключением к интернет-серверу.  
@@ -48,13 +43,13 @@ class CInternetConnection : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CInternetConnection::CInternetConnection](#cinternetconnection)|Создает объект `CInternetConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CInternetConnection::GetContext](#getcontext)|Возвращает идентификатор контекста для объекта соединения.|  
 |[CInternetConnection::GetServerName](#getservername)|Возвращает имя сервера, связанного с соединением.|  
@@ -62,7 +57,7 @@ class CInternetConnection : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CInternetConnection::operator HINTERNET](#operator_hinternet)|Дескриптор для Интернет-сеанс.|  
   
@@ -81,7 +76,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  Эта функция-член вызывается, когда `CInternetConnection` создан объект.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  Значение по умолчанию для `dwContext` отправленных MFC, позволяющий `CInternetConnection`-производный объект от [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан **Интернет-соединение**-производного объекта. Значение по умолчанию имеет значение 1; Тем не менее, можно явно назначить идентификатора контекста в [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) конструктор для соединения. Объект, а вся работа, она будет связана с этим идентификатором контекста. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  Вызовите эту функцию-член для получения идентификатора контекста для данного сеанса.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  Дополнительные сведения о том, как **GetContext** работает с другими классами WinInet, чтобы предоставить сведения о состоянии пользователя, см. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о контексте идентификатор.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  Вызовите эту функцию-член для получения имени сервера, связанного с этим подключением Интернета.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Имя сервера работает этот объект.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  Вызовите эту функцию-член для получения указателя на `CInternetSession` объект, связанный с данным соединением.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на [CInternetSession](../../mfc/reference/cinternetsession-class.md) объект, связанный с этим объектом подключения Интернета.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  Этот оператор используется для получения дескриптора уровень API для текущего сеанса Интернет.  
   
 ```  

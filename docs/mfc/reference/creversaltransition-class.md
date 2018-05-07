@@ -1,12 +1,9 @@
 ---
-title: "Класс CReversalTransition | Документы Microsoft"
-ms.custom: 
+title: Класс CReversalTransition | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReversalTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdce13f41e95cda592fec03fcedb01984fb34ab9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creversaltransition-class"></a>Класс CReversalTransition
 Инкапсулирует обратный переход.  
@@ -42,23 +37,23 @@ ms.lasthandoff: 12/21/2017
 class CReversalTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CReversalTransition::CReversalTransition](#creversaltransition)|Создает объект обратного перехода и инициализирует его длительности.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CReversalTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CReversalTransition::m_duration](#m_duration)|Продолжительность перехода.|  
   
@@ -75,7 +70,7 @@ class CReversalTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>  CReversalTransition::Create  
  Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -91,7 +86,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.  
   
-##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
  Создает объект обратного перехода и инициализирует его длительности.  
   
 ```  
@@ -102,7 +97,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  Продолжительность перехода.  
   
-##  <a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>  CReversalTransition::m_duration  
  Продолжительность перехода.  
   
 ```  

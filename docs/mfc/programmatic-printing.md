@@ -1,13 +1,10 @@
 ---
-title: "Программная печать | Документы Microsoft"
-ms.custom: 
+title: Программная печать | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>Программная печать
 OLE предоставленный средства для уникальной идентификации постоянных документов (**GetClassFile**) и загрузить их в их связан код (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, и **IPersistStorage::Load**). Чтобы дополнительно включить печать документов, вложение активного документа (с использованием существующей схемы OLE не входит в состав OLE 2.0 первоначально) представлен интерфейс печати standard базы, `IPrint`, которые обычно доступны через любой объект, который можно загрузить постоянное состояние типа документа. Каждое представление активного документа можно при необходимости поддерживать **IPrint** интерфейс для предоставления этих возможностей.  
@@ -61,7 +56,7 @@ interface IPrint : IUnknown
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`обычно реализуется на тот же объект, который поддерживает либо `IPersistFile` или `IPersistStorage`. Возможность программная печать постоянное состояние некоторого класса путем поиска в реестре для ключа «Возможностью печати для состояния» Обратите внимание, вызывающие объекты. В настоящее время «Печатным» указывает на поддержку по крайней мере `IPrint`; другие интерфейсы могут быть определены в будущем которого будут доступны через `QueryInterface` где **IPrint** просто представляет базовый уровень поддержки.  
+ `IPrint` обычно реализуется на тот же объект, который поддерживает либо `IPersistFile` или `IPersistStorage`. Возможность программная печать постоянное состояние некоторого класса путем поиска в реестре для ключа «Возможностью печати для состояния» Обратите внимание, вызывающие объекты. В настоящее время «Печатным» указывает на поддержку по крайней мере `IPrint`; другие интерфейсы могут быть определены в будущем которого будут доступны через `QueryInterface` где **IPrint** просто представляет базовый уровень поддержки.  
   
  Во время печати процедуру может понадобиться клиента или контейнер, который инициировал печати для управления ли продолжать печать. Например контейнер может поддерживать команду «Остановить печать», следует как можно быстрее завершить задание печати. Для поддержки этой возможности, клиент печати объекта можно реализовать объект приемника на небольших уведомления с помощью интерфейса `IContinueCallback`:  
   

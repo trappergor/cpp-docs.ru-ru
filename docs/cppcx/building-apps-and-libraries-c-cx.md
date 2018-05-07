@@ -1,24 +1,19 @@
 ---
-title: "Построение приложений и библиотек (C + +/ CX) | Документы Microsoft"
-ms.custom: 
+title: Построение приложений и библиотек (C + +/ CX) | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ec00a692fc6bb884694b6f70689cf58636869e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 072134642e9b115fdfeaab832fd2f29d5edd5f2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Построение приложений и библиотек (C++/CX)
 В этом разделе представлены некоторые сведения об использовании системы построения для создания приложения универсальной платформы Windows или компонента среды выполнения Windows.  

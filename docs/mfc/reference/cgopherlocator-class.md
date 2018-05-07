@@ -1,12 +1,9 @@
 ---
-title: "Класс CGopherLocator | Документы Microsoft"
-ms.custom: 
+title: Класс CGopherLocator | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherlocator-class"></a>Класс CGopherLocator
 Получает средство «указатель» с сервера gopher, определяет тип средства поиска и делает средство поиска доступным для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -43,23 +38,23 @@ ms.lasthandoff: 12/21/2017
 class CGopherLocator : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CGopherLocator::CGopherLocator](#cgopherlocator)|Создает объект `CGopherLocator`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CGopherLocator::GetLocatorType](#getlocatortype)|Выполняет синтаксический анализ локатора gopher и определяет его атрибуты.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Прямой доступ к символов, сохраненных в `CGopherLocator` объект в виде строки в стиле C.|  
   
@@ -80,7 +75,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
  Эта функция-член вызывается для создания `CGopherLocator` объекта.  
   
 ```  
@@ -94,7 +89,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>Примечания  
  Никогда не создавайте `CGopherLocator` объекта напрямую. Вместо этого необходимо вызвать [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) создается и возвращается указатель `CGopherLocator` объекта.  
   
-##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
  Вызовите эту функцию-член для получения типа указателя.  
   
 ```  
@@ -111,7 +106,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="remarks"></a>Примечания  
  Ниже приведены возможные типы:  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |GOPHER_TYPE_TEXT_FILE|Текстовый файл.|  
 |GOPHER_TYPE_DIRECTORY|Каталог дополнительные элементы Gopher.|  
@@ -138,7 +133,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Попросите + элемент.|  
 |GOPHER_TYPE_GOPHER_PLUS|Элемент Gopher +.|  
   
-##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
  Этот оператор приведения полезные предоставляет эффективный метод для доступа к строке C нулем, содержащихся в `CGopherLocator` объекта.  
   
 ```  

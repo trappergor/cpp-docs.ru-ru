@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DLayer | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DLayer | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DLayer
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dlayer-class"></a>Класс CD2DLayer
 Программа-оболочка для ID2D1Layer.  
@@ -58,14 +53,14 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Создает объект CD2DLayer.|  
 |[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Деструктор Вызывается при уничтожении объекта D2D слоя.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DLayer::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DLayer::CREATE](#create)|Создает CD2DLayer. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -77,13 +72,13 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Возвращает интерфейс ID2D1Layer|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|Хранит указатель на объект ID2D1Layer.|  
   
@@ -97,14 +92,14 @@ class CD2DLayer : public CD2DResource;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer  
  Деструктор Вызывается при уничтожении объекта D2D слоя.  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>  CD2DLayer::Attach  
  Присоединяет существующий ресурс интерфейс для объекта  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
-##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
  Создает объект CD2DLayer.  
   
 ```  
@@ -131,7 +126,7 @@ CD2DLayer(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
-##  <a name="create"></a>CD2DLayer::CREATE  
+##  <a name="create"></a>  CD2DLayer::CREATE  
  Создает CD2DLayer.  
   
 ```  
@@ -145,14 +140,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
   
-##  <a name="destroy"></a>CD2DLayer::destroy  
+##  <a name="destroy"></a>  CD2DLayer::destroy  
  Уничтожает объект CD2DLayer.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>  CD2DLayer::Detach  
  Отсоединяет интерфейса ресурсов из объекта  
   
 ```  
@@ -162,7 +157,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>  CD2DLayer::Get  
  Возвращает интерфейс ID2D1Layer  
   
 ```  
@@ -172,7 +167,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Layer или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>  CD2DLayer::GetSize  
  Возвращает размер целевого объекта отрисовки в аппаратно независимых пикселях  
   
 ```  
@@ -182,7 +177,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущий размер целевого объекта отрисовки в аппаратно независимых пикселях  
   
-##  <a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>  CD2DLayer::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -192,14 +187,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>  CD2DLayer::m_pLayer  
  Хранит указатель на объект ID2D1Layer.  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer *  
  Возвращает интерфейс ID2D1Layer  
   
 ```  

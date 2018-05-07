@@ -1,13 +1,10 @@
 ---
-title: "Исполняющая среда | Документы Microsoft"
-ms.custom: 
+title: Исполняющая среда | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a071a5246d00bbc2f4f82255af1aaf80b7b6f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c91706f5d222753a355897de943f78faf6104cb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-framework"></a>Исполняющая среда
 Основные библиотеки Microsoft Foundation Class (MFC) — это инкапсуляция большую часть API Windows в C++ форме. Библиотека классов представляют windows, диалоговые окна, контексты устройств GDI общие объекты, например кисти, перья, элементы управления и другие стандартные элементы Windows. Эти классы обеспечивают удобный интерфейс функции C++ члена для структуры в Windows, они инкапсулируют. Дополнительные сведения об использовании этих классов см. в разделе [разделы объекта окна](../mfc/window-objects.md).  

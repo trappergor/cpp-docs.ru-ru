@@ -1,12 +1,9 @@
 ---
-title: "Класс CDragListBox | Документы Microsoft"
-ms.custom: 
+title: Класс CDragListBox | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>Класс CDragListBox
 Помимо предоставления функциональных возможностей списка Windows `CDragListBox` класс позволяет пользователю перемещать элементы списка, такие как имена файлов, в окне списка.  
@@ -50,17 +45,17 @@ ms.lasthandoff: 12/21/2017
 class CDragListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDragListBox::CDragListBox](#cdraglistbox)|Создает объект `CDragListBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDragListBox::BeginDrag](#begindrag)|Вызывается платформой, когда начинается операция перетаскивания.|  
 |[CDragListBox::CancelDrag](#canceldrag)|Вызывается платформой при отмене операции перетаскивания.|  
@@ -92,7 +87,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  Вызывается методом framework, когда происходит событие, которое может начать операцию перетаскивания, например нажатие левой кнопки мыши.  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, если вы хотите контролировать, что происходит, когда начинается операция перетаскивания. Реализация по умолчанию захватывает мышь и остается в режиме перетаскивания, пока пользователь нажимает кнопку мыши влево или вправо или при нажатии клавиши ESC, в какое время отменена операция перетаскивания.  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  Вызывается платформой при отмене операции перетаскивания.  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию для обработки специальной обработки для вашего управления "список".  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  Создает объект `CDragListBox`.  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  Вызывается платформой при перетаскивании элемента списка в пределах `CDragListBox` объекта.  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор ресурса для отображения курсора. Возможны следующие значения:  
   
-- `DL_COPYCURSOR`Указывает, что элемент не будет скопировано.  
+- `DL_COPYCURSOR` Указывает, что элемент не будет скопировано.  
   
-- `DL_MOVECURSOR`Указывает, что элемент перемещается.  
+- `DL_MOVECURSOR` Указывает, что элемент перемещается.  
   
-- `DL_STOPCURSOR`Указывает, что текущего конечного места перетаскивания не является допустимым.  
+- `DL_STOPCURSOR` Указывает, что текущего конечного места перетаскивания не является допустимым.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию возвращает `DL_MOVECURSOR`. Переопределите эту функцию, если вы хотите предоставлять дополнительные функциональные возможности.  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  Вызывается платформой для изображения направляющих перед элементом с указанным индексом.  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>Примечания  
  Значение - 1 очищает направляющая. Переопределите эту функцию для изменения внешнего вида и поведения направляющая.  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  Вызывается платформой при удалении элемента в пределах `CDragListBox` объекта.  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>Примечания  
  Поведение по умолчанию копирует элемент списка и его данные в новое расположение, а затем удаляет исходный элемент. Переопределите эту функцию для настройки поведения по умолчанию, таких как включение копии элементов списка для переноса в другие местоположения в пределах списка.  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  Вызов этой функции для получения отсчитываемый от нуля индекс элемента списка, расположенный `pt`.  
   
 ```  

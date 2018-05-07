@@ -1,12 +1,9 @@
 ---
-title: "Шаблоны OLE DB | Документы Microsoft"
-ms.custom: 
+title: Шаблоны OLE DB | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 037cb338db89e03b4e9457c5a0abc72c33c0ba57
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 Шаблоны OLE DB упрощает доступ к данным OLE DB. Visual C++ предоставляет классов, реализующих многие часто используемые интерфейсы OLE DB. Можно использовать шаблоны потребителей Visual C++, можно написать приложение клиента (покупатели) OLE DB и поставщик шаблонов написать приложение на сервере (поставщик).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание раздела  
  [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)  
  Ссылки на классы шаблонов потребителей OLE DB, перечисленные по использованию.  
   

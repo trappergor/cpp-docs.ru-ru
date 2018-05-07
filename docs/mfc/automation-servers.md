@@ -1,13 +1,10 @@
 ---
-title: "Серверы автоматизации | Документы Microsoft"
-ms.custom: 
+title: Серверы автоматизации | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Серверы автоматизации
 Автоматизация позволяет приложения для работы с объектами, реализованными в другом приложении или получить доступ к объектам, поэтому ими можно управлять. Сервер автоматизации — это приложение, предоставляющее программируемыми объектами (объекты автоматизации) для других приложений (называется [клиенты автоматизации](../mfc/automation-clients.md)). Серверы автоматизации иногда называются компоненты автоматизации.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  Путем предоставления доступа к функциональным возможностям приложений через стандартный и четко определенный интерфейс, автоматизации позволяет создавать приложения в одном общем языке программирования как Microsoft Visual Basic вместо в макросе различных, относящихся к приложению Языки.  
   
-##  <a name="_core_support_for_automation_servers"></a>Поддержка для серверов автоматизации  
+##  <a name="_core_support_for_automation_servers"></a> Поддержка для серверов автоматизации  
  Visual C++ и платформы MFC обеспечивают расширенную поддержку для серверов автоматизации. Они обрабатывают большую часть нагрузки, связанной с создание сервера автоматизации, поэтому вы можете сосредоточиться на функциональности приложения.  
   
  Основной механизм для поддержки автоматизации является диспетчерскую карту набор макросов, которая расширяется в объявлениях и вызывает метод, необходимый для предоставления методы и свойства для OLE. Типичный диспетчерскую карту выглядит следующим образом:  

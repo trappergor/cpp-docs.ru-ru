@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCToolTipCtrl | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCToolTipCtrl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipCtrl
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae37349599977b236f111530f170da746b44b425
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipctrl-class"></a>Класс CMFCToolTipCtrl
 Расширенная реализация всплывающей подсказки на основе класса [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Подсказка на основе класса `CMFCToolTipCtrl` может отображать значок, метку и описание. Можно настроить его внешний вид с помощью градиентной заливки, пользовательских цветов текста и границы, полужирного шрифта, скругленных углов или стиля всплывающего предупреждения.  
@@ -68,13 +63,13 @@ class CMFCToolTipCtrl : public CToolTipCtrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCToolTipCtrl::CMFCToolTipCtrl`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Возвращает размер значка во всплывающей подсказке.|  
 |[CMFCToolTipCtrl::GetParams](#getparams)|Возвращает параметры отображения всплывающей подсказки.|  
@@ -165,7 +160,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtooltipctrl.h  
   
-##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
+##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl  
 
   
 ```  
@@ -177,7 +172,7 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="geticonsize"></a>CMFCToolTipCtrl::GetIconSize  
+##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize  
  Возвращает размер значка во всплывающей подсказке.  
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize GetIconSize();
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер значка в пикселях.  
   
-##  <a name="getparams"></a>CMFCToolTipCtrl::GetParams  
+##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams  
  Возвращает параметры отображения всплывающей подсказки.  
   
 ```  
@@ -197,7 +192,7 @@ const CMFCToolTipInfo& GetParams() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущие параметры отображения всплывающей подсказки, которые хранятся в [CMFCToolTipInfo класс](../../mfc/reference/cmfctooltipinfo-class.md) объекта.  
   
-##  <a name="ondrawborder"></a>CMFCToolTipCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder  
  Рисует границу всплывающей подсказки.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид границы всплывающей подсказки.  
   
-##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
 
   
 ```  
@@ -239,7 +234,7 @@ virtual CSize OnDrawDescription(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ondrawicon"></a>CMFCToolTipCtrl::OnDrawIcon  
+##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon  
  Отображает значок во всплывающей подсказке.  
   
 ```  
@@ -256,12 +251,12 @@ virtual BOOL OnDrawIcon(
  Координаты значка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если значок рисования. В противном случае `FALSE`.  
+ `TRUE` Если значок рисования. В противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы отобразить пользовательский значок. Необходимо также переопределить [CMFCToolTipCtrl::GetIconSize](#geticonsize) включение всплывающей подсказки обеспечить правильное вычисление макета текст и описание.  
   
-##  <a name="ondrawlabel"></a>CMFCToolTipCtrl::OnDrawLabel  
+##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
  Рисует заголовок всплывающей подсказки или вычисляет размер метки.  
   
 ```  
@@ -287,7 +282,7 @@ virtual CSize OnDrawLabel(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид метка всплывающей подсказки.  
   
-##  <a name="ondrawseparator"></a>CMFCToolTipCtrl::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
  Рисует разделитель между меткой и описанием во всплывающей подсказке.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void OnDrawSeparator(
   
  Переопределите этот метод в производном классе, чтобы настроить внешний вид разделителя.  
   
-##  <a name="onfillbackground"></a>CMFCToolTipCtrl::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground  
  Заливает фон всплывающей подсказки.  
   
 ```  
@@ -345,7 +340,7 @@ virtual void OnFillBackground(
   
  Переопределите этот метод в производном классе, чтобы настроить внешний вид всплывающей подсказки.  
   
-##  <a name="setdescription"></a>CMFCToolTipCtrl::SetDescription  
+##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription  
  Задает описание, которое отображается во всплывающей подсказке.  
   
 ```  
@@ -359,7 +354,7 @@ virtual void SetDescription(const CString strDesrciption);
 ### <a name="remarks"></a>Примечания  
  Текст описания отображается на подсказке под разделителем.  
   
-##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
+##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
 
   
 ```  
@@ -374,7 +369,7 @@ void SetFixedWidth(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
+##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton  
 
   
 ```  
@@ -386,7 +381,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
+##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation  
 
   
 ```  
@@ -398,7 +393,7 @@ void SetLocation(CPoint pt);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setparams"></a>CMFCToolTipCtrl::SetParams  
+##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
  Задает внешний вид всплывающей подсказки с помощью [CMFCToolTipInfo класс](../../mfc/reference/cmfctooltipinfo-class.md) объекта.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Класс COlePropertyPage | Документы Microsoft"
-ms.custom: 
+title: Класс COlePropertyPage | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePropertyPage
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cac788f0e7f691f28a6751d15971f117d753428c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepropertypage-class"></a>Класс COlePropertyPage
 Используется для отображения свойств пользовательского элемента управления в графическом интерфейсе подобно диалоговому окну.  
@@ -72,13 +67,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Создает объект `COlePropertyPage`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Указывает, ли пользователь изменил значение в элементе управления.|  
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Возвращает массив объектов, изменяется на странице свойств.|  
@@ -117,7 +112,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
+##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
  Создает объект `COlePropertyPage`.  
   
 ```  
@@ -136,7 +131,7 @@ COlePropertyPage(
 ### <a name="remarks"></a>Примечания  
  При реализации подкласс `COlePropertyPage`, следует использовать конструктор подкласса в `COlePropertyPage` конструктор для идентификации ресурса шаблона диалогового окна на которых основаны на странице свойств и строкового ресурса, содержащего его заголовок.  
   
-##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
+##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
  Определяет, ли пользователь изменил значение свойства элемента управления страницы с идентификатором указанного ресурса.  
   
 ```  
@@ -150,7 +145,7 @@ BOOL GetControlStatus(UINT nID);
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если значение элемента управления был изменен; в противном случае **FALSE**.  
   
-##  <a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
+##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
  Возвращает массив объектов, изменяется на странице свойств.  
   
 ```  
@@ -167,7 +162,7 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ### <a name="remarks"></a>Примечания  
  Каждый объект страницы свойств поддерживает массив указателей на `IDispatch` интерфейсы объектов редактируемой страницы. Эта функция задает его `pnObjects` аргумента для числа элементов в этом массиве и возвращает указатель на первый элемент массива.  
   
-##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
+##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Возвращает указатель на странице свойств `IPropertyPageSite` интерфейса.  
   
 ```  
@@ -180,7 +175,7 @@ LPPROPERTYPAGESITE GetPageSite();
 ### <a name="remarks"></a>Примечания  
  Элементы управления и контейнеры действуют совместно, чтобы пользователи могут просматривать и изменять свойства элемента управления. Элемент управления содержит страницы свойств, каждый из которых является OLE-объект, позволяющий пользователю изменять набор связанных свойств. Контейнер предоставляет свойства фрейма, отображение страниц свойств. Для каждой страницы фрейм свойства предоставляет страницы сайта, которая поддерживает `IPropertyPageSite` интерфейса.  
   
-##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
+##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
  Определяет, какие элементы управления, не включайте кнопки «Применить».  
   
 ```  
@@ -194,7 +189,7 @@ void IgnoreApply(UINT nID);
 ### <a name="remarks"></a>Примечания  
  Кнопки "Применить" на странице свойств включен только в том случае, если значения элементов управления страницы свойств были изменены. Эта функция используется для выбора элементов управления, которые не вызывают кнопки «Применить» будет включена после изменения их значений.  
   
-##  <a name="ismodified"></a>COlePropertyPage::IsModified  
+##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
  Определяет, изменилось ли все значения на странице свойств.  
   
 ```  
@@ -204,7 +199,7 @@ BOOL IsModified();
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если был изменен на странице свойств.  
   
-##  <a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
+##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
  Платформа вызывает эту функцию при определенное свойство для редактирования.  
   
 ```  
@@ -221,7 +216,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ### <a name="remarks"></a>Примечания  
  Его можно переопределить, чтобы установить фокус на соответствующий элемент управления на странице. Реализация по умолчанию не выполняет никаких действий и возвращает **FALSE**.  
   
-##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
+##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
  Платформа вызывает эту функцию, когда пользователь запрашивает справку в Интернете.  
   
 ```  
@@ -238,7 +233,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="remarks"></a>Примечания  
  Его необходимо переопределите в том случае, если на странице свойств необходимо выполнить любое специальное действие, когда пользователь обращается к справке. Реализация по умолчанию не выполняет никаких действий и возвращает **FALSE**, который дает платформе вызывать WinHelp.  
   
-##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
+##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
  Платформа вызывает эту функцию при инициализации диалогового окна страницы свойств.  
   
 ```  
@@ -251,7 +246,7 @@ virtual BOOL OnInitDialog();
 ### <a name="remarks"></a>Примечания  
  Его необходимо переопределите в том случае, если любое специальное действие является обязательным при инициализации диалогового окна. Реализация по умолчанию вызывает `CDialog::OnInitDialog` и возвращает **FALSE**.  
   
-##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
+##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
  Вызывается платформой, когда выбран другой элемент управления OLE с новыми свойствами.  
   
 ```  
@@ -263,7 +258,7 @@ virtual void OnObjectsChanged();
   
  Переопределите эту функцию для получения уведомлений о это действие и выполнения каких-либо специальных действий.  
   
-##  <a name="onsetpagesite"></a>COlePropertyPage::OnSetPageSite  
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite  
  Платформа вызывает эту функцию, когда фрейм свойства предоставляет сайта страницы на странице свойств.  
   
 ```  
@@ -273,7 +268,7 @@ virtual void OnSetPageSite();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию загружает заголовка страницы и пытается определить размер страницы из ресурса диалогового окна. Переопределить эту функцию, если на странице свойств требует никаких дальнейших действий; переопределение должно вызывать реализацию базового класса.  
   
-##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
+##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
  Изменяет состояние элемента управления страницы свойств.  
   
 ```  
@@ -295,7 +290,7 @@ BOOL SetControlStatus(
 ### <a name="remarks"></a>Примечания  
  Если состояние элемента управления страницы свойств "грязного" при закрытии страницы свойств или кнопки «Применить» выбран, свойство элемента управления будет обновляться с соответствующим значением.  
   
-##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
+##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
  Задает ресурс диалогового окна страницы свойств.  
   
 ```  
@@ -306,7 +301,7 @@ void SetDialogResource(HGLOBAL hDialog);
  *hDialog*  
  Дескриптор ресурса диалогового окна страницы свойств.  
   
-##  <a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
+##  <a name="sethelpinfo"></a>  COlePropertyPage::SetHelpInfo  
  Задает подсказку, имя файла справки и контекст справки для страницы свойств.  
   
 ```  
@@ -326,7 +321,7 @@ void SetHelpInfo(
  *dwHelpContext*  
  Контекст справки для страницы свойств.  
   
-##  <a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  COlePropertyPage::SetModifiedFlag  
  Указывает, изменил ли пользователь со страницы свойств.  
   
 ```  
@@ -337,7 +332,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
  `bModified`  
  Указывает новое значение для измененного флага на странице свойств.  
   
-##  <a name="setpagename"></a>COlePropertyPage::SetPageName  
+##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
  Задает имя страницы свойств, которое фрейм свойства обычно будет отображаться на вкладке этой страницы.  
   
 ```  

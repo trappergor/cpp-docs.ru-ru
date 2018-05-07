@@ -1,12 +1,9 @@
 ---
-title: "Класс CProgressCtrl | Документы Microsoft"
-ms.custom: 
+title: Класс CProgressCtrl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CProgressCtrl
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7def2d1a6b421259a2b0d5e8229165ea0593874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6317ce9484cc471611762d10e6f1482f24c2742a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "индикатор выполнения" Windows.  
@@ -72,17 +67,17 @@ ms.lasthandoff: 12/21/2017
 class CProgressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Создает объект `CProgressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CProgressCtrl::Create](#create)|Создает элемент управления progress bar и прикрепляет его к `CProgressCtrl` объекта.|  
 |[CProgressCtrl::CreateEx](#createex)|Создает элемент управления хода выполнения с указанным расширенные стили Windows и прикрепляет его к `CProgressCtrl` объекта.|  
@@ -121,7 +116,7 @@ class CProgressCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
+##  <a name="cprogressctrl"></a>  CProgressCtrl::CProgressCtrl  
  Создает объект `CProgressCtrl`.  
   
 ```  
@@ -134,7 +129,7 @@ CProgressCtrl();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CProgressCtrl::Create  
+##  <a name="create"></a>  CProgressCtrl::Create  
  Создает элемент управления progress bar и прикрепляет его к `CProgressCtrl` объекта.  
   
 ```  
@@ -149,9 +144,9 @@ virtual BOOL Create(
  `dwStyle`  
  Задает стиль окна хода выполнения. Примените любое сочетание stylesdescribed окна в [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK, кроме следующих индикатора стили элемента управления, к элементу управления:  
   
-- `PBS_VERTICAL`Отображает ход выполнения сведения по вертикали, сверху вниз. Без указания этого флага индикатора отображаются горизонтально, слева направо.  
+- `PBS_VERTICAL` Отображает ход выполнения сведения по вертикали, сверху вниз. Без указания этого флага индикатора отображаются горизонтально, слева направо.  
   
-- `PBS_SMOOTH`Отображает постепенно, плавное заполнение индикатора. Без указания этого флага элемента управления будут заполнены с блоками.  
+- `PBS_SMOOTH` Отображает постепенно, плавное заполнение индикатора. Без указания этого флага элемента управления будут заполнены с блоками.  
   
  `rect`  
  Задает размер и положение окна хода выполнения. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Так как элемент управления должен быть дочерним окном, указанный координаты указываются относительно клиентской области `pParentWnd`.  
@@ -171,7 +166,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CProgressCtrl::CreateEx  
+##  <a name="createex"></a>  CProgressCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CProgressCtrl` объекта.  
   
 ```  
@@ -205,7 +200,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
+##  <a name="getbarcolor"></a>  CProgressCtrl::GetBarColor  
  Возвращает цвет полосы индикатора хода выполнения для текущего индикатора.  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetBarColor() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826) сообщение, которое описано в Windows SDK.  
   
-##  <a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CProgressCtrl::GetBkColor  
  Возвращает цвет фона текущего индикатора хода выполнения.  
   
 ```  
@@ -231,7 +226,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828) сообщение, которое описано в Windows SDK.  
   
-##  <a name="getpos"></a>CProgressCtrl::GetPos  
+##  <a name="getpos"></a>  CProgressCtrl::GetPos  
  Извлекает текущее положение индикатора выполнения.  
   
 ```  
@@ -247,7 +242,7 @@ int GetPos();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
   
-##  <a name="getrange"></a>CProgressCtrl::GetRange  
+##  <a name="getrange"></a>  CProgressCtrl::GetRange  
  Возвращает текущий нижняя и верхняя границы, то диапазон индикатора.  
   
 ```  
@@ -269,7 +264,7 @@ void GetRange(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
   
-##  <a name="getstate"></a>CProgressCtrl::GetState  
+##  <a name="getstate"></a>  CProgressCtrl::GetState  
  Получает состояние текущего индикатора.  
   
 ```  
@@ -279,10 +274,10 @@ int GetState() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Состояние текущего индикатора, которое является одним из следующих значений:  
   
-|Значение|Регион|  
+|Значение|Состояние:|  
 |-----------|-----------|  
 |`PBST_NORMAL`|Выполняется|  
-|`PBST_ERROR`|Error|  
+|`PBST_ERROR`|Ошибка|  
 |`PBST_PAUSED`|Приостановлено|  
   
 ### <a name="remarks"></a>Примечания  
@@ -298,7 +293,7 @@ int GetState() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]  
   
-##  <a name="getstep"></a>CProgressCtrl::GetStep  
+##  <a name="getstep"></a>  CProgressCtrl::GetStep  
  Возвращает шаг приращения для индикатора текущего индикатора.  
   
 ```  
@@ -323,7 +318,7 @@ int GetStep() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
-##  <a name="offsetpos"></a>CProgressCtrl::OffsetPos  
+##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos  
  Перемещает индикатор текущую позицию элемента управления приращения, заданные `nPos` и перерисовывает панели, чтобы отразить новое место.  
   
 ```  
@@ -340,7 +335,7 @@ int OffsetPos(int nPos);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#5](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
-##  <a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
+##  <a name="setbarcolor"></a>  CProgressCtrl::SetBarColor  
  Задает цвет индикатора индикатор хода выполнения в текущего индикатора.  
   
 ```  
@@ -349,7 +344,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `clrBar`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите `CLR_DEFAULT` заставить индикатор выполнения использовать цвета по умолчанию.|  
   
@@ -371,7 +366,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]  
   
-##  <a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CProgressCtrl::SetBkColor  
  Задает цвет фона для индикатора.  
   
 ```  
@@ -388,7 +383,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#6](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
   
-##  <a name="setmarquee"></a>CProgressCtrl::SetMarquee  
+##  <a name="setmarquee"></a>  CProgressCtrl::SetMarquee  
  Включает режим Выделение или отключить для текущего индикатора.  
   
 ```  
@@ -399,9 +394,9 @@ BOOL SetMarquee(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `fMarqueeMode`|`true`Чтобы включить режим выделение, или `false` для отключения режима бегущей строки.|  
+|[in] `fMarqueeMode`|`true` Чтобы включить режим выделение, или `false` для отключения режима бегущей строки.|  
 |[in] `nInterval`|Время в миллисекундах между обновлениями анимации области выделения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -422,7 +417,7 @@ BOOL SetMarquee(
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
-##  <a name="setpos"></a>CProgressCtrl::SetPos  
+##  <a name="setpos"></a>  CProgressCtrl::SetPos  
  Задает сведения о ходе панели текущую позицию элемента управления в соответствии с `nPos` и перерисовывает панели, чтобы отразить новое место.  
   
 ```  
@@ -442,7 +437,7 @@ int SetPos(int nPos);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#7](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
-##  <a name="setrange"></a>CProgressCtrl::SetRange  
+##  <a name="setrange"></a>  CProgressCtrl::SetRange  
  Задает верхний и нижний пределы индикатора диапазона элемента управления и полосой, чтобы отразить новые диапазоны на экран.  
   
 ```  
@@ -469,7 +464,7 @@ void SetRange32(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]  
   
-##  <a name="setstate"></a>CProgressCtrl::SetState  
+##  <a name="setstate"></a>  CProgressCtrl::SetState  
  Задает состояние текущего элемента управления "Индикатор выполнения".  
   
 ```  
@@ -478,9 +473,9 @@ int SetState(int iState);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
-|[in] `iState`|Состояние, устанавливаемое для индикатора выполнения. Необходимо использовать одно из следующих значений.<br /><br /> - `PBST_NORMAL`— Выполняется<br />- `PBST_ERROR`-Ошибка<br />- `PBST_PAUSED`— Приостановлено|  
+|[in] `iState`|Состояние, устанавливаемое для индикатора выполнения. Необходимо использовать одно из следующих значений.<br /><br /> - `PBST_NORMAL` — Выполняется<br />- `PBST_ERROR` -Ошибка<br />- `PBST_PAUSED` — Приостановлено|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущее состояние текущего элемента управления "Индикатор выполнения".  
@@ -498,7 +493,7 @@ int SetState(int iState);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]  
   
-##  <a name="setstep"></a>CProgressCtrl::SetStep  
+##  <a name="setstep"></a>  CProgressCtrl::SetStep  
  Определяет шаг приращения для управления индикатором выполнения.  
   
 ```  
@@ -520,7 +515,7 @@ int SetStep(int nStep);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
-##  <a name="stepit"></a>CProgressCtrl::StepIt  
+##  <a name="stepit"></a>  CProgressCtrl::StepIt  
  Перемещает текущую позицию для управления индикатором выполнения шаг приращения и перерисовывает панели, чтобы отразить новое место.  
   
 ```  

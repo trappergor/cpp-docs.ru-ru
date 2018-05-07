@@ -1,13 +1,10 @@
 ---
-title: "Распространение файлов Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Распространение файлов Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45035847befc08f667c95238ede0604651c7e9b6
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Распространение файлов Visual C++
 
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Распространение с использованием модулей слияния](../ide/redistributing-components-by-using-merge-modules.md)|Описывает, как использовать распространяемые модули слияния Visual C++ для установки библиотек времени выполнения Visual C++ в качестве общих библиотек DLL в папке %windir%\system32\.|
 |[Распространение элементов ActiveX Visual C++](../ide/redistributing-visual-cpp-activex-controls.md)|Описание процедуры повторного распространения приложения, которое использует элементы управления ActiveX.|

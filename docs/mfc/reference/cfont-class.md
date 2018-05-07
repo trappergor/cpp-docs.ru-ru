@@ -1,12 +1,9 @@
 ---
-title: "CFont-класс | Документы Microsoft"
-ms.custom: 
+title: CFont-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFont
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfont-class"></a>CFont-класс
 Инкапсулирует шрифт интерфейса графических устройств Windows (GDI) и предоставляет функции-члены для манипулирования этим шрифтом.  
@@ -54,13 +49,13 @@ class CFont : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFont::CFont](#cfont)|Создает объект `CFont`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFont::CreateFont](#createfont)|Инициализирует `CFont` с заданными характеристиками.|  
 |[CFont::CreateFontIndirect](#createfontindirect)|Инициализирует `CFont` объекта с параметрами, приведенными в `LOGFONT` структуры.|  
@@ -71,7 +66,7 @@ class CFont : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HFONT CFont::operator](#operator_hfont)|Возвращает дескриптор шрифта Windows GDI присоединяется к `CFont` объекта.|  
   
@@ -92,7 +87,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>  CFont::CFont  
  Создает объект `CFont`.  
   
 ```  
@@ -105,7 +100,7 @@ CFont();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::CreateFont  
+##  <a name="createfont"></a>  CFont::CreateFont  
  Инициализирует `CFont` объекта с заданными характеристиками.  
   
 ```  
@@ -194,7 +189,7 @@ BOOL CreateFont(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>CFont::CreateFontIndirect  
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
  Инициализирует `CFont` объекта с параметрами, приведенными в [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)структуры.  
   
 ```  
@@ -218,7 +213,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>  CFont::CreatePointFont  
  Эта функция предоставляет простой способ создания указанной гарнитуры шрифта и размер в пунктах.  
   
 ```  
@@ -249,7 +244,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
  Эта функция является таким же, как [CreateFontIndirect](#createfontindirect) за исключением того, **lfHeight** членом `LOGFONT` интерпретируется в десятых долях точки, а не устройство единицы.  
   
 ```  
@@ -276,7 +271,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
  Возвращает указатель на `CFont` объект для заданного **HFONT** дескриптор объекта шрифта Windows GDI.  
   
 ```  
@@ -296,7 +291,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
  Эта функция вызывается для получения копии `LOGFONT` структуру `CFont`.  
   
 ```  
@@ -313,7 +308,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>  HFONT CFont::operator  
  Этот оператор используется для получения дескриптора Windows GDI шрифта, присоединенные к `CFont` объекта.  
   
 ```  

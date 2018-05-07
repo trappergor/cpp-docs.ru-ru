@@ -1,12 +1,9 @@
 ---
-title: "Класс COleCmdUI | Документы Microsoft"
-ms.custom: 
+title: Класс COleCmdUI | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecmdui-class"></a>Класс COleCmdUI
 Реализует метод для MFC, позволяющий обновлять состояние объектов ИП, связанных с зависимыми от `IOleCommandTarget`функциями вашего приложения.  
@@ -48,13 +43,13 @@ class COleCmdUI : public CCmdUI
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|Создает объект `COleCmdUI`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|Устанавливает или снимает флаг команды enable.|  
 |[COleCmdUI::SetCheck](#setcheck)|Задает состояние включения/выключения переключателя команды.|  
@@ -63,7 +58,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="remarks"></a>Примечания  
  В приложении, которое не включена для DocObjects, когда пользователь просматривает меню в приложении MFC процессов **UPDATE_COMMAND_UI** notifcations. Каждое уведомление предоставляется [CCmdUI](../../mfc/reference/ccmdui-class.md) объект, который можно обрабатывать для отражения состояния определенной команды. Однако при включении приложения для DocObjects MFC обрабатывает **UPDATE_OLE_COMMAND_UI** уведомления и назначит `COleCmdUI` объектов.  
   
- `COleCmdUI`позволяет DocObject для получения команд, которые происходят в пользовательском интерфейсе контейнера (например, FileNew, Open, печати и т. д), а контейнер для получения команд, создаваемых в DocObject пользовательского интерфейса. Несмотря на то что `IDispatch` может использоваться для перенаправления те же команды `IOleCommandTarget` предоставляет простой способ запроса и выполнить, так как он использует стандартный набор команд, обычно без аргументов, и участвует никакой информации о типе. `COleCmdUI`можно использовать для включения, обновления и задать другие свойства команд DocObject пользовательского интерфейса. При необходимости для вызова команды вызвать [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
+ `COleCmdUI` позволяет DocObject для получения команд, которые происходят в пользовательском интерфейсе контейнера (например, FileNew, Open, печати и т. д), а контейнер для получения команд, создаваемых в DocObject пользовательского интерфейса. Несмотря на то что `IDispatch` может использоваться для перенаправления те же команды `IOleCommandTarget` предоставляет простой способ запроса и выполнить, так как он использует стандартный набор команд, обычно без аргументов, и участвует никакой информации о типе. `COleCmdUI` можно использовать для включения, обновления и задать другие свойства команд DocObject пользовательского интерфейса. При необходимости для вызова команды вызвать [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
  Дополнительные сведения о DocObjects см. в разделе [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) и [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). См. также [первые шаги в Интернете: активные документы](../../mfc/active-documents-on-the-internet.md) и [активные документы](../../mfc/active-documents-on-the-internet.md).  
   
@@ -75,7 +70,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdocobj.h  
   
-##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
  Создает `COleCmdUI` объект, связанный с командой конкретного пользовательского интерфейса.  
   
 ```  
@@ -98,7 +93,7 @@ COleCmdUI(
 ### <a name="remarks"></a>Примечания  
  `COleCmdUI` Объект обеспечивает программный интерфейс для обновления объектов DocObject пользовательского интерфейса, таких как пункты меню или кнопок панели управления. Объекты пользовательского интерфейса может быть включена, отключена, проверяется или очистить через `COleCmdUI` объекта.  
   
-##  <a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>  COleCmdUI::Enable  
  Вызывайте эту функцию, чтобы задать флаг команды `COleCmdUI` объект **OLECOMDF_ENABLED**, который указывает интерфейс, что команда была доступна и включена, или снимите флаг команды.  
   
 ```  
@@ -109,7 +104,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  Указывает ли команды, связанные с `COleCmdUI` включен или отключен объект. Ненулевое значение включает команды; 0 отключает команду.  
   
-##  <a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
  Эта функция вызывается для задания состояния включения/выключения переключателя команды.  
   
 ```  
@@ -120,13 +115,13 @@ virtual void SetCheck(int nCheck);
  `nCheck`  
  Значение, определяющее, включить или выключить переключить ее состояние команды. Доступны следующие значения:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Задает команду, чтобы on.|  
 |**2**|Задает команду, чтобы определено; не удается определить состояние, так как атрибут этой команды на и отключение состояния в подходящий вариант выбора.|  
 |Любое другое значение|Задает команду, отключен.|  
   
-##  <a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>  COleCmdUI::SetText  
  Эта функция используется для возврата строки имени или состоянии текст команды.  
   
 ```  

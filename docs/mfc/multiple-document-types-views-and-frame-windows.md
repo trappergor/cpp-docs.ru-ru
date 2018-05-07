@@ -1,13 +1,10 @@
 ---
-title: "Несколько типов документов, представлений и фреймов | Документы Microsoft"
-ms.custom: 
+title: Несколько типов документов, представлений и фреймов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Множественные типы документов, представления и окна фреймов
 Стандартная связь между документом, его представлением и окном фрейма описана в разделе [Создание документов и представлений](../mfc/document-view-creation.md). Многие приложения поддерживают один тип документов (но возможно несколько открытых документов этого типа) с одним представлением в документе и только с одним окном фрейма в каждом документе. Однако для некоторых приложений может потребоваться изменить один или несколько из этих значений по умолчанию.  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  На следующем рисунке, разделенном на части a, b и c, показаны три модели пользовательского интерфейса в указанном выше порядке.  
   
- ![Несколько &#45; представление пользовательских интерфейсов](../mfc/media/vc37a71.gif "vc37a71")  
+ ![Несколько&#45;просмотра пользовательских интерфейсов](../mfc/media/vc37a71.gif "vc37a71")  
 Пользовательские интерфейсы с несколькими представлениями  
   
  Платформа предоставляет эти модели путем реализации команды создания окна и предоставления класса [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), как описано в разделе [Окна разделителей](#_core_splitter_windows). Их можно использовать в качестве отправной точки для реализации других моделей. Примеры программ, иллюстрирующие различные конфигурации представлений, окон фреймов и разделителей, см. в разделе [Примеры MFC](../visual-cpp-samples.md).  

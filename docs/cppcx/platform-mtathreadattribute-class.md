@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::MTAThreadAttribute | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::MTAThreadAttribute | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::MTAThreadAttribute::Equals
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 626d80a40c24f81b8723c4e1b8d916f5a3ba2bd6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
 Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).  
@@ -37,18 +32,18 @@ ms.lasthandoff: 02/14/2018
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-### <a name="members"></a>Участники  
+### <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
  Атрибут MTAThreadAttribute наследует от [класса Platform::Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

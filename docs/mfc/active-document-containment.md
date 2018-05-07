@@ -1,13 +1,10 @@
 ---
-title: "Вложение активного документа | Документы Microsoft"
-ms.custom: 
+title: Вложение активного документа | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>Вложение активного документа
 Вложение активного документа — это технология, которая предоставляет один кадр, в котором для работы с документами, чтобы вам создать и использовать несколько кадров приложения для каждого типа документа. Он отличается от основные технологии OLE, в том, что технологии OLE с внедренными объектами внутри составного документа, в котором может быть активна только одним элементом содержания. С вложение активного документа активировать всего документа (то есть всего приложения, включая связанные меню, панелей инструментов и т. д) в контексте одного кадра.  

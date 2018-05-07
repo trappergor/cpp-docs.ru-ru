@@ -1,12 +1,9 @@
 ---
-title: "Класс CHttpConnection | Документы Microsoft"
-ms.custom: 
+title: Класс CHttpConnection | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>Класс CHttpConnection
 Управление подключением к HTTP-серверу.  
@@ -44,13 +39,13 @@ class CHttpConnection : public CInternetConnection
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHttpConnection::CHttpConnection](#chttpconnection)|Создает объект `CHttpConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHttpConnection::OpenRequest](#openrequest)|Открывает HTTP-запроса.|  
   
@@ -73,7 +68,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  Эта функция-член вызывается для создания `CHttpConnection` объекта.  
   
 ```  
@@ -138,7 +133,7 @@ CHttpConnection(
 ### <a name="remarks"></a>Примечания  
  Никогда не создавайте `CHttpConnection` напрямую. Вместо этого объекта создается путем вызова [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
  Вызовите эту функцию-член для открытия HTTP-соединение.  
   
 ```  
@@ -203,7 +198,7 @@ CHttpFile* OpenRequest(
 ### <a name="remarks"></a>Примечания  
  `dwFlags` может принимать следующие значения:  
   
-|Флаг Интернета|Описание:|  
+|Флаг Интернета|Описание|  
 |-------------------|-----------------|  
 |`INTERNET_FLAG_RELOAD`|Вызывает загрузку запрошенного файла, объекта или каталоге с основного сервера, а не из кэша.|  
 |`INTERNET_FLAG_DONT_CACHE`|Не добавляет возвращаемой сущности в кэш.|  

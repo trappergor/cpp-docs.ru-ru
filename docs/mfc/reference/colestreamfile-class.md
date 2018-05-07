@@ -1,12 +1,9 @@
 ---
-title: "Класс COleStreamFile | Документы Microsoft"
-ms.custom: 
+title: Класс COleStreamFile | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>Класс COleStreamFile
 Представляет поток данных ( `IStream`) в составном файле как часть структурированного хранения OLE.  
@@ -54,13 +49,13 @@ class COleStreamFile : public CFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleStreamFile::COleStreamFile](#colestreamfile)|Создает объект `COleStreamFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleStreamFile::Attach](#attach)|Связывает поток с объектом.|  
 |[COleStreamFile::CreateMemoryStream](#creatememorystream)|Создает поток из глобальной памяти и связывает его с объектом.|  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>Примечания  
  `IStorage` Объект должен существовать прежде, чем поток, можно открыть или создать применяется в поток памяти.  
   
- `COleStreamFile`аналогичен обработки объектов [CFile](../../mfc/reference/cfile-class.md) объектов.  
+ `COleStreamFile` аналогичен обработки объектов [CFile](../../mfc/reference/cfile-class.md) объектов.  
   
  Дополнительные сведения о работе с потоками и хранилищами см. в статье [контейнеры: составных файлов](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  Связывает предоставленный поток OLE с `COleStreamFile` объекта.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  Дополнительные сведения см. в разделе [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) в Windows SDK.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  Создает объект `COleStreamFile`.  
   
 ```  
@@ -120,7 +115,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  Дополнительные сведения см. в разделе [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) в Windows SDK.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  Безопасно создает новый поток из глобальной общей памяти где нормальный, ожидаемое условие сбоя.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  Дополнительные сведения см. в разделе [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) в Windows SDK.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  Безопасно создает новый поток в объекте указанное хранилище, где нормальный, ожидаемое условие сбоя.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL CreateStream(
   
  Дополнительные сведения см. в разделе [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) в Windows SDK.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  Отсоединяет поток, из объекта без закрытия потока.  
   
 ```  
@@ -186,7 +181,7 @@ LPSTREAM Detach();
   
  Дополнительные сведения см. в разделе [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) в Windows SDK.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  Эта функция вызывается для возврата указателя для текущего потока.  
   
 ```  
@@ -196,7 +191,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на текущий интерфейс потока ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  Открывает существующий поток.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "TN055: Перенос приложений баз данных MFC ODBC на классы MFC DAO | Документы Microsoft"
-ms.custom: 
+title: 'TN055: Перенос приложений баз данных MFC ODBC на классы MFC DAO | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055. Перенос приложений, использующих классы базы данных MFC ODBC, на классы MFC DAO
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-основе)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-основе)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date` Функция основана на `CTime` и **TIMESTAMP_STRUCT**.  
+ \*    `RFX_Date` Функция основана на `CTime` и **TIMESTAMP_STRUCT**.  
   
  Ниже перечислены основные изменения в функциях, которые могут повлиять на приложение и требуют изменения более простое имя.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Класс exception был изменен. **CDBExceptions** исключение в классах ODBC и **CDaoExceptions** в классы DAO.  
   
--   `RFX_Date`использует `CTime` и **TIMESTAMP_STRUCT** объектов, пока **DFX_Date** использует `COleDateTime`. `COleDateTime` Почти идентичен `CTime`, но основе OLE 8-байтовое **даты** вместо 4-байтовый `time_t` может содержать гораздо больший диапазон данных.  
+-   `RFX_Date` использует `CTime` и **TIMESTAMP_STRUCT** объектов, пока **DFX_Date** использует `COleDateTime`. `COleDateTime` Почти идентичен `CTime`, но основе OLE 8-байтовое **даты** вместо 4-байтовый `time_t` может содержать гораздо больший диапазон данных.  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) моментальные снимки доступны только для чтения во время ODBC (`CRecordset`) моментальных снимков может быть обновляемым, в зависимости от того, что драйвер и использование библиотеки курсоров ODBC. При использовании библиотеки курсоров `CRecordset` моментальные снимки являются обновляемыми. Если вы используете какие-либо драйверы Microsoft 3.0 с пакетом обновления драйвера рабочий стол без библиотеку курсоров ODBC `CRecordset` моментальные снимки доступны только для чтения. Если вы используете другой драйвер, обратитесь к Если документации драйвера моментальные снимки (**STATIC_CURSORS**) доступны только для чтения.  

@@ -1,13 +1,10 @@
 ---
-title: "Стандартная команда и идентификаторы окон | Документы Microsoft"
-ms.custom: 
+title: Стандартная команда и идентификаторы окон | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c8195b1ab967a0d6692e839b1db1e89ee6694d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72b50108a9b880961f0dd8bcded1126a635fb9e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-command-and-window-ids"></a>Стандартная команда и идентификаторы окон
 Библиотеки классов Microsoft Foundation определяет количество стандартная команда и идентификаторы окон в файле Afxres.h. Эти идентификаторы наиболее часто используются в редакторы ресурсов и окне «Свойства» для сопоставления сообщения с функций-обработчиков. Все стандартные команды имеют **ID_** префикс. Например, при использовании редактора меню обычно привязке элемента меню открытия файла стандарта `ID_FILE_OPEN` команды идентификатор.  

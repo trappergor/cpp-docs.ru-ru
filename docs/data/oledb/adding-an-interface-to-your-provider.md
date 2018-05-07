@@ -1,30 +1,25 @@
 ---
-title: "Добавление интерфейса в поставщик | Документы Microsoft"
-ms.custom: 
+title: Добавление интерфейса в поставщик | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Добавление интерфейса в поставщик
 Определения объекта, который требуется добавить интерфейс (обычно данных источника, набора строк, команды или сеанса объекты, созданные мастером поставщика OLE DB). Это возможно, необходимо добавить интерфейс для объекта, не поддерживается поставщиком. В этом случае запустите мастер ATL OLE DB Provider для создания объекта. Щелкните правой кнопкой мыши проект в представлении классов щелкните **добавить класс** из **добавить** меню, а затем нажмите **поставщика ATL OLE DB**. Вы можете разместить код интерфейса в отдельном каталоге, а затем скопируйте файлы в проект поставщика.  
@@ -38,7 +33,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Добавить интерфейс **COM_MAP** в объекте с помощью макроса COM_INTERFACE_ENTRY. Если файл сопоставления отсутствует, создайте его. Пример:  
+ Добавить интерфейс **COM_MAP** в объекте с помощью макроса COM_INTERFACE_ENTRY. Если файл сопоставления отсутствует, создайте его. Например:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  

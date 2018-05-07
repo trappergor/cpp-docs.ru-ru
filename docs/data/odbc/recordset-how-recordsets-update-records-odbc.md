@@ -1,13 +1,10 @@
 ---
-title: "Набор записей: Порядок обновления записей в наборе записей (ODBC) | Документы Microsoft"
-ms.custom: 
+title: 'Набор записей: Порядок обновления записей в наборе записей (ODBC) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Набор записей. Порядок обновления записей в наборе (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  [Набор записей: Дополнительные сведения об обновлении (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) завершает рассказ влияние транзакций на обновления, влияние закрытия набора записей или прокрутки выполняется обновление и взаимодействие с обновлениями для других обновлений пользователи.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>Роль пользователя в обновлении набора записей  
+##  <a name="_core_your_role_in_recordset_updating"></a> Роль пользователя в обновлении набора записей  
  В следующей таблице показаны роли с помощью наборы записей, чтобы добавить, изменить или удалить записи, а также платформа делает за вас.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>Обновление набора записей: Вы и платформы  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о транзакциях см. в разделе [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="_core_the_edit_buffer"></a>В буфере  
+##  <a name="_core_the_edit_buffer"></a> В буфере  
  Взятые все вместе, члены данных полей в наборе записей служат в качестве буфера изменений, содержит одну запись — текущая запись. Операции обновления используют этот буфер для работы с текущей записи.  
   
 -   При добавлении записи в буфере используется для создания новой записи. После завершения добавления записи, запись, которая была текущей снова становится текущей.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  В буфере не играет никакой роли в процессе удаления записи. При удалении текущей записи, запись помечается как удаленная и recordset является «не в записи» пока прокрутки к другой записи.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>Подмножества и моментальные снимки  
+##  <a name="_core_dynasets_and_snapshots"></a> Подмножества и моментальные снимки  
  [Динамические наборы](../../data/odbc/dynaset.md) обновляют содержимое записей, при переходе к записи. [Моментальные снимки](../../data/odbc/snapshot.md) являются статическими представлениями записей, поэтому содержание записи обновляется только при вызове [Requery](../../mfc/reference/crecordset-class.md#requery). Чтобы использовать все функции динамических подмножеств данных, необходимо работать с помощью драйвера ODBC, который соответствует требуемому уровню поддержки ODBC API. Дополнительные сведения см. в разделе [ODBC](../../data/odbc/odbc-basics.md) и [динамический набор](../../data/odbc/dynaset.md).  
   
 ## <a name="see-also"></a>См. также  

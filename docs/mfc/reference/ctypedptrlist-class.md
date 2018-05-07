@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrList-класс | Документы Microsoft"
-ms.custom: 
+title: CTypedPtrList-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList-класс
 Предоставляет типобезопасную "программу-оболочку" для объектов класса `CPtrList`.  
@@ -68,7 +63,7 @@ class CTypedPtrList : public BASE_CLASS
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTypedPtrList::AddHead](#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
 |[CTypedPtrList::AddTail](#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  Эта функция-член вызывает `BASE_CLASS` **:: AddHead**.  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Примечания  
  Первая версия добавляет новый элемент перед начало списка. Вторая версия добавляет другой список элементов, прежде чем заголовок.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  Эта функция-член вызывает `BASE_CLASS` **:: AddTail**.  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>Примечания  
  Первая версия добавляет новый элемент после конца списка. Вторая версия добавляет другой список элементов после конца списка.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  Переменная типа **ПОЗИЦИИ** является ключом для списка.  
   
 ```  
@@ -177,7 +172,7 @@ TYPE GetAt(POSITION position) const;
  *ТИП*  
  Параметр шаблона, определяющий тип элементов, хранящихся в списке.  
   
- *положение*  
+ *Положение*  
  Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetHeadPosition` или **найти** вызова функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  Если список осуществляется напрямую или через указатель с `CTypedPtrList`, затем `GetAt` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет использовать слева от оператора присваивания функции и таким образом элементы списка изменить.  
   
 ### <a name="remarks"></a>Примечания  
- Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `GetAt`Извлекает `CObject` указатель, связанный с заданной позиции.  
+ Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `GetAt` Извлекает `CObject` указатель, связанный с заданной позиции.  
   
  Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, подтверждает отладочной версии библиотеки классов Microsoft Foundation.  
   
  Это встроенная функция вызывает `BASE_CLASS` **:: GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  Возвращает указатель, который представляет элемент head этого списка.  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>Примечания  
  Необходимо убедиться, что список не является пустой, перед вызовом `GetHead`. Если список пуст, подтверждает отладочной версии библиотеки классов Microsoft Foundation. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для **ПОЗИЦИИ** значение на следующую запись в списке.  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  Существует возможность удалить элемент во время итерации. Далее приведен пример [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для **ПОЗИЦИИ** значение предыдущей записи в списке.  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  Если полученного элемента является первым в списке, то новое значение `rPosition` равно **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  Возвращает указатель, который представляет элемент head этого списка.  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>Примечания  
  Необходимо убедиться, что список не является пустой, перед вызовом `GetTail`. Если список пуст, подтверждает отладочной версии библиотеки классов Microsoft Foundation. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  Удаляет элемент в начало списка и возвращает его.  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>Примечания  
  Необходимо убедиться, что список не является пустой, перед вызовом `RemoveHead`. Если список пуст, подтверждает отладочной версии библиотеки классов Microsoft Foundation. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  Удаляет элемент с конца списка и возвращает его.  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>Примечания  
  Необходимо убедиться, что список не является пустой, перед вызовом `RemoveTail`. Если список пуст, подтверждает отладочной версии библиотеки классов Microsoft Foundation. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  Указатель на объект для записи в список.  
   
 ### <a name="remarks"></a>Примечания  
- Переменная типа **ПОЗИЦИИ** является ключом для списка. Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `SetAt`Записывает указателя на объект в указанной позиции в списке.  
+ Переменная типа **ПОЗИЦИИ** является ключом для списка. Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `SetAt` Записывает указателя на объект в указанной позиции в списке.  
   
  Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, подтверждает отладочной версии библиотеки классов Microsoft Foundation.  
   

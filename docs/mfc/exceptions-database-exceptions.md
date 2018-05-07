@@ -1,13 +1,10 @@
 ---
-title: "Исключения: Базы данных исключений | Документы Microsoft"
-ms.custom: 
+title: 'Исключения: Базы данных исключений | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
 В этой статье описывается обработка исключений базы данных. Большая часть материала в данной статье применяется при работе с классами MFC для Open Database Connectivity (ODBC) или классы MFC для объектов доступа к данным (DAO). Будет явно отмечена как материалы, относящиеся к одной или другой модели. Ниже приведен список разделов.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Пример обработки исключений для базы данных](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>Подходы к обработке исключений  
+##  <a name="_core_approaches_to_exception_handling"></a> Подходы к обработке исключений  
  Этот подход остается прежним и работе с DAO или ODBC.  
   
  Следует всегда писать обработчики исключений для обработки исключительных условиях.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения об ошибках, тип объекта ошибки DAO и Коллекция ошибок DAO DAO доступна внутри класса [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>Пример обработки исключений для базы данных  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> Пример обработки исключений для базы данных  
  Следующий пример осуществляет попытку создать [CRecordset](../mfc/reference/crecordset-class.md)-производного объекта в куче с **новый** оператор, а затем откройте набор записей (для источника данных ODBC). Аналогичный пример для классов DAO см. «DAO исключение пример».  
   
 ### <a name="odbc-exception-example"></a>Пример исключений ODBC  

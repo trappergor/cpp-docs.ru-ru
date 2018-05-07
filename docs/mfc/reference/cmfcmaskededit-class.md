@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCMaskedEdit | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCMaskedEdit | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMaskedEdit
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ada987b3226d901c3bf01236c2a593c2e36f51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
 `CMFCMaskedEdit` Класс поддерживает элемент управления masked edit, который проверяет введенные пользователем данные, соответствие маске и отображает установленные результаты в соответствии с шаблоном.  
@@ -58,14 +53,14 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|  
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Отключение проверки введенных пользователем данных.|  
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.|  
@@ -79,7 +74,7 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанный символ для соответствующего символа маски.|  
   
@@ -118,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmaskededit.h  
   
-##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask  
  Отключение проверки введенных пользователем данных.  
   
 ```  
@@ -128,7 +123,7 @@ void DisableMask();
 ### <a name="remarks"></a>Примечания  
  Если отключена проверка введенных пользователем данных, элемент управления masked edit ведет себя как стандартный элемент управления.  
   
-##  <a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly  
  Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.  
   
 ```  
@@ -137,12 +132,12 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод получить только скрытые символы; `FALSE` для указания, что метод получить весь текст. Значение по умолчанию — `TRUE`.  
+ `TRUE` Чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод получить только скрытые символы; `FALSE` для указания, что метод получить весь текст. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы включить получение маскированные символы. Создайте элемент управления masked edit, соответствующий номер телефона, например (425) 555-0187. При вызове метода `GetWindowText` , она возвращает «4255550187». Если отключить получение маскированные символы `GetWindowText` метод возвращает текст, отображаемый в элементе управления редактированием, например «(425) 555-0187».  
   
-##  <a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  Инициализирует скрытого поля ввода.  
   
 ```  
@@ -164,7 +159,7 @@ void EnableMask(
  Символ по умолчанию, который замещает платформу для каждый недопустимый символ в вводимых пользователем данных. Значение этого параметра по умолчанию является символ подчеркивания (_).  
   
  [in] `lpszValid`  
- Строка, содержащая набор допустимых символов. `NULL`Указывает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
+ Строка, содержащая набор допустимых символов. `NULL` Указывает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для создания маски для элемент управления masked edit. Производный класс `CMFCMaskedEdit` класса и переопределить [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) метод, чтобы использовать собственный код для обработки пользовательских маски.  
@@ -182,7 +177,7 @@ void EnableMask(
 |пример|Буквенно-цифровой символ или пробел.|  
 |*|Печатный символ.|  
   
-##  <a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
  Указывает, допускает ли элемент управления masked edit пользователю входных данных для выбора определенных групп или все входные данные.  
   
 ```  
@@ -191,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Чтобы выбрать только группы; `FALSE` выделите весь текст. Значение по умолчанию — `TRUE`.  
+ `TRUE` Чтобы выбрать только группы; `FALSE` выделите весь текст. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция используется для указания, является ли элемент управления masked edit позволяет пользователю выбирать по группам или по всему тексту.  
@@ -214,7 +209,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  Если выбор по группе включен, пользователь может извлечь только «425», «555» или «0187» строки групп. Если выбрать группу отключено пользователь может извлечь весь текст и номер телефона: «(425) 555-0187».  
   
-##  <a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  Указывает, проверяется ли текст для только маскированные символы, или для всей маски.  
   
 ```  
@@ -223,9 +218,9 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`для проверки пользователя введенных только скрытые символы; `FALSE` для проверки соответствия всей маски. Значение по умолчанию — `TRUE`.  
+ `TRUE` для проверки пользователя введенных только скрытые символы; `FALSE` для проверки соответствия всей маски. Значение по умолчанию — `TRUE`.  
   
-##  <a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Извлекает проверить текст в элемент управления masked edit.  
   
 ```  
@@ -254,7 +249,7 @@ void GetWindowText(CString& rstrString) const;
   
  Этот метод переопределяет [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
-##  <a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
  Вызывается платформой для проверки указанный символ для соответствующего символа маски.  
   
 ```  
@@ -271,12 +266,12 @@ virtual BOOL IsMaskedChar(
  Соответствующий символ из строки маски.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если `chChar` параметр имеет тип символа, допускаемой `chMaskChar` параметр; в противном случае `FALSE`.  
+ `TRUE` Если `chChar` параметр имеет тип символа, допускаемой `chMaskChar` параметр; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для проверки ввода символов вручную. Дополнительные сведения о символах маска см. в разделе [CMFCMaskedEdit::EnableMask](#enablemask) метод.  
   
-##  <a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  Задает строку, допустимых символов, которые пользователь может ввести.  
   
 ```  
@@ -285,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
 ### <a name="parameters"></a>Параметры  
  [in] `lpszValid`  
- Строка, содержащая набор допустимых входных символов. `NULL`означает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
+ Строка, содержащая набор допустимых входных символов. `NULL` означает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для определения списка допустимых символов. Если входной символ не является в этом списке, он не будет принимать в элемент управления masked edit.  
@@ -294,7 +289,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
-##  <a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  Выводит запрос в элемент управления masked edit.  
   
 ```  

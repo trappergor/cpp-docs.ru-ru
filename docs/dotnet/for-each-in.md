@@ -1,12 +1,9 @@
 ---
-title: "для каждой из них в | Документы Microsoft"
-ms.custom: 
+title: для каждой из них в | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 Выполняет итерацию по массиву или коллекции. Это нестандартное ключевое слово доступно как в C++/CLI, так и в собственных проектах C++. Однако его использование не рекомендуется. Рассмотрите возможность использования стандартного [инструкции (C++) на основе диапазонов](../cpp/range-based-for-statement-cpp.md) вместо него.  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  *Инструкций* выполняются для каждого элемента массива или коллекции. После завершения итерации всех элементов коллекции управление передается следующему оператору после блока `for each`.  
   
- `for each`и `in` , [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` и `in` , [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Дополнительные сведения:  
   
@@ -124,7 +119,7 @@ Testing
   
  Синтаксис CLR совпадает со значением **все среды выполнения** синтаксис, за исключением следующего.  
   
- *выражение*  
+ *Выражение*  
  Выражение управляемого массива или коллекция. Элемент коллекции должен быть таким образом, чтобы компилятор мог преобразовать его из <xref:System.Object> для *идентификатор* типа.  
   
  *выражение* результат имеет тип, реализующий <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, или тип, который определяет `GetEnumerator` метод, либо возвращает тип, реализующий <xref:System.Collections.IEnumerator> или объявляет все методы, определенные в `IEnumerator`.  

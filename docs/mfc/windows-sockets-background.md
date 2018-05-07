@@ -1,13 +1,10 @@
 ---
-title: "Сокеты Windows: Фон | Документы Microsoft"
-ms.custom: 
+title: 'Сокеты Windows: Фон | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Сокеты Windows. Фон
 В этой статье объясняется сути и назначения сокеты Windows. Статья также:  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  Так как сокеты используют набор Интернет-протоколов, они являются предпочтительным маршрута для приложений, поддерживающих подключение к Интернету на «автострады сведения».  
   
-##  <a name="_core_definition_of_a_socket"></a>Определение сокета  
+##  <a name="_core_definition_of_a_socket"></a> Определение сокета  
  Сокет — это конечная точка связи — объект, через которую приложения Windows Sockets, отправляет или получает пакеты данных в сети. Сокет тип, связанный с выполняющийся процесс, и она может иметь имя. В настоящий момент сокеты обычно обмена данными только с другими сокеты, в один» связи домен,», использующий набор Интернет-протоколов.  
   
  Оба типа соединений являются двунаправленными; они являются потоков данных, которые можно передать в обоих направлениях одновременно (дуплексная).  
@@ -84,12 +79,12 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения об этих типах и какая сокета для использования в ситуациях, какие см [Windows Sockets: сокетах](../mfc/windows-sockets-stream-sockets.md) и [Windows Sockets: сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md).  
   
-##  <a name="_core_the_socket_data_type"></a>Тип данных СОКЕТА  
+##  <a name="_core_the_socket_data_type"></a> Тип данных СОКЕТА  
  Каждый объект сокета MFC инкапсулирует дескриптор объекта Windows Sockets. Тип данных этого дескриптора **СОКЕТА**. Объект **СОКЕТА** дескриптор является аналогом `HWND` для окна. Классы MFC сокета предоставляют операции на инкапсулированный дескриптор.  
   
  **СОКЕТА** тип данных подробно описывается в Windows SDK. В разделе «Тип сокета данных и значения ошибок» в группе Windows Sockets.  
   
-##  <a name="_core_uses_for_sockets"></a>Использует для сокетов  
+##  <a name="_core_uses_for_sockets"></a> Использует для сокетов  
  Сокеты очень полезны в контекстах по крайней мере три связи:  
   
 -   Модели клиент сервер.  

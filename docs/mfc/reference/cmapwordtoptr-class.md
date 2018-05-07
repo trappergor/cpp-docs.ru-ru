@@ -1,12 +1,9 @@
 ---
-title: "Класс CMapWordToPtr | Документы Microsoft"
-ms.custom: 
+title: Класс CMapWordToPtr | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapWordToPtr
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b204d87f-6427-43e1-93e3-a4b1bb41099f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d900a941b6612cdb1774302a2897d44d17c3ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0c20de761f91f304c1d7684dbd19a03c0b8efa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapwordtoptr-class"></a>Класс CMapWordToPtr
 Поддерживает сопоставления пустым указателям, зашифрованным 16-разрядными ключевыми словами.  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 class CMapWordToPtr : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
  Функции-члены `CMapWordToPtr` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`. Если вы видите `CString` или **const** указатель `char` как параметр функции или возвращаемого значения, замените **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
@@ -77,13 +72,13 @@ class CMapWordToPtr : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|  
@@ -101,12 +96,12 @@ class CMapWordToPtr : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMapWordToPtr`включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных элементов карты, необходимо присвоить глубины контекста дампа 1 или больше.  
+ `CMapWordToPtr` включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных элементов карты, необходимо присвоить глубины контекста дампа 1 или больше.  
   
  Невозможно сериализовать указатель слова карты.  
   

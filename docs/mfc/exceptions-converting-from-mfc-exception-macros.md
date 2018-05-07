@@ -1,13 +1,10 @@
 ---
-title: "Исключения: Преобразование из макросов исключений MFC | Документы Microsoft"
-ms.custom: 
+title: 'Исключения: Преобразование из макросов исключений MFC | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>Исключения. Преобразование из макроса исключений MFC
 Это довольно сложная тема.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Преобразование кода с помощью макроса исключений, чтобы использовать исключения C++](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>Преимущества преобразования  
+##  <a name="_core_advantages_of_converting"></a> Преимущества преобразования  
  Вы, скорее всего, не обязательно для преобразования существующего кода, несмотря на то, что следует учитывать различия между реализациями макрос с MFC версии 3.0 и реализации в более ранних версиях. Эти различия и последующие изменения в поведении кода обсуждаются в [исключения: изменения в макросах исключений в версии 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).  
   
  Основные преимущества преобразования являются:  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
      Объявления исключения для **перехватывать** ключевое слово используется следующий синтаксис:  
   
-     **catch (** *exception_type* *exception_name***)**  
+     **catch (** *exception_type* *exception_name ***)**  
   
      Этот оператор объявления исключения указывает тип исключения catch блока дескрипторов.  
   
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
      Используйте макросы `THROW_LAST` повторное создание текущее исключение. `throw` Ключевое слово без аргумента имеет тот же эффект.  
   
-##  <a name="_core_doing_the_conversion"></a>Это преобразование  
+##  <a name="_core_doing_the_conversion"></a> Это преобразование  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Для преобразования кода с использованием макросов использовать ключевые слова обработки исключений C++  
   
@@ -93,13 +88,13 @@ ms.lasthandoff: 12/21/2017
   
      **CATCH** (замените ее строкой **перехватывать**)  
   
-     `AND_CATCH`(Замените ее строкой **перехватывать**)  
+     `AND_CATCH` (Замените ее строкой **перехватывать**)  
   
-     `END_CATCH`(Удалить)  
+     `END_CATCH` (Удалить)  
   
      **ИСКЛЮЧЕНИЕ** (замените ее строкой `throw`)  
   
-     `THROW_LAST`(Замените ее строкой `throw`)  
+     `THROW_LAST` (Замените ее строкой `throw`)  
   
 3.  Измените аргументов макроса так, чтобы они формируют исключение допустимые объявления.  
   

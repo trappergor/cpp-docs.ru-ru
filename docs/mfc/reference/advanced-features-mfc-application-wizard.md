@@ -2,12 +2,9 @@
 title: Дополнительные функции, мастер приложений MFC | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.advanced
 dev_langs:
@@ -15,19 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2a9bb9ebb1837dc303e89e04ced496b52d1cdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5094c18f72182929565e7c23c38b63443839da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>Страница "Дополнительные функции" мастера приложений MFC
+# <a name="advanced-features-mfc-application-wizard"></a>Страница "Дополнительные возможности" мастера приложений MFC
 В этом разделе представлены параметры, относящиеся к дополнительным возможностям приложения, таким как справка, поддержка печати и т. д. С помощью данных параметров можно включить поддержку дополнительных возможностей, описанных ниже.  
   
  **Контекстная справка (HTML)**  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
  Добавляет поддержку для [диспетчера перезапуска Windows](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). В этом видеоролике показано, как использовать диспетчер перезапуска MFC: [практические советы. Использование нового диспетчера перезапуска](http://msdn.microsoft.com/vstudio/ee886407).  
   
  **Дополнительные области фреймов**  
- |Параметр|Описание:|  
+ |Параметр|Описание|  
 |------------|-----------------|  
 |**Закрепляемая область обозревателя**|Создание закрепляемой области, аналогичной Visual Studio **обозревателе решений** слева от фрейма главного окна.|  
 |**Закрепляемый фрейм вывода**|Создание закрепляемой области, аналогичной Visual Studio **вывода** область, которая находится в папке фрейма главного окна.|  

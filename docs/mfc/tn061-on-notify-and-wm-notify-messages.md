@@ -1,13 +1,10 @@
 ---
-title: "Tn061: сообщения ON_NOTIFY и WM_NOTIFY сообщения | Документы Microsoft"
-ms.custom: 
+title: 'Tn061: сообщения ON_NOTIFY и WM_NOTIFY сообщения | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061. Сообщения ON_NOTIFY и WM_NOTIFY
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|Элемент управления потерял фокус ввода|  
 |**NM_OUTOFMEMORY**|Элемент управления не удалось выполнить операцию, поскольку не было достаточный объем памяти доступен|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: Обработки сообщения WM_NOTIFY в приложениях MFC  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Обработки сообщения WM_NOTIFY в приложениях MFC  
  Функция `CWnd::OnNotify` обрабатывает сообщения уведомления. Его реализация по умолчанию проверяет схему сообщений для обработчиков уведомлений для вызова. В общем случае не следует переопределять `OnNotify`. Вместо этого укажите функцию обработчика событий и добавить запись схемы сообщений для этого обработчика в схему сообщений для окна-владельца класса.  
   
  Мастер классов, через окно свойств классов, можно создать `ON_NOTIFY` запись сопоставления сообщения и предоставить функцию каркас обработчика событий. Дополнительные сведения об использовании классов для упрощения этой процедуры см. в разделе [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md).  
@@ -138,7 +133,7 @@ pNotifyStruct  , LRESULT* result);
  `pNotifyStruct`  
  Указатель на структуру уведомления, как описано в предыдущем разделе.  
   
- *результат*  
+ *Результат*  
  Указатель на код результата можно задать до возврата.  
   
 ## <a name="example"></a>Пример  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  Обратите внимание ClassWizard автоматически предоставляет указатель соответствующего типа. Для доступа к структуре уведомления либо `pNMHDR` или `pLVKeyDow`.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  Если требуется обработать же **WM_NOTIFY** сообщений для набора элементов управления, можно использовать **ON_NOTIFY_RANGE** вместо `ON_NOTIFY`. Например имеется набор кнопок, для которого требуется выполнить те же действия для определенного сообщения уведомления.  
   
  При использовании **ON_NOTIFY_RANGE**, укажите непрерывный диапазон идентификаторов дочерних, для которого требуется обрабатывать сообщения уведомления путем указания начала и конца диапазона идентификаторы дочерних.  
@@ -220,10 +215,10 @@ pNotifyStruct  ,
  `pNotifyStruct`  
  Указатель на структуру уведомления, как описано выше.  
   
- *результат*  
+ *Результат*  
  Указатель на код результата можно задать до возврата.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
  Если требуется более одного объекта в уведомлении маршрутизации для обработки сообщения, можно использовать **ON_NOTIFY_EX** (или **ON_NOTIFY_EX_RANGE**) вместо `ON_NOTIFY` (или **ON_NOTIFY_RANGE** ). Единственное различие между **EX** и регулярного версии — что функция-член вызывается для **EX** версия возвращает **BOOL** , указывает ли Обработка сообщений должна быть продолжена. Возвращение **FALSE** этой функции позволяет обработать это сообщение в более одного объекта.  
   
  Мастер классов не обрабатывает **ON_NOTIFY_EX** или **ON_NOTIFY_EX_RANGE**; Если вы хотите использовать один из них, необходимо изменить схему сообщения самостоятельно.  

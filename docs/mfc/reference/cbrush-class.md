@@ -1,12 +1,9 @@
 ---
-title: "CBrush-класс | Документы Microsoft"
-ms.custom: 
+title: CBrush-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush-класс
 Инкапсулирует кисть интерфейса графических устройств Windows (GDI).  
@@ -58,13 +53,13 @@ class CBrush : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|Создает объект `CBrush`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисти стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Инициализирует кисти шаблону, заданному аппаратно независимый точечный рисунок (DIB).|  
@@ -77,7 +72,7 @@ class CBrush : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[HBRUSH CBrush::operator](#operator_hbrush)|Возвращает дескриптор Windows, присоединенного к `CBrush` объекта.|  
   
@@ -98,7 +93,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  Создает объект `CBrush`.  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  Задает стиль штриховки кисти. Он может быть одним из следующих значений:  
   
-- `HS_BDIAGONAL`Штриховки вниз (слева направо) на 45 градусов  
+- `HS_BDIAGONAL` Штриховки вниз (слева направо) на 45 градусов  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки.  
+- `HS_CROSS` Горизонтальные и вертикальные штриховки.  
   
-- `HS_DIAGCROSS`Перекрестная штриховка на 45 градусов  
+- `HS_DIAGCROSS` Перекрестная штриховка на 45 градусов  
   
-- `HS_FDIAGONAL`Диагональная штриховка (слева направо) на 45 градусов  
+- `HS_FDIAGONAL` Диагональная штриховка (слева направо) на 45 градусов  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Горизонтальная штриховка  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Вертикальная штриховка  
   
  `pBitmap`  
  Указывает на `CBitmap` объект, который указывает, с которой кисть рисует растровое изображение.  
   
 ### <a name="remarks"></a>Примечания  
- `CBrush`имеет четыре перегруженные конструкторы. Конструктор без аргументов создает неинициализированный `CBrush` объект, который необходимо инициализировать, прежде чем можно будет использовать.  
+ `CBrush` имеет четыре перегруженные конструкторы. Конструктор без аргументов создает неинициализированный `CBrush` объект, который необходимо инициализировать, прежде чем можно будет использовать.  
   
  Если вы используете конструктор без аргументов, необходимо инициализировать итоговый `CBrush` объекта с [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), или [CreateDIBPatternBrush](#createdibpatternbrush). При использовании одного из конструкторов, которые принимают аргументы, то какой-либо дальнейшей инициализации не требуется. Конструкторы с аргументами может вызывать исключение, если возникли ошибки, хотя всегда будет успешной конструктор без аргументов.  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  Инициализирует кисти стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  Инициализирует кисти шаблону, заданному аппаратно независимый точечный рисунок (DIB).  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  Инициализирует с заданным шаблоном заштрихованного и цвет кисти.  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  Задает стиль штриховки кисти. Он может быть одним из следующих значений:  
   
-- `HS_BDIAGONAL`Штриховки вниз (слева направо) на 45 градусов  
+- `HS_BDIAGONAL` Штриховки вниз (слева направо) на 45 градусов  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки.  
+- `HS_CROSS` Горизонтальные и вертикальные штриховки.  
   
-- `HS_DIAGCROSS`Перекрестная штриховка на 45 градусов  
+- `HS_DIAGCROSS` Перекрестная штриховка на 45 градусов  
   
-- `HS_FDIAGONAL`Диагональная штриховка (слева направо) на 45 градусов  
+- `HS_FDIAGONAL` Диагональная штриховка (слева направо) на 45 градусов  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Горизонтальная штриховка  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Вертикальная штриховка  
   
  `crColor`  
  Указывает цвет кисти в качестве цвета RGB (Цвет штриховки). В разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в Windows SDK для получения дополнительной информации.  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  Инициализирует кисти шаблону, заданному растрового изображения.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  Инициализирует кисти указанного сплошным цветом.  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  Инициализирует цвет кисти.  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  Возвращает указатель на `CBrush` объект для заданного дескриптора окна [HBRUSH](#operator_hbrush) объекта.  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>Параметры  
  `hBrush`  
- `HANDLE`кисти Windows GDI.  
+ `HANDLE` кисти Windows GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на `CBrush` объекта, если успешно; в противном случае **NULL**.  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  Вызовите эту функцию-член для извлечения `LOGBRUSH` структуры.  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
+##  <a name="operator_hbrush"></a>  HBRUSH CBrush::operator  
  Этот оператор используется для получения вложенного дескриптор Windows GDI `CBrush` объекта.  
   
 ```  

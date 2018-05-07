@@ -1,12 +1,9 @@
 ---
-title: "CToolBar-класс | Документы Microsoft"
-ms.custom: 
+title: CToolBar-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctoolbar-class"></a>CToolBar-класс
 Панели элементов управления, имеющие строку растровых кнопок и необязательные разделители.  
@@ -78,13 +73,13 @@ class CToolBar : public CControlBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBar::CToolBar](#ctoolbar)|Создает объект `CToolBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CToolBar::CommandToIndex](#commandtoindex)|Возвращает индекс кнопки с идентификатором данной команды.|  
 |[CToolBar::Create](#create)|Создает панель инструментов Windows и прикрепляет его к `CToolBar` объекта.|  
@@ -106,9 +101,9 @@ class CToolBar : public CControlBar
 |[CToolBar::SetSizes](#setsizes)|Задает размер кнопки и их растровые изображения.|  
   
 ## <a name="remarks"></a>Примечания  
- Кнопки может играть кнопок, флажок кнопки или переключателей. `CToolBar`Эти объекты объединены обычно внедренных объектов окна фрейма, производный от класса [CFrameWnd](../../mfc/reference/cframewnd-class.md) или [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
+ Кнопки может играть кнопок, флажок кнопки или переключателей. `CToolBar` Эти объекты объединены обычно внедренных объектов окна фрейма, производный от класса [CFrameWnd](../../mfc/reference/cframewnd-class.md) или [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl), функция-член, новые для MFC 4.0, можно воспользоваться преимуществами поддержки управления Windows для настройки панели инструментов и дополнительные функциональные возможности. `CToolBar`функции-члены обеспечивают большую часть функций общих элементов управления Windows; Тем не менее, при вызове `GetToolBarCtrl`, вы предоставляете панелей инструментов даже несколько характеристик панелей инструментов Windows 95/98. При вызове `GetToolBarCtrl`, он возвращает ссылку на `CToolBarCtrl` объекта. В разделе [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Дополнительные сведения о разработке с помощью стандартных элементов управления Windows. Дополнительные общие сведения о стандартных элементах управления см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493) в Windows SDK.  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl), функция-член, новые для MFC 4.0, можно воспользоваться преимуществами поддержки управления Windows для настройки панели инструментов и дополнительные функциональные возможности. `CToolBar` функции-члены обеспечивают большую часть функций общих элементов управления Windows; Тем не менее, при вызове `GetToolBarCtrl`, вы предоставляете панелей инструментов даже несколько характеристик панелей инструментов Windows 95/98. При вызове `GetToolBarCtrl`, он возвращает ссылку на `CToolBarCtrl` объекта. В разделе [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Дополнительные сведения о разработке с помощью стандартных элементов управления Windows. Дополнительные общие сведения о стандартных элементах управления см. в разделе [стандартные элементы управления](http://msdn.microsoft.com/library/windows/desktop/bb775493) в Windows SDK.  
   
  Visual C++ предоставляет два способа создания панели инструментов. Создание ресурса панели инструментов, с помощью редактора ресурсов, выполните следующие действия.  
   
@@ -141,11 +136,11 @@ class CToolBar : public CControlBar
  Каждая кнопка имеет одно изображение. Различные кнопки состояния и стили (нажатой вверх, вниз, отключено, отключенные вниз и неопределенным) создаются из этого одного изображения. Несмотря на то, что эти файлы могут содержать любой цвет, можно добиться наилучших результатов с изображениями в черный цвет и оттенков серого.  
   
 > [!WARNING]
-> `CToolBar`поддерживает растровые изображения с максимальным размером 16 цветов. При загрузке образа в редакторе панелей инструментов, Visual Studio автоматически преобразует изображение в точечный рисунок 16 цветов, при необходимости и выводит предупреждение, если изображение было выполнено преобразование. При использовании изображения с цветов больше 16 (с помощью внешний редактор позволяет редактировать изображение), приложение может работать непредвиденным образом.  
+> `CToolBar` поддерживает растровые изображения с максимальным размером 16 цветов. При загрузке образа в редакторе панелей инструментов, Visual Studio автоматически преобразует изображение в точечный рисунок 16 цветов, при необходимости и выводит предупреждение, если изображение было выполнено преобразование. При использовании изображения с цветов больше 16 (с помощью внешний редактор позволяет редактировать изображение), приложение может работать непредвиденным образом.  
   
  Кнопки панели инструментов имитировать кнопок по умолчанию. Тем не менее кнопки панели инструментов также можно имитировать кнопок флажков и переключателей. Кнопки флажок имеет три состояния: checked, снят или не определен. Переключатели имеют только два состояния: установлен и снят.  
   
- Чтобы задать отдельные кнопки или стиль разделителя не указывает на массив, вызовите [GetButtonStyle](#getbuttonstyle) для получения стиль, а затем вызвать [SetButtonStyle](#setbuttonstyle) вместо `SetButtons`. `SetButtonStyle`может пригодиться, если вы хотите изменить стиль кнопки во время выполнения.  
+ Чтобы задать отдельные кнопки или стиль разделителя не указывает на массив, вызовите [GetButtonStyle](#getbuttonstyle) для получения стиль, а затем вызвать [SetButtonStyle](#setbuttonstyle) вместо `SetButtons`. `SetButtonStyle` может пригодиться, если вы хотите изменить стиль кнопки во время выполнения.  
   
  Чтобы назначить текст, отображаемый на кнопке, вызовите [GetButtonText](#getbuttontext) для получения текста для отображения на кнопке, а затем вызвать [SetButtonText](#setbuttontext) для задания текста.  
   
@@ -169,7 +164,7 @@ class CToolBar : public CControlBar
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxext.h  
   
-##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
  Эта функция-член возвращает индекс первой кнопки панели инструментов, начиная с позиции 0, совпадает с Идентификатором команды `nIDFind`.  
   
 ```  
@@ -183,7 +178,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс кнопки, или -1, если нет кнопка имеет идентификатор данной команды.  
   
-##  <a name="create"></a>CToolBar::Create  
+##  <a name="create"></a>  CToolBar::Create  
  Эта функция-член создает панель инструментов Windows (дочернего окна) и связывает его с `CToolBar` объекта.  
   
 ```  
@@ -200,13 +195,13 @@ virtual BOOL Create(
  `dwStyle`  
  Стиль панели инструментов. Существуют следующие стили дополнительных инструментов поддерживается:  
   
-- `CBRS_TOP`Строка управления находится в верхней части окна фрейма.  
+- `CBRS_TOP` Строка управления находится в верхней части окна фрейма.  
   
-- `CBRS_BOTTOM`Панель элементов управления — в нижней части окна фрейма.  
+- `CBRS_BOTTOM` Панель элементов управления — в нижней части окна фрейма.  
   
-- `CBRS_NOALIGN`Панель элементов управления не меняет свое положение при изменении размеров родительского.  
+- `CBRS_NOALIGN` Панель элементов управления не меняет свое положение при изменении размеров родительского.  
   
-- `CBRS_TOOLTIPS`Панель элементов управления отображаются всплывающие подсказки.  
+- `CBRS_TOOLTIPS` Панель элементов управления отображаются всплывающие подсказки.  
   
 - **CBRS_SIZE_DYNAMIC** панели элементов управления является динамическим.  
   
@@ -214,7 +209,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** плавающей панели элементов управления.  
   
-- `CBRS_FLYBY`Строка состояния отображает сведения о кнопке.  
+- `CBRS_FLYBY` Строка состояния отображает сведения о кнопке.  
   
 - **CBRS_HIDE_INPLACE** панели элементов управления не отображается для пользователя.  
   
@@ -230,7 +225,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="createex"></a>CToolBar::CreateEx  
+##  <a name="createex"></a>  CToolBar::CreateEx  
  Эта функция вызывается для создания панели инструментов Windows (дочернего окна) и связать его с `CToolBar` объекта.  
   
 ```  
@@ -273,7 +268,7 @@ virtual BOOL CreateEx(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
  Эта функция-член создает `CToolBar` и устанавливает размеры по умолчанию.  
   
 ```  
@@ -283,7 +278,7 @@ CToolBar();
 ### <a name="remarks"></a>Примечания  
  Вызовите [создать](#create) функции-члена для создания окна инструментов.  
   
-##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
  Эта функция-член возвращает идентификатор элемента управления, стиль и индекс изображения кнопки панели инструментов или разделитель в расположении, заданном *nIndex.*  
   
 ```  
@@ -312,7 +307,7 @@ void GetButtonInfo(
   
  Если `nIndex` определяет разделитель, `iImage` равно ширину разделителя в пикселях.  
   
-##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  Вызовите эту функцию-член для извлечения стиль кнопки или разделителя на панели инструментов.  
   
 ```  
@@ -329,7 +324,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Стиль кнопки определяет, как кнопка появляется, и как реагирует на ввод данных пользователем. В разделе [SetButtonStyle](#setbuttonstyle) примеры стилей кнопок.  
   
-##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
  Вызовите эту функцию-член для извлечения текста, отображаемого на кнопке.  
   
 ```  
@@ -353,7 +348,7 @@ void GetButtonText(
 ### <a name="remarks"></a>Примечания  
  Вторая форма этого элемента функция заливки `CString` вместе с текстом строки.  
   
-##  <a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>  CToolBar::GetItemID  
  Эта функция-член возвращает идентификатор команды кнопки или разделителя, определяемое `nIndex`.  
   
 ```  
@@ -370,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Возвращать в качестве разделителей **ID_SEPARATOR**.  
   
-##  <a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
  Эта функция-член заполняет `RECT` , адрес которого содержится в структуре `lpRect` с координатами кнопку или разделитель, определяемое `nIndex`.  
   
 ```  
@@ -394,7 +389,7 @@ virtual void GetItemRect(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CToolBar::SetSizes](#setsizes).  
   
-##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
  Эта функция-член обеспечивает прямой доступ к базовой стандартного элемента управления.  
   
 ```  
@@ -412,7 +407,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
  Вызовите эту функцию-член для загрузки растрового изображения, определяемое `lpszResourceName` или `nIDResource`.  
   
 ```  
@@ -434,9 +429,9 @@ BOOL LoadBitmap(UINT nIDResource);
  Точечный рисунок должен содержать одно изображение для каждой кнопки панели инструментов. Если изображения имеют размера standard (16 пикселей в ширину и 15 пикселей в высоту), вызов [SetSizes](#setsizes) задание размеров кнопки и изображений.  
   
 > [!WARNING]
-> `CToolBar`поддерживает растровые изображения с максимальным размером 16 цветов. При загрузке образа в редакторе панелей инструментов, Visual Studio автоматически преобразует изображение в точечный рисунок 16 цветов, при необходимости и выводит предупреждение, если изображение было выполнено преобразование. При использовании изображения с цветов больше 16 (с помощью внешний редактор позволяет редактировать изображение), приложение может работать непредвиденным образом.  
+> `CToolBar` поддерживает растровые изображения с максимальным размером 16 цветов. При загрузке образа в редакторе панелей инструментов, Visual Studio автоматически преобразует изображение в точечный рисунок 16 цветов, при необходимости и выводит предупреждение, если изображение было выполнено преобразование. При использовании изображения с цветов больше 16 (с помощью внешний редактор позволяет редактировать изображение), приложение может работать непредвиденным образом.  
   
-##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
  Вызовите эту функцию-член для загрузки инструментов, определяемое `lpszResourceName` или `nIDResource`.  
   
 ```  
@@ -460,7 +455,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CToolBar::CreateEx](#createex).  
   
-##  <a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
  Вызовите эту функцию-член для задания точечного рисунка для панели инструментов.  
   
 ```  
@@ -477,7 +472,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>Примечания  
  Например, вызов `SetBitmap` изменение растровый рисунок после пользователь предпринимает действие на документ, который изменяет действие кнопки.  
   
-##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
  Вызовите эту функцию-член для задания идентификатора команды, стиль и номер изображения кнопки.  
   
 ```  
@@ -525,7 +520,7 @@ void SetButtonInfo(
   
  Сведения о растровых изображений и кнопок, в разделе [CToolBar](../../mfc/reference/ctoolbar-class.md) Обзор и [CToolBar::LoadBitmap](#loadbitmap).  
   
-##  <a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CToolBar::SetButtons  
  Эта функция-член задает идентификатор команды для каждой кнопки панели инструментов для значения, указанного в соответствующий элемент массива `lpIDArray`.  
   
 ```  
@@ -551,7 +546,7 @@ BOOL SetButtons(
   
  Если `lpIDArray` — **NULL**, эта функция выделяет место для числа элементов, заданные `nIDCount`. Используйте [SetButtonInfo](#setbuttoninfo) установить атрибуты каждого элемента.  
   
-##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  Вызовите эту функцию-член требуется задать стиль кнопки или разделителя или к группе кнопок.  
   
 ```  
@@ -591,7 +586,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  Можно также задать с помощью состояния кнопки `nStyle` параметра, однако из-за состояния кнопки управляются [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) обработчик, любые состояния, заданный с помощью `SetButtonStyle` будут потеряны во время следующей простоя Обработка. В разделе [обновление объектов пользовательского интерфейса](../../mfc/how-to-update-user-interface-objects.md) и [TN031: панелей элементов управления](../../mfc/tn031-control-bars.md) для получения дополнительной информации.  
   
-##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  Вызывайте эту функцию для задания текста на кнопке.  
   
 ```  
@@ -613,7 +608,7 @@ BOOL SetButtonText(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CToolBar::GetToolBarCtrl](#gettoolbarctrl).  
   
-##  <a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>  CToolBar::SetHeight  
  Эта функция-член задает высоту панели инструментов на значение, в пикселях, указанный в `cyHeight`.  
   
 ```  
@@ -629,7 +624,7 @@ void SetHeight(int cyHeight);
   
  Если эта функция не вызывается, платформа использует размер кнопки для определения высоты панели инструментов.  
   
-##  <a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>  CToolBar::SetSizes  
  Вызовите эту функцию-член присвоено кнопки панели инструментов размер в пикселях, указанный в *sizeButton*.  
   
 ```  

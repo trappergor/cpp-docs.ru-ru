@@ -1,12 +1,9 @@
 ---
-title: "Класс CEnumerator | Документы Microsoft"
-ms.custom: 
+title: Класс CEnumerator | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CEnumerator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CEnumerator class
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d0ac9fe73b2d8b37e345ddcf602dd98316eedf46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2b7e390212da53f85cb50dd5bb151ea6740784b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
@@ -52,7 +47,7 @@ class CEnumerator :
  Вы можете получить **ISourcesRowset** данных косвенно от этого класса.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:**atldbcli.h  
+ **Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
  [DBViewer](../../visual-cpp-samples.md)   
