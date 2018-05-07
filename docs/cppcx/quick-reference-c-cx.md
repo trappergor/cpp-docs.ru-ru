@@ -1,24 +1,19 @@
 ---
-title: "Краткий справочник (C + +/ CX) | Документы Microsoft"
-ms.custom: 
+title: Краткий справочник (C + +/ CX) | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quick-reference-ccx"></a>Краткий справочник (C++/CX)
 Среда выполнения Windows поддерживает приложения универсальной платформы Windows (UWP), которые выполняются только в доверенной среде операционной системы, используют авторизованные функции, типы данных и устройства и распространяются через магазин Microsoft. C + +/ CX упрощают создание приложений для среды выполнения Windows. В этой статье приводится краткий справочник; более полную документацию см. в разделе [системы типов](../cppcx/type-system-c-cx.md) и [расширения компонентов для платформ среды выполнения](http://go.microsoft.com/fwlink/p/?linkid=228720).  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/14/2018
 |объявление структуры|`struct` *идентификатор* `{}`<br /><br /> (т.е. простой структуры данных (POD))|`value class` *идентификатор* `{}`<br /><br /> `value struct` *идентификатор* `{}`|Объявляет простую структуру данных с закрытым доступом по умолчанию.<br /><br /> В метаданных Windows может быть представлен класс значений, но не стандартный класс C++.<br /><br /> Объявляет простую структуру данных с открытым доступом по умолчанию.<br /><br /> В метаданных Windows может быть представлена структура значения, но не стандартная структура C++.|  
 |объявление интерфейса|абстрактный класс, который содержит только чистые виртуальные функции.|`interface class` *идентификатор* `{}`<br /><br /> `interface struct` *идентификатор* `{}`|Объявляет интерфейс с закрытым доступом по умолчанию.<br /><br /> Объявляет интерфейс с открытым доступом по умолчанию.|  
 |делегат|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[ parameters ]* `);`|Объявляет объект, который может вызываться, как вызов функции.|  
-|событие|(Не применяется)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> - или -<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> - или -<br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> - или -<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Объявляет объект события, в котором хранится коллекция обработчиков событий (делегатов), которые вызываются при возникновении события.<br /><br /> Создает обработчик событий.<br /><br /> Добавляет обработчик событий.<br /><br /> Добавление обработчика событий возвращает токен события (*token-identifier*). Если планируется явно удалить обработчик событий, следует сохранить токен события для последующего использования.<br /><br /> Удаляет обработчик событий.<br /><br /> Чтобы удалить обработчик событий, необходимо указать токен события, который был сохранен при добавлении обработчика событий.|  
+|событие|(Не применяется)|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> - или -<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> - или -<br /><br /> `auto` *токен идентификатор* = *obj*. *идентификатор события*`::add(`*идентификатора делегата*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> - или -<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Объявляет объект события, в котором хранится коллекция обработчиков событий (делегатов), которые вызываются при возникновении события.<br /><br /> Создает обработчик событий.<br /><br /> Добавляет обработчик событий.<br /><br /> Добавление обработчика событий возвращает токен события (*token-identifier*). Если планируется явно удалить обработчик событий, следует сохранить токен события для последующего использования.<br /><br /> Удаляет обработчик событий.<br /><br /> Чтобы удалить обработчик событий, необходимо указать токен события, который был сохранен при добавлении обработчика событий.|  
 |свойство;|(Не применяется)|`property` *T* *identifier*;<br /><br /> `property` *T* *идентификатор* `[` *индекс* `];`<br /><br /> `property` *T* `default[` *индекс* `];`|Объявляет, что доступ к функции-члену класса или объекта осуществляется с помощью того же синтаксиса, который используется для доступа к элементу данных или индексированному элементу массива.<br /><br /> Объявляет свойство функции-члена класса или объекта.<br /><br /> Объявляет индексированное свойство функции-члена объекта.<br /><br /> Объявляет индексированное свойство функции-члена класса.|  
 |Параметризованный тип|шаблоны|`generic <typename` *T* `> interface class` *идентификатор* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Объявляет параметризованный класс интерфейса.<br /><br /> Объявляет параметризованный делегат.|  
 |Типы значений, допускающие значение NULL|`boost::optional<T>`|[Platform::IBox \<T >](../cppcx/platform-ibox-interface.md)|Позволяет переменным скалярных типов и структур значений иметь значение `nullptr`.|  

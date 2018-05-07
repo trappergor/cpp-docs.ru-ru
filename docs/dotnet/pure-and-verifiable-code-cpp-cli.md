@@ -1,13 +1,10 @@
 ---
-title: "Чистый и проверяемый код (C + +/ CLI) | Документы Microsoft"
-ms.custom: 
+title: Чистый и проверяемый код (C + +/ CLI) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ba218772bdedf772e995bb9289b18452d599e6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>Чистый и проверяемый код (C++/CLI)
 Для программирования .NET, Visual C++ в Visual Studio 2017 г. поддерживает создание смешанных сборок с помощью [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора. **/CLR: pure** и **CLR: safe** параметры являются устаревшими начиная с Visual Studio 2015 и будет удален в будущей версии компилятора. Если код должен быть проверяемый, затем рекомендуется переносить его в C#.

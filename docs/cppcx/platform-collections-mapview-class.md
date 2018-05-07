@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Collections:: | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -52,7 +47,7 @@ ref class MapView sealed;
  Тип значения в паре "ключ-значение".  
   
  `C`  
- Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. By default, [std::less\<K>](../standard-library/less-struct.md).  
+ Тип, предоставляющий объект функции, который может сравнить значения двух элементов как ключи сортировки, чтобы определить их относительный порядок в объекте MapView. По умолчанию [std::less\<K >](../standard-library/less-struct.md).  
   
 ### <a name="remarks"></a>Примечания  
  MapView является конкретной реализацией C++ [Windows::Foundation:: Collections:: \<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
@@ -61,13 +56,13 @@ ref class MapView sealed;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[MapView::MapView](#ctor)|Инициализирует новый экземпляр класса MapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[MapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[MapView::HasKey](#haskey)|Определяет, содержит ли текущий объект MapView указанный ключ.|  
@@ -102,7 +97,7 @@ virtual Windows::Foundation::Collections::IIterator<
   
 
 
-## <a name="haskey"></a>  MapView::HasKey Method
+## <a name="haskey"></a>  Метод MapView::HasKey
 Определяет, содержит ли текущий объект MapView указанный ключ.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -121,7 +116,7 @@ bool HasKey(K key);
   
 
 
-##  <a name="lookup"></a> MapView::Lookup Method
+##  <a name="lookup"></a> Метод MapView::Lookup
 Возвращает значение типа V, связанное с указанным ключом типа K.  
   
 ### <a name="syntax"></a>Синтаксис  
