@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar-класс | Документы Microsoft"
-ms.custom: 
+title: CDialogBar-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar-класс
 Предоставляет функциональные возможности немодального диалогового окна Windows на панели элементов управления.  
@@ -44,13 +39,13 @@ class CDialogBar : public CControlBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialogBar::CDialogBar](#cdialogbar)|Создает объект `CDialogBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDialogBar::Create](#create)|Создает диалоговую панель Windows и прикрепляет его к `CDialogBar` объекта.|  
   
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  Создает объект `CDialogBar`.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  Загружает ресурса шаблона диалогового окна, указанного `lpszTemplateName` или `nIDTemplate`, создает окно диалоговая панель, задает его стиль и связывает его с `CDialogBar` объекта.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  Стиль панели инструментов. Существуют следующие стили дополнительных инструментов поддерживается:  
   
-- `CBRS_TOP`Строка управления находится в верхней части окна фрейма.  
+- `CBRS_TOP` Строка управления находится в верхней части окна фрейма.  
   
-- `CBRS_BOTTOM`Панель элементов управления — в нижней части окна фрейма.  
+- `CBRS_BOTTOM` Панель элементов управления — в нижней части окна фрейма.  
   
-- `CBRS_NOALIGN`Панель элементов управления не меняет свое положение при изменении размеров родительского.  
+- `CBRS_NOALIGN` Панель элементов управления не меняет свое положение при изменении размеров родительского.  
   
-- `CBRS_TOOLTIPS`Панель элементов управления отображаются всплывающие подсказки.  
+- `CBRS_TOOLTIPS` Панель элементов управления отображаются всплывающие подсказки.  
   
 - **CBRS_SIZE_DYNAMIC** панели элементов управления является динамическим.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** плавающей панели элементов управления.  
   
-- `CBRS_FLYBY`Строка состояния отображает сведения о кнопке.  
+- `CBRS_FLYBY` Строка состояния отображает сведения о кнопке.  
   
 - **CBRS_HIDE_INPLACE** панели элементов управления не отображается для пользователя.  
   

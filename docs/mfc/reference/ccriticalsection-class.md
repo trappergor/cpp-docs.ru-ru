@@ -1,12 +1,9 @@
 ---
-title: "Класс CCriticalSection | Документы Microsoft"
-ms.custom: 
+title: Класс CCriticalSection | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccriticalsection-class"></a>Класс CCriticalSection
 Представляет «критическую секцию» — объект синхронизации, позволяющий одному потоку за раз, чтобы получить доступ к определенному фрагменту кода.  
@@ -48,26 +43,26 @@ class CCriticalSection : public CSyncObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCriticalSection::CCriticalSection](#ccriticalsection)|Создает объект `CCriticalSection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCriticalSection::Lock](#lock)|Использовать для получения доступа к `CCriticalSection` объекта.|  
 |[CCriticalSection::Unlock](#unlock)|Освобождает объект `CCriticalSection`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|Извлекает указатель на внутренний **CRITICAL_SECTION** объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CCriticalSection::m_sect](#m_sect)|Объект **CRITICAL_SECTION** объекта.|  
   
@@ -99,7 +94,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
  Создает объект `CCriticalSection`.  
   
 ```  
@@ -114,7 +109,7 @@ CCriticalSection();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CCriticalSection::Lock](#lock).  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>  CCriticalSection::Lock  
  Вызовите эту функцию-член для получения доступа к объект критической секции.  
   
 ```  
@@ -124,13 +119,13 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>Параметры  
  `dwTimeout`  
- `Lock`игнорирует значение этого параметра.  
+ `Lock` игнорирует значение этого параметра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `Lock`является блокирующий вызов, который будет выполнен после возврата сигнал объект критической секции (становится доступной).  
+ `Lock` является блокирующий вызов, который будет выполнен после возврата сигнал объект критической секции (становится доступной).  
   
  При необходимости времени ожидания, можно использовать [CMutex](../../mfc/reference/cmutex-class.md) объекта вместо `CCriticalSection` объекта.  
   
@@ -141,14 +136,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
  Содержит объект критической секции, который используется всеми `CCriticalSection` методы.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
  Извлекает **CRITICAL_SECTION** объекта.  
   
 ```  
@@ -158,7 +153,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию, чтобы получить указатель на внутренний **CRITICAL_SECTION** объекта.  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
  Выпуски `CCriticalSection` объекта для использования в другом потоке.  
   
 ```  

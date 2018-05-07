@@ -1,12 +1,9 @@
 ---
-title: "Класс CBitmapButton | Документы Microsoft"
-ms.custom: 
+title: Класс CBitmapButton | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>Класс CBitmapButton
 Создает элементы управления "кнопка", на которые вместо текста помещаются растровые изображения.  
@@ -48,20 +43,20 @@ class CBitmapButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBitmapButton::CBitmapButton](#cbitmapbutton)|Создает объект `CBitmapButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CBitmapButton::AutoLoad](#autoload)|Связывает кнопку в диалоговом окне с объектом `CBitmapButton` класса, загружает bitmap(s) по имени и размер кнопки в соответствии с растрового изображения.|  
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Инициализирует объект, загрузка один или несколько ресурсов именованный точечный рисунок из файла ресурсов приложения, подключив точечные рисунки объекта.|  
 |[CBitmapButton::SizeToContent](#sizetocontent)|Размеры кнопки в соответствии растрового изображения.|  
   
 ## <a name="remarks"></a>Примечания  
- `CBitmapButton`объект содержит до четырех точечные рисунки, содержащие изображения для различных состояний, можно предположить, кнопки: вверх (или обычный), вниз (или выделенной), с фокусом ввода, а также отключены. Только первый растровое изображение не требуется; другие являются необязательными.  
+ `CBitmapButton` объект содержит до четырех точечные рисунки, содержащие изображения для различных состояний, можно предположить, кнопки: вверх (или обычный), вниз (или выделенной), с фокусом ввода, а также отключены. Только первый растровое изображение не требуется; другие являются необязательными.  
   
  Кнопка с рисунком образы содержать границы вокруг изображения, а также само изображение. Границы обычно играет роль при отображении состояние кнопки. Например растровое изображение для специальных состояния обычно используется как для актуальном состоянии, но с пунктирным прямоугольником отступ от границы или Толстая сплошная линия границы. Битовая карта для отключенного состояния обычно напоминает единицы для актуальном состоянии, но имеет менее контрастных (например, пункт меню серым цветом или выделена серым цветом).  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  Связывает кнопку в диалоговом окне с объектом `CBitmapButton` класса, загружает bitmap(s) по имени и размер кнопки в соответствии с растрового изображения.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  Создает объект `CBitmapButton`.  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  Используйте эту функцию, если вы хотите загрузить точечных рисунков, определенной их идентификаторы или имена ресурсов, или если вы не можете использовать `AutoLoad` работать так, как, например, вы создаете растрового изображения кнопки, которая не является частью диалоговое окно.  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  Эта функция используется для изменения размеров точечного рисунка кнопку, чтобы размер растрового изображения.  
   
 ```  

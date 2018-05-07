@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DRectF | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DRectF | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRectF
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b0919780e4fcad86772892bb0b300a735df81e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2drectf-class"></a>Класс CD2DRectF
 Программа-оболочка для `D2D1_RECT_F`.  
@@ -44,19 +39,19 @@ class CD2DRectF : public D2D1_RECT_F;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Создает `CD2DRectF` объекта из `D2D1_RECT_F` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DRectF::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DRectF::operator CRect](#operator_crect)|Преобразует `CD2DRectF` для `CRect` объекта.|  
   
@@ -68,7 +63,7 @@ class CD2DRectF : public D2D1_RECT_F;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
  Создает объект CD2DRectF из CRect объекта.  
   
 ```  
@@ -100,7 +95,7 @@ CD2DRectF(
  `fBottom`  
  Нижняя координата источника  
   
-##  <a name="isnull"></a>CD2DRectF::ISNULL  
+##  <a name="isnull"></a>  CD2DRectF::ISNULL  
  Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).  
   
 ```  
@@ -110,7 +105,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если верхней прямоугольника, левую, нижнюю и правильные значения, все равно 0; в противном случае — значение FALSE.  
   
-##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
  Преобразует CD2DRectF CRect.  
   
 ```  

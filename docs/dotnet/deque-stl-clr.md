@@ -1,12 +1,9 @@
 ---
-title: "deque (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: deque (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <deque> header [STL/CLR]
 - <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11436466dadf4b06e604af6e2b5150a22c4ed241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с произвольного доступа. Используйте контейнер `deque` для управления последовательность элементов, выглядит как непрерывный блок памяти, но который можете увеличить или уменьшить конце без необходимости копировать все оставшиеся элементы. Поэтому он может реализовывать эффективно `double-ended queue`. (Поэтому имя.)  
@@ -60,7 +55,7 @@ template<typename Value>
   
 ## <a name="members"></a>Члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -76,7 +71,7 @@ template<typename Value>
 |[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|Заменяет все элементы.|  
 |[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|Обращается к элементу в указанной позиции.|  
@@ -100,12 +95,12 @@ template<typename Value>
 |[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
 |[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)|Обращается к последнему элементу.|  
 |[deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|Определяет, если два `deque` объекты не равны.|  
 |[deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)|Обращается к элементу в указанной позиции.|  
@@ -118,7 +113,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  

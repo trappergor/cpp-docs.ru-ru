@@ -1,13 +1,10 @@
 ---
-title: "Управление памятью: Примеры | Документы Microsoft"
-ms.custom: 
+title: 'Управление памятью: Примеры | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>Управление памятью. Примеры
 Этой статье описывается, как MFC выполняет рамки выделения и выделения кучи для каждого из трех типичных операций выделения памяти.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Объект](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>Выделение массива байтов  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Выделение массива байтов  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>Чтобы выделить память для массива байтов в кадре  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>Выделение структуры данных  
+##  <a name="_core_allocation_of_a_data_structure"></a> Выделение структуры данных  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>Чтобы выделить структуру данных в кадре  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>Размещение объекта  
+##  <a name="_core_allocation_of_an_object"></a> Размещение объекта  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>Чтобы выделить объект в кадре  
   

@@ -1,13 +1,10 @@
 ---
-title: "Классы DAO | Документы Microsoft"
-ms.custom: 
+title: Классы DAO | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>Классы DAO
 Эти классы работают с другими классами framework приложения предоставляют простой доступ к базам данных объекта доступа к данным (DAO), которые используют один и тот же механизм базы данных, как Microsoft Visual Basic и Microsoft Access. Кроме того, классы DAO доступны самые разнообразные баз данных, для которых доступны драйверы Open Database Connectivity (ODBC).  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>Связанные классы  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- Инкапсулирует дескриптор для хранения для большого двоичного объекта (BLOB), такие как растровое изображение. `CLongBinary`объекты используются для управления объектами больших объемов данных, хранящихся в таблицах базы данных.  
+ Инкапсулирует дескриптор для хранения для большого двоичного объекта (BLOB), такие как растровое изображение. `CLongBinary` объекты используются для управления объектами больших объемов данных, хранящихся в таблицах базы данных.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  Программа-оболочка для типа автоматизации OLE **валюты**, с фиксированной запятой арифметический тип с 15 цифр перед десятичной запятой и 4 цифры после.  

@@ -1,12 +1,9 @@
 ---
-title: "Класс IAccessorImpl | Документы Microsoft"
-ms.custom: 
+title: Класс IAccessorImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IAccessorImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe9f4905b1c98641d184ab6e67c25405754f8872
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d62deeb487fded5895bbd47332a0f8a6ad7bbce6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iaccessorimpl-class"></a>Класс IAccessorImpl
 Предоставляет реализацию [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) интерфейса.  
@@ -50,7 +45,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
  `BindingVector`  
  Единица хранения сведений о столбце. Значение по умолчанию — [CAtlMap](../../atl/reference/catlmap-class.md) ключевой элемент которого является **HACCESSOR** значение и значение элемента — это указатель на `BindType` структуры.  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="methods"></a>Методы  
   

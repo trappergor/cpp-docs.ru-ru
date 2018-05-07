@@ -1,13 +1,10 @@
 ---
-title: "Добавление ссылок в проектах Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Добавление ссылок в проектах Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Добавление ссылок в проекты Visual C++
 Очень часто программы вызывают функции API-интерфейсов в других двоичных файлах, таких как библиотеки DLL, компоненты среды выполнения Windows, пакеты SDK расширения, COM-компоненты и сборки .NET. Способ, которым программа находит эти двоичные файлы, зависит как от типа проекта, так и от типа двоичного файла.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  В проекте C++ (ATL) в машинном коде понятие *ссылок* применяется только к другим проектам в решении, включая общие проекты, то есть именно это и отображается в **диспетчере ссылок**:  
   
- ![Visual C# 43; &#43; Диспетчер ссылок &#40; Проекты ATL &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Диспетчер ссылок visual C++ (проекты ATL)")  
+ ![Visual C&#43; &#43; диспетчер ссылок &#40;проекты ATL&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "диспетчер ссылок Visual C++ (проекты ATL)")  
   
  В проектах C++/CLI или UWP понятие ссылки относится к более широкому диапазону двоичных файлов, а не только к другим проектам в решении.  Все они предоставляются в **диспетчер ссылок**.
   

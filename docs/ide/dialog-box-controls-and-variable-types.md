@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления диалоговых окон и типы переменных | Документы Microsoft"
-ms.custom: 
+title: Элементы управления диалоговых окон и типы переменных | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: f9cd9cea-45a6-4349-8358-e5efbcdcff76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2fbae37072f50898181334a9059a7dc9c6a83a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>Элементы управления "Диалоговые окна" и типы переменных
 Можно использовать [мастер добавления переменной члена](../ide/add-member-variable-wizard.md) для добавления переменной-члена для элемента управления диалогового окна поле, созданных с помощью MFC. Тип элемента управления, для которого добавить переменную-член определяет параметры, отображаемые в диалоговом окне.  
