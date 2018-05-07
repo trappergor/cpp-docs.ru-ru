@@ -1,12 +1,9 @@
 ---
-title: "Глобальные функции реестра и библиотеки типов | Документы Microsoft"
-ms.custom: 
+title: Глобальные функции реестра и библиотеки типов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>Глобальные функции реестра и библиотеки типов
 Эти функции обеспечивают поддержку для загрузки и регистрации библиотеки типов.  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 Эта функция используется для определения, перенаправляет ли приложение доступ к реестру на **HKEY_CURRENT_USER** (**HKCU**) узла.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -79,10 +74,10 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
 ### <a name="parameters"></a>Параметры  
  [выходной] `pEnabled`  
- `TRUE`Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK`Если метод выполнен успешно, в противном случае `HRESULT` код ошибки, если произошла ошибка.  
+ `S_OK` Если метод выполнен успешно, в противном случае `HRESULT` код ошибки, если произошла ошибка.  
   
 ### <a name="remarks"></a>Примечания  
  Перенаправление системного реестра не включен по умолчанию. Если этот параметр включен, доступ к реестру перенаправляется **HKEY_CURRENT_USER\Software\Classes**.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  Создает указанный раздел реестра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 Удаляет указанный раздел реестра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  Эта функция вызывается для регистрации библиотеки типов.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  Открывает указанный раздел реестра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 Открывает указанный раздел реестра. 
 
 ### <a name="syntax"></a>Синтаксис  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  Вспомогательный класс для отмены регистрации обработчика предварительного просмотра.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 Задает, перенаправляет ли приложение доступ к реестру на **HKEY_CURRENT_USER** (**HKCU**) узла.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -279,10 +274,10 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` Указывает, что данные реестра, направляются **HKCU** узла; `FALSE` указывает, что приложение записывает данные реестра узла по умолчанию. Узел по умолчанию является **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK`Если метод выполнен успешно, в противном случае `HRESULT` код ошибки, если произошла ошибка.  
+ `S_OK` Если метод выполнен успешно, в противном случае `HRESULT` код ошибки, если произошла ошибка.  
   
 ### <a name="remarks"></a>Примечания  
  Перенаправление системного реестра не включен по умолчанию. Если этот параметр включен, доступ к реестру перенаправляется **HKEY_CURRENT_USER\Software\Classes**.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  Эта функция вызывается для отмены регистрации библиотеки типов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  Эта функция вызывается для загрузки библиотеки типов.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [AtlRegisterTypeLib](#atlregistertypelib) и [AtlUnRegisterTypeLib](#atlunregistertypelib).  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  Эта функция объявлена устаревшей Visual Studio 2013 и удалена в Visual Studio 2015.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  Эта функция вызывается для чтения из системного реестра или записи в него.  
 
 ### <a name="syntax"></a>Синтаксис  

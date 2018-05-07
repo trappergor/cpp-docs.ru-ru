@@ -1,12 +1,9 @@
 ---
-title: "Класс ISupportErrorInfoImpl | Документы Microsoft"
-ms.custom: 
+title: Класс ISupportErrorInfoImpl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e8dc6b277f8eb59ade428d3ef8ea3dd5c083ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e226f66d6ddd20181f083f723568acb1cc647c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
 Этот класс предоставляет реализацию по умолчанию [ISupportErrorInfo интерфейс](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) и может использоваться, если только один интерфейс приводит к возникновению ошибки на объект.  
@@ -53,7 +48,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) интерфейса.|  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
   
-##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) интерфейса.  
   
 ```
@@ -82,7 +77,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>Примечания  
  В разделе [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) в Windows SDK.  
   
-##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  Этот метод вызывается для получения количества потоков в пуле.  
   
 ```
@@ -99,7 +94,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
  Этот метод используется для получения максимальное время в миллисекундах, которое пула потоков будет ожидать завершения работы потока.  
   
 ```
@@ -116,7 +111,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>Пример  
  В разделе [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  Вызовите этот метод, чтобы задать количество потоков в пуле.  
   
 ```
@@ -137,7 +132,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>Пример  
  В разделе [IThreadPoolConfig::GetSize](#getsize).  
   
-##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
  Вызовите этот метод, чтобы задать максимальное время в миллисекундах, которое пула потоков будет ожидать завершения работы потока.  
   
 ```

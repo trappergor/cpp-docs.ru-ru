@@ -2,12 +2,9 @@
 title: Управление библиотекой | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>Управление библиотекой
 Режим по умолчанию для LIB — позволяют создавать и изменять библиотеки объектов COFF. LIB запускается в этом режиме, если не указать/extract (для копирования объекта в файл) или/DEF (для построения библиотеки импорта).  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  Создание и изменение библиотеки применяются следующие параметры.  
   
- / LIBPATH:`dir`  
+ / LIBPATH: `dir`  
  Переопределяет путь к библиотеке среды. Дополнительные сведения см. в описании по ССЫЛКЕ [/LIBPATH](../../build/reference/libpath-additional-libpath.md) параметр.  
   
  / LIST  
@@ -94,7 +89,7 @@ LIB [options...] files...
  / REMOVE: *объект*  
  Исключает указанный *объекта* из выходной библиотеки. LIB создает выходную библиотеку, объединяя все объекты (в объектных файлов или библиотек), а затем удаляет все объекты, указанные в параметре/Remove.  
   
- / SUBSYSTEM: {КОНСОЛИ &#124; EFI_APPLICATION &#124; EFI_BOOT_SERVICE_DRIVER &#124; EFI_ROM &#124; EFI_RUNTIME_DRIVER &#124; МАШИННЫЙ КОД &#124; POSIX &#124; WINDOWS &#124; WINDOWSCE} [, #[. ##]]  
+ / SUBSYSTEM: {КОНСОЛИ &AMP;#124; EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER &AMP;#124; СОБСТВЕННОГО &AMP;#124; POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [, #[. ##]]  
  Указывает операционной системе, как запустить программу, созданную путем связывания с выходной библиотеки. Дополнительные сведения см. в описании по ССЫЛКЕ [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) параметр.  
   
  LIB-параметры, указанные в командной строке не учитывается регистр.  

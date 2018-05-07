@@ -2,11 +2,8 @@
 title: Класс CSnapInPropertyPageImpl | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Класс CSnapInPropertyPageImpl
 Этот класс предоставляет методы для реализации объекта страницы свойств оснастки.  
@@ -62,13 +57,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Изменяет состояние **ОК** и **отменить** кнопки.|  
 |[CSnapInPropertyPageImpl::Create](#create)|Инициализирует только что созданный объект `CSnapInPropertyPageImpl` объекта.|  
@@ -86,12 +81,12 @@ CSnapInPropertyPageImpl : public CDialogImplBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE** структура, используемая `CSnapInPropertyPageImpl` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CSnapInPropertyPageImpl`Предоставляет базовую реализацию для объекта страницы свойств оснастки. Основные возможности страницы свойств оснастки реализуются с помощью нескольких разных интерфейсов и сопоставления типов.  
+ `CSnapInPropertyPageImpl` Предоставляет базовую реализацию для объекта страницы свойств оснастки. Основные возможности страницы свойств оснастки реализуются с помощью нескольких разных интерфейсов и сопоставления типов.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CDialogImplBase`  
@@ -101,7 +96,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsnap.h  
   
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
  Эта функция вызывается после неустранимой изменений данных на странице модальную страницу свойств.  
   
 ```
@@ -113,7 +108,7 @@ void CancelToClose();
   
  `CancelToClose` Функция-член не выполняет никаких действий, в немодальный лист свойств, так как нет немодальный лист свойств **отменить** кнопку по умолчанию.  
   
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  Создает объект `CSnapInPropertyPageImpl`.  
   
 ```
@@ -127,7 +122,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>Примечания  
  Чтобы инициализировать базовой структуры, вызовите [CSnapInPropertyPageImpl::Create](#create).  
   
-##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>  CSnapInPropertyPageImpl::Create  
  Эта функция вызывается для инициализации базовую структуру страницы свойств.  
   
 ```
@@ -140,8 +135,8 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>Примечания  
  Сначала следует вызвать метод [CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl) перед вызовом этой функции.  
   
-##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
- `m_psp`— это структура, члены которой хранения характеристики **PROPSHEETPAGE**.  
+##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
+ `m_psp` — это структура, члены которой хранения характеристики **PROPSHEETPAGE**.  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -152,7 +147,7 @@ PROPSHEETPAGE m_psp;
   
  Дополнительные сведения об этой структуры, в том числе список его элементов. в разделе [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) в Windows SDK.  
   
-##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  Эта функция-член вызывается, когда пользователь щелкает **ОК** или **применить** кнопки.  
   
 ```
@@ -169,7 +164,7 @@ BOOL OnApply();
   
  Реализация по умолчанию `OnApply` возвращает **TRUE**.  
   
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  Эта функция-член вызывается, когда пользователь щелкает **справки** кнопки для страницы свойств.  
   
 ```
@@ -179,7 +174,7 @@ void OnHelp();
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию-член для отображения справки для страницы свойств.  
   
-##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive  
  Эта функция-член вызывается в том случае, когда страница больше не является активной.  
   
 ```
@@ -192,7 +187,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию-член для выполнения задач проверки специальных данных.  
   
-##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
  Эта функция-член вызывается, когда пользователь щелкает **отменить** кнопку и до отмены было выполнено действие.  
   
 ```
@@ -207,7 +202,7 @@ BOOL OnQueryCancel();
   
  Реализация по умолчанию `OnQueryCancel` возвращает **TRUE**.  
   
-##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  Эта функция-член вызывается, когда пользователь щелкает **отменить** кнопки.  
   
 ```
@@ -219,7 +214,7 @@ void OnReset();
   
  Переопределить эту функцию-член для указания программа принимает, когда пользователь щелкает **отменить** кнопки.  
   
-##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
  Эта функция-член вызывается в том случае, когда страница выбранного пользователем и станет активной.  
   
 ```
@@ -234,7 +229,7 @@ BOOL OnSetActive();
   
  Реализация по умолчанию возвращает **TRUE**.  
   
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  Эта функция-член вызывается, когда пользователь щелкает **обратно** кнопки с помощью мастера.  
   
 ```
@@ -252,7 +247,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для указания некоторые действия, когда должен выполнить пользователь **обратно** кнопки.  
   
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish  
  Эта функция-член вызывается, когда пользователь щелкает **Готово** кнопки с помощью мастера.  
   
 ```
@@ -265,7 +260,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для указания некоторые действия, когда должен выполнить пользователь **Готово** кнопки.  
   
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
  Эта функция-член вызывается, когда пользователь щелкает `Next` кнопки с помощью мастера.  
   
 ```
@@ -283,7 +278,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для указания некоторые действия, когда должен выполнить пользователь `Next` кнопки.  
   
-##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  Вызовите эту функцию-член для пересылки сообщения для каждой страницы в окне свойств.  
   
 ```
@@ -303,7 +298,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>Примечания  
  Если страница возвращает ненулевое значение, окно свойств не отправляет сообщения на последующих страницах.  
   
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
  Вызовите эту функцию-член для включения или отключения **применить** кнопки в зависимости от того, следует ли применять параметры на странице свойств для соответствующего внешнего объекта.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "open | Документы Майкрософт"
-ms.custom: 
+title: open | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - open
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - open function
 ms.assetid: e3139118-4da2-434b-a551-fcf3fccf49b5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5c695f776655cfdfa0cf1ed7816b0e4e7d6e3b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 554be4f45b56b45bb169c39b4f3cbcc4d3c3e4e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open"></a>open
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_open](../../c-runtime-library/reference/open-wopen.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_open](open-wopen.md).

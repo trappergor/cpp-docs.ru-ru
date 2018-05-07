@@ -1,12 +1,9 @@
 ---
-title: "_get_osfhandle | Документы Майкрософт"
-ms.custom: 
+title: _get_osfhandle | Документы Майкрософт
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _get_osfhandle
@@ -34,55 +31,53 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffc65e12c4a9023d0ef649bbf2cb5e8f7e76808
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
-Получает дескриптор файла операционной системы, связанный с указанным дескриптором файла.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-intptr_t _get_osfhandle(   
-   int fd   
-);  
-```  
-  
+Получает дескриптор файла операционной системы, связанный с указанным дескриптором файла.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+intptr_t _get_osfhandle(
+   int fd
+);
+```
+
 ### <a name="parameters"></a>Параметры
 
-*fd*  
-Дескриптор существующего файла.  
-  
+*fd*<br/>
+Дескриптор существующего файла.
+
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор файла операционной системы, если *fd* является допустимым. В противном случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает `INVALID_HANDLE_VALUE` (-1) и задает `errno` для `EBADF`, указывающее, неправильный дескриптор файла.  
-  
+Возвращает дескриптор файла операционной системы, если *fd* является допустимым. В противном случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **INVALID_HANDLE_VALUE** (-1) и задает **errno** для **EBADF**, указывающее, неправильный дескриптор файла.
+
 ## <a name="remarks"></a>Примечания
 
-Чтобы закрыть файл, получаемой в результате которого дескриптор файла операционной системы (ОС) `_get_osfhandle`, вызовите [ \_закрыть](../../c-runtime-library/reference/close.md) на дескриптор файла *fd*. Не следует вызывать `CloseHandle` для возвращаемого значения функции. Принадлежит базовый дескриптор файла операционной системы *fd* дескриптор файла, а затем закрывается, когда `_close` будет вызван на *fd*. Если владельцем дескриптора файла `FILE *` поток, затем вызвать [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) об этом `FILE *` поток закрывает дескриптор файла и базовый дескриптор файла операционной системы. В этом случае не следует вызывать `_close` на дескриптор файла.
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_get_osfhandle`|\<io.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
+Чтобы закрыть файл, получаемой в результате которого дескриптор файла операционной системы (ОС) **_get_osfhandle**, вызовите [_close](close.md) на дескриптор файла *fd*. Не вызывайте **CloseHandle** для возвращаемого значения функции. Принадлежит базовый дескриптор файла операционной системы *fd* дескриптор файла, а затем закрывается, когда [_close](close.md) будет вызван на *fd*. Если владельцем дескриптора файла **ФАЙЛ \***  поток, затем вызвать [fclose](fclose-fcloseall.md) , **ФАЙЛ \***  поток закрывает дескриптор файла и базовый дескриптор файла операционной системы. В этом случае не следует вызывать [_Закрыть](close.md) на дескриптор файла.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_get_osfhandle**|\<io.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
 ## <a name="see-also"></a>См. также
 
-[Обработка файлов](../../c-runtime-library/file-handling.md)   
-[_close](../../c-runtime-library/reference/close.md)   
-[_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
-[_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
-[_open, _wopen](../../c-runtime-library/reference/open-wopen.md)
+[Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
+[_close](close.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "isatty | Документы Майкрософт"
-ms.custom: 
+title: isatty | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - isatty
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a7af310bc9f24c01758ea6455435e2b5501c734
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1d5bd2df2e2ac1abf3f8e5cbdb0560052558c1f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isatty"></a>isatty
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_isatty](../../c-runtime-library/reference/isatty.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_isatty](isatty.md).

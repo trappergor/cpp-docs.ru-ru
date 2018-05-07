@@ -1,13 +1,10 @@
 ---
-title: "-Ox (включить большинство видов оптимизации скорости) | Документы Microsoft"
-ms.custom: 
+title: -Ox (включить большинство видов оптимизации скорости) | Документы Microsoft
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (включить большинство видов оптимизации скорости)
 
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 
 - [/Og (виды глобальной оптимизации)](../../build/reference/og-global-optimizations.md)
 
-- [/Oi (Создание встроенных функций)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi (создание встроенных функций)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/Ot (приоритет быстрого кода)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 
 - [/ O2 (максимизировать скорость)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/OD (Выключение (отладчика))](../../build/reference/od-disable-debug.md)
+- [/Od (отключение (отладчика))](../../build/reference/od-disable-debug.md)
 
 Вы можете отменить смещения в сторону скорость **/ox** параметр компилятора, если указать **/Oxs**, сочетающий **/ox** параметр компилятора с [/Os (приоритет малая Код)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Объединенные параметры предпочитать размер кода.
 

@@ -1,13 +1,10 @@
 ---
-title: "Как: использование регулярных выражений для поиска и замены (C + +/ CLI) | Документы Microsoft"
-ms.custom: 
+title: 'Как: использование регулярных выражений для поиска и замены (C + +/ CLI) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Replace method
 - regular expressions [C++], search and replace
 ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feb64670accef1cdcc5eedf9aa2b081dc41615b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Практическое руководство. Использование регулярных выражений для выполнения поиска и замены (C++/CLI)
 В следующем примере кода показано, как класс регулярного выражения <xref:System.Text.RegularExpressions.Regex> можно использовать для выполнения поиска и замены. Это делается с <xref:System.Text.RegularExpressions.Regex.Replace%2A> метод. Используемая версия принимает две строки в качестве входных данных: строка для изменения и строки для вставки вместо разделов (если таковые имеются), соответствующих шаблону, заданному для <xref:System.Text.RegularExpressions.Regex> объекта.  

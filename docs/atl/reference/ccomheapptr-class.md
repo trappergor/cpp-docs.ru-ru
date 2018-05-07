@@ -1,12 +1,9 @@
 ---
-title: "Класс CComHeapPtr | Документы Microsoft"
-ms.custom: 
+title: Класс CComHeapPtr | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeapPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8619c050ecc356e1445991b625da00c04f462848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheapptr-class"></a>Класс CComHeapPtr
 Класс интеллектуальный указатель для управления указатели кучи.  
@@ -47,12 +42,12 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Конструктор.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComHeapPtr`является производным от `CHeapPtr`, но использует [CComAllocator](../../atl/reference/ccomallocator-class.md) для выделения памяти с помощью COM-подпрограммы. В разделе [CHeapPtr](../../atl/reference/cheapptr-class.md) и [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) для доступных методов.  
+ `CComHeapPtr` является производным от `CHeapPtr`, но использует [CComAllocator](../../atl/reference/ccomallocator-class.md) для выделения памяти с помощью COM-подпрограммы. В разделе [CHeapPtr](../../atl/reference/cheapptr-class.md) и [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) для доступных методов.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -64,7 +59,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
+##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
  Конструктор.  
   
 ```

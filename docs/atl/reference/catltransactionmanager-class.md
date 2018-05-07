@@ -2,11 +2,8 @@
 title: Класс catltransactionmanager. | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Класс catltransactionmanager.
 Catltransactionmanager класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).  
@@ -62,14 +57,14 @@ class CAtlTransactionManager;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ Catltransactionmanager.](#dtor)|Деструктор catltransactionmanager.|  
 |[Catltransactionmanager.](#catltransactionmanager)|Конструктор catltransactionmanager.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Закрыть](#close)|Закрывает один дескриптор транзакции.|  
 |[Фиксация](#commit)|Запросы, что транзакция быть зафиксирована.|  
@@ -90,9 +85,9 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`Если этот резервный механизм поддерживается; `FALSE` в противном случае.|  
+|[m_bFallback](#m_bfallback)|`TRUE` Если этот резервный механизм поддерживается; `FALSE` в противном случае.|  
 |[m_hTransaction](#m_htransaction)|Дескриптор транзакции.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ Catltransactionmanager.  
+##  <a name="dtor"></a>  ~ Catltransactionmanager.  
  Деструктор catltransactionmanager.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>Примечания  
  В обычной обработки транзакция автоматически зафиксирована и закрыт. Если деструктор вызывается во время очистки исключения, транзакции откат и закрыт.  
   
-##  <a name="catltransactionmanager"></a>Catltransactionmanager.  
+##  <a name="catltransactionmanager"></a>  Catltransactionmanager.  
  Конструктор catltransactionmanager.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Параметры  
  `bFallback`  
- `TRUE`Указывает поддержку fallback. При сбое транзакции функции класса автоматически вызывает функцию «без использования транзакций». `FALSE`Указывает вызовы не «базовом».  
+ `TRUE` Указывает поддержку fallback. При сбое транзакции функции класса автоматически вызывает функцию «без использования транзакций». `FALSE` Указывает вызовы не «базовом».  
   
  `bAutoCreateTransaction`  
- `TRUE`Указывает, автоматически созданный обработчик транзакции в конструкторе. `FALSE`Указывает, что он не.  
+ `TRUE` Указывает, автоматически созданный обработчик транзакции в конструкторе. `FALSE` Указывает, что он не.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="close"></a>Закрыть  
+##  <a name="close"></a>  Закрыть  
  Закрывает дескриптор транзакции.  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `CloseHandle` функции. Метод автоматически вызывается в деструкторе.  
   
-##  <a name="commit"></a>Фиксация  
+##  <a name="commit"></a>  Фиксация  
  Запросы, что транзакция быть зафиксирована.  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `CommitTransaction` функции. Метод автоматически вызывается в деструкторе.  
   
-##  <a name="create"></a>Создание  
+##  <a name="create"></a>  Создание  
  Создает дескриптор транзакции.  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `CreateTransaction` функции. Для проверки  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  Создает или открывает файл, файловый поток или каталоге, что и транзакционных операций.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `CreateFileTransacted` функции.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  Удаляет существующий файл как транзакционных операций.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `DeleteFileTransacted` функции.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  Осуществляет поиск файла или вложенной папки в каталоге как транзакционных операций.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `FindFirstFileTransacted` функции.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  Получает атрибуты файловой системы для заданного файла или каталога в виде транзакционных операций.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `GetFileAttributesTransacted` функции.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  Получает атрибуты файловой системы для заданного файла или каталога в виде транзакционных операций.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `GetFileAttributesTransacted` функции.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  Возвращает дескриптор транзакции.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  Определяет, включены ли резервный вызовов.  
   
 ```
@@ -307,8 +302,8 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`Если этот резервный механизм поддерживается; `FALSE` в противном случае.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` Если этот резервный механизм поддерживается; `FALSE` в противном случае.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  Дескриптор транзакции.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  Перемещение существующего файла или каталога, включая его дочерние элементы в качестве транзакционных операций.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `MoveFileTransacted` функции.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  Создает указанный раздел реестра и связывает его с транзакцией. Если ключ уже существует, функция открывает его.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `RegCreateKeyTransacted` функции.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  Удаляет раздел и его значения из указанного представления платформой реестра как транзакционных операций.  
   
 ```
@@ -401,7 +396,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |`hKey`|Дескриптор, чтобы открыть раздел реестра.|  
 |`lpSubKey`|Имя ключа для удаления.|  
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `RegDeleteKeyTransacted` функции.  
   
-##  <a name="regopenkeyex"></a>Ошибка  
+##  <a name="regopenkeyex"></a>  Ошибка  
  Открывает указанный раздел реестра и связывает его с транзакцией.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `RegOpenKeyTransacted` функции.  
   
-##  <a name="rollback"></a>Откат  
+##  <a name="rollback"></a>  Откат  
  Запросы, будет выполнен откат транзакции.  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `RollbackTransaction` функции.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  Задает атрибуты для файла или каталога в виде транзакционных операций.  
   
 ```

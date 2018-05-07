@@ -1,12 +1,9 @@
 ---
-title: "mkdir | Документы Майкрософт"
-ms.custom: 
+title: mkdir | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - mkdir
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - mkdir function
 ms.assetid: 0a212890-181e-45d0-988d-e0f301fcdeb8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d60acbdd4e3dda36669108565f0ddc7b136b1b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cfaf27fa0609efa3275e4a6c662f0cd96d647908
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mkdir"></a>mkdir
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_mkdir](mkdir-wmkdir.md).

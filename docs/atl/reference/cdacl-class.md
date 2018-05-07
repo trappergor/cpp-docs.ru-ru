@@ -1,12 +1,9 @@
 ---
-title: "Класс CDacl | Документы Microsoft"
-ms.custom: 
+title: Класс CDacl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDacl
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac83d5c1f72bf1df20d41ec39b464ddb79e4f8e
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2724eebd218cea2795d483351ef91b34c9f1bf39
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdacl-class"></a>Класс CDacl
 Этот класс является оболочкой для структуры DACL (список управления доступом).  
@@ -50,14 +45,14 @@ class CDacl : public CAcl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|Конструктор.|  
 |[CDacl::~CDacl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDacl::AddAllowedAce](#addallowedace)|Добавляет допустимое ACE (записи управления доступом) `CDacl` объекта.|  
 |[CDacl::AddDeniedAce](#adddeniedace)|Добавляет запрещенного ACE для `CDacl` объекта.|  
@@ -67,7 +62,7 @@ class CDacl : public CAcl
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDacl::operator =](#operator_eq)|Оператор присвоения.|  
   

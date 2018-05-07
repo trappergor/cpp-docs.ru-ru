@@ -1,12 +1,9 @@
 ---
-title: "Класс CComControl | Документы Microsoft"
-ms.custom: 
+title: Класс CComControl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>Класс CComControl
 Этот класс предоставляет методы для создания и управления ATL элементов управления.  
@@ -65,13 +60,13 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControl::CComControl](#ccomcontrol)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|Создает окно для элемента управления.|  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|Этот метод используется для создания, отображения и работы окно сообщения.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComControl`— Это набор полезных управления вспомогательные функции и необходимые данные членов для элементов управления ATL. При создании стандартного элемента управления или элемента управления DHTML, используя мастер элементов управления ATL, мастер автоматически будет наследовать класс от `CComControl`. `CComControl`Большинство методов из производного [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` — Это набор полезных управления вспомогательные функции и необходимые данные членов для элементов управления ATL. При создании стандартного элемента управления или элемента управления DHTML, используя мастер элементов управления ATL, мастер автоматически будет наследовать класс от `CComControl`. `CComControl` Большинство методов из производного [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
  Дополнительные сведения о создании элемента управления см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL см. в статье [создается проект ATL](../../atl/reference/creating-an-atl-project.md).  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  Конструктор.  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>Примечания  
  Вызовы [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) конструктор, передавая `m_hWnd` данные-член наследуется через [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
   
 ```
@@ -126,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  По умолчанию создает окна для элемента управления путем вызова `CWindowImpl::Create`.  
   
 ```
@@ -146,7 +141,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  Уведомляет контейнера приемник измененного свойства элемента управления.  
   
 ```
@@ -168,7 +163,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  Уведомляет контейнера приемник, свойство элемента управления изменением, и что объект запрашивает приемник дальнейших действий.  
   
 ```
@@ -191,7 +186,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  Этот метод используется для создания, отображения и работы окно сообщения.  
   
 ```
@@ -215,7 +210,7 @@ int MessageBox(
  Возвращает целочисленное значение, указав одно из значений пунктов меню, перечисленных в разделе [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) документации по пакету Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- `MessageBox`полезно во время разработки и как простой способ отображения ошибок и предупреждений для пользователя.  
+ `MessageBox` полезно во время разработки и как простой способ отображения ошибок и предупреждений для пользователя.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   

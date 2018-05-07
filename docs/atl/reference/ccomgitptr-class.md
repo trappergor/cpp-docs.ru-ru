@@ -1,12 +1,9 @@
 ---
-title: "Класс CComGITPtr | Документы Microsoft"
-ms.custom: 
+title: Класс CComGITPtr | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComGITPtr
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 Этот класс предоставляет методы для работы с указателями на интерфейс и глобальной таблицы интерфейсов (GIT).  
@@ -53,14 +48,14 @@ class CComGITPtr
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Конструктор.|  
 |[CComGITPtr:: ~ CComGITPtr](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComGITPtr::Attach](#attach)|Этот метод вызывается для регистрации указателя интерфейса в глобальной таблицы интерфейсов (GIT).|  
 |[CComGITPtr::CopyTo](#copyto)|Этот метод используется для копирования передан указатель интерфейса из глобальной таблицы интерфейсов (GIT).|  
@@ -70,14 +65,14 @@ class CComGITPtr
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComGITPtr::operator DWORD](#operator_dword)|Возвращает куки-файл из `CComGITPtr` объекта.|  
 |[CComGITPtr::operator =](#operator_eq)|Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Файл cookie.|  
   
@@ -90,7 +85,7 @@ class CComGITPtr
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>  CComGITPtr::Attach  
  Этот метод вызывается для регистрации указателя интерфейса в глобальной таблицы интерфейсов (GIT).  
   
 ```
@@ -112,7 +107,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях произойдет ошибка утверждения, если GIT не является допустимым, или файл cookie равен NULL.  
   
-##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  Конструктор.  
   
 ```
@@ -141,7 +136,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  Использование конструктора `rv` является конструктором перемещения. При перемещении данных из источника, `rv`, а затем `rv` очищается.  
   
-##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  Деструктор  
   
 ```
@@ -151,7 +146,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>Примечания  
  Удаляет интерфейс из глобальной таблицы интерфейсов (GIT), с помощью [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>  CComGITPtr::CopyTo  
  Этот метод используется для копирования передан указатель интерфейса из глобальной таблицы интерфейсов (GIT).  
   
 ```
@@ -168,7 +163,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>Примечания  
  Интерфейс из GIT копируется передан указатель. Указатель должна быть выпущена вызывающим объектом, когда он больше не требуется.  
   
-##  <a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>  CComGITPtr::Detach  
  Вызовите этот метод, чтобы отделить интерфейс из `CComGITPtr` объекта.  
   
 ```
@@ -181,7 +176,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>Примечания  
  Это вызывающий объект должен удалить интерфейс из GIT, с помощью [CComGITPtr::Revoke](#revoke).  
   
-##  <a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  Вызовите этот метод для возврата cookie из `CComGITPtr` объекта.  
   
 ```
@@ -194,7 +189,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>Примечания  
  Файл cookie — это переменная, используемое для идентификации интерфейса и его расположение.  
   
-##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
  Файл cookie.  
   
 ```
@@ -204,7 +199,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>Примечания  
  Файл cookie является переменной-члена, используемое для идентификации интерфейса и его расположение.  
   
-##  <a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>  CComGITPtr::operator =  
  Оператор присваивания.  
   
 ```
@@ -233,7 +228,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>Примечания  
  Присваивает новое значение для `CComGITPtr` объекта из существующего объекта или из ссылок в общую таблицу интерфейса.  
   
-##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
  Возвращает файл cookie, связанные с `CComGITPtr` объекта.  
   
 ```  
@@ -243,7 +238,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>Примечания  
  Файл cookie — это переменная, используемое для идентификации интерфейса и его расположение.  
   
-##  <a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>  CComGITPtr::Revoke  
  Вызовите этот метод, чтобы удалить текущий интерфейс из глобальной таблицы интерфейсов (GIT).  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "locking | Документы Майкрософт"
-ms.custom: 
+title: locking | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - locking
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - locking function
 ms.assetid: 1db15308-543e-44cf-a26f-5539f8e4fb2f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9aab63c7babdba0d3f63f3cabade262a3fef858f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1d213c86d0f96937988e45733a91019c7c1754cf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="locking"></a>блокировка
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_locking](../../c-runtime-library/reference/locking.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_locking](locking.md).

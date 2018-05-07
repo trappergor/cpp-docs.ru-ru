@@ -1,13 +1,10 @@
 ---
-title: "Примеры сценариев реестра | Документы Microsoft"
-ms.custom: 
+title: Примеры сценариев реестра | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>Примеры сценариев реестра
 Примеры сценариев в этом разделе показано, как добавить раздел в системный реестр, Регистрация сервера регистрации COM и указать несколько синтаксический анализ деревьев.  
@@ -59,7 +54,7 @@ HKCU
   
  Теперь сценарий добавляет подраздел, `HasASubkey`в `MyVeryOwnKey`. В этом подразделе, и он добавляет `PrettyCool` подраздел (значение по умолчанию `DWORD` значение 55) и `ANameValue` с именем value (со значением строки `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>Зарегистрируйте сервер COM регистратора  
+##  <a name="_atl_register_the_registrar_com_server"></a> Зарегистрируйте сервер COM регистратора  
  Следующий скрипт регистрирует сам сервер COM регистратора.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   Добавляет `ATL Registrar Class` как строковое значение по умолчанию для `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- Дерево синтаксического анализа теперь добавляет два новых разделов в `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Первый ключ `ProgID`, возвращает строковое значение по умолчанию, — это идентификатор ProgID. Второй ключ `InprocServer32`, возвращает строковое значение по умолчанию, `%MODULE%`, в котором препроцессора значение описано в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), данной статьи. `InprocServer32`также возвращает именованное значение `ThreadingModel`, со значением строки `Apartment`.  
+ Дерево синтаксического анализа теперь добавляет два новых разделов в `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Первый ключ `ProgID`, возвращает строковое значение по умолчанию, — это идентификатор ProgID. Второй ключ `InprocServer32`, возвращает строковое значение по умолчанию, `%MODULE%`, в котором препроцессора значение описано в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), данной статьи. `InprocServer32` также возвращает именованное значение `ThreadingModel`, со значением строки `Apartment`.  
   
 ## <a name="specify-multiple-parse-trees"></a>Укажите несколько синтаксический анализ деревьев  
  Чтобы указать более одного дерево синтаксического анализа в скрипте, просто поместите в конце другого одно дерево. Например, следующий сценарий добавляет ключ `MyVeryOwnKey`, в деревья синтаксического анализа для обоих `HKEY_CLASSES_ROOT` и `HKEY_CURRENT_USER`:  

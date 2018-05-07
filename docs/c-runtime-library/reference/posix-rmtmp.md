@@ -1,12 +1,9 @@
 ---
-title: "rmtmp | Документы Майкрософт"
-ms.custom: 
+title: rmtmp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - rmtmp
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - rmtmp function
 ms.assetid: d79f0364-39e8-42fb-a73a-63c22a646cd8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d76dc44882092858c65fab5c4eac4be0336b32
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 721109948b4613cab3bda0a8a2df0f6e5897f768
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rmtmp"></a>rmtmp
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_rmtmp](../../c-runtime-library/reference/rmtmp.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_rmtmp](rmtmp.md).

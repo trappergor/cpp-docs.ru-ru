@@ -2,12 +2,9 @@
 title: catan, catanf, catanl | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - catan
@@ -40,70 +37,66 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f745ed0daf608126b30b9f5c8a02bdebd35cf21f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
-Возвращает арктангенс с порезов ветвь попадает в интервал [-1; + 1] по оси мнимой комплексного числа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-_Dcomplex catan(   
-   _Dcomplex z   
-);  
-_Fcomplex catan(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex catan(   
-  _Lcomplex z   
-);  // C++ only  
-_Fcomplex catanf(   
-   _Fcomplex z   
-);  
-_Lcomplex catanl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `z`  
- Комплексное число, указывающее угол в радианах.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Арктангенс `z` в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2; + π/2] вдоль оси real.  
-  
-## <a name="remarks"></a>Примечания  
- Поскольку C++ допускает перегрузку, можно вызывать перегрузки `catan`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `catan` всегда принимает и возвращает значение `_Dcomplex` .  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Заголовок C|Заголовок C++|  
-|-------------|--------------|------------------|  
-|`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin, csinf, csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin, casinf, casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos, ccosf, ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt, csqrtf, csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+Возвращает арктангенс с порезов ветвь попадает в интервал [-1; + 1] по оси мнимой комплексного числа.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+_Dcomplex catan( _Dcomplex z );
+_Fcomplex catanf( _Fcomplex z );
+_Lcomplex catanl( _Lcomplex z );
+```
+
+```cpp
+_Fcomplex catan( _Fcomplex z );  // C++ only
+_Lcomplex catan( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*z*<br/>
+Комплексное число, указывающее угол в радианах.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Арктангенс *z*, в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2; + π/2] вдоль оси real.
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **catan** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **catan** всегда принимает и возвращает **_Dcomplex** значение.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Заголовок C|Заголовок C++|
+|-------------|--------------|------------------|
+|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[catanh, catanhf, catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh, ctanhf, ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[csinh, csinhf, csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh, casinhf, casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh, ccoshf, ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh, cacoshf, cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos, cacosf, cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan, ctanf, ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin, csinf, csinl](csin-csinf-csinl.md)<br/>
+[casin, casinf, casinl](casin-casinf-casinl.md)<br/>
+[ccos, ccosf, ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt, csqrtf, csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

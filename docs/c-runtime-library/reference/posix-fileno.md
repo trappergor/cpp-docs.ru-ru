@@ -1,12 +1,9 @@
 ---
-title: "_fileno | Документы Майкрософт"
-ms.custom: 
+title: _fileno | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fileno
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - fileno function
 ms.assetid: 8f33e1e0-0dc8-4311-b690-ec6e577a64b5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1ee465892ff8783d4307a6f79d5bdbfc0e875b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 52dbf692032033999851c2dbade7db6b8b73e783
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fileno"></a>fileno
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fileno](../../c-runtime-library/reference/fileno.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fileno](fileno.md).

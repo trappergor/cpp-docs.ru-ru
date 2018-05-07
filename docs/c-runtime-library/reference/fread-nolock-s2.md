@@ -1,13 +1,10 @@
 ---
-title: "_fread_nolock_s2 | Документы Майкрософт"
-ms.custom: 
+title: _fread_nolock_s2 | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _fread_nolock_s
@@ -30,64 +27,67 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 438e12cd9a2a4099231e2dfb9c2ba27375811ea7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
-Читает данные из потока, не блокируя другие потоки. Это версия функции [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-size_t _fread_nolock_s(   
-   void *buffer,  
-   size_t bufferSize,  
-   size_t elementSize,  
-   size_t elementCount,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `buffer`  
- Место хранения данных.  
-  
- `bufferSize`  
- Размер буфера назначения в байтах.  
-  
- `elementSize`  
- Размер читаемого элемента в байтах.  
-  
- `elementCount`  
- Максимальное число читаемых элементов.  
-  
- `stream`  
- Указатель на структуру `FILE` .  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- См. раздел [fread_s](../../c-runtime-library/reference/fread-s.md).  
-  
-## <a name="remarks"></a>Примечания  
- Эта функция представляет собой неблокирующую версию функции `fread_s`. Она идентична функции `fread_s` , но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`_fread_nolock_s`|C: \<stdio.h>; C++: \<cstdio> или \<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [_read](../../c-runtime-library/reference/read.md)
+
+Читает данные из потока, не блокируя другие потоки. Это версия функции [fread_nolock](fread-nolock.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+size_t _fread_nolock_s(
+   void *buffer,
+   size_t bufferSize,
+   size_t elementSize,
+   size_t elementCount,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*buffer*<br/>
+Место хранения данных.
+
+*BufferSize*<br/>
+Размер буфера назначения в байтах.
+
+*elementSize*<br/>
+Размер читаемого элемента в байтах.
+
+*Значение elementCount*<br/>
+Максимальное число читаемых элементов.
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+См. раздел [fread_s](fread-s.md).
+
+## <a name="remarks"></a>Примечания
+
+Эта функция представляет собой версию неблокирующих **fread_s**. Она идентична **fread_s** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**_fread_nolock_s**|C: \<stdio.h>; C++: \<cstdio> или \<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[fwrite](fwrite.md)<br/>
+[_read](read.md)<br/>

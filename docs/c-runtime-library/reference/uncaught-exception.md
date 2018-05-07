@@ -1,12 +1,9 @@
 ---
-title: "__uncaught_exception | Документы Майкрософт"
-ms.custom: 
+title: __uncaught_exception | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - __uncaught_exception
@@ -29,38 +26,39 @@ dev_langs:
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496947e60ab3a2b32a12b52700610aa4878ad2d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fcae75a5d25710866f781d766cfd77eceb977649
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
-Указывает, возникло ли одно или несколько исключений, которые еще не были обработаны с помощью соответствующего блока `catch` инструкции [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-bool __uncaught_exception(  
-   );  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Значение `true` с момента возникновения исключения в блоке `try` и до инициализации соответствующего блока `catch`; в противном случае — `false`.  
-  
-## <a name="remarks"></a>Примечания  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|__uncaught_exception|eh.h|  
-  
-## <a name="see-also"></a>См. также  
- [Операторы try, throw и catch (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)
+
+Указывает, является ли одно или несколько исключений возникло, но еще не были обработаны с помощью соответствующих **перехватывать** блока [try-catch-](../../cpp/try-throw-and-catch-statements-cpp.md) инструкции.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+bool __uncaught_exception(
+   );
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** от времени, создается исключение **повторите** блокировки, пока не соответствующие друг другу **перехватывать** блок инициализирован; в противном случае — **false**.
+
+## <a name="remarks"></a>Примечания
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|__uncaught_exception|eh.h|
+
+## <a name="see-also"></a>См. также
+
+[Операторы try, throw и catch (C++)](../../cpp/try-throw-and-catch-statements-cpp.md)<br/>

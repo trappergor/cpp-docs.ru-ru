@@ -1,12 +1,9 @@
 ---
-title: "towctrans | Документы Майкрософт"
-ms.custom: 
+title: towctrans | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - towctrans
@@ -30,53 +27,57 @@ dev_langs:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bd4c48b5462d0d7b3cc7145a3044da80869af1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="towctrans"></a>towctrans
-Преобразует символ.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-wint_t towctrans(  
-   wint_t c,  
-   wctrans_t category   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Символ, который требуется преобразовать.  
-  
- `category`  
- Идентификатор, который содержит возвращаемое значение [wctrans](../../c-runtime-library/reference/wctrans.md).  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Символ `c` после того, как функция `towctrans` использовала правило преобразования в категории `category`.  
-  
-## <a name="remarks"></a>Примечания  
- Значение `category` должно возвращаться предыдущим успешным вызовом функции [wctrans](../../c-runtime-library/reference/wctrans.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`towctrans`|\<wctype.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- Пример использования функции `wctrans` см. в разделе `towctrans`.  
-  
-## <a name="see-also"></a>См. также  
- [Преобразование данных](../../c-runtime-library/data-conversion.md)
+
+Преобразует символ.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+wint_t towctrans(
+   wint_t c,
+   wctrans_t category
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Символ, который требуется преобразовать.
+
+*category*<br/>
+Идентификатор, который содержит возвращаемое значение [wctrans](wctrans.md).
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Символ *c*после того, как **towctrans** использовала правило преобразования в *категории*.
+
+## <a name="remarks"></a>Примечания
+
+Значение *категории* должен быть возвращен с ранее успешного вызова [wctrans](wctrans.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**towctrans**|\<wctype.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+В разделе **wctrans** пример, использующий **towctrans**.
+
+## <a name="see-also"></a>См. также
+
+[Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>

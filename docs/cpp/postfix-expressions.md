@@ -1,12 +1,9 @@
 ---
-title: "Постфиксные выражения | Документы Microsoft"
-ms.custom: 
+title: Постфиксные выражения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-expressions"></a>Постфиксные выражения
 Постфиксные выражения состоят из основных выражений или выражений, в которых постфиксные операторы следуют за основным выражением. Постфиксные операторы перечислены в следующей таблице.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[Подстрочный оператор](../cpp/subscript-operator.md)|**[ ]**|  
 |[Оператор вызова функции](../cpp/function-call-operator-parens.md)|**( )**|  
 |[Оператор явного преобразования типа](../cpp/explicit-type-conversion-operator-parens.md)|*Имя типа* **)**|  
-|[Оператор доступа к членам](../cpp/member-access-operators-dot-and.md)|**.** или**->**|  
+|[Оператор доступа к членам](../cpp/member-access-operators-dot-and.md)|**.** или **->**|  
 |[Постфиксный оператор приращения](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
 |[Постфиксный оператор уменьшения](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   

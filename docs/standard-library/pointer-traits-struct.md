@@ -1,12 +1,12 @@
 ---
-title: "Структура pointer_traits | Документы Майкрософт"
-ms.custom: 
+title: Структура pointer_traits | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
@@ -23,31 +23,34 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e419d8789e9dd6f3ed98e36a05a96d2e5f985082
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e6e6f6ca6c62e0dcb1d44d5f86a19e8a339a6b1
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pointertraits-struct"></a>Структура pointer_traits
-Предоставляет данные, необходимые объекту класса шаблонов `allocator_traits` для описания распределителя с типом указателя `Ptr`.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+
+Предоставляет данные, необходимые объекту класса шаблонов `allocator_traits` для описания распределителя с типом указателя `Ptr`.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <class Ptr>
 struct pointer_traits;
-```  
-  
-## <a name="remarks"></a>Примечания  
- Ptr может быть необработанным указателем типа `Ty *` или классом со следующими свойствами.  
-```  
+```
+
+## <a name="remarks"></a>Примечания
+
+Ptr может быть необработанным указателем типа `Ty *` или классом со следующими свойствами.
+
+```cpp
 struct Ptr
    { // describes a pointer type usable by allocators
    typedef Ptr pointer;
@@ -57,41 +60,44 @@ struct Ptr
    using rebind = typename Ptr<Other, Rest...>; // optional
    static pointer pointer_to(element_type& obj);
    // optional
-   };  
+   };
 ```
-### <a name="typedefs"></a>Определения типов  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|`typedef T2 difference_type`|Тип `T2` — `Ptr::difference_type`, если этот тип существует, в противном случае — `ptrdiff_t`. Если `Ptr` является необработанным указателем, то тип — `ptrdiff_t`.|  
-|`typedef T1 element_type`|Тип `T1` — `Ptr::element_type`, если этот тип существует, в противном случае — `Ty`. Если `Ptr` является необработанным указателем, то тип — `Ty`.|  
-|`typedef Ptr pointer`|Тип — `Ptr`.|  
-  
-### <a name="structs"></a>Структуры  
-  
-|name|Описание:|  
-|----------|-----------------|  
-|`pointer_traits::rebind`|Пытается преобразовать базовый указатель в указанный тип.|  
-  
-### <a name="methods"></a>Методы  
-  
-|Имя|Описание:|  
-|----------|-----------------|  
-|[pointer_to](#pointer_to)|Преобразует произвольную ссылку в объект класса `Ptr`.|  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<memory>  
-  
- **Пространство имен:** std  
-  
-##  <a name="pointer_to"></a>  pointer_to  
- Статический метод, возвращающий `Ptr::pointer_to(obj)`, если эта функция существует. В противном случае невозможно преобразовать произвольную ссылку на объект класса `Ptr`. Если `Ptr` является необработанной ссылкой, этот метод возвращает `addressof(obj)`.  
-  
-```cpp  
-static pointer pointer_to(element_type& obj);
-```  
-  
-## <a name="see-also"></a>См. также  
- [\<memory>](../standard-library/memory.md)   
- [Класс allocator_traits](../standard-library/allocator-traits-class.md)
 
+### <a name="typedefs"></a>Определения типов
+
+|Имя|Описание|
+|----------|-----------------|
+|`typedef T2 difference_type`|Тип `T2` — `Ptr::difference_type`, если этот тип существует, в противном случае — `ptrdiff_t`. Если `Ptr` является необработанным указателем, то тип — `ptrdiff_t`.|
+|`typedef T1 element_type`|Тип `T1` — `Ptr::element_type`, если этот тип существует, в противном случае — `Ty`. Если `Ptr` является необработанным указателем, то тип — `Ty`.|
+|`typedef Ptr pointer`|Тип — `Ptr`.|
+
+### <a name="structs"></a>Структуры
+
+|name|Описание|
+|----------|-----------------|
+|`pointer_traits::rebind`|Пытается преобразовать базовый указатель в указанный тип.|
+
+### <a name="methods"></a>Методы
+
+|Имя|Описание|
+|----------|-----------------|
+|[pointer_to](#pointer_to)|Преобразует произвольную ссылку в объект класса `Ptr`.|
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<memory>
+
+**Пространство имен:** std
+
+## <a name="pointer_to"></a>  pointer_to
+
+Статический метод, возвращающий `Ptr::pointer_to(obj)`, если эта функция существует. В противном случае невозможно преобразовать произвольную ссылку на объект класса `Ptr`. Если `Ptr` является необработанной ссылкой, этот метод возвращает `addressof(obj)`.
+
+```cpp
+static pointer pointer_to(element_type& obj);
+```
+
+## <a name="see-also"></a>См. также
+
+[\<memory>](../standard-library/memory.md)<br/>
+[Класс allocator_traits](../standard-library/allocator-traits-class.md)<br/>

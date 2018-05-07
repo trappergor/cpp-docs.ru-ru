@@ -1,12 +1,9 @@
 ---
-title: "gcvt | Документы Майкрософт"
-ms.custom: 
+title: gcvt | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - gcvt
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 950ff575276678300dcb2d855e14fc0e39c7bfb6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 32817ffd39a59b2369f2545b16ab529eaa79463a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gcvt"></a>gcvt
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_gcvt](../../c-runtime-library/reference/gcvt.md) или ее аналог с улучшенной безопасностью [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_gcvt](gcvt.md) или ее аналог с улучшенной безопасностью [_gcvt_s](gcvt-s.md).

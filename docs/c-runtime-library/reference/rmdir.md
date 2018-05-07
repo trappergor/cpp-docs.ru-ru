@@ -1,12 +1,9 @@
 ---
-title: "rmdir | Документы Майкрософт"
-ms.custom: 
+title: rmdir | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - rmdir
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - rmdir function
 ms.assetid: 03a0aff4-f66c-42a9-bee9-84c46f994952
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec258e12601246e781a73b8f9f35db938bee5731
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9c67192d2f88a0d321118ee65ff834d0f0747a3e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rmdir"></a>rmdir
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_rmdir](../../c-runtime-library/reference/rmdir-wrmdir.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_rmdir](rmdir-wrmdir.md).

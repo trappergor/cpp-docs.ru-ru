@@ -1,12 +1,9 @@
 ---
-title: "Класс CComEnumOnSTL | Документы Microsoft"
-ms.custom: 
+title: Класс CComEnumOnSTL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumOnSTL
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumonstl-class"></a>Класс CComEnumOnSTL
 Этот класс определяет COM-объект перечислителя, на основе коллекции стандартной библиотеки C++.  
@@ -60,11 +55,11 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  Класс контейнера стандартной библиотеки C++.  
   
 ## <a name="remarks"></a>Примечания  
- `CComEnumOnSTL`Определяет COM-объект перечислителя, на основе коллекции стандартной библиотеки C++. Этот класс можно использовать сам по себе или в сочетании с [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Ниже описаны типичные действия по использованию этого класса. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnumOnSTL` Определяет COM-объект перечислителя, на основе коллекции стандартной библиотеки C++. Этот класс можно использовать сам по себе или в сочетании с [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Ниже описаны типичные действия по использованию этого класса. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).  
   
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Чтобы использовать этот класс ICollectionOnSTLImpl:  
   
-- `typedef`специализации этого класса.  
+- `typedef` специализации этого класса.  
   
 -   Используйте `typedef` как последним аргументом шаблона в специализации `ICollectionOnSTLImpl`.  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>С помощью этого класса, независимо от ICollectionOnSTLImpl:  
   
-- `typedef`специализации этого класса.  
+- `typedef` специализации этого класса.  
   
 -   Используйте `typedef` в качестве аргумента шаблона в специализации `CComObject`.  
   

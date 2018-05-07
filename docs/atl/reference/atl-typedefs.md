@@ -2,11 +2,8 @@
 title: Определения типов ATL | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcore/ATL::_ATL_BASE_MODULE
@@ -32,17 +29,15 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d721cefd20ae5eb208c74d973069fb9365273d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb730faae0b70b840b637dc54a9f7b636f1d7a6e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-typedefs"></a>Определения типов ATL
 Библиотека активных шаблонов включает в себя следующие определения типов.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 |[LPCURL](#lpcurl)|Указатель на константу [CUrl](../../atl/reference/curl-class.md) объекта.|  
 |[LPURL](#lpurl)|Указатель на [CUrl](../../atl/reference/curl-class.md) объекта.|  
   
-##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE  
+##  <a name="_atl_base_module"></a>  _ATL_BASE_MODULE  
  Определен как определение типа, в зависимости от _ATL_BASE_MODULE70.  
   
 ```   
@@ -81,7 +76,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ## <a name="requirements"></a>Требования
 **Заголовок:** файле atlcore.h
 
-##  <a name="_atl_com_module"></a>_ATL_COM_MODULE  
+##  <a name="_atl_com_module"></a>  _ATL_COM_MODULE  
  Определен как определение типа, в зависимости от _ATL_COM_MODULE70.  
   
 ```   
@@ -94,7 +89,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h
   
-##  <a name="_atl_module"></a>_ATL_MODULE  
+##  <a name="_atl_module"></a>  _ATL_MODULE  
  Определен как определение типа, в зависимости от _ATL_MODULE70.  
   
 ```   
@@ -106,7 +101,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ### <a name="remarks"></a>Примечания  
  На основе [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md).  
   
-##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE  
+##  <a name="_atl_win_module"></a>  _ATL_WIN_MODULE  
  Определен как определение типа, в зависимости от _ATL_WIN_MODULE70.  
   
 ```   
@@ -120,7 +115,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h 
   
-##  <a name="atl_url_port"></a>ATL_URL_PORT 
+##  <a name="atl_url_port"></a>  ATL_URL_PORT 
   Тип используемого [CUrl](curl-class.md) для указания номера порта.
 ```  
 typedef WORD ATL_URL_PORT;
@@ -129,7 +124,7 @@ typedef WORD ATL_URL_PORT;
 ## <a name="requirements"></a>Требования
 **Заголовок:** файлов atlutil.h
 
-##  <a name="ccomdispatchdriver"></a>CComDispatchDriver  
+##  <a name="ccomdispatchdriver"></a>  CComDispatchDriver  
  Этот класс управляет указателей интерфейса СОМ.  
   
 ```   
@@ -138,7 +133,7 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h
   
-##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel  
+##  <a name="ccomglobalsthreadmodel"></a>  CComGlobalsThreadModel  
  Вызывает методы модели, независимо от того, что потоковая модель используется соответствующий поток.  
   
 ```   
@@ -157,7 +152,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
  В зависимости от модели потоков, используемых приложением `typedef` имя `CComGlobalsThreadModel` ссылается либо [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные `typedef` имен для ссылки на класс критической секции.  
   
 > [!NOTE]
-> `CComGlobalsThreadModel`не ссылается на класс [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
+> `CComGlobalsThreadModel` не ссылается на класс [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
  С помощью `CComGlobalsThreadModel` освобождает разработчика от указания определенного потоковой модели класса. Независимо от того, что потоковая модель используется будет вызывать соответствующие методы.  
   
@@ -168,14 +163,14 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
  Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, глобально доступные для программы, или если вы хотите защитить ресурсы модуля в нескольких потоках.  
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h
   
-##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel  
+##  <a name="ccomobjectthreadmodel"></a>  CComObjectThreadModel  
  Вызывает методы модели, независимо от того, что потоковая модель используется соответствующий поток.  
   
 ```   
@@ -194,7 +189,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
  В зависимости от модели потоков, используемых приложением `typedef` имя `CComObjectThreadModel` ссылается либо [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). Эти классы предоставляют дополнительные `typedef` имен для ссылки на класс критической секции.  
   
 > [!NOTE]
-> `CComObjectThreadModel`не ссылается на класс [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
+> `CComObjectThreadModel` не ссылается на класс [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).  
   
  С помощью `CComObjectThreadModel` освобождает разработчика от указания определенного потоковой модели класса. Независимо от того, что потоковая модель используется будет вызывать соответствующие методы.  
   
@@ -205,14 +200,14 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S = `CComSingleThreadModel`; M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`; M = `CComMultiThreadModel`  
   
  Используйте `CComObjectThreadModel` в пределах одного объекта класса. Используйте `CComGlobalsThreadModel` в объекте, который является либо глобально доступной в программу или если вы хотите защитить ресурсы модуля в нескольких потоках.  
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h
   
-##  <a name="ccontainedwindow"></a>CContainedWindow  
+##  <a name="ccontainedwindow"></a>  CContainedWindow  
  Этот класс является специализацией **CContainedWindowT.**  
   
 ```   
@@ -223,9 +218,9 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 **Заголовок:** atlwin.h
   
 ### <a name="remarks"></a>Примечания  
- `CContainedWindow`является специализацией [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Если вы хотите изменить базовый класс или признаки, используйте `CContainedWindowT` напрямую.  
+ `CContainedWindow` является специализацией [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md). Если вы хотите изменить базовый класс или признаки, используйте `CContainedWindowT` напрямую.  
   
-##  <a name="cpath"></a>CPath  
+##  <a name="cpath"></a>  CPath  
  Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CString`.  
   
 ```   
@@ -235,7 +230,7 @@ typedef CPathT<CString> CPath;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlpath.h
   
-##  <a name="cpatha"></a>CPathA  
+##  <a name="cpatha"></a>  CPathA  
  Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CStringA`.  
   
 ```   
@@ -245,7 +240,7 @@ typedef CPathT<CStringA> CPathA;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlpath.h  
   
-##  <a name="cpathw"></a>CPathW  
+##  <a name="cpathw"></a>  CPathW  
  Специализация [CPathT](../../atl/reference/cpatht-class.md) с помощью `CStringW`.  
   
 ```   
@@ -254,7 +249,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlpath.h
   
-##  <a name="csimplevalarray"></a>CSimpleValArray  
+##  <a name="csimplevalarray"></a>  CSimpleValArray  
  Представляет массив для хранения простых типов.  
   
 ```   
@@ -263,13 +258,13 @@ typedef ATL::CPathT<CStringW> CPathW;
 
   
 ### <a name="remarks"></a>Примечания  
- `CSimpleValArray`служит для создания и управления массивы, содержащие простые типы данных. Это простой #define из [CSimpleArray](../../atl/reference/csimplearray-class.md).  
+ `CSimpleValArray` служит для создания и управления массивы, содержащие простые типы данных. Это простой #define из [CSimpleArray](../../atl/reference/csimplearray-class.md).  
 
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlsimpcoll.h
   
-##  <a name="lpcurl"></a>LPCURL  
+##  <a name="lpcurl"></a>  LPCURL  
  Указатель на константу [CUrl](../../atl/reference/curl-class.md) объекта.  
   
 ```   
@@ -279,7 +274,7 @@ typedef const CUrl* LPCURL;
 ## <a name="requirements"></a>Требования
 **Заголовок:** файлов atlutil.h
 
-##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>  DefaultThreadTraits
 Класс характеристик потока по умолчанию.
 
 ### <a name="syntax"></a>Синтаксис
@@ -298,7 +293,7 @@ typedef const CUrl* LPCURL;
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlbase.h
   
-##  <a name="lpurl"></a>LPURL  
+##  <a name="lpurl"></a>  LPURL  
  Указатель на [CUrl](../../atl/reference/curl-class.md) объекта.  
   
 ```   

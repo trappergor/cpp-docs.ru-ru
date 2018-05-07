@@ -1,12 +1,9 @@
 ---
-title: "Класс CSimpleMapEqualHelperFalse | Документы Microsoft"
-ms.custom: 
+title: Класс CSimpleMapEqualHelperFalse | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1418114233b59112fcffb58ef4ae7c437af5ab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Класс CSimpleMapEqualHelperFalse
 Этот класс представляет вспомогательный класс для [CSimpleMap](../../atl/reference/csimplemap-class.md) класса.  
@@ -44,7 +39,7 @@ class CSimpleMapEqualHelperFalse
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSimpleMapEqualHelperFalse::IsEqualKey](#isequalkey)|(Статический) Проверяет два ключа на равенство.|  
 |[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Статический) Возвращает значение false.|  
@@ -57,7 +52,7 @@ class CSimpleMapEqualHelperFalse
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsimpcoll.h  
   
-##  <a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey  
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
  Проверяет два ключа на равенство.  
   
 ```
@@ -77,7 +72,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md).  
   
-##  <a name="isequalvalue"></a>CSimpleMapEqualHelperFalse::IsEqualValue  
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue  
  Возвращает значение false.  
   
 ```

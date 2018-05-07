@@ -1,13 +1,10 @@
 ---
-title: "cproj, cprojf, cprojl | Документы Майкрософт"
-ms.custom: 
+title: cproj, cprojf, cprojl | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - cproj
@@ -40,64 +37,67 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6afc69e136f6b84b5c6c60681e7670584e32f2d8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7e47536df4efa083d3d07827bb7fbf66a8669793
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
-Извлекает проекцию комплексного числа на сферу Римана.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-_Dcomplex cproj(   
-   _Dcomplex z   
-);  
-_Fcomplex cproj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex cproj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex cprojf(   
-   _Fcomplex z   
-);  
-_Lcomplex cprojl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `z`  
- Комплексное число.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Проекция `z` на сферу Римана.  
-  
-## <a name="remarks"></a>Примечания  
- Поскольку C++ допускает перегрузку, можно вызывать перегрузки `cproj`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `cproj` всегда принимает и возвращает значение `_Dcomplex` .  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Заголовок C|Заголовок C++|  
-|-------------|--------------|------------------|  
-|`cproj`,               `cprojf`, `cprojl`|\<complex.h>|\<ccomplex>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Извлекает проекцию комплексного числа на сферу Римана.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+_Dcomplex cproj(
+   _Dcomplex z
+);
+_Fcomplex cproj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex cproj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex cprojf(
+   _Fcomplex z
+);
+_Lcomplex cprojl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*z*<br/>
+Комплексное число.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Проекции *z* на Reimann сфере.
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cproj** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cproj** всегда принимает и возвращает **_Dcomplex** значение.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Заголовок C|Заголовок C++|
+|-------------|--------------|------------------|
+|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

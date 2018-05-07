@@ -1,12 +1,9 @@
 ---
-title: "__unhook | Документы Microsoft"
-ms.custom: 
+title: __unhook | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 Отменяет связь метода обработчика с событием.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  Указатель на метод события, с помощью которого отсоединяется метод обработчика событий.  
   
 -   События неуправляемого C++: *SourceClass* является исходным классом и *EventMethod* событие.  
@@ -64,7 +59,7 @@ long  __unhook(
  `interface`  
  Имя интерфейса, отсоединяемого с `receiver`, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **true**.  
   
- *источник*  
+ *Источник*  
  Указатель на экземпляр источника события. В зависимости от кода `type` указано в **event_receiver**, *источника* может принимать одно из следующих действий:  
   
 -   Собственный указатель на объект источника события.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   Указатель на управляемый объект (для управляемых событий).  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  Указатель на метод обработчика событий, который необходимо отсоединить от события. Обработчик определяется как метод класса или ссылка на этот класс, и если не указать имя класса, `__unhook` считает классом тот класс, в котором он вызван.  
   
 -   События неуправляемого C++: *ReceiverClass* является классом приемника событий и `HandlerMethod` является обработчиком.  

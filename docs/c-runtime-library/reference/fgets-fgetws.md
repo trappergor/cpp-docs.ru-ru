@@ -1,12 +1,9 @@
 ---
-title: "fgets, fgetws | Документы Майкрософт"
-ms.custom: 
+title: fgets, fgetws | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fgets
@@ -38,114 +35,117 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
-Получает строку из потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-char *fgets(   
-   char *str,  
-   int n,  
-   FILE *stream   
-);  
-wchar_t *fgetws(   
-   wchar_t *str,  
-   int n,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `str`  
- Место хранения данных.  
-  
- `n`  
- Максимальное число считываемых символов.  
-  
- `stream`  
- Указатель на структуру `FILE` .  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает `str`. `NULL` возвращается в случае ошибки или достижения конца файла. Чтобы определить, произошла ли ошибка, используйте `feof` или `ferror`. Если `str` или `stream` является указателем NULL либо `n` меньше или равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL` , и функция возвращает значение `NULL`.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `fgets` считывает строку из входного аргумента `stream` и сохраняет ее в `str`. `fgets` считывает символы из позиция текущего потока, включая первого символа новой строки, до конца потока или пока число считанных символов равно `n` - 1, что наступит раньше. Результат сохраняется в `str` с добавлением символа NULL. Считываемый символ новой строки (если такой есть) включается в строку.  
-  
- `fgetws` — это версия функции `fgets` для расширенных символов.  
-  
- Функция `fgetws` считывает аргумент `str` для расширенных символов как многобайтовый или расширенный символ, в зависимости от того, открыт ли `stream` в текстовом или двоичном режиме соответственно. Дополнительные сведения об использовании текстового и двоичного режима в Юникоде и многобайтовом потоковом вводе-выводе см. в разделах [Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Ввод-вывод в поток в кодировке Юникод в текстовом и двоичном режиме](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fgetts`|`fgets`|`fgets`|`fgetws`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`fgets`|\<stdio.h>|  
-|`fgetws`|\<stdio.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_fgets.c  
-// This program uses fgets to display  
-// a line from a file on the screen.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char line[100];  
-  
-   if( fopen_s( &stream, "crt_fgets.txt", "r" ) == 0 )  
-   {  
-      if( fgets( line, 100, stream ) == NULL)  
-         printf( "fgets error\n" );  
-      else  
-         printf( "%s", line);  
-      fclose( stream );  
-   }  
-}  
-```  
-  
-## <a name="input-crtfgetstxt"></a>Входные данные: crt_fgets.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>Вывод  
-  
-```  
-Line one.  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+Получает строку из потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+char *fgets(
+   char *str,
+   int numChars,
+   FILE *stream
+);
+wchar_t *fgetws(
+   wchar_t *str,
+   int numChars,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*<br/>
+Место хранения данных.
+
+*NumChars*<br/>
+Максимальное число считываемых символов.
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает *str*. **Значение NULL** возвращается для указания на ошибку либо конечного файла. Используйте **feof** или **ferror** для определения, произошла ли ошибка. Если *str* или *поток* является пустым указателем, или *numChars* меньше или равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **NULL**.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**Fgets** функция считывает строку из входного *поток* аргумент и сохраняет его в *str*. **fgets** считывает символы из текущей позиции потока и включая первого символа новой строки, в конце потока, или пока число считанных символов равно *numChars* - 1, что наступит раньше. Результат сохраняется в *str* добавляется символ null. Считываемый символ новой строки (если такой есть) включается в строку.
+
+**fgetws** — это двухбайтовая версия **fgets**.
+
+**fgetws** считывает аргумент двухбайтовые *str* как строки многобайтовых символов или строку расширенных символов в соответствии с ли *поток* открывается в текстовом или двоичном режиме соответственно. Дополнительные сведения об использовании текстового и двоичного режима в Юникоде и многобайтовом потоковом вводе-выводе см. в разделах [Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Ввод-вывод в поток в кодировке Юникод в текстовом и двоичном режиме](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fgetts**|**fgets**|**fgets**|**fgetws**|
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**fgets**|\<stdio.h>|
+|**fgetws**|\<stdio.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_fgets.c
+// This program uses fgets to display
+// a line from a file on the screen.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char line[100];
+
+   if( fopen_s( &stream, "crt_fgets.txt", "r" ) == 0 )
+   {
+      if( fgets( line, 100, stream ) == NULL)
+         printf( "fgets error\numChars" );
+      else
+         printf( "%s", line);
+      fclose( stream );
+   }
+}
+```
+
+### <a name="input-crtfgetstxt"></a>Входные данные: crt_fgets.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+Line one.
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[fputs, fputws](fputs-fputws.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

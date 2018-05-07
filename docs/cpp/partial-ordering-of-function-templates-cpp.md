@@ -1,29 +1,24 @@
 ---
-title: "Частичное Упорядочение шаблонов функций (C++) | Документы Microsoft"
-ms.custom: 
+title: Частичное Упорядочение шаблонов функций (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Частичное упорядочение шаблонов функций (C++)
 
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 
      2. Шаблон, принимающий только __T\*__  является более специализированным, чем один занимает только __T__, так как гипотетический тип __X\*__  является допустимым аргументом для __T__ аргумент шаблона, но __X__ не является допустимым аргументом для __T\*__  аргумент шаблона.
 
-     3. __const T__ является более специализированным, чем __T__, так как __const X__ является допустимым аргументом для __T__ аргумент шаблона, но __X__ не является допустимым аргументом для __const T__ аргумент шаблона.
+     3. __const T__ является более специализированным, чем __T__, так как __const X__ является допустимым аргументом для __T__ аргумент шаблона, но __X__ — не является допустимым аргументом для __const T__ аргумент шаблона.
 
      4. __const T\*__  является более специализированным, чем __T\*__, так как __const X\*__  является допустимым аргументом для __T\*__  аргумент шаблона, но __X\*__  не является допустимым аргументом для __const T\*__  аргумент шаблона.
 

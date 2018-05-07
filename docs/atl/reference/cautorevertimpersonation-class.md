@@ -2,11 +2,8 @@
 title: Класс CAutoRevertImpersonation | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoRevertImpersonation
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1982fc3c8b0d46dfd636cab63be82509fa07f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 942c446fc64bb7e4210bc82e21fc2511ae01503a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautorevertimpersonation-class"></a>Класс CAutoRevertImpersonation
 Этот класс возвращает [CAccessToken](../../atl/reference/caccesstoken-class.md) объектов nonimpersonating состояние, когда он покидает область действия.  
@@ -45,14 +40,14 @@ class CAutoRevertImpersonation
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Создает `CAutoRevertImpersonation` объекта|  
 |[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Удаляет объект и возвращается олицетворения маркера доступа.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAutoRevertImpersonation::Attach](#attach)|Автоматизирует возврате олицетворение маркера доступа.|  
 |[CAutoRevertImpersonation::Detach](#detach)|Отменяет изменения автоматического олицетворения.|  
@@ -68,7 +63,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
  Автоматизирует возврате олицетворение маркера доступа.  
   
 ```
@@ -82,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод следует использовать, только если [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) объект был создан со значением NULL `CAccessToken` указателя, или если [отсоединения](#detach) был вызван ранее. В простых случаях не требуется для использования этого метода.  
   
-##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
  Создает объект `CAutoRevertImpersonation`.  
   
 ```
@@ -96,7 +91,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Примечания  
  Фактический олицетворение маркера доступа следует выполнять отдельно от и лучше всего до создания `CAutoRevertImpersonation` объекта. Олицетворение будут отменены автоматически при `CAutoRevertImpersonation` объект выходит за пределы области.  
   
-##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  Удаляет объект и возвращается олицетворения маркера доступа.  
   
 ```
@@ -106,7 +101,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>Примечания  
  Возвращается в настоящее время действует для олицетворения [CAccessToken](../../atl/reference/caccesstoken-class.md) объект, предоставленный при создании или посредством [присоединение](#attach) метод. Если не `CAccessToken` имеет связанный, деструктор не оказывает влияния.  
   
-##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
  Отменяет изменения автоматического олицетворения.  
   
 ```
@@ -117,9 +112,9 @@ const CAccessToken* Detach() throw();
  Адрес ранее связанного [CAccessToken](../../atl/reference/caccesstoken-class.md), или значение NULL, если совпадения нет.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов **отсоединения** предотвращает `CAutoRevertImpersonation` объекта вернуть олицетворения, в настоящее время действует для [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта, связанного с данным объектом. `CAutoRevertImpersonation`Затем можно удалить с помощью не влияет или повторно связывать на том же или другом `CAccessToken` с помощью [присоединение](#attach).  
+ Вызов **отсоединения** предотвращает `CAutoRevertImpersonation` объекта вернуть олицетворения, в настоящее время действует для [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта, связанного с данным объектом. `CAutoRevertImpersonation` Затем можно удалить с помощью не влияет или повторно связывать на том же или другом `CAccessToken` с помощью [присоединение](#attach).  
   
-##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
  Извлекает текущий маркера доступа, связанный с данным объектом.  
   
 ```

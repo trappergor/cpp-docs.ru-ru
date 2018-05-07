@@ -1,29 +1,24 @@
 ---
-title: "-sdl (Включение дополнительные проверки безопасности) | Документы Microsoft"
-ms.custom: 
+title: -sdl (Включение дополнительные проверки безопасности) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 dev_langs:
 - C++
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbcb74272fa7cae3dd0c641bd6371c8f0f9c204
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa984b488f74043b8c90876047516ebca23d4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (включение дополнительных проверок безопасности)
 Добавляет рекомендуемые проверки жизненного цикла разработки безопасного ПО (SDL). Эти проверки отображают дополнительные, важные для безопасности предупреждения, такие как ошибки, и используют дополнительные возможности безопасного создания кода.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="compile-time-checks"></a>Проверки времени компиляции  
  **/ SDL** включает эти предупреждения как ошибки:  
   
-|Включаемые/sdl предупреждения|Эквивалентный параметр командной строки|Описание:|  
+|Включаемые/sdl предупреждения|Эквивалентный параметр командной строки|Описание|  
 |------------------------------|-------------------------------------|-----------------|  
 |[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|Унарный оператор "минус" был применен к беззнаковому типу, что приведет к получению результата без знака.|  
 |[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|Отрицательная целая константа преобразуется в беззнаковый тип, что, вероятно, приведет к получению бессмысленного результата.|  

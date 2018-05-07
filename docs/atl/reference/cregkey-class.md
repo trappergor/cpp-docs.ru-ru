@@ -1,12 +1,9 @@
 ---
-title: "Класс CRegKey | Документы Microsoft"
-ms.custom: 
+title: Класс CRegKey | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRegKey
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 Этот класс предоставляет методы для управления записей в системном реестре.  
@@ -79,14 +74,14 @@ class CRegKey
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRegKey::CRegKey](#cregkey)|Конструктор.|  
 |[CRegKey:: ~ CRegKey](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRegKey::Attach](#attach)|Этот метод вызывается для присоединения к HKEY `CRegKey` , задавая [m_hKey](#m_hkey) дескриптор элемента `hKey`.|  
 |[CRegKey::Close](#close)|Вызовите этот метод для освобождения [m_hKey](#m_hkey) член обработки и присвойте ему значение NULL.|  
@@ -119,22 +114,22 @@ class CRegKey
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRegKey::operator HKEY](#operator_hkey)|Преобразует `CRegKey` объект HKEY.|  
 |[CRegKey::operator =](#operator_eq)|Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRegKey::m_hKey](#m_hkey)|Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.|  
 |[CRegKey::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|  
   
 ## <a name="remarks"></a>Примечания  
- `CRegKey`Предоставляет методы для создания и удаления ключей и значений в системном реестре. Реестр содержит набор связанных с установкой определений для системных компонентов, таких как номера версий программного обеспечения, сопоставлений логических физических установленном оборудовании и COM-объектов.  
+ `CRegKey` Предоставляет методы для создания и удаления ключей и значений в системном реестре. Реестр содержит набор связанных с установкой определений для системных компонентов, таких как номера версий программного обеспечения, сопоставлений логических физических установленном оборудовании и COM-объектов.  
   
- `CRegKey`предоставляет интерфейс программирования для системного реестра для данного компьютера. Например, чтобы открыть определенного раздела реестра, вызовите `CRegKey::Open`. Чтобы получить или изменять значения данных, вызовите `CRegKey::QueryValue` или `CRegKey::SetValue`соответственно. Чтобы закрыть ключ, вызовите `CRegKey::Close`.  
+ `CRegKey` предоставляет интерфейс программирования для системного реестра для данного компьютера. Например, чтобы открыть определенного раздела реестра, вызовите `CRegKey::Open`. Чтобы получить или изменять значения данных, вызовите `CRegKey::QueryValue` или `CRegKey::SetValue`соответственно. Чтобы закрыть ключ, вызовите `CRegKey::Close`.  
   
  При закрытии ключа его данных реестра записывается (Сброс) на жесткий диск. Этот процесс может занять несколько секунд. Если приложение необходимо явно указать данные реестра на жестком диске, можно вызвать [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) функции Win32. Тем не менее **RegFlushKey** использует много системных ресурсов и должен вызываться только в случае крайней необходимости.  
   
@@ -144,7 +139,7 @@ class CRegKey
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>  CRegKey::Attach  
  Этот метод вызывается для присоединения к HKEY `CRegKey` , задавая [m_hKey](#m_hkey) дескриптор элемента `hKey`.  
   
 ```
@@ -158,7 +153,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>Примечания  
  **Присоединение** проверяет Если `m_hKey` отлично от NULL.  
   
-##  <a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>  CRegKey::Close  
  Вызовите этот метод для освобождения [m_hKey](#m_hkey) член обработки и присвойте ему значение NULL.  
   
 ```
@@ -168,7 +163,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успеха возвращает ERROR_SUCCESS; в противном случае возвращает значение ошибки.  
   
-##  <a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>  CRegKey::Create  
  Этот метод вызывается для создания указанным ключом, если он отсутствует в виде подраздела `hKeyParent`.  
   
 ```
@@ -210,7 +205,7 @@ LONG Create(
 ### <a name="remarks"></a>Примечания  
  **Создание** задает [m_hKey](#m_hkey) член для обработки этого ключа.  
   
-##  <a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>  CRegKey::CRegKey  
  Конструктор.  
   
 ```
@@ -233,7 +228,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Примечания  
  Создает новый объект `CRegKey`. Объект может быть создан из существующего `CRegKey` объекта, или из дескриптора для раздела реестра.  
   
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey  
+##  <a name="dtor"></a>  CRegKey:: ~ CRegKey  
  Деструктор  
   
 ```
@@ -243,7 +238,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор выпуски `m_hKey`.  
   
-##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  Этот метод используется для удаления указанного ключа из реестра.  
   
 ```
@@ -258,9 +253,9 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
  В случае успешного выполнения возвращает ERROR_SUCCESS. Если метод завершается ошибкой, возвращается код ошибки ненулевое значение, определенный в WINERROR. З.  
   
 ### <a name="remarks"></a>Примечания  
- `DeleteSubKey`можно удалить только ключ, который не имеет подразделов. Если раздел содержит подразделы, вызовите [RecurseDeleteKey](#recursedeletekey) вместо него.  
+ `DeleteSubKey` можно удалить только ключ, который не имеет подразделов. Если раздел содержит подразделы, вызовите [RecurseDeleteKey](#recursedeletekey) вместо него.  
   
-##  <a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
  Вызовите этот метод, чтобы удалить поле значение из [m_hKey](#m_hkey).  
   
 ```
@@ -274,7 +269,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения возвращает ERROR_SUCCESS. Если метод завершается ошибкой, возвращается код ошибки ненулевое значение, определенный в WINERROR. З.  
   
-##  <a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>  CRegKey::Detach  
  Этот метод вызывается для отсоединения [m_hKey](#m_hkey) дескриптор элемента из `CRegKey` и задайте `m_hKey` значение NULL.  
   
 ```
@@ -284,7 +279,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Раздел HKEY, КОТОРЫЙ сопоставлен `CRegKey` объекта.  
   
-##  <a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>  CRegKey::EnumKey  
  Вызовите этот метод, чтобы пронумеровать подключи открыть раздел реестра.  
   
 ```
@@ -314,7 +309,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>Примечания  
  Чтобы пронумеровать подключи, вызовите `CRegKey::EnumKey` с индекса 0. Увеличьте значение индекса и повторите, метод возвращает ERROR_NO_MORE_ITEMS. Дополнительные сведения см. в разделе [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) в Windows SDK.  
   
-##  <a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>  CRegKey::Flush  
  Этот метод используется для записи всех атрибутов открыть раздел реестра в реестр.  
   
 ```
@@ -327,7 +322,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) в Windows SDK.  
   
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  Этот метод используется для извлечения копии дескриптора безопасности, защищающий ключ открыть реестр.  
   
 ```
@@ -353,14 +348,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313).  
   
-##  <a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>  CRegKey::m_pTM  
  Указатель на `CAtlTransactionManager` объект.  
   
 ```
@@ -369,7 +364,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
  Этот метод уведомляет вызывающий объект о внесении изменений в атрибуты или содержимое открыть раздел реестра.  
   
 ```
@@ -410,7 +405,7 @@ LONG NotifyChangeKeyValue(
   
  Дополнительные сведения и пример программы см. в разделе [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892).  
   
-##  <a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>  CRegKey::Open  
  Вызовите этот метод, чтобы открыть указанный ключ и задать [m_hKey](#m_hkey) для обработки этого ключа.  
   
 ```
@@ -438,14 +433,14 @@ LONG Open(
   
  В отличие от [CRegKey::Create](#create), **откройте** не создает указанным ключом, если он не существует.  
   
-##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  Преобразует `CRegKey` объект HKEY.  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>  CRegKey::operator =  
  Оператор присвоения.  
   
 ```
@@ -462,7 +457,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>Примечания  
  Этот оператор отсоединяет `key` из его текущего объекта и присваивает его `CRegKey` вместо этого объекта.  
   
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  Вызовите этот метод, чтобы получить двоичные данные для имени указанного значения.  
   
 ```
@@ -491,7 +486,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывать строки, которые являются нулем. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  Этот метод вызывается для получения данных DWORD для имени указанного значения.  
   
 ```
@@ -516,7 +511,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывать строки, которые являются нулем. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  Этот метод вызывается для получения данных для имени указанного значения GUID.  
   
 ```
@@ -541,7 +536,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным.  
   
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  Этот метод используется для получения данных, состоящее из нескольких строк для имени указанного значения.  
   
 ```
@@ -570,7 +565,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывать строки, которые являются нулем. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  Этот метод вызывается для получения данных QWORD для имени указанного значения.  
   
 ```
@@ -595,7 +590,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывать строки, которые являются нулем. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  Этот метод используется для извлечения строковых данных для имени указанного значения.  
   
 ```
@@ -624,7 +619,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) функция, используемая этим методом явно не обрабатывать строки, которые являются нулем. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  Этот метод вызывается для получения данных для указанного значения поля [m_hKey](#m_hkey). Более ранние версии этот метод больше не поддерживаются и помечаются как **ATL_DEPRECATED**.  
   
 ```
@@ -680,7 +675,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  Этот метод позволяет вызывающему объекту указать любое расположение реестра, возможно чтение данных, которое не может быть доверенным. Кроме того, функция RegQueryValueEx, используемая этим методом не обрабатывает явно строк, являющихся `NULL` завершен. Оба условия должны проверяться вызывающим кодом.  
   
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
  Этот метод используется для удаления указанного ключа из реестра и явным образом удалить все разделы.  
   
 ```
@@ -697,7 +692,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>Примечания  
  Если раздел содержит подразделы, необходимо вызвать этот метод, чтобы удалить ключ.  
   
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
  Вызовите этот метод, чтобы задать двоичное значение раздела реестра.  
   
 ```
@@ -723,7 +718,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>Примечания  
  Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
   
-##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  Этот метод используется для задания значения реестра DWORD.  
   
 ```
@@ -743,7 +738,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
   
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  Этот метод используется для задания значения GUID раздела реестра.  
   
 ```
@@ -763,7 +758,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод использует `CRegKey::SetStringValue` и преобразует GUID в строку с помощью [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893).  
   
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  Этот метод используется для хранения данных в поле указанное значение указанного ключа.  
   
 ```
@@ -789,7 +784,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается для создания или открытия `lpszKeyName` ключа и сохранения `lpszValue` данные в `lpszValueName` значение поля.  
   
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
  Этот метод используется для настройки безопасности раздела реестра.  
   
 ```
@@ -816,7 +811,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>Примечания  
  Задает атрибуты ключа безопасности. В разделе [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) для получения дополнительных сведений.  
   
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  Вызовите этот метод, чтобы задать значение, состоящее из нескольких строк раздела реестра.  
   
 ```
@@ -836,7 +831,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
   
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  Этот метод используется для задания значения реестра QWORD.  
   
 ```
@@ -856,7 +851,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) для записи значения в реестр.  
   
-##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  Вызовите этот метод, чтобы задать строковое значение реестра.  
   
 ```
@@ -882,7 +877,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>Примечания  
  Этот метод использует [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) для записи значения в реестр.  
   
-##  <a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>  CRegKey::SetValue  
  Этот метод вызывается для хранения данных в поле указанного значения [m_hKey](#m_hkey). Более ранние версии этот метод больше не поддерживаются и помечаются как **ATL_DEPRECATED**.  
   
 ```

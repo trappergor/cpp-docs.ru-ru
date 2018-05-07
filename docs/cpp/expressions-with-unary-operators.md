@@ -1,12 +1,9 @@
 ---
-title: "Выражения с унарными операторами | Документы Microsoft"
-ms.custom: 
+title: Выражения с унарными операторами | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>Выражения с унарными операторами
 Унарные операторы действуют только на один операнд в выражении. Ниже приводится список унарных операторов:  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [оператор __alignof](../cpp/alignof-operator.md)  
   
--   [оператор New](../cpp/new-operator-cpp.md)  
+-   [Оператор New](../cpp/new-operator-cpp.md)  
   
 -   [оператор delete](../cpp/delete-operator-cpp.md)  
   
@@ -64,17 +59,17 @@ ms.lasthandoff: 12/21/2017
   
 -   *postfix-expression*  
   
--   `++`*унарное выражение*  
+-   `++` *Унарное выражение*  
   
--   `--`*унарное выражение*  
+-   `--` *Унарное выражение*  
   
 -   *унарный оператор* *выражение приведения*  
   
--   `sizeof`*унарное выражение*  
+-   `sizeof` *Унарное выражение*  
   
--   `sizeof(`*имя типа*`)`  
+-   `sizeof(` *Имя типа* `)`  
   
--   `decltype(`*выражение*`)`  
+-   `decltype(` *Выражение* `)`  
   
 -   *выражение выделения*  
   
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  Любой *Постфиксное выражение* считается *унарное выражение*, а потому, что любой основное выражение считается *Постфиксное выражение*, — все первичные выражения считается *унарное выражение* также. Дополнительные сведения см. в разделе [постфиксные выражения](../cpp/postfix-expressions.md) и [первичные выражения](../cpp/primary-expressions.md).  
   
- Объект *унарный оператор* состоит из одной или нескольких из следующих символов:`* & + - ! ~`  
+ Объект *унарный оператор* состоит из одной или нескольких из следующих символов: `* & + - ! ~`  
   
  *Выражение приведения* является унарное выражение с необязательным приведения, чтобы изменить тип. Дополнительные сведения см. [оператор Cast: ()](../cpp/cast-operator-parens.md).  
   

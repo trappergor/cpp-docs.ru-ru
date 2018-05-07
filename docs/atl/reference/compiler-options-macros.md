@@ -1,12 +1,9 @@
 ---
-title: "Параметры компилятора макросы | Документы Microsoft"
-ms.custom: 
+title: Параметры компилятора макросы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-macros"></a>Параметры компилятора, макросы
 Эти макросы управления функциями определенного компилятора.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |[ATL_NOINLINE](#atl_noinline)|Символ, указывающий функцию, не должен быть встроен.|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Определите, если все объекты используют один потоковую модель.|  
   
-##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
  Символ, который включает ошибки в проектах, преобразованные из предыдущих версий библиотеки ATL.  
   
 ```
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  Новые проекты имеют это `#define` по умолчанию значение в файле stdafx.h.  
   
-##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED  
  Если один или несколько объектов использовать потоковое определите.  
   
 ```
@@ -98,7 +93,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>Примечания  
  Указывает потоковое. В разделе [указание потоковой модели проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для других потоков "Параметры", и [параметры, мастер простых объектов ATL](../../atl/reference/options-atl-simple-object-wizard.md) моделей для объекта ATL описание работы с потоками.  
   
-##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  Гарантирует `CString` конструкторы явных, предотвращая любые непреднамеренного преобразования.  
   
 ```
@@ -110,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  С помощью макрос _T на все строковые аргументы конструктора, можно определить _ATL_CSTRING_EXPLICIT_CONSTRUCTORS и избежать ошибок компиляции, независимо от того, определен ли _UNICODE.  
   
-##  <a name="_atl_enable_ptm_warning"></a>ТАКЖЕ БИБЛИОТЕКАХ  
+##  <a name="_atl_enable_ptm_warning"></a>  ТАКЖЕ БИБЛИОТЕКАХ  
  Чтобы принудительно использовать синтаксис совместимый стандарт ANSI C++ для указателей на функции-члены определите этот макрос. С помощью этого макроса вызовет ошибку компилятора C4867 стеком нестандартный синтаксис, используемый для инициализации указателя на функцию-член.  
   
 ```
@@ -132,7 +127,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  Обратите внимание, что карты макросов, добавьте символ «&», не следует добавлять его снова в коде.  
   
-##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED  
  Определите, если один или несколько объектов используйте свободные или нейтральной работа с потоками.  
   
 ```
@@ -142,7 +137,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>Примечания  
  Указывает свободной потоковой модели. Свободной потоковой модели соответствует модели многопотокового подразделения. В разделе [указание потоковой модели проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для других потоков "Параметры", и [параметры, мастер простых объектов ATL](../../atl/reference/options-atl-simple-object-wizard.md) моделей для объекта ATL описание работы с потоками.  
   
-##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
  Символ, указывающий проект будет объектов, помеченных как одновременно бесплатный "или" Neutral.  
   
 ```
@@ -152,7 +147,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>Примечания  
  Если этот символ определен, ATL будет получать в коде, который будет правильно синхронизировать доступ к глобальным данным. Новый код должен использовать эквивалентные макрос [_ATL_FREE_THREADED](#_atl_free_threaded) вместо него.  
   
-##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
  Символ, который предотвращает использование пространства имен по умолчанию как ATL.  
   
 ```
@@ -162,7 +157,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>Примечания  
  Если этот символ не определен, включая atlbase.h выполнит **с использованием пространства имен ATL** по умолчанию, что может привести к конфликты имен. Чтобы избежать этого, определите этот символ.  
   
-##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
  Символ, запрещающую COM относящихся к коду, компилируемого с проектом.  
   
 ```

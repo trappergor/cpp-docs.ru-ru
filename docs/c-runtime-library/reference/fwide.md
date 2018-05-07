@@ -1,12 +1,9 @@
 ---
-title: "fwide | Документы Майкрософт"
-ms.custom: 
+title: fwide | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fwide
@@ -29,47 +26,49 @@ dev_langs:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e38bce95a26bd8b128a048768870c63f7de9da9f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fd52c450e2eb34c40d44d00a76550c401abcb6c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fwide"></a>fwide
-Не реализовано.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int fwide(  
-   FILE *stream,  
-   int mode;  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE` (игнорируется).  
-  
- `mode`  
- Новая ширина потока: положительное значение для расширенных символов, отрицательное для байта, ноль, чтобы оставить без изменений. (Это значение игнорируется.)  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Эта функция в настоящее время просто возвращает `mode`.  
-  
-## <a name="remarks"></a>Примечания  
- Текущая версия этой функции не соответствует стандарту.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`fwide`|\<wchar.h>|  
-  
- Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+Не реализовано.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int fwide(
+   FILE *stream,
+   int mode;
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на **ФАЙЛ** структуры (пропускается).
+
+*mode*<br/>
+Новая ширина потока: положительное значение для расширенных символов, отрицательное для байта, ноль, чтобы оставить без изменений. (Это значение игнорируется.)
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Эта функция в настоящее время только возвращает *режим*.
+
+## <a name="remarks"></a>Примечания
+
+Текущая версия этой функции не соответствует стандарту.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**fwide**|\<wchar.h>|
+
+Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).

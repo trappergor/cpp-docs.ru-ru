@@ -1,12 +1,9 @@
 ---
-title: "nan, nanf, nanl | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: nan, nanf, nanl | Документы Майкрософт
+ms.custom: ''
+ms.date: 94/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - nanf
@@ -36,53 +33,50 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba2620b43199788cfbcc237bc09a2cd112035
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
-Возвращает несигнальное значение NaN (QNaN).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double nan(  
-   const char* input   
-);  
-float nanf(  
-   const char* input   
-);  
-long double nanl(  
-   const char* input   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `input`  
- Строковое значение.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функции `nan` возвращают несигнальное значение NaN (QNaN).  
-  
-## <a name="remarks"></a>Примечания  
- Функции `nan` возвращают значение с плавающей запятой, которое соответствует несигнальному значению NaN (QNaN). Значение параметра `input` игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Заголовок C|Заголовок C++|  
-|--------------|--------------|------------------|  
-|`nan`, `nanf`, `nanl`|\<math.h>|\<cmath>|  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)   
- [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+
+Возвращает несигнальное значение NaN (QNaN).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double nan( const char* input );
+float nanf( const char* input );
+long double nanl( const char* input );
+```
+
+### <a name="parameters"></a>Параметры
+
+*Входные данные*<br/>
+Строковое значение.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**Nan** функции возвращают несигнальное значение NaN.
+
+## <a name="remarks"></a>Примечания
+
+**Nan** функции возвращают значение с плавающей запятой, соответствующий NaN (не сигналов) скрытый. *Ввода* значение игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Заголовок C|Заголовок C++|
+|--------------|--------------|------------------|
+|**NaN**, **nanf**, **nanl**|\<math.h>|\<cmath> или \<math.h>|
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite, _finitef](finite-finitef.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

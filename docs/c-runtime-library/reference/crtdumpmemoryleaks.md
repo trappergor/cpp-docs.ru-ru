@@ -1,12 +1,9 @@
 ---
-title: "_CrtDumpMemoryLeaks | Документы Microsoft"
-ms.custom: 
+title: _CrtDumpMemoryLeaks | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
@@ -39,55 +36,59 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f71e37da509d4e8dd05c5a41afa9fe539294347
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 68a187283eedadcd2f435b0900fde648a5010368
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
-Сбрасывает все блоки памяти в отладочной куче в случае утечки памяти (только в отладочной версии).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-int _CrtDumpMemoryLeaks( void );  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Если утечка памяти обнаружена, `_CrtDumpMemoryLeaks` возвращает значение TRUE. В противном случае функция возвращает значение FALSE.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_CrtDumpMemoryLeaks` определяет, произошла ли утечка памяти после начала выполнения программы. При обнаружении утечки данные заголовка отладки для всех объектов в куче записываются в форме, которую пользователь может прочитать. Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtDumpMemoryLeaks` удаляются на этапе предварительной обработки.  
-  
- Функция `_CrtDumpMemoryLeaks` часто вызывается в конце выполнения программы, чтобы проверить, освобождена ли вся выделенная приложением память. При прерывании работы программы эта функция может вызываться автоматически. Для этого необходимо включить битовое поле `_CRTDBG_LEAK_CHECK_DF` флага [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) с помощью функции [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md).  
-  
- `_CrtDumpMemoryLeaks` вызывает [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) для получения текущего состояния кучи, а затем проверяет состояние блоков, которые не были освобождены. Обнаружив не освобожденный блок, `_CrtDumpMemoryLeaks` вызывает функцию [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) для записи сведений обо всех объектах, выделенных в куче с начала выполнения программы.  
-  
- По умолчанию внутренние блоки среды выполнения C (`_CRT_BLOCK`) в операции с дампом памяти не включаются. Функцию [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) можно использовать для включения бита `_CRTDBG_CHECK_CRT_DF` флага `_crtDbgFlag` и включения этих блоков в процесс обнаружения утечек.  
-  
- Дополнительные сведения о функциях управления состоянием кучи и структуре `_CrtMemState` см. в статье [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_CrtDumpMemoryLeaks`|\<crtdbg.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="libraries"></a>Библиотеки  
- Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Пример  
- Пример использования `_CrtDumpMemoryLeaks` см. в описании [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).  
-  
-## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)
+
+Сбрасывает все блоки памяти в отладочной куче в случае утечки памяти (только в отладочной версии).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+int _CrtDumpMemoryLeaks( void );
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_CrtDumpMemoryLeaks** возвращает значение TRUE, если найден утечки памяти. В противном случае функция возвращает значение FALSE.
+
+## <a name="remarks"></a>Примечания
+
+**_CrtDumpMemoryLeaks** функция определяет, произошла ли утечка памяти с начала выполнения программы. При обнаружении утечки данные заголовка отладки для всех объектов в куче записываются в форме, которую пользователь может прочитать. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtDumpMemoryLeaks** удаляются на этапе предварительной обработки.
+
+**_CrtDumpMemoryLeaks** часто вызывается в конце выполнения программы, чтобы убедиться, что всей памяти, выделенной для приложения, был освобожден. Функция может вызываться автоматически при завершении программы, включив **_CRTDBG_LEAK_CHECK_DF** битовое поле [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) флаг с помощью [_CrtSetDbgFlag](crtsetdbgflag.md)функции.
+
+**_CrtDumpMemoryLeaks** вызовы [_CrtMemCheckpoint](crtmemcheckpoint.md) для получения текущего состояния кучи и проверяет состояние для блоков, которые не были освобождены. При появлении блок занятых **_CrtDumpMemoryLeaks** вызовы [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) данные дампа для всех объектов, помещенных в кучу с начала выполнения программы.
+
+По умолчанию внутренние блоки времени выполнения C (**_CRT_BLOCK**) не включаются в операции дампа памяти. [_CrtSetDbgFlag](crtsetdbgflag.md) функцию можно использовать для включения **_CRTDBG_CHECK_CRT_DF** бита **_crtDbgFlag** для учета этих блоков в процессе такого обнаружения утечки.
+
+Дополнительные сведения о функциях состояния кучи и **_CrtMemState** структуры см. в разделе [функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_CrtDumpMemoryLeaks**|\<crtdbg.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Пример
+
+Пример использования **_CrtDumpMemoryLeaks**, в разделе [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1).
+
+## <a name="see-also"></a>См. также
+
+[Процедуры отладки](../../c-runtime-library/debug-routines.md)<br/>

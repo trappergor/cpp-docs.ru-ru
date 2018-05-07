@@ -1,12 +1,9 @@
 ---
-title: "_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Документы Майкрософт"
-ms.custom: 
+title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _mbsnbcnt_l
@@ -59,132 +56,135 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc69e67058e782bd3ce43b835497dab756347a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-Возвращает число символов или байтов в пределах указанного количества.  
-  
+
+Возвращает число символов или байтов в пределах указанного количества.
+
 > [!IMPORTANT]
->  `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt` и `_mbsnccnt_l` нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-size_t _strncnt(  
-   const char *str,  
-   size_t count  
-);  
-size_t _wcsncnt(  
-   const wchar_t *str,  
-   size_t count  
-);  
-size_t _mbsnbcnt(  
-   const unsigned char *str,  
-   size_t count   
-);  
-size_t _mbsnbcnt_l(  
-   const unsigned char *str,  
-   size_t count,  
-   _locale_t locale  
-);  
-size_t _mbsnccnt(  
-   const unsigned char *str,  
-   size_t count  
-);  
-size_t _mbsnccnt_l(  
-   const unsigned char *str,  
-   size_t count,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `str`  
- Строка, которую необходимо проверить.  
-  
- `count`  
- Число символов или байтов, которые нужно проверить в `str`.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `_mbsnbcnt` и `_mbsnbcnt_l` возвращают число байтов, найденных в первой части `count` многобайтовых символов в `str`. `_mbsnccnt` и `_mbsnccnt_l` возвращают число символов, найденных в первой части `count` байтов в `str`. Если перед завершением анализа `str` обнаруживается символ NULL, они возвращают число байтов или символов, найденных перед символом NULL. Если `str` состоит менее чем из `count` символов или байтов, они возвращают число символов или байтов в строке. Если `count` меньше нуля, они возвращают 0. В предыдущих версиях эти функции имели возвращаемое значение типа `int`, а не `size_t`.  
-  
- `_strncnt` возвращает количество символов в первых `count` байтах однобайтовой строки `str`. `_wcsncnt` возвращает количество символов в первых `count` расширенных символах строки расширенных символов `str`.  
-  
-## <a name="remarks"></a>Примечания  
- `_mbsnbcnt` и `_mbsnbcnt_l` подсчитывают число байтов, найденных в первой части `count` многобайтовых символов в `str`. `_mbsnbcnt` и `_mbsnbcnt_l` заменяют `mtob` и должны использоваться вместо `mtob`.  
-  
- `_mbsnccnt` и `_mbsnccnt_l` подсчитывают число символов, найденных в первой части `count` байтов в `str`. Если `_mbsnccnt` и `_mbsnccnt_l` обнаруживают NULL во втором байте двухбайтового символа, первый байт также воспринимается как NULL и не включается в возвращаемое значение счетчика. `_mbsnccnt` и `_mbsnccnt_l` заменяют `btom` и должны использоваться вместо `btom`.  
-  
- Если `str` является пустым указателем или `count` равен 0, эти функции вызывают обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md), для `errno` устанавливается значение `EINVAL`, а функция возвращает 0.  
-  
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|-------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
-|`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
-|`_wcsncnt`|`n/a`|`n/a`|`_mbsnbcnt`|  
-|`_wcsncnt`|`n/a`|`n/a`|`_mbsnccnt`|  
-|`n/a`|`n/a`|`_mbsnbcnt_l`|`_mbsnccnt_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_mbsnbcnt`|\<mbstring.h>|  
-|`_mbsnbcnt_l`|\<mbstring.h>|  
-|`_mbsnccnt`|\<mbstring.h>|  
-|`_mbsnccnt_l`|\<mbstring.h>|  
-|`_strncnt`|\<tchar.h>|  
-|`_wcsncnt`|\<tchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_mbsnbcnt.c  
-  
-#include  <mbstring.h>  
-#include  <stdio.h>  
-  
-int main( void )  
-{  
-   unsigned char str[] = "This is a multibyte-character string.";  
-   unsigned int char_count, byte_count;  
-   char_count = _mbsnccnt( str, 10 );  
-   byte_count = _mbsnbcnt( str, 10 );  
-   if ( byte_count - char_count )  
-      printf( "The first 10 characters contain %d multibyte characters\n", char_count );  
-   else  
-      printf( "The first 10 characters are single-byte.\n");  
-}  
-```  
-  
-## <a name="output"></a>Вывод  
-  
-```  
-The first 10 characters are single-byte.  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [Языковой стандарт](../../c-runtime-library/locale.md)   
- [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**, и **_mbsnccnt_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+size_t _strncnt(
+   const char *str,
+   size_t count
+);
+size_t _wcsncnt(
+   const wchar_t *str,
+   size_t count
+);
+size_t _mbsnbcnt(
+   const unsigned char *str,
+   size_t count
+);
+size_t _mbsnbcnt_l(
+   const unsigned char *str,
+   size_t count,
+   _locale_t locale
+);
+size_t _mbsnccnt(
+   const unsigned char *str,
+   size_t count
+);
+size_t _mbsnccnt_l(
+   const unsigned char *str,
+   size_t count,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>Параметры
+
+*str*<br/>
+Строка, которую необходимо проверить.
+
+*count*<br/>
+Число символов или байтов, которые необходимо проанализировать в *str*.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_mbsnbcnt** и **_mbsnbcnt_l** возвращают число байтов найден в первом *число* многобайтовых символов из *str*. **_mbsnccnt** и **_mbsnccnt_l** возвращают количество символов, найден в первом *число* байтов *str*. Если обнаружен символ NULL перед изменением *str* имеет завершена, они возвращают число байт или символов, найдены перед символом NULL. Если *str* состоит из не более чем *число* символов или байтов, они возвращают число символов или байтов в строку. Если *число* меньше нуля, они возвращают 0. В предыдущих версиях эти функции было возвращаемым значением типа **int** вместо **size_t**.
+
+**_strncnt** возвращает число знаков в первом *число* байт строки однобайтовых *str*. **_wcsncnt** возвращает число знаков в первом *число* расширенных символов строки расширенных символов *str*.
+
+## <a name="remarks"></a>Примечания
+
+**_mbsnbcnt** и **_mbsnbcnt_l** определения числа байтов найден в первом *число* многобайтовых символов из *str*. **_mbsnbcnt** и **_mbsnbcnt_l** заменить **mtob** и должны использоваться вместо **mtob**.
+
+**_mbsnccnt** и **_mbsnccnt_l** число символы, входящие в первом *число* байтов *str*. Если **_mbsnccnt** и **_mbsnccnt_l** возникает NULL во второй байт двухбайтовых символов, первый байт также считается равным NULL и не включается в возвращаемое значение. **_mbsnccnt** и **_mbsnccnt_l** заменить **btom** и должны использоваться вместо **btom**.
+
+Если *str* является пустым указателем или *число* равно 0, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), **errno** равно **EINVAL**, и функция возвращает значение 0.
+
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|-------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|Н/Д|
+|**_wcsncnt**|Н/Д|Н/Д|**_mbsnbcnt**|
+|**_wcsncnt**|Н/Д|Н/Д|**_mbsnccnt**|
+|Н/Д|Н/Д|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_mbsnbcnt**|\<mbstring.h>|
+|**_mbsnbcnt_l**|\<mbstring.h>|
+|**_mbsnccnt**|\<mbstring.h>|
+|**_mbsnccnt_l**|\<mbstring.h>|
+|**_strncnt**|\<tchar.h>|
+|**_wcsncnt**|\<tchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_mbsnbcnt.c
+
+#include  <mbstring.h>
+#include  <stdio.h>
+
+int main( void )
+{
+   unsigned char str[] = "This is a multibyte-character string.";
+   unsigned int char_count, byte_count;
+   char_count = _mbsnccnt( str, 10 );
+   byte_count = _mbsnbcnt( str, 10 );
+   if ( byte_count - char_count )
+      printf( "The first 10 characters contain %d multibyte characters\n", char_count );
+   else
+      printf( "The first 10 characters are single-byte.\n");
+}
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+The first 10 characters are single-byte.
+```
+
+## <a name="see-also"></a>См. также
+
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

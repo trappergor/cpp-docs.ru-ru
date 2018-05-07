@@ -1,12 +1,9 @@
 ---
-title: "Единый наследования | Документы Microsoft"
-ms.custom: 
+title: Единый наследования | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003e407edfd50440a2bbeaf483c2fba94d178b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="single-inheritance"></a>Одиночное наследование
 При единичном наследовании, самой распространенной форме наследования, каждый класс имеет только один базовый класс. Рассмотрим пример взаимоотношений на следующем рисунке.  
   
- ![Основные один &#45; граф наследования](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![Основные одним&#45;граф наследования](../cpp/media/vc38xj1.gif "vc38XJ1")  
 Граф простого одиночного наследования  
   
  Обратите внимание на переход от общего к конкретному на этом рисунке. В структуре большинства иерархий классов заметна еще одна общая особенность: каждый производный класс является разновидностью базового класса. На этом рисунке видно, что класс `Book` является разновидностью класса `PrintedDocument`, а `PaperbackBook` — разновидностью класса `book`.  
@@ -155,8 +150,10 @@ class PaperbackBook : public Document {};
   
 int main() {  
    Document * DocLib[10];   // Library of ten documents.  
-   for (int i = 0 ; i < 10 ; i++)  
+   for (int i = 0 ; i < 5 ; i++)  
       DocLib[i] = new Document;  
+   for (int i = 5 ; i < 10 ; i++)  
+      DocLib[i] = new PaperbackBook;  
 }  
 ```  
   

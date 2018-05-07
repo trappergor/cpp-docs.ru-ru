@@ -1,12 +1,9 @@
 ---
-title: "chdir | Документы Майкрософт"
-ms.custom: 
+title: chdir | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - chdir
@@ -29,21 +26,19 @@ dev_langs:
 helpviewer_keywords:
 - chdir function
 ms.assetid: a65275a1-41e4-46be-83a5-167dfacb62a0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728562f3c84ff4c25eb60eec0704bb08c8c768b5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f16503ccf89def05f7c8800e4d33b1220b845d43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chdir"></a>chdir
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_chdir](../../c-runtime-library/reference/chdir-wchdir.md).
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_chdir](chdir-wchdir.md).
 
 > [!IMPORTANT]
-> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

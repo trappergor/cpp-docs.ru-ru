@@ -1,12 +1,9 @@
 ---
-title: "lseek | Документы Майкрософт"
-ms.custom: 
+title: lseek | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - lseek
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - lseek function
 ms.assetid: 137d7741-5c2e-443e-811a-6a01417fcae7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9119c98f5565cb2f9028db32ee9d771252d2843
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1c1c5dd9b15a20ed5ac1cf1be6a9ab6b4a552ec8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lseek"></a>lseek
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_lseek](../../c-runtime-library/reference/lseek-lseeki64.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_lseek](lseek-lseeki64.md).

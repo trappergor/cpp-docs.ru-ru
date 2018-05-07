@@ -1,12 +1,9 @@
 ---
-title: "memccpy | Документы Майкрософт"
-ms.custom: 
+title: memccpy | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - memccpy
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - memccpy function
 ms.assetid: e9951812-2b69-43e9-bbee-a0001bce4d80
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63375056660de5b30c84b4c4e8a949976d8e1d28
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7060ef8cfdd54604e6748477d09bcace6dda456
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memccpy"></a>memccpy
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_memccpy](../../c-runtime-library/reference/memccpy.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_memccpy](memccpy.md).

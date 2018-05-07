@@ -1,12 +1,9 @@
 ---
-title: "Приведение | Документы Microsoft"
-ms.custom: 
+title: Приведение | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting"></a>Приведение
 Если класс является производным от базового класса, содержащего виртуальные функции, то в языке C++ указатель на такой тип базового класса можно использовать для вызова реализаций виртуальных функций, находящихся в объекте производного класса. Класс, содержащий виртуальные функции, иногда называется "полиморфным".  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  Объект типа `C` может быть визуализирован, как показано на следующем рисунке.  
   
- ![Класс C с sub &#45; объекты B и A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![Класс C с sub&#45;объектов B и A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 Класс В с подобъектами Б и А  
   
  Для экземпляра класса `C` имеются подчиненный объект `B` и подчиненный объект `A`. Экземпляр `C`, содержащий подчиненные объекты `A` и `B`, является "полным объектом".  

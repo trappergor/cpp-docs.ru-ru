@@ -1,34 +1,29 @@
 ---
-title: "Настройка программ для Windows XP | Документы Microsoft"
-ms.custom: 
+title: Настройка программ для Windows XP | Документы Microsoft
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Настройка программ для Windows XP
 
 Поскольку Visual Studio поддерживает несколько наборы инструментов платформы, можно ориентироваться на операционные системы и библиотек времени выполнения, которые не поддерживаются набором инструментов по умолчанию. Например, путем переключения набора инструментов платформы, можно использовать C ++ 11, C ++ 14 и улучшения C ++ 17 языков, поддерживаемых компилятором Visual C++ в Visual Studio для создания приложений, ориентированных на [!INCLUDE[winxp](../build/includes/winxp_md.md)] и [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Можно также использовать более старых наборов инструментов платформы для обслуживания совместимых устаревшего кода и пользуясь при этом последними возможностями интегрированной среды разработки Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Установить набор инструментов платформы Windows XP
-Чтобы получить набор инструментов платформы и компоненты для целевой [!INCLUDE[winxp](../build/includes/winxp_md.md)] и [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] в Visual Studio 2017 г., запустите установщик Visual Studio. При первоначальной установке Visual Studio или при выборе **изменить** для изменения существующей установки, убедитесь, что **разработки настольных приложений с помощью C++** выбран рабочей нагрузки. В списке дополнительных компонентов для этой рабочей нагрузки, выберите **поддержки Windows XP для C++**и нажмите кнопку **установить** или **изменить**.
+Чтобы получить набор инструментов платформы и компоненты для целевой [!INCLUDE[winxp](../build/includes/winxp_md.md)] и [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] в Visual Studio 2017 г., запустите установщик Visual Studio. При первоначальной установке Visual Studio или при выборе **изменить** для изменения существующей установки, убедитесь, что **разработки настольных приложений с помощью C++** выбран рабочей нагрузки. В списке дополнительных компонентов для этой рабочей нагрузки, выберите **поддержки Windows XP для C++** и нажмите кнопку **установить** или **изменить**.
 
 ## <a name="windows-xp-targeting-experience"></a>Нацеливание на Windows XP
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/19/2018
 
 Эти библиотеки поддерживаются наборы инструментов платформы, установленным в Visual Studio, в зависимости от целевой объект:
 
-|Библиотека|Набор инструментов платформы по умолчанию для классических приложений Windows|По умолчанию приложения магазина целевой набор инструментов платформы|Набор инструментов платформы Windows XP для [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|Библиотека|Набор инструментов платформы по умолчанию для классических приложений Windows|По умолчанию приложения магазина целевой набор инструментов платформы|Набор инструментов платформы Windows XP для [!INCLUDE[winxp](../build/includes/winxp_md.md)] и [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
 |---|---|---|---|
 |CRT - библиотека|X|X|X|
 |Стандартная библиотека C++|X|X|X|

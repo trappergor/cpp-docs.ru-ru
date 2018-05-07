@@ -1,12 +1,9 @@
 ---
-title: "_splitpath_s, _wsplitpath_s | Документы Майкрософт"
-ms.custom: 
+title: _splitpath_s, _wsplitpath_s | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _wsplitpath_s
@@ -39,155 +36,159 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baa71ca1a3d624c08df8ff1cbd14a9386e1b83d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5fd1407aa6c2b7630e0720eeec179ca27e7d31a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
-Разбивает имя пути на компоненты. Это версии функции [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-errno_t _splitpath_s(  
-   const char * path,  
-   char * drive,  
-   size_t driveNumberOfElements,  
-   char * dir,  
-   size_t dirNumberOfElements,  
-   char * fname,  
-   size_t nameNumberOfElements,  
-   char * ext,   
-   size_t extNumberOfElements  
-);  
-errno_t _wsplitpath_s(  
-   const wchar_t * path,  
-   wchar_t * drive,  
-   size_t driveNumberOfElements,  
-   wchar_t *dir,  
-   size_t dirNumberOfElements,  
-   wchar_t * fname,  
-   size_t nameNumberOfElements,  
-   wchar_t * ext,  
-   size_t extNumberOfElements  
-);  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _splitpath_s(  
-   const char *path,  
-   char (&drive)[drivesize],  
-   char (&dir)[dirsize],  
-   char (&fname)[fnamesize],  
-   char (&ext)[extsize]  
-); // C++ only  
-template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>  
-errno_t _wsplitpath_s(  
-   const wchar_t *path,  
-   wchar_t (&drive)[drivesize],  
-   wchar_t (&dir)[dirsize],  
-   wchar_t (&fname)[fnamesize],  
-   wchar_t (&ext)[extsize]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] `path`  
- Полный путь.  
-  
- [выходной] `drive`  
- Буква диска с двоеточием в конце (`:`). Если буква диска не требуется, для этого параметра можно передать значение `NULL`.  
-  
- [in] `driveNumberOfElements`  
- Размер буфера `drive` в однобайтовых или расширенных символах. Если параметр `drive` имеет значение `NULL`, это значение должно быть 0.  
-  
- [выходной] `dir`  
- Путь к каталогу, включая заключительную косую черту. Могут использоваться символы косой черты (`/`), обратной косой черты (`\`) или оба. Если путь к каталогу не требуется, для этого параметра можно передать значение `NULL`.  
-  
- [in] `dirNumberOfElements`  
- Размер буфера `dir` в однобайтовых или расширенных символах. Если параметр `dir` имеет значение `NULL`, это значение должно быть 0.  
-  
- [выходной] `fname`  
- Базовое имя файла (без расширения). Если имя файла не требуется, для этого параметра можно передать значение `NULL`.  
-  
- [in] `nameNumberOfElements`  
- Размер буфера `fname` в однобайтовых или расширенных символах. Если параметр `fname` имеет значение `NULL`, это значение должно быть 0.  
-  
- [выходной] `ext`  
- Расширение имени файла, включая ведущую точку (**.**). Если расширение имени файла не требуется, для данного параметра можно передать значение `NULL`.  
-  
- [in] `extNumberOfElements`  
- Размер буфера `ext` в однобайтовых или расширенных символах. Если параметр `ext` имеет значение `NULL`, это значение должно быть 0.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
-  
-### <a name="error-conditions"></a>Условия ошибок  
-  
-|Условие|Возвращаемое значение|  
-|---------------|------------------|  
-|`path` равно `NULL`|`EINVAL`|  
-|`drive` имеет значение `NULL`, `driveNumberOfElements` отличен от нуля|`EINVAL`|  
-|`drive` отличен от `NULL`, `driveNumberOfElements` равен нулю|`EINVAL`|  
-|`dir` имеет значение `NULL`, `dirNumberOfElements` отличен от нуля|`EINVAL`|  
-|`dir` отличен от `NULL`, `dirNumberOfElements` равен нулю|`EINVAL`|  
-|`fname` имеет значение `NULL`, `nameNumberOfElements` отличен от нуля|`EINVAL`|  
-|`fname` отличен от `NULL`, `nameNumberOfElements` равен нулю|`EINVAL`|  
-|`ext` имеет значение `NULL`, `extNumberOfElements` отличен от нуля|`EINVAL`|  
-|`ext` отличен от `NULL`, `extNumberOfElements` равен нулю|`EINVAL`|  
-  
- Если выполняется какое-либо из приведенных выше условий, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `EINVAL`.  
-  
- Если какой-либо из этих буферов слишком мал для хранения результата, эти функции очищают все буферы, присваивают им пустые строки, устанавливают для параметра `errno` значение `ERANGE` и возвращают `ERANGE`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_splitpath_s` разделяет путь на четыре компонента. Функция `_splitpath_s` автоматически требуемым образом обрабатывает аргументы в виде многобайтовых строк, распознавая многобайтовые последовательности символов в соответствии с текущей многобайтовой кодовой страницей. `_wsplitpath_s` — это двухбайтовая версия `_splitpath_s`; аргументы для `_wsplitpath_s` представляют собой двухбайтовые строки. В остальном эти функции ведут себя одинаково.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tsplitpath_s`|`_splitpath_s`|`_splitpath_s`|`_wsplitpath_s`|  
-  
- Каждый компонент полного пути сохраняется в отдельном буфере; константы манифеста `_MAX_DRIVE`, `_MAX_DIR`, `_MAX_FNAME` и `_MAX_EXT` (определены в файле STDLIB.H) определяют максимальный допустимый размер каждого компонента файла. Компоненты файла, размер которых превышает значения соответствующих констант манифеста, могут вызвать повреждение кучи.  
-  
- В приведенной ниже таблице перечислены значения констант манифеста.  
-  
-|name|Значение|  
-|----------|-----------|  
-|_MAX_DRIVE|3|  
-|_MAX_DIR|256|  
-|_MAX_FNAME|256|  
-|_MAX_EXT|256|  
-  
- Если полный путь не содержит некоторый компонент (например, имя файла), функция `_splitpath_s` присваивает соответствующему буферу пустую строку.  
-  
- В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_splitpath_s`|\<stdlib.h>|  
-|`_wsplitpath_s`|\<stdlib.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для [_makepath_s, _wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md).  
-  
-## <a name="see-also"></a>См. также  
- [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [_splitpath, _wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+
+Разбивает имя пути на компоненты. Это версии функции [_splitpath, _wsplitpath](splitpath-wsplitpath.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+errno_t _splitpath_s(
+   const char * path,
+   char * drive,
+   size_t driveNumberOfElements,
+   char * dir,
+   size_t dirNumberOfElements,
+   char * fname,
+   size_t nameNumberOfElements,
+   char * ext,
+   size_t extNumberOfElements
+);
+errno_t _wsplitpath_s(
+   const wchar_t * path,
+   wchar_t * drive,
+   size_t driveNumberOfElements,
+   wchar_t *dir,
+   size_t dirNumberOfElements,
+   wchar_t * fname,
+   size_t nameNumberOfElements,
+   wchar_t * ext,
+   size_t extNumberOfElements
+);
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _splitpath_s(
+   const char *path,
+   char (&drive)[drivesize],
+   char (&dir)[dirsize],
+   char (&fname)[fnamesize],
+   char (&ext)[extsize]
+); // C++ only
+template <size_t drivesize, size_t dirsize, size_t fnamesize, size_t extsize>
+errno_t _wsplitpath_s(
+   const wchar_t *path,
+   wchar_t (&drive)[drivesize],
+   wchar_t (&dir)[dirsize],
+   wchar_t (&fname)[fnamesize],
+   wchar_t (&ext)[extsize]
+); // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*path*<br/>
+Полный путь.
+
+*Диск*<br/>
+Буква, за которым следует двоеточие (**:**). Можно передать **NULL** для этого параметра, если буква диска не требуется.
+
+*driveNumberOfElements*<br/>
+Размер *диск* буфера в однобайтовых или расширенных символов. Если *диск* — **NULL**, это значение должно быть 0.
+
+*dir*<br/>
+Путь к каталогу, включая заключительную косую черту. Символ косой черты ( **/** ), обратной косой черты ( **\\** ), или оба могут быть использованы. Можно передать **NULL** для этого параметра, если не требуется путь к каталогу.
+
+*dirNumberOfElements*<br/>
+Размер *dir* буфера в однобайтовых или расширенных символов. Если *dir* — **NULL**, это значение должно быть 0.
+
+*fname*<br/>
+Базовое имя файла (без расширения). Можно передать **NULL** для этого параметра, если имя файла не требуется.
+
+*nameNumberOfElements*<br/>
+Размер *fname* буфера в однобайтовых или расширенных символов. Если *fname* — **NULL**, это значение должно быть 0.
+
+*Ext*<br/>
+Расширение имени файла, включая ведущую точку (**.**). Можно передать **NULL** для этого параметра, если расширение имени файла не требуется.
+
+*extNumberOfElements*<br/>
+Размер *ext* буфера в однобайтовых или расширенных символов. Если *ext* — **NULL**, это значение должно быть 0.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает нуль в случае успеха или код ошибки в случае неудачи.
+
+### <a name="error-conditions"></a>Условия ошибок
+
+|Условие|Возвращаемое значение|
+|---------------|------------------|
+|*путь* — **значение NULL**|**EINVAL**|
+|*диск* — **NULL**, *driveNumberOfElements* не равно нулю|**EINVAL**|
+|*диск* не является**NULL**, *driveNumberOfElements* равно нулю|**EINVAL**|
+|*dir* — **NULL**, *dirNumberOfElements* не равно нулю|**EINVAL**|
+|*dir* не является**NULL**, *dirNumberOfElements* равно нулю|**EINVAL**|
+|*fname* — **NULL**, *nameNumberOfElements* не равно нулю|**EINVAL**|
+|*fname* не является**NULL**, *nameNumberOfElements* равно нулю|**EINVAL**|
+|*ext* — **NULL**, *extNumberOfElements* не равно нулю|**EINVAL**|
+|*ext* не является**NULL**, *extNumberOfElements* равно нулю|**EINVAL**|
+
+Если выполняется какое-либо из приведенных выше условий, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают **EINVAL**.
+
+Если любой из буферов слишком мал для хранения результата, эти функции очищают все буферы пустые строки, задайте **errno** для **ERANGE**и возвращают **ERANGE**.
+
+## <a name="remarks"></a>Примечания
+
+**_Splitpath_s** функция разделяет путь на четыре компонента. **_splitpath_s** автоматически требуемым образом обрабатывает аргументы строки многобайтовых символов соответствующим образом, распознавая последовательности многобайтовых символов согласно многобайтовой кодовой страницей в настоящий момент. **_wsplitpath_s** — это двухбайтовая версия **_splitpath_s**; аргументы для **_wsplitpath_s** представляют собой строки расширенных символов. В остальном эти функции ведут себя одинаково.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
+
+Каждый компонент полного пути сохраняется в отдельном буфере; константы манифеста **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**, и **_MAX_EXT** (определенная в STDLIB. H) укажите максимально допустимый размер каждого компонента файла. Компоненты файла, размер которых превышает значения соответствующих констант манифеста, могут вызвать повреждение кучи.
+
+В приведенной ниже таблице перечислены значения констант манифеста.
+
+|name|Значение|
+|----------|-----------|
+|_MAX_DRIVE|3|
+|_MAX_DIR|256|
+|_MAX_FNAME|256|
+|_MAX_EXT|256|
+
+Если полный путь не содержит компонентов (например, имя файла), **_splitpath_s** присваивает соответствующему буферу пустую строку.
+
+В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_splitpath_s**|\<stdlib.h>|
+|**_wsplitpath_s**|\<stdlib.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
+
+## <a name="see-also"></a>См. также
+
+[Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
+[_splitpath, _wsplitpath](splitpath-wsplitpath.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_makepath, _wmakepath](makepath-wmakepath.md)<br/>
+[_setmbcp](setmbcp.md)<br/>

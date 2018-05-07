@@ -2,11 +2,8 @@
 title: Строковые и символьные литералы (C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: cede3ee6efb063141fc9ba7db58c6ec1dbcae845
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Строковые и символьные литералы (C++)
 В C++ поддерживаются различные типы строк и символов, а также доступны различные способы выражения значений литералов каждого из этих типов. В исходном коде содержимое символьных и строковых литералов выражается с помощью кодировки. Универсальные имена символов и escape-символы позволяют представить любую строку, используя только основную кодировку исходного кода. Необработанные строковые литералы позволяют не использовать escape-символы и могут применяться для выражения всех типов строковых литералов. Можно также создать литералы std::string без необходимости выполнять дополнительные действия по созданию или преобразованию.  

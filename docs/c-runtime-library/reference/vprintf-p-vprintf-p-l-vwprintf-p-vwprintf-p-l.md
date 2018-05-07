@@ -1,12 +1,9 @@
 ---
-title: "_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l | Документы Майкрософт"
-ms.custom: 
+title: _vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _vwprintf_p
@@ -53,97 +50,100 @@ helpviewer_keywords:
 - vwprintf_p_l function
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18dedf361b3b6c83eb0f4e1a746bc90ca01fbc1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bcbe8f653d173a3fec754cdd5db8aa958d2f25a5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
-Записывают форматированные выходные данные, используя указатель на список аргументов, и включает спецификацию порядка, в котором эти аргументы используются.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _vprintf_p(  
-   const char *format,  
-   va_list argptr   
-);  
-int _vprintf_p_l(  
-   const char *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-int _vwprintf_p(  
-   const wchar_t *format,  
-   va_list argptr   
-);  
-int _vwprintf_p_l(  
-   const wchar_t *format,  
-   locale_t locale,  
-   va_list argptr   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `format`  
- Спецификация формата.  
-  
- `argptr`  
- Указатель на список аргументов.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
- Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функции `_vprintf_p` и `_vwprintf_p` возвращают число записанных символов, не включая конечный нуль-символ, или отрицательное значение, если произошла ошибка вывода.  
-  
-## <a name="remarks"></a>Примечания  
- Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в `stdout`. Эти функции отличаются от `vprintf_s` и `vwprintf_s` только тем, что они поддерживают возможность указать порядок, в котором используются аргументы. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
-  
- Функция `_vwprintf_p` является версией функции `_vprintf_p` с расширенными символами; обе функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `_vprintf_p` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
-  
- Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
-  
+
+Записывают форматированные выходные данные, используя указатель на список аргументов, и включает спецификацию порядка, в котором эти аргументы используются.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _vprintf_p(
+   const char *format,
+   va_list argptr
+);
+int _vprintf_p_l(
+   const char *format,
+   locale_t locale,
+   va_list argptr
+);
+int _vwprintf_p(
+   const wchar_t *format,
+   va_list argptr
+);
+int _vwprintf_p_l(
+   const wchar_t *format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*format*<br/>
+Спецификация формата.
+
+*argptr*<br/>
+Указатель на список аргументов.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+Дополнительные сведения см. в разделе [Спецификации формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_vprintf_p** и **_vwprintf_p** возвращают количество записанных символов, не включая завершающий символ null или отрицательное значение, если возникает ошибка вывода.
+
+## <a name="remarks"></a>Примечания
+
+Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает заданных данных в **stdout**. Эти функции отличаются от **vprintf_s** и **vwprintf_s** только в том, что они поддерживают возможность определить порядок, в котором аргументы используются. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+
+**_vwprintf_p** — это двухбайтовая версия **_vprintf_p**; две функции ведут себя одинаково, если поток открыт в режиме ANSI. **_vprintf_p** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
+
+Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
+
 > [!IMPORTANT]
->  Убедитесь, что `format` не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- Если `format` является пустым указателем, или строка форматирования содержит недопустимые символы форматирования, то вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задают для `errno` значение `EINVAL`.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vtprintf_p`|`_vprintf_p`|`_vprintf_p`|`_vwprintf_p`|  
-|`_vtprintf_p_l`|`_vprintf_p_l`|`_vprintf_p_l`|`_vwprintf_p_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
-|-------------|---------------------|----------------------|  
-|`_vprintf_p`, `_vprintf_p_l`|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|  
-|`_vwprintf_p`, `_vwprintf_p_l`|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|  
-  
- \* Требуется для совместимости с UNIX V.  
-  
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, `stdin`, `stdout`, и `stderr`, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [Функции vprintf](../../c-runtime-library/vprintf-functions.md)   
- [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
- [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)   
- [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
- [_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](../../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)   
- [_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](../../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)   
- [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md)
+> Убедитесь, что *format* не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+Если *формат* является пустым указателем, или если строка форматирования содержит недопустимые символы форматирования, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
+|**_vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательные заголовки|
+|-------------|---------------------|----------------------|
+|**_vprintf_p**, **_vprintf_p_l**|\<stdio.h> и \<stdarg.h>|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> или \<wchar.h> и \<stdarg.h>|\<varargs.h>*|
+
+\* Требуется для совместимости с UNIX V.
+
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
+[_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
+[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>
+[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
+[vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)<br/>
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[_vfprintf_p, _vfprintf_p_l, _vfwprintf_p, _vfwprintf_p_l](vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)<br/>
+[_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l](printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)<br/>
+[Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

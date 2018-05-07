@@ -1,12 +1,9 @@
 ---
-title: "not | Документы Майкрософт"
-ms.custom: 
+title: not | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,57 +26,58 @@ dev_langs:
 helpviewer_keywords:
 - not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6e9bef4d969f22c5ce87fd9654e4f8401b4769
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fea9560828890ab988448dc48dad2dabf88c13e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="not"></a>not
-Альтернатива параметру ! идентификатор.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define not !  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор !.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_not.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 0;  
-  
-   if (!a)  
-      cout << "a is zero" << endl;  
-  
-   if (not(a))  
-      cout << "a is zero" << endl;  
-}  
-```  
-  
-```Output  
-a is zero  
-a is zero  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива параметру ! идентификатор.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define not !
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор !.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_not.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 0;
+
+   if (!a)
+      cout << "a is zero" << endl;
+
+   if (not(a))
+      cout << "a is zero" << endl;
+}
+```
+
+```Output
+a is zero
+a is zero
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

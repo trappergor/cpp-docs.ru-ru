@@ -1,12 +1,12 @@
 ---
-title: "&lt;hash_map&gt; | Документы Майкрософт"
-ms.custom: 
+title: '&lt;hash_map&gt; | Документы Майкрософт'
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -39,20 +39,20 @@ ms.lasthandoff: 02/23/2018
 
 ### <a name="operators"></a>Операторы
 
-|Версия hash_map|Версия hash_multimap|Описание:|
+|Версия hash_map|Версия hash_multimap|Описание|
 |-----------------------|----------------------------|-----------------|
-|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
+|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 |[ operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[ operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Проверяет равенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|Версия hash_map|Версия hash_multimap|Описание:|
+|Версия hash_map|Версия hash_multimap|Описание|
 |-----------------------|----------------------------|-----------------|
 |[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|Меняет местами элементы двух объектов hash_map или hash_multimap.|
 
 ### <a name="classes"></a>Классы
 
-|||
+|Класс|Описание|
 |-|-|
 |[Класс hash_compare](hash-compare-class.md)|Описывает объект, который может использоваться любыми hash-ассоциативными контейнерами (hash_map, hash_multimap, hash_set или hash_multiset) как объект параметра **Traits** по умолчанию для сортировки и хэширования элементов в них.|
 |[Класс value_compare](value-compare-class.md)|Предоставляет объект функции, который может сравнивать элементы hash_map путем сравнения значения ключей для определения относительного порядка в hash_map.|
@@ -67,6 +67,6 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](cpp-standard-library-header-files.md)  
-[Потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)  
-[Справочник по стандартной библиотеке C++](cpp-standard-library-reference.md)  
+[Ссылки на файлы заголовков](cpp-standard-library-header-files.md)
+[потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)
+[Справочник по библиотеке C++ Standard](cpp-standard-library-reference.md)

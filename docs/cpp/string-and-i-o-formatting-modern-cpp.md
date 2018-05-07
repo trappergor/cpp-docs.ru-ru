@@ -1,27 +1,22 @@
 ---
-title: "Строки и вводом выводом форматирование (современный C++) | Документы Microsoft"
-ms.custom: 
+title: Строки и вводом выводом форматирование (современный C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Форматирование строк и ввода-вывода (современный C++)
 C++ [iostreams](../standard-library/iostream.md) способны форматированную строку ввода-вывода. Например ниже демонстрируется задание cout для форматирования целое число для вывода в шестнадцатеричном формате, сначала сохранить текущее состояние off и повторно параметру после этого, так как после форматирования состояния передается cout, он остается таким образом, пока не будут изменены, а не только для одной строки из кода.  

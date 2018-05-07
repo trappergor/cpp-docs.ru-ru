@@ -1,6 +1,6 @@
 ---
-title: "_beginthread, _beginthreadex | Документы Майкрософт"
-ms.custom: 
+title: _beginthread, _beginthreadex | Документы Майкрософт
+ms.custom: ''
 ms.date: 02/27/2018
 ms.technology:
 - cpp-standard-libraries
@@ -37,14 +37,13 @@ helpviewer_keywords:
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b575883bfad702d32a161a985a76494797747
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -84,7 +83,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>Параметры
 
 *start_address*<br/>
-Начальный адрес процедуры, который начинает выполнение нового потока. Для `_beginthread`соглашение о вызовах — это либо [__cdecl](../../cpp/cdecl.md) (для машинного кода), либо [__clrcall](../../cpp/clrcall.md) (для управляемого кода); для `_beginthreadex`это либо [__stdcall](../../cpp/stdcall.md) (для машинного кода), либо [__clrcall](../../cpp/clrcall.md) (для управляемого кода).
+Начальный адрес процедуры, который начинает выполнение нового потока. Для **_beginthread**, соглашение о вызовах [__cdecl](../../cpp/cdecl.md) (для машинного кода) или [__clrcall](../../cpp/clrcall.md) (для управляемого кода); для **_beginthreadex**, либо [__stdcall](../../cpp/stdcall.md) (для машинного кода) или [__clrcall](../../cpp/clrcall.md) (для управляемого кода).
 
 *stack_size*<br/>
 Размер стека нового потока или 0.
@@ -96,72 +95,72 @@ uintptr_t _beginthreadex( // MANAGED CODE
 Указатель на структуру [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Если *безопасности* имеет значение NULL, дескриптор не наследуется. Должно быть NULL для приложений Windows 95.
 
 *initflag*<br/>
-Флаги, управляющие начальным состоянием нового потока. Задать *initflag* для `0` запущен немедленно, или к `CREATE_SUSPENDED` при создании потока в приостановленном состоянии; используйте [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) для выполнения потока. Задать *initflag* для `STACK_SIZE_PARAM_IS_A_RESERVATION` флаг для использования *stack_size* в качестве начального зарезервированного размера стека в байтах; Если этот флаг не указан, *stack_size* указывает зафиксировать размер.
+Флаги, управляющие начальным состоянием нового потока. Задать *initflag* 0 для немедленного запуска, либо **CREATE_SUSPENDED** при создании потока в приостановленном состоянии; используйте [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) для выполнения потока. Задать *initflag* для **STACK_SIZE_PARAM_IS_A_RESERVATION** флаг для использования *stack_size* как первоначального Резервируемый размер стека в байтах, если этот флаг не указан, *stack_size* задает выделенный размер.
 
 *thrdaddr*<br/>
 Указывает на 32-разрядную переменную, которая получает идентификатор потока. Если равно NULL, оно не используется.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха каждая из этих функций возвращает дескриптор во вновь созданный поток; однако если вновь созданный поток выполняет выход слишком быстро, `_beginthread` может не возвращать допустимый дескриптор. (См. обсуждение в разделе "Заметки".) При возникновении ошибки `_beginthread` возвращает -1L, а параметр `errno` имеет значение `EAGAIN`, если слишком много потоков, значение `EINVAL`, если аргумент является недопустимым или размер стека неверен, либо значение `EACCES`, если недостаточно ресурсов (например, памяти). При возникновении ошибки `_beginthreadex` возвращает 0, а `errno` и `_doserrno` заданы.
+В случае успеха каждая из этих функций возвращает дескриптор во вновь созданный поток; Однако если вновь созданный поток выполняет выход слишком быстро **_beginthread** может не возвращать допустимый дескриптор. (См. обсуждение в разделе "Заметки".) При возникновении ошибки **_beginthread** возвращает-1 L и **errno** равно **EAGAIN** Если слишком много потоков, значение **EINVAL** при аргументе Недопустимый или размер стека неверен, или к **EACCES** Если недостаточно ресурсов (например, памяти). При возникновении ошибки **_beginthreadex** возвращает 0, и **errno** и **_doserrno** заданы.
 
-Если *start_address* имеет значение NULL, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции устанавливают для `errno` значение `EINVAL` и возвращают -1.
+Если *start_address* имеет значение NULL, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Дополнительные сведения о `uintptr_t` см. в разделе [Стандартные типы](../../c-runtime-library/standard-types.md).
+Дополнительные сведения о **uintptr_t**, в разделе [стандартные типы](../../c-runtime-library/standard-types.md).
 
 ## <a name="remarks"></a>Примечания
 
-`_beginthread` Функция создает поток, который начинает выполнение процедуры в *start_address*. В процедуре *start_address* необходимо использовать `__cdecl` (для машинного кода) или `__clrcall` (для управляемого кода) соглашение о вызовах и не должно быть возвращаемого значения. При возврате потока из этой процедуры он завершается автоматически. Дополнительные сведения о потоках см. в разделе [Поддержка многопоточности для устаревшего кода (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+**_Beginthread** функция создает поток, который начинает выполнение процедуры в *start_address*. В процедуре *start_address* необходимо использовать **__cdecl** (для машинного кода) или **__clrcall** (для управляемого кода) соглашение о вызовах и не должно быть возвращаемого значения. При возврате потока из этой процедуры он завершается автоматически. Дополнительные сведения о потоках см. в разделе [Поддержка многопоточности для устаревшего кода (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-`_beginthreadex` в большей степени похож на API Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx), чем `_beginthread`. `_beginthreadex` имеет следующие отличия от `_beginthread` :
+**_beginthreadex** напоминает Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API более чем **_beginthread** does. **_beginthreadex** отличается от **_beginthread** одним из следующих способов:
 
-- `_beginthreadex` имеет три дополнительных параметра: *initflag*, *безопасности*, и `threadaddr`. Новый поток можно создать в приостановленном состоянии, с заданными параметрами безопасности, а может быть получен с использованием *thrdaddr*, который является идентификатором потока.
+- **_beginthreadex** имеет три дополнительных параметра: *initflag*, *безопасности*, и **threadaddr**. Новый поток можно создать в приостановленном состоянии, с заданными параметрами безопасности, а может быть получен с использованием *thrdaddr*, который является идентификатором потока.
 
-- В процедуре *start_address* , передаваемое в `_beginthreadex` необходимо использовать `__stdcall` (для машинного кода) или `__clrcall` (для управляемого кода) соглашение о вызовах и должен возвращать код завершения потока.
+- В процедуре *start_address* , передаваемое в **_beginthreadex** необходимо использовать **__stdcall** (для машинного кода) или **__clrcall** (для управляемый код) соглашение о вызовах и должен возвращать код завершения потока.
 
-- `_beginthreadex` возвращает при ошибке 0, а не -1L.
+- **_beginthreadex** для сбоя, а не-1 L возвращает 0.
 
-- Поток, созданный с помощью `_beginthreadex` , завершается вызовом метода [_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md).
+- Поток, который создается с помощью **_beginthreadex** завершается вызовом [_endthreadex](endthread-endthreadex.md).
 
-Функция `_beginthreadex` обеспечивает большую подконтрольность создания потока, чем `_beginthread` . Функция `_endthreadex` также является более гибкой. Например, с помощью `_beginthreadex`можно использовать сведения о безопасности, задавать исходное состояние потока (выполняемого или приостановленного) и получить идентификатор только что созданного потока. Можно также использовать дескриптор потока, возвращаемого методом `_beginthreadex` , с помощью функций синхронизации API-интерфейса, что невозможно в случае с `_beginthread`.
+**_Beginthreadex** функция предоставляет больший контроль над способ создания потока, чем **_beginthread** does. **_Endthreadex** функция является более гибкой. Например, с помощью **_beginthreadex**, можно использовать сведения о безопасности, задавать исходное состояние потока (выполняемого или приостановленного) и получить идентификатор только что созданного потока. Можно также использовать дескриптор потока, возвращаемый **_beginthreadex** с API синхронизации, что нельзя выполнить с помощью **_beginthread**.
 
-Безопаснее использовать `_beginthreadex` , чем `_beginthread`. Если поток, созданный `_beginthread` , выполняет выход быстро, маркер, возвращаемый вызывающему объекту `_beginthread` , может быть недопустим или указывать на другой поток. Однако маркер, который возвращается `_beginthreadex` , должен быть закрыт вызывающим объектом `_beginthreadex`, поэтому это однозначно допустимый маркер, если `_beginthreadex` не возвращает ошибку.
+Безопаснее использовать **_beginthreadex** чем **_beginthread**. Если поток, созданный **_beginthread** выполняет выход быстро, маркер, который возвращается вызывающему объекту **_beginthread** может быть недопустим или указывать на другой поток. Тем не менее дескриптор, возвращенный **_beginthreadex** должен быть закрыт вызывающим объектом **_beginthreadex**, поэтому он гарантированно является допустимым дескриптором Если **_beginthreadex** не вернул ошибку.
 
-Можно вызвать [_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) или `_endthreadex` , чтобы явно завершить поток; однако `_endthread` или `_endthreadex` вызывается автоматически при возврате потока из процедуры, что передается в качестве параметра. Остановка потока вызовом метода `_endthread` или `_endthreadex` помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
+Можно вызвать [_endthread](endthread-endthreadex.md) или **_endthreadex** явным образом, чтобы завершить поток; Однако **_endthread** или **_endthreadex** вызывается автоматически при возврате потока из процедуры, что передается в качестве параметра. Завершение потока вызовом **_endthread** или **_endthreadex** помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
 
-`_endthread` автоматически закрывает дескриптор потока, тогда как `_endthreadex` этого не делает. Поэтому при использовании `_beginthread` и `_endthread`не следует явно закрывать дескриптор потока вызовом API Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) . Это поведение отличается от функции API Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) .
+**_endthread** автоматически закрывает дескриптор потока, тогда как **_endthreadex** — нет. Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока, вызывая функцию Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Это поведение отличается от функции API Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) .
 
-> [!NOTE]  
-> Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать функцию API Win32 `ExitThread` , чтобы не помешать системе времени выполнения освобождать выделенные ресурсы. `_endthread` и `_endthreadex` освобождают выделенные ресурсы потока и затем вызывают метод `ExitThread`.
+> [!NOTE]
+> Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать Win32 **ExitThread** API, чтобы вы не помешать системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.
 
-Операционная система обрабатывает выделение стека, если `_beginthread` или `_beginthreadex` вызываются; не следует передавать адрес стека потоков любой из этих функций. Кроме того *stack_size* аргумент может быть 0, в случае чего операционная система использует то же значение как стек, указанный для основного потока.
+Операционная система обрабатывает выделение стека при любом **_beginthread** или **_beginthreadex** вызываются; не нужно передавать адрес стека потоков любой из этих функций. Кроме того *stack_size* аргумент может быть 0, в случае чего операционная система использует то же значение как стек, указанный для основного потока.
 
-*arglist* параметр должен быть передан только что созданного потока. Как правило, это адрес элемента данных, например строки символов. *arglist* может иметь значение NULL, если он не является обязательным, но `_beginthread` и `_beginthreadex` должно быть задано либо значение для передачи новому потоку. Все потоки завершаются, если какой-либо поток вызывает метод `abort`, `exit`, `_exit`или `ExitProcess`.
+*arglist* параметр должен быть передан только что созданного потока. Как правило, это адрес элемента данных, например строки символов. *arglist* может иметь значение NULL, если он не является обязательным, но **_beginthread** и **_beginthreadex** должно быть задано либо значение для передачи новому потоку. Все потоки завершаются, если какой-либо поток вызывает [прервать](abort.md), **выхода**, **_exit**, или **ExitProcess**.
 
-Языковой стандарт нового потока инициализируется с помощью данные каждого процесса глобального текущего языкового стандарта. Если языковой стандарт отдельного потока включен при вызове [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) (глобально или для новых потоков только), поток может изменить его языковой стандарт независимо от других потоков, вызвав `setlocale` или `_wsetlocale`. Потоки, которые не имеют установлен флаг языкового стандарта отдельного потока может повлиять на сведения о локали в все потоки, кроме того, у которых нет флаг языкового стандарта отдельного потока, а также все вновь созданные потоки. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Языковой стандарт нового потока инициализируется с помощью данные каждого процесса глобального текущего языкового стандарта. Если языковой стандарт отдельного потока включен при вызове [_configthreadlocale](configthreadlocale.md) (глобально или для новых потоков только), поток может изменить его языковой стандарт независимо от других потоков, вызвав **setlocale** или **_wsetlocale**. Потоки, которые не имеют установлен флаг языкового стандарта отдельного потока может повлиять на сведения о локали в все потоки, кроме того, у которых нет флаг языкового стандарта отдельного потока, а также все вновь созданные потоки. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Для смешанного и чистого кода `_beginthread` и `_beginthreadex` имеют две перегруженные версии. Одна имеет указатель функции соглашения о вызовах в машинном коде, а другая — `__clrcall` указатель функции. Первый перегруженный метод не является безопасным для домена приложения и никогда таковым не будет. При записи смешанного или чистого кода нужно убедиться, что новый поток входит в правильный домен приложений, прежде чем осуществит доступ к управляемым ресурсам. Это можно сделать, например, с помощью [функции call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Вторая перегрузка является доменобезопасной; только что созданный поток всегда завершается в домене приложения вызывающего объекта `_beginthread` или `_beginthreadex`.
+Для смешанного и чистого кода **_beginthread** и **_beginthreadex** имеют две перегруженные версии. Одна имеет указатель функции соглашения о вызовах в машинном коде, а другая — **__clrcall** указатель функции. Первый перегруженный метод не является безопасным для домена приложения и никогда таковым не будет. При записи смешанного или чистого кода нужно убедиться, что новый поток входит в правильный домен приложений, прежде чем осуществит доступ к управляемым ресурсам. Это можно сделать, например, с помощью [функции call_in_appdomain](../../dotnet/call-in-appdomain-function.md). Вторая перегрузка является доменобезопасной; вновь созданный поток всегда завершается в домене приложения вызывающего объекта **_beginthread** или **_beginthreadex**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`_beginthread`|\<process.h>|
-|`_beginthreadex`|\<process.h>|
+|**_beginthread**|\<process.h>|
+|**_beginthreadex**|\<process.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
-Только многопоточные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+Только многопоточные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md) .
 
-Чтобы использовать `_beginthread` или `_beginthreadex`, приложение необходимо связать с одной из многопотоковых библиотек времени выполнения C.
+Для использования **_beginthread** или **_beginthreadex**, приложение должно быть связано с одной из многопотоковых библиотек времени выполнения C.
 
 ## <a name="example"></a>Пример
 
-В следующем примере используются `_beginthread` и `_endthread`.
+В следующем примере используется **_beginthread** и **_endthread**.
 
 ```C
 // crt_BEGTHRD.C
@@ -181,7 +180,7 @@ void CheckKey( void * );
 // GetGlyph returns a printable ASCII character value
 #define GetGlyph( val ) ((char)((val + 32) % 93 + 33))
 
-BOOL repeat = TRUE;                 // Global repeat flag 
+BOOL repeat = TRUE;                 // Global repeat flag
 HANDLE hStdOut;                     // Handle for console window
 CONSOLE_SCREEN_BUFFER_INFO csbi;    // Console information structure
 
@@ -197,7 +196,7 @@ int main()
     // Launch CheckKey thread to check for terminating keystroke.
     _beginthread( CheckKey, 0, NULL );
 
-    // Loop until CheckKey terminates program or 1000 threads created. 
+    // Loop until CheckKey terminates program or 1000 threads created.
     while( repeat && param < 1000 )
     {
         // launch another character thread.
@@ -235,9 +234,9 @@ void Bounce( void * parg )
 
     // Generate location, letter and color attribute from thread argument.
     srand( _threadid );
-    oldcoord.X = region.Left = region.Right = 
+    oldcoord.X = region.Left = region.Right =
         GetRandom(csbi.srWindow.Left, csbi.srWindow.Right - 1);
-    oldcoord.Y = region.Top = region.Bottom = 
+    oldcoord.Y = region.Top = region.Bottom =
         GetRandom(csbi.srWindow.Top, csbi.srWindow.Bottom - 1);
     ci.Char.AsciiChar = GetGlyph(*((int *)parg));
     ci.Attributes = GetRandom(1, 15);
@@ -281,7 +280,7 @@ void Bounce( void * parg )
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как использовать дескриптор потока, возвращаемого методом `_beginthreadex` , с помощью функции синхронизации API-интерфейса [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Основной поток ожидает завершения другого потока, прежде чем продолжить. Если второй поток вызывает `_endthreadex`, он заставляет его объект потока перейти в сигнальное состояние. Это позволяет продолжить выполнение основного потока. Это невозможно выполнить с помощью `_beginthread` и `_endthread`, поскольку `_endthread` вызывает метод `CloseHandle`, который удаляет объект потока, прежде чем его можно перевести в сигнальное состояние.
+В следующем примере кода показано, как можно использовать дескриптор потока, возвращаемый **_beginthreadex** с помощью API синхронизации [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx). Основной поток ожидает завершения другого потока, прежде чем продолжить. Если второй поток вызывает **_endthreadex**, он заставляет его объект потока перейти в сигнальное состояние. Это позволяет продолжить выполнение основного потока. Это нельзя сделать с **_beginthread** и **_endthread**, так как **_endthread** вызовы **CloseHandle**, который удаляет поток Объект, прежде чем его можно перевести в сигнальное состояние.
 
 ```cpp
 // crt_begthrdex.cpp
@@ -290,7 +289,7 @@ void Bounce( void * parg )
 #include <stdio.h>
 #include <process.h>
 
-unsigned Counter; 
+unsigned Counter;
 unsigned __stdcall SecondThreadFunc( void* pArguments )
 {
     printf( "In second thread...\n" );
@@ -332,7 +331,7 @@ Counter should be 1000000; it is-> 1000000
 ## <a name="see-also"></a>См. также
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)<br/>
-[abort](../../c-runtime-library/reference/abort.md)<br/>
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
+[abort](abort.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>

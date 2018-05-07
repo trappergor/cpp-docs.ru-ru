@@ -1,12 +1,9 @@
 ---
-title: "mktemp | Документы Майкрософт"
-ms.custom: 
+title: mktemp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - mktemp
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9817965084cd7f693140f4ecbdb2c1438a9246
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 17eb125ddd9a9cef7af408aaa60c72c1f589cf9e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mktemp"></a>mktemp
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) или ее аналог с улучшенной безопасностью [_mktemp_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_mktemp](mktemp-wmktemp.md) или ее аналог с улучшенной безопасностью [_mktemp_s](mktemp-s-wmktemp-s.md).

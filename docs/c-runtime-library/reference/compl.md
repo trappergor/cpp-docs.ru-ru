@@ -1,12 +1,9 @@
 ---
-title: "compl | Документы Майкрософт"
-ms.custom: 
+title: compl | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - compl
@@ -31,57 +28,58 @@ dev_langs:
 helpviewer_keywords:
 - compl function
 ms.assetid: e03f6fb5-cb8b-4afa-99c0-905f4105fb34
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c533f06209d0bd8880cf5b1e49b8d40b20d1210
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14d1a4d643dd18a51b7e5dd29bc8ce282be5c9ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compl"></a>compl
-Альтернатива оператору ~.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define compl ~  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор ~.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_compl.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 1, result;  
-  
-   result = ~a;  
-   cout << result << endl;  
-  
-   result= compl(a);  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
--2  
--2  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива оператору ~.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define compl ~
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор ~.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_compl.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 1, result;
+
+   result = ~a;
+   cout << result << endl;
+
+   result= compl(a);
+   cout << result << endl;
+}
+```
+
+```Output
+-2
+-2
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

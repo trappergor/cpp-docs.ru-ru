@@ -2,11 +2,8 @@
 title: 'Побитовое включительно или оператор: || Документы Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaef650cc747cdb9e628ae3b786bc1c1e21b5bdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc43460bc2c20262156bfdc6bd7f69a693c222f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Битовый оператор ИЛИ (включительно): |
 ## <a name="syntax"></a>Синтаксис  
@@ -47,7 +42,7 @@ expression
   
  Оба операнда оператора побитового ИЛИ должны быть целочисленного типа. Обычные арифметические преобразования, описанные в [стандартные преобразования](standard-conversions.md) применяются к операндам.  
   
-## <a name="operator-keyword-for-124"></a>Ключевое слово оператора &#124;  
+## <a name="operator-keyword-for-124"></a>Ключевое слово оператора&#124;  
  `bitor` Оператор является текстовым эквивалентом **&#124;**. Существует два способа доступа к `bitor` оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).  
   
 ## <a name="example"></a>Пример  

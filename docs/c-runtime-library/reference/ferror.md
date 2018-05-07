@@ -1,12 +1,9 @@
 ---
-title: "ferror | Документы Майкрософт"
-ms.custom: 
+title: ferror | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - ferror
@@ -32,57 +29,61 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db390539df0761aacdb11de5eace58b2c9c87f8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ferror"></a>ferror
-Проверяет наличие ошибок в потоке.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int ferror(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE` .  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Если ошибок в потоке `stream` нет, подпрограмма `ferror` возвращает 0. В противном случае возвращается ненулевое значение. Если поток имеет значение `NULL`, функция _`ferror` вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функции задает для `errno` значение `EINVAL` и возвращает 0.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Подпрограмма `ferror` (реализованная и как функция, и как макрос) проверяет наличие ошибок чтения или записи в файле, связанном с потоком `stream`. Если произошла ошибка, индикатор ошибки для потока остается установленным до тех пор, пока поток не будет закрыт или перемотан назад или пока для потока не будет вызвана функция `clearerr`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`ferror`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для [feof](../../c-runtime-library/reference/feof.md).  
-  
-## <a name="see-also"></a>См. также  
- [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)   
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof](../../c-runtime-library/reference/feof.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+Проверяет наличие ошибок в потоке.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int ferror(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Если ошибки не произошло в *поток*, **ferror** возвращает 0. В противном случае возвращается ненулевое значение. Если поток **NULL**, **ferror** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает 0.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**Ferror** подпрограммы (реализованный как функции и как макрос) проверяет для чтения или записи ошибок в файле, связанном с *поток*. Если произошла ошибка, индикатор ошибки для потока остается установленным, пока поток будет закрыт или перемотан назад или пока не **clearerr** вызвана.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**ferror**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для [feof](feof.md).
+
+## <a name="see-also"></a>См. также
+
+[Обработка ошибок](../../c-runtime-library/error-handling-crt.md)<br/>
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

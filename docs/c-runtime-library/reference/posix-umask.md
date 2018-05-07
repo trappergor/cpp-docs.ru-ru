@@ -1,12 +1,9 @@
 ---
-title: "umask | Документы Майкрософт"
-ms.custom: 
+title: umask | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - umask
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b23ca4efbf8f872bec11a10f334c7115274ad0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ccfda3a8d6fa834984624444e33018463a5be3c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umask"></a>umask
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_umask](../../c-runtime-library/reference/umask.md) или аналог с улучшенной безопасностью [_umask_s](../../c-runtime-library/reference/umask-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_umask](umask.md) или аналог с улучшенной безопасностью [_umask_s](umask-s.md).

@@ -1,34 +1,29 @@
 ---
-title: "Макросы MASM | Документы Microsoft"
-ms.custom: 
+title: Макросы MASM | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 21410432-72fc-4795-bc93-e78123f9f14f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 403220306a2585b1506a990664eaa2ec8f2ac1a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="masm-macros"></a>Макросы MASM
 Чтобы упростить использование [Необработанные псевдооперации](../build/raw-pseudo-operations.md), существует ряд макросы, определенные в файле ksamd64.inc, который можно использовать для создания типичных прологов и эпилогов.  
   
 ## <a name="remarks"></a>Примечания  
   
-|Макрос|Описание:|  
+|Макрос|Описание|  
 |-----------|-----------------|  
 |alloc_stack(n)|Выделяет кадр стека n байт (с помощью sub rsp, n) и создает соответствующую раскрутки сведения (.allocstack n)|  
 |save_reg reg, loc|Сохраняет reg защищенный регистр в стеке по RSP-loc смещения и помещает соответствующую информацию для раскрутки. (.savereg reg, loc)|  

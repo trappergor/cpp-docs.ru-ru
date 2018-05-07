@@ -1,32 +1,27 @@
 ---
-title: "CFixedStringT: Пример пользовательского диспетчера строка | Документы Microsoft"
-ms.custom: 
+title: 'CFixedStringT: Пример пользовательского диспетчера строка | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Пример пользовательского диспетчера строки
-Библиотека ATL реализует один пример диспетчера настраиваемой строки, используемых классом [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), который называется **CFixedStringMgr**. `CFixedStringT`является производным от [CStringT](../atl-mfc-shared/reference/cstringt-class.md) и реализует строку, которая выделяет его символьных данных в рамках `CFixedStringT` самого объекта, при условии, что строки меньше, чем длина, заданная параметром **t_nChars** параметр шаблона `CFixedStringT`. Таким образом строка не обязательно кучи, если длина строки выходит за буфер фиксированного размера. Поскольку `CFixedStringT` не всегда используйте кучи для выделения его строковые данные, он не может использовать **CAtlStringMgr** его руководитель строки. Она использует диспетчер настраиваемой строки (**CFixedStringMgr**), реализующего [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) интерфейса. Этот интерфейс рассматривается в [реализация пользовательских строка Manager (Advanced метод)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+Библиотека ATL реализует один пример диспетчера настраиваемой строки, используемых классом [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), который называется **CFixedStringMgr**. `CFixedStringT` является производным от [CStringT](../atl-mfc-shared/reference/cstringt-class.md) и реализует строку, которая выделяет его символьных данных в рамках `CFixedStringT` самого объекта, при условии, что строки меньше, чем длина, заданная параметром **t_nChars** параметр шаблона `CFixedStringT`. Таким образом строка не обязательно кучи, если длина строки выходит за буфер фиксированного размера. Поскольку `CFixedStringT` не всегда используйте кучи для выделения его строковые данные, он не может использовать **CAtlStringMgr** его руководитель строки. Она использует диспетчер настраиваемой строки (**CFixedStringMgr**), реализующего [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) интерфейса. Этот интерфейс рассматривается в [реализация пользовательских строка Manager (Advanced метод)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
  Конструктор для **CFixedStringMgr** принимает три параметра:  
   

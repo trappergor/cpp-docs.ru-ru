@@ -1,12 +1,9 @@
 ---
-title: "strupr, wcsupr | Документы Майкрософт"
-ms.custom: 
+title: strupr, wcsupr | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - strupr
@@ -32,17 +29,16 @@ helpviewer_keywords:
 - strupr function
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e963fde1e21c2ae143f2795e4de7bacfeff7e8eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 373c63df7a0f446f7c57cf794f31a96339a58d58
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
-Эти функции POSIX устарели. Используйте вместо них соответствующую стандарту ISO C++ функцию [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) или ее аналог с улучшенной безопасностью [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
+
+Эти функции POSIX устарели. Используйте вместо них соответствующую стандарту ISO C++ функцию [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) или ее аналог с улучшенной безопасностью [_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).

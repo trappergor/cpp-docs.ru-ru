@@ -1,13 +1,10 @@
 ---
-title: "Взаимный импорт | Документы Microsoft"
-ms.custom: 
+title: Взаимный импорт | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>Взаимный импорт
 Экспорт или импорт другого исполняемого файла представляет затруднения, если импорт является взаимным (или циклическим). Например две библиотеки DLL импортировать символы друг от друга, аналогично взаимно рекурсивные функции.  
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- При построении A.dll построены с `/D A_IMPL` и при построении B.dll, он создается с `/D B_IMPL`. С помощью отдельных символов для каждой библиотеки DLL `CExampleB` экспортируется и `CExampleA` импортируется при построении B.dll. `CExampleA`экспортируется при построении A.dll и импортируется, когда он используется библиотекой B.dll (или другим клиентом).  
+ При построении A.dll построены с `/D A_IMPL` и при построении B.dll, он создается с `/D B_IMPL`. С помощью отдельных символов для каждой библиотеки DLL `CExampleB` экспортируется и `CExampleA` импортируется при построении B.dll. `CExampleA` экспортируется при построении A.dll и импортируется, когда он используется библиотекой B.dll (или другим клиентом).  
   
  Такой тип архитектуры не может выполняться при использовании встроенной **AFX_EXT_CLASS** и `_AFXEXT` символы препроцессора. Способ, описанный выше решает эту проблему способом, отличным от используется классами MFC при построении его Active технологии, базы данных и библиотек DLL расширения MFC сети.  
   

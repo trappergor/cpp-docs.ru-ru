@@ -2,12 +2,9 @@
 title: -Yc (создать предкомпилированный заголовочный файл) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
 - /yc
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (создать предкомпилированный заголовочный файл)
 Указывает компилятору на необходимость создания файла предкомпилированного заголовка (PCH), представляющий состояние компиляции в определенной точке.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>Синтаксис  
   
 > __/Yc__
-> __/Yc__*имя файла*  
+>  __/Yc__*имя файла*  
   
   
 ## <a name="arguments"></a>Аргументы  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  Дополнительные сведения о предкомпилированных заголовках см. в разделе:  
   
--   [/Y (предварительно скомпилированные заголовки)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (предкомпилированные заголовки)](../../build/reference/y-precompiled-headers.md)  
   
 -   [Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)  
   

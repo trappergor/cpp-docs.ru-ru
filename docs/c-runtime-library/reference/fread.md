@@ -1,12 +1,9 @@
 ---
-title: "fread | Документы Майкрософт"
-ms.custom: 
+title: fread | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fread
@@ -33,114 +30,117 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d01c3362c94b0c644cb53aec6e45ce83b98dbf07
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fread"></a>fread
-Считывает данные из потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-size_t fread(   
-   void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `buffer`  
- Место хранения данных.  
-  
- `size`  
- Размер элемента в байтах.  
-  
- `count`  
- Максимальное число читаемых элементов.  
-  
- `stream`  
- Указатель на структуру `FILE` .  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `fread` Возвращает количество элементов целиком фактически прочитанных, которых может быть меньше, чем `count` при возникновении ошибки или если прежде чему будет достигнут конец файла `count`. Отличить ошибку чтения от состояния, связанного с достижением конца файла, можно с помощью функции `feof` или `ferror`. Если `size` или `count` равно 0, функция `fread` возвращает 0, а содержимое буфера не изменяется. Если `stream` или `buffer` является указателем NULL, функция `fread` вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функции задает для `errno` значение `EINVAL` и возвращает 0.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `fread` считывает максимум `count` элементов размером `size` байт из входного потока `stream` и сохраняет их в `buffer`. Указатель файла, связанный с `stream` (при наличии), возрастает на число фактически считанных байт. Если заданный поток открыт в текстовом режиме, символы перевода строки одной заменяются пары перевода строки возврата каретки. Замена не влияет на указатель файла или возвращаемое значение. В случае ошибки позиция указателя файла будет неопределенной. Значение частично считанного элемента не может быть определено.  
-  
- Эта функция блокирует работу других потоков. Неблокирующая версия функции называется `_fread_nolock`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`fread`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_fread.c  
-// This program opens a file named FREAD.OUT and  
-// writes 25 characters to the file. It then tries to open  
-// FREAD.OUT and read in 25 characters. If the attempt succeeds,  
-// the program displays the number of actual items read.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char list[30];  
-   int  i, numread, numwritten;  
-  
-   // Open file in text mode:  
-   if( fopen_s( &stream, "fread.out", "w+t" ) == 0 )  
-   {  
-      for ( i = 0; i < 25; i++ )  
-         list[i] = (char)('z' - i);  
-      // Write 25 characters to stream   
-      numwritten = fwrite( list, sizeof( char ), 25, stream );  
-      printf( "Wrote %d items\n", numwritten );  
-      fclose( stream );  
-  
-   }  
-   else  
-      printf( "Problem opening the file\n" );  
-  
-   if( fopen_s( &stream, "fread.out", "r+t" ) == 0 )  
-   {  
-      // Attempt to read in 25 characters   
-      numread = fread( list, sizeof( char ), 25, stream );  
-      printf( "Number of items read = %d\n", numread );  
-      printf( "Contents of buffer = %.25s\n", list );  
-      fclose( stream );  
-   }  
-   else  
-      printf( "File could not be opened\n" );  
-}  
-```  
-  
-```Output  
-Wrote 25 items  
-Number of items read = 25  
-Contents of buffer = zyxwvutsrqponmlkjihgfedcb  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [fwrite](../../c-runtime-library/reference/fwrite.md)   
- [_read](../../c-runtime-library/reference/read.md)
+
+Считывает данные из потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+size_t fread(
+   void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*buffer*<br/>
+Место хранения данных.
+
+*size*<br/>
+Размер элемента в байтах.
+
+*count*<br/>
+Максимальное число читаемых элементов.
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**fread** возвращает количество элементов целиком фактически прочитанных, которых может быть меньше, чем *число* при возникновении ошибки или если обнаружен конец файла до достижения *число*. Используйте **feof** или **ferror** функции могло различать ошибки чтения условие конечного файла. Если *размер* или *число* равно 0, **fread** возвращает 0 и содержимое буфера не изменяются. Если *поток* или *буфера* является пустым указателем, **fread** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает 0.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+**Fread** функция считывает до *число* элементы *размер* байт из входного *поток* и сохраняет их в *буфера* . Указатель файла, связанного с *поток* (если есть) увеличивается на число фактически считанных байтов. Если заданный поток открыт в текстовом режиме, символы перевода строки одной заменяются пары перевода строки возврата каретки. Замена не влияет на указатель файла или возвращаемое значение. В случае ошибки позиция указателя файла будет неопределенной. Значение частично считанного элемента не может быть определено.
+
+Эта функция блокирует работу других потоков. Если вам требуется неблокирующую версию, используйте **_fread_nolock**.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**fread**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_fread.c
+// This program opens a file named FREAD.OUT and
+// writes 25 characters to the file. It then tries to open
+// FREAD.OUT and read in 25 characters. If the attempt succeeds,
+// the program displays the number of actual items read.
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char list[30];
+   int  i, numread, numwritten;
+
+   // Open file in text mode:
+   if( fopen_s( &stream, "fread.out", "w+t" ) == 0 )
+   {
+      for ( i = 0; i < 25; i++ )
+         list[i] = (char)('z' - i);
+      // Write 25 characters to stream
+      numwritten = fwrite( list, sizeof( char ), 25, stream );
+      printf( "Wrote %d items\n", numwritten );
+      fclose( stream );
+
+   }
+   else
+      printf( "Problem opening the file\n" );
+
+   if( fopen_s( &stream, "fread.out", "r+t" ) == 0 )
+   {
+      // Attempt to read in 25 characters
+      numread = fread( list, sizeof( char ), 25, stream );
+      printf( "Number of items read = %d\n", numread );
+      printf( "Contents of buffer = %.25s\n", list );
+      fclose( stream );
+   }
+   else
+      printf( "File could not be opened\n" );
+}
+```
+
+```Output
+Wrote 25 items
+Number of items read = 25
+Contents of buffer = zyxwvutsrqponmlkjihgfedcb
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[fwrite](fwrite.md)<br/>
+[_read](read.md)<br/>

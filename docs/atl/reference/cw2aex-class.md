@@ -1,12 +1,9 @@
 ---
-title: "Класс CW2AEX | Документы Microsoft"
-ms.custom: 
+title: Класс CW2AEX | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fd48a34b82e0671d417a882e040a87a7691c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2aex-class"></a>Класс CW2AEX
 Этот класс используется макросы преобразования строк `CT2AEX`, `CW2TEX`, `CW2CTEX`, и `CT2CAEX`и определение типа **CW2A**.  
@@ -52,20 +47,20 @@ class CW2AEX
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CW2AEX::CW2AEX](#cw2aex)|Конструктор.|  
 |[CW2AEX:: ~ CW2AEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CW2AEX::operator LPSTR](#operator_lpstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CW2AEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|  
@@ -101,7 +96,7 @@ class CW2AEX
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlconv.h  
   
-##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>  CW2AEX::CW2AEX  
  Конструктор.  
   
 ```
@@ -119,7 +114,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Выделяет буфера, используемого в процессе перевода.  
   
-##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>  CW2AEX:: ~ CW2AEX  
  Деструктор  
   
 ```
@@ -129,21 +124,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>Примечания  
  Освобождает выделенный буфер.  
   
-##  <a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>  CW2AEX::m_psz  
  Элемент данных, который хранит исходную строку.  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer  
  Статический буфер, используемый для хранения преобразованную строку.  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR  
  Оператор преобразования.  
   
 ```  

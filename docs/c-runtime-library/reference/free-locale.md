@@ -1,12 +1,9 @@
 ---
-title: "_free_locale | Документы Майкрософт"
-ms.custom: 
+title: _free_locale | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _free_locale
@@ -35,46 +32,47 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1baa1458d3e799d2370092b7d8f96ee9fe4a359e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freelocale"></a>_free_locale
-Освобождает объект языкового стандарта.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void _free_locale(  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `locale`  
- Объект языкового стандарта, который необходимо освободить.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_free_locale` используется, чтобы освободить объект языкового стандарта, полученный из вызова функции `_get_current_locale` или `_create_locale`.  
-  
- Предыдущее название данной функции `__free_locale` (с 2 символами подчеркивания в начале) использовать не рекомендуется.  
-  
-## <a name="requirements"></a>Требования  
-  
-|`Routine`|Обязательный заголовок|  
-|---------------|---------------------|  
-|`_free_locale`|\<locale.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [_get_current_locale](../../c-runtime-library/reference/get-current-locale.md)   
- [_create_locale, _wcreate_locale](../../c-runtime-library/reference/create-locale-wcreate-locale.md)
+
+Освобождает объект языкового стандарта.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void _free_locale(
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*языковой стандарт* объект языкового стандарта для освобождения.
+
+## <a name="remarks"></a>Примечания
+
+**_Free_locale** функция используется, чтобы освободить объект языкового стандарта, полученный из вызова **_get_current_locale** или **_create_locale**.
+
+Предыдущее имя этой функции **__free_locale** (с двух символов подчеркивания) рекомендуется к использованию.
+
+## <a name="requirements"></a>Требования
+
+|**Подпрограммы**|Обязательный заголовок|
+|---------------|---------------------|
+|**_free_locale**|\<locale.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[_get_current_locale](get-current-locale.md)<br/>
+[_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

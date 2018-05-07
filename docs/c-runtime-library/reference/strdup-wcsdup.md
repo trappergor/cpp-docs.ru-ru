@@ -1,12 +1,9 @@
 ---
-title: "strdup, wcsdup | Документы Майкрософт"
-ms.custom: 
+title: strdup, wcsdup | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - wcsdup
@@ -32,17 +29,16 @@ helpviewer_keywords:
 - wcsdup function
 - strdup function
 ms.assetid: c9ac0935-b525-4e95-8a64-396fc7e34ee9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cc3f48b2c8ff3d22f8333ac75b6a23994d9cc98
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ec5298b1256028bebc9cf801babe136c846ad18c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strdup-wcsdup"></a>strdup, wcsdup
-Эти функции POSIX устарели. Вместо них используйте соответствующие стандарту ISO C++ функции [_strdup _wcsdup, _mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md).
+
+Эти функции POSIX устарели. Вместо них используйте соответствующие стандарту ISO C++ функции [_strdup _wcsdup, _mbsdup](strdup-wcsdup-mbsdup.md).

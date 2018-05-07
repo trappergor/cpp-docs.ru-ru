@@ -1,12 +1,9 @@
 ---
-title: "xor_eq | Документы Майкрософт"
-ms.custom: 
+title: xor_eq | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,60 +26,61 @@ dev_langs:
 helpviewer_keywords:
 - xor_eq function
 ms.assetid: eca4b6b4-b77a-4d44-a09a-5a7e69fdb56c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a830922b82d0d42fa43341b850a3e1199c2bea5d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 87bb77989b1ccdb37b5e59a9d85e902991d83055
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xoreq"></a>xor_eq
-Альтернатива оператору ^=.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define xor_eq ^=  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор ^=.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_xor_eq.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 3, b = 2, result;  
-  
-   result= a ^= b;  
-   cout << result << endl;  
-  
-   a = 3;  
-   b = 2;  
-  
-   result= a xor_eq b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-1  
-1  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива оператору ^=.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define xor_eq ^=
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор ^=.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_xor_eq.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 3, b = 2, result;
+
+   result= a ^= b;
+   cout << result << endl;
+
+   a = 3;
+   b = 2;
+
+   result= a xor_eq b;
+   cout << result << endl;
+}
+```
+
+```Output
+1
+1
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

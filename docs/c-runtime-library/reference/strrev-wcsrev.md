@@ -1,12 +1,9 @@
 ---
-title: "strrev, wcsrev | Документы Майкрософт"
-ms.custom: 
+title: strrev, wcsrev | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - strrev
@@ -32,17 +29,16 @@ helpviewer_keywords:
 - strrev function
 - wcsrev function
 ms.assetid: 89e05854-a9ce-4fb7-993d-a9831cd7edf2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfb48c7c2494b300018e274ea2de8c45e9f2ce9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b025b99c5f2038c984c73f27d058c6841c108ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strrev-wcsrev"></a>strrev, wcsrev
-Эти функции POSIX устарели. Используйте вместо них функции [_strrev, _wcsrev, _mbsrev, _mbsrev_l](../../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md), соответствующие стандарту ISO C++.
+
+Эти функции POSIX устарели. Используйте вместо них функции [_strrev, _wcsrev, _mbsrev, _mbsrev_l](strrev-wcsrev-mbsrev-mbsrev-l.md), соответствующие стандарту ISO C++.

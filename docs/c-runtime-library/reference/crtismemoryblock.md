@@ -1,12 +1,9 @@
 ---
-title: "_CrtIsMemoryBlock | Документы Майкрософт"
-ms.custom: 
+title: _CrtIsMemoryBlock | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
@@ -31,79 +28,84 @@ helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58faccd95e831dd264910abf063529db12701bf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
-Проверяет, находится ли указанный блок памяти в локальной куче и имеет ли он действительный идентификатор типа блока отладочной кучи (только в отладочной версии).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _CrtIsMemoryBlock(   
-   const void *userData,  
-   unsigned int size,  
-   long *requestNumber,  
-   char **filename,  
-   int *linenumber   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [in] `userData`  
- Указатель на начало блока памяти, требующего проверки.  
-  
- [in] `size`  
- Размер указанного блока в байтах.  
-  
- [выходной] `requestNumber`  
- Указатель на номер выделения блока или `NULL`.  
-  
- [выходной] `filename`  
- Указатель на имя исходного файла, который запрашивает блок или `NULL`.  
-  
- [выходной] `linenumber`  
- Указатель на номер строки в исходном файле или `NULL`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `_CrtIsMemoryBlock` возвращает `TRUE`, если указанный блок памяти находится в локальной куче и имеет допустимый идентификатор типа блока отладочной кучи; в противном случае функция возвращает `FALSE`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_CrtIsMemoryBlock` проверяет, находится ли указанный блок памяти в локальной куче и имеет ли он допустимый идентификатор типа блока. Эту функцию можно также использовать для получения порядкового номера распределения объекта, а также имени или номера строки исходного файла, содержащего исходный запрос на выделение блока памяти. Передача непустых значений параметров `requestNumber`, `filename` или `linenumber` заставляет `_CrtIsMemoryBlock` присваивать этим параметрам значения из заголовка отладки блока памяти, если блок находится в локальной куче. Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, вызовы `_CrtIsMemoryBlock` удаляются на этапе предварительной обработки.  
-  
- Если `_CrtIsMemoryBlock` завершается ошибкой, возвращается `FALSE`, а выходным параметрам присваиваются значения по умолчанию: `requestNumber` и `lineNumber` принимают значение 0, а `filename` — значение `NULL`.  
-  
- Так как эта функция возвращает значение `TRUE` или `FALSE`, ее можно передать в один из макросов [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) для создания простого механизма обработки ошибок отладки. Приведенный ниже пример вызывает сбой утверждения, если указанный адрес находится не в локальной куче.  
-  
-```  
-_ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,   
-&filename, &linenumber ) );  
-```  
-  
- Дополнительные сведения о том, как использовать `_CrtIsMemoryBlock` с другими функциями и макросами отладки, см. в статье [Макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_CrtIsMemoryBlock`|\<crtdbg.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="libraries"></a>Библиотеки  
- Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Пример  
- См. пример для раздела [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md).  
-  
-## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)
+
+Проверяет, находится ли указанный блок памяти в локальной куче и имеет ли он действительный идентификатор типа блока отладочной кучи (только в отладочной версии).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _CrtIsMemoryBlock(
+   const void *userData,
+   unsigned int size,
+   long *requestNumber,
+   char **filename,
+   int *linenumber
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Устойчивость данных пользователя*<br/>
+Указатель на начало блока памяти, требующего проверки.
+
+*size*<br/>
+Размер указанного блока в байтах.
+
+*requestNumber*<br/>
+Указатель на номер выделения блока или **NULL**.
+
+*filename*<br/>
+Указатель на имя исходного файла, который запросил блока или **NULL**.
+
+*linenumber*<br/>
+Указатель на номер строки в исходном файле или **NULL**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_CrtIsMemoryBlock** возвращает **TRUE** Если указанный блок памяти находится в локальной куче и имеет допустимый отладочной кучи блок идентификатор типа; в противном случае функция возвращает значение **FALSE**.
+
+## <a name="remarks"></a>Примечания
+
+**_CrtIsMemoryBlock** функция проверяет, находится ли указанный блок памяти в локальной куче приложения, содержащий идентификатор типа допустимым блоком. Эту функцию можно также использовать для получения порядкового номера распределения объекта, а также имени или номера строки исходного файла, содержащего исходный запрос на выделение блока памяти. Передача значений, отличных от NULL для *requestNumber*, *filename*, или *linenumber* причины параметры **_CrtIsMemoryBlock** для установки Эти параметры к значениям в блок памяти отладки заголовок, при обнаружении блока в локальной куче. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtIsMemoryBlock** удаляются на этапе предварительной обработки.
+
+Если **_CrtIsMemoryBlock** завершается ошибкой, возвращается **FALSE** и выходные параметры инициализируются значениями по умолчанию: *requestNumber* и **lineNumber**  равны 0 и *filename* равно **NULL**.
+
+Так как эта функция возвращает значение **TRUE** или **FALSE**, ее можно передать в один из макросов [_ASSERT](assert-asserte-assert-expr-macros.md) для создания простого механизма обработки ошибок отладки. Приведенный ниже пример вызывает сбой утверждения, если указанный адрес находится не в локальной куче.
+
+```C
+_ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
+          &filename, &linenumber ) );
+```
+
+Дополнительные сведения о том, как **_CrtIsMemoryBlock** можно использовать с другими функциями и макросами отладки см. в разделе [макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_CrtIsMemoryBlock**|\<crtdbg.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Пример
+
+См. пример для раздела [_CrtIsValidHeapPointer](crtisvalidheappointer.md).
+
+## <a name="see-also"></a>См. также
+
+[Процедуры отладки](../../c-runtime-library/debug-routines.md)<br/>

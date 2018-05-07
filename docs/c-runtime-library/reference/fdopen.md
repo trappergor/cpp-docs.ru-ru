@@ -1,12 +1,9 @@
 ---
-title: "fdopen | Документы Майкрософт"
-ms.custom: 
+title: fdopen | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fdopen
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - fdopen function
 ms.assetid: 3243c1d2-2826-4d2d-bfa2-a2da45f9cc7a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5034a5bf5bfa339a2a355016123b33e747108a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 71d8fe40a25e38a9286dc1376c1e59d0d2d21515
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fdopen"></a>fdopen
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fdopen](fdopen-wfdopen.md).

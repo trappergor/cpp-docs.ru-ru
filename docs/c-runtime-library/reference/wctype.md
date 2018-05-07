@@ -1,12 +1,9 @@
 ---
-title: "wctype | Документы Майкрософт"
-ms.custom: 
+title: wctype | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - wctype
@@ -30,61 +27,64 @@ helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17006f31e02e7aed60a20e088502fe969059084c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wctype"></a>wctype
-Определяет правило классификации кодов расширенных символов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-wctype_t wctype(  
-   const char * property   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `property`  
- Строка свойства.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Если категория `LC_CTYPE` текущего языкового стандарта не определяет правило классификации, имя которого соответствует строке свойства `property`, функция возвращает ноль. В противном случае возвращается ненулевое значение, подходящее для использования в качестве второго аргумента последующего вызова [towctrans](../../c-runtime-library/reference/towctrans.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция определяет правило классификации кодов расширенных символов. Следующие пары вызовов имеют аналогичное поведение во всех языковых стандартах (но реализация позволяет определить дополнительные правила классификации даже в языковом стандарте "C").  
-  
-|Функция|Эквивалентно|  
-|--------------|-------------|  
-|`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
-|`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
-|`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
-|`iswdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "digit" ) )`|  
-|`iswgraph(`  `c`  `)`|`iswctype(`  `c` `, wctype( "graph" ) )`|  
-|`iswlower(`  `c`  `)`|`iswctype(`  `c` `, wctype( "lower" ) )`|  
-|`iswprint(`  `c`  `)`|`iswctype(`  `c` `, wctype( "print" ) )`|  
-|`iswpunct(`  `c`  `)`|`iswctype(`  `c` `, wctype( "punct" ) )`|  
-|`iswspace(`  `c`  `)`|`iswctype(`  `c` `, wctype( "space" ) )`|  
-|`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
-|`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`wctype`|\<wctype.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Преобразование данных](../../c-runtime-library/data-conversion.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+Определяет правило классификации кодов расширенных символов.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+wctype_t wctype(
+   const char * property
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*свойство*<br/>
+Строка свойства.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Если **LC_CTYPE** категории текущего языкового стандарта не определяет правило классификации, имя которого соответствует строке свойства *свойство*, функция возвращает ноль. В противном случае возвращается ненулевое значение, подходящее для использования в качестве второго аргумента последующего вызова [towctrans](towctrans.md).
+
+## <a name="remarks"></a>Примечания
+
+Функция определяет правило классификации кодов расширенных символов. Следующие пары вызовов имеют аналогичное поведение во всех языковых стандартах (но реализация позволяет определить дополнительные правила классификации даже в языковом стандарте "C").
+
+|Функция|Эквивалентно|
+|--------------|-------------|
+|iswalnum(c)|iswctype (c, wctype ("alnum"))|
+|iswalpha(c)|iswctype (c, wctype ("альфа"))|
+|iswcntrl(c)|iswctype (c, wctype («комбинации клавиш CTRL»))|
+|iswdigit(c)|iswctype (c, wctype («цифра"))|
+|iswgraph(c)|iswctype (c, wctype («график»))|
+|iswlower(c)|iswctype (c, wctype («ниже»))|
+|iswprint(c)|iswctype (c, wctype ("print"))|
+|iswpunct(c)|iswctype (c, wctype («пунктуация»))|
+|iswspace(c)|iswctype (c, wctype ("space"))|
+|iswupper(c)|iswctype (c, wctype («верхний»))|
+|iswxdigit(c)|iswctype (c, wctype («xdigit»))|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**wctype**|\<wctype.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

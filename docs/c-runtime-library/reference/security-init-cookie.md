@@ -1,12 +1,9 @@
 ---
-title: "__security_init_cookie | Документы Майкрософт"
-ms.custom: 
+title: __security_init_cookie | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - __security_init_cookie
@@ -33,44 +30,46 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c51e02a36df9a54d2f301eafc24a0181e97153f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
-Инициализирует глобальный cookie-файл безопасности.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void __security_init_cookie(void);  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Глобальный cookie-файл безопасности используется для защиты от переполнения буфера в коде, скомпилированном с параметром [/GS (проверка безопасности буфера)](../../build/reference/gs-buffer-security-check.md), и в коде, в котором используется структурная обработка исключений. При входе в функцию с защитой от переполнения cookie-файл помещается в стек, а при выходе значение в стеке сравнивается с глобальным cookie-файлом. Любое различие между ними указывает, что произошло переполнение буфера, что приводит к немедленному завершению работы программы.  
-  
- Обычно CRT вызывает `__security_init_cookie` при инициализации. Если пропустить инициализацию CRT, например если используется [/ENTRY](../../build/reference/entry-entry-point-symbol.md) для указания точки ввода, то нужно вызвать `__security_init_cookie` вручную. Если не вызвать `__security_init_cookie`, то для глобального cookie-файла безопасности устанавливается значение по умолчанию и нарушается защита от переполнения буфера. Злоумышленник может воспользоваться этим значением cookie-файла по умолчанию, чтобы обойти проверку переполнения буфера, поэтому рекомендуется всегда вызывать `__security_init_cookie` при определении собственной точки входа.  
-  
- Функцию `__security_init_cookie` необходимо вызывать до входа в любую функцию, защищенную от переполнения; в противном случае будет обнаружено ложное переполнение буфера. Подробнее: [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).  
-  
-## <a name="example"></a>Пример  
- Примеры см. в разделе [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`__security_init_cookie`|\<process.h>|  
-  
- `__security_init_cookie` — расширение Майкрософт для стандартной библиотеки выполнения C. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Комплексные проверки безопасности компилятора](http://go.microsoft.com/fwlink/p/?linkid=7260)
+
+Инициализирует глобальный cookie-файл безопасности.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void __security_init_cookie(void);
+```
+
+## <a name="remarks"></a>Примечания
+
+Глобальный cookie-файл безопасности используется для защиты от переполнения буфера в коде, скомпилированном с параметром [/GS (проверка безопасности буфера)](../../build/reference/gs-buffer-security-check.md), и в коде, в котором используется структурная обработка исключений. При входе в функцию с защитой от переполнения cookie-файл помещается в стек, а при выходе значение в стеке сравнивается с глобальным cookie-файлом. Любое различие между ними указывает, что произошло переполнение буфера, что приводит к немедленному завершению работы программы.
+
+Как правило **__security_init_cookie** вызывается при инициализации CRT. Если пропустить инициализацию CRT — например, если вы используете [/Entry](../../build/reference/entry-entry-point-symbol.md) для указания точки входа, следует вызвать **__security_init_cookie** самостоятельно. Если **__security_init_cookie** не вызывается, глобальный файл cookie безопасности присвоено значение по умолчанию и нарушается защита от переполнения буфера. Так как злоумышленник может использовать это значение по умолчанию файл cookie, чтобы обойти проверку переполнения буфера, рекомендуется всегда вызывать **__security_init_cookie** при определении собственной точки входа.
+
+Вызов **__security_init_cookie** должны быть выполнены до любой защищенную от переполнения функции; в противном случае будет обнаружено ложное переполнение буфера. Подробнее: [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+
+## <a name="example"></a>Пример
+
+Примеры см. в разделе [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**__security_init_cookie**|\<process.h>|
+
+**__security_init_cookie** является расширением Microsoft для стандартной библиотеки C времени выполнения. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Комплексные проверки безопасности компилятора](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "filelength | Документы Майкрософт"
-ms.custom: 
+title: filelength | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - filelength
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - filelength function
 ms.assetid: 5fbc1912-7822-498d-bbf4-8bada87cf9b9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 485bdd1cd0c98b227e6a4813ff5a75de250de785
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 97800c09f79e786f9bf8f8428e146e2210d88d63
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filelength"></a>filelength
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_filelength](../../c-runtime-library/reference/filelength-filelengthi64.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_filelength](filelength-filelengthi64.md).

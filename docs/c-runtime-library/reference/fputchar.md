@@ -1,12 +1,9 @@
 ---
-title: "fputchar | Документы Майкрософт"
-ms.custom: 
+title: fputchar | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fputchar
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - fputchar function
 ms.assetid: d6cf3492-ace9-47a7-9f7d-3c25aa8ad526
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6284e76c557a26f97d209040a467dc8a98e0c0a1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6560fb57f8cb4dd781a2350b724b430a3d5c62ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fputchar"></a>fputchar
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fputchar](../../c-runtime-library/reference/fputchar-fputwchar.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fputchar](fputchar-fputwchar.md).

@@ -1,12 +1,12 @@
 ---
-title: "Класс is_nothrow_move_assignable | Документы Майкрософт"
-ms.custom: 
+title: Класс is_nothrow_move_assignable | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_move_assignable
@@ -15,43 +15,43 @@ dev_langs:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb1f16214dbfefb7f285f15eadf7975348531a23
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 52687b4244f17a823d4ef36066afd3a5f5047e52
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="isnothrowmoveassignable-class"></a>Класс is_nothrow_move_assignable
-Проверяет, имеет ли тип оператор присваивания перемещения **nothrow**.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```
+
+Проверяет, имеет ли тип оператор присваивания перемещения **nothrow**.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
 template <class Ty>
 struct is_nothrow_move_assignable;
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `Ty`  
- Запрашиваемый тип.  
-  
-## <a name="remarks"></a>Примечания  
- Экземпляр предиката типа содержит значение true, если тип `Ty` имеет оператор присваивания перемещения nothrow; в противном случае — значение false.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
-  
- **Пространство имен:** std  
-  
-## <a name="see-also"></a>См. также  
- [<type_traits>](../standard-library/type-traits.md)
+```
 
+### <a name="parameters"></a>Параметры
 
+`Ty` Запрашиваемый тип.
 
+## <a name="remarks"></a>Примечания
 
+Экземпляр предиката типа содержит значение true, если тип `Ty` имеет оператор присваивания перемещения nothrow; в противном случае — значение false.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<type_traits>
+
+**Пространство имен:** std
+
+## <a name="see-also"></a>См. также
+
+[<type_traits>](../standard-library/type-traits.md)<br/>

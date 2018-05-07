@@ -1,12 +1,9 @@
 ---
-title: "setmode | Документы Майкрософт"
-ms.custom: 
+title: setmode | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - setmode
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - setmode function
 ms.assetid: cb959d9e-09f3-45af-8943-85f4ca0d3f5a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4238ab0e5bcc4be4e918c15bc6f58151b513735
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5cfff187854b97a021b4a6d773718e102519d48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setmode"></a>setmode
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_setmode](../../c-runtime-library/reference/setmode.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_setmode](setmode.md).

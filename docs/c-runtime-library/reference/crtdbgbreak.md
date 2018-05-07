@@ -1,12 +1,9 @@
 ---
-title: "_CrtDbgBreak | Документы Майкрософт"
-ms.custom: 
+title: _CrtDbgBreak | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _CrtDbgBreak
@@ -31,44 +28,47 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f49870ace2b23983d7eb121cd18ea3d755250e51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
-Устанавливает точку останова в определенной строке кода. (Используется только в режиме отладки.)  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void _CrtDbgBreak( void );  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение отсутствует.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_CrtDbgBreak` задает точку останова отладки в той строке кода, где находится функция. Она используется только в режиме отладки и зависит от определенного ранее параметра `_DEBUG`.  
-  
- Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Запись собственных функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_CrtDbgBreak`|\<CRTDBG.h>|  
-  
-## <a name="libraries"></a>Библиотеки  
- Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>См. также  
- [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
- [__debugbreak](../../intrinsics/debugbreak.md)
+
+Устанавливает точку останова в определенной строке кода. (Используется только в режиме отладки.)
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void _CrtDbgBreak( void );
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращаемое значение отсутствует.
+
+## <a name="remarks"></a>Примечания
+
+**_CrtDbgBreak** функция задает точку останова для отладки в конкретной строке кода котором эта функция находится. Эта функция используется в режиме отладки только и зависит от **_DEBUG** предварительного определения.
+
+Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Запись собственных функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_CrtDbgBreak**|\<CRTDBG.h>|
+
+## <a name="libraries"></a>Библиотеки
+
+Только отладочные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>См. также
+
+[Процедуры отладки](../../c-runtime-library/debug-routines.md)<br/>
+[__debugbreak](../../intrinsics/debugbreak.md)<br/>

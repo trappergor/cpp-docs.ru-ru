@@ -1,12 +1,9 @@
 ---
-title: "isnan, _isnan, _isnanf | Документы Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: isnan, _isnan, _isnanf | Документы Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _isnan
@@ -41,68 +38,71 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d0997b1a6b304634c612f0f1615a059fd812b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
-Проверяет, является ли значение с плавающей запятой нечисловым значением (NAN).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int isnan(  
-   /* floating-point */ x   
-); /* C-only macro */  
-  
-int _isnan(  
-   double x   
-);  
-  
-int _isnanf(  
-   float x  
-); /* x64 only */  
-  
-template <class T>  
-bool isnan(  
-   T x  
-) throw(); /* C++ only */  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- *x*  
- Проверяемое значение с плавающей запятой.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- В языке C макрос `isnan`, а также функции `_isnan` и `_isnanf` возвращают ненулевое значение, если аргумент `x` является значением NAN. В остальных случаях возвращается значение 0.  
-  
- В языке C++ функции шаблона `isnan` возвращают `true`, если аргумент `x` является значением NAN. В остальных случаях возвращается значение `false`.  
-  
-## <a name="remarks"></a>Примечания  
- В языке C макрос `isnan`, а также функции `_isnan` и `_isnanf` проверяют значение с плавающей запятой *x* и возвращают ненулевое значение в том случае, если *x* является нечисловым значением (NAN). Значение NAN получается в том случае, если результат операции с плавающей запятой не удается представить в формате IEEE-754 с плавающей запятой для указанного типа. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
-  
- При компиляции в формате C++ макрос `isnan` не определяется, а вместо него используются функции шаблона `isnan`. Вместо целого возвращается значение типа `bool`.  
-  
- Функции `_isnan` и `_isnanf` относятся только к системам Майкрософт. Функция `_isnanf` доступна только при компиляции для x64.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|  
-|-------------|---------------------------|-------------------------------|  
-|`isnan`, `_isnanf`|\<math.h>|\<math.h> или \<cmath>|  
-|`_isnan`|\<float.h>|\<float.h> или \<cfloat>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+
+Проверяет, является ли значение с плавающей запятой нечисловым значением (NAN).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int isnan(
+   /* floating-point */ x
+); /* C-only macro */
+
+int _isnan(
+   double x
+);
+
+int _isnanf(
+   float x
+); /* x64 only */
+
+template <class T>
+bool isnan(
+   T x
+) throw(); /* C++ only */
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Проверяемое значение с плавающей запятой.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+В языке C **isnan** макрос и **_isnan** и **_isnanf** функции возвращают ненулевое значение, если аргумент *x* является NAN; в противном случае они Возвращает значение 0.
+
+В C++ **isnan** шаблона функции возвращают **true** Если аргумент *x* имеет значение NAN; в противном случае они возвращают **false**.
+
+## <a name="remarks"></a>Примечания
+
+C **isnan** макрос и **_isnan** и **_isnanf** функции тестирования значение с плавающей запятой *x*, возвращает ненулевое значение, если *x* не является числом (NAN) значение. Значение NAN получается в том случае, если результат операции с плавающей запятой не удается представить в формате IEEE-754 с плавающей запятой для указанного типа. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
+
+При компиляции как C++, **isnan** макрос не определен и **isnan** функция шаблона определена вместо него. Возвращает значение типа **bool** вместо целого числа.
+
+**_Isnan** и **_isnanf** функции — только к системам Майкрософт. **_Isnanf** функция доступна только при компиляции для x64.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|-------------|---------------------------|-------------------------------|
+|**isNaN**, **_isnanf**|\<math.h>|\<math.h> или \<cmath>|
+|**_isnan**|\<float.h>|\<float.h> или \<cfloat>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite, _finitef](finite-finitef.md)<br/>
+[_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>

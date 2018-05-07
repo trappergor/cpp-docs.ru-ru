@@ -1,28 +1,28 @@
 ---
-title: "Как: использование Windows 10 SDK в настольном приложении Windows | Документы Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 'Как: использование Windows 10 SDK в настольном приложении Windows | Документы Microsoft'
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
 При создании классического проекта Windows в Visual Studio 2017 г. он настроен по умолчанию для сборки с версией пакета SDK Windows 10, установленного при рабочей нагрузке C++ Desktop установки или последнего обновления. Эта версия пакета SDK Windows совместима со всеми последними выпусками Windows. Если требуется более раннюю версию пакета SDK, можно открыть проект | Свойства и выберите из версии пакета SDK, доступные в раскрывающемся списке версию пакета SDK Windows.  
@@ -31,7 +31,8 @@ ms.lasthandoff: 01/03/2018
   
 ### <a name="to-target-the-windows-10-sdk"></a>Изменение целевой платформы для пакета SDK для Windows 10  
   
-1.  Убедитесь, что установлен пакет SDK для Windows 10. Пакет SDK для Windows 10 устанавливается как часть [инструменты для Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631).  
+1.  Убедитесь, что установлен пакет SDK для Windows 10. Пакет SDK для Windows 10 устанавливается как часть **разработки настольных приложений с помощью C++** рабочей нагрузки. Автономная версия доступна на [загружает и средств для Windows 10](https://developer.microsoft.com/windows/downloads).
+
   
 2.  Откройте контекстное меню узла проекта и выберите пункт **Изменить целевую платформу для версии пакета SDK**.  
   

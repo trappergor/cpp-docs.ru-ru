@@ -1,12 +1,9 @@
 ---
-title: "memicmp | Документы Майкрософт"
-ms.custom: 
+title: memicmp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - memicmp
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - memicmp function
 ms.assetid: 45362e9c-7c64-41e9-92bb-7d4999a8635b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c03aaf6a120701f04968adbdf49f6c4ab48862
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 217f91028ff157f9fbddd5232e0cb4627d0dd4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memicmp"></a>memicmp
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_memicmp](../../c-runtime-library/reference/memicmp-memicmp-l.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_memicmp](memicmp-memicmp-l.md).

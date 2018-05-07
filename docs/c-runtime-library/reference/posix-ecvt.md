@@ -1,12 +1,9 @@
 ---
-title: "ecvt | Документы Майкрософт"
-ms.custom: 
+title: ecvt | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - ecvt
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - ecvt function
 ms.assetid: a24fccea-033a-4cc7-b120-4fd0f525a7e3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d916b6461faca1946737f503707d0a5995bfc73
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 15d96ea7a6c29d594ca8e93fa45f7eb40a36c09e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ecvt"></a>ecvt
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_ecvt](../../c-runtime-library/reference/ecvt.md) или ее аналог с улучшенной безопасностью [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_ecvt](ecvt.md) или ее аналог с улучшенной безопасностью [_ecvt_s](ecvt-s.md).

@@ -1,27 +1,22 @@
 ---
 title: Добавление элемента управления (ATL учебника, часть 2) | Документы Microsoft
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Добавление элемента управления (учебник ATL, часть 2)
 На этом шаге будет добавить элемент управления в проект, выполните его построение и проверить его на веб-странице.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/28/2018
 |**Компонентный класс**|Имя класса компонента для этого элемента управления.|  
 |**Interface**|Имя интерфейса, на котором этот элемент управления будет реализовывать его пользовательские методы и свойства.|  
 |**Type**|Описание для элемента управления.|  
-|**ProgID**|Для чтения имя, которое может использоваться для поиска CLSID элемента управления.|  
+|**Идентификатор progID**|Для чтения имя, которое может использоваться для поиска CLSID элемента управления.|  
   
  Необходимо внести в мастер элементов управления ATL несколько дополнительных параметров.  
   
@@ -88,7 +83,7 @@ ms.lasthandoff: 03/28/2018
 |PolyCtl.h|Содержит большую часть реализации класса C++ `CPolyCtl`.|  
 |PolyCtl.cpp|Содержит оставшиеся части `CPolyCtl`.|  
 |PolyCtl.rgs|Текстовый файл, содержащий скрипт реестра, используемые для регистрации элемента управления.|  
-|PolyCtl.htm|Веб-страница, содержащая ссылку на только что созданный элемент управления.|  
+|Файл PolyCtl.htm|Веб-страница, содержащая ссылку на только что созданный элемент управления.|  
   
  Мастер также выполнены следующие изменения кода:  
   

@@ -1,12 +1,9 @@
 ---
-title: "_makepath_s, _wmakepath_s | Документы Майкрософт"
-ms.custom: 
+title: _makepath_s, _wmakepath_s | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _wmakepath_s
@@ -38,172 +35,173 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bef7cdbd58ba21396c78a1945e272e0a0e1baa4d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a981e8758200e055693f24761238c98c3755311c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
-Создает путь из компонентов. Это версии функции [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствование безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-errno_t _makepath_s(  
-   char *path,  
-   size_t sizeInBytes,  
-   const char *drive,  
-   const char *dir,  
-   const char *fname,  
-   const char *ext   
-);  
-errno_t _wmakepath_s(  
-   wchar_t *path,  
-   size_t sizeInWords,  
-   const wchar_t *drive,  
-   const wchar_t *dir,  
-   const wchar_t *fname,  
-   const wchar_t *ext   
-);  
-template <size_t size>  
-errno_t _makepath_s(  
-   char (&path)[size],  
-   const char *drive,  
-   const char *dir,  
-   const char *fname,  
-   const char *ext   
-); // C++ only  
-template <size_t size>  
-errno_t _wmakepath_s(  
-   wchar_t (&path)[size],  
-   const wchar_t *drive,  
-   const wchar_t *dir,  
-   const wchar_t *fname,  
-   const wchar_t *ext   
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- [выходной] `path`  
- Буфер полного пути.  
-  
- [in] `sizeInWords`  
- Размер буфера в словах.  
-  
- [in] `sizeInBytes`  
- Размер буфера в байтах.  
-  
- [in] `drive`  
- Содержит букву (A, B и т. д.), соответствующую требуемому диску, с необязательным двоеточием после нее. Если двоеточие отсутствует, функция `_makepath_s` вставляет ее в составной путь автоматически. Если параметр `drive` имеет значение `NULL` или указывает на пустую строку, в составной строке `path` буква диска не отображается.  
-  
- [in] `dir`  
- Содержит путь каталогов, не включая обозначение диска или фактическое имя файла. Конечная косая черта является необязательной; в одном аргументе `dir` могут использоваться косая черта (/), обратная косая черта (\\) или обе. Если конечная косая черта (/ или \\) не указана, она вставляется автоматически. Если параметр `dir` имеет значение `NULL` или указывает на пустую строку, путь каталога не вставляется в составную строку `path`.  
-  
- [in] `fname`  
- Содержит базовое имя файла без расширений. Если параметр `fname` имеет значение `NULL` или указывает на пустую строку, имя файла не вставляется в составную строку `path`.  
-  
- [in] `ext`  
- Содержит фактическое расширение имени файла с предшествующей точкой (.) или без нее. Функция `_makepath_s` вставляет точку автоматически, если она отсутствует в параметре `ext`. Если параметр `ext` имеет значение `NULL` или указывает на пустую строку, расширение не вставляется в составную строку `path`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
-  
-### <a name="error-conditions"></a>Условия ошибок  
-  
-|`path`|`sizeInWords` / `sizeInBytes`|Назад|Содержимое `path`|  
-|------------|------------------------------------|------------|------------------------|  
-|`NULL`|any|`EINVAL`|не изменено|  
-|any|<= 0|`EINVAL`|не изменено|  
-  
- Если возникает любое из указанных выше условий ошибки, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, для параметра `errno` устанавливается значение `EINVAL`, и функция возвращает значение `EINVAL`. Значение `NULL` допускается для параметров `drive`, `fname` и `ext`. Дополнительные сведения о поведении в случае, когда эти параметры являются указателями NULL или пустыми строками, см. в разделе примечаний.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_makepath_s` создает строку составного пути из отдельных компонентов, сохраняя результат в параметре `path`. Путь `path` может включать букву диска, путь к каталогу, имя файла и расширение имени файла. `_wmakepath_s` — это двухбайтовая версия `_makepath_s`; аргументы для `_wmakepath_s` представляют собой двухбайтовые строки. Поведение `_wmakepath_s` и `_makepath_s` идентично в противном случае.  
-  
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tmakepath_s`|`_makepath_s`|`_makepath_s`|`_wmakepath_s`|  
-  
- Аргумент `path` должен указывать на пустой буфер достаточного для хранения полного пути размера. Размер составного пути `path` не должен быть больше константы `_MAX_PATH`, определенной в файле Stdlib.h.  
-  
- Если параметр path имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Кроме того, для параметра `errno` устанавливается значение `EINVAL`. Для всех остальных параметров допускаются значения `NULL`.  
-  
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
- Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_makepath_s`|\<stdlib.h>|  
-|`_wmakepath_s`|\<stdlib.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_makepath_s.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char path_buffer[_MAX_PATH];  
-   char drive[_MAX_DRIVE];  
-   char dir[_MAX_DIR];  
-   char fname[_MAX_FNAME];  
-   char ext[_MAX_EXT];  
-   errno_t err;  
-  
-   err = _makepath_s( path_buffer, _MAX_PATH, "c", "\\sample\\crt\\",  
-                      "crt_makepath_s", "c" );  
-   if (err != 0)  
-   {  
-      printf("Error creating path. Error code %d.\n", err);  
-      exit(1);  
-   }  
-   printf( "Path created with _makepath_s: %s\n\n", path_buffer );  
-   err = _splitpath_s( path_buffer, drive, _MAX_DRIVE, dir, _MAX_DIR, fname,  
-                       _MAX_FNAME, ext, _MAX_EXT );  
-   if (err != 0)  
-   {  
-      printf("Error splitting the path. Error code %d.\n", err);  
-      exit(1);  
-   }  
-   printf( "Path extracted with _splitpath_s:\n" );  
-   printf( "  Drive: %s\n", drive );  
-   printf( "  Dir: %s\n", dir );  
-   printf( "  Filename: %s\n", fname );  
-   printf( "  Ext: %s\n", ext );  
-}  
-```  
-  
-## <a name="output"></a>Вывод  
-  
-```  
-Path created with _makepath_s: c:\sample\crt\crt_makepath_s.c  
-  
-Path extracted with _splitpath_s:  
-  Drive: c:  
-  Dir: \sample\crt\  
-  Filename: crt_makepath_s  
-  Ext: .c  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   
- [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md)
+
+Создает путь из компонентов. Это версии функции [_makepath, _wmakepath](makepath-wmakepath.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствование безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+errno_t _makepath_s(
+   char *path,
+   size_t sizeInBytes,
+   const char *drive,
+   const char *dir,
+   const char *fname,
+   const char *ext
+);
+errno_t _wmakepath_s(
+   wchar_t *path,
+   size_t sizeInWords,
+   const wchar_t *drive,
+   const wchar_t *dir,
+   const wchar_t *fname,
+   const wchar_t *ext
+);
+template <size_t size>
+errno_t _makepath_s(
+   char (&path)[size],
+   const char *drive,
+   const char *dir,
+   const char *fname,
+   const char *ext
+); // C++ only
+template <size_t size>
+errno_t _wmakepath_s(
+   wchar_t (&path)[size],
+   const wchar_t *drive,
+   const wchar_t *dir,
+   const wchar_t *fname,
+   const wchar_t *ext
+); // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*path*<br/>
+Буфер полного пути.
+
+*sizeInWords*<br/>
+Размер буфера в словах.
+
+*sizeInBytes*<br/>
+Размер буфера в байтах.
+
+*Диск*<br/>
+Содержит букву (A, B и т. д.), соответствующую требуемому диску, с необязательным двоеточием после нее. **_makepath_s** вставляет двоеточие автоматически в составной путь, если он отсутствует. Если *диск* — **NULL** или указывает на пустую строку, буква диска не отображается в составную *путь* строки.
+
+*dir*<br/>
+Содержит путь каталогов, не включая обозначение диска или фактическое имя файла. Конечная косая черта является необязательным и косую черту (/) или обратную косую черту (\\) или оба могут быть использованы в одной *dir* аргумент. Если конечная косая черта (/ или \\) не указана, она вставляется автоматически. Если *dir* — **NULL** или указывает на пустую строку, путь каталога не вставляется в составную *путь* строки.
+
+*fname*<br/>
+Содержит базовое имя файла без расширений. Если *fname* — **NULL** или указывает на пустую строку, имя файла вставляется в составную *путь* строки.
+
+*Ext*<br/>
+Содержит фактическое расширение имени файла с предшествующей точкой (.) или без нее. **_makepath_s** вставляет точку автоматически, если он не отображается в *ext*. Если *ext* — **NULL** или указывает на пустую строку, расширение не вставляется в составную *путь* строки.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает нуль в случае успеха или код ошибки в случае неудачи.
+
+### <a name="error-conditions"></a>Условия ошибок
+
+|*path*|*sizeInWords* / *sizeInBytes*|Назад|Содержимое *путь*|
+|------------|------------------------------------|------------|------------------------|
+|**NULL**|any|**EINVAL**|не изменено|
+|any|<= 0|**EINVAL**|не изменено|
+
+Если возникает любое из указанных выше условий ошибки, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функции возвращают **EINVAL**. **Значение NULL** допускается для параметров *диск*, *fname*, и *ext*. Дополнительные сведения о поведении в случае, когда эти параметры являются указателями NULL или пустыми строками, см. в разделе примечаний.
+
+## <a name="remarks"></a>Примечания
+
+**_Makepath_s** функция создает строку составного пути из отдельных компонентов, сохраняя результат в *путь*. *Путь* может включать букву диска, путь к каталогу, имя файла и расширение имени файла. **_wmakepath_s** — это двухбайтовая версия **_makepath_s**; аргументы для **_wmakepath_s** представляют собой строки расширенных символов. **_wmakepath_s** и **_makepath_s** ведут себя идентично.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
+
+*Путь* аргумент должен указывать на пустой буфер недостаточно велик для хранения полного пути. Составной *путь* должно быть не больше, чем **_MAX_PATH** константа, определенная в Stdlib.h.
+
+Если путь **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Кроме того **errno** равно **EINVAL**. **Значение NULL** для всех остальных параметров допускаются значения.
+
+В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_makepath_s**|\<stdlib.h>|
+|**_wmakepath_s**|\<stdlib.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_makepath_s.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char path_buffer[_MAX_PATH];
+   char drive[_MAX_DRIVE];
+   char dir[_MAX_DIR];
+   char fname[_MAX_FNAME];
+   char ext[_MAX_EXT];
+   errno_t err;
+
+   err = _makepath_s( path_buffer, _MAX_PATH, "c", "\\sample\\crt\\",
+                      "crt_makepath_s", "c" );
+   if (err != 0)
+   {
+      printf("Error creating path. Error code %d.\n", err);
+      exit(1);
+   }
+   printf( "Path created with _makepath_s: %s\n\n", path_buffer );
+   err = _splitpath_s( path_buffer, drive, _MAX_DRIVE, dir, _MAX_DIR, fname,
+                       _MAX_FNAME, ext, _MAX_EXT );
+   if (err != 0)
+   {
+      printf("Error splitting the path. Error code %d.\n", err);
+      exit(1);
+   }
+   printf( "Path extracted with _splitpath_s:\n" );
+   printf( "   Drive: %s\n", drive );
+   printf( "   Dir: %s\n", dir );
+   printf( "   Filename: %s\n", fname );
+   printf( "   Ext: %s\n", ext );
+}
+```
+
+```Output
+Path created with _makepath_s: c:\sample\crt\crt_makepath_s.c
+
+Path extracted with _splitpath_s:
+   Drive: c:
+   Dir: \sample\crt\
+   Filename: crt_makepath_s
+   Ext: .c
+```
+
+## <a name="see-also"></a>См. также
+
+[Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
+[_fullpath, _wfullpath](fullpath-wfullpath.md)<br/>
+[_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md)<br/>
+[_makepath, _wmakepath](makepath-wmakepath.md)<br/>

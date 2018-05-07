@@ -1,12 +1,9 @@
 ---
-title: "_swab | Документы Майкрософт"
-ms.custom: 
+title: _swab | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _swab
@@ -35,81 +32,83 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01f23047436b7ff8cee16b42cc6ae0d8c2a9fd78
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: aeedb217466262d8643a851b5f93cb9ac26fb0a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="swab"></a>_swab
-Меняет местами байты.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void _swab(  
-   char *src,  
-   char *dest,  
-   int n   
-);  
-```  
-  
-## <a name="parameters"></a>Параметры  
- `src`  
- Данные, которые следует скопировать и поменять местами.  
-  
- `dest`  
- Место хранения для переставленных местами данных.  
-  
- `n`  
- Число байтов, которые следует скопировать и поменять местами.  
-  
+
+Меняет местами байты.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void _swab(
+   char *src,
+   char *dest,
+   int n
+);
+```
+
+## <a name="parameters"></a>Параметры
+
+*src* данные копируются и местами.
+
+*dest* хранилище данных местами.
+
+*n* число байтов, копировать и местами.
+
 ## <a name="return-value"></a>Возвращаемое значение
- Функция `swab` не возвращает значение. Функция задает для `errno` значение `EINVAL`, если указатель `src` или `dest` имеет значение NULL или параметр `n` меньше нуля, и вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
-  
- Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
- 
-## <a name="remarks"></a>Примечания  
- Если `n` является четным числом, функция `_swab` копирует `n` байт из `src`, меняет местами все соседние пары байтов и сохраняет результат в `dest`. Если `n` является нечетным числом, `_swab` копирует и меняет местами первые `n-1` байт из `src`, последний байт не копируется. Функция `_swab` обычно используется для подготовки двоичных данных для передачи на компьютер, который использует другой порядок байтов.  
-  
-## <a name="requirements"></a>Требования  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_swab`|C: \<stdlib.h> C++: \<cstdlib> или \<stdlib.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-```C 
-// crt_swab.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "...........................";  
-  
-int main()  
-{  
-    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
-    _swab(from, to, sizeof(from));  
-    printf("After:  %s\n        %s\n\n", from, to);  
-}  
-```  
-  
-```Output  
-Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
-        ...........................  
-  
-After:  BADCFEHGJILKNMPORQTSVUXWZY  
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)
+
+**Swab** функция не возвращает значение. Функция задает **errno** для **EINVAL** при любом *src* или *dest* указатель имеет значение null или *n* меньше больше нуля и недопустимого параметра вызова обработчика, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md).
+
+Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+## <a name="remarks"></a>Примечания
+
+Если *n* четное, **_swab** функции копии *n* байтов из *src*меняет каждая пара смежных байтов и сохраняет результат в *dest*. Если *n* является нечетным, **_swab** копирует и меняет первый *n*-1 байт *src*, и последний байт не копируются. **_Swab** функция обычно используется для подготовки двоичные данные для передачи на компьютере, который использует порядок байтов.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_swab**|C: \<stdlib.h> C++: \<cstdlib> или \<stdlib.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_swab.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";
+char to[] =   "...........................";
+
+int main()
+{
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);
+    _swab(from, to, sizeof(from));
+    printf("After:  %s\n        %s\n\n", from, to);
+}
+```
+
+```Output
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes
+        ...........................
+
+After:  BADCFEHGJILKNMPORQTSVUXWZY
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+```
+
+## <a name="see-also"></a>См. также
+
+[Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>

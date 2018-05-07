@@ -1,12 +1,9 @@
 ---
-title: "_fflush_nolock | Документы Майкрософт"
-ms.custom: 
+title: _fflush_nolock | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _fflush_nolock
@@ -34,49 +31,52 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 091a32f7e5c16876378a147084a9ecdd06354243
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 635d0339125483b385a49e8d42cc7c67b2fb92ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
-Записывает поток на диск без блокирования потока.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _fflush_nolock(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- См. раздел [fflush](../../c-runtime-library/reference/fflush.md).  
-  
-## <a name="remarks"></a>Примечания  
- Эта функция представляет собой неблокирующую версию функции `fflush`. Она идентична функции `fflush`, но не защищена от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`_fflush_nolock`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [fclose, _fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [setvbuf](../../c-runtime-library/reference/setvbuf.md)
+
+Записывает поток на диск без блокирования потока.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _fflush_nolock(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+См. раздел [fflush](fflush.md).
+
+## <a name="remarks"></a>Примечания
+
+Эта функция представляет собой версию неблокирующих **fflush**. Она идентична **fflush** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**_fflush_nolock**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose, _fcloseall](fclose-fcloseall.md)<br/>
+[_flushall](flushall.md)<br/>
+[setvbuf](setvbuf.md)<br/>

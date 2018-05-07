@@ -1,12 +1,9 @@
 ---
-title: "Класс CAtlModule | Документы Microsoft"
-ms.custom: 
+title: Класс CAtlModule | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModule
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be5d5a777d4b9aed9ee4d07016771ee91c913b0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodule-class"></a>Класс CAtlModule
 Этот класс предоставляет методы, используемые несколькими модульные классы ATL.  
@@ -54,14 +49,14 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlModule::CAtlModule](#catlmodule)|Конструктор.|  
 |[CAtlModule:: ~ CAtlModule](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Переопределите этот метод для добавления параметров к карте замены компонент реестра ATL (регистратор).|  
 |[CAtlModule::AddTermFunc](#addtermfunc)|Добавляет новую функцию, вызываемый при завершении модуля.|  
@@ -76,7 +71,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAtlModule::m_libid](#m_libid)|Содержит идентификатор GUID для текущего модуля.|  
 |[CAtlModule::m_pGIT](#m_pgit)|Указатель глобальной таблицы интерфейсов.|  
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
-##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements  
  Переопределите этот метод для добавления параметров к карте замены компонент реестра ATL (регистратор).  
   
 ```
@@ -115,7 +110,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  См. в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
   
-##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc  
  Добавляет новую функцию, вызываемый при завершении модуля.  
   
 ```
@@ -132,7 +127,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
-##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>  CAtlModule::CAtlModule  
  Конструктор.  
   
 ```
@@ -142,7 +137,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Примечания  
  Инициализирует данные-члены и инициирует критическую секцию вокруг поток модуля.  
   
-##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule  
  Деструктор  
   
 ```
@@ -152,7 +147,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все члены данных.  
   
-##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr  
  Извлекает указатель на общая таблица интерфейса.  
   
 ```
@@ -173,7 +168,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  В разделе [IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517) сведения о общая таблица интерфейса.  
   
-##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>  CAtlModule::GetLockCount  
  Возвращает число блокировок.  
   
 ```
@@ -183,7 +178,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает число блокировок. Это значение может быть полезно для диагностики и отладки.  
   
-##  <a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>  CAtlModule::Lock  
  Увеличивает счетчик блокировок.  
   
 ```
@@ -193,21 +188,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Увеличивает счетчик блокировок и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.  
   
-##  <a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>  CAtlModule::m_libid  
  Содержит идентификатор GUID для текущего модуля.  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>  CAtlModule::m_pGIT  
  Указатель глобальной таблицы интерфейсов.  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>  CAtlModule::Term  
  Освобождает все члены данных.  
   
 ```
@@ -217,7 +212,7 @@ void Term() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все члены данных. Этот метод вызывается деструктором.  
   
-##  <a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>  CAtlModule::Unlock  
  Уменьшает на единицу счетчик блокировок.  
   
 ```
@@ -227,7 +222,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Уменьшает счетчик блокировок и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.  
   
-##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD  
  Выполняет скрипт, содержащийся в указанный ресурс для регистрации или отмены регистрации объекта.  
   
 ```
@@ -265,7 +260,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  Этот метод вызывает метод [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) и [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).  
   
-##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper  
  Этот метод вызывается методом `UpdateRegistryFromResourceD` для обновления реестра.  
   
 ```
@@ -291,7 +286,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>Примечания  
  Этот метод предоставляет реализацию [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).  
   
-##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS  
  Выполняет скрипт, содержащийся в указанный ресурс для регистрации или отмены регистрации объекта. Компонент реестра ATL статически связывает этот метод.  
   
 ```

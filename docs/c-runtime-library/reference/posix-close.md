@@ -1,12 +1,9 @@
 ---
-title: "close | Документы Майкрософт"
-ms.custom: 
+title: close | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - close
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - close function
 ms.assetid: c79689f4-9c86-4a4a-a256-d22e3498f55d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82aa27b0a85697b9f3fb7ddbf6320cc94c59bee6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d1b9ba5c58cb64c0bb99c6e2795f01e8dd19bef4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="close"></a>закрыть
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_close](../../c-runtime-library/reference/close.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_close](close.md).

@@ -1,12 +1,9 @@
 ---
-title: "execlp | Документы Майкрософт"
-ms.custom: 
+title: execlp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - execlp
@@ -29,20 +26,19 @@ dev_langs:
 helpviewer_keywords:
 - execlp function
 ms.assetid: 68b19143-e7b1-49c6-89b5-084d0d66de9c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dc84a485136c0cfe13a87164fee920f518815df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b82cfa43220cf3c65d378781fb20a5f45a560b98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execlp"></a>execlp
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_execlp](../../c-runtime-library/reference/execlp-wexeclp.md).  
-  
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_execlp](execlp-wexeclp.md).
+
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

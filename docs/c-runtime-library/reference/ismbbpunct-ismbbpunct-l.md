@@ -1,12 +1,9 @@
 ---
-title: "_ismbbpunct, _ismbbpunct_l | Документы Майкрософт"
-ms.custom: 
+title: _ismbbpunct, _ismbbpunct_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _ismbbpunct
@@ -37,52 +34,54 @@ helpviewer_keywords:
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd6e7eb83752a8848ba6ff0ffb39309cd01e8679
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7881461b7468d27ac376ab942d35683928cc1651
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
-Определяет, является ли определенный символ знаком препинания.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _ismbbpunct(  
-   unsigned int c   
-);  
-int _ismbbpunct_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `c`  
- Целое число, которое требуется проверить.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `_ismbbpunct` возвращает ненулевое значение, если целое число `c` представляет собой символ знака препинания, не входящий в набор ASCII. Функция`_ismbbpunct` использует текущий языковой стандарт для любых параметров символов, зависящих от языкового стандарта. Функция`_ismbbpunct_l` идентична, за исключением того, что используется переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_ismbbpunct`|\<mbctype.h>|  
-|`_ismbbpunct_l`|\<mbctype.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Классификация байтов](../../c-runtime-library/byte-classification.md)   
- [Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)
+
+Определяет, является ли определенный символ знаком препинания.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _ismbbpunct(
+   unsigned int c
+);
+int _ismbbpunct_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*c*<br/>
+Целое число, которое требуется проверить.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_ismbbpunct** возвращает ненулевое значение, если целое число *c* — знак препинания. **_ismbbpunct** использует текущий языковой стандарт для любых параметров символов, зависящих от языкового стандарта. **_ismbbpunct_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_ismbbpunct**|\<mbctype.h>|
+|**_ismbbpunct_l**|\<mbctype.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
+[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -1,13 +1,10 @@
 ---
-title: "ATL-классы политики копирования | Документы Microsoft"
-ms.custom: 
+title: ATL-классы политики копирования | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>ATL-классы политики копирования
 Копирование политики классы являются [служебные классы](../atl/utility-classes.md) используется для инициализации, копировать и удалять данные. Копирование классов политик можно для определения семантику копирования для любого типа данных, а также определять преобразования между различными типами данных.  
@@ -75,14 +70,14 @@ ms.lasthandoff: 12/21/2017
  Как правило необходимо определить свои собственные классы политики копирования разнородных копирования (то есть преобразование между типами данных). Некоторые примеры пользовательских классов политики копирования, просмотрите файлы файлах VCUE_Copy.h и VCUE_CopyString.h в [ATLCollections](../visual-cpp-samples.md) образца. Эти файлы содержат два шаблона класса копирования политики `GenericCopy` и `MapCopy`, плюс количество специализации `GenericCopy` для различных типов данных.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`позволяет указать *SourceType* и `DestinationType` как аргументы шаблонов. Вот наиболее распространенная форма `GenericCopy` класс в файле VCUE_Copy.h:  
+ `GenericCopy` позволяет указать *SourceType* и `DestinationType` как аргументы шаблонов. Вот наиболее распространенная форма `GenericCopy` класс в файле VCUE_Copy.h:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  Файле VCUE_Copy.h также содержит следующие специализации этого класса: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h содержит специализации для копирования из **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, и `GenericCopy<BSTR, std::string>`. Можно повысить `GenericCopy` , предоставляя дополнительные собственные специализации.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`предполагается, копируемых данных хранится в библиотеке C++ Standard в стиле сопоставление, поэтому он позволяет указывать тип карты, в котором хранятся данные, а целевой тип. Реализация класса используется только для определения типов, предоставляемых *MapType* класса для определения типа источника данных и для вызова соответствующего `GenericCopy` класса. Без специализации этого класса не требуются.  
+ `MapCopy` предполагается, копируемых данных хранится в библиотеке C++ Standard в стиле сопоставление, поэтому он позволяет указывать тип карты, в котором хранятся данные, а целевой тип. Реализация класса используется только для определения типов, предоставляемых *MapType* класса для определения типа источника данных и для вызова соответствующего `GenericCopy` класса. Без специализации этого класса не требуются.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

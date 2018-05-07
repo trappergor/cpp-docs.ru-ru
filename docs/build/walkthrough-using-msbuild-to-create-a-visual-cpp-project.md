@@ -1,13 +1,10 @@
 ---
-title: "Пошаговое руководство: Использование MSBuild для создания проекта Visual C++ | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Использование MSBuild для создания проекта Visual C++ | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Пошаговое руководство. Использование MSBuild для создания проекта Visual C++
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] для построения проекта Visual C++ из командной строки. Вы узнаете, как для создания исходных файлов C++ и XML файла проекта для консольного приложения Visual C++. После создания проекта, вы узнаете, как настроить процесс построения.  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]создает каталог для выходных файлов и компилирует и связывает проект для создания программы Myproject.exe. После завершения процесса сборки, используйте следующую команду для запуска приложения:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] создает каталог для выходных файлов и компилирует и связывает проект для создания программы Myproject.exe. После завершения процесса сборки, используйте следующую команду для запуска приложения:  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  Приложение должно вывести «Hello, из MSBuild!» в окне консоли.  
   
 ## <a name="customizing-your-project"></a>Настройка проекта  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]позволяет выполнения целевых объектов построения стандартных, применяются пользовательские свойства и использования настраиваемых инструментов, событий и этапов построения. В этом разделе рассмотрены следующие задачи:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] позволяет выполнения целевых объектов построения стандартных, применяются пользовательские свойства и использования настраиваемых инструментов, событий и этапов построения. В этом разделе рассмотрены следующие задачи:  
   
 -   С помощью [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] с целевыми объектами построения.  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>Добавление настроек MSBuild  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]предоставляет различные способы для настройки процесса построения. Следующие разделы показывают, как добавить пользовательские шаги построения, инструменты и события для вашего [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] проекта:  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] предоставляет различные способы для настройки процесса построения. Следующие разделы показывают, как добавить пользовательские шаги построения, инструменты и события для вашего [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] проекта:  
   
 -   [Практическое руководство. Добавление пользовательского шага сборки в проекты MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

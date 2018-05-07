@@ -1,12 +1,9 @@
 ---
-title: "tempnam | Документы Майкрософт"
-ms.custom: 
+title: tempnam | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - tempnam
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - tempnam function
 ms.assetid: 42446733-f131-470f-b4d0-96918becab11
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58d5cc938253cd9866b839ee66c086febb7eee9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 19764fe8f794601ba8bbd2bd5087be6a02a5c493
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tempnam"></a>tempnam
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md).

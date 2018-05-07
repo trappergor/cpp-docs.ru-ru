@@ -1,12 +1,9 @@
 ---
-title: "lfind | Документы Майкрософт"
-ms.custom: 
+title: lfind | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - lfind
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6246d7fa80f9a89f2a57171ae805b03e75f664b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fe22dfe77cfef52ec8f160ea441d42dc397872a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lfind"></a>lfind
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_lfind](../../c-runtime-library/reference/lfind.md) или ее аналог с улучшенной безопасностью [_lfind_s](../../c-runtime-library/reference/lfind-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_lfind](lfind.md) или ее аналог с улучшенной безопасностью [_lfind_s](lfind-s.md).

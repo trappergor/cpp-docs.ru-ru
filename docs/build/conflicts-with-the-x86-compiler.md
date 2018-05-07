@@ -1,27 +1,22 @@
 ---
-title: "Конфликтует с x86 компилятора | Документы Microsoft"
-ms.custom: 
+title: Конфликтует с x86 компилятора | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8e47f0d3-afe0-42d9-9efa-de239ddd3a05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b2b9c4cf871e8436a8da34a862d205541e7dc5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd72de4922c297b4a230e0dc0fb606b56a2a473
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Конфликты с компилятором x86
 Типы данных, размер которых больше, чем 4 байта не выровнены автоматически в стеке при использовать x86 компилятора для компиляции приложения. Поскольку архитектура x86 компилятора является выровненных стека размером 4 байта, что-либо больше, чем 4 байта, например, 64-разрядное целое число, не может автоматически выравниваться по 8 байтам адреса.  

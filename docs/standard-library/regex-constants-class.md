@@ -1,12 +1,12 @@
 ---
-title: "Класс regex_constants | Документы Майкрософт"
-ms.custom: 
+title: Класс regex_constants | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>Класс regex_constants
-Пространство имен для флажков регулярных выражений.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Пространство имен `regex_constants` инкапсулирует несколько типов флажков и соответствующих им значений флажков.  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<regex>  
-  
- **Пространство имен:** std  
-  
-##  <a name="error_type"></a>  regex_constants::error_type  
- Флаги для оповещения об ошибках синтаксиса регулярного выражения.  
-  
-```  
+
+Пространство имен для флажков регулярных выражений.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>Примечания
+
+Пространство имен `regex_constants` инкапсулирует несколько типов флажков и соответствующих им значений флажков.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<regex>
+
+**Пространство имен:** std
+
+## <a name="error_type"></a>  regex_constants::error_type
+
+Флаги для оповещения об ошибках синтаксиса регулярного выражения.
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>Примечания  
- Тип представляет собой перечисляемый тип, описывающий объект, который может содержать флаги ошибок. Ниже перечислены значения различных флагов.  
-  
- `error_backref` -- выражение содержит недопустимую обратную ссылку  
-  
- `error_badbrace` -- выражение содержит недопустимое число в выражении { }  
-  
- `error_badrepeat` -- выражение повторения (в большинстве контекстов одно из "*", "", "+", "{") не имеет перед собой выражения  
-  
- `error_brace` -- выражение содержит непарные "{" или "}"  
-  
- `error_brack` -- выражение содержит непарные "[" или "]"  
-  
- `error_collate` -- выражение содержит недопустимое имя элемента сортировки  
-  
- `error_complexity` -- попытка сопоставления не удалась из-за излишней сложности  
-  
- `error_ctype` -- выражение содержит недопустимое имя класса символа  
-  
- `error_escape` -- выражение содержит недопустимую последовательность отмены  
-  
- `error_paren` -- выражение содержит непарные "(" или ")"  
-  
- `error_parse` -- не удалось распознать выражение  
-  
- `error_range` -- выражение содержит недопустимый спецификатор диапазона символов  
-  
- `error_space` -- распознавание регулярного выражения не удалось из-за недостатка ресурсов  
-  
- `error_stack` -- попытка сопоставления не удалась из-за недостатка памяти  
-  
- `error_syntax` -- распознавание не удалось из-за синтаксической ошибки  
-  
- `error_backref` -- выражение содержит недопустимую обратную ссылку  
-  
-##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- Флаги для параметров сопоставления регулярного выражения.  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>Примечания
+
+Тип представляет собой перечисляемый тип, описывающий объект, который может содержать флаги ошибок. Ниже перечислены значения различных флагов.
+
+`error_backref` -- выражение содержит недопустимую обратную ссылку
+
+`error_badbrace` -- выражение содержит недопустимое число в выражении { }
+
+`error_badrepeat` -- выражение повторения (в большинстве контекстов одно из "*", "", "+", "{") не имеет перед собой выражения
+
+`error_brace` -- выражение содержит непарные "{" или "}"
+
+`error_brack` -- выражение содержит непарные "[" или "]"
+
+`error_collate` -- выражение содержит недопустимое имя элемента сортировки
+
+`error_complexity` -- попытка сопоставления не удалась из-за излишней сложности
+
+`error_ctype` -- выражение содержит недопустимое имя класса символа
+
+`error_escape` -- выражение содержит недопустимую последовательность отмены
+
+`error_paren` -- выражение содержит непарные "(" или ")"
+
+`error_parse` -- не удалось распознать выражение
+
+`error_range` -- выражение содержит недопустимый спецификатор диапазона символов
+
+`error_space` -- распознавание регулярного выражения не удалось из-за недостатка ресурсов
+
+`error_stack` -- попытка сопоставления не удалась из-за недостатка памяти
+
+`error_syntax` -- распознавание не удалось из-за синтаксической ошибки
+
+`error_backref` -- выражение содержит недопустимую обратную ссылку
+
+## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+
+Флаги для параметров сопоставления регулярного выражения.
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>Примечания  
- Тип является типом битовой маски, описывающим параметры для использования при сопоставлении текстовой последовательности с регулярным выражением и флаги формата для использования при замене текста. Параметры можно использовать вместе с `|`.  
-  
- Параметры сопоставления  
-  
- `match_default`  
-  
- `match_not_bol` -- не рассматривать первую позицию в последовательности-результате как начало строки  
-  
- `match_not_eol` -- не рассматривать позицию после конца в последовательности-результате как конец строки  
-  
- `match_not_bow` -- не рассматривать первую позицию в последовательности-результате как начало слова  
-  
- `match_not_eow` -- не рассматривать позицию после конца в последовательности-результате как конец слова  
-  
- `match_any` -- принимать любое сопоставление, если их возможно несколько  
-  
- `match_not_null` -- не рассматривать пустую вложенную последовательность как совпадение  
-  
- `match_continuous` -- не искать соответствия кроме как в начале последовательности-результата  
-  
- `match_prev_avail` -- `--first` — это допустимый итератор; игнорируйте `match_not_bol` и `match_not_bow`, если они установлены  
-  
- Флаги формата  
-  
- `format_default` -- использовать правила формата ECMAScript  
-  
- `format_sed` -- использовать правила формата sed  
-  
- `format_no_copy` -- не копировать текст, который не соответствует регулярному выражению  
-  
- `format_first_only` -- не искать соответствия после нахождения первого  
-  
-##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- Флаги для выбора параметров синтаксиса.  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>Примечания
+
+Тип является типом битовой маски, описывающим параметры для использования при сопоставлении текстовой последовательности с регулярным выражением и флаги формата для использования при замене текста. Параметры можно использовать вместе с `|`.
+
+Параметры сопоставления
+
+`match_default`
+
+`match_not_bol` -- не рассматривать первую позицию в последовательности-результате как начало строки
+
+`match_not_eol` -- не рассматривать позицию после конца в последовательности-результате как конец строки
+
+`match_not_bow` -- не рассматривать первую позицию в последовательности-результате как начало слова
+
+`match_not_eow` -- не рассматривать позицию после конца в последовательности-результате как конец слова
+
+`match_any` -- принимать любое сопоставление, если их возможно несколько
+
+`match_not_null` -- не рассматривать пустую вложенную последовательность как совпадение
+
+`match_continuous` -- не искать соответствия кроме как в начале последовательности-результата
+
+`match_prev_avail` -- `--first` — это допустимый итератор; игнорируйте `match_not_bol` и `match_not_bow`, если они установлены
+
+Флаги формата
+
+`format_default` -- использовать правила формата ECMAScript
+
+`format_sed` -- использовать правила формата sed
+
+`format_no_copy` -- не копировать текст, который не соответствует регулярному выражению
+
+`format_first_only` -- не искать соответствия после нахождения первого
+
+## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+
+Флаги для выбора параметров синтаксиса.
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>Примечания  
- Тип — это тип битовой маски, описывающий описатели языка и модификаторы синтаксиса, используемые при компиляции регулярного выражения. Параметры можно использовать вместе с `|`. Одновременно можно использовать только один описатель языка.  
-  
- Описатели языка включают:  
-  
- `ECMAScript` -- компилировать как ECMAScript  
-  
- `basic` -- компилировать как BRE  
-  
- `extended` -- компилировать как ERE  
-  
- `awk` -- компилировать как awk  
-  
- `grep` -- компилировать как grep  
-  
- `egrep` -- компилировать как egrep  
-  
- Модификаторы синтаксиса включают:  
-  
- `icase` -- не учитывать регистр при сопоставлении  
-  
- `nosubs` -- реализация не должна отслеживать содержимое групп записи  
-  
- `optimize` -- реализация должна отдавать приоритет скорости сопоставления, а не скорости компиляции регулярных выражений  
-  
- `collate` -- учитывать регистр при сопоставлении  
-  
-## <a name="see-also"></a>См. также  
-[\<regex>](../standard-library/regex.md)  
-[Класс regex_error](../standard-library/regex-error-class.md)  
-[Функции \<regex>](../standard-library/regex-functions.md)  
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)  
-[Операторы \<regex>](../standard-library/regex-operators.md)  
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Класс regex_traits](../standard-library/regex-traits-class.md)  
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>Примечания
+
+Тип — это тип битовой маски, описывающий описатели языка и модификаторы синтаксиса, используемые при компиляции регулярного выражения. Параметры можно использовать вместе с `|`. Одновременно можно использовать только один описатель языка.
+
+Описатели языка включают:
+
+`ECMAScript` -- компилировать как ECMAScript
+
+`basic` -- компилировать как BRE
+
+`extended` -- компилировать как ERE
+
+`awk` -- компилировать как awk
+
+`grep` -- компилировать как grep
+
+`egrep` -- компилировать как egrep
+
+Модификаторы синтаксиса включают:
+
+`icase` -- не учитывать регистр при сопоставлении
+
+`nosubs` -- реализация не должна отслеживать содержимое групп записи
+
+`optimize` -- реализация должна отдавать приоритет скорости сопоставления, а не скорости компиляции регулярных выражений
+
+`collate` -- учитывать регистр при сопоставлении
+
+## <a name="see-also"></a>См. также
+
+[\<regex>](../standard-library/regex.md)<br/>
+[Класс regex_error](../standard-library/regex-error-class.md)<br/>
+[Функции \<regex>](../standard-library/regex-functions.md)<br/>
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
+[Операторы \<regex>](../standard-library/regex-operators.md)<br/>
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
+[Класс regex_traits](../standard-library/regex-traits-class.md)<br/>
+[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>

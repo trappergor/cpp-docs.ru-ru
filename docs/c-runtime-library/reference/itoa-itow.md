@@ -106,18 +106,17 @@ helpviewer_keywords:
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a471e0df86dbfd5e8c267c463684a088b400863
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 95aa140eae6d8a06eff84d03cbb562444c3bd552
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Преобразует целое число в строку. Доступны более безопасные версии этих функций; в разделе [_itoa_s функции также, _itow_s](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Преобразует целое число в строку. Доступны более безопасные версии этих функций; в разделе [_itoa_s функции также, _itow_s](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -192,12 +191,12 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>Примечания
 
-`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, И `_ui64toa` функции преобразования цифр из заданного *значение* аргумент в строку, завершающуюся значением null и в хранилище результатов (до 33 символы для `_itoa`, `_ltoa`, и `_ultoa`и 65 для `_i64toa` и `_ui64toa`) в *буфера*. Если *основание системы счисления* равно 10 и *значение* имеет отрицательное значение, первым символом результирующей строки будет знак «минус» (**-**). `_itow`, `_ltow`, `_ultow`, `_i64tow`, И `_ui64tow` функции — это двухбайтовая версии `_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, и `_ui64toa`соответственно.
+**_Itoa**, **_ltoa**, **_ultoa**, **_i64toa**, и **_ui64toa** функции преобразуют цифры Данный *значение* аргумент в строку, завершающуюся значением null и хранилище результат (до 33 символов для **_itoa**, **_ltoa**, и  **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в *буфера*. Если *основание системы счисления* равно 10 и *значение* имеет отрицательное значение, первым символом результирующей строки будет знак «минус» (**-**). **_Itow**, **_ltow**, **_ultow**, **_i64tow**, и **_ui64tow** функции расширенных символов версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, и **_ui64toa**, соответственно.
 
 > [!IMPORTANT]
 > Эти функции можно написать после конца буфера слишком мал. Чтобы предотвратить переполнение буфера, убедитесь, что *буфера* достаточно велик для хранения преобразованных цифр, а также конечного нуль символа и символа знака. Неправильное использование этих функций может привести к серьезным уязвимостей в коде.
 
-Из-за их потенциальные угрозы безопасности, по умолчанию, эти функции вызывают предупреждение об устаревании [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **эта функция или переменная может быть небезопасным. Рассмотрите возможность использования** *safe_function* **вместо него. Чтобы отключить об устаревании, используйте _CRT_SECURE_NO_WARNINGS.** Корпорация Майкрософт рекомендует изменять исходный код для использования *safe_function* предложенными предупреждающее сообщение. Более безопасные функции не следует создавать больше символов, чем заданный размер буфера. Дополнительные сведения см. в разделе [_itoa_s функции также, _itow_s](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Из-за их потенциальные угрозы безопасности, по умолчанию, эти функции вызывают предупреждение об устаревании [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **эта функция или переменная может быть небезопасным. Рассмотрите возможность использования** *safe_function* **вместо него. Чтобы отключить об устаревании, используйте _CRT_SECURE_NO_WARNINGS.** Корпорация Майкрософт рекомендует изменять исходный код для использования *safe_function* предложенными предупреждающее сообщение. Более безопасные функции не следует создавать больше символов, чем заданный размер буфера. Дополнительные сведения см. в разделе [_itoa_s функции также, _itow_s](itoa-s-itow-s.md).
 
 Чтобы использовать эти функции без предупреждения об устаревании, определить **_CRT_SECURE_NO_WARNINGS** препроцессора макрос перед включением каких-либо заголовков CRT. Сделать это в командной строке, в командной строке разработчика, добавив **/D_CRT_SECURE_NO_WARNINGS** параметра компилятора **cl** команды. В противном случае определите макрос в файле исходного кода. При использовании предкомпилированных заголовков, определение макроса в верхней части файла предкомпилированного заголовка включаемый файл, обычно stdafx.h. Чтобы определить макрос в исходном коде, используйте **#define** директиву перед включением любой заголовок CRT, как показано в примере:
 
@@ -208,7 +207,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают их более безопасные аналоги. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Имена Posix `itoa`, `ltoa`, и `ultoa` существуют как псевдонимы для `_itoa`, `_ltoa`, и `_ultoa` функции. Имена Posix устарели, так как они не соответствуют соглашения имя реализации функции ISO C. По умолчанию эти функции вызывают предупреждение об устаревании [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **имя POSIX для этого элемента является устаревшим. Используйте имя, соответствующее стандарту ISO C и C++:** *новое_имя*. Рекомендуется изменять исходный код, чтобы использовать более безопасные версии этих функций `_itoa_s`, `_ltoa_s`, или `_ultoa_s`. Дополнительные сведения см. в разделе [_itoa_s функции также, _itow_s](../../c-runtime-library/reference/itoa-s-itow-s.md).
+Имена Posix **itoa**, **ltoa**, и **ultoa** существуют как псевдонимы для **_itoa**, **_ltoa**, и **_ultoa** функции. Имена Posix устарели, так как они не соответствуют соглашения имя реализации функции ISO C. По умолчанию эти функции вызывают предупреждение об устаревании [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **имя POSIX для этого элемента является устаревшим. Используйте имя, соответствующее стандарту ISO C и C++:** *новое_имя*. Рекомендуется изменять исходный код, чтобы использовать более безопасные версии этих функций **_itoa_s**, **_ltoa_s**, или **_ultoa_s**. Дополнительные сведения см. в разделе [_itoa_s функции также, _itow_s](itoa-s-itow-s.md).
 
 Для обеспечения переносимости исходного кода можно сохранить имена Posix в коде. Чтобы использовать эти функции без предупреждения об устаревании, определять **_CRT_NONSTDC_NO_WARNINGS** и **_CRT_SECURE_NO_WARNINGS** макросы препроцессора перед включением каких-либо заголовков CRT. Сделать это в командной строке, в командной строке разработчика, добавив **/D_CRT_SECURE_NO_WARNINGS** и **/D_CRT_NONSTDC_NO_WARNINGS** параметры компилятора для **cl**команды. Также можно определите этот макрос в исходных файлах. При использовании предкомпилированных заголовков, определить этот макрос в верхней части предкомпилированный заголовок содержит файл, обычно stdafx.h. Чтобы определить макросы в исходном коде, используйте **#define** директивы, прежде чем включать заголовок любого CRT, как показано в примере:
 
@@ -227,11 +226,11 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 ||||
 |-|-|-|
 |Функции|radix|Макросы|
-|`_itoa`, `_itow`|16<br/>10<br/>8<br/>2|`_MAX_ITOSTR_BASE16_COUNT`<br/>`_MAX_ITOSTR_BASE10_COUNT`<br/>`_MAX_ITOSTR_BASE8_COUNT`<br/>`_MAX_ITOSTR_BASE2_COUNT`|
-|`_ltoa`, `_ltow`|16<br/>10<br/>8<br/>2|`_MAX_LTOSTR_BASE16_COUNT`<br/>`_MAX_LTOSTR_BASE10_COUNT`<br/>`_MAX_LTOSTR_BASE8_COUNT`<br/>`_MAX_LTOSTR_BASE2_COUNT`|
-|`_ultoa`, `_ultow`|16<br/>10<br/>8<br/>2|`_MAX_ULTOSTR_BASE16_COUNT`<br/>`_MAX_ULTOSTR_BASE10_COUNT`<br/>`_MAX_ULTOSTR_BASE8_COUNT`<br/>`_MAX_ULTOSTR_BASE2_COUNT`|
-|`_i64toa`, `_i64tow`|16<br/>10<br/>8<br/>2|`_MAX_I64TOSTR_BASE16_COUNT`<br/>`_MAX_I64TOSTR_BASE10_COUNT`<br/>`_MAX_I64TOSTR_BASE8_COUNT`<br/>`_MAX_I64TOSTR_BASE2_COUNT`|
-|`_ui64toa`, `_ui64tow`|16<br/>10<br/>8<br/>2|`_MAX_U64TOSTR_BASE16_COUNT`<br/>`_MAX_U64TOSTR_BASE10_COUNT`<br/>`_MAX_U64TOSTR_BASE8_COUNT`<br/>`_MAX_U64TOSTR_BASE2_COUNT`|
+|**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 В этом примере счетчик макроса преобразования для определения буфер достаточно велик, чтобы вместить **long long без знака** в базовый 2:
 
@@ -249,19 +248,19 @@ int main()
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot`|`_itoa`|`_itoa`|`_itow`|
-|`_ltot`|`_ltoa`|`_ltoa`|`_ltow`|
-|`_ultot`|`_ultoa`|`_ultoa`|`_ultow`|
-|`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|
-|`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
+|**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`itoa`, `ltoa`, `ultoa`|\<stdlib.h>|
-|`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, `_ui64toa`|\<stdlib.h>|
-|`_itow`, `_ltow`, `_ultow`, `_i64tow`, `_ui64tow`|\<stdlib.h> или \<wchar.h>|
+|**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> или \<wchar.h>|
 
 Эти функции и макросы зависят от корпорации Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -345,4 +344,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>См. также
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s также, _itow_s функции](../../c-runtime-library/reference/itoa-s-itow-s.md)<br/>
+[_itoa_s также, _itow_s функции](itoa-s-itow-s.md)<br/>

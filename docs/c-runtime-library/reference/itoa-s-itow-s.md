@@ -83,18 +83,17 @@ helpviewer_keywords:
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3598724e905c51c68e7f4305f409060eb1f98e41
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, также, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-Преобразует целое число в строку. Здесь представлены версии [_itoa функции _itow](../../c-runtime-library/reference/itoa-itow.md) с усовершенствованной безопасностью, как описано в [средства безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Преобразует целое число в строку. Здесь представлены версии [_itoa функции _itow](itoa-itow.md) с усовершенствованной безопасностью, как описано в [средства безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -161,22 +160,22 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 |value|buffer|size|radix|Назад|
 |-----------|------------|----------------------|-----------|------------|
-|any|`NULL`|any|any|`EINVAL`|
-|any|any|<=0|any|`EINVAL`|
-|any|any|<= требуемой длины результирующей строки|any|`EINVAL`|
-|any|any|any|*Основание системы счисления* < 2 или *основание системы счисления* > 36|`EINVAL`|
+|any|**NULL**|any|any|**EINVAL**|
+|any|any|<=0|any|**EINVAL**|
+|any|any|<= требуемой длины результирующей строки|any|**EINVAL**|
+|any|any|any|*Основание системы счисления* < 2 или *основание системы счисления* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Вопросы безопасности
 
-Эти функции можно создать ошибку нарушения прав доступа, если *буфера* не указывает на допустимый адрес в памяти и не `NULL`, или если длина буфера недостаточно для размещения в результирующую строку.
+Эти функции можно создать ошибку нарушения прав доступа, если *буфера* не указывает на допустимый адрес в памяти и не **NULL**, или если длина буфера недостаточно для размещения в результирующую строку.
 
 ## <a name="remarks"></a>Примечания
 
-За исключением параметров и возвращаемого значения `_itoa_s` и `_itow_s` функции семейства действуют так же как соответствующие опаснее `_itoa` и `_itow` версии.
+За исключением параметров и возвращаемого значения **_itoa_s** и **также, _itow_s** функции семейства действуют так же как соответствующие опаснее **_itoa** и **_itow** версий.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Библиотека отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).
+Библиотека отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 Библиотека CRT включает удобный макросы, чтобы определить размер буфера, необходимых для преобразования длинного возможные значения каждого целочисленных типов, включая завершающий символ null и подпишите символ несколько общих баз. Сведения см. в разделе [макросы счетчик преобразования максимально](itoa-itow.md#maximum-conversion-count-macros).
 
@@ -184,18 +183,18 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot_s`|`_itoa_s`|`_itoa_s`|`_itow_s`|
-|`_ltot_s`|`_ltoa_s`|`_ltoa_s`|`_ltow_s`|
-|`_ultot_s`|`_ultoa_s`|`_ultoa_s`|`_ultow_s`|
-|`_i64tot_s`|`_i64toa_s`|`_i64toa_s`|`_i64tow_s`|
-|`_ui64tot_s`|`_ui64toa_s`|`_ui64toa_s`|`_ui64tow_s`|
+|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
+|**_ultot_s**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
+|**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
+|**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`_itoa_s`, `_ltoa_s`, `_ultoa_s`, `_i64toa_s`, `_ui64toa_s`|\<stdlib.h>|
-|`_itow_s`, `_ltow_s`, `_ultow_s`, `_i64tow_s`, `_ui64tow_s`|\<stdlib.h> или \<wchar.h>|
+|**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
+|**также, _itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> или \<wchar.h>|
 
 Эти функции зависят от корпорации Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -272,4 +271,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>См. также
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa _itow функции](../../c-runtime-library/reference/itoa-itow.md)<br/>
+[_itoa _itow функции](itoa-itow.md)<br/>

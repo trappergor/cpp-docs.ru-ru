@@ -2,11 +2,8 @@
 title: Необработанные исключения C++ | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: db763ce602531b15e840013a6dd235b3fba4007e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhandled-c-exceptions"></a>Необработанные исключения C++
 Если соответствующий обработчик (или многоточие **перехватывать** обработчика) не найден для текущего исключения, о стандартных `terminate` функция времени выполнения. (Функцию `terminate` также можно явным образом вызвать из любого обработчика.) Действие по умолчанию для `terminate` заключается в том, что она вызывает функцию `abort`. Если вам необходимо, чтобы перед выходом из приложения функция `terminate` в вашей программе вызывала какую-то другую функцию, вызовите функцию `set_terminate`, указав в качестве ее единственного аргумента ту функцию, которую нужно вызвать. Функцию `set_terminate` можно вызвать из любого места программы. `terminate` Подпрограммы всегда вызывает последнюю функцию, заданную в качестве аргумента для `set_terminate`.  

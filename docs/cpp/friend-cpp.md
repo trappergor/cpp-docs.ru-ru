@@ -1,12 +1,9 @@
 ---
-title: "Friend (C++) | Документы Microsoft"
-ms.custom: 
+title: Friend (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - friend_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46caba9230676e30cde02e31cc231d606f446767
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="friend-c"></a>friend (C++)
 В некоторых случаях удобнее предоставить доступ на уровне члена к функциям, которые не являются членами класса, или ко всем элементам в отдельном классе. Только реализатор класса может объявить, что является для него дружественным элементом. Функция или класс не могут объявить себя дружественным элементом для любого класса. В определении класса используйте `friend` ключевое слово и имя функции, не являющихся членами или другой класс, чтобы предоставить доступ к закрытым и защищенным членам класса.         В определении шаблона параметром типа могут объявляться как дружественная.  

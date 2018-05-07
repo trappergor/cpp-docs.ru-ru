@@ -1,12 +1,9 @@
 ---
-title: "free | Документы Майкрософт"
-ms.custom: 
+title: free | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - free
@@ -31,63 +28,65 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161b067c432a30e58db51410f0540d60d5e74bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc6dfd832d18dbabc1ebc10aec252cc8afe15346
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="free"></a>free
-Освобождает блок памяти.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void free(   
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `memblock`  
- Ранее выделенный блок памяти, который требуется освободить.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `free` освобождает блок памяти (`memblock`), который был выделен ранее вызовом функции `calloc`, `malloc` или `realloc`. Число освобожденных байтов эквивалентно количеству байтов, запрошенному при выделении блока (или выделении заново, если использовалась функция `realloc`). Если `memblock` имеет значение `NULL`, указатель не обрабатывается и функция `free` немедленно возвращает управление. Попытка освободить недопустимый указатель (указатель на блок памяти, который не был выделен функцией `calloc`, `malloc` или `realloc`) может повлиять на последующие запросы выделения памяти и вызвать ошибки.  
-  
- В случае возникновения ошибки при освобождении памяти для `errno` задаются сведения о характере сбоя, полученные от операционной системы. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
- После освобождения блока памяти функция [_heapmin](../../c-runtime-library/reference/heapmin.md) минимизирует объем свободной памяти в куче путем объединения неиспользуемых областей и возврата их операционной системе. Освобожденная память, которая не возвращена операционной системе, возвращается в пул свободной памяти и снова доступна для выделения.  
-  
- Когда приложение связано с отладочной версией библиотек времени выполнения языка C, функция `free` соответствует функции [_free_dbg](../../c-runtime-library/reference/free-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
-  
- Функция `free` помечена как `__declspec(noalias)`; это означает, что функция гарантировано не изменяет глобальные переменные. Дополнительные сведения см. в разделе [noalias](../../cpp/noalias.md).  
-  
- Для освобождения памяти, которая выделена функцией [_malloca](../../c-runtime-library/reference/malloca.md), используйте функцию [_freea](../../c-runtime-library/reference/freea.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`free`|\<stdlib.h> и \<malloc.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для функции [malloc](../../c-runtime-library/reference/malloc.md).  
-  
-## <a name="see-also"></a>См. также  
- [Выделение памяти](../../c-runtime-library/memory-allocation.md)   
- [_alloca](../../c-runtime-library/reference/alloca.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_freea](../../c-runtime-library/reference/freea.md)
+
+Освобождает блок памяти.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void free(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*memblock* ранее выделенный блок памяти, освобождаемой.
+
+## <a name="remarks"></a>Примечания
+
+**Свободного** функция освобождает блок памяти (*memblock*) который был выделен ранее вызовом **calloc**, **malloc**, или **realloc**. Число освобожденных байтов эквивалентно количеству байтов, запрошенному при блок был выделен (или выделении заново, в случае использования **realloc**). Если *memblock* — **NULL**, указатель обрабатывается и **свободного** немедленно возвращает. Попытка освободить недопустимый указатель (указатель на блок памяти, которая не была выделена **calloc**, **malloc**, или **realloc**) может повлиять на последующие запросы выделения памяти и привести к ошибкам.
+
+Если произошла ошибка при освобождении памяти, **errno** задаются сведения из операционной системы о характере сбоя. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+После освобождения блока памяти функция [_heapmin](heapmin.md) минимизирует объем свободной памяти в куче путем объединения неиспользуемых областей и возврата их операционной системе. Освобожденная память, которая не возвращена операционной системе, возвращается в пул свободной памяти и снова доступна для выделения.
+
+Когда приложение связано с отладочной версией библиотеки времени выполнения C **свободного** разрешается [_free_dbg](free-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+
+**Бесплатные** помечен `__declspec(noalias)`, это означает, что функция гарантированно не изменит глобальные переменные. Дополнительные сведения см. в разделе [noalias](../../cpp/noalias.md).
+
+Для освобождения памяти, которая выделена функцией [_malloca](malloca.md), используйте функцию [_freea](freea.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**free**|\<stdlib.h> и \<malloc.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для функции [malloc](malloc.md).
+
+## <a name="see-also"></a>См. также
+
+[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[_alloca](alloca.md)<br/>
+[calloc](calloc.md)<br/>
+[malloc](malloc.md)<br/>
+[realloc](realloc.md)<br/>
+[_free_dbg](free-dbg.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_freea](freea.md)<br/>

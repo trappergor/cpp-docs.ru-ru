@@ -1,12 +1,9 @@
 ---
-title: "write | Документы Майкрософт"
-ms.custom: 
+title: write | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - write
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6d147aff67aa02afee85a396798d4d1803d0ac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ebcbc8bf32f609aa3c41458d5a5461a9d0c3435
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write"></a>запись
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_write](../../c-runtime-library/reference/write.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_write](write.md).

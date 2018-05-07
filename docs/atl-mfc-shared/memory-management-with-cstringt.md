@@ -1,12 +1,9 @@
 ---
-title: "Управление памятью с CStringT | Документы Microsoft"
-ms.custom: 
+title: Управление памятью с CStringT | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringT
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbf623344ec52abce28a08670e7f3cd09140563b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b65efd934fecdab36bfa1c0c882de1dd8862c81f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-management-with-cstringt"></a>Управление памятью с CStringT
 Класс [CStringT](../atl-mfc-shared/reference/cstringt-class.md) — это класс шаблона, используемый для работы с переменной длиной символьных строк. Выпущена через диспетчер строковый объект, связанный с каждым экземпляром и выделения памяти для хранения этих строк `CStringT`. MFC и ATL предоставляют экземпляров по умолчанию `CStringT`, который называется `CString`, `CStringA`, и `CStringW`, который работы со строками из различных типов знаков. Эти типы символов имеют тип **TCHAR**, `char`, и `wchar_t`соответственно. Такие типы строк по умолчанию использовать диспетчер строки, который выделяет память из кучи процесса (в ATL) или кучу CRT (в MFC). Эта схема выделения памяти достаточно для типичных приложений. Однако для кода, выполняющего служб с интенсивными вычислениями используйте строки (или многопоточного кода), диспетчеры памяти по умолчанию может работать медленнее, чем. Описывается, как переопределить поведение по умолчанию памяти управления `CStringT`, создание Распределители специально оптимизированных для поставленной задачи.  

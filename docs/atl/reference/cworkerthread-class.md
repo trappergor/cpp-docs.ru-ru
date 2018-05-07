@@ -1,12 +1,9 @@
 ---
-title: "Класс CWorkerThread | Документы Microsoft"
-ms.custom: 
+title: Класс CWorkerThread | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
 Этот класс создает рабочий поток или использует уже существующий, ожидает один или несколько маркеров объектов ядра и выполняет функцию указанного клиента, когда один из маркеров, получает сигнал.  
@@ -63,14 +58,14 @@ class CWorkerThread
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Конструктор рабочего потока.|  
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|Деструктор для рабочего потока.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод, чтобы добавить дескриптор ожидающий объект списка, поддерживаемого рабочим потоком.|  
 |[CWorkerThread::AddTimer](#addtimer)|Этот метод служит для добавления периодический таймер ожидания для списка, поддерживаемого рабочим потоком.|  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  Вызовите этот метод, чтобы добавить дескриптор ожидающий объект списка, поддерживаемого рабочим потоком.  
   
 ```
@@ -129,7 +124,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>Примечания  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через `pClient` при дескриптора, `hObject`, которому отправляется сигнал.  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  Этот метод служит для добавления периодический таймер ожидания для списка, поддерживаемого рабочим потоком.  
   
 ```
@@ -161,14 +156,14 @@ HRESULT AddTimer(
   
  Передает этот дескриптор таймера из `phTimer` для [CWorkerThread::RemoveHandle](#removehandle) закрытие таймером.  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  Конструктор.  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  Деструктор  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [CWorkerThread::Shutdown](#shutdown).  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  Вызовите этот метод, чтобы получить дескриптор потока рабочего потока.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор потока или значение NULL, если рабочий поток не был инициализирован.  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  Этот метод используется для получения идентификатора потока рабочего потока.  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает идентификатор потока или значение NULL, если рабочий поток не был инициализирован.  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  Этот метод вызывается для инициализации рабочего потока.  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  В разделе [CWorkerThread::Shutdown](#shutdown) сведения, как изменяется поведение этого метода при инициализации с помощью указателя на существующий объект.  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  Вызовите этот метод, чтобы удалить маркер из списка объектов ожидания.  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>Примечания  
  При удалении дескриптора [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, который был передан в [AddHandle](#addhandle). Если этот вызов завершается неудачно, `CWorkerThread` вызовет Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) функция с дескриптором.  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  Вызовите этот метод, чтобы завершить работу рабочий поток.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "_RTC_NumErrors | Документы Майкрософт"
-ms.custom: 
+title: _RTC_NumErrors | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _RTC_NumErrors
@@ -32,43 +29,45 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2034dd9c1e255196c66c4385e68c51845915ff59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: af223e1e2d183f5357cf1d1bac96aabb042a99da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
-Возвращает общее количество ошибок, которое может быть обнаружено путем проверки на ошибки во время выполнения (RTC). Вы можете использовать это число в качестве элемента управления в цикле **for**, где каждое значение в цикле передается в [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-int _RTC_NumErrors( void );  
-  
-```  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Целое число, представляющее общее количество ошибок, которое может быть обнаружено проверками на ошибки во время выполнения Visual C++.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_RTC_NumErrors`|\<rtcapi.h>|  
-  
- Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="libraries"></a>Библиотеки  
- Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="see-also"></a>См. также  
- [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   
- [Проверка ошибок во время выполнения](../../c-runtime-library/run-time-error-checking.md)
+
+Возвращает общее количество ошибок, которое может быть обнаружено путем проверки на ошибки во время выполнения (RTC). Вы можете использовать это число в качестве элемента управления в цикле **for**, где каждое значение в цикле передается в [_RTC_GetErrDesc](rtc-geterrdesc.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+int _RTC_NumErrors( void );
+
+```
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Целое число, представляющее общее количество ошибок, которое может быть обнаружено проверками на ошибки во время выполнения Visual C++.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_RTC_NumErrors**|\<rtcapi.h>|
+
+Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="see-also"></a>См. также
+
+[_RTC_GetErrDesc](rtc-geterrdesc.md)<br/>
+[Проверка ошибок во время выполнения](../../c-runtime-library/run-time-error-checking.md)<br/>

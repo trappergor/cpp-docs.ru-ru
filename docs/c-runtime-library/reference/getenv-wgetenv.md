@@ -1,12 +1,9 @@
 ---
-title: "getenv, _wgetenv | Документы Майкрософт"
-ms.custom: 
+title: getenv, _wgetenv | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - getenv
@@ -39,121 +36,124 @@ helpviewer_keywords:
 - _tgetenv function
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99d9104959dccf4a6879c4e929a1cdc281317171
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a2e68ca55d9e33995df583719e4797a6880d34ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
-Получает значение из текущей среды. Существуют более безопасные версии этих функций; см. раздел [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
-  
+
+Получает значение из текущей среды. Существуют более безопасные версии этих функций; см. раздел [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-char *getenv(   
-   const char *varname   
-);  
-wchar_t *_wgetenv(   
-   const wchar_t *varname   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `varname`  
- Имя переменной среды.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на запись таблицы среды, содержащую `varname`. Изменять значение переменной среды с помощью возвращенного указателя небезопасно. Чтобы изменить значение переменной среды, используйте функцию `_putenv`. Если имя `NULL` не найдено в таблице среды, возвращается значение `varname`.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `getenv` выполняет поиск в списке переменных среды для `varname`. `getenv` не учитывает регистр в операционной системе Windows. Функции `getenv` и `_putenv` для доступа к среде используют копию среды, указанную в глобальной переменной `_environ`. Функция `getenv` работает только в структурах данных, доступных в библиотеке времени выполнения, а не в "сегменте" среды, созданном для процесса операционной системой. Поэтому программы, использующих аргумент `envp` в [main](../../cpp/main-program-startup.md) или [wmain](../../cpp/main-program-startup.md) могут извлекать неверную информацию.  
-  
- Если `varname` является указателем `NULL`, эта функция вызывает обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `NULL`.  
-  
- `_wgetenv` — это версия с расширенными символами для `getenv`; аргумент и возвращаемое значение `_wgetenv` являются строками с расширенными символами. Глобальная переменная `_wenviron` — это версия `_environ` с расширенными символами.  
-  
- В программе с многобайтовой кодировкой (например, в программе с однобайтовой кодировкой ASCII) переменная `_wenviron` инициализируется значением `NULL`, поскольку среда состоит из строк многобайтовой кодировки. Затем если при первом вызове функции `_wputenv` или `_wgetenv` среда (многобайтовой кодировки) уже существует, создается соответствующая среда для поддержки расширенных строк и на нее устанавливается указатель `_wenviron`.  
-  
- Аналогично в программе Юникода (`_wmain`) переменная `_environ` инициализируется значением `NULL`, поскольку среда состоит из расширенных строк. Затем, если при первом вызове функции `_putenv` или `getenv` среда (Юникода) уже существует, создается соответствующая среда для поддержки многобайтовых строк, на которую указывает `_environ`.  
-  
- Если в программе одновременно существуют две копии среды (многобайтовой кодировки и Юникода), система времени выполнения должна поддерживать обе копии, что отрицательно сказывается на скорости выполнения программы. Например, при вызове функции `_putenv` также автоматически производится вызов функции `_wputenv`, чтобы строки в двух средах совпадали.  
-  
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+char *getenv(
+   const char *varname
+);
+wchar_t *_wgetenv(
+   const wchar_t *varname
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*varname*<br/>
+Имя переменной среды.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Возвращает указатель на запись таблицы среды содержащий *varname*. Изменять значение переменной среды с помощью возвращенного указателя небезопасно. Используйте [_putenv](putenv-wputenv.md) функции для изменения значения переменной среды. Возвращает значение **NULL** Если *varname* не найден в таблице среды.
+
+## <a name="remarks"></a>Примечания
+
+**Getenv** функция выполняет поиск в списке переменных среды для *varname*. **getenv** регистр не учитывается в операционной системе Windows. **getenv** и **_putenv** используют копию среды, на который указывает глобальная переменная **_environ** для доступа к среде. **getenv** работает только в структурах данных, доступных в библиотеке времени выполнения, а не в среде «сегмент», созданном для процесса операционной системой. Поэтому программы, которые используют *envp* аргумент [основной](../../cpp/main-program-startup.md) или [wmain](../../cpp/main-program-startup.md) могут извлекать неверную информацию.
+
+Если *varname* — **NULL**, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **NULL**.
+
+**_wgetenv** — это двухбайтовая версия **getenv**; аргумент и возвращаемое значение **_wgetenv** представляют собой строки расширенных символов. **_Wenviron** глобальная переменная — это двухбайтовая версия **_environ**.
+
+В программе с многобайтовой Кодировкой (например, в программе однобайтовой Кодировкой ASCII) **_wenviron** изначально **NULL** поскольку среда состоит из строк многобайтовых символов. Затем на первый вызов [_wputenv](putenv-wputenv.md), или при первом вызове для **_wgetenv** Если среда (многобайтовой Кодировки) уже существует, создается соответствующая среда широкосимвольной строки и затем указывает **_wenviron**.
+
+Аналогично в Юникоде (**_wmain**) программы, **_environ** изначально **NULL** поскольку среда состоит из строки расширенных символов. Затем на первый вызов **_putenv**, или при первом вызове для **getenv** Если среда (Юникода) уже существует, создается соответствующая среда многобайтовой Кодировки создается и затем указывает **_ Environ**.
+
+Если в программе одновременно существуют две копии среды (многобайтовой кодировки и Юникода), система времени выполнения должна поддерживать обе копии, что отрицательно сказывается на скорости выполнения программы. Например, при каждом вызове **_putenv**, вызов **_wputenv** также выполняется автоматически, так что строки в двух средах совпадали.
+
 > [!CAUTION]
->  В редких случаях, когда система времени выполнения поддерживает и версию Юникода, и многобайтовую версию, эти две версии среды могут не полностью соответствовать друг другу. Это происходит потому, что хотя любая уникальная расширенная строка сопоставляется уникальной строке Юникода, сопоставление уникальной строки Юникода со строкой многобайтовой кодировки не обязательно будет уникальными. Дополнительные сведения см. в разделе [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
-  
+> В редких случаях, когда система времени выполнения поддерживает и версию Юникода, и многобайтовую версию, эти две версии среды могут не полностью соответствовать друг другу. Это происходит потому, что хотя любая уникальная расширенная строка сопоставляется уникальной строке Юникода, сопоставление уникальной строки Юникода со строкой многобайтовой кодировки не обязательно будет уникальными. Дополнительные сведения см. в разделе [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
+
 > [!NOTE]
->  Семейства функций `_putenv` и `_getenv` не являются потокобезопасными. Функция `_getenv` может вернуть указатель строки, в то время как функция `_putenv` изменяет строку, вызывая случайные сбои. Убедитесь, что вызовы этих функций синхронизированы.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tgetenv`|`getenv`|`getenv`|`_wgetenv`|  
-  
- Для проверки или изменения значения переменной среды `TZ` используйте функции `getenv`, `_putenv` и `_tzset`, как требуется. Дополнительные сведения о переменной `TZ` см. в разделах [_tzset](../../c-runtime-library/reference/tzset.md), а также [_daylight, timezone и _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`getenv`|\<stdlib.h>|  
-|`_wgetenv`|\<stdlib.h> или \<wchar.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_getenv.c  
-// compile with: /W3  
-// This program uses getenv to retrieve  
-// the LIB environment variable and then uses  
-// _putenv to change it to a new value.  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char *libvar;  
-  
-   // Get the value of the LIB environment variable.  
-   libvar = getenv( "LIB" ); // C4996  
-   // Note: getenv is deprecated; consider using getenv_s instead  
-  
-   if( libvar != NULL )  
-      printf( "Original LIB variable is: %s\n", libvar );  
-  
-   // Attempt to change path. Note that this only affects the environment  
-   // variable of the current process. The command processor's  
-   // environment is not changed.  
-   _putenv( "LIB=c:\\mylib;c:\\yourlib" ); // C4996  
-   // Note: _putenv is deprecated; consider using putenv_s instead  
-  
-   // Get new value.  
-   libvar = getenv( "LIB" ); // C4996  
-  
-   if( libvar != NULL )  
-      printf( "New LIB variable is: %s\n", libvar );  
-}  
-```  
-  
-```Output  
-Original LIB variable is: C:\progra~1\devstu~1\vc\lib  
-New LIB variable is: c:\mylib;c:\yourlib  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)   
- [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
- [Константы среды](../../c-runtime-library/environmental-constants.md)
+> **_Putenv** и **_getenv** семейства функций не являются потокобезопасными. **_getenv** может вернуть указатель строки при **_putenv** изменяет строку, вызывая случайные сбои. Убедитесь, что вызовы этих функций синхронизированы.
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
+
+Чтобы проверить или изменить значение **TZ** использование переменной среды **getenv**, **_putenv** и **_tzset** при необходимости. Дополнительные сведения о **TZ**, в разделе [_tzset](tzset.md) и [_daylight, timezone и _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**getenv**|\<stdlib.h>|
+|**_wgetenv**|\<stdlib.h> или \<wchar.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_getenv.c
+// compile with: /W3
+// This program uses getenv to retrieve
+// the LIB environment variable and then uses
+// _putenv to change it to a new value.
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char *libvar;
+
+   // Get the value of the LIB environment variable.
+   libvar = getenv( "LIB" ); // C4996
+   // Note: getenv is deprecated; consider using getenv_s instead
+
+   if( libvar != NULL )
+      printf( "Original LIB variable is: %s\n", libvar );
+
+   // Attempt to change path. Note that this only affects the environment
+   // variable of the current process. The command processor's
+   // environment is not changed.
+   _putenv( "LIB=c:\\mylib;c:\\yourlib" ); // C4996
+   // Note: _putenv is deprecated; consider using putenv_s instead
+
+   // Get new value.
+   libvar = getenv( "LIB" ); // C4996
+
+   if( libvar != NULL )
+      printf( "New LIB variable is: %s\n", libvar );
+}
+```
+
+```Output
+Original LIB variable is: C:\progra~1\devstu~1\vc\lib
+New LIB variable is: c:\mylib;c:\yourlib
+```
+
+## <a name="see-also"></a>См. также
+
+[Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_putenv, _wputenv](putenv-wputenv.md)<br/>
+[Константы среды](../../c-runtime-library/environmental-constants.md)<br/>

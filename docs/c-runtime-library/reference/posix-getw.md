@@ -1,12 +1,9 @@
 ---
-title: "getw | Документы Майкрософт"
-ms.custom: 
+title: getw | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - getw
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - getw function
 ms.assetid: d3c347a4-3ff1-403b-8d02-2dd3b429bb5f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c221bcc2913a2025facbf961d663d25b52352c88
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9c9e3452f01509a1417b2fae66f6b3178116d8b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getw"></a>getw
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_getw](../../c-runtime-library/reference/getw.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_getw](getw.md).

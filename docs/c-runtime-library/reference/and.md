@@ -1,12 +1,9 @@
 ---
-title: "and | Документы Майкрософт"
-ms.custom: 
+title: and | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,59 +26,60 @@ dev_langs:
 helpviewer_keywords:
 - and macro
 ms.assetid: 2644ab57-8e1b-48f0-9021-cafe3e26bdc4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3984925cbb40daecb66fb964e884197a7fb0f8c9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f32aba356acade280d86da685024c68f63e9968e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="and"></a>и
-Альтернатива оператору &&.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define and &&  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор &&.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_and.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   bool a = true, b = false, result;  
-  
-   boolalpha(cout);  
-  
-   result= a && b;  
-   cout << result << endl;  
-  
-   result= a and b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-false  
-false  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива оператору &&.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define and &&
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор &&.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_and.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   bool a = true, b = false, result;
+
+   boolalpha(cout);
+
+   result= a && b;
+   cout << result << endl;
+
+   result= a and b;
+   cout << result << endl;
+}
+```
+
+```Output
+false
+false
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

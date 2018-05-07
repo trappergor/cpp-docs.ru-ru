@@ -1,12 +1,9 @@
 ---
-title: "flushall | Документы Майкрософт"
-ms.custom: 
+title: flushall | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - flushall
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d24bfd0437c46846a82c198479991142d7f475b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7bb866f774495c1eb8ee1684d629918f9a711c35
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flushall"></a>flushall
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_flushall](../../c-runtime-library/reference/flushall.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_flushall](flushall.md).

@@ -1,12 +1,9 @@
 ---
-title: "eof | Документы Майкрософт"
-ms.custom: 
+title: eof | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - eof
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23d1b0d010653e35b54022bde882fb18dfa546fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0631a671018d48f623b49e3c20f58fdd2d6e8180
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eof"></a>eof
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_eof](../../c-runtime-library/reference/eof.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_eof](eof.md).

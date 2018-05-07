@@ -1,12 +1,9 @@
 ---
-title: "fgetchar | Документы Майкрософт"
-ms.custom: 
+title: fgetchar | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - fgetchar
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69440723b2c1fb9a66293ab371e2a769f9e41855
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f71c2f7dc5ce63f26090a1463c934d38674086aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fgetchar"></a>fgetchar
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fgetchar](../../c-runtime-library/reference/fgetchar-fgetwchar.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fgetchar](fgetchar-fgetwchar.md).

@@ -1,34 +1,29 @@
 ---
-title: "Необработанные псевдооперации | Документы Microsoft"
-ms.custom: 
+title: Необработанные псевдооперации | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff3b9dd065b4bf1f64950f97237dec08b10d23cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="raw-pseudo-operations"></a>Необработанные псевдооперации
 В этом разделе перечислены псевдооперации.  
   
 ## <a name="remarks"></a>Примечания  
   
-|Операция псевдо|Описание:|  
+|Операция псевдо|Описание|  
 |----------------------|-----------------|  
 |КАДР PROC [: обработчика ошибок]|Причины MASM для создания функции запись в .pdata таблицы и очистки информацию в XDATA для функции структурной обработки исключений очистки поведение.  При наличии обработчика ошибок Данная процедура вводится в xdata как обработчик конкретного языка.<br /><br /> При использовании атрибута КАДР, он должен следовать. Директива ENDPROLOG.  Если функция является конечной (как определено в [типы функций](../build/function-types.md)) атрибут FRAME необязателен, как и в оставшейся части этих псевдо операций.|  
 |. PUSHREG reg|Приводит к возникновению ошибки завершения UWOP_PUSH_NONVOL запись для указанного номера регистра с помощью текущего смещения в прологе.<br /><br /> Это должно использоваться только с защищенным целочисленным регистрам.  Отправок переменные регистры, использовать. ALLOCSTACK 8 вместо|  

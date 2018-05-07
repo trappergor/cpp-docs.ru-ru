@@ -1,12 +1,9 @@
 ---
-title: "chsize | Документы Майкрософт"
-ms.custom: 
+title: chsize | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - chsize
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - chsize function
 ms.assetid: f94d62f6-b539-4cbf-bf99-b81d081b4216
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 215fdb31143f03e1a44643b8849ec7212cccab12
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6586dadb34b599766e7f4e26e75b5cdaf6d66530
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chsize"></a>chsize
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_chsize](../../c-runtime-library/reference/chsize.md) или ее аналог с улучшенной безопасностью [_chsize_s](../../c-runtime-library/reference/chsize-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_chsize](chsize.md) или ее аналог с улучшенной безопасностью [_chsize_s](chsize-s.md).

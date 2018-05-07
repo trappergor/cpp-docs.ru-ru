@@ -1,4 +1,4 @@
----
+﻿---
 title: Оператор for (C++) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
@@ -26,13 +26,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>Оператор for (C++)
-Выполняет оператор повторно до тех пор, пока условное значение не станет false. Сведения на основе диапазонов для инструкции см. в разделе [инструкции (C++) на основе диапазонов](../cpp/range-based-for-statement-cpp.md).  
+Повторяет выполнение инструкций (statement), пока условие не станет ложным. Сведения об операторе for для диапазона см. в разделе [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md). 
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-for ( init-expression ; cond-expression ; loop-expression )   
-    statement;  
+for ( init-expression ; cond-expression ; loop-expression )  
+     statement;   
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -42,8 +42,9 @@ for ( init-expression ; cond-expression ; loop-expression )
   
 ### <a name="for-loop-elements"></a>элементы цикла for  
   
-|Имя синтаксиса|Когда выполняется|Описание:|  
+|Название части|Когда выполняется|Описание:|  
 |-----------------|-------------------|-----------------|  
+|`init-expression`|Выражение `init-expression` выполняется только один раз перед любой другой частью инструкции **for**. Затем управление передается `cond-expression`.|Часто используется для инициализации индексов цикла. Может содержать выражения или объявления.|   
 |`init-expression`|Выражение `init-expression` выполняется только один раз перед любой другой частью инструкции **for**. Затем управление передается `cond-expression`.|Часто используется для инициализации индексов цикла. Может содержать выражения или объявления.|  
 |`cond-expression`|Перед выполнением каждой итерации `statement`, включая первую итерацию. `statement` выполняется, только если `cond-expression` имеет значение true (не равное нулю).|Выражение, значение которого относится к целочисленному типу или типу класса, для которого имеется однозначное преобразование к целочисленному типу. Обычно используется для проверки критериев завершения цикла for.|  
 |`loop-expression`|В конце каждой итерации `statement`. После выполнения `loop-expression` производится вычисление `cond-expression`.|Обычно используется для приращения индексов цикла.|  
@@ -55,27 +56,27 @@ for ( init-expression ; cond-expression ; loop-expression )
 using namespace std;  
   
 int main() {  
-    // The counter variable can be declared in the init-expression.  
+    // The counter variable can be declared in the init-expression. 
     for (int i = 0; i < 2; i++ ){   
        cout << i;  
     }  
-    // Output: 01  
+    // Output: 01 
     // The counter variable can be declared outside the for loop.  
     int i;  
     for (i = 0; i < 2; i++){  
         cout << i;  
     }  
-    // Output: 01  
-    // These for loops are the equivalent of a while loop.  
+    // Output: 01 
+    // These for loops are the equivalent of a while loop. 
     i = 0;  
     while (i < 2){  
         cout << i++;  
     }  
+    // напечатается: 01 
 }  
-    // Output: 012  
 ```  
   
- `init-expression` и `loop-expression` могут содержать несколько операторов, разделенных запятыми. Пример:  
+ `init-expression` и `loop-expression` могут содержать несколько операторов, разделенных запятыми. Пример: 
   
 ```cpp  
 #include <iostream>  
@@ -93,7 +94,7 @@ int main(){
     i + j = 19  
 ```  
   
- `loop-expression` можно увеличить или уменьшить, или изменить другими способами.  
+ `loop-expression` можно увеличить или уменьшить, или изменить другими способами. 
   
 ```cpp  
 #include <iostream>  
@@ -107,14 +108,14 @@ for (int i = 10; i > 0; i--) {
     for (int i = 10; i < 20; i = i+2) {  
         cout << i << ' ';  
     }  
-    // Output: 10 12 14 16 18  
+    // Output: 10 12 14 16 18 
 ```  
   
- Объект `for` цикл завершается, когда [разрыв](../cpp/break-statement-cpp.md), [возвращают](../cpp/return-statement-cpp.md), или [goto](../cpp/goto-statement-cpp.md) (к оператору с меткой за пределами **для** цикл) в `statement` выполняется. Объект [Продолжить](../cpp/continue-statement-cpp.md) инструкции в `for` цикла завершает только текущую итерацию.  
+ Цикл `for` завершается, когда в инструкциях тела цикла (`statement`) выполняется оператор [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md) или [goto](../cpp/goto-statement-cpp.md) (ведущий к оператору с меткой за пределами цикла **for**). Оператор [continue](../cpp/continue-statement-cpp.md) в цикле `for` завершает только текущую итерацию. 
   
- Если `cond-expression` будет указано, оно считается равным true и **для** цикл не завершится без `break`, `return`, или `goto` в `statement`.  
+ Если выражение `cond-expression` опущено, считается, что его значение истинно, и цикл **for** не завершится, если в `statement` нет `break`, `return` или `goto`. 
   
- Хотя эти три поля оператора `for` обычно используются для инициализации, тестирования на завершение и увеличения, они не ограничиваются такими способами использования. Например, следующий код выводит числа от 0 до 4. В данном случае `statement` является оператором null:  
+ Хотя эти три части оператора `for` обычно используются для инициализации, проверки завершения и для наращения, их можно использовать и другими способами. Например, следующий код выводит числа от 0 до 4. В этом случае в `statement` будет пусто:  
   
 ```cpp  
 #include <iostream>  
@@ -134,32 +135,32 @@ int main()
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  
-   // do something  
+    // do something  
 }  
-// i is now out of scope under /Za or /Zc:forScope  
+// i теперь вне области видимости при /Za или /Zc:forScope  
 ```  
   
- По умолчанию в разделе [/Ze](../build/reference/za-ze-disable-language-extensions.md), переменной, объявленной в `for` цикла остается в области до `for` цикла внешней области.  
+ По умолчанию, при использовании параметра [/Ze](../build/reference/za-ze-disable-language-extensions.md) переменная, объявленная в цикле `for`, остается в области видимости до окончания внешней области видимости, в которой находится цикл `for`. 
   
- [/ Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) включает стандартное поведение переменных, объявленных в циклах for, без необходимости указания/Za.  
+ [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) включает поведение объявленных в циклах for переменных по стандарту без необходимости указания /Za. 
   
- Также можно использовать различия области видимости цикла `for` для повторного объявления переменных в /Ze следующим образом:  
+ Также можно использовать различия области видимости цикла `for` для повторного объявления переменных при /Ze следующим образом:  
   
 ```cpp  
 // for_statement5.cpp  
 int main(){  
-   int i = 0;   // hidden by var with same name declared in for loop  
+   int i = 0; // hidden by var with same name declared in for loop  
    for ( int i = 0 ; i < 3; i++ ) {}  
   
    for ( int i = 0 ; i < 3; i++ ) {}  
 }  
 ```  
   
- Это более точно имитирует стандартное поведение переменной, объявленной в цикле `for`, что требует выхода переменных, объявленных в цикле `for`, за пределы области видимости после выполнения цикла. Если переменная объявлена в цикле `for`, компилятор внутренним образом повышает ее до локальной переменной во внешней области цикла `for`, даже если там уже есть локальная переменная с тем же именем.  
+ Это ближе к поведению переменной, объявленной в цикле `for`, по стандарту, при котором она должна пропадать из области после завершения цикла. При объявлении переменной в цикле `for` компилятор внутри себя превращает ее в локальную переменную внешней области, в которой находится цикл `for`, даже если там уже есть локальная переменная с таким же именем. 
   
 ## <a name="see-also"></a>См. также  
  [Операторы итерации](../cpp/iteration-statements-cpp.md)   
  [Ключевые слова](../cpp/keywords-cpp.md)   
  [Оператор while (C++)](../cpp/while-statement-cpp.md)   
  [Оператор do-while (C++)](../cpp/do-while-statement-cpp.md)   
- [Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)
+ [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md)

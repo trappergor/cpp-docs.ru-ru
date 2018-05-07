@@ -1,12 +1,9 @@
 ---
-title: "_fileno | Документы Майкрософт"
-ms.custom: 
+title: _fileno | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _fileno
@@ -33,79 +30,82 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0ce17b75ea74154121549209aed94b0a3affea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9bc03bcd92eb8040b7eefadd0c109e4e887f7304
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fileno"></a>_fileno
-Получает дескриптор файла, связанного с потоком.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-int _fileno(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `stream`  
- Указатель на структуру `FILE`.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- `_fileno` возвращает дескриптор файла. Ошибка не возвращается. Если `stream` не задает открытый файл, результат будет неопределенным. Если поток имеет значение `NULL`, функция _`_fileno` вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает -1 и задает для `errno` значение `EINVAL`.  
-  
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
-  
+
+Получает дескриптор файла, связанного с потоком.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _fileno(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Поток*<br/>
+Указатель на структуру **FILE**.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_fileno** возвращает дескриптор файла. Ошибка не возвращается. Результат не определен, если *поток* не соответствует открытому файлу. Если поток **NULL**, **_fileno** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает -1 и задает **errno** для **EINVAL**.
+
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
 > [!NOTE]
->  Если `stdout` или `stderr` не связаны с выходным потоком (например, в приложении Windows без окна консоли), возвращается дескриптор файла -2. В предыдущих версиях возвращался дескриптор файла -1. Это изменение позволяет приложениям отличить это условие от ошибки.  
-  
-## <a name="remarks"></a>Примечания  
- Подпрограмма `_fileno` возвращает дескриптор файла, в данный момент связанный с `stream`. Эта подпрограмма реализуется как функция и макрос. Дополнительные сведения о выборе любой реализации см. в разделе [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`_fileno`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_fileno.c  
-// This program uses _fileno to obtain  
-// the file descriptor for some standard C streams.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );  
-   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );  
-   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );  
-}  
-```  
-  
-```Output  
-The file descriptor for stdin is 0  
-The file descriptor for stdout is 1  
-The file descriptor for stderr is 2  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [_fdopen, _wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_filelength, _filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen, _wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+> Если **stdout** или **stderr** не связана с выходной поток (например, в приложении Windows без окна консоли), возвращается дескриптор файла является -2. В предыдущих версиях возвращался дескриптор файла -1. Это изменение позволяет приложениям отличить это условие от ошибки.
+
+## <a name="remarks"></a>Примечания
+
+**_Fileno** процедура возвращает дескриптор файла, который сейчас связан с *поток*. Эта подпрограмма реализуется как функция и макрос. Дополнительные сведения о выборе любой реализации см. в разделе [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**_fileno**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_fileno.c
+// This program uses _fileno to obtain
+// the file descriptor for some standard C streams.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );
+   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );
+   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );
+}
+```
+
+```Output
+The file descriptor for stdin is 0
+The file descriptor for stdout is 1
+The file descriptor for stderr is 2
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[_fdopen, _wfdopen](fdopen-wfdopen.md)<br/>
+[_filelength, _filelengthi64](filelength-filelengthi64.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[freopen, _wfreopen](freopen-wfreopen.md)<br/>

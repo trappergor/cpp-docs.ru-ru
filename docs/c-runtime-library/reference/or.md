@@ -1,12 +1,9 @@
 ---
-title: "or | Документы Майкрософт"
-ms.custom: 
+title: or | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,59 +26,60 @@ dev_langs:
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b1121ab8e8d5f665cea346143abbc26e0db31d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f9894d2925f4d1dba03442d5d117a5eb83abfa3a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="or"></a>или
-Альтернатива оператору &#124;&#124;.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define or ||  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор &#124;&#124;.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_or.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   bool a = true, b = false, result;  
-  
-   boolalpha(cout);  
-  
-   result= a || b;  
-   cout << result << endl;  
-  
-   result= a or b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-true  
-true  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива оператору &#124;&#124;.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define or ||
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор &#124;&#124;.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_or.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   bool a = true, b = false, result;
+
+   boolalpha(cout);
+
+   result= a || b;
+   cout << result << endl;
+
+   result= a or b;
+   cout << result << endl;
+}
+```
+
+```Output
+true
+true
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

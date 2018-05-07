@@ -1,12 +1,9 @@
 ---
-title: "sopen | Документы Майкрософт"
-ms.custom: 
+title: sopen | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - sopen
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - sopen function
 ms.assetid: 1ce0b707-0c9e-4942-8467-ce7f6cd68acc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec449a0adcff1cfdbbfc77ac25a6948e3e0b7d8d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5456d3c1e0f63fdc536a6c9fb17798f03282a080
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sopen"></a>sopen
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_sopen](../../c-runtime-library/reference/sopen-wsopen.md) или ее аналог с улучшенной безопасностью [_sopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_sopen](sopen-wsopen.md) или ее аналог с улучшенной безопасностью [_sopen_s](sopen-s-wsopen-s.md).

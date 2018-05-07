@@ -1,12 +1,9 @@
 ---
-title: "or_eq | Документы Майкрософт"
-ms.custom: 
+title: or_eq | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,57 +26,58 @@ dev_langs:
 helpviewer_keywords:
 - or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661708d93d79c0fd7be5e54b61044f38c21b1944
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9ecaefb43dfea22be2a0bdeb34a3de2e476b356
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="oreq"></a>or_eq
-Альтернатива оператору &#124;=.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-#define or_eq |=  
-  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Макрос создает оператор &#124;=.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// iso646_oreq.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 3, b = 2, result;  
-  
-   result= a |= b;  
-   cout << result << endl;  
-  
-   result= a or_eq b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-3  
-3  
-```  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iso646.h>
+
+Альтернатива оператору &#124;=.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+
+#define or_eq |=
+
+```
+
+## <a name="remarks"></a>Примечания
+
+Макрос создает оператор &#124;=.
+
+## <a name="example"></a>Пример
+
+```cpp
+// iso646_oreq.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 3, b = 2, result;
+
+   result= a |= b;
+   cout << result << endl;
+
+   result= a or_eq b;
+   cout << result << endl;
+}
+```
+
+```Output
+3
+3
+```
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<iso646.h>

@@ -1,12 +1,12 @@
 ---
-title: "Пространство имен stdext | Документы Майкрософт"
-ms.custom: 
+title: Пространство имен stdext | Документы Майкрософт
+ms.custom: ''
 ms.date: 09/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - stdext
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265a10e71064f2bf3a318a272b751009b1b193be
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c1baadcb29f4f30582f3e1cadd8a061fc72cd5a
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="stdext-namespace"></a>Пространство имен stdext
 
@@ -36,11 +36,11 @@ ms.lasthandoff: 02/23/2018
 
 Чтобы компилятор выдавал ошибку для использования `std` для членов \<hash_map > и \<hash_set > файлы заголовков с **/Ze**, добавьте следующую директиву перед `#include` все файлы заголовков стандартной библиотеки C++.
 
-```cpp  
-#define _DEFINE_DEPRECATED_HASH_CLASSES 0  
-```  
+```cpp
+#define _DEFINE_DEPRECATED_HASH_CLASSES 0
+```
 
-При компиляции с параметром **/Za**, компилятор создает ошибку.  
+При компиляции с параметром **/Za**, компилятор создает ошибку.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,12 +1,12 @@
 ---
-title: "Класс slice_array | Документы Майкрософт"
-ms.custom: 
+title: Класс slice_array | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - valarray/std::slice_array
@@ -15,85 +15,65 @@ dev_langs:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2f9ae76aad8078511ed2c37e8f15efcee361cc4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: db8eb8018bac0d26efd6a9cdd397b07301fc4052
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="slicearray-class"></a>Класс slice_array
-Внутренний, вспомогательный класс шаблона, который поддерживает объекты срезов, предоставляя операции между массивами подмножеств, заданные срезом valarray.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-template <class Type>  
-class slice_array : public slice {  
-public:  
-    typedef Type value_type;  
+
+Внутренний, вспомогательный класс шаблона, который поддерживает объекты срезов, предоставляя операции между массивами подмножеств, заданные срезом valarray.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+template <class Type>
+class slice_array : public slice {
+public:
+    typedef Type value_type;
     void operator=(const valarray<Type>& x) const;
-
- 
     void operator=(const Type& x) const;
-
- 
     void operator*=(const valarray<Type>& x) const;
-
- 
     void operator/=(const valarray<Type>& x) const;
-
- 
     void operator%=(const valarray<Type>& x) const;
-
- 
     void operator+=(const valarray<Type>& x) const;
-
- 
     void operator-=(const valarray<Type>& x) const;
-
- 
     void operator^=(const valarray<Type>& x) const;
-
- 
     void operator&=(const valarray<Type>& x) const;
-
- 
     void operator|=(const valarray<Type>& x) const;
-
- 
     void operator<<=(const valarray<Type>& x) const;
-
- 
     void operator>>=(const valarray<Type>& x) const;
+    // The rest is private or implementation defined
+}
+```
 
- 
-// The rest is private or implementation defined  
-}  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Класс описывает объект, который хранит ссылку на объект класса [valarray](../standard-library/valarray-class.md)**\<Type>** вместе с объектом класса [slice](../standard-library/slice-class.md), который описывает последовательность элементов для выбора из объекта **valarray\<Type**.  
-  
- Класс шаблона создается неявно с помощью определенных операций valarray и не может использоваться непосредственно в программе. Оператор индекса среза использует внутренний вспомогательный класс шаблона:  
-  
- `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
-  
- Объект **slice_array\<Type>** создается только путем записи выражения в форме [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) для среза **sl** класса valarray **va**. После этого функции-члены класса slice_array ведут себя как соответствующие сигнатуры функций, заданные для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом slice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в срезе, количеством элементов и расстоянием между элементами. Массив slice_array, вырезанный из класса valarray **va**, который объявлен **va**[ `slice`(2, 5, 3)], выбирает элементы с индексами 2, 5, 8, 11 и 14 из **va**. Чтобы процедура была действительной, индексы должны быть действительными.  
-  
-## <a name="example"></a>Пример  
- Пример объявления и использования класса slice_array см. в разделе [slice::slice](../standard-library/slice-class.md#slice).  
-  
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<valarray>  
-  
- **Пространство имен:** std  
-  
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="remarks"></a>Примечания
 
+Класс описывает объект, который хранит ссылку на объект класса [valarray](../standard-library/valarray-class.md)**\<Type>** вместе с объектом класса [slice](../standard-library/slice-class.md), который описывает последовательность элементов для выбора из объекта **valarray\<Type**.
+
+Класс шаблона создается неявно с помощью определенных операций valarray и не может использоваться непосредственно в программе. Оператор индекса среза использует внутренний вспомогательный класс шаблона:
+
+`slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
+
+Объект **slice_array\<Type>** создается только путем записи выражения в форме [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) для среза **sl** класса valarray **va**. После этого функции-члены класса slice_array ведут себя как соответствующие сигнатуры функций, заданные для **valarray\<Type>** с той разницей, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом slice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в срезе, количеством элементов и расстоянием между элементами. Массив slice_array, вырезанный из класса valarray **va**, который объявлен **va**[ `slice`(2, 5, 3)], выбирает элементы с индексами 2, 5, 8, 11 и 14 из **va**. Чтобы процедура была действительной, индексы должны быть действительными.
+
+## <a name="example"></a>Пример
+
+Пример объявления и использования класса slice_array см. в разделе [slice::slice](../standard-library/slice-class.md#slice).
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** \<valarray>
+
+**Пространство имен:** std
+
+## <a name="see-also"></a>См. также
+
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "_locking | Документы Майкрософт"
-ms.custom: 
+title: _locking | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _locking
@@ -34,158 +31,149 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0acd33e3f33077dafee9bd6c4892a17b42e7afe0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="locking"></a>_locking
-Блокирует или разблокирует байт файла.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-  
-      int _locking(  
-   int fd,  
-   int mode,  
-   long nbytes   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `fd`  
- Дескриптор файла.  
-  
- *mode*  
- Выполняемое действие блокировки.  
-  
- *nbytes*  
- Число байтов для блокировки.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_locking` возвращает 0 в случае успеха. Возвращаемое значение -1, указывающее на ошибку, в этом случае [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается одно из следующих значений.  
-  
- `EACCES`  
- Нарушение блокировки (файл уже заблокирован или разблокирован).  
-  
- `EBADF`  
- Недопустимый дескриптор файла.  
-  
- `EDEADLOCK`  
- Нарушение блокировки. Возвращается, если указан флаг `_LK_LOCK` или `_LK_RLCK` и файл не может быть заблокирован после 10 попыток.  
-  
- `EINVAL`  
- В функцию `_locking` передан недопустимый аргумент.  
-  
- Если сбой происходит из-за недопустимого параметра, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_locking` блокирует или разблокирует *nbytes* байт из файла, указанного в `fd`. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Все блокировки или разблокировки начинаются с текущего положения указателя файла и распространяются на следующие *nbytes* байт. Возможна блокировка байтов за концом файла.  
-  
- Параметр *mode* должен быть одной из следующих констант манифеста, определенных в файле Locking.h.  
-  
- `_LK_LOCK`  
- Блокирует указанные байты. Если заблокировать байты не удается, программа попытается повторить блокировку через 1 секунду. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.  
-  
- `_LK_NBLCK`  
- Блокирует указанные байты. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.  
-  
- `_LK_NBRLCK`  
- Эквивалентно `_LK_NBLCK`.  
-  
- `_LK_RLCK`  
- Эквивалентно `_LK_LOCK`.  
-  
- `_LK_UNLCK`  
- Разблокирует указанные байты, которые предварительно должны быть заблокированы.  
-  
- Можно заблокировать несколько разделов файла, которые не перекрываются. Разблокируемый раздел файла должен быть предварительно заблокирован. Функция `_locking` не объединяет смежные разделы. Если два заблокированных раздела являются смежными, каждый из них должен быть разблокирован отдельно. Разделы следует блокировать только на короткое время. Их необходимо разблокировать перед закрытием файла или выходом из программы.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|-------------|---------------------|---------------------|  
-|`_locking`|\<io.h> и \<sys/locking.h>|\<errno.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="libraries"></a>Библиотеки  
- Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_locking.c  
-/* This program opens a file with sharing. It locks  
- * some bytes before reading them, then unlocks them. Note that the  
- * program works correctly only if the file exists.  
- */  
-  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <sys/locking.h>  
-#include <share.h>  
-#include <fcntl.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <io.h>  
-  
-int main( void )  
-{  
-   int  fh, numread;  
-   char buffer[40];  
-  
-   /* Quit if can't open file or system doesn't   
-    * support sharing.   
-    */  
-   errno_t err = _sopen_s( &fh, "crt_locking.txt", _O_RDONLY, _SH_DENYNO,   
-                          _S_IREAD | _S_IWRITE );  
-   printf( "%d %d\n", err, fh );  
-   if( err != 0 )  
-      exit( 1 );  
-  
-   /* Lock some bytes and read them. Then unlock. */  
-   if( _locking( fh, LK_NBLCK, 30L ) != -1 )  
-   {  
-      long lseek_ret;  
-      printf( "No one can change these bytes while I'm reading them\n" );  
-      numread = _read( fh, buffer, 30 );  
-      buffer[30] = '\0';  
-      printf( "%d bytes read: %.30s\n", numread, buffer );  
-      lseek_ret = _lseek( fh, 0L, SEEK_SET );  
-      _locking( fh, LK_UNLCK, 30L );  
-      printf( "Now I'm done. Do what you will with them\n" );  
-   }  
-   else  
-      perror( "Locking failed\n" );  
-  
-   _close( fh );  
-}  
-```  
-  
-## <a name="input-crtlockingtxt"></a>Входные данные: crt_locking.txt  
-  
-```  
-The first thirty bytes of this file will be locked.  
-```  
-  
-## <a name="sample-output"></a>Пример результатов выполнения  
-  
-```  
-No one can change these bytes while I'm reading them  
-30 bytes read: The first thirty bytes of this  
-Now I'm done. Do what you will with them  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)
+
+Блокирует или разблокирует байт файла.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+int _locking(
+   int fd,
+   int mode,
+   long nbytes
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*fd*<br/>
+Дескриптор файла.
+
+*mode*<br/>
+Выполняемое действие блокировки.
+
+*nbytes*<br/>
+Число байтов для блокировки.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_locking** возвращает 0 в случае успеха. Возвращаемое значение -1, указывающее на ошибку, в этом случае [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается одно из следующих значений.
+
+|Значение errno|Условие|
+|-|-|
+**EACCES**|Нарушение блокировки (файл уже заблокирован или разблокирован).
+**EBADF**|Недопустимый дескриптор файла.
+**EDEADLOCK**|Нарушение блокировки. Возвращается, когда **_LK_LOCK** или **_LK_RLCK** установлен флаг и файл не может быть заблокирован после 10 попыток.
+**EINVAL**|Недопустимый аргумент был присвоен **_locking**.
+
+Если сбой происходит из-за недопустимого параметра, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
+
+## <a name="remarks"></a>Примечания
+
+**_Locking** функция блокирует или разблокирует *nbytes* байт файла, указанного *fd*. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Все блокировки или разблокировки начинаются с текущего положения указателя файла и распространяются на следующие *nbytes* байт. Возможна блокировка байтов за концом файла.
+
+Параметр *mode* должен быть одной из следующих констант манифеста, определенных в файле Locking.h.
+
+|*режим* значение|Действие|
+|-|-|
+**_LK_LOCK**|Блокирует указанные байты. Если заблокировать байты не удается, программа попытается повторить блокировку через 1 секунду. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.
+**_LK_NBLCK**|Блокирует указанные байты. Если после 10 попыток байты все равно не удается заблокировать, константа возвращает ошибку.
+**_LK_NBRLCK**|То же, что **_LK_NBLCK**.
+**_LK_RLCK**|То же, что **_LK_LOCK**.
+**_LK_UNLCK**|Разблокирует указанные байты, которые предварительно должны быть заблокированы.
+
+Можно заблокировать несколько разделов файла, которые не перекрываются. Разблокируемый раздел файла должен быть предварительно заблокирован. **_locking** не слияния соседних регионов, если два заблокированные области являются смежными, каждой области должен быть разблокирован отдельно. Разделы следует блокировать только на короткое время. Их необходимо разблокировать перед закрытием файла или выходом из программы.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательный заголовок|
+|-------------|---------------------|---------------------|
+|**_locking**|\<io.h> и \<sys/locking.h>|\<errno.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="libraries"></a>Библиотеки
+
+Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_locking.c
+/* This program opens a file with sharing. It locks
+* some bytes before reading them, then unlocks them. Note that the
+* program works correctly only if the file exists.
+*/
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/locking.h>
+#include <share.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <io.h>
+
+int main( void )
+{
+   int  fh, numread;
+   char buffer[40];
+
+   /* Quit if can't open file or system doesn't
+    * support sharing.
+    */
+   errno_t err = _sopen_s( &fh, "crt_locking.txt", _O_RDONLY, _SH_DENYNO,
+                          _S_IREAD | _S_IWRITE );
+   printf( "%d %d\n", err, fh );
+   if( err != 0 )
+      exit( 1 );
+
+   /* Lock some bytes and read them. Then unlock. */
+   if( _locking( fh, LK_NBLCK, 30L ) != -1 )
+   {
+      long lseek_ret;
+      printf( "No one can change these bytes while I'm reading them\n" );
+      numread = _read( fh, buffer, 30 );
+      buffer[30] = '\0';
+      printf( "%d bytes read: %.30s\n", numread, buffer );
+      lseek_ret = _lseek( fh, 0L, SEEK_SET );
+      _locking( fh, LK_UNLCK, 30L );
+      printf( "Now I'm done. Do what you will with them\n" );
+   }
+   else
+      perror( "Locking failed\n" );
+
+   _close( fh );
+}
+```
+
+### <a name="input-crtlockingtxt"></a>Входные данные: crt_locking.txt
+
+```Input
+The first thirty bytes of this file will be locked.
+```
+
+## <a name="sample-output"></a>Пример результатов выполнения
+
+```Output
+No one can change these bytes while I'm reading them
+30 bytes read: The first thirty bytes of this
+Now I'm done. Do what you will with them
+```
+
+## <a name="see-also"></a>См. также
+
+[Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>

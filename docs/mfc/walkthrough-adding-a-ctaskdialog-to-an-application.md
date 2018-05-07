@@ -1,12 +1,12 @@
 ---
-title: "Пошаговое руководство: Добавление CTaskDialog в приложение | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Добавление CTaskDialog в приложение | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Пошаговое руководство. Добавление CTaskDialog в приложение
 В этом пошаговом руководстве содержатся сведения о [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) и показано, как добавить его в приложение.  
   
- `CTaskDialog` является диалоговым окном задачи, которое заменяет диалоговое окно сообщения Windows в [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]. `CTaskDialog` улучшает исходное окно сообщения и расширяет его функциональные возможности. Окно сообщения Windows по-прежнему поддерживается в [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+ `CTaskDialog` Является диалоговым окном задачи, которое заменяет окно сообщения Windows в Windows Vista или более поздней версии. `CTaskDialog` улучшает исходное окно сообщения и расширяет его функциональные возможности. Окно сообщения Windows по-прежнему поддерживается в Visual Studio.  
   
 > [!NOTE]
->  [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] не поддерживается в версиях Windows, более ранних, чем `CTaskDialog`. Чтобы сообщение отображалось для пользователей, запускающих приложение в более ранних версиях Windows, необходимо запрограммировать альтернативный вариант диалогового окна. Статический метод [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) во время выполнения позволит определить возможность отображения `CTaskDialog`. Кроме того, `CTaskDialog` доступно только в случае, если ваше приложение построено с помощью библиотеки юникода.  
+> Версиях Windows, более ранних, чем Windows Vista не поддерживают `CTaskDialog`. Чтобы сообщение отображалось для пользователей, запускающих приложение в более ранних версиях Windows, необходимо запрограммировать альтернативный вариант диалогового окна. Статический метод [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) во время выполнения позволит определить возможность отображения `CTaskDialog`. Кроме того, `CTaskDialog` доступно только в случае, если ваше приложение построено с помощью библиотеки юникода.  
   
  `CTaskDialog` поддерживает несколько необязательных элементов для сбора и отображения информации. Например, `CTaskDialog` может отображать ссылки на команды, настраиваемые кнопки, настраиваемые значки и нижний колонтитул. `CTaskDialog` также располагает рядом методов, которые позволяют запрашивать состояние диалогового окна задачи, чтобы определить, какие необязательные элементы выбрал пользователь.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 или более поздней версии  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista или более поздней версии  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Замена окна сообщения Windows на CTaskDialog  
  В следующей процедуре показан основной способ использования `CTaskDialog`, заменяющего окно сообщения Windows. В этом примере также демонстрируется изменение значка, связанного с диалоговым окном задачи. После изменения значка `CTaskDialog` отображается аналогично окну сообщения Windows.  

@@ -1,12 +1,9 @@
 ---
-title: "_mbsnbcpy, _mbsnbcpy_l | Документы Майкрософт"
-ms.custom: 
+title: _mbsnbcpy, _mbsnbcpy_l | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _mbsnbcpy
@@ -42,101 +39,104 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d146faf02bbc37e84f9a386f526eeb449108bcc9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2fc3c849506401e44dfebcd4d0722953b557ae01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
-Копирует `n` байт строки в строку назначения. Существуют более безопасные версии этих функций; см. раздел [_mbsnbcpy_s, _mbsnbcpy_s_l](../../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md).  
-  
+
+Копирует **n** байт строки в строку назначения. Существуют более безопасные версии этих функций; см. раздел [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md).
+
 > [!IMPORTANT]
->  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-unsigned char * _mbsnbcpy(  
-   unsigned char * strDest,  
-   const unsigned char * strSource,  
-   size_t count  
-);  
-unsigned char * _mbsnbcpy_l(  
-   unsigned char * strDest,  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-unsigned char * _mbsnbcpy(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count  
-); // C++ only  
-template <size_t size>  
-unsigned char * _mbsnbcpy_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char * strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `strDest`  
- Место назначение для копирования строки символов.  
-  
- `strSource`  
- Копируемая строка символов.  
-  
- `count`  
- Число байтов для копирования.  
-  
- `locale`  
- Используемый языковой стандарт.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `_mbsnbcpy` возвращает указатель на конечную строку символов. Нет зарезервированных возвращаемых значений для указания ошибки.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_mbsnbcpy` копирует `count` байт из `strSource` в `strDest`. Если `count` превышает размер `strDest` или строки источника и назначения перекрываются, поведение функции `_mbsnbcpy` не определено.  
-  
- Если `strSource` или `strDest` является указателем NULL, эта функция вызывает обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает `NULL` и устанавливает для параметра `errno` значение `EINVAL`.  
-  
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны, но в версиях без суффикса `_l` используется текущий языковой стандарт, а в версиях с суффиксом `_l` используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
-  
+> Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+unsigned char * _mbsnbcpy(
+   unsigned char * strDest,
+   const unsigned char * strSource,
+   size_t count
+);
+unsigned char * _mbsnbcpy_l(
+   unsigned char * strDest,
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+unsigned char * _mbsnbcpy(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char * _mbsnbcpy_l(
+   unsigned char (&strDest)[size],
+   const unsigned char * strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*strDest*<br/>
+Место назначение для копирования строки символов.
+
+*strSource*<br/>
+Копируемая строка символов.
+
+*count*<br/>
+Число байтов для копирования.
+
+*locale*<br/>
+Используемый языковой стандарт.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**_mbsnbcpy** возвращает указатель на конечную строку символов. Нет зарезервированных возвращаемых значений для указания ошибки.
+
+## <a name="remarks"></a>Примечания
+
+**_Mbsnbcpy** функции копии *число* байтов из *strSource* для *strDest*. Если *число* превышает размер *strDest* или строки источника и назначения перекрываются, то поведение **_mbsnbcpy** не определено.
+
+Если *strSource* или *strDest* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **NULL** и задает **errno** для **EINVAL**.
+
+Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md) для получения дополнительной информации. Версии этих функций идентичны, за исключением тех, что, у которых нет **_l** суффикс используют текущий языковой стандарт и версий, которые имеют **_l** суффикс вместо этого используйте параметр языкового стандарта с Переданный. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
 > [!IMPORTANT]
->  Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера может быть использовано для выполнения произвольного атакующего кода, что может привести к несанкционированному повышению прав доступа и представлять угрозу для системы. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
-  
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy`|[strncpy](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|`_mbsnbcpy`|[wcsncpy](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|  
-|`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcp_l`|`_wcsncpy_l`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_mbsnbcpy`|\<mbstring.h>|  
-|`_mbsnbcpy_l`|\<mbstring.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="see-also"></a>См. также  
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
- [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+> Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера может быть использовано для выполнения произвольного атакующего кода, что может привести к несанкционированному повышению прав доступа и представлять угрозу для системы. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsncpy**|[strncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|**_mbsnbcpy**|[wcsncpy](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcp_l**|**_wcsncpy_l**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_mbsnbcpy**|\<mbstring.h>|
+|**_mbsnbcpy_l**|\<mbstring.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
+[_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

@@ -1,12 +1,9 @@
 ---
-title: "Макросы реестра | Документы Microsoft"
-ms.custom: 
+title: Макросы реестра | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eada9ed75bd69122523350536d0757e98b31358d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9b172217f1ca7ada7d8752151126b53055df37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-macros"></a>Макросы реестра
 Эти макросы определяют полезный тип средства библиотеки и реестра.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **Заголовок:** atlcom.h  
   
     
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY  
  Символ, который указывает, что требуется создать код регистрации для объекта в объект во избежание зависимость для библиотеки ATL. БИБЛИОТЕКИ DLL.  
   
 ```
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>  DECLARE_LIBID  
  Предоставляет способ ATL для получения *libid* библиотеки типов.  
   
 ```
@@ -79,14 +74,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>Пример  
  Проекты ATL без атрибутов созданный мастером будет образец с помощью этого макроса.  
   
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY  
  Используйте `DECLARE_NO_REGISTRY` , если вы хотите избежать любой регистрации ATL по умолчанию для класса, в котором отображается этот макрос.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>  DECLARE_REGISTRY  
  Вводит стандартный класс регистрации в системный реестр или удаляет его из системного реестра.  
   
 ```
@@ -117,9 +112,9 @@ DECLARE_REGISTRY(
 ### <a name="remarks"></a>Примечания  
  Стандартная регистрации состоит из идентификатора CLSID, идентификатор программы, идентификатор программы зависят от версии, строку описания и потоковую модель.  
   
- При создании объекта или управлять с помощью мастера добавления класса ATL, мастер автоматически реализует поддержку на основе сценария реестра и добавляет [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) макрос в файлы. Если не требуется поддержка реестра на основе сценария, необходимо заменить этот макрос с `DECLARE_REGISTRY`. `DECLARE_REGISTRY`вставляет только пять основных ключей, описанных выше, в реестр. Вручную, необходимо написать код для вставки остальные ключи в реестре.  
+ При создании объекта или управлять с помощью мастера добавления класса ATL, мастер автоматически реализует поддержку на основе сценария реестра и добавляет [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) макрос в файлы. Если не требуется поддержка реестра на основе сценария, необходимо заменить этот макрос с `DECLARE_REGISTRY`. `DECLARE_REGISTRY` вставляет только пять основных ключей, описанных выше, в реестр. Вручную, необходимо написать код для вставки остальные ключи в реестре.  
   
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID  
  Указывает сведения, необходимые для автоматической регистрации *appid*.  
   
 ```
@@ -141,7 +136,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>Пример  
  Классы, добавляемые в проекты ATL с помощью мастера добавления класса код будет иметь образец с помощью этого макроса.  
   
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE  
  Возвращает именованный ресурс, содержащий файл реестра и запускает его для ввода объекты в системный реестр или удалить их из системного реестра.  
   
 ```
@@ -164,7 +159,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).  
   
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID  
  То же, что [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) за исключением того, что он использует, создаваемые мастером **UINT** для идентификации ресурса, а не имя строки.  
   
 ```

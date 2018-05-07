@@ -2,11 +2,8 @@
 title: Макросы схемы свойство | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>Макросы схемы свойство
 Эти макросы определяют сопоставления свойств и записи.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  Отмечает начало сопоставления свойств объекта.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  При создании объекта с помощью мастера проектов ATL, мастер создаст пустой свойства карты, указав `BEGIN_PROP_MAP` следуют [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP`не сохраняет out экстент (измерения) в сопоставлении свойств, так как объект, с помощью сопоставления свойств могут не иметь пользовательский интерфейс, поэтому бы не экстента. Если объект является элементом управления ActiveX с пользовательским интерфейсом, она имеет экстент. В этом случае необходимо указать [PROP_DATA_ENTRY](#prop_data_entry) в сопоставление свойств для предоставления экстента.  
+ `BEGIN_PROP_MAP` не сохраняет out экстент (измерения) в сопоставлении свойств, так как объект, с помощью сопоставления свойств могут не иметь пользовательский интерфейс, поэтому бы не экстента. Если объект является элементом управления ActiveX с пользовательским интерфейсом, она имеет экстент. В этом случае необходимо указать [PROP_DATA_ENTRY](#prop_data_entry) в сопоставление свойств для предоставления экстента.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  Указывает область, то размеры элемента управления ActiveX.  
   
 ```
@@ -97,7 +92,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  Используйте этот макрос, чтобы ввести описание, идентификатор DISPID свойств и страницы свойств CLSID в схеме сопоставления свойств объекта.  
   
 ```
@@ -125,7 +120,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="example"></a>Пример  
  Далее приведен пример [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>НА PROP_ENTRY_TYPE_EX  
+##  <a name="prop_entry_type_ex"></a>  НА PROP_ENTRY_TYPE_EX  
  Аналогично [PROP_ENTRY_TYPE](#prop_entry_type), но позволяет вам указать определенного IID, если объект поддерживает несколько сдвоенных интерфейсов.  
   
 ```
@@ -158,7 +153,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  Используйте этот макрос для ввода CLSID страницы свойств в схеме сопоставления свойств объекта.  
   
 ```
@@ -170,7 +165,7 @@ PROP_PAGE(clsid)
  [in] Код CLSID страницы свойств.  
   
 ### <a name="remarks"></a>Примечания  
- `PROP_PAGE`Аналогично [PROP_ENTRY_TYPE](#prop_entry_type), но не требуется описание свойства или DISPID.  
+ `PROP_PAGE` Аналогично [PROP_ENTRY_TYPE](#prop_entry_type), но не требуется описание свойства или DISPID.  
   
 > [!NOTE]
 >  При вводе идентификатора класса CLSID со `PROP_ENTRY_TYPE` или [на PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), необходимо внести дополнительные запись с `PROP_PAGE`.  
@@ -180,7 +175,7 @@ PROP_PAGE(clsid)
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  Отмечает конец сопоставления свойств объекта.  
   
 ```

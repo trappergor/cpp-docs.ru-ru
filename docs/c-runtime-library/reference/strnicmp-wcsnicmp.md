@@ -1,12 +1,9 @@
 ---
-title: "strnicmp, wcsnicmp | Документы Майкрософт"
-ms.custom: 
+title: strnicmp, wcsnicmp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - wcsnicmp
@@ -32,17 +29,16 @@ helpviewer_keywords:
 - strnicmp function
 - wcsnicmp function
 ms.assetid: 01324ee4-0bd9-43e9-b2a3-53d180270a64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66f899339da8639d6f456784621a2ee051cc2986
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7424447f3e018a5372ebffc0d981280d770997ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strnicmp-wcsnicmp"></a>strnicmp, wcsnicmp
-Эти функции POSIX устарели. Используйте вместо них функции [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md), соответствующие стандарту ISO C++.
+
+Эти функции POSIX устарели. Используйте вместо них функции [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md), соответствующие стандарту ISO C++.

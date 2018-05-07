@@ -1,12 +1,9 @@
 ---
-title: "creat | Документы Майкрософт"
-ms.custom: 
+title: creat | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - creat
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - creat function
 ms.assetid: 3aa6f0cc-5ae6-40d5-be94-0ab6f53c0c5b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 463b85e9ec88ebf0c9550303f76ff21b680ef086
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00bcd442c46e7f2b797d7de1aae41808e76a79d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creat"></a>creat
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_create](../../c-runtime-library/reference/creat-wcreat.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_create](creat-wcreat.md).

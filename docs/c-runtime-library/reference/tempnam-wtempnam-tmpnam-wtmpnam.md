@@ -1,12 +1,9 @@
 ---
-title: "_tempnam, _wtempnam, tmpnam, _wtmpnam | Документы Майкрософт"
-ms.custom: 
+title: _tempnam, _wtempnam, tmpnam, _wtmpnam | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _wtempnam
@@ -49,142 +46,145 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29b0f7f645bd23c04e9d9f31dc914e29f7a048cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 55ff069d72d68493eee524ea2f9c012d2fc7f534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
-Формирует имена, которые можно использовать для создания временных файлов. Существуют более безопасные версии этих функций; см. статью [tmpnam_s, _wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-char *_tempnam(  
-   const char *dir,  
-   const char *prefix   
-);  
-wchar_t *_wtempnam(  
-   const wchar_t *dir,  
-   const wchar_t *prefix   
-);  
-char *tmpnam(  
-   char *str   
-);  
-wchar_t *_wtmpnam(  
-   wchar_t *str   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `prefix`  
- Строка, которая добавляется в начало имен, возвращаемых `_tempnam`.  
-  
- `dir`  
- Путь, используемый в имени файла, если переменная среды TMP отсутствует или TMP не является допустимым каталогом.  
-  
- `str`  
- Указатель, который будет содержать формируемое имя и совпадать с именем, возвращенным функцией. Это удобный способ сохранения формируемого имени.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает указатель на формируемое имя или `NULL` в случае сбоя. Сбой может возникать при попытке более `TMP_MAX` (STDIO см. H) вызовов с `tmpnam` или если вы используете `_tempnam` и указано недопустимое имя каталога в переменной среды TMP и `dir` параметра.  
-  
+
+Формирует имена, которые можно использовать для создания временных файлов. Существуют более безопасные версии этих функций; см. статью [tmpnam_s, _wtmpnam_s](tmpnam-s-wtmpnam-s.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+char *_tempnam(
+   const char *dir,
+   const char *prefix
+);
+wchar_t *_wtempnam(
+   const wchar_t *dir,
+   const wchar_t *prefix
+);
+char *tmpnam(
+   char *str
+);
+wchar_t *_wtmpnam(
+   wchar_t *str
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Префикс*<br/>
+Строка, которая добавляется в начало имен, возвращаемых **_tempnam**.
+
+*dir*<br/>
+Путь, используемый в имени файла, если переменная среды TMP отсутствует или TMP не является допустимым каталогом.
+
+*str*<br/>
+Указатель, который будет содержать формируемое имя и совпадать с именем, возвращенным функцией. Это удобный способ сохранения формируемого имени.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает указатель на формируемое имя или **NULL** при неудачном завершении. Сбой может возникать при попытке более **TMP_MAX** (STDIO см. H) вызовов с **tmpnam** или если вы используете **_tempnam** и указано недопустимое имя каталога в переменной среды TMP и *dir* параметра.
+
 > [!NOTE]
->  Указатели, возвращенные функциями `tmpnam` и `_wtmpnam`, указывают на внутренние статические буфера. Для освобождения этих указателей не следует вызывать функцию [free](../../c-runtime-library/reference/free.md). Функцию `free` необходимо вызывать для указателей, размещенных в памяти функциями `_tempnam` и `_wtempnam`.  
-  
-## <a name="remarks"></a>Примечания  
- Каждая из этих функций возвращает имя файла, который в данный момент не существует. Функция `tmpnam` возвращает имя, уникальное в текущей рабочей папке, а функция `_tempnam` позволяет сформировать уникальное имя в папке, отличной от текущей. Заметьте, что если в начало имени файла добавляется обратная косая черта без сведений о пути, например \fname21, это означает, что имя является допустимым для текущей рабочей папки.  
-  
- В случае функции `tmpnam` это сформированное имя файла можно сохранить в параметре `str`. Если параметр `str` имеет значение `NULL`, функция `tmpnam` оставляет результат во внутреннем статическом буфере. Поэтому все последующие вызовы уничтожают это значение. Имя, сформированное функцией `tmpnam`, состоит из программно формируемого имени файла и, после первого вызова функции `tmpnam`, расширения файла из последовательных чисел с основанием 32 (.1–.vvu, если параметр `TMP_MAX` в файле STDIO.H имеет значение 32 767).  
-  
- Функция `_tempnam` формирует уникальное имя файла для каталога, выбранного по следующим правилам:  
-  
--   Если переменная среды TMP определена и в ней задано допустимое имя каталога, уникальные имена файлов формируются для указанного каталога TMP.  
-  
--   Если переменная среды TMP не определена или если в ней задано имя несуществующего каталога, функция `_tempnam` будет использовать параметр `dir` в качестве пути, для которого формируются уникальные имена.  
-  
--   Если переменная среды TMP не указана или в ней указано имя несуществующего каталога, а параметр `dir` имеет значение `NULL` или содержит имя несуществующего каталога, для формирования уникальных имен функция `_tempnam` будет использовать текущий рабочий каталог. В настоящее время если и TMP, и `dir` содержат имена несуществующих каталогов, вызов функции `_tempnam` завершится ошибкой.  
-  
- Имя, возвращаемое функцией `_tempnam`, будет объединением параметра `prefix` и последовательного порядкового номера, образующих уникальное имя файла в указанном каталоге. Функция `_tempnam` формирует имена файлов, не имеющие расширение. Функция `_tempnam` использует функцию [malloc](../../c-runtime-library/reference/malloc.md), чтобы выделить память для имени файла; программа отвечает за освобождение этого пространства, когда оно больше не нужно.  
-  
- Функции `_tempnam` и `tmpnam` автоматически корректно обрабатывают многобайтовые строковые аргументы, распознавая последовательности многобайтовых символов согласно кодовой странице OEM, полученной из операционной системы. `_wtempnam` — это версия функции `_tempnam` для расширенных символов; аргументы и возвращаемое значение функции `_wtempnam` являются строками с расширенными символами. В остальных отношениях поведение функций `_wtempnam` и `_tempnam` идентично, за исключением того, что функция `_wtempnam` не обрабатывает многобайтовые строки. `_wtmpnam` — это версия с расширенными символами для `tmpnam`; аргумент и возвращаемое значение `_wtmpnam` являются строками с расширенными символами. В остальных отношениях поведение функций `_wtmpnam` и `tmpnam` идентично, за исключением того, что функция `_wtmpnam` не обрабатывает многобайтовые строки.  
-  
- Если определены `_DEBUG` и `_CRTDBG_MAP_ALLOC`, функции `_tempnam` и `_wtempnam` заменяются вызовами функций [_tempnam_dbg и _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md).  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ttmpnam`|`tmpnam`|`tmpnam`|`_wtmpnam`|  
-|`_ttempnam`|`_tempnam`|`_tempnam`|`_wtempnam`|  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_tempnam`|\<stdio.h>|  
-|`_wtempnam`, `_wtmpnam`|\<stdio.h> или \<wchar.h>|  
-|`tmpnam`|\<stdio.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_tempnam.c  
-// compile with: /W3  
-// This program uses tmpnam to create a unique filename in the  
-// current working directory, then uses _tempnam to create   
-// a unique filename with a prefix of stq.   
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{     
-   char* name1 = NULL;  
-   char* name2 = NULL;  
-  
-   // Create a temporary filename for the current working directory:   
-   if( ( name1 = tmpnam( NULL ) ) != NULL ) // C4996  
-   // Note: tmpnam is deprecated; consider using tmpnam_s instead  
-      printf( "%s is safe to use as a temporary file.\n", name1 );  
-   else  
-      printf( "Cannot create a unique filename\n" );  
-  
-   // Create a temporary filename in temporary directory with the  
-   // prefix "stq". The actual destination directory may vary  
-   // depending on the state of the TMP environment variable and  
-   // the global variable P_tmpdir.     
-  
-   if( ( name2 = _tempnam( "c:\\tmp", "stq" ) ) != NULL )  
-      printf( "%s is safe to use as a temporary file.\n", name2 );   
-   else  
-      printf( "Cannot create a unique filename\n" );  
-  
-   // When name2 is no longer needed :     
-   if(name2)  
-     free(name2);  
-  
-}  
-```  
-  
-```Output  
-\s1gk. is safe to use as a temporary file.  
-C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)
+> Указатели, возвращенные **tmpnam** и **_wtmpnam** пункты внутренние статические буфера. Для освобождения этих указателей не следует вызывать функцию [free](free.md). **Бесплатные** нужно вызывать для указателей, выделенных функциями **_tempnam** и **_wtempnam**.
+
+## <a name="remarks"></a>Примечания
+
+Каждая из этих функций возвращает имя файла, который в данный момент не существует. **tmpnam** возвращает имя, уникальное в текущем рабочем каталоге и **_tempnam** позволяет сформировать уникальное имя в папке, отличной от текущей. Заметьте, что если в начало имени файла добавляется обратная косая черта без сведений о пути, например \fname21, это означает, что имя является допустимым для текущей рабочей папки.
+
+Для **tmpnam**, можно сохранить это сформированное имя файла в *str*. Если *str* — **NULL**, затем **tmpnam** оставляет результат во внутреннем статическом буфере. Поэтому все последующие вызовы уничтожают это значение. Имя, созданное **tmpnam** состоит из имени файла, созданный программой и после первого вызова **tmpnam**, расширение файла из последовательных чисел с основанием 32 (.1 – .vvu, если **TMP_MAX**  в STDIO. H — 32 767).
+
+**_tempnam** создает уникальное имя файла для каталога, выбранного по следующим правилам:
+
+- Если переменная среды TMP определена и в ней задано допустимое имя каталога, уникальные имена файлов формируются для указанного каталога TMP.
+
+- Если переменная среды TMP не определена или если ему присваивается имя каталога, который не существует, **_tempnam** будет использовать *dir* параметра в виде пути, для которого формируются уникальные имена.
+
+- Если переменная среды TMP не определена или если ему присваивается имя каталога, который не существует и *dir* либо **NULL** или задайте имя каталога, который не существует, **_ tempnam** будет использовать текущий рабочий каталог для формирования уникальных имен. В настоящее время Если и TMP и *dir* укажите имена каталогов, которые не существуют, **_tempnam** функция вызов завершится ошибкой.
+
+Имя, возвращенное **_tempnam** будет объединением из *префикс* и порядкового номера, образующих уникальное имя файла для указанного каталога. **_tempnam** формирует имена файлов, не имеющие расширение. **_tempnam** использует [malloc](malloc.md) для выделения пространства для файла; программа отвечает за освобождение этого пространства, когда он больше не нужен.
+
+**_tempnam** и **tmpnam** автоматически корректно обрабатывают многобайтовые строковые аргументы, распознавая последовательности многобайтовых символов согласно кодовой странице OEM, полученной от операционной системы. **_wtempnam** — это двухбайтовая версия **_tempnam**; аргументы и возвращаемое значение **_wtempnam** представляют собой строки расширенных символов. **_wtempnam** и **_tempnam** ведут себя одинаково, за исключением того, что **_wtempnam** не обрабатывает многобайтовые строки. **_wtmpnam** — это двухбайтовая версия **tmpnam**; аргумент и возвращаемое значение **_wtmpnam** представляют собой строки расширенных символов. **_wtmpnam** и **tmpnam** ведут себя одинаково, за исключением того, что **_wtmpnam** не обрабатывает многобайтовые строки.
+
+Если **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, **_tempnam** и **_wtempnam** заменяются вызовами функций для [_tempnam _dbg и _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ttmpnam**|**tmpnam**|**tmpnam**|**_wtmpnam**|
+|**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_tempnam**|\<stdio.h>|
+|**_wtempnam**, **_wtmpnam**|\<stdio.h> или \<wchar.h>|
+|**tmpnam**|\<stdio.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_tempnam.c
+// compile with: /W3
+// This program uses tmpnam to create a unique filename in the
+// current working directory, then uses _tempnam to create
+// a unique filename with a prefix of stq.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   char* name1 = NULL;
+   char* name2 = NULL;
+
+   // Create a temporary filename for the current working directory:
+   if( ( name1 = tmpnam( NULL ) ) != NULL ) // C4996
+   // Note: tmpnam is deprecated; consider using tmpnam_s instead
+      printf( "%s is safe to use as a temporary file.\n", name1 );
+   else
+      printf( "Cannot create a unique filename\n" );
+
+   // Create a temporary filename in temporary directory with the
+   // prefix "stq". The actual destination directory may vary
+   // depending on the state of the TMP environment variable and
+   // the global variable P_tmpdir.
+
+   if( ( name2 = _tempnam( "c:\\tmp", "stq" ) ) != NULL )
+      printf( "%s is safe to use as a temporary file.\n", name2 );
+   else
+      printf( "Cannot create a unique filename\n" );
+
+   // When name2 is no longer needed :
+   if(name2)
+     free(name2);
+
+}
+```
+
+```Output
+\s1gk. is safe to use as a temporary file.
+C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.
+```
+
+## <a name="see-also"></a>См. также
+
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[malloc](malloc.md)<br/>
+[_setmbcp](setmbcp.md)<br/>
+[tmpfile](tmpfile.md)<br/>
+[tmpfile_s](tmpfile-s.md)<br/>

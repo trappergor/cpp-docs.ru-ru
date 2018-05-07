@@ -1,12 +1,9 @@
 ---
-title: "stricmp, wcsicmp | Документы Майкрософт"
-ms.custom: 
+title: stricmp, wcsicmp | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - stricmp
@@ -32,17 +29,16 @@ helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9d2e33b23eabde4d7be3f47b7a0d2d54feb0066
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f8db06722610b91100956bc9d7af23e02277aa6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
-Эти функции POSIX устарели. Вместо них используйте соответствующие стандарту ISO C++ функции [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
+
+Эти функции POSIX устарели. Вместо них используйте соответствующие стандарту ISO C++ функции [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).

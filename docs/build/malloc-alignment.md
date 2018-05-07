@@ -1,27 +1,22 @@
 ---
-title: "Выравнивание malloc | Документы Microsoft"
-ms.custom: 
+title: Выравнивание malloc | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>Выравнивание с помощью функции malloc
 [malloc](../c-runtime-library/reference/malloc.md) гарантирует возврат, выровнено для хранения любого объекта, которые используют основные выравнивание и умещалось объема памяти, выделенной памяти. Объект *фундаментальные выравнивание* является выравнивания, которое меньше или равно наибольшего выравнивания, поддерживаемого реализацией без указания выравнивания. (В Visual C++, это выравнивание, необходимого для `double`, или 8 байт. В коде для 64-разрядных платформ это ограничение составляет 16 байтов.) Например распределение четырехбайтовое расположения на границе, которая поддерживает любой объект 4 байта или меньше.  

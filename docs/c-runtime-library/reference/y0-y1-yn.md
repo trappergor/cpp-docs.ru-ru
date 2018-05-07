@@ -1,12 +1,9 @@
 ---
-title: "y0, y1, yn | Документы Майкрософт"
-ms.custom: 
+title: y0, y1, yn | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - y1
@@ -35,17 +32,16 @@ helpviewer_keywords:
 - y1 function
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95f9af3a5ceaa0abc78b855a4c121945944644be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5711301783d040244c65576692c811c6c0b565dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="y0-y1-yn"></a>y0, y1, yn
-Эти функции POSIX устарели. Используйте вместо них соответствующие стандарту ISO C++ [функции Бесселя: _j0, _j1, _jn, _y0, _y1, _yn](../../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md).
+
+Эти функции POSIX устарели. Используйте вместо них соответствующие стандарту ISO C++ [функции Бесселя: _j0, _j1, _jn, _y0, _y1, _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md).

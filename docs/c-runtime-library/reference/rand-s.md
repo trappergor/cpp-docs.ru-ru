@@ -1,12 +1,9 @@
 ---
-title: "rand_s | Документы Майкрософт"
-ms.custom: 
+title: rand_s | Документы Майкрософт
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - rand_s
@@ -38,18 +35,17 @@ helpviewer_keywords:
 - numbers, generating pseudorandom
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2438b2ced054667a658f8f31a37c9a62112debc6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8407848db8f442324127df8d7267a5350c077b2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rands"></a>rand_s
 
-Создает псевдослучайное число. Это более безопасные версии функции [rand](../../c-runtime-library/reference/rand.md), с усовершенствованной безопасностью, как описано в [средства безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md). 
+Создает псевдослучайное число. Это более безопасные версии функции [rand](rand.md), с усовершенствованной безопасностью, как описано в [средства безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,31 +55,31 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>Параметры
 
-*randomValue*  
+*randomValue*<br/>
 Указатель на целое число для хранения сформированное значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль в случае успешного выполнения; в противном случае — код ошибки. Если входной указатель _randomValue_ является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает `EINVAL` и устанавливает для параметра `errno` значение `EINVAL`. Если функция завершается с ошибкой по другой причине, *_randomValue_ имеет значение 0.
+Ноль в случае успешного выполнения; в противном случае — код ошибки. Если входной указатель _randomValue_ является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **EINVAL** и задает **errno** для **EINVAL**. Если функция завершается с ошибкой по другой причине, *_randomValue_ имеет значение 0.
 
 ## <a name="remarks"></a>Примечания
 
-Функция `rand_s` записывает псевдослучайное целое число в диапазоне от 0 до `UINT_MAX` в указатель ввода. Функция `rand_s` использует операционную систему для создания криптографически безопасных случайных чисел. Функция не использует начальное значение, созданное функцией [srand](../../c-runtime-library/reference/srand.md), и не влияет на последовательность случайных чисел, которая используется `rand`.
+**Rand_s** функция записывает псевдослучайное целое число в диапазоне от 0 до **UINT_MAX** к входному указателю. **Rand_s** функция использует операционную систему для создания криптографически надежного случайных чисел. Он не использует начальное значение, созданное [srand](srand.md) функции, и не влияет на случайную последовательность чисел, используемый [rand](rand.md).
 
-Функция `rand_s` требует, чтобы константа `_CRT_RAND_S` была определена до объявления оператора включения для этой функции, как показано в следующем примере:
+**Rand_s** функция требует константы **_CRT_RAND_S** определенные перед оператором включения функции должно быть объявлено, как показано в следующем примере:
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-`rand_s` зависит от API [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694), который доступен только в Windows XP и более поздних версиях.
+**rand_s** зависит от [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API, который только в Windows XP и более поздних версий.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`rand_s`|\<stdlib.h>|
+|**rand_s**|\<stdlib.h>|
 
 Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -131,7 +127,7 @@ int main( void )
         {
             printf_s("The rand_s function failed!\n");
         }
-        printf_s( "  %g\n", (double) number / 
+        printf_s( "  %g\n", (double) number /
                           ((double) UINT_MAX + 1) * max );
     }
 }
@@ -165,6 +161,6 @@ int main( void )
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>
+[srand](srand.md)<br/>

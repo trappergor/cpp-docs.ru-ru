@@ -1,13 +1,10 @@
 ---
-title: "cimag, cimagf, cimagl | Документы Майкрософт"
-ms.custom: 
+title: cimag, cimagf, cimagl | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - cimag
@@ -40,64 +37,60 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9802a682193a0ef805f4a6964bf0aa1682a7619b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c466ad2373686d368cb29c46c68da3aabd68662f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
-Извлекает мнимую часть комплексного числа.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double cimag(   
-   _Dcomplex z   
-);  
-float cimag(   
-   _Fcomplex z   
-);  // C++  
-long double cimag(   
-  _Lcomplex z   
-);  // C++  
-float cimagf(   
-   _Fcomplex z   
-);  
-long double cimagl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `z`  
- Комплексное число.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Мнимая часть `z`.  
-  
-## <a name="remarks"></a>Примечания  
- Так как C++ допускает перегрузку, можно вызывать перегрузки `cimag`, которые принимают значения `_Fcomplex` или `_Lcomplex` и возвращают значения `float` или `long double`. В программе на языке C `cimag` всегда принимает значение `_Dcomplex` и возвращает значение `double`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Заголовок C|Заголовок C++|  
-|-------------|--------------|------------------|  
-|`cimag`,               `cimagf`, `cimagl`|\<complex.h>|\<ccomplex>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="see-also"></a>См. также  
- [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+Извлекает мнимую часть комплексного числа.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double cimag( _Dcomplex z );
+float cimagf( _Fcomplex z );
+long double cimagl( _Lcomplex z );
+```
+
+```cpp
+float cimag( _Fcomplex z );  // C++
+long double cimag( _Lcomplex z );  // C++
+```
+
+### <a name="parameters"></a>Параметры
+
+*z*<br/>
+Комплексное число.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Мнимая часть *z*.
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cimag** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **длинные** **двойные** значения. В программе на языке C **cimag** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Заголовок C|Заголовок C++|
+|-------------|--------------|------------------|
+|**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="see-also"></a>См. также
+
+[Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

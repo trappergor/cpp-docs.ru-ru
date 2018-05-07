@@ -1,12 +1,9 @@
 ---
-title: "_strdup, _wcsdup, _mbsdup | Документы Майкрософт"
-ms.custom: 
+title: _strdup, _wcsdup, _mbsdup | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _strdup
@@ -51,102 +48,105 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476ffad002353cf2c4048e5138e6972c5c304983
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
-Повторяющиеся строки.  
-  
+
+Повторяющиеся строки.
+
 > [!IMPORTANT]
->  `_mbsdup` не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-char *_strdup(  
-   const char *strSource   
-);  
-wchar_t *_wcsdup(  
-   const wchar_t *strSource   
-);  
-unsigned char *_mbsdup(  
-   const unsigned char *strSource   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `strSource`  
- Исходная строка, завершающаяся символом NULL.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих функций возвращает указатель на место хранения для скопированной строки или значение `NULL` , если не удается выделить хранилище.  
-  
-## <a name="remarks"></a>Примечания  
- Функция `_strdup` вызывает функцию [malloc](../../c-runtime-library/reference/malloc.md), которая выделяет пространство для хранения копии `strSource`, и копирует `strSource` в выделенное пространство.  
-  
- Функции`_wcsdup` и `_mbsdup` are wide-character и multibyte-character versions of `_strdup`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `_wcsdup` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsdup` представляют собой многобайтовые строки. В остальном эти три функции ведут себя идентично.  
-  
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
-  
-|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsdup`|`_strdup`|`_mbsdup`|`_wcsdup`|  
-  
- Поскольку `_strdup` вызывает `malloc` для выделения пространства под копию `strSource`, рекомендуется освобождать соответствующую память, вызывая [свободную](../../c-runtime-library/reference/free.md) подпрограмму на указатель, возвращаемый вызовом функции `_strdup`.  
-  
- Если определены директивы `_DEBUG` и `_CRTDBG_MAP_ALLOC` , вместо функций `_strdup` и `_wcsdup` вызываются функции `_strdup_dbg` и `_wcsdup_dbg` , что позволяет выполнить отладку выделения памяти. Дополнительные сведения см. в разделе [_strdup_dbg, _wcsdup_dbg](../../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md).  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`_strdup`|\<string.h>|  
-|`_wcsdup`|\<string.h> или \<wchar.h>|  
-|`_mbsdup`|\<mbstring.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// crt_strdup.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buffer[] = "This is the buffer text";  
-   char *newstring;  
-   printf( "Original: %s\n", buffer );  
-   newstring = _strdup( buffer );  
-   printf( "Copy:     %s\n", newstring );  
-   free( newstring );  
-}  
-```  
-  
-```Output  
-Original: This is the buffer text  
-Copy:     This is the buffer text  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
- [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbsdup** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+char *_strdup(
+   const char *strSource
+);
+wchar_t *_wcsdup(
+   const wchar_t *strSource
+);
+unsigned char *_mbsdup(
+   const unsigned char *strSource
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*strSource*<br/>
+Исходная строка, завершающаяся символом NULL.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Каждая из этих функций возвращает указатель на место хранения для скопированной строки или **NULL** Если не удается выделить хранилище.
+
+## <a name="remarks"></a>Примечания
+
+**_Strdup** вызовов функций [malloc](malloc.md) для выделения пространства под копию *strSource* , а затем копирование *strSource* для выделенное пространство.
+
+**_wcsdup** и **_mbsdup** версии Юникода и многобайтовых символов **_strdup**. Аргументы и возвращаемое значение **_wcsdup** являются двухбайтовые строки; аргументы **_mbsdup** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
+
+Поскольку **_strdup** вызовы **malloc** для выделения пространства под копию *strSource*, рекомендуется освобождать память, вызвав [свободного](free.md) подпрограмму на указатель, возвращаемый вызовом **_strdup**.
+
+Если **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, **_strdup** и **_wcsdup** заменяются вызовами функций для **_strdup_dbg**  и **_wcsdup_dbg** чтобы разрешить отладку выделения памяти. Дополнительные сведения см. в разделе [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|**_strdup**|\<string.h>|
+|**_wcsdup**|\<string.h> или \<wchar.h>|
+|**_mbsdup**|\<mbstring.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+```C
+// crt_strdup.c
+
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char buffer[] = "This is the buffer text";
+   char *newstring;
+   printf( "Original: %s\n", buffer );
+   newstring = _strdup( buffer );
+   printf( "Copy:     %s\n", newstring );
+   free( newstring );
+}
+```
+
+```Output
+Original: This is the buffer text
+Copy:     This is the buffer text
+```
+
+## <a name="see-also"></a>См. также
+
+[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[memset, wmemset](memset-wmemset.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

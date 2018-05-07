@@ -1,12 +1,9 @@
 ---
-title: "toascii, __toascii | Документы Майкрософт"
-ms.custom: 
+title: toascii, __toascii | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - __toascii
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf4c29934d22d3f20d79650faa406f217ffdd4c6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -63,29 +58,29 @@ int __toascii(
 
 ### <a name="parameters"></a>Параметры
 
-*c*  
+*c*<br/>
 Символ для преобразования.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`__toascii` Преобразует значение *c* в 7-битной кодировке ASCII в диапазоне и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
+**__toascii** преобразует значение *c* в 7-битной кодировке ASCII в диапазоне и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
 
 ## <a name="remarks"></a>Примечания
 
-Подпрограмма `__toascii` преобразует заданный символ в символ ASCII путем его усечения до 7 бит в прямом порядке. Никакие другие преобразования не применяются.
+**__Toascii** подпрограммы преобразует данный символ в символ в кодировке ASCII, обрезано до 7 бит низкого порядка. Никакие другие преобразования не применяются.
 
-Подпрограмма `__toascii` реализуется в виде макроса за исключением случаев, когда задан макрос препроцессора _CTYPE_DISABLE_MACROS. Для обеспечения обратной совместимости `toascii` определяется как макрос только если [&#95; &#95; Директива STDC &#95; &#95; ](../../preprocessor/predefined-macros.md) не определено или задано значение 0; в противном случае значение не определено.
+**__Toascii** определяется как макрос не определен макрос препроцессора _CTYPE_DISABLE_MACROS. Для обеспечения обратной совместимости **toascii** определяется как макрос только если [ &#95; &#95;директива STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определено или задано значение 0; в противном случае значение не определено.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|`toascii`, `__toascii`|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
+|**toascii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
 
-Макрос `toascii` является расширением POSIX, а `__toascii` является реализацией Майкрософт расширения POSIX. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.
+**Toascii** макрос является расширением POSIX и **__toascii** является реализацией Майкрософт расширения POSIX. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 
-[Преобразование данных](../../c-runtime-library/data-conversion.md)   
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)   
-[Функции to](../../c-runtime-library/to-functions.md)
+[Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
+[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Функции to](../../c-runtime-library/to-functions.md)<br/>

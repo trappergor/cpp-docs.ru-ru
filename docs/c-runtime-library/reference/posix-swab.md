@@ -1,12 +1,9 @@
 ---
-title: "swab | Документы Майкрософт"
-ms.custom: 
+title: swab | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - swab
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - swab function
 ms.assetid: fb8b7137-420d-4485-bb65-e1ec68602905
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f5a21e23d605fa8bd9eeac633272d8f2a93347
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c5af1b73042a496f493b8f2f73208f2025c55b79
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="swab"></a>swab
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_swab](../../c-runtime-library/reference/swab.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_swab](swab.md).

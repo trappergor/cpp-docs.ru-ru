@@ -1,13 +1,10 @@
 ---
-title: "Параметры EDITBIN | Документы Microsoft"
-ms.custom: 
+title: Параметры EDITBIN | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>Параметры EDITBIN
 EDITBIN можно использовать для изменения объектных файлов, исполняемых файлов и библиотек динамической компоновки (DLL). Параметры определяют изменения, которые вносит EDITBIN.  
@@ -46,7 +41,7 @@ EDITBIN можно использовать для изменения объек
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Указывает, поддерживает ли DLL или исполняемого образа с высокой энтропией (64-разрядная версия) адрес пространства макета randomization (ASLR).|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Указывает, следует ли проверять цифровую подпись во время загрузки.|  
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Указывает, поддерживает ли объект адреса, превышающие два гигабайта.|  
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Отключает загрузочный баннер EDITBIN.|  
+|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Отключает загрузочный баннер EDITBIN.|  
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Указывает, совместим ли исполняемый образ с предотвращением исполнения данных Windows.|  
 |[/REBASE](../../build/reference/rebase.md)|Задает базовые адреса для указанных объектов.|  
 |[/RELEASE](../../build/reference/release.md)|Задает контрольную сумму в заголовке.|  

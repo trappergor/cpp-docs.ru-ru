@@ -1,12 +1,9 @@
 ---
-title: "Класс _com_error | Документы Microsoft"
-ms.custom: 
+title: Класс _com_error | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerror-class"></a>Класс _com_error
 **Блок, относящийся только к системам Microsoft**  
@@ -58,7 +53,7 @@ ms.lasthandoff: 01/25/2018
 |-|-|  
 |[Описание](../cpp/com-error-description.md)|Вызывает функцию `IErrorInfo::GetDescription`.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|Вызывает функцию `IErrorInfo::GetHelpContext`.|  
-|[HelpFile](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
+|[Файл справки](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
 |[Source](../cpp/com-error-source.md)|Вызывает функцию `IErrorInfo::GetSource`.|  
 |[GUID](../cpp/com-error-guid.md)|Вызывает функцию `IErrorInfo::GetGUID`.|  
   
@@ -78,10 +73,10 @@ ms.lasthandoff: 01/25/2018
 **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="requirements"></a>Требования  
- **Header:** \<comdef.h>  
+ **Заголовок:** \<comdef.h >  
   
- `Lib:`comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
+ `Lib:` comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
   
 ## <a name="see-also"></a>См. также  
  [Классы поддержки компилятора COM](../cpp/compiler-com-support-classes.md)   
- [IErrorInfo Interface](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Интерфейс IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

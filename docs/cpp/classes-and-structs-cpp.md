@@ -1,12 +1,9 @@
 ---
-title: "Классы и структуры (C++) | Документы Microsoft"
-ms.custom: 
+title: Классы и структуры (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - classes [C++]
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac15db222aed3abad980f4e1a0c715c099e2019c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classes-and-structs-c"></a>Классы и структуры (C++)
 В этом разделе приводится информация о классах и структурах C++. В C++ эти конструкции идентичны, за исключением того факта, что структуры по умолчанию открыты для доступа, а классы — закрыты.  
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
   
 -   [Обзор членов класса](../cpp/class-member-overview.md)  
   
--   [Управление доступом к членам](../cpp/member-access-control-cpp.md)  
+-   [Контроль доступа к членам](../cpp/member-access-control-cpp.md)  
   
 -   [Наследование](../cpp/inheritance-cpp.md)  
   
 -   [Статические члены](../cpp/static-members-cpp.md)  
   
--   [Заданные пользователем преобразования типов](../cpp/user-defined-type-conversions-cpp.md)  
+-   [Пользовательские преобразования типов](../cpp/user-defined-type-conversions-cpp.md)  
   
 -   [Изменяемые члены данных (изменяемый спецификатор)](../cpp/mutable-data-members-cpp.md)  
   

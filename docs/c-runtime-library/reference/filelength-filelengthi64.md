@@ -1,12 +1,9 @@
 ---
-title: "_filelength, _filelengthi64 | Документы Майкрософт"
-ms.custom: 
+title: _filelength, _filelengthi64 | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - _filelengthi64
@@ -38,56 +35,59 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf35d33958157a424bf78950c3b4cf23f33708e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 33943eb81658b065116d30592f25ef004d4bfc1b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
-Получает длину файла.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-long _filelength(   
-   int fd   
-);  
-__int64 _filelengthi64(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `fd`  
- Указывает дескриптор файла.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функции `_filelength` и `_filelengthi64` возвращают длину целевого файла (в байтах), связанного с дескриптором `fd`. Если параметр `fd` является недопустимым дескриптором файла, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, обе функции возвращают – 1 L указывает на ошибку, и задание `errno` для `EBADF`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Функция|Обязательный заголовок|  
-|--------------|---------------------|  
-|`_filelength`|\<io.h>|  
-|`_filelengthi64`|\<io.h>|  
-  
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для функции [_chsize](../../c-runtime-library/reference/chsize.md).  
-  
-## <a name="see-also"></a>См. также  
- [Обработка файлов](../../c-runtime-library/file-handling.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [Функции _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)   
- [_stat, _wstat Functions](../../c-runtime-library/reference/stat-functions.md)
+
+Получает длину файла.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+long _filelength(
+   int fd
+);
+__int64 _filelengthi64(
+   int fd
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*fd*<br/>
+Указывает дескриптор файла.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Оба **_filelength** и **_filelengthi64** возвращают длину файла в байтах целевого файла, связанного с *fd*. Если *fd* имеет недопустимый дескриптор файла, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, обе функции возвращают – 1 L указывает на ошибку, и задание **errno** для **EBADF**.
+
+## <a name="requirements"></a>Требования
+
+|Функция|Обязательный заголовок|
+|--------------|---------------------|
+|**_filelength**|\<io.h>|
+|**_filelengthi64**|\<io.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+
+## <a name="example"></a>Пример
+
+См. пример для функции [_chsize](chsize.md).
+
+## <a name="see-also"></a>См. также
+
+[Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
+[_chsize](chsize.md)<br/>
+[_fileno](fileno.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_stat, _wstat Functions](stat-functions.md)<br/>
+[_stat, _wstat Functions](stat-functions.md)<br/>

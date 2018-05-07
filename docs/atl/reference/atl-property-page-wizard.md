@@ -1,12 +1,9 @@
 ---
-title: "Мастер страницы свойств ATL | Документы Microsoft"
-ms.custom: 
+title: Мастер страницы свойств ATL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>Мастер страницы свойств ATL
 Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL. Страницы свойств ATL предоставляет пользовательский интерфейс для настройки свойств (или вызова методов) одного или нескольких COM-объектов.  

@@ -1,12 +1,9 @@
 ---
-title: "read | Документы Майкрософт"
-ms.custom: 
+title: read | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - read
@@ -29,17 +26,16 @@ dev_langs:
 helpviewer_keywords:
 - read function
 ms.assetid: 9e0eead4-d38c-4f65-87f5-f6c12da40ead
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb417eb2cf162ea3a5fbfec06075ec87e7d3be35
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9884ae414e9493026df6400fa9dcc447f165822
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read"></a>чтение
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_read](../../c-runtime-library/reference/read.md).
+
+Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_read](read.md).

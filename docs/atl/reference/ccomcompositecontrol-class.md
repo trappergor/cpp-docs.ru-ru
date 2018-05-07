@@ -1,12 +1,9 @@
 ---
-title: "Класс CComCompositeControl | Документы Microsoft"
-ms.custom: 
+title: Класс CComCompositeControl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>Класс CComCompositeControl
 Этот класс предоставляет методы, необходимые для реализации составного элемента управления.  
@@ -58,14 +53,14 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Конструктор.|  
 |[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Этот метод используется для соединения или разъединения всех элементов управления, размещаемым составного элемента управления.|  
 |[CComCompositeControl::CalcExtent](#calcextent)|Этот метод вызывается для расчета размера в **HIMETRIC** единицы ресурса диалогового окна, используемого для размещения составного элемента управления.|  
@@ -75,7 +70,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Кисть фона.|  
 |[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Дескриптор окна, которое в данный момент имеет фокус.|  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>Примечания  
  Классы, производные от класса `CComCompositeControl` наследовать функциональность составного элемента управления ActiveX. Элементы управления ActiveX, производный от `CComCompositeControl` размещенных стандартное диалоговое окно. Следующие типы элементов управления, называются составные элементы управления, так как они имеют возможность размещения других элементов управления (собственные элементы управления Windows и элементы управления ActiveX).  
   
- `CComCompositeControl`идентифицирует ресурс диалогового окна для создания составного элемента управления путем просмотра для элемента данных перечисления в дочернем классе. Прямой Международной этого класса дочернего элемента присваивается идентификатор ресурса для ресурса диалогового окна, который будет использоваться в качестве окна элемента управления. Ниже приведен пример элемента данных, класс, производный от `CComCompositeControl` должен содержать для идентификации ресурса диалогового окна для окна элемента управления:  
+ `CComCompositeControl` идентифицирует ресурс диалогового окна для создания составного элемента управления путем просмотра для элемента данных перечисления в дочернем классе. Прямой Международной этого класса дочернего элемента присваивается идентификатор ресурса для ресурса диалогового окна, который будет использоваться в качестве окна элемента управления. Ниже приведен пример элемента данных, класс, производный от `CComCompositeControl` должен содержать для идентификации ресурса диалогового окна для окна элемента управления:  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
  Этот метод используется для соединения или разъединения всех элементов управления, размещаемым составного элемента управления.  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>Примечания  
  Базовую реализацию этого метода поиска записей событий приемником сопоставления. Затем будет указано, или unadvises точек подключения COM-объекты, описываемого записей приемник карты приемника событий. Этот метод члена также использует тот факт, что производный класс наследует от одного экземпляра `IDispEventImpl` для каждого элемента управления в схеме приемника, который должен быть желательно или unadvised.  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  Этот метод вызывается для расчета размера в **HIMETRIC** единицы ресурса диалогового окна, используемого для размещения составного элемента управления.  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>Примечания  
  Возвращенный размер в `size` параметра.  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  Этот метод вызывается для создания окна элемента управления для составного элемента управления.  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>Примечания  
  Этот метод обычно вызывается в процессе активации на месте элемента управления.  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  Конструктор.  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Примечания  
  Инициализирует [CComCompositeControl::m_hbrBackground](#m_hbrbackground) и [CComCompositeControl::m_hWndFocus](#m_hwndfocus) члены данных в значение NULL.  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  Деструктор  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>Примечания  
  Удаляет объект фон, если он существует.  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  Этот метод используется для создания окна элемента управления и уведомить всех размещенных элементов управления.  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод [CComCompositeControl::Create](#create) и [CComCompositeControl::AdviseSinkMap](#advisesinkmap).  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  Кисть фона.  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  Дескриптор окна, которое в данный момент имеет фокус.  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  Вызовите этот метод, чтобы задать цвет фона составного элемента управления, используя цвет фона для контейнера.  
   
 ```

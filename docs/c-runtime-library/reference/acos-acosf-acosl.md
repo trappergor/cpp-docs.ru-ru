@@ -1,12 +1,9 @@
 ---
-title: "acos, acosf, acosl | Документация Майкрософт"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: acos, acosf, acosl | Документация Майкрософт
+ms.custom: ''
+ms.date: 04/05/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - acosf
@@ -40,119 +37,116 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cccaa6369f6d858a63991c561e0c0984eba1aba
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 664c3555602dfc16ce811b065e0d38f8fe93e733
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
-Вычисляет арккосинус.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-double acos(   
-   double x   
-);  
-float acos(  
-   float x   
-);   // C++ only  
-long double acos(  
-   long double x  
-);   // C++ only  
-float acosf(  
-   float x   
-);  
-long double acosl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `x`  
- Значение от -1 до 1, для которого нужно вычислить арккосинус (арккосинус).  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Функция `acos` возвращает арккосинус `x` в диапазоне от 0 до радиан π.  
-  
- По умолчанию если `x` меньше -1 или больше 1, `acos` возвращает неопределенное.  
-  
-|Входные данные|Исключение SEH|Исключение Matherr|  
-|-----------|-------------------|-----------------------|  
-|± ∞|`INVALID`|`_DOMAIN`|  
-|± QNAN,IND|Нет|`_DOMAIN`|  
-|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
-  
-## <a name="remarks"></a>Примечания  
- Поскольку C++ допускает перегрузки, можно вызывать перегрузки функции `acos`, принимающие и возвращающие типы `float` и `long double`. В программе на языке C `acos` всегда принимает и возвращает `double`.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|Необязательные заголовки|  
-|-------------|---------------------|----------------------|  
-|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
-  
-## <a name="example"></a>Пример  
- Эта программа предлагает ввести значение в диапазоне от -1 до 1. Входные значения вне этого диапазона вызывают сообщения об ошибке `_DOMAIN`. Если введено допустимое значение, программа выводит на экран арксинус и арккосинус этого значения.  
-  
-```  
-// crt_asincos.c  
-// arguments: 0  
-  
-#include <math.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-int main( int ac, char* av[] )  
-{  
-    double  x,  
-            y;  
-    errno_t err;   
-  
-    // argument checking  
-    if (ac != 2)  
-    {  
-        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",  
-                   av[0]);  
-        return 1;  
-    }  
-  
-    // Convert argument into a double value  
-    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)  
-    {  
-        fprintf_s( stderr, "Error converting argument into ",  
-                   "double value.\n");  
-        return 1;  
-    }  
-  
-    // Arcsine of X  
-    y = asin( x );  
-    printf_s( "Arcsine of %f = %f\n", x, y );  
-  
-    // Arccosine of X  
-    y = acos( x );  
-    printf_s( "Arccosine of %f = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-Arcsine of 0.000000 = 0.000000  
-Arccosine of 0.000000 = 1.570796  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [_matherr](../../c-runtime-library/reference/matherr.md)   
- [sin, sinf, sinl, sinh, sinhf, sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan, tanf, tanl, tanh, tanhf, tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)
+
+Вычисляет арккосинус.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+double acos( double x );
+float acosf( float x );
+long double acosl( long double x );
+```
+
+```cpp
+float acos( float x );   // C++ only
+long double acos( long double x );   // C++ only
+```
+
+### <a name="parameters"></a>Параметры
+
+*x*<br/>
+Значение от -1 до 1, для которого нужно вычислить арккосинус (арккосинус).
+
+## <a name="return-value"></a>Возвращаемое значение
+
+**Acos** функция возвращает арккосинус числа *x* в диапазоне от 0 до π радианы.
+
+По умолчанию если *x* меньше -1 или больше 1, **acos** возвращает неопределенное.
+
+|Входные данные|Исключение SEH|Исключение Matherr|
+|-----------|-------------------|-----------------------|
+|± ∞|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± QNAN,IND|Нет|**_DOMAIN**|
+|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+
+## <a name="remarks"></a>Примечания
+
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **acos** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **acos** всегда принимает и возвращает **двойные**.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|Необязательные заголовки|
+|-------------|---------------------|----------------------|
+|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+
+## <a name="example"></a>Пример
+
+Эта программа предлагает ввести значение в диапазоне от -1 до 1. Создать входные значения вне этого диапазона **_DOMAIN** сообщения об ошибках. Если введено допустимое значение, программа выводит на экран арксинус и арккосинус этого значения.
+
+```C
+// crt_asincos.c
+// arguments: 0
+
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main( int ac, char* av[] )
+{
+    double  x,
+            y;
+    errno_t err;
+
+    // argument checking
+    if (ac != 2)
+    {
+        fprintf_s( stderr, "Usage: %s <number between -1 and 1>\n",
+                   av[0]);
+        return 1;
+    }
+
+    // Convert argument into a double value
+    if ((err = sscanf_s( av[1], "%lf", &x )) != 1)
+    {
+        fprintf_s( stderr, "Error converting argument into ",
+                   "double value.\n");
+        return 1;
+    }
+
+    // Arcsine of X
+    y = asin( x );
+    printf_s( "Arcsine of %f = %f\n", x, y );
+
+    // Arccosine of X
+    y = acos( x );
+    printf_s( "Arccosine of %f = %f\n", x, y );
+}
+```
+
+```Output
+Arcsine of 0.000000 = 0.000000
+Arccosine of 0.000000 = 1.570796
+```
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
+[asin, asinf, asinl](asin-asinf-asinl.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
+[cos, cosf, cosl](cos-cosf-cosl.md)<br/>
+[_matherr](matherr.md)<br/>
+[sin, sinf, sinl](sin-sinf-sinl.md)<br/>
+[tan, tanf, tanl](tan-tanf-tanl.md)<br/>

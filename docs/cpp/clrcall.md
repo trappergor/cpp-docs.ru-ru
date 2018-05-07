@@ -1,12 +1,9 @@
 ---
-title: "__clrcall | Документы Microsoft"
-ms.custom: 
+title: __clrcall | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Блок, относящийся только к системам Microsoft**  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [/ CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) подразумевает, что все функции и указатели на функции, `__clrcall` и компилятор не разрешает доступ в функции в единицу компиляции отмечается ничего не `__clrcall`. Когда **/CLR: pure** используется, `__clrcall` можно указать только в указателях функций и внешних объявлениях.  
   
- Можно явно вызвать `__clrcall` функции из существующего кода C++, который был скомпилирован с помощью **/CLR** при условии, что функция имеет реализацию MSIL. `__clrcall`функции не могут вызываться непосредственно из функций, которые имеют встроенного ассемблерного кода и вызове зависящие от ЦП встроенные, к примеру, даже если эти функции скомпилированы с **/CLR**.  
+ Можно явно вызвать `__clrcall` функции из существующего кода C++, который был скомпилирован с помощью **/CLR** при условии, что функция имеет реализацию MSIL. `__clrcall` функции не могут вызываться непосредственно из функций, которые имеют встроенного ассемблерного кода и вызове зависящие от ЦП встроенные, к примеру, даже если эти функции скомпилированы с **/CLR**.  
   
  Указатели функций `__clrcall` предназначены для использования только в домене приложения, в котором они были созданы.  Вместо передачи указателей функций `__clrcall` между доменами приложения используйте <xref:System.CrossAppDomainDelegate>. Дополнительные сведения см. в разделе [домены приложений и Visual C++](../dotnet/application-domains-and-visual-cpp.md).  
   
