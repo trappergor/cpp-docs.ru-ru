@@ -1,24 +1,19 @@
 ---
-title: "Система типов (C + +/ CX) | Документы Microsoft"
-ms.custom: 
+title: Система типов (C + +/ CX) | Документы Microsoft
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>Система типов (C++/CX)
 С помощью архитектуры среды выполнения Windows, можно использовать C + +/ CX, Visual Basic, Visual C# и JavaScript для написания приложений и компонентов, которые напрямую обращаются к Windows API и взаимодействовать с другими приложениями среды выполнения Windows и компонентов. Универсальные приложения платформы Windows, написанных на C++, компилируются в машинный код, который выполняется непосредственно в ЦП. Универсальные приложения платформы Windows, написанных на языке C# или Visual Basic, компилируются в промежуточный язык Майкрософт (MSIL) и выполняются в среде (CLR). Универсальные приложения платформы Windows, написанных на языке JavaScript выполняются в среде выполнения. Сами компоненты операционной системы среды выполнения Windows написанного на языке C++ и выполняются как машинный код. Все эти компоненты и приложений универсальной платформы Windows взаимодействовать напрямую через двоичный интерфейс приложений (ABI) среды выполнения Windows.  
@@ -27,15 +22,15 @@ ms.lasthandoff: 02/14/2018
   
  Подробное рассмотрение проекции языка C++/CX и принципов его работы приведено в следующих записях блогов:  
   
-1.  [C + +/ CX: часть 0 из \[ n \]: введение](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + +/ CX: часть 0 из \[n\]: введение](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + +/ CX: часть 1 из \[ n \]: простого класса](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + +/ CX: часть 1 из \[n\]: простого класса](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + +/ CX: часть 2 из \[ n \]: типы с крышками](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + +/ CX: часть 2 из \[n\]: типы с крышками](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + +/ CX: часть 3 из \[ n \]: В процессе разработки](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + +/ CX: часть 3 из \[n\]: В процессе разработки](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + +/ CX: часть 4 из \[ n \]: статические функции-члены](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + +/ CX: часть 4 из \[n\]: статические функции-члены](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Файлы метаданных Windows (WINMD-файлы)  
  При компиляции приложения универсальной платформы Windows, написанного на языке C++, компилятор создает исполняемый файл в машинном коде, а также создает отдельный файл метаданных (.winmd) Windows, содержащий описания открытых типов среды выполнения Windows включая классы, структуры, перечисления, интерфейсы, параметризованные интерфейсы и делегаты. Формат метаданных напоминает формат, используемый в сборках .NET Framework.  В компоненте C++ WINMD-файл содержит только метаданные; исполняемый код находится в отдельном файле. Это происходит для компонентов среды выполнения Windows, которые входят в состав Windows. Имя WINMD-файла должно соответствовать корневому пространству имен в исходном коде или являться его префиксом. (Для языков платформы .NET Framework WINMD-файл содержит код и метаданные точно так же, как сборка .NET Framework.)  

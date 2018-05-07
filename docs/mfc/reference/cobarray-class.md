@@ -1,12 +1,9 @@
 ---
-title: "Класс CObArray | Документы Microsoft"
-ms.custom: 
+title: Класс CObArray | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>Класс CObArray
 Поддерживает массивы указателей `CObject` .  
@@ -76,13 +71,13 @@ class CObArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::CObArray](#cobarray)|Создает пустой массив для `CObject` указатели.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -104,7 +99,7 @@ class CObArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CObArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|  
   
@@ -139,7 +134,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  Добавляет новый элемент в конец массива, увеличение массива на 1.  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  Вызовите эту функцию-член для добавления содержимого другого массива в конец заданного массива.  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  Вызовите эту функцию-член для перезаписи элементов заданного массива с элементами другого массива того же типа.  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  Создает пустой `CObject` массив указателей.  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  Возвращает временную ссылку на указатель элемента в массиве.  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CObArray::GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  Освобождает все дополнительную память, выделенную пока массива был увеличил.  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CObArray::GetData](#getdata).  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  Возвращает элемент массива по указанному индексу.  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  Возвращает число элементов массива.  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  Используйте эту функцию-член для прямого доступа к элементам в массиве.  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  Возвращает размер массива.  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  Возвращает текущий верхнюю границу данного массива.  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  Вставляет элемент (или все элементы в другом массиве) по указанному индексу.  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  Определяет, пуст ли массив.  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если массив пуст; в противном случае — 0.  
   
-##  <a name="operator_at"></a>[CObArray::operator]  
+##  <a name="operator_at"></a>  [CObArray::operator]  
  Все эти подстрочного оператора удобный заменяют `SetAt` и `GetAt` функции.  
   
 ```  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  Удаляет все указатели из этого массива, но не удаляет `CObject` объектов.  
   
 ```  
@@ -609,7 +604,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  Удаляет один или несколько элементов, начиная с указанного индекса в массиве.  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  Задает элемент массива по указанному индексу.  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  Указатель на объект должны быть вставлены в этот массив. Объект **NULL** является допустимым значением.  
   
 ### <a name="remarks"></a>Примечания  
- `SetAt`не вызовет массива может увеличиваться. Используйте `SetAtGrow` Если разрешено автоматическое увеличение массива.  
+ `SetAt` не вызовет массива может увеличиваться. Используйте `SetAtGrow` Если разрешено автоматическое увеличение массива.  
   
  Необходимо убедиться, что значение индекса представляет является допустимой позицией в массиве. Если вне допустимых границ, отладочная версия библиотеки утверждения.  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  Задает элемент массива по указанному индексу.  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  Устанавливает размер массива пустой или существующей; Выделяет память при необходимости.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Пошаговое руководство: Обновление приложения MFC Scribble (часть 1) | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Обновление приложения MFC Scribble (часть 1) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Пошаговое руководство: Обновление приложения MFC Scribble (часть 1)
 В этом пошаговом руководстве показано, как изменить существующее приложение MFC для использования пользовательского интерфейса ленты. Visual Studio поддерживает ленты Office 2007 и Windows 7 живописных ленты. Дополнительные сведения о пользовательском интерфейсе ленты см. в разделе [лент](http://go.microsoft.com/fwlink/p/?linkid=129233) на сайте MSDN.  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/03/2018
   
 - [Настройка внешнего вида приложения](#setlook)  
   
-##  <a name="replaceclass"></a>Замена базовые классы  
+##  <a name="replaceclass"></a> Замена базовые классы  
  Чтобы преобразовать приложение, поддерживающее меню для приложения, поддерживающего ленты, должны наследовать классы инструментов приложений, фрейм окна и от обновленные базовых классов. (Мы рекомендуем не изменить исходный пример Scribble; вместо этого очистите проект Scribble, скопировать его в другой каталог и затем изменить копию).  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Для замены базовых классов в приложении Scribble  
@@ -101,11 +96,11 @@ ms.lasthandoff: 01/03/2018
   
 8.  В файле mainfrm.cpp:  
   
-    1.  Замените `m_wndToolBar.SetBarStyle` с`m_wndToolBar.SetPaneStyle`  
+    1.  Замените `m_wndToolBar.SetBarStyle` с `m_wndToolBar.SetPaneStyle`  
   
-    2.  Замените `m_wndToolBar.GetBarStyle` с`m_wndToolBar.GetPaneStyle`  
+    2.  Замените `m_wndToolBar.GetBarStyle` с `m_wndToolBar.GetPaneStyle`  
   
-    3.  Замените `DockControlBar(&m_wndToolBar)` с`DockPane(&m_wndToolBar)`  
+    3.  Замените `DockControlBar(&m_wndToolBar)` с `DockPane(&m_wndToolBar)`  
   
 9. В файле ipframe.cpp закомментируйте следующие три строки кода.  
   
@@ -130,7 +125,7 @@ ms.lasthandoff: 01/03/2018
   
  [[Разделы](#top)]  
   
-##  <a name="addbitmap"></a>Добавление растровых изображений в проект  
+##  <a name="addbitmap"></a> Добавление растровых изображений в проект  
  Следующие четыре действия данного пошагового руководства требуются ресурсы растрового изображения. Вы можете получить соответствующие растровые изображения различными способами:  
   
 -   Используйте [редакторы ресурсов](../windows/resource-editors.md) программистами собственные точечные рисунки. Или с помощью редакторов ресурсов можно собрать растровые изображения из изображений PNG-переносимой сетевой, входящих в состав [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Эти образы являются в `VS2008ImageLibrary` каталога.  
@@ -175,7 +170,7 @@ ms.lasthandoff: 01/03/2018
   
  [[Разделы](#top)]  
   
-##  <a name="addribbon"></a>Добавление ресурса ленты в проект  
+##  <a name="addribbon"></a> Добавление ресурса ленты в проект  
  При преобразовании приложения, использующего меню для приложения, использующего ленты, у вас для удаления или отключения существующих меню. Вместо этого можно создать ресурс ленты, добавить кнопки ленты и связать новые кнопки с существующие элементы меню. Несмотря на то, что больше не отображаются в меню, сообщения с панели ленты, маршрутизируются через меню. Кроме того ярлыки меню продолжать работу.  
   
  Лента состоит из «приложение», которая имеет большую кнопку ленты со стороны левый верхний, и одну или несколько вкладок категории. Каждая вкладка категории содержит одну или несколько панелей, которые действуют как контейнеры для элементов управления и кнопки ленты. Ниже показано, как создать ресурс ленты, а затем настройте кнопки приложения.  
@@ -226,7 +221,7 @@ ms.lasthandoff: 01/03/2018
   
  [[Разделы](#top)]  
   
-##  <a name="createinstance"></a>Создание экземпляра ленты  
+##  <a name="createinstance"></a> Создание экземпляра ленты  
  Ниже показано, как создать экземпляр ленты при запуске приложения. Чтобы добавить на панель ленты в приложение, объявите панель ленты в файле mainfrm.h. Затем в файле mainfrm.cpp напишите код для загрузки ресурса ленты.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Для создания экземпляра ленты  
@@ -250,7 +245,7 @@ ms.lasthandoff: 01/03/2018
   
  [[Разделы](#top)]  
   
-##  <a name="addcategory"></a>Настройка ресурс ленты  
+##  <a name="addcategory"></a> Настройка ресурс ленты  
  После создания кнопки приложения можно добавить элементы на ленту.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ ms.lasthandoff: 01/03/2018
   
  [[Разделы](#top)]  
   
-##  <a name="setlook"></a>Настройка внешнего вида приложения  
+##  <a name="setlook"></a> Настройка внешнего вида приложения  
  Объект *наглядный диспетчер* — это глобальный объект, управляющий все прорисовки для приложения. Так как в исходном приложении Scribble использует стиля пользовательского интерфейса Office 2000 пользователя, приложение может выглядеть просто. Вы можете сбросить приложению использовать Диспетчер визуальных Office 2007, как указано в приложениях Office 2007.  
   
 #### <a name="to-set-the-look-of-the-application"></a>Чтобы задать внешний вид приложения  

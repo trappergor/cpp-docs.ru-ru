@@ -1,13 +1,10 @@
 ---
-title: "Функции обмена данными диалоговых окон для элементов управления OLE | Документы Microsoft"
-ms.custom: 
+title: Функции обмена данными диалоговых окон для элементов управления OLE | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad97690ca948525e9a0920d087e4dfd617a11b4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dd7e1b9b18e8478cfa4e61a22806cf067cb3699
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Функции обмена данными диалоговых окон для элементов управления OLE
 В этом разделе перечислены функции DDX_OC, используемые для обмена данными между свойством элемента управления OLE в диалоговое окно, представление формы или объекте представления элемента управления и элемент данных диалоговое окно, представление формы или объекте представления элемента управления.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_OCText](#ddx_octext)|Управляет передачей **CString** данные между свойством элемента управления OLE и **CString** члена данных.|  
 |[DDX_OCTextRO](#ddx_octextro)|Управляет передачей **CString** данных между только для чтения свойство элемента управления OLE и **CString** члена данных.|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
  `DDX_OCBool` Функция управляет передачей **BOOL** данные между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **BOOL** членом данных в диалоговом окне, представлении формы или Объект представления элемента управления.  
   
 ```   
@@ -89,7 +84,7 @@ void AFXAPI DDX_OCBool(
 ### <a name="requirements"></a>Требования  
   **Заголовок:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
  `DDX_OCBoolRO` Функция управляет передачей **BOOL** данных между только для чтения свойство элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **BOOL** член данных диалогового окна представление формы или объекте представления элемента управления.  
   
 ```   
@@ -119,7 +114,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
  `DDX_OCColor` Функция управляет передачей **OLE_COLOR** данные между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **OLE_COLOR** член данных диалогового окна представление формы или объекте представления элемента управления.  
   
 ```   
@@ -149,7 +144,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
  `DDX_OCColorRO` Функция управляет передачей **OLE_COLOR** данных между только для чтения свойство элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **OLE_COLOR** данными-членом диалоговое окно, представления формы или объекте представления элемента управления.  
   
 ```   
@@ -179,7 +174,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
  `DDX_OCFloat` Функция управляет передачей **float** (или **двойные**) данные между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **float** (или **двойные**) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```   
@@ -215,7 +210,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
  `DDX_OCFloatRO` Функция управляет передачей **float** (или **двойные**) данные между только для чтения свойство элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и  **число с плавающей запятой** (или **двойные**) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```   
@@ -251,7 +246,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
  `DDX_OCInt` Функция управляет передачей `int` (или **длинные**) данные между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и `int` (или **долго**) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```   
@@ -287,7 +282,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
  `DDX_OCIntRO` Функция управляет передачей `int` (или **длинные**) данные между только для чтения свойство элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и `int` (или **long** ) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```   
@@ -323,7 +318,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
  `DDX_OCShort` Функция управляет передачей данных short между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и член данных short диалоговым окном представление формы или объекта представления элемента управления.  
   
 ```   
@@ -353,7 +348,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
  `DDX_OCShortRO` Функция управляет передачей данных short между только для чтения свойство элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и член данных short диалоговым окном представление формы или объекта представления элемента управления.  
   
 ```   
@@ -383,7 +378,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>  DDX_OCText  
  **DDX_OCText** функция управляет передачей **CString** данные между свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и **CString** данных член диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```   
@@ -413,7 +408,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
  Функция `DDX_OCTextRO` управляет передачей данных `CString` между доступным только для чтения свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и элементом данных `CString` диалогового окна, представления формы или объекта представления элемента управления.  
   
 ```  

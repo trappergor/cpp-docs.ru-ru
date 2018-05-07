@@ -1,13 +1,10 @@
 ---
-title: "Использование CHotKeyCtrl | Документы Microsoft"
-ms.custom: 
+title: Использование CHotKeyCtrl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHotKeyCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-chotkeyctrl"></a>Использование CHotKeyCtrl
 Горячий ключа элемента управления, представленный классом [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), — окно, которое отображает текстовое представление сочетание клавиш, которые пользователь вводит в него, например CTRL + SHIFT + Q. Это также обеспечивает внутреннее представление этого ключа в виде виртуального кода клавиши и набор флагов, которые представляют состояние сдвига. Горячий ключа управления фактически не задано сочетание клавиш — это зависит от программы. (Список стандартных кодов виртуального ключа, см. в Winuser.h.)  

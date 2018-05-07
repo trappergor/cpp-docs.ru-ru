@@ -1,12 +1,9 @@
 ---
-title: "CArchive-класс | Документы Microsoft"
-ms.custom: 
+title: CArchive-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchive
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cc94e78656c53156b8696b927780f46e939861a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f11edef585e699d90d8d33839e0e446cb5a726db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchive-class"></a>CArchive-класс
 Позволяет сохранить сложную сеть объектов в перманентной двоичной форме (обычно на запоминающем устройстве), сохраняющейся даже после удаления объектов.  
@@ -86,13 +81,13 @@ class CArchive
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArchive::CArchive](#carchive)|Создает объект `CArchive`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArchive::Abort](#abort)|Закрывает архив без вызова исключения.|  
 |[CArchive::Close](#close)|Очищает незаписанных данных и отключается от `CFile`.|  
@@ -118,19 +113,19 @@ class CArchive
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[CArchive::operator&lt;&lt;](#operator_lt_lt)|Хранит объекты и типы-примитивы в архив.|  
-|[CArchive::operator&gt;&gt;](#operator_gt_gt)|Загружает объекты и типы-примитивы из архива.|  
+|[CArchive::operator &lt;&lt;](#operator_lt_lt)|Хранит объекты и типы-примитивы в архив.|  
+|[CArchive::operator &gt;&gt;](#operator_gt_gt)|Загружает объекты и типы-примитивы из архива.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CArchive::m_pDocument](#m_pdocument)||  
   
 ## <a name="remarks"></a>Примечания  
- `CArchive`не имеет базового класса.  
+ `CArchive` не имеет базового класса.  
   
  Позже объекты можно загрузить из постоянного хранилища реконструкцию их в памяти. Этот процесс внесения постоянных данных называется «сериализация».  
   
@@ -140,9 +135,9 @@ class CArchive
   
  При построении `CArchive` объекта, присоединить ее к объекту класса `CFile` (или производный класс), представляющий открытый файл. Вы также указать, будет ли использован для загрузки или сохранения архива. Объект `CArchive` объекта может обрабатывать не только типы-примитивы, но объекты [CObject](../../mfc/reference/cobject-class.md)-производные классы, предназначенные для сериализации. Сериализуемый класс обычно имеет `Serialize` функция-член, который обычно использует [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) макросов, как описано в разделе класса `CObject`.  
   
- Перегруженные извлечения (  **>>** ) и вставки (  **<<** ) операторы — это удобный архив программные интерфейсы, которые поддерживают обоих типов-примитивов и `CObject` -производные классы.  
+ Перегруженные извлечения ( **>>**) и вставки ( **<<**) операторы — это удобный архив программные интерфейсы, которые поддерживают обоих типов-примитивов и `CObject` -производные классы.  
   
- `CArchive`также поддерживает программирование с использованием классов MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) и [CSocketFile](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) функция-член поддерживает такого использования.  
+ `CArchive` также поддерживает программирование с использованием классов MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) и [CSocketFile](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) функция-член поддерживает такого использования.  
   
  Дополнительные сведения о `CArchive`, см. в статьях [сериализации](../../mfc/serialization-in-mfc.md) и [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
@@ -152,7 +147,7 @@ class CArchive
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>  CArchive::Abort  
  Вызывайте эту функцию, чтобы закрыть архив без вызова исключения.  
   
 ```  
@@ -169,7 +164,7 @@ void Abort ();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CArchive::WriteClass](#writeclass).  
   
-##  <a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>  CArchive::CArchive  
  Создает `CArchive` и указывает, является ли он будет использоваться для загрузки или хранения объектов.  
   
 ```  
@@ -207,7 +202,7 @@ CArchive(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#12](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="close"></a>CArchive::Close  
+##  <a name="close"></a>  CArchive::Close  
  Очищает все данные, оставшиеся в буфере, закрывает архива и отключает из файла архива.  
   
 ```  
@@ -222,7 +217,7 @@ void Close();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CArchive::WriteString](#writestring).  
   
-##  <a name="flush"></a>CArchive::Flush  
+##  <a name="flush"></a>  CArchive::Flush  
  Вызывает запись данных, остающихся в буфере для записи в файл архива.  
   
 ```  
@@ -235,7 +230,7 @@ void Flush();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#13](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>  CArchive::GetFile  
  Возвращает `CFile` указатель на объект для этого архива.  
   
 ```  
@@ -251,7 +246,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#14](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>  CArchive::GetObjectSchema  
  Вызывайте эту функцию из `Serialize` функции, чтобы определить версию объекта, который был десериализован.  
   
 ```  
@@ -269,7 +264,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>  CArchive::IsBufferEmpty  
  Вызовите эту функцию-член для определения того, пуста ли архивный объект внутреннего буфера.  
   
 ```  
@@ -286,7 +281,7 @@ BOOL IsBufferEmpty() const;
   
  Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isloading"></a>CArchive::IsLoading  
+##  <a name="isloading"></a>  CArchive::IsLoading  
  Определяет, загружается ли архив данных.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="isstoring"></a>CArchive::IsStoring  
+##  <a name="isstoring"></a>  CArchive::IsStoring  
  Определяет, является ли архив хранения данных.  
   
 ```  
@@ -320,7 +315,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#17](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>  CArchive::MapObject  
  Вызовите эту функцию-член для размещения объектов на карте, фактически не сериализуются в файл, но, доступных для вложенных объектов для ссылки.  
   
 ```  
@@ -334,7 +329,7 @@ void MapObject(const CObject* pOb);
 ### <a name="remarks"></a>Примечания  
  Например не может сериализовать документ, но будет сериализовать элементы, которые являются частью документа. Путем вызова `MapObject`, разрешить элементов и подчиненных, ссылка на документ. Кроме того, можно сериализовать сериализованный подэлементы их `m_pDocument` обратный указатель.  
   
- Можно вызвать `MapObject` при сохранения и загрузки из `CArchive` объекта. `MapObject`Добавляет указанный объект в структурах внутренних данных, поддерживаемых `CArchive` объекта во время сериализации и десериализации, но в отличие от [ReadObject](#readobject) и [WriteObject](#writeobject) **,** не вызывает сериализации объекта.  
+ Можно вызвать `MapObject` при сохранения и загрузки из `CArchive` объекта. `MapObject` Добавляет указанный объект в структурах внутренних данных, поддерживаемых `CArchive` объекта во время сериализации и десериализации, но в отличие от [ReadObject](#readobject) и [WriteObject](#writeobject) **,** не вызывает сериализации объекта.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  
@@ -345,7 +340,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
  Значение **NULL** по умолчанию этот указатель **CDocument** может быть задано пользователь `CArchive` экземпляра требуется.  
   
 ```  
@@ -360,7 +355,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>  CArchive::operator &lt;&lt;  
  Сохраняет указанный объект или тип-примитив в архив.  
   
 ```  
@@ -430,7 +425,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[NVC_MFCSerialization#32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>  CArchive::operator &gt;&gt;  
  Загружает указанный объект или тип-примитив из архива.  
   
 ```  
@@ -512,7 +507,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="read"></a>CArchive::Read  
+##  <a name="read"></a>  CArchive::Read  
  Считывает указанное число байтов из архива.  
   
 ```  
@@ -537,7 +532,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="readclass"></a>CArchive::ReadClass  
+##  <a name="readclass"></a>  CArchive::ReadClass  
  Вызовите эту функцию-член для чтения ссылка на класс, сохраненные ранее с [WriteClass](#writeclass).  
   
 ```  
@@ -565,14 +560,14 @@ CRuntimeClass* ReadClass(
   
  Класс среды выполнения необходимо использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае `ReadClass` вызовет [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Если `pSchema` — **NULL**, можно извлечь схему хранимой класса путем вызова [CArchive::GetObjectSchema](#getobjectschema); в противном случае  **\***  `pSchema`будет содержать схему класса среды выполнения, которая ранее была сохранена.  
+ Если `pSchema` — **NULL**, можно извлечь схему хранимой класса путем вызова [CArchive::GetObjectSchema](#getobjectschema); в противном случае **\*** `pSchema`будет содержать схему класса среды выполнения, которая ранее была сохранена.  
   
  Можно использовать [SerializeClass](#serializeclass) вместо `ReadClass`, которая обрабатывает чтение и запись ссылки на класс.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CArchive::WriteClass](#writeclass).  
   
-##  <a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>  CArchive::ReadObject  
  Считывает данные объекта из архива и создает объект соответствующего типа.  
   
 ```  
@@ -587,14 +582,14 @@ CObject* ReadObject(const CRuntimeClass* pClass);
  Объект [CObject](../../mfc/reference/cobject-class.md) указатель, который необходимо безопасно привести к нужному серверу производного класса с помощью [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof).  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция обычно вызывается методом `CArchive` извлечения (  **>>** ) перегруженный оператор для [CObject](../../mfc/reference/cobject-class.md) указателя. **ReadObject**, в свою очередь, вызывает `Serialize` функция архивированные класса.  
+ Эта функция обычно вызывается методом `CArchive` извлечения ( **>>**) перегруженный оператор для [CObject](../../mfc/reference/cobject-class.md) указателя. **ReadObject**, в свою очередь, вызывает `Serialize` функция архивированные класса.  
   
  При указании ненулевое `pClass` параметр, который можно получить путем [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) макроса, то функция проверяет класс архивированные объекта во время выполнения. Предполагается с помощью `IMPLEMENT_SERIAL` макрос в реализацию класса.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CArchive::WriteObject](#writeobject).  
   
-##  <a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>  CArchive::ReadString  
  Вызовите эту функцию-член для чтения текстовых данных в буфер из файла, связанного с `CArchive` объекта.  
   
 ```  
@@ -625,7 +620,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CArchive::WriteString](#writestring).  
   
-##  <a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>  CArchive::SerializeClass  
  Вызовите эту функцию-член, при необходимости для сохранения и загрузки сведений о версии базового класса.  
   
 ```  
@@ -637,7 +632,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
  Указатель на объект класса среды выполнения для базового класса.  
   
 ### <a name="remarks"></a>Примечания  
- `SerializeClass`Считывает или записывает ссылку на класс `CArchive` объект, в зависимости от направления `CArchive`. Используйте `SerializeClass` вместо [ReadClass](#readclass) и [WriteClass](#writeclass) — удобный способ сериализации объектов базового класса; `SerializeClass` требует меньшего объема кода и меньшее количество параметров.  
+ `SerializeClass` Считывает или записывает ссылку на класс `CArchive` объект, в зависимости от направления `CArchive`. Используйте `SerializeClass` вместо [ReadClass](#readclass) и [WriteClass](#writeclass) — удобный способ сериализации объектов базового класса; `SerializeClass` требует меньшего объема кода и меньшее количество параметров.  
   
  Как `ReadClass`, `SerializeClass` проверяет, является ли информация о классе архивированные совместим с вашего класса среды выполнения. Если он не совместим, `SerializeClass` вызовет [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
   
@@ -648,7 +643,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>  CArchive::SetLoadParams  
  Вызовите `SetLoadParams` когда вы планируете считывать большое количество `CObject`-объектов, производных из архива.  
   
 ```  
@@ -660,14 +655,14 @@ void SetLoadParams(UINT nGrowBy = 1024);
  Минимальное число слотов элемент для выделения, если увеличение размера не требуется.  
   
 ### <a name="remarks"></a>Примечания  
- `CArchive`Массив нагрузки используется для разрешения ссылок на объекты, хранящиеся в архиве. `SetLoadParams`позволяет задать размер, к которому увеличения нагрузки массива.  
+ `CArchive` Массив нагрузки используется для разрешения ссылок на объекты, хранящиеся в архиве. `SetLoadParams` позволяет задать размер, к которому увеличения нагрузки массива.  
   
  Не следует вызывать `SetLoadParams` после загрузки любого объекта, или после [MapObject](#mapobject) или [ReadObject](#readobject) вызывается.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
  Вызовите эту функцию-член для задания объектов схемы, хранящиеся в объекте архива для `nSchema`.  
   
 ```  
@@ -686,7 +681,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#27](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>  CArchive::SetStoreParams  
  Используйте `SetStoreParams` при хранении большое количество `CObject`-производных объектов в архив.  
   
 ```  
@@ -701,14 +696,14 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
  Указывает гранулярность выделения памяти для расширения параметров. Должно быть степенью числа 2 для повышения производительности.  
   
 ### <a name="remarks"></a>Примечания  
- `SetStoreParams`позволяет задать размер хэш-таблицы и размер блока карты, используемый для идентификации уникальные объекты во время сериализации.  
+ `SetStoreParams` позволяет задать размер хэш-таблицы и размер блока карты, используемый для идентификации уникальные объекты во время сериализации.  
   
  Не следует вызывать `SetStoreParams` после хранятся все объекты, или [MapObject](#mapobject) или [WriteObject](#writeobject) вызывается.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="write"></a>CArchive::Write  
+##  <a name="write"></a>  CArchive::Write  
  Записывает указанное число байтов в архив.  
   
 ```  
@@ -730,7 +725,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>  CArchive::WriteClass  
  Используйте `WriteClass` обеспечить хранение версии и класс базового класса во время сериализации производного класса.  
   
 ```  
@@ -742,9 +737,9 @@ void WriteClass(const CRuntimeClass* pClassRef);
  Указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) структуру, которая соответствует запросу ссылки на класс.  
   
 ### <a name="remarks"></a>Примечания  
- `WriteClass`Записывает ссылку на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) для базового класса, чтобы `CArchive`. Используйте [CArchive::ReadClass](#readclass) для получения ссылок.  
+ `WriteClass` Записывает ссылку на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) для базового класса, чтобы `CArchive`. Используйте [CArchive::ReadClass](#readclass) для получения ссылок.  
   
- `WriteClass`проверяет, что информация о классе архивированные совместимость с класса среды выполнения. Если он не совместим, `WriteClass` вызовет [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
+ `WriteClass` проверяет, что информация о классе архивированные совместимость с класса среды выполнения. Если он не совместим, `WriteClass` вызовет [CArchiveException](../../mfc/reference/carchiveexception-class.md).  
   
  Класс среды выполнения необходимо использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае `WriteClass` вызовет [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
@@ -753,7 +748,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCSerialization#28](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>  CArchive::WriteObject  
  Сохраняет указанный `CObject` в архив.  
   
 ```  
@@ -765,7 +760,7 @@ void WriteObject(const CObject* pOb);
  Постоянный указатель для хранимого объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция обычно вызывается методом `CArchive` вставки (  **<<** ) перегруженный оператор для `CObject`. **Метод WriteObject**, в свою очередь, вызывает `Serialize` функция архивированные класса.  
+ Эта функция обычно вызывается методом `CArchive` вставки ( **<<**) перегруженный оператор для `CObject`. **Метод WriteObject**, в свою очередь, вызывает `Serialize` функция архивированные класса.  
   
  Необходимо использовать `IMPLEMENT_SERIAL` макрос, чтобы включить архивирование. **Метод WriteObject** записывает имя класса ASCII в архив. Это имя класса проверяется позднее, во время процесса загрузки. Специальные кодировки не допускает дублирования имя класса для нескольких объектов класса. Эта схема также предотвращает избыточное хранилище объекты, являющиеся целевыми для более чем один указатель.  
   
@@ -779,7 +774,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization#29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>  CArchive::WriteString  
  Используйте эту функцию-член для записи данных из буфера в файл, связанный с `CArchive` объекта.  
   
 ```  
@@ -793,7 +788,7 @@ void WriteString(LPCTSTR lpsz);
 ### <a name="remarks"></a>Примечания  
  Завершающий символ null (\0) не записывается в файл. а также новая строка автоматически записывается.  
   
- `WriteString`Возникло исключение в ответ на несколько условий, включая условия переполнения диска.  
+ `WriteString` Возникло исключение в ответ на несколько условий, включая условия переполнения диска.  
   
  **Запись** также доступна, но вместо заканчивается на символ null, он записывает запрошенное число байт в файл.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCRibbonCheckBox | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCRibbonCheckBox | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 Класс `CMFCRibbonCheckBox` реализует флажок, который можно добавить на панель ленты, панель быстрого доступа или во всплывающее меню.  
@@ -58,13 +53,13 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Переопределяет [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|  
@@ -97,7 +92,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  Конструктор объекта флажок ленты  
   
 ```  
@@ -121,7 +116,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  При переопределении получает компактный размер элемента управления checkbox.  
   
 ```  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>Примечания  
  Если не переопределен, возвращает промежуточный размер элемента управления checkbox.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  Возвращает промежуточный размер элемента управления checkbox.  
   
 ```  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>Примечания  
  Если не переопределен, вычисляет размер промежуточных размер по умолчанию флажок ( `AFX_CHECK_BOX_DEFAULT_SIZE`) плюс размер текста, а также поля.  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  Возвращает стандартный размер элемента управления checkbox.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>Примечания  
  Если не переопределен, возвращает промежуточный размер элемента управления checkbox.  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  Указывает, существует ли подсказка изображения, связанного с флажком.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  Вызывается платформой для отрисовки флажок, с помощью заданного контекста устройств.  
   
 ```  
@@ -197,7 +192,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  Вызывается платформой для отрисовки изображение меню для флажка.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>Примечания  
  Если не переопределен, возвращает `FALSE`.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  Вызывается платформой для отрисовки флажок в поле со списком команд.  
   
 ```  
@@ -244,14 +239,14 @@ virtual void OnDrawOnList(
  Отображаемый прямоугольник для флажка.  
   
  [in] `bIsSelected`  
- `TRUE`Если флажок установлен, или `FALSE` в противном случае.  
+ `TRUE` Если флажок установлен, или `FALSE` в противном случае.  
   
  [in] `bHighlighted`  
- `TRUE`Если флажок выделяется, или `FALSE` в противном случае.  
+ `TRUE` Если флажок выделяется, или `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  Задает данные специальных возможностей для флажка.  
   
 ```  

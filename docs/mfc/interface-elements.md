@@ -1,30 +1,25 @@
 ---
-title: "Элементы интерфейса | Документы Microsoft"
-ms.custom: 
+title: Элементы интерфейса | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>Элементы интерфейса
 В этом документе описываются элементы интерфейса, которые впервые появились в [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 и приводится описание различий с помощью более ранней версии библиотеки.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  Сайта закрепления (или фрейма главного окна) является владельцем всех панелей и окна в приложении. Содержит сайта закрепления [CDockingManager](../mfc/reference/cdockingmanager-class.md) член. Этот член поддерживает список всех областей, которые относятся к сайту закрепления. Список упорядочен, чтобы областей, созданных на внешних краях сайта закрепления располагаются в начале списка. Если платформа перерисовывает сайта закрепления, он обрабатывает в цикле этот список и настраивает макет каждой панели для включения текущего ограничивающего прямоугольника сайта закрепления. Можно вызвать `AdjustDockingLayout` или `RecalcLayout` , если для настройки макета закрепления, и платформа перенаправляет этот вызов в диспетчере закрепления.  
   
 ## <a name="dock-bars"></a>Закрепление панели  
- Каждое окно главного фрейма можно расположить *закрепление панелей* вдоль ее границы. Закрепление панели область, к которой принадлежит- [класс CDockSite](../mfc/reference/cdocksite-class.md). Закрепление панели можно принять объектов, производных от [CPane](../mfc/reference/cpane-class.md), такие как панели инструментов. Чтобы создать закрепления панели, когда инициализируется фрейма главного окна, вызовите `EnableDocking`. Чтобы включить автоматическое скрытие панели, вызовите `EnableAutoHideBars`. `EnableAutoHideBars`Создает [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) объектов и помещает их рядом с каждой линии закрепления.  
+ Каждое окно главного фрейма можно расположить *закрепление панелей* вдоль ее границы. Закрепление панели область, к которой принадлежит- [класс CDockSite](../mfc/reference/cdocksite-class.md). Закрепление панели можно принять объектов, производных от [CPane](../mfc/reference/cpane-class.md), такие как панели инструментов. Чтобы создать закрепления панели, когда инициализируется фрейма главного окна, вызовите `EnableDocking`. Чтобы включить автоматическое скрытие панели, вызовите `EnableAutoHideBars`. `EnableAutoHideBars` Создает [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) объектов и помещает их рядом с каждой линии закрепления.  
   
  Закрепление строк состоит из каждой линии закрепления. Закрепление строки представляются [CDockingPanesRow класса](../mfc/reference/cdockingpanesrow-class.md). Каждая строка dock содержит список панелей инструментов. Если пользователь закрепляет панели инструментов или перемещение панели инструментов из одной строки в другую в ту же Закрепить панель, платформа создает новую строку и соответствующим образом изменяет размер панели закрепления или он устанавливает положение панели инструментов на существующей строке.  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
  По умолчанию каждый `CDockablePane` поддерживает функцию автоматического скрытия. Когда пользователь щелкает кнопку закрепления в заголовок `CDockablePane`, платформа области переключается в режим автоматического скрытия. Для обработки нажмите кнопку, платформа создает [класс CMFCAutoHideBar](../mfc/reference/cmfcautohidebar-class.md) и [класс CMFCAutoHideButton](../mfc/reference/cmfcautohidebutton-class.md) связанных с `CMFCAutoHideBar` объекта. Платформа помещает новый `CMFCAutoHideBar` на [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). Кроме того, платформа присоединяет `CMFCAutoHideButton` на панель инструментов. [Класса CDockingManager](../mfc/reference/cdockingmanager-class.md) поддерживает `CDockablePane`.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>Вкладки панели элементов управления и панели Outlook  
- [CMFCBaseTabCtrl класс](../mfc/reference/cmfcbasetabctrl-class.md) реализует базовые функциональные возможности окна с вкладками с отделяемыми вкладками. Для использования `CMFCBaseTabCtrl` объекта, инициализировать [класс CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) в приложении. `CBaseTabbedPane`является производным от `CDockablePane` и содержит указатель `CMFCBaseTabCtrl` объекта. `CBaseTabbedPane` Дает пользователям возможность закрепления и изменение размера панелей элементов управления с вкладками. Используйте [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) для динамического создания панелей элементов управления, которые прикрепляются и с вкладками.  
+ [CMFCBaseTabCtrl класс](../mfc/reference/cmfcbasetabctrl-class.md) реализует базовые функциональные возможности окна с вкладками с отделяемыми вкладками. Для использования `CMFCBaseTabCtrl` объекта, инициализировать [класс CBaseTabbedPane](../mfc/reference/cbasetabbedpane-class.md) в приложении. `CBaseTabbedPane` является производным от `CDockablePane` и содержит указатель `CMFCBaseTabCtrl` объекта. `CBaseTabbedPane` Дает пользователям возможность закрепления и изменение размера панелей элементов управления с вкладками. Используйте [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) для динамического создания панелей элементов управления, которые прикрепляются и с вкладками.  
   
  Элемент управления панель Outlook также основана на полосы с вкладками. [Класс CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md) является производным от `CBaseTabbedPane`. Дополнительные сведения об использовании панели Outlook см. в разделе [класс CMFCOutlookBar](../mfc/reference/cmfcoutlookbar-class.md).  
   

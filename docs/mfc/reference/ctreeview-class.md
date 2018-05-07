@@ -1,12 +1,9 @@
 ---
-title: "CTreeView-класс | Документы Microsoft"
-ms.custom: 
+title: CTreeView-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTreeView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7530569d5e5313ebfcbdaf92ebd245962b9e443c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d19d4958de2f7909f2072b2ae2f59c00e63d65a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctreeview-class"></a>CTreeView-класс
 Упрощает использование элемента управления дерева и [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), класс, который инкапсулирует функциональность элемента управления дерева в архитектуру представления документов MFC.  
@@ -44,13 +39,13 @@ class CTreeView : public CCtrlView
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTreeView::CTreeView](#ctreeview)|Создает объект `CTreeView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTreeView::GetTreeCtrl](#gettreectrl)|Возвращает дерево элемента управления, связанного с представлением.|  
   
@@ -73,14 +68,14 @@ class CTreeView : public CCtrlView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcview.h  
   
-##  <a name="ctreeview"></a>CTreeView::CTreeView  
+##  <a name="ctreeview"></a>  CTreeView::CTreeView  
  Создает объект `CTreeView`.  
   
 ```  
 CTreeView();
 ```  
   
-##  <a name="gettreectrl"></a>CTreeView::GetTreeCtrl  
+##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl  
  Возвращает ссылку на дерево, связанный с представлением.  
   
 ```  

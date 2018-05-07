@@ -1,13 +1,10 @@
 ---
-title: "TN071: Реализация IOleCommandTarget в MFC | Документы Microsoft"
-ms.custom: 
+title: 'TN071: Реализация IOleCommandTarget в MFC | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21745762fb6f6eb1eb324013db12207c4b3b81d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Реализация IOleCommandTarget в MFC
 > [!NOTE]
@@ -34,11 +29,11 @@ ms.lasthandoff: 12/21/2017
   
  `IOleCommandTarget` Интерфейс включает объекты и их контейнеры для отправки команд друг с другом. Например, в панели инструментов объекта может содержать кнопки для команд **печати**, **предварительного просмотра перед печатью**, **Сохранить**, `New`, и **масштаба**. Если такого объекта были внедрены в контейнер, который поддерживает `IOleCommandTarget`, объект может включить ее кнопок и пересылки команды обработки, когда пользователь щелкнул их к контейнеру. Если контейнер для печати сам внедренного объекта, его выполнения данного запроса, отправив команду через `IOleCommandTarget` интерфейс внедренного объекта.  
   
- `IOleCommandTarget`Представляет интерфейс автоматизации, в котором используется клиентом для вызова методов на сервере. Однако использование `IOleCommandTarget` обеспечивает экономию ресурсов из вызовов, через интерфейсы автоматизации, так как программистам нет необходимости в использовании обычно дорогих `Invoke` метод `IDispatch`.  
+ `IOleCommandTarget` Представляет интерфейс автоматизации, в котором используется клиентом для вызова методов на сервере. Однако использование `IOleCommandTarget` обеспечивает экономию ресурсов из вызовов, через интерфейсы автоматизации, так как программистам нет необходимости в использовании обычно дорогих `Invoke` метод `IDispatch`.  
   
  В MFC `IOleCommandTarget` интерфейс используется активный документ серверами позволяет контейнеры активных документов для отправки команд на сервер. Класс сервера активных документов `CDocObjectServerItem`, использует схемы интерфейсов MFC (см. [TN038: реализация MFC/OLE IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)) для реализации `IOleCommandTarget` интерфейса.  
   
- `IOleCommandTarget`также реализована в **COleFrameHook** класса. **COleFrameHook** недокументированные класса MFC, который реализует функциональные возможности окна фрейма на месте изменяет контейнеров. **COleFrameHook** также использует схемы интерфейсов MFC для реализации `IOleCommandTarget` интерфейса. **COleFrameHook**реализация `IOleCommandTarget` перенаправляет команды OLE для `COleDocObjectItem`-производный контейнеры активных документов. Это позволяет любой MFC активного документа контейнера, для получения сообщений от серверов автономной активного документа.  
+ `IOleCommandTarget` также реализована в **COleFrameHook** класса. **COleFrameHook** недокументированные класса MFC, который реализует функциональные возможности окна фрейма на месте изменяет контейнеров. **COleFrameHook** также использует схемы интерфейсов MFC для реализации `IOleCommandTarget` интерфейса. **COleFrameHook**реализация `IOleCommandTarget` перенаправляет команды OLE для `COleDocObjectItem`-производный контейнеры активных документов. Это позволяет любой MFC активного документа контейнера, для получения сообщений от серверов автономной активного документа.  
   
 ## <a name="mfc-ole-command-maps"></a>Схемы команд OLE MFC  
  MFC-разработчики могут воспользоваться преимуществами `IOleCommandTarget` с помощью MFC OLE команды карты. Схемы команд OLE подобны схемы сообщений, так как они могут использоваться для сопоставления с функциями-членами класса, содержащего карты команд команды OLE. Чтобы добиться этого, поместите макросы в карты команд для указания команды, которые требуется обработать, команды OLE и идентификатор группы команд OLE [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение, которое будет отправляться при получении команды OLE. MFC также предоставляет ряд предопределенных макросов для стандартных команд OLE. Список стандартных OLE команды, которые изначально были разработаны для использования с приложениями Microsoft Office см. в разделе OLECMDID перечисления, который определен в docobj.h.  

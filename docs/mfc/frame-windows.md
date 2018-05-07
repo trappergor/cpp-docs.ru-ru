@@ -1,13 +1,10 @@
 ---
-title: "Окна фрейма | Документы Microsoft"
-ms.custom: 
+title: Окна фрейма | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-windows"></a>Окна фрейма
 Если приложение выполняется под управлением Windows, пользователь взаимодействует с документов, которые отображаются в окнах фрейма. Окно фрейма документа состоит из двух основных компонентов: фрейма и содержимое, он кадры. Окно фрейма документа может быть [однооконный интерфейс](../mfc/sdi-and-mdi.md) окна фрейма (SDI) или [многодокументного интерфейса](../mfc/sdi-and-mdi.md) дочернее окно (MDI). Windows управляет большей частью взаимодействие пользователя с окном фрейма: перемещение и изменение размеров окна и что сводит к минимуму и закрытие его увеличения. Управление содержимое внутри рамки.  

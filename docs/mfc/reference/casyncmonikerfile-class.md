@@ -1,12 +1,9 @@
 ---
-title: "Класс CAsyncMonikerFile | Документы Microsoft"
-ms.custom: 
+title: Класс CAsyncMonikerFile | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>Класс CAsyncMonikerFile
 Предоставляет функции для использования асинхронных моникеров в элементах управления ActiveX (ранее элементах управления OLE).  
@@ -62,17 +57,17 @@ ms.lasthandoff: 12/21/2017
 class CAsyncMonikerFile : public CMonikerFile  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|Создает объект `CAsyncMonikerFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::Close](#close)|Закрывает и освобождает все ресурсы.|  
 |[CAsyncMonikerFile::GetBinding](#getbinding)|Извлекает указатель на асинхронную передачу привязки.|  
@@ -81,7 +76,7 @@ class CAsyncMonikerFile : public CMonikerFile
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Создает объект COM, который реализует `IBindStatusCallback`.|  
 |[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Вызывается средой библиотеки OLE системы для получения сведений о типа привязки должен быть создан.|  
@@ -117,7 +112,7 @@ class CAsyncMonikerFile : public CMonikerFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  Создает объект `CAsyncMonikerFile`.  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Он не создает `IBindHost` интерфейса. `IBindHost`используется только в том случае, если указать его в **откройте** функции-члена.  
+ Он не создает `IBindHost` интерфейса. `IBindHost` используется только в том случае, если указать его в **откройте** функции-члена.  
   
  Описание `IBindHost` интерфейсом, см. в Windows SDK.  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  Вызывайте эту функцию, чтобы закрыть и освободить все ресурсы.  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>Примечания  
  Может быть вызван файлы неоткрытый или уже закрыт.  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  Создает объект COM, который реализует `IBindStatusCallback`.  
   
 ```  
@@ -154,7 +149,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  Если `pUnkControlling` не **NULL**, функция возвращает указатель на внутренний **IUnknown** на новый вспомогательного объекта COM `IBindStatusCallback`. Если `pUnkControlling` — **NULL**, функция возвращает указатель на **IUnknown** на новый вспомогательного объекта COM `IBindStatusCallback`.  
   
 ### <a name="remarks"></a>Примечания  
- `CAsyncMonikerFile`требуется объект COM, реализующий `IBindStatusCallback`. MFC реализует такого объекта, и он не статистическую обработку. Можно переопределить `CreateBindStatusCallback` для возврата COM-объект. COM-объект может агрегировать реализации MFC путем вызова `CreateBindStatusCallback` с управляющий unknown COM-объекта. COM-объекты, реализованные с помощью `CCmdTarget` поддержка COM можно получить, управляющий Неизвестный с помощью **CCmdTarget::GetControllingUnknown**.  
+ `CAsyncMonikerFile` требуется объект COM, реализующий `IBindStatusCallback`. MFC реализует такого объекта, и он не статистическую обработку. Можно переопределить `CreateBindStatusCallback` для возврата COM-объект. COM-объект может агрегировать реализации MFC путем вызова `CreateBindStatusCallback` с управляющий unknown COM-объекта. COM-объекты, реализованные с помощью `CCmdTarget` поддержка COM можно получить, управляющий Неизвестный с помощью **CCmdTarget::GetControllingUnknown**.  
   
  Кроме того, COM-объект можно делегировать реализацию MFC путем вызова **CreateBindStatusCallback (NULL)**.  
   
@@ -162,7 +157,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  Дополнительные сведения об асинхронных моникеров и асинхронные привязки см. в разделе [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) интерфейс и [как асинхронной привязки и хранилища рабочих](http://msdn.microsoft.com/library/windows/desktop/aa379152). Обсуждение статистической обработки, см. в разделе [статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558). Все три темы также в Windows SDK.  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  Вызванный из клиентского асинхронной моникера сообщить асинхронной моникер как ему нужно выполнить привязку.  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  Одна из причин для этого следует привязать с помощью модели по запросу данных вместо принудительной отправки данных модели. В модели данных запросу клиента диски при выполнении операции привязки, и специальное имя только предоставляет данные клиенту при чтении. В модель принудительной отправки данных моникер диски при выполнении операции асинхронной привязки и постоянно уведомляет клиента всякий раз, когда станут доступны новые данные.  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  Вызывайте эту функцию, чтобы получить указатель на асинхронную передачу привязки.  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  Описание `IBinding` интерфейсом, см. в Windows SDK.  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  Эта функция вызывается для получения формат данных в потоке.  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на структуру Windows [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) для открытым в данный момент поток. Возвращает **NULL** если моникер не привязан, если он не является асинхронным, или если асинхронная операция не было начато.  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  Вызывается клиентом асинхронной моникер, когда начинается процесс привязки для получения приоритет потока для привязки операции.  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  Приоритет, когда асинхронная передача будет выполняться. Один из флагов приоритет стандартных потоков: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**,  **THREAD_PRIORITY_IDLE**, **всех**, **THREAD_PRIORITY_NORMAL**, и **THREAD_PRIORITY_TIME_CRITICAL**. В описании функции Windows [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) описание этих значений.  
   
 ### <a name="remarks"></a>Примечания  
- `GetPriority`не должен вызываться напрямую. **THREAD_PRIORITY_NORMAL** возвращается посредством реализации по умолчанию.  
+ `GetPriority` не должен вызываться напрямую. **THREAD_PRIORITY_NORMAL** возвращается посредством реализации по умолчанию.  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  Вызывает асинхронный моникер `OnDataAvailable` для предоставления данных клиенту, как они станут доступны, во время асинхронной привязки операции.  
   
 ```  
@@ -241,7 +236,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  Вызывается средой моникер, когда не хватает ресурсов.  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию вызывает `GetBinding( )-> Abort( )`.  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  Вызывается несколько раз, чтобы указать текущий ход выполнения этой операции bind, обычно в разумные интервалы во время продолжительной операции специальным именем.  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  Экземпляр объекта, которая привязывается к собирается только создать. `szStatusText` Предоставляет CLSID нового объекта в строковом формате, после чего клиент возможность отменить операцию привязки, при необходимости.  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  Переопределите эту функцию в производных классах, чтобы выполнять действия при запуске привязки.  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается специальным именем. Реализация по умолчанию не выполняет никаких действий.  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  Вызывается в конце операции привязки моникера.  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  Описание `IBinding` интерфейсом, см. в Windows SDK.  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  Вызовите эту функцию-член для открытия файла асинхронно.  
   
 ```  
@@ -385,7 +380,7 @@ virtual BOOL Open(
  Указатель на файл исключения. В случае ошибки он будет присвоено причину.  
   
  `pMoniker`  
- Указатель на интерфейс асинхронной моникер `IMoniker`, точное моникер, — это сочетание моникер документа собственные, которое можно получить с **IOleClientSite::GetMoniker (** *OLEWHICHMK_ КОНТЕЙНЕР* **)**и специальное имя, созданное из имени пути. Для привязки элемента управления можно использовать этот моникер, но это не моникер, следует сохранить элемент управления.  
+ Указатель на интерфейс асинхронной моникер `IMoniker`, точное моникер, — это сочетание моникер документа собственные, которое можно получить с **IOleClientSite::GetMoniker (** *OLEWHICHMK_ КОНТЕЙНЕР* **)** и специальное имя, созданное из имени пути. Для привязки элемента управления можно использовать этот моникер, но это не моникер, следует сохранить элемент управления.  
   
  *pBindHost*  
  Указатель на `IBindHost` интерфейс, который будет использоваться для создания моникер от потенциально относительного пути. Если привязки узла является недопустимым или не обеспечивает специальное имя, по умолчанию используется вызов **Open (** `lpszFileName` **,**`pError`**)**. Описание `IBindHost` интерфейсом, см. в Windows SDK.  
@@ -402,7 +397,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>Примечания  
  Этот вызов инициирует процесс привязки.  
   
- Можно использовать URL-адрес или имя файла для `lpszURL` параметра. Пример:  
+ Можно использовать URL-адрес или имя файла для `lpszURL` параметра. Например:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

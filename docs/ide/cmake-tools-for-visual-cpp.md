@@ -1,13 +1,10 @@
 ---
-title: "Проекты Visual C++ CMake | Документы Microsoft"
-ms.custom: 
+title: Проекты Visual C++ CMake | Документы Microsoft
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Проекты Visual C++ CMake
 
@@ -174,7 +170,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
 JSON IntelliSense помогает изменить файл CMakeSettings.json:
 
-   ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
+   ![IntelliSense CMake JSON](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
 
 Ниже приведен пример приведен пример конфигурации, который можно использовать в качестве отправной точки для создания собственных в CMakeSettings.json.
 
@@ -237,7 +233,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |--------------|------------|
 | — версия  | Печать версии ниндзя («1.7.1»)|
 |   -C DIR   | изменить на DIR перед выполнением других действий|
@@ -249,7 +245,7 @@ usage: ninja [options] [targets...]
 |   -v       | Показать все командной строки во время построения|
 |   -d режим  | Включите отладку (-d режимы одного списка)|
 |   t - СРЕДСТВО  | Запустите subtool (среди одного списка используйте -t). Завершает параметры верхнего уровня; Дополнительные флаги переданы в средство| 
-|   -w FLAG  | Настройка предупреждений (-w предупреждений списка в список)|
+|   -w ФЛАГ  | Настройка предупреждений (-w предупреждений списка в список)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>Наследуемые сред (Visual Studio 2017 г. версия 15,5)
 CMakeSettings.json теперь поддерживает наследуемые сред. Эта функция позволяет (1) наследуют сред по умолчанию и (2) создайте пользовательские переменные, которые передаются CMake.exe при запуске.
@@ -262,7 +258,7 @@ CMakeSettings.json теперь поддерживает наследуемые 
 
 Следующая таблица показывает значения по умолчанию и их эквиваленты командной строки:
 
-|Имя контекста|Описание:|
+|Имя контекста|Описание|
 |-----------|-----------------|
 |vsdev|Среда Visual Studio по умолчанию|
 |msvc_x86|Компиляция с помощью x86 x86 средства|

@@ -1,12 +1,9 @@
 ---
-title: "COleControl-класс | Документы Microsoft"
-ms.custom: 
+title: COleControl-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl-класс
 Мощный базовый класс для разработки элементов управления OLE.  
@@ -364,7 +359,7 @@ ms.lasthandoff: 03/16/2018
 class COleControl : public CWnd  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
@@ -714,7 +709,7 @@ short AmbientTextAlign();
   
  Ниже приведен список допустимых возвращаемых значений.  
   
-|Возвращаемое значение|Значение|  
+|Возвращаемое значение|Смысл|  
 |------------------|-------------|  
 |0|Обычное выравнивание (номера справа, текст слева).|  
 |1|Выравнивание по левому краю|  
@@ -854,7 +849,7 @@ virtual void DisplayError(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *scode*  
+ *SCODE*  
  Значение кода состояния в отчетах. Полный список возможных кодов см. в статье [элементы управления ActiveX: Дополнительные разделы](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1062,7 +1057,7 @@ void FireError(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *scode*  
+ *SCODE*  
  Значение кода состояния в отчетах. Полный список возможных кодов см. в статье [элементы управления ActiveX: Дополнительные разделы](../../mfc/mfc-activex-controls-advanced-topics.md).  
   
  `lpszDescription`  
@@ -1412,10 +1407,10 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**short\***|  
+|`VT_I2`|**короткий\***|  
 |`VT_I4`|**Long\***|  
 |`VT_R4`|**Число с плавающей запятой\***|  
-|`VT_R8`|**double\***|  
+|`VT_R8`|**Double\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
 |**VT_DISPATCH**|**LPDISPATCH\***|  
@@ -1834,7 +1829,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
  Указатель на объект `IDropTarget` интерфейса. Так как он не имеет окна, не удалось зарегистрировать объект без окон `IDropTarget` интерфейса. Тем не менее, участвовать в операции перетаскивания, объект без окон можно по-прежнему реализовывать интерфейс и вернуть его в `GetWindowlessDropTarget`.  
   
 ### <a name="remarks"></a>Примечания  
- Как правило это потребует, окна элемента управления быть зарегистрированы в качестве цели перетаскивания. Но так как элемент управления не имеет окна свои собственные, контейнер будет использовать отдельное окно местом назначения. Он просто должен предоставить реализацию `IDropTarget` интерфейс, к которому контейнера можно делегат вызывает в соответствующее время. Пример:  
+ Как правило это потребует, окна элемента управления быть зарегистрированы в качестве цели перетаскивания. Но так как элемент управления не имеет окна свои собственные, контейнер будет использовать отдельное окно местом назначения. Он просто должен предоставить реализацию `IDropTarget` интерфейс, к которому контейнера можно делегат вызывает в соответствующее время. Например:  
   
  [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
@@ -2235,7 +2230,7 @@ virtual BOOL OnEdit(
 ### <a name="remarks"></a>Примечания  
  Это имеет тот же эффект, что и вызов элемента управления `OLEIVERB_UIACTIVATE` команды.  
   
- Эта функция обычно используется в качестве функция-обработчик `ON_OLEVERB` сообщений записи карты. Это делает доступными команду «Правка» в меню «Объект» элемента управления. Пример:  
+ Эта функция обычно используется в качестве функция-обработчик `ON_OLEVERB` сообщений записи карты. Это делает доступными команду «Правка» в меню «Объект» элемента управления. Например:  
   
  [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
@@ -2418,7 +2413,7 @@ virtual BOOL OnGetNaturalExtent(
  `dwAspect`  
  Указывает способ представления объекта. Представления включают содержимое, значок, эскиза или печатном документе. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**.  
   
- *lindex*  
+ *Индекс*  
  Часть объекта, который представляет интерес. В настоящее время только -1 является допустимым.  
   
  `ptd`  
@@ -2521,7 +2516,7 @@ virtual BOOL OnGetViewExtent(
  *dwDrawAspect*  
  `DWORD` описания, какая форма или аспект, объекта будет отображаться. Допустимые значения берутся из перечисления [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) или **DVASPECT2**.  
   
- *lindex*  
+ *Индекс*  
  Часть объекта, который представляет интерес. В настоящее время только -1 является допустимым.  
   
  `ptd`  

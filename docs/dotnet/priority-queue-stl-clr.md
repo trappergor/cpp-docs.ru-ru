@@ -1,12 +1,9 @@
 ---
-title: "priority_queue (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: priority_queue (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Класс шаблона описывает объект, управляющий переменной длины упорядоченную последовательность элементов с ограниченным доступом. Используйте адаптер контейнера `priority_queue` управление базового контейнера, как очередь с приоритетом.  
@@ -55,7 +50,7 @@ template<typename Value,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
 |[priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)|Тип базового контейнера.|  
@@ -67,7 +62,7 @@ template<typename Value,
 |[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|Делегат упорядочения для двух элементов.|  
 |[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|Заменяет все элементы.|  
 |[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
@@ -80,17 +75,17 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
 |[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|Копирует делегат упорядочения для двух элементов.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)|Обращается к элементу наивысший приоритет.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IPriorityQueue\<значение, контейнер >|Ведение адаптера универсального контейнера.|  
@@ -102,7 +97,7 @@ template<typename Value,
   
  Объект делегата должен применить строгого слабое упорядочение к значениям типа [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `value_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `value_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `value_comp()(X, Y)` имеет значение true, затем `value_comp()(Y, X)` должен иметь значение false.  
   

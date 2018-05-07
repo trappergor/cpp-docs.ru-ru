@@ -1,30 +1,25 @@
 ---
-title: "Использование элементов управления древовидного | Документы Microsoft"
-ms.custom: 
+title: Использование элементов управления древовидного | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tree-controls"></a>Использование элементов управления древовидного типа
 Типичное использование элемента управления дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) соответствует шаблону ниже:  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если необходимо использовать изображения элемента управления дерева, задать список изображений, вызвав [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Можно также изменить отступы, вызвав [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Делать это подходящий момент находится в [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (для элементов управления в диалоговых окнах) или [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (для представления).  
   
--   Поместить данные в элемент управления путем вызова `CTreeCtrl` [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) функцию один раз для каждого элемента данных. `InsertItem`Возвращает дескриптор для элемента, который можно использовать для ссылки на него в более поздней версии, например, при добавлении дочерних элементов. Подходящее время для инициализации данных находится в `OnInitDialog` (для элементов управления в диалоговых окнах) или `OnInitialUpdate` (для представления).  
+-   Поместить данные в элемент управления путем вызова `CTreeCtrl` [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) функцию один раз для каждого элемента данных. `InsertItem` Возвращает дескриптор для элемента, который можно использовать для ссылки на него в более поздней версии, например, при добавлении дочерних элементов. Подходящее время для инициализации данных находится в `OnInitDialog` (для элементов управления в диалоговых окнах) или `OnInitialUpdate` (для представления).  
   
 -   Как пользователь взаимодействует с элементом управления, он передает различные сообщения уведомления. Можно задать функцию для обработки каждого из сообщений, необходимо обработать, добавив **ON_NOTIFY_REFLECT** макроса в схеме сообщений окна управления или путем добавления `ON_NOTIFY` макрос в схеме сообщений родительского окна. В разделе [уведомляющие сообщения древовидного элемента управления](../mfc/tree-control-notification-messages.md) далее в этом разделе список возможных уведомления.  
   

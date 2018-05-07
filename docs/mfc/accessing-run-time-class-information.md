@@ -1,13 +1,10 @@
 ---
-title: "Доступ к сведениям о классе во время выполнения | Документы Microsoft"
-ms.custom: 
+title: Доступ к сведениям о классе во время выполнения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74c76e5cc156d106f8358fe729df0bb7026422
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 947102f17a5f35b7e6b5266f637375982d4cd55f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-run-time-class-information"></a>Доступ к сведениям о классе во время выполнения
 В этой статье объясняется, как получать доступ к сведениям о классе объекта во время выполнения.  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
      [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]  
   
     > [!NOTE]
-    >  Возвращает IsKindOf **TRUE** Если объект является членом указанного класса или класса, производного от указанного класса. `IsKindOf`не поддерживает несколько наследования или виртуальными базовыми классами, несмотря на то, что при необходимости можно использовать множественное наследование для производных классов Microsoft Foundation.  
+    >  Возвращает IsKindOf **TRUE** Если объект является членом указанного класса или класса, производного от указанного класса. `IsKindOf` не поддерживает несколько наследования или виртуальными базовыми классами, несмотря на то, что при необходимости можно использовать множественное наследование для производных классов Microsoft Foundation.  
   
  Сведения о классе среды выполнения применяется в динамическое создание объектов. Этот процесс описывается в статье [динамическое создание объектов](../mfc/dynamic-object-creation.md).  
   

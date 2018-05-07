@@ -1,12 +1,9 @@
 ---
-title: "Класс CRecordset | Документы Microsoft"
-ms.custom: 
+title: Класс CRecordset | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecordset
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2375739fe4d8442d4ecb7a1514641d45de4a8be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 683f1d612a57e4f6e2d8661af17faa73f725d3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecordset-class"></a>CRecordset-класс
 Представляет набор записей, выбранных из источника данных.  
@@ -164,13 +159,13 @@ class CRecordset : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::CRecordset](#crecordset)|Создает объект `CRecordset`. Производный класс необходимо предоставить конструктор, который вызывает следующее.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::AddNew](#addnew)|Подготавливает для добавления новой записи. Вызовите `Update` для завершения добавления.|  
 |[CRecordset::CanAppend](#canappend)|Возвращает ненулевое значение, если новые записи могут быть добавлены в набор записей через `AddNew` функции-члена.|  
@@ -230,7 +225,7 @@ class CRecordset : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRecordset::m_hstmt](#m_hstmt)|Содержит дескриптор инструкции ODBC для набора записей. Введите `HSTMT`.|  
 |[CRecordset::m_nFields](#m_nfields)|Содержит число элементов данных полей в наборе записей. Введите `UINT`.|  
@@ -271,7 +266,7 @@ class CRecordset : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="addnew"></a>CRecordset::AddNew  
+##  <a name="addnew"></a>  CRecordset::AddNew  
  Подготавливает для добавления новой записи в таблицу.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void AddNew();
 > [!NOTE]
 >  Если реализована массовая выборка строк, не удается вызвать `AddNew`. Это приведет к утверждение, вызвавшее сбой. Хотя класс `CRecordset` не предоставляет механизм для обновления пакетов строк данных, можно написать свои собственные функции с помощью функции API-интерфейса ODBC **SQLSetPos**. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `AddNew`Подготавливает новую, пустую запись, с помощью элементам данных полей. После вызова метода `AddNew`, задать нужные значения в элементам данных полей. (Нет необходимости вызывать [изменить](#edit) функции-члена для этой цели; используйте **изменить** только для существующих записей.) При последующем вызове **обновление**, измененные значения в поля элементов данных сохраняются в источнике данных.  
+ `AddNew` Подготавливает новую, пустую запись, с помощью элементам данных полей. После вызова метода `AddNew`, задать нужные значения в элементам данных полей. (Нет необходимости вызывать [изменить](#edit) функции-члена для этой цели; используйте **изменить** только для существующих записей.) При последующем вызове **обновление**, измененные значения в поля элементов данных сохраняются в источнике данных.  
   
 > [!CAUTION]
 >  При переходе к новой записи перед вызовом метода **обновление**, новая запись теряется, а не предупреждение не выдается.  
@@ -301,7 +296,7 @@ virtual void AddNew();
 ### <a name="example"></a>Пример  
  См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="canappend"></a>CRecordset::CanAppend  
+##  <a name="canappend"></a>  CRecordset::CanAppend  
  Определяет, позволяет ли ранее открывавшихся набора записей для добавления новых записей.  
   
 ```  
@@ -309,9 +304,9 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если набор записей разрешает добавление новых записей; в противном случае — 0. `CanAppend`Возвращает 0, если открыть набор записей, только для чтения.  
+ Ненулевое значение, если набор записей разрешает добавление новых записей; в противном случае — 0. `CanAppend` Возвращает 0, если открыть набор записей, только для чтения.  
   
-##  <a name="canbookmark"></a>CRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CRecordset::CanBookmark  
  Определяет, является ли набор записей позволяет помечать записей с помощью закладок.  
   
 ```  
@@ -322,14 +317,14 @@ BOOL CanBookmark() const;
  Ненулевое значение, если набор записей поддерживает закладки; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция не зависит от **CRecordset::useBookmarks** в диалоговом окне `dwOptions` параметр [откройте](#open) функции-члена. `CanBookmark`Указывает, является ли конкретного драйвера ODBC и курсор тип поддержки закладок. **CRecordset::useBookmarks** указывает, будет ли доступен, закладки, если они поддерживаются.  
+ Эта функция не зависит от **CRecordset::useBookmarks** в диалоговом окне `dwOptions` параметр [откройте](#open) функции-члена. `CanBookmark` Указывает, является ли конкретного драйвера ODBC и курсор тип поддержки закладок. **CRecordset::useBookmarks** указывает, будет ли доступен, закладки, если они поддерживаются.  
   
 > [!NOTE]
 >  Закладки не поддерживаются на наборы последовательного доступа.  
   
  Дополнительные сведения о закладок и навигации по набору записей, см. в статьях [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) и [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cancel"></a>CRecordset::Cancel  
+##  <a name="cancel"></a>  CRecordset::Cancel  
  Запросы, что источник данных отменить асинхронную операцию в данный момент или процесса из второго потока.  
   
 ```  
@@ -339,7 +334,7 @@ void Cancel();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что классы MFC ODBC больше не использовать асинхронную обработку; для выполнения асинхронной операции, необходимо напрямую вызвать функцию API-интерфейса ODBC **SQLSetConnectOption**. Дополнительные сведения см. в разделе «Выполнение функции асинхронно» в *Руководство программиста ODBC SDK*.  
   
-##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CRecordset::CancelUpdate  
  Отменяет все ожидающие обновления, вызванные [изменить](#edit) или [AddNew](#addnew) операции, прежде чем [обновление](#update) вызывается.  
   
 ```  
@@ -355,7 +350,7 @@ void CancelUpdate();
   
  Дополнительные сведения об обновлении данных см. в статье [набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  
   
-##  <a name="canrestart"></a>CRecordset::CanRestart  
+##  <a name="canrestart"></a>  CRecordset::CanRestart  
  Определяет, позволяет ли набор записей перезапуска его запроса (чтобы обновить свои записи) путем вызова **Requery** функции-члена.  
   
 ```  
@@ -365,7 +360,7 @@ BOOL CanRestart() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если разрешено обновление; в противном случае — 0.  
   
-##  <a name="canscroll"></a>CRecordset::CanScroll  
+##  <a name="canscroll"></a>  CRecordset::CanScroll  
  Определяет, допускает ли прокрутка набора записей.  
   
 ```  
@@ -378,7 +373,7 @@ BOOL CanScroll() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о прокрутке см. в статье [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="cantransact"></a>CRecordset::CanTransact  
+##  <a name="cantransact"></a>  CRecordset::CanTransact  
  Определяет, позволяет ли набор записей транзакций.  
   
 ```  
@@ -391,7 +386,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в статье [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CRecordset::CanUpdate  
  Определяет, возможно ли обновление набора записей.  
   
 ```  
@@ -404,7 +399,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>Примечания  
  Набор записей может быть только для чтения, если базовый источник данных доступен только для чтения или если вы указали **CRecordset::readOnly** в `dwOptions` параметра при открытии набора записей.  
   
-##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
+##  <a name="checkrowseterror"></a>  CRecordset::CheckRowsetError  
  Вызывается для обработки ошибок, возникающих при выполнении записи выборки.  
   
 ```  
@@ -418,9 +413,9 @@ virtual void CheckRowsetError(RETCODE nRetCode);
 ### <a name="remarks"></a>Примечания  
  Это виртуальная функция-член обрабатывает ошибки, возникающие при записи получены, и используется во время массовой выборке строк. Может потребоваться рассмотреть возможность переопределения `CheckRowsetError` для реализации обработки ошибок.  
   
- `CheckRowsetError`вызывается автоматически при выполнении операции курсора навигации, такие как **откройте**, **Requery**, или любой **переместить** операции. Он передается возвращаемое значение функции API-интерфейса ODBC **SQLExtendedFetch**. В следующей таблице перечислены возможные значения для `nRetCode` параметра.  
+ `CheckRowsetError` вызывается автоматически при выполнении операции курсора навигации, такие как **откройте**, **Requery**, или любой **переместить** операции. Он передается возвращаемое значение функции API-интерфейса ODBC **SQLExtendedFetch**. В следующей таблице перечислены возможные значения для `nRetCode` параметра.  
   
-|nRetCode|Описание:|  
+|nRetCode|Описание|  
 |--------------|-----------------|  
 |**SQL_SUCCESS**|Функция успешно завершена; Дополнительные сведения не доступен.|  
 |**SQL_SUCCESS_WITH_INFO**|Функция успешно завершена, возможно с Некритичная ошибка. Дополнительные сведения можно получить путем вызова **SQLError**.|  
@@ -431,7 +426,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  Дополнительные сведения о **SQLError**, см. в Windows SDK. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="close"></a>CRecordset::Close  
+##  <a name="close"></a>  CRecordset::Close  
  Закрытие набора записей.  
   
 ```  
@@ -446,7 +441,7 @@ virtual void Close();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="crecordset"></a>CRecordset::CRecordset  
+##  <a name="crecordset"></a>  CRecordset::CRecordset  
  Создает объект `CRecordset`.  
   
 ```  
@@ -468,7 +463,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 ### <a name="example"></a>Пример  
  Дополнительные сведения см. в статье [набор записей: объявление класса для таблицы (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).  
   
-##  <a name="delete"></a>CRecordset::Delete  
+##  <a name="delete"></a>  CRecordset::Delete  
  Удаляет текущую запись.  
   
 ```  
@@ -491,7 +486,7 @@ virtual void Delete();
   
  [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
+##  <a name="dobulkfieldexchange"></a>  CRecordset::DoBulkFieldExchange  
  Вызывается для обмена пакетов строк данных из источника данных в набор записей. Реализует блочный обмен полей записей (Bulk RFX).  
   
 ```  
@@ -503,12 +498,12 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
  Указатель на [разделе](../../mfc/reference/cfieldexchange-class.md) объекта. Платформа уже будет установлен этот объект для указания контекста для операции обмена поля.  
   
 ### <a name="remarks"></a>Примечания  
- При реализации массовой выборки строк, платформа вызывает эту функцию-член автоматически передавать данные из источника данных объекта набора записей. `DoBulkFieldExchange`Привязывает параметризованные члены данных также в том случае, если таковая имеется, соответствует заполнителям параметров в строке инструкции SQL для выбора набора записей.  
+ При реализации массовой выборки строк, платформа вызывает эту функцию-член автоматически передавать данные из источника данных объекта набора записей. `DoBulkFieldExchange` Привязывает параметризованные члены данных также в том случае, если таковая имеется, соответствует заполнителям параметров в строке инструкции SQL для выбора набора записей.  
   
  Если выборка строк не реализована, платформа вызывает [DoFieldExchange](#dofieldexchange). Для реализации массовой выборки строк, необходимо указать `CRecordset::useMultiRowFetch` параметр `dwOptions` параметр в [откройте](#open) функции-члена.  
   
 > [!NOTE]
-> `DoBulkFieldExchange`доступен только в том случае, если вы используете класс, производный от `CRecordset`. Если вы создали непосредственно из объекта набора записей `CRecordset`, необходимо вызвать [GetFieldValue](#getfieldvalue) функция-член для извлечения данных.  
+> `DoBulkFieldExchange` доступен только в том случае, если вы используете класс, производный от `CRecordset`. Если вы создали непосредственно из объекта набора записей `CRecordset`, необходимо вызвать [GetFieldValue](#getfieldvalue) функция-член для извлечения данных.  
   
  Блочный обмен полей записей (Bulk RFX) похож на обмен полями записей (RFX). Данные автоматически передается из источника данных объекта набора записей. Тем не менее, не может вызвать `AddNew`, **изменить**, **удаление**, или **обновление** для передачи изменений обратно в источник данных. Класс `CRecordset` в настоящее время не предоставляет механизма обновления пакетов строк данных; Однако можно написать свои собственные функции с помощью функции API-интерфейса ODBC **SQLSetPos**.  
   
@@ -516,7 +511,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
   
  Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Дополнительные сведения см. в статье [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CRecordset::DoFieldExchange  
  Вызывается для обмена данными (в обоих направлениях) между элементами данных полей набора записей и соответствующая запись в источнике данных. Реализует запись обмен (полями записей RFX).  
   
 ```  
@@ -528,12 +523,12 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
  Указатель на [разделе](../../mfc/reference/cfieldexchange-class.md) объекта. Платформа уже будет установлен этот объект для указания контекста для операции обмена поля.  
   
 ### <a name="remarks"></a>Примечания  
- Выборка строк не реализован, платформа вызывает эту функцию-член для обмена данными между элементами данных полей объекта набора записей и соответствующих столбцов текущей записи в источнике данных автоматически. `DoFieldExchange`Привязывает параметризованные члены данных также в том случае, если таковая имеется, соответствует заполнителям параметров в строке инструкции SQL для выбора набора записей.  
+ Выборка строк не реализован, платформа вызывает эту функцию-член для обмена данными между элементами данных полей объекта набора записей и соответствующих столбцов текущей записи в источнике данных автоматически. `DoFieldExchange` Привязывает параметризованные члены данных также в том случае, если таковая имеется, соответствует заполнителям параметров в строке инструкции SQL для выбора набора записей.  
   
  Если реализована массовая выборка строк, платформа вызывает [DoBulkFieldExchange](#dobulkfieldexchange). Для реализации массовой выборки строк, необходимо указать `CRecordset::useMultiRowFetch` параметр `dwOptions` параметр в [откройте](#open) функции-члена.  
   
 > [!NOTE]
-> `DoFieldExchange`доступен только в том случае, если вы используете класс, производный от `CRecordset`. Если вы создали непосредственно из объекта набора записей `CRecordset`, необходимо вызвать [GetFieldValue](#getfieldvalue) функция-член для извлечения данных.  
+> `DoFieldExchange` доступен только в том случае, если вы используете класс, производный от `CRecordset`. Если вы создали непосредственно из объекта набора записей `CRecordset`, необходимо вызвать [GetFieldValue](#getfieldvalue) функция-член для извлечения данных.  
   
  Обмен полей данных, называемый обмен полями записей (RFX) работает в обоих направлениях: члены данных полей объекта набора записей с полями записи в источнике данных и запись в источнике данных для объекта набора записей.  
   
@@ -547,7 +542,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
   
  Дополнительные примеры и подробности о `DoFieldExchange`, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Общие сведения об RFX см. в статье [обмен полями записей](../../data/odbc/record-field-exchange-rfx.md).  
   
-##  <a name="edit"></a>CRecordset::Edit  
+##  <a name="edit"></a>  CRecordset::Edit  
  Позволяет вносить изменения в текущей записи.  
   
 ```  
@@ -575,7 +570,7 @@ virtual void Edit();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
+##  <a name="flushresultset"></a>  CRecordset::FlushResultSet  
  Возвращает следующий результирующий набор предопределенного запроса (хранимой процедуры), при наличии нескольких результирующих наборов.  
   
 ```  
@@ -590,7 +585,7 @@ BOOL FlushResultSet();
   
  Если предопределенного запроса использует выходной параметр или параметры ввода вывода, необходимо вызвать `FlushResultSet` пока не будет возвращено `FALSE` (значение 0), чтобы получить эти значения параметра.  
   
- `FlushResultSet`вызывает функцию ODBC API `SQLMoreResults`. Если `SQLMoreResults` возвращает `SQL_ERROR` или `SQL_INVALID_HANDLE`, затем `FlushResultSet` вызовет исключение. Дополнительные сведения о `SQLMoreResults`, см. в Windows SDK.  
+ `FlushResultSet` вызывает функцию ODBC API `SQLMoreResults`. Если `SQLMoreResults` возвращает `SQL_ERROR` или `SQL_INVALID_HANDLE`, затем `FlushResultSet` вызовет исключение. Дополнительные сведения о `SQLMoreResults`, см. в Windows SDK.  
   
  Хранимой процедуры должен связанный поля, если вы хотите вызвать `FlushResultSet`.  
   
@@ -601,7 +596,7 @@ BOOL FlushResultSet();
   
  [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="getbookmark"></a>CRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CRecordset::GetBookmark  
  Получает значение закладки для текущей записи.  
   
 ```  
@@ -618,14 +613,14 @@ void GetBookmark(CDBVariant& varBookmark);
 > [!NOTE]
 >  Если закладок не поддерживается или недоступен, вызов `GetBookmark` приведет к созданию исключения. Закладки не поддерживаются на наборы последовательного доступа.  
   
- `GetBookmark`присваивает значение закладки для текущей записи `CDBVariant` объекта. Чтобы вернуться к этой записи в любое время после перемещения в другой записи, вызовите [SetBookmark](#setbookmark) с соответствующим свойством `CDBVariant` объекта.  
+ `GetBookmark` присваивает значение закладки для текущей записи `CDBVariant` объекта. Чтобы вернуться к этой записи в любое время после перемещения в другой записи, вызовите [SetBookmark](#setbookmark) с соответствующим свойством `CDBVariant` объекта.  
   
 > [!NOTE]
 >  После определенных операций по набору записей закладки больше не может быть допустимым. Например, при вызове метода `GetBookmark` следуют **Requery**, вы не сможете вернуться на запись с `SetBookmark`. Вызовите [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) для проверки, можно ли осуществить безопасный вызов `SetBookmark`.  
   
  Дополнительные сведения о закладок и навигации по набору записей, см. в статьях [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) и [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
+##  <a name="getdefaultconnect"></a>  CRecordset::GetDefaultConnect  
  Вызывается для получения строки подключения по умолчанию.  
   
 ```  
@@ -638,7 +633,7 @@ virtual CString GetDefaultConnect();
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает эту функцию-член для получения строки подключения по умолчанию для источника данных, на котором основан набор записей. ClassWizard реализует эту функцию для вас, указав тот же источник данных, используемого в ClassWizard для получения сведений о таблицах и столбцах. Вам будут, скорее всего, будет удобнее полагаться на это подключение по умолчанию при разработке приложения. Однако соединение по умолчанию может не подойти для пользователей приложения. Если это так, следует воссоздать этой функции, отменяя ClassWizard в версии. Дополнительные сведения о строках соединения см. в статье [источника данных (ODBC)](../../data/odbc/data-source-odbc.md).  
   
-##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CRecordset::GetDefaultSQL  
  Вызывается для получения строки SQL по умолчанию для выполнения.  
   
 ```  
@@ -660,7 +655,7 @@ virtual CString GetDefaultSQL();
 > [!CAUTION]
 >  Имя таблицы будет пустым, если платформа не удалось определить имя таблицы, если указано несколько имен таблиц или **ВЫЗОВИТЕ** инструкция не может быть интерпретирован. Обратите внимание, что при использовании **вызвать** инструкции, не должен вставить пробел между фигурными скобками и **вызвать** ключевое слово, и не должна вставлять пробел перед фигурную скобку или перед  **ВЫБЕРИТЕ** ключевое слово в **ВЫБЕРИТЕ** инструкции.  
   
-##  <a name="getfieldvalue"></a>CRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CRecordset::GetFieldValue  
  Получает поля данных в текущей записи.  
   
 ```  
@@ -726,7 +721,7 @@ void GetFieldValue(
 > [!NOTE]
 >  При объявлении объекта набора записей не на основе `CRecordset`, не имеют загрузить библиотеку курсоров ODBC. Библиотека курсоров требует, чтобы набор записей по крайней мере один привязанного столбца; Тем не менее, при использовании `CRecordset` привязаны непосредственно, ни один из столбцов. Функции-члены [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) и [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) управления, будут ли загружать библиотеку курсоров.  
   
- `GetFieldValue`вызывает функцию ODBC API **SQLGetData**. Если драйвер выводит значение **SQL_NO_TOTAL** для фактическая длина значения поля `GetFieldValue` приводит к возникновению исключения. Дополнительные сведения о **SQLGetData**, см. в Windows SDK.  
+ `GetFieldValue` вызывает функцию ODBC API **SQLGetData**. Если драйвер выводит значение **SQL_NO_TOTAL** для фактическая длина значения поля `GetFieldValue` приводит к возникновению исключения. Дополнительные сведения о **SQLGetData**, см. в Windows SDK.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода показано, как `GetFieldValue` объекта набора записей, объявленных непосредственно из `CRecordset`.  
@@ -738,7 +733,7 @@ void GetFieldValue(
   
  Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
+##  <a name="getodbcfieldcount"></a>  CRecordset::GetODBCFieldCount  
  Возвращает общее число полей объекта набора записей.  
   
 ```  
@@ -751,7 +746,7 @@ short GetODBCFieldCount() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о создании наборов записей см. в статье [набор записей: Создание и закрытие наборов записей (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
+##  <a name="getodbcfieldinfo"></a>  CRecordset::GetODBCFieldInfo  
  Получает сведения о полях в наборе записей.  
   
 ```  
@@ -782,7 +777,7 @@ void GetODBCFieldInfo(
   
  Дополнительные сведения о создании наборов записей см. в статье [набор записей: Создание и закрытие наборов записей (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).  
   
-##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CRecordset::GetRecordCount  
  Определяет размер набора записей.  
   
 ```  
@@ -797,7 +792,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  Число записей как «пиковой, «наибольший номер записи, пока отображается, когда пользователь перемещает по записям. Общее количество записей известно только после пользователь был перемещен за пределы последнюю запись. Для повышения производительности, счетчик не обновляется при вызове `MoveLast`. Чтобы подсчитать записи самостоятельно, вызовите `MoveNext` пока `IsEOF` возвращает ненулевое значение. Добавление записи через **CRecordset:AddNew** и **обновление** увеличивает счетчик; удаление записи через `CRecordset::Delete` уменьшает значение счетчика.  
   
-##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
+##  <a name="getrowsetsize"></a>  CRecordset::GetRowsetSize  
  Получает текущее значение для числа строк, которые вы хотите получить во время операции выборки.  
   
 ```  
@@ -814,7 +809,7 @@ DWORD GetRowsetSize() const;
   
  Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
+##  <a name="getrowsfetched"></a>  CRecordset::GetRowsFetched  
  Определяет, сколько записей было фактически получено после выборки.  
   
 ```  
@@ -834,7 +829,7 @@ DWORD GetRowsFetched() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
+##  <a name="getrowstatus"></a>  CRecordset::GetRowStatus  
  Получение сведений о состоянии для строки в текущем наборе строк.  
   
 ```  
@@ -849,9 +844,9 @@ WORD GetRowStatus(WORD wRow) const;
  Значение состояния для строки. Дополнительные сведения см. в разделе "Заметки".  
   
 ### <a name="remarks"></a>Примечания  
- `GetRowStatus`Возвращает значение, указывающее, любое изменение в состоянии, чтобы строка с момента его последнего, полученных из источника данных, или, нет соответствующей строки в `wRow` , которые были выбраны. В следующей таблице перечислены возможные возвращаемые значения.  
+ `GetRowStatus` Возвращает значение, указывающее, любое изменение в состоянии, чтобы строка с момента его последнего, полученных из источника данных, или, нет соответствующей строки в `wRow` , которые были выбраны. В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение состояния|Описание:|  
+|Значение состояния|Описание|  
 |------------------|-----------------|  
 |`SQL_ROW_SUCCESS`|Строка не содержит изменений.|  
 |`SQL_ROW_UPDATED`|Строка была обновлена.|  
@@ -862,7 +857,7 @@ WORD GetRowStatus(WORD wRow) const;
   
  Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLExtendedFetch** в Windows SDK.  
   
-##  <a name="getstatus"></a>CRecordset::GetStatus  
+##  <a name="getstatus"></a>  CRecordset::GetStatus  
  Определяет индекс текущей записи в наборе записей и ли наблюдалась последнюю запись.  
   
 ```  
@@ -874,7 +869,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
  Ссылку на **CRecordsetStatus** объекта. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="remarks"></a>Примечания  
- `CRecordset`пытается отслеживать индекс, но в некоторых случаях это может оказаться невозможным. В разделе [GetRecordCount](#getrecordcount) объяснение.  
+ `CRecordset` пытается отслеживать индекс, но в некоторых случаях это может оказаться невозможным. В разделе [GetRecordCount](#getrecordcount) объяснение.  
   
  **CRecordsetStatus** структура имеет следующий вид:  
   
@@ -894,7 +889,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
 - **m_bRecordCountFinal** ненулевое значение, если было определено общее число записей в наборе записей. Обычно это необходимо сделать, начиная с первого набора записей и вызов `MoveNext` до `IsEOF` возвращает ненулевое значение. Если этого элемента равно нулю, запись подсчета, возвращенный `GetRecordCount`, если только «пиковой» число записей не -1.  
   
-##  <a name="getsql"></a>CRecordset::GetSQL  
+##  <a name="getsql"></a>  CRecordset::GetSQL  
  Вызовите эту функцию-член для получения инструкции SQL, который был использован для выбора записей в наборе записей, когда он был открыт.  
   
 ```  
@@ -912,7 +907,7 @@ const CString& GetSQL() const;
 > [!NOTE]
 >  Вызовите эту функцию-член только после вызова метода [откройте](#open).  
   
-##  <a name="gettablename"></a>CRecordset::GetTableName  
+##  <a name="gettablename"></a>  CRecordset::GetTableName  
  Возвращает имя таблицы SQL, на которой основан запрос набора записей.  
   
 ```  
@@ -923,12 +918,12 @@ const CString& GetTableName() const;
  Объект **const** ссылка на `CString` , содержащую таблицу, имя, если набор записей из таблицы; в противном случае — пустая строка.  
   
 ### <a name="remarks"></a>Примечания  
- `GetTableName`Допустим, только если набор записей основан на таблице, не соединения нескольких таблиц или предопределенного запроса (хранимой процедуры). Имя доступно только для чтения.  
+ `GetTableName` Допустим, только если набор записей основан на таблице, не соединения нескольких таблиц или предопределенного запроса (хранимой процедуры). Имя доступно только для чтения.  
   
 > [!NOTE]
 >  Вызовите эту функцию-член только после вызова метода [откройте](#open).  
   
-##  <a name="isbof"></a>CRecordset::IsBOF  
+##  <a name="isbof"></a>  CRecordset::IsBOF  
  Возвращает ненулевое значение, если набор записей был позиционирован перед первой записи. Отсутствует текущая запись.  
   
 ```  
@@ -948,7 +943,7 @@ BOOL IsBOF() const;
   
  [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="isdeleted"></a>CRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CRecordset::IsDeleted  
  Определяет, был ли удален текущей записи.  
   
 ```  
@@ -968,7 +963,7 @@ BOOL IsDeleted() const;
 > [!NOTE]
 >  Если реализована массовая выборка строк, не следует вызывать `IsDeleted`. Вместо этого необходимо вызвать [GetRowStatus](#getrowstatus) функции-члена. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="iseof"></a>CRecordset::IsEOF  
+##  <a name="iseof"></a>  CRecordset::IsEOF  
  Возвращает ненулевое значение, если набор записей был помещен после последней записи. Отсутствует текущая запись.  
   
 ```  
@@ -986,7 +981,7 @@ BOOL IsEOF() const;
 ### <a name="example"></a>Пример  
  Далее приведен пример [IsBOF](#isbof).  
   
-##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CRecordset::IsFieldDirty  
  Определяет, является ли элемент данных заданного поля изменились с момента последнего [изменить](#edit) или [AddNew](#addnew) был вызван.  
   
 ```  
@@ -1008,11 +1003,11 @@ BOOL IsFieldDirty(void* pv);
   
  Вызов `IsFieldDirty` приведет к сбросу эффектов предыдущих вызовов [SetFieldDirty](#setfielddirty) так, как "грязные" состояние поля повторного вычисления. В `AddNew` случае, если текущее значение поля отличается от значения null псевдо поле перейдет в состояние «грязных». В **изменить** случае, если значение поля, отличается от кэшированное значение, то поле имеет состояние «грязных».  
   
- `IsFieldDirty`реализуется с помощью [DoFieldExchange](#dofieldexchange).  
+ `IsFieldDirty` реализуется с помощью [DoFieldExchange](#dofieldexchange).  
   
  Дополнительные сведения о «грязный» флаг см. в статье [набор записей: как наборы записей выберите записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).  
   
-##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CRecordset::IsFieldNull  
  Возвращает ненулевое значение, если указанное поле в текущей записи имеет значение Null (не имеет значения).  
   
 ```  
@@ -1032,9 +1027,9 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  Эта функция-член не применим в наборы записей, в которых используется выборка строк. Если реализована массовая выборка строк, затем `IsFieldNull` всегда будет возвращать **FALSE** и приведет к утверждение, вызвавшее сбой. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- `IsFieldNull`реализуется с помощью [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNull` реализуется с помощью [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CRecordset::IsFieldNullable  
  Возвращает ненулевое значение, если указанное поле в текущей записи может иметь значение Null (значение не имеющая).  
   
 ```  
@@ -1065,9 +1060,9 @@ BOOL IsFieldNullable(void* pv);
   
  Это означает, что нельзя задать все **param** поля **NULL**, как и с **outputColumn** поля.  
   
- `IsFieldNullable`реализуется с помощью [DoFieldExchange](#dofieldexchange).  
+ `IsFieldNullable` реализуется с помощью [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="isopen"></a>CRecordset::IsOpen  
+##  <a name="isopen"></a>  CRecordset::IsOpen  
  Определяет, если набор записей открыт.  
   
 ```  
@@ -1077,7 +1072,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если объекта набора записей [откройте](#open) или [Requery](#requery) ранее вызвать функцию-член и набор записей не закрыт; в противном случае — 0.  
   
-##  <a name="m_hstmt"></a>CRecordset::m_hstmt  
+##  <a name="m_hstmt"></a>  CRecordset::m_hstmt  
  Содержит дескриптор ODBC инструкции для структуры данных, типа **HSTMT**, связанные с набором записей.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1088,7 +1083,7 @@ BOOL IsOpen() const;
   
  Обычно не требуется доступ к **HSTMT** напрямую, но которые могут потребоваться для прямого выполнения инструкций SQL. `ExecuteSQL` Функции-члена класса `CDatabase` приведен пример использования **m_hstmt**.  
   
-##  <a name="m_nfields"></a>CRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CRecordset::m_nFields  
  Содержит число элементов данных полей в классе набора записей. то есть, количество столбцов, выбранных в наборе записей из источника данных.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1106,7 +1101,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Пример  
  См. в статье [обмен полями записей: использование RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_nparams"></a>CRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CRecordset::m_nParams  
  Содержит число элементов данных параметра в классе набора записей. число параметров, передаче с запросом набора записей.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1120,7 +1115,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Пример  
   См. в статьях [набор записей: Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) и [обмен полями записей: использование RFX](../../data/odbc/record-field-exchange-using-rfx.md).  
   
-##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CRecordset::m_pDatabase  
  Содержит указатель на `CDatabase` объекта, через который набор записей подключен к источнику данных.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1128,7 +1123,7 @@ BOOL IsOpen() const;
   
  Обычно не требуется напрямую использовать указателем, сохраненным в **m_pDatabase**. При написании собственных расширений для `CRecordset`, однако может потребоваться использовать указатель. Например, может потребоваться указатель при вызове собственных `CDBException`s. Или он может понадобиться, если вам нужно сделать что-нибудь, используя те же `CDatabase` объекта, например выполняющихся транзакций, задание времени ожидания, или вызов `ExecuteSQL` функции-члена класса `CDatabase` для выполнения инструкций SQL непосредственно.  
   
-##  <a name="m_strfilter"></a>CRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CRecordset::m_strFilter  
  После создания объекта набора записей, но перед вызовом его **откройте** члена функции, используйте этот элемент данных для хранения `CString` содержащий SQL **ГДЕ** предложения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1145,7 +1140,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="m_strsort"></a>CRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CRecordset::m_strSort  
  После создания объекта набора записей, но перед вызовом его **откройте** члена функции, используйте этот элемент данных для хранения `CString` содержащий SQL **ORDER BY** предложения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1162,7 +1157,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="move"></a>CRecordset::Move  
+##  <a name="move"></a>  CRecordset::Move  
  Перемещает указатель текущей записи в наборе записей, либо вперед или назад.  
   
 ```  
@@ -1192,7 +1187,7 @@ virtual void Move(
   
 |wFetchType|Извлеченных строк|Эквивалентный член-функция|  
 |----------------|--------------------|--------------------------------|  
-|`SQL_FETCH_RELATIVE`(значение по умолчанию)|Начальный набор строк `nRows` строки из первой строки в текущем наборе строк.||  
+|`SQL_FETCH_RELATIVE` (значение по умолчанию)|Начальный набор строк `nRows` строки из первой строки в текущем наборе строк.||  
 |`SQL_FETCH_NEXT`|Следующий набор строк; `nRows` учитывается.|[MoveNext](#movenext)|  
 |`SQL_FETCH_PRIOR`|Предыдущих строк; `nRows` учитывается.|[MovePrev](#moveprev)|  
 |`SQL_FETCH_FIRST`|Первый набор строк в наборе записей; `nRows` учитывается.|[MoveFirst](#movefirst)|  
@@ -1217,7 +1212,7 @@ virtual void Move(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="movefirst"></a>CRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CRecordset::MoveFirst  
  Делает первую запись в первый набор строк текущей записи.  
   
 ```  
@@ -1246,7 +1241,7 @@ void MoveFirst();
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsBOF](#isbof).  
   
-##  <a name="movelast"></a>CRecordset::MoveLast  
+##  <a name="movelast"></a>  CRecordset::MoveLast  
  Делает первую запись последней полный набор строк текущей записи.  
   
 ```  
@@ -1273,7 +1268,7 @@ void MoveLast();
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsBOF](#isbof).  
   
-##  <a name="movenext"></a>CRecordset::MoveNext  
+##  <a name="movenext"></a>  CRecordset::MoveNext  
  Делает первую запись следующего набора строк текущей записи.  
   
 ```  
@@ -1300,7 +1295,7 @@ void MoveNext();
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsBOF](#isbof).  
   
-##  <a name="moveprev"></a>CRecordset::MovePrev  
+##  <a name="moveprev"></a>  CRecordset::MovePrev  
  Делает первую запись в предыдущих строк текущей записи.  
   
 ```  
@@ -1330,7 +1325,7 @@ void MovePrev();
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsBOF](#isbof).  
   
-##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
+##  <a name="onsetoptions"></a>  CRecordset::OnSetOptions  
  Вызывается, чтобы задать параметры (используется для выбора) для указанной инструкции ODBC.  
   
 ```  
@@ -1342,13 +1337,13 @@ virtual void OnSetOptions(HSTMT hstmt);
  **HSTMT** инструкции ODBC, параметры которого должны быть заданы.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите `OnSetOptions` для задания параметров (используется для выбора) для указанной инструкции ODBC. Платформа вызывает эту функцию-член для задания начальных параметров набора записей. `OnSetOptions`Определяет источник данных поддерживает прокручиваемые курсоры и параллелизм курсоров и соответствующим образом настраивает параметры набора записей. (В то время как `OnSetOptions` используется для операций выбора, `OnSetUpdateOptions` используется для операций обновления.)  
+ Вызовите `OnSetOptions` для задания параметров (используется для выбора) для указанной инструкции ODBC. Платформа вызывает эту функцию-член для задания начальных параметров набора записей. `OnSetOptions` Определяет источник данных поддерживает прокручиваемые курсоры и параллелизм курсоров и соответствующим образом настраивает параметры набора записей. (В то время как `OnSetOptions` используется для операций выбора, `OnSetUpdateOptions` используется для операций обновления.)  
   
  Переопределить `OnSetOptions` для параметры set, относящиеся к драйверу или источнику данных. Например, если источник данных поддерживает открытие монопольного доступа, может переопределить `OnSetOptions` Чтобы воспользоваться преимуществами этой возможности.  
   
  Дополнительные сведения о курсорах см. в статье [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
+##  <a name="onsetupdateoptions"></a>  CRecordset::OnSetUpdateOptions  
  Вызывается, чтобы задать параметры (используется при обновлении) для указанной инструкции ODBC.  
   
 ```  
@@ -1366,7 +1361,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
   
  Дополнительные сведения о курсорах см. в статье [ODBC](../../data/odbc/odbc-basics.md).  
   
-##  <a name="open"></a>CRecordset::Open  
+##  <a name="open"></a>  CRecordset::Open  
  Открывает набор записей при извлечении таблицы или при выполнении запроса, который представляет набор записей.  
   
 ```  
@@ -1422,7 +1417,7 @@ virtual BOOL Open(
   
 - **CRecordset::optimizeBulkAdd** использовать подготовленной инструкции SQL для оптимизации Добавление много записей за один раз. Применяется только в том случае, если вы не используете функции API-интерфейса ODBC **SQLSetPos** обновление набора записей. Первое обновление определяет, какие поля отмечаются как грязные. Этот параметр является взаимоисключающим с `CRecordset::useMultiRowFetch`.  
   
-- `CRecordset::useMultiRowFetch`Реализации массовой выборки строк, чтобы разрешить несколько строк для получения в операции одной выборки. Это является дополнительным, предназначенный для повышения производительности; Однако блочный обмен полей записей не поддерживается ClassWizard. Этот параметр является взаимоисключающим с **CRecordset::optimizeBulkAdd**. Обратите внимание, что при указании `CRecordset::useMultiRowFetch`, затем параметр **CRecordset::noDirtyFieldCheck** будет включен автоматически (двойной буферизации будет недоступен); в наборы записей последовательного доступа, параметр  **CRecordset::useExtendedFetch** будет включен автоматически. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+- `CRecordset::useMultiRowFetch` Реализации массовой выборки строк, чтобы разрешить несколько строк для получения в операции одной выборки. Это является дополнительным, предназначенный для повышения производительности; Однако блочный обмен полей записей не поддерживается ClassWizard. Этот параметр является взаимоисключающим с **CRecordset::optimizeBulkAdd**. Обратите внимание, что при указании `CRecordset::useMultiRowFetch`, затем параметр **CRecordset::noDirtyFieldCheck** будет включен автоматически (двойной буферизации будет недоступен); в наборы записей последовательного доступа, параметр  **CRecordset::useExtendedFetch** будет включен автоматически. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 - **CRecordset::skipDeletedRecords** пропустить все удаленные записи при навигации по набору записей. Это приведет к снижению производительности в некоторых относительный выборки. Этот параметр не является действительным на наборы последовательного доступа. При вызове метода [переместить](#move) с `nRows` параметра равно 0 и **CRecordset::skipDeletedRecords** параметр, **переместить** будет assert. Обратите внимание, что **CRecordset::skipDeletedRecords** аналогичен *упаковки драйвер*, означающее, что удаленные строки удаляются из набора записей. Тем не менее если драйвер пакетов записей, затем он будет пропускать только те записи, которые можно удалить; он не будет пропускать записи, удаленные другим пользователям при открытом набора записей. **CRecordset::skipDeletedRecords** будет пропускать строки, удаленные другим пользователям.  
   
@@ -1474,7 +1469,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
+##  <a name="refreshrowset"></a>  CRecordset::RefreshRowset  
  Обновляет данные и состояние для строки в текущем наборе строк.  
   
 ```  
@@ -1495,17 +1490,17 @@ void RefreshRowset(
   
  Для использования `RefreshRowset`, необходимо реализована массовая выборка строк, указав **CRecordset::useMulitRowFetch** в диалоговом окне [откройте](#open) функции-члена.  
   
- `RefreshRowset`вызывает функцию ODBC API **SQLSetPos**. `wLockType` Указывает состояние блокировки строки после **SQLSetPos** был выполнен. В следующей таблице описаны возможные значения для `wLockType`.  
+ `RefreshRowset` вызывает функцию ODBC API **SQLSetPos**. `wLockType` Указывает состояние блокировки строки после **SQLSetPos** был выполнен. В следующей таблице описаны возможные значения для `wLockType`.  
   
-|wLockType|Описание:|  
+|wLockType|Описание|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(значение по умолчанию)|Драйвер или источник данных гарантирует, что строка находится в том же состоянии заблокирован или разблокирован, после появления `RefreshRowset` был вызван.|  
+|`SQL_LOCK_NO_CHANGE` (значение по умолчанию)|Драйвер или источник данных гарантирует, что строка находится в том же состоянии заблокирован или разблокирован, после появления `RefreshRowset` был вызван.|  
 |`SQL_LOCK_EXCLUSIVE`|Драйвер или источник данных исключительно блокирует строку. Не все источники данных поддерживают этот тип блокировки.|  
 |`SQL_LOCK_UNLOCK`|Драйвер или источник данных снимает блокировку строки. Не все источники данных поддерживают этот тип блокировки.|  
   
  Дополнительные сведения о **SQLSetPos**, см. в Windows SDK. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="requery"></a>Метод CRecordset::Requery  
+##  <a name="requery"></a>  Метод CRecordset::Requery  
  Перестраивает (обновления) набора записей.  
   
 ```  
@@ -1522,7 +1517,7 @@ virtual BOOL Requery();
   
  Для подмножества или моментального снимка, вызовите **Requery** любое время, в который необходимо перестроить набора записей с помощью нового фильтра или сортировки или новые значения параметров. Задайте свойства нового фильтра или сортировки задание новых значений для **m_strFilter** и `m_strSort` перед вызовом **Requery**. Установить новые параметры, назначив новые значения членов данных параметра перед вызовом **Requery**. Фильтрация и сортировка строк не меняются, можно повторно использовать в запросе, которая улучшает производительность.  
   
- Если произошел сбой попытки повторного построения recordset, закрывается набора записей. Перед вызовом метода **Requery**, можно определить, является ли набор записей можно опросить путем вызова `CanRestart` функции-члена. `CanRestart`не может гарантировать **Requery** будет выполнена успешно.  
+ Если произошел сбой попытки повторного построения recordset, закрывается набора записей. Перед вызовом метода **Requery**, можно определить, является ли набор записей можно опросить путем вызова `CanRestart` функции-члена. `CanRestart` не может гарантировать **Requery** будет выполнена успешно.  
   
 > [!CAUTION]
 >  Вызовите **Requery** только после вызова [откройте](#open).  
@@ -1532,7 +1527,7 @@ virtual BOOL Requery();
   
  [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CRecordset::SetAbsolutePosition  
  Устанавливает набор записей на запись, соответствующую номер указанной записи.  
   
 ```  
@@ -1544,7 +1539,7 @@ void SetAbsolutePosition(long nRows);
  Единицы порядковый номер для текущей записи в наборе записей.  
   
 ### <a name="remarks"></a>Примечания  
- `SetAbsolutePosition`Перемещает указатель текущей записи, исходя из этого порядковый номер позиции.  
+ `SetAbsolutePosition` Перемещает указатель текущей записи, исходя из этого порядковый номер позиции.  
   
 > [!NOTE]
 >  Эта функция-член не является допустимым наборы последовательного доступа.  
@@ -1558,7 +1553,7 @@ void SetAbsolutePosition(long nRows);
   
  Дополнительные сведения о перемещении по набору записей и закладки, см. в статьях [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) и [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="setbookmark"></a>CRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CRecordset::SetBookmark  
  Устанавливает набор записей на запись, содержащую указанную закладку.  
   
 ```  
@@ -1582,7 +1577,7 @@ void SetBookmark(const CDBVariant& varBookmark);
   
  Дополнительные сведения о закладок и навигации по набору записей, см. в статьях [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) и [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
-##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CRecordset::SetFieldDirty  
  Флаги элемента данных поля в наборе записей, как изменить или как неизмененные.  
   
 ```  
@@ -1619,7 +1614,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
   
  Это означает, что нельзя задать все **param** поля **NULL**, как и с **outputColumn** поля.  
   
-##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CRecordset::SetFieldNull  
  Флаги элемента данных поля в наборе записей, как Null (в частности, имеющая значение не) или как отличных от Null.  
   
 ```  
@@ -1659,9 +1654,9 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 > [!NOTE]
 >  При задании параметров значение Null, вызов `SetFieldNull` до открытых результатов в утверждение набора записей. В этом случае вызов [члена SetParamNull](#setparamnull).  
   
- `SetFieldNull`реализуется с помощью [DoFieldExchange](#dofieldexchange).  
+ `SetFieldNull` реализуется с помощью [DoFieldExchange](#dofieldexchange).  
   
-##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CRecordset::SetLockingMode  
  Задает режим блокировки «оптимистичный» блокировка (по умолчанию) или «пессимистической» блокировки. Определяет, как блокировки для обновления записей.  
   
 ```  
@@ -1679,7 +1674,7 @@ void SetLockingMode(UINT nMode);
 ### <a name="remarks"></a>Примечания  
  Вызовите эту функцию-член, если вам нужно указать, какие две стратегии блокировки записей набор записей используется для обновления. По умолчанию является режим блокировки набора записей **оптимистичный**. Вы можете изменять, особенно осторожны **пессимистическая** стратегия блокировки. Вызовите `SetLockingMode` после создания и открытия объекта набора записей, но перед вызовом **изменить**.  
   
-##  <a name="setparamnull"></a>CRecordset::SetParamNull  
+##  <a name="setparamnull"></a>  CRecordset::SetParamNull  
  Flags, параметр как Null (в частности, имеющая значение не) или как отличных от Null.  
   
 ```  
@@ -1698,9 +1693,9 @@ void SetParamNull(
 ### <a name="remarks"></a>Примечания  
  В отличие от [метод SetFieldNull](#setfieldnull), можно вызвать `SetParamNull` до открытия набора записей.  
   
- `SetParamNull`обычно используется с предопределенные запросы (хранимые процедуры).  
+ `SetParamNull` обычно используется с предопределенные запросы (хранимые процедуры).  
   
-##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
+##  <a name="setrowsetcursorposition"></a>  CRecordset::SetRowsetCursorPosition  
  Перемещает курсор в строку в текущем наборе строк.  
   
 ```  
@@ -1719,17 +1714,17 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  Для использования `SetRowsetCursorPosition`, необходимо реализована массовая выборка строк, указав `CRecordset::useMultiRowFetch` параметр `dwOptions` параметр в [откройте](#open) функции-члена.  
   
- `SetRowsetCursorPosition`вызывает функцию ODBC API **SQLSetPos**. `wLockType` Указывает состояние блокировки строки после **SQLSetPos** был выполнен. В следующей таблице описаны возможные значения для `wLockType`.  
+ `SetRowsetCursorPosition` вызывает функцию ODBC API **SQLSetPos**. `wLockType` Указывает состояние блокировки строки после **SQLSetPos** был выполнен. В следующей таблице описаны возможные значения для `wLockType`.  
   
-|wLockType|Описание:|  
+|wLockType|Описание|  
 |---------------|-----------------|  
-|`SQL_LOCK_NO_CHANGE`(значение по умолчанию)|Драйвер или источник данных гарантирует, что строка находится в том же состоянии заблокирован или разблокирован, после появления `SetRowsetCursorPosition` был вызван.|  
+|`SQL_LOCK_NO_CHANGE` (значение по умолчанию)|Драйвер или источник данных гарантирует, что строка находится в том же состоянии заблокирован или разблокирован, после появления `SetRowsetCursorPosition` был вызван.|  
 |`SQL_LOCK_EXCLUSIVE`|Драйвер или источник данных исключительно блокирует строку. Не все источники данных поддерживают этот тип блокировки.|  
 |`SQL_LOCK_UNLOCK`|Драйвер или источник данных снимает блокировку строки. Не все источники данных поддерживают этот тип блокировки.|  
   
  Дополнительные сведения о **SQLSetPos**, см. в Windows SDK. Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
+##  <a name="setrowsetsize"></a>  CRecordset::SetRowsetSize  
  Указывает количество записей, которые вы хотите получить во время выборки.  
   
 ```  
@@ -1755,7 +1750,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
   
  Дополнительные сведения о массовой выборке строк см. в статье [Набор записей: пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="update"></a>CRecordset::Update  
+##  <a name="update"></a>  CRecordset::Update  
  Завершает `AddNew` или **изменить** операции путем сохранения новых или измененных данных в источнике данных.  
   
 ```  

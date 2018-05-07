@@ -1,13 +1,10 @@
 ---
-title: "TN011: Использование MFC как часть библиотеки DLL | Документы Microsoft"
-ms.custom: 
+title: 'TN011: Использование MFC как часть библиотеки DLL | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d0ac05e314f3f8354ba289695afa672b1e28881
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011. Использование MFC как часть библиотеки DLL
 Эта заметка описывает обычные библиотеки DLL MFC, которая позволяет использовать библиотеку MFC как часть библиотеки динамической компоновки (DLL) Windows. Предполагается, что вы знакомы с библиотеки DLL Windows, а также способы их построения. Сведения о библиотеках расширения MFC, с помощью которого можно создавать расширения для библиотеки MFC, см. [версии библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md).  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   С обычные библиотеки DLL MFC, статическая компоновка с MFC размер DLL зависит только от MFC и C процедур среды выполнения, используемых и связанные.  
   
--   С обычные библиотеки DLL MFC, динамически связываются с MFC экономия места в памяти с помощью общедоступной версии MFC может оказаться значительным. Тем не менее, необходимо распространить общих библиотек DLL Mfc*\<версии >*DLL- и Msvvcrt*\<версии >*.dll, библиотеки DLL.  
+-   С обычные библиотеки DLL MFC, динамически связываются с MFC экономия места в памяти с помощью общедоступной версии MFC может оказаться значительным. Тем не менее, необходимо распространить общих библиотек DLL Mfc*\<версии >* DLL- и Msvvcrt*\<версии >*.dll, библиотеки DLL.  
   
 -   Проект библиотеки DLL не зависит от реализации классов. Проект библиотеки DLL экспортирует только к API требуется. Поэтому при изменении реализации обычные библиотеки DLL MFC действительны.  
   

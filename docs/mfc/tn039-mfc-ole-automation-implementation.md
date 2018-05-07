@@ -1,13 +1,10 @@
 ---
-title: "TN039: Реализация автоматизации MFC OLE | Документы Microsoft"
-ms.custom: 
+title: 'TN039: Реализация автоматизации MFC OLE | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039. Реализация автоматизации MFC/OLE
 > [!NOTE]
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  Строка пространства запятыми VTS_ для каждого параметра.  
   
 ## <a name="remarks"></a>Примечания  
- Эти макросы позволяют указывать **DISPID** фиксированного MFC автоматически назначить один. Эти дополнительные макросы имеют те же имена, за исключением того, что идентификатор добавляется к имени макроса (например **DISP_PROPERTY_ID**) и идентификатор определяется сразу после указанного параметра `pszName` параметр. В разделе AFXDISP. H Дополнительные сведения об этих макросов. **_ID** записи должны располагаться в конце карту диспетчеризации. Они будут применяться автоматическое **DISPID** поколения в так же, как значение, отличное от**_ID** бы версии макроса ( **DISPID**s определяются по положению). Пример:  
+ Эти макросы позволяют указывать **DISPID** фиксированного MFC автоматически назначить один. Эти дополнительные макросы имеют те же имена, за исключением того, что идентификатор добавляется к имени макроса (например **DISP_PROPERTY_ID**) и идентификатор определяется сразу после указанного параметра `pszName` параметр. В разделе AFXDISP. H Дополнительные сведения об этих макросов. **_ID** записи должны располагаться в конце карту диспетчеризации. Они будут применяться автоматическое **DISPID** поколения в так же, как значение, отличное от **_ID** бы версии макроса ( **DISPID**s определяются по положению). Пример:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

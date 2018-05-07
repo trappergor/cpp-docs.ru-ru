@@ -1,12 +1,9 @@
 ---
-title: "Класс CParabolicTransitionFromAcceleration | Документы Microsoft"
-ms.custom: 
+title: Класс CParabolicTransitionFromAcceleration | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CParabolicTransitionFromAcceleration
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219d8e153501334a3de02aa12153e05a4345b215
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Класс CParabolicTransitionFromAcceleration
 Инкапсулирует переход с параболическим ускорением.  
@@ -50,19 +45,19 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Переход с параболическим ускорением создает и инициализирует его с указанными параметрами.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CParabolicTransitionFromAcceleration::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Ускорение переменной анимации во время перехода.|  
 |[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
@@ -81,7 +76,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
  Переход с параболическим ускорением создает и инициализирует его с указанными параметрами.  
   
 ```  
@@ -101,7 +96,7 @@ CParabolicTransitionFromAcceleration(
  `dblAcceleration`  
  Ускорение переменной анимации во время перехода.  
   
-##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
  Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.  
   
-##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
  Ускорение переменной анимации во время перехода.  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
  Значение переменной анимации в конце перехода.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
  Скоростью переменной анимации в конце перехода.  
   
 ```  

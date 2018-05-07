@@ -1,13 +1,10 @@
 ---
-title: "Список элементов управления и представление списка | Документы Microsoft"
-ms.custom: 
+title: Список элементов управления и представление списка | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c9d559d642b6edf926b9feb49332ef7ec2924a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-control-and-list-view"></a>Элемент управления "Список" и представление списка
 Для удобства MFC инкапсулирует управления списком двумя способами. Список-элементы управления можно использовать:  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Неявно, с помощью класса [CListView](../mfc/reference/clistview-class.md).  
   
- `CListView`позволяет легко интегрировать элемент управления списком с архитектурой документ/представление MFC инкапсуляции элемента управления как [CEditView](../mfc/reference/ceditview-class.md) инкапсулирует элемент управления редактированием: элемент управления заполняет всю область представления MFC. (Представление *—* управления, приводится к `CListView`.)  
+ `CListView` позволяет легко интегрировать элемент управления списком с архитектурой документ/представление MFC инкапсуляции элемента управления как [CEditView](../mfc/reference/ceditview-class.md) инкапсулирует элемент управления редактированием: элемент управления заполняет всю область представления MFC. (Представление *—* управления, приводится к `CListView`.)  
   
  Объект `CListView` объект наследуется от [CCtrlView](../mfc/reference/cctrlview-class.md) и его базовых классов, а также добавляет функцию-член для извлечения базового элемента управления списка. Просмотр членов следует используйте для работы с представление как представление. Используйте [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl) функции-члена для получения доступа к функции-члены элемента управления списком. Используйте эти члены в:  
   

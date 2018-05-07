@@ -1,13 +1,10 @@
 ---
-title: "Печать | Документы Microsoft"
-ms.custom: 
+title: Печать | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing"></a>Печать
 Microsoft Windows реализует аппаратно независимые отображения. В MFC, это означает, что же вызовов рисования, в `OnDraw` функции-члена класса представления, отвечают за рисования на экране и на других устройствах, таких как принтеры. Для предварительного просмотра целевое устройство является имитацию печати с отображением.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Роль в печати и роль платформы  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Роль в печати и роль платформы  
  Представление класса должен выполнить следующие действия:  
   
 -   Сообщите платформе, сколько страниц в документе.  
