@@ -1,13 +1,10 @@
 ---
-title: "Мастер DLL [MFC] | Документы Microsoft"
-ms.custom: 
+title: Мастер DLL [MFC] | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.overview
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-dll-wizard"></a>мастер DLL [MFC]
 При использовании мастера библиотек DLL MFC для создания проекта MFC DLL, разработчик получает работающее приложение со встроенных функциональных возможностей, после компиляции будет реализовывать основные возможности [DLL](../../build/dlls-in-visual-cpp.md). Начальная программа MFC включает (.cpp) исходные файлы C++, файлы ресурсов (RC) и файл проекта (VCXPROJ). Код, созданный в этих начальных файлах, основан на MFC. Дополнительные сведения см. в разделе сведений о файле в файле Readme.txt, который создается для проекта в Visual Studio и [классы и функции, созданный мастером MFC DLL](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

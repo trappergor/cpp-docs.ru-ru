@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCRibbonLabel | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCRibbonLabel | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>Класс CMFCRibbonLabel
 Реализует недоступную для щелчка текстовую метку для ленты.  
@@ -44,14 +39,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Создает и инициализирует `CMFCRibbonLabel` объект с указанной текстовой строки.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonLabel::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  Создает и инициализирует [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) объекта, который отображает заданную текстовую строку.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  Текст, отображаемый в метке.  
   
  [in] `bIsMultiLine`  
- `TRUE`Чтобы указать, что метка Многострочная метка; в противном случае `FALSE`.  
+ `TRUE` Чтобы указать, что метка Многострочная метка; в противном случае `FALSE`.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  Определяет, какие данные специальных возможностей для текущего элемента метки ленты.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей метки ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если `data` параметр был заполнен данные специальных возможностей текущей метки ленты успешно, в противном случае — `FALSE`.  
+ `TRUE` Если `data` параметр был заполнен данные специальных возможностей текущей метки ленты успешно, в противном случае — `FALSE`.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

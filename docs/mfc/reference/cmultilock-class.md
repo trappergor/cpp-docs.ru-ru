@@ -1,12 +1,9 @@
 ---
-title: "Класс CMultiLock | Документы Microsoft"
-ms.custom: 
+title: Класс CMultiLock | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiLock
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultilock-class"></a>Класс CMultiLock
 Класс представляет механизм контроля доступа к ресурсам в многопоточных программах.  
@@ -48,20 +43,20 @@ class CMultiLock
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMultiLock::CMultiLock](#cmultilock)|Создает объект `CMultiLock`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMultiLock::IsLocked](#islocked)|Определяет, если объект определенного синхронизации в массиве заблокирован.|  
 |[CMultiLock::Lock](#lock)|Ожиданий в массиве объектов синхронизации.|  
 |[CMultiLock::Unlock](#unlock)|Освобождает все объекты принадлежащие синхронизации.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMultiLock`не имеет базового класса.  
+ `CMultiLock` не имеет базового класса.  
   
  Использование классов синхронизации [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), и [CEvent](../../mfc/reference/cevent-class.md), можно создать либо **CMultiLock** или [Класс CSingleLock](../../mfc/reference/csinglelock-class.md) объект для ожидания и освобождения объекта синхронизации. Используйте **CMultiLock** при наличии нескольких объектов, которые можно использовать в конкретный момент времени. Используйте `CSingleLock` при требуется только для одного объекта во время ожидания.  
   
@@ -77,7 +72,7 @@ class CMultiLock
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmt.h  
   
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
  Создает **CMultiLock** объекта.  
   
 ```  
@@ -100,7 +95,7 @@ CMultiLock(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается после создания массива объектов синхронизации, чтобы быть ожидание. Обычно она вызывается из потока, необходимо дождаться один из объектов синхронизации станут доступны.  
   
-##  <a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>  CMultiLock::IsLocked  
  Определяет, является ли указанный объект несигнальное (недоступно).  
   
 ```  
@@ -114,7 +109,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если указанный объект заблокирован; в противном случае — 0.  
   
-##  <a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>  CMultiLock::Lock  
  Эта функция вызывается для получения доступа к одному или нескольким ресурсы, управляемые объекты синхронизации, передаваемые **CMultiLock** конструктор.  
   
 ```  
@@ -158,7 +153,7 @@ DWORD Lock(
   
  Если `Lock` не сможет выполнять возврат немедленно, он будет ожидать не более указанного числа миллисекунд в *dwTimeOut* параметра перед возвратом. Если *dwTimeOut* — **БЕСКОНЕЧНЫЙ**, `Lock` не возвращается до получить доступ к объекту или условия, указанного в `dwWakeMask` было выполнено. В противном случае, если `Lock` был нельзя получить объект синхронизации, то возвращается успешно; в противном случае будет возвращена ошибка.  
   
-##  <a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>  CMultiLock::Unlock  
  Освобождает объект синхронизации, принадлежащих `CMultiLock`.  
   
 ```  
@@ -183,7 +178,7 @@ BOOL Unlock(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается `CMultiLock`деструктор.  
   
- Первая форма `Unlock` пытается разблокировать объект синхронизации, который управляется `CMultiLock`. Во второй форме `Unlock` пытается разблокировать `CSemaphore` объектов, принадлежащих `CMultiLock`. Если `CMultiLock` не владеет заблокированные `CSemaphore` объекта, возвращаемого функцией **FALSE**; в противном случае он возвращает **TRUE**. `lCount`и `lpPrevCount` одинаковы, что и параметры [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Во второй форме `Unlock` редко применяется к multilock ситуациях.  
+ Первая форма `Unlock` пытается разблокировать объект синхронизации, который управляется `CMultiLock`. Во второй форме `Unlock` пытается разблокировать `CSemaphore` объектов, принадлежащих `CMultiLock`. Если `CMultiLock` не владеет заблокированные `CSemaphore` объекта, возвращаемого функцией **FALSE**; в противном случае он возвращает **TRUE**. `lCount` и `lpPrevCount` одинаковы, что и параметры [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Во второй форме `Unlock` редко применяется к multilock ситуациях.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -1,12 +1,9 @@
 ---
-title: "Класс cObList | Документы Microsoft"
-ms.custom: 
+title: Класс cObList | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcd79377eebbf36ec4dd4688dff8b33c112e451
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coblist-class"></a>Класс cObList
 упорядоченные списки неуникальные fSupports `CObject` указатели доступны последовательно или по значению указателей.  
@@ -84,13 +79,13 @@ class CObList : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObList::CObList](#coblist)|Создает пустой список с `CObject` указатели.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CObList::AddHead](#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
 |[CObList::AddTail](#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  
@@ -115,7 +110,7 @@ class CObList : public CObject
 |[CObList::SetAt](#setat)|Задает элемент в заданной позиции.|  
   
 ## <a name="remarks"></a>Примечания  
- `CObList`списки ведут себя как взаимосвязанные списки.  
+ `CObList` списки ведут себя как взаимосвязанные списки.  
   
  Переменная типа **ПОЗИЦИИ** является ключом для списка. Можно использовать **ПОЗИЦИИ** переменной как итератор для последовательного прохождения список и как закладки, чтобы место хранения. Позиция в массиве не совпадает с помощью индекса, однако.  
   
@@ -142,7 +137,7 @@ class CObList : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcoll.h  
   
-##  <a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>  CObList::AddHead  
  Добавляет новый элемент или список элементов в заголовке этого списка.  
   
 ```  
@@ -183,7 +178,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>  CObList::AddTail  
  Добавляет новый элемент или список элементов заключительного этого списка.  
   
 ```  
@@ -224,7 +219,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="coblist"></a>CObList::CObList  
+##  <a name="coblist"></a>  CObList::CObList  
  Создает пустой `CObject` список указателей.  
   
 ```  
@@ -254,7 +249,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="find"></a>CObList::Find  
+##  <a name="find"></a>  CObList::Find  
  Выполняет поиск в списке последовательно, чтобы найти первый `CObject` указателя, совпадающий с указанным `CObject` указателя.  
   
 ```  
@@ -288,7 +283,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>  CObList::FindIndex  
  Использует значение `nIndex` как индекс в списке.  
   
 ```  
@@ -303,7 +298,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
  Объект **ПОЗИЦИИ** значение, которое может использоваться для итерации или извлечения указатель объекта; **NULL** Если `nIndex` слишком велик. (Платформа создает утверждение, если `nIndex` является отрицательным значением.)  
   
 ### <a name="remarks"></a>Примечания  
- Начинает последовательного сканирования с начало списка, остановка на  *n* элемент th.  
+ Начинает последовательного сканирования с начало списка, остановка на *n*элемент th.  
   
  В следующей таблице приведены другие члена функции, которые похожи на `CObList::FindIndex`.  
   
@@ -317,7 +312,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>  CObList::GetAt  
  Переменная типа **ПОЗИЦИИ** является ключом для списка.  
   
 ```  
@@ -326,14 +321,14 @@ const CObject*& GetAt(POSITION position) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *положение*  
+ *Положение*  
  Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetHeadPosition` или **найти** вызова функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  См. в описании возвращаемое значение [GetHead](#gethead).  
   
 ### <a name="remarks"></a>Примечания  
- Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `GetAt`Извлекает `CObject` указатель, связанный с заданной позиции.  
+ Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `GetAt` Извлекает `CObject` указатель, связанный с заданной позиции.  
   
  Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, подтверждает отладочной версии библиотеки классов Microsoft Foundation.  
   
@@ -347,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [FindIndex](#findindex).  
   
-##  <a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>  CObList::GetCount  
  Возвращает количество элементов в списке.  
   
 ```  
@@ -369,7 +364,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>  CObList::GetHead  
  Возвращает `CObject` указатель, который представляет элемент head этого списка.  
   
 ```  
@@ -399,7 +394,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CObList::GetHeadPosition  
  Возвращает позицию в ведущий элемент этого списка.  
   
 ```  
@@ -421,7 +416,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>  CObList::GetNext  
  Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для `POSITION` значение на следующую запись в списке.  
   
 ```  
@@ -466,7 +461,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>  CObList::GetPrev  
  Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для `POSITION` значение предыдущей записи в списке.  
   
 ```  
@@ -509,7 +504,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>  CObList::GetSize  
  Возвращает число элементов списка.  
   
 ```  
@@ -534,7 +529,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>  CObList::GetTail  
  Возвращает `CObject` указатель, который представляет элемент заключительного этого списка.  
   
 ```  
@@ -560,7 +555,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>  CObList::GetTailPosition  
  Возвращает положение элемента заключительного этого списка. **NULL** Если список пуст.  
   
 ```  
@@ -582,7 +577,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>  CObList::InsertAfter  
  Добавляет элемент в этот список после элемента в указанной позиции.  
   
 ```  
@@ -592,7 +587,7 @@ POSITION InsertAfter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *положение*  
+ *Положение*  
  Значение **POSITION** , возвращенное предыдущим вызовом функции-члена `GetNext`, `GetPrev`или **Find** .  
   
  `newElement`  
@@ -623,7 +618,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>  CObList::InsertBefore  
  Добавляет элемент в список перед элементом в указанной позиции.  
   
 ```  
@@ -633,7 +628,7 @@ POSITION InsertBefore(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *положение*  
+ *Положение*  
  Значение **POSITION** , возвращенное предыдущим вызовом функции-члена `GetNext`, `GetPrev`или **Find** .  
   
  `newElement`  
@@ -664,7 +659,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>  CObList::IsEmpty  
  Указывает, является ли этот список не содержит элементов.  
   
 ```  
@@ -684,7 +679,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [RemoveAll](#removeall).  
   
-##  <a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>  CObList::RemoveAll  
  Удаляет все элементы из списка и освобождает связанные `CObList` памяти.  
   
 ```  
@@ -708,7 +703,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>  CObList::RemoveAt  
  Удаляет указанный элемент из этого списка.  
   
 ```  
@@ -716,7 +711,7 @@ void RemoveAt(POSITION position);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *положение*  
+ *Положение*  
  Позиция элемента, который требуется удалить из списка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -746,7 +741,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>  CObList::RemoveHead  
  Удаляет элемент в начало списка и возвращает указатель на него.  
   
 ```  
@@ -771,7 +766,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>  CObList::RemoveTail  
  Удаляет элемент с конца списка и возвращает указатель на него.  
   
 ```  
@@ -796,7 +791,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>  CObList::SetAt  
  Задает элемент в заданной позиции.  
   
 ```  
@@ -813,7 +808,7 @@ void SetAt(
  `CObject` Указатель на запись в список.  
   
 ### <a name="remarks"></a>Примечания  
- Переменная типа **ПОЗИЦИИ** является ключом для списка. Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `SetAt`Записывает `CObject` указатель на указанной позиции в списке.  
+ Переменная типа **ПОЗИЦИИ** является ключом для списка. Это не то же, что индекс и не может работать с **ПОЗИЦИИ** значение самостоятельно. `SetAt` Записывает `CObject` указатель на указанной позиции в списке.  
   
  Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, подтверждает отладочной версии библиотеки классов Microsoft Foundation.  
   

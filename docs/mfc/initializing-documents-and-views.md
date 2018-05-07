@@ -1,13 +1,10 @@
 ---
-title: "Инициализация документов и представлений | Документы Microsoft"
-ms.custom: 
+title: Инициализация документов и представлений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - initializing objects [MFC], document objects
 - initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e46d130f535076c2591101ab57423db1130ef749
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initializing-documents-and-views"></a>Инициализация документов и представлений
 Класс документа должна поддерживать оба способа двумя различными способами, создании документов. Во-первых пользователь может создавать новый, пустой документ с помощью команды создания файла. В этом случае инициализации документа в переопределении [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) функции-члена класса [CDocument](../mfc/reference/cdocument-class.md). Во-вторых пользователя можно использовать команду «Открыть» в меню «файл» для создания нового документа, содержимое которого считываются из файла. В этом случае инициализации документа в переопределении [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) функции-члена класса **CDocument**. Если оба инициализаций совпадают, можно вызывать из обеих переопределенных общие функции-члена или `OnOpenDocument` можно вызвать `OnNewDocument` для инициализации чистой документа, а затем завершить операции открытия.  

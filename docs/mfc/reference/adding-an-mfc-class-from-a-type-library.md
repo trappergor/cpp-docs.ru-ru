@@ -1,13 +1,10 @@
 ---
-title: "Добавление класса MFC из библиотеки типов | Документы Microsoft"
-ms.custom: 
+title: Добавление класса MFC из библиотеки типов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Добавление класса MFC из библиотеки типов
 Этот мастер используется для создания класса MFC из интерфейса в доступной библиотеке типов. Можно добавить класс MFC для [приложение MFC](../../mfc/reference/creating-an-mfc-application.md), [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), или [управления MFC ActiveX](../../mfc/reference/creating-an-mfc-activex-control.md).  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  В мастере можно добавить несколько классов из библиотеки типов. Аналогично можно добавлять классы из нескольких библиотек типов в одном сеансе мастера.  
   
- Мастер создает класс MFC, производный от [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранной библиотеки типов. `COleDispatchDriver`реализует автоматизацию OLE на стороне клиента.  
+ Мастер создает класс MFC, производный от [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранной библиотеки типов. `COleDispatchDriver` реализует автоматизацию OLE на стороне клиента.  
   
 ## <a name="see-also"></a>См. также  
  [Клиенты автоматизации](../../mfc/automation-clients.md)   

@@ -1,12 +1,9 @@
 ---
-title: "Класс CCommand | Документы Microsoft"
-ms.custom: 
+title: Класс CCommand | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4c53d7b27c98e0509cd434bf6eac2412b9c1a1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 667e86c173a7001ae22036cb1f0dd8f3fbfcf6a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 Предоставляет методы для установки и выполнить команду.  
@@ -50,12 +45,12 @@ class CCommand :
  Тип класса метода доступа (такие как `CDynamicParameterAccessor`, `CDynamicStringAccessor`, или `CEnumeratorAccessor`), необходимо, чтобы использовался. Значение по умолчанию — `CNoAccessor`, который указывает, что класс не поддерживает параметры или выходные столбцы.  
   
  `TRowset`  
- Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`), необходимо, чтобы использовался. Значение по умолчанию — `CRowset`.  
+ Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`), необходимо, чтобы использовался. Значение по умолчанию — `CRowset`.  
   
  `TMultiple`  
  Чтобы использовать команду OLE DB, которая может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="methods"></a>Методы  
   
@@ -69,12 +64,12 @@ class CCommand :
   
 |||  
 |-|-|  
-|[Create](../../data/oledb/ccommand-create.md)|Создание новой команды для указанного сеанса, а затем задает текст команды.|  
+|[Создание](../../data/oledb/ccommand-create.md)|Создание новой команды для указанного сеанса, а затем задает текст команды.|  
 |[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Создание новой команды.|  
 |[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Возвращает список параметров команды, их имена и их типы.|  
 |[Подготовка](../../data/oledb/ccommand-prepare.md)|Проверяет и оптимизирует текущую команду.|  
 |[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Освобождает параметрическим при необходимости, а затем освобождает команды.|  
-|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Задает собственный тип каждого параметра команды.|  
+|[Метод SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Задает собственный тип каждого параметра команды.|  
 |[Аннулирующие](../../data/oledb/ccommand-unprepare.md)|Отменяет план выполнения текущей команды.|  
   
 ## <a name="remarks"></a>Примечания  

@@ -1,13 +1,10 @@
 ---
-title: "Использование вкладок свойств в приложении | Документы Microsoft"
-ms.custom: 
+title: Использование вкладок свойств в приложении | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>Использование вкладок свойств в приложении
 Чтобы использовать вкладку свойств в приложении, выполните следующие действия:  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
     -   Вызовите [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) для каждой страницы.  
   
-     Как правило, объект, который создает `CPropertySheet` также создает `CPropertyPage` объекты на этом шаге. Однако при реализации `CPropertySheet`-производного класса, можно внедрить `CPropertyPage` объекты в `CPropertySheet` и вызовите `AddPage` для каждой страницы из `CPropertySheet`-производный класс конструктора. `AddPage`Добавляет `CPropertyPage` объекта в окне свойств список страниц, но фактически не создает окно для данной страницы. Таким образом, нет необходимости ждать Создание окно страницы свойств для вызова `AddPage`; можно вызвать `AddPage` из конструктора в окне свойств.  
+     Как правило, объект, который создает `CPropertySheet` также создает `CPropertyPage` объекты на этом шаге. Однако при реализации `CPropertySheet`-производного класса, можно внедрить `CPropertyPage` объекты в `CPropertySheet` и вызовите `AddPage` для каждой страницы из `CPropertySheet`-производный класс конструктора. `AddPage` Добавляет `CPropertyPage` объекта в окне свойств список страниц, но фактически не создает окно для данной страницы. Таким образом, нет необходимости ждать Создание окно страницы свойств для вызова `AddPage`; можно вызвать `AddPage` из конструктора в окне свойств.  
   
      По умолчанию Если окно свойств содержит больше вкладок, чем может поместиться на одной строке вкладки свойств, вкладки складываются в несколько строк. Чтобы отключить наложение, вызовите [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) с параметром в **FALSE**. Необходимо вызвать метод `EnableStackedTabs` при создании страницы свойств.  
   

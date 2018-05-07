@@ -1,13 +1,10 @@
 ---
-title: "TN017: Уничтожение объектов окон | Документы Microsoft"
-ms.custom: 
+title: 'TN017: Уничтожение объектов окон | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.objects
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bba255403d31e7a1fa03febb0c760d20cdc81c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017. Уничтожение объектов окон
 Эта заметка содержит описание использования [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) метод. Используйте этот метод, если вы хотите сделать настроенные выделение `CWnd`-производных объектов. Эта заметка также объясняется, почему следует использовать [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) уничтожить объект Windows на C++, а не `delete` оператор.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  Во-вторых, использование `delete` оператора с объектами Windows должна возникать редко. Ниже приведены некоторые случаи, когда с помощью `delete` является правильным выбором.  
   
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>Автоматическая очистка с CWnd::PostNcDestroy  
- Когда система уничтожает окно Windows, — это Windows сообщение отправлено последним в окно `WM_NCDESTROY`. Значение по умолчанию `CWnd` обработчик для сообщения является [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy`отключает `HWND` из C++ объекта и вызов виртуальной функции `PostNcDestroy`. Некоторые классы переопределяют данную функцию для удаления объекта C++.  
+ Когда система уничтожает окно Windows, — это Windows сообщение отправлено последним в окно `WM_NCDESTROY`. Значение по умолчанию `CWnd` обработчик для сообщения является [CWnd::OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy). `OnNcDestroy` отключает `HWND` из C++ объекта и вызов виртуальной функции `PostNcDestroy`. Некоторые классы переопределяют данную функцию для удаления объекта C++.  
   
  Реализация по умолчанию `CWnd::PostNcDestroy` не выполняет никаких действий, который подходит для объектов окна, которые распределены в кадре стека или внедрены в другие объекты. Это не подходит для объектов окна, предназначенные для выделения в куче без любых других объектов. Другими словами не подходит для объектов окна, которые не внедряются в остальных объектов C++.  
   

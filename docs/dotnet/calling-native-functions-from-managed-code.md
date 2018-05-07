@@ -1,13 +1,10 @@
 ---
-title: "Вызов неуправляемых функций из управляемого кода | Документы Microsoft"
-ms.custom: 
+title: Вызов неуправляемых функций из управляемого кода | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Вызов неуправляемых функций из управляемого кода
 Общеязыковая среда выполнения предоставляет службы вызова платформы или PInvoke, позволяющая управляемому коду вызывать функции в стиле языка C в собственные динамической библиотеки (DLL). Такой же маршалинг данных применяется и для COM-взаимодействие со средой выполнения и для механизма «Это просто работает» или IJW.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Подробный обзор вызова неуправляемого кода](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- Примеры в этом разделе, иллюстрируют способ `PInvoke` может использоваться. `PInvoke`можно упростить маршалинг подготовленных данных, поскольку при этом предоставляется информация о маршалинге декларативно в атрибутах вместо написания кода процедуры маршалинга.  
+ Примеры в этом разделе, иллюстрируют способ `PInvoke` может использоваться. `PInvoke` можно упростить маршалинг подготовленных данных, поскольку при этом предоставляется информация о маршалинге декларативно в атрибутах вместо написания кода процедуры маршалинга.  
   
 > [!NOTE]
 >  Библиотека маршалинга предоставляет альтернативный способ маршалинга данных между машинным и управляемым средами оптимальным образом. В разделе [Обзор из маршалировании в C++](../dotnet/overview-of-marshaling-in-cpp.md) Дополнительные сведения о библиотеке маршалинга. Библиотека маршалинга используется только для данных, а не для функций.  

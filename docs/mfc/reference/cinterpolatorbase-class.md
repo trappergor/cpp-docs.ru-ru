@@ -1,12 +1,9 @@
 ---
-title: "Класс CInterpolatorBase | Документы Microsoft"
-ms.custom: 
+title: Класс CInterpolatorBase | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInterpolatorBase
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cea720391127f52d441de8f02c53756790d4b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinterpolatorbase-class"></a>Класс CInterpolatorBase
 Реализует обратный вызов, используемый API анимации, когда требуется рассчитать новое значение переменной анимации.  
@@ -60,13 +55,13 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Создает `CInterpolatorBase` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CInterpolatorBase::CreateInstance](#createinstance)|Создает экземпляр `CInterpolatorBase` и содержит указатель на пользовательские интерполятора, который будет обработки событий.|  
 |[CInterpolatorBase::GetDependencies](#getdependencies)|Возвращает интерполятора зависимости. (Переопределяет `CUIAnimationInterpolatorBase::GetDependencies`.)|  
@@ -91,14 +86,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
  Создает объект CInterpolatorBase.  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance  
  Создает экземпляр CInterpolatorBase и сохраняет указатель на пользовательские интерполятора, который будет обработки событий.  
   
 ```  
@@ -116,7 +111,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
-##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies  
  Возвращает интерполятора зависимости.  
   
 ```  
@@ -139,7 +134,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода GetDependencies.  
   
-##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
  Возвращает продолжительность интерполятор.  
   
 ```  
@@ -153,7 +148,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода GetDuration.  
   
-##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
  Возвращает конечное значение, к которому ведет интерполятора.  
   
 ```  
@@ -167,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода GetFinalValue.  
   
-##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
  Выполняет интерполяцию значение с указанным смещением  
   
 ```  
@@ -186,7 +181,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода InterpolateValue.  
   
-##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
  Выполняет интерполяцию скорости, начиная с указанной позиции  
   
 ```  
@@ -205,7 +200,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода InterpolateVelocity.  
   
-##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
  Содержит указатель на пользовательские интерполятора, который будет обработки событий.  
   
 ```  
@@ -216,7 +211,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  Указатель на пользовательские интерполятор.  
   
-##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
  Задает продолжительность интерполятора  
   
 ```  
@@ -230,7 +225,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. Он возвращает E_FAIL, если CCustomInterpolator не заданы, или пользовательские реализации возвращает значение FALSE из метода SetDuration.  
   
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
  Задает начальное значение интерполятора и скорости.  
   
 ```  

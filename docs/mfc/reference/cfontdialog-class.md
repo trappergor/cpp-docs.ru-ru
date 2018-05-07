@@ -1,12 +1,9 @@
 ---
-title: "Класс CFontDialog | Документы Microsoft"
-ms.custom: 
+title: Класс CFontDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontDialog
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9420ce86785595bb2d172ef32afe89c2845374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontdialog-class"></a>Класс CFontDialog
 Позволяет включить диалоговое окно выбора шрифта в приложение.  
@@ -68,13 +63,13 @@ class CFontDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFontDialog::CFontDialog](#cfontdialog)|Создает объект `CFontDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFontDialog::DoModal](#domodal)|Отображает диалоговое окно и пользователь может сделать выбор.|  
 |[CFontDialog::GetCharFormat](#getcharformat)|Возвращает значение, форматирование символов выбранного шрифта.|  
@@ -91,7 +86,7 @@ class CFontDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFontDialog::m_cf](#m_cf)|Структура, используемая для настройки `CFontDialog` объекта.|  
   
@@ -102,13 +97,13 @@ class CFontDialog : public CCommonDialog
   
  Один раз `CFontDialog` объект был создан, можно использовать `m_cf` структуры для инициализации значения или состояния элементов управления в диалоговом окне. [M_cf](#m_cf) структуры имеет тип [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832). Дополнительные сведения о структуре см. в Windows SDK.  
   
- После инициализации объекта диалогового окна элементы управления, вызовите метод `DoModal` функции-члена для отображения диалогового окна и разрешить пользователю выбрать шрифт. `DoModal`Возвращает, является ли пользователь выбрал ОК ( **IDOK**) или "Отмена" ( **IDCANCEL**) кнопки.  
+ После инициализации объекта диалогового окна элементы управления, вызовите метод `DoModal` функции-члена для отображения диалогового окна и разрешить пользователю выбрать шрифт. `DoModal` Возвращает, является ли пользователь выбрал ОК ( **IDOK**) или "Отмена" ( **IDCANCEL**) кнопки.  
   
  Если `DoModal` возвращает **IDOK**, можно использовать один из `CFontDialog`в функции-члены для извлечения информации, введенное пользователем.  
   
  Можно использовать окна [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функции, чтобы определить, произошла ли ошибка во время инициализации диалогового окна и Дополнительные сведения об ошибке. Дополнительные сведения о данной функции см. в Windows SDK.  
   
- `CFontDialog`использует COMMDLG. Файл DLL, который поставляется вместе с Windows версии 3.1 и более поздней версии.  
+ `CFontDialog` использует COMMDLG. Файл DLL, который поставляется вместе с Windows версии 3.1 и более поздней версии.  
   
  Чтобы настроить диалоговое окно, создайте класс, производный от `CFontDialog`, укажите шаблон настраиваемое диалоговое окно и добавить схему сообщений для обработки сообщений уведомлений из расширенных элементов управления. Любой необработанных сообщений должны передаваться в базовом классе.  
   
@@ -132,7 +127,7 @@ class CFontDialog : public CCommonDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
  Создает объект `CFontDialog`.  
   
 ```  
@@ -150,7 +145,7 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- l`plfInitial`  
+ L `plfInitial`  
  Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура данных, которая позволяет настроить некоторые характеристики шрифта.  
   
  `charFormat`  
@@ -174,7 +169,7 @@ CFontDialog(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна Windows общих шрифта и разрешить пользователю выбрать шрифт.  
   
 ```  
@@ -194,7 +189,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Пример  
   См. в примерах для [CFontDialog::CFontDialog](#cfontdialog) и [CFontDialog::GetColor](#getcolor).  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
  Возвращает значение, форматирование символов выбранного шрифта.  
   
 ```  
@@ -205,7 +200,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  Объект [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую сведения о форматировании символов выбранного шрифта.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
  Эта функция вызывается для получения цвет выбранного шрифта.  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
  Эта функция вызывается для присвоения характеристик текущего выбранного шрифта членам [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
 ```  
@@ -237,7 +232,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
  Эта функция вызывается для получения имя шрифта выбранного шрифта.  
   
 ```  
@@ -250,7 +245,7 @@ CString GetFaceName() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
  Эта функция вызывается для определения размера выбранного шрифта.  
   
 ```  
@@ -263,7 +258,7 @@ int GetSize() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
  Эта функция вызывается для получения имени стиля выбранного шрифта.  
   
 ```  
@@ -276,7 +271,7 @@ CString GetStyleName() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
  Эта функция вызывается для получения выбранного шрифта.  
   
 ```  
@@ -292,7 +287,7 @@ int GetWeight() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
  Вызывайте эту функцию, чтобы определить, является ли выбранный шрифт полужирным.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL IsBold() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
  Вызывайте эту функцию, чтобы определить, является ли шрифт курсивом.  
   
 ```  
@@ -318,7 +313,7 @@ BOOL IsItalic() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
  Эта функция вызывается для определения, если отображается выбранный шрифт зачеркивание.  
   
 ```  
@@ -331,7 +326,7 @@ BOOL IsStrikeOut() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
  Эта функция вызывается для определения, если выбранный шрифт подчеркивание.  
   
 ```  
@@ -344,7 +339,7 @@ BOOL IsUnderline() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
  Структуры, члены которого хранения характеристики объекта диалогового окна.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Типы проектов Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Типы проектов Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 10/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a837aa04b0e0c2b8d3d9f5cfd48181a9ea23b346
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-project-types"></a>Типы проектов Visual C++
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="windows-desktop"></a>Windows Desktop
 
-|Шаблон проекта|Описание:|  
+|Шаблон проекта|Описание|  
 |----------------------|-----------------------------| 
 |[Консольное приложение Windows](../windows/creating-a-console-application.md)|Проект по созданию консольного приложения Windows.|
 |[Классическое приложение Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Проект по созданию приложения Windows, рабочий стол (Win32).|
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="general"></a>Общие
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |Пустой проект|Пустой проект по созданию приложения, библиотеки или DLL. Любой код или ресурсы, необходимые, необходимо добавить.|
 |[Проект makefile](../ide/creating-a-makefile-project.md)|Проект для использования внешней системы сборки.|
@@ -64,13 +59,13 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="atl"></a>ATL
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |[Проект ATL](../atl/reference/creating-an-atl-project.md)|Проект, использующий библиотеку шаблонных классов.|
 
 ### <a name="test"></a>Проверка
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |[Проект машинного модульного теста](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Проект, содержащий модульные тесты собственного C++.|
 
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 
 Если добавить поддержку MFC и ATL компонент для установки Visual Studio добавляются эти шаблоны проектов Visual Studio.
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |[Приложения MFC](../mfc/reference/creating-an-mfc-application.md)|Проект по созданию приложения, использующего библиотеку Microsoft Foundation Class (MFC).|
 |[Элемент управления ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Проект для создания элемента управления ActiveX, использующий библиотеку MFC.|
@@ -90,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 
 Обзор универсальных приложений Windows в C++ см. в разделе [универсальных приложений Windows (C++)](../windows/universal-windows-apps-cpp.md).
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |Пустое приложение|Проект для одностраничного приложения универсальной платформы Windows (UWP), который не содержит предопределенные элементы управления и макет.|
 |Приложение DirectX 11|Проект для приложения универсальной платформы Windows, в котором используется DirectX 11.|

@@ -1,13 +1,10 @@
 ---
-title: "Требования к драйверам ODBC динамических подмножеств данных | Документы Microsoft"
-ms.custom: 
+title: Требования к драйверам ODBC динамических подмножеств данных | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c444cd8e8d13cca7d891dba92e881b8ca167bbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9fad26440cea2c8ec2efd7d07dacb83547252e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>Требования динамических подмножеств данных к драйверу ODBC
 В классы баз данных MFC ODBC динамические подмножества данных, наборы записей с динамическими свойствами. они синхронизация с источником данных, определенным образом. Динамические подмножества данных MFC (но не наборы записей последовательного доступа) требуют соответствия уровня 2 API драйвера ODBC. Если драйвер для вашего [источника данных](../../data/odbc/data-source-odbc.md) соответствует API уровня 1 задано, можно по-прежнему использовать обновляемые и только для чтения моментальные снимки и наборы последовательного доступа, но не динамических подмножеств данных. Тем не менее драйвер уровня 1 может поддерживать динамические подмножества данных, если он поддерживает расширенную выборки и управляемые набором ключей курсоры.  

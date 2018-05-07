@@ -1,13 +1,10 @@
 ---
-title: "Как: доступ к символам объекта System::String | Документы Microsoft"
-ms.custom: 
+title: 'Как: доступ к символам объекта System::String | Документы Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Практическое руководство. Доступ к символам объекта System::String
 Можно получить доступ к символов <xref:System.String> объекта для высокопроизводительных вызовов неуправляемых функций, принимающих `wchar_t*` строки. Метод возвращает внутренний указатель на первый символ <xref:System.String> объекта. Этот указатель можно работать напрямую или закрепленные и передается в функцию, ожидающую обычных `wchar_t` строки.  
   
 ## <a name="example"></a>Пример  
- `PtrToStringChars`Возвращает <xref:System.Char>, который является внутренним указателем (также известный как `byref`). Таким образом рекомендуется подвергаются сборке мусора. Не нужно закрепить этот указатель, только если необходимо передать его собственной функции.  
+ `PtrToStringChars` Возвращает <xref:System.Char>, который является внутренним указателем (также известный как `byref`). Таким образом рекомендуется подвергаются сборке мусора. Не нужно закрепить этот указатель, только если необходимо передать его собственной функции.  
   
  Рассмотрим следующий код.  Закрепление не требуется, поскольку `ppchar` является внутренним указателем, и если сборщик мусора перемещение строки, он указывает, будет также обновление `ppchar`. Без [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md), код будет работать, и не иметь потенциальные снижение производительности, вызванные путем закрепления.  
   

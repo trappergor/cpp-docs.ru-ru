@@ -1,13 +1,10 @@
 ---
-title: "Основы программирования для Интернет MFC | Документы Microsoft"
-ms.custom: 
+title: Основы программирования для Интернет MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 Корпорация Майкрософт предоставляет множество API-интерфейсы для программирования клиентских и серверных приложений. Для использования в Интернете, записываются много новых приложений и технологии, возможности браузера и изменение параметров безопасности, будут записаны новые типы приложений. Браузеры запуска на клиентских компьютерах, предоставление доступа к Интернет и отображения HTML-страницы, содержащие текст, графики, элементы управления ActiveX и документы. Серверы предоставляют FTP, HTTP и gopher службы и запустите серверные расширения приложения с помощью CGI. Пользовательские приложения можно получить сведения и предоставления данных в Интернете.  
@@ -82,14 +77,14 @@ ms.lasthandoff: 01/03/2018
   
 -   [Поддержка элементов управления DHTML в ATL](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a>Веб-сайтов для получения дополнительной информации  
+##  <a name="_core_web_sites_for_more_information"></a> Веб-сайтов для получения дополнительной информации  
  Дополнительные сведения о технологии Microsoft Internet см. в разделе [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) веб-сайта. (Ссылки могут изменяться без предварительного уведомления).  
   
  Этот веб-сайт для разработчиков, содержит сведения об использовании средства разработки Майкрософт и технологий и главные темы о прошедших или предстоящих конференций. На этой странице можно перейти на многие узлы связанные разработчика, включая .NET и центры разработчиков XML. Можно также загрузить бета-версии SDK и образцы.  
   
  [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других веб-технологий.  
   
-##  <a name="_core_more_internet_help"></a>Дополнительную информацию для Интернета  
+##  <a name="_core_more_internet_help"></a> Дополнительную информацию для Интернета  
  Раздел OLE пакета Windows SDK содержит дополнительные сведения о программировании OLE. Эти сведения предоставляют подробные сведения об использовании функций Win32 WinInet напрямую, а не через классы MFC. Он также содержит общие сведения о технологии Интернета.  
   
 ## <a name="see-also"></a>См. также  

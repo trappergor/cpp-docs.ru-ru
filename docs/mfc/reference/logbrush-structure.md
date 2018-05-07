@@ -1,13 +1,10 @@
 ---
-title: "Структура LOGBRUSH | Документы Microsoft"
-ms.custom: 
+title: Структура LOGBRUSH | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>Структура LOGBRUSH
 `LOGBRUSH` Структура определяет стиль, цвет и шаблон физического кисти. Он используется Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) и [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) функции.  
@@ -68,17 +63,17 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  Задает стиль штриховки. Значение зависит от стиля кисти, описанного в `lbStyle`. Если `lbStyle` — **BS_DIBPATTERN**, **lbHatch** член содержит дескриптор упакованный DIB. Если `lbStyle` — **BS_DIBPATTERNPT**, **lbHatch** член содержит указатель на упакованный DIB. Если `lbStyle` — **BS_HATCHED**, **lbHatch** задает ориентацию линии, используемые для создания штриховки. Он может принимать одно из следующих значений:  
   
-- `HS_BDIAGONAL`45 градусов штриховку вверх, слева направо  
+- `HS_BDIAGONAL` 45 градусов штриховку вверх, слева направо  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки.  
+- `HS_CROSS` Горизонтальные и вертикальные штриховки.  
   
-- `HS_DIAGCROSS`штриховки 45 градусов  
+- `HS_DIAGCROSS` штриховки 45 градусов  
   
-- `HS_FDIAGONAL`45 градусов штриховку вниз, влево и вправо  
+- `HS_FDIAGONAL` 45 градусов штриховку вниз, влево и вправо  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Горизонтальная штриховка  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Вертикальная штриховка  
   
  Если `lbStyle` — **BS_PATTERN**, **lbHatch** — это дескриптор для точечного рисунка, который определяет шаблон. Если `lbStyle` — **BS_SOLID** или **BS_HOLLOW**, **lbHatch** учитывается.  
   

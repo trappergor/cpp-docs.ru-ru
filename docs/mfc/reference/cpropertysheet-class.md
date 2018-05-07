@@ -1,12 +1,9 @@
 ---
-title: "CPropertySheet-класс | Документы Microsoft"
-ms.custom: 
+title: CPropertySheet-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropertySheet
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52c5d167390826578c4e3a2380c885bf1d507d19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet-класс
 Представляет страницы свойств, также известные как диалоговые окна вкладки.  
@@ -86,13 +81,13 @@ class CPropertySheet : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Создает объект `CPropertySheet`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|  
 |[CPropertySheet::Construct](#construct)|Создает объект `CPropertySheet`.|  
@@ -118,18 +113,18 @@ class CPropertySheet : public CWnd
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) структуры. Предоставляет доступ к параметрам основных свойств листа.|  
   
 ## <a name="remarks"></a>Примечания  
  Страница свойств состоит из `CPropertySheet` объекта и один или несколько [CPropertyPage](../../mfc/reference/cpropertypage-class.md) объектов. Платформа отображает страницу свойств в окне с набором вкладку индексов и область, которая содержит текущую страницу. Пользователь переходит на определенную страницу, используя соответствующую вкладку.  
   
- `CPropertySheet`обеспечивает поддержку развернутом [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) структура введена в [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] и Windows NT 2000. Эта структура содержит дополнительные флаги и члены, которые поддерживают использование «водяного знака» фоновый рисунок.  
+ `CPropertySheet` обеспечивает поддержку развернутом [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546) структура введена в [!INCLUDE[Win98](../../mfc/reference/includes/win98_md.md)] и Windows NT 2000. Эта структура содержит дополнительные флаги и члены, которые поддерживают использование «водяного знака» фоновый рисунок.  
   
  Для отображения этих новых образов автоматически в ваш объект вкладки свойств, передайте допустимые значения для точечного рисунка и палитру изображений в вызове [CPropertySheet::Construct](#construct) или [CPropertySheet::CPropertySheet](#cpropertysheet).  
   
- Несмотря на то что `CPropertySheet` не является производным от [CDialog](../../mfc/reference/cdialog-class.md), управление `CPropertySheet` объект аналогичен управление `CDialog` объекта. Например, для создания вкладки свойств требуется создание двух частей: вызов конструктора, а затем вызвать [DoModal](#domodal) для модальную страницу свойств или [создать](#create) для немодальный лист свойств. `CPropertySheet`Существует два типа конструкторов: [CPropertySheet::Construct](#construct) и [CPropertySheet::CPropertySheet](#cpropertysheet).  
+ Несмотря на то что `CPropertySheet` не является производным от [CDialog](../../mfc/reference/cdialog-class.md), управление `CPropertySheet` объект аналогичен управление `CDialog` объекта. Например, для создания вкладки свойств требуется создание двух частей: вызов конструктора, а затем вызвать [DoModal](#domodal) для модальную страницу свойств или [создать](#create) для немодальный лист свойств. `CPropertySheet` Существует два типа конструкторов: [CPropertySheet::Construct](#construct) и [CPropertySheet::CPropertySheet](#cpropertysheet).  
   
  При построении `CPropertySheet` объект, некоторые [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) может привести к возникновению исключения первого шанса. Это результаты из системы, попытка изменить стиль свойств перед созданием листа. Чтобы избежать этого исключения, убедитесь, что при создании заданы следующие стили вашего `CPropertySheet`:  
   
@@ -171,7 +166,7 @@ class CPropertySheet : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="addpage"></a>CPropertySheet::AddPage  
+##  <a name="addpage"></a>  CPropertySheet::AddPage  
  Добавляет предоставленный страницы с вкладкой «справа» в окне свойств.  
   
 ```  
@@ -185,7 +180,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="remarks"></a>Примечания  
  Добавление страниц свойств в порядке слева направо, который будет отображаться.  
   
- `AddPage`Добавляет [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) объект `CPropertySheet` объект в список страниц, но фактически не создает окно страницы. Платформа откладывает Создание окна для страницы, пока пользователь выбирает эту страницу.  
+ `AddPage` Добавляет [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) объект `CPropertySheet` объект в список страниц, но фактически не создает окно страницы. Платформа откладывает Создание окна для страницы, пока пользователь выбирает эту страницу.  
   
  При добавлении страницы свойств с помощью `AddPage`, `CPropertySheet` является родительским для `CPropertyPage`. Чтобы получить доступ к странице свойств на странице свойств, вызовите [CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).  
   
@@ -196,7 +191,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
-##  <a name="construct"></a>CPropertySheet::Construct  
+##  <a name="construct"></a>  CPropertySheet::Construct  
  Создает объект `CPropertySheet`.  
   
 ```  
@@ -264,7 +259,7 @@ void Construct(
   
  [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
   
-##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
+##  <a name="cpropertysheet"></a>  CPropertySheet::CPropertySheet  
  Создает объект `CPropertySheet`.  
   
 ```  
@@ -333,7 +328,7 @@ CPropertySheet(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
-##  <a name="create"></a>CPropertySheet::Create  
+##  <a name="create"></a>  CPropertySheet::Create  
  Отображает немодальный лист свойств.  
   
 ```  
@@ -358,7 +353,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ### <a name="remarks"></a>Примечания  
  Вызов **создать** могут находиться внутри конструктора или его можно вызывать после вызова конструктора.  
   
- Стиль по умолчанию, выраженное путем передачи -1, поскольку `dwStyle`, на самом деле **WS_SYSMENU &#124;** `WS_POPUP` **&#124; WS_CAPTION &#124; DS_MODALFRAME &#124; DS_CONTEXTHELP &#124; WS_VISIBLE**. Значение по умолчанию расширенный стиль окна, выраженное путем передачи 0 как `dwExStyle`, на самом деле **WS_EX_DLGMODALFRAME**.  
+ Стиль по умолчанию, выраженное путем передачи -1, поскольку `dwStyle`, на самом деле **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ ОТОБРАЖАЕТСЯ**. Значение по умолчанию расширенный стиль окна, выраженное путем передачи 0 как `dwExStyle`, на самом деле **WS_EX_DLGMODALFRAME**.  
   
  **Создать** функция-член возвращает сразу после создания страницы свойств. Чтобы окончательно удалить окно свойств, вызовите [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).  
   
@@ -371,7 +366,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
   
  [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
   
-##  <a name="domodal"></a>CPropertySheet::DoModal  
+##  <a name="domodal"></a>  CPropertySheet::DoModal  
  Отображает модальную страницу свойств.  
   
 ```  
@@ -379,7 +374,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `IDOK`или `IDCANCEL` Если функция была успешно; в противном случае значение 0 или -1. Если окно свойств было установлено как мастер (в разделе [SetWizardMode](#setwizardmode)), `DoModal` возвращает либо `ID_WIZFINISH` или `IDCANCEL`.  
+ `IDOK` или `IDCANCEL` Если функция была успешно; в противном случае значение 0 или -1. Если окно свойств было установлено как мастер (в разделе [SetWizardMode](#setwizardmode)), `DoModal` возвращает либо `ID_WIZFINISH` или `IDCANCEL`.  
   
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение соответствует идентификатору элемента управления, закрыто окно свойств. После возврата этой функции windows, соответствующее окно свойств и все страницы будут уничтожены. Сами объекты по-прежнему будет существовать. Как правило, будут получены данные от [CPropertyPage](../../mfc/reference/cpropertypage-class.md) объектов после `DoModal` возвращает `IDOK`.  
@@ -414,7 +409,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertySheet::AddPage](#addpage).  
   
-##  <a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs  
+##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs  
  Указывает, следует ли стека рядов вкладок в окне свойств.  
   
 ```  
@@ -433,7 +428,7 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
-##  <a name="enddialog"></a>CPropertySheet::EndDialog  
+##  <a name="enddialog"></a>  CPropertySheet::EndDialog  
  Завершает окно свойств.  
   
 ```  
@@ -452,7 +447,7 @@ void EndDialog(int nEndID);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertySheet::PressButton](#pressbutton).  
   
-##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
+##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex  
  Возвращает индекс активной страницы окно свойств и затем использует возвращенный номер индекса в качестве параметра для `GetPage`.  
   
 ```  
@@ -465,7 +460,7 @@ int GetActiveIndex() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="getactivepage"></a>CPropertySheet::GetActivePage  
+##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage  
  Извлекает окно свойств активной странице.  
   
 ```  
@@ -481,7 +476,7 @@ CPropertyPage* GetActivePage() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
-##  <a name="getpage"></a>CPropertySheet::GetPage  
+##  <a name="getpage"></a>  CPropertySheet::GetPage  
  Возвращает указатель на указанную страницу в данной вкладкой свойств.  
   
 ```  
@@ -498,7 +493,7 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="getpagecount"></a>CPropertySheet::GetPageCount  
+##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount  
  Определяет число страниц в настоящее время в окне свойств.  
   
 ```  
@@ -511,7 +506,7 @@ int GetPageCount() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).  
   
-##  <a name="getpageindex"></a>CPropertySheet::GetPageIndex  
+##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex  
  Извлекает индекс указанной страницы в окне свойств.  
   
 ```  
@@ -531,7 +526,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
+##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl  
  Извлекает указатель на набор вкладок, сделать нечто, относящееся к элементу управления вкладки (то есть, для использования этих интерфейсов API в [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).  
   
 ```  
@@ -547,7 +542,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
-##  <a name="m_psh"></a>CPropertySheet::m_psh  
+##  <a name="m_psh"></a>  CPropertySheet::m_psh  
  Структуры, члены которого хранения характеристики [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546).  
   
 ### <a name="remarks"></a>Примечания  
@@ -558,7 +553,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
-##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect  
  Преобразует единицы диалогового окна прямоугольника с экрана устройства.  
   
 ```  
@@ -576,7 +571,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect` Функция-член заменяет единицы диалогового окна в `lpRect` с экрана устройства (в пикселях), чтобы прямоугольник можно использовать для создания диалогового окна или разместить элемент управления в поле.  
   
-##  <a name="oninitdialog"></a>CPropertySheet::OnInitDialog  
+##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog  
  Переопределяет для ускорения инициализации листа свойств.  
   
 ```  
@@ -593,7 +588,7 @@ virtual BOOL OnInitDialog();
   
  Не обязательно записи схемы сообщений для этой функции-члена.  
   
-##  <a name="pressbutton"></a>CPropertySheet::PressButton  
+##  <a name="pressbutton"></a>  CPropertySheet::PressButton  
  Имитирует Выбор указанной кнопки в окне свойств.  
   
 ```  
@@ -626,7 +621,7 @@ void PressButton(int nButton);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
-##  <a name="removepage"></a>CPropertySheet::RemovePage  
+##  <a name="removepage"></a>  CPropertySheet::RemovePage  
  Удаляет страницу из страницы свойств, а также уничтожает соответствующее окно.  
   
 ```  
@@ -644,7 +639,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>Примечания  
  [CPropertyPage](../../mfc/reference/cpropertypage-class.md) сам объект не уничтожается, пока владелец `CPropertySheet` закрытия окна.  
   
-##  <a name="setactivepage"></a>CPropertySheet::SetActivePage  
+##  <a name="setactivepage"></a>  CPropertySheet::SetActivePage  
  Изменение активной странице.  
   
 ```  
@@ -668,7 +663,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPropertySheet::GetActivePage](#getactivepage).  
   
-##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText  
+##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText  
  Задает текст в команду "Готово".  
   
 ```  
@@ -685,7 +680,7 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="settitle"></a>CPropertySheet::SetTitle  
+##  <a name="settitle"></a>  CPropertySheet::SetTitle  
  Указывает заголовок страницы свойств (текст, отображаемый в строке заголовка окна фрейма).  
   
 ```  
@@ -707,7 +702,7 @@ void SetTitle(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
-##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
+##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons  
  Включает или отключает кнопку "Назад", "Next" или "Готово" в окне свойств мастера.  
   
 ```  
@@ -740,7 +735,7 @@ void SetWizardButtons(DWORD dwFlags);
   
  [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="setwizardmode"></a>CPropertySheet::SetWizardMode  
+##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode  
  Устанавливает в качестве мастер страницы свойств.  
   
 ```  
@@ -752,7 +747,7 @@ void SetWizardMode();
   
  Вызовите `SetWizardMode` перед вызовом [DoModal](#domodal). После вызова метода `SetWizardMode`, `DoModal` будет возвращать либо **ID_WIZFINISH** (если пользователь не закроет с помощью кнопки "Готово") или **IDCANCEL**.  
   
- `SetWizardMode`Устанавливает флаг PSH_WIZARD.  
+ `SetWizardMode` Устанавливает флаг PSH_WIZARD.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]  

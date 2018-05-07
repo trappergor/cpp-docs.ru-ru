@@ -1,29 +1,24 @@
 ---
-title: "Процедуры проверки данных стандартное диалоговое окно | Документы Microsoft"
-ms.custom: 
+title: Процедуры проверки данных стандартное диалоговое окно | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Стандартные программы проверки данных диалоговых окон
 В этом разделе перечислены процедуры проверки (DDV) данных стандартного диалогового окна, используемые для общих элементов управления диалоговых окон MFC.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  Вызовите `DDV_MaxChars` чтобы убедиться, что некоторые знаки в элементе управления связана с *значение* не превышает *nChars*.  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  Вызовите `DDV_MinMaxByte` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  Вызовите `DDV_MinMaxDateTime` чтобы убедиться, что значение даты и времени в элементе выбора даты и времени элемента управления ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) связанный с *refValue* попадает `refMinRange` и `refMaxRange`.  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  Вызовите `DDV_MinMaxDouble` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  Вызовите `DDV_MinMaxDWord` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  Вызовите `DDV_MinMaxFloat` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  Вызовите `DDV_MinMaxInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  Вызовите `DDV_MinMaxLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  Вызовите `DDV_MinMaxLongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  Вызовите `DDV_MinMaxMonth` чтобы убедиться, что значение даты и времени в месячном календаре элемента управления ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) связанный с *refValue* попадает `refMinRange` и `refMaxRange`.  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  Вызовите `DDV_MinMaxShort` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  Вызовите `DDV_MinMaxSlider` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  Вызовите `DDV_MinMaxUInt` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  Вызовите `DDV_MinMaxULongLong` чтобы убедиться, что значение в элементе управления, связанное с *значение* попадает `minVal` и `maxVal`.  
   
 ```   

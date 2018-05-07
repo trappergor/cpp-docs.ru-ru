@@ -1,10 +1,10 @@
 ---
-title: "Инструменты Visual C++ и функций в выпусках Visual Studio | Документы Microsoft"
-ms.custom: 
+title: Инструменты Visual C++ и функций в выпусках Visual Studio | Документы Microsoft
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,15 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bab6eda1c5c0d2d852d3a678f588f0539495001
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Инструменты Visual C++ и функций в выпусках Visual Studio
 
@@ -85,7 +83,7 @@ ms.lasthandoff: 03/05/2018
 |Консольное приложение Win32||X|X|X|
 |Проект Win32||X|X|X|
 
-## <a name="tools"></a>Инструменты
+## <a name="tools"></a>Сервис
 
 |Средство|Visual Studio Express для Windows|Visual Studio Express для Windows Desktop|Visual Studio Professional и Community|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
@@ -134,7 +132,7 @@ ms.lasthandoff: 03/05/2018
 |Конструктор Windows Forms||X|X|X|
 |Конструктор данных|||X|X|
 |Собственный редактор ресурсов (RC-файлы)|||X|X|
-|редакторы ресурсов|X|X|X|X|
+|Редакторы ресурсов|X|X|X|X|
 |Редактор моделей|X||X|X|
 |Конструктор шейдеров|X||X|X|
 
@@ -145,7 +143,7 @@ ms.lasthandoff: 03/05/2018
 |Конструктор данных|||X|X|
 |Объекты данных|||X|X|
 |Веб-службы|||X|X|
-|обозревателя серверов|||X|X|
+|Обозреватель серверов|||X|X|
 
 ## <a name="build-and-project-systems"></a>Системы сборки и проектов
 

@@ -1,13 +1,10 @@
 ---
-title: "Набор записей: Порядок выборки записей в наборе (ODBC) | Документы Microsoft"
-ms.custom: 
+title: 'Набор записей: Порядок выборки записей в наборе (ODBC) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Набор записей. Порядок выборки записей в наборе (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  Наборы записей для выбора записей из источника данных с помощью драйвера ODBC, драйвер отправки инструкций SQL. SQL зависят от порядка разработки и открытия класса набора записей.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>Варианты выбора записей  
+##  <a name="_core_your_options_in_selecting_records"></a> Варианты выбора записей  
  Ниже приведены варианты выбора записей.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>Как и когда влияет на набор записей  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 | Вызовите **Requery** для запроса последних значений в источнике данных | Укажите новые параметры фильтрации и сортировки. В разделе [набор записей: выполнение обновления наборов записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>Способ создания инструкций SQL в наборе записей  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> Способ создания инструкций SQL в наборе записей  
  При вызове объекта набора записей [откройте](../../mfc/reference/crecordset-class.md#open) функции-члена **откройте** создает инструкцию SQL, с помощью некоторые или все из следующих компонентов:  
   
 -   **LpszSQL** передан параметр **откройте**. В противном случае **NULL**, этот параметр задает пользовательскую строку SQL или входит в него. Платформа выполняет синтаксический анализ строки. Если строка SQL **ВЫБЕРИТЕ** инструкции или ODBC **ВЫЗОВИТЕ** инструкции, платформа используется в качестве инструкции SQL набора записей. Если строка начинается с «SELECT» или «{CALL», платформа используется для создания SQL **FROM** предложения.  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
  Сочетание этих способов можно использовать для открытия [таблиц](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) и для создания запросов на основе [соединения](../../data/odbc/recordset-performing-a-join-odbc.md) нескольких таблиц. После дополнительной настройки можно вызвать [предопределенные запросы](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (хранимые процедуры), выберите столбцы, не известна во время разработки таблицы и [привязки](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) их к полям набора записей или выполнять большей части прочих задачи доступа к данным. Не удается выполнить наборов записей задачи могут выполняться по-прежнему путем [вызов функций ODBC API](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) или непосредственного выполнения инструкций SQL с [помощью функции CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
-##  <a name="_core_customizing_the_selection"></a>Настройка выборки  
+##  <a name="_core_customizing_the_selection"></a> Настройка выборки  
  Помимо определения фильтра, порядок сортировки или параметры, можно выполнять следующие действия для настройки выбора набора записей:  
   
 -   Передача пользовательской строки SQL в **lpszSQL** при вызове [откройте](../../mfc/reference/crecordset-class.md#open) для набора записей. Что-либо передать **lpsqSQL** имеет приоритет над тем, какие [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) функция-член возвращает.  

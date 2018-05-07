@@ -1,12 +1,9 @@
 ---
-title: "Класс CDataPathProperty | Документы Microsoft"
-ms.custom: 
+title: Класс CDataPathProperty | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f258f5872a68931a40d21f7079e4089678baac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatapathproperty-class"></a>Класс CDataPathProperty
 Реализует свойство элемента управления OLE, которое можно загрузить асинхронно.  
@@ -50,17 +45,17 @@ ms.lasthandoff: 12/21/2017
 class CDataPathProperty : public CAsyncMonikerFile  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Создает объект `CDataPathProperty`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDataPathProperty::GetControl](#getcontrol)|Извлекает асинхронной управления OLE, связанного с `CDataPathProperty` объекта.|  
 |[CDataPathProperty::GetPath](#getpath)|Получает путь свойства.|  
@@ -96,7 +91,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxctl.h  
   
-##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty  
  Создает объект `CDataPathProperty`.  
   
 ```  
@@ -109,12 +104,12 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
  Указатель на объект элемента управления OLE следует связать с этим `CDataPathProperty` объекта.  
   
  `lpszPath`  
- Путь, который может быть абсолютным или относительным, используется для создания асинхронных моникер, ссылающийся на фактическое расположение абсолютный свойства. `CDataPathProperty`использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
+ Путь, который может быть абсолютным или относительным, используется для создания асинхронных моникер, ссылающийся на фактическое расположение абсолютный свойства. `CDataPathProperty` использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
   
 ### <a name="remarks"></a>Примечания  
  `COleControl` Объекта, на который указывает `pControl` используется **откройте** и получить производные классы. Если `pControl` — **NULL**, элемент управления, используемый с **откройте** следует задавать с `SetControl`. Если `lpszPath` — **NULL**, можно передать путь через **откройте** или установите его с `SetPath`.  
   
-##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  Вызовите эту функцию-член для извлечения `COleControl` объекта, связанного с `CDataPathProperty` объекта.  
   
 ```  
@@ -124,7 +119,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на элемент управления OLE, связанный с `CDataPathProperty` объекта. **Значение NULL** Если управления не связан.  
   
-##  <a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>  CDataPathProperty::GetPath  
  Вызовите эту функцию-член для получения пути, устанавливается, когда `CDataPathProperty` объект был создан или указанные в **откройте**, или указанный в предыдущем вызове `SetPath` функции-члена.  
   
 ```  
@@ -134,7 +129,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает путь к самому свойству. Может быть пустым, если путь не был указан.  
   
-##  <a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>  CDataPathProperty::Open  
  Вызовите эту функцию-член для инициирования загрузку асинхронного свойства связанного элемента управления.  
   
 ```  
@@ -164,7 +159,7 @@ virtual BOOL Open(CFileException* pError = NULL);
  Указатель на исключение файлов. В случае ошибки будет присвоено причину.  
   
  `lpszPath`  
- Путь, который может быть абсолютным или относительным, используется для создания асинхронных моникер, ссылающийся на фактическое расположение абсолютный свойства. `CDataPathProperty`использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
+ Путь, который может быть абсолютным или относительным, используется для создания асинхронных моникер, ссылающийся на фактическое расположение абсолютный свойства. `CDataPathProperty` использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -178,7 +173,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  Все перегрузки [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) также доступны из `CDataPathProperty`.  
   
-##  <a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>  CDataPathProperty::ResetData  
  Эта функция вызывается для получения `CAsyncMonikerFile::OnDataAvailable` известить контейнера изменились свойства элемента управления, что все сведения, которые были загружены асинхронно не используется.  
   
 ```  
@@ -188,7 +183,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>Примечания  
  Открытие должен быть перезапущен. Производные классы могут переопределить эту функцию для различные значения по умолчанию.  
   
-##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>  CDataPathProperty::SetControl  
  Вызовите эту функцию-член для связывания асинхронной элемента управления OLE с `CDataPathProperty` объекта.  
   
 ```  
@@ -199,7 +194,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  Указатель на асинхронных управления OLE, связываемое со свойством.  
   
-##  <a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>  CDataPathProperty::SetPath  
  Вызовите эту функцию-член для задания пути свойства.  
   
 ```  
@@ -208,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
   
 ### <a name="parameters"></a>Параметры  
  `lpszPath`  
- Путь, который может быть абсолютным или относительным к свойству, загружаемых в асинхронном режиме. `CDataPathProperty`использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
+ Путь, который может быть абсолютным или относительным к свойству, загружаемых в асинхронном режиме. `CDataPathProperty` использует URL-адреса, не имена файлов. Если вы хотите `CDataPathProperty` объекта для файла, добавить `file://` в путь.  
   
 ## <a name="see-also"></a>См. также  
  [Изображение образца MFC](../../visual-cpp-samples.md)   

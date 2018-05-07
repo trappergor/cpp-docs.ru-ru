@@ -1,13 +1,10 @@
 ---
-title: "Использование стандартных элементов управления в диалоговом окне | Документы Microsoft"
-ms.custom: 
+title: Использование стандартных элементов управления в диалоговом окне | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a9c77e6a8e5721bca6e3741b4b337cfdb42393
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c848cfa74363d871720f9ca269b114687aad9ecf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Использование стандартных элементов управления в диалоговом окне
 Общие элементы управления Windows можно использовать в [диалоговым окнам](../mfc/dialog-boxes.md), образуют представления записей и любое другое окно, на основе шаблона диалогового окна. Для форм, а также будет работать следующую процедуру с незначительными изменениями.  

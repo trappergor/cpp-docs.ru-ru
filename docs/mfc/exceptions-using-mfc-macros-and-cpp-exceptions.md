@@ -1,13 +1,10 @@
 ---
-title: "Исключения: Использование макросов MFC и исключений C++ | Документы Microsoft"
-ms.custom: 
+title: 'Исключения: Использование макросов MFC и исключений C++ | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6597f43deee73addff8e8f2045a38d7b1109fc0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Исключения. Использование макросов MFC и исключений C++
 В этой статье рассматриваются рекомендации по написанию кода, использующего обработку исключений макросов MFC и ключевые слова обработки исключений C++.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Блоки try внутри блоки catch](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a>Смешивание ключевые слова исключений и макросы  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> Смешивание ключевые слова исключений и макросы  
  Можно комбинировать макросы исключений MFC и ключевые слова исключений C++ в одной программе. Но нельзя смешивать макросов MFC с ключевые слова исключений C++ в одном блоке, поскольку макросы удаление объектов исключения автоматически при выходе из области видимости, а нет кода с помощью ключевых слов обработки исключений. Дополнительные сведения см. в статье [исключений: исключения перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
  Основное различие между макросами и ключевые слова является, что макросы «автоматически» удалить перехваченное исключение, когда исключение выходит из области. Код с помощью ключевых слов не; исключения в блоке catch, необходимо явно удалить. Смешение макросов и ключевые слова исключений C++ можно вызвать утечку памяти, когда объект исключения не удаляется или повреждение в куче при удалении исключения дважды.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a>Повторите блоки внутри блоков Catch  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Повторите блоки внутри блоков Catch  
  Не удается заново создать исключение, текущий изнутри **повторите** блок, находящийся внутри **ПЕРЕХВАТЫВАТЬ** блока. Следующий пример является недопустимым:  
   
  [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  

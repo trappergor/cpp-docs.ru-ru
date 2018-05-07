@@ -1,12 +1,9 @@
 ---
-title: "CPen-класс | Документы Microsoft"
-ms.custom: 
+title: CPen-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen-класс
 Инкапсулирует перо интерфейса графических устройств Windows (GDI).  
@@ -52,13 +47,13 @@ class CPen : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPen::CPen](#cpen)|Создает объект `CPen`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Создает логический финальных или геометрические перо с указанный стиль, ширину и атрибуты кисти и прикрепляет его к `CPen` объекта.|  
 |[CPen::CreatePenIndirect](#createpenindirect)|Создает перо с стиль, ширину и цвет, заданный [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) структуры и прикрепляет его к `CPen` объекта.|  
@@ -68,7 +63,7 @@ class CPen : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPen::operator HPEN](#operator_hpen)|Возвращает дескриптор Windows, присоединенного к `CPen` объекта.|  
   
@@ -85,7 +80,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  Создает объект `CPen`.  
   
 ```  
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  Создает логический финальных или геометрические перо с указанный стиль, ширину и атрибуты кисти и прикрепляет его к `CPen` объекта.  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  Инициализирует перо, имеет стиль, ширину и цвет, заданный в структуре, на который указывает `lpLogPen`.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  Возвращает указатель на `CPen` объект, заданный дескриптор для объекта pen Windows GDI.  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>Параметры  
  *hPen*  
- `HPEN`Дескриптор Windows GDI пера.  
+ `HPEN` Дескриптор Windows GDI пера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на `CPen` объекта, если успешно; в противном случае **NULL**.  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  Возвращает **EXTLOGPEN** базовой структуры.  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  Возвращает `LOGPEN` базовой структуры.  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
  Возвращает дескриптор Windows GDI вложенного `CPen` объекта.  
   
 ```  

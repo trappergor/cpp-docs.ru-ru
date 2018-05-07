@@ -1,13 +1,10 @@
 ---
-title: "Размещение Windows форме пользовательского элемента управления в диалоговом окне MFC | Документы Microsoft"
-ms.custom: 
+title: Размещение Windows форме пользовательского элемента управления в диалоговом окне MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da8e8a54947b329fe36eea5c80bdc13ba5cdfa74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291c0856e9d305e0b2b31c6bc233005b111592a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
 Размещает элемент управления Windows Forms как особый тип элемента управления ActiveX MFC и взаимодействует с элементом управления, используя интерфейсы ActiveX и свойства и методы <xref:System.Windows.Forms.Control> класса. Мы рекомендуем использовать .NET Framework свойства и методы для работы в элементе управления.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
  [Практическое руководство. Получение событий Windows Forms из собственных классов C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
   
 ## <a name="reference"></a>Ссылка  
- [Класс CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [Класса CDialog](../mfc/reference/cdialog-class.md) &#124; [Класс CWnd](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>  
+ [Класс CWinFormsControl](../mfc/reference/cwinformscontrol-class.md) &#124; [класса CDialog](../mfc/reference/cdialog-class.md) &#124; [класс CWnd](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>  
   
 ## <a name="see-also"></a>См. также  
  [Использование пользовательского элемента управления формы Windows в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

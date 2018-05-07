@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCAutoHideButton | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCAutoHideButton | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f40b7ab03e79d38d36a1b25a4cd973a5077468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebutton-class"></a>Класс CMFCAutoHideButton
 Кнопка, отображающая или скрывающая [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) , настроенный на скрытие.  
@@ -81,11 +76,11 @@ ms.lasthandoff: 12/21/2017
 class CMFCAutoHideButton : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||  
 |[CMFCAutoHideButton::Create](#create)|Создает и инициализирует кнопку автоматического скрытия.|  
@@ -128,7 +123,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxautohidebutton.h  
   
-##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop  
 
   
 ```  
@@ -137,7 +132,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>  CMFCAutoHideButton::Create  
  Создает и инициализирует кнопку автоматического скрытия.  
   
 ```  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  Извлекает выравнивание кнопки автоматического скрытия.  
   
 ```  
@@ -194,7 +189,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  Возвращает [CDockablePane](../../mfc/reference/cdockablepane-class.md) объект, связанный с кнопкой автоматического скрытия.  
   
 ```  
@@ -207,7 +202,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>Примечания  
  Чтобы связать кнопка автоматического скрытия с `CDockablePane`, передайте `CDockablePane` как параметр [CMFCAutoHideButton::Create](#create) метод.  
   
-##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
   
 ```  
@@ -218,7 +213,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect  
 
   
 ```  
@@ -229,7 +224,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize  
  Определяет размер кнопки автоматического скрытия.  
   
 ```  
@@ -242,7 +237,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>Примечания  
  Вычисляемый размер включает размер границы кнопки автоматического скрытия.  
   
-##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize  
  Возвращает размер текстовой метки для кнопки автоматического скрытия.  
   
 ```  
@@ -252,7 +247,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) , содержащий размер текста для кнопки автоматического скрытия.  
   
-##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  Указывает, активна ли кнопка автоматического скрытия.  
   
 ```  
@@ -260,12 +255,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопка автоматического скрытия активна; `FALSE` в противном случае.  
+ `TRUE` Если кнопка автоматического скрытия активна; `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
  Кнопка автоматического скрытия активен, когда связанный [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) окна.  
   
-##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  Определяет, является кнопка автоматического скрытия горизонтальной или вертикальной.  
   
 ```  
@@ -278,7 +273,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>Примечания  
  Платформа задает ориентацию [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объекта при его создании.  Ориентацию можно контролировать с помощью `dwAlignment` параметр в [CMFCAutoHideButton::Create](#create) метод.  
   
-##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
   
 ```  
@@ -289,7 +284,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
  Указывает, отображается ли кнопка автоматического скрытия.  
   
 ```  
@@ -297,9 +292,9 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если отображается кнопка; `FALSE` в противном случае.  
+ `TRUE` Если отображается кнопка; `FALSE` в противном случае.  
   
-##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  Этот метод вызывается платформой при рисовании кнопки автоматического скрытия.  
   
 ```  
@@ -313,7 +308,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить внешний вид кнопок автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
   
-##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  Этот метод вызывается платформой при рисовании границ кнопки автоматического скрытия.  
   
 ```  
@@ -336,7 +331,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить границы каждая кнопка автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
   
-##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  Этот метод вызывается платформой при заливке фона кнопки автоматического скрытия.  
   
 ```  
@@ -355,7 +350,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Примечания  
  Если вы хотите настроить фон для кнопки автоматического скрытия в приложении, создайте новый класс, производный от `CMFCAutoHideButton`. В производном классе переопределите этот метод.  
   
-##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
  Показывает или скрывает связанный [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).  
   
 ```  
@@ -366,7 +361,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  Логическое значение, указывающее, отображает ли этот метод прикрепленное `CDockablePane`.  
   
-##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  Показывает или скрывает кнопку автоматического скрытия.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  Логическое значение, указывающее, следует ли отображать кнопки автоматического скрытия.  
   
-##  <a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>  CMFCAutoHideButton::Move  
 
   
 ```  
@@ -389,7 +384,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane  
 
   
 ```  
@@ -401,7 +396,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode  
  Отключение режима автоматического скрытия.  
   
 ```  
@@ -414,7 +409,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
  Выделяет кнопки автоматического скрытия.  
   
 ```  
@@ -423,11 +418,11 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>Параметры  
  `bHighlight`  
- Указывает новое Автоскрытие состояние кнопки. `TRUE`Указывает, выделяется кнопки, `FALSE` указывает кнопки не выделяется.  
+ Указывает новое Автоскрытие состояние кнопки. `TRUE` Указывает, выделяется кнопки, `FALSE` указывает кнопки не выделяется.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
  Возвращает состояние выделения кнопки автоматического скрытия.  
   
 ```  

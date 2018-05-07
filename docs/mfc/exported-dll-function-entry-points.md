@@ -1,13 +1,10 @@
 ---
-title: "Экспортировать точки входа DLL функция | Документы Microsoft"
-ms.custom: 
+title: Экспортировать точки входа DLL функция | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exported-dll-function-entry-points"></a>Точки входа экспортированных функций DLL
 Экспортированных функций DLL-библиотеки, используйте [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) макрос для поддержания соответствующего глобального состояния при переходе с DLL модуль DLL вызывающему приложению.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Проблемы с ресурсами в библиотеках DLL будет возникать, если `AFX_MANAGE_STATE` макрос не используется. По умолчанию MFC использует дескриптор ресурса основного приложения для загрузки шаблона ресурсов. Этот шаблон хранится в библиотеке DLL. Основной причиной является сведения о состоянии модуля MFC не была переключена с `AFX_MANAGE_STATE` макрос. Дескриптор ресурса будет восстановлена из состояния модуля MFC. Переключение состояния модуля не вызывает ресурсов неправильный дескриптор для использования.  
   
- `AFX_MANAGE_STATE`не нужно перевести в каждой функции в DLL. Например `InitInstance` может быть вызван кодом MFC в приложении без `AFX_MANAGE_STATE` поскольку MFC автоматически переключается в состояние модуля перед `InitInstance` и затем коммутаторы ее снова после `InitInstance` возвращает. То же самое верно для всех обработчиков на схеме сообщений. Обычные библиотеки DLL MFC фактически иметь специальное окно главную процедуру автоматического переключения состояния модуля перед отправкой сообщения.  
+ `AFX_MANAGE_STATE` не нужно перевести в каждой функции в DLL. Например `InitInstance` может быть вызван кодом MFC в приложении без `AFX_MANAGE_STATE` поскольку MFC автоматически переключается в состояние модуля перед `InitInstance` и затем коммутаторы ее снова после `InitInstance` возвращает. То же самое верно для всех обработчиков на схеме сообщений. Обычные библиотеки DLL MFC фактически иметь специальное окно главную процедуру автоматического переключения состояния модуля перед отправкой сообщения.  
   
 ## <a name="see-also"></a>См. также  
  [Управление данными состояния модулей MFC](../mfc/managing-the-state-data-of-mfc-modules.md)

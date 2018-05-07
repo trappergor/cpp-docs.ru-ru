@@ -2,11 +2,8 @@
 title: Класс CMap | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMap
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmap-class"></a>Класс CMap
 Класс коллекции словарей, который сопоставляет уникальные ключи значениям.  
@@ -85,19 +80,19 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-structures"></a>Открытые структуры  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|Вложенную структуру, содержащую ключевое значение и значение связанного объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMap::CMap](#cmap)|Создает коллекцию, которая сопоставляет значения ключей.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMap::GetHashTableSize](#gethashtablesize)|Возвращает количество элементов в хэш-таблице.|  
@@ -116,7 +111,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CMap::operator]](#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   
@@ -127,7 +122,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  Некоторые функции-члены этого класса вызова глобальных вспомогательные функции, следует настроить для использования большинства `CMap` класса. В разделе [вспомогательные функции классов коллекции](../../mfc/reference/collection-class-helpers.md) в разделе макросы и глобальные объекты `MFC Reference`.  
   
- `CMap`переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) для поддержки сериализации и записи элементов в дамп. Если карта хранится архив с помощью `Serialize`, в свою очередь сериализуется каждого элемента карты. Реализация по умолчанию `SerializeElements` вспомогательный функция выполняет операцию побитового записи. Для сведений о сериализации указатель коллекции элементов, производных от `CObject` или другие пользовательские типы в разделе [как: создание коллекций типобезопасный](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap` переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) для поддержки сериализации и записи элементов в дамп. Если карта хранится архив с помощью `Serialize`, в свою очередь сериализуется каждого элемента карты. Реализация по умолчанию `SerializeElements` вспомогательный функция выполняет операцию побитового записи. Для сведений о сериализации указатель коллекции элементов, производных от `CObject` или другие пользовательские типы в разделе [как: создание коллекций типобезопасный](../../mfc/how-to-make-a-type-safe-collection.md).  
   
  Если вам требуется дамп диагностики отдельных элементов в карте (ключи и значения), необходимо присвоить глубины контекста дампа 1 или больше.  
   
@@ -143,7 +138,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>  CMap::CMap  
  Создает пустой карты.  
   
 ```  
@@ -160,7 +155,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>  CMap::CPair  
  Содержит ключевое значение и значение связанного объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -177,7 +172,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>Пример  
  Пример использования см. пример для [CMap::PLookup](#plookup).  
   
-##  <a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>  CMap::GetCount  
  Возвращает число элементов в объекте map.  
   
 ```  
@@ -190,7 +185,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::Lookup](#lookup).  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
  Определяет количество элементов в хэш-таблицу для карты.  
   
 ```  
@@ -203,7 +198,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
  Извлекает элемент карты по `rNextPosition`, затем обновляет `rNextPosition` для обращения к следующему элементу в схеме.  
   
 ```  
@@ -237,7 +232,7 @@ void GetNextAssoc(
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::SetAt](#setat).  
   
-##  <a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>  CMap::GetSize  
  Возвращает количество элементов карты.  
   
 ```  
@@ -253,7 +248,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
  Начинает итерацию карты, возвращая **ПОЗИЦИИ** значение, которое может быть передан `GetNextAssoc` вызова.  
   
 ```  
@@ -269,7 +264,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::SetAt](#setat).  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
  Инициализирует хэш-таблицы.  
   
 ```  
@@ -289,7 +284,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::Lookup](#lookup).  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>  CMap::IsEmpty  
  Определяет, является ли пустой карты.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::RemoveAll](#removeall).  
   
-##  <a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>  CMap::Lookup  
  Ищет значение сопоставлен с данным ключом.  
   
 ```  
@@ -326,12 +321,12 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  Ненулевое значение, если элемент найден; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `Lookup`использует алгоритм хэширования для быстрого поиска элемента карты с ключом, который совпадает с указанным ключом.  
+ `Lookup` использует алгоритм хэширования для быстрого поиска элемента карты с ключом, который совпадает с указанным ключом.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>[CMap::operator]  
+##  <a name="operator_at"></a>  [CMap::operator]  
  Удобный заменой `SetAt` функции-члена.  
   
 ```  
@@ -356,7 +351,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::Lookup](#lookup).  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
  Возвращает первый элемент объекта карты.  
   
 ```  
@@ -373,7 +368,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
  Извлекает элемент карты, на который указывает `pAssocRec`.  
   
 ```  
@@ -395,7 +390,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>  CMap::PLookup  
  Находит значение сопоставлен с данным ключом.  
   
 ```  
@@ -416,7 +411,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
+##  <a name="removeall"></a>  CMap::RemoveAll  
  Удаляет все значения из этой карте, вызвав функцию глобального **DestructElements**.  
   
 ```  
@@ -429,7 +424,7 @@ void RemoveAll();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
+##  <a name="removekey"></a>  CMap::RemoveKey  
  Ищет элемент карты, соответствующий заданному ключу; затем Если ключ найден, удаляет запись.  
   
 ```  
@@ -452,7 +447,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>CMap::SetAt  
+##  <a name="setat"></a>  CMap::SetAt  
  Основным средством для вставки элементов в сопоставлении.  
   
 ```  

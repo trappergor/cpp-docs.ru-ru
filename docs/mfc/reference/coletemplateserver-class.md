@@ -1,12 +1,9 @@
 ---
-title: "Класс COleTemplateServer | Документы Microsoft"
-ms.custom: 
+title: Класс COleTemplateServer | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 Используется для OLE-серверов визуального редактирования, серверов автоматизации и контейнеров связей (приложений, поддерживающих ссылки на внедряемые объекты).  
@@ -48,22 +43,22 @@ class COleTemplateServer : public COleObjectFactory
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Создает объект `COleTemplateServer`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Подключается к основному шаблон документа `COleObjectFactory` объекта.|  
 |[COleTemplateServer::Unregister](#unregister)|Отменяет регистрацию шаблона связанный документ.|  
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|Регистрирует тип документа в системном реестре OLE.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс является производным от класса [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); как правило, можно использовать `COleTemplateServer` напрямую вместо создания собственного производного класса. `COleTemplateServer`использует [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) объектов для управления документами на сервере. Используйте `COleTemplateServer` при реализации всего сервера, то есть сервера, которая может выполняться как отдельное приложение. Полные серверы обычно являются нескольким приложениям интерфейса (MDI) документа, несмотря на то, что поддерживаются однооконный интерфейс (SDI) приложения. Один `COleTemplateServer` объекта необходим для каждого типа документа server поддерживает приложения; то есть, если серверное приложение поддерживает листы и диаграммы, необходимо иметь два `COleTemplateServer` объектов.  
+ Этот класс является производным от класса [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); как правило, можно использовать `COleTemplateServer` напрямую вместо создания собственного производного класса. `COleTemplateServer` использует [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) объектов для управления документами на сервере. Используйте `COleTemplateServer` при реализации всего сервера, то есть сервера, которая может выполняться как отдельное приложение. Полные серверы обычно являются нескольким приложениям интерфейса (MDI) документа, несмотря на то, что поддерживаются однооконный интерфейс (SDI) приложения. Один `COleTemplateServer` объекта необходим для каждого типа документа server поддерживает приложения; то есть, если серверное приложение поддерживает листы и диаграммы, необходимо иметь два `COleTemplateServer` объектов.  
   
- `COleTemplateServer`переопределяет `OnCreateInstance` функция-член определяется `COleObjectFactory`. Эта функция-член вызывается платформой для создания объекта C++ соответствующего типа.  
+ `COleTemplateServer` переопределяет `OnCreateInstance` функция-член определяется `COleObjectFactory`. Эта функция-член вызывается платформой для создания объекта C++ соответствующего типа.  
   
  Дополнительные сведения о серверах см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md).  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  Создает объект `COleTemplateServer`.  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>Примечания  
  Краткое описание использования `COleTemplateServer` см. в описании [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) Общие сведения о классе.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  Подключает шаблон документа, на который указывает `pDocTemplate` к базовому объекту [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) объекта.  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в Windows SDK.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  Отменяет регистрацию шаблона связанный документ.  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>Примечания  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  Загружает сведения о типе файла из строки шаблонов документов и помещает эти сведения в системном реестре OLE.  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  Значение из **OLE_APPTYPE** перечисления, который определен в AFXDISP. З. Он может иметь одно из следующих значений:  
   
-- `OAT_INPLACE_SERVER`Сервер имеет всего сервера пользовательского интерфейса.  
+- `OAT_INPLACE_SERVER` Сервер имеет всего сервера пользовательского интерфейса.  
   
-- `OAT_SERVER`Сервер поддерживает только внедрения.  
+- `OAT_SERVER` Сервер поддерживает только внедрения.  
   
-- `OAT_CONTAINER`Контейнер поддерживает ссылки на внедренные объекты.  
+- `OAT_CONTAINER` Контейнер поддерживает ссылки на внедренные объекты.  
   
-- `OAT_DISPATCH_OBJECT`Объект `IDispatch`-поддержкой.  
+- `OAT_DISPATCH_OBJECT` Объект `IDispatch`-поддержкой.  
   
 - **OAT_DOC_OBJECT_SERVER** Server поддерживает как встраивание и модели компонентов объект документа.  
   

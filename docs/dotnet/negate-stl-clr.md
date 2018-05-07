@@ -2,11 +2,8 @@
 title: Отрицание (STL/CLR) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::negate
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - negate function [STL/CLR]
 ms.assetid: 58e4c339-0dee-4db8-b2cc-de8920977039
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7a9ae9fa1270a2a7f417e46681b21120eeded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5971bab0439f42c5abda71daae3671125b2e0b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 Класс шаблона описывает функтор, при вызове возвращает свой аргумент инвертировано. Она используется укажите объект функции, с точки зрения его типа аргумента.  
@@ -58,17 +53,17 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |argument_type|Тип аргумента функтор.|  
 |delegate_type|Тип универсального метода-делегата.|  
 |result_type|Тип результата функтор.|  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |negate|Создает функтор.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |delegate_type оператор ^|Приводит функтора к делегату.|  

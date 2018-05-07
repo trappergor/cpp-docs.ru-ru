@@ -1,29 +1,24 @@
 ---
-title: "Файлы справки (WinHelp) | Документы Microsoft"
-ms.custom: 
+title: Файлы справки (WinHelp) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 505506c7f3a14a73c6b0c859a70938fee3eed69e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-winhelp"></a>Файлы справки (WinHelp)
 Следующие файлы создаются при добавлении поддержки справки типа WinHelp в приложение, выбрав **контекстной справки** флажок, а затем выбрав **формат WinHelp** в [Дополнительные функции](../mfc/reference/advanced-features-mfc-application-wizard.md) мастера приложений MFC.  
@@ -32,8 +27,8 @@ ms.lasthandoff: 03/16/2018
 |---------------|------------------------|--------------------------------|-----------------|  
 |*ProjName*.hpj|*ProjName*\hlp|Исходные файлы|Файл справки проекта используется компилятором справки для создания программы или файла справки элемента управления.|  
 |*ProjName*.rtf|*ProjName*\hlp|Файлы справки|Содержит шаблон разделов, которые можно изменять и сведения по настройке hpj-файла.|  
-|*Projname*.cnt|*ProjName*\hlp|Файлы справки|Предоставляет структуру для **содержимое** окна справки Windows.|  
-|Makehelp.bat|*Projname*|Исходные файлы|Используется системой для построения проекта справки при компиляции проекта.|  
+|*ProjName*.cnt|*ProjName*\hlp|Файлы справки|Предоставляет структуру для **содержимое** окна справки Windows.|  
+|Makehelp.bat|*ProjName*|Исходные файлы|Используется системой для построения проекта справки при компиляции проекта.|  
 |Print.RTF|*ProjName*\hlp|Файлы справки|Создать, если проект включает поддержку печати (по умолчанию). Описывает диалоговые окна и команды печати.|  
 |*.bmp|*ProjName*\hlp|Файлы ресурсов|Содержать изображения для различных разделов создаваемых файлов справки.|  
   
@@ -43,8 +38,8 @@ ms.lasthandoff: 03/16/2018
 |---------------|------------------------|--------------------------------|-----------------|  
 |*ProjName*.hpj|*ProjName*\hlp|Исходные файлы|Файл проекта используется компилятором справки для создания программы или файла справки элемента управления.|  
 |*ProjName*.rtf|*ProjName*\hlp|Проект|Содержит шаблон разделов, которые можно изменять и сведения по настройке hpj-файла.|  
-|Makehelp.bat|*Projname*|Исходные файлы|Используется системой для построения проекта справки при компиляции проекта.|  
-|Bullet.bmp|*Projname*|Файлы ресурсов|Используется стандартный файл справки для представления маркированные списки.|  
+|Makehelp.bat|*ProjName*|Исходные файлы|Используется системой для построения проекта справки при компиляции проекта.|  
+|Bullet.bmp|*ProjName*|Файлы ресурсов|Используется стандартный файл справки для представления маркированные списки.|  
   
 ## <a name="see-also"></a>См. также  
  [Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

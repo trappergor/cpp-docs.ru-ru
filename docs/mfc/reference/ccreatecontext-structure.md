@@ -1,12 +1,9 @@
 ---
-title: "Структура CCreateContext | Документы Microsoft"
-ms.custom: 
+title: Структура CCreateContext | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>Структура CCreateContext
 Платформа использует `CCreateContext` структуры при создании окна фрейма и представления, связанные с документом.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `CCreateContext`Структура и не имеет базового класса.  
+ `CCreateContext` Структура и не имеет базового класса.  
   
  При создании окна значения в этой структуре предоставляют сведения, используемые для соединения компонентов документа в представление данных. Необходимо использовать `CCreateContext` при переопределении части процесса создания.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |Член|Тип|Что такое для|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`для создания нового представления.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` для создания нового представления.|  
 |`m_pCurrentDoc`|`CDocument*`|Существующий документ, который нужно связать с новым представлением.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|Шаблон документа, связанных с созданием нового окна фрейма MDI.|  
 |`m_pLastView`|`CView*`|Исходное представление, на котором моделируются дополнительные представления, как создание представления окна разделителя или создание во втором представлении, в документе.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  Все указатели в `CCreateContext` являются необязательными и могут быть `NULL` , если не задано или неизвестное.  
   
- `CCreateContext`используется функциями-членами, перечисленных в разделе «См.» Если планируется переопределить их, обратитесь к описания этих функций для получения конкретных сведений.  
+ `CCreateContext` используется функциями-членами, перечисленных в разделе «См.» Если планируется переопределить их, обратитесь к описания этих функций для получения конкретных сведений.  
   
  Вот несколько общих рекомендаций.  
   

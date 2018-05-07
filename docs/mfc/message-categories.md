@@ -1,13 +1,10 @@
 ---
-title: "Категории сообщений | Документы Microsoft"
-ms.custom: 
+title: Категории сообщений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - message handling [MFC], message types
 ms.assetid: 68e1db75-9da6-4a4d-b2c2-dc4d59f8d87b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d0e4710c74c12bf62cd19df6a053aea9ac35eaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-categories"></a>Категории сообщений
 Определяет, какие типы сообщений вы пишете обработчики для существуют три основные категории:  
@@ -48,10 +43,10 @@ ms.lasthandoff: 12/21/2017
   
      Сюда входят **WM_COMMAND** сообщения уведомления из объектов пользовательского интерфейса: меню, кнопки панели инструментов и сочетания клавиш. Платформа обрабатывает команды по-разному в другие сообщения, и они могут быть обработаны несколько видов объектов, как описано в [целей команды](../mfc/command-targets.md).  
   
-##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a>Сообщения Windows и управления уведомляющих сообщений  
+##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Сообщения Windows и управления уведомляющих сообщений  
  Сообщения в категории 1 и 2 — сообщения Windows и уведомлений элементов управления, обрабатываются windows: объекты классов, производный от класса `CWnd`. Сюда входят `CFrameWnd`, `CMDIFrameWnd`, `CMDIChildWnd`, `CView`, `CDialog`, и собственные классы, производные от этих базовых классов. Такие объекты инкапсулировать `HWND`, дескриптор окна Windows.  
   
-##  <a name="_core_command_messages"></a>Сообщения команд  
+##  <a name="_core_command_messages"></a> Сообщения команд  
  Сообщения в категории 3 — команды — могло быть обработано широкий ряд объектов: документы, шаблоны документов и сам объект приложения, помимо windows и представления. Когда команда напрямую влияет на некоторые конкретного объекта, имеет смысл у объекта обработать команду. Например, команде Открыть в меню «Файл» логически связан с приложением: приложение открывает указанный документ при получении команды. Поэтому обработчик для команды «Открыть» является функцией-членом класса приложения. Дополнительные сведения о командах и как они маршрутизируются объектов см. в разделе [как платформа вызывает обработчик](../mfc/how-the-framework-calls-a-handler.md).  
   
 ## <a name="see-also"></a>См. также  

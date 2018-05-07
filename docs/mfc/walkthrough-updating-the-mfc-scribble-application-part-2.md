@@ -1,29 +1,24 @@
 ---
-title: "Пошаговое руководство: Обновление приложения MFC Scribble (часть 2) | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Обновление приложения MFC Scribble (часть 2) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Пошаговое руководство. Обновление приложения MFC Scribble (часть 2)
 [Часть 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) этого пошагового руководства показано, как добавить ленту Office Fluent классической Scribble приложения. В этом разделе рассматриваются добавление панелей ленты и элементов управления, которые пользователи могут использовать вместо меню и команд.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Инициализация перья и сохранение настроек](#initpensave)  
   
-##  <a name="addnewpanel"></a>Добавление новых элементов управления на ленту  
+##  <a name="addnewpanel"></a> Добавление новых элементов управления на ленту  
  Следующие шаги показывают, как добавить **представление** панель, которая содержит два флажка, управляющие видимостью панели инструментов и строки состояния, а также **окна** панель, содержащую вертикально разбиения Кнопка, которая управляет созданием и расположении окон многодокументного интерфейса (MDI).  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>Чтобы добавить панели представления и окна панели на панель ленты  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Разделы](#top)]  
   
-##  <a name="addhelppanel"></a>Добавление панель справки на ленту  
+##  <a name="addhelppanel"></a> Добавление панель справки на ленту  
  Теперь можно назначить два элемента меню, которые определены в приложении Scribble для кнопки ленты, которые называются **разделы справки** и **об Scribble**. Кнопки добавляются в новую область с именем **справки**.  
   
 #### <a name="to-add-a-help-panel"></a>Чтобы добавить панель справки  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[Разделы](#top)]  
   
-##  <a name="addpenpanel"></a>Добавление панели пера на ленту  
+##  <a name="addpenpanel"></a> Добавление панели пера на ленту  
  Теперь добавьте панель для отображения кнопок, которые управляют толщину и цвет пера. Эта панель содержит флажок, который выполняет переключение между перья толстой структуру и малый размер. Аналогично его функциональность **толстой линией** элемента меню в приложении Scribble.  
   
  В исходном приложении Scribble дает пользователю возможность выбирать ширину пера в диалоговом окне, которое появляется при нажатии **толщины** меню. Поскольку панель ленты имеет достаточно места для новых элементов управления, можно заменить диалоговое окно с помощью двух поля со списком на ленте. Одно поле со списком Корректирует ширину пера тонкой и поле со списком Корректирует ширину толстого пера.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[Разделы](#top)]  
   
-##  <a name="addcolorbutton"></a>Добавление кнопки цвет пера панели  
+##  <a name="addcolorbutton"></a> Добавление кнопки цвет пера панели  
  Добавьте [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) объект, позволяющий пользователю scribble цветом.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>Чтобы добавить кнопку цвета на панель «перо»  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[Разделы](#top)]  
   
-##  <a name="addcolormember"></a>Добавление члена цвет класс документа  
- Так как в исходном приложении Scribble не имеет цвет перья, для них необходимо написать реализацию. Чтобы сохранить цвет пера документа, Добавление нового элемента класс документа`CscribbleDoc.`  
+##  <a name="addcolormember"></a> Добавление члена цвет класс документа  
+ Так как в исходном приложении Scribble не имеет цвет перья, для них необходимо написать реализацию. Чтобы сохранить цвет пера документа, Добавление нового элемента класс документа `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>Для добавления члена цвет класс документа  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[Разделы](#top)]  
   
-##  <a name="initpensave"></a>Инициализация перья и сохранение настроек  
+##  <a name="initpensave"></a> Инициализация перья и сохранение настроек  
  Затем инициализируйте цвет и ширину пера. Наконец сохранять и загружать цвет рисования из файла.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>Для инициализации элементов управления на ленте  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Добавьте следующий код в scribdoc.cpp, `CScribbleDoc::InitDocument` метод после того, как `m_sizeDoc = CSize(200,200)` инструкции.  
   
- ```*/ / Reset пользовательского интерфейса ленты для начального значения CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
+ ``` *Сброс пользовательского интерфейса ленты для начального значения CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) -> GetRibbonBar(); ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon -> FindByID(ID_PEN_COLOR)); * / / Set ColorButton черный  
     pColorBtn -> SetColor (RGB (0, 0, 0));

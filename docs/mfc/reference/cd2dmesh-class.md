@@ -1,12 +1,9 @@
 ---
-title: "Класс CD2DMesh | Документы Microsoft"
-ms.custom: 
+title: Класс CD2DMesh | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DMesh
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1a83fb222c1133e8ea59c7daf53a49b4472de2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce3ad5cfa7df335b5633dffbdd221bf59f01bb29
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dmesh-class"></a>Класс CD2DMesh
 Программа-оболочка для ID2D1Mesh.  
@@ -58,14 +53,14 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|Создает объект CD2DMesh.|  
 |[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|Деструктор Вызывается при уничтожении объекта D2D сетки.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DMesh::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DMesh::CREATE](#create)|Создает CD2DMesh. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -77,13 +72,13 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CD2DMesh::operator ID2D1Mesh *](#operator_id2d1mesh_star)|Возвращает интерфейс ID2D1Mesh|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CD2DMesh::m_pMesh](#m_pmesh)|Указатель на ID2D1Mesh.|  
   
@@ -97,14 +92,14 @@ class CD2DMesh : public CD2DResource;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh  
  Деструктор Вызывается при уничтожении объекта D2D сетки.  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="attach"></a>CD2DMesh::Attach  
+##  <a name="attach"></a>  CD2DMesh::Attach  
  Присоединяет существующий ресурс интерфейс для объекта  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(ID2D1Mesh* pResource);
  `pResource`  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
-##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
+##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
  Создает объект CD2DMesh.  
   
 ```  
@@ -131,7 +126,7 @@ CD2DMesh(
  `bAutoDestroy`  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
-##  <a name="create"></a>CD2DMesh::CREATE  
+##  <a name="create"></a>  CD2DMesh::CREATE  
  Создает CD2DMesh.  
   
 ```  
@@ -145,14 +140,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
   
-##  <a name="destroy"></a>CD2DMesh::destroy  
+##  <a name="destroy"></a>  CD2DMesh::destroy  
  Уничтожает объект CD2DMesh.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DMesh::Detach  
+##  <a name="detach"></a>  CD2DMesh::Detach  
  Отсоединяет интерфейса ресурсов из объекта  
   
 ```  
@@ -162,7 +157,7 @@ ID2D1Mesh* Detach();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс отсоединенных ресурсов.  
   
-##  <a name="get"></a>CD2DMesh::Get  
+##  <a name="get"></a>  CD2DMesh::Get  
  Возвращает интерфейс ID2D1Mesh  
   
 ```  
@@ -172,7 +167,7 @@ ID2D1Mesh* Get();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на интерфейс ID2D1Mesh или значение NULL, если объект еще не инициализирован.  
   
-##  <a name="isvalid"></a>CD2DMesh::IsValid  
+##  <a name="isvalid"></a>  CD2DMesh::IsValid  
  Проверяет допустимость ресурсов  
   
 ```  
@@ -182,14 +177,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.  
   
-##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
+##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh  
  Указатель на ID2D1Mesh.  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="open"></a>CD2DMesh::Open  
+##  <a name="open"></a>  CD2DMesh::Open  
  Открывает сетки для совокупности.  
   
 ```  
@@ -199,7 +194,7 @@ ID2D1TessellationSink* Open();
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на ID2D1TessellationSink, который используется для заполнения сетки.  
   
-##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
+##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh *  
  Возвращает интерфейс ID2D1Mesh  
   
 ```  

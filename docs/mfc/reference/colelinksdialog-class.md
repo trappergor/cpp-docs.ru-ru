@@ -1,12 +1,9 @@
 ---
-title: "Класс COleLinksDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleLinksDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinksdialog-class"></a>Класс COleLinksDialog
 Используется для диалогового окна OLE "Изменить ссылки".  
@@ -46,19 +41,19 @@ class COleLinksDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Создает объект `COleLinksDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinksDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменение связей.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinksDialog::m_el](#m_el)|Структура типа **OLEUIEDITLINKS** , управляет поведением окна.|  
   
@@ -90,7 +85,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
  Отображение диалогового окна OLE изменение связей.  
   
 ```  
@@ -109,7 +104,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Примечания  
  Если требуется инициализировать различные элементы управления диалоговых окон, задав члены [m_el](#m_el) структуры, необходимо сделать это перед вызовом `DoModal`, но после создания объекта диалогового окна.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Создает объект `COleLinksDialog`.  
   
 ```  
@@ -136,7 +131,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>Примечания  
  Эта функция создает только `COleLinksDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
  Структура типа **OLEUIEDITLINKS** используется для управления поведением диалогового окна «Изменить ссылки».  
   
 ```  

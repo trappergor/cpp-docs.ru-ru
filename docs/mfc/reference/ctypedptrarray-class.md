@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrArray-класс | Документы Microsoft"
-ms.custom: 
+title: CTypedPtrArray-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray-класс
 Предоставляет типобезопасную "программу-оболочку" для объектов класса `CPtrArray` или `CObArray`.  
@@ -64,7 +59,7 @@ class CTypedPtrArray : public BASE_CLASS
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTypedPtrArray::Add](#add)|Добавляет новый элемент в конец массива. Размер массива увеличивается при необходимости|  
 |[CTypedPtrArray::Append](#append)|Добавляет содержимое одного массива в другой конец. Размер массива увеличивается при необходимости|  
@@ -77,7 +72,7 @@ class CTypedPtrArray : public BASE_CLASS
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[[CTypedPtrArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|  
   
@@ -98,7 +93,7 @@ class CTypedPtrArray : public BASE_CLASS
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtempl.h  
   
-##  <a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>  CTypedPtrArray::Add  
  Эта функция-член вызывает `BASE_CLASS` **:: добавить**.  
   
 ```  
@@ -118,7 +113,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Add](../../mfc/reference/cobarray-class.md#add).  
   
-##  <a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>  CTypedPtrArray::Append  
  Эта функция-член вызывает `BASE_CLASS` **:: Append**.  
   
 ```  
@@ -141,7 +136,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Append](../../mfc/reference/cobarray-class.md#append).  
   
-##  <a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>  CTypedPtrArray::Copy  
  Эта функция-член вызывает `BASE_CLASS` **:: копирования**.  
   
 ```  
@@ -161,7 +156,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).  
   
-##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
  Это встроенная функция вызывает `BASE_CLASS` **:: ElementAt**.  
   
 ```  
@@ -181,7 +176,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).  
   
-##  <a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>  CTypedPtrArray::GetAt  
  Это встроенная функция вызывает `BASE_CLASS` **:: GetAt**.  
   
 ```  
@@ -201,7 +196,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
  Эта функция-член вызывает `BASE_CLASS` **:: InsertAt**.  
   
 ```  
@@ -241,7 +236,7 @@ void InsertAt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).  
   
-##  <a name="operator_at"></a>[CTypedPtrArray::operator]  
+##  <a name="operator_at"></a>  [CTypedPtrArray::operator]  
  Эти операторы встроенного вызова `BASE_CLASS` **:: operator []**.  
   
 ```  
@@ -261,7 +256,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  Отладочная версия библиотеки утверждения, если индекс (либо левой или правой части оператора присваивания) выходит за границы.  
   
-##  <a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>  CTypedPtrArray::SetAt  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.  
   
 ```  
@@ -283,7 +278,7 @@ void SetAt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные примечания см. в разделе [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).  
   
-##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
  Эта функция-член вызывает `BASE_CLASS` **:: SetAtGrow**.  
   
 ```  

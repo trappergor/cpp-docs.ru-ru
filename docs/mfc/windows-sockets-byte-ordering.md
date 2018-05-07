@@ -1,13 +1,10 @@
 ---
-title: "Сокеты Windows: Порядок байтов | Документы Microsoft"
-ms.custom: 
+title: 'Сокеты Windows: Порядок байтов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c25a7b2c8240531e1d778d6a119f857032423db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-byte-ordering"></a>Сокеты Windows. Порядок байтов
 В этой статье и в двух статей дополнительное приведены некоторые проблемы в программировании Windows Sockets. В этой статье описан порядок байтов. Другие проблемы рассматриваются в статьях: [Windows Sockets: блокирование](../mfc/windows-sockets-blocking.md) и [Windows Sockets: преобразование строки](../mfc/windows-sockets-converting-strings.md).  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="big--and-little-endian-byte-ordering"></a>И мало обратный порядок байтов  
   
-|Порядок байтов|Значение|  
+|Порядок байтов|Смысл|  
 |-------------------|-------------|  
 |Обратный порядок байтов|На левой стороне слова — самый старший байт.|  
 |Обратный порядок байтов|Самый старший байт — в правом конце слова.|  

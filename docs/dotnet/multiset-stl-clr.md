@@ -2,11 +2,8 @@
 title: мультинабор (STL/CLR) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - multiset class [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e01ec2d9c426d6b95b12fe0db9e5a2e328ae1cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `multiset` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента.  
@@ -57,7 +52,7 @@ template<typename Key>
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[multiset::const_iterator (STL/CLR)](../dotnet/multiset-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[multiset::const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -76,7 +71,7 @@ template<typename Key>
 |[multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|Удаляет все элементы.|  
@@ -99,7 +94,7 @@ template<typename Key>
 |[multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[multiset::value_comp (STL/CLR)](../dotnet/multiset-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|Определяет, если `multiset` объект не равен другому `multiset` объекта.|  
@@ -111,7 +106,7 @@ template<typename Key>
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Объект делегата должен применить строгого слабое упорядочение на ключах типа [multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y)` имеет значение true, затем `key_comp()(Y, X)` должен иметь значение false.  
   

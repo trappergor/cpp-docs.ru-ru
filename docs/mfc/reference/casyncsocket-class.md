@@ -1,12 +1,9 @@
 ---
-title: "CAsyncSocket-класс | Документы Microsoft"
-ms.custom: 
+title: CAsyncSocket-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket-класс
 Представляет Windows Socket — конечную точку обмена данными по сети.  
@@ -108,13 +103,13 @@ class CAsyncSocket : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|Создает объект `CAsyncSocket`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncSocket::Accept](#accept)|Принимает подключения через сокет.|  
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Запросы уведомления о событии для сокета.|  
@@ -145,7 +140,7 @@ class CAsyncSocket : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncSocket::OnAccept](#onaccept)|Уведомляет прослушивающего сокета, он может принять ожидающих запросов на подключение, вызвав **Accept**.|  
 |[CAsyncSocket::OnClose](#onclose)|Уведомляет закрыл сокет, подключенный сокет.|  
@@ -156,14 +151,14 @@ class CAsyncSocket : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncSocket::operator =](#operator_eq)|Присваивает новое значение для `CAsyncSocket` объекта.|  
 |[CAsyncSocket::operator СОКЕТА](#operator_socket)|Этот оператор используется для получения **СОКЕТА** handle `CAsyncSocket` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CAsyncSocket::m_hSocket](#m_hsocket)|Указывает **СОКЕТА** дескриптор, присоединенного к данному `CAsyncSocket` объекта.|  
   
@@ -187,7 +182,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
  Вызовите эту функцию-член для приема подключений на сокете.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE** очередь пуста при вхождении в для приема и дескрипторы не доступны.  
   
-- `WSAENOBUFS`Буфер не доступен.  
+- `WSAENOBUFS` Буфер не доступен.  
   
 - **WSAENOTSOCK** не дескриптор сокета.  
   
@@ -235,7 +230,7 @@ virtual BOOL Accept(
   
  Аргумент `lpSockAddr` имеет параметр результата, который заполняется с использованием адреса подключения сокета, как известно, уровня коммуникаций. **Принять** используется с типами сокета на основе подключения, например **SOCK_STREAM**.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  Вызовите эту функцию-член для запроса уведомления о событии для сокета.  
   
 ```  
@@ -270,9 +265,9 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 - **WSAEINPROGRESS** операцию блокировки сокетов Windows выполняется в данный момент.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция используется для указания того, какие функции MFC обратного вызова уведомления будет вызываться для сокета. `AsyncSelect`автоматически устанавливает этот сокет неблокирующий режим. Дополнительные сведения см. в статье [Windows Sockets: уведомления сокетов](../../mfc/windows-sockets-socket-notifications.md).  
+ Эта функция используется для указания того, какие функции MFC обратного вызова уведомления будет вызываться для сокета. `AsyncSelect` автоматически устанавливает этот сокет неблокирующий режим. Дополнительные сведения см. в статье [Windows Sockets: уведомления сокетов](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
  Вызовите эту функцию-член для присоединения `hSocket` дескриптор `CAsyncSocket` объекта.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL Attach(
 ### <a name="remarks"></a>Примечания  
  **СОКЕТА** дескриптор хранится в объекте [m_hSocket](#m_hsocket) члена данных.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
  Вызовите эту функцию-член для присоединения к ним локальный адрес сокета.  
   
 ```  
@@ -349,14 +344,14 @@ BOOL Bind (
   
 - **WSAEINVAL** сокет уже связан с адресом.  
   
-- `WSAENOBUFS`Недостаточно доступных буферов, слишком много подключений.  
+- `WSAENOBUFS` Недостаточно доступных буферов, слишком много подключений.  
   
 - **WSAENOTSOCK** не дескриптор сокета.  
   
 ### <a name="remarks"></a>Примечания  
  Эта процедура используется в несвязанной датаграмм или сокета потока перед последующих **Connect** или `Listen` вызовов. Прежде чем он может принимать запросы на подключение, прослушивающего сокета сервера необходимо выберите номер порта и сделать ее известных Windows Sockets, вызвав **привязки**. **Привязать** устанавливает локальную ассоциацию (номер адреса и порта узла) сокета, назначив гнездо неименованные локальное имя.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  Создает объект пустым сокета.  
   
 ```  
@@ -366,7 +361,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>Примечания  
  После создания объекта, необходимо вызвать его **создать** функции-члена для создания **СОКЕТА** структуры данных и привязать ее адрес. (На стороне сервера Windows Sockets связи, когда прослушивающего сокета создает сокет для использования в **Accept** вызова не вызывается **создать** для этого сокета.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>  CAsyncSocket::Close  
  Закрывает сокет.  
   
 ```  
@@ -378,7 +373,7 @@ virtual void Close();
   
  Для `CAsyncSocket`, но не для `CSocket`, семантика **закрыть** затронутые параметры сокетов **SO_LINGER** и **SO_DONTLINGER**. Дополнительные сведения см. в разделе функции-члена `GetSockOpt`.  
   
-##  <a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
  Вызовите эту функцию-член для установления соединения несвязанной поток или сокета датаграмм.  
   
 ```  
@@ -434,7 +429,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH** сети не могут использоваться для этого узла в данный момент.  
   
-- `WSAENOBUFS`Буфер не доступен. Сокет не подключен.  
+- `WSAENOBUFS` Буфер не доступен. Сокет не подключен.  
   
 - **WSAENOTSOCK** не дескриптор сокета.  
   
@@ -449,7 +444,7 @@ BOOL Connect(
   
  Для сокета датаграмм (тип **SOCK_DGRAM**), задать назначение по умолчанию, который будет использоваться на последующих **отправки** и **Receive** вызовов.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>  CAsyncSocket::Create  
  Вызовите **создать** после создания объекта сокета Создание сокетов Windows и присоединение его функции-члена.  
   
 ```  
@@ -498,7 +493,7 @@ BOOL Create(
   
 - **WSAEMFILE** доступных нет дополнительных дескрипторов файлов.  
   
-- `WSAENOBUFS`Буфер не доступен. Не удается создать сокет.  
+- `WSAENOBUFS` Буфер не доступен. Не удается создать сокет.  
   
 - **WSAEPROTONOSUPPORT** указанный порт не поддерживается.  
   
@@ -521,14 +516,14 @@ BOOL Create(
   
  Дополнительные сведения о сокеты потока и датаграммы см. в статьях [Windows Sockets: фон](../../mfc/windows-sockets-background.md) и [Windows Sockets: порты и адреса сокета](../../mfc/windows-sockets-ports-and-socket-addresses.md) и [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
  Вызовите эту функцию-член для отсоединения **СОКЕТА** обработки в `m_hSocket` элемент данных из `CAsyncSocket` и задайте `m_hSocket` для **NULL**.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
  Возвращает указатель на `CAsyncSocket` объект.  
   
 ```  
@@ -545,7 +540,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>Примечания  
  Для заданного **СОКЕТА** обработки, если `CAsyncSocket` объект не присоединен к дескриптору, функция-член возвращает **NULL**.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
  Вызовите эту функцию-член для получения состояния ошибки для последней операции, в котором произошел сбой.  
   
 ```  
@@ -560,7 +555,7 @@ static int PASCAL GetLastError();
   
  Дополнительные сведения о кодах ошибок см. в разделе [Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  Вызовите эту функцию-член для получения адреса сокета однорангового узла, к которому подключен этот сокет.  
   
 ```  
@@ -605,7 +600,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>Примечания  
  Чтобы обработать IPv6-адресов, используйте [CAsyncSocket::GetPeerNameEx](#getpeernameex).  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
  Вызовите эту функцию-член для получения адреса сокета однорангового узла, к которому этот сокет находится подключенного (маркеры адресов IPv6).  
   
 ```  
@@ -639,7 +634,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>Примечания  
  Эта функция является таким же, как [CAsyncSocket::GetPeerName](#getpeername) за исключением того, что он обрабатывает IPv6 адреса также как старые протоколы.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
  Вызовите эту функцию-член для получения локального имени для сокета.  
   
 ```  
@@ -686,7 +681,7 @@ BOOL GetSockName(
   
  Чтобы обработать IPv6-адресов, используйте [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
  Вызовите эту функцию-член для получения локального имени для сокета (маркеры адресов IPv6).  
   
 ```  
@@ -722,7 +717,7 @@ BOOL GetSockNameEx(
   
  Этот вызов особенно полезна при **Connect** вызова без это **привязки** , этот вызов предоставляет единственное средство, с помощью которого можно определить локальную ассоциацию, который был задан система.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  Вызовите эту функцию-член для извлечения параметр сокета.  
   
 ```  
@@ -762,7 +757,7 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK** не дескриптор сокета.  
   
 ### <a name="remarks"></a>Примечания  
- `GetSockOpt`Возвращает текущее значение для параметра сокета, связанные с сокетом любого типа, в любом состоянии и сохраняет результат в `lpOptionValue`. Параметры влияют на операции сокета, например маршрутизации пакетов, передача данных по каналу и т. д.  
+ `GetSockOpt` Возвращает текущее значение для параметра сокета, связанные с сокетом любого типа, в любом состоянии и сохраняет результат в `lpOptionValue`. Параметры влияют на операции сокета, например маршрутизации пакетов, передача данных по каналу и т. д.  
   
  Следующие параметры поддерживаются для `GetSockOpt`. Тип указывает тип данных, подразумевающие `lpOptionValue`. **TCP_NODELAY** параметр использует уровень **IPPROTO_TCP**; все прочие параметры использовать уровень **SOL_SOCKET**.  
   
@@ -796,7 +791,7 @@ BOOL GetSockOpt(
   
  Вызов `GetSockOpt` неподдерживаемый параметр приведет к код ошибки **WSAENOPROTOOPT** , возвращенных `GetLastError`.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
  Вызовите эту функцию-член для управления режимом сокета.  
   
 ```  
@@ -836,7 +831,7 @@ BOOL IOCtl(
   
  Эта функция представляет собой подмножество **ioctl()** в сокетов Беркли. В частности, нет ни одной команды, что эквивалентно **FIOASYNC**, пока **SIOCATMARK** команда только на уровне сокетов, который поддерживается.  
   
-##  <a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
  Вызовите эту функцию-член для прослушивания входящих запросов на подключение.  
   
 ```  
@@ -864,27 +859,27 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEMFILE** доступных нет дополнительных дескрипторов файлов.  
   
-- `WSAENOBUFS`Буфер не доступен.  
+- `WSAENOBUFS` Буфер не доступен.  
   
 - **WSAENOTSOCK** не дескриптор сокета.  
   
 - **WSAEOPNOTSUPP** сокета, на которую указывает ссылка, не относится к тип, поддерживающий `Listen` операции.  
   
 ### <a name="remarks"></a>Примечания  
- Для приема подключений, сокет сначала создается с **создать**, очередь для входящих подключений, указанном с помощью `Listen`, а затем принимаются подключения **Accept**. `Listen`применяется только к сокетов, которые поддерживают подключения, то есть биты типа **SOCK_STREAM**. Этот сокет переводится в режим «пассивный», где подтверждения и в очередь ожидающих принятия процессом входящие подключения.  
+ Для приема подключений, сокет сначала создается с **создать**, очередь для входящих подключений, указанном с помощью `Listen`, а затем принимаются подключения **Accept**. `Listen` применяется только к сокетов, которые поддерживают подключения, то есть биты типа **SOCK_STREAM**. Этот сокет переводится в режим «пассивный», где подтверждения и в очередь ожидающих принятия процессом входящие подключения.  
   
  Эта функция обычно используется серверов (или любого приложения, которое хочет принимать подключения), может иметь более одного запроса подключения одновременно: при получении запроса подключения с очередь переполнена, клиент появится сообщение об ошибке с указанием  **WSAECONNREFUSED**.  
   
- `Listen`предпринимается попытка продолжают функционировать разумно, если нет доступных портов (дескрипторы). Он будет принимать подключения до освобождения очереди. Если порты становятся доступными, последующий вызов `Listen` или **Accept** по возможности повторного заполнения очереди для текущего или последнего «невыполненную работу» и возобновить прослушивание входящих подключений.  
+ `Listen` предпринимается попытка продолжают функционировать разумно, если нет доступных портов (дескрипторы). Он будет принимать подключения до освобождения очереди. Если порты становятся доступными, последующий вызов `Listen` или **Accept** по возможности повторного заполнения очереди для текущего или последнего «невыполненную работу» и возобновить прослушивание входящих подключений.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  Содержит **СОКЕТА** дескриптор сокета, инкапсулированный этим `CAsyncSocket` объекта.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
  Вызывается платформой для уведомления прослушивающего сокета, он может принять ожидающих запросов на подключение, вызвав [Accept](#accept) функции-члена.  
   
 ```  
@@ -902,7 +897,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [Windows Sockets: уведомления сокетов](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
  Вызывается платформой для уведомления этот сокет, что закрывается соединенный сокет, его процесс.  
   
 ```  
@@ -924,7 +919,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [Windows Sockets: уведомления сокетов](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
  Вызывается платформой для уведомления этого при подключении к сокету его попытки подключения завершение, является ли успешно или с ошибкой.  
   
 ```  
@@ -957,7 +952,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH** сети не могут использоваться для этого узла в данный момент.  
   
-- `WSAENOBUFS`Буфер не доступен. Сокет не подключен.  
+- `WSAENOBUFS` Буфер не доступен. Сокет не подключен.  
   
 - **WSAENOTCONN** сокет не подключен.  
   
@@ -975,7 +970,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
  Вызывается платформой для получения сокета с сокета отправки данных по каналу для отправки уведомления.  
   
 ```  
@@ -995,7 +990,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC поддерживает данные по каналу, но пользователи класса `CAsyncSocket` , не рекомендуется использовать их. Простым способом является создавать второй сокет для передачи таких данных. Дополнительные сведения о данных по каналу см. в разделе [Windows Sockets: уведомления сокетов](../../mfc/windows-sockets-socket-notifications.md).  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
  Вызывается платформой для уведомления этот сокет это данные в буфер, который можно получить, вызвав **Receive** функции-члена.  
   
 ```  
@@ -1016,7 +1011,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
  Вызывается платформой для уведомления сокета, что теперь отправки данных путем вызова **отправки** функции-члена.  
   
 ```  
@@ -1037,7 +1032,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
  Присваивает новое значение для `CAsyncSocket` объекта.  
   
 ```  
@@ -1051,7 +1046,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для копирования существующих `CAsyncSocket` объекта в другой `CAsyncSocket` объекта.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator СОКЕТА  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator СОКЕТА  
  Этот оператор используется для получения **СОКЕТА** handle `CAsyncSocket` объекта.  
   
 ```  
@@ -1064,7 +1059,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>Примечания  
  Дескриптор можно использовать для прямого вызова API-интерфейсов Windows.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
  Вызовите эту функцию-член для получения данных из сокета.  
   
 ```  
@@ -1129,7 +1124,7 @@ virtual int Receive(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
  Вызовите эту функцию-член для получения датаграммы и сохранения исходного адреса в [SOCKADDR](../../mfc/reference/sockaddr-structure.md) структуры или в `rSocketAddress`.  
   
 ```  
@@ -1217,7 +1212,7 @@ int ReceiveFrom(
   
  Если тип сокета **SOCK_STREAM** и удаленная сторона завершил работу соединения корректно, `ReceiveFrom` будет немедленно завершена с 0 байт, полученных.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
  Вызовите эту функцию-член для получения датаграммы и сохранения исходного адреса в [SOCKADDR](../../mfc/reference/sockaddr-structure.md) структуры или в `rSocketAddress` (дескрипторы адресов IPv6).  
   
 ```  
@@ -1291,7 +1286,7 @@ int ReceiveFromEx(
   
  Если тип сокета **SOCK_STREAM** и удаленная сторона завершил работу соединения корректно, `ReceiveFromEx` будет немедленно завершена с 0 байт, полученных.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>  CAsyncSocket::Send  
  Вызовите эту функцию-член для отправки данных на подключенный сокет.  
   
 ```  
@@ -1330,7 +1325,7 @@ virtual int Send(
   
 - **WSAENETRESET** из-за удаления реализация Windows Sockets, его необходимо сбросить подключение.  
   
-- `WSAENOBUFS`Реализация Windows Sockets о взаимоблокировке буфера.  
+- `WSAENOBUFS` Реализация Windows Sockets о взаимоблокировке буфера.  
   
 - **WSAENOTCONN** сокет не подключен.  
   
@@ -1360,7 +1355,7 @@ virtual int Send(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CAsyncSocket::OnSend](#onsend).  
   
-##  <a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
  Вызовите эту функцию-член для отправки данных в определенное место назначения.  
   
 ```  
@@ -1423,7 +1418,7 @@ int SendTo(
   
 - **WSAENETRESET** из-за удаления реализация Windows Sockets, его необходимо сбросить подключение.  
   
-- `WSAENOBUFS`Реализация Windows Sockets о взаимоблокировке буфера.  
+- `WSAENOBUFS` Реализация Windows Sockets о взаимоблокировке буфера.  
   
 - **WSAENOTCONN** сокет не подключен ( **SOCK_STREAM** только).  
   
@@ -1450,17 +1445,17 @@ int SendTo(
 - **WSAENETUNREACH** сети не могут использоваться для этого узла в данный момент.  
   
 ### <a name="remarks"></a>Примечания  
- `SendTo`При использовании в сокеты датаграмм или поток и используется для записи выходных данных на сокете. Для сокеты датаграмм, необходимо соблюдать осторожность не должно превышать максимальный размер пакета IP базовой подсетей, которая задана по **iMaxUdpDg** элемент в [WSADATA](../../mfc/reference/wsadata-structure.md) структуры для заполнения [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Если данные слишком много атомарным образом проходить через базовый протокол ошибки **WSAEMSGSIZE** возвращается, и данные не передаются.  
+ `SendTo` При использовании в сокеты датаграмм или поток и используется для записи выходных данных на сокете. Для сокеты датаграмм, необходимо соблюдать осторожность не должно превышать максимальный размер пакета IP базовой подсетей, которая задана по **iMaxUdpDg** элемент в [WSADATA](../../mfc/reference/wsadata-structure.md) структуры для заполнения [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Если данные слишком много атомарным образом проходить через базовый протокол ошибки **WSAEMSGSIZE** возвращается, и данные не передаются.  
   
  Обратите внимание, что успешное завершение `SendTo` не указывает данные был успешно доставлен.  
   
- `SendTo`используется только на **SOCK_DGRAM** сокета, чтобы отправить датаграмму конкретных сокета определяется `lpSockAddr` параметра.  
+ `SendTo` используется только на **SOCK_DGRAM** сокета, чтобы отправить датаграмму конкретных сокета определяется `lpSockAddr` параметра.  
   
  Для отправки на широковещательные (на **SOCK_DGRAM** только), в адрес `lpSockAddr` параметр должен быть создан с помощью специального IP-адреса **INADDR_BROADCAST** (определенных в заголовке сокеты Windows файл WINSOCK. H) вместе с номером нужный порт. Либо, если `lpszHostAddress` параметр **NULL**, сокета настроен для использования. Это обычно не задействуются широковещательных датаграммы к превышению размера, с которой может возникнуть фрагментация, это означает, что часть данных датаграмма (включая заголовки) не должна превышать 512 байт.  
   
  Чтобы обработать IPv6-адресов, используйте [CAsyncSocket::SendToEx](#sendtoex).  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
  Вызовите эту функцию-член для отправки данных в определенное место назначения (маркеры адресов IPv6).  
   
 ```  
@@ -1509,7 +1504,7 @@ int SendToEx(
   
 - **WSAENETRESET** из-за удаления реализация Windows Sockets, его необходимо сбросить подключение.  
   
-- `WSAENOBUFS`Реализация Windows Sockets о взаимоблокировке буфера.  
+- `WSAENOBUFS` Реализация Windows Sockets о взаимоблокировке буфера.  
   
 - **WSAENOTCONN** сокет не подключен ( **SOCK_STREAM** только).  
   
@@ -1538,15 +1533,15 @@ int SendToEx(
 ### <a name="remarks"></a>Примечания  
  Этот метод является таким же, как [CAsyncSocket::SendTo](#sendto) за исключением того, что он обрабатывает IPv6 адреса также как старые протоколы.  
   
- `SendToEx`При использовании в сокеты датаграмм или поток и используется для записи выходных данных на сокете. Для сокеты датаграмм, необходимо соблюдать осторожность не должно превышать максимальный размер пакета IP базовой подсетей, которая задана по **iMaxUdpDg** элемент в [WSADATA](../../mfc/reference/wsadata-structure.md) структуры для заполнения [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Если данные слишком много атомарным образом проходить через базовый протокол ошибки **WSAEMSGSIZE** возвращается, и данные не передаются.  
+ `SendToEx` При использовании в сокеты датаграмм или поток и используется для записи выходных данных на сокете. Для сокеты датаграмм, необходимо соблюдать осторожность не должно превышать максимальный размер пакета IP базовой подсетей, которая задана по **iMaxUdpDg** элемент в [WSADATA](../../mfc/reference/wsadata-structure.md) структуры для заполнения [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). Если данные слишком много атомарным образом проходить через базовый протокол ошибки **WSAEMSGSIZE** возвращается, и данные не передаются.  
   
  Обратите внимание, что успешное завершение `SendToEx` не указывает данные был успешно доставлен.  
   
- `SendToEx`используется только на **SOCK_DGRAM** сокета, чтобы отправить датаграмму конкретных сокета определяется `lpSockAddr` параметра.  
+ `SendToEx` используется только на **SOCK_DGRAM** сокета, чтобы отправить датаграмму конкретных сокета определяется `lpSockAddr` параметра.  
   
  Для отправки на широковещательные (на **SOCK_DGRAM** только), в адрес `lpSockAddr` параметр должен быть создан с помощью специального IP-адреса **INADDR_BROADCAST** (определенных в заголовке сокеты Windows файл WINSOCK. H) вместе с номером нужный порт. Либо, если `lpszHostAddress` параметр **NULL**, сокета настроен для использования. Это обычно не задействуются широковещательных датаграммы к превышению размера, с которой может возникнуть фрагментация, это означает, что часть данных датаграмма (включая заголовки) не должна превышать 512 байт.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  Вызовите эту функцию-член для задания параметра сокета.  
   
 ```  
@@ -1592,9 +1587,9 @@ BOOL SetSockOpt(
 - **WSAENOTSOCK** не дескриптор сокета.  
   
 ### <a name="remarks"></a>Примечания  
- `SetSockOpt`Задает текущее значение для параметра сокета, связанные с сокетом любого типа, в любом состоянии. Несмотря на то, что параметры находятся на нескольких уровнях протокола, эта спецификация определяет только параметры, которые существуют на уровне верхнего края области «сокетов». Параметры влияют на операции сокета, например срочные данные, получен ли в обычном потоке данных, является ли широковещательных сообщений могут отправляться на сокет и т. д.  
+ `SetSockOpt` Задает текущее значение для параметра сокета, связанные с сокетом любого типа, в любом состоянии. Несмотря на то, что параметры находятся на нескольких уровнях протокола, эта спецификация определяет только параметры, которые существуют на уровне верхнего края области «сокетов». Параметры влияют на операции сокета, например срочные данные, получен ли в обычном потоке данных, является ли широковещательных сообщений могут отправляться на сокет и т. д.  
   
- Существует два типа параметров сокета: включить или отключить компонент или поведение логическое параметров и параметров, требующих целочисленное значение или структуры. Для включения логического параметра, `lpOptionValue` указывает ненулевое значение, целое число со знаком. Чтобы отключить этот параметр `lpOptionValue` указывает на целое число, равное нулю. `nOptionLen`должно быть равно **sizeof(BOOL)** для логических параметров. Чтобы задать другие параметры `lpOptionValue` указывает на целое число или структура, содержащая нужное значение для параметра, и `nOptionLen` длина целого числа или структуры.  
+ Существует два типа параметров сокета: включить или отключить компонент или поведение логическое параметров и параметров, требующих целочисленное значение или структуры. Для включения логического параметра, `lpOptionValue` указывает ненулевое значение, целое число со знаком. Чтобы отключить этот параметр `lpOptionValue` указывает на целое число, равное нулю. `nOptionLen` должно быть равно **sizeof(BOOL)** для логических параметров. Чтобы задать другие параметры `lpOptionValue` указывает на целое число или структура, содержащая нужное значение для параметра, и `nOptionLen` длина целого числа или структуры.  
   
  **SO_LINGER** действие, выполняемое при неотправленные данные в очереди на сокете элементов управления и **закрыть** функция, вызываемая для закрытия сокета.  
   
@@ -1637,7 +1632,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|Тип сокета.|  
 |**IP_OPTIONS**||Задайте параметры поля в IP-заголовке.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
  Получает вызов, чтобы отключить эту функцию-член отправляет, или оба через сокет.  
   
 ```  
@@ -1670,7 +1665,7 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK** не дескриптор сокета.  
   
 ### <a name="remarks"></a>Примечания  
- `ShutDown`используется для всех типов сокетов для отключения приема и передачи. Если `nHow` равно 0, то последующие получил на сокет будет запрещена. Не действует на более низкие уровни протокола.  
+ `ShutDown` используется для всех типов сокетов для отключения приема и передачи. Если `nHow` равно 0, то последующие получил на сокет будет запрещена. Не действует на более низкие уровни протокола.  
   
  Окно TCP для протокола управления передачей (TCP), не изменяется и входящие данные будут приняты (но не подтвержденного), пока не будет исчерпан окна. Для протокола UDP (User Datagram), принимаются и в очередь входящих датаграмм. В любом случае будет создаваться ошибки ICMP-пакет. Если `nHow` имеет значение 1, последующие отправляет запрещены. Для сокетов TCP будет отправлено FIN. Параметр `nHow` 2 отключает обоих передачу и прием, как описано выше.  
   
@@ -1679,7 +1674,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CAsyncSocket::OnReceive](#onreceive).  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>  CASyncSocket::Socket  
  Выделяет дескриптор сокета.  
   
 ```  

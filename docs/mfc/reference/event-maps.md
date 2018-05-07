@@ -1,13 +1,10 @@
 ---
-title: "Схемы событий | Документы Microsoft"
-ms.custom: 
+title: Схемы событий | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>Схемы событий
 Всякий раз, когда элемент управления, которые будут уведомите своего контейнера, произошло какое-либо действие (определяется разработчиком элемента управления), (например, нажатие клавиши, щелчок мыши или изменение состояния элемента управления), он вызывает функцию формирование событий. Эта функция уведомляет элемент управления контейнера возникшей некоторые важные действия по обработке связанных событий.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 |[ON_OLEVERB](#on_oleverb)|Указывает пользовательскую команду обрабатываются элементом управления OLE.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|Переопределяет сопоставление обычного глагола элемента управления OLE.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  Каждый `COleControl`-производный класс в программе может предоставлять карта событий для указания событий, элемент управления будет срабатывать.  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  Начинается определение карте событий.  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  Используйте `END_EVENT_MAP` макрос для завершения определения карте событий.  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  Определяет запись в схеме событий для пользовательского события.  
   
 ```   
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  Определяет событие, вызов функции для пользовательского события, относящегося к диспетчеризации Идентификатором, указанным параметром `dispid`.  
   
 ```   
@@ -208,7 +203,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  Этот макрос определяет элемент карты сообщений, который сопоставляется функции-члена конкретного элемента управления пользовательских команд.  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  Используйте этот макрос для переопределения поведения по умолчанию из обычного глагола.  
   
 ```   

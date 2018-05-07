@@ -1,13 +1,10 @@
 ---
-title: "Перетаскивание изображений из списка изображений | Документы Microsoft"
-ms.custom: 
+title: Перетаскивание изображений из списка изображений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d54984cdc1dc7897fb4f5d1d9680c6a2b95a787d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-images-from-an-image-list"></a>Перетаскивание изображений из списка изображений
 [CImageList](../mfc/reference/cimagelist-class.md) включает функции для перетаскивания изображения на экране. Функции перетаскивания, переместите изображение цветом и без любой мигания курсора. Можно перетащить маскированные и немаскированные изображения.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [DragEnter](../mfc/reference/cimagelist-class.md#dragenter) функция-член задает начальное положение изображения перетащите в окно и отображает его в позиции. Параметры включают указатель на окно, в котором для рисования изображения и точка, которая определяет координаты начальной позиции в окне. Координаты указываются относительно левого верхнего угла окна, не клиентской области. То же самое верно для всех функций перетаскивания изображения, принимающие координаты в качестве параметров. Это означает, что компенсировать ширины окна элементов, таких как граница, строку заголовка и меню, при указании координаты. При указании **NULL** дескриптор окна, при вызове `DragEnter`функции перетаскивания отрисовки изображения в контексте устройства, связанные с окном рабочего стола и координаты указываются относительно левого верхнего угла экрана.  
   
- `DragEnter`блокирует все обновления для заданного окна во время операции перетаскивания. Если необходимо выполнить любой рисунок во время операции перетаскивания, например выделение целевого объекта для операции перетаскивания и вставки, можно временно скрыть перетаскиваемого изображения с помощью [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) функции-члена. Можно также использовать [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) функции-члена.  
+ `DragEnter` блокирует все обновления для заданного окна во время операции перетаскивания. Если необходимо выполнить любой рисунок во время операции перетаскивания, например выделение целевого объекта для операции перетаскивания и вставки, можно временно скрыть перетаскиваемого изображения с помощью [DragLeave](../mfc/reference/cimagelist-class.md#dragleave) функции-члена. Можно также использовать [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) функции-члена.  
   
  Вызовите [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) после завершения перетаскивать изображение.  
   

@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Type | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::Type | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Класс Platform::Type
 Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом [Object::GetType](../cppcx/platform-object-class.md#gettype) в любом объекте или или с помощью [typeid](../windows/typeid-cpp-component-extensions.md) оператора в имени класса или структуры.  
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Примечания  
  Эквивалентом метода-члена GetTypeCode() является `typeid` свойства.
 
-## <a name="tostring">Метод Type::ToString</a>
+## <a name="tostring"></a> Метод Type::ToString
 Получает имя типа.  
   
 ### <a name="syntax"></a>Синтаксис  

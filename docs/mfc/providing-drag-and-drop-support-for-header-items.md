@@ -1,13 +1,10 @@
 ---
-title: "Предоставление поддержки перетаскивания и вставки для элементов заголовка | Документы Microsoft"
-ms.custom: 
+title: Предоставление поддержки перетаскивания и вставки для элементов заголовка | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd1ac2171a13610ee3aeabed12f5348089a57491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50cd19d4828269d0591afd0b46768e9917b96906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Предоставление поддержки перетаскивания для элементов заголовка
 Чтобы обеспечить поддержку и перетащите элементы заголовка, укажите `HDS_DRAGDROP` стиля. Поддержки перетаскивания и вставки для элементов заголовка дает пользователю возможность изменения порядка элементов заголовка элемента управления заголовка. Поведение по умолчанию предоставляет образ полупрозрачными перетащите перетаскиваемый элемент заголовка и визуальный индикатор новую позицию, при удалении элемента заголовка.  

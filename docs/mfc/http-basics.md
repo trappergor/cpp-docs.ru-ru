@@ -1,13 +1,10 @@
 ---
-title: "Основы HTTP | Документы Microsoft"
-ms.custom: 
+title: Основы HTTP | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - return codes [MFC]
 - HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67921e0667267b99b3787d55fa7ff564aa543ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56a2692edd9d41f80023e44f4ca8172cba8f9d00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-basics"></a>Основы HTTP
 При написании веб-приложение, часто просмотрите и добавьте сведения в заголовке HTTP. Коды возврата указать на успех или сбой запрошенного события. В следующей таблице перечислены некоторые распространенные коды возврата.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  Протокол передачи гипертекста (HTTP) — это протокол уровня приложения для информационных гипермедиа-систем. Дополнительные сведения о HTTP и взаимодействия веб-браузеров и серверов см. в спецификации протокола передачи гипертекста (HTTP):  
   
- [http://www.w3.org/pub/www/Protocols/](http://www.w3.org/pub/www/protocols/)  
+ [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
 ## <a name="see-also"></a>См. также  
  [Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)

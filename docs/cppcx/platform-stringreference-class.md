@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::StringReference | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::StringReference | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 Тип оптимизации, который можно использовать для передачи строковых данных из входных параметров `Platform::String^` в другие методы с минимальным числом операций копирования.  
@@ -43,13 +38,13 @@ class StringReference
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::StringReference](#ctor)|Два конструктора для создания экземпляров `StringReference`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::Data](#data)|Возвращает строковые данные как массив значений char16.|  
 |[StringReference::Length](#length)|Возвращает число символов в строке.|  
@@ -58,7 +53,7 @@ class StringReference
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[StringReference::operator=](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
 |[StringReference::operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  
@@ -72,7 +67,7 @@ class StringReference
   
  **Заголовок:** vccorlib.h  
 
-## <a name="data"></a>  StringReference::Data Method
+## <a name="data"></a>  Метод StringReference::Data
 Возвращает содержимое этого `StringReference` как массив значений char16.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -86,7 +81,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>  StringReference::GetHSTRING Method
+## <a name="gethstring"></a>  Метод StringReference::GetHSTRING
 Возвращает содержимое строки как `__abi_HSTRING`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -103,7 +98,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>  StringReference::GetString Method
+## <a name="getstring"></a>  Метод StringReference::GetString
 Возвращает содержимое строки как `Platform::String^`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -116,7 +111,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `Platform::String^`, который содержит строковые данные.  
 
-## <a name="length"></a>  StringReference::Length Method
+## <a name="length"></a>  Метод StringReference::Length
 Возвращает число символов в строке.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -132,7 +127,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>  StringReference::operator= Operator
+## <a name="operator-assign"></a>  StringReference::operator =-оператор
 Присваивает указанный объект текущему объекту `StringReference`.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -157,7 +152,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="operator-call"></a>  Оператор stringreference:: operator()
 Преобразует объект `StringReference` в объект `Platform::String^`.  
   
 ### <a name="syntax"></a>Синтаксис  

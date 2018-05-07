@@ -1,30 +1,25 @@
 ---
-title: "Как: организация выходных файлов проекта для построения | Документы Microsoft"
-ms.custom: 
+title: 'Как: организация выходных файлов проекта для построения | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Практическое руководство. Организация выходных файлов проекта для построения
 В этом разделе приводятся рекомендации по организации выходных файлов проекта. Построение ошибки могут возникать при неправильной настройке выходных файлов проекта. В этом разделе также описаны преимущества и недостатки каждого из вариантов организации выходных файлов проекта.  

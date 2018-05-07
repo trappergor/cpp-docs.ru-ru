@@ -1,12 +1,9 @@
 ---
-title: "Класс CFtpFileFind | Документы Microsoft"
-ms.custom: 
+title: Класс CFtpFileFind | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>Класс CFtpFileFind
 Помогает в поиске файлов Интернета на FTP-серверах.  
@@ -44,24 +39,24 @@ ms.lasthandoff: 12/21/2017
 class CFtpFileFind : public CFileFind  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|Создает объект `CFtpFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CFtpFileFind::FindFile](#findfile)|Поиск файла на FTP-сервере.|  
 |[CFtpFileFind::FindNextFile](#findnextfile)|Продолжает поиск файла из предыдущего вызова [FindFile](#findfile).|  
 |[CFtpFileFind::GetFileURL](#getfileurl)|Возвращает URL-адрес, включая путь файла.|  
   
 ## <a name="remarks"></a>Примечания  
- `CFtpFileFind`включает функции-члены, начать поиск, найдите файл и возвращает URL-адрес или другие описательные сведения о файле.  
+ `CFtpFileFind` включает функции-члены, начать поиск, найдите файл и возвращает URL-адрес или другие описательные сведения о файле.  
   
  Другие классы MFC, предназначен для Интернета и поиск локального файла включают [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) и [CFileFind](../../mfc/reference/cfilefind-class.md). Вместе с `CFtpFileFind`, эти классы обеспечивают удобный механизм для клиента, чтобы найти определенные файлы, независимо от того, сервера протокола или тип файла (локальном компьютере или удаленном сервере). Обратите внимание, что класс не MFC для поиска по HTTP-серверы HTTP поддерживает прямой файлами, необходимые для поиска.  
   
@@ -82,7 +77,7 @@ class CFtpFileFind : public CFileFind
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  Эта функция-член вызывается для создания `CFtpFileFind` объекта.  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>Пример  
   См. пример в обзоре класса ранее в этом разделе.  
   
-##  <a name="findfile"></a>CFtpFileFind::FindFile  
+##  <a name="findfile"></a>  CFtpFileFind::FindFile  
  Вызовите эту функцию-член для поиска файла FTP.  
   
 ```  
@@ -118,7 +113,7 @@ virtual BOOL FindFile(
  Указатель на строку, содержащую имя файла для поиска. Если **NULL**, вызов будет выполнять поиск подстановочный знак (*).  
   
  `dwFlags`  
- Флаги, описывающие способ обработки этого сеанса. Эти флаги можно объединить с помощью оператора побитового или (&#124;) и приведены ниже:  
+ Флаги, описывающие способ обработки этого сеанса. Эти флаги могут быть объединены с помощью побитового оператора OR (&#124;) и приведены ниже:  
   
 -   INTERNET_FLAG_RELOAD получить данные из проводной сети, даже если он кэшируется локально. Это флаг по умолчанию.  
   
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>Пример  
   См. в примере ранее в этом разделе.  
   
-##  <a name="findnextfile"></a>CFtpFileFind::FindNextFile  
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile  
  Вызовите эту функцию-член для продолжения поиска файла начался вызовом [FindFile](#findfile) функции-члена.  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>Примечания  
  Эту функцию необходимо вызывать по крайней мере один раз перед вызовом любой функции атрибутов (см. [CFileFind::FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)).  
   
- `FindNextFile`Создает оболочку для функции Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
+ `FindNextFile` Создает оболочку для функции Win32 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428).  
   
 ### <a name="example"></a>Пример  
   См. в примере этого раздела.  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  Вызовите эту функцию-член для получения URL-адрес из указанного файла.  
   
 ```  
@@ -168,7 +163,7 @@ CString GetFileURL() const;
  Путь и имя файла из универсальных указатель ресурса (URL).  
   
 ### <a name="remarks"></a>Примечания  
- `GetFileURL`похожа на функцию-член [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), за исключением того, что она возвращает URL-адрес в форме `ftp://moose/dir/file.txt`.  
+ `GetFileURL` похожа на функцию-член [CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath), за исключением того, что она возвращает URL-адрес в форме `ftp://moose/dir/file.txt`.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CFileFind](../../mfc/reference/cfilefind-class.md)   

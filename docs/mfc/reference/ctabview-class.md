@@ -1,12 +1,9 @@
 ---
-title: "Класс CTabView | Документы Microsoft"
-ms.custom: 
+title: Класс CTabView | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabView
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbb5d92387634356f1185cee73d5969944ac27a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabview-class"></a>Класс CTabView
 `CTabView` Класс упрощает использование класса элемента управления tab ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) в приложениях, использующих архитектуру документ/представление MFC.  
@@ -56,7 +51,7 @@ class CTabbedView : public CView
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTabView::AddView](#addview)|Добавляет новое представление вкладок элемента управления.|  
 |[CTabView::FindTab](#findtab)|Возвращает индекс указанного представления в набор вкладок.|  
@@ -67,13 +62,13 @@ class CTabbedView : public CView
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CTabView::IsScrollBar](#isscrollbar)|Вызывается платформой при создании представления вкладки для определения, имеет ли представление вкладка общих горизонтальной полосы прокрутки.|  
 |[CTabView::OnActivateView](#onactivateview)|Вызывается платформой при представлении вкладка становится активным или неактивным.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс позволяет легко перевести представление со вкладками в приложении документов и представлений. `CTabView`— `CView`-производного класса, который содержит встроенный `CMFCTabCtrl` объекта. `CTabView`обрабатывает все сообщения, необходимые для поддержки `CMFCTabCtrl` объекта. Просто создайте класс, наследующий `CTabView` и подключить его в приложение, а затем добавьте `CView`-производные классы с помощью `AddView` метод. Управления "Вкладка" отображается эти представления в виде вкладок.  
+ Этот класс позволяет легко перевести представление со вкладками в приложении документов и представлений. `CTabView` — `CView`-производного класса, который содержит встроенный `CMFCTabCtrl` объекта. `CTabView` обрабатывает все сообщения, необходимые для поддержки `CMFCTabCtrl` объекта. Просто создайте класс, наследующий `CTabView` и подключить его в приложение, а затем добавьте `CView`-производные классы с помощью `AddView` метод. Управления "Вкладка" отображается эти представления в виде вкладок.  
   
  Например, может потребоваться документа, могут быть представлены различными способами: как электронную таблицу, диаграмму, редактируемую форму и т. д. Можно создавать отдельные представления, графические данные, при необходимости, вставьте их в вашей `CTabView`-производного объекта и настроить их с вкладками без дополнительного кодирования.  
   
@@ -87,7 +82,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>  CTabView::AddView  
  Добавляет представление вкладок элемента управления.  
   
 ```  
@@ -117,7 +112,7 @@ int AddView(
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для добавления представления к вкладок, внедренных в кадре.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>  CTabView::FindTab  
  Возвращает индекс указанного представления в набор вкладок.  
   
 ```  
@@ -134,7 +129,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для получения индекс представления с указанным дескриптором.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Возвращает указатель в настоящее время активное представление.  
   
 ```  
@@ -146,7 +141,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
  Возвращает ссылку на набор вкладок, связанный с представлением.  
   
 ```  
@@ -156,7 +151,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на набор вкладок, связанный с представлением.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
  Вызывается платформой при создании представления вкладки для определения, имеет ли представление вкладка общих горизонтальной полосы прокрутки.  
   
 ```  
@@ -164,14 +159,14 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если вкладка представления должны создаваться вместе с полоса прокрутки общего. В противном случае — значение `FALSE`.  
+ `TRUE` Если вкладка представления должны создаваться вместе с полоса прокрутки общего. В противном случае — значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается платформой при `CTabView` создан объект.  
   
  Переопределить `IsScrollBar` метод в `CTabView`-производного класса и возврата `TRUE` Если нужно создать представление, имеющее общего горизонтальной полосы прокрутки.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  Вызывается платформой при представлении вкладка становится активным или неактивным.  
   
 ```  
@@ -185,7 +180,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в `CTabView`-производный класс для обработки этого уведомления.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>  CTabView::RemoveView  
  Удаляет представление из вкладок элемента управления.  
   
 ```  
@@ -201,7 +196,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
  Делает активным представления.  
   
 ```  
@@ -213,7 +208,7 @@ BOOL SetActiveView(int iTabNum);
  Отсчитываемый от нуля индекс представления вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанное представление сделан активным, `FALSE` Если недопустимый индекс представления.  
+ `TRUE` Если указанное представление сделан активным, `FALSE` Если недопустимый индекс представления.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  

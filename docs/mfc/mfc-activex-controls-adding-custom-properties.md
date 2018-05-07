@@ -1,30 +1,25 @@
 ---
-title: "Элементы управления ActiveX MFC: Добавление пользовательских свойств | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления ActiveX MFC: Добавление пользовательских свойств | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Элементы управления ActiveX в MFC. Добавление пользовательских свойств
 Пользовательские свойства отличаются от свойств хранения, что пользовательские свойства не реализованные `COleControl` класса. Пользовательское свойство используется для предоставления состояния или внешнего вида элемента управления ActiveX программисту, с помощью элемента управления.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      Мастер добавления свойств поддерживается параметризованные реализации. Свойства с параметрами (иногда называется массива свойства) могут использоваться для доступа к набор значений через одно свойство элемента управления. Макрос диспетчеризации карты для этой реализации является `DISP_PROPERTY_PARAM`. Дополнительные сведения о реализации этого типа см. в разделе [реализации параметризованные свойства](../mfc/mfc-activex-controls-advanced-topics.md) в статье элементы управления ActiveX: Дополнительные разделы.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>Используя мастер добавления свойства для добавления пользовательских свойств  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Используя мастер добавления свойства для добавления пользовательских свойств  
  Ниже показано, как добавить пользовательское свойство CircleOffset, который использует реализацию методов Get и Set. Пользовательское свойство CircleOffset позволяет пользователю элемента управления смещение круг в центре ограничивающего прямоугольника элемента управления. Процедура добавления пользовательских свойств с реализацией Кроме методов Get и Set очень похожа.  
   
  Эта процедура может также использоваться для других пользовательских свойств, которые нужно добавить. Замените на имя пользовательского свойства CircleOffset имя свойства и параметры.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 9. Нажмите кнопку **Готово**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>Добавить мастер изменения свойств для пользовательских свойств  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Добавить мастер изменения свойств для пользовательских свойств  
  При добавлении настраиваемого свойства CircleOffset, мастер добавления свойств вносит изменения в заголовке (. (H) и реализацию (. Файлы CPP) класса элемента управления.  
   
  Добавляются следующие строки. H-файл для объявления двух функций, вызванных `GetCircleOffset` и `SetCircleOffset`:  

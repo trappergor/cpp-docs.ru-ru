@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCPropertySheet | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCPropertySheet | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertySheet
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2684de5c72dcc755c2a75e2553eed509ce76533
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 Класс `CMFCPropertySheet` поддерживает таблицу свойств, каждая страница свойств в которой обозначается вкладкой, кнопкой панели инструментов, узлом элемента управления «Дерево» или элементом списка.  
@@ -74,14 +69,14 @@ class CMFCPropertySheet : public CPropertySheet
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|  
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|  
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|  
@@ -147,7 +142,7 @@ class CMFCPropertySheet : public CPropertySheet
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxpropertysheet.h  
   
-##  <a name="addpage"></a>CMFCPropertySheet::AddPage  
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage  
  Добавляет страницу в таблицу свойств.  
   
 ```  
@@ -163,7 +158,7 @@ void AddPage(CPropertyPage* pPage);
   
  Если окно свойств в стиле Microsoft Outlook, платформа отображает список кнопок навигации в левой части страницы свойств. После этого метод добавляет страницу свойств, соответствующая кнопка добавляет в список. Для отображения страницы свойств, щелкните соответствующую ему кнопку. Дополнительные сведения о стилях вкладок свойств, см. в разделе [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="addpagetotree"></a>CMFCPropertySheet::AddPageToTree  
+##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree  
  Добавляет новую страницу свойств в элемент управления «Дерево».  
   
 ```  
@@ -190,7 +185,7 @@ void AddPageToTree(
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет страницу свойств в качестве конечного элемента управления дерева. Добавление страницы свойств, создания `CMFCPropertySheet` , вызовите [CMFCPropertySheet::SetLook](#setlook) метод с `look` равным `CMFCPropertySheet::PropSheetLook_Tree`и затем использовать этот метод для добавления на странице свойств.  
   
-##  <a name="addtreecategory"></a>CMFCPropertySheet::AddTreeCategory  
+##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Добавляет новый узел в элемент управления «Дерево».  
   
 ```  
@@ -222,7 +217,7 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
   
  Использовать возвращаемое значение этого метода в последующих вызовах [CMFCPropertySheet::AddPageToTree](#addpagetotree) и [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
-##  <a name="cmfcpropertysheet"></a>CMFCPropertySheet::CMFCPropertySheet  
+##  <a name="cmfcpropertysheet"></a>  CMFCPropertySheet::CMFCPropertySheet  
  Создает объект `CMFCPropertySheet`.  
   
 ```  
@@ -253,7 +248,7 @@ CMFCPropertySheet(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе параметров для [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) конструктор.  
   
-##  <a name="enablepageheader"></a>CMFCPropertySheet::EnablePageHeader  
+##  <a name="enablepageheader"></a>  CMFCPropertySheet::EnablePageHeader  
  Резервирует место в верхней части каждой страницы для отрисовки пользовательского заголовка.  
   
 ```  
@@ -267,7 +262,7 @@ void EnablePageHeader(int nHeaderHeight);
 ### <a name="remarks"></a>Примечания  
  Чтобы использовать значение `nHeaderHeight` переопределить параметр для отрисовки пользовательского заголовка [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) метод.  
   
-##  <a name="getheaderheight"></a>CMFCPropertySheet::GetHeaderHeight  
+##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Получает высоту текущего заголовка.  
   
 ```  
@@ -280,7 +275,7 @@ int GetHeaderHeight() const;
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCPropertySheet::EnablePageHeader](#enablepageheader) метод перед вызовом этого метода.  
   
-##  <a name="getlook"></a>CMFCPropertySheet::GetLook  
+##  <a name="getlook"></a>  CMFCPropertySheet::GetLook  
  Получает значение перечисления, указывающее внешний вид текущей таблицы свойств.  
   
 ```  
@@ -290,7 +285,7 @@ PropSheetLook GetLook() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из значений перечисления, которое определяет внешний вид таблицы свойств. Список возможных значений, см. в таблице перечисления в подразделе "Примечания" [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="getnavbarwidth"></a>CMFCPropertySheet::GetNavBarWidth  
+##  <a name="getnavbarwidth"></a>  CMFCPropertySheet::GetNavBarWidth  
  Получает ширину панели навигации.  
   
 ```  
@@ -300,7 +295,7 @@ int GetNavBarWidth() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ширина панели навигации в пикселях.  
   
-##  <a name="gettab"></a>CMFCPropertySheet::GetTab  
+##  <a name="gettab"></a>  CMFCPropertySheet::GetTab  
  Получает внутренний объект набора вкладок, который поддерживает текущий элемент управления «Страница свойств».  
   
 ```  
@@ -317,7 +312,7 @@ CMFCTabCtrl& GetTab() const;
   
  Этот метод подтверждает в режиме отладки, если управления лист свойств не задано отображение в стиле Microsoft OneNote.  
   
-##  <a name="initnavigationcontrol"></a>CMFCPropertySheet::InitNavigationControl  
+##  <a name="initnavigationcontrol"></a>  CMFCPropertySheet::InitNavigationControl  
  Инициализирует появление текущего элемента управления «Страница свойств».  
   
 ```  
@@ -330,7 +325,7 @@ virtual CWnd* InitNavigationControl();
 ### <a name="remarks"></a>Примечания  
  Элемента управления на лист свойств могут отображаться в нескольких различных форм, таких как набор страниц с вкладками, дерево или список кнопок навигации. Используйте [CMFCPropertySheet::SetLook](#setlook) метод, чтобы задать внешний вид элемента управления листа свойств.  
   
-##  <a name="onactivatepage"></a>CMFCPropertySheet::OnActivatePage  
+##  <a name="onactivatepage"></a>  CMFCPropertySheet::OnActivatePage  
  Вызывается платформой при включении страницы свойств.  
   
 ```  
@@ -344,7 +339,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод гарантирует, что для свойства enabled страницы в области просмотра. Если стиль текущей таблицы свойств содержит область Microsoft Outlook, этот метод задает соответствующей кнопки Outlook в установленном состоянии.  
   
-##  <a name="ondrawpageheader"></a>CMFCPropertySheet::OnDrawPageHeader  
+##  <a name="ondrawpageheader"></a>  CMFCPropertySheet::OnDrawPageHeader  
  Вызывается платформой для отрисовки в заголовке страницы пользовательских свойств.  
   
 ```  
@@ -367,7 +362,7 @@ virtual void OnDrawPageHeader(
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий. При переопределении этого метода следует вызвать [CMFCPropertySheet::EnablePageHeader](#enablepageheader) метод перед платформа вызывает этот метод.  
   
-##  <a name="onremovetreepage"></a>CMFCPropertySheet::OnRemoveTreePage  
+##  <a name="onremovetreepage"></a>  CMFCPropertySheet::OnRemoveTreePage  
  Вызывается платформой для удаления страницы свойств из элемента управления «Дерево».  
   
 ```  
@@ -379,9 +374,9 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
  Указатель на объект page свойство, представляющее страницу свойств для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если этот метод выполнен успешно; в противном случае `FALSE`.  
+ `TRUE` Если этот метод выполнен успешно; в противном случае `FALSE`.  
   
-##  <a name="removecategory"></a>CMFCPropertySheet::RemoveCategory  
+##  <a name="removecategory"></a>  CMFCPropertySheet::RemoveCategory  
  Удаляет узел из элемента управления «Дерево».  
   
 ```  
@@ -395,7 +390,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы удалить узел, который также называется категорию, из элемента управления дерева. Используйте [CMFCPropertySheet::AddTreeCategory](#addtreecategory) метод, чтобы добавить узел в структуре дерева.  
   
-##  <a name="removepage"></a>CMFCPropertySheet::RemovePage  
+##  <a name="removepage"></a>  CMFCPropertySheet::RemovePage  
  Удаляет страницу свойств из таблицы свойств.  
   
 ```  
@@ -413,7 +408,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>Примечания  
  Этот метод удаляет указанное свойство страницы и уничтожает его соответствующее окно. На странице свойств объекта, `pPage` указывает не уничтожается, пока не [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) закрытия окна.  
   
-##  <a name="seticonslist"></a>CMFCPropertySheet::SetIconsList  
+##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Указывает список изображений, используемых в элементе управления навигации панели Outlook.  
   
 ```  
@@ -445,7 +440,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  Дополнительные сведения о методах, которые поддерживают этот метод см. в разделе [CImageList::Create](../../mfc/reference/cimagelist-class.md#create) и [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Дополнительные сведения о том, как задать стиль таблицы свойств см. в разделе [CMFCPropertySheet::SetLook](#setlook).  
   
-##  <a name="setlook"></a>CMFCPropertySheet::SetLook  
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook  
  Задает внешний вид таблицы свойств.  
   
 ```  
@@ -466,7 +461,7 @@ void SetLook(
   
  В следующей таблице перечислены значений перечисления, которые могут быть указаны в `look` параметра.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладку для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если имеется больше вкладок, чем может поместиться на одной строке.|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле панели Microsoft Outlook в левой части страницы свойств. Каждая кнопка в списке соответствует странице свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой области списка, платформа отображает стрелок прокрутки.|  

@@ -1,12 +1,9 @@
 ---
-title: "CStatusBarCtrl-класс | Документы Microsoft"
-ms.custom: 
+title: CStatusBarCtrl-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBarCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ee095257ddf3fd322a7e42e3f6fff6ac7cec76a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "индикатор статуса" Windows.  
@@ -78,13 +73,13 @@ class CStatusBarCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Создает объект `CStatusBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CStatusBarCtrl::Create](#create)|Создает элемент управления строка состояния и прикрепляет его к `CStatusBarCtrl` объекта.|  
 |[CStatusBarCtrl::CreateEx](#createex)|Создает элемент управления строка состояния с указанного расширенные стили Windows и прикрепляет его к `CStatusBarCtrl` объекта.|  
@@ -124,7 +119,7 @@ class CStatusBarCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="create"></a>CStatusBarCtrl::Create  
+##  <a name="create"></a>  CStatusBarCtrl::Create  
  Создает элемент управления строка состояния и прикрепляет его к `CStatusBarCtrl` объекта.  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
+##  <a name="createex"></a>  CStatusBarCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CStatusBarCtrl` объекта.  
   
 ```  
@@ -195,14 +190,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
+##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl  
  Создает объект `CStatusBarCtrl`.  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
+##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem  
  Вызывается платформой при изменении внешнего вида рисуемый владельцем строке состояния элемента управления изменяется.  
   
 ```  
@@ -220,7 +215,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` до этого элемента, функция завершается.  
   
-##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
+##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  Извлекает элемент управления строки состояния текущей ширины горизонтальной и вертикальной границы и расстояние между прямоугольники.  
   
 ```  
@@ -254,7 +249,7 @@ BOOL GetBorders(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
+##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon  
  Получает значок для части (также известный как область) в строке состояния.  
   
 ```  
@@ -263,7 +258,7 @@ HICON GetIcon(int iPart) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `iPart`|Отсчитываемый от нуля индекс элемента, содержащего значок, который требуется получить. Если этот параметр имеет значение -1, строка состояния полагается равным строку состояния простой режим.|  
   
@@ -285,7 +280,7 @@ HICON GetIcon(int iPart) const;
   
  [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
+##  <a name="getparts"></a>  CStatusBarCtrl::GetParts  
  Получает число элементов в строке состояния.  
   
 ```  
@@ -310,7 +305,7 @@ int GetParts(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
+##  <a name="getrect"></a>  CStatusBarCtrl::GetRect  
  Возвращает прямоугольник, ограничивающий части строки состояния.  
   
 ```  
@@ -332,7 +327,7 @@ BOOL GetRect(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="gettext"></a>CStatusBarCtrl::GetText  
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText  
  Получение текста из указанной части строки состояния.  
   
 ```  
@@ -358,11 +353,11 @@ int GetText(
   
 - **0** текст рисуется с границей отображаться ниже, чем плоскости строки состояния.  
   
-- `SBT_NOBORDERS`Текст рисуется без границы.  
+- `SBT_NOBORDERS` Текст рисуется без границы.  
   
-- `SBT_POPOUT`Текст рисуется с границей отображаться выше, чем плоскости строки состояния.  
+- `SBT_POPOUT` Текст рисуется с границей отображаться выше, чем плоскости строки состояния.  
   
-- `SBT_OWNERDRAW`Если текст имеет `SBT_OWNERDRAW` тип, графического `pType` получает это сообщение и возвращает 32-разрядное значение, связанное с текст, а не тип длины и операции.  
+- `SBT_OWNERDRAW` Если текст имеет `SBT_OWNERDRAW` тип, графического `pType` получает это сообщение и возвращает 32-разрядное значение, связанное с текст, а не тип длины и операции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Длина в символах, текста или [CString](../../atl-mfc-shared/reference/cstringt-class.md) содержащая текущий текст.  
@@ -370,7 +365,7 @@ int GetText(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="gettextlength"></a>CStatusBarCtrl::GetTextLength  
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength  
  Получает длину в символах текста из указанной части строки состояния.  
   
 ```  
@@ -388,11 +383,11 @@ int GetTextLength(
   
 - **0** текст рисуется с границей отображаться ниже, чем плоскости строки состояния.  
   
-- `SBT_NOBORDERS`Текст рисуется без границы.  
+- `SBT_NOBORDERS` Текст рисуется без границы.  
   
-- `SBT_OWNERDRAW`Текст рисуется родительским окном.  
+- `SBT_OWNERDRAW` Текст рисуется родительским окном.  
   
-- `SBT_POPOUT`Текст рисуется с границей отображаться выше, чем плоскости строки состояния.  
+- `SBT_POPOUT` Текст рисуется с границей отображаться выше, чем плоскости строки состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Длина в символах текста.  
@@ -400,7 +395,7 @@ int GetTextLength(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="gettiptext"></a>CStatusBarCtrl::GetTipText  
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText  
  Извлекает текст всплывающей подсказки для панели в строке состояния.  
   
 ```  
@@ -420,7 +415,7 @@ CString GetTipText(int nPane) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
+##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple  
  Проверяет элемент управления окна состояния, чтобы определить его в простом режиме.  
   
 ```  
@@ -433,7 +428,7 @@ BOOL IsSimple() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), как описано в Windows SDK.  
   
-##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  Задает цвет фона в строке состояния.  
   
 ```  
@@ -453,7 +448,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
+##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon  
  Задает значок для области, в строке состояния.  
   
 ```  
@@ -478,7 +473,7 @@ BOOL SetIcon(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CStatusBarCtrl::SetBkColor](#setbkcolor).  
   
-##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
+##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight  
  Задает минимальную высоту состояние панели область рисования элемента управления.  
   
 ```  
@@ -495,7 +490,7 @@ void SetMinHeight(int nMin);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
+##  <a name="setparts"></a>  CStatusBarCtrl::SetParts  
  Задает число частей в состояние элемента управления и координаты правой границы каждой части панели.  
   
 ```  
@@ -517,7 +512,7 @@ BOOL SetParts(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
+##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple  
  Определяет, отображается простой текст строки состояния или отображает все части элемента управления, заданные предыдущего вызова [SetParts](#setparts).  
   
 ```  
@@ -534,7 +529,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="remarks"></a>Примечания  
  Если приложения сменит строки состояния сложный простой или наоборот, система немедленно обновит элемент управления.  
   
-##  <a name="settext"></a>CStatusBarCtrl::SetText  
+##  <a name="settext"></a>  CStatusBarCtrl::SetText  
  Задает текст в указанной части элемента управления "Строка состояния".  
   
 ```  
@@ -563,7 +558,7 @@ BOOL SetText(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="settiptext"></a>CStatusBarCtrl::SetTipText  
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText  
  Задает текст всплывающей подсказки для панели в строке состояния.  
   
 ```  

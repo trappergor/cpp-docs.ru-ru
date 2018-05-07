@@ -1,12 +1,9 @@
 ---
-title: "CHeaderCtrl-класс | Документы Microsoft"
-ms.custom: 
+title: CHeaderCtrl-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHeaderCtrl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "заголовок" Windows.  
@@ -98,13 +93,13 @@ class CHeaderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Создает объект `CHeaderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Удаляет все фильтры для заголовка элемента управления.|  
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Очистка фильтра для заголовка элемента управления.|  
@@ -166,7 +161,7 @@ class CHeaderCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="cheaderctrl"></a>CHeaderCtrl::CHeaderCtrl  
+##  <a name="cheaderctrl"></a>  CHeaderCtrl::CHeaderCtrl  
  Создает объект `CHeaderCtrl`.  
   
 ```  
@@ -176,7 +171,7 @@ CHeaderCtrl();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_1.cpp)]  
   
-##  <a name="clearallfilters"></a>CHeaderCtrl::ClearAllFilters  
+##  <a name="clearallfilters"></a>  CHeaderCtrl::ClearAllFilters  
  Удаляет все фильтры для заголовка элемента управления.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL ClearAllFilters();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+ `true` Если этот метод выполнен успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод реализует поведение сообщения Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306) со значением столбца-1, как описано в Windows SDK.  
@@ -192,7 +187,7 @@ BOOL ClearAllFilters();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_2.cpp)]  
   
-##  <a name="clearfilter"></a>CHeaderCtrl::ClearFilter  
+##  <a name="clearfilter"></a>  CHeaderCtrl::ClearFilter  
  Очистка фильтра для заголовка элемента управления.  
   
 ```  
@@ -204,7 +199,7 @@ BOOL ClearFilter(int nColumn);
  Значение столбца, позволяющее определить, какой фильтр следует удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+ `true` Если этот метод выполнен успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод реализует поведение сообщения Win32 [HDM_CLEARFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775306), как описано в Windows SDK.  
@@ -212,7 +207,7 @@ BOOL ClearFilter(int nColumn);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]  
   
-##  <a name="create"></a>CHeaderCtrl::Create  
+##  <a name="create"></a>  CHeaderCtrl::Create  
  Создает элемент управления заголовком и прикрепляет его к `CHeaderCtrl` объекта.  
   
 ```  
@@ -244,17 +239,17 @@ virtual BOOL Create(
   
  Помимо стили элемента управления заголовка, можно использовать следующие общие стили элемента управления для определения, как элемент управления заголовка размещает и изменять свои размеры (в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) подробнее):  
   
-- `CCS_BOTTOM`Заставляет элемент управления для размещения себя в нижней части клиентской области родительского окна и задает ширину должен совпадать с родительским ширина окна.  
+- `CCS_BOTTOM` Заставляет элемент управления для размещения себя в нижней части клиентской области родительского окна и задает ширину должен совпадать с родительским ширина окна.  
   
-- `CCS_NODIVIDER`Запрещает выделение двух точек отрисовывается в верхней части элемента управления.  
+- `CCS_NODIVIDER` Запрещает выделение двух точек отрисовывается в верхней части элемента управления.  
   
-- `CCS_NOMOVEY`Заставляет элемент управления для изменения размера и перемещения самого по горизонтали, но не по вертикали, в ответ на `WM_SIZE` сообщение. Если `CCS_NORESIZE` используется стиль, этот стиль не применяется. Элементы управления заголовка имеют этот стиль по умолчанию.  
+- `CCS_NOMOVEY` Заставляет элемент управления для изменения размера и перемещения самого по горизонтали, но не по вертикали, в ответ на `WM_SIZE` сообщение. Если `CCS_NORESIZE` используется стиль, этот стиль не применяется. Элементы управления заголовка имеют этот стиль по умолчанию.  
   
-- `CCS_NOPARENTALIGN`Запрещает автоматическое перемещение в верхней или нижней части родительского окна элемента управления. Вместо этого элемент управления сохраняет его положение в родительском окне независимо от изменений размера родительского окна. Если `CCS_TOP` или `CCS_BOTTOM` используется стиль, высота корректируется по умолчанию, но также положение и ширины остаются неизменными.  
+- `CCS_NOPARENTALIGN` Запрещает автоматическое перемещение в верхней или нижней части родительского окна элемента управления. Вместо этого элемент управления сохраняет его положение в родительском окне независимо от изменений размера родительского окна. Если `CCS_TOP` или `CCS_BOTTOM` используется стиль, высота корректируется по умолчанию, но также положение и ширины остаются неизменными.  
   
-- `CCS_NORESIZE`Запрещает использовать стандартную ширину и высоту, при задании его исходный размер или новый размер элемента управления. Вместо этого элемент управления использует ширины и высоты, указанный в запросе для создания или изменения размера.  
+- `CCS_NORESIZE` Запрещает использовать стандартную ширину и высоту, при задании его исходный размер или новый размер элемента управления. Вместо этого элемент управления использует ширины и высоты, указанный в запросе для создания или изменения размера.  
   
-- `CCS_TOP`Заставляет элемент управления для размещения себя в верхней части клиентской области родительского окна и задает ширину должен совпадать с родительским ширина окна.  
+- `CCS_TOP` Заставляет элемент управления для размещения себя в верхней части клиентской области родительского окна и задает ширину должен совпадать с родительским ширина окна.  
   
  Также можно применить следующие стили окна заголовка в элемент управления (см. [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) подробнее):  
   
@@ -273,7 +268,7 @@ virtual BOOL Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
   
-##  <a name="createex"></a>CHeaderCtrl::CreateEx  
+##  <a name="createex"></a>  CHeaderCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связать его с `CHeaderCtrl` объекта.  
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо **создать** для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="createdragimage"></a>CHeaderCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Создает прозрачный версию изображения элемента в элемент управления заголовком.  
   
 ```  
@@ -326,7 +321,7 @@ CImageList* CreateDragImage(int nIndex);
   
  `CImageList` Объекта, к которому точек возвращенный указатель является временным и будет удалена в следующей обработки времени простоя.  
   
-##  <a name="deleteitem"></a>CHeaderCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem  
  Удаляет элемент из заголовка элемента управления.  
   
 ```  
@@ -343,7 +338,7 @@ BOOL DeleteItem(int nPos);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#5](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_5.cpp)]  
   
-##  <a name="drawitem"></a>CHeaderCtrl::DrawItem  
+##  <a name="drawitem"></a>  CHeaderCtrl::DrawItem  
  Вызывается платформой при изменении внешнего вида изменения рисуемый владельцем заголовка элемента управления.  
   
 ```  
@@ -364,7 +359,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
   
-##  <a name="editfilter"></a>CHeaderCtrl::EditFilter  
+##  <a name="editfilter"></a>  CHeaderCtrl::EditFilter  
  Начинает изменить указанный фильтр для заголовка элемента управления.  
   
 ```  
@@ -383,7 +378,7 @@ BOOL EditFilter(
  Укажите `true` для отмены изменений, внесенных пользователем, или `false` для принятия изменений, внесенных пользователем.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+ `true` Если этот метод выполнен успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод реализует поведение сообщения Win32 [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312), как описано в Windows SDK.  
@@ -391,7 +386,7 @@ BOOL EditFilter(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#7](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_7.cpp)]  
   
-##  <a name="getbitmapmargin"></a>CHeaderCtrl::GetBitmapMargin  
+##  <a name="getbitmapmargin"></a>  CHeaderCtrl::GetBitmapMargin  
  Получает ширину поля растрового изображения в элемент управления заголовком.  
   
 ```  
@@ -407,7 +402,7 @@ int GetBitmapMargin() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#8](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_8.cpp)]  
   
-##  <a name="getfocuseditem"></a>CHeaderCtrl::GetFocusedItem  
+##  <a name="getfocuseditem"></a>  CHeaderCtrl::GetFocusedItem  
  Возвращает индекс элемента, который имеет фокус в текущий элемент управления заголовка.  
   
 ```  
@@ -430,7 +425,7 @@ int GetFocusedItem() const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="getimagelist"></a>CHeaderCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CHeaderCtrl::GetImageList  
  Извлекает маркер из списка изображений, используемый для рисования элементов заголовка в элементе управления заголовка.  
   
 ```  
@@ -446,7 +441,7 @@ CImageList* GetImageList() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]  
   
-##  <a name="getitem"></a>CHeaderCtrl::GetItem  
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem  
  Извлекает сведения о заголовка элемента управления.  
   
 ```  
@@ -468,7 +463,7 @@ BOOL GetItem(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#10](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_12.cpp)]  
   
-##  <a name="getitemcount"></a>CHeaderCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CHeaderCtrl::GetItemCount  
  Получает число элементов в элемент управления заголовком.  
   
 ```  
@@ -481,7 +476,7 @@ int GetItemCount() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CHeaderCtrl::DeleteItem](#deleteitem).  
   
-##  <a name="getitemdropdownrect"></a>CHeaderCtrl::GetItemDropDownRect  
+##  <a name="getitemdropdownrect"></a>  CHeaderCtrl::GetItemDropDownRect  
  Возвращает прямоугольник, ограничивающий кнопку раскрывающегося списка для элемента заголовка в элементе управления текущего заголовка.  
   
 ```  
@@ -492,13 +487,13 @@ BOOL GetItemDropDownRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `iItem`|Отсчитываемый от нуля индекс заголовочный элемент, стиль `HDF_SPLITBUTTON`. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуры.|  
 |[выходной] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры получать сведения ограничивающего прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если эта функция прошла успешно; в противном случае `false`.  
+ `true` Если эта функция прошла успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [HDM_GETITEMDROPDOWNRECT](http://msdn.microsoft.com/library/windows/desktop/bb775339) сообщение, которое описано в Windows SDK.  
@@ -513,7 +508,7 @@ BOOL GetItemDropDownRect(
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#2](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_13.cpp)]  
   
-##  <a name="getitemrect"></a>CHeaderCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CHeaderCtrl::GetItemRect  
  Возвращает ограничивающий прямоугольник для данного элемента в элемент управления заголовком.  
   
 ```  
@@ -535,7 +530,7 @@ BOOL GetItemRect(
 ### <a name="remarks"></a>Примечания  
  Этот метод реализует поведение сообщения Win32 [HDM_GETITEMRECT](http://msdn.microsoft.com/library/windows/desktop/bb775341), как описано в Windows SDK.  
   
-##  <a name="getorderarray"></a>CHeaderCtrl::GetOrderArray  
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray  
  Получает порядок элементов в элементе управления заголовка справа налево.  
   
 ```  
@@ -560,7 +555,7 @@ BOOL GetOrderArray(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#11](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_14.cpp)]  
   
-##  <a name="getoverflowrect"></a>CHeaderCtrl::GetOverflowRect  
+##  <a name="getoverflowrect"></a>  CHeaderCtrl::GetOverflowRect  
  Возвращает ограничивающий прямоугольник кнопки переполнения текущего заголовка элемента управления.  
   
 ```  
@@ -569,12 +564,12 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[выходной] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающего прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если эта функция прошла успешно; в противном случае `false`.  
+ `true` Если эта функция прошла успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Если элемент управления заголовка содержит больше элементов, чем может быть отображено одновременно, элемент управления может отображать кнопки переполнения прокручиваемом к элементам, которые не видны. Элемент управления Заголовок должен иметь `HDS_OVERFLOW` и `HDF_SPLITBUTTON` стили для отображения кнопки переполнения. Ограничивающий прямоугольник заключает кнопку переполнения и существует только в том случае, если отображается кнопка переполнения. Дополнительные сведения см. в разделе [стили элемента управления заголовка](http://msdn.microsoft.com/library/windows/desktop/bb775241).  
@@ -591,7 +586,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]  
   
-##  <a name="hittest"></a>CHeaderCtrl::HitTest  
+##  <a name="hittest"></a>  CHeaderCtrl::HitTest  
  Определяет, какой элемент заголовка, расположенный в указанной точке.  
   
 ```  
@@ -600,7 +595,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in, out] `phdhti`|Указатель на [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) структура, которая указывает точки для проверки и получает результаты теста.|  
   
@@ -620,7 +615,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]  
   
-##  <a name="insertitem"></a>CHeaderCtrl::InsertItem  
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem  
  Вставляет элемент в элемент управления "Заголовок" по указанному индексу.  
   
 ```  
@@ -642,7 +637,7 @@ int InsertItem(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]  
   
-##  <a name="layout"></a>CHeaderCtrl::Layout  
+##  <a name="layout"></a>  CHeaderCtrl::Layout  
  Извлекает размер и положение элемента управления "Заголовок" в пределах заданного прямоугольника.  
   
 ```  
@@ -662,7 +657,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#13](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_18.cpp)]  
   
-##  <a name="ordertoindex"></a>CHeaderCtrl::OrderToIndex  
+##  <a name="ordertoindex"></a>  CHeaderCtrl::OrderToIndex  
  Получает значение индекса для элемента в зависимости от порядка в элементе управления заголовка.  
   
 ```  
@@ -679,7 +674,7 @@ int OrderToIndex(int nOrder) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение макроса Win32 [HDM_ORDERTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb775355), как описано в Windows SDK. Он обеспечивает поддержку упорядочение элементов заголовка.  
   
-##  <a name="setbitmapmargin"></a>CHeaderCtrl::SetBitmapMargin  
+##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin  
  Задает ширину поля растрового изображения в элемент управления заголовком.  
   
 ```  
@@ -699,7 +694,7 @@ int SetBitmapMargin(int nWidth);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#14](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_19.cpp)]  
   
-##  <a name="setfilterchangetimeout"></a>CHeaderCtrl::SetFilterChangeTimeout  
+##  <a name="setfilterchangetimeout"></a>  CHeaderCtrl::SetFilterChangeTimeout  
  Задает интервал времени ожидания в период между изменение происходит в атрибуты фильтра и учет [HDN_FILTERCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb775277) уведомления.  
   
 ```  
@@ -719,7 +714,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#15](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_20.cpp)]  
   
-##  <a name="setfocuseditem"></a>CHeaderCtrl::SetFocusedItem  
+##  <a name="setfocuseditem"></a>  CHeaderCtrl::SetFocusedItem  
  Устанавливает фокус на указанный заголовочный элемент в текущий элемент управления заголовка.  
   
 ```  
@@ -728,12 +723,12 @@ BOOL SetFocusedItem(int iItem);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `iItem`|Отсчитываемый от нуля индекс заголовочный элемент.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае `false`.  
+ `true` Если этот метод выполнен успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [HDM_SETFOCUSEDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775361) сообщение, которое описано в Windows SDK.  
@@ -748,7 +743,7 @@ BOOL SetFocusedItem(int iItem);
   
  [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]  
   
-##  <a name="sethotdivider"></a>CHeaderCtrl::SetHotDivider  
+##  <a name="sethotdivider"></a>  CHeaderCtrl::SetHotDivider  
  Перетащите разделитель между элементов заголовка для указания ручного изменения и удаления элемента заголовка.  
   
 ```  
@@ -772,7 +767,7 @@ int SetHotDivider(int nIndex);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]  
   
-##  <a name="setimagelist"></a>CHeaderCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList  
  Назначает заголовок элемента управления списка изображений.  
   
 ```  
@@ -792,7 +787,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CHeaderCtrl::GetImageList](#getimagelist).  
   
-##  <a name="setitem"></a>CHeaderCtrl::SetItem  
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem  
  Устанавливает атрибуты указанного элемента в элемент управления заголовком.  
   
 ```  
@@ -814,7 +809,7 @@ BOOL SetItem(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CHeaderCtrl::GetItem](#getitem).  
   
-##  <a name="setorderarray"></a>CHeaderCtrl::SetOrderArray  
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray  
  Задает слева направо порядок элементов в элемент управления заголовком.  
   
 ```  

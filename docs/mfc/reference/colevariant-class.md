@@ -1,12 +1,9 @@
 ---
-title: "Класс COleVariant | Документы Microsoft"
-ms.custom: 
+title: Класс COleVariant | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colevariant-class"></a>Класс COleVariant
 Инкапсулирует тип данных [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) .  
@@ -54,13 +49,13 @@ class COleVariant : public tagVARIANT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleVariant::COleVariant](#colevariant)|Создает объект `COleVariant`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleVariant::Attach](#attach)|Присоединяет **VARIANT** для `COleVariant`.|  
 |[COleVariant::ChangeType](#changetype)|Изменяет тип variant этого `COleVariant` объекта.|  
@@ -71,13 +66,13 @@ class COleVariant : public tagVARIANT
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|Преобразует `COleVariant` значение в `LPCVARIANT`.|  
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Преобразует `COleVariant` объекта в `LPVARIANT`.|  
 |[COleVariant::operator =](#operator_eq)|Копирует `COleVariant` значение.|  
 |[COleVariant::operator ==](#operator_eq_eq)|Сравнивает два `COleVariant` значения.|  
-|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Выходные данные `COleVariant` значение `CArchive` или `CDumpContext` и получает на входе `COleVariant` объекта из `CArchive`.|  
+|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|Выходные данные `COleVariant` значение `CArchive` или `CDumpContext` и получает на входе `COleVariant` объекта из `CArchive`.|  
   
 ## <a name="remarks"></a>Примечания  
  Этот тип данных используется в OLE-автоматизации. В частности [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) структура содержит указатель на массив **VARIANT** структуры. Объект **DISPPARAMS** структура используется для передачи параметров [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
@@ -99,7 +94,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
   
-##  <a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>  COleVariant::Attach  
  Эта функция вызывается для присоединения заданной [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) объект с текущим `COleVariant` объекта.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(VARIANT& varSrc);
   
  Дополнительные сведения см. в разделе [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) и [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) записи в Windows SDK.  
   
-##  <a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>  COleVariant::COleVariant  
  Создает объект `COleVariant`.  
   
 ```  
@@ -213,7 +208,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  Дополнительные сведения о `SCODE`, в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
   
-##  <a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>  COleVariant::ChangeType  
  Преобразует тип variant значения в этом `COleVariant` объекта.  
   
 ```  
@@ -230,7 +225,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), и [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) записи в Windows SDK.  
   
-##  <a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>  COleVariant::Clear  
  Очищает **VARIANT**.  
   
 ```  
@@ -242,7 +237,7 @@ void Clear();
   
  Дополнительные сведения см. в разделе `VARIANT`, `VARTYPE`, и `VariantClear` записи в Windows SDK.  
   
-##  <a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>  COleVariant::Detach  
  Отсоединяет базовый [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) объекта из этого `COleVariant` объекта.  
   
 ```  
@@ -257,7 +252,7 @@ VARIANT Detach();
   
  Дополнительные сведения см. в разделе [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), и [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) записи в Windows SDK.  
   
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  Извлекает массив байтов из существующего массива типа variant  
   
 ```  
@@ -268,7 +263,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  Ссылка на существующий [CByteArray](../../mfc/reference/cbytearray-class.md) объекта.  
   
-##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
  Этот оператор приведения возвращает `VARIANT` , значение которого копируется из этой структуры `COleVariant` объекта.  
   
 ```  
@@ -277,7 +272,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT  
  Вызовите этот оператор приведения для доступа к базовым `VARIANT` структуры для этого `COleVariant` объекта.  
   
 ```  
@@ -289,7 +284,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  Изменение значения в **VARIANT** структуры обращаются указатель, возвращаемый этой функцией изменит значение этой `COleVariant` объекта.  
   
-##  <a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>  COleVariant::operator =  
  Эти перегруженных операторах присваивания копирования исходного значения в это `COleVariant` объекта.  
   
 ```  
@@ -312,7 +307,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 ### <a name="remarks"></a>Примечания  
  Краткое описание каждого оператора выглядит следующим образом:  
   
-- **оператор = (** *varSrc***)** копирует существующий **VARIANT** или `COleVariant` объект в этот объект.  
+- **оператор = (** *varSrc ***)** копирует существующий **VARIANT** или `COleVariant` объект в этот объект.  
   
 - **оператор = (** `pSrc` **)** копии **VARIANT** осуществляется из объекта `pSrc` в этот объект.  
   
@@ -338,7 +333,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  Дополнительные сведения см. в разделе [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) и [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) записи в Windows SDK.  
   
-##  <a name="operator_eq_eq"></a>COleVariant::operator ==  
+##  <a name="operator_eq_eq"></a>  COleVariant::operator ==  
  Этот оператор сравнивает два значения типа variant и возвращает ненулевое значение, если объекты равны; в противном случае — 0.  
   
 ```  
@@ -346,7 +341,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;  
  Выходные данные `COleVariant` значение `CArchive` или **CdumpContext** и получает на входе `COleVariant` объекта из `CArchive`.  
   
 ```  
@@ -364,9 +359,9 @@ friend CArchive& AFXAPI operator>>(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `COleVariant` Вставки (  **< \<** ) поддерживает оператор диагностики формирование дампа и хранение в архив. Извлечение (  **>>** ) оператор поддерживает загрузку из архива.  
+ `COleVariant` Вставки ( **< \<**) поддерживает оператор диагностики формирование дампа и хранение в архив. Извлечение ( **>>**) оператор поддерживает загрузку из архива.  
   
-##  <a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>  COleVariant::SetString  
  Задает строку для конкретного типа.  
   
 ```  
@@ -381,7 +376,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  **VARTYPE** для нового `COleVariant` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр `vtSrc` должно быть `VT_BSTR` (Юникод) или `VT_BSTRT` (ANSI). `SetString`обычно используется значение строки ANSI, поскольку значение по умолчанию для [COleVariant::COleVariant](#colevariant) конструктор со строкой или указатель строковый параметр и не **VARTYPE** имеет формат ЮНИКОДА.  
+ Параметр `vtSrc` должно быть `VT_BSTR` (Юникод) или `VT_BSTRT` (ANSI). `SetString` обычно используется значение строки ANSI, поскольку значение по умолчанию для [COleVariant::COleVariant](#colevariant) конструктор со строкой или указатель строковый параметр и не **VARTYPE** имеет формат ЮНИКОДА.  
   
  Набор записей DAO в сборке не в ЮНИКОДЕ ожидает, что строки, строки ANSI. Таким образом, для DAO функции, использующие `COleVariant` объектов, если вы не создаете набор записей Юникод, необходимо использовать **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  форма конструктора с `vtSrc` значение `VT_BSTRT` (ANSI) или использовать `SetString` с `vtSrc` значение `VT_BSTRT` вносить строк в кодировке ANSI. Например `CDaoRecordset` функции [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) и [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) использовать `COleVariant` объектов как параметры. Эти объекты должны быть ANSI, если набор записей DAO не в ЮНИКОДЕ.  
   

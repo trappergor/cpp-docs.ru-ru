@@ -1,13 +1,10 @@
 ---
-title: "Приложения и поток поддерживают классы | Документы Microsoft"
-ms.custom: 
+title: Приложения и поток поддерживают классы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>Классы поддержки приложений и потоков
 Каждое приложение имеет только один объект приложения; Этот объект координирует других объектов в работающей программе и является производным от `CWinApp`.  
   
  Библиотека Microsoft Foundation Class (MFC) поддерживает несколько потоков выполнения в приложении. Все приложения должны иметь по крайней мере один поток; поток, используемый вашей `CWinApp` объект является этот основной поток.  
   
- `CWinThread`Инкапсулирует часть возможностей потоков операционной системы. Чтобы сделать использование нескольких потоков, MFC также предоставляет синхронизации классы объектов для предоставления интерфейса C++ объектов синхронизации Win32.  
+ `CWinThread` Инкапсулирует часть возможностей потоков операционной системы. Чтобы сделать использование нескольких потоков, MFC также предоставляет синхронизации классы объектов для предоставления интерфейса C++ объектов синхронизации Win32.  
   
 ## <a name="application-and-thread-classes"></a>Классы приложений и потоков  
  [CWinApp](../mfc/reference/cwinapp-class.md)  

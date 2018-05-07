@@ -1,13 +1,10 @@
 ---
-title: "Классы документов | Документы Microsoft"
-ms.custom: 
+title: Классы документов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>Классы документов
 Объекты класса документа, созданные объекты шаблон документа, управления данными приложения. Класс будет наследовать для документов из одного из этих классов.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  Поддерживает список элементов клиента OLE в элемент управления форматированием. При использовании [CRichEditView](../mfc/reference/cricheditview-class.md) и [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- Используется как базовый класс для классов документа серверного приложения. `COleServerDoc`объекты предоставляют большую часть поддержка сервера при взаимодействии с [COleServerItem](../mfc/reference/coleserveritem-class.md) объектов. Возможности Visual изменения обеспечивается с помощью архитектуры document/view библиотеки классов.  
+ Используется как базовый класс для классов документа серверного приложения. `COleServerDoc` объекты предоставляют большую часть поддержка сервера при взаимодействии с [COleServerItem](../mfc/reference/coleserveritem-class.md) объектов. Возможности Visual изменения обеспечивается с помощью архитектуры document/view библиотеки классов.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  Предоставляет, с [CHtmlEditView](../mfc/reference/chtmleditview-class.md), функции платформы редактирования WebBrowser HTML в контексте архитектуры представления документов MFC.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
  [CArchive](../mfc/reference/carchive-class.md)  
  Взаимодействует с [CFile](../mfc/reference/cfile-class.md) объекта для реализации постоянного хранилища для объектов с помощью сериализации (см. [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- Документы могут также содержать объекты OLE. `CDocItem`является базовым классом для элементов сервера и клиента.  
+ Документы могут также содержать объекты OLE. `CDocItem` является базовым классом для элементов сервера и клиента.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  Абстрактный базовый класс для [COleClientItem](../mfc/reference/coleclientitem-class.md) и [COleServerItem](../mfc/reference/coleserveritem-class.md). Объекты классов, производных от `CDocItem` представляют частей документов.  

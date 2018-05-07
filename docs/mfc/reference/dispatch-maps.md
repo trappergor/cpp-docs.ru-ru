@@ -1,13 +1,10 @@
 ---
-title: "Съемы | Документы Microsoft"
-ms.custom: 
+title: Съемы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>Схемы подготовки к отправке
 OLE-автоматизации предоставляет способы для вызова методов и для доступа к свойствам в приложениях. «Схеме диспетчеризации,» представляет внутренние и внешние имена функций объектов и свойств, а также типы данных, сами свойства и представляет собой механизм, предоставляемый библиотеки классов Microsoft Foundation для диспетчеризации эти запросы аргументы функции.  
@@ -46,7 +41,7 @@ OLE-автоматизации предоставляет способы для 
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Определяет свойство автоматизации OLE, который принимает параметры и имена функций Get и Set.|  
 |[DISP_DEFVALUE](#disp_defvalue)|Делает существующего свойства объекта, значение по умолчанию.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  Если `CCmdTarget`-производный класс в программе поддерживает OLE-автоматизации, что класс должен предоставлять карту диспетчеризации для предоставления его методы и свойства.  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  Объявляет определение карту диспетчеризации.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  Завершает определение карту диспетчеризации.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  Определяет функцию автоматизации OLE в карту диспетчеризации.  
   
 ```   
@@ -171,7 +166,7 @@ DISP_FUNCTION(
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_PI2**|**короткий\***|  
 |**VTS_PI4**|**Long\***|  
-|**VTS_PR4**|**число с плавающей запятой\***|  
+|**VTS_PR4**|**Число с плавающей запятой\***|  
 |**VTS_PR8**|**Double\***|  
 |**VTS_PCY**|**CY\***|  
 |**VTS_PDATE**|**ДАТА\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  Определяет свойства метода OLE-автоматизации в карту диспетчеризации.  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  Определяет свойство автоматизации OLE и имя функции, используемые для получения и задания значения свойства в карту диспетчеризации.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  Определяет свойство автоматизации OLE с уведомлением в карту диспетчеризации.  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  Определяет свойство с доступом с отдельными **получить** и `Set` функции-члены.  
   
 ```   
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  Делает существующего свойства объекта, значение по умолчанию.  
   
 ```   

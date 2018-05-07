@@ -1,13 +1,10 @@
 ---
-title: "SQL | Документы Microsoft"
-ms.custom: 
+title: SQL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL-код
 SQL (языка структурированных запросов) дает возможность взаимодействовать с реляционной базы данных, которая позволяет определить запрос, изменения и управления данными. С помощью синтаксиса SQL, можно создать инструкцию, извлекающую записи согласно заданным условиям.  
@@ -47,10 +42,10 @@ SQL (языка структурированных запросов) дает в
   
 -   [Использование классов базы данных SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  Классы баз данных, реализованы в ODBC, который использует SQL в интерфейс уровня вызова, а не внедрять SQL-команды в коде. ODBC SQL используется для взаимодействия с [источника данных](../../data/odbc/data-source-odbc.md) посредством драйверов ODBC. Эти драйверы трактуют SQL и переводят его, если необходимо, для использования с базой данных определенного формата, таких как Microsoft Access. Дополнительные сведения об использовании ODBC SQL см. в разделе [ODBC](../../data/odbc/odbc-basics.md) и ODBC SDK *Справочник программиста* на компакт-диске библиотеки MSDN.  
   
-##  <a name="_core_the_database_classes"></a>Классы баз данных  
+##  <a name="_core_the_database_classes"></a> Классы баз данных  
  Классы баз данных предназначены для редактирования и обновления данных в существующем [источника данных](../../data/odbc/data-source-odbc.md). [Мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [мастер потребителей ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (через **добавить класс**), и большинство инструкций SQL классы базы данных создается автоматически.  
   
  Классы баз данных используют часть SQL, известную как языка обработки данных (DML). Эти команды позволяют работать с всей или части источника данных, добавлять новые записи, редактирования записей и удаления записей. В следующей таблице перечислены наиболее распространенные ключевые слова SQL и использовать классы баз данных одним из способов их.  
@@ -79,7 +74,7 @@ SQL (языка структурированных запросов) дает в
   
  Дополнительные сведения о SQL, включающие список поддерживаемых инструкций SQL, типы данных, грамматику ядра SQL и список рекомендуемых публикаций о SQL, можно найти *ODBC SDK* *Справочник по программированию*  на компакт-диске библиотеки MSDN.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>Использование классов базы данных SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> Использование классов базы данных SQL  
  Наборы записей, которые являются производными от классов базы данных используйте ODBC для связи с источником данных и ODBC извлекает записи из источника данных путем отправки инструкций SQL. В этом разделе описывается связь между классами баз данных и SQL Server.  
   
  Набор записей создает инструкцию SQL путем построения частей инструкции SQL в `CString`. Строка формируется как **ВЫБЕРИТЕ** инструкцию, которая возвращает набор записей.  

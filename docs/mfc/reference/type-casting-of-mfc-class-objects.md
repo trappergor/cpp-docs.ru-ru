@@ -1,13 +1,10 @@
 ---
-title: "Приведение объектов классов MFC типов | Документы Microsoft"
-ms.custom: 
+title: Приведение объектов классов MFC типов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc887ad855b00b525c74b66bfc70f2adb3312e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 217be53a78a65a0f617438127b922b20c950853d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Приведение типов объектов классов MFC
 Макросы приведения типов предоставляют способ приведения заданный указатель на указатель, который указывает на объект определенного класса, с или без проверки, что допускается приведение.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|Указатель на указатель на объект класса приводит при проверке того, если приведение является допустимым.|  
 |[STATIC_DOWNCAST](#static_downcast)|Приводит указатель на объект из одного класса в указатель связанного типа. В отладочном построении вызывает **ASSERT** , если объект не является «вида» в целевой тип.|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
  Предоставляет удобный способ приведение указателя на указатель на объект класса при проверке того, если приведение является допустимым.  
   
 ```   
@@ -62,7 +57,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  Если объект, который ссылается указатель «вида» указанный класс макрос возвращает указатель на соответствующий. Если это не допустимые приведения, этот макрос возвращает **NULL**.  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
  Приведение *pobject* к указателю на *class_name* объекта.  
   
 ```   

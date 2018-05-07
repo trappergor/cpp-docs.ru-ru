@@ -1,12 +1,9 @@
 ---
-title: "стек (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: стек (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/stack> header [STL/CLR]
 - stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 290857b51fea6726ec7e4a836d4afe1b33a8e615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к последней обслужен. Используйте адаптер контейнера `stack` управление базового контейнера, что стек принудительной передачи.  
@@ -56,7 +51,7 @@ template<typename Value,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
 |[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Тип базового контейнера.|  
@@ -67,7 +62,7 @@ template<typename Value,
 |[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Заменяет все элементы.|  
 |[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
@@ -79,11 +74,11 @@ template<typename Value,
 |[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Обращается к последнему элементу.|  
 |[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Обращается к последнему элементу.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Определяет, если `stack` объект не равен другому `stack` объекта.|  
@@ -95,7 +90,7 @@ template<typename Value,
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IStack\<значение, контейнер >|Ведение адаптера универсального контейнера.|  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCReBar | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCReBar | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCReBar
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 118c792b1b732fa1e8b024bb6b80da5ea0e7aa31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 Объект `CMFCReBar` объект является панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления главной панели.  
@@ -62,7 +57,7 @@ class CMFCReBar : public CPane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCReBar::AddBar](#addbar)|Добавляет диапазон главной панели.|  
 |[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
@@ -95,7 +90,7 @@ class CMFCReBar : public CPane
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxRebar.h  
   
-##  <a name="addbar"></a>CMFCReBar::AddBar  
+##  <a name="addbar"></a>  CMFCReBar::AddBar  
  Добавляет диапазон главной панели.  
   
 ```  
@@ -114,13 +109,13 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out]`pBar`  
+ [in] [out] `pBar`  
  Указатель дочернего окна, который должен быть вставлен в главной панели. Указанный объект должен иметь **WS_CHILD** стиль окна.  
   
  [in] `pszText`  
  Задает текст, отображаемый на главной панели. Текст не является частью дочернего окна. Вместо этого он отображается на главной панели, сам.  
   
- [in] [out]`pbmp`  
+ [in] [out] `pbmp`  
  Указывает битовую карту для отображения на заднем плане главной панели.  
   
  [in] `dwStyle`  
@@ -133,9 +128,9 @@ BOOL AddBar(
  Представляет цвет фона главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если диапазон успешно добавлен в главной панели; в противном случае `FALSE`.  
+ `TRUE` Если диапазон успешно добавлен в главной панели; в противном случае `FALSE`.  
   
-##  <a name="create"></a>CMFCReBar::Create  
+##  <a name="create"></a>  CMFCReBar::Create  
  Создает контейнер элементов управления и прикрепляет его к [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) объекта.  
   
 ```  
@@ -147,7 +142,7 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out]`pParentWnd`  
+ [in] [out] `pParentWnd`  
  Указатель на родительское окно элемента управления главной панели.  
   
  [in] `dwCtrlStyle`  
@@ -160,11 +155,11 @@ BOOL Create(
  Идентификатор дочернего окна главной панели  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если главной панели был создан успешно. в противном случае `FALSE`.  
+ `TRUE` Если главной панели был создан успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
  Предоставляет прямой доступ к `CReBarCtrl` базового стандартного элемента управления для `CMFCReBar` объектов.  
   
 ```  
@@ -177,7 +172,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод, чтобы воспользоваться преимуществами общие функции управления Windows главной панели, при настройке вашей главной панели.  
   
-##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
 
   
 ```  
@@ -194,7 +189,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="canfloat"></a>CMFCReBar::CanFloat  
+##  <a name="canfloat"></a>  CMFCReBar::CanFloat  
 
   
 ```  
@@ -205,7 +200,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="enabledocking"></a>CMFCReBar::EnableDocking  
+##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking  
 
   
 ```  
@@ -217,7 +212,7 @@ void EnableDocking(DWORD dwDockStyle);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize  
 
   
 ```  
@@ -228,7 +223,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu  
 
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest  
 
   
 ```  
@@ -259,7 +254,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI  
 
   
 ```  
@@ -274,7 +269,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment  
 
   
 ```  

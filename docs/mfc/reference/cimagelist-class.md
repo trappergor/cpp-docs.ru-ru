@@ -1,12 +1,9 @@
 ---
-title: "CImageList-класс | Документы Microsoft"
-ms.custom: 
+title: CImageList-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImageList
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cimagelist-class"></a>CImageList-класс
 Предоставляет функциональные возможности стандартного элемента управления "список изображений" Windows.  
@@ -104,17 +99,17 @@ ms.lasthandoff: 12/21/2017
 class CImageList : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImageList::CImageList](#cimagelist)|Создает объект `CImageList`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImageList::Add](#add)|Добавляет изображение или изображения для списка изображений.|  
 |[CImageList::Attach](#attach)|Присоединяет списка изображений для `CImageList` объекта.|  
@@ -151,13 +146,13 @@ class CImageList : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImageList::operator HIMAGELIST](#operator_himagelist)|Возвращает `HIMAGELIST` присоединяется к `CImageList`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CImageList::m_hImageList](#m_himagelist)|Дескриптор, содержащий список изображений, присоединенного к данному объекту.|  
   
@@ -176,7 +171,7 @@ class CImageList : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="add"></a>CImageList::Add  
+##  <a name="add"></a>  CImageList::Add  
  Вызывайте эту функцию, чтобы добавить одно или несколько изображений или значка для списка изображений.  
   
 ```  
@@ -214,7 +209,7 @@ int Add(HICON hIcon);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]  
   
-##  <a name="attach"></a>CImageList::Attach  
+##  <a name="attach"></a>  CImageList::Attach  
  Эта функция вызывается для списка изображений для присоединения `CImageList` объекта.  
   
 ```  
@@ -231,7 +226,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]  
   
-##  <a name="begindrag"></a>CImageList::BeginDrag  
+##  <a name="begindrag"></a>  CImageList::BeginDrag  
  Эта функция вызывается для начните перетаскивать изображение.  
   
 ```  
@@ -256,14 +251,14 @@ BOOL BeginDrag(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]  
   
-##  <a name="cimagelist"></a>CImageList::CImageList  
+##  <a name="cimagelist"></a>  CImageList::CImageList  
  Создает объект `CImageList`.  
   
 ```  
 CImageList();
 ```  
   
-##  <a name="copy"></a>CImageList::Copy  
+##  <a name="copy"></a>  CImageList::Copy  
  Эта функция-член реализует поведение функции Win32 [ImageList_Copy](http://msdn.microsoft.com/library/windows/desktop/bb761520), как описано в Windows SDK.  
   
 ```  
@@ -290,7 +285,7 @@ BOOL Copy(
  `uFlags`  
  Значение флага бит, указывающий тип операции копирования будет выполняться. Этот параметр может принимать одно из следующих значений:  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |`ILCF_MOVE`|Исходный образ копируется индекс образа назначения. Эта операция приводит к несколько экземпляров заданного изображения. Значение по умолчанию — `ILCF_MOVE`.|  
 |`ILCF_SWAP`|Исходное и конечное изображения обмена позиций в списке изображений.|  
@@ -304,7 +299,7 @@ BOOL Copy(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]  
   
-##  <a name="create"></a>CImageList::Create  
+##  <a name="create"></a>  CImageList::Create  
  Инициализирует списка изображений и прикрепляет его к [CImageList](../../mfc/reference/cimagelist-class.md) объекта.  
   
 ```  
@@ -351,7 +346,7 @@ BOOL Create(CImageList* pImageList);
  `nFlags`  
  Указывает тип списка изображений для создания. Этот параметр может быть сочетанием следующих значений, но он может включать только один из `ILC_COLOR` значения.  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |`ILC_COLOR`|Использовать поведение по умолчанию, если ни один из других `ILC_COLOR`* указаны флаги. Как правило, значение по умолчанию — `ILC_COLOR4`; но старые драйверы отображения по умолчанию принимается `ILC_COLORDDB`.|  
 |`ILC_COLOR4`|Раздел 4-разрядное (16 цветов) аппаратно независимый точечный рисунок (DIB) как растровое изображение можно используйте для списка изображений.|  
@@ -407,7 +402,7 @@ BOOL Create(CImageList* pImageList);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#7](../../mfc/reference/codesnippet/cpp/cimagelist-class_5.cpp)]  
   
-##  <a name="deleteimagelist"></a>CImageList::DeleteImageList  
+##  <a name="deleteimagelist"></a>  CImageList::DeleteImageList  
  Эта функция вызывается для удаления списка изображений.  
   
 ```  
@@ -420,7 +415,7 @@ BOOL DeleteImageList();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#8](../../mfc/reference/codesnippet/cpp/cimagelist-class_6.cpp)]  
   
-##  <a name="deletetempmap"></a>CImageList::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CImageList::DeleteTempMap  
  Автоматически вызывается `CWinApp` обработчиком времени простоя `DeleteTempMap` удаляет все временные `CImageList` объектов, созданных [FromHandle](#fromhandle), но не уничтожает все дескрипторы ( `hImageList`) временно связанный с **ImageList** объектов.  
   
 ```  
@@ -430,7 +425,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#9](../../mfc/reference/codesnippet/cpp/cimagelist-class_7.cpp)]  
   
-##  <a name="detach"></a>CImageList::Detach  
+##  <a name="detach"></a>  CImageList::Detach  
  Эта функция вызывается для отсоединения объект списка image `CImageList` объекта.  
   
 ```  
@@ -446,7 +441,7 @@ HIMAGELIST Detach();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::Attach](#attach).  
   
-##  <a name="dragenter"></a>CImageList::DragEnter  
+##  <a name="dragenter"></a>  CImageList::DragEnter  
  При выполнении операции перетаскивания блокировки обновления окном, заданным параметром `pWndLock` и отображает изображение перетаскивания в позиции, указанной параметром `point`.  
   
 ```  
@@ -475,7 +470,7 @@ static BOOL PASCAL DragEnter(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::BeginDrag](#begindrag).  
   
-##  <a name="dragleave"></a>CImageList::DragLeave  
+##  <a name="dragleave"></a>  CImageList::DragLeave  
  Разблокирует окном, заданным параметром `pWndLock` и скрывает изображение перетаскивания, позволяя обновить окно.  
   
 ```  
@@ -492,7 +487,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::EndDrag](#enddrag).  
   
-##  <a name="dragmove"></a>CImageList::DragMove  
+##  <a name="dragmove"></a>  CImageList::DragMove  
  Вызывайте эту функцию, чтобы переместить изображение, перетаскиваемый во время операции перетаскивания и вставки.  
   
 ```  
@@ -512,7 +507,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]  
   
-##  <a name="dragshownolock"></a>CImageList::DragShowNolock  
+##  <a name="dragshownolock"></a>  CImageList::DragShowNolock  
  Показывает или скрывает изображение перетаскивания во время операции перетаскивания, не блокируя окна.  
   
 ```  
@@ -529,7 +524,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ### <a name="remarks"></a>Примечания  
  [CImageList::DragEnter](#dragenter) функция блокирует все обновления в окно во время операции перетаскивания. Однако эта функция не блокирует окна.  
   
-##  <a name="draw"></a>CImageList::Draw  
+##  <a name="draw"></a>  CImageList::Draw  
  Эта функция вызывается для отрисовки изображения, перетаскиваемый во время операции перетаскивания и вставки.  
   
 ```  
@@ -553,7 +548,7 @@ BOOL Draw(
  `nStyle`  
  Флаг, указывающий, стиль рисования. Может быть один или несколько из следующих значений:  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |`ILD_BLEND25`, **ILD_FOCUS**|Рисует изображение наложения 25 процентов с системным цветом. Если список изображений не содержит маску, это значение игнорируется.|  
 |`ILD_BLEND50`, **ILD_SELECTED**, **ILD_BLEND**|Рисует изображение наложения 50 процентов с системным цветом. Если список изображений не содержит маску, это значение игнорируется.|  
@@ -567,7 +562,7 @@ BOOL Draw(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::SetOverlayImage](#setoverlayimage).  
   
-##  <a name="drawex"></a>CImageList::DrawEx  
+##  <a name="drawex"></a>  CImageList::DrawEx  
  Рисует изображение элемента списка в заданном контексте устройства.  
   
 ```  
@@ -612,7 +607,7 @@ BOOL DrawEx(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]  
   
-##  <a name="drawindirect"></a>CImageList::DrawIndirect  
+##  <a name="drawindirect"></a>  CImageList::DrawIndirect  
  Вызовите эту функцию-член для рисования изображения из списка изображений.  
   
 ```  
@@ -666,7 +661,7 @@ BOOL DrawIndirect(
  *rgbBack*  
  Цвет фона изображения по умолчанию `CLR_DEFAULT`. Этот параметр может иметь определяемые приложением значения RGB или одно из следующих значений:  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|Цвет фона по умолчанию. Цвет фона для списка изображений с помощью рисуется изображение.|  
 |`CLR_NONE`|Без цвета фона. Изображение является прозрачным.|  
@@ -674,7 +669,7 @@ BOOL DrawIndirect(
  *rgbFore*  
  Изображения по умолчанию цвет переднего плана, `CLR_DEFAULT`. Этот параметр может иметь определяемые приложением значения RGB или одно из следующих значений:  
   
-|Значение|Значение|  
+|Значение|Смысл|  
 |-----------|-------------|  
 |`CLR_DEFAULT`|Цвет по умолчанию. С помощью системным цветом выделения цветом переднего плана, рисуется изображение.|  
 |`CLR_NONE`|Нет цвета blend. Изображение смешивается с цветом контекста устройства назначения.|  
@@ -705,7 +700,7 @@ BOOL DrawIndirect(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
   
-##  <a name="enddrag"></a>CImageList::EndDrag  
+##  <a name="enddrag"></a>  CImageList::EndDrag  
  Эта функция вызывается для завершения операции перетаскивания.  
   
 ```  
@@ -718,7 +713,7 @@ static void PASCAL EndDrag();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]  
   
-##  <a name="extracticon"></a>CImageList::ExtractIcon  
+##  <a name="extracticon"></a>  CImageList::ExtractIcon  
  Эта функция вызывается для создания на основе образа и его связанные маски, в список изображений значка.  
   
 ```  
@@ -738,7 +733,7 @@ HICON ExtractIcon(int nImage);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]  
   
-##  <a name="fromhandle"></a>CImageList::FromHandle  
+##  <a name="fromhandle"></a>  CImageList::FromHandle  
  Возвращает указатель на `CImageList` объект для заданного дескриптора для списка изображений.  
   
 ```  
@@ -758,7 +753,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]  
   
-##  <a name="fromhandlepermanent"></a>CImageList::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>  CImageList::FromHandlePermanent  
  Возвращает указатель на `CImageList` объект для заданного дескриптора для списка изображений.  
   
 ```  
@@ -778,7 +773,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#14](../../mfc/reference/codesnippet/cpp/cimagelist-class_14.cpp)]  
   
-##  <a name="getbkcolor"></a>CImageList::GetBkColor  
+##  <a name="getbkcolor"></a>  CImageList::GetBkColor  
  Эта функция вызывается для получения текущего цвета фона для списка изображений.  
   
 ```  
@@ -791,7 +786,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::SetBkColor](#setbkcolor).  
   
-##  <a name="getdragimage"></a>CImageList::GetDragImage  
+##  <a name="getdragimage"></a>  CImageList::GetDragImage  
  Получает список временного изображения, используемый для перетаскивания.  
   
 ```  
@@ -810,7 +805,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="return-value"></a>Возвращаемое значение  
  Если успешно, указатель на образе временный список, который используется для перетаскивания; в противном случае **NULL**.  
   
-##  <a name="getimagecount"></a>CImageList::GetImageCount  
+##  <a name="getimagecount"></a>  CImageList::GetImageCount  
  Вызывайте эту функцию для извлечения нескольких изображений в списке изображений.  
   
 ```  
@@ -823,7 +818,7 @@ int GetImageCount() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::ExtractIcon](#extracticon).  
   
-##  <a name="getimageinfo"></a>CImageList::GetImageInfo  
+##  <a name="getimageinfo"></a>  CImageList::GetImageInfo  
  Эта функция вызывается для получения сведений об образе.  
   
 ```  
@@ -845,7 +840,7 @@ BOOL GetImageInfo(
 ### <a name="remarks"></a>Примечания  
  `IMAGEINFO` Структура содержит сведения об изображении в списка изображений.  
   
-##  <a name="getsafehandle"></a>CImageList::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CImageList::GetSafeHandle  
  Эта функция вызывается для получения **m_hImageList** члена данных.  
   
 ```  
@@ -858,7 +853,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#15](../../mfc/reference/codesnippet/cpp/cimagelist-class_15.cpp)]  
   
-##  <a name="m_himagelist"></a>CImageList::m_hImageList  
+##  <a name="m_himagelist"></a>  CImageList::m_hImageList  
  Дескриптор списка изображений, присоединенного к данному объекту.  
   
  **HIMAGELIST m_hImageList;**  
@@ -869,7 +864,7 @@ HIMAGELIST GetSafeHandle() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]  
   
-##  <a name="operator_himagelist"></a>CImageList::operator HIMAGELIST  
+##  <a name="operator_himagelist"></a>  CImageList::operator HIMAGELIST  
  Этот оператор используется для получения вложенного дескриптор `CImageList` объекта.  
   
 ```  
@@ -885,7 +880,7 @@ operator HIMAGELIST() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]  
   
-##  <a name="read"></a>CImageList::Read  
+##  <a name="read"></a>  CImageList::Read  
  Эта функция вызывается для чтения списка изображений из архива.  
   
 ```  
@@ -902,7 +897,7 @@ BOOL Read(CArchive* pArchive);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]  
   
-##  <a name="remove"></a>CImageList::Remove  
+##  <a name="remove"></a>  CImageList::Remove  
  Вызывайте эту функцию, чтобы удалить изображение из объекта списка изображений.  
   
 ```  
@@ -922,7 +917,7 @@ BOOL Remove(int nImage);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
   
-##  <a name="replace"></a>CImageList::Replace  
+##  <a name="replace"></a>  CImageList::Replace  
  Вызывайте эту функцию, чтобы заменить изображение в список изображений заменяется новым изображением.  
   
 ```  
@@ -961,7 +956,7 @@ int Replace(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CImageList::SetImageCount](#setimagecount).  
   
-##  <a name="setbkcolor"></a>CImageList::SetBkColor  
+##  <a name="setbkcolor"></a>  CImageList::SetBkColor  
  Вызывайте эту функцию, чтобы задать цвет фона для списка изображений.  
   
 ```  
@@ -978,7 +973,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]  
   
-##  <a name="setdragcursorimage"></a>CImageList::SetDragCursorImage  
+##  <a name="setdragcursorimage"></a>  CImageList::SetDragCursorImage  
  Создает новое изображение перетаскивания путем объединения с текущего изображения перетащите заданного изображения (обычно изображение курсора мыши).  
   
 ```  
@@ -1000,7 +995,7 @@ BOOL SetDragCursorImage(
 ### <a name="remarks"></a>Примечания  
  Поскольку перетаскивания функции используют новый образ во время операции перетаскивания, следует использовать Windows [функция ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396) функция скрыть курсор мыши после вызова `CImageList::SetDragCursorImage`. В противном случае система может показаться имеют два курсора мыши на время операции перетаскивания.  
   
-##  <a name="setimagecount"></a>CImageList::SetImageCount  
+##  <a name="setimagecount"></a>  CImageList::SetImageCount  
  Вызовите эту функцию-член для сброса число образов в `CImageList` объекта.  
   
 ```  
@@ -1022,7 +1017,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]  
   
-##  <a name="setoverlayimage"></a>CImageList::SetOverlayImage  
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage  
  Вызовите эту функцию, чтобы добавить в список изображений для использования в качестве маски наложения отсчитываемый от нуля индекс изображения.  
   
 ```  
@@ -1049,7 +1044,7 @@ BOOL SetOverlayImage(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]  
   
-##  <a name="write"></a>CImageList::Write  
+##  <a name="write"></a>  CImageList::Write  
  Эта функция используется для записи объекта списка изображений в архив.  
   
 ```  

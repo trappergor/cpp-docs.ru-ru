@@ -1,12 +1,9 @@
 ---
-title: "CSliderCtrl-класс | Документы Microsoft"
-ms.custom: 
+title: CSliderCtrl-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSliderCtrl
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2788777b9a5014790e094cf39871b3e4d40750fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.  
@@ -108,13 +103,13 @@ class CSliderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Создает объект `CSliderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSliderCtrl::ClearSel](#clearsel)|Отменяет текущее выделение в элементе управления "ползунок".|  
 |[CSliderCtrl::ClearTics](#cleartics)|Удаляет текущий деления из элемента управления "ползунок".|  
@@ -175,7 +170,7 @@ class CSliderCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
+##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
  Отменяет текущее выделение в элементе управления "ползунок".  
   
 ```  
@@ -186,7 +181,7 @@ void ClearSel(BOOL bRedraw = FALSE);
  `bRedraw`  
  Перерисовывает флаг. Если этот параметр имеет **TRUE**, ползунок перерисовке после очистки выделение; в противном случае не перерисовке ползунок.  
   
-##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
+##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
  Удаляет текущий деления из элемента управления "ползунок".  
   
 ```  
@@ -197,7 +192,7 @@ void ClearTics(BOOL bRedraw = FALSE);
  `bRedraw`  
  Перерисовывает флаг. Если этот параметр имеет **TRUE**, ползунок перерисовке после очистки делений; в противном случае не перерисовке ползунок.  
   
-##  <a name="create"></a>CSliderCtrl::Create  
+##  <a name="create"></a>  CSliderCtrl::Create  
  Создает элемент управления "ползунок" и прикрепляет его к `CSliderCtrl` объекта.  
   
 ```  
@@ -231,7 +226,7 @@ virtual BOOL Create(
   
  Чтобы применить расширенные стили окна в элемент управления "ползунок", вызовите [CreateEx](#createex) вместо **создать**.  
   
-##  <a name="createex"></a>CSliderCtrl::CreateEx  
+##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CSliderCtrl` объекта.  
   
 ```  
@@ -265,14 +260,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl  
  Создает объект `CSliderCtrl`.  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy  
  Извлекает дескриптор окна элемента управления контактному лицу ползунок в заданную позицию.  
   
 ```  
@@ -293,7 +288,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), как описано в Windows SDK. Описание стили элемента управления "ползунок" см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в Windows SDK.  
   
-##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Извлекает размер и положение ограничивающего прямоугольника для элемента управления "ползунок" канала.  
   
 ```  
@@ -307,7 +302,7 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="remarks"></a>Примечания  
  Канал представляет собой область, на которое перемещается ползунок и при выборе диапазон, который содержит выделение.  
   
-##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize  
  Получает размер строки для элемента управления "ползунок".  
   
 ```  
@@ -320,7 +315,7 @@ int GetLineSize() const;
 ### <a name="remarks"></a>Примечания  
  Размер строки влияет на объем на которое перемещается ползунок для **TB_LINEUP** и **TB_LINEDOWN** уведомления. Размер строки по умолчанию — 1.  
   
-##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics  
  Извлекает количество делений в элементе управления "ползунок".  
   
 ```  
@@ -330,7 +325,7 @@ UINT GetNumTics() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество делений в элементе управления "ползунок".  
   
-##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize  
  Получает размер страницы для элемента управления "ползунок".  
   
 ```  
@@ -343,7 +338,7 @@ int GetPageSize() const;
 ### <a name="remarks"></a>Примечания  
  Влияет на размер страницы, сколько на которое перемещается ползунок для **TB_PAGEUP** и **TB_PAGEDOWN** уведомления.  
   
-##  <a name="getpos"></a>CSliderCtrl::GetPos  
+##  <a name="getpos"></a>  CSliderCtrl::GetPos  
  Извлекает текущее положение ползунка в элементе управления "ползунок".  
   
 ```  
@@ -353,7 +348,7 @@ int GetPos() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущая позиция.  
   
-##  <a name="getrange"></a>CSliderCtrl::GetRange  
+##  <a name="getrange"></a>  CSliderCtrl::GetRange  
  Извлекает максимальное и минимальное позиции для ползунок в элементе управления "ползунок".  
   
 ```  
@@ -372,7 +367,7 @@ void GetRange(
 ### <a name="remarks"></a>Примечания  
  Эта функция копирует значения в целые числа, ссылается `nMin` и `nMax`.  
   
-##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  Получает положение ползунка в элементе управления "ползунок".  
   
 ```  
@@ -382,7 +377,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение положения элемента управления.  
   
-##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin  
  Извлекает минимальное положение ползунка в элементе управления "ползунок".  
   
 ```  
@@ -392,7 +387,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Минимальное положение элемента управления.  
   
-##  <a name="getselection"></a>CSliderCtrl::GetSelection  
+##  <a name="getselection"></a>  CSliderCtrl::GetSelection  
  Извлекает начальные и конечные позиции текущего выделенного фрагмента в элементе управления "ползунок".  
   
 ```  
@@ -408,7 +403,7 @@ void GetSelection(
  `nMax`  
  Ссылка на целое число, получающий конечную позицию текущего выделенного фрагмента.  
   
-##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
  Получает длину ползунок в текущем элементе управления trackbar.  
   
 ```  
@@ -421,7 +416,7 @@ int GetThumbLength() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) сообщение, которое описано в Windows SDK.  
   
-##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Извлекает размер и положение ограничивающего прямоугольника для ползунок (бегунок) в элементе управления "ползунок".  
   
 ```  
@@ -432,7 +427,7 @@ void GetThumbRect(LPRECT lprc) const;
  `lprc`  
  Указатель на `CRect` объект, содержащий прямоугольник, ограничивающий ползунок при возврате из функции.  
   
-##  <a name="gettic"></a>CSliderCtrl::GetTic  
+##  <a name="gettic"></a>  CSliderCtrl::GetTic  
  Возвращает позицию делений в элементе управления "ползунок".  
   
 ```  
@@ -446,7 +441,7 @@ int GetTic(int nTic) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Положение указанного деления или - 1, если `nTic` не указывает допустимый индекс.  
   
-##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
+##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  Извлекает адрес массив, содержащий позицию делений для элемента управления "ползунок".  
   
 ```  
@@ -456,7 +451,7 @@ DWORD* GetTicArray() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Адрес массива, содержащего позиции метки делений для элемента управления "ползунок".  
   
-##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
+##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos  
  Извлекает текущий физическое расположение делений в элементе управления "ползунок".  
   
 ```  
@@ -470,7 +465,7 @@ int GetTicPos(int nTic) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Физическое расположение, в клиентских координатах, указанный деления или - 1, если `nTic` не указывает допустимый индекс.  
   
-##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  Извлекает дескриптор элемента управления всплывающей подсказки для элемента управления "ползунок", если таковые имеются.  
   
 ```  
@@ -485,7 +480,7 @@ CToolTipCtrl* GetToolTips() const;
   
  Описание стили элемента управления "ползунок" см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в Windows SDK.  
   
-##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Назначает окно в связанном окне для элемента управления "ползунок".  
   
 ```  
@@ -513,7 +508,7 @@ CWnd* SetBuddy(
   
  Описание стили элемента управления "ползунок" см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в Windows SDK.  
   
-##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Задает размер строки для элемента управления "ползунок".  
   
 ```  
@@ -530,7 +525,7 @@ int SetLineSize(int nSize);
 ### <a name="remarks"></a>Примечания  
  Размер строки влияет на объем на которое перемещается ползунок для **TB_LINEUP** и **TB_LINEDOWN** уведомления.  
   
-##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize  
  Задает размер страницы для элемента управления "ползунок".  
   
 ```  
@@ -547,7 +542,7 @@ int SetPageSize(int nSize);
 ### <a name="remarks"></a>Примечания  
  Влияет на размер страницы, сколько на которое перемещается ползунок для **TB_PAGEUP** и **TB_PAGEDOWN** уведомления.  
   
-##  <a name="setpos"></a>CSliderCtrl::SetPos  
+##  <a name="setpos"></a>  CSliderCtrl::SetPos  
  Задает текущее положение ползунка в элементе управления "ползунок".  
   
 ```  
@@ -558,7 +553,7 @@ void SetPos(int nPos);
  `nPos`  
  Указывает новое положение ползунка.  
   
-##  <a name="setrange"></a>CSliderCtrl::SetRange  
+##  <a name="setrange"></a>  CSliderCtrl::SetRange  
  Задает для ползунок в элементе управления "ползунок" диапазон (должностей минимальное и максимальное).  
   
 ```  
@@ -578,7 +573,7 @@ void SetRange(
  `bRedraw`  
  Флаг перерисовку. Если этот параметр имеет **TRUE**, ползунок перерисовке после значения диапазона; в противном случае не перерисовке ползунок.  
   
-##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
  Задает максимальный диапазон для ползунок в элементе управления "ползунок".  
   
 ```  
@@ -594,7 +589,7 @@ void SetRangeMax(
  `bRedraw`  
  Флаг перерисовку. Если этот параметр имеет **TRUE**, ползунок перерисовке после значения диапазона; в противном случае не перерисовке ползунок.  
   
-##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
  Задает минимальный диапазон для ползунок в элементе управления "ползунок".  
   
 ```  
@@ -610,7 +605,7 @@ void SetRangeMin(
  `bRedraw`  
  Флаг перерисовку. Если этот параметр имеет **TRUE**, ползунок перерисовке после значения диапазона; в противном случае не перерисовке ползунок.  
   
-##  <a name="setselection"></a>CSliderCtrl::SetSelection  
+##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
  Задает начальные и конечные позиции для текущего выделения в элементе управления "ползунок".  
   
 ```  
@@ -626,7 +621,7 @@ void SetSelection(
  `nMax`  
  Конечное положение ползунка.  
   
-##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
  Задает длину ползунок в текущем элементе управления trackbar.  
   
 ```  
@@ -635,7 +630,7 @@ void SetThumbLength(int nLength);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `nLength`|Длина ползунок в пикселях.|  
   
@@ -654,7 +649,7 @@ void SetThumbLength(int nLength);
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="settic"></a>CSliderCtrl::SetTic  
+##  <a name="settic"></a>  CSliderCtrl::SetTic  
  Задает позицию делений в элементе управления "ползунок".  
   
 ```  
@@ -668,7 +663,7 @@ BOOL SetTic(int nTic);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если деления — значение NULL. в противном случае — 0.  
   
-##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq  
  Задает частоту, с какой деления метки отображаются в ползунка.  
   
 ```  
@@ -684,7 +679,7 @@ void SetTicFreq(int nFreq);
   
  Необходимо создать элемент управления с `TBS_AUTOTICKS` стиль для использования этой функции. Дополнительные сведения см. в разделе [CSliderCtrl::Create](#create).  
   
-##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
+##  <a name="settipside"></a>  CSliderCtrl::SetTipSide  
  Положения элемента управления всплывающей подсказки используется элемент управления trackbar.  
   
 ```  
@@ -701,7 +696,7 @@ int SetTipSide(int nLocation);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 **TBM_SETTIPSIDE**, как описано в Windows SDK. Ползунок управления, использующих **TBS_TOOLTIPS** стиля отображения подсказки. Описание стили элемента управления "ползунок" см. в разделе [стили элемента управления Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) в Windows SDK.  
   
-##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Присваивает элемент управления подсказки к элементу управления "ползунок".  
   
 ```  

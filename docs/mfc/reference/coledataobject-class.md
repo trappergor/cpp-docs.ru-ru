@@ -1,12 +1,9 @@
 ---
-title: "Класс COleDataObject | Документы Microsoft"
-ms.custom: 
+title: Класс COleDataObject | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataObject
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledataobject-class"></a>Класс COleDataObject
 Используется в передаче данных для извлечения данных в разных форматах из буфера обмена путем перетаскивания или из встроенного элемента OLE.  
@@ -58,17 +53,17 @@ ms.lasthandoff: 12/21/2017
 class COleDataObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDataObject::COleDataObject](#coledataobject)|Создает объект `COleDataObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleDataObject::Attach](#attach)|Присоединяет указанный OLE-объект данных для `COleDataObject`.|  
 |[COleDataObject::AttachClipboard](#attachclipboard)|Присоединяет объект данных, который находится в буфере обмена.|  
@@ -82,7 +77,7 @@ class COleDataObject
 |[COleDataObject::Release](#release)|Отсоединяет и освобождает связанные `IDataObject` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `COleDataObject`не имеет базового класса.  
+ `COleDataObject` не имеет базового класса.  
   
  Эти виды передачи данных включают источник и назначение. Источник данных реализуется в виде объекта [COleDataSource](../../mfc/reference/coledatasource-class.md) класса. Каждый раз, когда целевое приложение содержит данные, удалить его или будет предложено выполнить операцию вставки из буфера обмена, объект `COleDataObject` необходимо создать класс.  
   
@@ -98,7 +93,7 @@ class COleDataObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>  COleDataObject::Attach  
  Вызывайте эту функцию, чтобы связать `COleDataObject` объект с OLE-объекта данных.  
   
 ```  
@@ -117,7 +112,7 @@ void Attach(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) в Windows SDK.  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  Вызывайте эту функцию, чтобы присоединить объект данных, который в настоящее время находится в буфере обмена, чтобы `COleDataObject` объекта.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  Вызов этой функции блокировки буфера обмена, пока этот объект данных не будет освобождена. Объект данных освобождается в деструкторе для `COleDataObject`. Дополнительные сведения см. в разделе [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048) и [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) в документации Win32.  
   
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  Эта функция вызывается для подготовки для последующих вызовов `GetNextFormat` для получения списка форматов данных из элемента.  
   
 ```  
@@ -146,7 +141,7 @@ void BeginEnumFormats();
   
  Дополнительные сведения см. в разделе [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) в Windows SDK.  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  Создает объект `COleDataObject`.  
   
 ```  
@@ -159,7 +154,7 @@ COleDataObject();
 > [!NOTE]
 >  Так как один из параметров для обработчиков и перетащите указатель `COleDataObject`, нет необходимости вызвать этот конструктор для поддержки операции перетаскивания.  
   
-##  <a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>  COleDataObject::Detach  
  Эта функция вызывается для отсоединения `COleDataObject` объект из связанного объекта данных OLE без освобождения объекта данных.  
   
 ```  
@@ -171,7 +166,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>  COleDataObject::GetData  
  Эта функция вызывается для получения данных из элемента в указанном формате.  
   
 ```  
@@ -199,7 +194,7 @@ BOOL GetData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в Windows SDK.  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  Эта функция вызывается для создания `CFile` или `CFile`-производного объекта и для получения данных в указанном формате в `CFile` указателя.  
   
 ```  
@@ -228,7 +223,7 @@ CFile* GetFileData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в Windows SDK.  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  Вызывайте эту функцию для размещения блока глобальной памяти и для получения данных в указанном формате в `HGLOBAL`.  
   
 ```  
@@ -252,7 +247,7 @@ HGLOBAL GetGlobalData(
   
  Дополнительные сведения см. в разделе [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) в Windows SDK.  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  Вызывайте эту функцию, чтобы получить все форматы, доступные для извлечения данных из элемента.  
   
 ```  
@@ -273,7 +268,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  Дополнительные сведения см. в разделе [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) в Windows SDK.  
   
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
  Эта функция вызывается для определения доступности для извлечения данных из объекта OLE определенного формата.  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>Пример  
   Далее приведен пример [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata).  
   
-##  <a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>  COleDataObject::Release  
  Эта функция вызывается для освобождения владения [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) объект, который был ранее связан с `COleDataObject` объекта.  
   
 ```  

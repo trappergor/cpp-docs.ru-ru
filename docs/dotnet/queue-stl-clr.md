@@ -2,11 +2,8 @@
 title: очереди (STL/CLR) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - queue class [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d5b91a2556a93f3cd74a24ea57306d70f2cbdb41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e65d5a364f5886df2bad976e3c34dc57266b70f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к очереди. Используйте адаптер контейнера `queue` управление базового контейнера, как очередь.  
@@ -56,7 +51,7 @@ template<typename Value,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
 |[queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Тип базового контейнера.|  
@@ -67,7 +62,7 @@ template<typename Value,
 |[queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Заменяет все элементы.|  
 |[queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Обращается к последнему элементу.|  
@@ -80,12 +75,12 @@ template<typename Value,
 |[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Подсчитывает количество элементов.|  
 |[queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Обращается к последнему элементу.|  
 |[queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Определяет, если `queue` объект не равен другому `queue` объекта.|  
@@ -97,7 +92,7 @@ template<typename Value,
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IQueue\<значение, контейнер >|Ведение адаптера универсального контейнера.|  

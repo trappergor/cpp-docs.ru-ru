@@ -1,13 +1,10 @@
 ---
-title: "Исключения: Исключения OLE | Документы Microsoft"
-ms.custom: 
+title: 'Исключения: Исключения OLE | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67be1947b3fa08c26d659838922ce42a905167a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 991848e9b5b78ad960fb8ed0bdf09dd56db47e2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ole-exceptions"></a>Исключения. Исключения OLE
 Методы и средства для обработки исключений в OLE совпадают для обработки других исключений. Дополнительные сведения об обработке исключений см. в статье [обработку исключений C++](../cpp/cpp-exception-handling.md).  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) для создания и обработки OLE отправки исключения (автоматизация).  
   
- Различие между этими двумя классами представляет объем информации, они предоставляют и где они используются. `COleException`имеет это открытый элемент данных, содержащее код состояния OLE для исключения. `COleDispatchException`предоставляет дополнительные сведения, включая следующие:  
+ Различие между этими двумя классами представляет объем информации, они предоставляют и где они используются. `COleException` имеет это открытый элемент данных, содержащее код состояния OLE для исключения. `COleDispatchException` предоставляет дополнительные сведения, включая следующие:  
   
 -   Код ошибки для конкретного приложения  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Имя приложения, создавшего исключение  
   
- `COleDispatchException`предоставляет дополнительные сведения, чтобы он может использоваться с продуктами, такие как Microsoft Visual Basic. Описание устные ошибки можно использовать в окне сообщения или другие уведомления; Справочные сведения можно использовать для пользователя, который отвечает условиям, вызвавшего исключение.  
+ `COleDispatchException` предоставляет дополнительные сведения, чтобы он может использоваться с продуктами, такие как Microsoft Visual Basic. Описание устные ошибки можно использовать в окне сообщения или другие уведомления; Справочные сведения можно использовать для пользователя, который отвечает условиям, вызвавшего исключение.  
   
  Два класса исключения OLE соответствуют двух глобальных функций: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) и [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Их следует используйте для вызова общие исключения OLE и диспетчеризации исключения OLE, соответственно.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Ленты конструктор (MFC) | Документы Microsoft"
-ms.custom: 
+title: Ленты конструктор (MFC) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.ribbon.F1
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ribbon-designer-mfc"></a>Конструктор лент (MFC)
 Конструктор лент позволяет создавать и настраивать ленту в приложениях MFC. Лента — это элемент пользовательского интерфейса (UI), который объединяет команды в логические группы. Эти группы отображаются на отдельных вкладках ленты в верхней части окна. Лента заменяет меню и панели инструментов. Лента может значительно повысить удобство использования приложения. Дополнительные сведения см. в разделе [лент](http://go.microsoft.com/fwlink/p/?linkid=129233). На следующем рисунке показана лента.  

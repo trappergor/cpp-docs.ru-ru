@@ -1,12 +1,9 @@
 ---
-title: "Класс CSettingsStore | Документы Microsoft"
-ms.custom: 
+title: Класс CSettingsStore | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Создает программу-оболочку для API-функций Windows, обеспечивая объектно-ориентированный интерфейс, который используется для доступа к реестру.  
@@ -56,13 +51,13 @@ class CSettingsStore : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Создает объект `CSettingsStore`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSettingsStore::Close](#close)|Закрывает открыть раздел реестра.|  
 |[CSettingsStore::CreateKey](#createkey)|Открывает указанный ключ или создает ее, если она не существует.|  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  Закрывает открыть раздел реестра.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод вызывается из деструктора объекта [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  Открывает раздел реестра или создает ее, если она не существует.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0 в случае успешного выполнения; в противном случае ненулевое значение.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateKey`использует `m_hKey` как корень реестра запросы. Он выполняет поиск `pszPath` виде подраздела `m_hKey`. Если ключ не существует, `CreateKey` его создает. В противном случае он открывает ключ. `CreateKey`Затем задает `m_hKey` для созданного или открытого ключа.  
+ `CreateKey` использует `m_hKey` как корень реестра запросы. Он выполняет поиск `pszPath` виде подраздела `m_hKey`. Если ключ не существует, `CreateKey` его создает. В противном случае он открывает ключ. `CreateKey` Затем задает `m_hKey` для созданного или открытого ключа.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Создает объект `CSettngsStore`.  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  Деструктор для `CSettingsStore` освобождает `m_hKey` автоматически.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  Удаляет ключ и все его дочерние элементы из реестра.  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  Если параметр `bAdmin` равен нулю, `DeleteKey` ищет ключ для удаления в разделе `HKEY_CURRENT_USER`. Если `bAdmin` отлично от нуля, `DeleteKey` ищет ключ для удаления в разделе `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Удаляет значение из `m_hKey`.  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  Открывает раздел реестра.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>Примечания  
  После этого метода успешно открывает указанный ключ, он задает `m_hKey` дескриптор этого ключа.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  Считывает значение из раздела в реестре.  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `Read`проверяет наличие `pszKey` виде подраздела `m_hKey`.  
+ `Read` проверяет наличие `pszKey` виде подраздела `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  Записывает значение в реестр с открытым ключом.  
   
 ```  

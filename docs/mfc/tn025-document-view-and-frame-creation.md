@@ -1,13 +1,10 @@
 ---
-title: "Tn025: создание Документов, просмотра и фреймов | Документы Microsoft"
-ms.custom: 
+title: 'Tn025: создание Документов, просмотра и фреймов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025. Создание документов, представлений и фреймов
 > [!NOTE]
@@ -52,13 +47,13 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplates  
  `CDocTemplate` Является источник и диспетчер документов. Он является владельцем документы, которые создает. Если приложение использует подход на основе ресурсов, описанный ниже, он не потребуется являются производными от `CDocTemplate`.  
   
- Для приложения SDI класс `CSingleDocTemplate` отслеживает отслеживания объекта документом. Приложение MDI, класс `CMultiDocTemplate` хранит список ( `CPtrList`) из всех открытых документов, созданных с использованием данного шаблона. `CDocTemplate::AddDocument`и `CDocTemplate::RemoveDocument` обеспечивают функции виртуальный член для добавления или удаления документа на основе шаблона. `CDocTemplate`является дружественной для **CDocument** поэтому защищенный **CDocument::m_pDocTemplate** обратный указатель для указания шаблона документа, который создан документ.  
+ Для приложения SDI класс `CSingleDocTemplate` отслеживает отслеживания объекта документом. Приложение MDI, класс `CMultiDocTemplate` хранит список ( `CPtrList`) из всех открытых документов, созданных с использованием данного шаблона. `CDocTemplate::AddDocument` и `CDocTemplate::RemoveDocument` обеспечивают функции виртуальный член для добавления или удаления документа на основе шаблона. `CDocTemplate` является дружественной для **CDocument** поэтому защищенный **CDocument::m_pDocTemplate** обратный указатель для указания шаблона документа, который создан документ.  
   
- `CWinApp`значение по умолчанию обрабатывает `OnFileOpen` реализацию, которая в свою очередь запрашивает все шаблоны doc. Реализация включает поиск уже открытых документов и решить, какой формат для открытия новых документов в.  
+ `CWinApp` значение по умолчанию обрабатывает `OnFileOpen` реализацию, которая в свою очередь запрашивает все шаблоны doc. Реализация включает поиск уже открытых документов и решить, какой формат для открытия новых документов в.  
   
- `CDocTemplate`управляет привязкой пользовательского интерфейса для документов и кадры.  
+ `CDocTemplate` управляет привязкой пользовательского интерфейса для документов и кадры.  
   
- `CDocTemplate`поддерживает счетчик числа неименованных документов.  
+ `CDocTemplate` поддерживает счетчик числа неименованных документов.  
   
 ## <a name="cdocument"></a>CDocument  
  Объект **CDocument** принадлежит `CDocTemplate`.  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCKeyMapDialog | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCKeyMapDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCKeyMapDialog
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfckeymapdialog-class"></a>Класс CMFCKeyMapDialog
 `CMFCKeyMapDialog` Класс поддерживает элемент управления, который сопоставляет команды клавишам на клавиатуре.  
@@ -56,23 +51,23 @@ ms.lasthandoff: 12/21/2017
 class CMFCKeyMapDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Создает объект `CMFCKeyMapDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::DoModal](#domodal)|Отображает диалоговое окно сопоставления клавиатуры.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::FormatItem](#formatitem)|Вызывается платформой для создания строку, описывающую сопоставления ключей. По умолчанию строка содержит имя команды, сочетания клавиш, используемые и описание ключа сочетания клавиш.|  
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Возвращает строку, содержащую список сочетаний клавиш, связанных с указанной командой.|  
@@ -104,7 +99,7 @@ class CMFCKeyMapDialog : public CDialogEx
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
+##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
  Создает объект `CMFCKeyMapDialog`.  
   
 ```  
@@ -118,7 +113,7 @@ CMFCKeyMapDialog(
  Указатель на родительское окно `CMFCKeyMapDialog` объекта.  
   
  [in] `bEnablePrint`  
- `TRUE`Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
+ `TRUE` Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -127,7 +122,7 @@ CMFCKeyMapDialog(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
+##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
  Отображает диалоговое окно сопоставления клавиатуры.  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>Примечания  
  Диалоговое окно сопоставления клавиатуры можно выбрать и назначить сочетания клавиш для разных категорий команд. Кроме того можно скопировать выбранный сочетания клавиш и их описание в буфер обмена.  
   
-##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
+##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
  Вызывается платформой для создания строку, описывающую сопоставления ключей. По умолчанию строка содержит имя команды, сочетания клавиш, используемые и описание ключа сочетания клавиш.  
   
 ```  
@@ -156,7 +151,7 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
+##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
  Получает строковое значение. Строка содержит перечень сочетаний клавиш, связанных с указанной команды.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
+##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
  Вызывается платформой перед вставкой элемента в элементе управления внутренний список, который поддерживает элемент управления сопоставления клавиатуры.  
   
 ```  
@@ -190,7 +185,7 @@ virtual void OnInsertItem(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
+##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
  Вызывается платформой, чтобы напечатать заголовок карты клавиатуры на новую страницу.  
   
 ```  
@@ -216,7 +211,7 @@ virtual int OnPrintHeader(
 ### <a name="remarks"></a>Примечания  
  Платформа использует этот метод для печати с раскладкой. По умолчанию этот метод выводит номер страницы, имя приложения и заголовок диалогового окна.  
   
-##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
+##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
  Вызывается платформой для вывода элемента сопоставления клавиатуры.  
   
 ```  
@@ -242,7 +237,7 @@ virtual int OnPrintItem(
  Смещение по горизонтали между левой части страницы и положение элемента.  
   
  [in] `bCalcHeight`  
- `TRUE`для вычисления наиболее высоту для элемента печати; `FALSE` усечение печати элемента так, чтобы по умолчанию пустое пространство.  
+ `TRUE` для вычисления наиболее высоту для элемента печати; `FALSE` усечение печати элемента так, чтобы по умолчанию пустое пространство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Высота элемента в печати.  
@@ -250,7 +245,7 @@ virtual int OnPrintItem(
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод для элемента карты ключей диалогового окна печати. По умолчанию этот метод выводит имя команды, сочетания клавиш и команда описание элемента.  
   
-##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
+##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
  Вызывается платформой, чтобы задать заголовки для столбцов в элементе управления внутренний список, который поддерживает сопоставление клавиатуры элемент управления.  
   
 ```  
@@ -260,7 +255,7 @@ virtual void OnSetColumns();
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод получает заголовки для столбцов с тремя ресурсами. Заголовок столбца команды должно из IDS_AFXBARRES_COMMAND, заголовок столбца ключа является из IDS_AFXBARRES_KEYS, и заголовок столбца описания из IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
+##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  Вызывается платформой, когда пользователь щелкает **печати** кнопки.  
   
 ```  
@@ -270,7 +265,7 @@ virtual void PrintKeyMap();
 ### <a name="remarks"></a>Примечания  
  `PrintKeyMap` Метод выводит карты ключей. Он запускает новое задание печати, а затем повторно вызывает [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) и [CMFCKeyMapDialog::OnPrintItem](#onprintitem) методы, пока не выводятся все сопоставления ключей.  
   
-##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
+##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
  Вызывается платформой для задания ширины столбцов в элементе управления внутренний список, который поддерживает сопоставление клавиатуры элемент управления.  
   
 ```  

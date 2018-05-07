@@ -1,12 +1,9 @@
 ---
-title: "Класс CDiscreteTransition | Документы Microsoft"
-ms.custom: 
+title: Класс CDiscreteTransition | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdiscretetransition-class"></a>Класс CDiscreteTransition
 Инкапсулирует отдельный переход.  
@@ -50,19 +45,19 @@ class CDiscreteTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Создает объект отдельный переход и инициализирует его параметры.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDiscreteTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
 |[CDiscreteTransition::m_delay](#m_delay)|Количество времени, на которое задержать мгновенный переход в последнее значение.|  
@@ -81,7 +76,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxanimationcontroller.h  
   
-##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
  Создает объект отдельный переход и инициализирует его параметры.  
   
 ```  
@@ -101,7 +96,7 @@ CDiscreteTransition(
  `hold`  
  Количество времени, на который для хранения переменной в свое последнее значение.  
   
-##  <a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>  CDiscreteTransition::Create  
  Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.  
   
-##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
  Значение переменной анимации в конце перехода.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
  Количество времени, на которое задержать мгновенный переход в последнее значение.  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
  Количество времени, на который для хранения переменной в свое последнее значение.  
   
 ```  

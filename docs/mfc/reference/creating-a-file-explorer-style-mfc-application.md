@@ -1,13 +1,10 @@
 ---
-title: "Создание приложения MFC в стиле проводника файл | Документы Microsoft"
-ms.custom: 
+title: Создание приложения MFC в стиле проводника файл | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Создание приложения MFC в стиле проводника
 Многие приложения системы Windows используют пользовательский интерфейс (UI) для проводника. При запуске проводника, например, в приложении видна вертикальная линия, разделяющая клиентской области. В левой части клиентской области предоставляет функции навигации и обзора, а в правой части клиентской области представлены сведения, относящиеся к выбранному элементу в левой области. Когда пользователь щелкает элемент в левой области, приложение повторно заполняет справа. В приложении MDI можно использовать команды на **представление** меню, чтобы изменить степень подробности представления в правой области. (В приложении SDI или несколько документов верхнего уровня приложения, можно изменить с помощью кнопок на панели инструментов только подробные сведения).  

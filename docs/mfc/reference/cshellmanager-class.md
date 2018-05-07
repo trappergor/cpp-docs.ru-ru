@@ -1,12 +1,9 @@
 ---
-title: "Класс CShellManager | Документы Microsoft"
-ms.custom: 
+title: Класс CShellManager | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CShellManager
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1e3fcff06b2937df8218ce1ab32b91ddf22a7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cshellmanager-class"></a>Класс CShellManager
 Реализует несколько методов, которые позволяют работать с указателями в списках идентификаторов (PIDL).  
@@ -62,13 +57,13 @@ class CShellManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|Создает объект `CShellManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, позволяющее пользователю выбрать папки оболочки.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Сцепляет два Pidl.|  
@@ -94,7 +89,7 @@ class CShellManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxshellmanager.h  
   
-##  <a name="browseforfolder"></a>CShellManager::BrowseForFolder  
+##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder  
  Отображает диалоговое окно, позволяющее пользователю выбрать папки оболочки.  
   
 ```  
@@ -137,7 +132,7 @@ BOOL BrowseForFolder(
   
  [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
-##  <a name="concatenateitem"></a>CShellManager::ConcatenateItem  
+##  <a name="concatenateitem"></a>  CShellManager::ConcatenateItem  
  Создает новый список, содержащий два Pidl.  
   
 ```  
@@ -159,7 +154,7 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="remarks"></a>Примечания  
  Этот метод создает новый [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) достаточно большим, чтобы вместить оба `pidl1` и `pidl2`. Затем копирует `pidl1` и `pidl2` в новый список.  
   
-##  <a name="copyitem"></a>CShellManager::CopyItem  
+##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Копирует список элементов.  
   
 ```  
@@ -176,7 +171,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ### <a name="remarks"></a>Примечания  
  Вновь созданный элемент списка имеет тот же размер элемента в списке.  
   
-##  <a name="createitem"></a>CShellManager::CreateItem  
+##  <a name="createitem"></a>  CShellManager::CreateItem  
  Создает новый PIDL.  
   
 ```  
@@ -190,7 +185,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на созданный элемент списка, в случае успешного выполнения; в противном случае `NULL`.  
   
-##  <a name="cshellmanager"></a>CShellManager::CShellManager  
+##  <a name="cshellmanager"></a>  CShellManager::CShellManager  
  Создает объект `CShellManager`.  
   
 ```  
@@ -200,7 +195,7 @@ CShellManager();
 ### <a name="remarks"></a>Примечания  
  В большинстве случаев не нужно создавать `CShellManager` напрямую. По умолчанию платформа создает ее автоматически. Чтобы получить указатель на `CShellManager`, вызовите [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Если вы создаете `CShellManager` вручную, его необходимо инициализировать с помощью метода [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
   
-##  <a name="freeitem"></a>CShellManager::FreeItem  
+##  <a name="freeitem"></a>  CShellManager::FreeItem  
  Удаляет список элементов.  
   
 ```  
@@ -211,7 +206,7 @@ void FreeItem(LPITEMIDLIST pidl);
  [in] `pidl`  
  Список элементов для удаления.  
   
-##  <a name="getitemcount"></a>CShellManager::GetItemCount  
+##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Возвращает количество элементов в списке элементов.  
   
 ```  
@@ -225,7 +220,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>Возвращаемое значение  
  Число элементов в списке элементов.  
   
-##  <a name="getitemsize"></a>CShellManager::GetItemSize  
+##  <a name="getitemsize"></a>  CShellManager::GetItemSize  
  Возвращает размер списка элементов.  
   
 ```  
@@ -239,7 +234,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер списка элементов.  
   
-##  <a name="getnextitem"></a>CShellManager::GetNextItem  
+##  <a name="getnextitem"></a>  CShellManager::GetNextItem  
  Извлекает следующего элемента из указателя на элемент списка идентификаторов (PIDL).  
   
 ```  
@@ -256,7 +251,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ### <a name="remarks"></a>Примечания  
  Если в списке нет дополнительных элементов, этот метод возвращает `NULL`.  
   
-##  <a name="getparentitem"></a>CShellManager::GetParentItem  
+##  <a name="getparentitem"></a>  CShellManager::GetParentItem  
  Извлекает родительское указателя на элемент списка идентификаторов (PIDL).  
   
 ```  
@@ -278,7 +273,7 @@ int GetParentItem(
 ### <a name="remarks"></a>Примечания  
  Уровень PIDL задается относительно рабочего стола. Считается, что системная PIDL с уровнем 0.  
   
-##  <a name="itemfrompath"></a>CShellManager::ItemFromPath  
+##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath  
  Извлекает указатель на элемент списка идентификаторов (PIDL) из элемента, определяется строкой пути.  
   
 ```  

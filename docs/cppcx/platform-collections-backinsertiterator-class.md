@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Collections:: backinsertiterator | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: backinsertiterator | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Класс Platform::Collections::BackInsertIterator
 Представляет итератор, который вставляет, а не перезаписывает элементы в конец упорядоченной коллекции.  
@@ -48,13 +43,13 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[BackInsertIterator::BackInsertIterator](#ctor)|Инициализирует новый экземпляр класса BackInsertIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор BackInsertIterator::operator*](#operator-dereference)|Получает ссылку на текущий объект BackInsertIterator.|  
 |[Оператор BackInsertIterator::operator++](#operator-increment)|Возвращает ссылку на текущий объект BackInsertIterator. Итератор не изменяется.|  
@@ -69,7 +64,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **Пространство имен:** Platform::Collections  
   
 ---
-## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
+## <a name="ctor"></a>  Конструктор BackInsertIterator::BackInsertIterator
 Инициализирует новый экземпляр класса `BackInsertIterator`.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -87,7 +82,7 @@ explicit BackInsertIterator(
 ### <a name="remarks"></a>Примечания  
  `BackInsertIterator` вставляет элементы после последнего элемента объекта, указанного параметром `v`.  
  
-## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
+## <a name="operator-assign"></a>  BackInsertIterator::operator =-оператор
 Добавляет указанный объект в конец текущей упорядоченной коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -103,7 +98,7 @@ BackInsertIterator& operator=( const T& t);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на текущий объект BackInsertIterator.  
 
-## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
+## <a name="operator-dereference"></a>  BackInsertIterator::operator *-оператор
 Получает ссылку на текущий объект BackInsertIterator.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -118,7 +113,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>Примечания  
  Этот оператор возвращает ссылку на текущий BackInsertIterator, а не на любой элемент в текущей коллекции.  
  
-## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
+## <a name="operator-increment"></a>  BackInsertIterator::operator ++-оператор
 Возвращает ссылку на текущий объект BackInsertIterator. Итератор не изменяется.  
   
 ## <a name="syntax"></a>Синтаксис  

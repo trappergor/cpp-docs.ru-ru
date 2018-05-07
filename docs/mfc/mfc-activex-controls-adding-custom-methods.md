@@ -1,37 +1,32 @@
 ---
-title: "Элементы управления ActiveX MFC: Добавление пользовательских методов | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления ActiveX MFC: Добавление пользовательских методов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Элементы управления ActiveX в MFC. Добавление пользовательских методов
 Настраиваемые методы отличаются от стандартных методов, что они уже не реализуются с `COleControl`. Вы должны предоставить реализацию для каждого пользовательского метода, который можно добавить в элемент управления.  
   
  Пользователь элемента управления ActiveX можно вызвать пользовательский метод в любое время для выполнения действий, определяемых элементом управления. Запись сопоставления диспетчеризации для пользовательских методов имеет форму `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>Добавление пользовательского метода с мастер добавления метода  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Добавление пользовательского метода с мастер добавления метода  
  Ниже показано, как добавить пользовательский метод PtInCircle каркас код элемента управления ActiveX. PtInCircle определяет внутри или вне круга координаты, передаются в элемент управления. Такую же процедуру можно также добавить другие настраиваемые методы. Замените имя пользовательского метода и его параметры для PtInCircle имя метода и параметров.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 10. Нажмите кнопку **Готово**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>Добавьте метод мастер изменения для пользовательских методов  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Добавьте метод мастер изменения для пользовательских методов  
  При добавлении настраиваемого метода, мастер добавления метода вносит некоторые изменения в заголовке класса элемента управления (. (H) и реализации (. Файлы CPP). Следующая строка добавляется к объявлению карты распределения в заголовке класса элемента управления (. H) файла.  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

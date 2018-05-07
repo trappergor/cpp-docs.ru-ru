@@ -1,13 +1,10 @@
 ---
-title: "Удаление всех объектов из коллекции CObject | Документы Microsoft"
-ms.custom: 
+title: Удаление всех объектов из коллекции CObject | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>удаление всех объектов из коллекции CObject
 В этой статье объясняется, как удалить все объекты в коллекции (без удаления самого объекта коллекции).  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Карта](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Чтобы удалить все объекты в список указателей на CObject  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Чтобы удалить все объекты в список указателей на CObject  
   
 1.  Используйте `GetHeadPosition` и `GetNext` для перечисления элементов списка.  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  Обратите внимание на разницу между удаление объекта элемента и самого элемента. Удаление элемента из списка просто удаляет ссылку на объект в списке. Объект все еще существует в памяти. При удалении объекта, он перестает существовать и освобождения памяти. Таким образом важно удалить элемент сразу после удаления элемента объекта, чтобы список не пытались получить доступ к объектам, которые больше не существуют.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>Чтобы удалить все элементы в массиве  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Чтобы удалить все элементы в массиве  
   
 1.  Используйте `GetSize` и целочисленных значений индекса для перечисления элементов массива.  
   
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  Как в приведенном выше примере список, можно вызвать `RemoveAll` для удаления всех элементов в массиве или `RemoveAt` для удаления отдельных элементов.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Чтобы удалить все элементы на карте  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Чтобы удалить все элементы на карте  
   
 1.  Используйте `GetStartPosition` и `GetNextAssoc` для перечисления элементов массива.  
   

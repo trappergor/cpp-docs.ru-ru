@@ -1,12 +1,9 @@
 ---
-title: "CException-класс | Документы Microsoft"
-ms.custom: 
+title: CException-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cexception-class"></a>CException-класс
 Базовый класс для всех исключений библиотеки классов Microsoft Foundation.  
@@ -46,13 +41,13 @@ class AFX_NOVTABLE CException : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CException::CException](#cexception)|Создает объект `CException`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CException::Delete](#delete)|Удаляет `CException` объекта.|  
 |[CException::ReportError](#reporterror)|Возвращает сообщение об ошибке в окне сообщения для пользователя.|  
@@ -94,7 +89,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="cexception">CException::CException</a>  
+##  <a name="cexception"></a>  CException::CException  
  Эта функция-член создает `CException` объекта.  
   
 ```  
@@ -172,7 +167,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror">CException::ReportError</a>  
+##  <a name="reporterror"></a>  CException::ReportError  
  Вызовите эту функцию-член для отчета текст сообщения об ошибке в окне сообщения для пользователя.  
   
 ```  

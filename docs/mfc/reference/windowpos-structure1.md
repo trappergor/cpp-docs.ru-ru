@@ -1,13 +1,10 @@
 ---
-title: "WINDOWPOS Structure1 | Документы Microsoft"
-ms.custom: 
+title: WINDOWPOS Structure1 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS Structure1
 `WINDOWPOS` Структура содержит сведения о размере и положение окна.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** скрывает окно.  
   
-- `SWP_NOACTIVATE`Не активирует окно.  
+- `SWP_NOACTIVATE` Не активирует окно.  
   
 - **SWP_NOCOPYBITS** удаляет все содержимое клиентской области. Если этот флаг не указан, сохраняются и скопированы обратно в клиентской области после размера или положения окна допустимое содержимое клиентской области.  
   
-- `SWP_NOMOVE`Сохраняет текущую позицию (не учитывает **x** и **y** членов).  
+- `SWP_NOMOVE` Сохраняет текущую позицию (не учитывает **x** и **y** членов).  
   
 - **SWP_NOOWNERZORDER** не меняет позицию окна-владельца в Z-порядке.  
   
-- `SWP_NOSIZE`Сохраняет текущий размер (не учитывает **cx** и **cy** членов).  
+- `SWP_NOSIZE` Сохраняет текущий размер (не учитывает **cx** и **cy** членов).  
   
 - **SWP_NOREDRAW** не перерисовывает изменения.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** предотвращает получение окна `WM_WINDOWPOSCHANGING` сообщения.  
   
-- `SWP_NOZORDER`Сохраняет текущий порядок (не учитывает **hwndInsertAfter** члена).  
+- `SWP_NOZORDER` Сохраняет текущий порядок (не учитывает **hwndInsertAfter** члена).  
   
 - **SWP_SHOWWINDOW** Отображение окна.  
   

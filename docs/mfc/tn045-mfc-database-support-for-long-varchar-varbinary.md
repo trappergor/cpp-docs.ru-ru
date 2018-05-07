@@ -1,13 +1,10 @@
 ---
-title: "TN045: Поддержка баз данных MFC для типов Long Varchar — Varbinary | Документы Microsoft"
-ms.custom: 
+title: 'TN045: Поддержка баз данных MFC для типов Long Varchar — Varbinary | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045. Поддержка MFC и баз данных для типов Long Varchar и Varbinary
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  При получении данных большой длины столбца `CString` или `CByteArray`, максимально возвращается объем данных, по умолчанию 255 байт. Все содержимое сверх этого пропускается. В этом случае платформа вызовет исключение **AFX_SQL_ERROR_DATA_TRUNCATED**. К счастью, можно явным образом увеличить nMaxLength больше значения до **MAXINT**.  
   
 > [!NOTE]
->  Значение nMaxLength используется MFC для задания локального буфера из **SQLBindColumn** функции. Это локальный буфер для хранения данных, в действительности не влияют объем данных, возвращаемых драйвером ODBC. `RFX_Text`и `RFX_Binary` только сделать одно вызовы с использованием **SQLFetch** для извлечения данных из базы данных серверной части. Каждый драйвер ODBC имеет другой ограничение на объем данных, которые могут вернуть в одну операцию выборки. Это ограничение может быть гораздо меньше, чем значение nMaxLength, в этом случае исключение **AFX_SQL_ERROR_DATA_TRUNCATED** будет создано. При этих обстоятельствах переключиться на использование `RFX_LongBinary` вместо `RFX_Text` или `RFX_Binary` , чтобы можно было получить все данные.  
+>  Значение nMaxLength используется MFC для задания локального буфера из **SQLBindColumn** функции. Это локальный буфер для хранения данных, в действительности не влияют объем данных, возвращаемых драйвером ODBC. `RFX_Text` и `RFX_Binary` только сделать одно вызовы с использованием **SQLFetch** для извлечения данных из базы данных серверной части. Каждый драйвер ODBC имеет другой ограничение на объем данных, которые могут вернуть в одну операцию выборки. Это ограничение может быть гораздо меньше, чем значение nMaxLength, в этом случае исключение **AFX_SQL_ERROR_DATA_TRUNCATED** будет создано. При этих обстоятельствах переключиться на использование `RFX_LongBinary` вместо `RFX_Text` или `RFX_Binary` , чтобы можно было получить все данные.  
   
  Выполняет привязку ClassWizard **SQL_LONGVARCHAR** для `CString`, или **SQL_LONGVARBINARY** для `CByteArray` для вас. Если требуется выделить более 255 байт, в которые получения длинных данных столбца, можно затем предоставить явное значение nMaxLength.  
   

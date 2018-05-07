@@ -1,29 +1,24 @@
 ---
-title: ". Обработка XML-файла | Документы Microsoft"
-ms.custom: 
+title: . Обработка XML-файла | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>Обработка XML-файлов
 Компилятор создает строку идентификатора для каждой конструкции в коде, помеченной для создания документации. Дополнительные сведения см. в разделе [рекомендуется комментарии документации теги](../ide/recommended-tags-for-documentation-comments-visual-cpp.md). Строка идентификатора однозначно определяет конструкцию. Программы обработки XML-файла можно использовать строку идентификатора для идентификации соответствующего .NET Framework метаданных или отражение элемента к которому применяется документация.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Первая часть строки идентификатора определяет тип члена идентифицируется в виде одного символа, за которым следует двоеточие. Используются следующие типы элементов.  
   
-    |Знак|Описание:|  
+    |Знак|Описание|  
     |---------------|-----------------|  
     |в|namespace<br /><br /> Не удается добавить комментарии к документации к пространству имен, возможны cref-ссылки на пространства имен.|  
     |T|тип: класс, интерфейс, структура, перечисление, делегат|  

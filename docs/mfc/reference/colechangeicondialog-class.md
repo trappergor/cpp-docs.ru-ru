@@ -1,12 +1,9 @@
 ---
-title: "Класс COleChangeIconDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleChangeIconDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>Класс COleChangeIconDialog
 Используется для диалогового окна OLE "Изменить значок".  
@@ -50,13 +45,13 @@ class COleChangeIconDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeIconDialog::COleChangeIconDialog](#colechangeicondialog)|Создает объект `COleChangeIconDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Выполняет изменения, указанные в диалоговом окне.|  
 |[COleChangeIconDialog::DoModal](#domodal)|Отображение диалогового окна OLE 2 изменить значок.|  
@@ -64,7 +59,7 @@ class COleChangeIconDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleChangeIconDialog::m_ci](#m_ci)|Структура, которая управляет поведением окна.|  
   
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  Эта функция создает только `COleChangeIconDialog` объекта.  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  Дополнительные сведения см. в разделе [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) структуры в Windows SDK.  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  Вызывайте эту функцию, чтобы изменить значок, представляющий элемент, выбранный в диалоговом окне после [DoModal](#domodal) возвращает **IDOK**.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если изменение выполнено успешно; в противном случае — 0.  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна OLE изменить значок.  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  Если `DoModal` возвращает **IDOK**, можно вызывать другой член функции для получения параметров или сведения, введенных пользователем в диалоговом окне.  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  Эта функция вызывается для получения дескриптора метафайла, содержащий аспект, преобразованного в значок выбранного элемента.  
   
 ```  
@@ -173,7 +168,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор метафайла, содержащий аспект, преобразованного в значок нового значка, если диалоговое окно было отклонено, выбрав **ОК**; в противном случае значок, как оно было перед отображается диалоговое окно.  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  Структура типа **OLEUICHANGEICON** используется для управления поведением диалогового окна "Изменить значок".  
   
 ```  

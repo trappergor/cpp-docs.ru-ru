@@ -1,13 +1,10 @@
 ---
-title: "TN043: Процедуры RFX | Документы Microsoft"
-ms.custom: 
+title: 'TN043: Процедуры RFX | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043. Процедуры RFX
 > [!NOTE]
@@ -99,15 +94,15 @@ RFX_Custom(pFX, "Col2",
   
 - **Значение** — Append «» следует разделитель, такие как ',' или ' "  
   
-- `SetFieldDirty`-Задать состояние "грязного" (т. е. измененной) полем  
+- `SetFieldDirty` -Задать состояние "грязного" (т. е. измененной) полем  
   
-- `SetFieldNull`-Задать бит состояния, указывающее значение null для поля  
+- `SetFieldNull` -Задать бит состояния, указывающее значение null для поля  
   
-- `IsFieldDirty`— Состояние «грязный» бит возвращаемое значение  
+- `IsFieldDirty` — Состояние «грязный» бит возвращаемое значение  
   
-- `IsFieldNull`— Возвращает значение бита в состоянии null  
+- `IsFieldNull` — Возвращает значение бита в состоянии null  
   
-- `IsFieldNullable`— Возвращает значение TRUE, если поле может содержать значения NULL  
+- `IsFieldNullable` — Возвращает значение TRUE, если поле может содержать значения NULL  
   
 - **StoreField** — архивировать значение поля  
   
@@ -120,7 +115,7 @@ RFX_Custom(pFX, "Col2",
 ## <a name="user-extensions"></a>Пользовательские расширения  
  Существует несколько способов для расширения стандартного механизма RFX. Можно  
   
--   Добавление новых типов данных. Пример:  
+-   Добавление новых типов данных. Например:  
   
  ```  
     CBookmark 

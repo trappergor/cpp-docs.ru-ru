@@ -1,13 +1,10 @@
 ---
-title: "Коллекции | Документы Microsoft"
-ms.custom: 
+title: Коллекции | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>Коллекции
 Библиотеки классов Microsoft Foundation предоставляет классы коллекций для управления группами объектов. Эти классы могут быть двух типов:  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Если код уже использует классы коллекций нешаблонных, можно продолжать их использовать. При написании новых классов строго типизированную коллекцию для собственных типов данных, рекомендуется использовать более новые классы на основе шаблона.  
   
-##  <a name="_core_collection_shapes"></a>Форма коллекции  
+##  <a name="_core_collection_shapes"></a> Форма коллекции  
  Класс коллекции характеризуются «формы» и типа его элементов. Форма — это способ объекты организованы и хранятся в коллекции. MFC предоставляет три фигуры базовой коллекции: списки, массивы и сопоставляет (также известный как словари). Можно выбрать коллекцию фигуры, который наиболее подходит для конкретной задачи программирования.  
   
  Кратко далее в этом разделе описывается каждый из трех форм предоставленной коллекции. Для сравнения возможностей фигур, помогающие решить, какой наилучшим образом подходит для вашей программы. в разделе [рекомендации по выбору класса коллекции](../mfc/recommendations-for-choosing-a-collection-class.md).  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
      Карта представляет коллекцию, которая связывает объект ключа с объектом значения.  
   
-##  <a name="_core_the_template_based_collection_classes"></a>Классы коллекций на основе шаблона  
+##  <a name="_core_the_template_based_collection_classes"></a> Классы коллекций на основе шаблона  
  Самый простой способ реализации строго типизированные коллекции, которая содержит объекты любого типа является использование одного из классов MFC на основе шаблона. Примеры этих классов см. в примере MFC [СБОРА](../visual-cpp-samples.md).  
   
  Ниже перечислены классы коллекций, основанных на шаблонах MFC.  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
 |Коллекции объектов любого типа|`CArray`|`CList`|`CMap`|  
 |Коллекции указателей на объекты любого типа|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Классы коллекций, не на основе шаблонов  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Классы коллекций, не на основе шаблонов  
  Если приложение уже использует нешаблонных классов MFC, могут продолжать их использовать. Однако для новых семейств сайтов, рекомендуется использовать классы на основе шаблона. В следующей таблице перечислены классы коллекций MFC, не основанных на шаблонах.  
   
 ### <a name="nontemplate-collection-classes"></a>Классы коллекций нешаблонных  

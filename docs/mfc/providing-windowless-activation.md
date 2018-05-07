@@ -1,13 +1,10 @@
 ---
-title: "Предоставление активации без окна | Документы Microsoft"
-ms.custom: 
+title: Предоставление активации без окна | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>Предоставление активации без окна
 Окно создания кода (то есть все, что происходит при вызове **CreateWindow**) является дорогостоящим для выполнения. Элемент управления, который поддерживает на экране окна должна управлять сообщения окна. Элементы управления без окон, следовательно, быстрее, чем элементы управления в windows.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  При включении активации без окна контейнера будут делегировать входящих сообщений для элемента управления `IOleInPlaceObjectWindowless` интерфейса. `COleControl`в реализации этого интерфейса отправляет сообщения через схему сообщений для элемента управления, после настройки мыши координирует соответствующим образом. Сообщения, как и обычные окна сообщения, можно обрабатывать, добавив соответствующие записи в схеме сообщений. В вашей обработчики для этих сообщений, избегайте использования `m_hWnd` переменную-член (или любую функцию-член, которые его используют) без проверки, его значение не **NULL**.  
   
- `COleControl`предоставляет функции-члены, вызывающие захват мыши, фокуса клавиатуры, прокрутка и другие окна службы из контейнера соответствующим образом, включая:  
+ `COleControl` предоставляет функции-члены, вызывающие захват мыши, фокуса клавиатуры, прокрутка и другие окна службы из контейнера соответствующим образом, включая:  
   
 -   [При получении фокуса](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   

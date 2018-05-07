@@ -1,22 +1,20 @@
 ---
-title: "Создать объявление или определение | Документы Microsoft"
-ms.custom: 
+title: Создать объявление или определение | Документы Microsoft
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 889c8acf5e0ef0ed6a7ac90088a6188658d49d75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-declaration--definition"></a>Создать объявление или определение
 **Что:** позволяет немедленно сформировать к объявлению или определению функции.
@@ -25,15 +23,15 @@ ms.lasthandoff: 12/21/2017
 
 **Почему:** можно вручную создать объявление или определение, но это создаст ее автоматически, создание файла заголовка или код, при необходимости.
 
-**Как:**
+**Как?**
 
 1. Поместите курсор текст или мыши с помощью функции, для которой нужно создать объявление или определение.
 
    ![Выделенный код](images/createdefinition_highlight.png)
 
-1. Затем выполните одно из следующих действий.
+1. Затем выполните одно из следующих действий:
    * **Клавиатура**
-     * Нажмите клавишу **Ctrl +.** для запуска **Быстрые действия и рефакторинг** и выбрать пункт **создать объявление или определение** в контекстном меню.
+     * Нажмите клавиши **CTRL + .**, для запуска **Быстрые действия и рефакторинг** и выбрать пункт **создать объявление или определение** в контекстном меню.
    * **Мышь**
      * Щелкните правой кнопкой мыши и выберите **Быстрые действия и рефакторинг** и выбрать пункт **создать объявление или определение** в контекстном меню.
 

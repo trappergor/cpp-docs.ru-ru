@@ -1,16 +1,12 @@
 ---
-title: "Ошибки компилятора C2400 – C2499 | Документы Microsoft"
-ms.custom: 
+title: Ошибки компилятора C2400 – C2499 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Ошибки компилятора C2400 – C2499
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[Ошибка компилятора C2426](compiler-error-c2426.md)|"*маркера*": недопустимый оператор в "*контекста*"|
 |[Ошибка компилятора C2427](compiler-error-c2427.md)|"*класс*": не удается определить класс в этой области|
 |[Ошибка компилятора C2428](compiler-error-c2428.md)|"*операции*": не разрешается с операндом типа «bool»|
-|C2429 ошибки компилятора|*Контекст* "*контекста*«требуется флаг компилятора»*параметр*"|
+|[C2429 ошибки компилятора](compiler-error-c2429.md)|"*функции языка*«требуется флаг компилятора»*параметр компилятора*"|
 |[Ошибка компилятора C2430](compiler-error-c2430.md)|Существует несколько индексный регистр в "*контекста*"|
 |[Ошибка компилятора C2431](compiler-error-c2431.md)|Недопустимый индексный регистр в "*контекста*"|
 |[Ошибка компилятора C2432](compiler-error-c2432.md)|Недопустимая ссылка на 16-разрядные данные в "*контекста*"|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[Ошибка компилятора C2491](compiler-error-c2491.md)|"*идентификатор*": определение dllimport *функция* не допускается|
 |[Ошибка компилятора C2492](compiler-error-c2492.md)|"*переменной*": данные с длительностью хранилища потока не могут иметь интерфейс dll|
 |[Ошибка компилятора C2493](compiler-error-c2493.md)|Недопустимая форма __based|
-|[Ошибка компилятора C2494](compiler-error-c2494.md)|"*ключевое слово*" нельзя вызвать из выражения фильтра или &#95; &#95; finally-блок finally|
+|[Ошибка компилятора C2494](compiler-error-c2494.md)|"*ключевое слово*" нельзя вызвать из выражения фильтра или &#95; &#95;finally-блок finally|
 |[Ошибка компилятора C2495](compiler-error-c2495.md)|"*идентификатор*": «__declspec(noexcept)» может применяться только в объявлениях или определениях функций|
 |[Ошибка компилятора C2496](compiler-error-c2496.md)|"*идентификатор*": «selectany» может применяться только к элементам данных с внешней компоновкой|
 |C2497 ошибки компилятора|"*идентификатор*": «implementation_key» может применяться только к объявлениям функций|

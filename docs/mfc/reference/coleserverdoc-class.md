@@ -1,12 +1,9 @@
 ---
-title: "Класс COleServerDoc | Документы Microsoft"
-ms.custom: 
+title: Класс COleServerDoc | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleServerDoc
@@ -91,17 +88,15 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81b3b8d4c3f25e1c443d5fbcaeddb7b587216d69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleserverdoc-class"></a>Класс COleServerDoc
 Базовый класс для серверной документации OLE.  
@@ -112,17 +107,17 @@ ms.lasthandoff: 12/21/2017
 class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Создает объект `COleServerDoc`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Активируется связанный документ DocObject.|  
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Активирует документ для редактирования по месту.|  
@@ -153,7 +148,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Вызывается платформой для создания окна фрейма для встроенного редактирования.|  
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Вызывается платформой для уничтожения окна фрейма для встроенного редактирования.|  
@@ -170,7 +165,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ## <a name="remarks"></a>Примечания  
  Серверный документ может содержать [COleServerItem](../../mfc/reference/coleserveritem-class.md) объектов, которые представляют собой интерфейс сервера внедренные или связанные элементы. При запуске серверного приложения контейнера для редактирования внедренного элемента, элемент загружается как свой собственный серверный документ; `COleServerDoc` объект содержит только один `COleServerItem` объект, состоящий из всего документа. Если серверное приложение запускается в контейнере, чтобы изменить связанный элемент, существующий документ загружается с диска; часть содержимого документа будет выделен для обозначения связанного элемента.  
   
- `COleServerDoc`объекты могут также содержать объектов [COleClientItem](../../mfc/reference/coleclientitem-class.md) класса. Это позволяет создавать приложения контейнера сервера. Платформа предоставляет функции для хранения правильно `COleClientItem` элементов во время обслуживания `COleServerItem` объектов.  
+ `COleServerDoc` объекты могут также содержать объектов [COleClientItem](../../mfc/reference/coleclientitem-class.md) класса. Это позволяет создавать приложения контейнера сервера. Платформа предоставляет функции для хранения правильно `COleClientItem` элементов во время обслуживания `COleServerItem` объектов.  
   
  Если серверное приложение не поддерживает ссылки, серверный документ всегда будет содержать только один элемент сервера, который представляет весь внедренный объект как документ. Если серверное приложение поддерживает ссылки, его необходимо создать серверный элемент каждый раз, когда фрагмент копируется в буфер обмена.  
   
@@ -198,7 +193,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="activatedocobject"></a>COleServerDoc::ActivateDocObject  
+##  <a name="activatedocobject"></a>  COleServerDoc::ActivateDocObject  
  Активируется связанный документ DocObject.  
   
 ```  
@@ -208,7 +203,7 @@ void ActivateDocObject();
 ### <a name="remarks"></a>Примечания  
  По умолчанию `COleServerDoc` не поддерживает активные документы (также называемый DocObjects). Для включения такой поддержки. в разделе [GetDocObjectServer](#getdocobjectserver) и класс [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md).  
   
-##  <a name="activateinplace"></a>COleServerDoc::ActivateInPlace  
+##  <a name="activateinplace"></a>  COleServerDoc::ActivateInPlace  
  Активирует элемент для редактирования по месту.  
   
 ```  
@@ -223,7 +218,7 @@ BOOL ActivateInPlace();
   
  Эта функция вызывается с использованием реализации по умолчанию [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow). Эта функция вызывается в том случае, если приложение поддерживает другую команду для активации на месте (например, "Воспроизведение").  
   
-##  <a name="coleserverdoc"></a>COleServerDoc::COleServerDoc  
+##  <a name="coleserverdoc"></a>  COleServerDoc::COleServerDoc  
  Создает `COleServerDoc` объекта без соединения с OLE системные библиотеки DLL.  
   
 ```  
@@ -233,7 +228,7 @@ COleServerDoc();
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать [COleLinkingDoc::Register](../../mfc/reference/colelinkingdoc-class.md#register) открыть связь с OLE. При использовании [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) в вашем приложении `COleLinkingDoc::Register` вызывается для вас `COleLinkingDoc`реализация `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
   
-##  <a name="createinplaceframe"></a>COleServerDoc::CreateInPlaceFrame  
+##  <a name="createinplaceframe"></a>  COleServerDoc::CreateInPlaceFrame  
  Платформа вызывает эту функцию для создания окна фрейма для редактирования по месту.  
   
 ```  
@@ -252,7 +247,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
   
  Существует расширенная overridable.  
   
-##  <a name="deactivateandundo"></a>COleServerDoc::DeactivateAndUndo  
+##  <a name="deactivateandundo"></a>  COleServerDoc::DeactivateAndUndo  
  Эта функция вызывается в том случае, если отменить поддерживаемых приложением, и пользователь нажимает кнопку отмены после активации элемента, но перед его изменением.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL DeactivateAndUndo();
 ### <a name="remarks"></a>Примечания  
  Если контейнер приложение создано с помощью библиотеки классов Microsoft Foundation, вызов этой функции приводит [COleClientItem::OnDeactivateAndUndo](../../mfc/reference/coleclientitem-class.md#ondeactivateandundo) для вызова, который отключает пользовательский интерфейс сервера.  
   
-##  <a name="destroyinplaceframe"></a>COleServerDoc::DestroyInPlaceFrame  
+##  <a name="destroyinplaceframe"></a>  COleServerDoc::DestroyInPlaceFrame  
  Платформа вызывает эту функцию для уничтожения окна фрейма на месте и вернуть сервер окна документа приложения в состояние до активации на месте.  
   
 ```  
@@ -279,7 +274,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ### <a name="remarks"></a>Примечания  
  Существует расширенная overridable.  
   
-##  <a name="discardundostate"></a>COleServerDoc::DiscardUndoState  
+##  <a name="discardundostate"></a>  COleServerDoc::DiscardUndoState  
  Если пользователь выполняет операцию редактирования, который не может быть отменено, эта функция вызывается для принудительного приложения-контейнера для отмены его состояния отмены сведения.  
   
 ```  
@@ -292,7 +287,7 @@ BOOL DiscardUndoState();
 ### <a name="remarks"></a>Примечания  
  Эта функция предназначена, чтобы серверы, поддерживающие отмены может освободить ресурсы, которые в противном случае будет использоваться состояния отмены сведения, который не может использоваться.  
   
-##  <a name="getclientsite"></a>COleServerDoc::GetClientSite  
+##  <a name="getclientsite"></a>  COleServerDoc::GetClientSite  
  Извлекает указатель на базовый `IOleClientSite` интерфейса.  
   
 ```  
@@ -302,7 +297,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Извлекает указатель на базовый [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) интерфейса.  
   
-##  <a name="getdocobjectserver"></a>COleServerDoc::GetDocObjectServer  
+##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Переопределить эту функцию для создания нового `CDocObjectServer` элемент и возвращает указатель на него.  
   
 ```  
@@ -319,11 +314,11 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ### <a name="remarks"></a>Примечания  
  При активации сервер DocObject, возвращает значение, отличное от **NULL** указатель мыши показывает, что клиент может поддерживать DocObjects. Реализация по умолчанию возвращает **NULL**.  
   
- Типичная реализация для документа, который поддерживает DocObjects просто выделить новый `CDocObjectServer` объекта и возвращает его в вызывающий объект. Пример:  
+ Типичная реализация для документа, который поддерживает DocObjects просто выделить новый `CDocObjectServer` объекта и возвращает его в вызывающий объект. Например:  
   
  [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]  
   
-##  <a name="getembeddeditem"></a>COleServerDoc::GetEmbeddedItem  
+##  <a name="getembeddeditem"></a>  COleServerDoc::GetEmbeddedItem  
  Эта функция вызывается для получения указателя на элемент, представляющий весь документ.  
   
 ```  
@@ -336,7 +331,7 @@ COleServerItem* GetEmbeddedItem();
 ### <a name="remarks"></a>Примечания  
  Он вызывает [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), виртуальная функция с реализация по умолчанию отсутствует.  
   
-##  <a name="getitemcliprect"></a>COleServerDoc::GetItemClipRect  
+##  <a name="getitemcliprect"></a>  COleServerDoc::GetItemClipRect  
  Вызовите `GetItemClipRect` функции-члена для получения координат прямоугольника обрезки элемента, который изменяется на месте.  
   
 ```  
@@ -352,7 +347,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
   
  Рисование не будет выполняться вне прямоугольника отсечения. Как правило рисунок будет автоматически ограничен. Эта функция позволяет определить, является ли пользователь прокручивает за пределы видимой области документа. в этом случае Прокрутить документ контейнера, при необходимости с помощью вызова [ScrollContainerBy](#scrollcontainerby).  
   
-##  <a name="getitemposition"></a>COleServerDoc::GetItemPosition  
+##  <a name="getitemposition"></a>  COleServerDoc::GetItemPosition  
  Вызовите `GetItemPosition` функции-члена для получения координат элемента редактируемого на месте.  
   
 ```  
@@ -368,7 +363,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
   
  Положение элемента можно сравнить с текущим прямоугольником отсечения, чтобы определить степень, в которой элемент видимыми (или не отображается) на экране.  
   
-##  <a name="getzoomfactor"></a>COleServerDoc::GetZoomFactor  
+##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor  
  `GetZoomFactor` Функция-член определяет «масштаб» элемента, который был активирован для редактирования по месту.  
   
 ```  
@@ -396,7 +391,7 @@ BOOL GetZoomFactor(
   
  Функция присваивает его первых двух аргументов числитель и знаменатель элемента «коэффициента масштабирования.» Если элемент не редактируется на месте, функция задает значение по умолчанию 100% (или 1:1) эти аргументы и возвращает ноль. Дополнительные сведения см. в разделе технической 40 Обратите внимание, [MFC/OLE по месту изменение размеров и изменение масштаба](../../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-##  <a name="isdocobject"></a>COleServerDoc::IsDocObject  
+##  <a name="isdocobject"></a>  COleServerDoc::IsDocObject  
  Определяет, является ли документ DocObject.  
   
 ```  
@@ -406,7 +401,7 @@ BOOL IsDocObject() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  **Значение TRUE,** Если документ является DocObject; в противном случае **FALSE**.  
   
-##  <a name="isembedded"></a>COleServerDoc::IsEmbedded  
+##  <a name="isembedded"></a>  COleServerDoc::IsEmbedded  
  Вызовите `IsEmbedded` функции-члена для определения того, представляет ли объекта, встроенного в контейнере документа.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL IsEmbedded() const;
 ### <a name="remarks"></a>Примечания  
  Несмотря на то, что он может управляться как ссылка приложения-контейнера документа, загруженного из файла не внедряется. Для внедрения считается документ, который внедряется в документе-контейнере.  
   
-##  <a name="isinplaceactive"></a>COleServerDoc::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>  COleServerDoc::IsInPlaceActive  
  Вызовите `IsInPlaceActive` функции-члена, чтобы определить, является ли элемент в данный момент в активном состоянии на месте.  
   
 ```  
@@ -429,7 +424,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если `COleServerDoc` объект является активным в месте; в противном случае — 0.  
   
-##  <a name="notifychanged"></a>COleServerDoc::NotifyChanged  
+##  <a name="notifychanged"></a>  COleServerDoc::NotifyChanged  
  Эта функция вызывается для уведомления всех связанных элементов, которые подключены к документу, который документ был изменен.  
   
 ```  
@@ -442,7 +437,7 @@ void NotifyChanged();
 > [!NOTE]
 >  Эта функция включена для совместимости с OLE-1. Новые приложения должны использовать [UpdateAllItems](#updateallitems).  
   
-##  <a name="notifyclosed"></a>COleServerDoc::NotifyClosed  
+##  <a name="notifyclosed"></a>  COleServerDoc::NotifyClosed  
  Эта функция вызывается для уведомления контейнеров, что документ был закрыт.  
   
 ```  
@@ -452,7 +447,7 @@ void NotifyClosed();
 ### <a name="remarks"></a>Примечания  
  Когда пользователь выбирает команду "Закрыть" в меню "файл" `NotifyClosed` вызывается `COleServerDoc`реализация [OnCloseDocument](../../mfc/reference/cdocument-class.md#onclosedocument) функции-члена. В контейнере приложения, написанные с помощью библиотеки классов Microsoft Foundation [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) функцию-член `COleClientItem` вызывается.  
   
-##  <a name="notifyrename"></a>COleServerDoc::NotifyRename  
+##  <a name="notifyrename"></a>  COleServerDoc::NotifyRename  
  Эта функция вызывается после пользователь переименовывает серверного документа.  
   
 ```  
@@ -466,7 +461,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ### <a name="remarks"></a>Примечания  
  Когда пользователь выбирает команду «Сохранить как» из меню «Файл» `NotifyRename` вызывается `COleServerDoc`реализация [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument) функции-члена. Эта функция уведомляет системы OLE библиотеки DLL, которые в свою очередь уведомление контейнеров. В контейнере приложения, написанные с помощью библиотеки классов Microsoft Foundation [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) функцию-член `COleClientItem` вызывается.  
   
-##  <a name="notifysaved"></a>COleServerDoc::NotifySaved  
+##  <a name="notifysaved"></a>  COleServerDoc::NotifySaved  
  Эта функция вызывается после пользователь сохраняет документ сервера.  
   
 ```  
@@ -476,7 +471,7 @@ void NotifySaved();
 ### <a name="remarks"></a>Примечания  
  Когда пользователь выбирает команду «Сохранить» из меню «Файл» `NotifySaved` вызывается для вас `COleServerDoc`реализация [OnSaveDocument](../../mfc/reference/cdocument-class.md#onsavedocument). Эта функция уведомляет системы OLE библиотеки DLL, которые в свою очередь уведомление контейнеров. В контейнере приложения, написанные с помощью библиотеки классов Microsoft Foundation [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) функцию-член `COleClientItem` вызывается.  
   
-##  <a name="onclose"></a>COleServerDoc::OnClose  
+##  <a name="onclose"></a>  COleServerDoc::OnClose  
  Вызывается платформой, когда контейнер запрашивает закрытие серверного документа.  
   
 ```  
@@ -487,18 +482,18 @@ virtual void OnClose(OLECLOSE dwCloseOption);
  `dwCloseOption`  
  Значение из перечисления `OLECLOSE`. Этот параметр может принимать одно из следующих значений:  
   
-- `OLECLOSE_SAVEIFDIRTY`Файл сохраняется в том случае, если он был изменен.  
+- `OLECLOSE_SAVEIFDIRTY` Файл сохраняется в том случае, если он был изменен.  
   
-- `OLECLOSE_NOSAVE`Файл не будет закрыт без сохранения.  
+- `OLECLOSE_NOSAVE` Файл не будет закрыт без сохранения.  
   
-- `OLECLOSE_PROMPTSAVE`Если файл был изменен, пользователю предлагается его сохранении.  
+- `OLECLOSE_PROMPTSAVE` Если файл был изменен, пользователю предлагается его сохранении.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию вызывает `CDocument::OnCloseDocument`.  
   
  Дополнительные сведения и дополнительные значения см. в разделе [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) в Windows SDK.  
   
-##  <a name="ondeactivate"></a>COleServerDoc::OnDeactivate  
+##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Вызывается платформой, когда пользователь делает внедренного или связанного элемента, который является активным в данный момент на месте.  
   
 ```  
@@ -512,7 +507,7 @@ virtual void OnDeactivate();
   
  Дополнительные сведения см. в статье [активации](../../mfc/activation-cpp.md)...  
   
-##  <a name="ondeactivateui"></a>COleServerDoc::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>  COleServerDoc::OnDeactivateUI  
  Вызывается, когда пользователь делает неактивным элемент, который был активирован на месте.  
   
 ```  
@@ -528,7 +523,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  Всегда устанавливает платформу `bUndoable` для **FALSE**. Если сервер поддерживает отмены и выполняется операция, которое может быть отменено, вызовите реализацию базового класса с `bUndoable` значение **TRUE**.  
   
-##  <a name="ondocwindowactivate"></a>COleServerDoc::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  Платформа вызывает эту функцию, чтобы активировать или деактивировать окно документа для редактирования по месту.  
   
 ```  
@@ -544,7 +539,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
   
  Дополнительные сведения см. в статье [активации](../../mfc/activation-cpp.md)...  
   
-##  <a name="onexecolecmd"></a>COleServerDoc::OnExecOleCmd  
+##  <a name="onexecolecmd"></a>  COleServerDoc::OnExecOleCmd  
  Платформа вызывает эту функцию для выполнения указанной команды или отобразить справку по команде.  
   
 ```  
@@ -583,19 +578,19 @@ virtual HRESULT OnExecOleCmd(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` Если успешно; в противном случае — одно из следующих кодов ошибки:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|Произошла непредвиденная ошибка|  
 |**E_FAIL**|Произошла ошибка|  
 |**E_NOTIMPL**|Указывает MFC сам следует попытаться перевести и отправляет команду|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`не является **NULL** , но не указана группа распознано в качестве команды|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`не является допустимой команды в группе`pguidCmdGroup`|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` не является **NULL** , но не указана группа распознано в качестве команды|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` не является допустимой команды в группе `pguidCmdGroup`|  
 |**OLECMDERR_DISABLED**|Команду по `nCmdID` отключена и не может быть выполнена|  
 |**OLECMDERR_NOHELP**|Вызывающий объект запрашивает справки на команду по `nCmdID` , но Справка недоступна|  
 |**OLECMDERR_CANCELED**|Выполнение отменено пользователем|  
   
 ### <a name="remarks"></a>Примечания  
- `COleCmdUI`можно использовать для включения, обновления и задать другие свойства команд DocObject пользовательского интерфейса. После инициализации команды можно выполнить их при помощи `OnExecOleCmd`.  
+ `COleCmdUI` можно использовать для включения, обновления и задать другие свойства команд DocObject пользовательского интерфейса. После инициализации команды можно выполнить их при помощи `OnExecOleCmd`.  
   
  Платформа вызывает функцию перед попыткой преобразования и отправляет команду документа OLE. Не нужно переопределить эту функцию для обработки стандартные команды OLE документа, но вы должны предоставить переопределение, чтобы эта функция, если требуется обрабатывать пользовательские команды или обработки команд, которые принимают параметры и возвращать результаты.  
   
@@ -605,7 +600,7 @@ virtual HRESULT OnExecOleCmd(
   
  Описывает реализацию базового класса этой функции **OLE_COMMAND_MAP** структур, связанных с целевой объект команды и попробуйте диспетчеризации команду, чтобы соответствующий обработчик. Реализация базового класса работает только с командами, которые не принимают аргументы и возвращаемые значения. Если требуется для обработки команд, аргументов и возвращаемых значений, необходимо переопределить эту функцию и работать с `pvarargIn` и `pvarargOut` параметры самостоятельно.  
   
-##  <a name="onframewindowactivate"></a>COleServerDoc::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  Эта функция вызывается платформой при активации или отключении окна фрейма приложения-контейнера.  
   
 ```  
@@ -621,7 +616,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
   
  Дополнительные сведения см. в статье [активации](../../mfc/activation-cpp.md)...  
   
-##  <a name="ongetembeddeditem"></a>COleServerDoc::OnGetEmbeddedItem  
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem  
  Вызывается платформой, когда приложение контейнера вызывает серверное приложение для создания или редактирования внедренного элемента.  
   
 ```  
@@ -634,7 +629,7 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию отсутствует. Необходимо переопределить эту функцию для возвращения элемента, который представляет весь документ. Это возвращаемое значение должно быть объектом `COleServerItem`-производного класса.  
   
-##  <a name="onreactivateandundo"></a>COleServerDoc::OnReactivateAndUndo  
+##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo  
  Платформа вызывает эту функцию, если пользователь решит отменить изменения, внесенные в элемент, который был активирован в месте, меняется и впоследствии деактивации.  
   
 ```  
@@ -649,7 +644,7 @@ virtual BOOL OnReactivateAndUndo();
   
  Переопределите эту функцию, если приложение поддерживает отмены. Обычно необходимо выполнить операцию отмены, а затем активировать элемент, вызвав `ActivateInPlace`. Если контейнер приложение создано с помощью библиотеки классов Microsoft Foundation, при вызове `COleClientItem::ReactivateAndUndo` вызывает эту функцию, чтобы вызвать.  
   
-##  <a name="onresizeborder"></a>COleServerDoc::OnResizeBorder  
+##  <a name="onresizeborder"></a>  COleServerDoc::OnResizeBorder  
  Платформа вызывает эту функцию, изменении размера окна фрейма приложения-контейнера.  
   
 ```  
@@ -676,7 +671,7 @@ virtual void OnResizeBorder(
   
  Существует расширенная overridable.  
   
-##  <a name="onsethostnames"></a>COleServerDoc::OnSetHostNames  
+##  <a name="onsethostnames"></a>  COleServerDoc::OnSetHostNames  
  Вызывается платформой, когда контейнер устанавливает или изменяет имена узлов для этого документа.  
   
 ```  
@@ -697,7 +692,7 @@ virtual void OnSetHostNames(
   
  Переопределите эту функцию, если приложение задает заголовки использованием другого механизма.  
   
-##  <a name="onsetitemrects"></a>COleServerDoc::OnSetItemRects  
+##  <a name="onsetitemrects"></a>  COleServerDoc::OnSetItemRects  
  Платформа вызывает эту функцию, чтобы изменить расположение окна фрейма на месте для редактирования в окне фрейма приложения-контейнера.  
   
 ```  
@@ -718,7 +713,7 @@ virtual void OnSetItemRects(
   
  Эта функция обычно вызывается в ответ на `RequestPositionChange` вызвать, несмотря на то, что он может быть вызван в любое время в контейнере для запроса на изменение позиции для элемента на месте.  
   
-##  <a name="onshowcontrolbars"></a>COleServerDoc::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
  Платформа вызывает эту функцию для отображения или скрытия панели элементов управления серверного приложения, связанные с окном фрейма, обозначенную `pFrameWnd`.  
   
 ```  
@@ -737,7 +732,7 @@ virtual void OnShowControlBars(
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию перечисляет все панели элементов управления, принадлежащих этого окна фрейма и скрывает или отображает их.  
   
-##  <a name="onshowdocument"></a>COleServerDoc::OnShowDocument  
+##  <a name="onshowdocument"></a>  COleServerDoc::OnShowDocument  
  Платформа вызывает `OnShowDocument` работать, когда серверный документ должен будет скрыто или показано.  
   
 ```  
@@ -751,7 +746,7 @@ virtual void OnShowDocument(BOOL bShow);
 ### <a name="remarks"></a>Примечания  
  Если `bShow` — **TRUE**, реализация по умолчанию активирует приложение сервера, при необходимости, в результате чего приложение-контейнер для прокрутки окна ее, чтобы элемент был виден. Если `bShow` — **FALSE**, реализация по умолчанию деактивирует элемента посредством вызова `OnDeactivate`, удаляет или скрывает все окна фрейма, которые были созданы для документа, за исключением первой. Если остались документов не отображается, реализация по умолчанию скрывает серверного приложения.  
   
-##  <a name="onupdatedocument"></a>COleServerDoc::OnUpdateDocument  
+##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  Вызывается платформой при сохранении документа, внедренный элемент в составных документов.  
   
 ```  
@@ -764,7 +759,7 @@ virtual BOOL OnUpdateDocument();
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию вызывает [COleServerDoc::NotifySaved](#notifysaved) и [COleServerDoc::SaveEmbedding](#saveembedding) члена функции и затем помечается как очистить. Переопределите эту функцию, если вы хотите выполнить специальная обработка при обновлении встроенного элемента.  
   
-##  <a name="requestpositionchange"></a>COleServerDoc::RequestPositionChange  
+##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange  
  Вызовите эту функцию-член для изменения положения элемента приложение контейнера.  
   
 ```  
@@ -778,7 +773,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ### <a name="remarks"></a>Примечания  
  Эта функция обычно вызывается (вместе с `UpdateAllItems`) при изменении данных в активный элемент на месте. После вызова этого метода, контейнер может или не может выполнить изменение путем вызова `OnSetItemRects`. Итоговая позиция может отличаться от от запрошенного.  
   
-##  <a name="saveembedding"></a>COleServerDoc::SaveEmbedding  
+##  <a name="saveembedding"></a>  COleServerDoc::SaveEmbedding  
  Вызывайте эту функцию, чтобы сообщить приложения-контейнера для сохранения внедренного объекта.  
   
 ```  
@@ -788,7 +783,7 @@ void SaveEmbedding();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается автоматически из `OnUpdateDocument`. Обратите внимание, что эта функция приводит его, чтобы обновить на диске, поэтому обычно он вызывается только в результате действия пользователя.  
   
-##  <a name="scrollcontainerby"></a>COleServerDoc::ScrollContainerBy  
+##  <a name="scrollcontainerby"></a>  COleServerDoc::ScrollContainerBy  
  Вызовите `ScrollContainerBy` функции-члена прокрутку документа-контейнера значение, в пикселях, обозначенном `sizeScroll`.  
   
 ```  
@@ -805,7 +800,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ### <a name="remarks"></a>Примечания  
  Положительные значения указывают прокрутку вниз и вправо; отрицательные значения указывают, прокрутку вверх и влево.  
   
-##  <a name="updateallitems"></a>COleServerDoc::UpdateAllItems  
+##  <a name="updateallitems"></a>  COleServerDoc::UpdateAllItems  
  Эта функция вызывается для уведомления всех связанных элементов, которые подключены к документу, который документ был изменен.  
   
 ```  
@@ -829,13 +824,13 @@ void UpdateAllItems(
  `nDrawAspect`  
  Определяет, как для отображения элемента. Это значение из `DVASPECT` перечисления. Этот параметр может принимать одно из следующих значений:  
   
-- `DVASPECT_CONTENT`Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
+- `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
   
-- `DVASPECT_THUMBNAIL`Элемент отображается в представлении «эскиз», чтобы оно может отображаться в средстве просмотра.  
+- `DVASPECT_THUMBNAIL` Элемент отображается в представлении «эскиз», чтобы оно может отображаться в средстве просмотра.  
   
-- `DVASPECT_ICON`Элемент будет представлен значок.  
+- `DVASPECT_ICON` Элемент будет представлен значок.  
   
-- `DVASPECT_DOCPRINT`Элемент представляется, как если бы выводились с помощью команды «Печать» из меню «файл».  
+- `DVASPECT_DOCPRINT` Элемент представляется, как если бы выводились с помощью команды «Печать» из меню «файл».  
   
 ### <a name="remarks"></a>Примечания  
  Как правило, эта функция вызывается, когда пользователь изменит серверного документа. Если объект OLE связан документ с автоматически обновляемую связь, элемент обновляется для отражения изменений. В контейнере приложения, написанные с помощью библиотеки классов Microsoft Foundation [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) функцию-член `COleClientItem` вызывается.  

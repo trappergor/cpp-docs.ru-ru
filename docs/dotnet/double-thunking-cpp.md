@@ -1,13 +1,10 @@
 ---
-title: "Создание типа Double (C++) | Документы Microsoft"
-ms.custom: 
+title: Создание типа Double (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>Двойное преобразование (С++)
 Двойное преобразование относится к потере производительности, которые могут возникнуть при вызове функции в управляемом контексте вызывает управляемую функцию Visual C++ и когда выполнение программы вызывает функции машинную точку входа, чтобы вызвать управляемую функцию. В этом разделе рассматриваются возникновения двойного и как можно избежать снижения производительности.  
@@ -40,11 +35,11 @@ ms.lasthandoff: 12/21/2017
   
  Аналогично Если вы экспортируете ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) управляемой функции, основную точку входа, и любая функция, которая импортирует и вызывает данную функцию будет вызываться через машинную точку входа. Чтобы избежать двойного в такой ситуации, следует использовать семантику собственного экспорта и импорта; просто создайте ссылку на метаданные через `#using` (см. [# директива using](../preprocessor/hash-using-directive-cpp.md)).  
   
- Компилятор теперь сокращение нежелательного двойного. Например, любая функция с управляемым типом в сигнатуре (включая возвращаемый тип) будет явно помечена как `__clrcall`. Дополнительные сведения о двойного преобразования исключения в разделе [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ Компилятор теперь сокращение нежелательного двойного. Например, любая функция с управляемым типом в сигнатуре (включая возвращаемый тип) будет явно помечена как `__clrcall`. Дополнительные сведения о двойного преобразования исключения в разделе [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем образце показано двойное преобразование. При компиляции в машинный код (без **/CLR**), вызов виртуальной функции в `main` создает один вызов `T`элемента конструктора копирования и один вызов деструктора. Похожее поведение наблюдается, когда виртуальная функция объявлена с **/CLR** и `__clrcall`. Тем не менее при компиляции только с **/CLR**, вызов функции создает вызов конструктора копирования, но имеется другой вызов конструктора копирования из-за машинного управляемому преобразованию.  
   
 ### <a name="code"></a>Код  
@@ -101,7 +96,7 @@ __thiscall T::~T(void)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  Приведенный выше образец было показано создание двойное преобразование. В этом примере показан результат. `for` Цикл вызывает виртуальную функцию и программа сообщает время выполнения. Максимальное время, отображается при компиляции программы с **/CLR**. Минимальное время выводятся при компиляции без **/CLR** или если виртуальная функция объявлена с `__clrcall`.  
   
 ### <a name="code"></a>Код  

@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCButton | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCButton | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCButton
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 `CMFCButton` Класс расширяет его функциональные возможности [CButton](../../mfc/reference/cbutton-class.md) класса, такие как выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и указание подсказки.  
@@ -114,14 +109,14 @@ class CMFCButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCButton::CMFCButton`|Конструктор по умолчанию.|  
 |`CMFCButton::~CMFCButton`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCButton::CleanUp](#cleanup)|Сбрасывает внутренние переменные и освобождает ресурсы, выделенные как изображения, точечные рисунки и значки.|  
 |`CMFCButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -156,7 +151,7 @@ class CMFCButton : public CButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCButton::OnDraw](#ondraw)|Вызывается платформой для отображения кнопки.|  
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы кнопки.|  
@@ -167,7 +162,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Указывает, следует ли прямоугольник фокуса вокруг кнопки.|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Указывает, следует ли выделять BS_CHECKBOX стиль кнопки при наведении курсора.|  
@@ -207,14 +202,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxbutton.h  
   
-##  <a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>  CMFCButton::CleanUp  
  Сбрасывает внутренние переменные и освобождает ресурсы, выделенные как изображения, точечные рисунки и значки.  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>  CMFCButton::EnableFullTextTooltip  
  Указывает, следует ли отображать полный текст всплывающей подсказки в окно всплывающей подсказки больших или усеченный версии текста в окне небольшой всплывающей подсказки.  
   
 ```  
@@ -223,11 +218,11 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bOn`  
- `TRUE`Чтобы отобразить весь текст; `FALSE` усечение отображения текста.  
+ `TRUE` Чтобы отобразить весь текст; `FALSE` усечение отображения текста.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>  CMFCButton::EnableMenuFont  
  Указывает, является ли шрифт текста кнопки таким же, как шрифт меню приложения.  
   
 ```  
@@ -238,15 +233,15 @@ void EnableMenuFont(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bOn`  
- `TRUE`Чтобы использовать шрифт меню приложения в качестве шрифта текста кнопки; `FALSE` использовать системный шрифт. Значение по умолчанию — `TRUE`.  
+ `TRUE` Чтобы использовать шрифт меню приложения в качестве шрифта текста кнопки; `FALSE` использовать системный шрифт. Значение по умолчанию — `TRUE`.  
   
  [in] `bRedraw`  
- `TRUE`Чтобы немедленно обновить экран; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE` Чтобы немедленно обновить экран; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Если не используется этот метод для задания шрифта текста кнопки, можно указать шрифт с [CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont) метод. Если не указать шрифт вообще, платформа задает шрифт по умолчанию.  
   
-##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>  CMFCButton::EnableWindowsTheming  
  Указывает, соответствует ли стиль границы кнопки текущей темы Windows.  
   
 ```  
@@ -255,12 +250,12 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bEnable`  
- `TRUE`для использования текущей темы Windows для рисования границ кнопки; `FALSE` не использует тему. Значение по умолчанию — `TRUE`.  
+ `TRUE` для использования текущей темы Windows для рисования границ кнопки; `FALSE` не использует тему. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод влияет на все кнопки в приложения, которые являются производными от `CMFCButton` класса.  
   
-##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>  CMFCButton::GetToolTipCtrl  
  Возвращает ссылку на базовый элемент управления всплывающей подсказки.  
   
 ```  
@@ -272,7 +267,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>  CMFCButton::IsAutoCheck  
  Указывает, является ли флажок или переключатель автоматической кнопки.  
   
 ```  
@@ -280,11 +275,11 @@ BOOL IsAutoCheck() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопка имеет стиль BS_AUTOCHECKBOX или BS_AUTORADIOBUTTON; в противном случае `FALSE`.  
+ `TRUE` Если кнопка имеет стиль BS_AUTOCHECKBOX или BS_AUTORADIOBUTTON; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>  CMFCButton::IsAutorepeatCommandMode  
  Указывает, устанавливается ли кнопка режим автоматического повтора.  
   
 ```  
@@ -297,7 +292,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>Примечания  
  Используйте [CMFCButton::SetAutorepeatMode](#setautorepeatmode) метод Установка кнопки режима автоматического повтора.  
   
-##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>  CMFCButton::IsCheckBox  
  Указывает, является ли кнопка флажок.  
   
 ```  
@@ -309,7 +304,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>  CMFCButton::IsChecked  
  Указывает, установлен ли флажок текущей кнопки.  
   
 ```  
@@ -317,12 +312,12 @@ BOOL IsChecked() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если установлен кнопке текущий; в противном случае `FALSE`.  
+ `TRUE` Если установлен кнопке текущий; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа использует различными способами, показывая, что возвращены различные виды кнопок. Например переключатель проверяется, если он содержит точку; будет установлен флажок, если он содержит **X**.  
   
-##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCButton::IsHighlighted  
  Указывает, выделяется ли кнопка.  
   
 ```  
@@ -335,7 +330,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>Примечания  
  Кнопка выделяется при наведении указателя мыши на кнопку.  
   
-##  <a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>  CMFCButton::IsPressed  
  Указывает ли кнопка помещается и выделен.  
   
 ```  
@@ -347,7 +342,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>  CMFCButton::IsPushed  
  Указывает, является ли кнопка в нажатом состоянии.  
   
 ```  
@@ -359,7 +354,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>  CMFCButton::IsRadioButton  
  Указывает, является ли кнопка типа "переключатель".  
   
 ```  
@@ -371,7 +366,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>  CMFCButton::IsWindowsThemingEnabled  
  Указывает, соответствует ли стиль границы кнопки текущей темы Windows.  
   
 ```  
@@ -379,9 +374,9 @@ static BOOL IsWindowsThemingEnabled();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если стиль границы кнопки соответствует текущей темы Windows; в противном случае `FALSE`.  
+ `TRUE` Если стиль границы кнопки соответствует текущей темы Windows; в противном случае `FALSE`.  
   
-##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Указывает, следует ли прямоугольник фокуса вокруг кнопки.  
   
 ```  
@@ -393,7 +388,7 @@ BOOL m_bDrawFocus;
   
  `CMFCButton` Конструктор инициализирует этот элемент для `TRUE`.  
   
-##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Указывает, следует ли выделять BS_CHECKBOX стиль кнопки при наведении курсора.  
   
 ```  
@@ -403,7 +398,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>Примечания  
  Задать `m_bHighlightChecked` члена `TRUE` для указания, что платформа будет выделяться BS_CHECKBOX стиль кнопки при наведении указателя мыши.  
   
-##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Указывает, следует ли отображать изображение справа от кнопки.  
   
 ```  
@@ -413,7 +408,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>Примечания  
  Задать `m_bRightImage` члена `TRUE` для указания, что платформа будет отображаться изображение кнопки справа от кнопки текстовой метки.  
   
-##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>  CMFCButton::m_bTransparent  
  Указывает, является ли кнопки прозрачным.  
   
 ```  
@@ -423,7 +418,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>Примечания  
  Задать `m_bTransparent` члена `TRUE` для указания, что платформа будет прозрачной кнопки. `CMFCButton` Конструктор инициализирует этот элемент для `FALSE`.  
   
-##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>  CMFCButton::m_nAlignStyle  
  Задает выравнивание текста кнопки.  
   
 ```  
@@ -433,7 +428,7 @@ AlignStyle m_nAlignStyle;
 ### <a name="remarks"></a>Примечания  
  Используйте один из следующих `CMFCButton::AlignStyle` значений перечисления, чтобы задать выравнивание текста кнопки:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ALIGN_CENTER|(По умолчанию) Кнопка текст выравнивается по центру кнопки.|  
 |ALIGN_LEFT|Кнопка текст выравнивается по левой кнопки.|  
@@ -441,7 +436,7 @@ AlignStyle m_nAlignStyle;
   
  `CMFCButton` Конструктор инициализирует этот элемент для ALIGN_CENTER.  
   
-##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Указывает стиль кнопки, например без рамки, плоский, с плоской или объемные эффекты.  
   
 ```  
@@ -451,7 +446,7 @@ FlatStyle  m_nFlatStyle;
 ### <a name="remarks"></a>Примечания  
  В следующей таблице перечислены `CMFCButton::m_nFlatStyle` значения перечисления, которые определяют внешний вид кнопки.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |BUTTONSTYLE_3D|(По умолчанию) Кнопка для высокого уровня, трехмерного сторонами. При нажатии кнопки, кнопка нажатие в глубоких отступов.|  
 |BUTTONSTYLE_FLAT|Когда указатель мыши не наведите кнопки, кнопки кажется двухмерный и не имеет вызванное сторон. Когда указатель мыши находится над кнопкой, кнопка появляется низкий, трехмерного сторонами. При нажатии кнопки, кнопка нажатие в неполную отступов.|  
@@ -466,7 +461,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCButton::OnDraw  
  Вызывается платформой для отображения кнопки.  
   
 ```  
@@ -489,7 +484,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы использовать собственный код для отображения кнопки.  
   
-##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCButton::OnDrawBorder  
  Вызывается платформой для рисования границы кнопки.  
   
 ```  
@@ -512,7 +507,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы использовать собственный код для рисования границы.  
   
-##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCButton::OnDrawFocusRect  
  Вызывается платформой для отрисовки прямоугольника фокуса для кнопки.  
   
 ```  
@@ -531,7 +526,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы использовать собственный код для отрисовки прямоугольника фокуса.  
   
-##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>  CMFCButton::OnDrawText  
  Вызывается платформой для отрисовки текста кнопки.  
   
 ```  
@@ -562,7 +557,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, используемый для отрисовки на кнопке отображается надпись собственный код.  
   
-##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCButton::OnFillBackground  
  Вызывается платформой при рисовании фона текста кнопки.  
   
 ```  
@@ -581,7 +576,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, чтобы использовать собственный код для рисования фона кнопки.  
   
-##  <a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>  CMFCButton::SelectFont  
  Возвращает шрифт, который связан с помощью заданного контекста устройств.  
   
 ```  
@@ -597,7 +592,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>  CMFCButton::SetAutorepeatMode  
  Задает кнопку в режим автоматического повтора.  
   
 ```  
@@ -611,7 +606,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>Примечания  
  Этот метод приводит к постоянно отправлять сообщения WM_COMMAND родительское окно до освобождения кнопки, кнопки или `nTimeDelay` параметра равным нулю.  
   
-##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Задает изображение для нажатой кнопки.  
   
 ```  
@@ -642,7 +637,7 @@ void SetCheckedImage(
  Дескриптор значок, который содержит точечный рисунок и маски для нового образа.  
   
  [in] `bAutoDestroy`  
- `TRUE`для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE` для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
  [in] `hIconHot`  
  Дескриптор значок, который содержит изображение для выбранного состояния.  
@@ -654,7 +649,7 @@ void SetCheckedImage(
  Дескриптор точечного рисунка, который содержит образ для выбранной области.  
   
  [in] `bMap3dColors`  
- Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE`Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
+ Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE` Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
   
  [in] `uiBmpResId`  
  Идентификатор ресурса для невыбранных изображения.  
@@ -672,11 +667,11 @@ void SetCheckedImage(
  Идентификатор ресурса точечного рисунка, отключено.  
   
  [in] `bAlphaBlend`  
- `TRUE`для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
+ `TRUE` для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>  CMFCButton::SetFaceColor  
  Задает цвет фона для текста кнопки.  
   
 ```  
@@ -690,12 +685,12 @@ void SetFaceColor(
  Значение цвета RGB.  
   
  [in] `bRedraw`  
- `TRUE`Чтобы обновить экран немедленно; в противном случае `FALSE`.  
+ `TRUE` Чтобы обновить экран немедленно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы определить новый цвет заливки фона кнопки (лицевой стороной). Обратите внимание, что фон не будет заполнен при [CMFCButton::m_bTransparent](#m_btransparent) является переменной-члена `TRUE`.  
   
-##  <a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>  CMFCButton::SetImage  
  Задает изображение для кнопки.  
   
 ```  
@@ -726,7 +721,7 @@ void SetImage(
  Дескриптор значок, который содержит точечный рисунок и маски для нового образа.  
   
  [in] `bAutoDestroy`  
- `TRUE`для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE` для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
  [in] `hIconHot`  
  Дескриптор значок, который содержит изображение для выбранного состояния.  
@@ -744,7 +739,7 @@ void SetImage(
  Идентификатор ресурса для выбранного образа.  
   
  [in] `bMap3dColors`  
- Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE`Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
+ Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE` Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
   
  [in] `hIconDisabled`  
  Дескриптор значок отключенного рисунка.  
@@ -756,7 +751,7 @@ void SetImage(
  Идентификатор ресурса точечного рисунка, отключено.  
   
  [in] `bAlphaBlend`  
- `TRUE`для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
+ `TRUE` для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -766,7 +761,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>  CMFCButton::SetMouseCursor  
  Задает изображение курсора.  
   
 ```  
@@ -786,7 +781,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>  CMFCButton::SetMouseCursorHand  
  Задает курсор на изображение ладони.  
   
 ```  
@@ -796,7 +791,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод, чтобы связать изображение курсора руки с помощью кнопки. Курсор загружается из ресурсов приложения.  
   
-##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>  CMFCButton::SetStdImage  
  Использует `CMenuImages` объекта, чтобы задать значок кнопки.  
   
 ```  
@@ -818,7 +813,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCButton::SetTextColor  
  Задает цвет текста кнопки для кнопки, не установлен.  
   
 ```  
@@ -831,7 +826,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>  CMFCButton::SetTextHotColor  
  Задает цвет текста кнопки для кнопки, которая выбрана.  
   
 ```  
@@ -844,7 +839,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>  CMFCButton::SetTooltip  
  Связывает всплывающей подсказки с кнопкой.  
   
 ```  
@@ -857,7 +852,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCButton::SizeToContent  
  Изменение размера кнопки для хранения его текст кнопки и изображения.  
   
 ```  
@@ -866,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bCalcOnly`  
- `TRUE`вычисления, но не изменять, новый размер кнопки. `FALSE` изменение размера кнопки. Значение по умолчанию — `FALSE`.  
+ `TRUE` вычисления, но не изменять, новый размер кнопки. `FALSE` изменение размера кнопки. Значение по умолчанию — `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `CSize` , содержащий новый размер кнопки.  

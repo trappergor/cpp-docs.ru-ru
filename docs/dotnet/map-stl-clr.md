@@ -1,12 +1,9 @@
 ---
-title: "Карта (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: Карта (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `map` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента. Элемент состоит из ключа, для упорядочения последовательности и сопоставленные значение, которое происходит расстояния.  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  Здесь:  
   
- `GKey`совпадает со значением `Key` Если последний является типом ссылки, в этом случае он является`Key^`  
+ `GKey` совпадает со значением `Key` Если последний является типом ссылки, в этом случае он является `Key^`  
   
- `GMapped`совпадает со значением `Mapped` Если последний является типом ссылки, в этом случае он является`Mapped^`  
+ `GMapped` совпадает со значением `Mapped` Если последний является типом ссылки, в этом случае он является `Mapped^`  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +65,7 @@ template<typename Key,
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[map::const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -90,7 +85,7 @@ template<typename Key,
 |[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|Удаляет все элементы.|  
@@ -113,7 +108,7 @@ template<typename Key,
 |[map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[map::value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[map::operator (STL/CLR)](../dotnet/map-operator-stl-clr.md)|Сопоставляет сопоставленных связанное с ним значение ключа.|  
@@ -126,7 +121,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -143,7 +138,7 @@ template<typename Key,
   
  Объект делегата должен применить строгого слабое упорядочение на ключах типа [map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y)` имеет значение true, затем `key_comp()(Y, X)` должен иметь значение false.  
   

@@ -1,13 +1,10 @@
 ---
-title: "TN002: Формат данных постоянного объекта | Документы Microsoft"
-ms.custom: 
+title: 'TN002: Формат данных постоянного объекта | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002. Формат данных постоянного объекта
 Эта заметка описывает MFC подпрограммы, которые поддерживают постоянные объекты C++ и формат данных объекта, когда он хранится в файле. Это относится только к классам с [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) макросы.  
@@ -61,7 +56,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Сохранение (Вставка) и восстановление объектов (извлечение) зависит от нескольких «констант манифеста.» Это значения, которые хранятся в двоичном формате и содержат важную информацию в архив (Обратите внимание, что префикс «w» указывает количества 16-разрядное):  
   
-|Тег|Описание:|  
+|Тег|Описание|  
 |---------|-----------------|  
 |wNullTag|Используется для указателей на объекты NULL (0).|  
 |wNewClassTag|Указывает, что класс описание, которое следует за является новой возможностью в этом контексте архива (-1).|  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  Если объект не сохранялся, есть две возможности, которые следует учитывать: объект и точный тип объекта (то есть класс) являются новыми для данного содержимого архива или объект имеет точный тип уже видели. Чтобы определить, является ли тип было выявлено, кода запросы `m_pStoreMap` для [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) объект, который соответствует `CRuntimeClass` объект, связанный с объектом, который сохраняется. Если соответствие, `WriteObject` вставляет тег, который является побитовое `OR` из `wOldClassTag` и этот индекс. Если `CRuntimeClass` является новой возможностью в данном контексте архив `WriteObject` назначает новый номер продукта для этого класса и вставляет его в архив, предшествует `wNewClassTag` значение.  
   
- Дескриптор для данного класса затем вставляется в архив с помощью `CRuntimeClass::Store` метод. `CRuntimeClass::Store`Вставляет номер схемы классов (см. ниже) и имя класса текста ASCII. Обратите внимание, что использование имени текста ASCII не гарантирует уникальность архива в приложениях. Таким образом следует пометить файлы данных, чтобы избежать повреждения. После вставки информация о классе, архив помещает объект в `m_pStoreMap` , а затем вызывает `Serialize` для вставки данных определенного класса. Перевести объект в `m_pStoreMap` перед вызовом `Serialize` предотвращает сохранение в хранилище несколько копий объекта.  
+ Дескриптор для данного класса затем вставляется в архив с помощью `CRuntimeClass::Store` метод. `CRuntimeClass::Store` Вставляет номер схемы классов (см. ниже) и имя класса текста ASCII. Обратите внимание, что использование имени текста ASCII не гарантирует уникальность архива в приложениях. Таким образом следует пометить файлы данных, чтобы избежать повреждения. После вставки информация о классе, архив помещает объект в `m_pStoreMap` , а затем вызывает `Serialize` для вставки данных определенного класса. Перевести объект в `m_pStoreMap` перед вызовом `Serialize` предотвращает сохранение в хранилище несколько копий объекта.  
   
  При возврате изначальной вызывающей стороны (обычно корневой сетевых объектов), необходимо вызвать [CArchive::Close](../mfc/reference/carchive-class.md#close). Если планируется для выполнения других [CFile](../mfc/reference/cfile-class.md)операций, необходимо вызвать `CArchive` метод [Flush](../mfc/reference/carchive-class.md#flush) во избежание повреждения архива.  
   

@@ -1,12 +1,9 @@
 ---
-title: "CSocket-класс | Документы Microsoft"
-ms.custom: 
+title: CSocket-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket-класс
 Является производным от `CAsyncSocket`, наследует его инкапсуляция Windows Sockets API и представляет более высокий уровень абстракции, чем `CAsyncSocket` объекта.  
@@ -50,17 +45,17 @@ ms.lasthandoff: 12/21/2017
 class CSocket : public CAsyncSocket  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSocket::CSocket](#csocket)|Создает объект `CSocket`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSocket::Attach](#attach)|Присоединяет **СОКЕТА** дескриптор `CSocket` объекта.|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|Отменяет блокирующий вызов, который в данный момент выполняется.|  
@@ -70,12 +65,12 @@ class CSocket : public CAsyncSocket
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSocket::OnMessagePending](#onmessagepending)|Вызывается для обработки ожидающих сообщений, при ожидании завершения блокирующий вызов.|  
   
 ## <a name="remarks"></a>Примечания  
- `CSocket`работает с классами `CSocketFile` и `CArchive` для управления отправки и получения данных.  
+ `CSocket` работает с классами `CSocketFile` и `CArchive` для управления отправки и получения данных.  
   
  Объект `CSocket` также предоставляет блокировки, что является необходимым для синхронной операции из `CArchive`. Блокировка функции, такие как `Receive`, `Send`, `ReceiveFrom`, `SendTo`, и `Accept` (все наследуемые от `CAsyncSocket`), не возвращают `WSAEWOULDBLOCK` ошибки в `CSocket`. Вместо этого эти функции дождитесь завершения операции. Кроме того, исходного вызова будет завершена с ошибкой, `WSAEINTR` Если `CancelBlockingCall` , называется блокирует одну из этих функций.  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  Вызовите эту функцию-член для присоединения `hSocket` дескриптор `CSocket` объекта.  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  Вызовите эту функцию-член для отмены блокирующий вызов в настоящий момент.  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  Вызовите **создать** после создания объекта сокета Создание сокетов Windows и присоединение его функции-члена.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  Дополнительные сведения о сокеты потока и датаграммы см. в статьях [Windows Sockets: фон](../../mfc/windows-sockets-background.md), [Windows Sockets: порты и адреса сокета](../../mfc/windows-sockets-ports-and-socket-addresses.md), и [Windows Sockets: с помощью Сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  Создает объект `CSocket`.  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  Возвращает указатель на `CSocket` объект.  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  Вызовите эту функцию-член для определения блокирующий вызов выполняется.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  Переопределите эту функцию-член для поиска определенных сообщений из Windows и отреагировать на них в сокета.  
   
 ```  

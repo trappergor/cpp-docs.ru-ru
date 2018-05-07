@@ -1,13 +1,10 @@
 ---
-title: "Настройка элемента заголовка &#39; s внешний вид | Документы Microsoft"
-ms.custom: 
+title: Настройка элемента заголовка&#39;s внешний вид | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,17 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Настройка элемента заголовка &#39; s внешний вид
+# <a name="customizing-the-header-item39s-appearance"></a>Настройка элемента заголовка&#39;внешний вид s
 Установив *dwStyle* параметр при создании элемента управления заголовка ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), можно определить внешний вид и поведение заголовка элементов или заголовка самого элемента управления.  
   
  Вот выборки стили, которые можно задать, и их назначение.  

@@ -1,13 +1,10 @@
 ---
-title: "Наследование элементов управления от стандартного элемента управления | Документы Microsoft"
-ms.custom: 
+title: Наследование элементов управления от стандартного элемента управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Наследование элементов управления от стандартного элемента управления
 Как и в случае с любым [CWnd](../mfc/reference/cwnd-class.md)-производного класса, можно изменить поведение элемента управления нового класса, производного от существующего класса элемента управления.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  Переопределить `OnInitDialog` классов диалоговых окон для вызова функции-члена `SubclassDlgItem` функции-члена производного элемента управления.  
   
- `SubclassDlgItem`«динамически подклассов» элемент управления создан из шаблона диалогового окна. Когда элемент управления динамически подклассы, подключения в Windows, обработки некоторых сообщений в приложении и затем передать оставшиеся сообщения на Windows. Дополнительные сведения см. в разделе [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) функции-члена класса `CWnd` в *Справочник по библиотеке MFC*. В следующем примере показано, как можно написать переопределение `OnInitDialog` для вызова `SubclassDlgItem`:  
+ `SubclassDlgItem` «динамически подклассов» элемент управления создан из шаблона диалогового окна. Когда элемент управления динамически подклассы, подключения в Windows, обработки некоторых сообщений в приложении и затем передать оставшиеся сообщения на Windows. Дополнительные сведения см. в разделе [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) функции-члена класса `CWnd` в *Справочник по библиотеке MFC*. В следующем примере показано, как можно написать переопределение `OnInitDialog` для вызова `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

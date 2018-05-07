@@ -1,30 +1,25 @@
 ---
-title: "Установка изображений для отдельного элемента | Документы Microsoft"
-ms.custom: 
+title: Установка изображений для отдельного элемента | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7f3dbdf4d386e40802d74459dd2854035b5b7c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>Установка изображений для отдельного элемента
 Различные типы изображений, используемых элементом поле Расширенное поле со списком определяются по значениям в `iImage`, **iSelectedImage**, и **iOverlay** члены [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) структуры. Каждое значение — это индекс образа в списке связанное изображение элемента управления. По умолчанию эти члены являются равным 0, вызывает элемент управления для отображения нет изображения для элемента. Если вы хотите использовать изображения для определенного элемента, можно изменить структуру соответственно, при вставке элемент поля со списком или путем изменения существующего элемента поле со списком.  

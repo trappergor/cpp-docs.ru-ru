@@ -1,13 +1,10 @@
 ---
-title: "Регистрация элементов управления OLE | Документы Microsoft"
-ms.custom: 
+title: Регистрация элементов управления OLE | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11e943b8aa6427517ecb5b32ddf6f56442f5d0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e51e4c425d3d16b57a2b1ce0d4fc2f585dc505d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-ole-controls"></a>Регистрация элементов управления OLE
 Элементы управления OLE, подобно другим объектам сервера OLE, может осуществляться других OLE-совместимых приложений. Это достигается путем регистрации библиотеки типов и класс элемента управления.  
@@ -43,9 +38,9 @@ ms.lasthandoff: 12/21/2017
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|Удаляет класс элемента управления или класса страницы свойств из базы данных регистрации.|  
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Удаление библиотеки типов элемента управления из базы данных регистрации.|  
   
- `AfxOleRegisterTypeLib`обычно вызывается в реализации библиотеки DLL элементов управления `DllRegisterServer`. Аналогичным образом `AfxOleUnregisterTypeLib` вызывается `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, и `AfxOleUnregisterClass` обычно вызываются с `UpdateRegistry` функции-члене класса элемента управления класса фабрики или странице свойств.  
+ `AfxOleRegisterTypeLib` обычно вызывается в реализации библиотеки DLL элементов управления `DllRegisterServer`. Аналогичным образом `AfxOleUnregisterTypeLib` вызывается `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, и `AfxOleUnregisterClass` обычно вызываются с `UpdateRegistry` функции-члене класса элемента управления класса фабрики или странице свойств.  
   
-##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
+##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass  
  Регистрирует класс элемента управления с регистрационной базы данных Windows.  
   
 ```   
@@ -81,11 +76,11 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  `nRegFlags`  
  Содержит один или несколько из следующих флагов:  
   
-- `afxRegInsertable`Позволяет элементу управления отображаются в диалоговом окне Вставка объекта OLE-объекты.  
+- `afxRegInsertable` Позволяет элементу управления отображаются в диалоговом окне Вставка объекта OLE-объекты.  
   
-- `afxRegApartmentThreading`Задает модель потоков в реестре, ThreadingModel = подразделения.  
+- `afxRegApartmentThreading` Задает модель потоков в реестре, ThreadingModel = подразделения.  
   
-- `afxRegFreeThreading`Задает модель потоков в реестре, ThreadingModel = Free.  
+- `afxRegFreeThreading` Задает модель потоков в реестре, ThreadingModel = Free.  
   
      Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` для задания ThreadingModel = Both. В разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в Windows SDK, Дополнительные сведения о потоковой модели регистрации.  
   
@@ -146,7 +141,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  Ненулевое значение, если класс элемента управления была зарегистрирована; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это позволяет элементу управления для использования с контейнерами, OLE-элемент управления виду. `AfxOleRegisterControlClass`обновление реестра с именем элемента управления и его расположение в системе, а также задается модель потоков, который поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [Технические заметки 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модели подразделения потоков в OLE элементы управления,» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в Windows SDK.  
+ Это позволяет элементу управления для использования с контейнерами, OLE-элемент управления виду. `AfxOleRegisterControlClass` обновление реестра с именем элемента управления и его расположение в системе, а также задается модель потоков, который поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [Технические заметки 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модели подразделения потоков в OLE элементы управления,» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -160,7 +155,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
+##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
  Регистрирует класса страницы свойств с регистрационной базы данных Windows.  
   
 ```  
@@ -184,7 +179,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  `nRegFlags`  
  Может содержать флаг.  
   
-- `afxRegApartmentThreading`Задает модель потоков в реестре, ThreadingModel = подразделения.  
+- `afxRegApartmentThreading` Задает модель потоков в реестре, ThreadingModel = подразделения.  
   
 > [!NOTE]
 >  В версиях MFC до MFC 4.2 `int` `nRegFlags` параметр не доступен. Обратите внимание, что `afxRegInsertable` флаг не является допустимым параметром для страницы свойств и вызовет ASSERT в MFC, если оно задано  
@@ -193,12 +188,12 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  Ненулевое значение, если класс элемента управления была зарегистрирована; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это позволяет страницу свойств для использования с контейнерами, OLE-элемент управления виду. `AfxOleRegisterPropertyPageClass`Добавляет в реестр имя страницы свойств и его расположение в системе, а также задается модель потоков, который поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [Технические заметки 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модели подразделения потоков в OLE элементы управления,» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в Windows SDK.  
+ Это позволяет страницу свойств для использования с контейнерами, OLE-элемент управления виду. `AfxOleRegisterPropertyPageClass` Добавляет в реестр имя страницы свойств и его расположение в системе, а также задается модель потоков, который поддерживает элемент управления в реестре. Дополнительные сведения см. в разделе [Технические заметки 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «Модели подразделения потоков в OLE элементы управления,» и [о процессах и потоках](http://msdn.microsoft.com/library/windows/desktop/ms681917) в Windows SDK.  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
+##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
  Регистрирует библиотеку типов с регистрационной базы данных Windows и позволяет библиотеки типов для использования других контейнеров, которые являются OLE-элемент управления виду.  
   
 ```   
@@ -236,7 +231,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
  Удаляет класс элемента управления или свойства страниц из базы данных регистрации Windows.  
   
 ```   
@@ -256,7 +251,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
  Вызывайте эту функцию, чтобы удалить запись библиотеки типов из регистрационной базы данных Windows.  
   
 ```   

@@ -1,12 +1,9 @@
 ---
-title: "Класс COleConvertDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleConvertDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>Класс COleConvertDialog
 Дополнительные сведения см. в разделе [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры в Windows SDK.  
@@ -56,13 +51,13 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Создает объект `COleConvertDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleConvertDialog::DoConvert](#doconvert)|Выполняет преобразование, указанные в диалоговом окне.|  
 |[COleConvertDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменение элемента.|  
@@ -73,7 +68,7 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleConvertDialog::m_cv](#m_cv)|Структура, которая управляет поведением окна.|  
   
@@ -102,7 +97,7 @@ class COleConvertDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  Создает только `COleConvertDialog` объекта.  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS** указывает, что переключатель активировать будут выбираться изначально при вызове диалоговое окно.  
   
-- **CF_SETCONVERTDEFAULT** указывает, что класс которого **CLSID** определяется **clsidConvertDefault** членом `m_cv` структуры будет использоваться как значение по умолчанию выделение в поле список классов, при выборе переключателя для преобразования.  
+- **CF_SETCONVERTDEFAULT** указывает, что класс которого **CLSID** определяется **clsidConvertDefault** членом `m_cv` структуры будет использоваться как значение по умолчанию в списке классов при преобразовать в кнопку-переключатель установлен.  
   
 - **CF_SETACTIVATEDEFAULT** указывает, что класс которого **CLSID** определяется **clsidActivateDefault** членом `m_cv` структуры будет использоваться как значение по умолчанию Выбор в списке класс при активации как переключателя.  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) и [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры.  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Эта функция вызывается после успешного возвращения из [DoModal](#domodal)из, чтобы преобразовать или активировать объект типа [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>Примечания  
  Активировать согласно сведения, выбранный пользователем в диалоговом окне Convert или преобразовать элемент.  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна преобразования OLE.  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  Если `DoModal` возвращает **IDOK**, можно вызывать другой член функции для получения параметров или сведения, введенных пользователем в диалоговом окне.  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  Эта функция вызывается для получения **CLSID** связанный с элементом, выбранный в диалоговом окне Convert пользователем.  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Эта функция вызывается для определения ли пользователь выбрал отображения выбранного элемента в виде значка.  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Метод требуется для отображения объекта.  
   
-- `DVASPECT_CONTENT`Возвращается, если не был установлен флажок виде значка.  
+- `DVASPECT_CONTENT` Возвращается, если не был установлен флажок виде значка.  
   
-- `DVASPECT_ICON`Возвращается, если был установлен флажок виде значка.  
+- `DVASPECT_ICON` Возвращается, если был установлен флажок виде значка.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция только после вызова [DoModal](#domodal) возвращает **IDOK**.  
   
  Дополнительные сведения о рисовании аспект см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуру данных в Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Эта функция вызывается для получения дескриптора метафайла, содержащий аспект, преобразованного в значок выбранного элемента.  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор метафайла, содержащий преобразованного в значок аспектом выбранного элемента, если был установлен флажок виде значка проверяется при отклонении диалоговое окно, выбрав **ОК**; в противном случае **NULL**.  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  Эта функция вызывается для определения типа преобразования, выбранного в диалоговом окне Convert.  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs** возвращается, если был установлен переключатель активации, пользователь выбирает другой элемент для активации, и `DoModal` возвращается **IDOK**.  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  Структура типа **OLEUICONVERT** используется для управления поведением диалоговое окно "преобразование".  
   
 ```  

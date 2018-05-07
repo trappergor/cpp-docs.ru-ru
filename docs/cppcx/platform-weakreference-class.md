@@ -1,26 +1,21 @@
 ---
-title: "Класс Platform::WeakReference | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::WeakReference | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformweakreference-class"></a>Класс Platform::WeakReference
 Представляет слабую ссылку на экземпляр класса ссылок.  
@@ -37,19 +32,19 @@ class WeakReference
   
 ### <a name="constructors"></a>Конструкторы  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[WeakReference::WeakReference](#ctor)|Инициализирует новый экземпляр класса WeakReference.|  
   
 ### <a name="methods"></a>Методы  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[WeakReference::Resolve](#resolve)|Возвращает дескриптор базовому классу ссылок или значение nullptr, если объект больше не существует.|  
   
 ### <a name="operators"></a>Операторы  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[WeakReference::operator=](#operator-assign)|Присваивает новое значение объекту WeakReference.|  
 |[WeakReference::operator BoolType](#booltype)|Реализует безопасный шаблон bool.|  
@@ -57,7 +52,7 @@ class WeakReference
 ### <a name="remarks"></a>Примечания  
  Класс WeakReference сам не является классом ссылок и поэтому не наследуется от Platform::Object^ и не может использоваться в сигнатуре открытого метода.  
 
-## <a name="operator-assign"></a> WeakReference::operator=
+## <a name="operator-assign"></a> WeakReference::operator =
 Присваивает значение WeakReference.  
   
 ### <a name="syntax"></a>Синтаксис  

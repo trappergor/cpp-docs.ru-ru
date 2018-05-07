@@ -2,12 +2,9 @@
 title: Указание событий сборки | Документы Microsoft
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>Задание событий построения
 
@@ -60,7 +55,7 @@ ms.lasthandoff: 01/03/2018
 
       Несколько входных и выходных файлов можно указать с помощью макросов MSBuild символически. Сведения о том, как указать расположение файлов и имен наборов файлов см. в разделе [общие макросы для команд и свойств построения](../ide/common-macros-for-build-commands-and-properties.md).
 
-      Так как при указании переменной среды необходимо заменить каждый символ «%» зарезервирован MSBuild,  **%**  escape-символ **% 25** Шестнадцатеричная escape-последовательность. Например, замените **% WINDIR %** с **% 25WINDIR % 25**. MSBuild заменяет каждый **% 25** последовательность с  **%**  символов перед обращением к переменной среды.
+      Так как при указании переменной среды необходимо заменить каждый символ «%» зарезервирован MSBuild, **%** escape-символ **% 25** Шестнадцатеричная escape-последовательность. Например, замените **% WINDIR %** с **% 25WINDIR % 25**. MSBuild заменяет каждый **% 25** последовательность с **%** символов перед обращением к переменной среды.
 
    - В **описание**, введите описание для этого события. Описание печатается **вывода** окна при возникновении этого события.
 

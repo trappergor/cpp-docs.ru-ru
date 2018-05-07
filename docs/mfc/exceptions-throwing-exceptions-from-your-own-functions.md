@@ -1,13 +1,10 @@
 ---
-title: "Исключения: Создание исключений из собственных функций | Документы Microsoft"
-ms.custom: 
+title: 'Исключения: Создание исключений из собственных функций | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15aeb1af7f41cf2df8be3f69657ec6870c55ab34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dae6f2c0d1cab021cc91854a34f10423a1122dec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Исключения. Создание исключений из собственных функций
 Можно использовать исключительно для перехвата исключений, вызванных функций в MFC или других библиотеках парадигма обработки исключений MFC. Помимо перехват исключения, создаваемые библиотеки кода, может вызывать исключения из собственного кода при написании функции, которые могут возникнуть исключительных условиях.  

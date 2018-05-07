@@ -1,13 +1,10 @@
 ---
-title: "Чтение и запись файлов | Документы Microsoft"
-ms.custom: 
+title: Чтение и запись файлов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-and-writing-files"></a>Чтение и запись файлов
 При использовании функции обработки файлов библиотеки времени выполнения C, будут отображаться знакомые MFC операций чтения и записи. В этой статье описывается непосредственно чтение и запись непосредственно в `CFile` объекта. Вы также можете буферизованный файлового ввода-вывода с [CArchive](../mfc/reference/carchive-class.md) класса.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Используйте **чтения** и **записи** функции-члены для чтения и записи данных в файле.  
   
-     - или -  
+     -или-  
   
 2.  `Seek` Функция-член также доступен для перемещения с определенным смещением в файле.  
   

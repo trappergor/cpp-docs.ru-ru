@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCPropertyGridFontProperty | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCPropertyGridFontProperty | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 505f48bcfb867ae8444d8dbbee360bb04e23d8e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, открывается диалоговое окно выбора шрифта.  
@@ -46,14 +41,14 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|  
 |`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Получает цвет шрифта, выбранного пользователем из диалогового окна шрифта.|  
@@ -73,7 +68,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfontproperty"></a>CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
+##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
  Создает объект `CMFCPropertyGridFontProperty`.  
   
 ```  
@@ -113,7 +108,7 @@ CMFCPropertyGridFontProperty(
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
-##  <a name="getcolor"></a>CMFCPropertyGridFontProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
  Получает цвет шрифта, выбранного пользователем из диалогового окна шрифта.  
   
 ```  
@@ -125,7 +120,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="getlogfont"></a>CMFCPropertyGridFontProperty::GetLogFont  
+##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
  Возвращает шрифт, пользователем из диалогового окна шрифта.  
   
 ```  

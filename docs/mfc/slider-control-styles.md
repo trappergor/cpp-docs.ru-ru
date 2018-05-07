@@ -1,13 +1,10 @@
 ---
-title: "Стили элемента управления \"ползунок\" | Документы Microsoft"
-ms.custom: 
+title: Стили элемента управления "ползунок" | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-styles"></a>Стили элемента управления "Ползунок"
 Элементы управления "ползунок" ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) может иметь вертикальной или горизонтальной ориентации. Они могут иметь делений шкалы на обеих сторонах обоих сторон или ни одного. Они также могут использоваться для указания диапазона последовательных значений. Эти свойства управляются с помощью стилей управления "ползунок", которые указываются при создании управления "ползунок".  

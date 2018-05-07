@@ -1,13 +1,10 @@
 ---
-title: "Перетаскивание: реализация конечного расположения сброса | Документы Microsoft"
-ms.custom: 
+title: 'Перетаскивание: реализация конечного расположения сброса | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>Перетаскивание. Реализация конечного расположения сброса
 В этой статье описано, как сделать приложение конечного расположения сброса. Реализация конечного расположения сброса занимает немного сложнее, чем реализация источника перетаскивания, но по-прежнему относительно просто. Эти методы также применяются к приложениям отличных от OLE.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Добавьте переменную-член для каждого представления в приложении, которое вы хотите быть конечного расположения сброса. Эта переменная-член должен иметь тип `COleDropTarget` или класс, производный от него.  
   
-2.  Из функции класс представления, который обрабатывает `WM_CREATE` сообщений (обычно `OnCreate`), для обращения к новой переменной члена `Register` функции-члена. `Revoke`вызывается автоматически для вас при уничтожении представления.  
+2.  Из функции класс представления, который обрабатывает `WM_CREATE` сообщений (обычно `OnCreate`), для обращения к новой переменной члена `Register` функции-члена. `Revoke` вызывается автоматически для вас при уничтожении представления.  
   
 3.  Переопределите следующие функции. Если необходимо такое же поведение во всем приложении Переопределите эти функции в классе представления. Если требуется изменить поведение в отдельных случаях необходимо включить при удалении отличных`CView` windows, переопределение этих функций в вашей `COleDropTarget`-производного класса.  
   

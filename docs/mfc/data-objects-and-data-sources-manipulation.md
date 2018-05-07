@@ -1,13 +1,10 @@
 ---
-title: "Объекты и источники данных: манипуляции | Документы Microsoft"
-ms.custom: 
+title: 'Объекты и источники данных: манипуляции | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Объекты и источники данных. Манипуляция
 После создания объекта данных или источник данных можно выполнить ряд общих операций на данные, такие как вставка и удаление данных, перечисление форматы файлов, которые данные находятся в, и многое другое. В этой статье описаны методы, необходимые для выполнения наиболее часто выполняемые операции. Ниже приведен список разделов.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Извлечение данных из объекта данных](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>Вставка данных в источник данных  
+##  <a name="_core_inserting_data_into_a_data_source"></a> Вставка данных в источник данных  
  Способ вставки данных в источник данных зависит ли данные передаются непосредственно или по требованию и на носителе, для которого предоставляется. Возможные значения — следующим образом.  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Предоставление данных немедленно (немедленно подготовки отчетов)  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если вы используете `CFile` объект в качестве источника данных, вызовите `COleDataSource::DelayRenderFileData` вместо `COleDataSource::DelayRenderData` в предыдущем варианте. При запросе данных платформа вызывает `COleDataSource::OnRenderFileData`, который необходимо переопределить.  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Определение форматов, доступные в объекте данных  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> Определение форматов, доступные в объекте данных  
  Прежде чем приложение позволяет пользователю вставлять данные в него, необходимо знать, если существует форматов в буфере обмена, он может обрабатывать. Для этого приложения они должны сделать следующее:  
   
 1.  Создание `COleDataObject` объекта и **FORMATETC** структуры.  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  Если вы используете `ON_UPDATE_COMMAND_UI`, теперь можно включить вставить и, возможно, Специальная вставка элементов в меню "Правка". Чтобы сделать это, вызовите `CMenu::EnableMenuItem` или `CCmdUI::Enable`. Дополнительные сведения о какой контейнера приложений следует делать с пунктов меню и ответ, [меню и ресурсы: добавление контейнеров](../mfc/menus-and-resources-container-additions.md).  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Извлечение данных из объекта данных  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> Извлечение данных из объекта данных  
  После выбора формата данных, остается для извлечения данных из объекта данных. Чтобы сделать это, пользователь решает, куда поместить данные, и приложение вызывает соответствующую функцию. Данные будут доступны в одном из следующих носители:  
   
 |Средняя|Функция, вызываемая|  

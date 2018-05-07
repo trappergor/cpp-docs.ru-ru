@@ -1,30 +1,25 @@
 ---
-title: "Обработка отраженных сообщений | Документы Microsoft"
-ms.custom: 
+title: Обработка отраженных сообщений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3576e93ce7ce2d972e78433065feaf06f3ae15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-reflected-messages"></a>Обработка отраженных сообщений
 Отражение позволяет обрабатывать сообщения для элемента управления, такие как сообщения `WM_CTLCOLOR`, **WM_COMMAND**, и **WM_NOTIFY**, внутри себя. Это делает элемент управления более автономной и переносной. Механизм работает Общие элементы управления Windows, а также элементы управления ActiveX (ранее — элементы управления OLE).  

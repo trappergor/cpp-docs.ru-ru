@@ -1,12 +1,9 @@
 ---
-title: "Класс COleSafeArray | Документы Microsoft"
-ms.custom: 
+title: Класс COleSafeArray | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleSafeArray
@@ -69,17 +66,15 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c7a471b5c397c430f419514b9ebf1d4da62f62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colesafearray-class"></a>Класс COleSafeArray
 Класс для работы с массивами произвольных типов и измерений.  
@@ -94,13 +89,13 @@ class COleSafeArray : public tagVARIANT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleSafeArray::COleSafeArray](#colesafearray)|Создает объект `COleSafeArray`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleSafeArray::AccessData](#accessdata)|Извлекает указатель на данные массива.|  
 |[COleSafeArray::AllocData](#allocdata)|Выделяет память для массива.|  
@@ -131,16 +126,16 @@ class COleSafeArray : public tagVARIANT
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Получает доступ к базовым **VARIANT** структуры `COleSafeArray` объекта.|  
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Получает доступ к базовым **VARIANT** структуры `COleSafeArray` объекта.|  
 |[COleSafeArray::operator =](#operator_eq)|Копирует значения в `COleSafeArray` объекта ( **SAFEARRAY**, **VARIANT**, `COleVariant`, или `COleSafeArray` массива).|  
 |[COleSafeArray::operator ==](#operator_eq_eq)|Сравнивает два массива типа variant ( **SAFEARRAY**, **VARIANT**, `COleVariant`, или `COleSafeArray` массивы).|  
-|[COleSafeArray::operator&lt;&lt;](#operator_lt_lt)|Выводит содержимое `COleSafeArray` объекта в контекст дампа.|  
+|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|Выводит содержимое `COleSafeArray` объекта в контекст дампа.|  
   
 ## <a name="remarks"></a>Примечания  
- `COleSafeArray`является производным от OLE **VARIANT** структуры. OLE **SAFEARRAY** функции-члены доступны через `COleSafeArray`, а также как набор функций-членов специально для одномерных массивов байтов.  
+ `COleSafeArray` является производным от OLE **VARIANT** структуры. OLE **SAFEARRAY** функции-члены доступны через `COleSafeArray`, а также как набор функций-членов специально для одномерных массивов байтов.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `tagVARIANT`  
@@ -150,7 +145,7 @@ class COleSafeArray : public tagVARIANT
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
   
-##  <a name="accessdata"></a>COleSafeArray::AccessData  
+##  <a name="accessdata"></a>  COleSafeArray::AccessData  
  Извлекает указатель на данные массива.  
   
 ```  
@@ -167,7 +162,7 @@ void AccessData(void** ppvData);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
-##  <a name="allocdata"></a>COleSafeArray::AllocData  
+##  <a name="allocdata"></a>  COleSafeArray::AllocData  
  Выделяет память для безопасного массива.  
   
 ```  
@@ -177,7 +172,7 @@ void AllocData();
 ### <a name="remarks"></a>Примечания  
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
+##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
  Выделяет память для дескриптора безопасного массива.  
   
 ```  
@@ -191,7 +186,7 @@ void AllocDescriptor(DWORD dwDims);
 ### <a name="remarks"></a>Примечания  
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="attach"></a>COleSafeArray::Attach  
+##  <a name="attach"></a>  COleSafeArray::Attach  
  Обеспечивает контроль данных в существующем **VARIANT** массив `COleSafeArray` объекта.  
   
 ```  
@@ -208,7 +203,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="example"></a>Пример  
   Далее приведен пример [COleSafeArray::AccessData](#accessdata).  
   
-##  <a name="clear"></a>COleSafeArray::Clear  
+##  <a name="clear"></a>  COleSafeArray::Clear  
  Очищает безопасного массива.  
   
 ```  
@@ -218,7 +213,7 @@ void Clear();
 ### <a name="remarks"></a>Примечания  
  Функция очищает безопасный массив, задав `VARTYPE` объекта `VT_EMPTY`. Текущее содержимое освобождаются и освобождается массив.  
   
-##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
+##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
  Создает объект `COleSafeArray`.  
   
 ```  
@@ -261,7 +256,7 @@ COleSafeArray(const COleVariant& varSrc);
   
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="copy"></a>COleSafeArray::Copy  
+##  <a name="copy"></a>  COleSafeArray::Copy  
  Создает копию существующего безопасного массива.  
   
 ```  
@@ -275,7 +270,7 @@ void Copy(LPSAFEARRAY* ppsa);
 ### <a name="remarks"></a>Примечания  
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="create"></a>COleSafeArray::Create  
+##  <a name="create"></a>  COleSafeArray::Create  
  Выделяет и инициализирует данные для массива.  
   
 ```  
@@ -293,7 +288,7 @@ void Create(
   
 ### <a name="parameters"></a>Параметры  
  `vtSrc`  
- Базовый тип массива (то есть **VARTYPE** каждого элемента массива). **VARTYPE** предназначен только для подмножества типов variant. Ни **VT_ARRAY** ни **VT_BYREF** может быть установлен флаг. `VT_EMPTY`и **VT_NULL** не являются допустимым базовых типов для массива. Все другие типы являются допустимыми.  
+ Базовый тип массива (то есть **VARTYPE** каждого элемента массива). **VARTYPE** предназначен только для подмножества типов variant. Ни **VT_ARRAY** ни **VT_BYREF** может быть установлен флаг. `VT_EMPTY` и **VT_NULL** не являются допустимым базовых типов для массива. Все другие типы являются допустимыми.  
   
  `dwDims`  
  Число измерений в массиве. Это можно изменить после создания массива с [Redim](#redim).  
@@ -310,7 +305,7 @@ void Create(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="createonedim"></a>COleSafeArray::CreateOneDim  
+##  <a name="createonedim"></a>  COleSafeArray::CreateOneDim  
  Создает новый одномерный `COleSafeArray` объекта.  
   
 ```  
@@ -342,7 +337,7 @@ void CreateOneDim(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
-##  <a name="destroy"></a>COleSafeArray::Destroy  
+##  <a name="destroy"></a>  COleSafeArray::Destroy  
  Уничтожает дескриптор существующего массива и все данные в массиве.  
   
 ```  
@@ -352,7 +347,7 @@ void Destroy();
 ### <a name="remarks"></a>Примечания  
  Если объекты хранятся в массиве, каждый объект освобождается. В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydata"></a>COleSafeArray::DestroyData  
+##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
  Удаляет все данные в безопасном массиве.  
   
 ```  
@@ -362,7 +357,7 @@ void DestroyData();
 ### <a name="remarks"></a>Примечания  
  Если объекты хранятся в массиве, каждый объект освобождается. В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
+##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
  Уничтожает дескриптор безопасного массива.  
   
 ```  
@@ -372,7 +367,7 @@ void DestroyDescriptor();
 ### <a name="remarks"></a>Примечания  
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
-##  <a name="detach"></a>COleSafeArray::Detach  
+##  <a name="detach"></a>  COleSafeArray::Detach  
  Отсоединяет **VARIANT** данные из `COleSafeArray` объекта.  
   
 ```  
@@ -390,7 +385,7 @@ VARIANT Detach();
 ### <a name="example"></a>Пример  
   Далее приведен пример [COleSafeArray::PutElement](#putelement).  
   
-##  <a name="getbytearray"></a>COleSafeArray::GetByteArray  
+##  <a name="getbytearray"></a>  COleSafeArray::GetByteArray  
  Копирует содержимое безопасного массива в `CByteArray`.  
   
 ```  
@@ -401,7 +396,7 @@ void GetByteArray(CByteArray& bytes);
  `bytes`  
  Ссылку на [CByteArray](../../mfc/reference/cbytearray-class.md) объекта.  
   
-##  <a name="getdim"></a>COleSafeArray::GetDim  
+##  <a name="getdim"></a>  COleSafeArray::GetDim  
  Возвращает число измерений в `COleSafeArray` объекта.  
   
 ```  
@@ -414,7 +409,7 @@ DWORD GetDim();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="getelement"></a>COleSafeArray::GetElement  
+##  <a name="getelement"></a>  COleSafeArray::GetElement  
  Получает один элемент безопасного массива.  
   
 ```  
@@ -438,7 +433,7 @@ void GetElement(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
   
-##  <a name="getelemsize"></a>COleSafeArray::GetElemSize  
+##  <a name="getelemsize"></a>  COleSafeArray::GetElemSize  
  Получает размер элемента в `COleSafeArray` объекта.  
   
 ```  
@@ -448,7 +443,7 @@ DWORD GetElemSize();
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер в байтах элементов безопасного массива.  
   
-##  <a name="getlbound"></a>COleSafeArray::GetLBound  
+##  <a name="getlbound"></a>  COleSafeArray::GetLBound  
  Возвращает нижнюю границу любого измерения `COleSafeArray` объекта.  
   
 ```  
@@ -470,7 +465,7 @@ void GetLBound(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
-##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
+##  <a name="getonedimsize"></a>  COleSafeArray::GetOneDimSize  
  Возвращает количество элементов в одномерном массиве `COleSafeArray` объекта.  
   
 ```  
@@ -483,7 +478,7 @@ DWORD GetOneDimSize();
 ### <a name="example"></a>Пример  
   Далее приведен пример [COleSafeArray::CreateOneDim](#createonedim).  
   
-##  <a name="getubound"></a>COleSafeArray::GetUBound  
+##  <a name="getubound"></a>  COleSafeArray::GetUBound  
  Возвращает верхнюю границу любого измерения безопасного массива.  
   
 ```  
@@ -505,7 +500,7 @@ void GetUBound(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
-##  <a name="lock"></a>COleSafeArray::Lock  
+##  <a name="lock"></a>  COleSafeArray::Lock  
  Увеличивает счетчик блокировки массиве и поместить указатель на данные массива в дескрипторе массива.  
   
 ```  
@@ -519,14 +514,14 @@ void Lock();
   
  При ее нельзя удалить массив.  
   
-##  <a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleSafeArray::operator LPCVARIANT  
  Вызовите этот оператор приведения для доступа к базовым **VARIANT** структуры для этого `COleSafeArray` объекта.  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
-##  <a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleSafeArray::operator LPVARIANT  
  Вызовите этот оператор приведения для доступа к базовым **VARIANT** структуры для этого `COleSafeArray` объекта.  
   
 ```  
@@ -536,7 +531,7 @@ operator LPVARIANT();
 ### <a name="remarks"></a>Примечания  
  Обратите внимание, что изменение значения в **VARIANT** структуры обращаются указатель, возвращаемый этой функцией изменит значение этой `COleSafeArray` объекта.  
   
-##  <a name="operator_eq"></a>COleSafeArray::operator =  
+##  <a name="operator_eq"></a>  COleSafeArray::operator =  
  Эти перегруженных операторах присваивания копирования исходного значения в это `COleSafeArray` объекта.  
   
 ```  
@@ -551,11 +546,11 @@ COleSafeArray& operator=(const COleVariant& varSrc);
   
 - **оператор = (** *saSrc* **)** копирует существующий `COleSafeArray` объект в этот объект.  
   
-- **оператор = (** *varSrc***)** копирует существующий **VARIANT** или `COleVariant` массив в этот объект.  
+- **оператор = (** *varSrc ***)** копирует существующий **VARIANT** или `COleVariant` массив в этот объект.  
   
 - **оператор = (** `pSrc` **)** копии **VARIANT** объект массива осуществляется `pSrc` в этот объект.  
   
-##  <a name="operator_eq_eq"></a>COleSafeArray::operator ==  
+##  <a name="operator_eq_eq"></a>  COleSafeArray::operator ==  
  Этот оператор сравнивает два массива ( **SAFEARRAY**, **VARIANT**, `COleVariant`, или `COleSafeArray` массивы) и возвращает ненулевое значение, если объекты равны; в противном случае — 0.  
   
 ```  

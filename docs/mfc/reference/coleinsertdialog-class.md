@@ -1,12 +1,9 @@
 ---
-title: "Класс COleInsertDialog | Документы Microsoft"
-ms.custom: 
+title: Класс COleInsertDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4638471ed199d08bb21bcf16465fe933af3a584c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleinsertdialog-class"></a>Класс COleInsertDialog
 Используется для диалогового окна OLE "Вставить объект".  
@@ -58,13 +53,13 @@ class COleInsertDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Создает объект `COleInsertDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleInsertDialog::CreateItem](#createitem)|Создание элемента, выбранного в диалоговом окне.|  
 |[COleInsertDialog::DoModal](#domodal)|Отображает диалоговое окно вставки объекта OLE.|  
@@ -76,7 +71,7 @@ class COleInsertDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleInsertDialog::m_io](#m_io)|Структура типа **OLEUIINSERTOBJECT** , управляет поведением окна.|  
   
@@ -108,7 +103,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
  Эта функция создает только `COleInsertDialog` объекта.  
   
 ```  
@@ -141,7 +136,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>Примечания  
  Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
  Эта функция вызывается для создания объекта типа [COleClientItem](../../mfc/reference/coleclientitem-class.md) только тогда, когда [DoModal](#domodal) возвращает **IDOK**.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>Примечания  
  Необходимо выделить `COleClientItem` объект перед вызовом этой функции.  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
  Эта функция вызывается для отображения диалогового окна OLE вставить объект.  
   
 ```  
@@ -174,9 +169,9 @@ INT_PTR
  `dwFlags`  
  Одно из следующих значений:  
   
- `COleInsertDialog::DocObjectsOnly`вставляет только DocObjects.  
+ `COleInsertDialog::DocObjectsOnly` вставляет только DocObjects.  
   
- `COleInsertDialog::ControlsOnly`Вставляет элементы управления ActiveX.  
+ `COleInsertDialog::ControlsOnly` Вставляет элементы управления ActiveX.  
   
  Ноль вставляет DocObject ни элемент управления ActiveX. Это означает одну реализацию как первый прототип перечисленных выше.  
   
@@ -194,7 +189,7 @@ INT_PTR
   
  Если `DoModal` возвращает IDOK, другой член можно вызывать функции для получения параметров или данные, введенные в диалоговом окне со стороны пользователя.  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
  Эта функция вызывается для получения **CLSID** связанные с выбранного элемента, только если [DoModal](#domodal) возвращает **IDOK** и тип выбора **COleInsertDialog:: createNewItem**.  
   
 ```  
@@ -207,7 +202,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  Эта функция вызывается для определения, если пользователь выбрал Отображение выбранного элемента в виде значка.  
   
 ```  
@@ -217,16 +212,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Метод требуется для отображения объекта.  
   
-- `DVASPECT_CONTENT`Возвращается, если не был установлен флажок виде значка.  
+- `DVASPECT_CONTENT` Возвращается, если не был установлен флажок виде значка.  
   
-- `DVASPECT_ICON`Возвращается, если был установлен флажок виде значка.  
+- `DVASPECT_ICON` Возвращается, если был установлен флажок виде значка.  
   
 ### <a name="remarks"></a>Примечания  
  Вызов этой функции только в том случае, если [DoModal](#domodal) возвращает **IDOK**.  
   
  Дополнительные сведения о рисовании аспект см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуру данных в Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  Эта функция вызывается для получения дескриптора метафайла, содержащий аспект, преобразованного в значок выбранного элемента.  
   
 ```  
@@ -236,7 +231,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор метафайла, содержащий преобразованного в значок аспектом выбранного элемента, если был установлен флажок виде значка проверяется при отклонении диалоговое окно, выбрав **ОК**; в противном случае **NULL**.  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
  Вызывайте эту функцию для получения полного пути, только если выбранный файл [DoModal](#domodal) возвращает **IDOK** и тип выбора не **COleInsertDialog::createNewItem**.  
   
 ```  
@@ -246,7 +241,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Полный путь к файлу, выбранному в диалоговом окне. Если тип выделения `createNewItem`, эта функция возвращает бессмысленной `CString` в режиме выпуска или вызывает проверочное утверждение в режиме отладки.  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
  Эта функция вызывается для получения выбран, если в диалоговом окне Вставка объекта было отклонено, выбрав тип выбора **ОК**.  
   
 ```  
@@ -275,7 +270,7 @@ enum Selection {
   
 - **COleInsertDialog::linkToFile** был выбран переключатель Создать из файла и был установлен флажок связь.  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
  Структура типа **OLEUIINSERTOBJECT** используется для управления поведением диалогового окна "Вставка объекта".  
   
 ```  

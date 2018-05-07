@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Collections:: inputiterator | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: inputiterator | Документы Microsoft'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
 Предоставляет InputIterator библиотеки стандартных шаблонов для коллекций, унаследованных от среды выполнения Windows.  
@@ -44,7 +39,7 @@ class InputIterator;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`difference_type`|Различие указателя (ptrdiff_t).|  
 |`iterator_category`|Категория итератора ввода (:: std::input_iterator_tag).|  
@@ -54,13 +49,13 @@ class InputIterator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[InputIterator::InputIterator](#ctor)|Инициализирует новый экземпляр класса InputIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор InputIterator::operator!=](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|  
 |[Оператор InputIterator::operator*](#operator-decrement)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|  
@@ -76,7 +71,7 @@ class InputIterator;
   
  **Пространство имен:** Platform::Collections  
 
-## <a name="ctor"></a>  InputIterator::InputIterator Constructor
+## <a name="ctor"></a>  Конструктор InputIterator::InputIterator
 Инициализирует новый экземпляр класса InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -106,7 +101,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  InputIterator::operator* Operator
+## <a name="operator-dereference"></a>  Оператор InputIterator::operator *
 Извлекает ссылку на элемент, указанный текущим итератором InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -120,7 +115,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  InputIterator::operator== Operator
+## <a name="operator-equality"></a>  InputIterator::operator ==-оператор
 Указывает, равен ли текущий объект InputIterator указанному объекту InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -138,7 +133,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  InputIterator::operator++ Operator
+## <a name="operator-increment"></a>  InputIterator::operator ++-оператор
 Выполняет приращение текущего итератора InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -158,7 +153,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
+## <a name="operator-inequality"></a>  InputIterator::operator! =-оператор
 Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  

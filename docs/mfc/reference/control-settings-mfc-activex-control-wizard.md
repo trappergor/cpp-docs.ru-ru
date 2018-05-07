@@ -1,13 +1,10 @@
 ---
-title: "Параметры элементов управления, мастер элементов управления ActiveX MFC | Документы Microsoft"
-ms.custom: 
+title: Параметры элементов управления, мастер элементов управления ActiveX MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.settings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Страница "Параметры элемента управления" мастера элементов управления ActiveX MFC
 Эта страница мастера позволяет указать способ управления вело себя. Например базовый элемент управления на стандартные типы элементов управления Windows, оптимизировать свое поведение и внешний вид или указывают, что элемент управления может выступать в роли контейнера для других элементов управления.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 01/03/2018
  **Создание элемента управления на основе**  
  В этом списке можно выбрать тип элемента управления, из которого должны наследовать элемент управления. Список — это подмножество классы элементов управления, которые доступны для `CreateWindowEx` и дополнительных общих элементов управления, которые указаны в файле commctrl.h. Сделанный выбор определяет стиль элемента управления в `PreCreateWindow` функционировать в *ProjName*Ctrl.cpp файл. Дополнительные сведения см. в разделе [элементы управления MFC ActiveX: Создание подкласса элемента управления Windows Forms](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|Элемент управления|Описание:|  
+|Элемент управления|Описание|  
 |-------------|-----------------|  
 |**КНОПКА**|Элемент управления button в Windows|  
 |**ПОЛЕ СО СПИСКОМ**|Поле со списком Windows|  

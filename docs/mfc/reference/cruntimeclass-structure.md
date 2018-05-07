@@ -1,12 +1,9 @@
 ---
-title: "Структура CRuntimeClass | Документы Microsoft"
-ms.custom: 
+title: Структура CRuntimeClass | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>Структура CRuntimeClass
 Каждый класс, производный от `CObject` связан с `CRuntimeClass` структуру, можно использовать для получения сведений о объекта или его базовый класс во время выполнения.  
@@ -43,7 +38,7 @@ struct CRuntimeClass
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRuntimeClass::CreateObject](#createobject)|Создает объект во время выполнения.|  
 |[CRuntimeClass::FromName](#fromname)|Создает объект во время выполнения с помощью имени класса знакомы.|  
@@ -51,7 +46,7 @@ struct CRuntimeClass
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CRuntimeClass::m_lpszClassName](#m_lpszclassname)|Имя класса.|  
 |[CRuntimeClass::m_nObjectSize](#m_nobjectsize)|Размер объекта в байтах.|  
@@ -61,11 +56,11 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|Число класса схемы.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRuntimeClass`Структура и поэтому не имеет базового класса.  
+ `CRuntimeClass` Структура и поэтому не имеет базового класса.  
   
  Возможность определения класса объекта во время выполнения может быть полезно при необходимости дополнительного типа, проверяющего аргументов функции, или когда необходимо написать код специального назначения, на основе класса объекта. Сведения о классе во время выполнения не поддерживается языком C++.  
   
- `CRuntimeClass`Предоставляет сведения о связанного объекта C++, такие как указатель на `CRuntimeClass` базового класса и имя класса ASCII связанного класса. Эта структура также включает различные функции, которые могут использоваться для динамического создания объектов, указав тип объекта, используя знакомые имя и определение, если класс является производным от определенного класса.  
+ `CRuntimeClass` Предоставляет сведения о связанного объекта C++, такие как указатель на `CRuntimeClass` базового класса и имя класса ASCII связанного класса. Эта структура также включает различные функции, которые могут использоваться для динамического создания объектов, указав тип объекта, используя знакомые имя и определение, если класс является производным от определенного класса.  
   
  Дополнительные сведения об использовании `CRuntimeClass`, см. в статье [доступ к сведениям о классе во время выполнения](../../mfc/accessing-run-time-class-information.md).  
   
@@ -75,7 +70,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  Эта функция вызывается для динамического создания заданного класса во время выполнения.  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  Эта функция вызывается для получения `CRuntimeClass` структур, связанных с понятным именем.  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  Эта функция вызывается для определения, если вызывающий класс является производным от класса, указанного в *pBaseClass* параметра.  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  Нулем строка, содержащая имя класса ASCII.  
   
 ### <a name="remarks"></a>Примечания  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  Размер объекта в байтах.  
   
 ### <a name="remarks"></a>Примечания  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  Если приложение статически связывается с MFC, этот элемент данных содержит указатель на `CRuntimeClass` структура базового класса.  
   
 ### <a name="remarks"></a>Примечания  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  Указатель на функцию в конструктор по умолчанию, которая создает объект класса.  
   
 ### <a name="remarks"></a>Примечания  
  Этот указатель допустимо, только если класс поддерживает динамическое создание; в противном случае функция возвращает **NULL**.  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  Если приложение использует библиотеку MFC в общей библиотеке DLL, этот элемент данных указывает на функцию, возвращающую `CRuntimeClass` структура базового класса.  
   
 ### <a name="remarks"></a>Примечания  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [IsDerivedFrom](#isderivedfrom).  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  Номер схемы (-1 для классов несериализуемый).  
   
 ### <a name="remarks"></a>Примечания  

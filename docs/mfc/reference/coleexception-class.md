@@ -1,12 +1,9 @@
 ---
-title: "Класс COleException | Документы Microsoft"
-ms.custom: 
+title: Класс COleException | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e895e893c6032a8f8d7db0549f872c82cd0d9b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleexception-class"></a>Класс COleException
 Представляет исключительное условие, связанное с операцией OLE.  
@@ -44,13 +39,13 @@ class COleException : public CException
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleException::Process](#process)|Преобразует перехваченного исключения в кодом возврата OLE.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleException::m_sc](#m_sc)|Содержит код состояния, указывающее причину создания исключения.|  
   
@@ -71,7 +66,7 @@ class COleException : public CException
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdisp.h  
   
-##  <a name="m_sc"></a>COleException::m_sc  
+##  <a name="m_sc"></a>  COleException::m_sc  
  Этот элемент данных содержит код состояния OLE, указывающее причину создания исключения.  
   
 ```  
@@ -86,7 +81,7 @@ SCODE m_sc;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
-##  <a name="process"></a>COleException::Process  
+##  <a name="process"></a>  COleException::Process  
  Вызовите **процесс** функция-член для преобразования в код состояния OLE перехваченного исключения.  
   
 ```  

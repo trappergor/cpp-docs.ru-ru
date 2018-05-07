@@ -2,11 +2,8 @@
 title: Класс CMFCDropDownToolbarButton | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Класс CMFCDropDownToolbarButton
 Тип кнопки панели инструментов, который при нажатии ведет себя как обычная кнопка. Тем не менее, он открывает панель инструментов с раскрывающегося списка ( [CMFCDropDownToolBar класса](../../mfc/reference/cmfcdropdowntoolbar-class.md) Если пользователь нажимает и удерживает соответствующую кнопку на панели инструментов.  
@@ -76,14 +71,14 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Создает объект `CMFCDropDownToolbarButton`.|  
 |`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Копирует свойства другой кнопки панели инструментов в текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
 |`CMFCDropDownToolbarButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -107,7 +102,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Указывает продолжительность времени, пользователь должен удерживайте кнопку мыши вниз до появления панели инструментов раскрывающегося списка.|  
   
@@ -128,7 +123,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
  Копирует свойства другой кнопки панели инструментов в текущей кнопки.  
   
 ```  
@@ -140,9 +135,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  Ссылка «источник» из которого выполняется копирование.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для копирования другую кнопку эта кнопка панели инструментов. `src`должен иметь тип `CMFCDropDownToolbarButton`.  
+ Этот метод используется для копирования другую кнопку эта кнопка панели инструментов. `src` должен иметь тип `CMFCDropDownToolbarButton`.  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  Создает объект `CMFCDropDownToolbarButton`.  
   
 ```  
@@ -171,7 +166,7 @@ CMFCDropDownToolbarButton(
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
  Открывает панель инструментов с раскрывающегося списка.  
   
 ```  
@@ -192,7 +187,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  Этот метод завершается ошибкой, если `pWnd` — `NULL` и кнопки панели инструментов, раскрывающийся список не имеет родительского окна.  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  Копирует текст с помощью кнопки панели инструментов в меню.  
   
 ```  
@@ -211,7 +206,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  Этот метод завершается ошибкой, если панель инструментов родительского `m_pToolBar`, является `NULL` Возвращает реализацию базового класса или `FALSE`.  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
  Извлекает панели инструментов раскрывающийся список, связанный с кнопкой.  
   
 ```  
@@ -224,7 +219,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает `m_pToolBar` элемент данных.  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
  Определяет, является ли открытый инструментов раскрывающегося списка.  
   
 ```  
@@ -237,7 +232,7 @@ BOOL IsDropDown() const;
 ### <a name="remarks"></a>Примечания  
  Платформа открывает панель инструментов раскрывающийся список с помощью [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) метод. Платформа закрывает раскрывающийся список инструментов, при нажатии кнопки мыши влево в неклиентской области инструментов, раскрывающийся список.  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
  Определяет отображение кнопки с расширенной границей.  
   
 ```  
@@ -250,7 +245,7 @@ virtual BOOL IsExtraSize() const;
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о расширенных границы, в разделе [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
  Указывает продолжительность времени, пользователь должен удерживайте кнопку мыши вниз до появления панели инструментов раскрывающегося списка.  
   
 ```  
@@ -260,7 +255,7 @@ static UINT m_uiShowBarDelay;
 ### <a name="remarks"></a>Примечания  
  Задержка измеряется в миллисекундах. Значение по умолчанию — 500. Можно задать другой задержка, изменив значение этого элемента данных.  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
  Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления.  
   
 ```  
@@ -286,7 +281,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)), добавив Ширина стрелки раскрывающегося списка в горизонтальном направлении размер кнопки.  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
  Вызывается платформой при вставке кнопки в панели инструментов.  
   
 ```  
@@ -300,7 +295,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), сняв текстовая метка ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) и параметр [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) и [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) членов данных `FALSE`.  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
  Вызывается платформой, когда пользователь нажимает кнопку мыши.  
   
 ```  
@@ -314,7 +309,7 @@ virtual BOOL OnClick(
  Родительское окно кнопки панели инструментов.  
   
  [in] `bDelay`  
- `TRUE`Если сообщения должны обрабатываться с задержкой.  
+ `TRUE` Если сообщения должны обрабатываться с задержкой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если кнопке обрабатывает сообщения нажмите кнопку. в противном случае — 0.  
@@ -324,7 +319,7 @@ virtual BOOL OnClick(
   
  Когда пользователь нажимает кнопку панели инструментов, этот метод создает таймер, который ожидает, длина времени, заданного параметром [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) член данных, а затем откроется в раскрывающемся списке панели инструментов с помощью [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) метод. Этот метод закрывает раскрывающегося списка на панели инструментов во второй раз, по нажатию кнопки панели инструментов.  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
  Вызывается платформой, когда пользователь отпускает кнопку мыши.  
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnClickUp();
   
  Дополнительные сведения о раскрывающимся списком и раскрывающимся списком таймера см. в разделе [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
  Вызывается платформой при обработке родительского инструментов `WM_HELPHITTEST` сообщения.  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  Дополнительные сведения о `WM_HELPHITTEST message, see` [TN028: поддержка справки контекстно-зависимые](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
  Изменяет предоставленный меню, когда приложение отображает контекстное меню на панели инструментов родительской.  
   
 ```  
@@ -389,7 +384,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
  Переопределите этот метод для изменения в контекстном меню, платформа отображает в режим настройки.  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
  Вызывается платформой для отрисовки кнопки с помощью указанного стили и параметры.  
   
 ```  
@@ -432,7 +427,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для настройки панели инструментов кнопку рисования.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
  Вызывается платформой для отрисовки кнопки в **команды** области **Настройка** диалоговое окно.  
   
 ```  
@@ -460,7 +455,7 @@ virtual int OnDrawOnCustomizeList(
   
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) изменением текста метки кнопки на имя кнопки (то есть значение `lpszName` параметр, который Вы передали конструктор).  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
  Считывает этот объект из архива или записывает его в архив.  
   
 ```  
@@ -474,7 +469,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>Примечания  
  Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) путем сериализации идентификатор ресурса панели инструментов родительского. При загрузке архива ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) возвращает ненулевое значение), этот метод устанавливает `m_pToolBar` член данных на панели инструментов, которая содержит идентификатор сериализованного ресурса.  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
  Задает команду по умолчанию, она используется, когда пользователь нажимает кнопку.  
   
 ```  

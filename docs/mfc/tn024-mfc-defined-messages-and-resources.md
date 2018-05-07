@@ -1,13 +1,10 @@
 ---
-title: "TN024: Сообщения, определенные MFC и ресурсы | Документы Microsoft"
-ms.custom: 
+title: 'TN024: Сообщения, определенные MFC и ресурсы | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024. Сообщения и ресурсы, определенные MFC
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- Это сообщение отправляется по `COleResizeBar` для окна-владельца (через `GetOwner`) при изменении пользователем размера полосу изменения размера с маркерами изменения размера. `COleIPFrameWnd`При попытке изменить положение окна фрейма, как пользователь запросил реагирует на данное сообщение.  
+ Это сообщение отправляется по `COleResizeBar` для окна-владельца (через `GetOwner`) при изменении пользователем размера полосу изменения размера с маркерами изменения размера. `COleIPFrameWnd` При попытке изменить положение окна фрейма, как пользователь запросил реагирует на данное сообщение.  
   
  Указывает новый прямоугольник, в клиентских координатах относительно окна фрейма, который содержит полосу изменения размера по lParam.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|Является одним из следующих значений:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|Не используется (0)|  
   
- Возвращаемое значение должно быть ненулевым Если **FS_SYNCACTIVE** — набор и синхронизирует окно с родительского фрейма для ее активации. `CMiniFrameWnd`возвращает ненулевое значение, если стиль имеет значение **MFS_SYNCACTIVE.**  
+ Возвращаемое значение должно быть ненулевым Если **FS_SYNCACTIVE** — набор и синхронизирует окно с родительского фрейма для ее активации. `CMiniFrameWnd` возвращает ненулевое значение, если стиль имеет значение **MFS_SYNCACTIVE.**  
   
  Дополнительные сведения см. в разделе реализации `CMiniFrameWnd`.  
   

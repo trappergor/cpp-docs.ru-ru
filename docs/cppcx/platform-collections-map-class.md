@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::Collections:: MAP | Документы Microsoft"
-ms.custom: 
+title: 'Класс Platform::Collections:: MAP | Документы Microsoft'
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -57,7 +52,7 @@ ref class Map sealed;
 Тип значения в паре "ключ-значение".
 
 *C*  
-Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. By default, [std::less\<K>](../standard-library/less-struct.md).
+Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::less\<K >](../standard-library/less-struct.md).
 
 *__is_valid_winrt_type()*  
 Созданные компилятором функцию, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в схеме.
@@ -84,18 +79,18 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
-|[Map::Map](#ctor)|Инициализирует новый экземпляр класса Map.|
+|[MAP::MAP](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Map::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
-|[Map::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
+|[MAP::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
 |[Map::GetView](#getview)|Возвращает представление текущего объекта Map, доступное только для чтения (т. е. [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md)).|
-|[Map::HasKey](#haskey)|Определяет, содержит ли текущий объект Map указанный ключ.|
+|[MAP::HasKey](#haskey)|Определяет, содержит ли текущий объект Map указанный ключ.|
 |[Map::Insert](#insert)|Добавляет в текущий объект Map указанную пару "ключ-значение".|
 |[Map::Lookup](#lookup)|Извлекает элемент по указанному ключу в текущем объекте Map.|
 |[Map::Remove](#remove)|Удаляет указанную пару "ключ-значение" из текущего объекта Map.|
@@ -105,8 +100,8 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Происходит при изменении объекта Map.|
+|name|Описание|
+|[MAP::MapChanged](#mapchanged-event.md) `event`|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -147,7 +142,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myMap->First();`.
 
-## <a name="getview"></a>  Map::GetView Method
+## <a name="getview"></a>  Метод MAP::GetView
 
 Возвращает только для чтения представление текущего сопоставления; то есть [класс Platform::Collections:: mapview](../cppcx/platform-collections-mapview-class.md), который реализует [Windows::Foundation:: Collections::\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) интерфейса.
 
@@ -202,7 +197,7 @@ virtual bool Insert(K key, V value);
 
 `true` Если ключ существующего элемента в текущем объекте Map совпадает *ключ* части значения этому элементу задано значение *значение*. `false` Если в текущем объекте Map нет элемента, соответствующего *ключ* и *ключ* и *значение* параметров, внесенные в виде пары ключ значение и затем добавляются в текущей карты.
 
-## <a name="lookup"></a>  Map::Lookup Method
+## <a name="lookup"></a>  Метод MAP::Lookup
 
 Возвращает значение типа V, связанное с указанным ключом типа K, если ключ существует.
 
@@ -253,13 +248,13 @@ Map(
 *m*  
 Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для `map Class` , используемый для инициализации текущего объекта Map.
 
-*first*  
+*Первый*  
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта Map.
 
-*last*  
+*последний*  
 Итератор ввода первого элемента после диапазона элементов, используемый для инициализации текущего объекта Map.
 
-## <a name="mapchanged"></a>  Map::MapChanged Event
+## <a name="mapchanged"></a>  Событие MAP::MapChanged
 
 Возникает, когда элемент вставляется в сопоставление или удаляется из него.
 

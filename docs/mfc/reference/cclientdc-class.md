@@ -1,12 +1,9 @@
 ---
-title: "CClientDC-класс | Документы Microsoft"
-ms.custom: 
+title: CClientDC-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CClientDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92fb471ee30e725cd97bff6cbda8d551c0bc859
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cclientdc-class"></a>CClientDC-класс
 Отвечает за вызов функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время удаления.  
@@ -44,13 +39,13 @@ class CClientDC : public CDC
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CClientDC::CClientDC](#cclientdc)|Создает `CClientDC` подключен объект `CWnd`.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CClientDC::m_hWnd](#m_hwnd)|`HWND` Окна, для которого данный `CClientDC` является допустимым.|  
   
@@ -69,7 +64,7 @@ class CClientDC : public CDC
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
  Создает `CClientDC` объекта, который обращается к клиентской области [CWnd](../../mfc/reference/cwnd-class.md) , на который указывает `pWnd`.  
   
 ```  
@@ -88,7 +83,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
  `HWND` Из `CWnd` указатель, используемый для создания `CClientDC` объекта.  
   
 ```  
@@ -96,7 +91,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_hWnd`является защищенной переменной.  
+ `m_hWnd` является защищенной переменной.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CClientDC::CClientDC](#cclientdc).  

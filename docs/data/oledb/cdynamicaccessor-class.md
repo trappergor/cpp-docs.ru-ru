@@ -1,12 +1,9 @@
 ---
-title: "Класс CDynamicAccessor | Документы Microsoft"
-ms.custom: 
+title: Класс CDynamicAccessor | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f07ceae02c9c243f59f37ea49e77ef3113b5a54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a4006afa9ebdfcf95a01103d1fd97643a6b749f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 Дает возможность доступа к источнику данных, если у вас нет сведений о схеме базы данных (базовая структура).  
@@ -54,7 +49,7 @@ class CDynamicAccessor : public CAccessorBase
 |[GetColumnCount](../../data/oledb/cdynamicaccessor-getcolumncount.md)|Возвращает число столбцов в наборе строк.|  
 |[GetColumnFlags](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|Извлекает характеристики столбца.|  
 |[GetColumnInfo](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|Извлекает метаданные столбца.|  
-|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Возвращает имя указанного столбца.|  
+|[getColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|Возвращает имя указанного столбца.|  
 |[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|Получает тип данных указанного столбца.|  
 |[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|Получает максимально возможная длина столбца в байтах.|  
 |[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|Возвращает индекс столбца, заданному имени столбца.|  
@@ -62,7 +57,7 @@ class CDynamicAccessor : public CAccessorBase
 |[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)|Извлекает данные из буфера.|  
 |[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)|Задает больших двоичных ОБЪЕКТОВ, обработки значения для текущей строки.|  
 |[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)|Задает максимальный размер большого двоичного ОБЪЕКТА в байтах.|  
-|[SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|Задает длину столбца в байтах.|  
+|[Функция SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|Задает длину столбца в байтах.|  
 |[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|Задает состояние указанного столбца.|  
 |[SetValue](../../data/oledb/cdynamicaccessor-setvalue.md)|Сохраняет данные в буфер.|  
   
@@ -74,7 +69,7 @@ class CDynamicAccessor : public CAccessorBase
  Обсуждение и примеры использования классов динамического метода доступа см. в разделе [использование динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:**atldbcli.h  
+ **Заголовок:** atldbcli.h  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

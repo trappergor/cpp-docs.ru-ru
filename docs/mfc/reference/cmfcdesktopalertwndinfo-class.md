@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCDesktopAlertWndInfo | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCDesktopAlertWndInfo | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndInfo
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f257575abbf405177b2524c4c803c0b3d250187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Класс CMFCDesktopAlertWndInfo
 `CMFCDesktopAlertWndInfo` Класс используется с [класс CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Определяет элементы управления, которые отображаются, если всплывает окно оповещения.  
@@ -44,23 +39,23 @@ ms.lasthandoff: 12/21/2017
 class CMFCDesktopAlertWndInfo  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Дескриптор значка, который отображается.|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Идентификатор команды, связанные со ссылкой на окно оповещения.|  
@@ -89,7 +84,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxDesktopAlertDialog.h  
   
-##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -103,7 +98,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon  
  Дескриптор значка, который отображается.  
   
 ```  
@@ -112,7 +107,7 @@ HICON m_hIcon;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
  Идентификатор команды, связанные со ссылкой на окно оповещения.  
   
 ```  
@@ -122,7 +117,7 @@ UINT m_nURLCmdID;
 ### <a name="remarks"></a>Примечания  
  Идентификатор команды отправляется владелец во всплывающем окне, когда пользователь щелкает ссылку, заданные [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
-##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
  Текст, отображаемый в окне предупреждения с рабочего стола.  
   
 ```  
@@ -131,7 +126,7 @@ CString m_strText;
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
  Ссылки, которая отображается в окне предупреждения с рабочего стола.  
   
 ```  

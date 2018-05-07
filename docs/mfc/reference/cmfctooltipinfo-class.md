@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCToolTipInfo | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCToolTipInfo | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nGradientAngle
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5da1b989ccc41a2f3136473dbe08200e091bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 325650f35d097b54eda160bbdbbd5c877dbd0242
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctooltipinfo-class"></a>Класс CMFCToolTipInfo
 Хранит сведения о внешнем виде подсказок.  
@@ -62,17 +57,17 @@ ms.lasthandoff: 12/21/2017
 class CMFCToolTipInfo  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolTipInfo::operator =](#operator_eq)||  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Логическая переменная, указывающая, имеет ли всплывающая подсказка вид выноски.|  
 |[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Логическая переменная, указывающая, выделяются ли заголовки всплывающих подсказок жирным шрифтом.|  
@@ -102,7 +97,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtooltipctrl.h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
  Задает стиль отображения для всех всплывающих подсказок.  
   
 ```  
@@ -110,9 +105,9 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `TRUE`Указывает, что всплывающие подсказки использовать стиль выноски `FALSE` показывает, что всплывающие подсказки использовать прямоугольный стиля.  
+ `TRUE` Указывает, что всплывающие подсказки использовать стиль выноски `FALSE` показывает, что всплывающие подсказки использовать прямоугольный стиля.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
  Указывает, является ли полужирный шрифт текста всплывающей подсказки.  
   
 ```  
@@ -122,7 +117,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для отображения текста всплывающей подсказки с полужирным шрифтом или `FALSE` для отображения меток всплывающей подсказки с жирный шрифт.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
  Указывает, отображаются ли подсказки каждого текст описания.  
   
 ```  
@@ -132,7 +127,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для отображения описания или `FALSE` скрыть описание. Можно указать описание на всплывающей подсказке, вызвав [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
  Отображение всех всплывающих подсказок значков.  
   
 ```  
@@ -142,7 +137,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для отображения значков на каждой подсказки или `FALSE` отображать подсказки без значков.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
  Указывает, имеет ли каждый подсказки разделители между его метку и его описание.  
   
 ```  
@@ -152,7 +147,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для отображения разделителем метка всплывающей подсказки и описание, или `FALSE` отображать подсказки без разделителя.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
  Указывает, имеют ли все подсказки скругленные углы.  
   
 ```  
@@ -162,14 +157,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>Примечания  
  Значение этого элемента `TRUE` для отображения прямоугольника с закругленными углами в подсказки или `FALSE` для отображения углов прямоугольной во всплывающих подсказках.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
  Задает цвет границы для всех всплывающих подсказок.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
  Задает цвет фона всплывающей подсказки.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>Примечания  
  Если [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) равно -1, цвет фона всплывающей подсказки — `m_clrFill`. В противном случае `m_clrFill` определяет начало градиента цвет и `m_clrFillGradient` задает цвет конца градиента. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) определяет направление градиента.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
  Задает конечный цвет градиента фона для всплывающих подсказок.  
   
 ```  
@@ -189,14 +184,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>Примечания  
  Если `m_clrFillGradient` равно -1, нет нет градиента. В противном случае задается начальный цвет градиента [CMFCToolTipInfo::m_clrFill](#m_clrfill) и цвет градиента Готово указан `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) определяет направление градиента.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
  Указывает цвет текста для всех всплывающих подсказок.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
  Задает угол, по которому будет использовано градиента фона для всплывающих подсказок.  
   
 ```  
@@ -204,18 +199,18 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_nGradientAngle`Указывает угол в градусах, градиента фона подсказок смещается от по горизонтали. Если `m_nGradientAngle` равно 0, градиента выводится слева направо. Если `m_nGradientAngle` — от 1 до 360, градиента поворот по часовой стрелке на это число градусов. Если `m_nGradientAngle` -1, значение по умолчанию градиента рисуется сверху вниз. Это то же самое, что параметр `m_nGradientAngle` 90.  
+ `m_nGradientAngle` Указывает угол в градусах, градиента фона подсказок смещается от по горизонтали. Если `m_nGradientAngle` равно 0, градиента выводится слева направо. Если `m_nGradientAngle` — от 1 до 360, градиента поворот по часовой стрелке на это число градусов. Если `m_nGradientAngle` -1, значение по умолчанию градиента рисуется сверху вниз. Это то же самое, что параметр `m_nGradientAngle` 90.  
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` определяет начало градиента цвет и [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` задает цвет конца градиента. Если `m_clrFillGradient` равно -1, нет нет градиента.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
  Задает максимальную ширину описание, оно отображается в каждой всплывающей подсказки. Если ширина описание превышает указанное значение, текст переносится.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
  Указывает, управляет ли диспетчер визуального представления приложения внешний вид всех всплывающих подсказок.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>Примечания  
  Если `m_bVislManagerTheme` — `TRUE`, каждый подсказки запрашивает новый [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) из наглядный диспетчер приложения, прежде чем они отображаются на экране и использует значения в этом объекте, чтобы определить их внешний вид. Другие члены вашей [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) игнорируются.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

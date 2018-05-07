@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления ActiveX MFC: Добавление событий хранения в элемент управления ActiveX | Документы Microsoft"
-ms.custom: 
+title: 'Элементы управления ActiveX MFC: Добавление событий хранения в элемент управления ActiveX | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Элементы управления ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
-Событий хранения отличаются от пользовательских событий, автоматически запускаются классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`содержит функции стандартных элементов, которые инициируют события, возникающие в результате общие действия. Некоторые общие действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. Карты записей событий для стандартных событий всегда предшествует **EVENT_STOCK** префикс.  
+Событий хранения отличаются от пользовательских событий, автоматически запускаются классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` содержит функции стандартных элементов, которые инициируют события, возникающие в результате общие действия. Некоторые общие действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. Карты записей событий для стандартных событий всегда предшествует **EVENT_STOCK** префикс.  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>События, поддерживаемые Stock мастер добавления события  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> События, поддерживаемые Stock мастер добавления события  
  `COleControl` Класс предоставляет десять событий хранения, перечисленные в следующей таблице. Можно указать события, в элементе управления с помощью [мастер добавления события](../ide/add-event-wizard.md).  
   
 ### <a name="stock-events"></a>Событий хранения  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |MouseUp|**void FireMouseUp (короткое** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Возникает, если любой **BUTTONUP** получении (влево, среднего или вправо). Захват мыши освобождается до этого события.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**void (FireReadyStateChange)**|Возникает, когда выполняется передача управления в следующее состояние готовности, из-за количество полученных данных.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_READYSTATECHANGE)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>Стандартное событие, используя мастер добавления события  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Стандартное событие, используя мастер добавления события  
  Добавление событий хранения требует меньше работы, чем при добавлении пользовательских событий, так как срабатывание Фактическое событие обрабатывается базовым классом, автоматически `COleControl`. В следующей процедуре добавляется стандартное событие для элемента управления, который был разработан с использованием [мастер элементов управления ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). Событие вызывается нажатие клавиши, срабатывает при нажатии клавиши и элемент управления является активным. Эта процедура может также использоваться для добавления других стандартных событий. Замените имя выбранного стандартное событие для нажатие клавиши.  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Чтобы добавить стандартное событие KeyPress, используя мастер добавления события  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  Нажмите кнопку **Готово**.  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>Добавить мастер изменения событий для стандартных событий  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> Добавить мастер изменения событий для стандартных событий  
  Так как биржевые события обрабатываются базовый класс элемента управления, мастер добавления события не изменяется каким-либо образом объявления класса. Он добавляет событие элемента управления карты событий и делает запись в его. IDL-файл. Следующая строка добавляется схема событий элемента управления, расположенных в реализацию класса элемента управления (. Файл .cpp):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  

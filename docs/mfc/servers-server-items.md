@@ -1,13 +1,10 @@
 ---
-title: "Серверы: Элементы сервера | Документы Microsoft"
-ms.custom: 
+title: 'Серверы: Элементы сервера | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-server-items"></a>Серверы. Элементы сервера
 Когда контейнер запускает сервер, чтобы пользователь может изменить элемент внедренного или связанного OLE, серверное приложение создает «элемента сервера». Серверный элемент, который представляет собой объект класса, производного от `COleServerItem`, предоставляет интерфейс между серверного документа и приложения-контейнера.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  В [HIERSVR](../visual-cpp-samples.md) выборки, например, класс элемента сервера **CServerItem**, содержит элемент, являющийся указателем на объект класса **CServerNode**. **CServerNode** объекта является узлом приложения HIERSVR документ, который представляет собой дерево. Когда **CServerNode** объект является корневым узлом, **CServerItem** представляет весь документ. Когда **CServerNode** объект является дочерним для узла, **CServerItem** представляет часть документа. См. Образец MFC OLE [HIERSVR](../visual-cpp-samples.md) пример взаимодействия.  
   
-##  <a name="_core_implementing_server_items"></a>Реализация элементы сервера  
+##  <a name="_core_implementing_server_items"></a> Реализация элементы сервера  
  При использовании мастера приложений для получения кода «Начальная» для приложения, все, что нужно сделать, чтобы включить элементы сервера в начальный код — выберите один из параметров сервера на странице параметров OLE. При добавлении элементов сервера в существующее приложение, выполните следующие действия:  
   
 #### <a name="to-implement-a-server-item"></a>Для реализации элемента сервера  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  Реализации класса своего элемента сервера `OnGetExtent` функции-члена. Платформа вызывает эту функцию для извлечения размер элемента. Реализация по умолчанию не выполняет никаких действий.  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a>Подсказки для элемента сервера архитектуры  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> Подсказки для элемента сервера архитектуры  
  Как отмечалось в [реализации элементы сервера](#_core_implementing_server_items), серверных приложений необходима возможность отображения элементов в режиме сервера и в метафайл используется приложением-контейнером. Библиотеки классов Microsoft Foundation архитектуру приложения, класс представления элемента `OnDraw` функции-члена отображает элемент, когда она редактируется (см. [CView::OnDraw](../mfc/reference/cview-class.md#ondraw) в *Справочник по библиотеке классов* ). Серверный элемент `OnDraw` отрисовывает элемент в метафайл во всех остальных случаях (в разделе [COleServerItem::OnDraw](../mfc/reference/coleserveritem-class.md#ondraw)).  
   
  Избежать повторения кода, создав вспомогательные функции в вашем классе серверного документа и вызывать их из `OnDraw` функций в классах представление и элемента сервера. Пример MFC OLE [HIERSVR](../visual-cpp-samples.md) использует такую стратегию: функции **CServerView::OnDraw** и **CServerItem::OnDraw** обе вызывают **CServerDoc::DrawTree**  для отрисовки элемента.  

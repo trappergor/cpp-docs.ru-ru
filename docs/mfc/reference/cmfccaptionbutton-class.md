@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCCaptionButton | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCCaptionButton | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbutton-class"></a>Класс CMFCCaptionButton
 `CMFCCaptionButton` Класс реализует кнопки, которая отображается в заголовке окна для области закрепления или окна области. Как правило, платформа создает кнопки заголовка автоматически.  
@@ -58,13 +53,13 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>Конструкторы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Создает объект CMFCCaptionButton.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CMFCCaptionButton::GetHit](#gethit)|Возвращает команду, представленный кнопки.|  
 |[CMFCCaptionButton::GetIconID](#geticonid)|Возвращает идентификатор изображения, связанные с кнопкой.|  
@@ -97,7 +92,7 @@ class CMFCCaptionButton : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
  Создает объект `CMFCCaptionButton`.  
   
 ```  
@@ -133,7 +128,7 @@ CMFCCaptionButton(
   
  В заголовке выравниваются на вправо или влево.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  Возвращает команду, представленный кнопки.  
   
 ```  
@@ -155,7 +150,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|Вниз стрелку кнопки меню.|  
 |`HTNOWHERE`|Значение по умолчанию; представляет ни одной команды.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
  Возвращает идентификатор изображения, связанные с кнопкой.  
   
 ```  
@@ -166,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>Параметры  
  [in] `bHorz`  
- `TRUE`Стрелка влево или вправо образа идентификаторы; `FALSE` для вверх или Стрелка вниз изображения идентификаторы.  
+ `TRUE` Стрелка влево или вправо образа идентификаторы; `FALSE` для вверх или Стрелка вниз изображения идентификаторы.  
   
  [in] `bMaximized`  
- `TRUE`для развертывания образа идентификатора; `FALSE` для свертывания изображения идентификатор.  
+ `TRUE` для развертывания образа идентификатора; `FALSE` для свертывания изображения идентификатор.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор изображения.  
@@ -177,7 +172,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>Примечания  
  Параметры указать идентификатор изображения для свернуть или развернуть кнопки заголовка.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  Возвращает прямоугольник, занимаемый кнопки.  
   
 ```  
@@ -190,7 +185,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>Примечания  
  Если кнопка не видна, возвращаемый размер равен 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  Возвращает ширину и высоту кнопки.  
   
 ```  
@@ -203,7 +198,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>Примечания  
  Возвращаемый размер включает кнопку поля и границы.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
  Указывает, задан ли размер мини-высоте строки заголовка.  
   
 ```  
@@ -211,11 +206,11 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если заголовок равен размеру мини; в противном случае `FALSE`.  
+ `TRUE` Если заголовок равен размеру мини; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
  Задает местоположение draw кнопки и Показать состояние окна.  
   
 ```  
@@ -231,7 +226,7 @@ void Move(
  [in] `bHide`  
  Следует ли отображать кнопки.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  Рисует кнопки заголовка.  
   
 ```  
@@ -262,7 +257,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>Примечания  
  `bMaximized` Параметр используется, когда кнопка находится развернуть или свернуть.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Задает размер мини-заголовке.  
   
 ```  
@@ -271,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] `bSet`  
- `TRUE`для высоте строки мини-заголовка; `FALSE` для высоте строки заголовка по умолчанию.  
+ `TRUE` для высоте строки мини-заголовка; `FALSE` для высоте строки заголовка по умолчанию.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

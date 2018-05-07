@@ -1,13 +1,10 @@
 ---
-title: "Проверка данных диалогового окна | Документы Microsoft"
-ms.custom: 
+title: Проверка данных диалогового окна | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DDV (dialog data validation) [MFC]
 - data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01766dd741ed87d9ac11b8858221a1bd09b0cf31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-validation"></a>Проверка данных диалогового окна
 Можно указать проверки помимо обмена данными путем вызова функции DDV, как показано в примере в [обмен данными диалоговых окон](../mfc/dialog-data-exchange.md). `DDV_MaxChars` Вызов в примере проверяет, что строка, введенная в текстовое поле элемента управления не больше 20 символов. Обычно функция DDV предупреждает пользователя в окне сообщения, если проверка завершается ошибкой и помещает фокус на элемент управления, вызвавший ошибку, пользователь может вводить данные. Функция DDV определенного элемента управления должен вызываться сразу после функции DDX для одного элемента управления.  

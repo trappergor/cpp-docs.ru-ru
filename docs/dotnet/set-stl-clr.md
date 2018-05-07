@@ -1,12 +1,9 @@
 ---
-title: "Задайте (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: Задайте (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `set` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента.  
@@ -57,7 +52,7 @@ template<typename Key>
   
 ## <a name="members"></a>Участники  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[set::const_iterator (STL/CLR)](../dotnet/set-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[set::const_reference (STL/CLR)](../dotnet/set-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -76,7 +71,7 @@ template<typename Key>
 |[set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[set::value_type (STL/CLR)](../dotnet/set-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[set::begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)|Удаляет все элементы.|  
@@ -99,7 +94,7 @@ template<typename Key>
 |[set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[set::value_comp (STL/CLR)](../dotnet/set-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)|Определяет, если `set` объект не равен другому `set` объекта.|  
@@ -111,7 +106,7 @@ template<typename Key>
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
@@ -127,7 +122,7 @@ template<typename Key>
   
  Объект делегата должен применить строгого слабое упорядочение на ключах типа [set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
+ `key_comp()(X, Y)` Возвращает значение того же типа Boolean привести при каждом вызове.  
   
  Если `key_comp()(X, Y)` имеет значение true, затем `key_comp()(Y, X)` должен иметь значение false.  
   
@@ -158,6 +153,6 @@ template<typename Key>
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
- [набор](../dotnet/set-stl-clr.md)   
- [набор](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
  [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

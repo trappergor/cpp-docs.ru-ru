@@ -1,13 +1,10 @@
 ---
-title: "Серверы: Реализация окон фрейма на месте | Документы Microsoft"
-ms.custom: 
+title: 'Серверы: Реализация окон фрейма на месте | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Серверы. Реализация окон фрейма на месте
 В этой статье объясняется, что необходимо сделать для реализации окна фрейма на месте в приложении сервера визуального редактирования, если мастер приложений не используется для создания приложения сервера. Вместо следующие процедуры, описанной в этой статье, можно использовать существующий класс окна фрейма на месте из мастера создания приложений приложения или образца, входящие в состав Visual C++.  

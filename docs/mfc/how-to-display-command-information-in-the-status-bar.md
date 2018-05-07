@@ -1,13 +1,10 @@
 ---
-title: "Как: отображение сведений о команде в строке состояния | Документы Microsoft"
-ms.custom: 
+title: 'Как: отображение сведений о команде в строке состояния | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da836f48592d97b3526c568eb9d9a830428f53a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>Практическое руководство. Отображение сведений о команде в строке состояния
 При запуске мастера приложений для создания основы приложение может поддерживать панели инструментов и строки состояния. Только один вариант в мастере приложений поддерживает оба подхода. При наличии в строке состояния приложения автоматически предоставляет полезные обратной связи, когда пользователь перемещает указатель над элементами меню. Приложение автоматически отображает командную строку в строке состояния, при выделении элемента меню. Например, при наведении указателя мыши на **Вырезать** на **изменить** меню, в строке состояния могут отображаться в области сообщений строки состояния «Удаление выделенного и помещает его в буфер обмена». Запрос помогает пользователю понять назначение элемента меню. Это также работает при нажатии кнопки на панели инструментов.  

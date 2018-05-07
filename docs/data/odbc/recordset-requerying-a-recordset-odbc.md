@@ -2,12 +2,9 @@
 title: 'Набор записей: Выполнение обновления наборов записей (ODBC) | Документы Microsoft'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Набор записей. Выполнение обновления наборов записей (ODBC)
 Этот раздел относится к классам MFC ODBC.  
@@ -41,16 +36,16 @@ ms.lasthandoff: 12/21/2017
   
 -   Обновление набора записей, основываясь на изменяющихся значений параметров.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>Обновление набора записей для даты  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> Обновление набора записей для даты  
  Как правило требуется объекта набора записей для перевода ее в актуальном состоянии. В среде с сетевой базе данных другие пользователи могут вносить изменения в данные во время существования набора записей. Дополнительные сведения о при набор записей отражает изменения, внесенные другими пользователями, и наборы записей других пользователей отражают изменения см. в разделе [набор записей: как наборы записей обновления записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) и [динамический набор](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>Обновление на основе новых параметров  
+##  <a name="_core_requerying_based_on_new_parameters"></a> Обновление на основе новых параметров  
  Часто и столь же важно — использование [Requery](../../mfc/reference/crecordset-class.md#requery) можно выбрать новый набор записей на основе изменения значений параметров.  
   
 > [!TIP]
 >  Скорость обработки запросов может быть значительно выше, при вызове метода **Requery** с измененными параметрами, по сравнению с вызовом **откройте** еще раз.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Требуемые vs динамических подмножеств данных. Моментальные снимки  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Требуемые vs динамических подмножеств данных. Моментальные снимки  
  Так как динамические наборы предназначены для представления набора записей с динамическими данными в актуальном состоянии, следует выполнить повторный запрос динамических подмножеств данных, часто в том случае, если вы хотите отражает добавления других пользователей. Моментальные снимки, с другой стороны, полезны, поскольку полагаться на статическое содержимое во время подготовки отчетов, вычисление итоговых значений и т. д. Тем не менее иногда может потребоваться повторный запрос и моментальные снимки. В многопользовательской среде данных моментального снимка может потерять синхронизацию с источником данных другим пользователям изменить базу данных.  
   
 #### <a name="to-requery-a-recordset-object"></a>Повторный запрос объекта набора записей  

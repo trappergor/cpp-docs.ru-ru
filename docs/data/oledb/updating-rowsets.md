@@ -1,12 +1,9 @@
 ---
-title: "Обновление наборов строк | Документы Microsoft"
-ms.custom: 
+title: Обновление наборов строк | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fcb5794de2e0358e5c17cde5ac8e69fa9e3c08f6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8ca0ef94ba6c60bd43e24672fe7db669a3930fd7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="updating-rowsets"></a>обновление наборов строк
+# <a name="updating-rowsets"></a>Обновление наборов строк
 Обновление или запись данных в хранилище данных — одна из простейших операций баз данных. В OLE DB используется простой механизм обновления: приложение-клиент задает значения привязанных членов данных, а затем записывает эти значения в набор строк; затем клиент запрашивает у поставщика обновление хранилища данных.  
   
  Клиенты могут выполнять следующие типы обновлений в данных набора строк: задание значений столбцов в строке, вставка строки и удаление строки. Чтобы можно было использовать эти операции, класс шаблона OLE DB [CRowset](../../data/oledb/crowset-class.md) реализует интерфейс [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) и переопределяет следующие методы интерфейса:  

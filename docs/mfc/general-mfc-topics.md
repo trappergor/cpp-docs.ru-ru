@@ -1,13 +1,10 @@
 ---
-title: "Общие разделы по MFC | Документы Microsoft"
-ms.custom: 
+title: Общие разделы по MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97f3b609a68071f34e1841128a66b5518e1b17db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244b3fa9ef50584bf8694d4356d799d35f868828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-mfc-topics"></a>Общие разделы по MFC
 Этот сборник статей содержит технические сведения о библиотеке Microsoft Foundation Class (MFC) и предоставляет общие данные о платформе MFC и ее ключевых компонентах и подсистемах.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  Платформа MFC — это мощная система, позволяющая выполнять задачи построения на основе разработок опытных программистов для Windows. MFC сокращает время разработки, делает код более мобильным, обеспечивает масштабную поддержку с сохранением свободы и гибкости программирования и предоставляет простой доступ к тяжело программируемым элементам пользовательского интерфейса и технологиям, таким как технология Active, OLE и интернет-программирование. Кроме того, MFC упрощает программирование баз данных за счет объектов DAO и компонента ODBC и сетевое программирования за счет интерфейса Windows Sockets. MFC упрощает программирование таких компонентов, как страницы свойств («диалоговые окна с вкладками»), окна предварительного просмотра перед печатью и плавающие настраиваемые панели инструментов.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание раздела  
  `MFC Samples`, которые предоставляются в [примеры Visual C++](../visual-cpp-samples.md)  
   
  [Использование файлов с исходным кодом MFC](../mfc/using-the-mfc-source-files.md)  

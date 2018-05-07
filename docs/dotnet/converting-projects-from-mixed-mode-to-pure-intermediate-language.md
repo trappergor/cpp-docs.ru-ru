@@ -1,13 +1,10 @@
 ---
-title: "Преобразование проектов из смешанного режима в чистый промежуточный язык | Документы Microsoft"
-ms.custom: 
+title: Преобразование проектов из смешанного режима в чистый промежуточный язык | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 Все проекты Visual C++ CLR ссылки на библиотеки времени выполнения C по умолчанию. Следовательно эти проекты классифицируются как приложения в смешанном режиме, поскольку в них объединяется машинный код с кодом языка среды CLR (управляемого кода). При компиляции, они компилируются в промежуточный язык (IL), также известный как промежуточный язык Майкрософт (MSIL).  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
     1.  Везде, где это возможно, замените неуправляемые типы ссылками на структуры из [системы](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx) пространства имен. В следующей таблице перечислены распространенные управляемых типов.  
   
-        |Структура|Описание:|  
+        |Структура|Описание|  
         |---------------|-----------------|  
         |[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Представляет логическое значение.|  
         |[Byte](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Представляет 8-битовое целое число без знака.|  
@@ -104,4 +99,4 @@ ms.lasthandoff: 12/21/2017
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Представляет 32-битовое целое число без знака.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Представляет 64-битовое целое число без знака.|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Указывает метод, который не возвращает значений. то есть метод имеет тип возврата void.|
+        |[значение типа void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Указывает метод, который не возвращает значений. то есть метод имеет тип возврата void.|

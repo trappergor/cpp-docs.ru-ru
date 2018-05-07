@@ -1,13 +1,10 @@
 ---
-title: "Использование окон фрейма | Документы Microsoft"
-ms.custom: 
+title: Использование окон фрейма | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54a232b246665a1ef82fb48166eed2aff0fd9db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-frame-windows"></a>Использование окон фрейма
 Платформа MFC создает документ окна фрейма, документы и их представления — как часть своей реализации создать и открыть команды в меню «файл». Поскольку платформа выполняет большую часть работы окна фрейма для вас, вы работать лишь малую роль в создании, использовании и уничтожение этих окон. Можно Однако явно создать собственные окна фрейма и дочерние окна для особых целей.  

@@ -1,12 +1,9 @@
 ---
-title: "список (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: список (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - list class [STL/CLR]
 - <list> header [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 40046e2b7263559765c2aab2bef13a17c341f7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ff009da3ca29697e9b3affceb424bcd84b9b896
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `list` управления последовательность элементов в качестве двунаправленного связанного списка узлов, в каждой хранения одного элемента.  
@@ -56,7 +51,7 @@ template<typename Value>
   
 ## <a name="members"></a>Члены  
   
-|Определение типа|Описание:|  
+|Определение типа|Описание|  
 |---------------------|-----------------|  
 |[list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[list::const_reference (STL/CLR)](../dotnet/list-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -72,7 +67,7 @@ template<typename Value>
 |[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание:|  
+|Функция-член|Описание|  
 |---------------------|-----------------|  
 |[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Заменяет все элементы.|  
 |[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|Обращается к последнему элементу.|  
@@ -102,12 +97,12 @@ template<typename Value>
 |[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
 |[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Удаляет смежные элементы, которые прошли заданный тест.|  
   
-|Свойство.|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |[list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)|Обращается к последнему элементу.|  
 |[list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
-|Оператор|Описание:|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Определяет, если `list` объект не равен другому `list` объекта.|  
@@ -119,7 +114,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание:|  
+|Интерфейс|Описание|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  

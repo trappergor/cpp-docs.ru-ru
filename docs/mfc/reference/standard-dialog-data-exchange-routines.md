@@ -1,29 +1,24 @@
 ---
-title: "Процедуры обмена данными стандартное диалоговое окно | Документы Microsoft"
-ms.custom: 
+title: Процедуры обмена данными стандартное диалоговое окно | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Стандартные программы обмена данных диалоговых окон
 В этом разделе перечислены стандартное диалоговое окно данных exchange (DDX) процедуры, используемые для общих элементов управления диалоговых окон MFC.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_Slider](#ddx_slider)|Инициализирует или извлекает текущее положение ползунка полосы прокрутки элемента управления "ползунок".|  
 |[DDX_Text](#ddx_text)|Инициализирует или извлекает текущее значение элемента управления edit.|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
  `DDX_CBIndex` Функция управляет передачей `int` данных между поле со списком в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
  `DDX_CBString` Функция управляет передачей `CString` данных между поле редактирования поле со списком в диалоговом окне, представлении формы или объекте представления элемента управления и `CString` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
  `DDX_CBStringExact` Функция управляет передачей `CString` данных между поле редактирования поле со списком в диалоговом окне, представлении формы или объекте представления элемента управления и `CString` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
+##  <a name="ddx_check"></a>  DDX_Check  
  `DDX_Check` Функция управляет передачей `int` данных между управления «флажок» в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
+##  <a name="ddx_control"></a>  DDX_Control  
  `DDX_Control` Функции управления, указанный в подклассах `nIDC`, диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
  `DDX_DateTimeCtrl` Функция управляет передачей данных даты или времени между элемент выбора даты и времени ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) объект представления формы или диалогового окна, так и [CTime](../../atl-mfc-shared/reference/ctime-class.md) или [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) данными-членом объекта представления формы или диалогового окна.  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 Создает элемент управления .NET сопоставления идентификатор элемента управления ресурса.  
    
 ### <a name="syntax"></a>Синтаксис  
@@ -263,7 +258,7 @@ void DDX_ManagedControl(
  Ссылку на [CWinFormsControl класс](cwinformscontrol-class.md) объекта.  
    
 ### <a name="remarks"></a>Примечания  
- `DDX_ManagedControl`вызовы [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) для создания элемента управления, сопоставление идентификатора элемента управления ресурса Используйте `DDX_ManagedControl` для создания элементов управления из идентификаторы ресурсов в [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Для обмена данными необязательно использовать функции DDX/DDV с элементами управления Windows Forms.  
+ `DDX_ManagedControl` вызовы [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) для создания элемента управления, сопоставление идентификатора элемента управления ресурса Используйте `DDX_ManagedControl` для создания элементов управления из идентификаторы ресурсов в [CDialog::OnInitDialog](cdialog-class.md#oninitdialog). Для обмена данными необязательно использовать функции DDX/DDV с элементами управления Windows Forms.  
   
  Дополнительные сведения см. в разделе [как: выполните DDX/DDV привязки данных, с помощью Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
    
@@ -276,7 +271,7 @@ void DDX_ManagedControl(
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
  `DDX_IPAddress` Функция управляет передачей данных между элемента управления IP-адрес и элемент данных объекта представления элемента управления.  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
  `DDX_LBIndex` Функция управляет передачей `int` данных между элемент управления списком в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
  `DDX_LBString` Функция управляет передачей `CString` данных между элемент управления списком в диалоговом окне, представлении формы или объекте представления элемента управления и `CString` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
  `DDX_CBStringExact` Функция управляет передачей `CString` данных между поле редактирования элемент управления списком в диалоговом окне, представлении формы или объекте представления элемента управления и `CString` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
  `DDX_MonthCalCtrl` Функция управляет передачей данных для дат между управления Календарь месяца ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) в диалоговое окно, представление формы или объекте представления элемента управления и либо [CTime](../../atl-mfc-shared/reference/ctime-class.md) или [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
+##  <a name="ddx_radio"></a>  DDX_Radio  
  `DDX_Radio` Функция управляет передачей `int` данных между группу элементов управления "переключатель" в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления. Значение `int` данные-член определяется в соответствии с какой переключатель выбрана кнопка внутри группы.  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
  `DDX_Scroll` Функция управляет передачей `int` данных между управления полосой прокрутки в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
+##  <a name="ddx_slider"></a>  DDX_Slider  
  `DDX_Slider` Функция управляет передачей `int` данных между управления "ползунок" в представлении формы или диалогового окна и `int` данными-членом объекта представления формы или диалогового окна.  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
+##  <a name="ddx_text"></a>  DDX_Text  
  `DDX_Text` Функция управляет передачей `int`, **UINT**, **длинные**, `DWORD`, `CString`, **float**, или  **двойные** данные между элемент управления редактированием в диалоговое окно, представление формы или элемента управления представления и [CString](../../atl-mfc-shared/reference/cstringt-class.md) данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
   
 ```  

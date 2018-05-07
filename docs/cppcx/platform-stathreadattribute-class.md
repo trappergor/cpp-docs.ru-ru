@@ -1,11 +1,8 @@
 ---
-title: "Класс Platform::STAThreadAttribute | Документы Microsoft"
-ms.custom: 
+title: Класс Platform::STAThreadAttribute | Документы Microsoft
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Класс Platform::STAThreadAttribute
 Указывает, что потоковая модель для приложения является однопотоковым подразделением (STA).  
@@ -43,14 +38,14 @@ public ref class STAThreadAttribute sealed : Attribute
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор STAThreadAttribute 1](#ctor)|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
  Атрибут STAThreadAttribute наследует от [класса Platform::Object](../cppcx/platform-object-class.md). Атрибут STAThreadAttribute также перегружает или имеет следующие члены:  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

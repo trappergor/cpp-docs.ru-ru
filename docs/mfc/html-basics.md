@@ -1,29 +1,24 @@
 ---
-title: "Основы HTML | Документы Microsoft"
-ms.custom: 
+title: Основы HTML | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="html-basics"></a>Основы HTML
 Большинство браузеров поддерживает возможность проверки исходного кода HTML страницы, которые вы просматриваете. При просмотре исходного кода, вы увидите несколько HTML-тегов (язык HTML), заключенных в угловые скобки (<>), смешивается с текстом.  
@@ -120,7 +115,7 @@ Life is good.
   
  Полное описание тегов атрибутами и расширениями, см. в спецификации языка (HTML):  
   
- [http://www.w3.org/pub/www/MarkUp/](http://www.w3.org/pub/www/markup/)  
+ [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
 ## <a name="see-also"></a>См. также  
  [Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)
