@@ -1,30 +1,25 @@
 ---
-title: "Пошаговое руководство: Реализация фьючерсов | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Реализация фьючерсов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119969860f031acbc2f1764a34a456d2e8a16437
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12f2bd5897945dec0045019462c2faeb665a19e4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-implementing-futures"></a>Пошаговое руководство. Реализация фьючерсов
 В этом разделе показано, как реализовать фьючерсов в приложении. Разделе показано, как объединить существующие функциональные возможности в среде выполнения с параллелизмом в формат, что делает больше.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере показано полное `async_future` класса и пример его использования. `wmain` Функция создает объект std::[вектор](../../standard-library/vector-class.md) , содержащий 10000 случайных целых чисел. Затем он использует `async_future` объектов, чтобы найти наименьшее и наибольшее значения, содержащиеся в `vector` объекта.  
   
 ### <a name="code"></a>Код  

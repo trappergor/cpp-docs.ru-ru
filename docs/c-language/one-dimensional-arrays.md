@@ -1,13 +1,10 @@
 ---
-title: "Одномерные массивы | Документация Майкрософт"
-ms.custom: 
+title: Одномерные массивы | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="one-dimensional-arrays"></a>Одномерные массивы
 Постфиксное выражение, за которым следует выражение в квадратных скобках (**[ ]**), является представлением элемента объекта массива с индексом. Выражение с индексом в представленной ниже форме ссылается на значение, размешенное по адресу на *expression* позиций дальше *postfix-expression*:  
@@ -56,7 +51,7 @@ int main() {
   
  Выражения индекса обычно используются для ссылки на элементы массива, но индекс может применяться к любому указателю. Независимо от порядка значений, выражение *expression* должно быть заключено в квадратные скобки (**[ ]**).  
   
- Выражение индекса вычисляется путем добавления целочисленного значения к значению указателя, а результат передается в оператор косвенного обращения (**\****). (Этот механизм обсуждается в статье [Операторы косвенного обращения и адреса операнда](../c-language/indirection-and-address-of-operators.md).) В конечном итоге в случае одномерного массива следующие 4 выражения эквивалентны, при условии что `a` является указателем, а `b` — целым числом:  
+ Выражение индекса вычисляется путем добавления целочисленного значения к значению указателя, а результат передается в оператор косвенного обращения (**\***). (Этот механизм обсуждается в статье [Операторы косвенного обращения и адреса операнда](../c-language/indirection-and-address-of-operators.md).) В конечном итоге в случае одномерного массива следующие 4 выражения эквивалентны, при условии что `a` является указателем, а `b` — целым числом:  
   
 ```  
 a[b]  

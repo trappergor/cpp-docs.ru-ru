@@ -1,30 +1,25 @@
 ---
-title: "Общие сведения о программировании Юникода | Документы Microsoft"
-ms.custom: 
+title: Общие сведения о программировании Юникода | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-programming-summary"></a>Общие сведения о программировании Юникода
 Чтобы воспользоваться преимуществами поддержки времени выполнения MFC и C Юникода, необходимо:  
@@ -90,13 +85,13 @@ ms.lasthandoff: 02/09/2018
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut`принимает число символов, не является числом байтов.  
+     `CDC::TextOut` принимает число символов, не является числом байтов.  
   
 -   Используйте [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) для открытия файлов в кодировке Юникод.  
   
  Итак, MFC и библиотеки времени выполнения обеспечивают поддержку программирования Юникода:  
   
--   За исключением функций-членов класса базы данных все функции MFC поддерживают Юникод, включая `CString`. `CString`также предоставляет функции преобразования Юникода или ANSI.  
+-   За исключением функций-членов класса базы данных все функции MFC поддерживают Юникод, включая `CString`. `CString` также предоставляет функции преобразования Юникода или ANSI.  
   
 -   Библиотека времени выполнения предоставляет версии Юникода для всех функций обработки строк. (Библиотека времени выполнения также предоставляет переносимые версии, подходящие для Юникода или для многобайтовой Кодировки. Это **_tcs** макросы.)  
   

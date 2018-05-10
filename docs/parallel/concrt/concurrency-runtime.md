@@ -1,13 +1,10 @@
 ---
-title: "Среда выполнения с параллелизмом | Документы Microsoft"
-ms.custom: 
+title: Среда выполнения с параллелизмом | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 Исполняющая среда с параллелизмом для C++ помогает создавать надежные, масштабируемые, быстро реагирующие параллельные приложения. Она повышает уровень абстракции, чтобы пользователю не приходилось управлять подробностями инфраструктуры, связанными с параллелизмом. Ее также можно использовать для указания политик планирования, соответствующих требованиям качества обслуживания приложений. Эти ресурсы помогут вам начать работу с исполняющей средой с параллелизмом.  

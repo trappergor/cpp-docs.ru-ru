@@ -1,13 +1,10 @@
 ---
-title: "Целочисленные типы | Документы Майкрософт"
-ms.custom: 
+title: Целочисленные типы | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - integer types
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e324976d0054cd1b32188b6ebe0f10ab4e1bdd69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: acc3dc7631602e8accd9574bf707798dae5ba0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integer-types"></a>Целочисленные типы
 Всем целым константам присваивается тип на основе их значения и способа представления. Для любой целой константы можно принудительно задать тип **long**, добавив букву **l** или **L** в конец константы; для принудительного задания типа `unsigned` добавьте в конец значения букву **u** или **U**. Следует избегать использования буквы **l** в нижнем регистре, так как ее можно перепутать с цифрой 1. Ниже приведены некоторые формы целых констант **long**:  

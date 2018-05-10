@@ -1,13 +1,10 @@
 ---
-title: "Оператор if (C) | Документация Майкрософт"
-ms.custom: 
+title: Оператор if (C) | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 f1_keywords:
 - else
 - if
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0e4929b55d6cfc0ef01ee183b74b2439b85d10
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: f307860ce71e8c9fc74b2ab97e88ced02e08332f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-statement-c"></a>Оператор if (C)
 Оператор **if** управляет условным ветвлением. Тело оператора **if** выполняется, если значение выражения отлично от нуля. Существует две формы синтаксиса для оператора **if**.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 03/16/2018
   
  В обоих формах оператора **if** выражение может иметь любое значение, кроме структуры, и его вычисление влечет за собой все соответствующие побочные эффекты.  
   
- В первой форме синтаксиса оператор *statement* выполняется, если значение *expression* имеет значение true (не равно нулю). Если *выражение* возвращает false, *statement* пропускается. Во второй форме синтаксиса c предложением **else**, если *expression* имеет значение false, выполняется второй оператор *statement*. После этого управление передается (в обеих формах) из оператора **if** в следующий по порядку оператор программы, если выполняемый оператор не содержит операторов **break**, **continue** или`goto`.  
+ В первой форме синтаксиса оператор *statement* выполняется, если значение *expression* имеет значение true (не равно нулю). Если *выражение* возвращает false, *statement* пропускается. Во второй форме синтаксиса c предложением **else**, если *expression* имеет значение false, выполняется второй оператор *statement*. После этого управление передается (в обеих формах) из оператора **if** в следующий по порядку оператор программы, если выполняемый оператор не содержит операторов **break **,** continue`goto` или** .  
   
  Ниже приведены примеры операторов **if**:  
   

@@ -1,13 +1,10 @@
 ---
-title: "Прототипы функции | Документация Майкрософт"
-ms.custom: 
+title: Прототипы функции | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,26 +14,24 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>Прототипы функций
 Объявление функции предшествует ее определению и указывает имя, тип возвращаемого значения, класс хранения и другие атрибуты функции. Чтобы объявление функции стало ее прототипом, оно должно также задавать типы и идентификаторы аргументов функции.  
   
 ## <a name="syntax"></a>Синтаксис  
  `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
- /\* *attribute-seq* opt используется только для систем Microsoft \*/  
+ /\* *attribute-seq* opt используется только для систем Microsoft */  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  
@@ -61,7 +56,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* Декларатор функции \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* Декларатор нового стиля \*/  
   
- *direct-declarator* **(** *identifier-list* opt**)** /* Декларатор устаревшего стиля \*/  
+ *direct-declarator* **(** *identifier-list* opt **)**  /* Декларатор устаревшего стиля \*/  
   
  Прототип имеет ту же форму, что и определение функции, но завершается точкой с запятой сразу после закрывающей круглой скобки и поэтому не имеет тела. В любом случае возвращаемый тип должен соответствовать возвращаемому типу, указанному в определении функции.  
   

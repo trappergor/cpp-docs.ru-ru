@@ -1,31 +1,26 @@
 ---
-title: "Основные принципы работы атрибутов | Документы Microsoft"
-ms.custom: 
+title: Основные принципы работы атрибутов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>Основные принципы работы атрибутов
 Существует три способа для вставки атрибутов в проекте. Во-первых можно вставить их вручную в исходном коде. Во-вторых можно вставлять их с помощью сетки свойств объекта в проекте. Наконец вы можете вставить их с помощью различных мастеров. Дополнительные сведения об использовании окна «Свойства» и различных мастеров см. в разделе [Создание и управление проектов Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

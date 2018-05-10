@@ -1,36 +1,31 @@
 ---
-title: "Оператор return (C) | Документы Майкрософт"
-ms.custom: 
+title: Оператор return (C) | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>Оператор return (C)
 Оператор `return` завершает выполнение функции и возвращает управление вызывающей функции. Выполнение возобновляется в вызывающей функции в точке сразу после вызова. Оператор `return` также может возвращать значение, передавая его вызывающей функции. Дополнительные сведения см. в разделе [Тип возвращаемого значения](../c-language/return-type.md).  
   
 ## <a name="syntax"></a>Синтаксис  
  *оператор-перехода*:  
- *выражение* **return** необ**;**  
+ *выражение* **return** необ **;**  
   
  Значение параметра *выражение*, если оно указано, возвращается вызывающей функции. Если параметр *выражение* опущен, возвращаемое значение функции не определено. Параметр "выражение", если он присутствует, вычисляется и преобразуется к типу, возвращаемому функцией. Если функция была объявлена с типом возвращаемого значения `void`, то оператор `return`, содержащий выражение, выводит предупреждение, и выражение не вычисляется.  
   

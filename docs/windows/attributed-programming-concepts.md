@@ -1,13 +1,10 @@
 ---
-title: "Основные понятия о программировании атрибутивного | Документы Microsoft"
-ms.custom: 
+title: Основные понятия о программировании атрибутивного | Документы Microsoft
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributed-programming-concepts"></a>Основные понятия атрибутивного программирования
 Visual C++ включает разнообразные материалы, помогающие использовать атрибуты в программах. Атрибуты, появившаяся в Visual C++, предназначены для упрощения программирования в модели COM и .NET Framework общих разработку языка в среде выполнения. При включении атрибутов в исходных файлах, компилятор работает с поставщиком библиотек динамической компоновки (DLL) для вставки кода или изменения кода в файлах созданный объект. Существуют атрибуты, предназначенных для создания IDL-файлы, интерфейсов, библиотеки типов и других элементов COM. В интегрированной среде разработки (IDE) атрибуты поддерживаются мастером и окно «Свойства».  

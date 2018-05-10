@@ -1,12 +1,9 @@
 ---
-title: "Класс ISource | Документы Microsoft"
-ms.custom: 
+title: Класс ISource | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>Класс ISource
 Класс `ISource` является интерфейсом для всех блоков источников. Блоки источников распространяют сообщения в блоки `ITarget`.  
@@ -55,21 +50,21 @@ class ISource;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`source_type`|Псевдоним для `T`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ Деструктор ISource](#dtor)|Уничтожает `ISource` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[accept](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
+|[Принять](#accept)|При переопределении в производном классе, принимает сообщение, предложенное это `ISource` блоком, передавая владение вызывающему объекту.|  
 |[acquire_ref](#acquire_ref)|При переопределении в производном классе получает значение счетчика ссылок на это `ISource` блок, чтобы предотвратить удаление.|  
 |[Использовать](#consume)|При переопределении в производном классе, получает сообщение было предложено это `ISource` блокировку и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
 |[link_target](#link_target)|При переопределении в производном классе связывает целевой блок это `ISource` блока.|  
@@ -128,7 +123,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объекту, связанному этого источника во время `link_target` метод.  
   
-##  <a name="consume">Использовать</a> 
+##  <a name="consume"></a> Использовать 
 
  При переопределении в производном классе, получает сообщение было предложено это `ISource` блокировку и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   

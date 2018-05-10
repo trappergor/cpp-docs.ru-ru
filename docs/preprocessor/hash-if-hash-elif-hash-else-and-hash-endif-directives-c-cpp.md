@@ -1,12 +1,9 @@
 ---
-title: "#Если #elif, #else и #endif (C/C++) | Документы Microsoft"
-ms.custom: 
+title: '#Если #elif, #else и #endif (C/C++) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Директивы #if, #elif, #else и #endif (C/C++)
 Директива `#if` вместе с директивами `#elif`, `#else` и `#endif` управляет компиляцией частей исходного файла. Если указанное выражение (после `#if`) имеет ненулевое значение, в записи преобразования сохраняется группа строк, следующая сразу за директивой `#if`.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 02/23/2018
  *текст строки If*  
   
  *Если строка* :  
- **#if**  *constant-expression*  
+ **#if***константное выражение*   
   
  **#ifdef***идентификатор*  
   
@@ -65,9 +60,9 @@ ms.lasthandoff: 02/23/2018
  *elif части elif строки текста*  
   
  *elif строки* :  
- **#elif**  *constant-expression*  
+ **#elif***константное выражение*   
   
- *else-part* :  
+ *Else часть* :  
  *текст строки else*  
   
  *строки Else* :  
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  Препроцессор обрабатывает выделенный *текст* и передает его в компилятор. Если *текст* содержит директивы препроцессора, препроцессор выполняет эти директивы. Компилируются только текстовые блоки, выбранные препроцессором.  
   
- Препроцессор выбирает один *текст* элемента, оценивая константные выражения, следующие за каждой `#if` или `#elif` директивы, пока не найдет true (ненулевое) константное выражение. Выделяется весь текст (включая другие директивы препроцессора, начиная с версии  **#** ) до соответствующей `#elif`, `#else`, или `#endif`.  
+ Препроцессор выбирает один *текст* элемента, оценивая константные выражения, следующие за каждой `#if` или `#elif` директивы, пока не найдет true (ненулевое) константное выражение. Выделяется весь текст (включая другие директивы препроцессора, начиная с версии **#**) до соответствующей `#elif`, `#else`, или `#endif`.  
   
  Если все вхождения *константное выражение* имеют значение false, или если ни один `#elif` отображается директивы, препроцессор выбирает блок текста после `#else` предложения. Если `#else` предложение опущено и все экземпляры *константное выражение* в `#if` блок имеют значение false, выбран ни один текстовый блок.  
   

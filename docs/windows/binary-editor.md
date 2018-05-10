@@ -1,13 +1,10 @@
 ---
-title: "Двоичный редактор | Документы Microsoft"
-ms.custom: 
+title: Двоичный редактор | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>двоичный редактор
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  Двоичный редактор позволяет редактировать любые ресурсы на двоичном уровне либо в шестнадцатеричном формате, либо в формате ASCII. Для поиска строк ASCII или шестнадцатеричных байтов можно также использовать [команду "Найти"](/visualstudio/ide/reference/find-command) . Двоичный редактор следует использовать, только когда нужно просмотреть или внести незначительные изменения в настраиваемые ресурсы или типы ресурсов, не поддерживаемые средой Visual Studio.  
   
- Чтобы открыть двоичный редактор, сначала выберите **файл &#124; Создать &#124; Файл** в главном меню выберите файл, который необходимо изменить, а затем щелкните стрелку раскрывающегося рядом с **откройте** кнопку и выберите **открыть с помощью &#124; Двоичный редактор**.  
+ Чтобы открыть двоичный редактор, сначала выберите **файл &#124; New &#124; файл** в главном меню выберите файл, который необходимо изменить, а затем щелкните стрелку раскрывающегося рядом с **откройте** кнопку и выберите **Открыть с помощью &#124; двоичный редактор**.  
   
 > [!CAUTION]
 >  Редактирование в двоичном редакторе таких ресурсов, как диалоговые окна, изображения или меню, опасно. Неверное редактирование может повредить ресурс, сделав его нечитаемым в соответствующем специализированном редакторе.  

@@ -1,27 +1,22 @@
 ---
-title: "Пример программы | Документация Майкрософт"
-ms.custom: 
+title: Пример программы | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b148e14dad4df43dfe55d89172c557d6d2cc4c0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-program"></a>Пример программы
 Следующая исходная программа на языке C состоит из двух файлов исходного кода. В ней показаны различные объявления и определения, возможные в программе на языке C. В последующих разделах этого документа описывается, как создавать такие объявления, определения и инициализации, и как использовать ключевые слова C, например **static** и `extern`. Функция `printf` объявлена в файле заголовка C STDIO.H.  

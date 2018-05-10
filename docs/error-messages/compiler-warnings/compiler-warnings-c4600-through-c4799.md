@@ -1,8 +1,8 @@
 ---
-title: "Предупреждения компилятора C4600 через C4799 | Документы Microsoft"
+title: Предупреждения компилятора C4600 через C4799 | Документы Microsoft
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Предупреждения компилятора C4600 через C4799
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/21/2017
 |[(Ошибка) предупреждение компилятора C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|«класс»: Запечатанный абстрактный класс не может реализовывать интерфейс «интерфейс»|
 |Предупреждение компилятора (уровень 1) C4688|"ограничение": список ограничений содержит частный тип сборки "тип"|
 |Предупреждение компилятора (уровень 1) C4689|«%c»: Неподдерживаемый знак в #pragma detect_mismatch; #pragma ignored|
-|Предупреждение компилятора (уровень 4) C4690|[emitidl (pop)]: стека превышает число занесений|
+|Предупреждение компилятора (уровень 4) C4690|[ emitidl ( pop ) ]: стека превышает число занесений|
 |[Предупреждение компилятора (уровень 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|«Тип»: ожидался адресуемый тип в сборке без ссылки «файл», тип, определенный в текущей записи преобразования, вместо этого использовать|
 |[Предупреждение компилятора (уровень 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|"функция": подпись не частного члена содержит частный собственный тип сборки "частныйТип"|
 |[Предупреждение компилятора (уровень 1, ошибка) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|«класс»: Запечатанный абстрактный класс не может иметь любой экземпляр члены «член экземпляра»|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[Предупреждение компилятора (уровень 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|«переменная» имеет различное выравнивание в «файл1» и «файл2»: номер и номер|
 |[Предупреждение компилятора (уровень 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|«тип» имеет различные размеры в «файл1» и «файл2»: число и число байтов|
 |[Предупреждение компилятора (уровень 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|«переменная» имеет различные типы в «файл1» и «файл2»: «тип1» и «тип2»|
-|[Предупреждение компилятора C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|переменное обращение "*выражение*" определяется параметром/volatile:\<iso &#124; ms >; попробуйте использовать встроенные функции __iso_volatile_load/store|
+|[Предупреждение компилятора C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|переменное обращение "*выражение*" определяется параметром/volatile:\<iso&#124;ms >; попробуйте использовать встроенные функции __iso_volatile_load/store|
 |[Предупреждение компилятора (уровень 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Вызов управляемого «точка входа»: управляемый код может не выполняться во время блокировки загрузчика, включая точки входа DLL и поступившим из них вызовам|
 |Предупреждение компилятора (уровень 4) C4749|условно поддерживается: нестандартное применение offsetof к non standard макет типа "*типа*"|
 |Предупреждение компилятора (уровень 1) C4750|"идентификатор": функция с _alloca() включена в цикл|
