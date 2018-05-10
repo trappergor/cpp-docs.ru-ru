@@ -1,13 +1,10 @@
 ---
-title: "По умолчанию события элемента управления | Документы Microsoft"
-ms.custom: 
+title: По умолчанию события элемента управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - events [C++], controls
 - dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a50b0deeb525481afb1da7221689924c41930bff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="default-control-events"></a>События по умолчанию элемента управления
 Следующие имена элементов управления имеют соответствующие им события:  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |Slider|**NM_CUSTOMDRAW**|  
 |"Счетчик"|**UDN_DELTAPOS**|  
 |Статический текст|(Неприменимо)|  
-|Вкладка|**TCN_SELCHANGE**|  
+|Tab|**TCN_SELCHANGE**|  
 |Дерево|**TVN_SELCHANGE**|  
   
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  

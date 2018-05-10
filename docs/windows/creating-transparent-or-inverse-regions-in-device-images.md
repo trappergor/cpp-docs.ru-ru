@@ -1,13 +1,10 @@
 ---
-title: "Создание прозрачных областей или обратный областей на изображениях устройств (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: Создание прозрачных областей или обратный областей на изображениях устройств (редактор изображений для значков) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,18 +25,16 @@ helpviewer_keywords:
 - device projects, transparent images
 - icons [C++], screen regions
 ms.assetid: a994954b-b039-4391-a535-58d1fa10fc3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f416b31200352fc849fb2d1c7a43f9759da47d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70fd2411eefba495478baaf5fb20fe7a27031001
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Создание прозрачных областей или областей с обращенными цветами на изображениях устройств (редактор изображений для значков)
 В [редактора изображений](../windows/image-editor-for-icons.md), начальной изображения значков и курсоров имеют атрибут прозрачности. Несмотря на то, что изображения может быть прямоугольником, многие не отображаются, так как части изображения прозрачны. основное изображение на экране показаны через значка или курсора. При перетаскивании значка части изображения могут отображаться в Инвертированный цвет. Создать этот эффект, задав цвет экрана и инвертированный цвет в [окно выбора цвета](../windows/colors-window-image-editor-for-icons.md).  

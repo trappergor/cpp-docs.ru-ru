@@ -1,13 +1,10 @@
 ---
-title: "Выбор элементов управления | Документы Microsoft"
-ms.custom: 
+title: Выбор элементов управления | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - size, controls
 - controls [C++], dominant
 ms.assetid: 27f05450-4550-4229-9f4c-2c9e06365596
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8bf795bacf40a90aaeec451315e4d0e75f7f71aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4a8d5260b721bf829c73f587ccd691db5543e40
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-controls"></a>Выбор элементов управления
 Выберите элементы управления до размера, выравнивание, переместить, скопировать, или удалить их и выполните операцию, которую вы хотите. В большинстве случаев необходимо выбрать более одного элемента управления, чтобы использовать средства изменения размера и выравнивания на [инструментов редактора диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  

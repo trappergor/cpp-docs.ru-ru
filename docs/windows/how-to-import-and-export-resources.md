@@ -1,13 +1,10 @@
 ---
-title: "Как: Импорт и экспорт ресурсов | Документы Microsoft"
-ms.custom: 
+title: 'Как: Импорт и экспорт ресурсов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.importing
 - vc.resvw.resource.importing
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a01269928d0e5b52cca6e2301ad681db61289f80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-import-and-export-resources"></a>Практическое руководство. Импорт и экспорт ресурсов
 Графические ресурсы (растровые изображения, значки, курсоры, панели инструментов), HTML-файлы и пользовательские ресурсы можно импортировать для использования в Visual C++. Эти же типы ресурсов можно экспортировать из проекта Visual C++ в виде отдельных файлов, которые можно использовать за пределами среды разработки.  

@@ -1,13 +1,10 @@
 ---
-title: "Универсальные классы (C + +/ CLI) | Документы Microsoft"
-ms.custom: 
+title: Универсальные классы (C + +/ CLI) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>Универсальные классы (C++/CLI)
 Универсальный класс объявляется в следующем формате:  
@@ -81,7 +76,7 @@ class-body
  *тело класса*  
  Тело класса, содержащее поля, функции-члены и т. д.  
   
- *деклараторы*  
+ *Деклараторы*  
  Объявления любых переменных данного типа. Например: `^` *идентификатор*[`,` ...]  
   
  Можно объявить универсальные классы такие (Обратите внимание, что ключевое слово **класса** может быть использован вместо **typename**). В этом примере `ItemType`, `KeyType` и `ValueType` — неизвестные типы, заданные в точке, где тип. `HashTable<int, int>` — сконструированный тип универсального типа `HashTable<KeyType, ValueType>`. Из одного универсального типа можно создать несколько разных сконструированных типов. Сконструированные типы, созданные из универсальных классов, обрабатываются так же, как и любой другой тип ссылочного класса.  

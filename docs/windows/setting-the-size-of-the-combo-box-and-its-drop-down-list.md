@@ -1,13 +1,10 @@
 ---
-title: "Задание размера для поле со списком и соответствующего раскрывающегося списка | Документы Microsoft"
-ms.custom: 
+title: Задание размера для поле со списком и соответствующего раскрывающегося списка | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Задание размера для поля со списком и соответствующего раскрывающегося списка
 При добавлении его в диалоговом окне можно изменить размеры поле со списком. Также можно указать размер поля раскрывающегося списка.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  Чтобы изменить исходный размер области раскрывающегося списка, используйте нижний маркер изменения размера.  
   
-     ![Поле со списком &#45; изменение размера в проекте MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![Поле со списком&#45;изменение размера в проекте MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  Щелкните стрелку раскрывающегося списка, чтобы закрыть часть раскрывающегося списка в поле со списком.  
   

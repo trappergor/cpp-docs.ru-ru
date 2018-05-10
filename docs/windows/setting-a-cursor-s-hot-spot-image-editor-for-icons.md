@@ -1,13 +1,10 @@
 ---
-title: "Установка курсора &#39; s горячей позицию (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: Установка курсора&#39;гиперобъект s (редактор изображений для значков) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - cursors, hot spots
 - hot spots
 ms.assetid: a610388a-45c8-43cd-98a2-fd31f29238b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bcfccb7b9252bf28e5b180b1df6b6d36fcbfbd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 527cdeabb6f45601641fcc64d3b82bb36652e002
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Установка курсора &#39; s горячей позицию (редактор изображений для значков)
+# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Установка курсора&#39;гиперобъект s (редактор изображений для значков)
 Активная точка [курсор](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) является точкой на которую ссылается Windows при отслеживании позиции курсора. По умолчанию активная точка имеет значение в верхнем левом углу курсора (координаты 0,0). Свойство активную область в [окно свойств](/visualstudio/ide/reference/properties-window) координаты активной точки отображаются.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>Чтобы задать активной точки курсора  

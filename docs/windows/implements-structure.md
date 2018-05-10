@@ -1,12 +1,9 @@
 ---
-title: "Реализует структуру | Документы Microsoft"
-ms.custom: 
+title: Реализует структуру | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Implements structure
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da9ea650c34b7b1ed75d351587c39e52a88098
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implements-structure"></a>Implements - структура
 Реализует QueryInterface и GetIid для указанных интерфейсов.  
@@ -105,13 +100,13 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`ClassFlags`|Синоним для `RuntimeClassFlags<WinRt>`.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод Implements::CanCastTo](../windows/implements-cancastto-method.md)|Возвращает указатель на указанный интерфейс.|  
 |[Метод Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Возвращает указатель на базовый интерфейс IUnknown.|  
@@ -119,7 +114,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 ### <a name="protected-constants"></a>Защищенные константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Константа Implements::IidCount](../windows/implements-iidcount-constant.md)|Содержит количество идентификаторов реализованного интерфейса.|  
   

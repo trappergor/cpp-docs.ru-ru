@@ -1,27 +1,22 @@
 ---
-title: "Руководство по переносу: Spy++ | Документы Майкрософт"
-ms.custom: 
+title: 'Руководство по переносу: Spy++ | Документы Майкрософт'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>Руководство по переносу: Spy++
 Этот пример переноса позволяет понять, на что похож типичный проект переноса, какие типы проблем могут возникать, а также содержит ряд общих советов и рекомендаций по решению проблем переноса. Это не является полным руководством по переносу, так как особенности переноса проекта существенно зависят от конкретного кода.  

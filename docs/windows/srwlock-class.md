@@ -1,12 +1,9 @@
 ---
-title: "Класс SRWLock | Документы Microsoft"
-ms.custom: 
+title: Класс SRWLock | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::SRWLock
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="srwlock-class"></a>SRWLock - класс
 Представляет тонкую блокировку чтения и записи.  
@@ -51,14 +46,14 @@ class SRWLock;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор SRWLock::SRWLock](../windows/srwlock-srwlock-constructor.md)|Инициализирует новый экземпляр класса SRWLock.|  
 |[Деструктор SRWLock::~SRWLock](../windows/srwlock-tilde-srwlock-destructor.md)|Отменяет инициализацию экземпляра класса SRWLock.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод SRWLock::LockExclusive](../windows/srwlock-lockexclusive-method.md)|Получает объект SRWLock в монопольном режиме.|  
 |[Метод SRWLock::LockShared](../windows/srwlock-lockshared-method.md)|Получает объект SRWLock в режиме общего доступа.|  
@@ -67,7 +62,7 @@ class SRWLock;
   
 ### <a name="protected-data-member"></a>Защищенные данные-член  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Элемент данных SRWLock::SRWLock_](../windows/srwlock-srwlock-data-member.md)|Содержит базовую переменную блокировки для текущего объекта SRWLock.|  
   

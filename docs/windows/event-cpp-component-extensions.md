@@ -1,13 +1,10 @@
 ---
-title: "события (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: события (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event (расширения компонентов C++)
 `event` Ключевое слово объявляет *событий*, которое является уведомлением для зарегистрированных подписчиков (*обработчики событий*), что произошло нечто интересное.  
@@ -53,13 +48,13 @@ modifiereventdelegate^ event_name
   
  **Параметры**  
   
- *модификатор*  
+ *Модификатор*  
  Модификатор, который может использоваться в объявлении события или в методе доступа события.  Возможными значениями являются `static` и `virtual`.  
   
  *delegate*  
  [Делегировать](../windows/delegate-cpp-component-extensions.md), сигнатура которого должен соответствовать обработчик событий.  
   
- *имя_события*  
+ *event_name*  
  Имя события.  
   
  *RETURN_VALUE*  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  Вы можете использовать `operators+=` и `operator-=` для добавления и удаления обработчика событий или для явного вызова методов `add()` и `remove()`.  
   
- `event`— Контекстно-зависимое ключевое слово; в разделе [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) для получения дополнительной информации.  
+ `event` — Контекстно-зависимое ключевое слово; в разделе [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) для получения дополнительной информации.  
   
 ## <a name="windows-runtime"></a>Среда выполнения Windows  
   
@@ -115,13 +110,13 @@ modifiereventdelegate^ event_name
   
  **Параметры**  
   
- *модификатор*  
+ *Модификатор*  
  Модификатор, который может использоваться в объявлении события или в методе доступа события.  Возможными значениями являются `static` и `virtual`.  
   
  *delegate*  
  [Делегировать](../windows/delegate-cpp-component-extensions.md), сигнатура которого должен соответствовать обработчик событий.  
   
- *имя_события*  
+ *event_name*  
  Имя события.  
   
  *RETURN_VALUE*  

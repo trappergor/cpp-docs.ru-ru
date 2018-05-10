@@ -1,31 +1,26 @@
 ---
-title: "Универсальные шаблоны и шаблоны (Visual C++) | Документы Microsoft"
-ms.custom: 
+title: Универсальные шаблоны и шаблоны (Visual C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics-and-templates-visual-c"></a>Универсальные типы и шаблоны (Visual C++)
 Универсальные и обычные шаблоны — это возможности языков программирования, обеспечивающие поддержку параметризированных типов. Однако они отличаются и имеют разные применения. В этом разделе дан обзор многих отличий.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  Ниже приведен простой пример совместного использования обычных и универсальных шаблонов. В этом примере шаблонный класс передает свой параметр универсальному типу. Обратное невозможно.  
   
  Эту идиому можно использовать, когда требуется выполнить сборку в существующем универсальном API с кодом шаблона, который является локальным для сборки Visual C++, или при необходимости добавить дополнительный слой параметризации к универсальному типу, чтобы воспользоваться преимуществами некоторых функций обычных шаблонов, не поддерживаемых универсальными.  

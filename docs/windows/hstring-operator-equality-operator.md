@@ -1,30 +1,25 @@
 ---
-title: "HString::Operator ==-оператор | Документы Microsoft"
-ms.custom: 
+title: HString::Operator ==-оператор | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::operator==
 dev_langs:
 - C++
 ms.assetid: 77ff4c1a-e62a-4256-bf9d-0f017137c630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db6c449a7ceb4799feb4740c11385875a6309ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5386636a348fdf7162e9b6d63f0e6dbc109bd655
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringoperator-operator"></a>Оператор HString::Operator==
 Указывает, равны ли два параметра.  
@@ -56,13 +51,13 @@ inline bool operator==(
   
 #### <a name="parameters"></a>Параметры  
  `lhs`  
- Первый параметр для сравнения. `lhs`может быть объект HString или HStringReference или дескриптор HSTRING.  
+ Первый параметр для сравнения. `lhs` может быть объект HString или HStringReference или дескриптор HSTRING.  
   
  `rhs`  
  Второй параметр для сравнения.`rhs` может быть объект HString или HStringReference или дескриптор HSTRING.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`Если `lhs` и `rhs` параметры равны; в противном случае — `false`.  
+ `true` Если `lhs` и `rhs` параметры равны; в противном случае — `false`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
