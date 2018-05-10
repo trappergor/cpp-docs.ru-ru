@@ -1,13 +1,10 @@
 ---
-title: "importlib | Документы Microsoft"
-ms.custom: 
+title: importlib | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.importlib
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7c62db5b1e10f115a57da1ea00cd87760b96a71f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c21b97e50fa03861245a0c0881963387dd8a3102
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="importlib"></a>importlib
 Делает типы, которые уже были скомпилированы в другую библиотеку типов, доступными для создаваемой библиотеки типов.  
@@ -75,5 +70,5 @@ ms.lasthandoff: 12/21/2017
  [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [Импорт](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [включить](../windows/include-cpp.md)   
+ [Включить](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

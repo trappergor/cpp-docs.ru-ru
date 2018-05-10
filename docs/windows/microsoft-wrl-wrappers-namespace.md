@@ -1,12 +1,9 @@
 ---
-title: "Пространство имен Microsoft::wrl:: wrappers | Документы Microsoft"
-ms.custom: 
+title: 'Пространство имен Microsoft::wrl:: wrappers | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7633bcd784fa7b9b5f7255e25e8ddc52c5b93db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Пространство имен Microsoft::WRL::Wrappers
 Определяет оболочки типа "Получение ресурса есть инициализация" (RAII), которые упрощают управление временем существования объектов, строк и дескрипторов.  
@@ -47,7 +42,7 @@ namespace Microsoft::WRL::Wrappers;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс CriticalSection](../windows/criticalsection-class.md)|Представляет объект критической секции.|  
 |[Класс Event (библиотека шаблонов C++ среды выполнения Windows)](../windows/event-class-windows-runtime-cpp-template-library.md)|Представляет событие.|  

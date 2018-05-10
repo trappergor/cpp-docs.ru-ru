@@ -1,13 +1,10 @@
 ---
-title: "Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: 'Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков) | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Значки и курсоры: ресурсы изображений для устройств отображения (редактор изображений для значков)
 Значки и курсоры представляют собой графические ресурсы, которые могут состоять из нескольких изображений разных размеров, использующих разные цветовые схемы, в зависимости от типа устройства отображения. Кроме того, у курсоров есть "активная точка" — точка, которая используется системой Windows для отслеживания позиции курсора. Как и в случае с растровыми и другими изображениями, для создания и редактирования значков и курсоров используется редактор изображений.  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>См. также  
  [Редактор изображений для значков](../windows/image-editor-for-icons.md)   
- [Значки](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
+ [значки](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Курсоры](http://msdn.microsoft.com/library/windows/desktop/ms646970)
 

@@ -1,13 +1,10 @@
 ---
-title: "Создание изображения устройства (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: Создание изображения устройства (редактор изображений для значков) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>Создание изображения устройства (редактор изображений для значков)
 При создании нового значка или курсора ресурса изображения редактор сначала появляется изображение стандартного типа (32 × 32, 16 цветов для значков и 32 х 32, монохромный для курсоров). Затем можно добавлять изображения различные размеры и стили для начальной значка или курсора и редактировать каждое дополнительное изображение, при необходимости, для различных устройств отображения. Можно также изменить изображения с помощью операции вырезания и вставки из существующего типа изображений или из растрового изображения, созданного в графическом приложении.  

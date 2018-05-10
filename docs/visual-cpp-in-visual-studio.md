@@ -1,13 +1,10 @@
 ---
-title: "Visual C++ в Visual Studio | Документы Майкрософт"
-ms.custom: 
+title: Visual C++ в Visual Studio | Документы Майкрософт
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,14 +15,13 @@ helpviewer_keywords:
 - Visual C++, reference
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
@@ -33,69 +29,69 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="general-information-about-visual-c"></a>Общие сведения о Visual C++
 
-[Новые возможности Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
+[Новые возможности Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 Новые возможности Visual C++.
 
-[Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md)  
+[Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
 Сведения об улучшениях соответствия C++ в Visual Studio 2017.
 
-[Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)  
+[Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)<br/>
 Список с данными о состоянии соответствия стандартам по каждой функции в компиляторе C++ MSVC.
 
-[Журнал изменений Visual C++ 2003–2015](porting/visual-cpp-change-history-2003-2015.md)  
+[Журнал изменений Visual C++ 2003–2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 Ознакомьтесь с критическими изменениями в предыдущих версиях.
 
-[Возвращение к C++](cpp/welcome-back-to-cpp-modern-cpp.md)  
+[Возвращение к C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 Дополнительные сведения о современных методах программирования на C++ на основе C ++ 11 и C ++ 14 для написания быстродействующего и безопасного кода и исключения многих типичных ошибок программирования в стиле C.
 
-[Как сообщить о проблеме с набором инструментов Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)  
- Сведения о создании эффективных отчетов об ошибках с использованием набора инструментов Visual C++ (компилятора, компоновщика и других средств) и информация о способах отправки отчета.
+[Как сообщить о проблеме с набором инструментов Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+Сведения о создании эффективных отчетов об ошибках с использованием набора инструментов Visual C++ (компилятора, компоновщика и других средств) и информация о способах отправки отчета.
 
-[Руководство по переносу и обновлению Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)  
+[Руководство по переносу и обновлению Visual C++](porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 Руководство по переносу кода и обновлению проектов для Visual Studio 2017, включая перенос кода C++ в Windows 10 и универсальную платформу Windows.
 
-[Блог команды разработчиков Visual C++](http://blogs.msdn.com/b/vcblog/)  
- Описание новых возможностей и актуальная информация от разработчиков [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
+[Блог команды разработчиков Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
+Описание новых возможностей и актуальная информация от разработчиков [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)].
 
-[Загружаемые файлы Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=235233)  
+[Загружаемые файлы Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=235233)<br/>
 Загрузка Visual Studio.
 
-[Инструменты и функции Visual C++ в выпусках Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
+[Инструменты и функции Visual C++ в выпусках Visual Studio](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Сведения о разных редакциях Visual C++.
 
-[Поддерживаемые платформы](supported-platforms-visual-cpp.md)  
+[Поддерживаемые платформы](supported-platforms-visual-cpp.md)<br/>
 Поддерживаемые платформы.
 
-[Примеры кода на Visual C++](visual-cpp-samples.md)  
+[Примеры кода на Visual C++](visual-cpp-samples.md)<br/>
 Информация о примерах.
 
-[Сообщество разработчиков Visual Studio](https://developercommunity.visualstudio.com/)  
+[Сообщество разработчиков Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Обращение за помощью, регистрация ошибок и предложения по Visual Studio.
 
 ## <a name="writing-applications-in-c"></a>Создание приложений на языке C++
 
-[Универсальные приложения Windows](windows/universal-windows-apps-cpp.md)  
+[Универсальные приложения Windows](windows/universal-windows-apps-cpp.md)<br/>
 Руководства и справочные материалы в Центре разработчика Windows. Сведения о разработке приложений UWP см. в разделах [Введение в универсальную платформу Windows](/windows/uwp/get-started/universal-application-platform-guide) и [Создание первого приложения UWP на C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-[Классические приложения (C++)](windows/desktop-applications-visual-cpp.md)  
+[Классические приложения (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Создание классических приложений, включающих цикл обработки сообщений и обратные вызовы.
 
-[DLL в Visual C++](build/dlls-in-visual-cpp.md)  
+[DLL в Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Использование Win32, ATL и MFC для создания классических библиотек DLL для Windows, а также сведения о компиляции и регистрации библиотеки DLL.
 
-[Параллельное программирование](parallel/parallel-programming-in-visual-cpp.md)  
+[Параллельное программирование](parallel/parallel-programming-in-visual-cpp.md)<br/>
 Использование библиотеки параллельных шаблонов, C++ AMP, OpenMP и другим компонентов, связанных с многопоточностью в Windows.
 
-[Рекомендации по безопасности](security/security-best-practices-for-cpp.md)  
+[Рекомендации по безопасности](security/security-best-practices-for-cpp.md)<br/>
 Защита приложений от вредоносного кода и несанкционированного использования.
 
-[Облачное и веб-программирование](cloud/cloud-and-web-programming-in-visual-cpp.md)  
+[Облачное и веб-программирование](cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 В C++ имеются несколько параметров для соединения с веб-узлом и облаком.
 
-[Доступ к данным](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)  
+[Доступ к данным](data/data-access-in-cpp.md)<br/>
 Для подключения к базам данных используйте ODBC и другие технологии доступа к базам данных.
 
-[Текст и строки](text/text-and-strings-in-visual-cpp.md)  
+[Текст и строки](text/text-and-strings-in-visual-cpp.md)<br/>
 Подробнее о работе с другими форматами текста и строк и кодировках для локальных и международных разработок.
 
 ## <a name="c-development-tools"></a>Средства разработки C++
@@ -112,28 +108,28 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 В следующих разделах приведены сведения о различных библиотеках C и C++, включенных в Visual Studio.
 
-[Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)  
+[Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)<br/>
 Включает альтернативы с улучшенной безопасностью для функций, которые, как известно, могут представлять угрозу безопасности.
 
-[Стандартная библиотека C++](standard-library/cpp-standard-library-reference.md)  
+[Стандартная библиотека C++](standard-library/cpp-standard-library-reference.md)<br/>
 Стандартная библиотека C++.
 
-[Библиотека шаблонных классов (ATL)](atl/atl-com-desktop-components.md)  
+[Библиотека шаблонных классов (ATL)](atl/atl-com-desktop-components.md)<br/>
 Поддержка компонентов и приложений COM.
 
-[Библиотеки Microsoft Foundation Class (MFC)](mfc/mfc-desktop-applications.md)  
+[Библиотеки Microsoft Foundation Class (MFC)](mfc/mfc-desktop-applications.md)<br/>
 Поддержка создания классических приложений с традиционными пользовательскими интерфейсами или интерфейсами в стиле Office.
 
-[Библиотека параллельных шаблонов (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)  
+[Библиотека параллельных шаблонов (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Асинхронные и параллельные алгоритмы, выполняемые в ЦП.
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 Массово-параллельные алгоритмы, выполняемые в GPU.
 
-[Библиотека шаблонов среды выполнения Windows (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
+[Библиотека шаблонов среды выполнения Windows (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
 Приложения и компоненты универсальной платформы Windows (UWP).
 
-[Программирование .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[Программирование .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Программирование для общеязыковой среды выполнения (CLR).
 
 См. также документацию по [STL/CLR](dotnet/stl-clr-library-reference.md) и [C++ Support Library](dotnet/cpp-support-library.md).
@@ -144,14 +140,14 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="more-resources"></a>Дополнительные ресурсы
 
-[Стандартная C++](http://isocpp.org/)  
+[Стандартная C++](http://isocpp.org/)<br/>
 Дополнительные сведения о C++, обзор Modern C++ и ссылки на книги, статьи, обсуждения и данные о событиях
 
-[Знакомство с Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
+[Знакомство с Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
 Начало изучения C++.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C](c-language/c-language-reference.md)   
-[Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)   
-[Внутренние объекты компилятора и язык ассемблера](intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Справочник по языку C#](c-language/c-language-reference.md)
+- [Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)
+- [Внутренние объекты компилятора и язык ассемблера](intrinsics/compiler-intrinsics-and-assembly-language.md)

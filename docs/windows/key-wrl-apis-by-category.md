@@ -1,35 +1,30 @@
 ---
-title: "Основные API WRL по категориям | Документы Microsoft"
-ms.custom: 
+title: Основные API WRL по категориям | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>Основные API WRL по категориям
 В следующих таблицах перечислены первичного классы, структуры, функции и макросы библиотека шаблонов C++ среды выполнения Windows. Конструкции в вспомогательного пространства имен и классы, опущены. Эти списки дополнять документацию по API, упорядоченных по пространствам имен.  
   
 ### <a name="classes"></a>Классы  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|  
 |[Класс AsyncBase](../windows/asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="structures"></a>Структуры  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|  
 |[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, заданный интерфейс недоступен в списке IID.|  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="functions"></a>Функции  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Функция ActivateInstance](../windows/activateinstance-function.md)|Регистрирует и извлекает экземпляр заданного типа, определенного в идентификатор указанного класса.|  
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="macros"></a>Макросы  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Макрос ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса.|  
 |[Макрос InspectableClass](../windows/inspectableclass-macro.md)|Задает уровень имя и доверия класса среды выполнения.|  

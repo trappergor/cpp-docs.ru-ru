@@ -1,12 +1,9 @@
 ---
-title: "Метод SimpleClassFactory::CreateInstance | Документы Microsoft"
-ms.custom: 
+title: Метод SimpleClassFactory::CreateInstance | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68778eb1b5421cfcf22261d8b1c1efd99bc32c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>Метод SimpleClassFactory::CreateInstance
 
@@ -61,7 +56,7 @@ SimpleClassFactory не поддерживает агрегирование. Е�
 
 ## <a name="remarks"></a>Примечания
 
-Если &#95; &#95; WRL_STRICT &#95; &#95; будет определено, Ошибка утверждения создается, если базовый класс, указанный в параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со значением ClassicCom или WinRtClassicComMix [RuntimeClassType ](../windows/runtimeclasstype-enumeration.md) значение перечисления.
+Если &#95; &#95;WRL_STRICT&#95; &#95; будет определено, Ошибка утверждения создается, если базовый класс, указанный в параметре шаблона класса не является производным от [RuntimeClass](../windows/runtimeclass-class.md), или не настроен со значением ClassicCom или WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значение перечисления.
 
 ## <a name="requirements"></a>Требования
 

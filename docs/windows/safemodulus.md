@@ -1,13 +1,10 @@
 ---
-title: "SafeModulus | Документы Microsoft"
-ms.custom: 
+title: SafeModulus | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeModulus
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemodulus"></a>SafeModulus
 Выполняет операцию остатка от деления двух чисел.  
@@ -53,7 +48,7 @@ inline bool SafeModulus (
  Параметр где `SafeModulus` сохраняет результат.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`При отсутствии ошибок; `false` при возникновении ошибки.  
+ `true` При отсутствии ошибок; `false` при возникновении ошибки.  
   
 ## <a name="remarks"></a>Примечания  
  Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции одного модуля без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  

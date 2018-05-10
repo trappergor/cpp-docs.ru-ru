@@ -1,13 +1,10 @@
 ---
-title: "TypeDef, Enum, Union и Struct атрибуты | Документы Microsoft"
-ms.custom: 
+title: TypeDef, Enum, Union и Struct атрибуты | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,28 +14,26 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Атрибуты Typedef, Enum, Union и Struct
 Следующие атрибуты, относящиеся к [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [структуры](../cpp/struct-cpp.md), и [перечисления](../cpp/enumerations-cpp.md) ключевые слова C++.  
   
 ### <a name="typedef"></a>typedef  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|При использовании [switch_type](../windows/switch-type.md) атрибута в **объединение**.|  
-|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[Настройка](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
 |[first_is](../windows/first-is.md)|Указывает индекс первого элемента массива для передачи.|  
 |[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.|  
@@ -55,18 +50,18 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="enum"></a>перечисление  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
-|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[Настройка](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
 |[v1_enum](../windows/v1-enum.md)|Направляет передачи заданного перечислимого типа как сущность 32 бита, а не 16-разрядное значение по умолчанию.|  
   
 ### <a name="union"></a>union  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
-|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[Настройка](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
 |[first_is](../windows/first-is.md)|Указывает индекс первого элемента массива для передачи.|  
 |[last_is](../windows/last-is.md)|Определяет индекс последнего элемента массива для передачи.|  
@@ -74,18 +69,18 @@ ms.lasthandoff: 12/21/2017
 |[max_is](../windows/max-is.md)|Задает максимальное значение для индекса массива допустимым.|  
 |[size_is](../windows/size-is.md)|Указывает объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.|  
 |[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
   
 ### <a name="nonencapsulated-union"></a>Nonencapsulated объединения  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |[ms_union](../windows/ms-union.md)|Управляет выравниванием представление данных сети nonencapsulated объединений.|  
 |[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору встраивать код в результате использования атрибута.|  
   
 ### <a name="struct"></a>структура  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |[aggregatable](../windows/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|  
 |[aggregates](../windows/aggregates.md)|Указывает, что элемент управления использует статистическую функцию для целевого класса.|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|Создает элемент управления ActiveX.|  
 |[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Добавляет запись интерфейс COM карты.|  
 |[control](../windows/control.md)|Указывает, что определяемый пользователем тип элемента управления.|  
-|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[Настройка](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[db_column](../windows/db-column.md)|Связывает указанный столбец набора строк.|  
 |[db_command](../windows/db-command.md)|Создает команду OLE DB.|  
 |[db_param](../windows/db-param.md)|Связывает указанный член переменной с входным или выходным параметром и разделяет переменной.|  
@@ -112,10 +107,10 @@ ms.lasthandoff: 12/21/2017
 |[max_is](../windows/max-is.md)|Задает максимальное значение для индекса массива допустимым.|  
 |[requires_category](../windows/requires-category.md)|Задает категории обязательный компонент целевого класса.|  
 |[size_is](../windows/size-is.md)|Указывает объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.|  
-|[источник](../windows/source-cpp.md)|В классе задает исходных интерфейсов COM-объект для точки подключения. Для свойства или метода означает, что член возвращает объект или ВАРИАНТ, который является источником событий.|  
+|[Источник](../windows/source-cpp.md)|В классе задает исходных интерфейсов COM-объект для точки подключения. Для свойства или метода означает, что член возвращает объект или ВАРИАНТ, который является источником событий.|  
 |[Работа с потоками](../windows/threading-cpp.md)|Указывает, что потоковая модель для COM-объекта.|  
 |[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
-|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
+|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
 |[version](../windows/version-cpp.md)|Определяет конкретную версию несколькими версиями класса.|  
 |[vi_progid](../windows/vi-progid.md)|Указывает форму независимый от версии идентификатор ProgID.|  
   

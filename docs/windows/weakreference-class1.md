@@ -1,12 +1,9 @@
 ---
-title: "WeakReference Class1 | Документы Microsoft"
-ms.custom: 
+title: WeakReference Class1 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - WeakReference class
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8985434365cb8144fc2ee3680ef19c5b8ed99301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a44b992138371ff33a9059990a5ec3e93689c679
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="weakreference-class1"></a>Класс WeakReference 1
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -50,14 +45,14 @@ class WeakReference;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор WeakReference::WeakReference](../windows/weakreference-weakreference-constructor.md)|Инициализирует новый экземпляр класса WeakReference.|  
 |[Деструктор WeakReference::~WeakReference](../windows/weakreference-tilde-weakreference-destructor.md)|Деинициализирует (уничтожает) текущий экземпляр класса WeakReference.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод WeakReference::DecrementStrongReference](../windows/weakreference-decrementstrongreference-method.md)|Уменьшает счетчик строгого ссылок объекта WeakReference.|  
 |[Метод WeakReference::IncrementStrongReference](../windows/weakreference-incrementstrongreference-method.md)|Увеличивает счетчик строгую ссылку объекта WeakReference.|  
