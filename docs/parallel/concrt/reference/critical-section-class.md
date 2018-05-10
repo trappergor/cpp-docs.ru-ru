@@ -1,12 +1,9 @@
 ---
-title: "Класс critical_section | Документы Microsoft"
-ms.custom: 
+title: Класс critical_section | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>Класс critical_section
 Не допускающий повторные входы мьютекс, который явно учитывает среду выполнения с параллелизмом.  
@@ -48,26 +43,26 @@ class critical_section;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`native_handle_type`|Ссылка на объект `critical_section`.|  
   
 ### <a name="public-classes"></a>Открытые классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс critical_section::scoped_lock](#critical_section__scoped_lock_class)|Исключение безопасном программой-оболочкой RAII для `critical_section` объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Создает новый критический раздел.|  
 |[~ critical_section деструктор](#dtor)|Уничтожает критический раздел.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[lock](#lock)|Получает данную критическую секцию.|  
 |[native_handle](#native_handle)|Возвращает конкретный собственный дескриптор платформы, если он существует.|  
@@ -151,7 +146,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  Критической секции для блокировки.  
   
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
  Уничтожает `scoped_lock` объекта и освобождает критический раздел, переданную в конструкторе.  
   

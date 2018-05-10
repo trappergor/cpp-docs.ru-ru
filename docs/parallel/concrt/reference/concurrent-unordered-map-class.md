@@ -1,12 +1,9 @@
 ---
-title: "Класс concurrent_unordered_map | Документы Microsoft"
-ms.custom: 
+title: Класс concurrent_unordered_map | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 932cfe232b07a9020af450ad33bb34101827ac79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>Класс concurrent_unordered_map
 Класс `concurrent_unordered_map` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  
@@ -79,7 +74,7 @@ template <typename K,
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`allocator_type`|Тип распределителя для управления хранилищем.|  
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|  
@@ -100,13 +95,13 @@ template <typename K,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[concurrent_unordered_map](#ctor)|Перегружен. Создает параллельный неупорядоченном сопоставлении.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[at](#at)|Перегружен. Находит элемент в `concurrent_unordered_map` с заданным значением ключа... Данный метод безопасен в режиме параллелизма.|  
 |[hash_function](#hash_function)|Получает сохраненный объект хэш-функции.|  
@@ -117,9 +112,9 @@ template <typename K,
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator[]](#operator_at)|Перегружен. Находит или вставляет элемент с указанным ключом. Данный метод безопасен в режиме параллелизма.|  
+|[оператор]](#operator_at)|Перегружен. Находит или вставляет элемент с указанным ключом. Данный метод безопасен в режиме параллелизма.|  
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_map` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -133,7 +128,7 @@ template <typename K,
  `concurrent_unordered_map`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** concurrent_unordered_map.h  
+ **Заголовок:** concurrent_unordered_map.h  
   
  **Пространство имен:** concurrency  
   
@@ -566,7 +561,7 @@ size_type size() const;
 ### <a name="remarks"></a>Примечания  
  При наличии параллельных вставок число элементов в параллельном контейнере может измениться сразу после вызова этой функции даже до чтения возвращаемого значения.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Поменять местами 
 
  Меняет местами содержимое двух `concurrent_unordered_map` объектов. Этот метод не является безопасным в режиме параллелизма.  
   

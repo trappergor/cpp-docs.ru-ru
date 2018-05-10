@@ -1,13 +1,10 @@
 ---
-title: "Члены структур и объединений | Документы Майкрософт"
-ms.custom: 
+title: Члены структур и объединений | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-union-members"></a>Члены структур и объединений
 Выражение выбора члена ссылается на члены структур и объединений. Такое выражение имеет значение и тип выбранного члена.  
@@ -54,7 +49,7 @@ identifier
   
  Две формы выражений выбора члена оказывают аналогичное влияние.  
   
- Фактически выражение, включающее оператор выбора члена (**->**), — это сокращенная версия выражения, использующего точку (**.**), если выражение перед точкой включает оператор косвенного обращения (**\****), примененный к значению указателя. Поэтому  
+ Фактически выражение, включающее оператор выбора члена (**->**), — это сокращенная версия выражения, использующего точку (**.**), если выражение перед точкой включает оператор косвенного обращения (**\***), примененный к значению указателя. Поэтому  
   
 ```  
   
@@ -78,7 +73,7 @@ identifier
  если *expression* — значение указателя.  
   
 ## <a name="examples"></a>Примеры  
- Данное объявление структуры представлено в следующих примерах. Дополнительные сведения об операторе косвенного обращения (**\****), используемом в этих примерах, см. в разделе [Операторы косвенного обращения и определения адреса](../c-language/indirection-and-address-of-operators.md).  
+ Данное объявление структуры представлено в следующих примерах. Дополнительные сведения об операторе косвенного обращения (**\***), используемом в этих примерах, см. в разделе [Операторы косвенного обращения и определения адреса](../c-language/indirection-and-address-of-operators.md).  
   
 ```  
 struct pair   

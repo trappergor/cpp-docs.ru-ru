@@ -1,12 +1,9 @@
 ---
-title: "Класс Accelerator | Документы Microsoft"
-ms.custom: 
+title: Класс Accelerator | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 Ускоритель — возможность оборудования, оптимальна для работы с параллельными данными. Ускоритель возможно, устройство, подключенное к шине PCIe (GPU) или может быть инструкция расширенной задать для основного ЦП.  
@@ -74,14 +69,14 @@ class accelerator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор сочетаний клавиш](#ctor)|Инициализирует новый экземпляр класса `accelerator`.|  
 |[~ accelerator, деструктор](#ctor)|Уничтожает `accelerator` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[create_view](#create_view)|Создает и возвращает `accelerator_view` объект на этом сочетаний клавиш.|  
 |[get_all](#get_all)|Возвращает вектор `accelerator` объектов, представляющих доступные сочетания клавиш.|  
@@ -103,7 +98,7 @@ class accelerator;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор!=](#operator_neq)|Сравнивает этот `accelerator` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного `accelerator` этого объекта.|  
@@ -111,7 +106,7 @@ class accelerator;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[cpu_accelerator](#cpu_accelerator)|Получает строку константу для ЦП `accelerator`.|  
 |[dedicated_memory](#dedicated_memory)|Возвращает объем памяти, выделенной для `accelerator`, в килобайтах.|  

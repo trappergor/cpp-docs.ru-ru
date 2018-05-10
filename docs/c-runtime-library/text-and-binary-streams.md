@@ -1,30 +1,25 @@
 ---
-title: "Текстовые и двоичные потоки | Документация Майкрософт"
-ms.custom: 
+title: Текстовые и двоичные потоки | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-binary-streams"></a>Текстовые и двоичные потоки
 Текстовый поток состоит из одной или нескольких строк текста, которые можно вывести на ориентированный на текст дисплей, чтобы их можно было прочитать. При чтении из текстового потока программа считывает символ `NL` (новая строка) в конце каждой строки. При записи в текстовый поток программа записывает символ `NL` для обозначения конца строки. Для сопоставления различных соглашений о представлении текста в файлах в различных целевых средах библиотечные функции могут изменять количество и представление символов, передаваемых между программой и текстовым потоком.  

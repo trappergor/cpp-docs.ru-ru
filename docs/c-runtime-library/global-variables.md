@@ -1,13 +1,10 @@
 ---
-title: "Глобальные переменные | Документация Майкрософт"
-ms.custom: 
+title: Глобальные переменные | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.variables
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec44138379e3510f353f0fdd99f7a6a1905f9cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2da3dd07c7088bee4be750b764b4a467bfebeae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-variables"></a>Глобальные переменные
 Библиотека времени выполнения языка C (Майкрософт) обеспечивает следующие глобальные переменные или макросы. Многие из этих глобальных переменных или макросов были признаны нерекомендуемыми и заменены более надежными и безопасными функциональными версиями, которые мы рекомендуем использовать вместо них.  

@@ -1,29 +1,24 @@
 ---
-title: "Политики планировщика | Документы Microsoft"
-ms.custom: 
+title: Политики планировщика | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Политики планировщика
 В этом документе описывается роль политик планировщика в среде выполнения с параллелизмом. Объект *политики планировщика* определяет стратегию, которую планировщик применяет при управлении задачами. Например, рассмотрим приложение, которое требует выполнение некоторых задач с `THREAD_PRIORITY_NORMAL` и других задач с `THREAD_PRIORITY_HIGHEST`.  Можно создать два экземпляра планировщика: один задает политику `ContextPriority` как `THREAD_PRIORITY_NORMAL`, а второй определяет ту же политику как `THREAD_PRIORITY_HIGHEST`.  
@@ -41,14 +36,14 @@ ms.lasthandoff: 12/21/2017
 
  [Concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) перечисление определяет ключи политики, связанные с планировщиком задач. В следующей таблице описаны ключи политики и значение по умолчанию, используемые средой выполнения для каждого из них.  
   
-|Ключ политики|Описание:|Значение по умолчанию|  
+|Ключ политики|Описание|Значение по умолчанию|  
 |----------------|-----------------|-------------------|  
 |`SchedulerKind`|Объект [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) значение, указывающее тип потоков для планирования задач.|`ThreadScheduler` (используйте стандартные потоки). Это единственное допустимое значение для этого ключа.|  
 |`MaxConcurrency`|`unsigned int` Значение, указывающее максимальное количество ресурсов параллелизма, которые используются планировщиком.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|`unsigned int` Значение, указывающее минимальное количество ресурсов параллелизма, которые используются планировщиком.|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int` Значение, указывающее, сколько потоков необходимо выделить каждому ресурсу для обработки.|`1`|  
 |`LocalContextCacheSize`|`unsigned int` Значение, указывающее максимальное число контекстов, которые могут быть кэшированы в локальной очереди каждого виртуального процессора.|`8`|  
-|`ContextStackSize`|`unsigned int` Значение, указывающее размер стека, в килобайтах, необходимо зарезервировать для каждого контекста.|`0`(использовать размер стека по умолчанию)|  
+|`ContextStackSize`|`unsigned int` Значение, указывающее размер стека, в килобайтах, необходимо зарезервировать для каждого контекста.|`0` (использовать размер стека по умолчанию)|  
 |`ContextPriority`|`int` Значение, указывающее приоритет потока в каждом контексте. Это может быть любое значение, которое можно передать [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) или `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| Объект [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) значение, указывающее используемый алгоритм планирования. |`EnhanceScheduleGroupLocality`|  

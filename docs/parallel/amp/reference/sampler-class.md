@@ -1,12 +1,9 @@
 ---
-title: "Класс sampler | Документы Microsoft"
-ms.custom: 
+title: Класс sampler | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - sampler
@@ -21,17 +18,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa9b68d2369ff2a0ade4bb4cb122b2481d3cd4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4f9788b62385f7c6f5eb82e3fbc69d63d3120cc2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sampler-class"></a>Класс sampler
 Класс пробы агрегирует данные конфигурации выборки, используемый для дискретизации текстур.  
@@ -46,13 +41,13 @@ class sampler;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Образец конструктора](#ctor)|Перегружен. Создает экземпляр образца.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[get_address_mode](#get_address_mode)|Возвращает `address_mode` , связанную с объектом пробы.|  
 |[get_border_color](#get_border_color)|Возвращает цвет границы, связанный с объектом пробы.|  
@@ -60,13 +55,13 @@ class sampler;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[address_mode](#address_mode)|Возвращает режим адрес `sampler` объекта.|  
 |[border_color](#border_color)|Возвращает цвет границы `sampler` объекта.|  

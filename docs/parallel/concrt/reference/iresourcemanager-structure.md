@@ -1,12 +1,9 @@
 ---
-title: "Структура IResourceManager | Документы Microsoft"
-ms.custom: 
+title: Структура IResourceManager | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>Структура IResourceManager
 Интерфейс для диспетчера ресурсов среды выполнения с параллелизмом. Это интерфейс, по которому планировщики взаимодействуют с диспетчером ресурсов.  
@@ -48,13 +43,13 @@ struct IResourceManager;
   
 ### <a name="public-enumerations"></a>Открытые перечисления  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IResourceManager::OSVersion](#osversion)|Перечислимый тип, представляющий версию операционной системы.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IResourceManager::CreateNodeTopology](#createnodetopology)|Присутствует только в отладочной сборки среды выполнения, этот метод является тестового обработчика, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии без необходимости фактического оборудования, соответствующего конфигурации. Этот метод возвращает с коммерческие сборки среды выполнения, не выполняя никаких действий.|  
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Возвращает количество узлов, доступных диспетчеру ресурсов.|  
@@ -74,7 +69,7 @@ struct IResourceManager;
   
  **Пространство имен:** concurrency  
   
-##  <a name="createnodetopology"></a>  IResourceManager::CreateNodeTopology Method  
+##  <a name="createnodetopology"></a>  Метод IResourceManager::CreateNodeTopology  
  Присутствует только в отладочной сборки среды выполнения, этот метод является тестового обработчика, разработанный для упрощения тестирования диспетчера ресурсов на различные аппаратные топологии без необходимости фактического оборудования, соответствующего конфигурации. Этот метод возвращает с коммерческие сборки среды выполнения, не выполняя никаких действий.  
   
 ```
@@ -113,7 +108,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество узлов, доступных диспетчеру ресурсов.  
   
-##  <a name="getfirstnode"></a>  IResourceManager::GetFirstNode Method  
+##  <a name="getfirstnode"></a>  Метод IResourceManager::GetFirstNode  
  Возвращает первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
 ```
@@ -123,7 +118,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Первый узел в порядке перечисления, определенном диспетчером ресурсов.  
   
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
+##  <a name="iresourcemanager__osversion"></a>  Перечисление IResourceManager::OSVersion  
  Перечислимый тип, представляющий версию операционной системы.  
   
 ```

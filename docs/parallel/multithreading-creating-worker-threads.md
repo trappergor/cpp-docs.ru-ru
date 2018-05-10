@@ -1,13 +1,10 @@
 ---
-title: "Многопоточность: Создание рабочих потоков | Документы Microsoft"
-ms.custom: 
+title: 'Многопоточность: Создание рабочих потоков | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>Многопоточность. Создание рабочих потоков
 Рабочий поток обычно используется для обработки фоновых задач, которые пользователь не должен ожидать, чтобы продолжить работу с приложением. Хорошими примерами рабочих потоков могут быть задачи, такие как повторное вычисление и печати в фоновом режиме. В этом разделе подробно описываются действия, необходимые для создания рабочего потока. Ниже приведен список разделов.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Создание рабочего потока является относительно простой задачей. Для запуска потока требуются только два этапа: реализация функции управления и запуска этого потока. Нет необходимости наследовать класс от [CWinThread](../mfc/reference/cwinthread-class.md). Если вам требуется специальная версия, можно наследовать класс `CWinThread`, но не является обязательным для большинства простых рабочих потоков. Можно использовать `CWinThread` без изменений.  
   
-##  <a name="_core_starting_the_thread"></a>Запуск потока  
+##  <a name="_core_starting_the_thread"></a> Запуск потока  
  Существует две перегруженные версии `AfxBeginThread`:, можно создать только рабочих потоков и который может создаваться потоков пользовательского интерфейса и рабочие потоки. Чтобы начать выполнение рабочего потока с помощью первой перегрузки, вызовите [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), указав следующие сведения:  
   
 -   Адрес функции управления.  
@@ -57,9 +52,9 @@ ms.lasthandoff: 12/21/2017
   
 -   (Необязательно) Атрибуты требуемой безопасности. Значение по умолчанию — такой же доступ, как родительского потока. Дополнительные сведения о формате информации о безопасности см. в разделе [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- `AfxBeginThread`Создает и инициализирует `CWinThread` объекта, запускает его и возвращает его адрес, чтобы ссылаться на него позднее. Проверяет вносятся во всей процедуры, убедитесь, что все объекты, освобожденных должным образом вызывать любую часть создания.  
+ `AfxBeginThread` Создает и инициализирует `CWinThread` объекта, запускает его и возвращает его адрес, чтобы ссылаться на него позднее. Проверяет вносятся во всей процедуры, убедитесь, что все объекты, освобожденных должным образом вызывать любую часть создания.  
   
-##  <a name="_core_implementing_the_controlling_function"></a>Реализация функции управления  
+##  <a name="_core_implementing_the_controlling_function"></a> Реализация функции управления  
  Функция управления определяет поток. При вводе этой функции поток запускается, и при завершении работы, поток завершается. Эта функция должна иметь следующий прототип:  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  Существуют некоторые ограничения на действия в многопоточных программах, написанным с использованием библиотеки MFC. Описание этих ограничений, а также другие советы по использованию потоков см. в разделе [Многопоточность: советы про программированию](../parallel/multithreading-programming-tips.md).  
   
-##  <a name="_core_controlling_function_example"></a>Пример функции управления  
+##  <a name="_core_controlling_function_example"></a> Пример функции управления  
  В следующем примере показано, как определения функции управления и использовать его из другой части программы.  
   
 ```  

@@ -1,30 +1,25 @@
 ---
-title: "Битовые поля в C | Документация Майкрософт"
-ms.custom: 
+title: Битовые поля в C | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>Битовые поля в C
 Представлять собой заданное количество бит, т. е. "битовое поле", могут не только деклараторы для членов структуры или объединения, но и декларатор структуры. Указание его длины отделяется от декларатора имени поля двоеточием. Битовое поле интерпретируется как целочисленный тип.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
  *декларатор-структуры*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  Выражение *constant-expression* задает ширину поля в битах. *type-specifier* для `declarator` должен иметь тип `unsigned int`, **signed int** или `int`, а значение *constant-expression* должно быть неотрицательными и целочисленным. Если указано значение 0, то объявление не содержит `declarator`. Массивы битовых полей, указатели на битовые поля, а также функции, возвращающие битовые поля, не допускаются. Необязательный параметр `declarator` задает имя битового поля. Битовые поля могут объявляться только в рамках структуры. Оператор взятия адреса (**&**) не может применяться к компонентам битового поля.  
   

@@ -1,30 +1,25 @@
 ---
-title: "Создание асинхронных операций в C++ для приложений UWP | Документы Microsoft"
-ms.custom: 
+title: Создание асинхронных операций в C++ для приложений UWP | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений UWP
 В этом документе описываются некоторые ключевые аспекты, которые следует учитывать при использовании класса задачи для создания асинхронных операций на основе Windows ThreadPool в приложении универсальной среды выполнения Windows (UWP).  
@@ -68,13 +63,13 @@ ms.lasthandoff: 02/14/2018
  [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Представляет асинхронное действие.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation:: iasyncactionwithprogress\<TProgress >](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Представляет асинхронное действие, сообщающее о ходе выполнения.  
   
  [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Представляет асинхронную операцию, которая возвращает результат.  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation:: iasyncoperationwithprogress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Возвращает асинхронную операцию, которая возвращает результат и отчитывается о ходе выполнения.  
   
  Понятие *действие* означает, что асинхронная задача не создает значение (представьте функцию, которая возвращает `void`). Понятие *операция* означает, что асинхронная задача создает значение. Понятие *ход выполнения* означает, что задача может отправить сообщение о ходе выполнения вызывающему объекту. Языки JavaScript, .NET Framework и Visual C++ предоставляют свои собственные способы создания экземпляров таких интерфейсов для использования с переходом через границы ABI. Для Visual C++ PPL предоставляет функцию [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) . Эта функция создает асинхронное действие среды выполнения Windows или операцию, которая представляет завершение задачи. `create_async` Функция принимает рабочую функцию (обычно лямбда-выражение), внутренне создает `task` объекта и оборачивает задачу в одном из 4 асинхронных интерфейсов среды выполнения Windows.  
@@ -168,7 +163,7 @@ ms.lasthandoff: 02/14/2018
 
 >  Не вызывайте [concurrency::task::wait](reference/task-class.md#wait) в теле продолжения, выполняемого в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) так как этот метод блокирует текущий поток и может вызвать зависание приложения. Тем не менее можно вызвать метод [concurrency::task::get](reference/task-class.md#get) для получения результата из предшествующей задачи в потоке задач.  
   
-##  <a name="example-app">Пример: Управление выполнением в приложении среды выполнения Windows на C++ и XAML</a>  
+##  <a name="example-app"></a> Пример: Управление выполнением в приложении среды выполнения Windows на C++ и XAML  
  Рассмотрим приложение C++ XAML, которое считывает файл с диска, находит наиболее распространенные слова в этом файле, а затем отображает результаты в пользовательском интерфейсе. Чтобы создать приложение, начните работу в Visual Studio путем создания **пустое приложение (универсальные приложения Windows)** и назовите его `CommonWords`. В манифесте приложения укажите возможность **Библиотека документов** , которая позволяет приложению обращаться к папке "Документы". Также добавьте текстовый тип файла (TXT) в раздел объявлений манифеста приложения. Дополнительные сведения о возможностях и объявлениях приложения см. в разделе [Пакеты приложений и их развертывание](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Обновите элемент `Grid` в MainPage.xaml для включения элемента `ProgressRing` и элемента `TextBlock` . `ProgressRing` показывает, что операция выполняется, а `TextBlock` отображает результаты вычислений.  

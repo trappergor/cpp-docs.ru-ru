@@ -1,12 +1,9 @@
 ---
-title: "Класс Scheduler | Документы Microsoft"
-ms.custom: 
+title: Класс Scheduler | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Класс Scheduler
 Представляет абстракцию для планировщика среды выполнения с параллелизмом.  
@@ -55,17 +50,17 @@ class Scheduler;
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[Scheduler](#ctor)|Объект `Scheduler` класса можно создавать только с помощью методов фабрики или неявно.|  
+|[Планировщик](#ctor)|Объект `Scheduler` класса можно создавать только с помощью методов фабрики или неявно.|  
 |[~ Деструктор планировщика](#dtor)|Объект `Scheduler` при исчезают все внешние ссылки на него неявно уничтожения класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Attach](#attach)|Присоединяет планировщика в вызывающий контекст. После возврата этого метода, вызывающий контекст управляется планировщиком и планировщик становится текущим планировщиком.|  
-|[Create](#create)|Создает новый планировщик, поведение которой описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.|  
+|[Создание](#create)|Создает новый планировщик, поведение которой описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.|  
 |[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписания в планировщике. Версия, принимающая параметр `_Placement` случае задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика.|  
 |[GetPolicy](#getpolicy)|Возвращает копию политики, созданные с планировщиком.|  
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копия политики, созданные с планировщиком.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Идентификатор 
 
  Возвращает уникальный идентификатор для планировщика.  
   

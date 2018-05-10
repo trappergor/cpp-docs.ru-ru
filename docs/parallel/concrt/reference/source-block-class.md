@@ -1,12 +1,9 @@
 ---
-title: "Класс source_block | Документы Microsoft"
-ms.custom: 
+title: Класс source_block | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>Класс source_block
 Класс `source_block` — это абстрактный базовый класс только для блоков источника. Класс предоставляет основные функции управления соединениями, а также проверки распространенных ошибок.  
@@ -75,22 +70,22 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`target_iterator`|Итератор для прохода подключенных целевых объектов.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[source_block](#ctor)|Создает объект `source_block`.|  
 |[~ source_block деструктор](#dtor)|Уничтожает `source_block` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[accept](#accept)|Принимает сообщение, которое было предложено это `source_block` объекта, передавая владение вызывающему объекту.|  
+|[Принять](#accept)|Принимает сообщение, которое было предложено это `source_block` объекта, передавая владение вызывающему объекту.|  
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `source_block` объекта, чтобы предотвратить удаление.|  
 |[Использовать](#consume)|Получает сообщение было предложено это `source_block` объекта и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
 |[link_target](#link_target)|Ссылки на это целевой блок `source_block` объекта.|  
@@ -102,7 +97,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|При переопределении в производном классе, принимает сообщение, предложенное по источнику. Блоки сообщений должны переопределять этот метод для проверки `_MsgId` , а сообщение возвращается.|  
 |[async_send](#async_send)|Асинхронно ставит в очередь сообщения и запускает задачу распространения, если это еще не сделано|  
@@ -200,7 +195,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
  `_Msg`  
  Указатель на `message` объект для асинхронной передачи.  
   
-##  <a name="consume">Использовать</a> 
+##  <a name="consume"></a> Использовать 
 
  Получает сообщение было предложено это `source_block` объекта и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   

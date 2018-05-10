@@ -1,10 +1,7 @@
 ---
-title: "пространство имен Concurrency операторы | Документы Microsoft"
-ms.custom: 
+title: пространство имен Concurrency операторы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
@@ -12,17 +9,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-operators"></a>пространство имен Concurrency операторы
 ||||  
@@ -31,7 +26,7 @@ ms.lasthandoff: 02/23/2018
 |[operator&gt;=](#operator_gt_eq)|[оператор&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[оператор==](#operator_eq_eq)|[оператор||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>  оператор &#124; &#124; Оператор  
+##  <a name="operator_lor"></a>  оператор&#124; &#124; оператор  
  Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.  
   
 ```  

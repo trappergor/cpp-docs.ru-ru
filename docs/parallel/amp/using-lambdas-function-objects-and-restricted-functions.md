@@ -1,27 +1,22 @@
 ---
-title: "С помощью лямбда-выражений, объектов функций и ограниченных функций | Документы Microsoft"
-ms.custom: 
+title: С помощью лямбда-выражений, объектов функций и ограниченных функций | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Использование лямбда-выражений, объектов функций и ограниченных функций
 Код C++ AMP, который будет выполняться на сочетания клавиш заданное в качестве аргумента в вызове [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) метод. Лямбда-выражение или объект функции (функтор) можно предоставить в качестве этого аргумента. Кроме того лямбда-выражения выражение или объект функции может вызвать функцию ограничения C++ AMP. В этом разделе используется алгоритм Добавление массива для демонстрации лямбда-выражений, объектов функций и ограниченных функций. В следующем примере показано алгоритм без кода C++ AMP. Создаются два одномерные массивы одинаковой длины. Соответствующие элементы целое складываются и сохраняются в третьем одномерным массивом. C++ AMP не используется.  

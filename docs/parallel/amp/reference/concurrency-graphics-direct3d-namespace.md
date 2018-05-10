@@ -1,12 +1,9 @@
 ---
-title: "Пространство имен Concurrency::Graphics:: Direct3D | Документы Microsoft"
-ms.custom: 
+title: 'Пространство имен Concurrency::Graphics:: Direct3D | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 420a022412d5f66855f834d574f627fdbf7273fd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6835297ca3248fcae92d94d98ab5620f86b5ba58
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Пространство имен Concurrency::graphics::direct3d
 Предоставляет [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) и [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) методы.  
@@ -39,7 +34,7 @@ namespace direct3d;
   
 ### <a name="functions"></a>Функции  
   
-|Имя<br /><br /> Описание:|  
+|Имя<br /><br /> Описание|  
 |--------------------------|  
 |[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> Get интерфейс конечного образцом Direct3D для данного сочетания клавиш просмотра, представляющий указанный образец объекта.|  
 |[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> Возвращает указанный базовый интерфейс текстуры Direct3D [текстуры](texture-class.md) объекта.|  
@@ -50,7 +45,7 @@ namespace direct3d;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_graphics.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

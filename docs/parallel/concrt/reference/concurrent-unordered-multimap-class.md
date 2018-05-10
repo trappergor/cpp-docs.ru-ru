@@ -1,12 +1,9 @@
 ---
-title: "Класс concurrent_unordered_multimap | Документы Microsoft"
-ms.custom: 
+title: Класс concurrent_unordered_multimap | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multimap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb958123ddae320b9cc3803a7b453d2ce10e433
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7bfbbc3b9127d8d6c8b66e7a0c1ceb10d1dffa14
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Класс concurrent_unordered_multimap
 Класс `concurrent_unordered_multimap` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  
@@ -78,7 +73,7 @@ template <typename K,
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`allocator_type`|Тип распределителя для управления хранилищем.|  
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|  
@@ -99,13 +94,13 @@ template <typename K,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[concurrent_unordered_multimap](#ctor)|Перегружен. Создает параллельное неупорядоченное мультисопоставление.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|  
 |[insert](#insert)|Перегружен. Добавляет элементы к `concurrent_unordered_multimap` объекта.|  
@@ -115,7 +110,7 @@ template <typename K,
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_multimap` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
@@ -130,7 +125,7 @@ template <typename K,
  `concurrent_unordered_multimap`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** concurrent_unordered_map.h  
+ **Заголовок:** concurrent_unordered_map.h  
   
  **Пространство имен:** concurrency  
   
@@ -515,7 +510,7 @@ size_type size() const;
 ### <a name="remarks"></a>Примечания  
  При наличии параллельных вставок число элементов в параллельном контейнере может измениться сразу после вызова этой функции даже до чтения возвращаемого значения.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Поменять местами 
 
  Меняет местами содержимое двух `concurrent_unordered_multimap` объектов. Этот метод не является безопасным в режиме параллелизма.  
   

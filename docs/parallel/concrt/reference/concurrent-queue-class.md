@@ -1,12 +1,9 @@
 ---
-title: "Класс concurrent_queue | Документы Microsoft"
-ms.custom: 
+title: Класс concurrent_queue | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_queue
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentqueue-class"></a>Класс concurrent_queue
 Класс `concurrent_queue` представляет собой класс контейнера последовательности, обеспечивающий доступ к элементам в порядке поступления. Он позволяет использовать ограниченный набор параллельно-безопасных операций, таких как `push` и `try_pop`.  
@@ -58,7 +53,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди.|  
 |`const_iterator`|Тип, который представляет не потокобезопасный `const` итератор элементы в параллельной очереди.|  
@@ -71,14 +66,14 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|Перегружен. Создает параллельную очередь.|  
-|[~concurrent_queue Destructor](#dtor)|Уничтожает параллельной очереди.|  
+|[~ concurrent_queue деструктор](#dtor)|Уничтожает параллельной очереди.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[clear](#clear)|Очищает параллельную очередь, уничтожая все в данный момент элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|  
 |[empty](#empty)|Определяет, верно ли параллельная очередь пуста в данный момент этот метод вызывается. Данный метод безопасен в режиме параллелизма.|  

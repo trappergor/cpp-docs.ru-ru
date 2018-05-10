@@ -1,12 +1,9 @@
 ---
-title: "Класс Texture | Документы Microsoft"
-ms.custom: 
+title: Класс Texture | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture
@@ -26,17 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b16e449f3def7b4b86932e9806fa78d422466978
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="texture-class"></a>Класс texture
 Текстура — на статистических данных `accelerator_view` в домене экстента. Представляет коллекцию переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее тип-примитив C++ ( `unsigned int`, `int`, `float`, `double`), скалярный тип ( `norm`, или `unorm`), или тип короткого вектора.  
@@ -59,21 +54,21 @@ class texture;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`scalar_type`|Скалярные типы.|  
 |`value_type`|Типы значений.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор текстуры](#ctor)|Инициализирует новый экземпляр класса `texture`.|  
 |[~ texture деструктор](#ctor)|Уничтожает `texture` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Копирует `texture` объект в место назначения, выполняя глубокой копией.|  
 |[data](#data)|Возвращает необработанные данные текстуры, этот указатель ЦП.|  
@@ -85,21 +80,21 @@ class texture;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
-|[operator[]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
+|[Operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
+|[оператор]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
 |[оператор=](#operator_eq)|Копирует указанный [текстуры](texture-class.md) этого объекта.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Возвращает ранг `texture` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[associated_accelerator_view](#associated_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) именно предпочитаемую целевую этот текстуры для копирования.|  
 |[depth_pitch](#depth_pitch)|Возвращает число байтов между каждый срез глубины 3D промежуточной текстуры на ЦП.|  
@@ -113,7 +108,7 @@ class texture;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_graphics.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ##  <a name="dtor"></a> ~ текстуры 
 

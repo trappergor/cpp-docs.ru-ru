@@ -1,12 +1,9 @@
 ---
-title: "Класс Call | Документы Microsoft"
-ms.custom: 
+title: Класс Call | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - call
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="call-class"></a>Класс call
 Блок обмена сообщениями `call` — это упорядоченный блок `target_block` с несколькими источниками, который вызывает заданную функцию при получении сообщения.  
@@ -55,14 +50,14 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[call](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
+|[Вызов](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Выполняет функцию вызвать для входящих сообщений.|  
 |[process_message](#process_message)|Обрабатывает сообщение, которое было принято данным `call` блока обмена сообщениями.|  

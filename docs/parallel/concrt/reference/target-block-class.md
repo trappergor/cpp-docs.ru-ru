@@ -1,12 +1,9 @@
 ---
-title: "Класс target_block | Документы Microsoft"
-ms.custom: 
+title: Класс target_block | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - target_block
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 754bc6add99974ff204c977e47f35486cc830d95
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="targetblock-class"></a>Класс target_block
 Класс `target_block` — это абстрактный базовый класс, который предоставляет основные функции управления соединениями и проверку ошибок только для целевых блоков.  
@@ -67,27 +62,27 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`source_iterator`|Тип итератора для `source_link_manager` для этого `target_block` объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[target_block](#ctor)|Создает объект `target_block`.|  
-|[~target_block Destructor](#dtor)|Уничтожает `target_block` объекта.|  
+|[~ target_block деструктор](#dtor)|Уничтожает `target_block` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[распространение](#propagate)|Асинхронно передает сообщение из исходного блока данному целевому блоку.|  
 |[send](#send)|Для этого целевого блока синхронно передает сообщение из исходного блока.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[async_send](#async_send)|Асинхронно отправляет сообщение для обработки.|  
 |[decline_incoming_messages](#decline_incoming_messages)|Указывает блоку, что новые сообщения должны быть отклонены.|  
@@ -197,7 +192,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 virtual void process_message(message<_Source_type> *);
 ```  
   
-##  <a name="propagate">распространение</a> 
+##  <a name="propagate"></a> распространение 
 
  Асинхронно передает сообщение из исходного блока данному целевому блоку.  
   
@@ -326,7 +321,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```  
   
-##  <a name="dtor"></a> ~target_block 
+##  <a name="dtor"></a> ~ target_block 
 
  Уничтожает `target_block` объекта.  
   

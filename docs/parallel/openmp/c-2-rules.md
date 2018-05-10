@@ -1,32 +1,27 @@
 ---
-title: "C.2 правила | Документы Microsoft"
-ms.custom: 
+title: C.2 правила | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 Правила
 Нотация описан в разделе 6.1 стандарта C. В этом приложении грамматики показывает расширения Грамматика базовый язык для директивы OpenMP C и C++.  
   
- **/\*в C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* в C++ (ISO/IEC 14882:1998) \*/**  
   
  *оператор объявления*:  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  *оператор объявления openmp директива*  
   
- **/\*в C90 (ISO/IEC 9899: 1990)\*/**  
+ **/\* в C90 (ISO/IEC 9899: 1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  *список операторов openmp директива*  
   
- **/\*в C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* в C99 (ISO/IEC 9899: 1999) \*/**  
   
  *элемент блока*:  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *statement*:  
   
- **/\*стандартные инструкции\*/**  
+ **/\* стандартные инструкции \*/**  
   
  *Конструкция OpenMP*  
   
@@ -274,7 +269,7 @@ ms.lasthandoff: 12/21/2017
   
  *объявление*:  
   
- **/\*Стандартная объявления\*/**  
+ **/\* Стандартная объявления \*/**  
   
  *Директива threadprivate*  
   
@@ -304,9 +299,9 @@ ms.lasthandoff: 12/21/2017
   
  *оператором редукции*:  
   
- *Один из*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *Один из*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*в языке C\*/**  
+ **/\* в языке C \*/**  
   
  *Список переменной*:  
   
@@ -314,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  *Список переменной* **,** *идентификатор*  
   
- **/\*в C++\*/**  
+ **/\* в C++ \*/**  
   
  *Список переменной*:  
   

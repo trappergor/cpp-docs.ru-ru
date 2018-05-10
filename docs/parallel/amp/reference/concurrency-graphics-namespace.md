@@ -1,29 +1,24 @@
 ---
-title: "Пространство имен Concurrency::Graphics | Документы Microsoft"
-ms.custom: 
+title: Пространство имен Concurrency::Graphics | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2da450ca30ee780f0e493f0b120de33a939a4cd7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Пространство имен Concurrency::graphics
 Пространство имен графики предоставляет типы и функции, которые предназначены для программирования графики.  
@@ -38,26 +33,26 @@ namespace graphics;
   
 ### <a name="namespaces"></a>Пространства имен  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Пространство имен Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Предоставляет функции для взаимодействия Direct3D.|  
   
 ### <a name="typedefs"></a>Определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`uint`|Тип элемента для [класс uint_2](uint-2-class.md), [класс uint_3](uint-3-class.md), и [класс uint_4](uint-4-class.md). Определенная как `typedef unsigned int uint;`.|  
   
 ### <a name="enumerations"></a>Перечисления  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
-|[address_mode Enumeration](concurrency-graphics-namespace-enums.md#address_mode).|Указывает адрес режимов, поддерживаемых для дискретизации текстур.|  
-|[filter_mode Enumeration](concurrency-graphics-namespace-enums.md#filter_mode)|Указывает режимы фильтрации, поддерживаемые для дискретизации текстур.|  
+|[Перечисление address_mode](concurrency-graphics-namespace-enums.md#address_mode).|Указывает адрес режимов, поддерживаемых для дискретизации текстур.|  
+|[Перечисление filter_mode](concurrency-graphics-namespace-enums.md#filter_mode)|Указывает режимы фильтрации, поддерживаемые для дискретизации текстур.|  
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс texture](texture-class.md)|Текстуры является выражением на accelerator_view в домене экстентов данных. Представляет коллекцию переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее тип-примитив C++ (unsigned int, int, с плавающей запятой) или норму скалярный тип или unorm (определенная в concurrency::graphics) или типы соответствующих короткого вектора, определенных в concurrency::graphics.|  
 |[Класс writeonly_texture_view](writeonly-texture-view-class.md)|Writeonly_texture_view предоставляет доступ writeonly до текстуры.|  
@@ -86,7 +81,7 @@ namespace graphics;
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Перегружен. Копирует содержимое исходного текстуры в узла буфера назначения.|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Перегружен. Асинхронно копирует содержимое исходного текстуры в узла буфера назначения.|  

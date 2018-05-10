@@ -1,27 +1,22 @@
 ---
-title: "Пошаговое руководство: Умножение матриц | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Умножение матриц | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Пошаговое руководство. Умножение матриц
 Это пошаговое руководство демонстрирует использование C++ AMP для ускорения выполнения умножение матриц. Без заполнения и полноразмерных мозаичное заполнение представлены два алгоритма.  
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="multiplication-without-tiling"></a>Умножение без заполнения  
  В этом разделе рассмотрим умножения двух матриц, А и Б, который определяется следующим образом:  
   
- ![3 &#45; &#45; 2 матрицы](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;по&#45;2 матрицы](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; &#45; 3 матрицы](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;по&#45;3 матрицы](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  Представляет матрицу 3 x 2, а B — матрицы 2 x 3. Результат умножения A, B является следующая матрица 3 x 3. Продукт вычисляется путем умножения строки A по столбцам B поэлементно.  
   
- ![3 &#45; &#45; 3 матрицы](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;по&#45;3 матрицы](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>Для умножения без использования C++ AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  Чтобы воспользоваться преимуществами мозаичное заполнение в умножение матриц, алгоритм необходимо секционировать матрицы на плитки, а затем скопировать данные плитки в `tile_static` переменные для более быстрого доступа. В этом примере матрицы секционируются на submatrices одинакового размера. Путем умножения submatrices найден продукт. Две матрицы и их продукции в этом примере являются:  
   
- ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;по&#45;4 матрицы](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;по&#45;4 матрицы](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;по&#45;4 матрицы](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  Матрицы разделенная на матрицы четыре 2 x 2, которые определены следующим образом:  
   
- ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;по&#45;Матрица 4, разделенная на 2&#45;по&#45;2 sub&#45;матрицы](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;по&#45;Матрица 4, разделенная на 2&#45;по&#45;2 sub&#45;матрицы](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  Продукт A и B теперь могут быть написаны и вычисляется следующим образом:  
   
- ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;по&#45;Матрица 4, разделенная на 2&#45;по&#45;2 sub&#45;матрицы](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  Поскольку матрицы `a` через `h` являются матрицы 2 x 2, все эти продукты и суммы из них — матрицы 2 x 2. Также следует, что A * B является матрицу 4 x 4 должным образом. Чтобы быстро проверить алгоритм, вычислите значение элемента в первой строке и первом столбце в пределах продукта. В примере, который будет иметь значение элемента в первой строке и первом столбце `ae + bg`. Имеется только для вычисления первого столбца, первая строка `ae` и `bg` для каждого термина. Это значение для `ae` — `1*1 + 2*5 = 11`. Значение для `bg` — `3*1 + 4*5 = 23`. Получается значение `11 + 23 = 34`, которое является верным.  
   

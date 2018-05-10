@@ -1,10 +1,7 @@
 ---
-title: "перечисления пространство имен Concurrency | Документы Microsoft"
-ms.custom: 
+title: перечисления пространство имен Concurrency | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>перечисления имен параллелизма
 ||||  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>  agent_status Enumeration  
+##  <a name="agent_status"></a>  Перечисление agent_status  
  Допустимые состояния для объекта `agent`.  
   
 ```
@@ -48,7 +43,7 @@ enum agent_status;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`agent_canceled`|Объект `agent` отменен.|  
 |`agent_created`|`agent` Был создан, но не запущена.|  
@@ -62,7 +57,7 @@ enum agent_status;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
+##  <a name="agents_eventtype"></a>  Перечисление Agents_EventType  
  Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.  
   
 ```
@@ -71,7 +66,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`AGENTS_EVENT_CREATE`|Тип события, который представляет создание объекта|  
 |`AGENTS_EVENT_DESTROY`|Тип события, который представляет удаление объекта|  
@@ -85,7 +80,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
+##  <a name="concrt_eventtype"></a>  Перечисление ConcRT_EventType  
  Типы событий, которые можно отслеживать с помощью функций трассировки, обеспечиваемых средой выполнения с параллелизмом.  
   
 ```
@@ -93,7 +88,7 @@ enum ConcRT_EventType;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CONCRT_EVENT_ATTACH`|Тип события, который представляет акт присоединение к планировщику.|  
 |`CONCRT_EVENT_BLOCK`|Тип события, который представляет акт блокировки контекста.|  
@@ -108,7 +103,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h **пространство имен:** параллелизма
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Перечисление Concrt_TraceFlags  
  Флажки трассировки для типов событий  
   
 ```
@@ -116,7 +111,7 @@ enum Concrt_TraceFlags;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`AgentEventFlag`||  
 |`AllEventsFlag`||  
@@ -129,7 +124,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  Перечисление CriticalRegionType  
  Тип критической области, внутри которой находится контекст.  
   
 ```
@@ -137,7 +132,7 @@ enum CriticalRegionType;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`InsideCriticalRegion`|Указывает, что контекст внутри критической области. Внутри критической области, асинхронные приостановки скрыты от планировщика. Такая приостановка произойдет, диспетчер ресурсов будет ожидать к запуску и просто возобновите ее вместо повторного вызова планировщика потока. Все блокировки, сделанные внутри такой области должна быть получена с особой осторожностью.|  
 |`InsideHyperCriticalRegion`|Указывает, что контекст внутри hyper критической области. При использовании внутри hyper критической области, синхронные и асинхронные приостановки скрыты от планировщика. Такая приостановка или блокировки происходит, диспетчер ресурсов будет ожидать к запуску и просто возобновите ее вместо повторного вызова планировщика потока. Блокировки, сделанные внутри такой области никогда не должен использоваться совместно с кодом, выполняемым за пределами такой области. Это приведет к непредсказуемым взаимоблокировки.|  
@@ -146,7 +141,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
+##  <a name="dynamicprogressfeedbacktype"></a>  Перечисление DynamicProgressFeedbackType  
  Используется политикой `DynamicProgressFeedback` для описания того, будет ли к ресурсам планировщика применена повторная балансировка в соответствии со статистическими данными, полученными из планировщика, или только на основе перехода виртуальных процессоров в состояние бездействия и из него через вызовы методов `Activate` и `Deactivate` для интерфейса `IVirtualProcessorRoot`. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -154,11 +149,11 @@ enum DynamicProgressFeedbackType;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|Планировщик не выполняет сбор сведений о ходе выполнения. Перераспределения выполняется на основе исключительно на уровень подписки базовой аппаратный поток. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Это значение зарезервировано для использования средой выполнения.|  
 |`ProgressFeedbackEnabled`|Планировщик собирает сведения о ходе выполнения и передает его в диспетчер ресурсов. Диспетчер ресурсов будет использовать эти статистические данные для балансирования ресурсов от имени планировщика в дополнение к уровень подписки базовой аппаратный поток. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|  
-##  <a name="join_type"></a>  join_type Enumeration  
+##  <a name="join_type"></a>  Перечисление join_type  
  Тип блока обмена сообщениями `join`.  
   
 ```
@@ -166,7 +161,7 @@ enum join_type;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`greedy`|Жадное `join` блоки обмена сообщениями немедленно принимают сообщение после распространения. Это более эффективно, но имеет возможность live блокировки, в зависимости от конфигурации сети.|  
 |`non_greedy`|Нежадный `join` отложенных сообщений и попробуйте и использовать их, когда все поступили блоки обмена сообщениями. Они гарантированно будут работать, но медленнее.|  
@@ -174,7 +169,7 @@ enum join_type;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** agents.h  
 
-##  <a name="message_status"></a>  message_status Enumeration  
+##  <a name="message_status"></a>  Перечисление message_status  
  Допустимые ответы на предложение объекта `message` блоку.  
   
 ```
@@ -182,7 +177,7 @@ enum message_status;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`accepted`|Целевой объект принял сообщение.|  
 |`declined`|Целевой объект не приняла сообщение.|  
@@ -192,7 +187,7 @@ enum message_status;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** agents.h  
 
-##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
+##  <a name="policyelementkey"></a>  Перечисление PolicyElementKey  
  Ключи политики, описывающие аспекты поведения планировщика. Каждый элемент политики описан с помощью пары «ключ — значение». Дополнительные сведения о политиках планировщика и их влиянии на планировщики см. в разделе [планировщик](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
 ```
@@ -200,7 +195,7 @@ enum PolicyElementKey;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`ContextPriority`|Приоритет потоков операционной системы каждого контекста в планировщике. Если этот ключ присвоено значение `INHERIT_THREAD_PRIORITY` контекстов в планировщике наследуют приоритет потока, который создал планировщик.<br /><br /> Допустимые значения: любые допустимые значения для Windows `SetThreadPriority` функции и специальное значение `INHERIT_THREAD_PRIORITY`<br /><br /> Значение по умолчанию: `THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|Размер зарезервированного стека для каждого контекста в планировщике в килобайтах.<br /><br /> Допустимые значения: положительные целые числа<br /><br /> Значение по умолчанию: `0`, указывающее, использовать процесса по умолчанию размер стека.|  
@@ -226,7 +221,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`ThreadScheduler`|Указывает явного запроса регулярных потоков Win32.|  
 |`UmsThreadDefault`|Планируемые потоки в режиме пользователя (UMS) не поддерживаются в среде выполнения с параллелизмом в Visual Studio 2013. Использование `UmsThreadDefault` в качестве значения для политики `SchedulerType` не приведет к ошибке. Однако, планировщик, созданный с помощью этой политики, по умолчанию будет настроен на использование потоков Win32.|  
@@ -234,7 +229,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>Требования  
  **Заголовок:** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
+##  <a name="schedulingprotocoltype"></a>  Перечисление SchedulingProtocolType  
  Используется политикой `SchedulingProtocol` для описания того, какой алгоритм планирования будет использоваться для планировщика. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md).  
   
 ```
@@ -242,7 +237,7 @@ enum SchedulingProtocolType;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`EnhanceForwardProgress`|Планировщик предпочитает циклический перебор по группам расписаний после выполнения каждой задачи. Разблокированные контексты обычно планируются образом первым пришел первым вышел (FIFO). Виртуальные процессоры не кэшируют разблокированные контексты.|  
 |`EnhanceScheduleGroupLocality`|Планировщик предпочитает продолжать работать над задачами в пределах текущей группы расписаний перед перемещением в другую группу расписания. Разблокированные контексты кэшируются на виртуальный процессор и обычно планируются образом (LIFO) последним пришел первым вышел виртуального процессора, что их разблокирован.|  
@@ -258,7 +253,7 @@ enum SwitchingProxyState;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`Blocking`|Указывает, что вызывающий поток блокируется и должны исключительно принадлежать вызывающим до повторного запуска впоследствии и выполнения других действий.|  
 |`Idle`|Указывает, что вызывающий поток больше не нужен планировщику и возвращается к диспетчеру ресурсов. Контекст, который был отправлен больше не может использоваться диспетчером ресурсов.|  
@@ -269,7 +264,7 @@ enum SwitchingProxyState;
   
  Дополнительные сведения об использовании этого типа см. в разделе [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto).  
   
-##  <a name="task_group_status"></a>  task_group_status Enumeration  
+##  <a name="task_group_status"></a>  Перечисление task_group_status  
  Описывает состояние выполнения объекта `task_group` или `structured_task_group`. Значение этого типа возвращается многочисленными методами, которые ожидают выполнения задач, запланированных для завершения группой задач.  
   
 ```
@@ -277,7 +272,7 @@ enum task_group_status;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`canceled`|Объект `task_group` или `structured_task_group` отменен. Одна или несколько задач, возможно, не были выполнены.|  
 |`completed`|Задачи, поставленные в очередь объекта `task_group` или `structured_task_group`, завершены успешно.|  
@@ -294,7 +289,7 @@ enum WinRTInitializationType;
 ```  
 ### <a name="values"></a>Значения  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`DoNotInitializeWinRT`|Когда приложение выполняется в операционной системе Windows версии 8 и выше, потоки в планировщике не инициализируют среду выполнения Windows.|  
 |`InitializeWinRTAsMTA`|Когда приложение выполняется в операционной системе Windows версии 8 или выше, каждый поток в планировщике инициализирует среду выполнения Windows и объявляет, что это часть многопотокового подразделения.|  

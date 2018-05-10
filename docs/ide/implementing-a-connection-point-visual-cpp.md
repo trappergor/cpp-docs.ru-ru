@@ -1,30 +1,25 @@
 ---
-title: "Реализация точки подключения (Visual C++) | Документы Microsoft"
-ms.custom: 
+title: Реализация точки подключения (Visual C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 - connection points [C++], implementing
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab065c78d8ea5d2de105abdc2fa651e05f9d1875
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>Реализация точки подключения (Visual C++)
 Чтобы реализовать точку подключения с помощью мастера реализации точек подключения, необходимо создан проект как COM-приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  

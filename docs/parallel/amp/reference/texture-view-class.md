@@ -1,12 +1,9 @@
 ---
-title: "Класс texture_view | Документы Microsoft"
-ms.custom: 
+title: Класс texture_view | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>Класс texture_view
 Предоставляет доступ на чтение и запись для текстуры. `texture_view` может использоваться только для чтения текстуры, тип которого значение является `int`, `unsigned int`, или `float` , имеющие bpse 32-разрядных по умолчанию. Для чтения других форматов текстур, используйте `texture_view<const value_type, _Rank>`.  
@@ -64,7 +59,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`value_type`|Тип элементов в статистических выражениях текстуры.|  
 |`coordinates_type`|Тип координат, используется для указания текселя в `texture_view`— то есть `short_vector` , имеет тот же ранг, как связанные текстуры, которая имеет тип значения `float`.|  
@@ -72,14 +67,14 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор texture_view](#ctor)|Перегружен. Создает `texture_view` экземпляра.|  
 |[~ texture_view деструктор](#ctor)|Уничтожает `texture_view` экземпляра.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[gather_alpha](#gather_alpha)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре выборки текселя компоненты альфа (w).|  
 |[gather_blue](#gather_blue)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре выборки текселя компоненты синего цвета (z).|  
@@ -91,15 +86,15 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Перегружен. Возвращает значение элемента по индексу.|  
-|[operator[]](#operator_at)|Перегружен. Возвращает значение элемента по индексу.|  
+|[Operator()](#operator_call)|Перегружен. Возвращает значение элемента по индексу.|  
+|[оператор]](#operator_at)|Перегружен. Возвращает значение элемента по индексу.|  
 |[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[value_type](#value_type)|Тип значения элементов `texture_view`.|  
   
@@ -440,7 +435,7 @@ value_type operator() (
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение элемента с индексом `_Index`.  
   
-##  <a name="sample">Пример</a> 
+##  <a name="sample"></a> Пример 
 
  Образцы текстуру по указанным координатам и уровень детализации с помощью выборки указанной конфигурации.  
   

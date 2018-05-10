@@ -1,12 +1,9 @@
 ---
-title: "Класс cancellation_token_registration | Документы Microsoft"
-ms.custom: 
+title: Класс cancellation_token_registration | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_registration
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7c609c3a76e94029bd9004cf6322bae4f08d27b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fe11e2697734d06988f4cbcfce48f38cf02c32b7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokenregistration-class"></a>Класс cancellation_token_registration
 Класс `cancellation_token_registration` представляет уведомление обратного вызова из `cancellation_token`. При использовании метода `register` на `cancellation_token` для получения уведомления о времени выполнения отмены объект `cancellation_token_registration` возвращается как дескриптор для обратного вызова, чтобы вызывающий код мог запросить, чтобы определенный обратный вызов больше не выполнялся с помощью метода `deregister`.  
@@ -42,14 +37,14 @@ class cancellation_token_registration;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[cancellation_token_registration](#ctor)||  
-|[~cancellation_token_registration Destructor](#dtor)||  
+|[~ cancellation_token_registration деструктор](#dtor)||  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор!=](#operator_neq)||  
 |[оператор=](#operator_eq)||  
@@ -59,11 +54,11 @@ class cancellation_token_registration;
  `cancellation_token_registration`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** pplcancellation_token.h  
+ **Заголовок:** pplcancellation_token.h  
   
  **Пространство имен:** concurrency  
   
-##  <a name="dtor"></a> ~cancellation_token_registration 
+##  <a name="dtor"></a> ~ cancellation_token_registration 
 
 ```
 ~cancellation_token_registration();

@@ -1,13 +1,10 @@
 ---
-title: "Отмена в PPL | Документы Microsoft"
-ms.custom: 
+title: Отмена в PPL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 В этом документе рассматривается роль отмены в библиотеке параллельных шаблонов (PPL), а также объясняется, как отменить параллельную работу и как определить, что параллельная работа отменена.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-##  <a name="top"></a>В этом документе  
+##  <a name="top"></a> В этом документе  
   
 - [Деревья параллельной работы](#trees)  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Когда не следует использовать отмену](#when)  
   
-##  <a name="trees"></a>Деревья параллельной работы  
+##  <a name="trees"></a> Деревья параллельной работы  
  В PPL для управления детализированными задачами и вычислениями используются задачи и группы задач. Можно вкладывать группы задач для формирования *деревьев* параллельной работы. На следующем рисунке показано дерево параллельной работы. На этом рисунке `tg1` и `tg2` представляют группы задач; `t1`, `t2`, `t3`, `t4` и `t5` представляют работы, которые выполняют группы задач.  
   
  ![Дерево параллельной работы](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,14 +77,14 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="tasks"></a>Отмена параллельных задач  
+##  <a name="tasks"></a> Отмена параллельных задач  
 
  Существует несколько способов отмены параллельной работы. Предпочтительный способ — использование токена отмены. Группы задач также поддерживают [Concurrency::task_group:: Cancel](reference/task-group-class.md#cancel) метод и [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) метод. Еще один способ — создать исключение в теле рабочей функции задачи. Какой бы метод вы ни выбрали, нужно понимать, что отмена не происходит немедленно. Хотя новая работа не запускается, если задача или группа задач отменяются, выполняющаяся работа должна выполнить проверку и отреагировать на отмену.  
 
   
  Дополнительные примеры отмены параллельных задач см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [как: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), и [как: использование Обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
-###  <a name="tokens"></a>Использование токена отмены для отмены параллельной работы  
+###  <a name="tokens"></a> Использование токена отмены для отмены параллельной работы  
  Классы `task`, `task_group` и `structured_task_group` поддерживают отмену посредством использования токенов отмены. Библиотека PPL определяет [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) и [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) классы для этой цели. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Можно использовать уже active [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) функции-члена для наблюдения за токен отмены и остановитесь, когда это возможно.  
   
 
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="cancellation-tokens-and-task-composition"></a>Токены отмены и композиция задач  
 
- [Параллелизма:: HYPERLINK «http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx» when_all](reference/concurrency-namespace-functions.md#when_all) и [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) функции помогают объединять несколько задач для реализации общих шаблонов. В этом разделе описывается, как эти функции работают с токенами отмены.  
+ [Параллелизма:: гиперссылка «http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx» when_all](reference/concurrency-namespace-functions.md#when_all) и [concurrency::when_any](reference/concurrency-namespace-functions.md#when_all) функции помогают объединять несколько задач для реализации общих шаблонов. В этом разделе описывается, как эти функции работают с токенами отмены.  
   
  Если предоставляется токен отмены для любой из функций `when_all` и `when_any`, эта функция отменяется, только если отменяется этот токен отмены, или одна из участвующих задач заканчивается в отмененном состоянии или создает исключение.  
   
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-###  <a name="cancel"></a>Использование метода cancel для отмены параллельной работы  
+###  <a name="cancel"></a> Использование метода cancel для отмены параллельной работы  
 
  [Concurrency::task_group:: Cancel](reference/task-group-class.md#cancel) и [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) методы задают для группы задач отмененное состояние. После вызова метода `cancel` группа задач не начинает выполнение следующих задач. Методы `cancel` могут вызываться несколькими дочерними задачами. Отмененная задача заставляет [Concurrency::task_group:: wait](reference/task-group-class.md#wait) и [Concurrency::structured_task_group:: wait](reference/structured-task-group-class.md#wait) методы для возврата [concurrency::canceled](reference/concurrency-namespace-enums.md#task_group_status).  
 
@@ -200,7 +195,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-###  <a name="exceptions"></a>Использование исключений для отмены параллельной работы  
+###  <a name="exceptions"></a> Использование исключений для отмены параллельной работы  
  Использование токенов отмены и метода `cancel` более эффективно, чем обработка исключений при отмене дерева параллельной работы. Токены отмены и метод `cancel` отменяют задачу и все дочерние задачи сверху вниз. Механизм обработки исключений, напротив, работает в режиме «снизу вверх», и каждую дочернюю группу задач приходится отменять независимо, поскольку исключение распространяется вверх. Раздел [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md) описывается, как среда выполнения с параллелизмом использует исключения для сообщения об ошибках. Однако не все исключения указывают на ошибку. Например, алгоритм поиска может отменить связанную задачу при нахождении результата. Тем не менее, как упоминалось ранее, обработка исключений менее эффективна, чем использование метода `cancel` для отмены параллельной работы.  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="algorithms"></a>Отмена параллельных алгоритмов  
+##  <a name="algorithms"></a> Отмена параллельных алгоритмов  
  Параллельные алгоритмы в PPL (например, `parallel_for`) основаны на группах задач. Таким образом, многие из тех же способов можно использовать для для отмены параллельного алгоритма.  
   
  Следующие примеры иллюстрируют несколько способов отмены параллельного алгоритма.  
@@ -258,14 +253,14 @@ Caught 50
   
  [[В начало](#top)]  
   
-##  <a name="when"></a>Когда не следует использовать отмену  
+##  <a name="when"></a> Когда не следует использовать отмену  
  Использование отмены подходит в тех случаях, когда каждый член группы связанных задач может выполнить выход своевременно. Однако существуют некоторые сценарии, в которых отмена может не подойти для вашего приложения. Например, поскольку отмена задач осуществляется совместно, весь набор задач не будет отменен, если одна из задач заблокирована. Например, если одна задача еще не запущена, но разблокирует другую активную задачу, эта задача не запустится, если отменяется группа задач. Это может вызвать взаимоблокировку в приложении. Второй пример, когда использование отмены может не подойти: задача отменяется, но ее дочерняя задача выполняет важную операцию, например высвобождение ресурса. Так как при отмене родительской задачи отменяется весь набор задач, эта операция не будет выполнена. Пример, иллюстрирующий этот аспект см. в разделе [понимание как отмена и обработка исключений влияет на уничтожение объектов](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) раздела рекомендации в разделе библиотеки параллельных шаблонов.  
   
  [[В начало](#top)]  
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Показывается, как использовать отмену для реализации алгоритма параллельного поиска.|  
 |[Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь приводятся способы использования класса `task_group` для записи алгоритма поиска для базовой структуры дерева.|  

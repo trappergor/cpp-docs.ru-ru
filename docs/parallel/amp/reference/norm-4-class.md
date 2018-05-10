@@ -1,12 +1,9 @@
 ---
-title: "Класс norm_4 | Документы Microsoft"
-ms.custom: 
+title: Класс norm_4 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm4-class"></a>Класс norm_4
 Представляет короткий вектор из четырех чисел обычного.  
@@ -308,13 +303,13 @@ class norm_4;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор norm_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_4::get_w||  
 |norm_4::get_wx||  
@@ -455,34 +450,34 @@ class norm_4;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_4::operator-||  
 |norm_4::operator--||  
-|norm_4::operator*=||  
+|norm_4::operator * =||  
 |norm_4::operator / =||  
-|norm_4::operator++||  
-|norm_4::operator+=||  
-|norm_4::operator=||  
+|norm_4::operator ++||  
+|norm_4::operator +=||  
+|norm_4::operator =||  
 |norm_4::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Размер константы](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_4::a||  
-|norm_4::ab||  
+|norm_4::AB||  
 |norm_4::abg||  
 |norm_4::abgr||  
-|norm_4::abr||  
+|norm_4::ABR||  
 |norm_4::abrg||  
-|norm_4::ag||  
+|norm_4::AG||  
 |norm_4::agb||  
 |norm_4::agbr||  
 |norm_4::agr||  
@@ -491,67 +486,67 @@ class norm_4;
 |norm_4::arb||  
 |norm_4::arbg||  
 |norm_4::arg||  
-|norm_4::argb||  
+|norm_4::ARGB||  
 |norm_4::b||  
-|norm_4::ba||  
+|norm_4::BA||  
 |norm_4::bag||  
 |norm_4::bagr||  
 |norm_4::Bar||  
 |norm_4::barg||  
-|norm_4::bg||  
-|norm_4::bga||  
+|norm_4::BG||  
+|norm_4::BGA||  
 |norm_4::bgar||  
 |norm_4::bgr||  
 |norm_4::bgra||  
 |norm_4::br||  
-|norm_4::bra||  
+|norm_4::BRA||  
 |norm_4::brag||  
 |norm_4::brg||  
 |norm_4::brga||  
 |norm_4::g||  
 |norm_4::ga||  
-|norm_4::gab||  
+|norm_4::GAB||  
 |norm_4::gabr||  
 |norm_4::gar||  
 |norm_4::garb||  
-|norm_4::gb||  
+|norm_4::GB||  
 |norm_4::gba||  
 |norm_4::gbar||  
-|norm_4::gbr||  
+|norm_4::GBR||  
 |norm_4::gbra||  
-|norm_4::gr||  
+|norm_4::GR||  
 |norm_4::gra||  
 |norm_4::grab||  
 |norm_4::grb||  
 |norm_4::grba||  
 |norm_4::r||  
-|norm_4::ra||  
+|norm_4::RA||  
 |norm_4::rab||  
 |norm_4::rabg||  
 |norm_4::rag||  
 |norm_4::ragb||  
-|norm_4::rb||  
+|norm_4::RB||  
 |norm_4::rba||  
 |norm_4::rbag||  
 |norm_4::rbg||  
 |norm_4::rbga||  
-|norm_4::rg||  
+|norm_4::RG||  
 |norm_4::rga||  
 |norm_4::rgab||  
-|norm_4::rgb||  
-|norm_4::rgba||  
+|norm_4::RGB||  
+|norm_4::RGBA||  
 |norm_4::w||  
-|norm_4::wx||  
+|norm_4::WX||  
 |norm_4::wxy||  
 |norm_4::wxyz||  
 |norm_4::wxz||  
 |norm_4::wxzy||  
-|norm_4::wy||  
+|norm_4::WY||  
 |norm_4::wyx||  
 |norm_4::wyxz||  
-|norm_4::wyz||  
+|norm_4::WYZ||  
 |norm_4::wyzx||  
-|norm_4::wz||  
+|norm_4::wZ||  
 |norm_4::wzx||  
 |norm_4::wzxy||  
 |norm_4::wzy||  
@@ -562,7 +557,7 @@ class norm_4;
 |norm_4::xwyz||  
 |norm_4::xwz||  
 |norm_4::xwzy||  
-|norm_4::xy||  
+|norm_4::XY||  
 |norm_4::xyw||  
 |norm_4::xywz||  
 |norm_4::xyz||  
@@ -578,7 +573,7 @@ class norm_4;
 |norm_4::ywxz||  
 |norm_4::ywz||  
 |norm_4::ywzx||  
-|norm_4::yx||  
+|norm_4::YX||  
 |norm_4::yxw||  
 |norm_4::yxwz||  
 |norm_4::yxz||  
@@ -609,9 +604,9 @@ class norm_4;
  `norm_4`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** amp_short_vectors.h  
+ **Заголовок:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ##  <a name="ctor"></a> norm_4 
 
