@@ -1,12 +1,9 @@
 ---
-title: "Класс unsupported_os | Документы Microsoft"
-ms.custom: 
+title: Класс unsupported_os | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unsupported_os
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a147bc429268c7342667e770de083dc6660fa955
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7a4881bc0182c0d7bfbc5b5806fd6a59eea7fb25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unsupportedos-class"></a>Класс unsupported_os
 Данный класс описывает исключение, которое создается при использовании неподдерживаемой операционной системы.  
@@ -42,7 +37,7 @@ class unsupported_os : public std::exception;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[unsupported_os](#ctor)|Перегружен. Создает объект `unsupported_os`.|  
   

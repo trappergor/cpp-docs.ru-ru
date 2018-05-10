@@ -1,12 +1,9 @@
 ---
-title: "Класс JOIN | Документы Microsoft"
-ms.custom: 
+title: Класс JOIN | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - join
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a37b6d3dce5d41578999aa54c8dff2dd2271fe9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="join-class"></a>Класс join
 Блок обмена сообщениями `join` — это упорядоченный блок `propagator_block` с несколькими источниками и одной целью, который объединяет сообщения типа `T` от каждого из своих источников.  
@@ -60,14 +55,14 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[join](#ctor)|Перегружен. Создает `join` блока обмена сообщениями.|  
 |[~ join деструктор](#dtor)|Уничтожает `join` блока.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `join` блока обмена сообщениями, передавая владение вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `join` блок обмена сообщениями и зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
@@ -179,7 +174,7 @@ join(
   
  Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `join` блока обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
   
-##  <a name="dtor"></a> ~join 
+##  <a name="dtor"></a> ~ join 
 
  Уничтожает `join` блока.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Класс scoped_d3d_access_lock | Документы Microsoft"
-ms.custom: 
+title: Класс scoped_d3d_access_lock | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>Класс scoped_d3d_access_lock
 Оболочка RAII для блокировки доступа D3D accelerator_view объекта.  
@@ -40,14 +35,14 @@ class scoped_d3d_access_lock;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock Constructor](#ctor)|Перегружен. Создает объект `scoped_d3d_access_lock`. Блокировка снимается в том случае, когда этот объект выходит из области.|  
-|[~scoped_d3d_access_lock Destructor](#dtor)|Освобождает блокировку доступа D3D в связанном `accelerator_view` объект.|  
+|[Конструктор scoped_d3d_access_lock](#ctor)|Перегружен. Создает объект `scoped_d3d_access_lock`. Блокировка снимается в том случае, когда этот объект выходит из области.|  
+|[~ Деструктор scoped_d3d_access_lock](#dtor)|Освобождает блокировку доступа D3D в связанном `accelerator_view` объект.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Принимает право на владение блокировки из другого `scoped_d3d_access_lock`.|  
   
@@ -57,7 +52,7 @@ class scoped_d3d_access_lock;
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amprt.h  
   
- **Namespace:** concurrency::direct3d  
+ **Пространство имен:** concurrency::direct3d  
 
 ##  <a name="ctor"></a> scoped_d3d_access_lock 
 
@@ -98,7 +93,7 @@ scoped_d3d_access_lock(// [3] move constructor
  Принимает существующей блокировки D3D доступа из другого `scoped_d3d_access_lock` объекта. Построение не блокируется.  
 
   
-##  <a name="dtor"></a> ~scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~ scoped_d3d_access_lock 
 
  Освобождает блокировку доступа D3D в связанном `accelerator_view` объект.  
   

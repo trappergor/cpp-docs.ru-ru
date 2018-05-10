@@ -1,12 +1,9 @@
 ---
-title: "Класс invalid_scheduler_policy_value | Документы Microsoft"
-ms.custom: 
+title: Класс invalid_scheduler_policy_value | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::invalid_scheduler_policy_value
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbcbef5fc97f10b923b9a6b692a7cfa3799151b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ec11d7ebc7d2c074344e9651a7c548fe1ad01943
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidschedulerpolicyvalue-class"></a>Класс invalid_scheduler_policy_value
 Этот класс описывает исключение, создаваемое, когда ключу политики объекта `SchedulerPolicy` присваивается недопустимое для этого ключа значение.  
@@ -40,7 +35,7 @@ class invalid_scheduler_policy_value : public std::exception;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|  
   

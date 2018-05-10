@@ -1,13 +1,10 @@
 ---
-title: "Пространства имен | Документы Майкрософт"
-ms.custom: 
+title: Пространства имен | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b0fe8a097da3de67d149665928524395988c730
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-spaces"></a>Пространства имен
 Компилятор настраивает пространства имен, чтобы различать идентификаторы, используемые для различных типов элементов. Имена в каждом пространстве имен должны быть уникальными во избежание конфликтов, но одинаковые имена могут использоваться в нескольких пространствах имен. Это означает, что можно использовать один и тот же идентификатор для двух или более различных элементов при условии, что элементы расположены в разных пространствах имен. Компилятор может разрешить ссылки на основе синтаксического контекста идентификатора в программе.  

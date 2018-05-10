@@ -1,12 +1,9 @@
 ---
-title: "Класс overwrite_buffer | Документы Microsoft"
-ms.custom: 
+title: Класс overwrite_buffer | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - overwrite_buffer
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overwritebuffer-class"></a>Класс overwrite_buffer
 Блок обмена сообщениями `overwrite_buffer` — это упорядоченный блок `propagator_block` с несколькими источниками и несколькими целями, который может хранить одно сообщение в один момент времени. Новые сообщения перезаписывают предыдущие.  
@@ -59,21 +54,21 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|Перегружен. Создает `overwrite_buffer` блока обмена сообщениями.|  
 |[~ overwrite_buffer деструктор](#dtor)|Уничтожает `overwrite_buffer` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[has_value](#has_value)|Проверяет, является ли это `overwrite_buffer` блока обмена сообщениями еще имеет значение.|  
 |[value](#value)|Возвращает ссылку на текущие полезную нагрузку сообщения, хранящуюся в `overwrite_buffer` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `overwrite_buffer` блока обмена сообщениями, возвращая копию сообщения вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `overwrite_buffer` блок обмена сообщениями и зарезервированное целевым объектом, возвращая копию сообщения вызывающему объекту.|  
@@ -166,7 +161,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Указатель на только что привязанный целевой объект.  
   
-##  <a name="dtor"></a> ~overwrite_buffer 
+##  <a name="dtor"></a> ~ overwrite_buffer 
 
  Уничтожает `overwrite_buffer` блока обмена сообщениями.  
   

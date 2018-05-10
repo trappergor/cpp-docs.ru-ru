@@ -1,12 +1,9 @@
 ---
-title: "Класс writeonly_texture_view | Документы Microsoft"
-ms.custom: 
+title: Класс writeonly_texture_view | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - writeonly_texture_view
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3ab115301a6d7063ba443cf528b382ae955360f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writeonlytextureview-class"></a>Класс writeonly_texture_view
 Предоставляет доступ writeonly до текстуры.  
@@ -59,33 +54,33 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`scalar_type`||  
 |`value_type`|Тип элементов в текстуре.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[writeonly_texture_view Constructor](#ctor)|Инициализирует новый экземпляр класса `writeonly_texture_view`.|  
-|[~writeonly_texture_view Destructor](#ctor)|Уничтожает `writeonly_texture_view` объекта.|  
+|[Конструктор writeonly_texture_view](#ctor)|Инициализирует новый экземпляр класса `writeonly_texture_view`.|  
+|[~ writeonly_texture_view деструктор](#ctor)|Уничтожает `writeonly_texture_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[set](#set)|Задает значение элемента по указанному индексу.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Копирует указанный `writeonly_texture_view` этого объекта.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Возвращает ранг `writeonly_texture_view` объекта.|  
   
@@ -97,9 +92,9 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_graphics.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
-##  <a name="dtor"></a> ~writeonly_texture_view 
+##  <a name="dtor"></a> ~ writeonly_texture_view 
 
  Уничтожает `writeonly_texture_view` объекта.  
   

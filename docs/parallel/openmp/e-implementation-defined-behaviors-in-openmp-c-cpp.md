@@ -1,27 +1,22 @@
 ---
-title: "Д. Реализацию определяемых поведения OpenMP C/C++ | Документы Microsoft"
-ms.custom: 
+title: Д. Реализацию определяемых поведения OpenMP C/C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>Д. Поведения, определяемого реализацией OpenMP C/C++
 В этом приложении перечислены варианты поведения, называются «определяемого реализацией» в этом API.  Каждое поведение перекрестных ссылок, к его описание в основной спецификации.  
@@ -65,14 +60,14 @@ ms.lasthandoff: 12/21/2017
   
      В Visual C++ число потоков, определяется операционной системой.  
   
--   `OMP_SCHEDULE`переменная среды: значение по умолчанию для этой переменной среды, определяемое реализацией (см. [разделе 4.1](../../parallel/openmp/4-1-omp-schedule.md) на стр. 48).  
+-   `OMP_SCHEDULE` переменная среды: значение по умолчанию для этой переменной среды, определяемое реализацией (см. [разделе 4.1](../../parallel/openmp/4-1-omp-schedule.md) на стр. 48).  
   
      В Visual C++ — тип расписания `static` с не размер фрагмента данных.  
   
--   `OMP_NUM_THREADS`переменная среды: Если значение не указано для `OMP_NUM_THREADS` переменной среды, или если значение не является положительным целым числом, или если значение превышает максимальное число потоков, может поддерживать система, число потоков, используемых Реализация определяемых (см. [разделе 4.2](../../parallel/openmp/4-2-omp-num-threads.md) на стр. 48).  
+-   `OMP_NUM_THREADS` переменная среды: Если значение не указано для `OMP_NUM_THREADS` переменной среды, или если значение не является положительным целым числом, или если значение превышает максимальное число потоков, может поддерживать система, число потоков, используемых Реализация определяемых (см. [разделе 4.2](../../parallel/openmp/4-2-omp-num-threads.md) на стр. 48).  
   
      В Visual C++ если значение равно нулю или меньше количество потоков равно числу процессоров.  Если значение превышает 64, число потоков — 64.  
   
--   `OMP_DYNAMIC`переменная среды: значение по умолчанию, определяемое реализацией (см. [раздел 4.3](../../parallel/openmp/4-3-omp-dynamic.md) на странице 49).  
+-   `OMP_DYNAMIC` переменная среды: значение по умолчанию, определяемое реализацией (см. [раздел 4.3](../../parallel/openmp/4-3-omp-dynamic.md) на странице 49).  
   
      В Visual C++, значение по умолчанию — `FALSE`.

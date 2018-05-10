@@ -1,30 +1,25 @@
 ---
-title: "Пошаговое руководство: Создание сети обработки изображений | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Создание сети обработки изображений | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Пошаговое руководство. Создание сети обработки изображений
 В этом документе показано, как создавать сеть асинхронных блоков сообщений, выполняющих обработку изображений.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Полный пример](#complete)  
   
-##  <a name="functionality"></a>Определение функции обработки изображений  
+##  <a name="functionality"></a> Определение функции обработки изображений  
  В этом разделе представлены функции поддержки, которые использует сеть обработки изображений для работы с образами, которые считываются с диска.  
   
  Следующие функции `GetRGB` и `MakeColor`, извлекают и объединяют отдельные компоненты данного цвета соответственно.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="network"></a>Создание сети обработки изображений  
+##  <a name="network"></a> Создание сети обработки изображений  
  Этот раздел описывает, как создавать сеть асинхронных блоков сообщений, выполняющих обработку изображений в каждом [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] изображений (расширение JPG) в данном каталоге. Сеть выполняет следующие операции обработки изображений.  
   
 1.  Все изображения, созданные пользователем Tom преобразуйте в оттенках серого.  
@@ -127,7 +122,7 @@ ms.lasthandoff: 12/21/2017
   
  Следующая таблица описывает члены сети.  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`load_bitmap`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) , загружающий `Bitmap` с диска и добавляющий запись `map` объекта, связывающую изображение с исходным именем файла.|  
 |`loaded_bitmaps`|Объект [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объект, отправляющий загруженные изображения фильтрам обработки изображений.|  
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
 |`colormask`|Объект `transformer` объект, который удаляет компоненты зеленого и синего цветов из изображений, в которых красный основной цвет.|  
 |`darken`|Объект `transformer` объект, который затемняет которых красный основной цвет изображения.|  
 |`sepiatone`|Объект `transformer` объект, применяющий тонирование сепией к изображениям, не созданным пользователем Tom и не преобладает красный цвет.|  
-|`save_bitmap`|Объект `transformer` объекта, сохраняющий обработанный `image` на диск как растровое изображение. `save_bitmap`Получает исходное имя файла из `map` объекта и изменяет расширение имени файла на BMP.|  
+|`save_bitmap`|Объект `transformer` объекта, сохраняющий обработанный `image` на диск как растровое изображение. `save_bitmap` Получает исходное имя файла из `map` объекта и изменяет расширение имени файла на BMP.|  
 |`delete_bitmap`|Объект `transformer` объект, который освобождает память для изображений.|  
 |`decrement`|Объект [concurrency::call](../../parallel/concrt/reference/call-class.md) объект, действующий как конечный узел сети. Он уменьшает `countdown_event` чтобы сообщить главному приложению, изображение было обработано.|  
   
@@ -155,7 +150,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="complete"></a>Полный пример  
+##  <a name="complete"></a> Полный пример  
  Ниже приведен полный пример кода. `wmain` Управляет функция [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] библиотеку и вызывает `ProcessImages` функции к процессу [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] файлы в `Sample Pictures` каталога.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  ![Пример выходных данных для примера](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`созданные пользователем Tom Alphin и поэтому преобразуется в оттенках серого. `Chrysanthemum`, `Desert`, `Koala`, и `Tulips` красный основной цвет и таким образом удалить компоненты сине-зеленый цвет и они затемнены. `Hydrangeas`, `Jellyfish`, и `Penguins` соответствующие критериям по умолчанию и, следовательно, toned цвета.  
+ `Lighthouse` созданные пользователем Tom Alphin и поэтому преобразуется в оттенках серого. `Chrysanthemum`, `Desert`, `Koala`, и `Tulips` красный основной цвет и таким образом удалить компоненты сине-зеленый цвет и они затемнены. `Hydrangeas`, `Jellyfish`, и `Penguins` соответствующие критериям по умолчанию и, следовательно, toned цвета.  
   
  [[В начало](#top)]  
   

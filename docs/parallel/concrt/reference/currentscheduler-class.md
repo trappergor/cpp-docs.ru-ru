@@ -1,12 +1,9 @@
 ---
-title: "Класс CurrentScheduler | Документы Microsoft"
-ms.custom: 
+title: Класс CurrentScheduler | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>Класс CurrentScheduler
 Представляет абстракцию для текущего планировщика, связанного с вызывающим контекстом.  
@@ -51,9 +46,9 @@ class CurrentScheduler;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[Create](#create)|Создает новый планировщик, поведение которой описывается `_Policy` параметра и присоединяет его к вызывающему контексту. Вновь созданного планировщика станет текущего планировщика для контекст вызова.|  
+|[Создание](#create)|Создает новый планировщик, поведение которой описывается `_Policy` параметра и присоединяет его к вызывающему контексту. Вновь созданного планировщика станет текущего планировщика для контекст вызова.|  
 |[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписаний внутри планировщика, связанного с вызывающим контекстом. Версия, принимающая параметр `_Placement` случае задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|  
 |[Detach](#detach)|Отсоединяет текущий планировщик от вызывающего контекста и восстанавливает ранее присоединенный планировщик как текущий планировщик в том случае, если он существует. После возврата этого метода, вызывающий контекст затем управляется планировщика, который ранее был присоединен к контексту с помощью `CurrentScheduler::Create` или `Scheduler::Attach` метод.|  
 |[Get](#get)|Возвращает указатель на планировщик, связанный с вызывающим контекстом, также называют текущего планировщика.|  
@@ -179,7 +174,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>Примечания  
  В результате этого метода в процессе будет создан планировщик по умолчанию и/или присоединен к вызывающему контексту, если отсутствует планировщик, в данный момент связанный с вызывающим контекстом.  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Идентификатор 
 
  Возвращает уникальный идентификатор для текущего планировщика.  
   
@@ -228,7 +223,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ### <a name="remarks"></a>Примечания  
  Если планировщик присоединен к вызывающему контексту, вызов этого метода приведет к [scheduler_not_attached](scheduler-not-attached-class.md) вызываемом исключении.  
   
-##  <a name="scheduletask">ScheduleTask</a> 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Назначает легкое задание внутри планировщика, связанного с вызывающим контекстом. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.  
   

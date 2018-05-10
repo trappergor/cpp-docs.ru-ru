@@ -1,12 +1,9 @@
 ---
-title: "Класс multitype_join | Документы Microsoft"
-ms.custom: 
+title: Класс multitype_join | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>Класс multitype_join
 Блок обмена сообщениями `multitype_join` — это блок с несколькими источниками и одной целью, который объединяет сообщения разных типов от каждого из своих источников и предлагает кортеж объединенных сообщений своему целевому объекту.  
@@ -62,22 +57,22 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`type`|Псевдоним для `T`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|Перегружен. Создает блок обмена сообщениями `multitype_join` .|  
-|[~multitype_join Destructor](#dtor)|Уничтожает `multitype_join` блока обмена сообщениями.|  
+|[~ multitype_join деструктор](#dtor)|Уничтожает `multitype_join` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[accept](#accept)|Принимает сообщение, которое было предложено это `multitype_join` блоком, передавая владение вызывающему объекту.|  
+|[Принять](#accept)|Принимает сообщение, которое было предложено это `multitype_join` блоком, передавая владение вызывающему объекту.|  
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `multitype_join` блока обмена сообщениями, чтобы предотвратить удаление.|  
 |[Использовать](#consume)|Получает сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
 |[link_target](#link_target)|Ссылки на это целевой блок `multitype_join` блока обмена сообщениями.|  
@@ -135,7 +130,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом `ITarget` объекту, связанному этого источника во время `link_target` метод.  
   
-##  <a name="consume">Использовать</a> 
+##  <a name="consume"></a> Использовать 
 
  Получает сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
@@ -211,7 +206,7 @@ multitype_join(
   
  Конструкция перемещения не выполняется при блокировке. Это означает, что пользователь должен убедиться в отсутствии простых задач во время перемещения. В противном случае могут возникнуть многочисленные гонки, приводящие к исключениям или недопустимому состоянию.  
   
-##  <a name="dtor"></a> ~multitype_join 
+##  <a name="dtor"></a> ~ multitype_join 
 
  Уничтожает `multitype_join` блока обмена сообщениями.  
   

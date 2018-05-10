@@ -1,12 +1,9 @@
 ---
-title: "Класс cancellation_token_source | Документы Microsoft"
-ms.custom: 
+title: Класс cancellation_token_source | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_source
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokensource-class"></a>Класс cancellation_token_source
 Класс `cancellation_token_source` представляет возможность отмены некоторой отменяемой операции.  
@@ -45,22 +40,22 @@ class cancellation_token_source;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[cancellation_token_source](#ctor)|Перегружен. Создает новый `cancellation_token_source`. Источник можно использовать, чтобы сигнализировать об отмене некоторой отменяемой операции.|  
-|[~cancellation_token_source Destructor](#dtor)||  
+|[~ cancellation_token_source деструктор](#dtor)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[cancel](#cancel)|Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.|  
+|[Отмена](#cancel)|Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.|  
 |[create_linked_source](#create_linked_source)|Перегружен. Создает `cancellation_token_source`, который отменяется при отмене предоставленного токена.|  
 |[get_token](#get_token)|Возвращает токен отмены, связанный с данным источником. Возвращенный токен можно опрашивать на предмет отмены или предоставить обратный вызов, если и когда произойдет отмена.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор!=](#operator_neq)||  
 |[оператор=](#operator_eq)||  
@@ -70,7 +65,7 @@ class cancellation_token_source;
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** pplcancellation_token.h  
+ **Заголовок:** pplcancellation_token.h  
   
  **Пространство имен:** concurrency  
   

@@ -1,13 +1,10 @@
 ---
-title: ": Многопоточность | Документы Microsoft"
-ms.custom: 
+title: ': Многопоточность | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Многопоточность. Завершение потоков
 Завершение потока, может произойти двух случаях: контролирующей функции или поток не разрешено выполняться до завершения. Если текстовый процессор поток для печати в фоновом режиме, функция управления завершается при успешном выполнении задания печати. Если пользователю необходимо отменить печать, однако печати фоновый поток должен быть преждевременно. В этом разделе объясняется, как реализовать каждой ситуации и как получить код выхода потока после его завершения.  
@@ -43,17 +38,17 @@ ms.lasthandoff: 01/29/2018
   
 -   [Получение кода выхода из потока](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a>Обычное завершение потока  
+##  <a name="_core_normal_thread_termination"></a> Обычное завершение потока  
  Для рабочего потока, обычное завершение потока является простым: выхода из функции управления и возврата значением, указывающим причину завершения. Можно использовать любой [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) функции или `return` инструкции. Как правило 0 означает успешное выполнение, но это вы сами.  
   
  Пользовательский интерфейс происходит так же просто: из потока пользовательского интерфейса, вызовите [функцию PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Единственный параметр, **функцию PostQuitMessage** принимает — это код выхода потока. Как и для рабочих потоков 0 обычно означает успешное завершение.  
   
-##  <a name="_core_premature_thread_termination"></a>Преждевременное завершение потока  
+##  <a name="_core_premature_thread_termination"></a> Преждевременное завершение потока  
  Преждевременное завершение потока выполняется почти так же просто: вызов [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) из потока. Передайте необходимый код выхода в качестве единственного параметра. Это останавливает выполнение потока, освобождает стека потока, отсоединяет все библиотеки DLL, присоединенный к потоку и удаляет объект потока из памяти.  
   
- `AfxEndThread`должна вызываться из потока, подлежащего прерыванию. Если вы хотите завершить поток из другого потока, необходимо настроить способ связи между двумя потоками.  
+ `AfxEndThread` Должна вызываться из потока, подлежащего прерыванию. Если вы хотите завершить поток из другого потока, необходимо настроить способ связи между двумя потоками.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Получение кода выхода из потока  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Получение кода выхода из потока  
  Чтобы получить код выхода или потока пользовательского интерфейса, вызовите [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) функции. Сведения об этой функции см. в разделе [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Эта функция принимает дескриптор потока (хранятся в `m_hThread` данными-членом `CWinThread` объектов) и адрес `DWORD`.  
   
  Если поток по-прежнему активна, **GetExitCodeThread** помещает **STILL_ACTIVE** в предоставленном `DWORD` адрес; в противном случае код завершения помещается в этот адрес.  

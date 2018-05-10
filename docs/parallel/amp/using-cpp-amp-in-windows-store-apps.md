@@ -1,27 +1,22 @@
 ---
-title: "Использование C++ AMP в приложениях UWP | Документы Microsoft"
-ms.custom: 
+title: Использование C++ AMP в приложениях UWP | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Использование C++ AMP в приложениях UWP
 C++ AMP (C++ Accelerated Massive Parallelism) можно использовать в приложении универсальной платформы Windows (UWP) для выполнения вычислений на GPU (единица обработки графики) или других вычислений сочетания клавиш. Однако C++ AMP не предоставляет интерфейсы API для работы непосредственно с типами среды выполнения Windows, а в среде выполнения Windows нет программы-оболочки для C++ AMP. При использовании в коде типов среды выполнения Windows, включая созданные самостоятельно, необходимо преобразовать их в совместимые с С++ AMP типы.  

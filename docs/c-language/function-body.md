@@ -1,13 +1,10 @@
 ---
-title: "Текст функции | Документация Майкрософт"
-ms.custom: 
+title: Текст функции | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: d6a566c1120f0a89a985895393fae5a79690bfa3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-body"></a>Текст функции
 "Тело функции" — это составной оператор, содержащий операторы, которые определяют выполняемые функцией действия.  
@@ -35,10 +30,10 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* Относится только к системам Microsoft \*/  
+ /\* *attribute-seq* Относится только к системам Microsoft */  
   
  *compound-statement*: /\* Текст функции \*/  
- **{**  *declaration-list* opt*statement-list* opt**}**  
+ **{**  *declaration-list* opt*statement-list* opt **}**  
   
  Если не указано иное, переменные, объявленные в теле функции (локальные переменные), имеют класс хранения **auto**. При вызове функции создается хранилище для локальных переменных и выполняются локальные инициализации. Управление передается первому оператору в составном выражении *compound-statement* и продолжается до тех пор, пока не будет выполнен оператор `return` или достигнут конец тела функции. Затем управление возвращается в точку, из которой вызвана функция.  
   

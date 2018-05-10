@@ -2,12 +2,9 @@
 title: Строки языка | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Language Strings
 Функции `setlocale` и `_create_locale` могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, которые не используют кодовую страницу Юникода. Список языков, поддерживаемых в разных версиях операционных систем, вы найдете в [документации по API многоязыковой поддержке (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Сокращение названия языка** списка поддерживаемых языков. Дополнительные сведения о языковой поддержке по версии операционной системы см. в [приложении A: поведение продукта](http://msdn.microsoft.com/goglobal/bb896001.aspx) в статье [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: справочник по коду языка Windows).   
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |chh|zh-HK|  
 |chi|zh-SG|  
 |китайский|zh|  
-|ккитайский — Специальный административный регион Гонконг|zh-HK|  
+|китайский — Гонконг|zh-HK|  
 |китайский — упрощенное письмо|zh-CN|  
 |китайский — Сингапур|zh-SG|  
 |китайский — традиционный|zh-TW|  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |норвежский|Нет|  
 |норвежский — букмол|nb-NO|  
 |норвежский — нюнорск|nn-NO|  
-|бразильский португальский|pt-BR|  
+|португальский — бразильский|pt-BR|  
 |испанский — Аргентина|es-AR|  
 |испанский — Боливия|es-BO|  
 |испанский — Чили|es-CL|  

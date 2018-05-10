@@ -1,12 +1,9 @@
 ---
-title: "Класс task_handle | Документы Microsoft"
-ms.custom: 
+title: Класс task_handle | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>Класс task_handle
 Класс `task_handle` представляет отдельный параллельный рабочий элемент. Он инкапсулирует инструкции и данные, необходимые для выполнения части работы.  
@@ -49,16 +44,16 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[task_handle](#ctor)|Создает новое `task_handle` объекта. Работа задачи выполняется путем вызова функции, указанное в качестве параметра конструктору.|  
 |[~ task_handle деструктор](#dtor)|Уничтожает `task_handle` объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator()](#task_handle__operator_call)|Оператор вызова функции, который среда выполнения вызывает для выполнения работы дескриптора задачи.|  
+|[Operator()](#task_handle__operator_call)|Оператор вызова функции, который среда выполнения вызывает для выполнения работы дескриптора задачи.|  
   
 ## <a name="remarks"></a>Примечания  
  `task_handle` объекты, которые могут использоваться в сочетании с `structured_task_group` или более общим `task_group` объекта для разбиения работы на параллельные задачи. Дополнительные сведения см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  

@@ -1,12 +1,9 @@
 ---
-title: "Класс message_processor | Документы Microsoft"
-ms.custom: 
+title: Класс message_processor | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message_processor
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="messageprocessor-class"></a>Класс message_processor
 Класс `message_processor` — это абстрактный базовый класс для обработки объектов `message`. Упорядочивание сообщений не гарантируется.  
@@ -50,21 +45,21 @@ class message_processor;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`type`|Псевдоним для `T`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[async_send](#async_send)|При переопределении в производном классе размещает сообщения в блок асинхронно.|  
 |[sync_send](#sync_send)|При переопределении в производном классе размещает сообщения в блок синхронно.|  
-|[Ожидание](#wait)|При переопределении в производном классе, ожидает завершения всех асинхронных операций.|  
+|[wait](#wait)|При переопределении в производном классе, ожидает завершения всех асинхронных операций.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[process_incoming_message](#process_incoming_message)|При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.|  
   
@@ -117,7 +112,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>Примечания  
  Процессор реализации должны переопределять этот метод.  
   
-##  <a name="wait">Ожидание</a> 
+##  <a name="wait"></a> Ожидание 
 
  При переопределении в производном классе, ожидает завершения всех асинхронных операций.  
   

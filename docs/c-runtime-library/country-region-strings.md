@@ -1,13 +1,10 @@
 ---
-title: "Строки страны и региона | Документы Майкрософт"
-ms.custom: 
+title: Строки страны и региона | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых различными версиями операционной системы Windows, см. в разделе[National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (Справочник по API многоязыковой поддержки (NLS)). В списках строка страны или региона может приобретать любое значение страны из столбца **Языковые стандарты — Language Country/Region** (Страна или регион языка) или любой из аббревиатур из столбца **Country or Region name abbreviation** (Аббревиатура названия страны или региона). Дополнительные сведения о поддержке языков по версии операционной системы Windows см. в [приложении A: поведение продуктов](http://msdn.microsoft.com/goglobal/bb896001.aspx) в статье [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: справочник по коду языка Windows).  

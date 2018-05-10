@@ -1,30 +1,25 @@
 ---
-title: "Пошаговое руководство: Создание приложения на основе агентов | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Создание приложения на основе агентов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Пошаговое руководство. Создание приложения на основе агента
 В этом разделе описывается создание базового приложения на основе агентов. В этом пошаговом руководстве можно создать агент, который асинхронно считывает данные из текстового файла. Приложение использует алгоритм контрольной суммы Adler-32 для расчета контрольной суммы содержимого этого файла.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 - [С помощью file_reader класс в приложении](#useagentclass)  
   
-##  <a name="createapplication"></a>Создание консольного приложения  
+##  <a name="createapplication"></a> Создание консольного приложения  
  В этом разделе показано создание консольного приложения Visual C++, ссылки на файлы заголовка, которые будут использоваться программой.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Создание приложения Visual C++ с помощью мастера консольных приложений Win32  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="createagentclass"></a>Создание file_reader класса  
+##  <a name="createagentclass"></a> Создание file_reader класса  
  В этом разделе показано, как создать `file_reader` класса. Планирование в среде выполнения каждого агента для выполнения работы в его собственном контексте. Таким образом можно создать агент, выполняющий работу синхронно, но взаимодействует с другими компонентами асинхронно. `file_reader` Класс считывает данные из заданного входного файла и отправляет данные из этого файла заданному целевому компоненту.  
   
 #### <a name="to-create-the-filereader-class"></a>Чтобы создать класс file_reader  
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="useagentclass"></a>С помощью file_reader класс в приложении  
+##  <a name="useagentclass"></a> С помощью file_reader класс в приложении  
  В этом разделе показано, как использовать `file_reader` класса для считывания содержимого текстового файла. Также демонстрируется создание [concurrency::call](../../parallel/concrt/reference/call-class.md) объект, который получает данные файла и вычисляет их контрольную сумму Adler-32.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>Использование класса file_reader в приложении  

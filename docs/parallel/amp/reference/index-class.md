@@ -1,12 +1,9 @@
 ---
-title: "Класс index | Документы Microsoft"
-ms.custom: 
+title: Класс index | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>Класс index
 Определяет *N*-pographics-cpp-amp.md измерений индекса.  
@@ -47,16 +42,16 @@ class index;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Индекс конструктора](#ctor)|Инициализирует новый экземпляр класса `index`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор--](#operator--)|Уменьшает значение каждого элемента `index` объекта.|  
-|[operator(mod)=](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении на ряд этого элемента.|  
+|[Operator(MOD) =](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении на ряд этого элемента.|  
 |[оператор*=](#operator_star_eq)|Умножает каждый элемент `index` объекта по номеру.|  
 |[оператор/=](#operator_div_eq)|Делит каждый элемент `index` объекта по номеру.|  
 |[index::operator\[\]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
@@ -68,7 +63,7 @@ class index;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Сохраняет ранг объекта `index` объекта.|  
   
@@ -84,7 +79,7 @@ class index;
  **Пространство имен** : Concurrency  
 
 
-## <a name="index_ctor">Индекс конструктора</a>
+## <a name="index_ctor"></a> Индекс конструктора
 Инициализирует новый экземпляр класса индекса.
 
 ```  
@@ -118,7 +113,7 @@ explicit index(
 
 _Array  
 Одномерный массив с ранжирующие значения.  
-_I  
+НЕ_Т  
 Индекс в одномерный индекс.  
 _I0  
 Длина наиболее значимых измерения.  

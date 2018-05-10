@@ -1,13 +1,10 @@
 ---
-title: "Примечания SAL | Документы Майкрософт"
-ms.custom: 
+title: Примечания SAL | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79e10e9b93beb811f42e15574014df6a464aadb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sal-annotations"></a>Примечания SAL
 При просмотре библиотечных заголовочных файлов вы можете обратить внимание на некоторые непривычные заметки, например `_In_z` и `_Out_z_cap_(_Size)`. Это примеры языка заметок для исходного кода Microsoft (SAL), который предоставляет набор заметок, позволяющих описывать, как функция использует свои параметры, например, предположения о параметрах и гарантии при завершении. Заметки определяются в файле заголовка \<sal.h>.  

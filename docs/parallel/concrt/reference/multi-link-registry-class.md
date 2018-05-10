@@ -1,12 +1,9 @@
 ---
-title: "Класс multi_link_registry | Документы Microsoft"
-ms.custom: 
+title: Класс multi_link_registry | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 Объект `multi_link_registry` представляет собой `network_link_registry`, управляющий несколькими блоками источников или целевыми блоками.  
@@ -53,19 +48,19 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[multi_link_registry](#ctor)|Создает объект `multi_link_registry`.|  
 |[~ multi_link_registry деструктор](#dtor)|Уничтожает `multi_link_registry` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Overrides [network_link_registry::add](network-link-registry-class.md#add).)|  
-|[begin](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекта. (Overrides [network_link_registry::begin](network-link-registry-class.md#begin).)|  
+|[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
+|[begin](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  
 |[содержит](#contains)|Поиск `multi_link_registry` объекта для указанного блока. (Переопределяет [network_link_registry::contains](network-link-registry-class.md#contains).)|  
-|[count](#count)|Подсчитывает количество элементов в `multi_link_registry` объекта. (Overrides [network_link_registry::count](network-link-registry-class.md#count).)|  
+|[count](#count)|Подсчитывает количество элементов в `multi_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Удаляет ссылку из `multi_link_registry` объекта. (Переопределяет [network_link_registry::remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Устанавливает верхний предел на число ссылок `multi_link_registry` могут храниться в объекте.|  
   
@@ -142,7 +137,7 @@ virtual size_t count();
 multi_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~multi_link_registry 
+##  <a name="dtor"></a> ~ multi_link_registry 
 
  Уничтожает `multi_link_registry` объекта.  
   

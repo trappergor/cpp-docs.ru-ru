@@ -1,12 +1,9 @@
 ---
-title: "Структура IVirtualProcessorRoot | Документы Microsoft"
-ms.custom: 
+title: Структура IVirtualProcessorRoot | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Структура IVirtualProcessorRoot
 Абстракция для аппаратного потока, в котором может выполняться прокси-поток.  
@@ -45,7 +40,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IVirtualProcessorRoot::Activate](#activate)|Вызывает прокси-поток, связанный с интерфейсом контекста выполнения `pContext` для начала выполнения на этот корневой виртуальный процессор.|  
 |[IVirtualProcessorRoot::Deactivate](#deactivate)|В результате прокси-поток, выполняющийся на этот корневой виртуальный процессор, чтобы остановить управлять контекстом выполнения. Прокси-поток продолжит выполнение при вызове `Activate` метода.|  
@@ -140,7 +135,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation` возникает, если корневой виртуальный процессор не был активирован, или аргумент `pContext` не представляет контекст выполнения, который был отправлен недавно этим корневой виртуальный процессор.  
   
-##  <a name="getid"></a>  IVirtualProcessorRoot::GetId Method  
+##  <a name="getid"></a>  Метод IVirtualProcessorRoot::GetId  
  Возвращает уникальный идентификатор для корневого виртуального процессора.  
   
 ```

@@ -2,26 +2,21 @@
 title: Графики (C++ AMP) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: HT
+ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="graphics-c-amp"></a>Графика (C++ AMP)
 C++ AMP содержит несколько интерфейсов API в [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) пространство имен, которое можно использовать для доступа к поддержке текстур на GPU. Ниже описываются наиболее типичные сценарии применения:  
@@ -148,7 +143,7 @@ void createTextureWithBPC() { // Create the source data.
 |-------------|---------------------|  
 |текстуры\<T 1 >|16384|  
 |текстуры\<T, 2 >|16384|  
-|текстуры\<T, 2 >|2048|  
+|текстуры\<T 3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>Чтение из объектов текстуры  
  Можно считывать из `texture` объектов с помощью [texture::operator\[\]](reference/texture-class.md#operator_at), [оператор texture:: operator()](reference/texture-class.md#operator_call), или [методtexture::get](reference/texture-class.md#get). Два операторы возвращают значение, а не ссылка. Поэтому нельзя осуществлять запись в объект `texture` с помощью `texture::operator\[\]`.  

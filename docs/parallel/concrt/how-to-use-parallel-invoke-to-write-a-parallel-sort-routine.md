@@ -1,13 +1,10 @@
 ---
-title: "Как: использование функции parallel_invoke для написания программы параллельной сортировки | Документы Microsoft"
-ms.custom: 
+title: 'Как: использование функции parallel_invoke для написания программы параллельной сортировки | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки
 В этом документе описывается использование [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) алгоритм для повышения производительности алгоритма битонной сортировки. Алгоритм битонной сортировки рекурсивно разделяет входной последовательности на сортированные разделы меньшего размера. Алгоритма битонной сортировки могут выполняться параллельно, поскольку каждая операция разделения независима от других операций.  
@@ -44,14 +39,14 @@ ms.lasthandoff: 12/21/2017
   
 - [Использование функции parallel_invoke для выполнения битонной сортировки параллельно](#parallel)  
   
-##  <a name="serial"></a>Выполнение битонной сортировки  
+##  <a name="serial"></a> Выполнение битонной сортировки  
  Пример последовательного версию алгоритма битонной сортировки. `bitonic_sort` Функция разделяет последовательность на два раздела, сортирует эти разделы в противоположных направлениях и объединяет результаты. Эта функция вызывает два раза рекурсивно для сортировки каждой секции.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[В начало](#top)]  
   
-##  <a name="parallel"></a>Использование функции parallel_invoke для выполнения битонной сортировки параллельно  
+##  <a name="parallel"></a> Использование функции parallel_invoke для выполнения битонной сортировки параллельно  
  В этом разделе описывается использование `parallel_invoke` алгоритм для параллельного выполнения алгоритма битонной сортировки.  
   
 ### <a name="procedures"></a>Процедуры  

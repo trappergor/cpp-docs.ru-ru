@@ -1,30 +1,25 @@
 ---
-title: "Как: использование функции parallel_invoke для выполнения параллельных операций | Документы Microsoft"
-ms.custom: 
+title: 'Как: использование функции parallel_invoke для выполнения параллельных операций | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefabd21e04c4c3cc39934de111fe94151317ca5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07c7a5248d5a132ae7b0542bfcedddee0c081753
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Практическое руководство. Использование функции parallel_invoke для выполнения параллельных операций
 В этом примере показано, как использовать [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) алгоритм для повышения производительности программы, выполняющей несколько операций на общий источник данных. Так как нет операций не изменяет источник, они могут выполняться параллельно простым способом.  

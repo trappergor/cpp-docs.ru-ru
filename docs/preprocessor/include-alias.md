@@ -1,12 +1,9 @@
 ---
-title: "include_alias | Документы Microsoft"
-ms.custom: 
+title: include_alias | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -35,8 +30,8 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="syntax"></a>Синтаксис
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias(*long_filename*, *short_filename*)
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива pragma include_alias («*краткое_имя_файла*","*кратким_именем_файла*»)  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива pragma include_alias (*краткое_имя_файла*, *кратким_именем_файла*)
 
 ## <a name="remarks"></a>Примечания
 
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-Обратите внимание, что имя файла выводятся сообщения об ошибках, или в качестве значения из предварительно определенных **&#95; &#95; ФАЙЛ &#95; &#95;**  макрос, является имя файла после выполнения подстановки. Например выводиться данные после применения следующих директив:
+Обратите внимание, что имя файла выводятся сообщения об ошибках, или в качестве значения из предварительно определенных **&#95; &#95;ФАЙЛ&#95; &#95;** макрос, является имя файла после выполнения подстановки. Например выводиться данные после применения следующих директив:
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

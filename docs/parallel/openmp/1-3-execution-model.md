@@ -1,27 +1,22 @@
 ---
-title: "1.3 модель выполнения | Документы Microsoft"
-ms.custom: 
+title: 1.3 модель выполнения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 Модель выполнения
 OpenMP используется модель ветвления соединения параллельного выполнения. Хотя эта модель ветвления соединения может быть полезна для решения различных проблем, немного приспособлено для крупных приложений на основе массива. OpenMP предназначен для поддержки программ, будет выполняться правильно и что параллельного программы (нескольких потоков выполнения и полная библиотека поддержки OpenMP) и как последовательные программы (директив обрабатывается и простую библиотеку заглушки OpenMP). Тем не менее возможно и может разработать программу, которая будет работать некорректно, если выполняются последовательно. Кроме того различные степени параллелизма может привести к различных числовых результатов из-за изменений в ассоциации математических операций. Например уменьшение последовательного добавления может быть другим шаблоном Добавление связи, чем параллельной редукции. Эти разные связи может повлиять на результаты сложения чисел с плавающей запятой.  

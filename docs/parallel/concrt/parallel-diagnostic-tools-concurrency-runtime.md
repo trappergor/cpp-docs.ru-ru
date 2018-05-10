@@ -1,29 +1,24 @@
 ---
-title: "Параллельные средства диагностики (среда выполнения с параллелизмом) | Документы Microsoft"
-ms.custom: 
+title: Параллельные средства диагностики (среда выполнения с параллелизмом) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1cd3ce4c86332719e299c11fee3ffbee8b41c14f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] предоставляет расширенную поддержку отладки и профилирования многопоточных приложений.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 01/03/2018
   
  В следующей таблице описаны события, которые среда выполнения вызывает при включенной трассировке событий:  
   
-|событие|Описание:|Значение|  
+|событие|Описание|Значение|  
 |-----------|-----------------|-----------|  
 
 |[Concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)| Идентификатор поставщика ETW для среды выполнения с параллелизмом. |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  
