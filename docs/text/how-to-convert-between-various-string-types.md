@@ -1,13 +1,10 @@
 ---
-title: "Как: преобразование различных типов строк | Документы Microsoft"
-ms.custom: 
+title: 'Как: преобразование различных типов строк | Документы Microsoft'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 В этом разделе показано, как преобразовать различных типов строк Visual C++ в другие строки. Типы строк, охваченных включают `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), и <xref:System.String?displayProperty=fullName>. Во всех случаях строки копии при преобразовании в новый тип. Любые изменения, внесенные в новую строку не повлияет на исходную строку и наоборот.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать из `char *` строки других типов, перечисленных выше. Объект `char *` строки (которая также называется строкой формата C) используется символ null для обозначения конца строки. В строках формата C обычно требуется один байт на символ, но также можно использовать два байта. В приведенных ниже примерах `char *` строки, иногда называют многобайтовые строки символов из-за строковых данных, получаемых при преобразовании из строки в Юникоде. Одиночный символ однобайтовых и многобайтовых (`MBCS`) можно использовать функции `char *` строки.  
   
 ### <a name="code"></a>Код  
@@ -136,7 +131,7 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать из `wchar_t *` строки других типов, перечисленных выше. Несколько типов строк, включая `wchar_t *`, реализуют форматы расширенных символов. Для преобразования строк многобайтовых и формат расширенных символов, можно использовать один вызов функции например `mbstowcs_s` или вызов конструктора для класса, такие как `CStringA`.  
   
 ### <a name="code"></a>Код  
@@ -261,7 +256,7 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать из `_bstr_t` строки других типов, перечисленных выше. `_bstr_t` Объект — это способ инкапсуляции расширенный символ `BSTR` строки. Строка BSTR имеется значение длины и не использовать символ null для завершения строки, но строкового типа, который выполняется преобразование может потребоваться завершающий нуль-символ.  
   
 ### <a name="code"></a>Код  
@@ -362,7 +357,7 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать из `CComBSTR` строки других типов, перечисленных выше. Как _bstr_t `CComBSTR` объект — это способ инкапсуляции строк расширенных символов BSTR. Строка BSTR имеется значение длины и не использовать символ null для завершения строки, но строкового типа, который выполняется преобразование может потребоваться завершающий нуль-символ.  
   
 ### <a name="code"></a>Код  
@@ -473,10 +468,10 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
- В этом примере показано, как преобразовать из `CString` строки других типов, перечисленных выше. `CString`основан на типе данных TCHAR, который в свою очередь, зависит ли символ `_UNICODE` определен. Если `_UNICODE` не определен, `TCHAR` определяется как char и `CString` содержит строку многобайтовых символов; Если `_UNICODE` определен, `TCHAR` определяется как `wchar_t` и `CString` содержит расширенный символ Строка.  
+### <a name="description"></a>Описание  
+ В этом примере показано, как преобразовать из `CString` строки других типов, перечисленных выше. `CString` основан на типе данных TCHAR, который в свою очередь, зависит ли символ `_UNICODE` определен. Если `_UNICODE` не определен, `TCHAR` определяется как char и `CString` содержит строку многобайтовых символов; Если `_UNICODE` определен, `TCHAR` определяется как `wchar_t` и `CString` содержит расширенный символ Строка.  
   
- `CStringA`является многобайтовой строки всегда версии `CString`, `CStringW` является единственной версий строки расширенных символов. Ни `CStringA` , ни `CStringW` использовать `_UNICODE` для определения способа компиляции. `CStringA`и `CStringW` используются в этом примере для пояснения небольших отличий в выделении размера буфера и обработке выходных данных.  
+ `CStringA` является многобайтовой строки всегда версии `CString`, `CStringW` является единственной версий строки расширенных символов. Ни `CStringA` , ни `CStringW` использовать `_UNICODE` для определения способа компиляции. `CStringA` и `CStringW` используются в этом примере для пояснения небольших отличий в выделении размера буфера и обработке выходных данных.  
   
 ### <a name="code"></a>Код  
   
@@ -622,7 +617,7 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать из `basic_string` строки других типов, перечисленных выше.  
   
 ### <a name="code"></a>Код  
@@ -719,7 +714,7 @@ Hello, World! (System::String)
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано, как преобразовать строку расширенных символов (Юникод) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) строки других типов, перечисленных выше.  
   
 ### <a name="code"></a>Код  

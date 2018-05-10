@@ -1,55 +1,23 @@
 ---
-title: "Свойства C/C++ Properties (Linux C++) | Документы Майкрософт"
-ms.custom: 
+title: Свойства C/C++ Properties (Linux C++) | Документы Майкрософт
+ms.custom: ''
 ms.date: 9/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-f1_keywords:
-- VC.Project.VCClangCompilerTool.AdditionalIncludeDirectories
-- VC.Project.VCClangCompilerTool.DebugInformationFormat
-- VC.Project.VCClangCompilerTool.ObjectFile
-- VC.Project.VCClangCompilerTool.WarningLevel
-- VC.Project.VCClangCompilerTool.WarnAsError
-- VC.Project.VCClangCompilerTool.AdditionalWarning
-- VC.Project.VCClangCompilerTool.Verbose
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCClangCompilerTool.Optimization
-- VC.Project.VCClangCompilerTool.StrictAliasing
-- VC.Project.VCClangCompilerTool.UnrollLoops
-- VC.Project.VCClangCompilerTool.LinkTimeOptimization
-- VC.Project.VCClangCompilerTool.OmitFramePointers
-- VC.Project.VCClangCompilerTool.NoCommonBlocks
-- VC.Project.VCClangCompilerTool.PIC
-- VC.Project.VCClangCompilerTool.ThreadSafeStatics
-- VC.Project.VCClangCompilerTool.RelaxIEEE
-- VC.Project.VCClangCompilerTool.HideInlineMethods
-- VC.Project.VCClangCompilerTool.SymbolsHiddenByDefault
-- VC.Project.VCClangCompilerTool.ExceptionHandling
-- VC.Project.VCClangCompilerTool.RuntimeTypeInfo
-- VC.Project.VCClangCompilerTool.CLanguageStandard
-- VC.Project.VCClangCompilerTool.CppLanguageStandard
-- VC.Project.VCClangCompilerTool.PreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefinePreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.UndefineAllPreprocessorDefinitions
-- VC.Project.VCClangCompilerTool.ShowIncludes
-- VC.Project.VCClangCompilerTool.CompileAs
-- VC.Project.VCClangCompilerTool.ForcedIncludeFiles
-- vc.project.AdditionalOptionsPage
+f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 096775841841574571b7ef731db52f3bbda6485f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1978c566dab949093f0ddbd2aa1aa37ad0942808
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cc-properties-linux-c"></a>Свойства C/C++ (Linux)
 
@@ -101,13 +69,13 @@ ms.lasthandoff: 12/21/2017
 Свойство. | Описание: | Варианты
 --- | ---| ---
 Включить информацию о типах времени выполнения | Добавляет код для проверки типов объектов C++ во время выполнения (информация о типах времени выполнения).     (frtti, fno-rtti)
-Стандарт языка C | Определяет стандарт языка C. | **Default**<br>**C89** — стандарт языка C89.<br>**C99** — стандарт языка C99.<br>**C11** — стандарт языка C11.<br>**C99 (диалект GNU)** — стандарт языка C99 (диалект GNU).<br>**C11 (диалект GNU)** — стандарт языка C11 (диалект GNU).<br>
-Стандарт языка C++ | Определяет стандарт языка C++. | **Default**<br>**C++03** — стандарт языка C++03.<br>**C++11** — стандарт языка C++11.<br>**C++14** — стандарт языка C++14.<br>**C++03 (диалект GNU)** — стандарт языка C++03 (диалект GNU).<br>**C++11 (диалект GNU)** — стандарт языка C++11 (диалект GNU).<br>**C++14 (диалект GNU)** — стандарт языка C++14 (диалект GNU).<br>
+Стандарт языка C | Определяет стандарт языка C. | **Default**<br>**C89** — стандарт языка C89.<br>**C99** — стандарт языка C99.<br>**C11** — стандарт языка C11.<br>**C99 (диалект GNU)**  — стандарт языка C99 (диалект GNU).<br>**C11 (диалект GNU)**  — стандарт языка C11 (диалект GNU).<br>
+Стандарт языка C++ | Определяет стандарт языка C++. | **Default**<br>**C++03** — стандарт языка C++03.<br>**C++11** — стандарт языка C++11.<br>**C++14** — стандарт языка C++14.<br>**C++03 (диалект GNU)**  — стандарт языка C++03 (диалект GNU).<br>**C++11 (диалект GNU)**  — стандарт языка C++11 (диалект GNU).<br>**C++14 (диалект GNU)**  — стандарт языка C++14 (диалект GNU).<br>
 
 ## <a name="advanced"></a>Дополнительно
 Свойство. | Описание: | Варианты
 --- | ---| ---
-Компилировать как | Выбор языка компиляции C-файлов и CPP-файлов.  При использовании значения "по умолчанию" определение будет производиться по расширениям C и CPP. (-x c, -x c++) | **По умолчанию** — по умолчанию.<br>**Компилировать как код C** — компилировать как код C.<br>**Компилировать как код C++** — компилировать как код C++.<br>
+Компилировать как | Выбор языка компиляции C-файлов и CPP-файлов.  При использовании значения "по умолчанию" определение будет производиться по расширениям C и CPP. (-x c, -x c++) | **По умолчанию** — по умолчанию.<br>**Компилировать как код C** — компилировать как код C.<br>**Компилировать как код C++**  — компилировать как код C++.<br>
 Принудительно включенные файлы | Один или несколько принудительно включенных файлов (-include [имя])
 
 ## <a name="additional-options"></a>Дополнительные параметры 

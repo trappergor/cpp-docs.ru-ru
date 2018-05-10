@@ -1,27 +1,22 @@
 ---
-title: "Диапазон значений типа char | Документы Майкрософт"
-ms.custom: 
+title: Диапазон значений типа char | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 15ae9781-ec21-4333-bba8-6d2383bbf7f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5fdba1c603b453a3140675b4ab8783ac3332de6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bac6f2c8ce8fa1e10f24c6ea25491de2011de724
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="range-of-char-values"></a>Диапазон значений типа char
 **ANSI 3.2.1.1** Имеет ли "простой" тип **char** тот же диапазон значений, что и **signed char** или `unsigned char`  

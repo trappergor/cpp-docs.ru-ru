@@ -1,13 +1,10 @@
 ---
-title: "Универсальные текстовые сопоставления в файле Tchar.h | Документы Microsoft"
-ms.custom: 
+title: Универсальные текстовые сопоставления в файле Tchar.h | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Универсальные текстовые сопоставления в файле Tchar.h
 Чтобы упростить преобразование кода для международного использования [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] библиотека времени выполнения предоставляет [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-конкретных универсальные текстовые сопоставления для многих типов данных, подпрограмм и других объектов. Можно использовать эти сопоставления, которые определены в файле Tchar.h для написания универсального кода, который можно скомпилировать в однобайтовой, многобайтовой кодировке или [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] наборов, в зависимости от константы манифеста, определяется с помощью символов `#define` инструкции. Универсальные текстовые сопоставления представляют собой [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] расширения, которые не являются [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] совместимы.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 |Определение #|Скомпилированная версия|Пример|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)](расширенные символы)|`_tcsrev` сопоставляется с `_wcsrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] (расширенные символы)|`_tcsrev` сопоставляется с `_wcsrev`|  
 |`_MBCS`|Многобайтовые символы|`_tcsrev` сопоставляется с `_mbsrev`|  
 |Нет (по умолчанию не имеет ни `_UNICODE` ни `_MBCS` определен)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` сопоставляется с `strrev`|  
   
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="generic-text-data-type-mappings"></a>Сопоставления типов данных универсального текста  
   
-|Универсальные текстовые<br /><br /> Имя типа данных|_UNICODE &<br /><br /> _MBCS не определены|_MBCS<br /><br /> Определено|_UNICODE<br /><br /> Определено|  
+|Универсальные текстовые<br /><br /> Имя типа данных|_UNICODE &AMP;<br /><br /> _MBCS не определены|_MBCS<br /><br /> Определено|_UNICODE<br /><br /> Определено|  
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` или `_TEXT`|Не действует (удаляется препроцессором)|Не действует (удаляется препроцессором)|`L`(преобразует следующий символ или строку в ее [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] аналог)|  
+|`_T` или `_TEXT`|Не действует (удаляется препроцессором)|Не действует (удаляется препроцессором)|`L` (преобразует следующий символ или строку в ее [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] аналог)|  
   
  Список универсальных текстовых сопоставлений подпрограмм, переменных и других объектов см. в разделе [универсальные текстовые сопоставления](../c-runtime-library/generic-text-mappings.md) в справочнике библиотеки времени выполнения.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Обязательные и необязательные файлы заголовков (CRT) | Документация Майкрософт"
-ms.custom: 
+title: Обязательные и необязательные файлы заголовков (CRT) | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.headers
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - include files, required in run time
 - header files, required in run time
 ms.assetid: f64d0bf5-e2c3-4b42-97d0-443b3d901d9f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83eb2373119002c2d206d40ace25bff8bf767081
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-and-optional-header-files"></a>Обязательные и необязательные файлы заголовков
 Описание каждой подпрограммы времени выполнения включает список обязательных и необязательных включаемых файлов заголовков (.H) для этой подпрограммы. Обязательные файлы заголовков необходимо включать, чтобы получить объявление функции для подпрограммы, или определение, используемое другой, вызываемой внутренне подпрограммой. Необязательные файлы заголовков обычно включаются для использования предопределенных констант, определений типов или встроенных макросов. В следующей таблице приведены примеры содержимого необязательных файлов заголовков:  

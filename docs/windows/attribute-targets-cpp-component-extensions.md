@@ -1,30 +1,25 @@
 ---
-title: "Атрибут целевых объектов (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: Атрибут целевых объектов (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>Целевые объекты атрибутов (расширения компонентов C++)
 Описатели использования атрибута позволяют определить его целевые объекты.  Каждый атрибут определяется для применения к определенным элементам языка. Например, атрибут может быть определен для применения только для классов и структур.  В приведенном ниже списке показаны возможные синтаксические элементы, для которых можно использовать настраиваемый атрибут. Можно использовать сочетания этих значений (с помощью операций логического ИЛИ).  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  Ниже приведен список допустимых целевых объектов атрибутов.  
   
--   `All`(применяется ко всем конструкциям)  
+-   `All` (применяется ко всем конструкциям)  
   
     ```  
   
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Assembly`(применяется к сборке в целом)  
+-   `Assembly` (применяется к сборке в целом)  
   
     ```  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Module`(применяется к модулю в целом)  
+-   `Module` (применяется к модулю в целом)  
   
     ```  
   
@@ -293,7 +288,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показано задание нескольких целевых объектов.  
   
 ### <a name="code"></a>Код  

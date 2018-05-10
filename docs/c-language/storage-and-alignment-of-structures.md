@@ -1,13 +1,10 @@
 ---
-title: "Хранение и выравнивание структур | Документация Майкрософт"
-ms.custom: 
+title: Хранение и выравнивание структур | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>Хранение и выравнивание структур
 **Блок, относящийся только к системам Microsoft**  
@@ -45,11 +40,11 @@ ms.lasthandoff: 12/21/2017
 min( n, sizeof( item ) )  
 ```  
   
- здесь *n* — это размер пакета, выраженный с параметром /Zp[*n*], а *item* — это элемент структуры. Размер пакета по умолчанию — /Zp8.  
+ где *n* — это размер пакета, выраженный с параметром /Zp[*n*], а *item* — это элемент структуры. Размер пакета по умолчанию — /Zp8.  
   
  Чтобы использовать директиву pragma `pack` для указания упаковки, отличной от заданной в командной строке для определенной структуры, разместите директиву pragma `pack`, где размер пакета — 1, 2, 4, 8 или 16, перед структурой. Для возобновления компоновки в соответствии с инструкциями с командной строки задайте директиву pragma `pack` без аргументов.  
   
- Битовые поля по умолчанию имеют размер **long** для компилятора Microsoft C. Элементы структуры выравниваются по размеру типа или размеру /Zp[*n*] в зависимости от того что меньше. Размер по умолчанию — 4.  
+ Битовые поля по умолчанию имеют размер **long** для компилятора Microsoft C. Элементы структуры выравниваются по размеру типа или размеру /Zp [*n*] в зависимости от того что меньше. Размер по умолчанию — 4.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

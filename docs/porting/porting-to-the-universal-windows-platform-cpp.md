@@ -1,27 +1,22 @@
 ---
-title: "Перенос на универсальную платформу Windows (C++) | Документы Майкрософт"
-ms.custom: 
+title: Перенос на универсальную платформу Windows (C++) | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f2f94e54a8525d8d633374b3a23bafdfd93fee56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Перенос в универсальную платформу Windows (C++)
 В этом разделе приводятся сведения о переносе существующего кода C++ на платформу приложений Windows 10, которая называется универсальной платформой Windows. Термин *универсальный* означает, что код может работать на любом из устройств под управлением Windows 10, в том числе на настольных ПК, телефонах, планшетных ПК и будущих устройствах. Вы создаете один проект и один пользовательский интерфейс на XAML, который нормально работает на любом устройстве с ОС Windows 10. Чтобы пользовательский интерфейс приложения мог адаптироваться к дисплеям разного размера, можно использовать средства динамического макета в XAML.  

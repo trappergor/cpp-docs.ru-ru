@@ -1,29 +1,24 @@
 ---
-title: "Заполнение и выравнивание членов структур| Документация Майкрософт"
-ms.custom: 
+title: Заполнение и выравнивание членов структур| Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - structure members, padding and alignment
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cd8dc389f4a4140b78a78753f7f5a91168bd984
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb090fc283da0a8aa86dac524272d308127059ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Заполнение и выравнивание членов структуры
 **ANSI 3.5.2.1** Заполнение и выравнивание членов структур, а также выяснение, может ли битовое поле пересекать границу блоков хранения в памяти  

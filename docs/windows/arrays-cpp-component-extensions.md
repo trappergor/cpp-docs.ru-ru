@@ -1,13 +1,10 @@
 ---
-title: "Массивы (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: Массивы (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>Массивы (расширения компонентов C++)
 `Platform::Array<T>` Типа в C + +/ CX, или `array` ключевого слова в C + +/ CLI, объявляет массив указанного типа и начальное значение.  
@@ -143,7 +138,7 @@ int main() {
   
 ### <a name="remarks"></a>Примечания  
   
- `array`в [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) пространства имен.  
+ `array` в [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) пространства имен.  
   
  Как и в стандартной версии C++, индексы массива начинаются от нуля, и массив индексируется с помощью квадратных скобок ([]). В отличие от стандартной версии C++, индексы многомерного массива указываются в списке индексов каждого измерения вместо набора операторов квадратных скобок ([]) для каждого измерения. Например *идентификатор*[*index1*, *index2*] вместо *идентификатор*[*index1*] [ *index2*].  
   

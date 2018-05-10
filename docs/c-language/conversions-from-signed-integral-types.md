@@ -1,13 +1,10 @@
 ---
-title: "Преобразования из целочисленных типов со знаком | Документы Майкрософт"
-ms.custom: 
+title: Преобразования из целочисленных типов со знаком | Документы Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8747f6c1bfde3f076101cc9330d73b1c76c1055b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversions-from-signed-integral-types"></a>Преобразования из целочисленных типов со знаком
 Когда знаковое целое число преобразуется в целое число без знака равного или большего размера и значение целого числа со знаком — не отрицательное, значение остается неизменным. Преобразование выполняется путем расширения знака целого числа со знаком. Целое число со знаком преобразуется в более короткое целое число со знаком путем усечения битов высокого порядка. Результат интерпретируется как значение без знака (см. данный пример).  

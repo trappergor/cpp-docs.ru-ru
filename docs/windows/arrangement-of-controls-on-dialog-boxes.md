@@ -1,13 +1,10 @@
 ---
-title: "Размещение элементов управления в диалоговых окнах | Документы Microsoft"
-ms.custom: 
+title: Размещение элементов управления в диалоговых окнах | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, placement
 - Dialog editor, arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Размещение элементов управления в диалоговых окнах
 Редактор диалоговых окон средства макета, выравнивание и размер элементов управления автоматически. Для большинства задач можно использовать [инструментов редактора диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Все команды панели инструментов редактора диалоговых окон также доступны в меню «Формат» и большинства [сочетания клавиш](../windows/accelerator-keys-for-the-dialog-editor.md).  

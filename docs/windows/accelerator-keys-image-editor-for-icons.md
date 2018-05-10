@@ -1,13 +1,10 @@
 ---
-title: "Сочетания клавиш (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: Сочетания клавиш (редактор изображений для значков) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c992ed83f5c86fdd770bda8f9970ff98a90c2722
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2b19fb16410f7d720d11e8b8560cde4cadf10b1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>Сочетания клавиш (редактор изображений для значков)
 Ниже перечислены сочетания клавиш для команд редактора изображений, привязанных к ключи по умолчанию. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню и нажмите кнопку **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-|Команда|Клавиши|Описание:|  
+|Команда|Клавиши|Описание|  
 |-------------|----------|-----------------|  
 |Image.AirBrushTool|CTRL + A|Рисование распылителем с помощью выбранного размера и цвета.|  
 |Image.BrushTool|CTRL + B|Рисование с помощью кисти с выбранной формой, размер и цвет.|  

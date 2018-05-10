@@ -1,13 +1,10 @@
 ---
-title: "Текст и строки в Visual C++ | Документы Microsoft"
-ms.custom: 
+title: Текст и строки в Visual C++ | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-and-strings-in-visual-c"></a>Текст и строки в Visual C++
 Важным аспектом разработки приложений для международных рынков является соответствующее предоставление местных кодировок. Кодировка ASCII определяет символы в диапазоне от 0x00 до 0x7F. Существуют другие кодировки, в основном европейские, которые определяют символы в диапазоне от 0x00 до 0x7F одинаково в набор символов ASCII, а также определяют расширенную кодировку от 0x80 до 0xFF. Таким образом 8-разрядная версия, одиночные байтов кодировки (SBCS) достаточно для представления набора символов ASCII, а также кодировки для большинства европейских языков. Однако некоторые не европейские кодировки, например Кандзи (японский), включают намного больше символов, чем однобайтовая кодировка представления и поэтому требуют многобайтовой кодировки (MBCS).  

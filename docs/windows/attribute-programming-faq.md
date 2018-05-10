@@ -1,13 +1,10 @@
 ---
-title: "Атрибут часто задаваемые вопросы по программированию | Документы Microsoft"
-ms.custom: 
+title: Атрибут часто задаваемые вопросы по программированию | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>Атрибутивное программирование. Часто задаваемые вопросы
 В этом разделе ответы на следующие вопросы:  
@@ -49,10 +44,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [Можно использовать атрибуты для класса, производного от класса, который также использует атрибуты](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Что такое значение HRESULT  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Что такое значение HRESULT  
  `HRESULT` Является простой тип данных, часто используется в качестве возвращаемого значения атрибутов и ATL в целом. В следующей таблице описаны различные значения. Дополнительные значения содержатся в файле winerror.h файла заголовка.  
   
-|name|Описание:|Значение|  
+|name|Описание|Значение|  
 |----------|-----------------|-----------|  
 |S_OK|Операция выполнена успешно|0x00000000|  
 |E_UNEXPECTED|Непредвиденная ошибка|0x8000FFFF|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 |E_FAIL|Неизвестная ошибка|0x80004005|  
 |E_ACCESSDENIED|Ошибка доступа|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Если нужно указать имя параметра для атрибута?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Если нужно указать имя параметра для атрибута?  
  В большинстве случаев Если атрибут имеет один параметр, именем этого параметра. Это имя не требуется при вставке атрибута в коде. Например, следующее использование [статистическую обработку](../windows/aggregatable.md) атрибута:  
   
 ```  
@@ -100,10 +95,10 @@ class CMyClass
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
 |[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size_is](../windows/size-is.md)|[источник](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[size_is](../windows/size-is.md)|[Источник](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>Можно использовать комментарии в блоке атрибута?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Можно использовать комментарии в блоке атрибута?  
  Можно использовать однострочный и многострочный комментарии в блоке атрибутов. Тем не менее нельзя использовать либо стиль комментария в круглых скобках, содержащий параметры для атрибута.  
   
  Следующее выражение допустимо:  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Как атрибуты взаимодействуют с наследованием?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Как атрибуты взаимодействуют с наследованием?  
  Атрибутами и неопределенные классы могут наследовать другие классы, которые могут сами быть атрибуты или нет. Результат наследование от класса с атрибутом является производным от этого класса, после атрибута поставщика обеспечит его код. Атрибуты не передаются производных классов через наследование C++. Только поставщика атрибутов преобразует код вблизи его атрибуты.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Использование атрибутов в проект ATL без атрибутов  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Использование атрибутов в проект ATL без атрибутов  
  Возможно, проект ATL без атрибутов, который IDL-файл, и можно начать добавлять атрибутами объектов. В этом случае используйте мастер добавления класса предоставления кода.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Как использовать IDL-файл в проекте с атрибутами  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Как использовать IDL-файл в проекте с атрибутами  
  Имеется IDL-файл, который вы хотите использовать в проекте ATL с атрибутами. В этом случае используется [importidl](../windows/importidl.md) атрибута, компиляции IDL-файла h-файл (см. [страницы свойств MIDL](../ide/midl-property-pages.md) в диалоговом окне страницы свойств проекта) и включите h-файл в проект .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>Можно изменить код, который вставлен с помощью атрибута  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Можно изменить код, который вставлен с помощью атрибута  
  Некоторые атрибуты вводят кода в проекте. Этот код можно просмотреть с помощью [/Fx](../build/reference/fx-merge-injected-code.md) параметр компилятора. Можно также скопировать код из внедренного файла и вставьте его в исходный код. Это позволяет изменять поведение атрибута. Тем не менее может потребоваться изменить другие части кода также.  
   
  Следующий пример является результатом копирования введенный код в файл исходного кода:  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Как опережающее объявление интерфейсе с атрибутами?  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Как опережающее объявление интерфейсе с атрибутами?  
  Если планируется сделать опережающее объявление интерфейсе с атрибутами, необходимо применить те же атрибуты для опережающего объявления, применяются к объявлению реального интерфейса. Необходимо также применить [Экспорт](../windows/export.md) для вашей опережающего объявления атрибута.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Можно использовать атрибуты для класса, производного от класса, который также использует атрибуты  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Можно использовать атрибуты для класса, производного от класса, который также использует атрибуты  
  Нет, с помощью атрибутов в классе, производном от класса, который также использует атрибуты не поддерживается.  
   
 ## <a name="see-also"></a>См. также  
