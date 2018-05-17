@@ -26,6 +26,7 @@
 # [Рекомендации по безопасности для C++](security/security-best-practices-for-cpp.md)
 ## [Запуск от имени участника группы "Пользователи"](security/running-as-a-member-of-the-users-group.md)
 ## [Влияние контроля учетных записей на приложение](security/how-user-account-control-uac-affects-your-application.md)
+## [Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд](security/developer-guidance-speculative-execution.md)
 # [Примеры кода на Visual C++](visual-cpp-samples.md)
 # [Справка и сообщество Visual C++](visual-cpp-help-and-community.md)
 # [Как сообщить о проблеме с набором инструментов Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
