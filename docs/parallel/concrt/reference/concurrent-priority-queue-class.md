@@ -1,12 +1,9 @@
 ---
-title: "Класс concurrent_priority_queue | Документы Microsoft"
-ms.custom: 
+title: Класс concurrent_priority_queue | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ed193eea8209611640b6d125d79ffec1748a7f7f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>Класс concurrent_priority_queue
 Класс `concurrent_priority_queue` — это контейнер, который позволяет нескольким потокам параллельно помещать и извлекать элементы. Элементы извлекаются в порядке приоритета, определяемого функтором, предоставленным в качестве аргумента шаблона.  
@@ -63,7 +58,7 @@ template <typename T,
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди с приоритетом.|  
 |`const_reference`|Тип, представляющий константную ссылку на элемент типа, хранящийся в параллельной очереди с приоритетом.|  
@@ -73,13 +68,13 @@ template <typename T,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[concurrent_priority_queue](#ctor)|Перегружен. Создает параллельную очередь с приоритетом.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[clear](#clear)|Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.|  
 |[empty](#empty)|Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Данный метод безопасен в режиме параллелизма.|  
@@ -91,7 +86,7 @@ template <typename T,
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_priority_queue` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
@@ -248,7 +243,7 @@ size_type size() const;
 ### <a name="remarks"></a>Примечания  
  Возвращенный размер обязательно включать все элементы, добавленные с помощью вызовов функции `push`. Тем не менее он может не отражать результаты выполнения параллельных операций в очереди.  
   
-##  <a name="swap"></a> swap 
+##  <a name="swap"></a> Поменять местами 
 
  Меняет местами содержимое двух параллельных очередей с приоритетом. Этот метод не является безопасным в режиме параллелизма.  
   

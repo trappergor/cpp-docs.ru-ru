@@ -1,12 +1,9 @@
 ---
-title: "Структура ITopologyExecutionResource | Документы Microsoft"
-ms.custom: 
+title: Структура ITopologyExecutionResource | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITopologyExecutionResource
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b044575fdaccead8c30bd8dca955923a8c5f9e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: adb456315b2c6d15b7a3696df9a6845a2bd2b899
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itopologyexecutionresource-structure"></a>Структура ITopologyExecutionResource
 Интерфейс для ресурса выполнения, как определено диспетчером ресурсов.  
@@ -43,7 +38,7 @@ struct ITopologyExecutionResource;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[ITopologyExecutionResource::GetId](#getid)|Возвращает уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.|  
 |[ITopologyExecutionResource::GetNext](#getnext)|Возвращает интерфейс для следующего ресурса выполнения в порядке перечисления.|  
@@ -59,7 +54,7 @@ struct ITopologyExecutionResource;
   
  **Пространство имен:** concurrency  
   
-##  <a name="getid"></a>  ITopologyExecutionResource::GetId Method  
+##  <a name="getid"></a>  Метод ITopologyExecutionResource::GetId  
  Возвращает уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.  
   
 ```
@@ -69,7 +64,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.  
   
-##  <a name="getnext"></a>  ITopologyExecutionResource::GetNext Method  
+##  <a name="getnext"></a>  Метод ITopologyExecutionResource::GetNext  
  Возвращает интерфейс для следующего ресурса выполнения в порядке перечисления.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "Класс network_link_registry | Документы Microsoft"
-ms.custom: 
+title: Класс network_link_registry | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 Абстрактный базовый класс `network_link_registry` управляет связями между блоками источников и целевыми блоками.  
@@ -51,7 +46,7 @@ class network_link_registry;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `network_link_registry` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `network_link_registry` объект для чтения и выполнения операций const.|  
@@ -60,7 +55,7 @@ class network_link_registry;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[add](#add)|При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.|  
 |[begin](#begin)|При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.|  

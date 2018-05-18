@@ -1,28 +1,23 @@
 ---
-title: "Пространство имен Microsoft::wrl:: Details | Документы Microsoft"
-ms.custom: 
+title: 'Пространство имен Microsoft::wrl:: Details | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrldetails-namespace"></a>Пространство имен Microsoft::WRL::Details
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -37,7 +32,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс ComPtrRef](../windows/comptrref-class.md)|Представляет ссылку на объект ComPtr типа\<T >.|  
 |[Класс ComPtrRefBase](../windows/comptrrefbase-class.md)|Представляет базовый класс для [ComPtrRef](../windows/comptrref-class.md) класса.|  
@@ -50,7 +45,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Структура ArgTraits](../windows/argtraits-structure.md)|Объявляет указанный делегат интерфейс и анонимную функцию-член, имеющий указанное число параметров.|  
 |[Структура ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Помогает определить общие характеристики аргументов делегата.|  
@@ -76,13 +71,13 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="enumerations"></a>Перечисления  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Перечисление AsyncStatusInternal](../windows/asyncstatusinternal-enumeration.md)|Задает сопоставление между внутренними перечислениями состояний асинхронных операций и **Windows::Foundation::AsyncStatus** перечисления.|  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Функция ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Получает фабрику активации для активации указанного идентификатора.|  
 |[Функция Move](../windows/move-function.md)|Перемещает указанный аргумент из одного расположения в другое.|  

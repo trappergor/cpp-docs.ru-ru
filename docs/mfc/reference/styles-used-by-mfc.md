@@ -1,7 +1,7 @@
 ---
 title: Стили, используемые MFC | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>Стили, используемые MFC  
   
 Используйте следующие флаги стилей для указания внешнего вида окна или элемента управления и поведения при создании соответствующий объект MFC. В большинстве случаев эти стили заданы в `dwStyle` параметр класса `Create` функции.  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>Стили кнопок  
+## <a name="button-styles"></a> Стили кнопок  
   
 Применить стили к [класс CButton](../../mfc/reference/cbutton-class.md) проверьте объекты, такие как переключатели, поля и кнопок. Задать сочетание стилей в `dwStyle` параметр [CButton::Create](../../mfc/reference/cbutton-class.md#create). Дополнительные сведения о стилях кнопки в Windows см. в разделе [стили кнопок (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
   
@@ -287,9 +285,7 @@ ms.lasthandoff: 05/04/2018
 |`BS_MULTILINE`|Если текстовая строка слишком длинна в одной строке в прямоугольнике кнопка заключает в оболочку на кнопке отображается надпись в несколько строк.|  
 |`BS_NOTIFY`|Активирует кнопку Отправить `BN_DBLCLK`, `BN_KILLFOCUS`, и `BN_SETFOCUS` сообщения уведомления своему родительскому окну. Обратите внимание, что кнопок отправки `BN_CLICKED` уведомление, независимо от того, указана ли этот стиль.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>Стили полей со списками  
+## <a name="combo-box-styles"></a>  Стили полей со списками  
   
 В MFC доступны перечисленные далее стили полей со списками. Дополнительные сведения о стилях поле со списком в Windows см. в разделе [стили полей со списком (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
   
@@ -309,9 +305,7 @@ ms.lasthandoff: 05/04/2018
 |`CBS_SORT`|Автоматическая сортировка строк, введенных в поле со списком.|  
 |`CBS_UPPERCASE`|Преобразует в верхний регистр весь текст в поле выбора и в списке.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>Изменение стилей  
+## <a name="edit-styles"></a>  Изменение стилей  
   
 Изменить стили применяются к [класс CEdit](../../mfc/reference/cedit-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CEdit::Create](../../mfc/reference/cedit-class.md#create). Дополнительные сведения о стилях редактирования элемента управления в Windows см. в разделе [изменение стилей элемента управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
   
@@ -332,9 +326,7 @@ ms.lasthandoff: 05/04/2018
 |`ES_UPPERCASE`|Преобразует все символы в верхний регистр при вводе в поле редактирования.|  
 |`ES_WANTRETURN`|Указывает, что вставить символ возврата каретки при нажатии клавиши ВВОД при вводе текста в элементе управления edit несколько строк в диалоговом окне. Без этого стиля нажатие клавиши ВВОД действует так же, как нажатие кнопки диалогового окна поля по умолчанию. Этот стиль не оказывает влияния на однострочный элемент управления.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>Стили окна фрейма  
+## <a name="frame-window-styles-mfc"></a> Стили окна фрейма  
   
 Стили окна фрейма применяются к [класса CFrameWnd](../../mfc/reference/cframewnd-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create).  
   
@@ -342,11 +334,9 @@ ms.lasthandoff: 05/04/2018
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|Определяет сведения для добавления в конец заголовка окна рамки. Например, «Microsoft Draw – рисования в Document1». Можно задать строки, представленных на вкладке "строки шаблонов документов" в мастере приложений. Если требуется отключить этот параметр, необходимо переопределить `CWnd::PreCreateWindow` функции-члена.|  
 |`FWS_PREFIXTITLE`|Отображает имя документа, перед именем приложения в заголовке окна фрейма. Например, «WordPad – документ». Можно задать строки, представленных на вкладке "строки шаблонов документов" в мастере приложений. Если требуется отключить этот параметр, необходимо переопределить `CWnd::PreCreateWindow` функции-члена.|  
-|`FWS_SNAPTOBARS`|Изменение размеров элементов управления окна фрейма, содержащего панель элементов управления при его в плавающем окне вместо закрепить окно фрейма. Этот стиль размеров окна в соответствии с панели управления.|  
+|`FWS_SNAPTOBARS`|Изменение размеров элементов управления окна фрейма, содержащего панель элементов управления при его в плавающем окне вместо закрепить окно фрейма. Этот стиль размеров окна в соответствии с панели управления.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>Стили списков  
+## <a name="list-box-styles"></a> Стили списков  
   
 Стили списков применяются к [CListBox-класс](../../mfc/reference/clistbox-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Дополнительные сведения о списке стили окна в Windows см. в разделе [стили окна списка (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
   
@@ -369,9 +359,7 @@ ms.lasthandoff: 05/04/2018
 |`LBS_USETABSTOPS`|Позволяет распознавать и расширять знаки табуляции при рисовании строк списка. Позиций табуляции по умолчанию — 32 единицы диалогового окна. (Единицы диалогового окна является горизонтальное или вертикальное расстояние. Единицы диалогового окна горизонтальной равно одной четвертой текущий блок базовый ширины диалогового окна. Базовые единицы диалогового окна вычисляются в зависимости от высоты и ширины текущего системного шрифта. `GetDialogBaseUnits` Windows функция возвращает базовых единиц текущего диалогового окна в пикселях.) Этот стиль не должны использоваться с `LBS_OWNERDRAWFIXED`.|  
 |`LBS_WANTKEYBOARDINPUT`|Владелец списка получает `WM_VKEYTOITEM` или `WM_CHARTOITEM` сообщений при каждом нажатии клавиши, когда фокус ввода списка. Это позволяет приложению выполнять специальную обработку для клавиатуры.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>Стили окна сообщений  
+##<a name="message-box-styles"></a>  Стили окна сообщений  
   
 Стили окна сообщений применяются к [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) элементов. Задать сочетание стилей в `nType` параметр `AfxMessageBox`. Дополнительные сведения о стили окна сообщений в Windows см. в разделе [функции MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
   
@@ -412,9 +400,7 @@ ms.lasthandoff: 05/04/2018
 |`MB_DEFBUTTON2`|Вторая кнопка используется по умолчанию.|  
 |`MB_DEFBUTTON3`|Третья кнопка используется по умолчанию.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>Стили полосы прокрутки  
+## <a name="scroll-bar-styles"></a> Стили полосы прокрутки  
   
 Стили полосы прокрутки применяются к [CScrollBar класс](../../mfc/reference/cscrollbar-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Дополнительные сведения о прокрутка стили элемента управления в Windows см. в разделе [стили элемента управления полосы прокрутки (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533).  
   
@@ -431,9 +417,7 @@ ms.lasthandoff: 05/04/2018
 |`SBS_TOPALIGN`|При использовании `SBS_HORZ` стиля. В верхней части полосы прокрутки выравнивается верхний край прямоугольника, заданного в `Create` функции-члена. Полоса прокрутки имеет высоту по умолчанию для системы полосы прокрутки.|  
 |`SBS_VERT`|Задает вертикальную полосу прокрутки. Если ни одна из `SBS_RIGHTALIGN` , ни `SBS_LEFTALIGN` задан, полоса прокрутки имеет высоту, ширину и положение, предоставленное `Create` функции-члена.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>Статические стили  
+## <a name="static-styles"></a> Статические стили  
   
 Статические стили применяются к [CStatic класс](../../mfc/reference/cstatic-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Дополнительные сведения о стилях статический элемент управления в Windows см. в разделе [статические стили элемента управления (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773).  
   
@@ -467,9 +451,7 @@ ms.lasthandoff: 05/04/2018
 |`SS_WHITERECT`|Задает прямоугольник, закрашенный цвет, используемый для заливки фона окна. По умолчанию цвет белый.|  
 |`SS_WORDELLIPSIS`|Усекает текст, который не умещается и добавляется многоточие.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>Стили окна  
+## <a name="window-styles"></a> Стили окна  
   
 Стили окна применяются к [класс CWnd](../../mfc/reference/cwnd-class.md) объектов. Задать сочетание стилей в `dwStyle` параметр [CWnd::Create](../../mfc/reference/cwnd-class.md#create) или [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Дополнительные сведения о стилях окна в Windows см. в разделе [стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
@@ -503,9 +485,7 @@ ms.lasthandoff: 05/04/2018
 |`WS_VISIBLE`|Создает окно, которое изначально является видимым.|  
 |`WS_VSCROLL`|Создает окно, которое имеет вертикальную полосу прокрутки.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>Расширенные стили окна  
+## <a name="extended-window-styles"></a> Расширенные стили окна  
   
 Расширенные стили окна применяются к [класс CWnd](../../mfc/reference/cwnd-class.md) объектов. Задать сочетание стилей в `dwExStyle` параметр [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Дополнительные сведения о расширенные стили окна в Windows см. в разделе [расширенные стили окна (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
   

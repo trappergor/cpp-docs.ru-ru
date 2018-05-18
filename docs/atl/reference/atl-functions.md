@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d4a74b551ecc249db88293bfce091f3df14165d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c5e63e884a44b310330c05fc4a77e3e7f37bec5
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-functions"></a>Функции библиотеки ATL
 
@@ -73,6 +73,5 @@ ms.lasthandoff: 05/03/2018
  [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
  [Макросы](../../atl/reference/atl-macros.md)   
  [Глобальные переменные](../../atl/reference/atl-global-variables.md)   
- [Структуры](../../atl/reference/atl-structures.md)   
  [Определения типов](../../atl/reference/atl-typedefs.md)   
- [Классы](../../atl/reference/atl-classes.md)
+ [Классы и структуры](../../atl/reference/atl-classes.md)

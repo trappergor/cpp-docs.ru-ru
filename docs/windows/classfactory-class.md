@@ -1,12 +1,9 @@
 ---
-title: "Класс ClassFactory | Документы Microsoft"
-ms.custom: 
+title: Класс ClassFactory | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ClassFactory class
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c37c016809d31fcb072f23768e9f54313331016
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6294634652ffc6a53a577ccd75c348ed63c502e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="classfactory-class"></a>ClassFactory - класс
 Реализует базовую функциональность интерфейса IClassFactory.  
@@ -70,13 +65,13 @@ class ClassFactory : public Details::RuntimeClass<
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущим объектом ClassFactory.|  
 |[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим объектом ClassFactory.|  

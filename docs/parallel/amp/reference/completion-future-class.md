@@ -2,11 +2,8 @@
 title: Класс completion_future | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="completionfuture-class"></a>Класс completion_future
 Представляет будущих соответствующий асинхронную операцию C++ AMP.  
@@ -57,9 +52,9 @@ class completion_future;
 |Имя|Описание|  
 |----------|-----------------|  
 |[get](#get)|Ожидает завершения указанной асинхронной операции.|  
-|[then](#then)|Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.|  
+|[затем](#then)|Добавляет объект обратного вызова функции `completion_future` объект для выполнения по завершении выполнения указанной асинхронной операции.|  
 |[to_task](#to_task)|Возвращает `task` объект, соответствующий указанной асинхронной операции.|  
-|[valid](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|  
+|[Допустимые](#valid)|Возвращает логическое значение, указывающее, связан ли объект с асинхронной операцией.|  
 |[wait](#wait)|Блокируется до завершения связанного асинхронной операции.|  
 |[wait_for](#wait_for)|Блокируется до завершения асинхронной операции, связанные или времени, заданного параметром `_Rel_time` прошло.|  
 |[wait_until](#wait_until)|Блокируется до завершения асинхронной операции, связанные или до текущего времени превышает значение, заданное параметром `_Abs_time`.|  
@@ -278,7 +273,7 @@ std::future_status::future_status wait_until(
   
 3.  `std::future_status::timeout` Если задан период времени.  
   
-## <a name="dtor"></a> ~completion_future 
+## <a name="dtor"></a> ~ completion_future 
 
 Уничтожает `completion_future` объекта.  
   

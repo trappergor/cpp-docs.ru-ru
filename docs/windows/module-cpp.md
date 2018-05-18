@@ -1,13 +1,10 @@
 ---
-title: "модуль (C++) | Документы Microsoft"
-ms.custom: 
+title: модуль (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 Определяет блок библиотеки в IDL-файле.  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  Номер версии, который вы хотите назначить блоку библиотеки. Значение по умолчанию — 1,0.  
   
  `uuid`  
- Уникальный идентификатор для библиотеки. Если этот параметр опущен, идентификатор для библиотеки будет создан автоматически. Может потребоваться получить значение *uuid* для блока библиотеки, что можно сделать с помощью идентификатора **__uuidof(***имя_библиотеки***)**.  
+ Уникальный идентификатор для библиотеки. Если этот параметр опущен, идентификатор для библиотеки будет создан автоматически. Может потребоваться получить *uuid* блока библиотеки, что можно сделать с помощью идентификатора **__uuidof (***libraryname***)**.  
   
  **lcid**  
  Параметр локализации. Дополнительные сведения см. в описании [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) .  
@@ -196,5 +191,5 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
  [Библиотека](http://msdn.microsoft.com/library/windows/desktop/aa367069)   
  [HelpContext](../windows/helpcontext.md)   
  [HelpString](../windows/helpstring.md)   
- [файл справки](../windows/helpfile.md)   
+ [Файл справки](../windows/helpfile.md)   
  [version](../windows/version-cpp.md)   

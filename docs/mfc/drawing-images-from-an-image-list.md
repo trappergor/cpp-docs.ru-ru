@@ -1,13 +1,10 @@
 ---
-title: "Рисование изображений из списка изображений | Документы Microsoft"
-ms.custom: 
+title: Рисование изображений из списка изображений | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>Рисование изображений из списка изображений
 Чтобы нарисовать изображение, используйте [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) функции-члена. Вы зададите указатель на объект контекста устройства, индекс образа для рисования, расположение, в контексте устройства, на котором будет рисоваться изображение и набор флагов, чтобы указать стиль рисования.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  Nonmasked образ копируется в контексте устройства назначения с помощью **SRCCOPY** выполнению растровую операцию. Цвета изображения внешне кажутся одинаковыми, независимо от того, цвет фона контекста устройства. Стили рисования, указанный в **нарисовать** также не оказывают влияния на nonmasked изображения.  
   
- В дополнение к функции-члену Draw, другую функцию [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), расширяет возможность обрабатывать изображения перед просмотром. `DrawIndirect`принимает в качестве параметра, [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) структуры. Эта структура используется для настройки обработки текущего изображения, включая использование коды растровых операций (ROP). Дополнительные сведения о кодах ROP см. в разделе [коды растровых операций](http://msdn.microsoft.com/library/windows/desktop/dd162892) и [растровых изображений как кисти](http://msdn.microsoft.com/library/windows/desktop/dd183378) в Windows SDK.  
+ В дополнение к функции-члену Draw, другую функцию [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), расширяет возможность обрабатывать изображения перед просмотром. `DrawIndirect` принимает в качестве параметра, [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) структуры. Эта структура используется для настройки обработки текущего изображения, включая использование коды растровых операций (ROP). Дополнительные сведения о кодах ROP см. в разделе [коды растровых операций](http://msdn.microsoft.com/library/windows/desktop/dd162892) и [растровых изображений как кисти](http://msdn.microsoft.com/library/windows/desktop/dd183378) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CImageList](../mfc/using-cimagelist.md)   

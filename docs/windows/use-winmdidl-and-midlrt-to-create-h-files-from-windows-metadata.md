@@ -1,28 +1,23 @@
 ---
-title: "Как: использование winmdidl.exe и midlrt.exe для создания h-файлы из метаданных windows | Документы Microsoft"
-ms.custom: 
+title: 'Как: использование winmdidl.exe и midlrt.exe для создания h-файлы из метаданных windows | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Практическое руководство. Использование winmdidl.exe и midlrt.exe для создания H-файлов из метаданных Windows
 Winmdidl.exe и midlrt.exe разрешают взаимодействие COM-уровня между машинным кодом C++ и компонентами среды выполнения Windows. Winmdidl.exe принимает в качестве входных данных WINMD-файл, содержащий метаданные для компонента среды выполнения Windows, и выводит IDL-файл. Midlrt.exe преобразовывает этот IDL-файл в файлы заголовков, которые можно использовать в коде C++. Оба инструмента запускаются с помощью командной строки.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Выводит общее время выполнения в окно консоли.  
   
  / outdir:\<dir >  
- Задает выходной каталог. Если путь содержит пробелы, используйте кавычки. Выходной каталог по умолчанию — * \<диска >*: \Users\\*\<имя пользователя >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.  
+ Задает выходной каталог. Если путь содержит пробелы, используйте кавычки. Выходной каталог по умолчанию —  *\<диска >*: \Users\\*\<имя пользователя >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Указывает файл, содержащий пользовательский текст, который необходимо вставить в начало сообщения по умолчанию об авторских правах и версии winmdidl в верхней части сгенерированного IDL-файла. Если путь содержит пробелы, используйте кавычки.  

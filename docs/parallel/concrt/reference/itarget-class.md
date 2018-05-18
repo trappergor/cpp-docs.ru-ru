@@ -1,12 +1,9 @@
 ---
-title: "Класс ITarget | Документы Microsoft"
-ms.custom: 
+title: Класс ITarget | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITarget
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9780e4b9ff8950511601b03e8423764c3def77a1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itarget-class"></a>Класс ITarget
 Класс `ITarget` является интерфейсом для всех целевых блоков. Целевые блоки потребляют сообщения, предлагаемые ими блоками `ISource`.  
@@ -52,20 +47,20 @@ class ITarget;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`filter_method`|Подпись метода, используемая блоком, который возвращает `bool` значение, чтобы определить, следует ли принять предложенное сообщение.|  
 |`type`|Псевдоним для `T`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ Деструктор ITarget](#dtor)|Уничтожает `ITarget` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[распространение](#propagate)|При переопределении в производном классе асинхронно передает сообщение из исходного блока данному целевому блоку.|  
 |[send](#send)|При переопределении в производном классе синхронно передает сообщение в целевой блок.|  
@@ -73,7 +68,7 @@ class ITarget;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[link_source](#link_source)|При переопределении в производном классе связывает указанный исходный блок это `ITarget` блока.|  
 |[unlink_source](#unlink_source)|При переопределении в производном классе удаляет связь указанного блока источника из этого `ITarget` блока.|  
@@ -113,7 +108,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ### <a name="remarks"></a>Примечания  
  Эта функция не должен вызываться непосредственно на `ITarget` блока. Блоки должны быть соединены друг с другом с помощью `link_target` метод `ISource` блоков, который будет вызывать `link_source` метод в соответствующий целевой объект.  
   
-##  <a name="propagate">распространение</a> 
+##  <a name="propagate"></a> распространение 
 
  При переопределении в производном классе асинхронно передает сообщение из исходного блока данному целевому блоку.  
   

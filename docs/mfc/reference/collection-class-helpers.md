@@ -1,13 +1,10 @@
 ---
-title: "Вспомогательные функции классов коллекции | Документы Microsoft"
-ms.custom: 
+title: Вспомогательные функции классов коллекции | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
 Классы коллекций `CMap`, `CList`, и `CArray` использовать Шаблонизированный вспомогательный объект глобальные функции для таких целей, как сравнение, копирования и сериализации элементов. Как часть реализации классов на основе `CMap`, `CList`, и `CArray`, необходимо переопределить эти функции, при необходимости с версиями, специально созданных для типа данных, хранящихся в вашей карты, список или массив. Сведения о переопределении вспомогательные функции, такие как `SerializeElements`, см. в статье [коллекций: как создать типобезопасную коллекцию](../../mfc/how-to-make-a-type-safe-collection.md). Обратите внимание, что **ConstructElements** и **DestructElements** являются устаревшими.  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 |[HashKey](#hashkey)|Вычисляет хэш-ключа.|  
 |[SerializeElements](#serializeelements)|Сохраняет или получает элементы в или из архива.|  
   
-##  <a name="compareelements"></a>CompareElements  
- Вызывается непосредственно [CList::Find] (#clist__find clist class.md #not_found.md и косвенно посредством [cmap__lookup](cmap-class.md#lookup) и [cmap__operator &#91; &#93;](cmap-class.md#operator_at).  
+##  <a name="compareelements"></a>  CompareElements  
+ Вызывается непосредственно [CList::Find] (#clist__find clist class.md #not_found.md и косвенно посредством [cmap__lookup](cmap-class.md#lookup) и [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -83,7 +78,7 @@ CompareElements(
 ### <a name="requirements"></a>Требования  
    **Заголовок:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>  CopyElements  
  Эта функция вызывается напрямую с помощью [CArray::Append](carray-class.md#append) и [CArray::Copy](carray-class.md#copy).  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  Число копируемых элементов.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию использует простой оператор присваивания (  **=**  ) для выполнения операции копирования. Если при копировании типа нет перегруженного оператора =, реализация по умолчанию выполняет побитовое копирование.  
+ Реализация по умолчанию использует простой оператор присваивания ( **=** ) для выполнения операции копирования. Если при копировании типа нет перегруженного оператора =, реализация по умолчанию выполняет побитовое копирование.  
   
  Сведения о реализации это и другие вспомогательные функции, см. в статье [коллекций: как создать типобезопасную коллекцию](../how-to-make-a-type-safe-collection.md).  
   
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>  DumpElements  
  Предоставляет поточно ориентированный диагностические данные в виде текста для элементов коллекции переопределение.  
   
 ```   
@@ -148,7 +143,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  Вычисляет хэш-значение для указанного ключа.  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  Хэш-значение ключа.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывается напрямую с помощью [CMap::RemoveKey](cmap-class.md#removekey) и косвенно посредством [CMap::Lookup](cmap-class.md#lookup) и [CMap::Operator &#91; &#93;](cmap-class.md#operator_at).
+ Эта функция вызывается напрямую с помощью [CMap::RemoveKey](cmap-class.md#removekey) и косвенно посредством [CMap::Lookup](cmap-class.md#lookup) и [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
   
  Реализация по умолчанию создает хэш-значения путем перехода `key` вправо на четыре позиции. Переопределите эту функцию, чтобы он возвращал хэш-значения подходящий для вашего приложения.  
   
@@ -184,7 +179,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>  SerializeElements  
  [CArray](carray-class.md), [CList](clist-class.md), и [CMap](cmap-class.md) эта функция вызывается для сериализации элементов.  
   
 ```   

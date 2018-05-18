@@ -1,12 +1,9 @@
 ---
-title: "Класс WeakRef | Документы Microsoft"
-ms.custom: 
+title: Класс WeakRef | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - WeakRef class
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8263595bdd564c313a8783a3a9baf0c6d562494
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba7efc595be55b807cd3f044269db0debcb72407
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="weakref-class"></a>Класс WeakRef
 Представляет собой *слабую ссылку* , которая может использоваться только в среде выполнения Windows, а не в классической модели COM. Слабая ссылка представляет собой объект, который может быть доступен или недоступен.  
@@ -76,14 +71,14 @@ if (strongRef == nullptr)
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор WeakRef::WeakRef](../windows/weakref-weakref-constructor.md)|Инициализирует новый экземпляр класса WeakRef.|  
 |[Деструктор WeakRef::~WeakRef](../windows/weakref-tilde-weakref-destructor.md)|Деинициализирует текущий экземпляр класса WeakRef.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод WeakRef::As](../windows/weakref-as-method.md)|Задает определенный указатель ComPtr для представления указанного интерфейса.|  
 |[Метод WeakRef::AsIID](../windows/weakref-asiid-method.md)|Задает определенный указатель ComPtr для представления идентификатора указанного интерфейса.|  
@@ -91,7 +86,7 @@ if (strongRef == nullptr)
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Оператор WeakRef::operator&](../windows/weakref-operator-ampersand-operator.md)|Возвращает объект ComPtrRef, представляющий текущий объект WeakRef.|  
   

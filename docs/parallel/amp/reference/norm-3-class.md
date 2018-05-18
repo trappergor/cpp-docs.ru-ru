@@ -1,12 +1,9 @@
 ---
-title: "Класс norm_3 | Документы Microsoft"
-ms.custom: 
+title: Класс norm_3 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
@@ -81,17 +78,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm3-class"></a>Класс norm_3
 Представляет короткого вектора трех обычных чисел.  
@@ -112,13 +107,13 @@ class norm_3;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор norm_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_3::get_x||  
 |norm_3::get_xy||  
@@ -159,42 +154,42 @@ class norm_3;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_3::operator-||  
 |norm_3::operator--||  
 |norm_3::operator * =||  
 |norm_3::operator / =||  
 |norm_3::operator ++||  
-|norm_3::operator+=||  
+|norm_3::operator +=||  
 |norm_3::operator =||  
 |norm_3::operator-=||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Размер константы](#size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |norm_3::b||  
-|norm_3::bg||  
+|norm_3::BG||  
 |norm_3::bgr||  
 |norm_3::br||  
 |norm_3::brg||  
 |norm_3::g||  
 |norm_3::GB||  
-|norm_3::gbr||  
+|norm_3::GBR||  
 |norm_3::GR||  
 |norm_3::grb||  
 |norm_3::r||  
 |norm_3::RB||  
 |norm_3::rbg||  
-|norm_3::rg||  
-|norm_3::rgb||  
+|norm_3::RG||  
+|norm_3::RGB||  
 |norm_3::x||  
 |norm_3::XY||  
 |norm_3::xyz||  
@@ -215,11 +210,11 @@ class norm_3;
  `norm_3`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** amp_short_vectors.h  
+ **Заголовок:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
 
-## <a name="ctor">Конструктор norm_3</a>
+## <a name="ctor"></a> Конструктор norm_3
 По умолчанию конструктор инициализирует все элементы с 0.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -283,7 +278,7 @@ explicit inline norm_3(
  `_Other`  
  Объект, используемый для инициализации.  
   
-## <a name="a-namesize-size-constant"></a><a name="size">Размер константы
+## <a name="a-namesize-size-constant"></a><a name="size"> Размер константы
 ### <a name="syntax"></a>Синтаксис  
   
 ```  

@@ -1,30 +1,25 @@
 ---
-title: "Пошаговое руководство: Создание пользовательского блока сообщений | Документы Microsoft"
-ms.custom: 
+title: 'Пошаговое руководство: Создание пользовательского блока сообщений | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Пошаговое руководство. Создание пользовательского блока сообщений
 В этом документе описывается создание настраиваемого блочного типа сообщений, сортирующий входящие сообщения по приоритету.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 - [Полный пример](#complete)  
   
-##  <a name="design"></a>Проектирование пользовательского блока сообщений  
+##  <a name="design"></a> Проектирование пользовательского блока сообщений  
  Блоки сообщений принимают участие в отправки и получения сообщений. Блок сообщений, которая отправляет сообщения называется *блок источника*. Блок сообщений, получает сообщения, называется *целевой блок*. Блок сообщений, отправляющий и принимающий сообщения, называется *блоке распространения*. Библиотека агентов использует абстрактный класс [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) для представления исходных блоков и абстрактный класс [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) целевые блоки. Типы блоков сообщений, выполняющие роль источников, являются производными от `ISource`; типы блоков сообщений, выполняющие роль целевых объектов являются производными от `ITarget`.  
   
  Несмотря на то, что можно получить ваш тип блока сообщений напрямую из `ISource` и `ITarget`, библиотека агентов определяет три базовых классов, которые выполняют значительную часть функциональные возможности, общие для всех типов блоков сообщений, например, обработка ошибок и Соединение блоков сообщений друг с другом в виде параллельно безопасно. [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md) класс является производным от `ISource` и отправляет сообщения другим блокам. [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md) класс является производным от `ITarget` и получает сообщения от других блоков. [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md) класс является производным от `ISource` и `ITarget` и отправляет сообщения другим блокам и принимает сообщения от других блоков. Мы рекомендуем использовать эти три базовые классы для обработки сведений, инфраструктуру, что можно сосредоточиться на поведение своего блока сообщений.  
@@ -73,10 +68,10 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="class"></a>Определение priority_buffer класса  
+##  <a name="class"></a> Определение priority_buffer класса  
  `priority_buffer` Класс — это тип блока пользовательских сообщений, сортирующий входящие сообщения сначала по приоритету, а затем по порядку получения сообщений. `priority_buffer` Похож [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) так как он содержит очередь сообщений, а также так как он действует в качестве источника и целевой блок сообщений и может иметь несколько источников и несколько целевые объекты. Однако `unbounded_buffer` распространяет сообщения только в порядке, в котором он получает сообщения из своих источников.  
   
- `priority_buffer` Класс получает сообщения типа std::[кортежа](../../standard-library/tuple-class.md) , содержащие `PriorityType` и `Type` элементы. `PriorityType`относится к типу, представляющему приоритет сообщения; `Type` ссылается на часть данных сообщения. `priority_buffer` Класс отправляет сообщения типа `Type`. `priority_buffer` Класс также управляет двумя очередями сообщений: [std::priority_queue](../../standard-library/priority-queue-class.md) объекта для входящих сообщений и std::[очереди](../../standard-library/queue-class.md) объекта для исходящих сообщений. Сортировка сообщений по приоритету полезен, когда `priority_buffer` объект получает несколько сообщений одновременно, или при получении нескольких сообщений перед все сообщения будут прочитаны получателями.  
+ `priority_buffer` Класс получает сообщения типа std::[кортежа](../../standard-library/tuple-class.md) , содержащие `PriorityType` и `Type` элементы. `PriorityType` относится к типу, представляющему приоритет сообщения; `Type` ссылается на часть данных сообщения. `priority_buffer` Класс отправляет сообщения типа `Type`. `priority_buffer` Класс также управляет двумя очередями сообщений: [std::priority_queue](../../standard-library/priority-queue-class.md) объекта для входящих сообщений и std::[очереди](../../standard-library/queue-class.md) объекта для исходящих сообщений. Сортировка сообщений по приоритету полезен, когда `priority_buffer` объект получает несколько сообщений одновременно, или при получении нескольких сообщений перед все сообщения будут прочитаны получателями.  
   
  В дополнение к методам семь, класс, производный от `propagator_block` необходимо реализовать `priority_buffer` класса также переопределения `link_target_notification` и `send_message` методы. `priority_buffer` Класс также определяет два открытых вспомогательных метода `enqueue` и `dequeue`и закрытый вспомогательный метод `propagate_priority_order`.  
   
@@ -193,7 +188,7 @@ ms.lasthandoff: 12/21/2017
   
  [[В начало](#top)]  
   
-##  <a name="complete"></a>Полный пример  
+##  <a name="complete"></a> Полный пример  
  В следующем примере показано полное определение `priority_buffer` класса.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

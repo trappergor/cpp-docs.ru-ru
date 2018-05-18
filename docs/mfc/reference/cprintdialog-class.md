@@ -1,12 +1,9 @@
 ---
-title: "Класс CPrintDialog | Документы Microsoft"
-ms.custom: 
+title: Класс CPrintDialog | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>Класс CPrintDialog
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном Windows для печати.  
@@ -74,13 +69,13 @@ class CPrintDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialog::CPrintDialog](#cprintdialog)|Создает объект `CPrintDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|  
 |[CPrintDialog::DoModal](#domodal)|Отображает диалоговое окно и пользователь может сделать выбор.|  
@@ -100,7 +95,7 @@ class CPrintDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CPrintDialog::m_pd](#m_pd)|Структура, используемая для настройки `CPrintDialog` объекта.|  
   
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  Если не указать дескрипторов в `m_pd` для **hDevMode** и **hDevNames** членов, нужно убедиться, что вызов функции Windows **GlobalFree** для этих маркеров Когда вы закончите с диалоговым окном. При использовании реализации framework Настройка печати, предоставляемые `CWinApp::OnFilePrintSetup`, нет необходимости освободить эти маркеры. Дескрипторы обслуживаются `CWinApp` и освобождаются в `CWinApp`деструктор. Необходим только для освобождения эти дескрипторы, при использовании `CPrintDialog` автономный.  
   
- После инициализации элементы управления диалоговых окон, вызовите метод `DoModal` функции-члена для отображения диалогового окна и разрешить пользователю выбирать параметры печати. `DoModal`Возвращает, является ли пользователь выбрал ОК ( **IDOK**) или "Отмена" ( **IDCANCEL**) кнопки.  
+ После инициализации элементы управления диалоговых окон, вызовите метод `DoModal` функции-члена для отображения диалогового окна и разрешить пользователю выбирать параметры печати. `DoModal` Возвращает, является ли пользователь выбрал ОК ( **IDOK**) или "Отмена" ( **IDCANCEL**) кнопки.  
   
  Если `DoModal` возвращает **IDOK**, можно использовать один из `CPrintDialog`в функции-члены для извлечения информации, введенное пользователем.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Можно использовать окна **CommDlgExtendedError** функции, чтобы определить, произошла ли ошибка во время инициализации диалогового окна и Дополнительные сведения об ошибке. Дополнительные сведения о данной функции см. в Windows SDK.  
   
- `CPrintDialog`использует COMMDLG. Файл DLL, который поставляется вместе с Windows версии 3.1 и более поздней версии.  
+ `CPrintDialog` использует COMMDLG. Файл DLL, который поставляется вместе с Windows версии 3.1 и более поздней версии.  
   
  Чтобы настроить диалоговое окно, создайте класс, производный от `CPrintDialog`, укажите шаблон настраиваемое диалоговое окно и добавить схему сообщений для обработки сообщений уведомлений из расширенных элементов управления. Любой необработанных сообщений должны быть переданы базовом классе. Функция-ловушка Настройка не требуется.  
   

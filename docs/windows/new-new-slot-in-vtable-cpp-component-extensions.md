@@ -1,30 +1,25 @@
 ---
-title: "New (новый слот в vtable) (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: New (новый слот в vtable) (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (новый слот в vtable) (расширения компонентов C++)
 `new` Ключевое слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  В **/CLR** компиляции `new` указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.  
   
- `new`в результате модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
+ `new` в результате модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
   
 -   [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   

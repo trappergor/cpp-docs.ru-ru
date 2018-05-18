@@ -1,12 +1,9 @@
 ---
-title: "Класс ScheduleGroup | Документы Microsoft"
-ms.custom: 
+title: Класс ScheduleGroup | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ScheduleGroup
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulegroup-class"></a>Класс ScheduleGroup
 Представляет абстракцию для группы расписаний. Группы расписаний организуют набор связанных работ, которые выигрывают от планирования в непосредственной близости друг от друга: во времени (путем выполнения другой задачи в той же группе перед перемещением в другую группу) или в пространстве (путем выполнения нескольких элементов в той же группе в том же узле NUMA или физическом сокете).  
@@ -45,13 +40,13 @@ class ScheduleGroup;
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ Деструктор ScheduleGroup](#dtor)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Id](#id)|Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.|  
 |[Ссылки](#reference)|Увеличивает значение счетчика ссылок группы расписания.|  
@@ -66,7 +61,7 @@ class ScheduleGroup;
   
  **Пространство имен:** concurrency  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> Идентификатор 
 
  Возвращает идентификатор для группы расписаний, уникальный в пределах планировщик, к которому принадлежит группа.  
   
@@ -126,7 +121,7 @@ virtual unsigned int Release() = 0;
   
  Расписание группы связан с определенным экземпляром планировщика. Необходимо убедиться, что все ссылки на группы расписаний освобождаются до освобождения всех ссылок на планировщик, поскольку последние может привести к уничтожению планировщика. Это приведет к неопределенному поведению.  
   
-##  <a name="dtor"></a> ~ScheduleGroup 
+##  <a name="dtor"></a> ~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();

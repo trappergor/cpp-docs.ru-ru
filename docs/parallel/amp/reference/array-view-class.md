@@ -1,12 +1,9 @@
 ---
-title: "Класс array_view | Документы Microsoft"
-ms.custom: 
+title: Класс array_view | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>Класс array_view
 Представляет представление многомерном над данными, хранящимися в другой контейнер.  
@@ -77,14 +72,14 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор array_view](#ctor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы ограничены для выполнения только в ЦП и не может быть выполнена на целевом Direct3D.|  
 |[~ array_view, деструктор](#ctor)|Уничтожает `array_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Копирует содержимое `array_view` указанное назначение путем вызова `copy(*this, dest)`.|  
 |[data](#data)|Возвращает указатель на необработанные данные `array_view`.|  
@@ -92,7 +87,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|Возвращает объект экстента array_view объекта.|  
 |[get_ref](#get_ref)|Возвращает ссылку на индексированного элемента.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится.|  
-|[refresh](#refresh)|Уведомляет `array_view` объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все данные из кэша устаревшим.|  
+|[Обновления](#refresh)|Уведомляет `array_view` объекта, привязанного памяти был изменен вне `array_view` интерфейса. Вызов этого метода отображает все данные из кэша устаревшим.|  
 |[reinterpret_as](#reinterpret_as)|Возвращает одномерный массив, который содержит все элементы в `array_view` объекта.|  
 |[section](#section)|Возвращает подраздел `array_view` объект, находящийся в указанный источник и, возможно, который имеет указанную область.|  
 |[synchronize](#synchronize)|Синхронизирует все изменения, внесенные в `array_view` объекта обратно в исходные данные.|  
@@ -103,21 +98,21 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|  
-|[operator[]](#operator_at)|Возвращает элемент, указанный параметрами.|  
+|[Operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|  
+|[оператор]](#operator_at)|Возвращает элемент, указанный параметрами.|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного `array_view` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Сохраняет ранг объекта `array_view` объекта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[extent](#extent)|Получает объект `extent`, который определяет форму объекта `array_view`.|  
 |[source_accelerator_view](#source_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится|  

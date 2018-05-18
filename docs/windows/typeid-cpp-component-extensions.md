@@ -1,30 +1,25 @@
 ---
-title: "typeid (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: typeid (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (расширения компонентов C++)
 Возвращает значение, указывающее тип объекта.  
@@ -77,15 +72,15 @@ type::typeid
   
  **Заметки**  
   
- `typeid`используется для получения <xref:System.Type> для типа во время компиляции.  
+ `typeid` используется для получения <xref:System.Type> для типа во время компиляции.  
   
- `typeid`Аналогично получению System::Type для типа во время выполнения с помощью <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A>. Однако typeid принимает только имя типа параметра.  Если вы хотите использовать для получения имени System::Type экземпляр типа, используйте GetType.  
+ `typeid` Аналогично получению System::Type для типа во время выполнения с помощью <xref:System.Type.GetType%2A> или <xref:System.Object.GetType%2A>. Однако typeid принимает только имя типа параметра.  Если вы хотите использовать для получения имени System::Type экземпляр типа, используйте GetType.  
   
- `typeid`необходима возможность вычислять имени типа (тип) во время компиляции, в то время как GetType результатом является тип, возвращаемый во время выполнения.  
+ `typeid` необходима возможность вычислять имени типа (тип) во время компиляции, в то время как GetType результатом является тип, возвращаемый во время выполнения.  
   
- `typeid`может принимать имя собственного типа или общий псевдоним языка среды выполнения для имени собственного типа; в разделе [эквиваленты C++ собственных типов .NET Framework (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) для получения дополнительной информации.  
+ `typeid` может принимать имя собственного типа или общий псевдоним языка среды выполнения для имени собственного типа; в разделе [эквиваленты C++ собственных типов .NET Framework (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) для получения дополнительной информации.  
   
- `typeid`Несмотря на то, что он будет по-прежнему возвращать System::Type также работает с собственных типов.  Чтобы получить структуру type_info, используйте [оператор typeid](../cpp/typeid-operator.md).  
+ `typeid` Несмотря на то, что он будет по-прежнему возвращать System::Type также работает с собственных типов.  Чтобы получить структуру type_info, используйте [оператор typeid](../cpp/typeid-operator.md).  
   
 ### <a name="requirements"></a>Требования  
  Параметр компилятора: **/clr**  

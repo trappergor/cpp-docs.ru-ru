@@ -1,12 +1,9 @@
 ---
-title: "Класс CEdit | Документы Microsoft"
-ms.custom: 
+title: Класс CEdit | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Предоставляет функции элемента управления редактированием Windows.  
@@ -128,13 +123,13 @@ class CEdit : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CEdit::CEdit](#cedit)|Создает `CEdit` объект элемента управления.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CEdit::CanUndo](#canundo)|Определяет, можно ли отменить операцию управления редактирования.|  
 |[CEdit::CharFromPos](#charfrompos)|Возвращает индексы строку и символ, ближайший к указанной позиции знака.|  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  Каждая запись сопоставления сообщений имеет следующий вид:  
   
- **ON_**уведомления **(** *идентификатор, memberFxn ***)**  
+ **ON_** уведомления **(** *идентификатор, memberFxn ***)**  
   
  где `id` указывает идентификатор дочернего окна элемента управления, отправляющего уведомление, и `memberFxn` имя функции-члена родительского вы написали для обработки уведомления.  
   
@@ -515,7 +510,7 @@ BOOL GetHighlight(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[выходной] `pichStart`|Отсчитываемый от нуля индекс первого символа в диапазоне от текста, который будет выделен.|  
 |[выходной] `pichEnd`|Отсчитываемый от нуля индекс последнего символа в диапазоне от текста, который будет выделен.|  
@@ -983,7 +978,7 @@ void SetHighlight(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `ichStart`|Отсчитываемый от нуля индекс первого символа в диапазоне текста для выделения.|  
 |[in] `ichEnd`|Отсчитываемый от нуля индекс последнего символа в диапазоне текста для выделения.|  
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  Когда `SetPasswordChar` вызове функции-члена `CEdit` будет перерисовывает все символы видимой, используя символ, указанный *ch*.  
   
- Если элемент управления для редактирования создается с [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , знак пароля по умолчанию задан стиль звездочку (  **\*** ). Этот стиль удаляется, если `SetPasswordChar` вызывается с *ch* присвоено значение 0.  
+ Если элемент управления для редактирования создается с [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , знак пароля по умолчанию задан стиль звездочку ( **\***). Этот стиль удаляется, если `SetPasswordChar` вызывается с *ch* присвоено значение 0.  
   
  Дополнительные сведения см. в разделе [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) в Windows SDK.  
   
@@ -1247,7 +1242,7 @@ BOOL ShowBalloonTip(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |---------------|-----------------|  
 |[in] `pEditBalloonTip`|Указатель на [EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466) структура, описывающая всплывающей подсказки.|  
 |[in] `lpszTitle`|Указатель на строку Юникода, содержащее заголовок окна всплывающей подсказки.|  

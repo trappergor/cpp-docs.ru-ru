@@ -2,9 +2,6 @@
 title: Пространство имен Concurrency::Direct3D функции (AMP) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +24,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Пространство имен Concurrency::Direct3D функции (AMP)
 ||||  
@@ -47,10 +42,10 @@ ms.lasthandoff: 04/10/2018
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
+|[MAD](#mad)|[make_array](#make_array)|[шума](#noise)|  
 |[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
-|[step](#step)|[umax](#umax)|[umin](#umin)|  
+|[Шаг](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** amp.h **пространство имен:** параллелизма
@@ -69,7 +64,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает абсолютное значение аргумента.  
   
-##  <a name="clamp"></a>  clamp  
+##  <a name="clamp"></a>  CLAMP  
  Вычисляет значение первого аргумента указанного ограниченный диапазон, определяемый указанным второго и третьего аргументов.  
   
 ```  
@@ -241,7 +236,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель интерфейса IUnknown, соответствующий базовый массив буфера Direct3D.  
   
-##  <a name="imax"></a>  imax  
+##  <a name="imax"></a>  iMax  
  Определите максимальное числовое значение аргументов  
   
 ```  
@@ -293,7 +288,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>Возвращаемое значение  
  Логический флаг, указывающее, запрещен ли accelerator_view указанного времени ожидания.  
   
-##  <a name="mad"></a>  mad  
+##  <a name="mad"></a>  MAD  
  Вычисляет произведение первого и второго заданного аргумента, а затем добавляет указанный третий аргумент.  
   
 ```  
@@ -367,7 +362,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>Возвращаемое значение  
  Массив, созданный с помощью предоставленного буфера Direct3D.  
   
-##  <a name="noise"></a>  noise  
+##  <a name="noise"></a>  шума  
  Создает случайное значение с помощью алгоритма шума Перлина  
   
 ```  
@@ -381,7 +376,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение шума Перлина в диапазоне от -1 до 1  
   
-##  <a name="radians"></a>  radians  
+##  <a name="radians"></a>  RADIANS  
  Преобразование _X из градусов в радианы  
   
 ```  
@@ -440,7 +435,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает _X с ограничениями в диапазоне от 0 до 1  
   
-##  <a name="sign"></a>  sign  
+##  <a name="sign"></a>  Вход  
  Определяет знак заданного аргумента.  
   
 ```  
@@ -477,7 +472,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает 0, если _X меньше, чем _Min; 1, если _X больше, чем _Max; в противном случае — значение в диапазоне от 0 до 1, если _X находится в диапазоне [_Min, _Max]  
   
-##  <a name="step"></a>  step  
+##  <a name="step"></a>  Шаг  
  Сравнивает два значения и возвращает 0 или 1, в зависимости от того, какое значение больше.  
   
 ```  
@@ -496,7 +491,7 @@ inline float step(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает 1, если _X больше или равно _Y; в противном случае — 0.  
   
-##  <a name="umax"></a>  umax  
+##  <a name="umax"></a>  UMAX  
  Определите максимальное числовое значение аргументов  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Размещение Windows форме пользовательский элемент управления в диалоговом окне MFC | Документы Microsoft"
-ms.custom: 
+title: Размещение Windows форме пользовательский элемент управления в диалоговом окне MFC | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
-MFC предоставляет класс шаблона [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , чтобы можно было разместить пользовательский элемент управления Windows Forms (<xref:System.Windows.Forms.UserControl>) в модальные и немодальные диалоговом окне MFC. `CWinFormsDialog`является производным от класса MFC [CDialog](../mfc/reference/cdialog-class.md), поэтому в диалоговом окне могут запускаться как модальное или немодальный.  
+MFC предоставляет класс шаблона [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , чтобы можно было разместить пользовательский элемент управления Windows Forms (<xref:System.Windows.Forms.UserControl>) в модальные и немодальные диалоговом окне MFC. `CWinFormsDialog` является производным от класса MFC [CDialog](../mfc/reference/cdialog-class.md), поэтому в диалоговом окне могут запускаться как модальное или немодальный.  
   
  Процесс, `CWinFormsDialog` , который используется для размещения элемента управления пользователя аналогична описанной в [размещение пользовательского элемента управления формы Windows в диалоговом окне MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Однако `CWinFormsDialog` управляет инициализацией и размещением пользовательского элемента управления, чтобы не должен быть запрограммирован вручную.  
   

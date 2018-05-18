@@ -1,12 +1,9 @@
 ---
-title: "Класс int_2 | Документы Microsoft"
-ms.custom: 
+title: Класс int_2 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5abe11c29263817c8530d01fb3e190ba5866326
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7368607fd3041895d2f84553d64395ed1bd54820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int2-class"></a>Класс int_2
 Представляет короткого вектора из двух целых чисел.  
@@ -68,13 +63,13 @@ class int_2;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[int_2 Constructor](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
+|[Конструктор int_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |int_2::get_x||  
 |int_2::get_xy||  
@@ -91,33 +86,33 @@ class int_2;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |int_2::operator-||  
 |int_2::operator--||  
-|int_2::operator%=||  
-|int_2::operator&=||  
-|int_2::operator*=||  
-|int_2::operator/=||  
-|int_2::operator^=||  
+|int_2::operator % =||  
+|int_2::operator & =||  
+|int_2::operator * =||  
+|int_2::operator / =||  
+|int_2::operator ^ =||  
 |int_2::operator&#124;=||  
-|int_2::operator~||  
-|int_2::operator++||  
-|int_2::operator+=||  
+|int_2::operator ~||  
+|int_2::operator ++||  
+|int_2::operator +=||  
 |int_2::operator<\<=||  
-|int_2::operator=||  
+|int_2::operator =||  
 |int_2::operator-=||  
-|int_2::operator>>=||  
+|int_2::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Размер константы](#int_2__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |int_2::g||  
 |int_2::gr||  
@@ -132,9 +127,9 @@ class int_2;
  `int_2`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** amp_short_vectors.h  
+ **Заголовок:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ##  <a name="ctor"></a> int_2 
 

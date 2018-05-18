@@ -1,12 +1,9 @@
 ---
-title: "Класс CMFCRibbonSeparator | Документы Microsoft"
-ms.custom: 
+title: Класс CMFCRibbonSeparator | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSeparator
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f05d89388d8722fab7853dc3c1e5bcb4d9a2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
 Реализует разделителя ленты.  
@@ -58,14 +53,14 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Создает объект `CMFCRibbonSeparator`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** списка в **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonSeparator::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -74,7 +69,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание:|  
+|Имя|Описание|  
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Метод копирования, который задает разделитель элементов переменные из другого объекта.|  
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Возвращает размер разделителя.|  
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Указывает, является ли разделитель.|  
@@ -107,7 +102,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
  Добавляет разделитель для **команды** списка в **Настройка** диалоговое окно.  
   
 ```  
@@ -126,7 +121,7 @@ virtual int AddToListBox(
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс строки, в поле со списком, определяемое `pWndListBox`.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Создает объект `CMFCRibbonSeparator`.  
   
 ```  
@@ -145,7 +140,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
   
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
  Метод копирования, который задает разделитель элементов переменные из другого объекта.  
   
 ```  
@@ -156,7 +151,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  [in] `Src`  
  Исходный элемент ленты для копирования из.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  Возвращает размер разделителя.  
   
 ```  
@@ -170,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер разделителя в контексте данного устройства.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
  Указывает, является ли разделитель.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL IsSeparator() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда `TRUE` к этому классу.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
  Указывает, является ли это позиции табуляции.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>Примечания  
  Разделитель ленты не табуляции.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
  Вызывается системой для рисования разделителя на ленте или панели инструментов быстрого доступа.  
   
 ```  
@@ -204,7 +199,7 @@ virtual void OnDraw(CDC* pDC);
  [in] `pDC`  
  Указатель на контекст устройства.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  Вызывается системой для отрисовки в качестве разделителя в **команды** списка.  
   
 ```  
@@ -221,7 +216,7 @@ virtual void OnDrawOnList(
   
 |||  
 |-|-|  
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |[in] `pDC`|Указатель на контекст устройства.|  
 |[in] `strText`|Текст, отображаемый в списке.|  
 |[in] `nTextOffset`|Интервал между текстом и левой стороны обрамляющего прямоугольника.|  

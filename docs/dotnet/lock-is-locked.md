@@ -1,12 +1,9 @@
 ---
-title: "Lock::is_locked | Документы Microsoft"
-ms.custom: 
+title: Lock::is_locked | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - is_locked
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4f7a3c92ccace542a4588b0278fd4f799459c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockislocked"></a>lock::is_locked
 Указывает, является ли блокировка удерживается.  
@@ -42,7 +37,7 @@ bool is_locked();
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `true`Если блокировка удерживается, `false` в противном случае.  
+ `true` Если блокировка удерживается, `false` в противном случае.  
   
 ## <a name="example"></a>Пример  
  Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  

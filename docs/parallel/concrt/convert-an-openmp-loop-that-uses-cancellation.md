@@ -1,30 +1,25 @@
 ---
-title: "Как: преобразование цикла OpenMP, использующего отмену для использования среды выполнения с параллелизмом | Документы Microsoft"
-ms.custom: 
+title: 'Как: преобразование цикла OpenMP, использующего отмену для использования среды выполнения с параллелизмом | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего отмену для использования среды выполнения с параллелизмом
 В некоторых параллельных циклах не требуют выполнения всех итераций. Например алгоритм, который выполняет поиск значения можно завершить работу, когда значение найдено. OpenMP не предоставляет механизм для выхода из параллельного цикла. Тем не менее можно использовать флаг или логическое значение для включения итерации цикла, чтобы указать, что решение найдено. Среда выполнения с параллелизмом предоставляет функциональность, позволяющую одной задаче отменять другие задачи, которые еще не запущен.  

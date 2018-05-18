@@ -1,12 +1,9 @@
 ---
-title: "Класс CSmartDockingInfo | Документы Microsoft"
-ms.custom: 
+title: Класс CSmartDockingInfo | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmartdockinginfo-class"></a>Класс CSmartDockingInfo
 Определяет внешний вид интеллектуальных маркеров закрепления.  
@@ -56,23 +51,23 @@ ms.lasthandoff: 12/21/2017
 class CSmartDockingInfo : public CObject  
 ```  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Члены  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |`CSmartDockingInfo::CSmartDockingInfo`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSmartDockingInfo::CopyTo](#copyto)|Копирует текущий смарт-закрепления параметры сведения в предоставленный [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальных маркеров закрепления.|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Задает цвет фона базовый интеллектуальных маркеров закрепления.|  
@@ -115,7 +110,7 @@ class CSmartDockingInfo : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
  Копирует текущие параметры смарт-закрепления в предоставленный [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.  
   
 ```  
@@ -126,7 +121,7 @@ void CopyTo(CSmartDockingInfo& params);
  [выходной] `params`  
  Объект типа `CSmartDockingInfo` заполняется текущие параметры смарт-закрепления.  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальных маркеров закрепления.  
   
 ```  
@@ -138,14 +133,14 @@ BOOL m_bUseThemeColorInShading;
   
  Значение по умолчанию — `FALSE`.  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  Задает цвет фона базовый интеллектуальных маркеров закрепления.  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
  Задает цвет, который будет заменен `m_clrToneSrc` в смарт-закрепления растровые изображения маркера.  
   
 ```  
@@ -157,7 +152,7 @@ COLORREF m_clrToneDest;
   
  Чтобы изменить цвет пользовательских маркеров, необходимо указать `m_clrToneDest` и `m_clrToneSrc`.  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  Задает цвет смарт-закрепления растровые изображения маркера.  
   
 ```  
@@ -169,7 +164,7 @@ COLORREF m_clrToneSrc;
   
  Используйте `(COLORREF)-1` оставить пустым члена группы смарт-закрепления.  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  Задает цвет смарт-закрепления точечных рисунков маркера, если они являются прозрачными.  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>Примечания  
  Это значение задается при отображении пользовательские маркеры и пользовательские растровые изображения в группе закрепления.  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
  Задает смещение между центральная группа вид интеллектуальных маркеров закрепления и границы прямоугольника, центральная группа.  
   
 ```  
@@ -189,7 +184,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>Примечания  
  Задайте это значение, если вы хотите изменить смещение по умолчанию между пользовательские маркеры и границы центральная группа вид интеллектуальных маркеров закрепления. Смещение по умолчанию составляет 5 пикселей.  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  Указывает общий объем прямоугольник, ограничивающий все маркеры смарт-закрепления в группе центра.  
   
 ```  
@@ -199,7 +194,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>Примечания  
  Задать `m_sizeTotal` размер маркера центральная группа ограничивающего прямоугольника. Необходимо указать это значение, если вы используете пользовательские растровые изображения маркеров.  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  Определяет ресурс идентификаторы точечных рисунков, которые используются для без подсветки пользовательских интеллектуальных маркеров закрепления.  
   
 ```  
@@ -207,7 +202,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Заполнение массива идентификаторы точечных рисунков, представляющий интеллектуальных маркеров закрепления ресурсов. `AFX_SD_MARKERS_NUM`в настоящее время определяется как 5. Заполните массив следующим образом:  
+ Заполнение массива идентификаторы точечных рисунков, представляющий интеллектуальных маркеров закрепления ресурсов. `AFX_SD_MARKERS_NUM` в настоящее время определяется как 5. Заполните массив следующим образом:  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -219,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  Определяет идентификаторы точечных рисунков, которые используются для выделенных пользовательские маркеры смарт-закрепления ресурсов.  
   
 ```  
@@ -227,7 +222,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Заполните этот массив с идентификаторами точечных рисунков, представляющий выделенный интеллектуальных маркеров закрепления. `AFX_SD_MARKERS_NUM`в настоящее время определяется как 5. Заполните массив следующим образом:  
+ Заполните этот массив с идентификаторами точечных рисунков, представляющий выделенный интеллектуальных маркеров закрепления. `AFX_SD_MARKERS_NUM` в настоящее время определяется как 5. Заполните массив следующим образом:  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   

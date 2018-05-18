@@ -1,30 +1,25 @@
 ---
-title: "Библиотека асинхронных агентов | Документы Microsoft"
-ms.custom: 
+title: Библиотека асинхронных агентов | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>библиотеку асинхронных агентов
 Библиотека асинхронных агентов (или просто *Библиотека агентов*) предоставляет модель программирования, которая позволяет повысить надежность разработки приложений с поддержкой параллелизма. Библиотека агентов — это библиотека шаблонов C++, который способствует модель программирования на основе субъектов и в процессе передачи сообщений для недетализированного потока данных и задач по конвейеризации. Библиотека агентов сборки на компоненты управления планирования и ресурсов в среде выполнения с параллелизмом.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  Библиотека агентов состоит из трех компонентов: *асинхронных агентов*, *асинхронные блоки сообщений*, и *функции передачи сообщений*. Агенты поддерживают состояние и используют блоки сообщений и функции передачи сообщений для взаимодействия друг с другом и с внешними компонентами. Функции передачи сообщений позволяют агентов для отправки и получения сообщений из внешних компонентов. Асинхронные блоки сообщений содержат сообщения и позволяют агентам взаимодействовать синхронизированной.  
   
- Ниже показано взаимодействие двух агентов используйте блоки сообщений и функции передачи сообщений для обмена данными. На этом рисунке `agent1` отправляет сообщение `agent2` с помощью [concurrency::send](reference/concurrency-namespace-functions.md#send) функции и [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта. `agent2`использует [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функция для чтения сообщения. `agent2`использует тот же метод для отправки сообщения к `agent1`. Пунктирные стрелки представляют поток данных между агентами. Сплошные стрелки соединяют агенты с блоками сообщений, которые они записи или чтения из.  
+ Ниже показано взаимодействие двух агентов используйте блоки сообщений и функции передачи сообщений для обмена данными. На этом рисунке `agent1` отправляет сообщение `agent2` с помощью [concurrency::send](reference/concurrency-namespace-functions.md#send) функции и [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта. `agent2` использует [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функция для чтения сообщения. `agent2` использует тот же метод для отправки сообщения к `agent1`. Пунктирные стрелки представляют поток данных между агентами. Сплошные стрелки соединяют агенты с блоками сообщений, которые они записи или чтения из.  
   
  ![Компоненты библиотеки агентов](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

@@ -1,12 +1,9 @@
 ---
-title: "Класс ActivationFactory | Документы Microsoft"
-ms.custom: 
+title: Класс ActivationFactory | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivationFactory class
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6775e9466ed337a070b6a234a4d65bb949a009e4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactory-class"></a>ActivationFactory - класс
 Позволяет одному или нескольким классам быть активированными средой выполнения Windows.  
@@ -67,13 +62,13 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует класс ActivationFactory.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает значение счетчика ссылок объекта ActivationFactory.|  
 |[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|  

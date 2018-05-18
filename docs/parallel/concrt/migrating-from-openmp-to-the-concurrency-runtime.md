@@ -1,30 +1,25 @@
 ---
-title: "Переход от OpenMP к среде выполнения с параллелизмом | Документы Microsoft"
-ms.custom: 
+title: Переход от OpenMP к среде выполнения с параллелизмом | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16e10287526e6b815ba56183a8e3d590102507aa
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Переход от OpenMP к среде выполнения с параллелизмом
 Среда выполнения с параллелизмом позволяет использовать самые разные модели программирования. Эти модели могут перекрываться с моделями других библиотек или дополнять их. Документы в этом разделе сравнения [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) в среду выполнения с параллелизмом и приводятся примеры способов миграции существующего кода OpenMP для использования среды выполнения с параллелизмом.  

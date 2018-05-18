@@ -1,12 +1,9 @@
 ---
-title: "Структура IScheduler | Документы Microsoft"
-ms.custom: 
+title: Структура IScheduler | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>Структура IScheduler
 Интерфейс для абстракции планировщика работы. Диспетчер ресурсов среды выполнения с параллелизмом использует этот интерфейс для взаимодействия с планировщиками работы.  
@@ -48,7 +43,7 @@ struct IScheduler;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Предоставляет планировщик с набором корней виртуальный процессор для его использования. Каждый `IVirtualProcessorRoot` интерфейс представляет право на выполнение одного потока, который может выполнять работу от имени планировщик.|  
 |[IScheduler::GetId](#getid)|Возвращает уникальный идентификатор для планировщика.|  
@@ -69,7 +64,7 @@ struct IScheduler;
   
  **Пространство имен:** concurrency  
   
-##  <a name="addvirtualprocessors"></a>  IScheduler::AddVirtualProcessors Method  
+##  <a name="addvirtualprocessors"></a>  Метод IScheduler::AddVirtualProcessors  
  Предоставляет планировщик с набором корней виртуальный процессор для его использования. Каждый `IVirtualProcessorRoot` интерфейс представляет право на выполнение одного потока, который может выполнять работу от имени планировщик.  
   
 ```
@@ -88,7 +83,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>Примечания  
  Диспетчер ресурсов вызывает `AddVirtualProcessor` метод для предоставления первоначального набора корней виртуальный процессор в планировщике. Он также может вызывать метод для добавления корней виртуальный процессор в планировщике при перебалансировке ресурсов между планировщиками.  
   
-##  <a name="getid"></a>  IScheduler::GetId Method  
+##  <a name="getid"></a>  Метод IScheduler::GetId  
  Возвращает уникальный идентификатор для планировщика.  
   
 ```
@@ -103,7 +98,7 @@ virtual unsigned int GetId() const = 0;
   
  Идентификатор, полученный из другого источника может привести к неопределенному поведению.  
   
-##  <a name="getpolicy"></a>  IScheduler::GetPolicy Method  
+##  <a name="getpolicy"></a>  Метод IScheduler::GetPolicy  
  Возвращает копию политики планировщика. Дополнительные сведения о политиках планировщиков см. в разделе [SchedulerPolicy](schedulerpolicy-class.md).  
   
 ```
@@ -113,7 +108,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  Копия политики планировщика.  
   
-##  <a name="notifyresourcesexternallybusy"></a>  IScheduler::NotifyResourcesExternallyBusy Method  
+##  <a name="notifyresourcesexternallybusy"></a>  Метод IScheduler::NotifyResourcesExternallyBusy  
  Уведомляет этот планировщик, на аппаратные потоки, представленных набором корней виртуальный процессор в массиве `ppVirtualProcessorRoots` теперь используются другими планировщики.  
   
 ```
@@ -163,7 +158,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  Планировщик, который имеет право на уведомления возвращает набор начального уведомления при его создании, информирования о его ли ресурсы, которые она была присвоена извне занятости и неактивности.  
   
-##  <a name="removevirtualprocessors"></a>  IScheduler::RemoveVirtualProcessors Method  
+##  <a name="removevirtualprocessors"></a>  Метод IScheduler::RemoveVirtualProcessors  
  Инициирует Удаление корней виртуального процессора, которые ранее были выделены на данном планировщике.  
   
 ```
@@ -184,7 +179,7 @@ virtual void RemoveVirtualProcessors(
   
  Параметр `ppVirtualProcessorRoots` указывает на массив интерфейсов. Входит в набор корни виртуального процессора для удаления корни не был активирован возвращается немедленно с помощью `Remove` метод. Корни, которые были активированы и либо выполняют работу или были отключены и ожидают прибытия работы, должны возвращаться асинхронно. Планировщику необходимо сделать все попытки удалить корневой виртуальный процессор, как можно быстрее. Задержка удаления корней виртуального процессора может привести к непреднамеренному превышение лимита подписки в планировщике.  
   
-##  <a name="statistics"></a>  IScheduler::Statistics Method  
+##  <a name="statistics"></a>  Метод IScheduler::Statistics  
  Предоставляет сведения о скорости поступления до завершения задачи и изменение длины очереди для планировщика.  
   
 ```

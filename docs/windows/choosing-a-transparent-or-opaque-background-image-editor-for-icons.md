@@ -1,13 +1,10 @@
 ---
-title: "Выбор прозрачного и непрозрачного фона (редактор изображений для значков) | Документы Microsoft"
-ms.custom: 
+title: Выбор прозрачного и непрозрачного фона (редактор изображений для значков) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Выбор прозрачного и непрозрачного фона (Редактор изображений для значков)
 При перемещении или копировании выбор из образа, точки в целевом, которые соответствуют текущим цветом фона, по умолчанию являются прозрачной. они не мешает пикселей в целевом расположении.  

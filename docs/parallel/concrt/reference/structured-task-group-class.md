@@ -1,12 +1,9 @@
 ---
-title: "Класс structured_task_group | Документы Microsoft"
-ms.custom: 
+title: Класс structured_task_group | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>Класс structured_task_group
 Класс `structured_task_group` представляет коллекцию параллельной работы со сложной структурой. Можно поместить в очередь `structured_task_group` отдельные параллельные задачи с помощью объектов `task_handle` и ожидать их выполнения или отменить группу задач до завершения выполнения, что приведет к отмене всех задач, которые не начали выполнение.  
@@ -47,20 +42,20 @@ class structured_task_group;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[structured_task_group](#ctor)|Перегружен. Создает новое `structured_task_group` объекта.|  
-|[~structured_task_group Destructor](#dtor)|Уничтожает объект `structured_task_group`. Вы должны вызвать либо метод `wait` или `run_and_wait` метод на объект до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.|  
+|[~ structured_task_group деструктор](#dtor)|Уничтожает объект `structured_task_group`. Вы должны вызвать либо метод `wait` или `run_and_wait` метод на объект до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[cancel](#cancel)|Делает все возможное при попытке отменить поддерева, корнем в эту группу задач работы. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.|  
+|[Отмена](#cancel)|Делает все возможное при попытке отменить поддерева, корнем в эту группу задач работы. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.|  
 |[is_canceling](#is_canceling)|Сообщает вызывающей стороне, находится ли группа задач состоянии отмены. Это не обязательно, `cancel` метод был вызван для `structured_task_group` объекта (хотя это определенно позволяет этот метод для возврата `true`). Он может иметь место, `structured_task_group` объекта выполняется встроено и дальнейшей группы задач вверх в дереве работы была отменена. В случаях, таких как where эти среда выполнения может определить заранее, что отмена будет передаваться через этот `structured_task_group` объекта, `true` будут также возвращены.|  
 |[run](#run)|Перегружен. Планирует задачу на `structured_task_group` объекта. Вызывающий объект управляет временем существования `task_handle` переданный объект `_Task_handle` параметра. Версия, которая принимает параметр `_Placement`, заставляет задачу стремиться к выполнению в расположении, указанном этим параметром.|  
 |[run_and_wait](#run_and_wait)|Перегружен. Планирует задачу для выполнения встроено в вызывающий контекст с помощью `structured_task_group` объекта для поддержки полной отмены. Если `task_handle` объект передается как параметр `run_and_wait`, вызывающий объект отвечает за управление жизненным циклом `task_handle` объекта. Функция затем ожидает, пока не работают на `structured_task_group` объекта завершена или отменена.|  
-|[Ожидание](#wait)|Ожидает, пока не работают на `structured_task_group` завершена или отменена.|  
+|[wait](#wait)|Ожидает, пока не работают на `structured_task_group` завершена или отменена.|  
   
 ## <a name="remarks"></a>Примечания  
  Существует ряд серьезных ограничений на использование `structured_task_group` объекта с целью повышения производительности:  
@@ -108,7 +103,7 @@ bool is_canceling();
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [отмены](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-##  <a name="run"></a> run 
+##  <a name="run"></a> Запустите 
 
  Планирует задачу на `structured_task_group` объекта. Вызывающий объект управляет временем существования `task_handle` переданный объект `_Task_handle` параметра. Версия, которая принимает параметр `_Placement`, заставляет задачу стремиться к выполнению в расположении, указанном этим параметром.  
   
@@ -191,7 +186,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Примечания  
  Конструктор, который принимает токен отмены, создает `structured_task_group`, которая будет отменена, когда будет отменен источник, связанный с этим токеном. Предоставление явного токена отмены также изолирует эту группу структурированных задач от участия в неявной отмене из родительской группы с другим токеном или без токена.  
   
-##  <a name="dtor"></a> ~structured_task_group 
+##  <a name="dtor"></a> ~ structured_task_group 
 
  Уничтожает объект `structured_task_group`. Вы должны вызвать либо метод `wait` или `run_and_wait` метод на объект до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.  
   
@@ -202,7 +197,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>Примечания  
  Если деструктор выполняется как результат обычного выполнения (например, не освобождения стека из-за исключения) и ни `wait` , ни `run_and_wait` методы вызываются, деструктор может вызвать [missing_wait](missing-wait-class.md) исключение.  
   
-##  <a name="wait">Ожидание</a> 
+##  <a name="wait"></a> Ожидание 
 
  Ожидает, пока не работают на `structured_task_group` завершена или отменена.  
   

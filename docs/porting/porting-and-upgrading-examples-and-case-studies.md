@@ -1,27 +1,22 @@
 ---
-title: "Перенос и обновление: примеры и конкретные случаи | Документы Майкрософт"
-ms.custom: 
+title: 'Перенос и обновление: примеры и конкретные случаи | Документы Майкрософт'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: d48bbff9-1ea7-467f-8c8b-758601f01573
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212b51f417fc84b602e6231f2e769cb73c9a1460
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a1b05c96e4db1af204937068f019222d3c53684
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Перенос и обновление: примеры и конкретные случаи
 Чтобы получить представление о возможных проблемах, которые могут возникать при миграции с предыдущей версии Visual C++ на текущую версию, можно ознакомиться с историями успешной миграции.  

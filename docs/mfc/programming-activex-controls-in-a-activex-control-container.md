@@ -1,13 +1,10 @@
 ---
-title: "Контейнеры элементов управления ActiveX: Программирование элементов управления ActiveX в контейнере элементов управления ActiveX | Документы Microsoft"
-ms.custom: 
+title: 'Контейнеры элементов управления ActiveX: Программирование элементов управления ActiveX в контейнере элементов управления ActiveX | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Контейнеры элементов управления ActiveX. Программирование элементов управления ActiveX в контейнере элементов управления ActiveX
 В этой статье описан процесс для доступа к предоставляемым [методы](../mfc/mfc-activex-controls-methods.md) и [свойства](../mfc/mfc-activex-controls-properties.md) внедренных элементов управления ActiveX. По сути выполняются следующие действия.  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>Заголовок класса программы-оболочки (. (H) файл  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Заголовок класса программы-оболочки (. (H) файл  
  Для получения и задания свойств (и вызывать методы) для элемента управления Circ `CCirc` класс-оболочка обеспечивает объявление все они доступны методы и свойства. В примере эти объявления находятся в круглый З. Следующий пример является частью класса `CCirc` , определяющий интерфейсов элемента управления ActiveX:  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  Затем, эти функции могут вызываться из других процедур приложения, с помощью обычного синтаксиса C++. Дополнительные сведения об использовании этой функции-члена присвоено к методам и свойствам элемента управления, обратитесь к разделу [программирование элемента управления ActiveX](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>Член переменной изменения в проект  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Член переменной изменения в проект  
  Когда элемент управления ActiveX был добавлен в проект и внедренных в контейнере поле диалоговых окон, доступны в других частях проекта. Самый простой способ доступа к элементу управления — [создать переменную-член](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) класс диалогового окна `CContainerDlg` (шаг 2), то есть того же типа, как класс-оболочку, добавленные в проект Visual C++. Затем можно использовать переменную-член для доступа к внедренный элемент управления в любое время.  
   
  Когда **добавления переменной-члена** диалоговое окно добавляет `m_circctl` член переменной в проект, а также добавляет следующие строки в файле заголовка (. H) из `CContainerDlg` класса:  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>Программирование элемента управления ActiveX  
+##  <a name="_core_programming_the_activex_control"></a> Программирование элемента управления ActiveX  
  На этом этапе вставлено в шаблон диалогового окна элемента управления ActiveX и создать переменную-член для нее. Общий синтаксис C++ теперь можно использовать для доступа к свойствам и методам внедренного элемента управления.  
   
  Как уже отмечалось (в [заголовок класса программы-оболочки (. H) файл](#_core_the_wrapper_class_header_28h29_file)), файл заголовка (. (H) для `CCirc` класс-оболочку, в этом вариантов круглый Символ «H» содержит список функций элементов, которые можно использовать для получения и задания любое значение открытого свойства. Также доступны функции-члены для предоставленные методы.  

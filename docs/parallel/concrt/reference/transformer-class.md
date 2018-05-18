@@ -1,12 +1,9 @@
 ---
-title: "Класс transformer | Документы Microsoft"
-ms.custom: 
+title: Класс transformer | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - transformer
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53ec38ee10ca4d7997095fe8acddd957564c822
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac9ea43e1d3f6f369b93e92e91fa3606cf7d6af5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transformer-class"></a>Класс transformer
 Блок обмена сообщениями `transformer` — это упорядоченный блок `propagator_block` с одной целью и несколькими источниками, который может принимать сообщения одного типа и хранить неограниченное число сообщений другого типа.  
@@ -61,14 +56,14 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[transformer](#ctor)|Перегружен. Создает `transformer` блока обмена сообщениями.|  
 |[~ transformer деструктор](#dtor)|Уничтожает `transformer` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `transformer` блока обмена сообщениями, передавая владение вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `transformer` и зарезервированные целевым объектом, передавая владение вызывающему объекту.|  

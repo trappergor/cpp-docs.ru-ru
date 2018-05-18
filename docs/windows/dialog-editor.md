@@ -1,13 +1,10 @@
 ---
-title: "Редактор диалоговых окон | Документы Microsoft"
-ms.custom: 
+title: Редактор диалоговых окон | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>Редактор диалоговых окон
-Редактор диалоговых окон позволяет создавать или редактировать ресурсы диалогового окна. Открыть редактор диалоговых окон, дважды щелкните RC-файл диалогового окна в окне представления ресурсов (**представление &#124; Представление ресурсов**). Представление ресурсов недоступно в экспресс-выпусках.  
+Редактор диалоговых окон позволяет создавать или редактировать ресурсы диалогового окна. Открыть редактор диалоговых окон, дважды щелкните RC-файл диалогового окна в окне представления ресурсов (**представление &#124; представление ресурсов**). Представление ресурсов недоступно в экспресс-выпусках.  
   
  Одним из первых шагов при создании нового диалогового окна (или шаблона диалоговых окон) является добавление элементов управления. В редакторе диалоговых окон элементы управления можно вписывать в определенный размер или форму, выравнивать и перемещать по диалоговому окну. Кроме того, любой элемент управления можно легко удалить.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Класс Event | Документы Microsoft"
-ms.custom: 
+title: Класс Event | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>Класс event
 Сбрасываемое вручную событие, которое явно учитывает среду выполнения с параллелизмом.  
@@ -46,22 +41,22 @@ class event;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[~ событий деструктор](#dtor)|Уничтожает событие.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[reset](#reset)|Сбрасывает несигнальное состояние события.|  
 |[set](#set)|Указывает события.|  
-|[Ожидание](#wait)|Ожидание события в сигнальное.|  
+|[wait](#wait)|Ожидание события в сигнальное.|  
 |[wait_for_multiple](#wait_for_multiple)|Ожидает несколько событий в сигнальное.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[timeout_infinite](#timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|  
   
@@ -124,7 +119,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait">Ожидание</a> 
+##  <a name="wait"></a> Ожидание 
 
  Ожидание события в сигнальное.  
   

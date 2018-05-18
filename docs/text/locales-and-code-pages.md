@@ -1,13 +1,10 @@
 ---
-title: "Языковые стандарты и кодовые страницы | Документы Microsoft"
-ms.custom: 
+title: Языковые стандарты и кодовые страницы | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="locales-and-code-pages"></a>Языковые стандарты и кодовые страницы
 Идентификатор языкового стандарта отражает региональные параметры и язык для конкретного географического региона. Данного языка могут разговаривать в более чем одной стране или регионе; Например португальском говорят в Бразилии, а также как и Португалия. И наоборот страны или региона, может иметь более одного официальный язык. Например, Канады имеет двух языках: английский и французский языки. Таким образом, Канады имеет два различных языков: английский (Канада) "и" французский (Канада). К некоторым категориям, зависящим от языкового стандарта, относится формат дат и отображения денежных значений.  

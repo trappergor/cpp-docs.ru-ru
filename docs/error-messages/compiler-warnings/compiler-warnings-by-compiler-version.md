@@ -1,13 +1,10 @@
 ---
-title: "Предупреждения компилятора версии компилятора | Документы Microsoft"
-ms.custom: 
+title: Предупреждения компилятора версии компилятора | Документы Microsoft
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Предупреждения компилятора версии компилятора
 
@@ -234,7 +230,7 @@ C4992|Warbird: функция "*объявление*" помеченная ка
 |||
 |-|-|
 C4330|атрибут "*атрибута*«для раздела»*раздел*" игнорируется
-C4415|duplicate __declspec(code_seg('*name*'))
+C4415|повторяющиеся __declspec (code_seg ("*имя*"))
 C4416|атрибут "__declspec(code_seg(...))" содержит пустую строку: игнорируется
 C4417|явное создание экземпляров шаблона не может иметь атрибут "__declspec(code_seg(...))": пропущен
 C4418|атрибут "__declspec(code_seg(...))" игнорируется для перечисления

@@ -1,13 +1,10 @@
 ---
-title: "Поддержка OLE: Реализация MFC | Документы Microsoft"
-ms.custom: 
+title: 'Поддержка OLE: Реализация MFC | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>Поддержка OLE. Реализация MFC
 Из-за размера и сложности необработанные OLE API-интерфейса может быть очень длительной вызов его непосредственно для создания приложений OLE. Реализация библиотеки классов Microsoft Foundation OLE предназначена для того, чтобы уменьшить объем работы, что требуется для создания полнофункциональных, поддерживающими OLE приложений.  
   
  В этой статье описываются части OLE API, которые не были реализованы в MFC. Обсуждение также объясняется, что реализуется сопоставление OLE части пакета Windows SDK.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>Некоторые части OLE не реализован в библиотеке классов  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Некоторые части OLE не реализован в библиотеке классов  
  Несколько интерфейсов и возможности OLE не предоставляются непосредственно MFC. Если требуется использовать эти функции можно вызывать непосредственно OLE API.  
   
  IMoniker-интерфейс  

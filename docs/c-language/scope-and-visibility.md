@@ -1,13 +1,10 @@
 ---
-title: "Область и видимость | Документация Майкрософт"
-ms.custom: 
+title: Область и видимость | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85f0ca180fc60b1281440845289d2f2a39d71af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-and-visibility"></a>Область и видимость
 Видимость идентификатора определяет части программы, в которых можно сослаться на идентификатор, то есть ее область. Идентификатор является видимым (т. е. его можно использовать) только в частях программы, входящих в ее область, которая может быть ограничена (в порядке повышение количества ограничений) файлом, функцией, блоком или прототипом функции, в котором она отображается. Область идентификатора — это часть программы, в которой можно использовать имя. В некоторых случаях она называется лексической областью. Существует четыре типа области: функция, файл, блок и прототип функции.  

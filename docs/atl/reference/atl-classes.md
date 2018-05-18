@@ -1,7 +1,7 @@
 ---
-title: Классы ATL | Документы Microsoft
+title: ATL классы и структуры | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL-классы
-Active Template Library (ATL) содержит следующие классы. Для поиска определенного класса по категории, в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).  
+# <a name="atl-classes-and-structs"></a>ATL-классы и структуры
+Active Template Library (ATL) включает следующие классы и структуры. Для поиска определенного класса по категории, в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).  
   
-|Класс|Описание|Файл заголовка|  
+|Класс или структура|Описание|Файл заголовка|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Содержит сведения, используемые для подготовки к просмотру для различных целей, например принтер, метафайла или элемент управления ActiveX.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Содержит данные экземпляра класса в коде над окнами в ATL|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|Используются проектом, которое использует ATL.|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Используемый код с COM в ATL| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|Содержит сведения о типе, используемый для описания метода или свойства на disp-интерфейса.|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|Содержит данные, используемые каждый модуль ATL.|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Использовать в коде над окнами в ATL.|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Этот класс используется макросы преобразования строк `CA2TEX` и `CT2AEX`и определение типа **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Этот класс используется макросы преобразования строк `CA2CTEX` и `CT2CAEX`и определение типа **CA2CA**.|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Этот класс используется макросы преобразования строк `CA2TEX`, `CA2CTEX`, `CT2WEX`, и `CT2CWEX`и определение типа **CA2W**.|atlconv.h|  
@@ -224,7 +231,6 @@ Active Template Library (ATL) содержит следующие классы. 
  [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)   
  [Функции](../../atl/reference/atl-functions.md)   
  [Глобальные переменные](../../atl/reference/atl-global-variables.md)   
- [Структуры](../../atl/reference/atl-structures.md)   
  [Определения типов](../../atl/reference/atl-typedefs.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "Элементы управления в диалоговых окнах | Документы Microsoft"
-ms.custom: 
+title: Элементы управления в диалоговых окнах | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="controls-in-dialog-boxes"></a>Элементы управления в диалоговых окнах
 Можно добавить элементы управления в диалоговое окно с помощью [редактор диалоговых окон](../windows/dialog-editor-tab-toolbox.md) в [окно панели элементов](/visualstudio/ide/reference/toolbox), позволяет выбрать элемент управления должен и перетащите его в диалоговом окне. По умолчанию окно панели элементов имеет значение для автоматического скрытия. Оно появляется в виде вкладки на левом краю решения, если открыт редактор диалоговых окон. Тем не менее, вы можете закрепить окно панели элементов в нужное место, щелкнув **Автоскрытие** кнопку в правом верхнем углу окна. Дополнительные сведения о том, как управлять поведением этого окна см. в разделе [Управление окнами](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  

@@ -1,12 +1,9 @@
 ---
-title: "Класс unbounded_buffer | Документы Microsoft"
-ms.custom: 
+title: Класс unbounded_buffer | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 Блок обмена сообщениями `unbounded_buffer` — это упорядоченный блок `propagator_block` с несколькими целями и несколькими источниками, который может хранить неограниченное число сообщений.  
   
@@ -59,21 +54,21 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[unbounded_buffer](#ctor)|Перегружен. Создает `unbounded_buffer` блока обмена сообщениями.|  
 |[~ unbounded_buffer деструктор](#dtor)|Уничтожает `unbounded_buffer` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[dequeue](#dequeue)|Удаляет элемент из `unbounded_buffer` блока обмена сообщениями.|  
 |[enqueue](#enqueue)|Добавляет элемент в `unbounded_buffer` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `unbounded_buffer` блока обмена сообщениями, передавая владение вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `unbounded_buffer` блок обмена сообщениями и зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
@@ -153,7 +148,7 @@ _Type dequeue();
 ### <a name="return-value"></a>Возвращаемое значение  
  Полезные данные сообщения, удалены из `unbounded_buffer`.  
   
-##  <a name="enqueue"></a> enqueue 
+##  <a name="enqueue"></a> Поставить в очередь 
 
  Добавляет элемент в `unbounded_buffer` блока обмена сообщениями.  
   
@@ -348,7 +343,7 @@ unbounded_buffer(
   
  Тип `filter_method` является функтор с сигнатурой `bool (_Type const &)` которого вызывается этим `unbounded_buffer` блока обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.  
   
-##  <a name="dtor"></a> ~unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  Уничтожает `unbounded_buffer` блока обмена сообщениями.  
   

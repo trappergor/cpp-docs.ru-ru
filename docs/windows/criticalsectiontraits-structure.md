@@ -1,12 +1,9 @@
 ---
-title: "Структура CriticalSectionTraits | Документы Microsoft"
-ms.custom: 
+title: Структура CriticalSectionTraits | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CriticalSectionTraits structure
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits - структура
 Специализирует объект CriticalSection для поддержки недопустимую критическую секцию или функцию освобождения критической секции.  
@@ -41,13 +36,13 @@ struct CriticalSectionTraits;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|`Type`|Объект `typedef` , определяющий указатель для критической секции. `Type`определяется как `typedef CRITICAL_SECTION* Type;`.|  
+|`Type`|Объект `typedef` , определяющий указатель для критической секции. `Type` определяется как `typedef CRITICAL_SECTION* Type;`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Метод CriticalSectionTraits::GetInvalidValue](../windows/criticalsectiontraits-getinvalidvalue-method.md)|Специализирует шаблон CriticalSection таким образом, что он всегда будет являться недопустимым.|  
 |[Метод CriticalSectionTraits::Unlock](../windows/criticalsectiontraits-unlock-method.md)|Специализирует шаблон CriticalSection так, чтобы она поддерживала снимать владения объектом указанного критической секции.|  

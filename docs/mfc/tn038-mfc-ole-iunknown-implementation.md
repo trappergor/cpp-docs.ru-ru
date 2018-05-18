@@ -1,13 +1,10 @@
 ---
-title: "TN038: Реализация MFC OLE IUnknown | Документы Microsoft"
-ms.custom: 
+title: 'TN038: Реализация MFC OLE IUnknown | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038. Реализация MFC/OLE IUnknown
 > [!NOTE]
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  Дополнительные сведения о статистической обработке см. в разделе [статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) раздела.  
   
- Поддержка схем интерфейсов MFC заключена в класс `CCmdTarget`. `CCmdTarget`«*имеет*"ссылаются на число, а также все функции-члены, связанные с [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) реализацию (счетчик ссылок, например находится в `CCmdTarget`). Чтобы создать класс, поддерживающий модель COM OLE, создайте класс, производный от `CCmdTarget`, и используйте различные макросы и функции-члены `CCmdTarget` для реализации требуемых интерфейсов. Реализация MFC использует вложенные классы для определения каждой реализации интерфейса, что во многом похоже на приведенный выше пример. Эта задача упрощается благодаря стандартной реализации IUnknown, а также набору макросов, позволяющих исключить некоторые из повторяющихся частей кода.  
+ Поддержка схем интерфейсов MFC заключена в класс `CCmdTarget`. `CCmdTarget` «*имеет*"ссылаются на число, а также все функции-члены, связанные с [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) реализацию (счетчик ссылок, например находится в `CCmdTarget`). Чтобы создать класс, поддерживающий модель COM OLE, создайте класс, производный от `CCmdTarget`, и используйте различные макросы и функции-члены `CCmdTarget` для реализации требуемых интерфейсов. Реализация MFC использует вложенные классы для определения каждой реализации интерфейса, что во многом похоже на приведенный выше пример. Эта задача упрощается благодаря стандартной реализации IUnknown, а также набору макросов, позволяющих исключить некоторые из повторяющихся частей кода.  
   
 ## <a name="interface-map-basics"></a>Основы использования схем интерфейсов  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  Используйте макрос `METHOD_PROLOGUE` для доступа к родительскому объекту, производному от `CCmdTarget`.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [выпуска](http://msdn.microsoft.com/library/windows/desktop/ms682317), и [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) можно делегировать `CCmdTarget` реализации этих функций (`ExternalAddRef`, `ExternalRelease`, и `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [выпуска](http://msdn.microsoft.com/library/windows/desktop/ms682317), и [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) можно делегировать `CCmdTarget` реализации этих функций (`ExternalAddRef`, `ExternalRelease`, и `ExternalQueryInterface`).  
   
  Приведенный выше пример CPrintEditObj можно реализовать следующим образом:  
   

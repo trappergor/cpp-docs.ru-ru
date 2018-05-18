@@ -1,10 +1,7 @@
 ---
-title: "Функции пространство имен Concurrency::precise_math | Документы Microsoft"
-ms.custom: 
+title: Функции пространство имен Concurrency::precise_math | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Функции пространство имен Concurrency::precise_math
 ||||  
@@ -142,7 +137,7 @@ ms.lasthandoff: 02/23/2018
 |[logbf](#logbf)|[logf](#logf)|[modf](#modf)|  
 |[modff](#modff)|[nan](#nan)|[nanf](#nanf)|  
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|  
-|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|  
+|[nextafterf](#nextafterf)|[PHI](#phi)|[phif](#phif)|  
 |[pow](#pow)|[powf](#powf)|[probit](#probit)|  
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
 |[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Параметры  
  `exponent`  
- Экспоненциальное термин  *n*  математические выражения `e` <sup> n </sup>, где `e` является основанием натурального логарифма.  
+ Экспоненциальное термин *n* математические выражения `e` <sup>n</sup>, где `e` является основанием натурального логарифма.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает экспоненту аргумента с основанием e, за вычетом 1  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Параметры  
  `exponent`  
- Экспоненциальное термин  *n*  математические выражения `e` <sup> n </sup>, где `e` является основанием натурального логарифма.  
+ Экспоненциальное термин *n* математические выражения `e` <sup>n</sup>, где `e` является основанием натурального логарифма.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает экспоненту аргумента с основанием e, за вычетом 1  
@@ -897,7 +892,7 @@ inline float fdimf(
 ### <a name="return-value"></a>Возвращаемое значение
 Разница между _X и _Y Если _X больше _Y; в противном случае значение + 0. 
   
-##  <a name="floor"></a>  floor  
+##  <a name="floor"></a>  функция FLOOR  
  Вычисляет floor аргумента  
   
 ```  
@@ -1076,7 +1071,7 @@ inline double fmod(
  Второй аргумент с плавающей запятой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В оставшейся части `_X` деленная `_Y`; то есть значение `_X`  -  `_Y`  *n* , где  *n*  — целым числом, величина `_X`  -  `_Y`  *n*  меньше, чем величина `_Y`.  
+ В оставшейся части `_X` деленная `_Y`; то есть значение `_X`  -  `_Y` *n*, где *n* является целым числом таким образом, что величина `_X`  -  `_Y` *n* меньше, чем величина `_Y`.  
   
 ##  <a name="fmodf"></a>  fmodf  
  Вычисляет остаток от первого указанного аргумента деленная второго заданного аргумента.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  Второй аргумент с плавающей запятой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В оставшейся части `_X` деленная `_Y`; то есть значение `_X`  -  `_Y`  *n* , где  *n*  — целым числом, величина `_X`  -  `_Y`  *n*  меньше, чем величина `_Y`.  
+ В оставшейся части `_X` деленная `_Y`; то есть значение `_X`  -  `_Y` *n*, где *n* является целым числом таким образом, что величина `_X`  -  `_Y` *n* меньше, чем величина `_Y`.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  Разделяет значения аргумента как нулевое значение NaN, бесконечное, обычная, subnormal,  
@@ -1231,7 +1226,7 @@ inline int ilogbf(float _X) restrict(amp);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает порядок _X в виде значения типа int со знаком  
   
-##  <a name="isfinite"></a>  isFinite  
+##  <a name="isfinite"></a>  isfinite  
  Определяет, имеет ли аргумент конечное значение  
   
 ```  
@@ -1583,7 +1578,7 @@ inline float modff(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает подписанный дробной части числа `_X`.  
   
-##  <a name="nan"></a>  nan  
+##  <a name="nan"></a>  NaN  
  Возвращает несигнальным значением NaN  
   
 ```  
@@ -1685,7 +1680,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает следующее значение может быть представлен в типе функции, после _X в направлении _Y  
   
-##  <a name="phi"></a>  phi  
+##  <a name="phi"></a>  PHI  
  Возвращает интегральную функцию распределения аргумента  
   
 ```  

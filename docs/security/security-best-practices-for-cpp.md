@@ -1,13 +1,10 @@
 ---
-title: "Рекомендации по безопасности для C++ | Документы Microsoft"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Рекомендации по безопасности для C++ | Документы Microsoft
+ms.custom: ''
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,40 +14,40 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>Рекомендации по безопасности для C++
+
 В этой статье содержатся сведения об инструментах и методиках обеспечения безопасности. Использование этих инструментов не дает полной гарантии защиты от хакерских атак, но при этом существенно снижает шансы на успех таких атак.  
   
-## <a name="visual-c-security-features"></a>Средства безопасности в Visual C++  
+## <a name="visual-c-security-features"></a>Средства безопасности в Visual C++
+
  Эти средства обеспечения безопасности приложений встроены в компилятор и компоновщик Visual C++.  
   
- [/ Guard (Включение защиты потока управления)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (включение защиты потока управления)](../build/reference/guard-enable-control-flow-guard.md)  
  Указывает компилятору на необходимость анализа потока управления для целевых объектов косвенного вызова во время компиляции и последующей вставки кода для проверки целевых объектов во время выполнения.  
   
- [Параметр /GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md)  
+ [/GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md)  
  Указывает компилятору на необходимость вставки кода, обнаруживающего переполнения, в функции, которыми могут воспользоваться злоумышленники. При обнаружении переполнения выполнение программы прекращается. По умолчанию этот параметр включен.  
   
- [/ Параметр SAFESEH (образ содержит обработчики безопасных событий)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (образ содержит безопасные обработчики исключений)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  Указывает компоновщику на необходимость включения в выходной образ таблицы, содержащей адрес каждого обработчика исключений. Во время выполнения операционная система проверяет по этой таблице, действительно ли используются только допустимые обработчики исключений. Это помогает предотвратить запуск обработчиков исключений, внедряемых злоумышленниками в среду выполнения. По умолчанию этот параметр выключен.  
   
  [/ NXCOMPAT](../build/reference/nxcompat.md),  [ /NXCOMPAT (совместимо с Предотвращение выполнения данных)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  Эти возможности компилятора и компоновщика реализуют совместимость с функцией предотвращения исполнения данных (DEP). Функция DEP защищает ЦП от исполнения страниц, не содержащих кода.  
   
- [/ analyze (анализ кода)](../build/reference/analyze-code-analysis.md)  
+ [/analyze (анализ кода)](../build/reference/analyze-code-analysis.md)  
  Этот параметр компилятора запускает анализ кода с целью выявления потенциальных проблем безопасности, таких как переполнение буфера, отмена инициализации памяти, разыменование нулевого указателя и утечки памяти. По умолчанию этот параметр выключен. Дополнительные сведения см. в разделе [анализа кода C/C++ Обзор](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
- [/ DYNAMICBASE (использование адреса места случайный выбор макета)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (использование технологии ASRL)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  Этот параметр компоновщика позволяет собрать исполняемый образ, который можно загрузить в другое расположение в памяти в начале выполнения. Этот параметр также делает расположение стека в памяти значительно менее прогнозируемым.  
   
 ## <a name="security-enhanced-crt"></a>Среда выполнения повышенной безопасности  
@@ -89,16 +86,20 @@ ms.lasthandoff: 01/03/2018
 -   Тестирование приложения на наличие возможных проблем совместимости, возникающих в результате типичных ошибок программирования.  
   
 -   Исследовать приложения для определения утечек памяти.  
-  s
+
 -   Выявлять потенциальные проблемы безопасности в приложениях.  
   
  Средство AppVerifier является частью Application Compatibility Toolkit, которое доступно из [совместимость приложений](http://go.microsoft.com/fwlink/p/?linkid=91277) на веб-сайте TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Учетные записи пользователей Windows  
- Для разработчиков и в конечном счете пользователей использование учетных записей Windows, относящихся к группе "Администраторы", создает повышенный риск для безопасности. Дополнительные сведения см. в разделе [Запуск от имени участника группы "пользователи"](running-as-a-member-of-the-users-group.md) и [влияет на приложения как (Учетных записей)](how-user-account-control-uac-affects-your-application.md).  
-  
+ Для разработчиков и в конечном счете пользователей использование учетных записей Windows, относящихся к группе "Администраторы", создает повышенный риск для безопасности. Дополнительные сведения см. в разделе [Запуск от имени участника группы "пользователи"](running-as-a-member-of-the-users-group.md) и [влияет на приложения как (Учетных записей)](how-user-account-control-uac-affects-your-application.md).
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>Рекомендации для гипотетического каналов стороны выполнения
+
+Сведения об идентификации и противодействия Упреждающее исполнение стороне канал оборудования уязвимостей в программном обеспечении C++ см. в разделе [руководство разработчика C++ для каналов стороны наблюдающая выполнения](developer-guidance-speculative-execution.md).
+
 ## <a name="see-also"></a>См. также  
- <xref:System.Security>   
- [Безопасность](/dotnet/standard/security/index)   
- [Влияние контроля учетных записей на приложение](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [Безопасность](/dotnet/standard/security/index)   
+- [Влияние контроля учетных записей на приложение](how-user-account-control-uac-affects-your-application.md)

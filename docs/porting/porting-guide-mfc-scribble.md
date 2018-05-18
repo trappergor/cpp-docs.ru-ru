@@ -1,27 +1,22 @@
 ---
-title: "Руководство по переносу: MFC Scribble | Документы Майкрософт"
-ms.custom: 
+title: 'Руководство по переносу: MFC Scribble | Документы Майкрософт'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>Руководство по переносу: MFC Scribble
 Этот раздел — первый из несколько подразделов, в которых рассматриваются процедуры обновления проектов Visual C++, созданных в более ранних версиях Visual Studio до Visual Studio 2017. В этих подразделах на примерах описывается процесс обновления начиная с очень простого проекта с постепенным повышением уровня сложности. В этом подразделе будет рассмотрен процесс обновления для конкретного проекта MFC Scribble. Он подходит в качестве базового примера для процесса обновления для проектов C++.  

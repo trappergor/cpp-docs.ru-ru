@@ -1,13 +1,10 @@
 ---
-title: "Сочетания клавиш для редактора диалоговых окон | Документы Microsoft"
-ms.custom: 
+title: Сочетания клавиш для редактора диалоговых окон | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Dialog editor, shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75e9e6cac169bfe5e5867d0c1f3c14f70d19f916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a526cb1312a1e97eca4ad716576c009a6ae05e4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Сочетания клавиш для редактора диалоговых окон
 Ниже перечислены стандартные сочетания клавиш для команд редактора диалоговых окон. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню, выберите **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-|Команда|Клавиши|Описание:|  
+|Команда|Клавиши|Описание|  
 |-------------|----------|-----------------|  
 |Format.AlignBottoms|CTRL + SHIFT + СТРЕЛКА ВНИЗ|Выравнивает по нижнему краю выбранных элементах главного элемента управления|  
 |Format.AlignCenters|SHIFT + F9|Вертикальное выравнивание элементов управления с главного элемента управления|  

@@ -1,12 +1,9 @@
 ---
-title: "Структура short_vector_traits | Документы Microsoft"
-ms.custom: 
+title: Структура short_vector_traits | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - short_vector_traits
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f249a464cd9f55d8cbb4aea79bcb705104306b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 54ab4120fa4eb6393c25a7ea77377bd0a2b04258
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="shortvectortraits-structure"></a>Структура short_vector_traits
 Получение базовых Длина вектора и скалярный тип типа короткого вектора или скалярный тип позволяет short_vector_traits  
@@ -101,13 +96,13 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[short_vector_traits::short_vector_traits Constructor](#ctor)||  
+|[Конструктор short_vector_traits::short_vector_traits](#ctor)||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Константа short_vector_traits::size](#size)||  
   
@@ -115,9 +110,9 @@ struct short_vector_traits<double_4>;
  `short_vector_traits`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** amp_short_vectors.h  
+ **Заголовок:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ##  <a name="ctor"></a>  Конструктор short_vector_traits::short_vector_traits  
   
@@ -125,7 +120,7 @@ struct short_vector_traits<double_4>;
 short_vector_traits();
 ```  
   
-##  <a name="size">Константа short_vector_traits::size</a>  
+##  <a name="size"></a>  Константа short_vector_traits::size  
   
 ```  
 static int const size = 1;  

@@ -1,13 +1,10 @@
 ---
-title: "свойство (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: свойство (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - property_cpp
 - property
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b9d310043a2693eaef254256385becc0bcc7d501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b763131fe91e2df2385f2c06bcba8bc759d695a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="property--c-component-extensions"></a>property (расширения компонентов C++)
 Объявляет *свойство*, который является функция-член, которая действует и доступна как элемент данных или элемент массива.  
@@ -121,7 +116,7 @@ modifier property type default[index];
   
  **Параметры**  
   
- *модификатор*  
+ *Модификатор*  
  Модификатор, который может использоваться в объявлении свойства или в методе доступа get/set свойства. Возможными значениями являются `static` и `virtual`.  
   
  *type*  

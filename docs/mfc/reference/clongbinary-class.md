@@ -1,12 +1,9 @@
 ---
-title: "CLongBinary-класс | Документы Microsoft"
-ms.custom: 
+title: CLongBinary-класс | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLongBinary
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clongbinary-class"></a>CLongBinary-класс
 Упрощает работу с очень большими объектами двоичных данных (BLOB-объектами) в базе данных.  
@@ -44,13 +39,13 @@ class CLongBinary : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CLongBinary::CLongBinary](#clongbinary)|Создает объект `CLongBinary`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|Содержит фактический размер в байтах, дескриптор которого хранится в объект данных `m_hData`.|  
 |[CLongBinary::m_hData](#m_hdata)|Содержит Windows `HGLOBAL` дескриптор объекта фактическим размерам изображения.|  
@@ -75,14 +70,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb_.h  
   
-##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>  CLongBinary::CLongBinary  
  Создает объект `CLongBinary`.  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
  Хранит фактический размер в байтах данных, хранящихся в `HGLOBAL` обработки в `m_hData`.  
   
 ```  
@@ -92,7 +87,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>Примечания  
  Этот размер может быть меньше, чем размер блока памяти, выделенного для данных. Вызов Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) функции, чтобы получить выделенный размер.  
   
-##  <a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Сохраняет Windows `HGLOBAL` дескриптор фактический большой двоичный объект данных.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Класс COleLinkingDoc | Документы Microsoft"
-ms.custom: 
+title: Класс COleLinkingDoc | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>Класс COleLinkingDoc
 Базовый класс для документов OLE-контейнера, которые поддерживают связывание со встроенными элементами, которые их содержат.  
@@ -50,20 +45,20 @@ class COleLinkingDoc : public COleDocument
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Создает объект `COleLinkingDoc`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinkingDoc::Register](#register)|Регистрирует документа OLE системные библиотеки DLL.|  
 |[COleLinkingDoc::Revoke](#revoke)|Отменяет регистрацию документа.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Находит указанный внедренный элемент.|  
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Выполняет поиск указанного связанного элемента.|  
@@ -105,7 +100,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  Создает `COleLinkingDoc` объекта, не создавая обмен данными с OLE системные библиотеки DLL.  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>Примечания  
  Необходимо вызвать метод `Register` функции-члена для информирования OLE документ открыт.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  Вызывается платформой для определения, содержит ли документ с указанным именем встроенного элемента OLE.  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию выполняет список внедренных элементов для элемента с указанным именем (сравнение имени учитывается регистр символов). Переопределите эту функцию, если у вас есть собственный метод хранения и именования внедренные элементы OLE.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  Вызывается платформой, чтобы проверить, содержит ли документ элемент связанного сервера с указанным именем.  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>Примечания  
  Значение по умолчанию `COleLinkingDoc` реализация всегда возвращает **NULL**. Эта функция будет переопределен в производном классе `COleServerDoc` для поиска в списке сервера OLE-элементы для связанного элемента с указанным именем (сравнение имени учитывается регистр символов). Переопределите эту функцию, если был реализован собственный метод хранения и извлечения элементов связанного сервера.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  Сообщает системе OLE библиотек DLL, что документ открыт.  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  При использовании `COleTemplateServer` в вашем приложении `Register` вызывается для вас `COleLinkingDoc`реализация `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  Сообщает системе OLE библиотек DLL, что документ больше не открыт.  
   
 ```  
@@ -183,7 +178,7 @@ void Revoke();
 ### <a name="remarks"></a>Примечания  
  Эта функция вызывается для отмены регистрации документа с OLE системные библиотеки DLL.  
   
- Эту функцию следует вызывать при закрытии файл с именем, но обычно не требуется вызывать его напрямую. `Revoke`вызывается для вас `COleLinkingDoc`реализация `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
+ Эту функцию следует вызывать при закрытии файл с именем, но обычно не требуется вызывать его напрямую. `Revoke` вызывается для вас `COleLinkingDoc`реализация `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC OCLIENT](../../visual-cpp-samples.md)   

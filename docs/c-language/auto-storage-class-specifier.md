@@ -1,27 +1,22 @@
 ---
-title: "Описатель класса хранения auto | Документация Майкрософт"
-ms.custom: 
+title: Описатель класса хранения auto | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce3ac6467ea566ebdd9d21e24843efe72457ba9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4054b723c1e44c94be9d112f6bfbd74db8f857ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-storage-class-specifier"></a>Спецификатор классов хранения auto
 Описатель класса хранения **auto** объявляет автоматическую переменную, то есть переменную с локальным временем существования. Переменная **auto** является видимой только в том блоке, в котором она объявлена. Объявления переменных **auto** могут содержать инициализаторы, как описано в статье [Инициализация](../c-language/initialization.md). Поскольку переменные с классом хранения **auto** не инициализируются автоматически, необходимо явно инициализировать их при объявлении или присвоить им начальные значения в операторах блока. Для неинициализированных переменных **auto** значения не определены. (Локальная переменная с классом хранения **auto** или **register** инициализируется заново каждый раз, когда она попадает в область видимости, если для нее указан инициализатор.)  

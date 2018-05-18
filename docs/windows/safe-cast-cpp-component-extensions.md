@@ -1,13 +1,10 @@
 ---
-title: "safe_cast (расширения компонентов C++) | Документы Microsoft"
-ms.custom: 
+title: safe_cast (расширения компонентов C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (расширения компонентов C++)
 В случае успешного выполнения операция `safe_cast` возвращает указанное выражение как указанный тип; в противном случае вызывается исключение `InvalidCastException`.  
@@ -69,11 +64,11 @@ expression
  *Идентификатор типа*  
  Целевой тип преобразования *выражение* для. Дескриптор ссылки или типа значения, тип значения или отслеживаемая ссылка на ссылку или тип значения.  
   
- *выражение*  
+ *Выражение*  
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
 ### <a name="remarks"></a>Примечания  
- `safe_cast`Создает `InvalidCastException` если его не удается преобразовать *выражение* тип, указанный в *идентификатор типа*. Для перехвата `InvalidCastException`, укажите [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) параметр компилятора и используйте оператор try-catch.  
+ `safe_cast` Создает `InvalidCastException` если его не удается преобразовать *выражение* тип, указанный в *идентификатор типа*. Для перехвата `InvalidCastException`, укажите [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) параметр компилятора и используйте оператор try-catch.  
   
 ### <a name="requirements"></a>Требования  
  Параметр компилятора: **/ZW**  
@@ -133,7 +128,7 @@ expression
  *Идентификатор типа*  
  Дескриптор ссылки или типа значения, тип значения или отслеживаемая ссылка на ссылку или тип значения.  
   
- *выражение*  
+ *Выражение*  
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -145,7 +140,7 @@ expression
   
  Дополнительные сведения о приведениях см. в разделе [операторы приведения](../cpp/casting-operators.md).  
   
- `safe_cast`не применяется **const_cast** (отбросить квалификатор **const**).  
+ `safe_cast` не применяется **const_cast** (отбросить квалификатор **const**).  
   
  `safe_cast` находится в пространстве имен CLI.  В разделе [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) для получения дополнительной информации.  
   

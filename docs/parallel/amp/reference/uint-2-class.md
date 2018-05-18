@@ -1,12 +1,9 @@
 ---
-title: "Класс uint_2 | Документы Microsoft"
-ms.custom: 
+title: Класс uint_2 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::set_xy
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b3b494460e0f254f46ed197e09d6d8d485b5e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 03447d24f77b671b0a2cb171e84c266df1908fb3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uint2-class"></a>Класс uint_2
 Представляет короткого вектора двух целых чисел без знака.  
@@ -68,13 +63,13 @@ class uint_2;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор uint_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |uint_2::get_x||  
 |uint_2::get_xy||  
@@ -91,32 +86,32 @@ class uint_2;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |uint_2::operator--||  
-|uint_2::operator%=||  
-|uint_2::operator&=||  
-|uint_2::operator*=||  
-|uint_2::operator/=||  
-|uint_2::operator^=||  
+|uint_2::operator % =||  
+|uint_2::operator & =||  
+|uint_2::operator * =||  
+|uint_2::operator / =||  
+|uint_2::operator ^ =||  
 |uint_2::operator&#124;=||  
-|uint_2::operator~||  
-|uint_2::operator++||  
-|uint_2::operator+=||  
+|uint_2::operator ~||  
+|uint_2::operator ++||  
+|uint_2::operator +=||  
 |uint_2::operator<\<=||  
-|uint_2::operator=||  
+|uint_2::operator =||  
 |uint_2::operator-=||  
-|uint_2::operator>>=||  
+|uint_2::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Размер константы](#uint_2__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |uint_2::g||  
 |uint_2::gr||  
@@ -131,9 +126,9 @@ class uint_2;
  `uint_2`  
   
 ## <a name="requirements"></a>Требования  
- **Header:** amp_short_vectors.h  
+ **Заголовок:** amp_short_vectors.h  
   
- **Namespace:** Concurrency::graphics  
+ **Пространство имен:** Concurrency::graphics  
   
 ##  <a name="ctor"></a> uint_2 
 

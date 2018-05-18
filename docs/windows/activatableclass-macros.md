@@ -1,12 +1,9 @@
 ---
-title: "Макрос Activatableclass | Документы Microsoft"
-ms.custom: 
+title: Макрос Activatableclass | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ActivatableClass
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7043a3a9013f02048b34149dd113d2125dced6a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeb68deddd1cdfa9e1e869a08bfb0a1f3bb8d6ca
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activatableclass-macros"></a>Макрос ActivatableClass
 
@@ -57,7 +52,7 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>Параметры
 
-*className*  
+*ClassName*  
 Имя для создаваемого класса.  
 
 *фабрики*  
@@ -68,7 +63,7 @@ ActivatableClassWithFactoryEx(
 
 ## <a name="remarks"></a>Примечания
 
-Не используйте эти макросы классической модели COM, если вы не используете `#undef` директиву, чтобы убедиться, что **&#95; &#95; WRL_WINRT_STRICT &#95; &#95;**  удаляется определение макроса.
+Не используйте эти макросы классической модели COM, если вы не используете `#undef` директиву, чтобы убедиться, что **&#95; &#95;WRL_WINRT_STRICT&#95; &#95;** удаляется определение макроса.
 
 ## <a name="requirements"></a>Требования
 

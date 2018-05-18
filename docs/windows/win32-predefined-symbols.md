@@ -1,13 +1,10 @@
 ---
-title: "Предопределенные символы Win32 | Документы Microsoft"
-ms.custom: 
+title: Предопределенные символы Win32 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-predefined-symbols"></a>Предопределенные символы Win32
 Эти символы определяются в файлах заголовков Win32, и они поддерживают стандартные функции приложения Windows и действия. Эти символы используются главным образом с помощью общих элементов пользовательского интерфейса. При работе с элементами управления ресурсами в редакторах, эти символы будут отображаться в [окно "Свойства"](/visualstudio/ide/reference/properties-window) связанного с типичными элементами управления. Например если на панель инструментов должна отображать значок приложения, значок будет связана с символом IDI_SMALL в окне свойств.  

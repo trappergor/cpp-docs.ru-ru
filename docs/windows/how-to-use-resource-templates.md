@@ -1,13 +1,10 @@
 ---
-title: "Как: использование шаблонов ресурсов | Документы Microsoft"
-ms.custom: 
+title: 'Как: использование шаблонов ресурсов | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>Практическое руководство. Использование шаблонов ресурсов
 Шаблон ресурса — это настроенный ресурс, сохраненный как RCT-файл. Шаблон ресурса можно использовать в качестве отправной точки для создания других ресурсов. Шаблоны ресурсов позволяют сэкономить время при разработке дополнительных ресурсов или групп ресурсов, которые совместно используют какие-либо возможности, например, стандартные элементы управления и другие повторяющиеся элементы. Например, вы хотите поместить кнопку "Справка" и значок с логотипом компании в несколько диалоговых окон. Чтобы быстро сделать это, создайте новый шаблон диалогового окна и поместите в него логотип и кнопку "Справка".  
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  [Откройте RC-файл как отдельный файл](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-2.  На **файл** меню, нажмите кнопку  **Сохранить \<* имя_файла*> как **.  
+2.  На **файл** меню, нажмите кнопку **Сохранить \< *имя_файла*> как**.  
   
 3.  Укажите расположение и нажмите кнопку **ОК**.  
   

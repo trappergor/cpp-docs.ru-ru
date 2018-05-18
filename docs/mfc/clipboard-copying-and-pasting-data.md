@@ -1,37 +1,32 @@
 ---
-title: "Буфер обмена: Копирование и вставка данных | Документы Microsoft"
-ms.custom: 
+title: 'Буфер обмена: Копирование и вставка данных | Документы Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Буфер обмена. Копирование и вставка данных
 В этом разделе описываются минимальные действия, необходимые для реализации копирования и вставки из буфера обмена в приложениях OLE. Рекомендуется ознакомиться с [объектов данных и источники данных (OLE)](../mfc/data-objects-and-data-sources-ole.md) разделы перед продолжением.  
   
  Прежде чем можно реализовать, копирование и вставка, прежде всего необходимо указать функции для обработки параметров копирования, вырезания и вставки на меню "Правка".  
   
-##  <a name="_core_copying_or_cutting_data"></a>Копирование или копирование данных  
+##  <a name="_core_copying_or_cutting_data"></a> Копирование или копирование данных  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>Чтобы скопировать данные в буфер обмена  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  В качестве примера данной последовательности, в разделе **OnEditCut** и **OnEditCopy** функции в MFC OLE-пример программы [OCLIENT](../visual-cpp-samples.md) и [HIERSVR](../visual-cpp-samples.md). Обратите внимание, что в этих примерах использовать указатель выбранных данных, уже выполнен шаг 1.  
   
-##  <a name="_core_pasting_data"></a>Вставка данных  
+##  <a name="_core_pasting_data"></a> Вставка данных  
  Вставка данных гораздо сложнее копирования, поскольку необходимо выбрать формат, используемый в Вставка данных в приложение.  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>Вставка данных из буфера обмена  

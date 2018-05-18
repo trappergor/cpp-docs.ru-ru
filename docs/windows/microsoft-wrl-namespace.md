@@ -1,12 +1,9 @@
 ---
-title: "Пространство имен Microsoft::WRL | Документы Microsoft"
-ms.custom: 
+title: Пространство имен Microsoft::WRL | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37d4d5391da4dfb6e25754eb1350224acb97e972
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrl-namespace"></a>Пространство имен Microsoft::WRL
 Определяет основные типы, составляющие библиотека шаблонов C++ среды выполнения Windows.  
@@ -54,7 +49,7 @@ namespace Microsoft::WRL;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|  
 |[Класс AsyncBase](../windows/asyncbase-class.md)|Реализует асинхронный конечный автомат среды выполнения Windows.|  
@@ -71,7 +66,7 @@ namespace Microsoft::WRL;
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|  
 |[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает шаблонам RuntimeClass, Implements и ChainInterfaces, что заданный интерфейс недоступен в списке IID.|  
@@ -81,7 +76,7 @@ namespace Microsoft::WRL;
   
 ### <a name="enumerations"></a>Перечисления  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Перечисление AsyncResultType](../windows/asyncresulttype-enumeration.md)|Указывает тип результата, возвращаемого методом GetResults().|  
 |[Перечисление ModuleType](../windows/moduletype-enumeration.md)|Указывает, должен ли модуль поддерживать внутрипроцессный или внепроцессный сервер.|  
@@ -89,7 +84,7 @@ namespace Microsoft::WRL;
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|  
 |[Функция обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md)|Создает объект, функция-член которого является методом обратного вызова.|  

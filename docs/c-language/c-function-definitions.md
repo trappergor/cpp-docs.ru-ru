@@ -1,13 +1,10 @@
 ---
-title: "Определения функций в C| Документация Майкрософт"
-ms.custom: 
+title: Определения функций в C| Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>Определения функций в C
 Определение функции задает имя функции, типы и число ожидаемых параметров, а также тип значений, возвращаемый функцией. Определение функции также содержит тело функции с объявлениями ее локальных переменных и операторы, которые определяют действия, выполняемые функцией.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*: /\*Здесь декларатор является декларатором функции \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* относится только к системам Microsoft \*/  
+ /\* *attribute-seq* относится только к системам Microsoft */  
   
  Параметры прототипа:  
   
@@ -72,7 +67,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* Декларатор функции \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* Декларатор нового стиля \*/  
   
- *direct-declarator* **(** *identifier-list* opt**)** /* Декларатор устаревшего стиля \*/  
+ *direct-declarator* **(** *identifier-list* opt **)**  /* Декларатор устаревшего стиля \*/  
   
  Для списка параметров в определении используется следующий синтаксис:  
   
@@ -101,7 +96,7 @@ ms.lasthandoff: 03/16/2018
  Синтаксис тела функции:  
   
  *compound-statement*: /\* Текст функции \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  Изменять объявления функций могут только описатели класса хранения `extern` и **static**. Спецификатор `extern` означает, что на функцию можно ссылаться из других файлов; то есть, имя функции экспортируется в компоновщик. Описатель **static** означает, что на функцию невозможно ссылаться из других файлов. Имя такой функции не экспортируется компоновщиком. Если в определении функции класс хранения не указан, принимается класс `extern`. В любом случае функция всегда видна от точки определения до конца файла.  
   

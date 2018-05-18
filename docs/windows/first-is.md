@@ -1,13 +1,10 @@
 ---
-title: "first_is | Документы Microsoft"
-ms.custom: 
+title: first_is | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.first_is
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13637f9381e233f5bcffe4dbacc9a86765b40b84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8292dfb329d5e5db15f8329cbdead443215bbee8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="firstis"></a>first_is
 Указывает индекс первого элемента массива для передачи.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *выражение*  
+ *Выражение*  
  Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
   
 ## <a name="remarks"></a>Примечания  

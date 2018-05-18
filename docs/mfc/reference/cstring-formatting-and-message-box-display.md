@@ -1,13 +1,10 @@
 ---
-title: "Форматирование CString и отображение окна сообщения | Документы Microsoft"
-ms.custom: 
+title: Форматирование CString и отображение окна сообщения | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Форматирование CString и отображение окна сообщения
 Ряд функций, позволяющих форматирования и синтаксического анализа `CString` объектов. Эти функции можно использовать всякий раз, когда приходится манипулировать `CString` объектов, но они особенно полезны для форматирования строки, которые будут отображаться в текстовое окно сообщения.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
  Это глобальная функция используется для извлечения подстроки из заданной исходной строки.  
   
 ```   
@@ -82,7 +77,7 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
  Замена строки, на который указывает `lpsz1` для любых экземпляров символов «%1» в ресурс строки шаблона, определенный `nIDS`.  
   
 ```  
@@ -113,7 +108,7 @@ void  AfxFormatString1(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
  Замена строки, на который указывает `lpsz1` для любых экземпляров символов «%1», и строка, на который указывает `lpsz2` для любых экземпляров символов «%2» в ресурс строки шаблона, определенный `nIDS`.  
   
 ```   
@@ -148,7 +143,7 @@ void AfxFormatString2(
 ### <a name="requirements"></a>Требования  
   **Заголовок** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
  Отображает окно сообщения на экране.  
   
 ```  

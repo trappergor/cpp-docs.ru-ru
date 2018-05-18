@@ -1,12 +1,9 @@
 ---
-title: "Числовой (STL/CLR) | Документы Microsoft"
-ms.custom: 
+title: Числовой (STL/CLR) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/numeric>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/numeric> header [STL/CLR]
 - <numeric> header [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cdf9ccb65299af688fde2fbff7b3d6cedad6de96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d02423b2f8a2573fb4a90fd6f348a8e012dc91b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numeric-stlclr"></a>числовой (STL/CLR)
 Определяет шаблонные функции контейнера, которые выполняют алгоритмы, предоставляемые для числовой обработки.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="functions"></a>Функции  
   
-|Функция|Описание:|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[accumulate (STL/CLR)](../dotnet/accumulate-stl-clr.md)|Вычисляет сумму всех элементов в указанном диапазоне, включая некоторое начальное значение, путем вычисления последовательных частичных сумм или вычисляет результат последовательных частичных сумм, аналогичным образом полученных от использования указанной бинарной операции, отличной от суммы.|  
 |[adjacent_difference (STL/CLR)](../dotnet/adjacent-difference-stl-clr.md)|Вычисляет последовательные различия между каждым элементом и его предшественником в диапазоне ввода и выводит результаты в диапазон назначения или вычисляет результат обобщенной процедуры, где операция разности заменена другой определенной бинарной операцией.|  

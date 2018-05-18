@@ -1,12 +1,9 @@
 ---
-title: "Класс single_assignment | Документы Microsoft"
-ms.custom: 
+title: Класс single_assignment | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_assignment
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4bacbdaa4af141101863b4d6d81d114d43aced9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singleassignment-class"></a>Класс single_assignment
 Блок обмена сообщениями `single_assignment` — это упорядоченный блок `propagator_block` с несколькими источниками и несколькими целями, который может хранить один объект `message` с однократной записью.  
@@ -58,21 +53,21 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[single_assignment](#ctor)|Перегружен. Создает `single_assignment` блока обмена сообщениями.|  
 |[~ single_assignment деструктор](#dtor)|Уничтожает `single_assignment` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[has_value](#has_value)|Проверяет, является ли это `single_assignment` блока обмена сообщениями еще была инициализирована со значением.|  
 |[value](#value)|Возвращает ссылку на текущие полезную нагрузку сообщения, хранящуюся в `single_assignment` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `single_assignment` блока обмена сообщениями, возвращая копию сообщения вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `single_assignment` и зарезервированные целевым объектом, возвращая копию сообщения вызывающему объекту.|  

@@ -1,13 +1,10 @@
 ---
-title: "Экспорт | Документы Microsoft"
-ms.custom: 
+title: Экспорт | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.export
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24619e3a0e707b40590b0ffb37b415629a18b1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67b71639fc0b7d0039f5665d2cc187191ac14baf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="export"></a>экспорт
 В результате структуру данных помещается в IDL-файл.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  Не удается применить **Экспорт** атрибута к классу, даже если класс имеет только открытые члены (эквивалент `struct`).  
   
- Если вы экспортируете неименованные `enum`s или `struct`s, они будут имена, начинающиеся с **__unnamed***x*, где *x* — это последовательный номер.  
+ Если вы экспортируете неименованные `enum`s или `struct`s, они будут имена, начинающиеся с **__unnamed *** x*, где *x* — это последовательный номер.  
   
  Определения типов, допустимый для экспорта: базовые типы, структуры, объединения, перечисления, либо введите идентификаторы.  В разделе [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) для получения дополнительной информации.  
   
@@ -68,7 +63,7 @@ struct MyStruct {
   
 |||  
 |-|-|  
-|**Применение**|**Объединение**, `typedef`, `enum`, `struct`, или`interface`|  
+|**Применение**|**Объединение**, `typedef`, `enum`, `struct`, или `interface`|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|Нет|  

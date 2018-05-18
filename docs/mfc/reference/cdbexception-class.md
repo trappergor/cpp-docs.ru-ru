@@ -1,12 +1,9 @@
 ---
-title: "Класс CDBException | Документы Microsoft"
-ms.custom: 
+title: Класс CDBException | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 Представляет условие исключения, поступающее от классов базы данных.  
@@ -46,14 +41,14 @@ class CDBException : public CException
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CDBException::m_nRetCode](#m_nretcode)|Содержит код возврата для Open Database Connectivity (ODBC), типа **RETCODE**.|  
 |[CDBException::m_strError](#m_strerror)|Содержит строку с описанием ошибки в терминах буквенно-цифровых.|  
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Содержит строку с описанием ошибки с точки зрения коды ошибок, возвращенный ODBC.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс включает два открытые члены данных, используемого для определения причины возникновения исключения или отобразить текстовое сообщение, описывающее исключение. `CDBException`объекты конструирования и создаваемые функции-члены классов базы данных.  
+ Этот класс включает два открытые члены данных, используемого для определения причины возникновения исключения или отобразить текстовое сообщение, описывающее исключение. `CDBException` объекты конструирования и создаваемые функции-члены классов базы данных.  
   
 > [!NOTE]
 >  Этот класс является одним из классов MFC Open Database Connectivity (ODBC). Если вместо этого используются новые классы объектов доступа к данным (DAO), используйте [CDaoException](../../mfc/reference/cdaoexception-class.md) вместо него. Все имена классов DAO иметь префикс «CDao». Дополнительные сведения см. в статье [Обзор: программирования баз данных](../../data/data-access-programming-mfc-atl.md).  
@@ -74,7 +69,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  Содержит код ошибки ODBC типа **RETCODE** возвращенных функции API-интерфейса программирования приложений ODBC.  
   
 ### <a name="remarks"></a>Примечания  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  Коды с префиксом SQL определяются ODBC. Коды с префиксом AFX определены в файле AFXDB. Символ «H» в MFC\INCLUDE.  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  Содержит строку с описанием ошибки, вызвавшей исключение.  
   
 ### <a name="remarks"></a>Примечания  
  Строка описывает ошибку в терминах буквенно-цифровых. Дополнительные сведения и пример см. в разделе **m_strStateNativeOrigin**.  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  Содержит строку с описанием ошибки, вызвавшей исключение.  
   
 ### <a name="remarks"></a>Примечания  

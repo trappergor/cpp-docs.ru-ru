@@ -1,12 +1,9 @@
 ---
-title: "Класс CIPAddressCtrl | Документы Microsoft"
-ms.custom: 
+title: Класс CIPAddressCtrl | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cipaddressctrl-class"></a>Класс CIPAddressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "IP-адрес" Windows.  
@@ -58,13 +53,13 @@ class CIPAddressCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Создает объект `CIPAddressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|Удаляет содержимое контроль IP-адресов.|  
 |[CIPAddressCtrl::Create](#create)|Создает контроль IP-адресов и прикрепляет его к `CIPAddressCtrl` объекта.|  
@@ -94,14 +89,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
  Создает объект `CIPAddressCtrl`.  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
  Удаляет содержимое контроль IP-адресов.  
   
 ```  
@@ -111,7 +106,7 @@ void ClearAddress();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377), как описано в Windows SDK.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
  Создает контроль IP-адресов и прикрепляет его к `CIPAddressCtrl` объекта.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL Create(
   
  Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо **создать**.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Эта функция вызывается для создания элемента управления (дочернего окна) и связать его с `CIPAddressCtrl` объекта.  
   
 ```  
@@ -181,7 +176,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  Извлекает адрес значения для всех четырех полях в контроль IP-адресов.  
   
 ```  
@@ -223,7 +218,7 @@ int GetAddress(DWORD& dwAddress);
 |2|от 8 до 15|  
 |3|от 0 до 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
  Определяет, являются ли все поля в контроль IP-адресов пустым.  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379), как описано в Windows SDK.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  Задает адрес значения для всех четырех полях в контроль IP-адресов.  
   
 ```  
@@ -275,7 +270,7 @@ void SetAddress(DWORD dwAddress);
 |2|от 8 до 15|  
 |3|от 0 до 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
  Задает фокус клавиатуры для указанного поля контроль IP-адресов.  
   
 ```  
@@ -289,7 +284,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381), как описано в Windows SDK.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  Задает диапазон в указанном поле в контроль IP-адресов.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "Файлы ресурсов (C++) | Документы Microsoft"
-ms.custom: 
+title: Файлы ресурсов (C++) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-files-c"></a>Файлы ресурсов (C++)
 Ресурсы — это элементы интерфейса, которые предоставляют сведения для пользователя. Ресурсами являются точечных рисунков, значков, панелей инструментов и курсоров. Некоторые ресурсы можно изменять, чтобы выполнить действие, например при выборе в меню или ввод данных в диалоговом окне.  
   
  В разделе [работы с ресурсами](../windows/working-with-resource-files.md) для получения дополнительной информации.  
   
-|Имя файла|Расположение каталога|Расположение в обозревателе решений|Описание:|  
+|Имя файла|Расположение каталога|Расположение в обозревателе решений|Описание|  
 |---------------|------------------------|--------------------------------|-----------------|  
 |*ProjName*.rc|*ProjName*|Исходные файлы|Файл скрипта ресурсов проекта. Файл описания ресурсов содержит следующую строку, в зависимости от типа проекта и поддержки, выбранная для проекта (например, панели инструментов, диалоговые окна или HTML).<br /><br /> -По умолчанию определение меню.<br />-Сочетаний клавиш и строк таблицы.<br />-По умолчанию **о** диалоговое окно.<br />-Другие диалоговые окна.<br />-Файл значка (res\\*Projname*.ico).<br />-Сведения о версии.<br />-Растровые изображения.<br />-Панель инструментов.<br />-HTML файлы.<br /><br /> Файл ресурсов включает файл Afxres.rc для стандартные ресурсы Microsoft Foundation Class.|  
 |Resource.h|*ProjName*|Файлы заголовка|Файл заголовка ресурса, который содержит определения для ресурсов, используемых в проекте.|  

@@ -1,12 +1,9 @@
 ---
-title: "Грамматика препроцессора | Документы Microsoft"
-ms.custom: 
+title: Грамматика препроцессора | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>Грамматика препроцессора
-**#define**  *identifier* *token-string*opt  
+**#define***идентификатор* *строке токена*необязательно    
   
- *#* **Определение***идентификатор*[**(** *идентификатор*необ**,** *...*  **,** *идентификатор*необ **)**] *строке токена*необязательно    
+ *#* **Определение***идентификатор*[**(** *идентификатор*необ **,** *...*  **,** *идентификатор*необ **)**] *строке токена*необязательно  
   
- **defined(**  *identifier* **)**  
+ **определенные (***идентификатор* **)**   
   
- **defined**  *identifier*  
+ **определенные***идентификатор*   
   
- `#include` **"***path-spec***"**  
+ `#include` **«***-пути***»**  
   
- `#include` **\<***path-spec***>**  
+ `#include` **\<***-пути***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line***последовательность цифр***»** *filename* **»**необязательно      
   
- *#* **undef***идентификатор*   
+ *#* **undef***идентификатор*  
   
- **#error**  *token-string*  
+ **#error***строке токена*   
   
- **#pragma**  *token-string*  
+ **#pragma***строке токена*   
   
  *Условное* :  
  *IF часть elif части*необ*else часть*необ*endif строка*  
@@ -55,11 +50,11 @@ ms.lasthandoff: 02/23/2018
  *if-linetext*  
   
  *Если строка* :  
- **#if**  *constant-expression*  
+ **#if***константное выражение*   
   
- **#ifdef***идентификатор*   
+ **#ifdef***идентификатор*  
   
- **#ifndef***идентификатор*   
+ **#ifndef***идентификатор*  
   
  *elif части* :  
  *текст elif строки*  
@@ -67,9 +62,9 @@ ms.lasthandoff: 02/23/2018
  *elif части elif строки текста*  
   
  *elif строки* :  
- **#elif**  *constant-expression*  
+ **#elif***константное выражение*   
   
- *else-part* :  
+ *Else часть* :  
  *else-linetext*  
   
  *строки Else* :  
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
  *ENDIF строка* :  
  `#endif`  
   
- *digit-sequence* :  
+ *последовательность цифр* :  
  *digit*  
   
  *digit-sequence digit*  

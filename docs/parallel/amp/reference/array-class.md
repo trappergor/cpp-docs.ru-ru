@@ -1,12 +1,9 @@
 ---
-title: "Класс Array | Документы Microsoft"
-ms.custom: 
+title: Класс Array | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array
@@ -31,17 +28,15 @@ dev_langs:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0a7d063d5e57d77735a33eac8ec944d41032fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="array-class"></a>Класс array
 Представляет контейнер данных, используемый для перемещения данных в клавишей быстрого доступа.  
@@ -64,13 +59,13 @@ friend class array;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор массива](#ctor)|Инициализирует новый экземпляр класса `array`.|  
 |[~ array деструктор](#dtor)|Уничтожает `array` объекта.|  
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Копирует содержимое массива в другой массив.|  
 |[data](#data)|Возвращает указатель на необработанные данные массива.|  
@@ -84,22 +79,22 @@ friend class array;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[operator std::vector&lt;value_type&gt;](#operator_vec)|Использует `copy(*this, vector)` неявное преобразование массива в объект std::[вектор](../../../standard-library/vector-class.md) объекта.|  
-|[operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
-|[operator[]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
+|[оператор std::vector&lt;value_type&gt;](#operator_vec)|Использует `copy(*this, vector)` неявное преобразование массива в объект std::[вектор](../../../standard-library/vector-class.md) объекта.|  
+|[Operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
+|[оператор]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
 |[оператор=](#operator_eq)|Копирует содержимое указанного `array` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Сохраняет ранг массива.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[accelerator_view](#accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
 |[associated_accelerator_view](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передаваемый в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  
@@ -546,7 +541,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>Возвращаемое значение  
  `extent` Объекта `array`.  
   
-##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a> оператор std::vector&lt;value_type&gt; 
 
  Использует `copy(*this, vector)` неявное преобразование массива в объект std::vector.  
   

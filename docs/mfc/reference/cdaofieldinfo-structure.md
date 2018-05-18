@@ -2,12 +2,9 @@
 title: Структура CDaoFieldInfo | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>Структура CDaoFieldInfo
 `CDaoFieldInfo` Структура содержит сведения об объекте поля, определенные для объектов доступа к данным (DAO).  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary** Long Binary (объекта OLE); вы можете использовать класс MFC [CByteArray](../../mfc/reference/cbytearray-class.md) вместо класса `CLongBinary` как `CByteArray` является более подробным и проще в использовании.  
   
-- **dbMemo** Memo; класс MFC см.`CString`  
+- **dbMemo** Memo; класс MFC см. `CString`  
   
 - **dbGUID** глобально уникальный идентификатор или универсальный уникальный идентификатор, используемый для вызовов удаленных процедур. Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
   
@@ -90,7 +85,7 @@ struct CDaoFieldInfo
  *m_lSize*  
  Значение, указывающее максимальный размер в байтах, DAO поле объекта, который содержит текст или фиксированного размера поля объекта, который содержит текст или числовых значений. Дополнительные сведения см. в разделе «Свойства Size» в справке DAO. Размеры может принимать одно из следующих значений:  
   
-|Тип|Размер (байт)|Описание:|  
+|Тип|Размер (байт)|Описание|  
 |----------|--------------------|-----------------|  
 |**dbBoolean**|1 байт|Да/Нет (то же, как True или False)|  
 |**dbByte**|1|Byte|  
@@ -159,7 +154,7 @@ struct CDaoFieldInfo
   
  Помимо использования для проверки свойств объекта, можно также использовать `CDaoFieldInfo` для построения для создания новых полей в tabledef входного параметра. Более простые параметры доступны для этой задачи, но если требуется более точное управление, можно использовать версию [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) , который принимает `CDaoFieldInfo` параметра.  
   
- Сведений, получаемых методом `GetFieldInfo` функция-член (класса, который содержит поле) хранится в `CDaoFieldInfo` структуры. Вызовите `GetFieldInfo` функции-члена в Коллекция полей которого хранится объект поля вмещающего объекта. `CDaoFieldInfo`также определяет `Dump` функции-члена в отладочных построений. Можно использовать `Dump` для помещения в дамп содержимого `CDaoFieldInfo` объекта.  
+ Сведений, получаемых методом `GetFieldInfo` функция-член (класса, который содержит поле) хранится в `CDaoFieldInfo` структуры. Вызовите `GetFieldInfo` функции-члена в Коллекция полей которого хранится объект поля вмещающего объекта. `CDaoFieldInfo` также определяет `Dump` функции-члена в отладочных построений. Можно использовать `Dump` для помещения в дамп содержимого `CDaoFieldInfo` объекта.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdao.h  

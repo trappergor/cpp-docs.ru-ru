@@ -1,13 +1,10 @@
 ---
-title: "Написание многопотоковой программы Win32 | Документы Microsoft"
-ms.custom: 
+title: Написание многопотоковой программы Win32 | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Написание многопотоковой программы Win32
 При написании программы с несколькими потоками, необходимо скоординировать их поведение и [использования ресурсов программы](#_core_sharing_common_resources_between_threads). Кроме того, необходимо убедиться, что каждый поток получает [собственный стек](#_core_thread_stacks).  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>Общий доступ к ресурсам между потоками  
+##  <a name="_core_sharing_common_resources_between_threads"></a> Общий доступ к ресурсам между потоками  
   
 > [!NOTE]
 >  Аналогичные сведения с точки зрения MFC см. в разделе [Многопоточность: советы про программированию](../parallel/multithreading-programming-tips.md) и [Многопоточность: использование классов синхронизации](../parallel/multithreading-when-to-use-the-synchronization-classes.md).  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>Стеки потоков  
+##  <a name="_core_thread_stacks"></a> Стеки потоков  
  Все пространство стека приложения по умолчанию назначается первый поток выполнения, которая называется поток 1. В результате необходимо указать, какой объем памяти, выделяемой для стека в каждый дополнительный поток программы требуется. Операционная система выделяет пространство дополнительных стека для потока, при необходимости, но необходимо указать значение по умолчанию.  
   
  Первый аргумент в `_beginthread` является указателем на **BounceProc** функции, которая выполняет потоки. Второй аргумент задает размер стека по умолчанию для потока. Последний аргумент является идентификатором, передаваемое **BounceProc**. **BounceProc** использует этот идентификатор для генератора случайных чисел, а также для выбора атрибута цвета потока и отображения символов.  

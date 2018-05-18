@@ -2,26 +2,21 @@
 title: 2.3 конструкция parallel | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 121454f6a98901a6c1b695a80c6ec774737b95e0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Конструкция parallel
 Следующая директива определяет параллельной области, являющийся областью программы, которые необходимо выполнить несколько потоков параллельно. Это основные конструкции, которая запускает параллельного выполнения.  
@@ -32,19 +27,19 @@ ms.lasthandoff: 04/10/2018
   
  *Предложение* является одним из следующих:  
   
- **if(** *scalar-expression* **)**  
+ **Если (** *скалярное выражение* **)**  
   
- **private(** *variable-list* **)**  
+ **закрытый (** *списка переменной* **)**  
   
- **firstprivate(** *variable-list* **)**  
+ **firstprivate (** *списка переменной* **)**  
   
  **по умолчанию (общий &#124; none)**  
   
- **shared(** *variable-list* **)**  
+ **Общие (** *списка переменной* **)**  
   
- **copyin(** *variable-list* **)**  
+ **copyin (** *списка переменной* **)**  
   
- **Уменьшение (** *оператор* **:***списка переменной* **)**   
+ **Уменьшение (** *оператор* **:***списка переменной* **)**  
   
  **num_threads(** *integer-expression* **)**  
   

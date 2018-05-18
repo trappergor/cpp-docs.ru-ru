@@ -1,12 +1,9 @@
 ---
-title: "Пространство имен Concurrency::Direct3D | Документы Microsoft"
-ms.custom: 
+title: Пространство имен Concurrency::Direct3D | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Пространство имен Concurrency::direct3d
 `direct3d` Пространство имен предоставляет функции, поддерживающие взаимодействие D3D. Он обеспечивает эффективное использование ресурсов D3D для вычислений в коде AMP, а также разрешает использование ресурсов, созданные в AMP в коде D3D, не создавая промежуточные резервированием. Можно постепенно ускорения большим объемом вычислений разделы приложений DirectX с помощью C++ AMP и использовать этот API D3D в формируемые AMP вычисления данных.  
@@ -44,19 +39,19 @@ namespace direct3d;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Класс scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Для блокировки доступа D3D программой-оболочкой RAII `accelerator_view` объекта.|  
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Структура adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Тип тега для указания блокировки доступа D3D должны приняла, а не получена.|  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Возвращает абсолютное значение аргумента|  
 |[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Перегружен. Фиксирует _X в заданный диапазон _Min и _Max|  
@@ -71,16 +66,16 @@ namespace direct3d;
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Сравнивает два значения и возвращает значение, которое больше.|  
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Сравнивает два значения и возвращает значение, которое меньше.|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Возвращает логический флаг, указывающее, запрещен ли accelerator_view указанного времени ожидания.|  
-|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Перегружен. Выполняет операцию арифметического умножения или добавления на три аргумента: _X * _Y + _Z|  
+|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Перегружен. Выполняет операцию арифметического умножения или добавления на три аргумента: _X * _Y + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Создайте массив в указатель на интерфейс D3D буфера.|  
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Создает случайное значение с помощью алгоритма шума Перлина|  
-|[RADIANS](concurrency-direct3d-namespace-functions-amp.md#radians)|Преобразование _X из градусов в радианы|  
+|[шума](concurrency-direct3d-namespace-functions-amp.md#noise)|Создает случайное значение с помощью алгоритма шума Перлина|  
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Преобразование _X из градусов в радианы|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Вычисляет приблизительные, быстро обратное аргумента|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Изменяет порядок биты в _X|  
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Фиксирует _X в диапазоне от 0 до 1|  
 |[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Перегружен. Возвращает знак значения аргумента|  
 |[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Возвращает smooth интерполяции Hermite между 0 и 1, если _X находится в диапазоне [_Min, _Max].|  
-|[step](concurrency-direct3d-namespace-functions-amp.md#step)|Сравнивает два значения и возвращает 0 или 1, в зависимости от того, какое значение больше.|  
+|[Шаг](concurrency-direct3d-namespace-functions-amp.md#step)|Сравнивает два значения и возвращает 0 или 1, в зависимости от того, какое значение больше.|  
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Сравнивает два значения без знака, возвращая значение, которое больше.|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Сравнивает два значения без знака, возвращая значение, которое меньше.|  
 

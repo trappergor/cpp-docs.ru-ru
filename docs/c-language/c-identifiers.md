@@ -1,13 +1,10 @@
 ---
-title: "Идентификаторы C | Документация Майкрософт"
-ms.custom: 
+title: Идентификаторы C | Документация Майкрософт
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cca0381392a1f7c2f227c3296597dc3c614ae0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-identifiers"></a>Идентификаторы C
 "Идентификаторы" или "символы" — это имена, задаваемые в программе для переменных, типов, функций и меток. Написание и регистр символов в именах идентификаторов должны отличаться от всех ключевых слов. Не допускается использовать ключевые слова (C или Microsoft) в качестве идентификаторов; они зарезервированы для специального применения. Идентификатор создается путем его указания в объявлении переменной, типа или функции. В этом примере `result` представляет собой идентификатор целой переменной, а `main` и `printf` — это имена идентификаторов для функций.  

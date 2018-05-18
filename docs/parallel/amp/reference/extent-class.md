@@ -1,12 +1,9 @@
 ---
-title: "область класса (C++ AMP) | Документы Microsoft"
-ms.custom: 
+title: область класса (C++ AMP) | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 Представляет собой вектор *N* целочисленных значений, указывающих границы *N*-мерном пространстве, который соответствует значение 0. Значения в объекте vector упорядочиваются от наиболее важных до наименее важных.  
@@ -56,13 +51,13 @@ class extent;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[область конструктора](#ctor)|Инициализирует новый экземпляр класса `extent`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[содержит](#contains)|Проверяет, что указанный `extent` объект с указанным рангом.|  
 |[size](#size)|Возвращает общий размер линейной области памяти (в единицах элементов).|  
@@ -70,7 +65,7 @@ class extent;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[operator-](#operator_min)|Возвращает новый `extent` объект, созданный путем вычитания `index` элементы из соответствующего `extent` элементов.|  
 |[оператор--](#operator_min_min)|Уменьшает значение каждого элемента `extent` объекта.|  
@@ -87,7 +82,7 @@ class extent;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|name|Описание:|  
+|name|Описание|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Возвращает ранг `extent` объекта.|  
   
@@ -95,7 +90,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains">содержит</a> 
+## <a name="contains"></a> содержит 
 
 Указывает, является ли указанный [индекс](index-class.md) значение содержится в объекте «область».  
   
@@ -356,7 +351,7 @@ static const int rank = _Rank;
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile">плитки</a> 
+## <a name="tile"></a> плитки 
 
 Создает объект tiled_extent с плитки указанного измерения.
 

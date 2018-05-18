@@ -1,12 +1,9 @@
 ---
-title: "Класс reader_writer_lock | Документы Microsoft"
-ms.custom: 
+title: Класс reader_writer_lock | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 Блокировка чтения или записи на основе очередей с предпочтением записи только с локальным вращением. Блокировка предоставляет модулям записи доступ в порядке поступления и блокирует доступ модулей чтения при постоянной нагрузке модулей записи.  
@@ -49,21 +44,21 @@ class reader_writer_lock;
   
 ### <a name="public-classes"></a>Открытые классы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
-|[reader_writer_lock::scoped_lock Class](#scoped_lock_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокирует объекты, как средство записи.|  
-|[reader_writer_lock::scoped_lock_read Class](#scoped_lock_read_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировать объекты в качестве читателя.|  
+|[Класс reader_writer_lock::scoped_lock](#scoped_lock_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокирует объекты, как средство записи.|  
+|[Класс reader_writer_lock::scoped_lock_read](#scoped_lock_read_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировать объекты в качестве читателя.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[reader_writer_lock](#ctor)|Создает новое `reader_writer_lock` объекта.|  
-|[~reader_writer_lock Destructor](#dtor)|Уничтожает `reader_writer_lock` объекта.|  
+|[~ reader_writer_lock деструктор](#dtor)|Уничтожает `reader_writer_lock` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[lock](#lock)|Получает блокировку чтения записи, как средство записи.|  
 |[lock_read](#lock_read)|Чтения получает блокировку чтения записи. При наличии модулей записи, активные читатели должны подождать, пока они выполняются. Средство чтения просто регистрирует интерес в блокировке и ожидает записи для ее снятия.|  
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  Уничтожает `reader_writer_lock` объекта.  
   
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>Примечания  
  Ожидается, что больше не блокировки при выполнении деструктора. По-прежнему позволяя блокировки чтения записи приводит к неопределенному блокировки удерживаются результатов к неопределенному поведению.  
   
-##  <a name="scoped_lock_class"></a>  reader_writer_lock::scoped_lock Class  
+##  <a name="scoped_lock_class"></a>  Класс reader_writer_lock::scoped_lock  
  Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокирует объекты, как средство записи.  
   
 ```
@@ -150,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock` Объект для получения как средство записи.  
   
-## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
 Уничтожает `reader_writer_lock` объекта и снимает блокировку, переданную в конструкторе.   
 
@@ -158,7 +153,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class"></a>  reader_writer_lock::scoped_lock_read Class  
+##  <a name="scoped_lock_read_class"></a>  Класс reader_writer_lock::scoped_lock_read  
  Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировать объекты в качестве читателя.  
   
 ```
@@ -181,7 +176,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock` Объект для получения как модуль чтения.  
   
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read::~scoped_lock_read Destructor
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read:: ~ scoped_lock_read деструктор
 Уничтожает `scoped_lock_read` объекта и снимает блокировку, переданную в конструкторе.  
 
 ```

@@ -1,30 +1,25 @@
 ---
-title: "Распространение компонентов с использованием модулей слияния | Документы Microsoft"
-ms.custom: 
+title: Распространение компонентов с использованием модулей слияния | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093c732563844b14a3f99662150d4db9b2fac1fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Распространение компонентов с использованием модулей слияния
 Visual Studio включает [модули слияния](http://msdn.microsoft.com/library/aa367434) для каждого компонента Visual C++, которая лицензирована для распространения вместе с приложением. Если модуль слияния компилируется в файле установщика Windows, он включает развертывание определенных DLL на компьютерах, имеющих определенную платформу. В файле установки укажите, что модули слияния являются необходимыми компонентами для вашего приложения. При установке Visual Studio, модули слияния устанавливаются в \Program Files\Common модули Files\Merge\\. (Только неотладочные версии библиотек DLL Visual C++ могут распространяться.) Дополнительные сведения и ссылка на список модулей слияния, которые лицензируются для распространения см. в разделе [распространение файлов Visual C++](../ide/redistributing-visual-cpp-files.md).  

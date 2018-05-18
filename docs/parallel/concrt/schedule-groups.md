@@ -1,29 +1,24 @@
 ---
-title: "Группы расписаний | Документы Microsoft"
-ms.custom: 
+title: Группы расписаний | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedule-groups"></a>Группы расписаний
 В этом документе описывается роль групп расписаний в среде выполнения с параллелизмом. Объект *группы расписаний* связывает или группы задач, связанных друг с другом. Каждый планировщик имеет один или несколько групп расписаний. Используйте группы расписаний, когда требуется высокая степень локальности связанных задач, например если группу связанных задач лучше выполнять в одном узле процессора. И наоборот используйте экземпляры планировщика, когда приложение получает определенные требования к качеству, например, если требуется ограничить объем вычислительных ресурсов, выделенных для набора задач. Дополнительные сведения об экземплярах планировщиков см. в разделе [экземпляры планировщика](../../parallel/concrt/scheduler-instances.md).  

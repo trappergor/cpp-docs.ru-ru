@@ -1,27 +1,22 @@
 ---
-title: "Версии 1.4 соответствие | Документы Microsoft"
-ms.custom: 
+title: Версии 1.4 соответствие | Документы Microsoft
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 662ad260-b9a1-43b7-b269-ef6ff0714e05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fca67cb50cf91195d7edfb1e5e2fccfc9f8c5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c1bde41491f456ff99b0cd0d1ccc8ab98508412
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="14-compliance"></a>1.4 Совместимость
 Реализация API OpenMP C/C++ является *OpenMP совместимые* если он распознает и сохраняет семантика элементы данной спецификации, как описано в главах 1, 2, 3, 4, и приложение C. приложения A, B, D, E и F для сведения только в целях и не входит в спецификацию. Реализации, включающие только подмножество API OpenMP-несовместимые.  
