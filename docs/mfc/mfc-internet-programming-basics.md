@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 Корпорация Майкрософт предоставляет множество API-интерфейсы для программирования клиентских и серверных приложений. Для использования в Интернете, записываются много новых приложений и технологии, возможности браузера и изменение параметров безопасности, будут записаны новые типы приложений. Браузеры запуска на клиентских компьютерах, предоставление доступа к Интернет и отображения HTML-страницы, содержащие текст, графики, элементы управления ActiveX и документы. Серверы предоставляют FTP, HTTP и gopher службы и запустите серверные расширения приложения с помощью CGI. Пользовательские приложения можно получить сведения и предоставления данных в Интернете.  
@@ -52,8 +52,6 @@ ms.lasthandoff: 05/04/2018
 -   [Основные сведения о WinInet](../mfc/wininet-basics.md)  
   
 -   [Основы HTML](../mfc/html-basics.md)  
-  
--   [Основы HTTP](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
   
