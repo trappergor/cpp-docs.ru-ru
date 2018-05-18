@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 Предоставляет базовую функциональность всех классов окон в библиотеке Microsoft Foundation Class.  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|Уведомляет об удалении указанного окна из цепочки.|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|Вызывается, когда необходимо изменить состояние пользовательского интерфейса.|  
 |[CWnd::OnChar](#onchar)|Вызывается, когда нажатие клавиши преобразуются в несистемный символ.|  
-|[CWnd::OnCharToItem](#onchartoitem)|Вызывается дочерним списком с [LBS_WANTKEYBOARDINPUT](list-box-styles.md) стиля в ответ на [WM_CHAR](#onchar) сообщения.|  
+|[CWnd::OnCharToItem](#onchartoitem)|Вызывается дочерним списком с [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стиля в ответ на [WM_CHAR](#onchar) сообщения.|  
 |[CWnd::OnChildActivate](#onchildactivate)|Вызывается для дочерних окон многодокументного интерфейса (MDI) при изменении размера или положения объекта `CWnd`, а также при активации объекта `CWnd`.|  
 |[CWnd::OnChildNotify](#onchildnotify)|Вызывается родительским окном, чтобы позволить уведомляющему элементу управления ответить на уведомление элемента управления.|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|Вызывается при изменении содержимого буфера обмена.|  
