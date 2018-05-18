@@ -16,28 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c4725dd357854db504272e5b8b9d88641b143d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-error-c2482"></a>Ошибка компилятора C2482
 
->"*идентификатор*": динамическая инициализация данных «thread» не допускается
+>"*идентификатор*": динамическая инициализация данных «thread» не допускается в коде managed WinRT
 
-Это сообщение об ошибке не используется в Visual Studio 2015 и более поздних версиях. В предыдущих версиях, переменные, объявленные с помощью `thread` атрибут нельзя инициализировать с помощью выражения, которое необходимо оценить во время выполнения. Статическое выражение, необходимые для инициализации `thread` данных.
+## <a name="remarks"></a>Примечания
+
+При использовании управляемых или code WinRT, переменные, объявленные с помощью [__declspec(thread)](../../cpp/thread.md) атрибута модификатор класса хранения или [thread_local](../../cpp/storage-classes-cpp.md#thread_local) спецификатор класса хранения не может инициализироваться с помощью выражения для этого требуется вычисление во время выполнения. Статическое выражение, необходимые для инициализации `__declspec(thread)` или `thread_local` данные в этих средах выполнения.
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C2482 в Visual Studio 2013 и более ранних версий:
+Следующий пример приводит к возникновению ошибки C2482 в управляемых (**/CLR**) и WinRT (**/zw**) кода:
 
 ```cpp
 // C2482.cpp
-// compile with: /c
+// For managed example, compile with: cl /EHsc /c /clr C2482.cpp
+// For WinRT example, compile with: cl /EHsc /c /ZW C2482.cpp
 #define Thread __declspec( thread )
-Thread int tls_i = tls_i;   // C2482
+Thread int tls_i1 = tls_i1;   // C2482
 
 int j = j;   // OK in C++; C error
-Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
+
+Чтобы устранить эту проблему, инициализировать локальное хранилище потока с помощью константы, **constexpr**, или статическое выражение. Выполните инициализацию потоках отдельно.

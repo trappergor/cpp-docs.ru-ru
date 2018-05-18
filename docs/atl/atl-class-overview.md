@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>Обзор класса ATL
 Классы в Active Template Library (ATL), можно классифицировать следующим образом.  
@@ -49,11 +49,10 @@ ms.lasthandoff: 05/03/2018
  Дополнительные классы, которые можно использовать в проекты ATL, в разделе [общие классы](../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
 ## <a name="see-also"></a>См. также  
- [Классы](../atl/reference/atl-classes.md)   
- [Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)   
+ [Классы и структуры](../atl/reference/atl-classes.md)   
+ [Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)  
  [Функции](../atl/reference/atl-functions.md)   
  [Глобальные переменные](../atl/reference/atl-global-variables.md)   
  [Макросы](../atl/reference/atl-macros.md)   
- [Структуры](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 
