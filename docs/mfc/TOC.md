@@ -136,7 +136,6 @@
 ### [Технология Active в Интернете](active-technology-on-the-internet.md)
 ### [Основные сведения о WinInet](wininet-basics.md)
 ### [Основы HTML](html-basics.md)
-### [Основы HTTP](http-basics.md)
 ## [Задачи программирования для интернет-решений MFC](mfc-internet-programming-tasks.md)
 ### [Решения, которые необходимо принять при разработке приложения](application-design-choices.md)
 ### [Создание приложений MFC](writing-mfc-applications.md)
