@@ -2,11 +2,8 @@
 title: '&lt;complex&gt; | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <complex>
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133d969121599e77e74448a0b29b4d8de56cf97d
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
-ms.translationtype: HT
+ms.openlocfilehash: a29dfc976ca29405814bbae81f42a02a74300d74
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -42,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
 Комплексные числа — это упорядоченная пара вещественных чисел. С геометрической точки зрения комплексная плоскость — это вещественная двумерная плоскость. Отличия комплексной плоскости от вещественной состоят в том, что у нее есть дополнительная алгебраическая структура. У этой структуры есть две основные операции.
 
-- Сложение, которое определяется как (**, *b*) + (*c*, *d*) = (** + *c* , *b* + *d*)
+- Сложение, которое определяется как (*a*, *b*) + (*c*, *d*) = (*a* + *c* , *b* + *d*)
 
 - Умножение, которое определяется как (*a*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad* + *bc*)
 
