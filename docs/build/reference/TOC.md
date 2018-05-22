@@ -53,6 +53,7 @@
 #### [/favor (оптимизация для особенностей архитектуры)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (полный путь к файлу исходного кода в папке Diagnostics)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (определение поведения с плавающей запятой)](fp-specify-floating-point-behavior.md)
+##### [Оптимизация вычислений с плавающей запятой в Microsoft Visual C++](floating-point-optimization.md)
 #### [/FS (принудительное выполнение синхронных записей PDB)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (оптимизация для приложений Windows)](ga-optimize-for-windows-application.md)
 #### [/Gd, /Gr, /Gv, /Gz (соглашение о вызовах)](gd-gr-gv-gz-calling-convention.md)
