@@ -1,4 +1,4 @@
----
+﻿---
 title: Оператор while (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
@@ -29,9 +29,8 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      while ( expression )  
-   statement  
+while ( expression )  
+  statement
 ```  
   
 ## <a name="remarks"></a>Примечания  
@@ -71,8 +70,8 @@ int main()
  Условие завершения вычисляется в начале цикла. Если символов подчеркивания в конце строки нет, цикл никогда не выполняется.  
   
 ## <a name="see-also"></a>См. также  
+ [Операторы перебора](../cpp/iteration-statements-cpp.md)   
  [Операторы итерации](../cpp/iteration-statements-cpp.md)   
- [Ключевые слова](../cpp/keywords-cpp.md)   
  [Оператор do-while (C++)](../cpp/do-while-statement-cpp.md)   
  [Оператор for (C++)](../cpp/for-statement-cpp.md)   
  [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md)
