@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 Регистрирует подпрограмму, вызываемую во время выхода.  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  Указатель на переменную, указывающую на конец списка функций, которые должны выполняться при отключении.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- В случае успеха возвращается указатель на функцию пользователя. В противном случае возвращается указатель NULL.  
+ В случае успеха возвращается указатель на функцию пользователя. В противном случае возвращается указатель **NULL**.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `__dllonexit` аналогична функции [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) за тем исключением, что глобальные переменные, которые она использует, не видны подпрограмме. Вместо глобальных переменных в этой функции применяются параметры `pbegin` и `pend`.  

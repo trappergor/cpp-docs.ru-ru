@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает число символов в *str*, за исключением терминала **NULL**. Возвращаемое значение не является зарезервированным для указания ошибки, за исключением **_mbstrlen** и **_mbstrlen_l**, которые возвращают `((size_t)(-1))` , если строка содержит недопустимый Многобайтовый символ.
+Каждая из этих функций возвращает число символов в *str*, за исключением терминалов null. Возвращаемое значение не является зарезервированным для указания ошибки, за исключением **_mbstrlen** и **_mbstrlen_l**, которые возвращают `((size_t)(-1))` , если строка содержит недопустимый Многобайтовый символ.
 
 ## <a name="remarks"></a>Примечания
 

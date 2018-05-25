@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>Ошибка компилятора C3533
 «Тип»: параметр не может иметь тип, содержащий «auto»  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  Удалить `auto` ключевое слово из объявления параметра.  
   
 ## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3535, так как он объявляет параметр функции с `auto` ключевое слово и его компиляции с **/Zc: auto**.  
+ Следующий пример вызывает C3533, так как он объявляет параметр функции с `auto` ключевое слово и его компиляции с **/Zc: auto**.  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3535, так как он объявляет параметр шаблона с `auto` ключевое слово и его компиляции с **/Zc: auto**.  
+ Следующий пример вызывает C3533 в режим C ++ 14, так как он объявляет параметр шаблона с `auto` ключевое слово и его компиляции с **/Zc: auto**. (В C ++ 17, это допустимое определение шаблона класса с параметром один шаблон не является типом, тип которого определяется.)
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>См. также  

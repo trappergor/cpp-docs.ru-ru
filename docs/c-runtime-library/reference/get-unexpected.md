@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d300ae9d0b03f5d6b8549026afe106aef32d62d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
@@ -52,7 +52,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на функцию, зарегистрированную функцией [set_unexpected](set-unexpected-crt.md). Если функция не задана, возвращаемое значение может использоваться для восстановления поведения по умолчанию; это значение может быть равно NULL.
+Возвращает указатель на функцию, зарегистрированную функцией [set_unexpected](set-unexpected-crt.md). Если ни одна из функций не задана, возвращаемое значение может использоваться для восстановления поведения по умолчанию; Это значение может быть **NULL**.
 
 ## <a name="requirements"></a>Требования
 
