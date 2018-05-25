@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_Fullpath_dbg** и **_wfullpath_dbg** идентичны **_fullpath** и **_wfullpath** за исключением того, что, когда **_DEBUG** будет определено, эти функции используют отладочную версию **malloc**, **_malloc_dbg**для выделения памяти, если в качестве первого параметра передается значение NULL. Сведения о компонентах отладки **_malloc_dbg**, в разделе [_malloc_dbg](malloc-dbg.md).
+**_Fullpath_dbg** и **_wfullpath_dbg** идентичны **_fullpath** и **_wfullpath** за исключением того, что, когда **_DEBUG** будет определено, эти функции используют отладочную версию **malloc**, **_malloc_dbg**для выделения памяти, если **NULL** передается как первый параметр. Сведения о компонентах отладки **_malloc_dbg**, в разделе [_malloc_dbg](malloc-dbg.md).
 
 Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить **_CRTDBG_MAP_ALLOC** флаг. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы **_fullpath** и **_wfullpath** сопоставляются с **_fullpath_dbg** и **_wfullpath_dbg**, соответственно, с *blockType* значение **_NORMAL_BLOCK**. Таким образом, не требуется явно вызывать эти функции, если только необходимости пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 

@@ -50,11 +50,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f04031bd0d21ab0a4520820d433016497072e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -123,7 +123,7 @@ int _vswprintf_p_l(
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-Если *буфера* или *формат* параметры: указатели NULL, если значение счетчика равно нулю, или если строка форматирования содержит недопустимые символы форматирования, вызывается обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Если *буфера* или *формат* параметры **NULL** указатели, если число равно нулю, или если строка формата содержит недопустимое форматирование символов, недопустимый параметр вызывается обработчик, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 

@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -150,7 +150,7 @@ unsigned char *_mbsnset_l(
 
 **_wcsnset** и **_mbsnset** версии Юникода и многобайтовых символов **_strnset**. Строковые аргументы и возвращаемое значение **_wcsnset** являются двухбайтовые строки; аргументы **_mbsnset** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbsnset** возвращает значение NULL и задает **errno** для **EINVAL**. **_strnset** и **_wcsnset** не проверяют свои параметры.
+**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbsnset** возвращает **NULL** и задает **errno** для **EINVAL**. **_strnset** и **_wcsnset** не проверяют свои параметры.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

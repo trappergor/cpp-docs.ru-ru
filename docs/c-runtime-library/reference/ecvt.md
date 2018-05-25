@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ char *_ecvt(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ecvt** возвращает указатель на строку знаков; Значение NULL, если произошла ошибка.
+**_ecvt** возвращает указатель на строку знаков; **NULL** Если произошла ошибка.
 
 ## <a name="remarks"></a>Примечания
 
@@ -85,7 +85,7 @@ char *_ecvt(
 
 **_ecvt** и **_fcvt** используют для преобразования один статически выделенный буфер. Каждый вызов одной из этих подпрограмм уничтожает результат предыдущего вызова.
 
-Эта функция проверяет свои параметры. Если *dec* или *входа* имеет значение NULL, или *число* равно 0, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и будет возвращено значение NULL.
+Эта функция проверяет свои параметры. Если *dec* или *входа* — **NULL**, или *число* равно 0, вызывается обработчик недопустимого параметра, как описано в [параметр Проверка](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и **NULL** возвращается.
 
 ## <a name="requirements"></a>Требования
 

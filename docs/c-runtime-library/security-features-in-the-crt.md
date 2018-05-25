@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>Возможности безопасности в CRT
 Многие старые функции CRT имеют новые, более безопасные версии. Если безопасная функция существует, то старая менее безопасная версия помечена как нерекомендуемая, а новая версия имеет суффикс `_s` ("secure" — "безопасный").  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. Параметры, передаваемые в функции CRT, проверяются и в безопасных функциях, и во многих существовавших ранее версиях функций. Эти проверки включают:  
   
-    -   Проверка на значение `NULL`, переданное в функции.  
+    -   Проверка на значение **NULL**, переданное в функции.  
   
     -   Проверка допустимости перечислимых значений.  
   

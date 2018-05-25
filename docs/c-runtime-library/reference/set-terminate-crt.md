@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017ea9d96cef9065ff82e7f3428e725b816c9319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +56,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на предыдущую функцию, зарегистрированные с **set_terminate** , чтобы можно было впоследствии восстановить предыдущую функцию. Если предыдущая функция не задана, возвращаемое значение может использоваться для восстановления поведения по умолчанию; это значение может быть равно NULL.
+Возвращает указатель на предыдущую функцию, зарегистрированные с **set_terminate** , чтобы можно было впоследствии восстановить предыдущую функцию. Если предыдущая функция не задана, возвращаемое значение может использоваться для восстановления поведения по умолчанию; Это значение может быть **NULL**.
 
 ## <a name="remarks"></a>Примечания
 
