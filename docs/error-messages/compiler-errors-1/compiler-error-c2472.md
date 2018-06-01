@@ -16,38 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d89a6d6b10fa76c7fbf1bf11c4ebe2ecff5f98ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704864"
 ---
 # <a name="compiler-error-c2472"></a>Ошибка компилятора C2472
-"функция" не может создаваться в управляемом коде "сообщение"; для генерации смешанного образа выполните компиляцию с параметром /clr  
-  
- Эта ошибка возникает при использовании типов, не поддерживаемых в управляемом коде, в чистой среде CLR. Для устранения этой ошибки выполните компиляцию с параметром **/clr** .  
-  
- Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2472:  
-  
-```  
-// C2472.cpp  
-// compile with: /clr:pure  
-// C2472 expected  
-  
-#include <cstdlib>  
-  
-int main()  
-{  
-   int * __ptr32 p32;  
-   int * __ptr64 p64;  
-  
-   p32 = (int * __ptr32)malloc(4);  
-   p64 = p32;  
-}  
-```  
-  
-## <a name="see-also"></a>См. также  
- [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)
+
+> "*функция*" не может создаваться в управляемом коде: "*сообщение*"; Компиляция с параметром/CLR для генерации смешанного образа
+
+## <a name="remarks"></a>Примечания
+
+Эта ошибка возникает при использовании типов, не поддерживаемых в управляемом коде, в чистой среде CLR. Для устранения этой ошибки выполните компиляцию с параметром **/clr** .
+
+**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2472:
+
+```cpp
+// C2472.cpp
+// compile with: /clr:pure
+// C2472 expected
+
+#include <cstdlib>
+
+int main()
+{
+   int * __ptr32 p32;
+   int * __ptr64 p64;
+
+   p32 = (int * __ptr32)malloc(4);
+   p64 = p32;
+}
+```
+
+## <a name="see-also"></a>См. также
+
+- [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)

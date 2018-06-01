@@ -1,7 +1,7 @@
 ---
 title: Класс RoInitializeWrapper | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705596"
 ---
 # <a name="roinitializewrapper-class"></a>Класс RoInitializeWrapper
 Инициализирует среду выполнения Windows.  
@@ -31,20 +32,20 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>Примечания  
- RoInitializeWrapper — удобный метод, который инициализирует среду выполнения Windows и возвращает значение HRESULT, указывающее, успешно ли выполнена операция.  
+ RoInitializeWrapper — удобный метод, который инициализирует среду выполнения Windows и возвращает значение HRESULT, указывающее, успешно ли выполнена операция. Так как вызывает деструктор класса `::Windows::Foundation::Uninitialize`, экземпляры `RoInitializeWrapper` должны объявляться на верхнего уровня и в глобальной области.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор RoInitializeWrapper::RoInitializeWrapper](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|Инициализирует новый экземпляр класса RoInitializeWrapper.|  
 |[Деструктор RoInitializeWrapper::~RoInitializeWrapper](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|Удаляет текущий экземпляр класса RoInitializeWrapper.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор RoInitializeWrapper::HRESULT()](../windows/roinitializewrapper-hresult-parens-operator.md)|Возвращает значение HRESULT, полученное конструктором RoInitializeWrapper.|  
   

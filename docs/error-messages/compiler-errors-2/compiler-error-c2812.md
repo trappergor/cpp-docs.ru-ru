@@ -16,24 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d46b0f9744f192d677d7b2df27b67e734de1b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c5469e4f7be3c164cc63fa30f5069009846be48
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705027"
 ---
 # <a name="compiler-error-c2812"></a>Ошибка компилятора C2812
-\#Импорт не поддерживается с параметром/clr: pure и/CLR: safe  
-  
- Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
-  
- [директива #import](../../preprocessor/hash-import-directive-cpp.md) не поддерживается с **/CLR: pure** и **/CLR: safe** из-за `#import` требует использования библиотек поддержки собственного компилятора.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2812.  
-  
-```  
-// C2812.cpp  
-// compile with: /clr:pure /c  
-#import "importlib.tlb"   // C2812  
+
+> \#Импорт не поддерживается с параметром/clr: pure и/CLR: safe
+
+## <a name="remarks"></a>Примечания
+
+**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+
+[директива #import](../../preprocessor/hash-import-directive-cpp.md) не поддерживается с **/CLR: pure** и **/CLR: safe** из-за `#import` требует использования библиотек поддержки собственного компилятора.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2812.
+
+```cpp
+// C2812.cpp
+// compile with: /clr:pure /c
+#import "importlib.tlb"   // C2812
 ```
