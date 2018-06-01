@@ -16,33 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3634ecf3eb1417095cce144706838113b5ad2a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704962"
 ---
 # <a name="compiler-error-c3768"></a>Ошибка компилятора C3768
-не удается получить адрес виртуальной функции vararg в чистом управляемом коде  
-  
- **/CLR: pure** рекомендуется использовать параметр компилятора в Visual Studio 2015.  
-  
- При компиляции с параметром `/clr:pure`, невозможно получить адрес виртуальной `vararg` функции.  
-  
-## <a name="example"></a>Пример  
 
- Следующий пример приводит к возникновению ошибки C3768:  
-  
-```  
-// C3768.cpp  
-// compile with: /clr:pure  
-struct A  
-{  
-   virtual void f(...);  
-};  
-  
-int main()  
-{  
-   &(A::f);   // C3768  
-}  
+> не удается получить адрес виртуальной функции vararg в чистом управляемом коде
+
+## <a name="remarks"></a>Примечания
+
+**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+
+При компиляции с параметром **/CLR: pure**, невозможно получить адрес виртуальной `vararg` функции.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3768:
+
+```cpp
+// C3768.cpp
+// compile with: /clr:pure
+struct A
+{
+   virtual void f(...);
+};
+
+int main()
+{
+   &(A::f);   // C3768
+}
 ```
