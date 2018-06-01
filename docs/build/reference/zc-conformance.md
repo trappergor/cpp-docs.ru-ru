@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704897"
 ---
 # <a name="zc-conformance"></a>/Zc (соответствие)
 
@@ -43,6 +44,7 @@ ms.lasthandoff: 05/03/2018
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Включить C ++ 17 чрезмерно выровненных динамическое выделение (включен по умолчанию в C ++ 17).|
 |[Авто\[-\]](zc-auto-deduce-variable-type.md)|Применить новое значение стандартного C++ для `auto` (на по умолчанию).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|Включить **__cplusplus** макрос для отчета, поддерживается стандарт (отключено по умолчанию).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Включить внешнюю компоновку для `constexpr` переменных (отключено по умолчанию).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Обеспечить выполнение стандартным C++ `for` правила области видимости (на по умолчанию).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Включение неявного `noexcept` на требуемые функции (на по умолчанию).|
