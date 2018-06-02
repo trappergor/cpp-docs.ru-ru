@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686855"
 ---
 # <a name="pointers-to-members"></a>Указатели на члены
 Объявления указателей на члены — это особый случай объявлений указателей.  Они объявляются с помощью следующей последовательности:  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- В приведенном выше примере `pwCaption` — это указатель на любой член класса `Window` , имеет тип **char\***. `pwCaption` имеет тип `char * Window::*`. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.  
+ В приведенном выше примере `pwCaption` — это указатель на любой член класса `Window` , имеет тип **char\***. `pwCaption` имеет тип `char * Window::* `. В следующем фрагменте кода объявляются указатели на функции-члены `SetCaption` и `GetCaption`.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
