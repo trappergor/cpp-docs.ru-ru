@@ -204,7 +204,7 @@
 ### [/DELAY (параметры импорта отложенной загрузки)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (импорт отложенной загрузки)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (частичное подписание сборки)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (зависимой загрузки флаги, заданные по умолчанию)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (зависимой загрузки флаги, заданные по умолчанию)](dependentloadflag.md)
 ### [/DLL (сборка DLL)](dll-build-a-dll.md)
 ### [/DRIVER (драйвер режима ядра Windows NT)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (использование технологии ASRL)](dynamicbase-use-address-space-layout-randomization.md)

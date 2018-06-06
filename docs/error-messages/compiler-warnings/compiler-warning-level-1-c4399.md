@@ -20,7 +20,7 @@ ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703724"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>Предупреждение компилятора (уровень 1) C4399
