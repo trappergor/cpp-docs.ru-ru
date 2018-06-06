@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (определение библиотеки по умолчанию) | Документы Microsoft
+title: / DEFAULTLIB (определение библиотеки по умолчанию) | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569785"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (определение библиотеки по умолчанию)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Здесь:  
-  
- *Библиотека*  
- Имя библиотеки для поиска при разрешении внешних ссылок.  
-  
-## <a name="remarks"></a>Примечания  
- Параметр/DEFAULTLIB добавляет единицу *библиотеки* в список библиотек, LINK выполняет поиск при разрешении ссылок. Это библиотека, заданная с/DEFAULTLIB, выполняется после библиотек, указанных в командной строке и перед стандартных библиотек в OBJ-файлы.  
-  
- [Игнорировать все стандартные библиотеки](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB) переопределяет параметр/DEFAULTLIB:*библиотеки*. [Игнорировать библиотеки](../../build/reference/nodefaultlib-ignore-libraries.md) (/ NODEFAULTLIB:*библиотеки*) переопределяет параметр/DEFAULTLIB:*библиотеки* при же *библиотеки* имя указан в обеих.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
--   Этот параметр не доступен из среды разработки Visual Studio. Для добавления библиотеки на этапе компоновки, используйте **Дополнительные зависимости** свойство из **ввода** страницу свойств.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+Указание библиотеки по умолчанию для поиска для разрешения внешних ссылок.
+
+## <a name="syntax"></a>Синтаксис
+
+> **/ DEFAULTLIB**:_библиотеки_
+
+### <a name="arguments"></a>Аргументы
+
+|Аргумент|Описание:|
+|-|-|
+*Библиотека*|Имя библиотеки для поиска при разрешении внешних ссылок.
+
+## <a name="remarks"></a>Примечания
+
+**/DEFAULTLIB** параметр добавляет один *библиотеки* в список библиотек, LINK выполняет поиск при разрешении ссылок. Это библиотека, заданная с помощью **/DEFAULTLIB** выполняется после библиотек, явно указанных в командной строке и перед стандартных библиотек в OBJ-файлы.
+
+При использовании без аргументов, [/NODEFAULTLIB (игнорировать все стандартные библиотеки)](../../build/reference/nodefaultlib-ignore-libraries.md) параметр переопределяет все **/DEFAULTLIB**:*библиотеки* параметры. **/NODEFAULTLIB**:*библиотеки* параметр переопределения **/DEFAULTLIB**:*библиотеки* при же *библиотеки*указано как имя.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
+
+1. В **Дополнительные параметры**, введите **/DEFAULTLIB**:*библиотеки* параметр для каждой библиотеки для поиска. Выберите **ОК** для сохранения изменений.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
+- [Параметры компоновщика](../../build/reference/linker-options.md)

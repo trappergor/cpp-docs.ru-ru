@@ -1,7 +1,7 @@
 ---
 title: Структура steady_clock | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1dbfac1eb8c67c5306bded6e6fd9ee8dacf54b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569902"
 ---
 # <a name="steadyclock-struct"></a>Структура steady_clock
 
-Представляет часы `steady`.
+Представляет *постоянной* часов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,25 +33,32 @@ struct steady_clock;
 
 ## <a name="remarks"></a>Примечания
 
-В Windows объект steady_clock создает оболочку для функции QueryPerformanceCounter.
+В Windows `steady_clock` заключает в оболочку `QueryPerformanceCounter` функции.
 
-Часы считаются *монотонными*, если значение, возвращаемое при первом вызове `now()`, всегда не больше значений, возвращаемых при последующих вызовах `now()`.
+Часы считаются *монотонными*, если значение, возвращаемое при первом вызове `now`, всегда меньше значения, возвращаемого при последующих вызовах `now`, или равно ему. Часы считаются *постоянными*, если они *монотонны* и интервал времени между соседними тактами является постоянной величиной.
 
-Часы считаются *постоянными*, если они *монотонны* и если интервал времени между соседними тактами является постоянной величиной.
+`high_resolution_clock` TypeDef для `steady_clock`.
 
-High_resolution_clock является определением типа для steady_clock.
+### <a name="public-typedefs"></a>Открытые определения типов
+
+|name|Описание:|
+|----------|-----------------|
+|`steady_clock::duration`|Синоним для `nanoseconds`, определенного в \<chrono >.|
+|`steady_clock::period`|Синоним для `nano`, определенного в \<отношение >.|
+|`steady_clock::rep`|Синоним для **длинные** **длинные**, тип, который используется для представления числа тактов часов при автономном создании экземпляра `duration`.|
+|`steady_clock::time_point`|Синоним для `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Открытые функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |--------------|-----------------|
-|now|Возвращает текущее время как значение time_point.|
+|`now`|Возвращает текущее время как `time_point` значение.|
 
 ## <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
-|`system_clock::is_steady`|Содержит `true`. Объект `steady_clock` — *постоянный*.|
+|`steady_clock::is_steady`|Содержит `true`. Объект `steady_clock` — *постоянный*.|
 
 ## <a name="requirements"></a>Требования
 
@@ -60,6 +68,6 @@ High_resolution_clock является определением типа для 
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[Структура system_clock](../standard-library/system-clock-structure.md)<br/>
+- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+- [\<chrono>](../standard-library/chrono.md)
+- [Структура system_clock](../standard-library/system-clock-structure.md)
