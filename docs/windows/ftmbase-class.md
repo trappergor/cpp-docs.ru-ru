@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bcc003811a747569f22f6b2603faf72096dd049
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 38f30c497fc8640b1f88f4ffb3fc6f14bed55a3e
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814356"
 ---
 # <a name="ftmbase-class"></a>FtmBase - класс
 Представляет свободнопоточный объект маршаллера.  
@@ -36,19 +37,19 @@ class FtmBase : public Microsoft::WRL::Implements<
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе «IMarshal» в подразделе «COM-интерфейсы» раздела «Ссылки COM» в библиотеке MSDN.  
+ Дополнительные сведения см. в разделе [класс RuntimeClass](runtimeclass-class.md).  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Инициализирует новый экземпляр класса FtmBase.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Создает общую таблицу интерфейса (GIT).|  
 |[Метод FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Принудительно освобождает все внешние подключения к объекту. Объект сервера вызывает реализацию объекта до завершения работы этого метода.|  
@@ -60,7 +61,7 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Элемент данных FtmBase::marshaller_](../windows/ftmbase-marshaller-data-member.md)|Хранит ссылку на свободное упаковщик в режиме потока.|  
   
