@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569814"
 ---
 # <a name="fatal-error-c1083"></a>Неустранимая ошибка C1083
 
@@ -106,6 +107,8 @@ ms.lasthandoff: 05/04/2018
 
 - Файл компилируется с помощью другого **/ analyze** значения параметра компилятора, чем значение, использовавшееся для предварительной компиляции заголовков. При предварительной компиляции заголовков для проекта, все они должны использовать одинаковые **/ analyze** параметры. Дополнительные сведения см. в разделе [/analyze (анализ кода)](../../build/reference/analyze-code-analysis.md).
 
+- Файл или каталог был создан с помощью системы Windows для Linux, учет регистра в каталоге включен и указанного варианта пути или файла совпадает с регистром пути или файлу на диске.
+
 - Файл, каталог или диск доступен только для чтения.
 
 - Visual Studio или программы командной строки не имеют достаточных полномочий на чтение файла или каталога. Это может произойти, например, когда файлы проекта имеют разных владельцев, чем процесс, запущенный в Visual Studio или программы командной строки. Иногда можно исправить эту проблему, запустив Visual Studio или командной строки разработчика от имени администратора.
@@ -127,4 +130,4 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>См. также
 
-[Свойства MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Свойства MSBuild](/visualstudio/msbuild/msbuild-properties)
