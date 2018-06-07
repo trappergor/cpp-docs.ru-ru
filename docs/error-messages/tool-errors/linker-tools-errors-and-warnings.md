@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38adaab248127f9810d53304ca1ad9593f78667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569960"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Ошибки и предупреждения инструментов компоновщика
 
@@ -132,6 +133,8 @@ ms.lasthandoff: 05/04/2018
 
 [Ошибка средств компоновщика LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
+[LNK1318 Ошибка средств компоновщика](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+
 [Ошибка средств компоновщика LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
 [Ошибка средств компоновщика LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md)
@@ -181,6 +184,8 @@ ms.lasthandoff: 05/04/2018
 [Предупреждение средств компоновщика LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
 
 [Предупреждение средств компоновщика LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
+
+[Предупреждение средств компоновщика LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Предупреждение средств компоновщика LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 
