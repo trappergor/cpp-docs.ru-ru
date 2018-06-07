@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753634"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -67,6 +68,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Управляет отложенной загрузкой библиотек DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Включает отложенную загрузку указанной библиотеки DLL.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Частично подписывает сборку.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Задает флаги по умолчанию загружает зависимые библиотеки DLL.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Выполняет сборку библиотеки DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Создает драйвер режима ядра.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Указывает, следует ли создавать исполняемый образ, базовый адрес которого может быть случайным образом изменен во время загрузки с помощью технологии ASLR.|
@@ -116,7 +118,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|Использует альтернативное местоположение для сохранения файла PDB.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|Создает файл базы данных программы (PDB), не содержащий закрытых символов.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|Задает файл PGD для профильных оптимизаций.|
-|[/ POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Устаревшие** создает сборки поточно ориентированного инструментирования профильной Оптимизации.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**Устаревшие** создает сборки поточно ориентированного инструментирования профильной Оптимизации.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|Создает выходной файл, который может быть использован для профилировщика производительности инструментов.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Задает контрольную сумму в заголовке файла EXE.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Указывает на то, что образ будет содержать таблицу безопасных обработчиков исключений.|
@@ -128,7 +130,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|Указывает идентификатор ресурса библиотеки типов, создаваемой компоновщиком.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|Указывает имя файла TLB и имена других выходных файлов MIDL.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|Создает приложение, специально рассчитанное на запуск под управлением сервера терминалов.|
-|[/ ПАРАМЕТР USEPROFILE](../../build/reference/useprofile.md)|Использует профильной оптимизации обучающих данных для создания оптимизированного образа.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|Использует профильной оптимизации обучающих данных для создания оптимизированного образа.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|Печатает сообщения хода выполнения компоновщика.|
 |[/VERSION](../../build/reference/version-version-information.md)|Присваивает номер версии.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|Включает в себя каждого файла объект из указанного статических библиотек.|
