@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843079"
 ---
 # <a name="building-browse-information-files-overview"></a>Информационные файлы просмотра сборки: общие сведения
 Чтобы создать сведения о просмотре для просмотра символов, компилятор создает SBR-файл для каждого исходного файла в вашем проекте, затем BSCMAKE. EXE объединяет SBR-файлов в один BSC-файл.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Не построения BSC-файл на уровне проекта либо используйте параметр/n, чтобы предотвратить усечение SBR-файлов.  
   
-2.  После построения всех проектов, запустите BSCMAKE со всеми SBR-файлы в качестве входного. Допускаются подстановочные знаки. Для экземпляра, если у вас есть проект каталоги C:\X, C:\Y и C:\Z с SBR-файлы в их и требуется объединить все в одной BSC-файл, используйте BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*. c:\whatever_directory\combined.bsc/o SBR для построения объединенного BSC-файл.  
+2.  После построения всех проектов, запустите BSCMAKE со всеми SBR-файлы в качестве входного. Допускаются подстановочные знаки. Для экземпляра, если у вас есть проект каталоги C:\X, C:\Y и C:\Z с SBR-файлы в их и требуется объединить все в одной BSC-файл, используйте BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*c:\whatever_directory\combined.bsc/o .sbr для создания объединенного BSC-файл.  
   
 ## <a name="see-also"></a>См. также  
  [Средства построения C/C++](../../build/reference/c-cpp-build-tools.md)   
