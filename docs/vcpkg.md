@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705441"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -120,7 +121,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Теперь вы можете добавлять файлы заголовков в #include, используя автозавершение, для этого достаточно ввести папку или заголовок. Для связывания с библиотеками или добавления ссылок на проект выполнять какие-либо другие действия не требуется. На рисунке ниже показано, как Visual Studio находит файлы заголовков azure-storage-cpp. Средство vcpkg помещает файлы заголовков во вложенную папку **\installed** и распределяет их по целевым платформам. На следующей схеме показан список включаемых файлов во вложенной папке **\was** для библиотеки.
 
-![Интеграция vcpkg и Intellisense](media/vcpkg-intellisense.png "vcpkg и Intellisense")
+![vcpkg IntelliSense integration](media/vcpkg-intellisense.png "vcpkg and IntelliSense")
 
 ### <a name="per-project"></a>Для каждого проекта
 
