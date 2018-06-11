@@ -2,7 +2,7 @@
 title: Установка поддержки C++ в Visual Studio | Документы Microsoft
 description: Установить поддержку Visual C++ в Visual Studio
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253760"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
@@ -32,17 +33,17 @@ ms.lasthandoff: 05/03/2018
 
 - Недостаточно свободного дискового пространства. Visual Studio требуется по крайней мере 7 ГБ дискового пространства и может занять не менее 50 ГБ, если установлены много общих параметров. Мы рекомендуем установить его на диске c:.
 
-Сведения о дисковом пространстве и требования к операционной системе см. в разделе [требования к системе для Visual Studio 2017 г](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs). Программа установки сообщает, требуется место на диске для выбранных параметров.
+Сведения о дисковом пространстве и требования к операционной системе см. в разделе [Visual Studio семейства системных требований к продукту](/visualstudio/productinfo/vs2017-system-requirements-vs). Программа установки сообщает, требуется место на диске для выбранных параметров.
 
 ## <a name="installation"></a>Установка
 
 1. Загрузите последнюю Visual Studio 2017 г. установщик Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Установить Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Установить Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
+   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Найдите файл установщика загружаются и запустите его. Могут отображаться в браузере или может оказаться в папке загрузок. Установщик должен иметь права администратора для выполнения. Вы можете увидеть **контроль учетных записей пользователей** диалоговое окно, запрашивающее разрешение дать установщику внести изменения в систему, выбрать **Да**. Если возникают трудности, найдите загруженный файл в проводнике щелкните правой кнопкой мыши значок установщика и выберите **Запуск от имени администратора** в контекстном меню.
 
