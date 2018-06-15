@@ -1,5 +1,5 @@
 ---
-title: '&lt;Примечания&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;remarks&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 380a2c27a761154e59826259d3e1e682ae7fbd87
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334471"
 ---
-# <a name="ltremarksgt-visual-c"></a>&lt;Примечания&gt; (Visual C++)
-Тег \<remarks> позволяет добавить сведения о типе, дополняющие информацию, указанную с помощью тега [\<summary>](../ide/summary-visual-cpp.md). Эта информация отображается в [обозревателя объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб-отчете комментариев кода.  
+# <a name="ltremarksgt-visual-c"></a>&lt;remarks&gt; (Visual C++)
+Тег \<remarks> позволяет добавить сведения о типе, дополняющие информацию, указанную с помощью тега [\<summary>](../ide/summary-visual-cpp.md). Эта информация отображается в [обозревателе объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб-отчете комментариев кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;значение&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;value&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325400"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;значение&gt; (Visual C++)
-\<Значение > тег можно описать свойства и методы доступа к свойствам. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавит [ \<сводки >](../ide/summary-visual-cpp.md) тег для нового свойства. После этого следует вручную добавить тег \<value> для описания значения, которое представляется свойством.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+Тег \<value> позволяет описать свойство и методы доступа к свойству. Обратите внимание, что при добавлении свойства с помощью мастера создания кода из интегрированной среды разработки Visual Studio для нового свойства будет добавлен тег [\<summary>](../ide/summary-visual-cpp.md). После этого следует вручную добавить тег \<value> для описания значения, которое представляется свойством.  
   
 ## <a name="syntax"></a>Синтаксис  
   

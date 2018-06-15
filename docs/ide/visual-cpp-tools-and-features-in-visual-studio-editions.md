@@ -1,5 +1,5 @@
 ---
-title: Инструменты Visual C++ и функций в выпусках Visual Studio | Документы Microsoft
+title: Инструменты и функции Visual C++ в выпусках Visual Studio | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -18,11 +18,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337253"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Инструменты Visual C++ и функций в выпусках Visual Studio
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Инструменты и функции Visual C++ в выпусках Visual Studio
 
 В следующей таблице перечислены компоненты Visual C++, доступные в Visual Studio. Крестик в ячейке указывает, что компонент доступен. Пустая ячейка означает, что компонент недоступен. Примечания в скобках означают, что компонент доступен с ограничениями.
 
@@ -65,10 +66,10 @@ ms.lasthandoff: 05/04/2018
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Шаблоны XAML для UWP, Windows 8.1, Windows Phone 8.0|X||X|X|
 |Приложение Direct3D|X||X|X|
-|Библиотеки DLL (универсальные приложения Windows)|X||X|X|
-|Статическая библиотека (универсальные приложения Windows)|X||X|X|
+|Библиотека DLL (универсальные приложения для Windows)|X||X|X|
+|Статическая библиотека (универсальные приложения для Windows)|X||X|X|
 |Компонент среды выполнения Windows|X||X|X|
-|Модульного тестирования (универсальное приложение Windows)|X||X|X|
+|Приложение модульного тестирования (универсальное приложение Windows)|X||X|X|
 |Проект ATL|||X|X|
 |Библиотека классов (CLR)||X|X|X|
 |Консольное приложение CLR||X|X|X|
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/04/2018
 |Консольное приложение Win32||X|X|X|
 |Проект Win32||X|X|X|
 
-## <a name="tools"></a>Сервис
+## <a name="tools"></a>Инструменты
 
 |Средство|Visual Studio Express для Windows|Visual Studio Express для Windows Desktop|Visual Studio Professional и Community|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
@@ -132,7 +133,7 @@ ms.lasthandoff: 05/04/2018
 |Конструктор Windows Forms||X|X|X|
 |Конструктор данных|||X|X|
 |Собственный редактор ресурсов (RC-файлы)|||X|X|
-|Редакторы ресурсов|X|X|X|X|
+|редакторы ресурсов|X|X|X|X|
 |Редактор моделей|X||X|X|
 |Конструктор шейдеров|X||X|X|
 
@@ -143,7 +144,7 @@ ms.lasthandoff: 05/04/2018
 |Конструктор данных|||X|X|
 |Объекты данных|||X|X|
 |Веб-службы|||X|X|
-|Обозреватель серверов|||X|X|
+|обозревателя серверов|||X|X|
 
 ## <a name="build-and-project-systems"></a>Системы сборки и проектов
 

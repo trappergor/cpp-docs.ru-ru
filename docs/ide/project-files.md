@@ -1,5 +1,5 @@
 ---
-title: Файлы проекта | Документы Microsoft
+title: Файлы проектов | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327233"
 ---
 # <a name="project-files"></a>Файлы проекта
-Файл проекта Visual C++ представляет собой XML-файл имеет расширение VCXPROJ-файл и содержит сведения, необходимые для построения проекта Visual C++.  
+Файл проекта Visual C++ представляет собой XML-файл с расширением VCXPROJ, который содержит сведения, необходимые для сборки проекта Visual C++.  
   
 ## <a name="example"></a>Пример  
- В следующем примере файл VCXPROJ-файл был создан с помощью задания **консольное приложение Win32** в **новый проект** диалоговое окно. Для обработки в проект файла используйте средство msbuild.exe из командной строки или **построения** в [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (В этом примере не удалось обработать, поскольку не указаны требуемые исходный файл и файлы заголовков). Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект**. Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Этот пример невозможно обработать из-за отсутствия требуемого исходного файла и файла заголовков.) Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,5 +129,5 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Построение проектов C++ в Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
+ [Сборка проектов C++ в Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Работа со свойствами проектов](../ide/working-with-project-properties.md)

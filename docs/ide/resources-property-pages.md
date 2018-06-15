@@ -1,5 +1,5 @@
 ---
-title: Страницы свойств ресурсов | Документы Microsoft
+title: Страницы свойств ресурсов | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,16 +23,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322878"
 ---
 # <a name="resources-property-pages"></a>Страницы свойств ресурсов
-Дополнительные сведения об использовании компилятора ресурсов см. в разделе [с помощью RC (версия-Кандидат командной строки)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
+Дополнительные сведения об использовании компилятора ресурсов см. в разделе [Использование компилятора ресурсов (командной строки RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055).  
   
- Сведения о доступе к **ресурсов** страницы свойств в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
+ Сведения о доступе к страницам свойств **Ресурсы** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   
- Для программного доступа к этим свойствам, см. <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
+ Для программного доступа к этим свойствам см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.  
   
 ## <a name="see-also"></a>См. также  
  [Страницы свойств](../ide/property-pages-visual-cpp.md)

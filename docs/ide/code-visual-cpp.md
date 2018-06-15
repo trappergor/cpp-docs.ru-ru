@@ -1,5 +1,5 @@
 ---
-title: '&lt;код&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;code&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330123"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;код&gt; (Visual C++)
-\<Кода > тег дает возможность указать одну или несколько строк, как код.  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+С помощью тега \<code> можно определить одну или несколько строк как код.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  Текст, который необходимо пометить как код.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте [ \<c >](../ide/c-visual-cpp.md) для указания часть текста должен быть помечен как код.  
+ С помощью тега [\<c>](../ide/c-visual-cpp.md) можно указать часть текста, которую нужно пометить как код.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   

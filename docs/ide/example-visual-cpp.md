@@ -1,5 +1,5 @@
 ---
-title: '&lt;Пример&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;example&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321435"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;Пример&gt; (Visual C++)
-Тег \<example> позволяет указать пример использования метода или другого элемента библиотеки. Как правило, это также включает в себя использование [ \<кода >](../ide/code-visual-cpp.md) тег.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+Тег \<example> позволяет указать пример использования метода или другого элемента библиотеки. Как правило, при этом также используется тег [\<code>](../ide/code-visual-cpp.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   

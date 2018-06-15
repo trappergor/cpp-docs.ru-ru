@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;paramref&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326587"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
-\<Paramref > тег дает возможность указать, что слово является параметром. Чтобы этот параметр некоторым конкретным образом могут обрабатываться XML-файл.  
+Тег \<paramref> позволяет указать, что слово является параметром. В XML-файле этот параметр может выделяться особым образом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
