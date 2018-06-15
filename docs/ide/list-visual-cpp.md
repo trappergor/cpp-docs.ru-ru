@@ -1,5 +1,5 @@
 ---
-title: '&lt;список&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;list&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323983"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;список&gt; (Visual C++)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 Блок \<listheader> используется для определения строки заголовка в таблице или списке определений. При определении таблицы необходимо ввести данные для термина в заголовке.  
   
 ## <a name="syntax"></a>Синтаксис  

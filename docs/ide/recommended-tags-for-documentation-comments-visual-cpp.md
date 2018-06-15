@@ -1,5 +1,5 @@
 ---
-title: Рекомендуемые теги для комментариев документации (Visual C++) | Документы Microsoft
+title: Рекомендуемые теги для комментариев документации (Visual C++) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,35 +13,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328624"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>Рекомендуемые теги для комментариев документации (Visual C++)
-Компилятор Visual C++ будет обрабатывать комментарии в коде и создает XDC-файл для каждого объекта компиляции и xdcmake.exe будет обрабатывать XDC-файлы в XML-файл. Обработка XML-файла для создания документации — детализации, который должен быть реализован на вашем сайте.  
+Компилятор Visual C++ обрабатывает комментарии документации в коде и создает XDC-файл для каждой единицы компиляции, а xdcmake.exe преобразует XDC-файлы в XML-файл. Обработка XML-файла для создания документации — это аспект, который нужно реализовать на вашем сайте.  
   
- Теги обрабатываются на конструкций, таких как типы и члены типов.  
+ Теги обрабатываются в конструкциях, таких как типы и их члены.  
   
- Теги должен предшествовать типы или члены.  
+ Теги должны стоять прямо перед типами или членами.  
   
 > [!NOTE]
->  Комментарии документации не может применяться к пространству имен или в вне определения свойства и события; для объявления в классе должен комментарии к документации.  
+>  Комментарии документации невозможно применить к пространству имен или к внешнему определению для свойств и событий; эти комментарии должны находиться в объявлениях внутри класса.  
   
- Компилятор обрабатывает любые теги, имеющие допустимый формат XML. Следующие теги предоставляют часто используемые возможности в пользовательской документации:  
+ Компилятор обрабатывает любые теги, имеющие допустимый формат XML. С помощью следующих тегов реализуются часто используемые в пользовательской документации возможности:  
   
 ||||  
 |-|-|-|  
 |[\<c>](../ide/c-visual-cpp.md)|[\<code>](../ide/code-visual-cpp.md)|[\<example>](../ide/example-visual-cpp.md)|  
-|[\<исключение >](../ide/exception-visual-cpp.md)1|[\<включить >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
-|[\<para>](../ide/para-visual-cpp.md)|[\<PARAM >](../ide/param-visual-cpp.md)1|[\<paramref >](../ide/paramref-visual-cpp.md)1|  
-|[\<разрешение >](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
-|[\<в разделе >](../ide/see-visual-cpp.md)1|[\<seealso >](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
+|[\<exception>](../ide/exception-visual-cpp.md)1|[\<include>](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
+|[\<para>](../ide/para-visual-cpp.md)|[\<param>](../ide/param-visual-cpp.md)1|[\<paramref>](../ide/paramref-visual-cpp.md)1|  
+|[\<permission>](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
+|[\<see>](../ide/see-visual-cpp.md)1|[\<seealso>](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
 |[\<value>](../ide/value-visual-cpp.md)|||  
   
  1. Компилятор проверяет синтаксис.  
   
- В текущей версии компилятора Visual C++ не поддерживает `<paramref>`, тег, который поддерживается других компиляторов Visual Studio. Visual C++ может поддерживать `<paramref>` в будущем выпуске.  
+ В текущем выпуске компилятор Visual C++ не поддерживает тег`<paramref>`, который поддерживают другие компиляторы Visual Studio. Возможно, поддержка `<paramref>` будет добавлена в будущих выпусках Visual C++.  
   
 ## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

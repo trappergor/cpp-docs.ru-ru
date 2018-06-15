@@ -1,5 +1,5 @@
 ---
-title: Примеры развертывания | Документы Microsoft
+title: Примеры развертывания | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,10 +17,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327415"
 ---
 # <a name="deployment-examples"></a>Примеры развертывания
 Этот раздел содержит примеры, демонстрирующие развертывание приложений Visual C++.  
@@ -36,4 +37,4 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>См. также  
  [Пошаговое руководство. Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [Развертывание приложений для настольных систем](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)

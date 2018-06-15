@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239428"
 ---
 # <a name="cmap-class"></a>Класс CMap
 Класс коллекции словарей, который сопоставляет уникальные ключи значениям.  
@@ -67,32 +68,32 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  Класс объекта, который используется как ключ для карты.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  Тип данных, используемый для `KEY` аргументов; обычно ссылка `KEY`.  
   
  `VALUE`  
  Класс объекта, хранимый в сопоставлении.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  Тип данных, используемый для `VALUE` аргументов; обычно ссылка `VALUE`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-structures"></a>Открытые структуры  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|Вложенную структуру, содержащую ключевое значение и значение связанного объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMap::CMap](#cmap)|Создает коллекцию, которая сопоставляет значения ключей.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMap::GetHashTableSize](#gethashtablesize)|Возвращает количество элементов в хэш-таблице.|  
@@ -111,7 +112,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CMap::operator]](#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   

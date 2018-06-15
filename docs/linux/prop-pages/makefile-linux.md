@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705703"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Свойства проекта Makefile (Linux C++)
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/04/2018
 Обязательно включаемые файлы | Задает файлы, включаемые принудительно.
 Определения препроцессора | Указывает определения препроцессора, используемые файлами исходного кода.
 Отменить определения препроцессора | Задает одну или несколько отмен определений препроцессора.     (/U[macro])
-Дополнительные параметры | Указывает дополнительные параметры компилятора, которые должны использоваться Intellisense при синтаксическом разборе файлов C++.
+Дополнительные параметры | Указывает дополнительные параметры компилятора, которые должны использоваться IntelliSense при анализе файлов C++.
 
 ### <a name="build"></a>Построить
 

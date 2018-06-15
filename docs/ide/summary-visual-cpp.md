@@ -1,5 +1,5 @@
 ---
-title: '&lt;Сводка&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;summary&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322293"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;Сводка&gt; (Visual C++)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 Тег \<summary> следует использовать для описания типа или члена типа. Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../ide/remarks-visual-cpp.md).  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  Сводка объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Текст для \<сводки > тег является единственным источником сведений о типе в IntelliSense, а также отображается в [обозревателя объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб-отчете комментариев кода.  
+ Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense, а также отображается в [обозревателе объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и веб-отчете комментариев кода.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   

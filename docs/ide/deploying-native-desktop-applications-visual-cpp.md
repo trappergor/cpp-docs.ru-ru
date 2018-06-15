@@ -1,5 +1,5 @@
 ---
-title: Развертывание классических приложений неуправляемого кода (Visual C++) | Документы Microsoft
+title: Развертывание собственных классических приложений (Visual C++) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -20,18 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34259248"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Развертывание классических приложений неуправляемого кода (Visual C++)
 
 Развертывание — это процесс, с помощью которого готовое приложение или компонент распространяются для установки на других компьютерах. Планирование развертывания начинается при создании приложения на компьютере разработчика. Развертывание завершается, когда приложение установлено и готово для запуска на компьютере пользователя.
 
-Visual Studio предоставляет различные технологии развертывания приложений Windows. К ним относятся развертывания ClickOnce и развертывания установщика Windows.
+Visual Studio предоставляет различные технологии развертывания приложений Windows. К ним относятся развертывание ClickOnce и развертывание установщика Windows.
 
-- Можно использовать ClickOnce для развертывания приложений C++, предназначенных для общеязыковой среды выполнения (CLR) — смешанных, чистых и проверяемых сборок. Несмотря на то, что установщик Windows можно использовать для развертывания приложений управляемого кода, рекомендуется использовать ClickOnce, так как она позволяет воспользоваться функциями безопасности .NET Framework, например подписывание манифеста. ClickOnce не поддерживает развертывание приложений с машинным кодом C++. Дополнительные сведения см. в разделе [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
+- ClickOnce можно использовать для развертывания приложений C++, предназначенных для среды CLR, — смешанных, полностью управляемых и проверяемых сборок. Хотя установщик Windows можно использовать для развертывания управляемого приложения, рекомендуется использовать компонент ClickOnce, так как он позволяет воспользоваться функциями безопасности .NET Framework, например подписыванием манифеста. ClickOnce не поддерживает развертывание собственных приложений C++. Дополнительные сведения см. в разделе [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md).
 
 - Установщик Windows можно использовать для развертывания приложений C++ неуправляемого кода или приложений C++, предназначенных для среды CLR.
 
@@ -49,7 +50,7 @@ Visual Studio предоставляет различные технологии
 
 - [Выбор метода развертывания](../ide/choosing-a-deployment-method.md)
 
-- [Универсальный CRT развертывания](universal-crt-deployment.md).
+- [Развертывание универсальной библиотеки CRT](universal-crt-deployment.md)
 
 - [Распространение файлов Visual C++](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ Visual Studio предоставляет различные технологии
 
 - [Развертывание с помощью технологии ClickOnce для приложений Visual C++](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [Выполнение приложения C++/CLR в предыдущей версии среды выполнения](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [Выполнение приложения C++ с параметром /clr в более ранней версии среды выполнения](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>Связанные разделы
 

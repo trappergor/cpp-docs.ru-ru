@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;c&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329262"
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
-\<c > тег указывает, что текст в описании должен быть помечен как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../ide/code-visual-cpp.md).  
+С помощью тега \<c> можно указать, что текст в описании нужно пометить как код. Чтобы определить несколько строк в качестве кода, используйте тег [\<code>](../ide/code-visual-cpp.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>Параметры  
  `text`  
- Текст, который вы хотите указать в качестве кода.  
+ Текст, который нужно указать в качестве кода.  
   
 ## <a name="remarks"></a>Примечания  
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  

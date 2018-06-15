@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762064"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) и [15.7](#improvements_157)
 
@@ -1581,6 +1582,46 @@ D<int> d;
 ```
 
 Чтобы устранить ошибку, измените выражение B() на B\<T>().
+
+### <a name="constexpr-aggregate-initialization"></a>Агрегатная инициализация constexpr
+
+В предыдущих версиях компилятора C++ неправильно обрабатывалась агрегатная инициализация constexpr; принимался недопустимый код, в котором список агрегатной инициализации содержал слишком много элементов, и создавался неправильный объект Codegen. Примером является следующий код: 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+В Visual Studio 2017 версии 15.7 с обновлением 3 и более поздних версий в предыдущий пример добавляется *C2078 too many initializers*. В приведенном ниже примере показано, как исправить код. При инициализации `std::array`, когда используются вложенные списки инициализации в скобках, укажите для внутреннего массива собственный вложенный список в скобках:
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>См. также
 

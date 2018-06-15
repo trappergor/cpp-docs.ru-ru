@@ -1,5 +1,5 @@
 ---
-title: Добавить класс-диалоговое окно | Документы Microsoft
+title: Диалоговое окно "Добавление класса" | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,10 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33339778"
 ---
 # <a name="add-class-dialog-box"></a>Диалоговое окно "Добавление класса"
 Диалоговое окно **Добавление класса** содержит шаблоны, которые позволяют выполнить следующие действия.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Автоматически создать новый класс, добавив в проект соответствующие файлы и исходный код.  
   
- Вы можете получить доступ к **Добавление класса** диалогового окна **проекта** меню **обозревателе решений**, или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Перейти к диалоговому окну **Добавление класса** можно из меню **Проект**, **обозревателя решений** или [представления классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
 >  При попытке добавить класс, который не подходит для текущего проекта, вы получите сообщение об ошибке. Нажмите кнопку **ОК** , чтобы вернуться в диалоговое окно **Добавление класса** .  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |Класс MFC|[Мастер добавления классов MFC](../mfc/reference/mfc-add-class-wizard.md)|  
 |Класс MFC из элемента управления ActiveX|[Мастер добавления классов из элемента ActiveX](../ide/add-class-from-activex-control-wizard.md)|  
-|Класс MFC из TypeLib|[Добавления классов из Typelib мастера](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|Класс MFC из TypeLib|[Мастер добавления классов из библиотеки типов](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |Потребитель ODBC MFC|[Мастер потребителя MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>Универсальные классы  

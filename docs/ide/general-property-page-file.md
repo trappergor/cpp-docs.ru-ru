@@ -1,5 +1,5 @@
 ---
-title: Страница «Общие свойства» (файл) | Документы Microsoft
+title: Страница свойств "Общие" (файл) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324039"
 ---
 # <a name="general-property-page-file"></a>Страница свойств "Общие" (файл)
 
-При выборе файла в **обозревателе решений**, **Общие** страница свойств под **свойства конфигурации** узел содержит следующие свойства:
+При выборе файла в **обозревателе решений** страница свойств **Общие** в узле **Свойства конфигурации** содержит следующие свойства:
 
 **Исключить из сборки**  
-Указывает, следует ли файл в сборку для текущей конфигурации.
+Определяет, должен ли файл входить в сборку для текущей конфигурации.
 
 Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
 **Средство**  
-Средство, которое будет использоваться для построения этого файла. В разделе [Указание средства построения пользовательских](../ide/specifying-custom-build-tools.md) для получения дополнительной информации.
+Средство, которое будет использоваться для сборки этого файла. Дополнительные сведения см. в разделе [Задание пользовательских средств сборки](../ide/specifying-custom-build-tools.md).
 
 Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
-Сведения о доступе к **Общие** страница свойств под **свойства конфигурации** узел, в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).
+Сведения о доступе к странице свойств **Общие** в узле **Свойства конфигурации** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).
 
-Для проектов, отличных от Windows, в разделе [ссылка на страницу свойств C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+Для проектов, отличных от Windows, см. раздел [Ссылка на страницу свойств C++ для Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
 
 ## <a name="see-also"></a>См. также
 
