@@ -16,40 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 613c2069443e580fb581798d9e1cc6d5781d7c91
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705092"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Ошибка средств компоновщика LNK1313
-обнаружен модуль ijw/native, невозможно скомпоновать с чистыми модулями  
-  
- Текущая версия Visual C++ не поддерживает связывание машинного или смешанного управляемого/неуправляемого OBJ-файлов с OBJ-файлы, скомпилированные с **/CLR: pure**.  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// LNK1313.cpp  
-// compile with: /c /clr:pure  
-// a pure module  
-int main() {}  
-```  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// LNK1313_b.cpp  
-// compile with: /c /clr  
-// an IJW module  
-void test(){}  
-```  
-  
-## <a name="example"></a>Пример  
- Следующий пример кода образует ошибку LNK1313.  
-  
-```  
-// LNK1313_c.cpp  
-// compile with: /link LNK1313.obj LNK1313_b.obj  
-// LNK1313 warning expected  
+
+> обнаружен модуль ijw/native, невозможно скомпоновать с чистыми модулями
+
+## <a name="remarks"></a>Примечания
+
+Текущая версия Visual C++ не поддерживает связывание машинного или смешанного управляемого/неуправляемого OBJ-файлов с OBJ-файлы, скомпилированные с **/CLR: pure**.
+
+**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+
+## <a name="example"></a>Пример
+
+```cpp
+// LNK1313.cpp
+// compile with: /c /clr:pure
+// a pure module
+int main() {}
+```
+
+## <a name="example"></a>Пример
+
+```cpp
+// LNK1313_b.cpp
+// compile with: /c /clr
+// an IJW module
+void test(){}
+```
+
+## <a name="example"></a>Пример
+
+Следующий пример кода образует ошибку LNK1313.
+
+```cpp
+// LNK1313_c.cpp
+// compile with: /link LNK1313.obj LNK1313_b.obj
+// LNK1313 warning expected
 ```

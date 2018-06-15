@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -85,7 +85,7 @@ int _mbsbtype_l(
 |**_MBC_SINGLE** (0)|Однобайтовый символ. Например, в кодовой странице 932 **_mbsbtype** возвращает 0, если указанный байт — в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF.|
 |**_MBC_LEAD** (1)|Старший байт многобайтового символа. Например, в кодовой странице 932 **_mbsbtype** возвращает 1, если указанного байтового входит в диапазон 0x81-0x9F и от 0xE0 - 0xFC.|
 |**_MBC_TRAIL** (2)|Младший байт многобайтового символа. Например, в кодовой странице 932 **_mbsbtype** возвращает 2 в том случае, если указанного байтового диапазона 0x40-0x7E и 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**Значение NULL** string, недопустимый символ или **NULL** байтов найдено до байт по смещению *число* в *mbstr*.|
+|**_MBC_ILLEGAL** (-1)|**Значение NULL** строку, недопустимый символ или нулевым байтом, найдены перед байт по смещению *число* в *mbstr*.|
 
 ## <a name="remarks"></a>Примечания
 

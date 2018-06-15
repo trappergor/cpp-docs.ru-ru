@@ -1,5 +1,5 @@
 ---
-title: Страницы свойств средства манифестов | Документы Microsoft
+title: Страницы свойств инструмента манифеста | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321991"
 ---
 # <a name="manifest-tool-property-pages"></a>Страницы свойств средства манифестов
-Используйте **инструмент манифеста** страницы свойств, чтобы задать параметры для mt.exe сборки.  
+Используйте страницы свойств **Инструмент манифеста**, чтобы задать параметры сборки для mt.exe.  
   
- Дополнительные сведения о средстве манифеста см. в разделе [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Дополнительные сведения об инструменте манифеста см. в разделе [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- [Общие, инструмент манифеста, свойства конфигурации \<имя_проекта > диалоговое окно страниц свойств](../ide/general-manifest-tool-configuration-properties.md)  
+ [Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Общие"](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Вход и выход, инструмент, свойства конфигурации манифеста \<имя_проекта > диалоговое окно страниц свойств](../ide/input-and-output-manifest-tool.md)  
+ [Диалоговое окно страниц свойств ](../ide/input-and-output-manifest-tool.md)Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Вход и выход"\<  
   
- [Изолированные COM, инструмент манифеста, свойства конфигурации, \<имя_проекта > диалоговое окно страниц свойств](../ide/isolated-com-manifest-tool.md)  
+ [Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Изолированный COM"](../ide/isolated-com-manifest-tool.md)  
   
- [Дополнительно, инструмент манифеста, свойства конфигурации \<имя_проекта > диалоговое окно страниц свойств](../ide/advanced-manifest-tool.md)  
+ [Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Дополнительно"](../ide/advanced-manifest-tool.md)  
   
 ## <a name="see-also"></a>См. также  
  [Страницы свойств](../ide/property-pages-visual-cpp.md)

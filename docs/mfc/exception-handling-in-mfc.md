@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239441"
 ---
 # <a name="exception-handling-in-mfc"></a>Обработка исключений в MFC
 В этой статье описываются способы обработки исключений, доступные в MFC. Доступны два механизма.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
  Если вы уже разработали приложения с помощью макроса исключений MFC, можно продолжить использование этих макросов в существующий код, при использовании исключения C++ в новом коде. Статья [исключения: изменения в макросах исключений в версии 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) дает инструкции по таким образом.  
   
 > [!NOTE]
->  Чтобы включить обработку исключений C++ в коде, выберите Включить C++ исключения на странице Создание кода в папке проекта C/C++ [страницы свойств](../ide/property-pages-visual-cpp.md) диалогового окна, или используйте /GX параметр компилятора. Значение по умолчанию — /GX-, который отключает обработку исключений.  
+>  Чтобы включить обработку исключений C++ в коде, выберите Включить C++ исключения на странице Создание кода в папке проекта C/C++ [страницы свойств](../ide/property-pages-visual-cpp.md) диалогового окна, или используйте [/EHsc](../build/reference/eh-exception-handling-model.md) параметр компилятора.  
   
  В этой статье рассматриваются следующие темы:  
   

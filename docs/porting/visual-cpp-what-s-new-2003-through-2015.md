@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705609"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -1936,7 +1937,7 @@ __sptr, __uptr
 - 64-разрядные собственные и перекрестные компиляторы.
 - Добавлен параметр компилятора /analyze (корпоративный анализ кода).
 - Добавлен параметр компилятора /bigobj.
-- Добавлены /clr:pure, /clr:safe и /clr:oldSyntax. (Впоследствии сделано нерекомендуемым в Visual Studio 2015.)
+- Добавлены /clr:pure, /clr:safe и /clr:oldSyntax. (Впоследствии отмечены как нерекомендуемые в Visual Studio 2015 и удалены в Visual Studio 2017.)
 - Устаревшие параметры компилятора: многие параметры компилятора в этом выпуске устарели. Дополнительные сведения см. в разделе "Отмененные режимы компилятора".
 - В коде /clr уменьшено двойное преобразование, дополнительные сведения см. в разделе "Двойное преобразование (С++)".
 - Параметр /EH (модель обработки исключений) или /EHs больше невозможно использовать для перехвата исключения, вызванного не с помощью throw; используйте параметр /EHa.

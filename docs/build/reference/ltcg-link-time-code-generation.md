@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703737"
 ---
 # <a name="ltcg-link-time-code-generation"></a>Параметр /LTCG (создание кода во время компоновки)
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
 
 Модули, скомпилированные с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) и [/clr](../../build/reference/clr-common-language-runtime-compilation.md) , могут использоваться в качестве входных данных компоновщика, если указан параметр **/LTCG** .
 
-- **/ Параметр LTCG** может принять машинные файлы объектов и файлами объектов, смешанного управляемого и машинного (скомпилированные с помощью **/CLR**). Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.
+- **/ Параметр LTCG** может принять машинные файлы объектов и файлами объектов, смешанного управляемого и машинного (скомпилированные с помощью **/CLR**). **/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
 
 - **/ LTCG: PGI** не принимает машинные модули, скомпилированные с помощью **/GL** и   **/CLR**
 
@@ -161,5 +162,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
+- [Параметры компоновщика](../../build/reference/linker-options.md)

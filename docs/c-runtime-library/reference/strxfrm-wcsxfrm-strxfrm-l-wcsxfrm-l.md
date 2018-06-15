@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ size_t wcsxfrm_l(
 
 **wcsxfrm** — это двухбайтовая версия **strxfrm**; строковые аргументы функции **wcsxfrm** являются указателями расширенных символов. Для **wcsxfrm**после того, как преобразовать строку, вызов **wcscmp** с двумя преобразованными строками дает результаты, которые идентичны результату вызова **wcscoll** применены к двум исходным строкам. **wcsxfrm** и **strxfrm** ведут себя идентично. **wcsxfrm** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_wcsxfrm_l** использует переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
-Эти функции проверяют свои параметры. Если *strSource* является пустым указателем, или *strDest* является указателем NULL (если значение счетчика равно нулю), или если *число* больше, чем **INT_MAX**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают **INT_MAX**.
+Эти функции проверяют свои параметры. Если *strSource* является пустым указателем, или *strDest* — **NULL** указатель (если значение счетчика равно нулю), или если *число* больше, чем **INT_MAX**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 

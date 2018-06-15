@@ -1,5 +1,5 @@
 ---
-title: Обработка ошибок (CRT) | Документация Майкрософт
+title: Обработка ошибок (CRT) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704851"
 ---
 # <a name="error-handling-crt"></a>Обработка ошибок (CRT)
 
 Используйте эти подпрограммы для обработки ошибок в программах.
 
-## <a name="error-handling-routines"></a>Подпрограммы для обработки ошибок
+## <a name="error-handling-routines"></a>Процедуры обработки ошибок
 
 |Подпрограмма|Использовать|
 |-------------|---------|
@@ -45,4 +46,4 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>См. также
 
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)

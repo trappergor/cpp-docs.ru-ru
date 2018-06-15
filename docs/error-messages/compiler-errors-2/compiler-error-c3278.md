@@ -16,42 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f05916be060b9712f6ba1b1955b37da538afe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b993aaaee0e50eacf47ce594b4c5efa47f83dd18
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705079"
 ---
 # <a name="compiler-error-c3278"></a>Ошибка компилятора C3278
-прямой вызов метода интерфейса или чистого метода method приведет к сбою во время выполнения  
-  
- Вызван метод интерфейса или чистый метод, что недопустимо.  
-  
- Следующий пример приводит к возникновению ошибки C3278:  
-  
-```  
-// C3278_2.cpp  
-// compile with: /clr  
-using namespace System;  
-interface class I  
-{  
-   void vmf();  
-};  
-  
-public ref class C: public I  
-{  
-public:  
-   void vmf()  
-   {  
-      Console::WriteLine( "In C::vmf()" );  
-      I::vmf(); // C3278  
-   }  
-  
-};  
-  
-int main()  
-{  
-   C^ pC = gcnew C;  
-   pC->vmf();  
-}  
+
+> прямой вызов метода интерфейса или чистого метода "*метод*" приведет к сбою во время выполнения
+
+## <a name="remarks"></a>Примечания
+
+Вызван метод интерфейса или чистый метод, что недопустимо.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3278:
+
+```cpp
+// C3278_2.cpp
+// compile with: /clr
+using namespace System;
+interface class I
+{
+   void vmf();
+};
+
+public ref class C: public I
+{
+public:
+   void vmf()
+   {
+      Console::WriteLine( "In C::vmf()" );
+      I::vmf(); // C3278
+   }
+
+};
+
+int main()
+{
+   C^ pC = gcnew C;
+   pC->vmf();
+}
 ```

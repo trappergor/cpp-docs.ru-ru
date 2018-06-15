@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090961"
 ---
 # <a name="casting-ccx"></a>Приведение (C++/CX)
 Четыре различных оператора приведения применяются к типам среды выполнения Windows: [оператор static_cast](../cpp/static-cast-operator.md), [оператор dynamic_cast](../cpp/dynamic-cast-operator.md), **оператор safe_cast**, и [ Оператор reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` и `static_cast` вызывают исключение, если преобразование не может быть выполнено; [оператор static_cast](../cpp/static-cast-operator.md) также выполняет проверку типов во время компиляции. `dynamic_cast` возвращает значение `nullptr` , если не удается преобразовать тип. Хотя `reinterpret_cast` возвращает значение, отличное от NULL, оно может быть неверным. По этой причине рекомендуется не использовать `reinterpret_cast` , если нет уверенности, что приведение завершится успешно. Кроме того, мы рекомендуем не использовать C-стиль приведения в C + +/ CX код, поскольку это идентично `reinterpret_cast`.  

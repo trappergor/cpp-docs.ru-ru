@@ -1,5 +1,5 @@
 ---
-title: -CLRUNMANAGEDCODECHECK (Добавление атрибута SupressUnmanagedCodeSecurityAttribute) | Документы Microsoft
+title: / Параметр CLRUNMANAGEDCODECHECK (Добавление атрибута SupressUnmanagedCodeSecurityAttribute) | Документы Microsoft
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a00563460519225b38b1c5e745679da943d890cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705378"
 ---
 # <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>Параметр /CLRUNMANAGEDCODECHECK (добавление атрибута SupressUnmanagedCodeSecurityAttribute)
-**/ Параметр CLRUNMANAGEDCODECHECK** указывает, будет ли компоновщик применять <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> с компоновщиком `PInvoke` вызовы из управляемого кода в собственные библиотеки DLL.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-/CLRUNMANAGEDCODECHECK[:NO]  
-```  
-  
-## <a name="remarks"></a>Примечания  
- По умолчанию компоновщик применяет SuppressUnmanagedCodeSecurityAttribute к созданным `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** действует, SuppressUnmanagedCodeSecurityAttribute не применяется.  
-  
- Компоновщик только добавляет атрибут к объектам, которые были скомпилированы с **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и будет удален в будущей версии компилятора.  
-  
- Объект `PInvoke` вызов создается компоновщиком, когда компоновщик не удается найти управляемый символ, удовлетворяющий ссылке от управляемого вызывающего объекта, но можно найти символ для удовлетворения этой ссылки. Дополнительные сведения о `PInvoke`, в разделе [вызов собственных функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md).  
-  
- Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно задать **/clrunmanagedcodecheck**. Если изображение содержит атрибуты SuppressUnmanagedCodeSecurity и AllowPartiallyTrustedCallers не потенциальной уязвимости безопасности.  
-  
- В разделе [правила написания безопасного кода для неуправляемого кода](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Дополнительные сведения о последствиях использования SuppressUnmanagedCodeSecurityAttribute.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
-  
-2.  Разверните **свойства конфигурации** узла.  
-  
-3.  Разверните **компоновщика** узла.  
-  
-4.  Выберите **Дополнительно** страницу свойств.  
-  
-5.  Изменить **проверьте неуправляемый код CLR** свойство.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
-  
-1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.  
-  
-## <a name="see-also"></a>См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+
+**/ Параметр CLRUNMANAGEDCODECHECK** указывает, будет ли компоновщик применять <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> с компоновщиком `PInvoke` вызовы из управляемого кода в собственные библиотеки DLL.
+
+## <a name="syntax"></a>Синтаксис
+
+> **/ ПАРАМЕТР CLRUNMANAGEDCODECHECK**[**: НЕТ**]
+
+## <a name="remarks"></a>Примечания
+
+По умолчанию компоновщик применяет **SuppressUnmanagedCodeSecurityAttribute** с компоновщиком `PInvoke` вызовов. Когда **/clrunmanagedcodecheck** , **SuppressUnmanagedCodeSecurityAttribute** не применяется.
+
+Компоновщик только добавляет атрибут к объектам, которые были скомпилированы с **/CLR** или **/CLR: pure**. Тем не менее **/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+
+Объект `PInvoke` вызов создается компоновщиком, когда компоновщик не удается найти управляемый символ, удовлетворяющий ссылке от управляемого вызывающего объекта, но можно найти символ для удовлетворения этой ссылки. Дополнительные сведения о `PInvoke`, в разделе [вызов собственных функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md).
+
+Обратите внимание, что при использовании <xref:System.Security.AllowPartiallyTrustedCallersAttribute> в коде, необходимо явно задать **/clrunmanagedcodecheck**. Если изображение содержит атрибуты SuppressUnmanagedCodeSecurity и AllowPartiallyTrustedCallers не потенциальной уязвимости безопасности.
+
+В разделе [правила написания безопасного кода для неуправляемого кода](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) Дополнительные сведения о последствиях использования **SuppressUnmanagedCodeSecurityAttribute**.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. Разверните **свойства конфигурации** узла.
+
+1. Разверните **компоновщика** узла.
+
+1. Выберите **Дополнительно** страницу свойств.
+
+1. Изменить **проверьте неуправляемый код CLR** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.
+
+## <a name="see-also"></a>См. также
+
+- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
+- [Параметры компоновщика](../../build/reference/linker-options.md)

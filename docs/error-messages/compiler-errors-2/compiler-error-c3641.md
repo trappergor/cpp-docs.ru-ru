@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496ff73822dcc1c886fbd2020f8ec6b8a5a9a2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704949"
 ---
 # <a name="compiler-error-c3641"></a>Ошибка компилятора C3641
-«функция»: недопустимое соглашение о вызовах «соглашение_о_вызовах» для функции, скомпилированные с параметром/clr: pure или/CLR: safe  
-  
- Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
-  
- Только [__clrcall](../../cpp/clrcall.md) соглашение о вызовах может использоваться с [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
- Следующий пример приводит к возникновению ошибки C3641:  
-  
-```  
-// C3641.cpp  
-// compile with: /clr:pure /c  
-void __cdecl f() {}   // C3641  
+
+> "*функция*": недопустимое соглашение о вызовах «соглашение_о_вызовах» для функции, скомпилированные с параметром/clr: pure или/CLR: safe
+
+## <a name="remarks"></a>Примечания
+
+**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+
+Только [__clrcall](../../cpp/clrcall.md) соглашение о вызовах может использоваться с [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C3641:
+
+```cpp
+// C3641.cpp
+// compile with: /clr:pure /c
+void __cdecl f() {}   // C3641
 ```

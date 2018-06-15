@@ -16,29 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6557e913f2bd34fda9d435d44020697a925af4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705284"
 ---
 # <a name="compiler-error-c2441"></a>Ошибка компилятора C2441
-«переменная»: символ, объявленный с параметром __declspec(process), должен быть константой в/CLR: pure режим  
-  
- Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
-  
- По умолчанию переменные, домена приложения, в разделе **/CLR: pure**. Переменная, помеченная как `__declspec(process)` под **/CLR: pure** может привести к ошибкам, если изменения в одном домене приложения и чтение в другой.  
-  
- Таким образом, поэтому компилятор применяет каждого процесса, переменные быть `const` под **/CLR: pure**, что делает их чтения только во всех доменах приложения.  
-  
- Дополнительные сведения см. в разделе [процесс](../../cpp/process.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению ошибки C2441.  
-  
-```  
-// C2441.cpp  
-// compile with: /clr:pure /c  
-__declspec(process) int i;   // C2441  
-__declspec(process) const int j = 0;   // OK  
+
+> "*переменной*": символ, объявленный с параметром __declspec(process), должен быть константой в/CLR: pure режим
+
+## <a name="remarks"></a>Примечания
+
+**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+
+По умолчанию переменные, домена приложения, в разделе **/CLR: pure**. Переменная, помеченная как `__declspec(process)` под **/CLR: pure** может привести к ошибкам, если изменения в одном домене приложения и чтение в другой.
+
+Таким образом, поэтому компилятор применяет каждого процесса, переменные быть `const` под **/CLR: pure**, что делает их чтения только во всех доменах приложения.
+
+Дополнительные сведения см. в разделе [процесс](../../cpp/process.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению ошибки C2441.
+
+```cpp
+// C2441.cpp
+// compile with: /clr:pure /c
+__declspec(process) int i;   // C2441
+__declspec(process) const int j = 0;   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: 'Страницы свойств MIDL: Дополнительно | Документы Microsoft'
+title: 'Страницы свойств MIDL: "Дополнительно" |Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,37 +27,38 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330808"
 ---
 # <a name="midl-property-pages-advanced"></a>Страницы свойств MIDL: Дополнительно
-**Дополнительно** на странице свойств в **MIDL** папки задаются следующие параметры компилятора MIDL:  
+Страница свойств **Дополнительно** в папке **MIDL** указывает следующие параметры компилятора MIDL:  
   
--   Включить проверку ошибок ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Разрешить проверку ошибок ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка распределения ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка ошибок нехватки памяти ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверки допустимости ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка границ ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка границ перечислений ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка границ перечислений ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка ссылочных указателей ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверка указателей ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка данных заглушки ([/Error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   Проверках данных-заглушек ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка параметров ([/ robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Проверка параметров ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
   
--   Выравнивание члена структуры ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   Выравнивание членов структур ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   Перенаправлять выходные данные ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   Перенаправить вывод ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   Параметры предварительной обработки C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   Параметры препроцессора C ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
 -   Отменить определения препроцессора ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / robust предназначен только для использования при построении для Windows 2000 или более поздней версии. При построении проекта ATL и хотите использовать / robust, измените следующую строку в файле dlldatax.c:  
+ \* /robust предназначен для использования только при сборке для компьютера с Windows 2000 или более поздней версии. Если вы выполняете сборку проекта ATL и хотите использовать /robust, измените следующую строку в файле dlldatax.c:  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,9 +66,9 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- Сведения о доступе к **Дополнительно** на странице свойств в **MIDL** папку, в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
+ Сведения о доступе к странице свойств **Дополнительно** в папке **MIDL** см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md).  
   
- Сведения о том, как получить программный доступ к параметрам MIDL для проектов C++ см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
+ Сведения о программном доступе к параметрам MIDL для проектов C++ см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>.  
   
 ## <a name="see-also"></a>См. также  
  [Страницы свойств MIDL](../ide/midl-property-pages.md)

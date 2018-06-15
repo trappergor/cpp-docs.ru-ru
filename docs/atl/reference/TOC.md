@@ -1,3 +1,4 @@
+
 # [Классы и структуры библиотеки ATL](atl-classes.md)
 ## [Структура _ATL_BASE_MODULE70](atl-base-module70-structure.md)
 ## [Структура _ATL_COM_MODULE70](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [Интерфейс IWorkerThreadClient](iworkerthreadclient-interface.md)
 ## [Класс Win32ThreadTraits](win32threadtraits-class.md)
 ## [Рабочий архетип](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [Функции ATL](atl-functions.md)
 ## [Служебные функции HTTP ATL](atl-http-utility-functions.md)
 ## [Функции кодировки текста ATL](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [Макросы преобразования строк](string-conversion-macros.md)
 ## [Макросы класса окна](window-class-macros.md)
 ## [Макросы сообщений Windows](windows-messages-macros.md)
+# [Операторы ATL](atl-operators.md)
 # [Глобальные переменные ATL](atl-global-variables.md)
+# [Определения типов ATL](atl-typedefs.md)
 # [Мастеры и диалоговые окна ATL](atl-wizards-and-dialog-boxes.md)
 ## [Параметры приложений, мастер проектов ATL](application-settings-atl-project-wizard.md)
 ## [Мастер компонентов страницы активного сервера ATL, ASP](asp-atl-active-server-page-component-wizard.md)

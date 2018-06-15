@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569853"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор файла операционной системы, если *fd* является допустимым. В противном случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **INVALID_HANDLE_VALUE** (-1) и задает **errno** для **EBADF**, указывающее, неправильный дескриптор файла.
+Возвращает дескриптор файла операционной системы, если *fd* является допустимым. В противном случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **INVALID_HANDLE_VALUE** (-1) и задает **errno** для **EBADF**, указывающее, неправильный дескриптор файла. Чтобы избежать Предупреждение компилятора при использовании результат подпрограммы, которые ожидают, что дескриптор файла Win32, приведите его к **ОБРАБОТКИ** типа.
 
 ## <a name="remarks"></a>Примечания
 

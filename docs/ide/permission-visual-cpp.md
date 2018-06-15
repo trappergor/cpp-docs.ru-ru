@@ -1,5 +1,5 @@
 ---
-title: '&lt;разрешение&gt; (Visual C++) | Документы Microsoft'
+title: '&lt;permission&gt; (Visual C++) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33324087"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;разрешение&gt; (Visual C++)
-Тег \<permission> tag позволяет документировать уровень доступа для члена. <xref:System.Security.PermissionSet> Вы можете задать доступ к члену.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+Тег \<permission> tag позволяет документировать уровень доступа для члена. <xref:System.Security.PermissionSet> позволяет задать уровень доступа для члена.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>Примечания  
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
- Компилятор Visual C++ будет пытаться разрешить ссылки cref за один проход по комментариям документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. В разделе [ \<seealso >](../ide/seealso-visual-cpp.md) для получения дополнительной информации.  
+ Компилятор Visual C++ будет пытаться разрешить ссылки cref за один проход по комментариям документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. Дополнительные сведения см. в описании [\<seealso>](../ide/seealso-visual-cpp.md).  
   
 ## <a name="example"></a>Пример  
   

@@ -104,7 +104,6 @@
 #### [Списки инициализатора](initializer-lists.md)
 #### [Нотация приведения типов и знакомство с safe_cast<>](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [Чистый и проверяемый код (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [Сравнение смешанных, чистых и проверяемых компонентов (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [Практическое руководство. Создание проверяемых проектов на языке C++ (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [Практическое руководство. Миграция в -clr:safe (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [Использование проверяемых сборок вместе с SQL Server (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

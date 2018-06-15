@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 794db055ad433b6f3407c056dcf182e40e24c8f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02b920832d462c88c13d68525a1a4038cf6720f1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -74,10 +74,10 @@ void * _aligned_offset_recalloc_dbg(
 Смещение в выделение памяти для принудительного выполнения выравнивания.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию realloc, или значение NULL.
+Указатель на имя исходного файла, который запросил операцию realloc или **NULL**.
 
 *linenumber*<br/>
-Номер строки в исходном файле, которой была запрошена операция realloc, или NULL.
+Номер строки в исходном файле, которой была запрошена операция realloc или **NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

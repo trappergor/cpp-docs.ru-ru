@@ -71,6 +71,7 @@
 ## [Основные сведения о зависимостях приложения Visual C++](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [Определение библиотек DLL для распространения](determining-which-dlls-to-redistribute.md)
 ## [Выбор метода развертывания](choosing-a-deployment-method.md)
+## [Развертывание универсальной библиотеки CRT](universal-crt-deployment.md)
 ## [Распространение файлов Visual C++](redistributing-visual-cpp-files.md)
 ### [Распространение компонентов с использованием модулей слияния](redistributing-components-by-using-merge-modules.md)
 ### [Распространение элементов ActiveX Visual C++](redistributing-visual-cpp-activex-controls.md)

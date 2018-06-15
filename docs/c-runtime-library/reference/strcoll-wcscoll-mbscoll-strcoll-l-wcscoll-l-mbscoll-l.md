@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ int _mbscoll_l(
 |0|*string1* идентичен *строка2*|
 |> 0|*string1* больше *строка2*|
 
-Каждая из этих функций возвращает **_NLSCMPERROR** при возникновении ошибки. Для использования **_NLSCMPERROR**, включают любой из СТРОК. H или MBSTRING. З. **wcscoll** может завершиться ошибкой, если *string1* или *string2* имеет значение NULL или содержит коды расширенных символов, за пределами домена упорядоченной последовательности. При возникновении ошибки **wcscoll** может задать **errno** для **EINVAL**. Для проверки ошибки во время вызова **wcscoll**, задайте **errno** 0 и проверьте **errno** после вызова **wcscoll**.
+Каждая из этих функций возвращает **_NLSCMPERROR** при возникновении ошибки. Для использования **_NLSCMPERROR**, включают любой из СТРОК. H или MBSTRING. З. **wcscoll** может завершиться ошибкой, если *string1* или *string2* — **NULL** или содержит коды расширенных символов, за пределами домена упорядоченной последовательности. При возникновении ошибки **wcscoll** может задать **errno** для **EINVAL**. Для проверки ошибки во время вызова **wcscoll**, задайте **errno** 0 и проверьте **errno** после вызова **wcscoll**.
 
 ## <a name="remarks"></a>Примечания
 

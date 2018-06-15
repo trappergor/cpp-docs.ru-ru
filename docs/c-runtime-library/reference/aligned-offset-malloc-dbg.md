@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ void * _aligned_offset_malloc_dbg(
 Смещение в выделение памяти для принудительного выполнения выравнивания.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию выделения, или NULL.
+Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
 
 *linenumber*<br/>
-Номер строки в исходном файле, в которой была запрошена операция выделения, или NULL.
+Номер строки в исходном файле, которой была запрошена операция выделения или **NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
