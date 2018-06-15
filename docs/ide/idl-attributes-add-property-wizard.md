@@ -1,5 +1,5 @@
 ---
-title: Атрибуты IDL, мастер добавления свойства | Документы Microsoft
+title: Атрибуты IDL, мастер добавления свойства | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340194"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Атрибуты IDL, мастер добавления свойства
-Эта страница мастера добавления свойства для указания любого интерфейса (IDL) параметры IDL для свойства.  
+Используйте эту страницу мастера добавления свойства, чтобы указать все параметры IDL для этого свойства.  
   
  **id**  
- Задает числовой идентификатор, который определяет свойство. Этот параметр недоступен для свойств настраиваемых интерфейсов. В разделе [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) в *MIDL ссылка*.  
+ Задает числовой идентификатор, который определяет это свойство. Этот параметр недоступен для свойств настраиваемых интерфейсов. См. описание [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) в *справочнике по MIDL*.  
   
  **helpcontext**  
- Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом свойстве в файле справки. В разделе [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) в *MIDL ссылка*.  
+ Задает идентификатор контекста, позволяющий пользователю просматривать в файле справки информацию об этом свойстве. См. описание [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) в *справочнике по MIDL*.  
   
  **helpstring**  
- Определяет строку символов, используемый для описания элемента, к которому он применяется. По умолчанию он имеет значение «свойство *имя свойства*.» В разделе [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) в *MIDL ссылка*.  
+ Определяет строку символов, используемую для описания элемента, к которому оно применяется. По умолчанию имеет значение "property *имя свойства*". См. описание [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) в *справочнике по MIDL*.  
   
 ## <a name="other-options"></a>Другие параметры  
- Не все параметры, доступные для всех типов свойств.  
+ Не все параметры доступны для всех типов свойств.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
-|**bindable**|Указывает, что свойство поддерживает привязку данных. В разделе [привязываемых](http://msdn.microsoft.com/library/windows/desktop/aa366738) в *MIDL ссылка*. Для базовой реализации свойства этот параметр имеет значение по умолчанию и является неизменяемым.|  
-|**defaultbind**|Указывает, что это свойство одиночное, связываемое наиболее представляет объект. В разделе [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) в *MIDL ссылка*.|  
-|**displaybind**|Указывает, что это свойство должно отображаться пользователю как связываемое. В разделе [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) в *MIDL ссылка*.|  
-|**immediatebind**|Указывает, будут немедленно уведомлены базы данных всех изменений для этого свойства объекта с привязкой к данным. В разделе [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) в *MIDL ссылка*.|  
-|**defaultcollelem**|Указывает, что свойство является функция доступа к элементу коллекции по умолчанию. В разделе [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) в *MIDL ссылка*.|  
-|**nonbrowsable**|Теги член интерфейса или disp-интерфейс, который не должен отображаться в обозревателе свойств. В разделе [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) в *MIDL ссылка*.|  
-|**requestedit**|Указывает, что свойство поддерживает **OnRequestEdit** уведомления см. в разделе [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) в *MIDL ссылка*. Для базовой реализации свойства этот параметр имеет значение по умолчанию и является неизменяемым.|  
-|**Источник**|Указывает, что член свойства является источником событий. В разделе [источника](http://msdn.microsoft.com/library/windows/desktop/aa367166) в *MIDL ссылка*.|  
-|**hidden**|Указывает, что свойство существует, но не должен отображаться в пользовательском браузере. В разделе [скрытые](http://msdn.microsoft.com/library/windows/desktop/aa366861) в *MIDL ссылка*.|  
-|**restricted**|Указывает, что свойство не может вызываться произвольным образом. В разделе [ограниченных](http://msdn.microsoft.com/library/windows/desktop/aa367157) в *MIDL ссылка*.|  
-|`local`|Указывает компилятору MIDL, что свойство не является удаленной. В разделе [локального](http://msdn.microsoft.com/library/windows/desktop/aa367071) в *MIDL ссылка*.|  
+|**bindable**|Указывает, что свойство поддерживает привязку данных. См. описание [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) в *справочнике по MIDL*. Для стандартной реализации свойства этот параметр задан по умолчанию и недоступен для изменения.|  
+|**defaultbind**|Указывает, что это единственное привязываемое свойство представляет объект наилучшим образом. См. описание [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) в *справочнике по MIDL*.|  
+|**displaybind**|Указывает, что это свойство должно отображаться пользователю как связываемое. См. описание [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) в *справочнике по MIDL*.|  
+|**immediatebind**|Указывает, что база данных будет немедленно оповещаться обо всех изменениях этого свойства для объекта с привязкой к данным. См. описание [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) в *справочнике по MIDL*.|  
+|**defaultcollelem**|Указывает, что свойство является функцией метода доступа для элемента в коллекции по умолчанию. См. описание [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) в *справочнике по MIDL*.|  
+|**nonbrowsable**|Помечает член интерфейса или disp-интерфейса, который не должен отображаться в обозревателе свойств. См. описание [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) в *справочнике по MIDL*.|  
+|**requestedit**|Указывает, что свойство поддерживает уведомление **OnRequestEdit**. См. описание [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) в *справочнике по MIDL*. Для стандартной реализации свойства этот параметр задан по умолчанию и недоступен для изменения.|  
+|**source**|Указывает, что член свойства является источником событий. См. описание [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) в *справочнике по MIDL*.|  
+|**hidden**|Указывает, что свойство существует, но не должно отображаться в пользовательском браузере. См. описание [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) в *справочнике по MIDL*.|  
+|**restricted**|Указывает, что свойство не может вызываться произвольным образом. См. описание [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) в *справочнике по MIDL*.|  
+|`local`|Указывает компилятору MIDL, что свойство не является удаленным. См. описание [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) в *справочнике по MIDL*.|  
   
 ## <a name="see-also"></a>См. также  
  [Добавление свойства](../ide/adding-a-property-visual-cpp.md)   
- [Имена, мастер добавления свойства](../ide/names-add-property-wizard.md)   
+ [Мастер добавления свойств, страница "Имена"](../ide/names-add-property-wizard.md)   
  [Реализация интерфейса](../ide/implementing-an-interface-visual-cpp.md)   
  [Свойства хранения](../ide/stock-properties.md)
