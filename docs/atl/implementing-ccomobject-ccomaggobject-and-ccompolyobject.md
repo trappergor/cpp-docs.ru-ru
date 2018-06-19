@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356345"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Реализация CComObject, CComAggObject и CComPolyObject
 Классы шаблонов [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), и [CComPolyObject](../atl/reference/ccompolyobject-class.md) всегда являются наиболее производные классы в цепочке наследования. Обрабатывать все методы в их обязанность **IUnknown**: `QueryInterface`, `AddRef`, и **выпуска**. Кроме того `CComAggObject` и `CComPolyObject` (при использовании для объектов, статистические) предоставляют специальные подсчет ссылок на и `QueryInterface` семантику, необходимые для внутреннего unknown.  

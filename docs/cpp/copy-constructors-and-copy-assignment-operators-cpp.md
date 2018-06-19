@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417266"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Конструкторы копий и операторы присваивания копий (C++)
 > [!NOTE]

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356387"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>Связывание с CRT в ATL-проект
 [Библиотеки времени выполнения C](../c-runtime-library/crt-library-features.md) (CRT) предоставляют множество полезных функций, которые можно упростить программирование гораздо во время разработки ATL. Все проекты ATL связь с библиотекой CRT. Вы увидите преимущества и недостатки связывания метода в [преимуществами и недостатками метод, используемый для связи с этой библиотекой CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md).  

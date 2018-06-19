@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417188"
 ---
 # <a name="for-statement-c"></a>Оператор for (C++)
 Повторяет выполнение инструкций (statement), пока условие не станет ложным. Сведения об операторе for для диапазона см. в разделе [Оператор for для диапазона (C++)](../cpp/range-based-for-statement-cpp.md).  
