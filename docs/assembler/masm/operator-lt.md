@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055245"
 ---
 # <a name="operator-lt"></a>Оператор LT
 Возвращает значение true (-1), если *expression1* — меньше, чем *expression2*, или значение false (0), если это не так.  

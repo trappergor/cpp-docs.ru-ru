@@ -372,7 +372,7 @@
 ###### [_bstr_t::operator +=, +](bstr-t-operator-add-equal-plus.md)
 ###### [_bstr_t::operator !](bstr-t-operator-logical-not.md)
 ###### [Операторы отношения _bstr_t](bstr-t-relational-operators.md)
-###### [_bstr_t::wchar_t*, _bstr_t::char*](bstr-t-wchar-t-star-bstr-t-char-star.md)
+###### [_bstr_t::wchar_t *, _bstr_t::char*](bstr-t-wchar-t-star-bstr-t-char-star.md)
 #### [Класс _com_error](com-error-class.md)
 ##### [Функции-члены _com_error](com-error-member-functions.md)
 ###### [_com_error::_com_error](com-error-com-error.md)

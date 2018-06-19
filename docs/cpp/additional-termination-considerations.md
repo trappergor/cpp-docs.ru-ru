@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408150"
 ---
 # <a name="additional-termination-considerations"></a>Дополнительные сведения о завершении
 Программы на языке C++ можно завершить с помощью **выхода**, `return`, или **прервать**. Можно добавить обработку выхода с помощью функции `atexit`. Эти темы рассматриваются в следующих разделах.  
