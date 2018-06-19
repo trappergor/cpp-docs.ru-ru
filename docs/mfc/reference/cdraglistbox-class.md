@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367215"
 ---
 # <a name="cdraglistbox-class"></a>Класс CDragListBox
 Помимо предоставления функциональных возможностей списка Windows `CDragListBox` класс позволяет пользователю перемещать элементы списка, такие как имена файлов, в окне списка.  

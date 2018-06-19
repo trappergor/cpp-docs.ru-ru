@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169703"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Включать заголовок STL/CLR `<cliext/utility>` для определения шаблона класса `pair` и некоторые вспомогательные функции шаблона.  

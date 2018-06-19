@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108296"
 ---
 # <a name="comptr-class"></a>Класс com::ptr
 Программа-оболочка для COM-объекта, который можно использовать в качестве члена класса среды CLR.  Оболочки также позволяет автоматизировать управление временем существования COM-объекта, освобождая все принадлежащие ссылки на объект при вызове его деструктора. Аналогично [класс CComPtr](../atl/reference/ccomptr-class.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138523"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Практическое руководство. Хранение текста в буфере обмена (C++/CLI)
 Следующий пример кода использует <xref:System.Windows.Forms.Clipboard> объект, определенный в <xref:System.Windows.Forms> пространство имен для хранения строки. Этот объект предоставляет две функции-члена: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> и <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Данные хранятся в буфере обмена посредством отправки любого объекта, производного от <xref:System.Object> для <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

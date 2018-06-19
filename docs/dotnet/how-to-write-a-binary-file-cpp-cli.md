@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130131"
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>Практическое руководство. Запись в двоичный файл (C++/CLI)
 В следующем примере кода демонстрируется записи двоичных данных в файл. Два класса из <xref:System.IO> используются пространство имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> представляет фактический файл, пока <xref:System.IO.BinaryWriter> предоставляет интерфейс для потока, который разрешает двоичный доступ.  

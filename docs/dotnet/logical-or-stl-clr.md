@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137267"
 ---
 # <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
 Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент или второй тестов как true. Она используется укажите объект функции, с точки зрения его типа аргумента.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110124"
 ---
 # <a name="findfirstof-stlclr"></a>find_first_of (STL/CLR)
 Выполняет поиск первого вхождения любого из нескольких значений в заданный диапазон или первого вхождения любого из нескольких элементов, равноценных в смысле, заданном бинарным предикатом, в указанный набор элементов.  

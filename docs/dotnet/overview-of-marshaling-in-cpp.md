@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137138"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Общие сведения о маршалировании в C++
 В смешанном режиме иногда необходимо выполнять маршалинг данных между неуправляемыми и управляемыми типами. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] представленные библиотеке маршалинга для упаковки и преобразования данных в простой способ.  

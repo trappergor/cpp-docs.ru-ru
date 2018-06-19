@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109348"
 ---
 # <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
 Класс шаблона описывает функтор, при вызове возвращает значение true, только если первый аргумент больше или равен ему. Она используется укажите объект функции, с точки зрения его типа аргумента.  

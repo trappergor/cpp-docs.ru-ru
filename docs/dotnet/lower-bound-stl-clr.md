@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129815"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 Находит позицию первого элемента в упорядоченном диапазоне, который имеет значение меньше или равна указанному значению, где критерий упорядочивания может быть указан бинарным предикатом.  

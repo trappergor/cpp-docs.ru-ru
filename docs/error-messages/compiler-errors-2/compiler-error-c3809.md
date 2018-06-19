@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273044"
 ---
 # <a name="compiler-error-c3809"></a>Ошибка компилятора C3809
 class: управляемый тип или тип WinRT не может иметь дружественные функции, классы и интерфейсы  

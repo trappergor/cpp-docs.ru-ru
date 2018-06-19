@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107419"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 Указывает макросы `COLUMN_ENTRY` , которые следуют за входными, выходными или и входными, и выходными макросами `SET_PARAM_TYPE` .  

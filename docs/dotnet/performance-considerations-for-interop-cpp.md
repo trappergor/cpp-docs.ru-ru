@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164054"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Вопросы производительности взаимодействия (C++)
 В этом разделе описаны рекомендации по уменьшении влияния управляемых и неуправляемых переходов взаимодействия на производительность во время выполнения.  

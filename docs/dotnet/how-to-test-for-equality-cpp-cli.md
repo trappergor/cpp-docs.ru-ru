@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127985"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>Практическое руководство. Проверка на равенство (C++/CLI)
 В следующем примере проверка на равенство, использующий управляемые расширения для C++ основана на которые указывают дескрипторы.  

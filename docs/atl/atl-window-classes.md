@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355436"
 ---
 # <a name="atl-window-classes"></a>Классы окон ATL
 ATL включает несколько классов, которые позволяют использовать и реализовывать windows. Эти классы, как другие классы ATL, обеспечивают эффективную реализацию, которое не устанавливают дополнительные затраты на ваш код.  

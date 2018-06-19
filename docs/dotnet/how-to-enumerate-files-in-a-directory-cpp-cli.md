@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127894"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Практическое руководство. Перечисление файлов в каталоге (C++/CLI)
 В следующем примере кода показано, как получить список файлов в каталоге. Кроме того перечисляются подкаталоги. Следующий пример кода использует <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> и <xref:System.IO.Directory.GetDirectories%2A> методов, чтобы отобразить содержимое каталога C:\Windows.  

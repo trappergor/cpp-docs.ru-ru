@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378830"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 `CMFCButton` Класс расширяет его функциональные возможности [CButton](../../mfc/reference/cbutton-class.md) класса, такие как выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и указание подсказки.  

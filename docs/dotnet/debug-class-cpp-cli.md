@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106210"
 ---
 # <a name="debug-class-ccli"></a>Класс Debug (C++/CLI)
 При использовании <xref:System.Diagnostics.Debug> в приложении Visual C++ поведение не меняется между отладки и выпуска.  

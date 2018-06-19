@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371935"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Страница "Строки шаблонов документов", мастер добавления классов MFC
 Эта страница мастера доступна только для классов, отвечающих следующим критериям:  
