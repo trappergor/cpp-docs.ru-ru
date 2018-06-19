@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418397"
 ---
 # <a name="data-type-ranges"></a>Диапазоны типов данных
 Компиляторы Visual C++ (32-разрядные и 64-разрядные) поддерживают типы, указанные в приведенной ниже таблице.  

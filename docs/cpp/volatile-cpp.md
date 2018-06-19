@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423965"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 Квалификатор типа, который используется для объявления о том, что объект может быть изменен в программе аппаратным обеспечением.  

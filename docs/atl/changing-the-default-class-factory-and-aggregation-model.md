@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355243"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>Изменение статистической модели и фабрики класса по умолчанию
 ATL использует [CComCoClass](../atl/reference/ccomcoclass-class.md) для определения модели по умолчанию класс фабрики и статистической обработки для объекта. `CComCoClass` Задает следующие два макроса:  

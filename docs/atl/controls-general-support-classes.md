@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354859"
 ---
 # <a name="controls-general-support-classes"></a>Элементы управления: Классы поддержки Общие
 Следующие классы предоставляют общую поддержку для элементов управления ATL:  

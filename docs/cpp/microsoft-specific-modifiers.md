@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420227"
 ---
 # <a name="microsoft-specific-modifiers"></a>Модификаторы, используемые в системах Майкрософт
 В этом разделе описываются специальные расширения Microsoft для C++ в следующих аспектах языка:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358580"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Добавление элемента управления (учебник ATL, часть 2)
 На этом шаге будет добавить элемент управления в проект, выполните его построение и проверить его на веб-странице.  

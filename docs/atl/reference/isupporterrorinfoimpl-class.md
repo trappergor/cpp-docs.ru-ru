@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364585"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
 Этот класс предоставляет реализацию по умолчанию [ISupportErrorInfo интерфейс](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) и может использоваться, если только один интерфейс приводит к возникновению ошибки на объект.  

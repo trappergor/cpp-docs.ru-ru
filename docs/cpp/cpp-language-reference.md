@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417207"
 ---
 # <a name="c-language-reference"></a>Справочник по языку C++
 В этом справочнике описывается язык программирования С++ в том виде, в котором он реализован в Microsoft Visual C++. На основе *аннотированного справочного руководства по C++* Эллис (Margaret Ellis) и Страуструп (Bjarne Stroustrup) и ANSI/ISO C++ международного стандарта (ISO/IEC FDIS 14882). Включены реализации компонентов языка С++ корпорацией Майкрософт.  

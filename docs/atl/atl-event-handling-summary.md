@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356527"
 ---
 # <a name="atl-event-handling-summary"></a>Сводка обработки событий ATL
 Как правило обработка событий COM — это относительно простой процесс. Существует три основных этапа:  

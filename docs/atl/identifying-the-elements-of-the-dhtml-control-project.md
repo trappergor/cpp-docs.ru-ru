@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357686"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Определения элементов проекта элемента управления DHTML
 Для любого элемента управления ATL точно так, создается большая часть кода для элемента управления DHTML. Для понимания универсального кода, проработать [учебник по ATL](../atl/active-template-library-atl-tutorial.md), и ознакомьтесь с разделами [создается проект ATL](../atl/reference/creating-an-atl-project.md) и [основы объекта ATL COM-объекты](../atl/fundamentals-of-atl-com-objects.md).  

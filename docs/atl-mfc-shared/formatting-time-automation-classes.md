@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354959"
 ---
 # <a name="formatting-time-automation-classes"></a>Форматирования времени: Классы автоматизации
 #### <a name="to-format-a-time"></a>Форматирование времени  

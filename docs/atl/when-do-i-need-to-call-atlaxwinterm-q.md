@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360166"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>Если нужно вызвать AtlAxWinTerm?
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm) отменяет регистрацию **«AtlAxWin80»** класс окна. Эту функцию следует вызывать (если больше не требуется для создания узла windows) после уничтожения всех существующих окон узла. Если не вызвать эту функцию, класс окна будет отменена автоматически при завершении процесса.  

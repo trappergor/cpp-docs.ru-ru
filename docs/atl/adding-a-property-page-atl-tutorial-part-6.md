@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361594"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Добавление страницы свойств (учебник ATL, часть 6)
 Страницы свойств реализуются как отдельные объекты COM, которые позволят им можно было использовать при необходимости. На этом шаге необходимо выполнить следующие задачи, чтобы добавить страницу свойств для элемента управления:  

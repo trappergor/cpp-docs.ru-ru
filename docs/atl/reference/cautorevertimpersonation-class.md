@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359511"
 ---
 # <a name="cautorevertimpersonation-class"></a>Класс CAutoRevertImpersonation
 Этот класс возвращает [CAccessToken](../../atl/reference/caccesstoken-class.md) объектов nonimpersonating состояние, когда он покидает область действия.  

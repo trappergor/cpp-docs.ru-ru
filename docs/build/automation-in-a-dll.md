@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360658"
 ---
 # <a name="automation-in-a-dll"></a>Автоматизация в библиотеке DLL
 При выборе параметра автоматизации в мастер MFC DLL мастер предоставляет следующее:  

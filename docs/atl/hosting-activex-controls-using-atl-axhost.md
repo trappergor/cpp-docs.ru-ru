@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356257"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>Размещение элементов управления ActiveX, с помощью ATL AXHost
 Пример в этом разделе показано, как создание AXHost и как разместить элемент управления ActiveX, с помощью различных функций ATL. Также показано, как получение доступа к событиям элементов управления и приемником (с помощью [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) из элемента управления, который размещен. Этот образец размещает элемент управления календаря, в главном окне или в дочернем окне.  

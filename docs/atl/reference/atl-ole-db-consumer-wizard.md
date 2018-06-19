@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364954"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 Этот мастер устанавливает класс потребителя OLE DB с помощью привязки данных для доступа к указанному источнику данных через указанный поставщик OLE DB.  

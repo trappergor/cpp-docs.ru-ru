@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358398"
 ---
 # <a name="using-a-window"></a>С помощью окна
 Класс [CWindow](../atl/reference/cwindow-class.md) дает возможность использовать окно. После присоединения в окне `CWindow` объекта, затем можно вызвать `CWindow` методы для управления окном. `CWindow` также содержит `HWND` оператор преобразования `CWindow` объект `HWND`. Таким образом можно передать `CWindow` объект любая функция, которая требует дескриптора окна. Вы можете легко сочетать `CWindow` вызовы методов и вызовы функций Win32, без создания временных объектов.  

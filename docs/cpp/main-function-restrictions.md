@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419689"
 ---
 # <a name="main-function-restrictions"></a>Ограничения функции main
 Несколько ограничений **основной** функции, которые не применяются к каким другим функциям C++. **Основной** функции:  

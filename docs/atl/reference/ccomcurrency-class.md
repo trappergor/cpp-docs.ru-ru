@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366251"
 ---
 # <a name="ccomcurrency-class"></a>Класс CComCurrency
 `CComCurrency` содержит методы и операторы для создания объекта CURRENCY и управления им.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356965"
 ---
 # <a name="queryinterface"></a>QueryInterface
 Несмотря на то, что существуют механизмы, с помощью которых объект можно выразить функциональные возможности, он предоставляет статически (до создания его экземпляра), основной механизм COM является использование **IUnknown** метод с именем [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

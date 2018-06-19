@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356400"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Экспортирование классов строки с помощью CStringT
 В прошлом, являться следствием разработчиков MFC `CString` специализации свои собственные классы строк. В Microsoft Visual C++ .NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md) класс была заменена на класс шаблона с именем [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Эта возможность реализована несколько преимуществ:  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357861"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Программирование с использованием CComBSTR (ATL)
 Класс ATL [CComBSTR](../atl/reference/ccombstr-class.md) предоставляет оболочку `BSTR` тип данных. Хотя `CComBSTR` — это эффективное средство, существует несколько ситуаций, требующих осторожность.  

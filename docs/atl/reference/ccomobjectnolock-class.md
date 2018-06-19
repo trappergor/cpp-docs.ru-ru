@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361483"
 ---
 # <a name="ccomobjectnolock-class"></a>Класс CComObjectNoLock
 Этот класс реализует **IUnknown** для неагрегированные объекта, но не не инкремента, счетчик блокировок модуля в конструкторе.  

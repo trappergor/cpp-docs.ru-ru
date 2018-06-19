@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359007"
 ---
 # <a name="creating-an-atl-project"></a>Создание проекта библиотеки ATL
 Для создания проекта ATL проще всего использовать мастер проектов ATL, расположенный в папке проекты Win32 **диалоговое окно нового проекта**.  

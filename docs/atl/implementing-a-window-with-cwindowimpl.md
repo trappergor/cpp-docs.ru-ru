@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356551"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Реализация окна с CWindowImpl
 Чтобы реализовать окна, создайте класс, производный от `CWindowImpl`. В производном классе объявите схему сообщений и функций обработчиков сообщений. Теперь можно использовать класс тремя разными способами:  

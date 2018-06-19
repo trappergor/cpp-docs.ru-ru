@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367476"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Динамическое создание параметра области стека
 Если используется указатель кадра, параметр существует динамическое создание параметра области стека. Оно не используется в настоящее время [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] компилятора.  

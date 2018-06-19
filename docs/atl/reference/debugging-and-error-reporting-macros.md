@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365045"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы, отладка и отчеты об ошибках
 Эти макросы предоставляют полезные средства отладки и трассировки.  

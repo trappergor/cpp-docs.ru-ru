@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357819"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>Реализация пользовательских строка Manager (расширенный метод)
 В специальных ситуациях может потребоваться реализовать пользовательскую строку диспетчер, который больше, чем просто изменить какие-либо кучи используется для выделения памяти. В этом случае необходимо вручную реализовать [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) интерфейс как руководитель настраиваемой строки.  

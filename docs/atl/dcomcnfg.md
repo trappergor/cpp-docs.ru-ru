@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357249"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG.
 **DCOMCNFG** — это программа Windows NT 4.0, которая позволяет настраивать различные параметры DCOM в реестре. **DCOMCNFG** окно содержит три страницы: безопасность по умолчанию, свойства по умолчанию и приложений. В среде Windows 2000 четвертой странице протоколов по умолчанию, отсутствует.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358773"
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
 Эта страница мастера позволяет определить потоковую модель и уровень агрегирования страницы свойств, который вы создаете.  

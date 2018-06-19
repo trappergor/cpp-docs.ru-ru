@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354923"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Принципы разработки для сбора и интерфейсы перечислителя
 Существуют принципы другую структуру каждого типа интерфейса:  

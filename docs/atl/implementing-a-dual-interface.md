@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356736"
 ---
 # <a name="implementing-a-dual-interface"></a>Реализации сдвоенного интерфейса
 Можно реализовать сдвоенный интерфейс, используя [IDispatchImpl](../atl/reference/idispatchimpl-class.md) класс, который предоставляет реализацию по умолчанию `IDispatch` методов сдвоенных интерфейсов. Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  

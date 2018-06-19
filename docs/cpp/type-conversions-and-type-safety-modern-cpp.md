@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424780"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Преобразования типов и безопасность типов (современный C++)
 В этом документе определяет распространенных проблем преобразования типа и описывает, как их избежать в коде C++.  

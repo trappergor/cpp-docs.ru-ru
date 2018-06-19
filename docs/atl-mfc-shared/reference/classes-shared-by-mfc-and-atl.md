@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356978"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Классы, совместно используемые MFC и ATL
 В следующей таблице перечислены классы, совместно MFC и ATL.  

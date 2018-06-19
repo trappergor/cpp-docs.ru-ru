@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414774"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Особенности написания кода пролога и эпилога
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  

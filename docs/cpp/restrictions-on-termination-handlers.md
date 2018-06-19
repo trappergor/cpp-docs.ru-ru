@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420586"
 ---
 # <a name="restrictions-on-termination-handlers"></a>Ограничения обработчиков завершения
 Невозможно использовать инструкцию `goto` для входа в блок инструкций `__try` или `__finally`. Входить в этот блок необходимо только через обычный поток управления. (Впрочем, можно выйти из блока инструкций `__try`). Кроме того, невозможно вложить обработчик исключений или обработчик завершения в блок `__finally`.  

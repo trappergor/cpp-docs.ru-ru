@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355465"
 ---
 # <a name="calling-c-code-from-dhtml"></a>Вызов кода C++ из DHTML
 Элемент управления DHTML может размещаться в контейнер, например тестовый контейнер или Internet Explorer. В разделе [тестирование свойств и событий с использованием тестового контейнера](../mfc/testing-properties-and-events-with-test-container.md) сведения о том, как получить доступ к контейнеру теста.  

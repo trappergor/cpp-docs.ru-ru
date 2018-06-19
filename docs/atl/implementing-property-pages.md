@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357497"
 ---
 # <a name="implementing-property-pages"></a>Реализация страницы свойств
 Страницы свойств являются COM-объекты, реализующие `IPropertyPage` или **IPropertyPage2** интерфейса. Библиотека ATL предоставляет поддержку для реализации страницы свойств через [мастер страницы свойств ATL](../atl/reference/atl-property-page-wizard.md) в [диалоговое окно "Добавление класса"](../ide/add-class-dialog-box.md).  

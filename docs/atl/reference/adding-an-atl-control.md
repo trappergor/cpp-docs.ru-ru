@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356939"
 ---
 # <a name="adding-an-atl-control"></a>Добавление элемента управления ATL
 Этот мастер используется для добавления объекта пользовательского интерфейса в проект, который поддерживает интерфейсы всех потенциальных контейнеров. Для поддержки этих интерфейсов проект должен быть создан как приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  

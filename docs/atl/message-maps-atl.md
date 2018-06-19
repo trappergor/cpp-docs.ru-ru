@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357262"
 ---
 # <a name="message-maps-atl"></a>Схемы сообщений (ATL)
 Схемы сообщений связывает функцию обработчика событий с определенного сообщения, команды или уведомления. С помощью ATL [макросы схемы сообщений](../atl/reference/message-map-macros-atl.md), можно указать схему сообщений для окна. Процедуры окна в `CWindowImpl`, `CDialogImpl`, и `CContainedWindowT` направлять сообщения окна к схему сообщений.  

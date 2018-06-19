@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417279"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Практическое руководство. Интерфейс между кодом с исключениями и без исключений
 В этой статье описываются способы реализации согласованной обработки исключений в модуль C++, а также способ преобразования этих исключений в и из кодов ошибок на границах исключение.  

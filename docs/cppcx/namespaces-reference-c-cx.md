@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086990"
 ---
 # <a name="namespaces-reference-ccx"></a>Справочник по пространствам имен (C++/CX)
 Статьи в этом разделе документации описывают пространства имен, которые поддерживают компилятор C + +/ CX.  

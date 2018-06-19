@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361269"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Добавление события (учебник ATL, часть 5)
 На этом шаге вы добавите `ClickIn` и `ClickOut` событий для элемента управления ATL. Будет срабатывать `ClickIn` событие, если пользователь щелкает внутри многоугольника и противопожарного `ClickOut` при щелчке за пределами. Ниже приведены задачи, чтобы добавить событие.  

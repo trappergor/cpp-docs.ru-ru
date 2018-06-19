@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364551"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Параметры, мастер компонентов страницы активного сервера ATL
 Эта страница мастер компонентов ATL Active Server страницы для повышения эффективности и поддержки ошибок для объекта.  

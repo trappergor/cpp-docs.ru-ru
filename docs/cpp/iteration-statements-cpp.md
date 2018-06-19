@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418917"
 ---
 # <a name="iteration-statements-c"></a>Операторы перебора (C++)
 Операторы итерации приводят к тому, что операторы (или составные операторы) выполняются ноль или более раз в соответствии с некоторыми критериями завершения цикла. Когда эти операторы являются составными операторами, они выполняются по порядку, если в них не встречается инструкция [break](../cpp/break-statement-cpp.md) или [continue](../cpp/continue-statement-cpp.md).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355011"
 ---
 # <a name="properties-and-property-pages-classes"></a>Свойства и классы страниц свойств
 Следующие классы поддерживают свойства и страницы свойств:  
