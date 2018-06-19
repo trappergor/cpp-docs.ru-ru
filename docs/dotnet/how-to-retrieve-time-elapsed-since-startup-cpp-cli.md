@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132834"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows (C++/CLI)
 В следующем примере кода показано, как определить счетчик тактов или число миллисекунд, прошедших с Windows запущена. Это значение хранится в <xref:System.Environment.TickCount%2A?displayProperty=fullName> члена и, поскольку это 32-разрядное значение, оно обнуляется приблизительно каждые 24,9 дней.  

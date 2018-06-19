@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127826"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Практическое руководство. Извлечение текущего имени пользователя (C++/CLI)
 В следующем примере кода показано получение имени текущего пользователя (имя пользователя, выполнившего вход в Windows). Имя хранится в <xref:System.Environment.UserName%2A> строку, которая определена в <xref:System.Environment> пространства имен.  

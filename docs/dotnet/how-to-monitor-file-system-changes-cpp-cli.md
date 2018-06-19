@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130709"
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>Практическое руководство. Отслеживание изменений в файловой системе (C++/CLI)
 Следующий пример кода использует <xref:System.IO.FileSystemWatcher> для регистрации событий, соответствующие файлам, которые созданы, изменены, удален или переименован. Вместо периодически анализировать каталог на предмет изменений в файлах, можно использовать <xref:System.IO.FileSystemWatcher> класса для вызова событий при обнаружении изменений.  

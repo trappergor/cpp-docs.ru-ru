@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132025"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Практическое руководство. Анализ строк с помощью метода разделения (C++/CLI)
 В следующем примере кода показано использование <xref:System.String.Split%2A?displayProperty=fullName> метод для извлечения каждого слова из строки. Строка, содержащая несколько типов разделителей слов создается и затем анализируется путем вызова метода <xref:System.String.Split%2A> со списком описаний. Затем каждое слово в предложении выводится отдельно.  

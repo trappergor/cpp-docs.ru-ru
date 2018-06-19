@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131950"
 ---
 # <a name="mismatch-stlclr"></a>mismatch (STL/CLR)
 Сравнивает два диапазона поэлементно либо на равенство или равноценность в смысле, заданном бинарным предикатом, и находит первую позицию, где наблюдается разница.  

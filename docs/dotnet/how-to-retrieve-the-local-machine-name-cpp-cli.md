@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128645"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Практическое руководство. Извлечение имени локального компьютера (C++/CLI)
 В следующем примере кода демонстрируется извлечение имени локального компьютера (имя компьютера, которое отображается в сети). Это можно сделать путем получения <xref:System.Environment.MachineName%2A> строку, которая определена в <xref:System.Environment> пространства имен.  

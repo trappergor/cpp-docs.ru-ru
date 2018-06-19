@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130039"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>Практическое руководство. Рисование фигур с помощью платформы .NET Framework
 Следующий пример кода использует <xref:System.Drawing.Graphics> класса, чтобы изменить <xref:System.Windows.Forms.Form.OnPaint%2A> обработчик событий, чтобы получить указатель на <xref:System.Drawing.Graphics> объект главной формы. Затем этот указатель используется для задать цвет фона формы и рисования линии и дуги с помощью <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> и <xref:System.Drawing.Graphics.DrawArc%2A> методы.  

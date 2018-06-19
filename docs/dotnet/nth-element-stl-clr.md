@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132899"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Разделяет диапазон элементов, правильно находя `n`-ый элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а также все элементы, следующие за ней в последовательности, больше или равны ему.  

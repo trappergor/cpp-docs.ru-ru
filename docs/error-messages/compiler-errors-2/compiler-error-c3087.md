@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245313"
 ---
 # <a name="compiler-error-c3087"></a>Ошибка компилятора C3087
 "именованный_аргумент": вызов атрибута "атрибут" уже инициализирует данный член  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133434"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>Практическое руководство. Диагностика и устранение проблем совместимости сборок (C++/CLI)
 В этом разделе объясняется, что может произойти, когда версия сборки, которая использовалась во время компиляции не соответствует версии сборки, указанной во время выполнения и способы устранения проблемы.  

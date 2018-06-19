@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128622"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>Практическое руководство. Реализация ключевых слов языка C# "is" и "as" (C++/CLI)
 В этом разделе показан способ реализации функциональности `is` и `as` ключевые слова C# в Visual C++.  

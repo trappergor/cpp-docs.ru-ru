@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160996"
 ---
 # <a name="replaceif-stlclr"></a>replace_if (STL/CLR)
 Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному предикату.  
