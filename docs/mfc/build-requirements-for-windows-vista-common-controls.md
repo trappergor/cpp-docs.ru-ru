@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342164"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Требования к сборке для использования стандартных элементов управления в Windows Vista
 Библиотека Microsoft Foundation Class (MFC) поддерживает стандартные элементы управления Windows версии 6.1. Стандартные элементы управления, включенные в [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] и включается в библиотеке [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]. Эта библиотека предоставляет новые методы, которые повышают существующих классов и новые классы и методы, поддерживающие [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] стандартных элементов управления. При построении приложения необходимо соблюдать требования к компиляции и миграции, описанные в следующих разделах.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385902"
 ---
 # <a name="tree-control-item-selection"></a>Выбор элемента древовидного элемента управления
 При изменении выбора одного элемента к другому дерево ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) и [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) сообщений уведомления. Оба уведомления содержат значение, указывающее, является ли изменения в результате щелчка кнопкой мыши или нажатие клавиши. Уведомления также содержат сведения о элемента, которая получает выделение и элемент, который теряет выделение. Эти сведения можно использовать для задания атрибутов элемента, зависящих от состояния выбора элемента. Возвращение **TRUE** в ответ на **TVN_SELCHANGING** предотвращает изменение; Выбор возвращение **FALSE** можно изменить.  

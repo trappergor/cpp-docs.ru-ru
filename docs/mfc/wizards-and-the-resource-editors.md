@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383845"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Мастера и редакторы ресурсов
 Visual C++ содержит несколько мастеров для использования в программировании MFC вместе с Многие редакторы ресурсов интеграции. Для элементов ActiveX программирования, [мастер элементов управления ActiveX](../mfc/reference/mfc-activex-control-wizard.md) используется в целях очень похоже на, мастер приложений MFC. При написании приложения MFC без большинства из этих средств средства значительно упростить и ускорить работу.  

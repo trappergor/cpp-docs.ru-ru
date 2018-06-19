@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850298"
 ---
 # <a name="executioncharacterset"></a>кодировка_выполнения
 Указывает набор символов исполнения, используемый для строковых и символьных литералах. Эта директива не требуется для литералов, помеченные с префиксом u8.  

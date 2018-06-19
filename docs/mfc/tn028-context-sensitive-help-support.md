@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385148"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028. Поддержка контекстной справки
 Эта заметка описывает правила назначения идентификаторов контексты справки и других проблем справки в MFC. Поддержка контекстной справки требуется компилятор справки, который доступен в Visual C++.  

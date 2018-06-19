@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385584"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Сокеты Windows. Уведомления сокетов
 В этой статье описываются функции уведомления в классах сокета. Эти функции-члены, функции обратного вызова, которые платформа вызывает для уведомления объекта сокета важных событий. Функции уведомления являются:  

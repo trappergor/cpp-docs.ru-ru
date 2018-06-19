@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344504"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>Наследование элементов управления от стандартного элемента управления
 Как и в случае с любым [CWnd](../mfc/reference/cwnd-class.md)-производного класса, можно изменить поведение элемента управления нового класса, производного от существующего класса элемента управления.  

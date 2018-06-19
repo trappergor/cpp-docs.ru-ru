@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333135"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Контейнеры элементов управления ActiveX. Соединение элемента управления ActiveX с переменной-членом
 Чтобы связать элемент управления ActiveX с переменной-члена класса диалогового окна, который будет содержать элемент управления является самым простым способом доступа к элемента управления ActiveX в пределах его приложение контейнера элемента управления.  

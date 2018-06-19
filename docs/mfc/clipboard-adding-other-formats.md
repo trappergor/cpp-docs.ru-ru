@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342151"
 ---
 # <a name="clipboard-adding-other-formats"></a>Буфер обмена. Добавление других форматов
 В этом разделе объясняется, как развертывать список поддерживаемых форматов, особенно для поддержки OLE. Раздел [буфер обмена: копирование и вставка данных](../mfc/clipboard-copying-and-pasting-data.md) описывается минимальная реализация необходима поддержка копирования и вставки из буфера обмена. Если все реализации, только форматы, буфер обмена: `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**и, возможно, `CF_LINKSOURCE`. Большинство приложений должны Дополнительные форматы в буфере обмена больше трех.  

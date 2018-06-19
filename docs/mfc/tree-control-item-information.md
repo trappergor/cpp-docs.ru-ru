@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385369"
 ---
 # <a name="tree-control-item-information"></a>Сведения об элементе древовидного элемента управления
 Элементы управления дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) имеют ряд функций-членов, получающие сведения о элементов в элементе управления. [GetItem](../mfc/reference/ctreectrl-class.md#getitem) функция-член возвращает некоторые или все данные, связанные с элементом. Эти данные могут включать текст элемента, состояние, изображений, количество дочерних элементов и прикладных данных 32-разрядное значение. Имеется также [SetItem](../mfc/reference/ctreectrl-class.md#setitem) функцию, которая может устанавливать некоторые или все данные, связанные с элементом.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325920"
 ---
 # <a name="active-document-classes"></a>Классы активных документов
 Активные документы могут отображаться в окне всю клиентскую веб-браузера, например Internet Explorer 5.5 или в активных контейнеров, таких как Microsoft Office Binder, которая поддерживает активные документы.  

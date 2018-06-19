@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858972"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>Добавление значений в элемент управления поля со списком
 Можно добавить значения в поле со списком, пока у вас есть открыть редактор диалоговых окон.  

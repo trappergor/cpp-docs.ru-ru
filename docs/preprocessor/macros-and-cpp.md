@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849617"
 ---
 # <a name="macros-and-c"></a>Макросы и C++
 C++ предоставляет новые возможности, некоторые из которых вытесняют предложенные препроцессором ANSI C. Эти новые возможности повышают безопасность типов и предсказуемость языка.  

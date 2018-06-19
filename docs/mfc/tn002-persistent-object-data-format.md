@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385421"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002. Формат данных постоянного объекта
 Эта заметка описывает MFC подпрограммы, которые поддерживают постоянные объекты C++ и формат данных объекта, когда он хранится в файле. Это относится только к классам с [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) макросы.  
