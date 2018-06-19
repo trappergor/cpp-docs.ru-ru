@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344900"
 ---
 # <a name="exception-classes"></a>Классы исключений
 Библиотека классов предоставляет механизм обработки исключений, на основе класса `CException`. Платформа приложения использует исключений в коде; Кроме того, их можно использовать в указанное имя. Дополнительные сведения см. в статье [исключения](../mfc/exception-handling-in-mfc.md). Можно наследовать собственные типы исключений из `CException`.  

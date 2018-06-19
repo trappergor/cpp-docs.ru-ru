@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355666"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Оптимизация постоянства и инициализации
 По умолчанию постоянства и инициализации в элементе управления обрабатываются `DoPropExchange` функции-члена. Типичные элемента управления, эта функция содержит несколько вызовов **PX_** функции (`PX_Color`, `PX_Font`и так далее), один для каждого свойства.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367455"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Класс CMFCDesktopAlertWndInfo
 `CMFCDesktopAlertWndInfo` Класс используется с [класс CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Определяет элементы управления, которые отображаются, если всплывает окно оповещения.  

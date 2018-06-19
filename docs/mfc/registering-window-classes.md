@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379750"
 ---
 # <a name="registering-window-classes"></a>Регистрация классов Window
 Окно «классы» в традиционном программировании для Windows определения характеристик «класс» (а не класс C++), из которого можно создать любое количество windows. Этот тип класса — это шаблон или модель для создания windows.  

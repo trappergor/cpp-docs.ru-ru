@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298620"
 ---
 # <a name="linker-tools-error-lnk1237"></a>Ошибка средств компоновщика LNK1237
 При создании кода компилятор ввел ссылку на символ «символ», определенный в модуле «модуль», откомпилированном с параметром /GL  

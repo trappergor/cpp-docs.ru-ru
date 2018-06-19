@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336603"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Сообщения векторизатора и параллелизатора
 Параметры компилятора Visual C++ можно использовать [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) и [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) для задания [автоматическая параллелизация и автоматическая векторизация](../../parallel/auto-parallelization-and-auto-vectorization.md) на вывод кодов причины и информационные сообщения о его действиях. В этой статье описываются коды причины и сообщения.  

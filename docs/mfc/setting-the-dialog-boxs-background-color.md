@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379987"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Установка цвета фона диалогового окна
 Можно задать цвет фона диалоговые окна, обрабатывая `WM_CTLCOLOR` сообщения для диалогового окна. Задать цвет используется только указанного диалогового окна.  
