@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361333"
 ---
 # <a name="collection-classes"></a>Классы коллекций
 Следующие классы обеспечивают поддержку массивы, списки, сопоставления, а также методы признаки за помощь со сравнениями и доступ к элементу.  

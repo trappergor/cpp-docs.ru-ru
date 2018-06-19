@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360891"
 ---
 # <a name="urect-class"></a>Класс _U_RECT
 Этот класс адаптера аргумент позволяет либо `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется с точки зрения указатели.  

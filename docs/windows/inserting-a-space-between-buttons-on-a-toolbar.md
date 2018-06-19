@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879839"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>Вставка промежутка между кнопками в панели инструментов
 Как правило для вставки промежутка между кнопками, просто перетащите их друг от друга на панели инструментов. Чтобы удалить место, перетащите их к друг с другом.  

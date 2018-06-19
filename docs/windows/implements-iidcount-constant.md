@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873671"
 ---
 # <a name="implementsiidcount-constant"></a>Константа Implements::IidCount
 Содержит количество идентификаторов реализованного интерфейса.  

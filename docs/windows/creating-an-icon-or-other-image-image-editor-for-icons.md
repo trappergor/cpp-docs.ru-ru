@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874737"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>Создание значка или другого изображения (редактор изображений для значков)
 Можно создать новое изображение (растровое изображение, значок, курсор или панель инструментов), а затем использовать редактор изображений для настройки внешнего вида. Можно также создать новый растровое изображение на основе [шаблона](../windows/how-to-use-resource-templates.md).  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879111"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *Внутренний указатель* объявляет указатель внутри ссылочного типа, но не на сам объект. Он может указывать на дескриптор ссылки, тип значения, дескриптор упакованного типа, член управляемого типа или элемент управляемого массива.  

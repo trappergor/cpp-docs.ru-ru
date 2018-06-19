@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415729"
 ---
 # <a name="comerror-class"></a>Класс _com_error
 **Блок, относящийся только к системам Microsoft**  

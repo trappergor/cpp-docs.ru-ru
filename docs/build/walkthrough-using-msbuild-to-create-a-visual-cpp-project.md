@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392566"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Пошаговое руководство. Использование MSBuild для создания проекта Visual C++
 В этом пошаговом руководстве демонстрируется использование [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] для построения проекта Visual C++ из командной строки. Вы узнаете, как для создания исходных файлов C++ и XML файла проекта для консольного приложения Visual C++. После создания проекта, вы узнаете, как настроить процесс построения.  

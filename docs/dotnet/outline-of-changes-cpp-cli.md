@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138305"
 ---
 # <a name="outline-of-changes-ccli"></a>Обзор изменений (C++/CLI)
 Данная структура приводятся примеры некоторых изменений в языке от управляемых расширений для C++ к Visual C++. Перейдите по ссылке, приведенной после каждого примера для получения дополнительной информации.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361870"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>Тестирование элемента управления ATL DHTML
 После создания проекта можно создать и протестировать пример элемента управления. Перед этим следует используйте представления классов и обозревателя решений для проверки проекта. Элементы проекта описаны более подробно в [определения элементов управления DHTML проекта](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  

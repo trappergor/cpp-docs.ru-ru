@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132574"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Практическое руководство. Создание консольного приложения CLR (C++/CLI)
 Шаблон консольного приложения можно использовать для создания проекта консольного приложения, уже включающего необходимые ссылки и файлы.  

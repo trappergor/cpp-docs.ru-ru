@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882658"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Изменение размера всего изображения (редактор изображений для значков)
 ### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Изменение размера всего изображения с помощью окна свойств  

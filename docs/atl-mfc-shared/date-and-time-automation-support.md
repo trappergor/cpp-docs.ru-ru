@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357598"
 ---
 # <a name="date-and-time-automation-support"></a>Дата и время: Поддержка автоматизации
 В этой статье описывается воспользоваться преимуществами служб библиотеки класса, связанные с управлением даты и времени. Описанные процедуры включают:  

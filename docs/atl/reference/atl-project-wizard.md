@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357909"
 ---
 # <a name="atl-project-wizard"></a>Мастер проектов ATL
 Active Template Library (ATL) — это набор основанных на шаблонах классов C++, которые упрощают создание простой и быстрый COM-объектов. Мастер проектов ATL создает проект со структурами COM-объектами.  

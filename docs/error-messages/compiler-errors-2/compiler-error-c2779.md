@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233932"
 ---
 # <a name="compiler-error-c2779"></a>Ошибка компилятора C2779
 «объявление»: методы свойства может быть связан только с нестатическими данными-членами  

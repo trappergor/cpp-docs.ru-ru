@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873580"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Диалоговое окно "Параметры сетки" (редактор изображений для значков)
 Позволяет указать параметры сетки для изображения и отображает линии сетки над редактируемым изображением. Линии полезны для редактирования изображения, но не сохраняются как часть самого изображения.  

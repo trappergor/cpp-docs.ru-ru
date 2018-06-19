@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255997"
 ---
 # <a name="atl-com-desktop-components"></a>Компоненты ATL COM Desktop
 Справочник по ATL документах Active Template Library (ATL), набор основанных на шаблонах классов C++, упрощающих написание объектов модели объектов компонентов (COM). Чтобы полностью использовать преимущества ATL, настоятельно рекомендуется ознакомиться с моделью COM.  

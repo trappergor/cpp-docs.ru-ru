@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368617"
 ---
 # <a name="precedence-in-macro-definitions"></a>Приоритет в макроопределениях
 Если макрос имеет несколько определений, NMAKE использует определение наивысшего приоритета. Ниже перечислены порядок приоритета от наибольшего к наименьшему.  

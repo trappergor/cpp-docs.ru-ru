@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877570"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>Практическое руководство. Повышение производительности с помощью универсальных коллекций (Visual C++)
 С помощью универсальных шаблонов можно создать многократно используемый код на основе параметра типа. Определение фактического типа параметра типа откладывается до вызова из клиентского кода. Дополнительные сведения об универсальных шаблонах см. в разделе [универсальные шаблоны](../windows/generics-cpp-component-extensions.md).  

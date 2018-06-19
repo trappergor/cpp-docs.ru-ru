@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876024"
 ---
 # <a name="ole-db-consumer-attributes"></a>Атрибуты потребителя OLE DB
 Атрибуты потребителя OLE DB ввести код, на основе [Шаблоны потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), чтобы создать рабочий OLE DB потребителя, выполняет задачи, такие как Открытие таблицы, выполнения команд и доступ к данным.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875101"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>Доступ к редактору ресурсов заданного символа
 При просмотре символов в [символы ресурсов-диалоговое окно](../windows/resource-symbols-dialog-box.md), могут получить дополнительные сведения о том, как используется конкретный символ. **Просмотреть** кнопки позволяет быстро получить эту информацию.  

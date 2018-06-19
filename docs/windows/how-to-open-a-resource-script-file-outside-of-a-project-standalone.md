@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879169"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>Практическое руководство. Открытие файла описания ресурсов за пределами проекта (в автономном режиме)
 Ресурсы в RC-файле можно просматривать без открытия проекта. RC-файл откроется в окне документа в [представление ресурсов](../windows/resource-view-window.md) окна (что происходит, когда файл открыт в рамках проекта).  
