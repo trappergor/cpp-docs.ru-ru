@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348095"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>Шаблоны документов и процесс создания документов и представлений
 Чтобы управлять сложный процесс создания документов с их связанные с ними представления и окна фрейма, платформа использует два шаблона класса документа: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) для SDI-приложения и [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) приложениях MDI. Объект `CSingleDocTemplate` можно создать и сохранить один документ одного типа одновременно. Объект `CMultiDocTemplate` хранит список во множестве открытых документов одного типа.  

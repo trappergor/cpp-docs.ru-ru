@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299751"
 ---
 # <a name="c-runtime-error-r6035"></a>Ошибка времени выполнения C R6035
 Microsoft Visual C++ библиотеки времени выполнения, ошибка R6035 — Модуль в этом приложении инициализация модуля глобальный файл cookie безопасности во время активного как функция, использующая этот файл.  Вызов __security_init_cookie ранее.  

@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376142"
 ---
 # <a name="cmfccolorbar-class"></a>Класс CMFCColorBar
 `CMFCColorBar` Класс представляет закрепляемую панель элементов управления, которая может выбирать цвета в документ или приложение.  

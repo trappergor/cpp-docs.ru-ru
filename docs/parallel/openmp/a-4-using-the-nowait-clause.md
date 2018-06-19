@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689809"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4   Использование предложения nowait
 При наличии нескольких независимых циклы внутри параллельной области, можно использовать `nowait` предложение ([раздел 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) на странице 11) во избежание подразумеваемых барьера в конце `for` директивы, как показано ниже:  

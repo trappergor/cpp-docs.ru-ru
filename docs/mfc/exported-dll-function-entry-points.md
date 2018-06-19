@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343857"
 ---
 # <a name="exported-dll-function-entry-points"></a>Точки входа экспортированных функций DLL
 Экспортированных функций DLL-библиотеки, используйте [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) макрос для поддержания соответствующего глобального состояния при переходе с DLL модуль DLL вызывающему приложению.  
