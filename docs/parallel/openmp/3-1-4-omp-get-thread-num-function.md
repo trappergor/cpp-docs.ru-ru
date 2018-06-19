@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686075"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 Функция omp_get_thread_num
 `omp_get_thread_num` Функция возвращает номер потока, в его команде потока, выполняющего функции. Поток номеров лежит между 0 и **omp_get_num_threads()**-1, включительно. Главный поток команды является потоком 0.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880196"
 ---
 # <a name="resource-symbols-dialog-box"></a>Символы ресурсов - диалоговое окно
 **Символы ресурсов** диалоговое окно позволяет добавить новые символы ресурсов, изменить символы отображаются или перейти в то место в исходном коде, где используется символ.  

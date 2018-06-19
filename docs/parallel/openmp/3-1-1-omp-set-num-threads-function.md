@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688444"
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 Функция omp_set_num_threads
 `omp_set_num_threads` Функция задает по умолчанию количество потоков, используемых для последующих параллельных областей, которые задают `num_threads` предложения. Он следующий:  

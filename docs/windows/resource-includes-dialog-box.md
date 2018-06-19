@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879676"
 ---
 # <a name="resource-includes-dialog-box"></a>включения ресурсов - Диалоговое окно
 Можно использовать **включения ресурсов** диалогового окна для изменения среды в обычное рабочее расположение хранение всех ресурсов в RC-файл проекта и все [символы](../windows/symbols-resource-identifiers.md) в файле Resource.h.  

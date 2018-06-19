@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875602"
 ---
 # <a name="generic-delegates-visual-c"></a>Универсальные делегаты (Visual C++)
 Параметры универсального типа можно использовать с делегатами. Дополнительные сведения о делегатах см. в разделе [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  
