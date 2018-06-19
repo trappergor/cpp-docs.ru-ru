@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385087"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 В этом разделе описывается добавление кнопки панели инструментов, содержащей элемент управления Windows на панель инструментов. Кнопки панели инструментов MFC, необходимо [класса CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-производного класса, например [класса CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton класса](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Класса CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), или [CMFCToolBarMenuButton класса](../mfc/reference/cmfctoolbarmenubutton-class.md).  

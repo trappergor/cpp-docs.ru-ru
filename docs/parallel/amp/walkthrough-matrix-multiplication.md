@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693199"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Пошаговое руководство. Умножение матриц
 Это пошаговое руководство демонстрирует использование C++ AMP для ускорения выполнения умножение матриц. Без заполнения и полноразмерных мозаичное заполнение представлены два алгоритма.  

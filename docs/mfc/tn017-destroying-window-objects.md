@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384307"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017. Уничтожение объектов окон
 Эта заметка содержит описание использования [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) метод. Используйте этот метод, если вы хотите сделать настроенные выделение `CWnd`-производных объектов. Эта заметка также объясняется, почему следует использовать [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) уничтожить объект Windows на C++, а не `delete` оператор.  

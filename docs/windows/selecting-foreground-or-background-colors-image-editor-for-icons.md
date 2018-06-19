@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888650"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Выбор основного цвета и цвета фона (редактор изображений для значков)
 За исключением **ластика**, инструменты на **редактора изображений** инструментов рисования с текущего основного или фонового цвета при нажатии кнопки мыши влево или вправо, соответственно.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891926"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>Переключение между элементами управления диалогового окна и кодом
 В приложениях MFC вы можете дважды щелкнуть элементы управления диалоговых окон для перехода к их коду обработчика или быстро создать заглушку функции обработчика.  

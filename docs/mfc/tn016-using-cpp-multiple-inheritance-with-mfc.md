@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384092"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016. Использование множественного наследования C++ с MFC
 Эта заметка описывается использование множественного наследования (ИУП) с помощью классов Microsoft Foundation. Использование MI не требуется в MFC. MI не используется в любые классы MFC и не требуется писать библиотеки классов.  

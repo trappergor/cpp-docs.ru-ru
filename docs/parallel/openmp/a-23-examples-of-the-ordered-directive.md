@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692760"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23   Примеры директивы ordered
 Можно иметь несколько разделов упорядоченный с `for` задается с помощью `ordered` предложения. Первый пример не соответствует требованиям, так как API указывается следующее:  

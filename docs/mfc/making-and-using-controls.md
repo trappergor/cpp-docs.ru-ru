@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347011"
 ---
 # <a name="making-and-using-controls"></a>Создание и использование элементов управления
 Сделать большинство элементов управления диалоговых окон в Visual C++ [редактор диалоговых окон](../windows/dialog-editor.md). Однако можно также создать элементы управления в любой диалогового окна или окна.  

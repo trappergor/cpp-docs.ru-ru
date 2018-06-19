@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694333"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   Использование директивы flush без списка
 Следующий пример (для [раздел 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) на странице 20) отличает общих объектов, затронутых `flush` директивы без списка из общих объектов, которые не были затронуты:  

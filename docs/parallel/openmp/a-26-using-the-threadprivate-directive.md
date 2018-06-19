@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690534"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26   Использование директивы threadprivate
 Следующие примеры демонстрируют, как использовать `threadprivate` директивы ([разделе 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) на странице 23) для предоставления отдельный счетчик для каждого потока.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349272"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы управления ActiveX в MFC. Добавление стандартных методов
 Стандартный метод отличается от пользовательского метода в том, что уже реализован классом [COleControl](../mfc/reference/colecontrol-class.md). Например `COleControl` содержит функцию стандартных элементов, которая поддерживает метод обновления для элемента управления. Запись карты распределения для этого метод **DISP_STOCKFUNC_REFRESH**.  

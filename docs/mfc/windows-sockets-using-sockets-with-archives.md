@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385542"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Сокеты Windows. Использование сокетов с архивами
 В этой статье описывается [модель программирования CSocket](#_core_the_csocket_programming_model). Класс [CSocket](../mfc/reference/csocket-class.md) предоставляет поддержка сокета на более высоком уровне абстракции, чем класс [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` использует версию протокола сериализации MFC для передачи данных с объектом сокета посредством MFC [CArchive](../mfc/reference/carchive-class.md) объекта. `CSocket` предоставляет блокировку (при управлении фоновой обработки сообщений Windows) и предоставляет доступ к `CArchive`, который управляет многие аспекты связи, который необходимо сделать самостоятельно с помощью необработанных API-Интерфейс или класс `CAsyncSocket`.  

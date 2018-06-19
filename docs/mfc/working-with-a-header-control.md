@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383037"
 ---
 # <a name="working-with-a-header-control"></a>Работа с элементом управления "Заголовок"
 Простой способ использования элемента управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) работает в сочетании с элементом управления списком; см. раздел [использование CListCtrl](../mfc/using-clistctrl.md) далее в этом разделе семействе. Также можно использовать элемент управления заголовком сам по себе. MFC вызывает **InitCommonControls** для вас. Существуют следующие основные задачи.  

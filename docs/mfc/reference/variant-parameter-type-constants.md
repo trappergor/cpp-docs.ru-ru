@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379864"
 ---
 # <a name="variant-parameter-type-constants"></a>Константы типа параметра Variant
 В этом разделе перечислены новые константы, указывающие типы variant параметр предназначен для работы с классы элементов управления OLE, библиотеки классов Microsoft Foundation.  

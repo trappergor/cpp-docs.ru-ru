@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880876"
 ---
 # <a name="mutexlock-method"></a>Метод Mutex::Lock
 Ожидает, пока текущий объект или объект мьютекса, связанный с указанным дескриптором освобождает объект взаимного исключения или истечения отведенного времени ожидания.  

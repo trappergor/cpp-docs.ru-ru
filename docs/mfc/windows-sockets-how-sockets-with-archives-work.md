@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385220"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Сокеты Windows. Работа сокетов с архивами
 В этой статье объясняется, как [CSocket](../mfc/reference/csocket-class.md) объекта, [CSocketFile](../mfc/reference/csocketfile-class.md) объекта и [CArchive](../mfc/reference/carchive-class.md) объекта объединяются и упрощают отправку и получение данных с помощью Windows Сокет.  

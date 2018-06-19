@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382977"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003. Сопоставление дескрипторов Windows с объектами
 Эта заметка описывает MFC подпрограммы, которые поддерживает сопоставление Windows объекта дескрипторы объектов C++.  

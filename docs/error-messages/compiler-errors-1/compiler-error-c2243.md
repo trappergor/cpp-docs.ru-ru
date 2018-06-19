@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172593"
 ---
 # <a name="compiler-error-c2243"></a>Ошибка компилятора C2243
 Преобразование conversion type из type1 в type2 существует, но недоступно  

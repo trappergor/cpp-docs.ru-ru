@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379900"
 ---
 # <a name="run-member-function"></a>Выполнение функции-члена
 Приложение framework тратит больше всего времени в [запуска](../mfc/reference/cwinapp-class.md#run) функции-члена класса [CWinApp](../mfc/reference/cwinapp-class.md). После инициализации `WinMain` вызовы **запуска** для обработки в цикл обработки сообщений.  

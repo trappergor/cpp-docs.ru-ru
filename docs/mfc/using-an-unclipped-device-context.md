@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381014"
 ---
 # <a name="using-an-unclipped-device-context"></a>Использование необрезанного контекста устройства
 Если имеется полная уверенность, элемент управления не рисовать за пределами его клиентской прямоугольной области, можно значительно прирост скорости небольшой, но обнаруживаются, отключив вызов `IntersectClipRect` , внесенных `COleControl`. Чтобы сделать это, удалите **clipPaintDC** флаг с набором флагов, возвращенных [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Пример:  

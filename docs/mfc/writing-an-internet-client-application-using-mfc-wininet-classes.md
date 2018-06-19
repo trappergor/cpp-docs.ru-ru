@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384440"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Создание клиентских приложений в Интернете с использованием классов MFC WinInet
 Основой каждой клиентских веб-приложений является Интернет-сеанс. Реализация MFC сеансов Интернета как объекты класса [CInternetSession](../mfc/reference/cinternetsession-class.md). С помощью этого класса, можно создать один сеанс Интернета или несколько параллельных сеансов.  

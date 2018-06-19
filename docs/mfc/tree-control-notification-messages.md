@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385740"
 ---
 # <a name="tree-control-notification-messages"></a>Уведомляющие сообщения древовидного элемента управления
 Структура дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет следующие сообщения уведомления, как **WM_NOTIFY** сообщения:  

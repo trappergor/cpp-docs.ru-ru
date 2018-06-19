@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381092"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Реализация строки состояния в MFC
 Объект [CStatusBar](../mfc/reference/cstatusbar-class.md) объект является панель элементов управления со строкой панелей вывода текста. Панелей вывода используются строки сообщения, а индикаторы состояния. Примеры включают справочное сообщение строки меню, которые кратко объясните команду меню и индикаторы, которые показывают состояние SCROLL LOCK, NUM LOCK и другие ключи.  

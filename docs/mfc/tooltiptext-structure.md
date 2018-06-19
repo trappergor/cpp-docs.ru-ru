@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383436"
 ---
 # <a name="tooltiptext-structure"></a>Структура TOOLTIPTEXT
 При записи вашего [обработчик уведомлений совет средство](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), необходимо использовать `TOOLTIPTEXT` структуры. Члены `TOOLTIPTEXT` структуры являются:  

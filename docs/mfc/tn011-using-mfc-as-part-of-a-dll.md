@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384714"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011. Использование MFC как часть библиотеки DLL
 Эта заметка описывает обычные библиотеки DLL MFC, которая позволяет использовать библиотеку MFC как часть библиотеки динамической компоновки (DLL) Windows. Предполагается, что вы знакомы с библиотеки DLL Windows, а также способы их построения. Сведения о библиотеках расширения MFC, с помощью которого можно создавать расширения для библиотеки MFC, см. [версии библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md).  

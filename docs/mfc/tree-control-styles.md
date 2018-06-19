@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382041"
 ---
 # <a name="tree-control-styles"></a>Стили древовидного элемента управления
 Дерево элемента управления ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) стили определяют внешний вид элемента управления дерева. Стили начальной задается при создании элемента управления дерева. Можно извлекать и изменение стилей после создания дерева на основе [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) и [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) функции Windows, указав **GWL_STYLE** для `nIndex` параметра. Полный список стилей см. в разделе [стили окна элемента управления представления дерева](http://msdn.microsoft.com/library/windows/desktop/bb760013) в Windows SDK.  

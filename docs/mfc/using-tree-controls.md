@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384873"
 ---
 # <a name="using-tree-controls"></a>Использование элементов управления древовидного типа
 Типичное использование элемента управления дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) соответствует шаблону ниже:  

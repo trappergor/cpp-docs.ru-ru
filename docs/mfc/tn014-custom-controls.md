@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384586"
 ---
 # <a name="tn014-custom-controls"></a>TN014. Пользовательские элементы управления
 Эта заметка описывается поддержка MFC для пользовательских и самостоятельной рисования элементов управления. Он также описывает динамического создания подкласса и связь между [CWnd](../mfc/reference/cwnd-class.md) объектов и `HWND`s.  

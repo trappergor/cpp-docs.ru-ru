@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384375"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Сокеты Windows. Пример сокетов с использованием архивов
 Это статье приведен пример использования класса [CSocket](../mfc/reference/csocket-class.md). Пример использует `CArchive` объектов для сериализации данных через сокет. Обратите внимание, что это не сериализации документа или файла.  

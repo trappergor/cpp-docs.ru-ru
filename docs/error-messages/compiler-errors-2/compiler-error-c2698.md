@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233821"
 ---
 # <a name="compiler-error-c2698"></a>Ошибка компилятора C2698
 объявление using для "объявления 1" не могут сосуществовать с существующие объявление using для "объявления 2"  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343354"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Буфер обмена. Копирование и вставка данных
 В этом разделе описываются минимальные действия, необходимые для реализации копирования и вставки из буфера обмена в приложениях OLE. Рекомендуется ознакомиться с [объектов данных и источники данных (OLE)](../mfc/data-objects-and-data-sources-ole.md) разделы перед продолжением.  

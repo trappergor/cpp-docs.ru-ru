@@ -48,6 +48,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695357"
 ---
 # <a name="concurrentvector-class"></a>Класс concurrent_vector
 Класс `concurrent_vector` представляет собой класс контейнера последовательности, обеспечивающий доступ к элементам в случайном порядке. Позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  

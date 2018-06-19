@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381983"
 ---
 # <a name="slider-notification-messages"></a>Уведомляющие сообщения ползунка
 Элемент управления "ползунок" уведомляет родительского окна действий пользователя, отправляя родительского `WM_HSCROLL` или `WM_VSCROLL` сообщений, в зависимости от ориентации элемента управления "ползунок". Чтобы обработать эти сообщения, добавьте обработчики для `WM_HSCROLL` и `WM_VSCROLL` сообщений родительского окна. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) и [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) функции-члены будут передаваться код уведомления, положение ползунка и указатель на [CSliderCtrl](../mfc/reference/csliderctrl-class.md) объекта. Обратите внимание, что указатель имеет тип **CScrollBar \***  несмотря на то, что он указывает `CSliderCtrl` объекта. Может потребоваться выполнить приведение этого указателя, если необходимо работать с элементом управления "ползунок".  

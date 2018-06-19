@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691174"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Практическое руководство. Использование функции parallel_invoke для выполнения параллельных операций
 В этом примере показано, как использовать [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) алгоритм для повышения производительности программы, выполняющей несколько операций на общий источник данных. Так как нет операций не изменяет источник, они могут выполняться параллельно простым способом.  

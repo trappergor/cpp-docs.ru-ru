@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380713"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Поддержка контекстов активации в состоянии модуля MFC
 MFC создает контекст активации с помощью ресурса манифеста, предоставляемый модулем пользователя. Дополнительные сведения о создание контекстов активации см. в следующих разделах:  

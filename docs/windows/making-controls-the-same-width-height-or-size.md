@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874802"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>Выравнивание элементов управления по размеру
 Можно изменить размер группы элементов управления, исходя из размера главного элемента управления. Вы также можете [размера элемента управления на основе аналитик его заголовке](../windows/sizing-individual-controls.md).  

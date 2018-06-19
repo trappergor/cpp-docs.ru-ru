@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881157"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Практическое руководство. Обработка событий с использованием WRL
 В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для подписки и обрабатывать события объекта среды выполнения Windows.  

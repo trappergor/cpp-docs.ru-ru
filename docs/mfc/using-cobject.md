@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382302"
 ---
 # <a name="using-cobject"></a>Использование CObject
 [CObject](../mfc/reference/cobject-class.md) является корневой базовый класс для большинства библиотеки классов Microsoft Foundation (MFC). `CObject` Класс содержит множество полезных возможностей, которые требуется включить в собственных объектов программы, включая поддержку сериализации, сведения о классе во время выполнения и диагностических выходных данных объекта. Если вы наследуете класс от `CObject`, класс может использовать эти `CObject` функции.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889349"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Задание размера для поля со списком и соответствующего раскрывающегося списка
 При добавлении его в диалоговом окне можно изменить размеры поле со списком. Также можно указать размер поля раскрывающегося списка.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380166"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Параметры для CStatusBarCtrl
 По умолчанию [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) — окно состояния в нижней части родительского окна, но можно указать `CCS_TOP` стиля, чтобы они появились в верхней части клиентской области родительского окна.  

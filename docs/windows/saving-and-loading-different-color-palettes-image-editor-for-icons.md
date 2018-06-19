@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892323"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Сохранение и загрузка различных цветовых палитр (редактор изображений для значков)
 Можно сохранить и загрузить палитру цветов, которая содержит [пользовательские цвета](../windows/customizing-or-changing-colors-image-editor-for-icons.md). (По умолчанию последняя использованная палитра цветов автоматически загружается при запуске Visual Studio.)  

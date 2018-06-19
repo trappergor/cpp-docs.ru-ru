@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385395"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Пошаговое руководство. Обновление приложения MFC Scribble (часть 2)
 [Часть 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) этого пошагового руководства показано, как добавить ленту Office Fluent классической Scribble приложения. В этом разделе рассматриваются добавление панелей ленты и элементов управления, которые пользователи могут использовать вместо меню и команд.  

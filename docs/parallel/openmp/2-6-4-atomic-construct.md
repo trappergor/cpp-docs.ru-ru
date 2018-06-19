@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688132"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 Конструкция atomic
 `atomic` Директива гарантирует, что конкретное расположение в памяти обновлены атомарным образом, а не предоставляя его возможности несколько одновременных потоков записи. Синтаксис `atomic` директивы таков:  

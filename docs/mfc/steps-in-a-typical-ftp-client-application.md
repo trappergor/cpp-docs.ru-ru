@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381128"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>Шаги для организации типичного клиентского приложения FTP
 Создает обычном клиентском приложении FTP [CInternetSession](../mfc/reference/cinternetsession-class.md) и [классе CFtpConnection](../mfc/reference/cftpconnection-class.md) объекта. Обратите внимание, что эти классы MFC WinInet не контролируют, фактически параметры типа прокси-сервера; Выполняет IIS.  

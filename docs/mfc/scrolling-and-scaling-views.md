@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379272"
 ---
 # <a name="scrolling-and-scaling-views"></a>Изменение масштаба и прокрутка представлений
 MFC поддерживает представления, прокрутите список и представления, которые автоматически масштабируется по размеру окна фрейма, который отображает их. Класс `CScrollView` поддерживает оба вида представления.  

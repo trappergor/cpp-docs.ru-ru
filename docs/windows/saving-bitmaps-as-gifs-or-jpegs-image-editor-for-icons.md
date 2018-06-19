@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890194"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>Сохранение растровых изображений как изображений GIF или JPEG (редактор изображений для значков)
 При создании растрового изображения в формат растрового изображения (.bmp) создается изображение. Тем не менее, можно сохранить изображение в формате GIF или JPEG или в других графических форматов.  

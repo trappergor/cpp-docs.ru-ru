@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883532"
 ---
 # <a name="creating-a-console-application"></a>Создание консольного приложения
 С помощью мастера приложений Win32 является самым простым способом создания консольного приложения Win32.  
