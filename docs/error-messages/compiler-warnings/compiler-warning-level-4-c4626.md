@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295140"
 ---
 # <a name="compiler-warning-level-4-c4626"></a>Предупреждение компилятора (уровень 4) C4626
 "производный класс": не удалось создать оператор присваивания, так как оператор присваивания для базового класса недоступен или удален  

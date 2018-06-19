@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131245"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Практическое руководство. Запись данных в текстовый файл (C++/CLI)
 В следующем примере кода показано, как для создания текстового файла и запись в него с помощью текста <xref:System.IO.StreamWriter> класс, который определен в <xref:System.IO> пространства имен. <xref:System.IO.StreamWriter> Конструктор принимает имя файла, который должен быть создан. Если файл существует, он будет перезаписан (если не передать значение True в качестве второго <xref:System.IO.StringWriter> аргумента конструктора).  

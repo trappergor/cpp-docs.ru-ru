@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134489"
 ---
 # <a name="modulus-stlclr"></a>modulus (STL/CLR)
 Класс шаблона описывает функтор, при вызове возвращает остаток от деления второй первого аргумента. Она используется укажите объект функции, с точки зрения его типа аргумента.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139765"
 ---
 # <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Практическое руководство. Преобразование типа System::String к wchar_t* или char*
 Можно использовать `PtrToStringChars` в Vcclr.h преобразовать <xref:System.String> в машинный код `wchar_t *` или `char *`.  Это всегда возвращает указатель на расширенный Юникода, поскольку является внутренним форматом строк CLR. Затем можно преобразовать из расширенных, как показано в следующем примере.  

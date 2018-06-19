@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373199"
 ---
 # <a name="toolbar-control-styles"></a>Стили элемента управления панели инструментов
 [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) имеет набор стилей флагов, определяющих внешний вид и поведение кнопки. Сочетание этих флагов можно задать путем вызова [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). В этом разделе перечислены значения флагов стилей и их значений.  

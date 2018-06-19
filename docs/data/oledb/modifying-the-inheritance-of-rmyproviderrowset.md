@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106236"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Изменение порядка наследования класса RMyProviderRowset
 Чтобы добавить `IRowsetLocate` интерфейсом пример простого поставщика только для чтения, измените порядок наследования класса **RMyProviderRowset**. Изначально **RMyProviderRowset** наследует от `CRowsetImpl`. Необходимо изменить его, чтобы наследовать от **CRowsetBaseImpl**.  

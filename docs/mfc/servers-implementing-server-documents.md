@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380280"
 ---
 # <a name="servers-implementing-server-documents"></a>Серверы. Реализация документов сервера
 В этой статье описаны шаги необходимо выполнить для успешной реализации серверного документа, если вы не указали параметр OLE-сервера в мастере приложений.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383166"
 ---
 # <a name="working-with-a-tab-control"></a>Работа с элементом управления "Вкладка"
 Самый простой способ использования элемента управления tab ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), добавив его в ресурс шаблона диалоговых окон в редакторе диалогового окна. Также можно использовать набор вкладок сам по себе. MFC вызывает **InitCommonControls** для вас. Существуют следующие основные задачи.  

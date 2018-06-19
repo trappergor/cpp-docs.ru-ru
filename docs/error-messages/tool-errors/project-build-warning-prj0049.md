@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319814"
 ---
 # <a name="project-build-warning-prj0049"></a>Предупреждение при построении проекта PRJ0049
 Упоминаемого целевого "\<ссылка >" требуется платформа .NET Framework \<MinFrameworkVersion > и не сможет запуститься на целевой платформы этого проекта  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169661"
 ---
 # <a name="compiler-error-c2207"></a>Ошибка компилятора C2207
 member: член шаблона класса не может получать тип функции  

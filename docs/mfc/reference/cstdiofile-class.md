@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374992"
 ---
 # <a name="cstdiofile-class"></a>Класс CStdioFile
 Представляет файл потока среды выполнения C, как открытые с помощью функции времени выполнения [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  

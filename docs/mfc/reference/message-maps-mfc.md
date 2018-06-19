@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371716"
 ---
 # <a name="message-maps-mfc"></a>Схемы сообщений (MFC)
 Ссылки в этом разделе перечислены все [макросы сопоставления сообщений](../../mfc/reference/message-map-macros-mfc.md) и все [CWnd](../../mfc/reference/cwnd-class.md) прототипов функции записи схемы сообщений вместе с соответствующего члена:  

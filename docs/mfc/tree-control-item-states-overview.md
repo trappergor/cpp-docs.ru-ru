@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383153"
 ---
 # <a name="tree-control-item-states-overview"></a>Общие сведения о состояниях элемента древовидного элемента управления
 Каждый элемент в виде дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) находится в текущем состоянии. Например элемент можно выбрать, отключенные, развернутыми и т. д. В большинстве случаев дерево автоматически устанавливает состояние элемента в соответствии с действиями пользователя, такие как выбор элемента. Тем не менее, можно также задать состояние элемента с помощью [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) функция-член и получить текущее состояние элемента с помощью [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) функции-члена. Полный список состояний элементов см. в разделе [дерево управления константы](http://msdn.microsoft.com/library/windows/desktop/bb759985) в Windows SDK.  

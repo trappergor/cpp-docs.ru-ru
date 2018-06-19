@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129373"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>Практическое руководство. Чтение данных из двоичного файла (C++/CLI)
 В следующем примере кода показано, как считывать двоичные данные из файла, с помощью двух классов из <xref:System.IO?displayProperty=fullName> пространство имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> представляет фактический файл. <xref:System.IO.BinaryReader> предоставляет интерфейс для потока, который разрешает двоичный доступ.  

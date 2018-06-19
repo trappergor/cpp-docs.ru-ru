@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380000"
 ---
 # <a name="reflected-window-message-ids"></a>Отраженные идентификаторы сообщений окон
 Подкласс быстрый способ создания элемента управления ActiveX или другие специальные управляющие — это окно. Дополнительные сведения см. в разделе [элементы управления MFC ActiveX: Создание подкласса элемента управления Windows Forms](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131310"
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>Управляемые типы и функция main (C++/CLI)
 При написании приложения с использованием **/CLR**, аргументы **main()** функция не может иметь управляемый тип.  

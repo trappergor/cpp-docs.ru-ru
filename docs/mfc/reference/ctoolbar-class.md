@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376370"
 ---
 # <a name="ctoolbar-class"></a>CToolBar-класс
 Панели элементов управления, имеющие строку растровых кнопок и необязательные разделители.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109603"
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент больше, чем второй. Она используется укажите объект функции, с точки зрения его типа аргумента.  

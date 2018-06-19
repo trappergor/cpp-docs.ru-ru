@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381515"
 ---
 # <a name="tree-control-item-labels"></a>Метки элементов древовидного элемента управления
 Обычно указывается текст метки элемента при добавлении элемента в элементе управления иерархического представления ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` Можно передать функции-члена [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) структура, определяющая свойства элемента, включая строка, содержащая текст метки. `InsertItem` есть несколько перегрузок, которые могут быть вызваны с различными сочетаниями параметров.  

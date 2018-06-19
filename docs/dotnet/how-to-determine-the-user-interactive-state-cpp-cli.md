@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127309"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>Практическое руководство. Определение интерактивного состояния пользователя (C++/CLI)
 В следующем примере кода показано, как определить, выполняется ли код в контексте, взаимодействия с пользователем. Если <xref:System.Environment.UserInteractive%2A> имеет значение false, то код выполняется как процесс службы или из веб-приложения, в этом случае вам не следует пытаться взаимодействовать с пользователем.  

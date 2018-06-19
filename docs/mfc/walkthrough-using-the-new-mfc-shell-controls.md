@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385100"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Пошаговое руководство. Использование новых элементов управления оболочки MFC
 В этом пошаговом руководстве вы создадите приложения вида проводника. Вы создадите окна, содержащего две области. В левой области будет содержаться [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) объекта, который отображает рабочий стол в иерархическом представлении. В правой области будет содержаться [объект CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , отображение файлов в папке, выбранной в левой области.  

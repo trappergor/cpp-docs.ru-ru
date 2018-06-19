@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130806"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Практическое руководство. Запись данных в реестр Windows (C++/CLI)
 Следующий пример кода использует <xref:Microsoft.Win32.Registry.CurrentUser> ключ для создания записи экземпляра <xref:Microsoft.Win32.RegistryKey> соответствующий класс **программного обеспечения** ключа. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> Метод затем используется для создания нового ключа и добавления в пары "ключ значение".  

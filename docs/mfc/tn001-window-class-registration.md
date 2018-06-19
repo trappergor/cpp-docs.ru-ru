@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383858"
 ---
 # <a name="tn001-window-class-registration"></a>TN001. Регистрация класса Window
 Эта заметка описывает MFC подпрограммы, которые регистрируют специальные [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es, необходимые для Microsoft Windows. Определенные `WNDCLASS` описаны атрибуты, используемые MFC и Windows.  

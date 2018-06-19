@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385197"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>Типобезопасный доступ к элементам управления с использованием мастеров кода
 Если вы знакомы с функциями DDX, можно использовать свойства элемента управления в [член мастер добавления переменной-](../ide/add-member-variable-wizard.md) для создания строго типизированного доступа. Этот подход проще, чем создание элементов управления без мастеров кода.  

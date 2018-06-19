@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383449"
 ---
 # <a name="slider-control-member-functions"></a>Функции-члены элемента управления "Ползунок"
 Приложение может вызвать ползунок функции-члены элемента управления для получения сведений об элементе управления "ползунок" ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) и изменить его характеристики.  

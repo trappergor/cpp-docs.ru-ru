@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358486"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 При написании приложения, создается один [CWinApp](../../mfc/reference/cwinapp-class.md)-производного объекта. В некоторых случаях требуется получить сведения об этом объекте из вне `CWinApp`-производного объекта. Или может потребоваться доступ к объектам другие глобальные «диспетчер».
