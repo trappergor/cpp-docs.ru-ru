@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368763"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>Определение подходящего метода экспорта
 Вы можете экспортировать функции одним из двух способов — DEF-файла или `__declspec(dllexport)` ключевое слово. Чтобы решить, каким образом является наиболее подходящим для библиотеки DLL, задайте себе следующие вопросы:  

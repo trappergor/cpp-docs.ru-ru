@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366449"
 ---
 # <a name="ccombstr-class"></a>CComBSTR-класс
 Этот класс является оболочкой для `BSTR`s.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111254"
 ---
 # <a name="record-views--mfc-data-access"></a>Представления записей (доступ к данным MFC)
 Этот раздел относится только к классам ODBC библиотеки MFC. Сведения о представлениях записей OLE DB см. в разделе [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) и [с помощью OLE DB для представлений записей](../data/oledb/using-ole-db-record-views.md).  

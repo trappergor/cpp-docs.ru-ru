@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366397"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 Представляет относительного времени временной интервал.  

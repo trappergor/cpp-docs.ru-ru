@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364223"
 ---
 # <a name="ccomaggobject-class"></a>Класс CComAggObject
 Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) интерфейс для вычисляемого объекта. По определению вычисляемого объекта внутри внешнего объекта. `CComAggObject` Класс аналогичен [CComObject класса](../../atl/reference/ccomobject-class.md), за исключением того, что он предоставляет интерфейс, который напрямую доступны для внешних клиентов.  

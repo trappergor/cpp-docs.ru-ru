@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105248"
 ---
 # <a name="findend-stlclr"></a>find_end (STL/CLR)
 Ищет в диапазоне последнюю подпоследовательность, совпадающую с заданной последовательностью, или эквивалентной согласно условию, заданному двоичным предикатом.  

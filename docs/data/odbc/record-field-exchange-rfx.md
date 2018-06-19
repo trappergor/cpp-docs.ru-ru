@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091658"
 ---
 # <a name="record-field-exchange-rfx"></a>Обмен данными полями записей (RFX)
 Классы баз данных MFC ODBC автоматизируют перемещение данных между источника данных и [записей](../../data/odbc/recordset-odbc.md) объекта. При наследовании от класса [CRecordset](../../mfc/reference/crecordset-class.md) и выборка строк не используется, данные передаются с помощью механизма обмена (полями записей RFX) поле записи.  

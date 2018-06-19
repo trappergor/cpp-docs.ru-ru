@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128658"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>Практическое руководство. Перебор элементов определенной пользователем коллекции с использованием цикла for each
 Класс может быть управляемой коллекции ему функция GetEnumerator отличным от private, которая возвращает дескриптор перечислителя класса или интерфейса.  Класс перечислителя должно содержать объявление функции нестатическая MoveNext и текущего свойства.  

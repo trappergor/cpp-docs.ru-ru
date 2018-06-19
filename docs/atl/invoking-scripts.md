@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362275"
 ---
 # <a name="invoking-scripts"></a>Вызов скриптов
 [Использование подстановочных параметров (препроцессор регистратора)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) рассматриваются замены карты и указывается метод регистратора **AddReplacement**. Регистратор имеет восемь других методов, определенных в построении сценариев, и все описаны в следующей таблице.  

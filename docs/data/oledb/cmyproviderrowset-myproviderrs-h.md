@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097345"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 Мастер создает запись для объекта набора строк. В данном случае файл называется `CMyProviderRowset`. `CMyProviderRowset` Класс наследует класс поставщика OLE DB с именем `CRowsetImpl`, который реализует интерфейсы, необходимые для объекта набора строк. В следующем коде показано цепочку наследования для `CRowsetImpl`:  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104526"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Заголовок STL/CLR `<cliext/adapter>` определяет два класса шаблона (`collection_adapter` и `range_adapter`) и функцию шаблона `make_collection`.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135083"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>Практическое руководство. Перечисление типов данных в сборках с помощью отражения (C++/CLI)
 В следующем коде показано перечисление открытых типов и членов с помощью <xref:System.Reflection>.  

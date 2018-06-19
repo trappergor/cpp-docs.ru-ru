@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110616"
 ---
 # <a name="generaten-stlclr"></a>generate_n (STL/CLR)
 Присваивает значения, создаваемые объектом функции, указанному количеству элементов в диапазон и возвращается на позицию, следующую за последним присвоенным значением.  

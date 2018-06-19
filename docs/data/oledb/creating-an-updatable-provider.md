@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098645"
 ---
 # <a name="creating-an-updatable-provider"></a>Создание поставщика с возможностью записи
 Visual C++ поддерживает поставщики, которые могут обновлять (запись) в хранилище данных. В этом разделе описывается создание обновляемых поставщиков с помощью шаблонов OLE DB.  

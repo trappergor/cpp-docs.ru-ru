@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370671"
 ---
 # <a name="res-files-as-linker-input"></a>RES-файлы в качестве входных файлов компоновщика
 При компоновке программы можно указать RES-файл. RES-файл создается компилятором ресурсов (RC). LINK автоматически преобразует RES-файлы в формат COFF. Средство CVTRES.exe должен быть в том же каталоге, что и LINK.exe, или в каталоге, указанном в переменной среды PATH.  

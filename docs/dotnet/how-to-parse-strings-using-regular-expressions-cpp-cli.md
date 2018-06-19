@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131102"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Практическое руководство. Анализ строк с помощью регулярных выражений (C++/CLI)
 В следующем примере кода демонстрируется простой анализ строки с помощью <xref:System.Text.RegularExpressions.Regex> класса в <xref:System.Text.RegularExpressions?displayProperty=fullName> пространства имен. Строка, содержащая несколько типов разделителей слов создается. Строка анализируется с использованием <xref:System.Text.RegularExpressions.Regex> класса вместе с <xref:System.Text.RegularExpressions.Match> класса. Затем каждое слово в предложении выводится отдельно.  

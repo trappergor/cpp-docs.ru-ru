@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134443"
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Практическое руководство. Маршалинг VARIANT для ADO.NET (C++/CLI)
 Показано, как добавить собственный `VARIANT` в базу данных, а также каким образом следует маршалировать <xref:System.Object?displayProperty=fullName> из базы данных в собственную `VARIANT`.  

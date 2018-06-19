@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107943"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Динамично определяемые столбцы, возвращенные объекту-получателю
 PROVIDER_COLUMN_ENTRY в обычном режиме обработки **IColumnsInfo::GetColumnsInfo** вызова. Тем не менее поскольку объект-получатель может выбрать использование закладок, поставщик необходимо изменять столбцы, возвращенные в зависимости от того, является ли потребитель запрашивает закладку.  

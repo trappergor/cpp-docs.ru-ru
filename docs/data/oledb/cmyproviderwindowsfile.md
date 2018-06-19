@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097930"
 ---
 # <a name="cmyproviderwindowsfile"></a>Класс CMyProviderWindowsFile
 Мастер создает класс, содержащий одну строку данных. в этом случае вызывается `CMyProviderWindowsFile`. В следующем коде для `CMyProviderWindowsFile` — созданный мастером и выводит все файлы в каталоге с помощью **WIN32_FIND_DATA** структуры. `CMyProviderWindowsFile` наследует от **WIN32_FIND_DATA** структуры:  

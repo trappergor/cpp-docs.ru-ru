@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374987"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Предоставление информации о типах во время выполнения)
 Добавление кода для проверки типов объектов во время выполнения.  

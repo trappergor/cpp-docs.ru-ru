@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363588"
 ---
 # <a name="csacl-class"></a>Класс CSacl
 Этот класс является оболочкой для структуры системного списка управления ДОСТУПОМ (список управления доступом системы).  
