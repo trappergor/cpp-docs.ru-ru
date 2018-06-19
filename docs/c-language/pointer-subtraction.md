@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383737"
 ---
 # <a name="pointer-subtraction"></a>Вычитание указателей
 **ANSI 3.3.6, 4.1.1** Тип целого числа, необходимый для сохранения различия между двумя указателями на элементы одного массива, **ptrdiff_t**  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365498"
 ---
 # <a name="ctokengroups-class"></a>Класс CTokenGroups
 Этот класс является оболочкой для **TOKEN_GROUPS** структуры.  

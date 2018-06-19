@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383232"
 ---
 # <a name="including-quoted-filenames"></a>Включение имен файлов в кавычках
 **ANSI 3.8.2** Поддержка заключенных в кавычки имен для включаемых файлов исходного кода  

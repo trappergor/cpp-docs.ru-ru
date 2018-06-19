@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361906"
 ---
 # <a name="ipropertypage2impl-class"></a>Класс IPropertyPage2Impl
 Этот класс реализует **IUnknown** и наследует реализация по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).  
