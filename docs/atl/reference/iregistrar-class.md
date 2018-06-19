@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363756"
 ---
 # <a name="iregistrar-interface"></a>Интерфейс IRegistrar
 Этот интерфейс определяется см и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   

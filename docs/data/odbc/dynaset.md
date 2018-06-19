@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092322"
 ---
 # <a name="dynaset"></a>Динамический набор
 В этом разделе описываются динамические подмножества данных и описывает их [доступности](#_core_availability_of_dynasets).  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096929"
 ---
 # <a name="cenumeratoropen"></a>CEnumerator::Open
 Привязывает моникер для перечислителя, если один указано, а затем извлекает набор строк для перечислителя путем вызова [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx).  

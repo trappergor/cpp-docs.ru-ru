@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096331"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 Наследует от **DBPROPSET** структуры и добавляет конструктор, который инициализирует ключевых полей и `AddProperty` доступа к методу.  

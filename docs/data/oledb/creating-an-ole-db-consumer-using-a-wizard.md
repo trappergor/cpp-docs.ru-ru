@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097004"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Создание объекта-получателя OLE DB с помощью мастера
 Описано, как использовать мастер проектов ATL и Мастер потребителя ATL OLE DB для создания объекта-получателя OLE DB-шаблоны и затем изменить основной код консольного приложения, для получения и отображения данных из таблицы базы данных.  

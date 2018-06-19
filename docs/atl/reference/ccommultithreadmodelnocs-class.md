@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364197"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Класс CComMultiThreadModelNoCS
 `CComMultiThreadModelNoCS` Предоставляет методы поточно ориентированного увеличивать и уменьшать значение переменной, без блокировки критической секции или разблокирование функциональные возможности.  

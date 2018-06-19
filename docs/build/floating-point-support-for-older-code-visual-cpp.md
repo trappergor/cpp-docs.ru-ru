@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367164"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Поддержка плавающей запятой для устаревшего кода (Visual C++)
 MMX и регистры с плавающей запятой стека (MM0-MM7/ST0-ST7) сохраняются между переключений контекста.  Нет явного соглашение о вызовах для этих регистров.  Запрещено использование этих регистров в коде режима ядра.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365006"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>Класс IOleInPlaceObjectWindowlessImpl
 Этот класс реализует **IUnknown** и предоставляет методы, позволяющие неоконным получать сообщения окна и участвовать в операции перетаскивания и вставки.  

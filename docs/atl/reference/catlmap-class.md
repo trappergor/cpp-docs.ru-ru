@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366301"
 ---
 # <a name="catlmap-class"></a>Класс CAtlMap
 Этот класс предоставляет методы для создания и управления объекта map.  
