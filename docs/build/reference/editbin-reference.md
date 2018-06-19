@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372312"
 ---
 # <a name="editbin-reference"></a>Справочник ЕDITBIN
 Двоичный редактор файла COFF корпорации Майкрософт (программа EDITBIN. (EXE) изменяет двоичные файлы общих объекта файла формат COFF. EDITBIN можно использовать для изменения объектных файлов, исполняемых файлов и библиотек динамической компоновки (DLL).  

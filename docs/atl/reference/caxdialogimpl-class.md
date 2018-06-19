@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365081"
 ---
 # <a name="caxdialogimpl-class"></a>Класс CAxDialogImpl
 Этот класс реализует диалоговое окно (модальные и немодальные), на котором размещены элементы управления ActiveX.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390103"
 ---
 # <a name="struct-unwindcode"></a>Структура UNWIND_CODE
 В массиве кодов очистки используется для записи последовательности операций в прологе, влияющие на неизменяемые регистры и RSP. Каждый элемент кода имеет следующий формат:  

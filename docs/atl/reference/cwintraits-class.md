@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362512"
 ---
 # <a name="cwintraits-class"></a>Класс CWinTraits
 Этот класс предоставляет метод для стандартизации стили, используемые при создании объекта окна.  

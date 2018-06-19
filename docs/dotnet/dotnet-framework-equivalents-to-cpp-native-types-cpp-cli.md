@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110942"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>Эквиваленты собственным типам C++ в .NET Framework (C++/CLI)
 В следующей таблице показаны ключевые слова для встроенных типов Visual C++, которые являются псевдонимами предопределенных типов в **системы** пространства имен.  

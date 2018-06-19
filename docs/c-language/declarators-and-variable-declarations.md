@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390610"
 ---
 # <a name="declarators-and-variable-declarations"></a>Деклараторы и объявления переменных
 В остальной части данного раздела описывается форма и значение объявлений для переменных типов, включенных в этот список. В частности, в остальных разделах объясняется, как объявить следующие объекты.  

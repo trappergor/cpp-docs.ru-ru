@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368061"
 ---
 # <a name="importing-into-an-application"></a>Импорт в приложение
 Функции можно импортировать в приложение с помощью двух методов:  

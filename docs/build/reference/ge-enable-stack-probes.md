@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375302"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (включить проверку стека)
 Включает стековые зонды для каждого вызова функции, для которой требуется хранилище для локальных переменных.  

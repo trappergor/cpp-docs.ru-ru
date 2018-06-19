@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373726"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Задание библиотек DLL с отложенной загрузкой
 Можно указать, какие библиотек DLL с отложенной загрузки с [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` компоновщика. Если вы не планируете использовать собственную версию вспомогательной функции, необходимо также связать программу с библиотекой delayimp.lib (для классических приложений) или dloadhelper.lib (для приложений Магазина).  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361818"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Операции CString, связанные со строками в стиле C
 Объект [CString](../atl-mfc-shared/using-cstring.md) объект содержит символьных строковых данных. `CString` наследует набор [методы и операторы](../atl-mfc-shared/reference/cstringt-class.md) , определенные в шаблоне класса [CStringT](../atl-mfc-shared/reference/cstringt-class.md) для работы со строковыми данными. (`CString` — `typedef` , специализирующейся `CStringT` для работы с типом символьных данных, `CString` поддерживает.)  

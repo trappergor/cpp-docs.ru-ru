@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378237"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (размещение отладочной информации в объектном файле)
 Включить полный отладочную информацию во всех объектных файлах, созданного из файла предкомпилированного заголовка (PCH) при использовании с [/Yc](../../build/reference/yc-create-precompiled-header-file.md) и [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) параметры. Не рекомендуется.  

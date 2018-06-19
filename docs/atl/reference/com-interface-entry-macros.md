@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366592"
 ---
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
  Эти макросы ввести интерфейсы объекта в его сопоставления COM, чтобы они могли быть доступны для `QueryInterface`. Порядок записей в карте COM является интерфейсы заказа будет проверяться соответствие **IID** во время `QueryInterface`.  

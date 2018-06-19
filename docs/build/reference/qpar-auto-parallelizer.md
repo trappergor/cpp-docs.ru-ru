@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375692"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (автоматический параллелизатор)
 Включает [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) функции компилятора для автоматически параллелизации циклов в коде.  

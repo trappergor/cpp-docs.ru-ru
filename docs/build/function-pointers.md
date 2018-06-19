@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367151"
 ---
 # <a name="function-pointers"></a>Указатели функций
 Указатели на функции — это просто указатели на метку соответствующей функции. Не предусмотрены требований к оглавлению для указателей на функции.  

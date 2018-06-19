@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366423"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Агрегирование и макросы фабрики класса
 Эти макросы обеспечивают способы управления статистической обработки и объявления фабрик классов.  

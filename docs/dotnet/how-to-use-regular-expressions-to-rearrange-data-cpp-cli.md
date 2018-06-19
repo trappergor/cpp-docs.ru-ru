@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130868"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Практическое руководство. Использование регулярных выражений для изменения порядка данных (C++/CLI)
 В следующем примере кода показано, как поддержка регулярных выражений .NET Framework можно использовать для изменения порядка или формата данных. Следующий пример кода использует <xref:System.Text.RegularExpressions.Regex> и <xref:System.Text.RegularExpressions.Match> классы для извлечения имени и фамилии из строки и отображения этих имен элементов в обратном порядке.  

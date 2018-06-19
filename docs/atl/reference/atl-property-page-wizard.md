@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359786"
 ---
 # <a name="atl-property-page-wizard"></a>Мастер страницы свойств ATL
 Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL. Страницы свойств ATL предоставляет пользовательский интерфейс для настройки свойств (или вызова методов) одного или нескольких COM-объектов.  

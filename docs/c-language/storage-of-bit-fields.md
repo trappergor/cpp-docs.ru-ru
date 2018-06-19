@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385049"
 ---
 # <a name="storage-of-bit-fields"></a>Хранение битовых полей
 **ANSI 3.5.2.1** Порядок назначения битовых полей в целом числе  

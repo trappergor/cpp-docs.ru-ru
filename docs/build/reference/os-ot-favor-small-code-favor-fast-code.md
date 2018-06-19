@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378913"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (приоритет размера кода или скорости кода)
 Сводит к минимуму или максимизирует размер exe и DLL.  

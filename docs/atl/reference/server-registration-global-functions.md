@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364709"
 ---
 # <a name="server-registration-global-functions"></a>Глобальные функции для регистрации сервера
 Эти функции обеспечивают поддержку для регистрации и отмены регистрации серверных объектов в карте объектов.  

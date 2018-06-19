@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380606"
 ---
 # <a name="stack-allocation"></a>Выделение памяти в стеке
 В прологе функции несет ответственность за выделение памяти в стеке для локальных переменных, сохраняемые регистры, параметров стека и регистра.  

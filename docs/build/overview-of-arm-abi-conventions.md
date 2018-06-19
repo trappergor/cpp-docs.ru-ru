@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379098"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Обзор соглашений ABI ARM
 Двоичный интерфейс приложения (ABI) для кода, скомпилированного для Windows на процессорах ARM, основан на стандартном встроенном двоичном интерфейсе приложения ARM. В этой статье указаны различия между системой Windows на устройствах ARM и стандартной системой. Дополнительные сведения о стандартных встроенном двоичном интерфейсе приложения ARM см. в разделе [приложения двоичного интерфейса (ABI) для архитектуры ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

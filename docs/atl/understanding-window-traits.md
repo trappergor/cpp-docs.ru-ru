@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362372"
 ---
 # <a name="understanding-window-traits"></a>Основные сведения об окне признаки
 Окно признаки классы предоставляют простой способ для стандартизации стили, используемые для создания объекта ATL окна. Признаки окна могут использоваться в качестве параметров шаблона, [CWindowImpl](../atl/reference/cwindowimpl-class.md) и другие классы окон ATL как способа предоставления стили окна на уровне класса по умолчанию.  

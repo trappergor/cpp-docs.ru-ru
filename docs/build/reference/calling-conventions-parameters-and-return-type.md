@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372205"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Соглашения о вызовах, параметры и тип возвращаемого значения
 Прототип вспомогательной подпрограммы:  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422180"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Время обработки исключений. Общие сведения
 Обработчик завершения выполняется независимо от того, как завершается блок инструкции `__try`. Причины включают выход из блока `__try`, инструкцию `longjmp`, которая передает контроль за пределы блока, а также освобождение стека из-за обработки исключения.  

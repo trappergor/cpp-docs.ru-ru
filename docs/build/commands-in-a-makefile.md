@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366878"
 ---
 # <a name="commands-in-a-makefile"></a>Команды в файле makefile
 Описание блока или определение правила указывает блок команд для выполнения, если зависимость является устаревшей. NMAKE отображается каждая команда перед запуском, если/s, **. АВТОМАТИЧЕСКАЯ**, **! CMDSWITCHES**, или использовать @. NMAKE ищет поиск правила вывода, если блок описания должен следовать блок команд.  

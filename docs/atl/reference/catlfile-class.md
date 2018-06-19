@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366111"
 ---
 # <a name="catlfile-class"></a>Класс CAtlFile
 Этот класс предоставляет тонкую оболочку вокруг Windows API обработки файлов.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389888"
 ---
 # <a name="byte-and-wide-streams"></a>Байты и широкие потоки
 Байтовый поток обрабатывает файл как последовательность байтов. В рамках программы поток передает эту последовательность байтов в неизменном виде.  

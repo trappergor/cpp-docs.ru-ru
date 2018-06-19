@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361731"
 ---
 # <a name="cdefaultchartraits-class"></a>Класс CDefaultCharTraits
 Этот класс предоставляет два статические функции для преобразования символов в верхний или нижний регистр.  

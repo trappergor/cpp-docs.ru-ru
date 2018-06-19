@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373170"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Распространенные проблемы, возникающие при создании построений выпуска
 Во время разработки обычно построение и тестирование отладочного построения проекта. При создании приложения для сборки выпуска, может возникнуть нарушение прав доступа.  

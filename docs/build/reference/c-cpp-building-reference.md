@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375488"
 ---
 # <a name="cc-building-reference"></a>Ссылка на сборку C/C++
 Visual C++ предоставляет два способа построения программ C/C++. Самым простым (и наиболее распространенным) способом является [сборки в среде разработки Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Другим способом является [построение из командной строки с помощью средства командной строки](../../build/building-on-the-command-line.md). В любом случае можно создать исходные файлы с помощью редактора источника Visual C++ или редактора стороннего по своему усмотрению.  

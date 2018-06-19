@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379202"
 ---
 # <a name="overview-of-lib"></a>Общие сведения о LIB
 LIB создает стандартные библиотеки, библиотеки импорта и экспорта файлов можно использовать с [ССЫЛКУ](../../build/reference/linker-options.md) при сборке программы. LIB запускается из командной строки.  

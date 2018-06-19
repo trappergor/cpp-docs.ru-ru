@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372660"
 ---
 # <a name="dumpbin-reference"></a>Справочник DUMPBIN
 Дампер двоичных файлов COFF корпорации Майкрософт (программа DUMPBIN. (EXE) отображает сведения о распространенных объекта файла формат COFF двоичных файлов. Можно использовать DUMPBIN для просмотра объекта COFF-файлы, стандартных библиотек объектов COFF, исполняемых файлов и библиотек динамической компоновки (DLL).  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368839"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Импорт в приложение с помощью __declspec(dllimport)
 Говорят, что программа, которая использует открытые символы, определенные библиотекой DLL их импортировать. При создании файлов заголовка для приложений, использующих библиотеки DLL для сборки, используйте **__declspec(dllimport)** для объявления открытых символов. Ключевое слово **__declspec(dllimport)** работает ли экспортировать DEF-файлы или с **__declspec(dllexport)** ключевое слово.  

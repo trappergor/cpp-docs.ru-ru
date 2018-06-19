@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128271"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>Практическое руководство. Проверка версии Windows (C++/CLI)
 В следующем примере кода показано, как получить сведения о платформе и версии текущей операционной системы. Эти сведения хранятся в <xref:System.Environment.OSVersion%2A?displayProperty=fullName> свойство и состоит из перечисление, описывающее версии Windows, в общем и <xref:System.Environment.Version%2A> , содержащий точный сборки операционной системы.  

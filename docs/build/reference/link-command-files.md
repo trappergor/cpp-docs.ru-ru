@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375289"
 ---
 # <a name="link-command-files"></a>Командные файлы LINK
 Аргументы командной строки можно передать ССЫЛКУ в виде командный файл. Чтобы задать командный файл для компоновщика, используйте следующий синтаксис:  

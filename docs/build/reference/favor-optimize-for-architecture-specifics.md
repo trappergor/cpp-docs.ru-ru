@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376225"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (оптимизация для особенностей архитектуры)
 **/ favor:** `option` создает код, оптимизированный для конкретной архитектуры или для специфики микроархитектур в архитектурах Intel и AMD.  

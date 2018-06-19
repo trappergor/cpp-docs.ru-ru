@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374795"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (принудительное выполнение синхронных записей PDB)
 Обеспечивает записей в файле базы данных (PDB) программы, созданные [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) или [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— для сериализации через MSPDBSRV. EXE-ФАЙЛА.  

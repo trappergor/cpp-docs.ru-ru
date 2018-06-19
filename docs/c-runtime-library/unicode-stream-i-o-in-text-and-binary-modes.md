@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409057"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>Ввод-вывод в поток в кодировке Юникод в текстовом и двоичном режиме
 

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365943"
 ---
 # <a name="catltransactionmanager-class"></a>Класс catltransactionmanager.
 Catltransactionmanager класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).  

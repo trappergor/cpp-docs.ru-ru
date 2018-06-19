@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356583"
 ---
 # <a name="cstring-semantics"></a>Семантика CString
 Несмотря на то что [CString](../atl-mfc-shared/reference/cstringt-class.md) объекты являются динамические, может увеличиваться, они действуют как простые классы и встроенные типы-примитивы. Каждый `CString` объект представляет уникальное значение. `CString` объекты следует рассматривать как фактические строки, а не как указатели на строки.  
