@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354443"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>Практическое руководство. Создание типобезопасных коллекций
 В этой статье объясняется, как делать строго типизированные коллекции, для собственных типов данных. Ниже приведен список разделов.  

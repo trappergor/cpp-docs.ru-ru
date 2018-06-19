@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695763"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений UWP
 В этом документе описываются некоторые ключевые аспекты, которые следует учитывать при использовании класса задачи для создания асинхронных операций на основе Windows ThreadPool в приложении универсальной среды выполнения Windows (UWP).  

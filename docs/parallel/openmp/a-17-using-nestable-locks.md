@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689913"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   Использование вкладываемых блокировок
 Следующий пример (для [разделе 3.2](../../parallel/openmp/3-2-lock-functions.md) на странице 41) показано, как блокировку, которая может использоваться для синхронизации обновлений для всей структуры и один из его членов.  

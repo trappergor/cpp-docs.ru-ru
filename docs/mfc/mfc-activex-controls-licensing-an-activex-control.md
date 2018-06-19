@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353939"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Элементы управления ActiveX в MFC. Лицензирование элемента управления ActiveX
 Поддержки лицензирования, дополнительный компонент, элементов управления ActiveX, можно контролировать, кто может использовать или распространять элемент управления. (Дополнительные сведения о вопросы лицензирования см. вопросы лицензирования в [обновление существующего элемента управления ActiveX](../mfc/upgrading-an-existing-activex-control.md).)  

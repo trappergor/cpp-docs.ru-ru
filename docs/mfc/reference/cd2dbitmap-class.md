@@ -66,6 +66,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354286"
 ---
 # <a name="cd2dbitmap-class"></a>Класс CD2DBitmap
 Программа-оболочка для ID2D1Bitmap.  

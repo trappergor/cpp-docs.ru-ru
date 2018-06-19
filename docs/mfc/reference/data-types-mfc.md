@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375357"
 ---
 # <a name="data-types-mfc"></a>Типы данных (MFC)
 В этом разделе перечислены типы данных, наиболее часто используются в библиотеке Microsoft Foundation Class. Большинство типов данных являются такие же, как в платформы Development Kit (SDK), а другие представляют собой уникальные для MFC.  

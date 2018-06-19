@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353502"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Элементы управления ActiveX в MFC. Сериализация
 В этой статье описывается, как для сериализации элемента управления ActiveX. Сериализация — это процесс чтение или запись на носитель постоянное хранилище, например файл на диске. Библиотека Microsoft Foundation Class (MFC) предоставляет встроенную поддержку сериализации в классе `CObject`. `COleControl` расширяет эту функцию на элементы управления ActiveX с помощью механизма обмена свойство.  

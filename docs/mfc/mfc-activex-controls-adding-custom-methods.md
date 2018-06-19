@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350037"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>Элементы управления ActiveX в MFC. Добавление пользовательских методов
 Настраиваемые методы отличаются от стандартных методов, что они уже не реализуются с `COleControl`. Вы должны предоставить реализацию для каждого пользовательского метода, который можно добавить в элемент управления.  

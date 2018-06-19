@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354022"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Элементы управления ActiveX в MFC. Дополнительные разделы
 В этой статье представлены дополнительные разделы, относящиеся к разработке элементов управления ActiveX. Сюда входит следующее.  

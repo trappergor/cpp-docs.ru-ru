@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366129"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Классы и функции, создаваемые мастером MFC DLL
 Код, формируемый мастером MFC DLL зависит от типа создаваемой библиотеки DLL и параметры, которые вы выбрали. Мастер библиотек DLL MFC создает тот же код для обоих видов обычные библиотеки DLL MFC.  

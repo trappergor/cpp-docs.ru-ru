@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373512"
 ---
 # <a name="rgndata-structure"></a>Структура RGNDATA
 `RGNDATA` Структура содержит заголовок и массив прямоугольников, составляющие области. Эти прямоугольники отсортированный сверху вниз слева направо, не перекрываются.  

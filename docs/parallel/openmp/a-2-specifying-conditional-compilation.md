@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690599"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   Задание условной компиляции
 Следующие примеры иллюстрируют использование условной компиляции с помощью макроса OpenMP `_OPENMP` ([раздел 2.2](../../parallel/openmp/2-2-conditional-compilation.md) на странице 8). При использовании компиляции OpenMP `_OPENMP` становится определен макрос.  

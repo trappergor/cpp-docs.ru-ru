@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375607"
 ---
 # <a name="csocket-class"></a>CSocket-класс
 Является производным от `CAsyncSocket`, наследует его инкапсуляция Windows Sockets API и представляет более высокий уровень абстракции, чем `CAsyncSocket` объекта.  

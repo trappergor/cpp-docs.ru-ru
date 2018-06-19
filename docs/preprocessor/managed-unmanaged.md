@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846380"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
 Позволяет на уровне функций контролировать режим их компиляции: с управляемым или неуправляемым кодом.  

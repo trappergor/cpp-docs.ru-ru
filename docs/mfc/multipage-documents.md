@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355276"
 ---
 # <a name="multipage-documents"></a>Многостраничные документы
 В этой статье описывается протокол печати Windows и описание печати документов, содержащих более одной страницы. Статья содержит следующие разделы:  
