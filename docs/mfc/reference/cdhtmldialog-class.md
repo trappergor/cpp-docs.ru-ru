@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377011"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 Используется для создания диалоговых окон, использующих HTML вместо ресурсов диалогового окна, чтобы реализовать собственный пользовательский интерфейс.  

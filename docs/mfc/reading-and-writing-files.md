@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347941"
 ---
 # <a name="reading-and-writing-files"></a>Чтение и запись файлов
 При использовании функции обработки файлов библиотеки времени выполнения C, будут отображаться знакомые MFC операций чтения и записи. В этой статье описывается непосредственно чтение и запись непосредственно в `CFile` объекта. Вы также можете буферизованный файлового ввода-вывода с [CArchive](../mfc/reference/carchive-class.md) класса.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33309472"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Предупреждение компилятора (уровень 2) C4099
 «Идентификатор»: имя типа, ранее отображенное с помощью objecttype1 теперь отображено с помощью «objecttype2»  

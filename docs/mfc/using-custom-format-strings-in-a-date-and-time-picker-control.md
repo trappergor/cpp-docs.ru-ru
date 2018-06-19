@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382006"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Использование строк пользовательского формата в элементе выбора даты и времени
 По умолчанию элементы управления для даты и времени предоставляют три формате типов (каждый формат, соответствующий уникальный стиль) для отображения текущей даты или времени.  

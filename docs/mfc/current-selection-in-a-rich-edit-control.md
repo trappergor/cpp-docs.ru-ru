@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345014"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Текущее выделение в элементе управления "Rich Edit"
 Пользователь может выбрать текст в элементе управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) с помощью клавиатуры или мыши. Выделена диапазон выбранных символов или положение курсора, если символов не выбраны. Приложения можно получить сведения о текущее выделение, задать текущее выделение, определить, когда текущие изменения выбора и отображать или скрывать Выбор выделения.  

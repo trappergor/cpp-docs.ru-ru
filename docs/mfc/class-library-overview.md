@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346904"
 ---
 # <a name="class-library-overview"></a>Общие сведения о библиотеке классов
 В этом обзоре категорию и описываются классы в Microsoft Foundation Class библиотеки (MFC) версии 9.0. Классы MFC, в совокупности, образующих исполняющую среду — платформа приложения, написанного для интерфейса Windows API. Задачи программирования — для заполнения в коде, который зависит от приложения.  

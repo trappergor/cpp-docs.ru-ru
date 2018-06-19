@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345069"
 ---
 # <a name="frame-window-classes-windows"></a>Классы окна фрейма (Windows)
 Окна фрейма — это окна, которые фрейма приложения или части приложения. Окна фрейма обычно содержат другие окна, такие как представления, панели инструментов и строки состояния. В случае использования `CMDIFrameWnd`, они могут содержать `CMDIChildWnd` косвенно объектов.  

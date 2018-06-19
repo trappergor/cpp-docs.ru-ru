@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342311"
 ---
 # <a name="creating-a-rebar-control"></a>Создание элемента управления главной панели
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md) объектов необходимо создать перед родительский объект является видимым. Это сводит к минимуму возможные проблемы отрисовки.  

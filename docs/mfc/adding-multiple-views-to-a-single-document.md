@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344153"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Добавление нескольких представлений в один документ
 В приложении однооконный интерфейс (SDI), созданные с помощью библиотеки Microsoft Foundation Class (MFC) каждого типа документа связан с типом единое представление. В некоторых случаях желательно иметь возможность переключения текущего представления документа с помощью нового представления.  

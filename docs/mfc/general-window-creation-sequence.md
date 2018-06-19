@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346520"
 ---
 # <a name="general-window-creation-sequence"></a>Общая последовательность создания окна
 При создании окна собственный, такие как дочерний элемент окна, платформа использует гораздо того же процесса, описанного в [создание документов и представлений](../mfc/document-view-creation.md).  

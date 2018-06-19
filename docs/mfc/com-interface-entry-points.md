@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341415"
 ---
 # <a name="com-interface-entry-points"></a>Точки входа интерфейса COM
 Функции-члены интерфейса COM, используйте [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) макрос для поддержания соответствующего глобального состояния при вызове методов экспортируемого интерфейса.  

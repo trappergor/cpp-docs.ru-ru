@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346169"
 ---
 # <a name="drawing-in-a-view"></a>Рисование в представлении
 Почти все рисования в приложении происходит в режиме `OnDraw` функция-член, который необходимо переопределить в классе представления. (Исключением является мыши рисования, рассматриваемые в [Интерпретация ввода пользователя через представление](../mfc/interpreting-user-input-through-a-view.md).) Ваш `OnDraw` переопределения:  

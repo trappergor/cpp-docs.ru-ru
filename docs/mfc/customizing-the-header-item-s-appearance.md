@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342898"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>Настройка элемента заголовка&#39;внешний вид s
 Установив *dwStyle* параметр при создании элемента управления заголовка ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), можно определить внешний вид и поведение заголовка элементов или заголовка самого элемента управления.  

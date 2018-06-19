@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343419"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Создание новых документов, окон и представлений
 На следующих рисунках обзора процесса создания для документов, представлений и фреймов. Другие статьи, посвященные участвующие объекты указать дополнительные сведения.  

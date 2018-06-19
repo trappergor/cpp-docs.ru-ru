@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347667"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Печать в элементах управления "Rich Edit"
 Можно определить элемент управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) для отображения его выходных данных для заданного устройства, такие как принтер. Можно также указать, что устройство вывода, для которого элемент управления rich edit форматирует его текст.  

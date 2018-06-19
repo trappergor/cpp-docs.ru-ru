@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339031"
 ---
 # <a name="active-document-containers"></a>Контейнеры активных документов
 Контейнер активного документа, например Microsoft Office Binder или Internet Explorer позволяет работать с несколькими документами для разных типов приложений в пределах одного кадра (вместо вас от необходимости создавать и использовать несколько кадров приложения для каждого Тип документа).  

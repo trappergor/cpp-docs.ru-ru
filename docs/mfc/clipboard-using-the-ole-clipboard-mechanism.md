@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342541"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Буфер обмена. Использование механизма буфера обмена OLE
 OLE использует стандартные форматы и некоторые форматы конкретного OLE для передачи данных через буфер обмена.  

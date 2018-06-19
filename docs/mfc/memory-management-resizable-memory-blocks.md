@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345685"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Управление памятью. Изменяемые блоки памяти
 **Новый** и **удаление** операторы, описанные в статье [управление памятью: примеры](../mfc/memory-management-examples.md), хорошо подходят для выделение и освобождение блоков фиксированного размера памяти и объекты. В некоторых случаях приложение может понадобиться изменяемые блоки памяти. Необходимо использовать стандартные функции библиотеки времени выполнения C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), и [свободного](../c-runtime-library/reference/free.md) для управления изменяемые блоки памяти в куче.  

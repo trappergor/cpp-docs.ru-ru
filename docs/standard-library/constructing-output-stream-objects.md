@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850076"
 ---
 # <a name="constructing-output-stream-objects"></a>Построение объектов потока вывода
 

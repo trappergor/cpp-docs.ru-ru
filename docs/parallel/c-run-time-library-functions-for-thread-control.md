@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685766"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>Функции управления потоками в библиотеке времени выполнения C
 Все программы Win32 имеют по крайней мере один поток. Любой поток может создавать дополнительные потоки. Поток можно быстро завершить работу, а затем прерывает или оставаться активным в течение времени жизни программы.  

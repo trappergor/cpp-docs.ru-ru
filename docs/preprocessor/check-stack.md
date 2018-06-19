@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849773"
 ---
 # <a name="checkstack"></a>check_stack
 Указывает компилятору на необходимость выключения стековых зондов, если **off** (или **-**) указан, или если включить стековые зонды **на** (или **+**) указан.  

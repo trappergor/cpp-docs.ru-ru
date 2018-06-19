@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346104"
 ---
 # <a name="header-control-and-list-control"></a>Элементы управления "Заголовок" и "Список"
 В большинстве случаев используется, внедренный в элемент управления заголовка [CListCtrl](../mfc/reference/clistctrl-class.md) или [CListView](../mfc/reference/clistview-class.md) объекта. Однако существуют случаев, когда объект отдельный заголовок элемента управления является нежелательной, например обработки данных, расположенных в столбцы или строки, в [CView](../mfc/reference/cview-class.md)-производного объекта. В этих случаях необходимо контролировать внешний вид и поведение по умолчанию элемента управления внедренных заголовок.  

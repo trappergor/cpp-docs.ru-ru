@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344978"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs. CReBarCtrl
 MFC предоставляет два класса, чтобы создать rebars: [CReBar](../mfc/reference/crebar-class.md) и [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (который создает оболочку для стандартного элемента управления Windows API). **CReBar** предоставляет все функциональные возможности стандартного элемента главной панели управления и обрабатывает многие необходимые общие параметры управления и структуры для вас.  

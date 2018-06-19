@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345213"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Рисование изображений из списка изображений
 Чтобы нарисовать изображение, используйте [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) функции-члена. Вы зададите указатель на объект контекста устройства, индекс образа для рисования, расположение, в контексте устройства, на котором будет рисоваться изображение и набор флагов, чтобы указать стиль рисования.  

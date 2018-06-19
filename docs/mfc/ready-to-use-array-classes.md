@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347968"
 ---
 # <a name="ready-to-use-array-classes"></a>Готовые классы массивов
 Следующие классы являются классы массивов готовые к использованию.  

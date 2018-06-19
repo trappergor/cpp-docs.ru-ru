@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385928"
 ---
 # <a name="wininet-basics"></a>Основные сведения о WinInet
 WinInet можно использовать для добавления поддержки FTP для загрузки и отправки файлов из приложения. Можно переопределить [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) и использовать `dwContext` параметр для предоставления сведений о ходе выполнения для пользователей, как поиск и загрузка файлов.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345260"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Создание определяемых владельцем элементов управления "Заголовок"
 Можно определить отдельные элементы управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) до определяемых владельцем элементов. Дополнительные сведения см. в разделе [управления заголовков Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) в Windows SDK.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346621"
 ---
 # <a name="document-classes"></a>Классы документов
 Объекты класса документа, созданные объекты шаблон документа, управления данными приложения. Класс будет наследовать для документов из одного из этих классов.  

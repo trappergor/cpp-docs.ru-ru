@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342479"
 ---
 # <a name="adding-controls-by-hand"></a>Добавление элементов управления вручную
 Вы можете либо [Добавление элементов управления в диалоговое окно редактора](../mfc/using-the-dialog-editor-to-add-controls.md) или добавить их вручную, с помощью кода.  

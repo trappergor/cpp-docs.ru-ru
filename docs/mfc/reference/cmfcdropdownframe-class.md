@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368622"
 ---
 # <a name="cmfcdropdownframe-class"></a>Класс CMFCDropDownFrame
 Предоставляет функциональные возможности окна фрейма раскрывающийся список для раскрывающийся список панелей инструментов и кнопки панели инструментов раскрывающегося списка.  

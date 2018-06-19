@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342684"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Отсоединение CWnd от HWND
 Для обхода объекта -`HWND` связь, MFC предоставляет другой `CWnd` функции-члена [отсоединения](../mfc/reference/cwnd-class.md#detach), отсоединяет объект window C++ из окна Windows. Это предотвращает деструктор уничтожение окна Windows при уничтожении объекта.  
