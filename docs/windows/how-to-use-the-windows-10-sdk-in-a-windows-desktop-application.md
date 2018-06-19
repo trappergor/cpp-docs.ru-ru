@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882828"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
 При создании классического проекта Windows в Visual Studio 2017 г. он настроен по умолчанию для сборки с версией пакета SDK Windows 10, установленного при рабочей нагрузке C++ Desktop установки или последнего обновления. Эта версия пакета SDK Windows совместима со всеми последними выпусками Windows. Если требуется более раннюю версию пакета SDK, можно открыть проект | Свойства и выберите из версии пакета SDK, доступные в раскрывающемся списке версию пакета SDK Windows.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876856"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>Изменение фрагментов изображения (редактор изображений для значков)
 Можно выполнять стандартные операции редактирования — вырезание, копирование, очистка и перемещение — на [выбора](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), является ли выделение всего изображения или только для части. Поскольку редактор изображений использует буфер обмена Windows, можно передавать изображения между редактора изображений и других приложений для Windows.  

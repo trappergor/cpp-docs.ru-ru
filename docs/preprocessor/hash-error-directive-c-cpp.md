@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33905576"
 ---
 # <a name="error-directive-cc"></a>Директива #error (C/C++)
 Директива `#error` создает заданное пользователем сообщение об ошибке во время компиляции, а затем завершает компиляцию.  

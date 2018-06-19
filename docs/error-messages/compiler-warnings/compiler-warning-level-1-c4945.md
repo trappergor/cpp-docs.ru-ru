@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291483"
 ---
 # <a name="compiler-warning-level-1-c4945"></a>Предупреждение компилятора (уровень level 1) C4945
 «символ»: не удается импортировать символ из «сборки 2»: «символ» уже был импортирован из другой сборки «сборка1»  

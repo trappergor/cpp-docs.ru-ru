@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878701"
 ---
 # <a name="generic-interfaces-visual-c"></a>Универсальные интерфейсы (Visual C++)
 Ограничения, которые применяются к параметрам типа для классов совпадают с теми, которые применяются к параметрам типа в интерфейсах (см. [универсальные классы (C + +/ CLI)](../windows/generic-classes-cpp-cli.md)).  

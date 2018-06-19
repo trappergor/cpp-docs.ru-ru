@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128583"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>Практическое руководство. Отображение изображений в платформе .NET Framework
 В следующем примере кода обработчик событий OnPaint для получения указателя изменяется <xref:System.Drawing.Graphics> объект главной формы. <xref:System.Windows.Forms.Form.OnPaint%2A> Функция предназначена для приложения Windows Forms, скорее всего, созданные с использованием мастера приложений Visual Studio.  

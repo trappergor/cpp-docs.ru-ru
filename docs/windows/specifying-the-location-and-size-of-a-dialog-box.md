@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890581"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Задание местоположения и размера диалогового окна
 Расположение и размер диалогового окна, а также расположение и размер элементов управления, измеряется в диалоговых единицах. Значения для отдельных элементов управления и диалогового окна отображаются в правом нижнем углу строки при выборе состояния Visual Studio.  

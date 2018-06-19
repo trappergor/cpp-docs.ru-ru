@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130559"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly** заключается в контекстно-зависимое ключевое слово, которое указывает, что присваивания значения переменной может выполняться только в рамках объявления или в статическом конструкторе в том же классе.  

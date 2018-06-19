@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251462"
 ---
 # <a name="compiler-error-c3207"></a>Ошибка компилятора C3207
 "функция": недопустимый аргумент шаблона для "аргумент", требуется класс шаблона  

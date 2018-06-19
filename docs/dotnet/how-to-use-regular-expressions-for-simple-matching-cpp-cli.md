@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128284"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Практическое руководство. Использование регулярных выражений для простых совпадений (C++/CLI)
 В следующем примере кода использует регулярные выражения для поиска совпадающих подстрок. Выполняется поиск статическим <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> метод, который принимает в качестве входных данных две строки. Первый — строка для поиска, а второй — это шаблон для поиска.  
