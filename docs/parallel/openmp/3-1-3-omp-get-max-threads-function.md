@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687515"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 Функция omp_get_max_threads
 **Omp_get_max_threads** функция возвращает целое число, которое гарантированно будет по крайней мере число потоков, которые используются для формирования команды при параллельной области без **num_threads** предложения бы быть обнаружены в этой точке в коде. Он следующий:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349536"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Способы создания всплывающих подсказок
 MFC предоставляет три класса для создания и управления ими средства элемента управления подсказки: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) и [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Функции-члены совет средства в этих классах, перенос общих элементов управления Windows API. Класс `CToolBarCtrl` и класс `CToolTipCtrl` являются производными от класса `CWnd`.  

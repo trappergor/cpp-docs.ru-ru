@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369194"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Класс CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Класс реализует элемент ленты, можно добавить в строку статуса ленты.  

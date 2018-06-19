@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374059"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Создание проекта библиотеки DLL MFC
 MFC-библиотеки DLL является двоичным файлом, который выступает в качестве общей библиотеки функций, которые могут использоваться одновременно несколькими приложениями. Самый простой способ создать проект библиотеки DLL MFC является использование мастера DLL MFC.  

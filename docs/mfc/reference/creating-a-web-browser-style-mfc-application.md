@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374527"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Создание приложения MFC в стиле браузера
 Веб-приложении обозревателя доступны сведения из Интернета (например, HTML или активные документы) или интрасети, а также папки в локальной файловой системе и в сети. Путем создания производного класса представления приложения из [CHtmlView](../../mfc/reference/chtmlview-class.md), эффективно сделать приложение веб-браузер, создавая представление с элементом управления WebBrowser.  

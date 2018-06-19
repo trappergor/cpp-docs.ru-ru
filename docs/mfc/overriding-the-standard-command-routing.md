@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352816"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Переопределение стандартной маршрутизации команд
 В редких случаях при необходимо реализовать вариации Стандартная framework маршрутизации можно переопределить его. Необходимо изменить маршрутизацию в один или несколько классов, переопределив `OnCmdMsg` в этих классах. Сделать это:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690069"
 ---
 # <a name="27-data-environment"></a>2.7 Среда данных
 В этом разделе описываются директивы и несколько предложений для контроля среды данных во время выполнения параллельных регионов, следующим образом:  

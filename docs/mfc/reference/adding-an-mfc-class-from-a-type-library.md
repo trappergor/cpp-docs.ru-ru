@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355120"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Добавление класса MFC из библиотеки типов
 Этот мастер используется для создания класса MFC из интерфейса в доступной библиотеке типов. Можно добавить класс MFC для [приложение MFC](../../mfc/reference/creating-an-mfc-application.md), [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), или [управления MFC ActiveX](../../mfc/reference/creating-an-mfc-activex-control.md).  

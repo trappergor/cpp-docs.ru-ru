@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372701"
 ---
 # <a name="cmfcribbonslider-class"></a>Класс CMFCRibbonSlider
 `CMFCRibbonSlider` Класс реализует элемент управления "ползунок", который можно добавить на панель ленты или строки состояния ленты. Элемент управления "ползунок" ленты напоминает ползунки масштаба, отображаемые в приложениях Office 2007.  

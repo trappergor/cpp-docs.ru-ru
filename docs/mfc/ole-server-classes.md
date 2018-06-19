@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350433"
 ---
 # <a name="ole-server-classes"></a>Серверные классы OLE
 Эти классы используются серверными приложениями. Серверные документы являются производными от `COleServerDoc` , а не из **CDocument**. Обратите внимание, что поскольку `COleServerDoc` является производным от `COleLinkingDoc`, документы сервера также могут быть контейнеры, которые поддерживают связывание.  

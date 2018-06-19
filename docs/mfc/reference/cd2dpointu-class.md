@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350560"
 ---
 # <a name="cd2dpointu-class"></a>Класс CD2DPointU
 Программа-оболочка для `D2D1_POINT_2U`.  

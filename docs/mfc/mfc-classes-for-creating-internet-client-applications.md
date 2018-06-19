@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348665"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Классы MFC для создания клиентских приложений в Интернете
 MFC предоставляет следующие классы и глобальные функции для написания клиентских приложений в Интернете. Отступ указывает, что класс является производным от класса выровненных над ним. `CGopherFile` и `CHttpFile` являются производными от `CInternetFile`, например. Эти классы и глобальные функции объявлены в AFXINET. H, за исключением `CFileFind`, которое объявлено в AFX. З.  

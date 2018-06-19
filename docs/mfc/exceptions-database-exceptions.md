@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354306"
 ---
 # <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
 В этой статье описывается обработка исключений базы данных. Большая часть материала в данной статье применяется при работе с классами MFC для Open Database Connectivity (ODBC) или классы MFC для объектов доступа к данным (DAO). Будет явно отмечена как материалы, относящиеся к одной или другой модели. Ниже приведен список разделов.  

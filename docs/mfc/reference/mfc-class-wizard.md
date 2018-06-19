@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370146"
 ---
 # <a name="mfc-class-wizard"></a>Мастер классов MFC
 Позволяет добавлять сообщения и обработчики сообщений для классов в проекте. Можно также запустить другие мастера или добавить класс в проект.  

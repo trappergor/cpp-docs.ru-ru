@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352581"
 ---
 # <a name="interface-elements"></a>Элементы интерфейса
 В этом документе описываются элементы интерфейса, которые впервые появились в [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 и приводится описание различий с помощью более ранней версии библиотеки.  

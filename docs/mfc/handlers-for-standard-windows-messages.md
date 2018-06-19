@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348222"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Обработчики для стандартных сообщений Windows
 По умолчанию обработчики для стандартных сообщений Windows (**WM_**) предварительно определены в классе `CWnd`. Библиотека классов сформирует имена для этих обработчиков на имя сообщения. Например, обработчик `WM_PAINT` сообщение объявляется в `CWnd` как:  

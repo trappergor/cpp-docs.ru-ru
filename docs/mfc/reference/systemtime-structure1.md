@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372396"
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
 `SYSTEMTIME` Структура представляет дату и время, с использованием отдельных элементов для месяц, день, год, дня недели, час, минуты, секунды и миллисекунды.  

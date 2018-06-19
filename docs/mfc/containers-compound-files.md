@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348349"
 ---
 # <a name="containers-compound-files"></a>Контейнеры. Составные файлы
 В этой статье описываются компоненты и реализации составных файлов, а также их преимущества и недостатки использования составных файлов в приложениях OLE.  

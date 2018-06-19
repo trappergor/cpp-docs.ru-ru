@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352839"
 ---
 # <a name="programmatic-printing"></a>Программная печать
 OLE предоставленный средства для уникальной идентификации постоянных документов (**GetClassFile**) и загрузить их в их связан код (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, и **IPersistStorage::Load**). Чтобы дополнительно включить печать документов, вложение активного документа (с использованием существующей схемы OLE не входит в состав OLE 2.0 первоначально) представлен интерфейс печати standard базы, `IPrint`, которые обычно доступны через любой объект, который можно загрузить постоянное состояние типа документа. Каждое представление активного документа можно при необходимости поддерживать **IPrint** интерфейс для предоставления этих возможностей.  

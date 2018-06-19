@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381027"
 ---
 # <a name="serialization-in-mfc"></a>Сериализация в MFC
 В этой статье объясняется механизм сериализации, предоставляемый в Microsoft Foundation Class библиотеки (MFC) позволяющие объекты сохраняется после запуска программы.  

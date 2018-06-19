@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690349"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Конструкция ordered
 Следующие структурированный блок **упорядоченные** директива выполняются в порядке, в котором будет выполняться итераций в последовательном цикле. Синтаксис **упорядоченные** директивы таков:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371638"
 ---
 # <a name="mapping-messages-to-functions"></a>Сопоставление сообщений с функциями
 Окно свойств позволяет привязать обработчики сообщений (функции-члены классов MFC пользовательского интерфейса) сообщения, созданные ресурсы приложения. Они используют [схемы сообщений MFC](../../mfc/messages-and-commands-in-the-framework.md) для создания привязки.  

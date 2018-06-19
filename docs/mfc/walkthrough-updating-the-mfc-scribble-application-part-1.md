@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385113"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Пошаговое руководство: Обновление приложения MFC Scribble (часть 1)
 В этом пошаговом руководстве показано, как изменить существующее приложение MFC для использования пользовательского интерфейса ленты. Visual Studio поддерживает ленты Office 2007 и Windows 7 живописных ленты. Дополнительные сведения о пользовательском интерфейсе ленты см. в разделе [лент](http://go.microsoft.com/fwlink/p/?linkid=129233) на сайте MSDN.  

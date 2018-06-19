@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691418"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   Привязка директив barrier
 Привязка директив правила вызова для **барьера** директивы для привязки к ближайшей окружению `parallel` директивы. Дополнительные сведения о директиве привязки см. в разделе [2.8 разделе](../../parallel/openmp/2-8-directive-binding.md) на стр.  

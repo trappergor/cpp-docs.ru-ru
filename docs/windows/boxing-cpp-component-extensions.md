@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861361"
 ---
 # <a name="boxing--c-component-extensions"></a>Упаковка-преобразование (расширения компонентов C++)
 Компилятор Visual C++ может преобразовывать типы значений в объекты в процессе, называемом *упаковка-преобразование*и преобразовывать объекты в типы значений в процессе, называемом *распаковки*.  

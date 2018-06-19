@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384115"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020. Соглашения именования и нумерации идентификаторов
 Эта заметка описывает идентификатор именования и нумерации соглашения, которые MFC 2.0 использует ресурсы, команд, строками, элементы управления и дочерние окна.  

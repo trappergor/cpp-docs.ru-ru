@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350785"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
 В некоторых случаях элемент управления ActiveX будет больше свойств, чем достаточно может поместиться на одной странице свойств. В этом случае можно добавить страницы свойств в элемент управления ActiveX для отображения этих свойств.  

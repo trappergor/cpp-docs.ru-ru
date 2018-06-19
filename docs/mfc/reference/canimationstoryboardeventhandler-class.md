@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352227"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Класс CAnimationStoryboardEventHandler
 Реализует обратный вызов, используемый API анимации при изменении состояния или обновлении раскадровки.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349056"
 ---
 # <a name="ole-container-classes"></a>Классы контейнера OLE
 Эти классы используются приложением-контейнером. Оба `COleLinkingDoc` и `COleDocument` управления наборами `COleClientItem` объектов. Вместо того чтобы наследование класса документов от **CDocument**, вы будете сделайте его производным от `COleLinkingDoc` или `COleDocument`, в зависимости от того, поддержку для ссылок на объекты, внедренные в документе.  

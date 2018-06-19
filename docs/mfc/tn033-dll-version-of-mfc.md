@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385246"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033. Версия библиотеки DLL MFC
 Эта заметка описывает, как можно использовать MFCxx.DLL и MFCxxD.DLL (где x является номером версии MFC) библиотек динамической компоновки с приложениями MFC и библиотека DLL-расширения MFC. Дополнительные сведения об обычных библиотек DLL MFC см. в разделе [использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
