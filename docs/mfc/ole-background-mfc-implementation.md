@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350003"
 ---
 # <a name="ole-background-mfc-implementation"></a>Поддержка OLE. Реализация MFC
 Из-за размера и сложности необработанные OLE API-интерфейса может быть очень длительной вызов его непосредственно для создания приложений OLE. Реализация библиотеки классов Microsoft Foundation OLE предназначена для того, чтобы уменьшить объем работы, что требуется для создания полнофункциональных, поддерживающими OLE приложений.  

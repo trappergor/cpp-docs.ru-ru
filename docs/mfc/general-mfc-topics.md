@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349621"
 ---
 # <a name="general-mfc-topics"></a>Общие разделы по MFC
 Этот сборник статей содержит технические сведения о библиотеке Microsoft Foundation Class (MFC) и предоставляет общие данные о платформе MFC и ее ключевых компонентах и подсистемах.  
