@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380554"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini и NMAKE
 NMAKE считывает Tools.ini прежде чем он считывает makefile-файлы, если только не используется /R. Ищет Tools.ini сначала в текущем каталоге, а затем в каталоге, указанном в переменной среды INIT. Раздел параметров NMAKE в файле настройки начинается с `[NMAKE]` и может содержать любые сведения о файле makefile. Укажите комментарий на отдельные строки, начинающиеся со знака номера (#).  

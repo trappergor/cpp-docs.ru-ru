@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387243"
 ---
 # <a name="type-conversions-c"></a>Преобразования типов (C)
 Преобразования типов зависят от указанного оператора и типа операнда или операторов. Преобразования типов выполняются в следующих случаях:  

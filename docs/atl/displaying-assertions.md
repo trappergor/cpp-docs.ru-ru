@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354283"
 ---
 # <a name="displaying-assertions"></a>Отображение утверждения
 Если перестать отвечать на запросы клиентов, подключенных к службе, служба может утвержденное и отображается окно сообщения, которые еще не видит. Это можно проверить с помощью отладчика Visual C++ для отладки кода (в разделе [с помощью диспетчера задач](../atl/using-task-manager.md) ранее в этом разделе).  

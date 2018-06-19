@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388491"
 ---
 # <a name="sequential-evaluation-operator"></a>Оператор последовательного вычисления
 Оператор последовательного вычисления, называемый также оператором "запятая", вычисляет свои два операнда последовательно в направлении слева направо.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354186"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>Добавление функциональных возможностей в составной элемент управления
 После добавления всех необходимых элементов управления в составной элемент управления, следующий шаг предполагает добавление новых функций. Эта особенность обычно разделяется на две категории:  

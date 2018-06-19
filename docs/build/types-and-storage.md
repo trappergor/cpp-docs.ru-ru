@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380619"
 ---
 # <a name="types-and-storage"></a>Типы и хранилище
 В этом разделе рассматривается перечисление и хранение типов данных для [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] архитектуры.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354659"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>Форматирования значения времени: Классы общего назначения
 Ниже показано, как форматировать значения времени.  

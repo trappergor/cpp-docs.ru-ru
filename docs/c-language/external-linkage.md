@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383206"
 ---
 # <a name="external-linkage"></a>Внешняя компоновка
 Если в первом объявлении на уровне области видимости файла для идентификатора не используется описатель класса хранения **static**, объект имеет внешнюю компоновку.  

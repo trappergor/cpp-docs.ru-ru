@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049285"
 ---
 # <a name="instr"></a>@InStr
 Макрос функцию, которая находит первое вхождение *string2* в *string1*, начиная с *позиции* в *string1*. Если *позиции* не отображается, поиск начинается с начала *string1*. Возвращает целочисленный позиции или 0, если *string2* не найден.  

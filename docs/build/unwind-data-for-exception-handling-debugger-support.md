@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380437"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Данные раскрутки для обработки исключений и поддержки отладчика
 В этом разделе рассматриваются структуры данных, необходимые для обработки исключений и поддержки отладки.  

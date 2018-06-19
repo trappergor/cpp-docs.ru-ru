@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053120"
 ---
 # <a name="if"></a>.IF
 Создает код, который проверяет `condition1` (например, AX > 7) и выполняет *инструкций* Если это условие истинно.  

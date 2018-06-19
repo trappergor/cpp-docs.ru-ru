@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382277"
 ---
 # <a name="constants-in-primary-expressions"></a>Константы в первичных выражениях
 Константный операнд имеет значение и тип того константного значения, которое он представляет. Символьная константа имеет тип `int`. Целочисленная константа имеет тип `int`, **long**, `unsigned int` или `unsigned long` (в зависимости от размера целого числа и от способа указания значения). Дополнительные сведения см. в статье [Константы](../c-language/c-constants.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380457"
 ---
 # <a name="wildcards-and-nmake"></a>Использование подстановочных знаков в программе NMAKE
 NMAKE расширение имени файла подстановочных знаков (* и?) в строках зависимостей. Подстановочный знак, указанных в команде, передаваемые команде; NMAKE не развертывает его.  

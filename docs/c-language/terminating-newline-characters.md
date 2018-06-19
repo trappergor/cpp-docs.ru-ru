@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385114"
 ---
 # <a name="terminating-newline-characters"></a>Завершающие символы новой строки
 **ANSI 4.9.2** Необходимость в наличии конечного символа новой строки в последней строке текстового потока  

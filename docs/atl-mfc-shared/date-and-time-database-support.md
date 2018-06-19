@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353894"
 ---
 # <a name="date-and-time-database-support"></a>Дата и время: поддержка базы данных
 Начиная с версии 4.0, MFC database программирования использует [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) и [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) классы, представляющие данные даты и времени. Эти классы также используется в модели автоматизации, являются производными от класса [COleVariant](../mfc/reference/colevariant-class.md). Предоставит улучшенную поддержку управления данных даты и времени, чем у [CTime](../atl-mfc-shared/reference/ctime-class.md) и [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  

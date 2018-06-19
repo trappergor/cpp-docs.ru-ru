@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384763"
 ---
 # <a name="identifiers-in-primary-expressions"></a>Идентификаторы в первичных выражениях
 Идентификаторы могут иметь целочисленный тип, тип **float**, тип `enum`, тип `struct`, тип **объединения**, тип массива, тип указателя или тип функции. Идентификатор представляет собой основное выражение, его он был объявлен как обозначение объекта (тогда это l-значение) или как функция (тогда это обозначение функции). Определение левостороннего значения приводится в статье [Выражения L-Value и R-Value](../c-language/l-value-and-r-value-expressions.md).  

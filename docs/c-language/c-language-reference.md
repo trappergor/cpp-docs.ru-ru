@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381191"
 ---
 # <a name="c-language-reference"></a>Справочник по языку C
 *Справочник по языку C* описывает язык программирования C, реализованный в Microsoft C. Руководство организовано на основе стандарта ANSI C (иногда называется C89) и содержит дополнительные сведения о расширениях Майкрософт для стандарта ANSI C.  

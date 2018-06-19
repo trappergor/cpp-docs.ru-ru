@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379930"
 ---
 # <a name="struct-runtimefunction"></a>структура RUNTIME_FUNCTION
 Обработка исключений, основанных на таблицах требует запись таблицы для всех функций, которые выделяют пространство стека или вызова другой функции (например, неконечные функции). Записи в таблице функций имеет следующий формат:  

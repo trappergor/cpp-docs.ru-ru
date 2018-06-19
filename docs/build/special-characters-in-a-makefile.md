@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380463"
 ---
 # <a name="special-characters-in-a-makefile"></a>Специальные символы в файле makefile
 Чтобы использовать специальный знак NMAKE как буквенный символ, поместите знак вставки (^) перед ней. NMAKE игнорирует стрелки, которые предшествуют другие символы. Специальные символы — это:  

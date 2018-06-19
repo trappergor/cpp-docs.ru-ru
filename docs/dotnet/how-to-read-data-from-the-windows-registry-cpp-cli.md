@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132558"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Практическое руководство. Чтение данных из реестра Windows (C++/CLI)
 Следующий пример кода использует <xref:Microsoft.Win32.Registry.CurrentUser> ключ для чтения данных из реестра Windows. Во-первых, выполняется перечисление подразделов с помощью <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> открывается с помощью метода, а затем подраздел удостоверения <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> метод. Как и корневые ключи, каждый подраздел представлен <xref:Microsoft.Win32.RegistryKey> класса. Наконец, новый <xref:Microsoft.Win32.RegistryKey> объект используется для перечисления пар "ключ значение".  
