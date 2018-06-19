@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303950"
 ---
 # <a name="c-runtime-error-r6031"></a>Ошибка во время выполнения R6031 C
 Попытка инициализации CRT более одного раза. Это указывает на ошибку в приложении.  

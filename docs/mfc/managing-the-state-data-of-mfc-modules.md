@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347699"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Управление данными состояния модулей MFC
 В этой статье рассматриваются данные состояния модулей MFC и обновление это состояние при хода выполнения (в коде объекта path принимает с помощью приложения при выполнении) и покидает модуля. Переключение состояния модулей с `AFX_MANAGE_STATE` и `METHOD_PROLOGUE` также рассматривается макросы.  

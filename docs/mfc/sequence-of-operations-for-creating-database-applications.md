@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381333"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>Последовательность операций для создания приложений баз данных
 Следующая таблица показывает роль и роль платформы при написании приложений баз данных.  

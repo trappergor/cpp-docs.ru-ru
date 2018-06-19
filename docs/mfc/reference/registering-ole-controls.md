@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378061"
 ---
 # <a name="registering-ole-controls"></a>Регистрация элементов управления OLE
 Элементы управления OLE, подобно другим объектам сервера OLE, может осуществляться других OLE-совместимых приложений. Это достигается путем регистрации библиотеки типов и класс элемента управления.  

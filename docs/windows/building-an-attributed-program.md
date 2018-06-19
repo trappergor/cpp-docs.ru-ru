@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862281"
 ---
 # <a name="building-an-attributed-program"></a>Сборка атрибутированной программы
 После помещения атрибутов Visual C++ в исходный код, вы можете компилятор Visual C++ для создания файла библиотеки и .idl тип для вас. Компоновщик следующие параметры помогают построить файлы с расширением TLB и .idl:  

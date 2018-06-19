@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347903"
 ---
 # <a name="control-bars"></a>Панели элементов управления
 «Панель управления» имеет общее имя для панели инструментов, строк состояния и индикаторы диалогового окна. Классы MFC `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, и **CReBar** является производным от класса [CControlBar](../mfc/reference/ccontrolbar-class.md), который реализует их общие функциональные возможности.  
