@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415149"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>Практическое руководство. Создание и использование экземпляров weak_ptr
 Иногда объект необходимо сохранить возможность доступа к базовым объектом для `shared_ptr` не вызывая счетчик ссылок увеличивается. Как правило, такая ситуация возникает при наличии циклических ссылок между `shared_ptr` экземпляров.  

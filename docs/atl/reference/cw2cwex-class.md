@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363286"
 ---
 # <a name="cw2cwex-class"></a>Класс CW2CWEX
 Этот класс используется макросы преобразования строк `CW2CTEX` и `CT2CWEX`и определение типа `CW2W`.  

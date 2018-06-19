@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419647"
 ---
 # <a name="nullptr"></a>nullptr
 Обозначает константу-указатель NULL типа `std::nullptr_t`, которая может быть преобразована к любому типу необработанного указателя.  Хотя ключевое слово `nullptr` можно использовать без включения каких-либо заголовков, но если в коде используется тип `std::nullptr_t`, необходимо определить его, включив заголовок `<cstddef>`.  

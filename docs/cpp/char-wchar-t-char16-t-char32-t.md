@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413899"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 Типы **char**, **wchar_t**, **char16_t** и **char32_t** встроенные типы, представляющие буквенно-цифровые символы, а также не алфавитно-цифрового глифы и непечатаемые символы.

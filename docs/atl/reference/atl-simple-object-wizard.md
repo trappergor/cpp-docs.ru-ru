@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363973"
 ---
 # <a name="atl-simple-object-wizard"></a>Мастер простых объектов ATL
 Этот мастер вставляет в проект минимальный COM-объект. Эта страница мастера для указания имен, которые идентифицируют класс C++ и файлы для объекта и его функциональные возможности модели COM.  

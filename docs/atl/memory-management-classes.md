@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356512"
 ---
 # <a name="memory-management-classes"></a>Классы управления памяти
 Эти классы обеспечивают поддержку для кучи указатели, интеллектуальные указатели и других подпрограмм выделения памяти.  

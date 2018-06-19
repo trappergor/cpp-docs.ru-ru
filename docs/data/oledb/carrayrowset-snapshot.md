@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089442"
 ---
 # <a name="carrayrowsetsnapshot"></a>CArrayRowset::Snapshot
 Считывает весь набор строк в памяти, Создание изображения или моментального снимка его.  

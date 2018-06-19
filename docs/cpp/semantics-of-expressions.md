@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424135"
 ---
 # <a name="semantics-of-expressions"></a>Семантика выражений
 Выражения оцениваются по приоритетности и группировке операторов. ([Приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md) в [лексические соглашения](../cpp/lexical-conventions.md), показаны отношения C++ операторы налагают на выражения.)  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356723"
 ---
 # <a name="multiple-dual-interfaces"></a>Несколько сдвоенные интерфейсы
 Вы можете сочетать преимущества сдвоенный интерфейс (то есть, гибкость vtable и позднее связывание, таким образом сделать класс доступным для языков скриптов, а также язык C++) с помощью метода множественное наследование.  
