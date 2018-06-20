@@ -1,7 +1,7 @@
 ---
 title: Использование CString | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361705"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238725"
 ---
 # <a name="using-cstring"></a>Использование CString
 В следующих подразделах этого раздела описывается программирование с использованием `CString`. Справочную информацию о `CString` класса, см. в документации для [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "32361705"
   
  Объект `CStringW` содержит тип `wchar_t` и поддерживает строки Юникода. Объект `CStringA` содержит тип `char` и поддерживает строки с однобайтовой и многобайтовой кодировкой. Объект `CString` поддерживает тип `char` или тип `wchar_t` в зависимости от того, какой символ определен во время компиляции — `MBCS` или `UNICODE`.  
   
- Объект `CString` хранит символьные данные в объекте `CStringData`. `CString` принимает строки с завершающим байтом `null` в стиле C, однако не сохраняет символ `null` в хранимых символьных данных. Вместо этого `CString` отслеживает длину строки. `CString` не предоставляет знак завершения NULL при экспорте строки в стиле C. Вы можете вставить `null` в `CString`, однако это может привести к непредвиденным результатам.  
+ Объект `CString` хранит символьные данные в объекте `CStringData`. `CString` принимает `null`-символом строки в стиле C. `CString` отслеживает длину строки для повышения производительности, но он также сохраняет `null` знаку в хранимых символьных данных для поддержки преобразования — LPCWSTR. `CString` При экспорте строки в стиле C, включает завершающий символ null. Можно вставить `null` в других местах в `CString`, но может привести к непредвиденным результатам.  
   
  Следующий набор строковых классов можно использовать без привязки библиотеки MFC, как с поддержкой CRT, так и без нее: `CAtlString`, `CAtlStringA` и `CAtlStringW`.  
   
