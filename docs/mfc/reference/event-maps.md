@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e7ab64af82e2f37104f82778d4c6f5eb12bd032
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377892"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271309"
 ---
 # <a name="event-maps"></a>Схемы событий
 Всякий раз, когда элемент управления, которые будут уведомите своего контейнера, произошло какое-либо действие (определяется разработчиком элемента управления), (например, нажатие клавиши, щелчок мыши или изменение состояния элемента управления), он вызывает функцию формирование событий. Эта функция уведомляет элемент управления контейнера возникшей некоторые важные действия по обработке связанных событий.  
@@ -140,17 +140,17 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_CY**|**ВАЛЮТА**|  
 |**VTS_DATE**|**DATE**|  
-|**VTS_BSTR**|**const char\***|  
+|**VTS_BSTR**|**const char\\\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
-|**VTS_FONT**|**IFontDispatch\***|  
+|**VTS_FONT**|**IFontDispatch\\\***|  
 |**VTS_HANDLE**|`HANDLE`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const VARIANT\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
+|**VTS_VARIANT**|**const VARIANT\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE**|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE**|**IPictureDisp\\\***|  
 |**VTS_TRISTATE**|**OLE_TRISTATE**|  
 |**VTS_XPOS_PIXELS**|**OLE_XPOS_PIXELS**|  
 |**VTS_YPOS_PIXELS**|**OLE_YPOS_PIXELS**|  

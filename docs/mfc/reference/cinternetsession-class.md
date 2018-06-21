@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374569"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271338"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 Создает и инициализирует один или несколько параллельных сеансов Интернета и, при необходимости, описывает подключение к прокси-серверу.  
@@ -62,13 +62,13 @@ class CInternetSession : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInternetSession::CInternetSession](#cinternetsession)|Создает объект `CInternetSession`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInternetSession::Close](#close)|Закрывает подключение к Интернету, при завершении сеанса Интернета.|  
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Устанавливает состояние подпрограммы обратного вызова.|  
@@ -85,7 +85,7 @@ class CInternetSession : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|Дескриптор текущего сеанса Интернета.|  
   
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |Тип URL-адреса|Returns|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|Gopher://|**CGopherFile\***|  
-|FTP: / /|**Классе CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|Gopher://|**CGopherFile\\\***|  
+|FTP: / /|**Классе CInternetFile\\\***|  
   
 ### <a name="remarks"></a>Примечания  
  Параметр `dwFlags` необходимо включить **INTERNET_FLAG_TRANSFER_ASCII** или **INTERNET_FLAG_TRANSFER_BINARY**, но не оба. Остальные флаги могут объединяться с помощью битовой операции `OR` оператор ( **&#124;**).  
