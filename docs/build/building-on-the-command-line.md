@@ -1,7 +1,7 @@
 ---
 title: Построение в командной строке кода C/C++ | Документы Microsoft
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379280"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322320"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Построение кода C/C++ в командной строке
 
@@ -51,7 +51,7 @@ ms.locfileid: "32379280"
 
 Фактическое начало меню папки и в контекстном различаться в зависимости от версии Visual Studio, установки и установки псевдоним Если задается один. Например, при наличии Visual Studio 2017 г. установлен, и вы уже данный его установка псевдонимом для *предварительного просмотра*, называется ярлык командной строки разработчика **Командная строка разработчика для VS 2017 г. (Предварительная версия)**, в папку с именем **2017 г. Visual Studio**.
 
-Если вы уже установили [Build Tools для Visual Studio 2017 г](https://go.microsoft.com/fwlink/p/?linkid=840931) (который также включает набор инструментов компилятора Visual Studio 2015 с обновлением 3), только машинный код в зависимости от конкретной архитектуры или между tools устанавливаются параметры командной строки разработчика , а не Общие **Командная строка разработчика** ярлык.
+Если вы уже установили [Build Tools для Visual Studio 2017 г](https://go.microsoft.com/fwlink/p/?linkid=875721) (который также включает набор инструментов компилятора Visual Studio 2015 с обновлением 3), только машинный код в зависимости от конкретной архитектуры или между tools устанавливаются параметры командной строки разработчика , а не Общие **Командная строка разработчика** ярлык.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>Чтобы открыть окно командной строки разработчика

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705570"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322398"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Выключенные по умолчанию предупреждения компилятора
 
@@ -89,7 +89,7 @@ ms.locfileid: "34705570"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (уровень 1)|"*operator1*": оператор перед запятой не имеет результата; возможно, планировалось "*operator2*"?|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (уровень 1)|выражение не имеет результата; требуется выражение с побочным действием|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (уровень 3)|«__assume» содержит эффект "*эффект*"|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (уровень 4)|Информация: семантика catch(...) изменилась, начиная с версии Visual C++ 7.1; структурированные исключения (SEH) более не перехватываются|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (уровень 4)|информационные: семантика catch(...) изменилась, начиная с версии Visual C++ 7.1; структурированные исключения (SEH) более не перехватываются|
 |C4574 (уровень 4)|"*идентификатор*«определяется как" 0": имелось в виду использование" #if *идентификатор*"?|
 |C4577 (уровень 1)|noexcept при использовании без указания; режима обработки исключений Прекращение по исключению не гарантируется. Задайте параметр/EHsc|
 |C4582 (уровень 4)|"*типа*": конструктор не вызывается неявно|
@@ -153,12 +153,14 @@ ms.locfileid: "34705570"
 |[C5038](../error-messages/compiler-warnings/c5038.md) (уровень 4)|данные-член "*member1*«будет инициализирована после элемента данных»*член2*" <sup>15,3</sup>|
 |C5039 (уровень 4)|"*функция*": указатель или ссылка на потенциально создания функция extern C функции передан в группе - EHc. Если эта функция создает исключение, может возникнуть неопределенное поведение. <sup>15,5</sup>|
 |C5042 (уровень 3)|"*функция*": объявления функций в области видимости блока не может быть указанного «inline» в стандартном языке C++; удалите спецификатор «inline» <sup>15,5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|Компилятор будет вставлять Spectre снижение нагрузки на память, если указан параметр /Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> это предупреждение доступна, начиная с Visual Studio 2015 с обновлением 1.<br>
-<sup>14,3</sup> это предупреждение доступна, начиная с Visual Studio 2015 с обновлением 3.<br>
-<sup>15,3</sup> это предупреждение доступна, начиная с версии 15,3 2017 г. Visual Studio.<br>
-<sup>15,5</sup> это предупреждение доступна, начиная с версии 15,5 2017 г. Visual Studio.<br>
-<sup>Разрешение</sup> это предупреждение отключено Если [/ разрешительным-](../build/reference/permissive-standards-conformance.md) задан параметр компилятора.
+<sup>14,1</sup> это предупреждение доступна, начиная с Visual Studio 2015 с обновлением 1.  
+<sup>14,3</sup> это предупреждение доступна, начиная с Visual Studio 2015 с обновлением 3.  
+<sup>15,3</sup> это предупреждение доступна, начиная с версии 15,3 2017 г. Visual Studio.  
+<sup>15,5</sup> это предупреждение доступна, начиная с версии 15,5 2017 г. Visual Studio.  
+<sup>15,7</sup> это предупреждение доступна, начиная с версии 15,7 2017 г. Visual Studio.  
+<sup>Разрешение</sup> это предупреждение отключено Если [/ разрешительным-](../build/reference/permissive-standards-conformance.md) задан параметр компилятора.  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Предупреждения из системы по умолчанию в более ранних версиях
 

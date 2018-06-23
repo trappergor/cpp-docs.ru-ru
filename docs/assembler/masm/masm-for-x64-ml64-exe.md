@@ -1,7 +1,7 @@
 ---
 title: MASM для x64 (ml64.exe) | Документы Microsoft
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42edd255b3f8730263bba9ff683ce16da6fc59b5
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253806"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322252"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM для x64 (ml64.exe)
 
-Visual Studio включает 32-разрядных и 64-разрядные размещенные версии Microsoft Assembler (MASM) для целевого x64 кода. С именем ml64.exe, это код на языке ассемблера, принимающий x64 языка ассемблера. Средства командной строки MASM устанавливаются при выборе рабочей нагрузки C++ во время установки Visual Studio. Как отдельный загружаемый MASM средства недоступны. Инструкции о том, как загрузить и установить копию Visual Studio см. в разделе [установите Visual Studio](/visualstudio/install/install-visual-studio). Если вы не хотите устанавливать полный IDE Visual Studio, но требуется только средства командной строки, загрузите [Build Tools для Visual Studio 2017 г](https://go.microsoft.com/fwlink/p/?linkid=840931).
+Visual Studio включает 32-разрядных и 64-разрядные размещенные версии Microsoft Assembler (MASM) для целевого x64 кода. С именем ml64.exe, это код на языке ассемблера, принимающий x64 языка ассемблера. Средства командной строки MASM устанавливаются при выборе рабочей нагрузки C++ во время установки Visual Studio. Как отдельный загружаемый MASM средства недоступны. Инструкции о том, как загрузить и установить копию Visual Studio см. в разделе [установите Visual Studio](/visualstudio/install/install-visual-studio). Если вы не хотите устанавливать полный IDE Visual Studio, но требуется только средства командной строки, загрузите [Build Tools для Visual Studio 2017 г](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
 Использование MASM для создания кода для x64 обращается в командной строке, необходимо использовать командную строку разработчика для x64 целевых объектов, которые задает необходимый путь и других переменных среды. Сведения о том, как запустить командную строку разработчика см. в разделе [кода C/C++ на сборки в командной строке](../../build/building-on-the-command-line.md).
 

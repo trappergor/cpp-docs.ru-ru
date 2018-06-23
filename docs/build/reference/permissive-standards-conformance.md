@@ -1,6 +1,6 @@
 ---
 title: -разрешительным - (соответствие стандартам) | Документы Microsoft
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379319"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322268"
 ---
 # <a name="permissive--standards-conformance"></a>/ разрешительным-(соответствие стандартам)
 
@@ -50,7 +50,7 @@ ms.locfileid: "32379319"
 
 **/ Разрешительным-** параметр использует поддержки соответствия в текущей версии компилятора для определения, какие языковые конструкции, не соответствующий требованиям. Этот параметр не определить, если код соответствует определенной версии стандарта C++. Чтобы включить все реализованные в компиляторе стандарта последнюю черновика, используйте [/std:latest](../../build/reference/std-specify-language-standard-version.md) параметр. Чтобы ограничить поддержку компилятора для текущей реализации стандарт C ++ 17, используйте [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) параметр. Чтобы ограничить поддержку компилятора для более точного соответствия стандарту C ++ 14, используйте [/std: c ++ 14](../../build/reference/std-specify-language-standard-version.md) параметр, который используется по умолчанию.
 
-Не все C ++ 11 C ++ 14 и C ++ 17 стандартам код поддерживается компилятором Visual C++ в Visual Studio 2017 г. **/ Разрешительным-** параметр не может обнаружить проблемы в отношении некоторых аспектов поиск имени двухфазной, привязки неконстантная ссылка во временный, обработке init копирования как прямой инициализации, позволяя несколько пользовательских преобразований в Инициализация или альтернативные токены для логических операторов и других областях, соответствия не поддерживается. Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
+Не все C ++ 11 C ++ 14 и C ++ 17 стандартам код поддерживается компилятором Visual C++ в Visual Studio 2017 г. В зависимости от версии Visual Studio **/ разрешительным-** параметр не может обнаружить проблемы в отношении некоторых аспектов поиск имени двухфазной, привязки неконстантная ссылка во временный, обработке init копирования как прямой инициализации, позволяя несколько пользовательских преобразований в инициализации или альтернативный маркеры для логических операторов и других областях соответствия не поддерживается. Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Для эффективного использования **/ разрешительным-**, обновление до последней версии Visual Studio.
 
 ### <a name="how-to-fix-your-code"></a>Устранение кода
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 Также могут возникнуть ошибки в шаблоне метапрограммирования, где типы результата условного оператора может изменять в соответствии с **/Zc:ternary** и **/ разрешительным-**. Один из способов устранения этой проблемы заключается в использовании [std::remove_reference](../../standard-library/remove-reference-class.md) для результирующего типа.
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>Для поиска имени двухфазной (частично)
+#### <a name="two-phase-name-look-up"></a>Двухфазная имя для поиска
 
-Когда **/ разрешительным-** был установлен в Visual Studio 2017 г. версия 15,3, компилятор анализирует функций и классов определения шаблонов, имена зависимых и не зависит от используемого в шаблонах, при необходимости двухфазной имени подстановки. В этом выпуске выполняется анализ зависимостей только имя. В частности не зависимые имена, которые не объявлены в контексте определение шаблона вызвать диагностическое сообщение при необходимости по стандартам ISO C++. Однако привязки имен независимые, требующие аргумент зависимый поиск в контексте определение не выполняется.
+Когда **/ разрешительным-** параметр задан, компилятор анализирует функций и классов определения шаблонов, определяющее зависимые и независимые, используемых в шаблонах, при необходимости для подстановки двухфазной имя. В Visual Studio 2017 г. версия 15,3 выполняется анализ зависимостей имя. В частности не зависимые имена, которые не объявлены в контексте определение шаблона вызвать диагностическое сообщение при необходимости по стандартам ISO C++. В Visual Studio 2017 г. версия 15,7 также выполняется привязка не зависит от имен, которые требуется аргумент зависимый поиск в контексте определения.
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+Если вы устаревшее поведение для двухэтапной подстановки, а в противном случае должны **/ разрешительным-** поведение, добавьте **/Zc:twoPhase-** параметр.
+
 ### <a name="windows-header-issues"></a>Заголовок проблемы Windows
 
 **/ Разрешительным-** параметр слишком строгие для версии наборы средств Windows перед Осень создатели обновления пакета SDK для Windows (10.0.16299.0), или набор драйверов Windows (WDK) 1709. Рекомендуется обновить до последних версий наборы средств Windows для использования **/ разрешительным-** в коде драйвера Windows или устройства.
 
-Некоторые файлы заголовков в Осень создатели обновления пакета SDK Windows (10.0.16299.0) или 1709, набор драйверов Windows (WDK) возникают проблемы, обеспечивающие их несовместимы с использованием **/ разрешительным-**. Для решения этих проблем, рекомендуется ограничить использование этих заголовков к только эти файлы исходного кода, требует от них, а затем удалите **/ разрешительным-** параметр при компиляции этих файлов определенного исходного кода. Следующие проблемы относятся только к Осень создатели обновления пакета SDK Windows (10.0.16299.0).
+Некоторые файлы заголовков в апреле Windows SDK 2018 обновления (10.0.17134.0), попадающие создатели обновления пакета SDK Windows (10.0.16299.0) или 1709, набор драйверов Windows (WDK) возникают проблемы, обеспечивающие их несовместимы с использованием **/permissive-**. Для решения этих проблем, рекомендуется ограничить использование этих заголовков к только эти файлы исходного кода, требует от них, а затем удалите **/ разрешительным-** параметр при компиляции этих файлов определенного исходного кода.
 
-#### <a name="issue-in-umqueryh"></a>Проблема um\Query.h
+Эти заголовки WinRT WRL выпущена в окнах 2018 апреля обновления пакета SDK (10.0.17134.0) не являются чистыми с **/ разрешительным-**. Чтобы решить эти проблемы, либо не используйте **/ разрешительным-**, или используйте **/ разрешительным-** с **/Zc:twoPhase-** при работе с такими заголовками:
 
-При использовании **/ разрешительным-** переключатель компилятора `tagRESTRICTION` структуры не компилируется из-за case(RTOr) член «или».
+- Проблемы в winrt/wrl/async.h
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-Чтобы устранить эту проблему, скомпилировать файлы, содержащие Query.h без **/ разрешительным-** параметр.
+- Проблема winrt/wrl/implements.h
 
-#### <a name="issue-in-umcellularapioemh"></a>Проблема um\cellularapi_oem.h
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-При использовании **/ разрешительным-** переключатель компилятора, опережающее объявление `enum UICCDATASTOREACCESSMODE` вызывает предупреждение:
+Эти заголовки пользовательском режиме выпущена в окнах 2018 апреля обновления пакета SDK (10.0.17134.0) не являются чистыми с **/ разрешительным-**. Чтобы решить эти проблемы, не используйте **/ разрешительным-** при работе с такими заголовками:
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Проблемы в um/Tune.h
 
-Прямого объявления неограниченного перечисления является расширением Майкрософт. Чтобы устранить эту проблему, скомпилировать файлы, содержащие cellularapi_oem.h без **/ разрешительным-** параметр или используйте [/wd](../../build/reference/compiler-option-warning-level.md) параметр, чтобы отключить предупреждение C4471.
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Проблема um\omscript.h
+- Проблема um/spddkhlp.h
 
-В C ++ 03, преобразование из строкового литерала в тип BSTR (который является typedef для "wchar_t *") является устаревшей, но разрешено. В C ++ 11 больше не допускается преобразование.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Проблемы в um/refptrco.h
 
-Чтобы устранить эту проблему, скомпилировать файлы, содержащие omscript.h без **/ разрешительным-** параметр или используйте **/Zc:strictStrings-** вместо него.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+Эти проблемы относятся только к заголовки пользовательском режиме Осень создатели обновления пакета SDK для Windows (10.0.16299.0).
+
+- Проблема um/Query.h
+
+   При использовании **/ разрешительным-** переключатель компилятора `tagRESTRICTION` структуры не компилируется из-за case(RTOr) член «или».
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   Чтобы устранить эту проблему, скомпилировать файлы, содержащие Query.h без **/ разрешительным-** параметр.
+
+- Проблема um/cellularapi_oem.h
+
+   При использовании **/ разрешительным-** переключатель компилятора, опережающее объявление `enum UICCDATASTOREACCESSMODE` вызывает предупреждение:
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   Прямого объявления неограниченного перечисления является расширением Майкрософт. Чтобы устранить эту проблему, скомпилировать файлы, содержащие cellularapi_oem.h без **/ разрешительным-** параметр или используйте [/wd](../../build/reference/compiler-option-warning-level.md) параметр, чтобы отключить предупреждение C4471.
+
+- Проблема um/omscript.h
+
+   В C ++ 03, преобразование из строкового литерала в тип BSTR (который является typedef для "wchar_t *") является устаревшей, но разрешено. В C ++ 11 больше не допускается преобразование.
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   Чтобы устранить эту проблему, скомпилировать файлы, содержащие omscript.h без **/ разрешительным-** параметр или используйте **/Zc:strictStrings-** вместо него.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
@@ -407,7 +453,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. Откройте свой проект **страницы свойств** диалоговое окно.
 
-1. В разделе **свойства конфигурации**, разверните **C/C++** папку и выберите **языка** страницу свойств.
+1. Выберите **свойства конфигурации** > **C/C++** > **языка** страницу свойств.
 
 1. Изменение **режим совместимости** значение свойства **Да (/ разрешительным-)**. Выберите **ОК** или **применить** для сохранения изменений.
 
@@ -425,5 +471,5 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)   
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+- [Параметры компилятора](../../build/reference/compiler-options.md)
+- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
