@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355045"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929959"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Контейнеры элементов управления ActiveX. Программирование элементов управления ActiveX в контейнере элементов управления ActiveX
 В этой статье описан процесс для доступа к предоставляемым [методы](../mfc/mfc-activex-controls-methods.md) и [свойства](../mfc/mfc-activex-controls-properties.md) внедренных элементов управления ActiveX. По сути выполняются следующие действия.  
@@ -76,7 +76,7 @@ ms.locfileid: "33355045"
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> Член переменной изменения в проект  
  Когда элемент управления ActiveX был добавлен в проект и внедренных в контейнере поле диалоговых окон, доступны в других частях проекта. Самый простой способ доступа к элементу управления — [создать переменную-член](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) класс диалогового окна `CContainerDlg` (шаг 2), то есть того же типа, как класс-оболочку, добавленные в проект Visual C++. Затем можно использовать переменную-член для доступа к внедренный элемент управления в любое время.  
   
- Когда **добавления переменной-члена** диалоговое окно добавляет `m_circctl` член переменной в проект, а также добавляет следующие строки в файле заголовка (. H) из `CContainerDlg` класса:  
+ Когда **добавления переменной-члена** диалоговое окно добавляет *m_circctl* член переменной в проект, а также добавляет следующие строки в файле заголовка (. H) из `CContainerDlg` класса:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ ms.locfileid: "33355045"
   
  Единый механизм для изменения свойств элемента управления находится в `OnInitDialog` функции-члена класса главного диалогового окна. Эта функция вызывается непосредственно перед диалоговое окно появляется и используется для инициализации ее содержимое, включая его элементов управления.  
   
- Следующий пример кода использует `m_circctl` переменной-члена для изменения свойств элемента управления внедренных Circ заголовок и CircleShape:  
+ Следующий пример кода использует *m_circctl* переменной-члена для изменения свойств элемента управления внедренных Circ заголовок и CircleShape:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

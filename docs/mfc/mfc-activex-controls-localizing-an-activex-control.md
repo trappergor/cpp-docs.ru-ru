@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355699"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929612"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Элементы управления ActiveX в MFC. Локализация элемента управления ActiveX
 В этой статье рассматриваются процедуры для локализации интерфейсов элемента управления ActiveX.  
@@ -41,7 +41,7 @@ ms.locfileid: "33355699"
     > [!NOTE]
     >  Это не будет работать в некоторых случаях, если будущие экземпляры имеют разных языков.  
   
--   Используйте **OnAmbientChanged** функция уведомления динамическую загрузку соответствующих ресурсов для языкового стандарта для контейнера.  
+-   Используйте `OnAmbientChanged` функция уведомления динамическую загрузку соответствующих ресурсов для языкового стандарта для контейнера.  
   
     > [!NOTE]
     >  Это будет работать для элемента управления, но DLL во время выполнения не будут обновляться динамически собственными ресурсами когда изменяется внешнее свойство LocaleID. Кроме того библиотеки DLL времени выполнения для элементов управления ActiveX использовать языковой стандарт потока для определения языковой стандарт для его ресурсы.  
@@ -98,7 +98,7 @@ ms.locfileid: "33355699"
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- Поместите в образце кода выше в функции-члене класса элемента управления, например переопределение [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Кроме того `m_hResDLL` должно быть переменной-члена класса элемента управления.  
+ Поместите в образце кода выше в функции-члене класса элемента управления, например переопределение [COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite). Кроме того *m_hResDLL* должно быть переменной-члена класса элемента управления.  
   
  Аналогичная логика можно использовать для локализации страницы свойств элемента управления. Для локализации на странице свойств, добавление кода, похожего на следующий пример файла реализации страницу свойств (в переопределении [COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350785"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931613"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
 В некоторых случаях элемент управления ActiveX будет больше свойств, чем достаточно может поместиться на одной странице свойств. В этом случае можно добавить страницы свойств в элемент управления ActiveX для отображения этих свойств.  
@@ -48,7 +48,7 @@ ms.locfileid: "33350785"
   
 3.  Разверните **диалоговое окно** , а затем установите **IDD_OLE_PROPPAGE_SMALL**.  
   
-4.  Щелкните `New` для добавления ресурса в проект.  
+4.  Нажмите кнопку **New** для добавления ресурса в проект.  
   
 5.  Выберите новый шаблон страницы свойств для обновления окна «Свойства».  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33350785"
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- Обратите внимание, что необходимо повысить уровень второго параметра `BEGIN_PROPPAGEIDS` макрос (количество страниц свойств) от 1 до 2.  
+ Обратите внимание, что необходимо повысить уровень второго параметра BEGIN_PROPPAGEIDS-макрос (количество страниц свойств) от 1 до 2.  
   
  Также необходимо изменить файл реализации элемента управления (. Файл .cpp) для включения заголовка (. H) файл нового класса страницы свойств.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "33350785"
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  Измените конструктор элемента `CAddtlPropPage` , чтобы **IDS_SAMPLE_ADDPPG_CAPTION** передается `COlePropertyPage` конструктора, как показано ниже:  
+7.  Измените конструктор элемента `CAddtlPropPage` , чтобы IDS_SAMPLE_ADDPPG_CAPTION передается `COlePropertyPage` конструктора, как показано ниже:  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

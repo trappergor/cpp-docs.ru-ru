@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fcac345a572f8b33d76692d6852e2dc28698367
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f464efcc76d688ec753395876ebc0841ec4b2cfa
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342466"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931077"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Создание и отображение диалоговых окон
 Создание объекта диалогового окна — это двухфазная операция. Во-первых создайте объект диалогового окна, а затем создать диалоговое окно. Модальные и немодальные диалоговые окна несколько в процесс, используемый для создания и отображения их отличаться. В следующей таблице перечислены диалогового окна как модальные и немодальные поля обычно создается и отображаются.  
@@ -32,7 +32,7 @@ ms.locfileid: "33342466"
   
 |Тип диалогового окна|Способ его создания|  
 |-----------------|----------------------|  
-|[Немодальный](../mfc/creating-modeless-dialog-boxes.md)|Создать `CDialog`, затем вызовите **создать** функции-члена.|  
+|[Немодальный](../mfc/creating-modeless-dialog-boxes.md)|Создать `CDialog`, затем вызовите `Create` функции-члена.|  
 |[Модальные](../mfc/creating-modal-dialog-boxes.md)|Создать `CDialog`, затем вызовите `DoModal` функции-члена.|  
   
  Если необходимо, создаются в диалоговое окно [шаблона диалогового окна в памяти](../mfc/using-a-dialog-template-in-memory.md) , сформированного, а не из ресурса шаблона диалогового окна. Однако это довольно сложная тема.  

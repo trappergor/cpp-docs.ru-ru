@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351654"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929001"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты
 Ресурсы ленты, проще визуализировать, изменение и обслуживание от вручную закодированная лент. В этом разделе описывается преобразование вручную закодированная лента в проекте MFC в ресурс ленты.  
@@ -29,7 +29,7 @@ ms.locfileid: "33351654"
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Чтобы преобразовать ленты MFC в ресурс ленты  
   
-1.  В Visual Studio в существующий проект MFC, откройте исходный файл, где CMFCRibbonBar объект инициализирован. Как правило файл является mainfrm.cpp. Добавьте следующий код после кода инициализации для ленты.  
+1.  В Visual Studio откройте исходный файл в существующий проект MFC, где `CMFCRibbonBar` инициализации объекта. Как правило файл является mainfrm.cpp. Добавьте следующий код после кода инициализации для ленты.  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

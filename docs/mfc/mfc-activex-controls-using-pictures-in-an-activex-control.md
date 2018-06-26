@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354921"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930652"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование изображений в элементе управления ActiveX
 В этой статье описан общий тип Picture и способ его реализации в пользовательском элементе управления ActiveX. Ниже приведен список разделов.  
@@ -71,11 +71,11 @@ ms.locfileid: "33354921"
      Эти изменения будут внесены в нескольких функциях, ответственных за отрисовку элемента управления ActiveX .  
   
 ##  <a name="_core_additions_to_your_control_project"></a> Дополнения к проекту элемента управления  
- Чтобы добавить идентификатор страницы свойств на стандартную страницу свойств изображения, вставьте следующую строку после макроса `BEGIN_PROPPAGEIDS` в CPP-файле, реализующем элемент управления:  
+ Чтобы добавить идентификатор страницы свойств для стандартную страницу свойств изображения, вставьте следующую строку после BEGIN_PROPPAGEIDS-макрос в файле реализации элемента управления (. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Вы также должны увеличить параметр счетчика макроса `BEGIN_PROPPAGEIDS` на один. Это показано в следующей строке:  
+ Вы также должны увеличить параметр счетчика BEGIN_PROPPAGEIDS-макрос на единицу. Это показано в следующей строке:  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33354921"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Необязательно называть член данных `m_pic`; подойдет любое имя.  
+ Нет необходимости называть член данных *m_pic*; подойдет любое имя.  
   
  Далее добавьте настраиваемое свойство, которое поддерживает тип Picture.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33354921"
 >  Имена класса и функций вашего элемента управления могут отличаться от примера выше.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> Модификации проекта элемента управления  
- После внесения необходимых дополнений в проект элемента управления необходимо изменить несколько функций, которые влияют на отрисовку элемента управления ActiveX. Эти функции, `OnResetState`и `OnDraw`, а также функции Get и Set настраиваемого свойства изображения расположены в файле реализации элемента управления. (Обратите внимание, что в этом примере класс элемента управления называется `CSampleCtrl`, член данных `CPictureHolder` называется `m_pic`, а имя настраиваемого свойства изображения — `ControlPicture`.)  
+ После внесения необходимых дополнений в проект элемента управления необходимо изменить несколько функций, которые влияют на отрисовку элемента управления ActiveX. Эти функции, `OnResetState`и `OnDraw`, а также функции Get и Set настраиваемого свойства изображения расположены в файле реализации элемента управления. (Обратите внимание, что в этом примере класс элемента управления называется `CSampleCtrl`, `CPictureHolder` данные-член вызывается *m_pic*, и имя свойства пользовательский рисунок `ControlPicture`.)  
   
  В функцию `OnResetState` элемента управления добавьте следующую необязательную строку после вызова `COleControl::OnResetState`:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "33354921"
  После внесения изменений выполните повторную сборку проекта, чтобы внедрить новые функции настраиваемого свойства изображения и использовать Контейнер для тестирования нового свойства. Сведения о том, как получить доступ к Контейнеру для тестирования, см. в разделе [Тестирование свойств и событий в Контейнере для тестирования](../mfc/testing-properties-and-events-with-test-container.md) .  
   
 ## <a name="see-also"></a>См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)   
  [Элементы управления MFC ActiveX: Использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md)   
  [Элементы ActiveX в MFC. Страницы свойств](../mfc/mfc-activex-controls-property-pages.md)
 

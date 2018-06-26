@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359342"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930791"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Элементы управления ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
-Событий хранения отличаются от пользовательских событий, автоматически запускаются классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` содержит функции стандартных элементов, которые инициируют события, возникающие в результате общие действия. Некоторые общие действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. Карты записей событий для стандартных событий всегда предшествует **EVENT_STOCK** префикс.  
+Событий хранения отличаются от пользовательских событий, автоматически запускаются классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` содержит функции стандартных элементов, которые инициируют события, возникающие в результате общие действия. Некоторые общие действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. События сопоставления записи для бумагу события всегда предшествует EVENT_STOCK-префикс.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> События, поддерживаемые Stock мастер добавления события  
  `COleControl` Класс предоставляет десять событий хранения, перечисленные в следующей таблице. Можно указать события, в элементе управления с помощью [мастер добавления события](../ide/add-event-wizard.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "33359342"
 |Нажатие клавиши|**void FireKeyPress (короткое\***`pnChar`**)** |Возникает, когда `WM_CHAR` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_KEYPRESS)**|  
 |Клавиша вверх|**void FireKeyUp (короткое** `nChar` **, short**`nShiftState`**)** |Возникает, когда `WM_SYSKEYUP` или `WM_KEYUP` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_KEYUP)**|  
 |MouseDown|**void FireMouseDown (короткое** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Возникает, если любой **BUTTONDOWN** получении (влево, среднего или вправо). Мышь захвачена непосредственно перед этого события.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_MOUSEDOWN)**|  
-|MouseMove|**void FireMouseMove (короткое** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Возникает, когда `WM_MOUSEMOVE` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_MOUSEMOVE)**|  
+|MouseMove|**void FireMouseMove (короткое** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Возникает, когда получает сообщение WM_MOUSEMOVE.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_MOUSEMOVE)**|  
 |MouseUp|**void FireMouseUp (короткое** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |Возникает, если любой **BUTTONUP** получении (влево, среднего или вправо). Захват мыши освобождается до этого события.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**void (FireReadyStateChange)**|Возникает, когда выполняется передача управления в следующее состояние готовности, из-за количество полученных данных.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_READYSTATECHANGE)**|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "33359342"
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- Добавив этот код запускает событие KeyPress при `WM_CHAR` сообщение и элемент управления является активным. KeyPress-событие может генерироваться в других случаях путем вызова функции обработки (например, `FireKeyPress`) из кода элемента управления.  
+ Добавление этот код запускает событие Нажатие клавиши, если получено сообщение WM_CHAR и элемент управления является активным. KeyPress-событие может генерироваться в других случаях путем вызова функции обработки (например, `FireKeyPress`) из кода элемента управления.  
   
  Мастер добавления события добавляет следующую строку кода в элемент управления. IDL-файла:  
   
@@ -111,6 +111,6 @@ ms.locfileid: "33359342"
  Эта строка связывает KeyPress-событие с Идентификатором его стандартной диспетчеризации, предоставляет контейнеру возможность предвидеть KeyPress-событие.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)   
  [Элементы управления MFC ActiveX: методы](../mfc/mfc-activex-controls-methods.md)   
  [Класс COleControl](../mfc/reference/colecontrol-class.md)

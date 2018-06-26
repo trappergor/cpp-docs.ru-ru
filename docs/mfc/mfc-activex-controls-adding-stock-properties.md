@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357563"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930134"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы управления ActiveX в MFC. Добавление стандартных свойств
-Стандартные свойства отличаются от пользовательские свойства, что они уже реализован класс `COleControl`. `COleControl` содержит функции стандартных элементов, которые поддерживают общие свойства для элемента управления. Некоторые типичные свойства включают заголовок элемента управления и цвета переднего плана и фона. Сведения о других стандартных свойств см. в разделе [Stock поддерживаются свойства, с помощью мастера добавления свойства](#_core_stock_properties_supported_by_classwizard) далее в этой статье. Записи карты распределения для стандартных свойств всегда предшествует **DISP_STOCKPROP**.  
+Стандартные свойства отличаются от пользовательские свойства, что они уже реализован класс `COleControl`. `COleControl` содержит функции стандартных элементов, которые поддерживают общие свойства для элемента управления. Некоторые типичные свойства включают заголовок элемента управления и цвета переднего плана и фона. Сведения о других стандартных свойств см. в разделе [Stock поддерживаются свойства, с помощью мастера добавления свойства](#_core_stock_properties_supported_by_classwizard) далее в этой статье. Записи карты распределения для свойства всегда предваряться DISP_STOCKPROP бумагу.  
   
  В этой статье описывается добавление стандартных свойств (в данном случае заголовок) для элемента управления ActiveX, используя мастер добавления свойств и описываются изменения, полученный код. Ниже приведен список разделов.  
   
@@ -81,16 +81,16 @@ ms.locfileid: "33357563"
   
 |Свойство.|Элемент карты распределения|Как получить доступ к значение|  
 |--------------|------------------------|-------------------------|  
-|**Внешний вид**|**(DISP_STOCKPROP_APPEARANCE)**|Значение, доступным в качестве **m_sAppearance**.|  
-|`BackColor`|**(DISP_STOCKPROP_BACKCOLOR)**|Значение доступного путем вызова `GetBackColor`.|  
-|`BorderStyle`|**(DISP_STOCKPROP_BORDERSTYLE)**|Значение, доступным в качестве **m_sBorderStyle**.|  
-|**Подпись**|**(DISP_STOCKPROP_CAPTION)**|Значение доступного путем вызова `InternalGetText`.|  
-|**Включено**|**(DISP_STOCKPROP_ENABLED)**|Значение, доступным в качестве **m_bEnabled**.|  
-|**Шрифт**|**(DISP_STOCKPROP_FONT)**|См. в статье [элементы управления MFC ActiveX: использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md) для использования.|  
-|`ForeColor`|**(DISP_STOCKPROP_FORECOLOR)**|Значение доступного путем вызова `GetForeColor`.|  
-|**hWnd**|**(DISP_STOCKPROP_HWND)**|Значение, доступным в качестве `m_hWnd`.|  
-|**Text**|**(DISP_STOCKPROP_TEXT)**|Значение доступного путем вызова `InternalGetText`. Это свойство является таким же, как **заголовок**, за исключением имени свойства.|  
-|**Состояние готовности**|**DISP_STOCKPROP_READYSTATE()**|Значение, доступным в качестве m_lReadyState или `GetReadyState`|  
+|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Значение, доступным в качестве `m_sAppearance`.|  
+|`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Значение доступного путем вызова `GetBackColor`.|  
+|`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Значение, доступным в качестве `m_sBorderStyle`.|  
+|`Caption`|(DISP_STOCKPROP_CAPTION)|Значение доступного путем вызова `InternalGetText`.|  
+|`Enabled`|(DISP_STOCKPROP_ENABLED)|Значение, доступным в качестве `m_bEnabled`.|  
+|`Font`|(DISP_STOCKPROP_FONT)|См. в статье [элементы управления MFC ActiveX: использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md) для использования.|  
+|`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Значение доступного путем вызова `GetForeColor`.|  
+|`hWnd`|(DISP_STOCKPROP_HWND)|Значение, доступным в качестве `m_hWnd`.|  
+|`Text`|(DISP_STOCKPROP_TEXT)|Значение доступного путем вызова `InternalGetText`. Это свойство является таким же, как `Caption`, за исключением имени свойства.|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Значение, доступным в качестве `m_lReadyState` или `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> Свойства хранения и уведомления  
  Многие стандартные свойства имеют функции уведомления, которые могут быть изменены. Например, каждый раз, когда `BackColor` изменения свойств, `OnBackColorChanged` вызывается функция (функцию-член класса элемента управления). Реализация по умолчанию (в `COleControl`) вызовы `InvalidateControl`. Переопределите эту функцию, если необходимо предпринять дополнительные действия при возникновении такой ситуации.  
@@ -105,7 +105,7 @@ ms.locfileid: "33357563"
  [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
 ## <a name="see-also"></a>См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)   
  [Элементы управления MFC ActiveX: свойства](../mfc/mfc-activex-controls-properties.md)   
  [Элементы управления MFC ActiveX: методы](../mfc/mfc-activex-controls-methods.md)   
  [Класс COleControl](../mfc/reference/colecontrol-class.md)

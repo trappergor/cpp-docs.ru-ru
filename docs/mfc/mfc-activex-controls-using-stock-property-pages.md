@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347134"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932199"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Элементы управления ActiveX в MFC. Использование стандартных страниц свойств
 Страницы стандартных свойств, доступных для элементов управления ActiveX и их использование описаны в этой статье.  
@@ -41,13 +41,13 @@ ms.locfileid: "33347134"
   
 -   [Элементы ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC предоставляет три стандартных страниц свойств для использования с элементами управления ActiveX: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, и **CLSID_CPicturePropPage**. Эти страницы пользовательского интерфейса для стандартных цвета, шрифта и свойства изображения соответственно.  
+ MFC предоставляет три стандартных страниц свойств для использования с элементами управления ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, и `CLSID_CPicturePropPage`. Эти страницы пользовательского интерфейса для стандартных цвета, шрифта и свойства изображения соответственно.  
   
  Чтобы включить эти страницы свойств в элемент управления, добавьте их идентификаторы коду, который инициализирует элемент управления массив кодов страницы свойств. В следующем примере этот код находится в файле реализации элемента управления (. CPP) инициализирует массив содержит все три стандартных страниц свойств и страницы свойств по умолчанию (с именем `CMyPropPage` в этом примере):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- Обратите внимание, что число свойств страниц в `BEGIN_PROPPAGEIDS` макрос, равно 4. Представляет количество страниц свойств, поддерживаемых элементом управления ActiveX.  
+ Обратите внимание, что количество страницах свойств в BEGIN_PROPPAGEIDS-макрос 4. Представляет количество страниц свойств, поддерживаемых элементом управления ActiveX.  
   
  После внесения этих изменений, перестройте проект. Теперь элемент управления имеет страницы свойств шрифта, изображения и цвет свойства.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "33347134"
 >  Если не отображаются страницы стандартных свойств (см. Примечание в предыдущем) зарегистрировать библиотеку DLL, запустив RegSvr32.exe из командной строки с именем полный путь к библиотеке DLL.  
   
 ## <a name="see-also"></a>См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
+ [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)   
  [Элементы ActiveX в MFC. Добавление стандартных свойств](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

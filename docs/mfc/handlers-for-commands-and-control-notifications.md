@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347237"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929135"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>Обработчики для команд и уведомлений элементов управления
 Существуют обработчики не по умолчанию для команды или сообщения уведомления элемента управления. Таким образом вы связаны только по соглашению в именовании обработчиков эти категории сообщений. При сопоставлении обработчика уведомлений команда или элемент управления, свойства windows предлагает имя, основанное на код ID или уведомление элемента управления. Можно принять предложенное имя, изменить его или заменить его.  
@@ -40,7 +40,7 @@ ms.locfileid: "33347237"
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- Эта команда может назначить Идентификатором `IDC_MY_BUTTON` , так как она эквивалентна объект пользовательского интерфейса приложения.  
+ Эта команда может назначить Идентификатором **IDC_MY_BUTTON** , так как она эквивалентна объект пользовательского интерфейса приложения.  
   
  Обе категории сообщений не принимают аргументов и не возвращает значение.  
   

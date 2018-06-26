@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346065"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932212"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Исключения. Использование макросов MFC и исключений C++
 В этой статье рассматриваются рекомендации по написанию кода, использующего обработку исключений макросов MFC и ключевые слова обработки исключений C++.  
@@ -51,7 +51,7 @@ ms.locfileid: "33346065"
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- Проблема возникает из-за `e` удаляется после выхода из «внутренний» **ПЕРЕХВАТЫВАТЬ** блока. С помощью `THROW_LAST` макрос вместо **THROW** инструкция вызовет «внешней» **ПЕРЕХВАТЫВАТЬ** блок, чтобы получить допустимый указатель:  
+ Проблема возникает из-за `e` удаляется после выхода из «внутренний» **ПЕРЕХВАТЫВАТЬ** блока. С помощью **THROW_LAST** макрос вместо **THROW** инструкция вызовет «внешней» **ПЕРЕХВАТЫВАТЬ** блок, чтобы получить допустимый указатель:  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

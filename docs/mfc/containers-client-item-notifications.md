@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344628"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928228"
 ---
 # <a name="containers-client-item-notifications"></a>Контейнеры. Уведомления элементов клиентов
 В этой статье рассматриваются переопределяемые функции, вызывается платформой MFC при серверных приложений изменять элементы в документе клиентское приложение.  
@@ -32,11 +32,11 @@ ms.locfileid: "33344628"
   
 |Уведомление|Значение|  
 |------------------|-------------|  
-|`OLE_CHANGED`|Изменения внешнего вида элемента OLE.|  
-|`OLE_SAVED`|Элемент OLE была сохранена.|  
-|`OLE_CLOSED`|Элемент OLE был закрыт.|  
+|**OLE_CHANGED**|Изменения внешнего вида элемента OLE.|  
+|**OLE_SAVED**|Элемент OLE была сохранена.|  
+|**OLE_CLOSED**|Элемент OLE был закрыт.|  
 |**OLE_RENAMED**|Переименован сервер документ, содержащий элемент OLE.|  
-|`OLE_CHANGED_STATE`|Элемент OLE был изменен из одного состояния в другое.|  
+|**OLE_CHANGED_STATE**|Элемент OLE был изменен из одного состояния в другое.|  
 |**OLE_CHANGED_ASPECT**|Аспект рисования элемента OLE платформой был изменен.|  
   
  Эти значения в диапазоне от **OLE_NOTIFICATION** перечисления, который определен в AFXOLE. З.  
@@ -45,9 +45,9 @@ ms.locfileid: "33344628"
   
 |Если первый аргумент —|Второй аргумент|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` или `OLE_CLOSED`|Не используется.|  
-|`OLE_CHANGED`|Указывает аспект объекта OLE, которая была изменена.|  
-|`OLE_CHANGED_STATE`|Описывает состояние вводится (`emptyState`, **loadedState**, `openState`, `activeState`, или `activeUIState`).|  
+|**OLE_SAVED** или **OLE_CLOSED**|Не используется.|  
+|**OLE_CHANGED**|Указывает аспект объекта OLE, которая была изменена.|  
+|**OLE_CHANGED_STATE**|Описывает состояние вводится (*emptyState*, *loadedState*, *openState*, *activeState*, или  *activeUIState*).|  
   
  Дополнительные сведения о состояниях элемента клиента можно предположить, см. в разделе [контейнеры: состояния клиентских элементов](../mfc/containers-client-item-states.md).  
   

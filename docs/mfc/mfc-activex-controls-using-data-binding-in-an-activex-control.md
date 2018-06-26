@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353277"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929735"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 Одним из применений более мощных элементов управления ActiveX — привязки к данным, позволяющую свойства нужно привязать элемент управления с определенным полем в базе данных. Когда пользователь изменяет данные в этом связанное свойство, элемент управления уведомляет базы данных и обновить поле записи запросов. Базы данных уведомляет элемент управления об успехе или сбое запроса.  
@@ -51,7 +51,7 @@ ms.locfileid: "33353277"
  Имеется возможность создать стандартное свойство с привязкой к данным, несмотря на то, что скорее всего, будет необходимо [метод привязываемых get и set](#vchowcreatingbindablegetsetmethod).  
   
 > [!NOTE]
->  Стандартные свойства имеют **привязываемых** и **requestedit** атрибуты по умолчанию.  
+>  Стандартные свойства имеют `bindable` и `requestedit` атрибуты по умолчанию.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Чтобы добавить стандартное свойство привязки с помощью мастера добавления свойства  
   

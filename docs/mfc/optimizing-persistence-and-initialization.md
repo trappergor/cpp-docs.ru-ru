@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355666"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930317"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Оптимизация постоянства и инициализации
 По умолчанию постоянства и инициализации в элементе управления обрабатываются `DoPropExchange` функции-члена. Типичные элемента управления, эта функция содержит несколько вызовов **PX_** функции (`PX_Color`, `PX_Font`и так далее), один для каждого свойства.  
@@ -45,7 +45,7 @@ ms.locfileid: "33355666"
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- Обратите внимание, что в случае загрузки используется временной переменной и затем ей назначается значение, а не приведение `m_boolProp` для **БАЙТОВ** ссылки. Метод приведения приведет к появлению всего один байт `m_boolProp` изменяемым, оставляя оставшиеся байты не инициализирована.  
+ Обратите внимание, что в случае загрузки используется временной переменной и затем ей назначается значение, а не приведение *m_boolProp* для **БАЙТОВ** ссылки. Метод приведения приведет к появлению всего один байт *m_boolProp* изменяемым, оставляя оставшиеся байты не инициализирована.  
   
  Для одного элемента управления, можно оптимизировать инициализации элемента управления путем переопределения [COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) следующим образом:  
   

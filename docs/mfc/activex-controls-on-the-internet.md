@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352318"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931981"
 ---
 # <a name="activex-controls-on-the-internet"></a>Элементы управления ActiveX в Интернете
 Элементы управления ActiveX — обновленная версия спецификации элемента управления OLE. Элементы управления являются основной архитектурой для разработки программных компонентов, которые могут использоваться в различных контейнерах, включая поддержкой COM веб-браузеров в Интернете. Любой элемент управления ActiveX могут быть элементом управления Интернет и можно добавить его функциональность активного документа или входить в состав веб-страницы. Элементы управления на веб-страницы могут взаимодействовать друг с другом с помощью сценариев.  
@@ -39,7 +39,7 @@ ms.locfileid: "33352318"
   
  **Чтобы элемент управления ActiveX, элемент управления должен:**  
   
--   Поддержка **IUnknown** интерфейса.  
+-   Поддержка `IUnknown` интерфейса.  
   
 -   Быть COM-объектом.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "33352318"
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>Для создания проекта с помощью мастера элементов управления ActiveX MFC  
   
-1.  Нажмите кнопку `New` на **файл** меню.  
+1.  Нажмите кнопку **New** на **файл** меню.  
   
 2.  Выберите **мастер элементов управления ActiveX MFC** из Visual C++ проектов и имя проекта.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "33352318"
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Реализуйте **Get и Set** методы. Для **получить**, возвращается строка. Для `Set`, загрузить свойство и вызвать `SetModifiedFlag`.  
+5.  Реализуйте методы `Get/Set`. Для `Get`, возвращается строка. Для `Set`, загрузить свойство и вызвать `SetModifiedFlag`.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

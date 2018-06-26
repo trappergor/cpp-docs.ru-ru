@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347926"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932176"
 ---
 # <a name="containers-advanced-features"></a>Контейнеры. Дополнительные возможности
 В этой статье описаны шаги, необходимые для включения необязательные дополнительные компоненты в существующие приложения контейнера. Эти функции представлены:  
@@ -70,13 +70,13 @@ ms.locfileid: "33347926"
   
     -   Подключиться к `COleTemplateServer` объект шаблоны документов путем вызова объекта `ConnectTemplate` функции-члена.  
   
-    -   Вызовите **COleTemplateServer::RegisterAll** функции-члена для регистрации всех объектов класса с системой OLE.  
+    -   Вызовите `COleTemplateServer::RegisterAll` функции-члена для регистрации всех объектов класса с системой OLE.  
   
-    -   Вызовите метод `COleTemplateServer::UpdateRegistry`. Единственным параметром, который `UpdateRegistry` должно быть `OAT_CONTAINER` Если приложение не запускается с параметром «/ внедренные». Эта строка регистрирует приложение как контейнер, который может поддерживать ссылки на внедренные объекты.  
+    -   Вызовите метод `COleTemplateServer::UpdateRegistry`. Единственным параметром, который `UpdateRegistry` должно быть *OAT_CONTAINER* Если приложение не запускается с параметром «/ внедренные». Эта строка регистрирует приложение как контейнер, который может поддерживать ссылки на внедренные объекты.  
   
          Если приложение запускается с параметром «/ внедренные», не должно отображать основного окна, аналогично серверного приложения.  
   
- Пример MFC OLE [OCLIENT](../visual-cpp-samples.md) использует эту функцию. Пример, как это сделать, см. `InitInstance` функции в OCLIENT. Файл .cpp в этом образце приложения.  
+ Пример MFC OLE [OCLIENT](../visual-cpp-samples.md) использует эту функцию. Пример, как это сделать, см. `InitInstance` функционировать в *OCLIENT. CPP* файл этого образца приложения.  
   
 ## <a name="see-also"></a>См. также  
  [Контейнеры](../mfc/containers.md)   

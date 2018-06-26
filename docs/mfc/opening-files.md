@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352767"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931571"
 ---
 # <a name="opening-files"></a>Открытие файлов
 В MFC наиболее распространенный способ открытия файла является двухэтапный процесс.  
@@ -55,7 +55,7 @@ ms.locfileid: "33352767"
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  Этот пример создает и открывает файл. При наличии проблем, `Open` вызов может быть возвращен `CFileException` объекта в его последнего параметра, как показано ниже. `TRACE` Макрос выводит имя файла и код, указывающий причину сбоя. Можно вызвать `AfxThrowFileException` функционировать, если требуются более подробные сообщения об ошибках.  
+>  Этот пример создает и открывает файл. При наличии проблем, `Open` вызов может быть возвращен `CFileException` объекта в его последнего параметра, как показано ниже. Макрос TRACE выводит имя файла и код, указывающий причину сбоя. Можно вызвать `AfxThrowFileException` функционировать, если требуются более подробные сообщения об ошибках.  
   
 ## <a name="see-also"></a>См. также  
  [CFile-класс](../mfc/reference/cfile-class.md)   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348236"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931727"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>Элементы управления ActiveX в MFC. Доступ к свойствам окружения
 В этой статье рассматриваются как доступ к свойствам окружения контейнера элемента управления для элемента управления ActiveX.  
@@ -44,7 +44,7 @@ ms.locfileid: "33348236"
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  Вызывающий объект должен вызвать **выпуска ()** возвращаемый шрифта.  
+    >  Вызывающий объект должен вызвать `Release( )` возвращаемый шрифта.  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33348236"
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- При изменении значения свойства окружающей среды (через какое-либо действие контейнера), **OnAmbientPropertyChanged** вызове функции-члена элемента управления. Переопределите эту функцию-член для обработки такого уведомления. Параметр для **OnAmbientPropertyChanged** идентификатор диспетчеризации измененное свойство окружения. Возможно, значение этого идентификатора диспетчеризации **DISPID_UNKNOWN**, указывающая, что одно или несколько свойств внешнего изменилось, но сведения о том, какие свойства были затронуты недоступна.  
+ При изменении значения свойства окружающей среды (через какое-либо действие контейнера), `OnAmbientPropertyChanged` вызове функции-члена элемента управления. Переопределите эту функцию-член для обработки такого уведомления. Параметр для `OnAmbientPropertyChanged` идентификатор диспетчеризации измененное свойство окружения. Возможно, значение этого идентификатора диспетчеризации DISPID_UNKNOWN, который указывает, что одно или несколько свойств внешнего был изменен, но сведения о том, какие свойства были затронуты недоступна.  
   
 ## <a name="see-also"></a>См. также  
  [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)

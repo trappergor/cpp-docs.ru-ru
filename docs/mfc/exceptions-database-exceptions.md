@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354306"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930242"
 ---
 # <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
 В этой статье описывается обработка исключений базы данных. Большая часть материала в данной статье применяется при работе с классами MFC для Open Database Connectivity (ODBC) или классы MFC для объектов доступа к данным (DAO). Будет явно отмечена как материалы, относящиеся к одной или другой модели. Ниже приведен список разделов.  
@@ -54,7 +54,7 @@ ms.locfileid: "33354306"
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) содержит расширенный код ошибки из классов MFC DAO. Эти коды ошибок, которые имеют имена вида **AFX_DAO_ERROR_XXX**, приведен в подразделе член данных в `CDaoException`.  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) содержит OLE `SCODE` из DAO, если это применимо. Редко необходимо для работы с данным кодом ошибки, однако. Обычно Дополнительные сведения можно найти в других членах данных. В разделе элемент данных для получения дополнительных сведений `SCODE` значения.  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) содержит OLE **SCODE** из DAO, если это применимо. Редко необходимо для работы с данным кодом ошибки, однако. Обычно Дополнительные сведения можно найти в других членах данных. В разделе элемент данных для получения дополнительных сведений **SCODE** значения.  
   
  Дополнительные сведения об ошибках, тип объекта ошибки DAO и Коллекция ошибок DAO DAO доступна внутри класса [CDaoException](../mfc/reference/cdaoexception-class.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33354306"
  Следующий пример осуществляет попытку создать [CRecordset](../mfc/reference/crecordset-class.md)-производного объекта в куче с **новый** оператор, а затем откройте набор записей (для источника данных ODBC). Аналогичный пример для классов DAO см. «DAO исключение пример».  
   
 ### <a name="odbc-exception-example"></a>Пример исключений ODBC  
- [Откройте](../mfc/reference/crecordset-class.md#open) функция-член может возникнуть исключение (типа [CDBException](../mfc/reference/cdbexception-class.md) для классов ODBC), поэтому эта кода скобки **откройте** вызов с **повторите**  блок. Последующие **перехватывать** блок будет перехватывать `CDBException`. Можно проверить исключение сам объект, вызывается `e`, но в этом случае достаточно знать Сбой попытки создать набор записей. **Перехватывать** блок выдает сообщение об ошибке и выполняет очистку при удалении объекта набора записей.  
+ [Откройте](../mfc/reference/crecordset-class.md#open) функция-член может возникнуть исключение (типа [CDBException](../mfc/reference/cdbexception-class.md) для классов ODBC), поэтому эта кода скобки `Open` вызов с **повторите** блока. Последующие **перехватывать** блок будет перехватывать `CDBException`. Можно проверить исключение сам объект, вызывается `e`, но в этом случае достаточно знать Сбой попытки создать набор записей. **Перехватывать** блок выдает сообщение об ошибке и выполняет очистку при удалении объекта набора записей.  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

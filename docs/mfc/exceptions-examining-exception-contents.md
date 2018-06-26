@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7af858a7bd43bca2a04fac417c592f2dba979ffe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82c7453b92ce14fbbcd20ea0f9a8bd8a7a2b5b6d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343260"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932238"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Исключения. Анализ содержимого исключений
 Несмотря на то что **перехватывать** блока аргумент может быть практически любого типа данных, типов, производных от класса исключения функции MFC `CException`. Чтобы перехватить исключение, создаваемое с помощью функции MFC, затем можно написать **перехватывать** блока, чей аргумент — указатель для `CException` объекта (или объект, производный от `CException`, такие как `CMemoryException`). В зависимости от точного типа исключения можно изучить данные элементы объекта исключения для сбора сведений о конкретной причины исключения.  
   
- Например `CFileException` тип имеет `m_cause` член данных, который содержит тип перечисления, указывающее причину исключения файлов. Некоторые примеры возможные возвращаемые значения **CFileException::fileNotFound** и **CFileException::readOnly**.  
+ Например `CFileException` тип имеет `m_cause` член данных, который содержит тип перечисления, указывающее причину исключения файлов. Некоторые примеры возможные возвращаемые значения `CFileException::fileNotFound` и `CFileException::readOnly`.  
   
  В следующем примере показано, как проверять содержимое `CFileException`. Аналогичным образом можно просмотреть другие типы исключений.  
   

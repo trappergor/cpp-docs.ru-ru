@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347699"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930520"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Управление данными состояния модулей MFC
-В этой статье рассматриваются данные состояния модулей MFC и обновление это состояние при хода выполнения (в коде объекта path принимает с помощью приложения при выполнении) и покидает модуля. Переключение состояния модулей с `AFX_MANAGE_STATE` и `METHOD_PROLOGUE` также рассматривается макросы.  
+В этой статье рассматриваются данные состояния модулей MFC и обновление это состояние при хода выполнения (в коде объекта path принимает с помощью приложения при выполнении) и покидает модуля. Переключение состояния модулей с макросами AFX_MANAGE_STATE и METHOD_PROLOGUE, затрагивающих.  
   
 > [!NOTE]
 >  Термин «модуль» здесь — исполняемую программу или DLL (или набор библиотек DLL), независимо от остальной части приложения, но использует общий копию библиотеки DLL MFC. Элемент управления ActiveX — типичный пример использования модуля.  
