@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384440"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956477"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>Создание клиентских приложений в Интернете с использованием классов MFC WinInet
 Основой каждой клиентских веб-приложений является Интернет-сеанс. Реализация MFC сеансов Интернета как объекты класса [CInternetSession](../mfc/reference/cinternetsession-class.md). С помощью этого класса, можно создать один сеанс Интернета или несколько параллельных сеансов.  
@@ -43,9 +43,9 @@ ms.locfileid: "33384440"
   
 -   Если вы используете `CInternetSession::OpenURL` для установления подключения к серверу, вызов `OpenURL` возвращает `CStdioFile`.  
   
--   Если использовать **CInternetSession::GetFtpConnection**, `GetGopherConnection`, или `GetHttpConnection` для установления подключения к серверу, необходимо вызвать `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, или **CHttpConnection::OpenRequest,**  соответственно, чтобы вернуть `CInternetFile`, `CGopherFile`, или `CHttpFile`соответственно.  
+-   Если использовать `CInternetSession::GetFtpConnection`, `GetGopherConnection`, или `GetHttpConnection` для установления подключения к серверу, необходимо вызвать `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, или `CHttpConnection::OpenRequest`, соответственно, чтобы вернуть `CInternetFile`, `CGopherFile`, или `CHttpFile`, соответственно.  
   
- Шаги по реализации клиентских веб-приложений зависит от того, необходимо создать универсальный клиент через Интернет, на основе **OpenURL** или протоколом клиента, с помощью одного из **GetConnection** функции.  
+ Шаги по реализации клиентских веб-приложений зависит от того, необходимо создать универсальный клиент через Интернет, на основе `OpenURL` или протоколом клиента, с помощью одного из `GetConnection` функции.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
   

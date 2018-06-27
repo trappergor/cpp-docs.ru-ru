@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355289"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952376"
 ---
 # <a name="cd2dgeometrysink-class"></a>Класс CD2DGeometrySink
 Программа-оболочка для ID2D1GeometrySink.  
@@ -68,14 +68,14 @@ class CD2DGeometrySink;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Создает объект CD2DGeometrySink из CD2DPathGeometry объекта.|  
 |[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Деструктор Вызывается при уничтожении объекта D2D geometry приемника.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::AddArc](#addarc)|Добавляет одну дугу по геометрическому пути|  
 |[CD2DGeometrySink::AddBezier](#addbezier)|Создает кривую Безье третьего порядка между текущей и заданной конечной точками.|  
@@ -94,13 +94,13 @@ class CD2DGeometrySink;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Возвращает интерфейс ID2D1GeometrySink|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|Указатель на ID2D1GeometrySink.|  
   
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `arc`  
+ *Дуги*  
  Добавляемый сегмент дуги к рисунку  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bezier`  
+ *Безье*  
  Структура, описывающая контрольные точки и конечные точки кривой Безье для добавления.  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `beziers`  
+ *кривых Безье*  
  Массив сегментов Безье, описывающий кривых Безье для создания. Кривая строится с текущего места в приемник geometry (конечная точка рисуется последнего сегмента или местоположении, заданном свойством BeginFigure) в конечную точку первого сегмента Безье в массиве. Если массив содержит дополнительные сегменты Безье, каждый последующий сегмент Безье использует конечную точку предыдущего сегмента Безье в качестве начальной точки.  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Конечная точка линии для рисования.  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `points`  
+ *точки*  
  Массив одну или несколько точек, описывающие линии для рисования. Линия с текущего места в приемник geometry (конечная точка рисуется последнего сегмента или местоположении, заданном свойством BeginFigure) первой точки в массиве. Если в массиве содержатся дополнительные точки, линия берет начало от первой точки ко второй точке в массиве, с второй точки для третьей и т. д. Массив из последовательности для конечных точек, линий для отрисовки.  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bezier`  
+ *Безье*  
  Структура, описывающая контрольную точку и конечную точку для добавления квадратичной кривой Безье.  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `beziers`  
+ *кривых Безье*  
  Массив из последовательности сегментов Безье второго.  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `startPoint`  
+ *startPoint*  
  Точка, с которого начинается новой фигуры.  
   
- `figureBegin`  
+ *figureBegin*  
  Ли новая фигура должна быть пустой или заливкой.  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pathGeometry`  
+ *pathGeometry*  
  Существующий объект CD2DPathGeometry.  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `figureEnd`  
+ *figureEnd*  
  Значение, указывающее, закрыт ли текущей фигуры. Если рисунок закрыт, отображается линия между текущей точкой и заданные BeginFigure начальную точку.  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fillMode`  
+ *fillMode*  
  Метод, используемый, чтобы определить, является ли заданная точка частью геометрии.  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `vertexFlags`  
+ *vertexFlags*  
  Параметры обводки и соединения для применения к новые сегменты, добавлен в приемник geometry.  
   
 ## <a name="see-also"></a>См. также  

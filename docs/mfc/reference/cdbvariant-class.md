@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369087"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951823"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 Представляет вариантный тип данных для классов MFC ODBC.  
@@ -60,32 +60,32 @@ ms.locfileid: "33369087"
 class CDBVariant  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в данный момент сохраненного значения. Введите `DWORD`.|  
   
 ### <a name="public-union-members"></a>Открытые члены объединения  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|  
-|[CDBVariant::m_chVal](#m_chval)|Содержит значение типа `unsigned char`.|  
+|[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **unsigned char**.|  
 |[CDBVariant::m_dblVal](#m_dblval)|Содержит значение типа **двойные**.|  
 |[CDBVariant::m_fltVal](#m_fltval)|Содержит значение типа **float**.|  
 |[CDBVariant::m_iVal](#m_ival)|Содержит значение типа **короткие**.|  
@@ -99,7 +99,7 @@ class CDBVariant
 ## <a name="remarks"></a>Примечания  
  `CDBVariant` не имеет базового класса.  
   
- `CDBVariant` Аналогично [COleVariant](../../mfc/reference/colevariant-class.md), однако `CDBVariant` не использует OLE. `CDBVariant` Позволяет хранить значения, не беспокоясь о типами данных. `CDBVariant` отслеживает текущее значение, которое хранится в объединении тип данных.  
+ `CDBVariant` Аналогично [COleVariant](../../mfc/reference/colevariant-class.md), однако `CDBVariant` не использует OLE. `CDBVariant` позволяет хранить значения, не беспокоясь о типами данных. `CDBVariant` отслеживает текущее значение, которое хранится в объединении тип данных.  
   
  Класс [CRecordset](../../mfc/reference/crecordset-class.md) использует `CDBVariant` объектов в трех функций-членов: `GetFieldValue`, `GetBookmark`, и `SetBookmark`. Например `GetFieldValue` позволяет динамически извлекать данные в столбце. Так как тип данных столбца не может быть известен во время выполнения `GetFieldValue` использует `CDBVariant` объект для хранения данных в столбце.  
   
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если значение [m_dwType](#m_dwtype) член данных — **DBVT_DATE**, **DBVT_STRING**, или **DBVT_BINARY**, **снимите**освобождает память, связанные с членом объединения указателя. **Очистить** задает `m_dwType` для **DBVT_NULL**.  
+ Если значение [m_dwType](#m_dwtype) член данных — **DBVT_DATE**, **DBVT_STRING**, или **DBVT_BINARY**, `Clear` освобождает память связанные с членом объединения указателя. `Clear` Задает `m_dwType` для **DBVT_NULL**.  
   
- `CDBVariant` Вызовы деструктора **снимите**.  
+ `CDBVariant` Вызовы деструктора `Clear`.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  Сохраняет значение типа **BOOL**.  

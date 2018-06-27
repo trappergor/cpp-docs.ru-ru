@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370524"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956282"
 ---
 # <a name="cftpfilefind-class"></a>Класс CFtpFileFind
 Помогает в поиске файлов Интернета на FTP-серверах.  
@@ -40,17 +40,17 @@ ms.locfileid: "33370524"
 class CFtpFileFind : public CFileFind  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|Создает объект `CFtpFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFtpFileFind::FindFile](#findfile)|Поиск файла на FTP-сервере.|  
 |[CFtpFileFind::FindNextFile](#findnextfile)|Продолжает поиск файла из предыдущего вызова [FindFile](#findfile).|  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pConnection`  
+ *pConnection*  
  Указатель на объект `CFtpConnection`. FTP-соединение можно получить, вызвав [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).  
   
- `dwContext`  
+ *dwContext*  
  Идентификатор контекста для `CFtpFileFind` объекта. В разделе **примечания** Дополнительные сведения об этом параметре.  
   
 ### <a name="remarks"></a>Примечания  
- Значение по умолчанию для `dwContext` отправленных MFC, позволяющий `CFtpFileFind` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CFtpFileFind` объекта. Можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
+ Значение по умолчанию для *dwContext* отправленных MFC, позволяющий `CFtpFileFind` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CFtpFileFind` объекта. Можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
 ### <a name="example"></a>Пример  
   См. пример в обзоре класса ранее в этом разделе.  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pstrName`  
+ *pstrName*  
  Указатель на строку, содержащую имя файла для поиска. Если **NULL**, вызов будет выполнять поиск подстановочный знак (*).  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, описывающие способ обработки этого сеанса. Эти флаги могут быть объединены с помощью побитового оператора OR (&#124;) и приведены ниже:  
   
 -   INTERNET_FLAG_RELOAD получить данные из проводной сети, даже если он кэшируется локально. Это флаг по умолчанию.  

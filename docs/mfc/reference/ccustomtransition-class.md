@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358045"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952756"
 ---
 # <a name="ccustomtransition-class"></a>Класс CCustomTransition
 Реализует пользовательский переход.  
@@ -50,17 +50,17 @@ ms.locfileid: "33358045"
 class CCustomTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Создает объект пользовательский переход.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Задает начальное значение будет применяться к переменной анимации, связанные с этот переход.|  
@@ -68,7 +68,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Указывает, задан ли параметр начального значения с SetInitialValue.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Указывает, задан ли параметр с SetInitialVelocity начальной скоростью.|  
@@ -97,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pInterpolator`  
+ *pInterpolator*  
  Указатель на пользовательские интерполятор.  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -110,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pFactory`  
+ *pFactory*  
  Указатель на переход фабрики, который отвечает за создание пользовательских переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -161,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialValue`  
+ *Начальное значение*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  Задает начальную скорость, которой будет применяться к переменной анимации, связанные с этот переход.  
@@ -171,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)

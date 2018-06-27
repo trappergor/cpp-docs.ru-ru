@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350801"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956453"
 ---
 # <a name="cd2drectf-class"></a>Класс CD2DRectF
 Программа-оболочка для `D2D1_RECT_F`.  
@@ -40,19 +40,19 @@ class CD2DRectF : public D2D1_RECT_F;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Создает `CD2DRectF` объекта из `D2D1_RECT_F` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DRectF::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
+|[CD2DRectF::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные ( **null**).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectF::operator CRect](#operator_crect)|Преобразует `CD2DRectF` для `CRect` объекта.|  
   
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  исходного прямоугольника  
   
- `fLeft`  
+ *fLeft*  
  Координата левой источника  
   
- `fTop`  
+ *fTop*  
  Координата верхней источника  
   
- `fRight`  
+ *fRight*  
  Источник справа координат  
   
- `fBottom`  
+ *fBottom*  
  Нижняя координата источника  
   
 ##  <a name="isnull"></a>  CD2DRectF::ISNULL  

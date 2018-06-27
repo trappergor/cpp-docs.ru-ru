@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbd24042e7f309a28cea5e72b6a134f3205e541
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74e8909a86a9382121dc2dc3375d12ed828c8c88
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357963"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957472"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 Базовый класс для всех областей в MFC.  
@@ -196,14 +196,14 @@ class CBasePane : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CBasePane::CBasePane`|Конструктор по умолчанию.|  
 |`CBasePane::~CBasePane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
@@ -311,7 +311,7 @@ class CBasePane : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|  
   
@@ -325,7 +325,7 @@ class CBasePane : public CWnd
   
     - `AFX_CBRS_FLOAT` делает области с плавающей запятой.  
   
-    - `AFX_CBRS_AUTOHIDE` Включает режим автоматического скрытия.  
+    - `AFX_CBRS_AUTOHIDE` включает режим автоматического скрытия.  
   
     - `AFX_CBRS_CLOSE` включает панель будет закрыта (скрытый).  
   
@@ -372,7 +372,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `int`  
+ [in] *int*  
  Не используется.  
   
 ##  <a name="addpane"></a>  CBasePane::AddPane  
@@ -383,7 +383,7 @@ void AddPane(CBasePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на область для добавления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -399,7 +399,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `hdwp`  
+ [out] *hdwp*  
  Дескриптор структуру, содержащую несколько положение окон.  
   
 ### <a name="remarks"></a>Примечания  
@@ -427,11 +427,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- Указывает ли панель растягивания для размера кадра. `bStretch` Параметр имеет ненулевое значение, при строке не закрепляемую панель (недоступно для закрепления) и 0 при закрепленными или с плавающей запятой (доступны для закрепления).  
+ [in] *bStretch*  
+ Указывает ли панель растягивания для размера кадра. *BStretch* параметр имеет ненулевое значение, при строке не закрепляемую панель (недоступно для закрепления) и 0 при закрепленными или с плавающей запятой (доступны для закрепления).  
   
- [in] `bHorz`  
- Указывает, что полоса является горизонтально или вертикально. `bHorz` Параметр имеет ненулевое значение, если панель горизонтальный и равно 0, если она вертикально.  
+ [in] *bHorz*  
+ Указывает, что полоса является горизонтально или вертикально. *BHorz* параметр имеет ненулевое значение, если панель горизонтальный и равно 0, если она вертикально.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  На панели управления размер в пикселях объекта `CSize` объекта.  
@@ -447,14 +447,14 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель, чтобы закрепить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если другой области могут быть приняты; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой перед его закрепляет область определяется `pBar` для текущей области.  
+ Этот метод вызывается платформой перед его закрепляет область определяется *pBar* для текущей области.  
   
  Используйте этот метод и [CBasePane::CanBeDocked](#canbedocked) метод для управления как закрепление панелей в другие области в приложении.  
   
@@ -515,14 +515,14 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockBar`  
+ [in] *pDockBar*  
  Указатель на другую панель.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если в этой области можно прикреплять к другой области; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой перед его закрепляет область определяется `pDockBar` для текущей области.  
+ Этот метод вызывается платформой перед его закрепляет область определяется *pDockBar* для текущей области.  
   
  Используйте этот метод и [CBasePane::CanAcceptPane](#canacceptpane) метод для управления как закрепление панелей в другие области в приложении.  
   
@@ -597,11 +597,11 @@ virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pOrgBar`  
+ [in] *pOrgBar*  
  Указатель на другую панель.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод копирует состояние из `pOrgBar` в эту область.  
+ Этот метод копирует состояние из *pOrgBar* в эту область.  
   
 ##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe  
  Если области можно перемещаться, этот метод создает окно области для него.  
@@ -611,7 +611,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectInitial`  
+ [in] *rectInitial*  
  Указывает начальные координаты окна области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -639,32 +639,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Расширенные стили (см. [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) для получения дополнительной информации).  
   
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  Имя класса окна.  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Имя окна.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль окна (в разделе [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
- [in] `rect`  
+ [in] *rect*  
  Исходного прямоугольника.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно.  
   
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор области. Должно быть уникальным.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Флаги стилей для панели.  
   
- [in] `pContext`  
- указатель на `CcreateContext`  
+ [in] *pContext*  
+ Указатель на `CcreateContext`  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если область создана успешно. в противном случае `FALSE`.  
@@ -676,7 +676,7 @@ virtual BOOL CreateEx(
   
  Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Области можно с плавающей запятой.|  
 |`AFX_CBRS_AUTOHIDE`|Область поддерживает режим автоматического скрытия|  
@@ -686,7 +686,7 @@ virtual BOOL CreateEx(
 |`AFX_CBRS_REGULAR_TABS`|При на другую панель, в которой этот стиль закрепляет одну область, создается регулярное окна с вкладками. (Дополнительные сведения см. в разделе [CTabbedPane класса](../../mfc/reference/ctabbedpane-class.md).)|  
 |`AFX_CBRS_OUTLOOK_TABS`|При на другую панель, в которой этот стиль закрепляет одну область, создается стиле Outlook окна с вкладками. (Дополнительные сведения см. в разделе [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).)|  
   
- Чтобы использовать новые стили, укажите их в `dwControlBarStyle`.  
+ Чтобы использовать новые стили, укажите их в *dwControlBarStyle*.  
   
 ##  <a name="dockpane"></a>  CBasePane::DockPane  
  Закрепляет область в другую область или область окна.  
@@ -699,22 +699,22 @@ virtual BOOL DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockBar`  
+ [in] *pDockBar*  
  Указатель на другую панель.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Указывает прямоугольника назначения.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Задает метод закрепления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если панель управления был прикреплять успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Вызывайте эту функцию, чтобы закрепить в области для другой области или Закрепить панель ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)), указанным параметром `pDockBar`, или для главного фрейма Если `pDockBar` — `NULL`.  
+ Вызывайте эту функцию, чтобы закрепить в области для другой области или Закрепить панель ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)), указанным параметром *pDockBar*, или для главного фрейма Если *pDockBar* — `NULL`.  
   
- `dockMethod` Задает способ закрепления панели. В разделе [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) список возможных значений.  
+ *dockMethod* задает способ закрепления панели. В разделе [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) список возможных значений.  
   
 ##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
  Закрепляет область, используя сведения о типах во время выполнения.  
@@ -724,7 +724,7 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bUseDockSite`  
+ [in] *bUseDockSite*  
  Если `TRUE`, закрепить на сайте закрепления. Если `FALSE`, закрепите их родительского фрейма.  
   
 ##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
@@ -741,23 +741,23 @@ virtual BOOL DockToFrameWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  В части, которую требуется закрепить на панели, чтобы родительского фрейма.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Требуемый размер.  
   
- [in] `dwDockFlags`  
+ [in] *dwDockFlags*  
  Не обрабатывается.  
   
- [in] `pRelativeBar`  
+ [in] *pRelativeBar*  
  Не обрабатывается.  
   
- [in] `nRelativeIndex`  
+ [in] *nRelativeIndex*  
  Не обрабатывается.  
   
- [in] `bOuterEdge`  
- Если `TRUE` и нет других закрепляемых областей на стороне, заданные `dwAlignment`, панель закреплена за пределами области, ближе к краю родительского фрейма. Если `FALSE`, панель прикрепляется ближе к центру клиентской области.  
+ [in] *bOuterEdge*  
+ Если `TRUE` и нет других закрепляемых областей на стороне, заданные *dwAlignment*, панель закреплена за пределами области, ближе к краю родительского фрейма. Если `FALSE`, панель прикрепляется ближе к центру клиентской области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
@@ -792,7 +792,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -806,7 +806,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Задает выравнивание закрепления для включения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -824,7 +824,7 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Включение захвата; `FALSE` отключить ее.  
   
 ### <a name="remarks"></a>Примечания  
@@ -841,20 +841,20 @@ virtual BOOL FloatPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectFloat`  
+ [in] *rectFloat*  
  Указывает, где плавающей панели отображаются координаты на экране.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Задает метод dock для использования в плавающее области.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Указывает, будет ли видна панель с плавающей запятой ( `TRUE`) или скрытым ( `FALSE`).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если область была перемещается успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается для float область на экране позиции, указанной параметром `rectFloat`.  
+ Этот метод вызывается для float область на экране позиции, указанной параметром *rectFloat*.  
   
 ##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
  Платформа вызывает этот метод, чтобы получить полный путь к `WinHelp` файл, связанный с указанным объектом и идентификатором нужного раздела в этом файле.  
@@ -867,13 +867,13 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszHelpFile`  
+ [in] *pszHelpFile*  
  Адрес `BSTR` , который получает полный путь к `WinHelp` файл, связанный с указанным объектом, если таковые имеются.  
   
- [in] `varChild`  
+ [in] *varChild*  
  Указывает, является ли раздел справки, чтобы получить объект или один из дочерних элементов объекта. Этот параметр может быть как `CHILDID_SELF` (Чтобы получить раздел справки для объекта) или идентификатор дочернего (Чтобы получить раздел справки для одной из ее дочерних элементов объекта).  
   
- [in] `pidTopic`  
+ [in] *pidTopic*  
  Идентифицирует `Help` раздел файла, связанного с указанным объектом.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -890,11 +890,11 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pvarChildren`  
+ [in] *pvarChildren*  
  Получает сведения, которые определяют выбранного дочернего.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `CBasePane` не реализует этот метод. Если значением параметра `pvarChildren` является `NULL`, метод возвращает `E_INVALIDARG`. В противном случае этот метод возвращает `DISP_E_MEMBERNOTFOUND`.  
+ `CBasePane` не реализует этот метод. Если *pvarChildren* — `NULL`, этот метод возвращает `E_INVALIDARG`. В противном случае этот метод возвращает `DISP_E_MEMBERNOTFOUND`.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция является частью поддержки Active Accessibility в MFC. Переопределите эту функцию в производном классе, если элементы не оконные пользовательского интерфейса, отличные от элементов управления ActiveX без окон.  
@@ -922,10 +922,10 @@ virtual DWORD GetControlBarStyle() const
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение состоит из следующих значений.  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Делает float панели управления.|  
-|`AFX_CBRS_AUTOHIDE`|Включает режим автоматического скрытия.|  
+|`AFX_CBRS_AUTOHIDE`|включает режим автоматического скрытия.|  
 |`AFX_CBRS_RESIZE`|Включает изменение размера панели элементов управления. Если этот флаг установлен, на панели управления может быть помещен в закрепляемую панель.|  
 |`AFX_CBRS_CLOSE`|Обеспечивает скрытие панели элементов управления.|  
   
@@ -961,7 +961,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
  Если `CBasePane::m_dockMode` — не определено (DT_UNDEFINED), то режим закрепления берется из глобальный режим закрепления ( `AFX_GLOBAL_DATA::m_dockModeGlobal`).  
   
- Установив `m_dockMode` или переопределение `GetDockingMode` можно выбрать режим закрепления для каждой области.  
+ Установив *m_dockMode* или переопределение `GetDockingMode` можно выбрать режим закрепления для каждой области.  
   
 ##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
  Возвращает указатель на [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)объекта место закрепления панели.  
@@ -1017,7 +1017,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bBigIcon`  
+ [in] *bBigIcon*  
  Указывает 32 x 32 пикселя значок, если `TRUE`; указывает 16 пикселей значком 16 пикселей, если `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1067,7 +1067,7 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNoAssert`  
+ [in] *bNoAssert*  
  Если `TRUE`, этот метод не проверяет наличие недействительных указателей. Если этот метод вызывается при завершении работы приложения, присвойте этому параметру значение `TRUE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1096,7 +1096,7 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `hWndTab`  
+ [out] *hWndTab*  
  Если возвращаемое значение не `NULL`, этот параметр содержит дескриптор родительского окна с вкладками.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1139,14 +1139,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для вставки.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Указатель на соседней панели.  
   
- [in] `bAfter`  
- Если `TRUE`, `pControlBar` вставляется после `pTarget`. Если `FALSE`, `pControlBar` вставляется перед `pTarget`.  
+ [in] *bAfter*  
+ Если `TRUE`, *pControlBar* вставляется после *pTarget*. Если `FALSE`, *pControlBar* вставляется перед *pTarget*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно, `FALSE` в противном случае.  
@@ -1270,13 +1270,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указанная точка.  
   
- [выходной] `dwBarAlignment`  
+ [out] *dwBarAlignment*  
  Задает край приближается к точке. Возможными значениями являются `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, и `CBRS_ALIGN_BOTTOM`  
   
- [выходной] `bOuterEdge`  
+ [out] *bOuterEdge*  
  `TRUE` Если точка находится рядом с внешней границы сайта закрепления; `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1349,13 +1349,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1375,20 +1375,20 @@ virtual HDWP MoveWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, указав новое расположение и размер области.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  Если `TRUE`, окрашивание области. Если `FALSE`, области не разрешено.  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Дескриптор структуру позиции отложенное окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор к структуре положение окна отложенного или `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Если передать `NULL` как `hdwp` параметра, этот метод перемещает окно обычным образом. Если передается дескриптор, этот метод выполняет отложенное перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) или сохранив возвращаемое значение предыдущего вызова этого метода.  
+ Если передать `NULL` как *hdwp* параметра, этот метод перемещает окно обычным образом. Если передается дескриптор, этот метод выполняет отложенное перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) или сохранив возвращаемое значение предыдущего вызова этого метода.  
   
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  Вызывается структурой после изменения родительской области.  
@@ -1398,7 +1398,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndOldParent`  
+ [in] *pWndOldParent*  
  Указатель на предыдущий родительский элемент.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1416,10 +1416,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndNewParent`  
+ [in] *pWndNewParent*  
  Указатель на новый родительского окна.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Указывает, может быть задержана изменения макета.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1445,7 +1445,7 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CPaneDivider*`  
+ [in] *CPaneDivider\**  
  Не используется.  
   
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
@@ -1458,10 +1458,10 @@ virtual void OnPaneContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentFrame`  
+ [in] *pParentFrame*  
  Указатель родительского фрейма.  
   
- [in] `point`  
+ [in] *точки*  
  Указывает расположение в контекстном меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1477,7 +1477,7 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMiniFrame`  
+ [in] *pMiniFrame*  
  Указатель из которого удаляется области окна области.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1493,7 +1493,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lVal`  
+ [in] *lVal*  
  Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1513,16 +1513,16 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указывает точку, в экранных координатах, для проверки.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Увеличьте область поиска на указанное значение. Панель будет удовлетворять условиям поиска, если заданная точка находится в области увеличения.  
   
- [in] `bExactBar`  
- `TRUE` Чтобы игнорировать `nSensitivity` параметр; в противном случае `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` Чтобы игнорировать *nSensitivity* параметр; в противном случае `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  В противном случае `NULL`, метод выполняет поиск только области заданного типа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1548,19 +1548,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на область для удаления.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Если `TRUE`, уничтожается области удален.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Если `TRUE`, настроить макет закрепления немедленно.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Если `TRUE`, макет закрепления относится к списку автоматическое скрытие панелей. Если `FALSE`, макет закрепления связан список регулярных панелей.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Указатель на область, которая заменяет области удален.  
   
 ##  <a name="savestate"></a>  CBasePane::SaveState  
@@ -1574,13 +1574,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1597,7 +1597,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1611,13 +1611,13 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwNewStyle`  
+ [in] *dwNewStyle*  
  Побитовый оператор или сочетание следующих значений.  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Делает float панели управления.|  
-|`AFX_CBRS_AUTOHIDE`|Включает режим автоматического скрытия.|  
+|`AFX_CBRS_AUTOHIDE`|включает режим автоматического скрытия.|  
 |`AFX_CBRS_RESIZE`|Включает изменение размера панели элементов управления. Если этот флаг установлен, на панели управления может быть помещен в закрепляемую панель.|  
 |`AFX_CBRS_CLOSE`|Обеспечивает скрытие панели элементов управления.|  
   
@@ -1629,7 +1629,7 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dockModeNew`  
+ [in] *dockModeNew*  
  Задает новый режим закрепления для области.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1647,13 +1647,13 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Задает новый выравнивание.  
   
 ### <a name="remarks"></a>Примечания  
  Как правило, этот метод вызывается платформой при присоединении панель с одной стороны главного фрейма в другой.  
   
- В следующей таблице показаны возможные значения для `dwAlignment`:  
+ В следующей таблице показаны возможные значения для *dwAlignment*:  
   
 |Значение|Выравнивание|  
 |-----------|---------------|  
@@ -1670,7 +1670,7 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwNewStyle`  
+ [in] *dwNewStyle*  
  Указывает новый стиль для задания.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1693,32 +1693,32 @@ virtual HDWP SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndInsertAfter`  
+ [in] *pWndInsertAfter*  
  Идентифицирует `CWnd` объекта, который предшествует это `CWnd` объекта в Z-порядке. Дополнительные сведения см. в разделе [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] `x`  
+ [in] *x*  
  Задает позицию левого края окна.  
   
- [in] `y`  
+ [in] *y*  
  Задает позицию верхнего края окна.  
   
- [in] `cx`  
+ [in] *cx*  
  Задает ширину окна.  
   
- [in] `cy`  
+ [in] *cy*  
  Указывает высоту окна.  
   
- [in] `nFlags`  
+ [in] *nFlags*  
  Указывает параметры размера и положения. Дополнительные сведения см. в разделе [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
- [in] `hdwp`  
+ [in] *hdwp*  
  Ссылка на структуру, содержащую сведения о размере и позиции для одного или нескольких окон.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор структуру позиции обновленное отложенное окно или `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Если `pWndInsertAfter` — `NULL`, этот метод вызывает метод [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Если `pWndInsertAfter` не является `NULL`, этот метод вызывает метод `DeferWindowPos`.  
+ Если *pWndInsertAfter* — `NULL`, этот метод вызывает метод [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Если *pWndInsertAfter* не является `NULL`, этот метод вызывает метод `DeferWindowPos`.  
   
 ##  <a name="showpane"></a>  CBasePane::ShowPane  
  Показывает или скрывает панель.  
@@ -1731,13 +1731,13 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  Указывает, следует ли отображать ( `TRUE`) или скрыть ( `FALSE`) областью.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Если `TRUE`, повторное вычисление макет закрепления откладывается.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  Если `TRUE`, область активна, при отображении.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1755,10 +1755,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nLength`  
+ [in] *nLength*  
  Длина, с помощью которого для растяжения области.  
   
- [in] `bVert`  
+ [in] *bVert*  
  Если `TRUE`, растянуть области по вертикали. Если `FALSE`, растянуть панели по горизонтали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1772,7 +1772,7 @@ virtual void UndockPane(BOOL bDelay=FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bDelay`  
+ *bDelay*  
  Значение TRUE, если макет закрепления не пересчитывается немедленно.  
   
 ### <a name="remarks"></a>Примечания  

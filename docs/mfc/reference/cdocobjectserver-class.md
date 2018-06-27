@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367410"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956466"
 ---
 # <a name="cdocobjectserver-class"></a>Класс CDocObjectServer
 Реализует дополнительные интерфейсы OLE, необходимые для преобразования стандартного сервера `COleDocument` в полноценный сервер DocObject: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`и `IPrint`.  
@@ -46,19 +46,19 @@ class CDocObjectServer : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Создает объект `CDocObjectServer`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServer::ActivateDocObject](#activatedocobject)|Активирует сервер объект документа, но не отображается.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServer::OnActivateView](#onactivateview)|Отображает представление DocObject.|  
 |[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Восстанавливает состояние представления DocObject.|  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `ActivateDocObject` вызовы `IOleDocumentSite` **ActivateMe** метода, но не содержит представление, так как он ожидает инструкциями о том, как установить и отобразить представление, учитывая в вызове [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` вызовы `IOleDocumentSite` `ActivateMe` метода, но не содержит представление, так как он ожидает инструкциями о том, как установить и отобразить представление, учитывая в вызове [CDocObjectServer::OnActivateView](#onactivateview).  
   
  Вместе `ActivateDocObject` и `OnActivateView` активации и отображает представление DocObject. DocObject активации отличается от других видов OLE встроенной активации. Активация DocObject обходит отображения границы штриховки на месте и оформления объекта (например, маркеры изменения размера), игнорирует функции экстент объектов и рисует полосы прокрутки внутри прямоугольника представление, в отличие от их рисования за пределами этого прямоугольника (как обычный Активация на месте).  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  Указатель на документ сайта клиента, который является клиент для сервер DocObject.  
   
- `pDocSite`  
+ *pDocSite*  
  Указатель на `IOleDocumentSite` интерфейс, реализуемый контейнера.  
   
 ### <a name="remarks"></a>Примечания  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ar`  
+ *ar*  
  Объект `CArchive` объект, из которого для сериализации состояния представления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ar`  
+ *ar*  
  Объект `CArchive` объекта, в который выполняется сериализация состояния представления.  
   
 ### <a name="remarks"></a>Примечания  

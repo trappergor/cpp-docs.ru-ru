@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e806d622e79fe57039b85dc77860b07b956ece1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71ec3bae44bd9365891c3a87fd33dfd3e1db2700
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377827"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957420"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет [CFrameWnd](../../mfc/reference/cframewnd-class.md) класса.  
@@ -208,7 +208,7 @@ class CFrameWndEx : public CFrameWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Настраивает макет элемент клиента OLE и клиентскую область фрейма.|  
 |`CFrameWndEx::AddDockSite`|Этот метод не используется.|  
@@ -337,10 +337,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Область панели управления для регистрации.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` Если вы хотите добавить область панели управления в конец списка. `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -354,7 +354,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hdwp`  
+ *hdwp*  
  Дескриптор на структуру, содержащую позиции несколько окон. .  
   
 ### <a name="remarks"></a>Примечания  
@@ -368,7 +368,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenuAlt`  
+ [in] *hMenuAlt*  
  Дескриптор альтернативных меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -384,17 +384,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панели управления можно закреплять.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Идентификатор стороны фрейм окна, чтобы закрепить.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Указатель константы Rect-структура, которая задает положение на экране и размер окна.  
   
 ### <a name="remarks"></a>Примечания  
- `nDockBarID` Параметр может принимать одно из следующих значений:  
+ *NDockBarID* параметр может принимать одно из следующих значений:  
   
 -   AFX_IDW_DOCKBAR_TOP  
   
@@ -414,17 +414,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на объект области быть закреплено.  
   
- [in] `pLeftOf`  
- Указатель на панели слева от которого закрепление области, определяемой `pBar`.  
+ [in] *pLeftOf*  
+ Указатель на панели слева от которого закрепление области, определяемой *pBar*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `pBar` успешно закреплен. В противном случае — значение `FALSE`.  
+ `TRUE` Если *pBar* успешно закреплен. В противном случае — значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод принимает панели инструментов, определяемое `pBar` параметр и фиксирует элемент управления, его в левой части панели инструментов, указанный свойством `pLeftOf` параметра.  
+ Этот метод принимает панели инструментов, определяемое *pBar* параметр и фиксирует элемент управления, его в левой части панели инструментов, указанный свойством *pLeftOf* параметра.  
   
 ##  <a name="enableautohidepanes"></a>  CFrameWndEx::EnableAutoHidePanes  
  Включает режим автоматического скрытия области при присоединении по заданному краю фрейма главного окна.  
@@ -434,14 +434,14 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Указывает части фрейма главного окна, к которому необходимо закрепить панель.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если для строки успешно панель прикрепляется к стороне окна фрейма, задаваемый `dwDockStyle`, `FALSE` в противном случае.  
+ `TRUE` Если для строки успешно панель прикрепляется к стороне окна фрейма, задаваемый *dwDockStyle*, `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- `dwDockStyle` Может принимать одно из следующих значений:  
+ *dwDockStyle* может иметь одно из следующих значений:  
   
 -   CBRS_ALIGN_TOP: позволяет панели элементов управления, прикрепленные к верхней части клиентской области окна фрейма.  
   
@@ -459,14 +459,14 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Указывает части фрейма главного окна, где закрепляет строке области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если для строки области могут закрепляться указанного сбоку успешно. В противном случае — значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- `dwDockStyle` Параметр может принимать одно из следующих значений:  
+ *DwDockStyle* параметр может принимать одно из следующих значений:  
   
 -   CBRS_ALIGN_TOP  
   
@@ -484,7 +484,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnableMenu`  
+ [in] *bEnableMenu*  
  `TRUE` для отображения в главном меню в полноэкранном режиме, `FALSE` в противном случае.  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
@@ -495,7 +495,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiFullScreenCmd`  
+ [in] *uiFullScreenCmd*  
  Идентификатор команды, которая включает и отключает в полноэкранном режиме.  
   
 ### <a name="remarks"></a>Примечания  
@@ -513,7 +513,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить загрузку состояние стыковки `FALSE` Чтобы отключить загрузку состояние закрепления.  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
@@ -530,22 +530,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить автоматическую обработку панель элементов управления всплывающих меню; `FALSE` отключить автоматическую обработку панель элементов управления всплывающих меню.  
   
- [in] `uiCustomizeCmd`  
+ [in] *uiCustomizeCmd*  
  Идентификатор команды **Настройка** элемента меню.  
   
- [in] `strCustomizeLabel`  
+ [in] *strCustomizeLabel*  
  Метки, которое будет отображаться для **Настройка** пункта меню  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [in] *uiViewToolbarsMenuEntryID*  
  Идентификатор элемента панели инструментов меню, откроется всплывающее меню в панели управления.  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [in] *bContextMenuShowsToolbarsOnly*  
  Если `TRUE`, панель элементов управления контекстное меню отображается список только для панели инструментов. Если `FALSE`, в меню отображаются в списке панелей инструментов и закрепляемых панелей.  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bViewMenuShowsToolbarsOnly*  
  Если `TRUE`, в меню панели управления отображаются в списке панелей инструментов только. Если `FALSE`, в меню отображаются в списке панелей инструментов и закрепляемых панелей.  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
@@ -599,7 +599,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -637,10 +637,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  Текст подсказки, отображаемый на кнопке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -660,14 +660,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pControlBar`  
+ *pControlBar*  
  Указатель на панель элементов управления, которую нужно вставить в список панелей элементов управления и зарегистрировать в диспетчере закрепления.  
   
- `pTarget`  
+ *pTarget*  
  Указатель на панель элементов управления, перед или после которой нужно вставить панель.  
   
- `bAfter`  
- `TRUE` Если вы хотите вставить `pControlBar` после `pTarget`, `FALSE` в противном случае.  
+ *bAfter*  
+ `TRUE` Если вы хотите вставить *pControlBar* после *pTarget*, `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если панель элементов управления была успешно вставлена и зарегистрирован, `FALSE` в противном случае.  
@@ -709,20 +709,20 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Положение точки.  
   
- [выходной] `dwBarAlignment`  
+ [out] *dwBarAlignment*  
  Где точка выравнивается. См. в разделе "Примечания" возможных значений в таблице.  
   
- [выходной] `bOuterEdge`  
+ [out] *bOuterEdge*  
  `TRUE` Если точка находится ближе к границе фрейма; `FALSE` Если точка находится в клиентской области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если точка находится в зоне выравнивания; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены возможные значения для `dwBarAlignment` параметра.  
+ В следующей таблице перечислены возможные значения для *dwBarAlignment* параметра.  
   
  `CBRS_ALIGN_TOP`  
  Выровненный по верхнему.  
@@ -760,16 +760,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIDResource`  
+ [in] *nIDResource*  
  Идентификатор ресурса, используемый для загрузки всех ресурсов кадра.  
   
- [in] `dwDefaultStyle`  
+ [in] *dwDefaultStyle*  
  Стиль рамки окна по умолчанию.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно фрейма.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Указатель на [CCreateContext структуры](../../mfc/reference/ccreatecontext-structure.md) класс, используемый инфраструктурой при создании приложения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -787,25 +787,25 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nBorderCmd`  
+ [in] *nBorderCmd*  
  Команда согласования границы. Возможные значения см.  
   
- [in, out] `lpRectBorder`  
+ [in, out] *lpRectBorder*  
  Размеры границы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если должны быть пересчитаны макета; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены возможные значения для `nBorderCmd` параметра.  
+ В следующей таблице перечислены возможные значения для *nBorderCmd* параметра.  
   
- `borderGet`  
+ *borderGet*  
  Получите доступное пространство клиента OLE.  
   
- `borderRequest`  
+ *borderRequest*  
  Запрос пространство клиента OLE.  
   
- `borderSet`  
+ *borderSet*  
  Задайте пространство клиента OLE.  
   
 ##  <a name="onactivate"></a>  CFrameWndEx::OnActivate  
@@ -819,17 +819,17 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nState`  
+ [in] *nState*  
  Является ли кадр активным или неактивным. См. в разделе "Примечания" возможных значений в таблице.  
   
- [in] `pWndOther`  
+ [in] *pWndOther*  
  Указатель на другое окно, переключения ввод данных пользователем с текущей строкой.  
   
- [in] `bMinimized`  
+ [in] *bMinimized*  
  Свернутое состояние рамки. `TRUE` Если кадр свернута; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены возможные значения для `nState` параметра.  
+ В следующей таблице перечислены возможные значения для *nState* параметра.  
   
  `WA_ACTIVE`  
  Фрейм выбран с методами, отличными от щелчка кнопкой мыши.  
@@ -850,10 +850,10 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bActive`  
+ [in] *bActive*  
  `TRUE` Если выбрана приложения; `FALSE` Если приложение не установлено.  
   
- [in] `dwThreadID`  
+ [in] *dwThreadID*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -868,10 +868,10 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
+ [in] *wParam*  
  Этот параметр не используется.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -923,7 +923,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMenuPopup`  
+ *pMenuPopup*  
  Указатель всплывающего меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -941,16 +941,16 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор команды.  
   
- [in] `nCode`  
+ [in] *nCode*  
  Категория сообщения команды.  
   
- [in, out] `pExtra`  
+ [in, out] *pExtra*  
  Указатель на объект команды.  
   
- [in, out] `pHandlerInfo`  
+ [in, out] *pHandlerInfo*  
  Указатель на структуру обработчика команд.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -975,7 +975,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpCreateStruct`  
+ [in] *lpCreateStruct*  
  Указатель на [структура CREATESTRUCT](../../mfc/reference/createstruct-structure.md) для нового кадра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1004,13 +1004,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Указатель готовится к просмотру, изображение кнопки меню.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Указатель на `Rect` структура, которая задает экрана положение и размер изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1030,13 +1030,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель на пункт меню.  
   
- [in] `rectLogo`  
+ [in] *rectLogo*  
  Ссылка на константу `CRect` структура, которая задает экрана положение и размер эмблемы меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1052,10 +1052,10 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Этот параметр не используется.  
   
- [in] `lp`  
+ [in] *lp*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1073,10 +1073,10 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Этот параметр не используется.  
   
- [in] `lp`  
+ [in] *lp*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1092,7 +1092,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpMMI`  
+ [in] *lpMMI*  
  Указатель на [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) структуры.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1107,10 +1107,10 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
+ [in] *wParam*  
  Этот параметр не используется.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1128,10 +1128,10 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFlags`  
- Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра `wParam` в [WM_LBUTTONDOWN уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ [in] *nFlags*  
+ Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра *wParam* в [WM_LBUTTONDOWN уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
   
- [in] `point`  
+ [in] *точки*  
  Указывает координат x и y указателя, относительно верхнего левого угла окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1146,10 +1146,10 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFlags`  
- Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра `wParam` в [WM_LBUTTONUP уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ [in] *nFlags*  
+ Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра *wParam* в [WM_LBUTTONUP уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
   
- [in] `point`  
+ [in] *точки*  
  Указывает координат x и y указателя, относительно верхнего левого угла окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1164,14 +1164,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопки панели инструментов.  
   
- [выходной] `pTI`  
+ [out] *pTI*  
  Указатель на структуру сведений средства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если приложение заполняет `pTI` параметра. В противном случае — значение `FALSE`.  
+ `TRUE` Если приложение заполняет *pTI* параметра. В противном случае — значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, если вы хотите предоставить подсказку о специальный пункт меню.  
@@ -1187,13 +1187,13 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nChar`  
+ [in] *nChar*  
  Код символа нажатой клавише.  
   
- [in] `nFlags`  
+ [in] *nFlags*  
  Содержит `MF_POPUP` флаг, если меню отображается подменю; содержит `MF_SYSMENU` флаг меню, отображаемое в случае меню элемента управления.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель на меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1220,10 +1220,10 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFlags`  
- Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра `wParam` в [WM_MOUSEMOVE уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ [in] *nFlags*  
+ Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. в разделе параметра *wParam* в [WM_MOUSEMOVE уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
   
- [in] `point`  
+ [in] *точки*  
  Указывает x и y координаты указателя мыши относительно левого верхнего угла окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1236,7 +1236,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrame`  
+ [in] *pFrame*  
  Указатель на [CPaneFrameWnd класс](../../mfc/reference/cpaneframewnd-class.md) окно панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1252,7 +1252,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bActive`  
+ [in] *bActive*  
  `TRUE` Чтобы нарисовать рамку активно; `FALSE` для рисования рамки неактивным.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1270,10 +1270,10 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bCalcValidRects`  
+ [in] *bCalcValidRects*  
  `TRUE` Если приложение необходимо указать допустимый клиентской области; в противном случае `FALSE`.  
   
- [in] `lpncsp`  
+ [in] *lpncsp*  
  Указатель на `NCCALCSIZE_PARAMS` структуру, содержащую изменения измерения кадра.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1286,7 +1286,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Положение указателя в координатах экрана.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1304,10 +1304,10 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHitTest`  
+ [in] *nHitTest*  
  Указатель попадание перечислимое значение. Список возможных значений в разделе [WM_NCHITTEST уведомления](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
   
- [in] `point`  
+ [in] *точки*  
  Положение указателя в координатах экрана.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1329,7 +1329,7 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента панели управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1347,10 +1347,10 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
+ [in] *wParam*  
  Этот параметр не используется.  
   
- [in] `lParam`  
+ [in] *lParam*  
  `TRUE` При кадр находится в режиме предварительного просмотра печати. `FALSE` Если отключен режим предварительного просмотра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1368,10 +1368,10 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Событие управления питанием. Список возможных значений в разделе [сообщение WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
   
- [in] `lp`  
+ [in] *lp*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1391,13 +1391,13 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Дескриптор меню окно нового кадра.  
   
- [in] `lp`  
+ [in] *lp*  
  Дескриптор окна в новое меню.  
   
- [in] `hmenu`  
+ [in] *hmenu*  
  Дескриптор меню окно нового кадра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1417,10 +1417,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPreview`  
+ [in] *bPreview*  
  `TRUE` Чтобы включить режим предварительного просмотра; `FALSE` отключение предварительного просмотра печати.  
   
- [in] `pState`  
+ [in] *состояния производительности*  
  Указатель на `CPrintPreviewState` фрейма структуре.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1435,10 +1435,10 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
+ [in] *wParam*  
  Этот параметр не используется.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Указатель на текст окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1456,10 +1456,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPane`  
+ [in] *pMenuPane*  
  Указатель на панели быстрого настроить область.  
   
- [in] `uiToolbarID`  
+ [in] *uiToolbarID*  
  Идентификатор элемента управления для настройки панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1476,16 +1476,16 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Если приложение показывает областей; `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Этот метод всегда возвращают `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию показаны панели Если `bShow` — `TRUE` и скрытые области или когда `bShow` — `FALSE` и области являются видимыми.  
+ Реализация по умолчанию показаны панели Если *bShow* — `TRUE` и скрытые области или когда *bShow* — `FALSE` и области являются видимыми.  
   
- Реализация по умолчанию скрывает панели, если `bShow` — `TRUE` и видимых панелей или при `bShow` — `FALSE` и скрытые области.  
+ Реализация по умолчанию скрывает панели, если *bShow* — `TRUE` и видимых панелей или при *bShow* — `FALSE` и скрытые области.  
   
  Переопределите этот метод в производном классе, чтобы выполнять пользовательский код, когда платформа показывает или скрывает панели.  
   
@@ -1497,7 +1497,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель всплывающего меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1517,13 +1517,13 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nType`  
- Тип изменения размера. Возможные значения см. в разделе параметра `wParam` в [WM_SIZE уведомления](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ [in] *nType*  
+ Тип изменения размера. Возможные значения см. в разделе параметра *wParam* в [WM_SIZE уведомления](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
   
- [in] `cx`  
+ [in] *cx*  
  Новая ширина окна в пикселях.  
   
- [in] `cy`  
+ [in] *cy*  
  Новая высота окна в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1538,10 +1538,10 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `fwSide`  
- Граница кадра, который перемещается. Параметр `wParam` в [WM_SIZING уведомления](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ [in] *fwSide*  
+ Граница кадра, который перемещается. Параметр *wParam* в [WM_SIZING уведомления](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
   
- [in, out] `pRect`  
+ [in, out] *pRect*  
  Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](../../mfc/reference/rect-structure1.md) структуру, которая содержит координаты опорного кадра.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1565,10 +1565,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель всплывающего меню.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на перемещаемой панелью.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1589,10 +1589,10 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Этот параметр не используется.  
   
- [in] `lp`  
+ [in] *lp*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1610,10 +1610,10 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wp`  
+ [in] *wp*  
  Этот параметр не используется.  
   
- [in] `lp`  
+ [in] *lp*  
  Указатель на текст строки заголовка, на панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1634,7 +1634,7 @@ afx_msg LRESULT OnToolbarDelete(
  [in]  
  Этот параметр не используется.  
   
- [in] `lp`  
+ [in] *lp*  
  Указатель на панель инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1650,7 +1650,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenuAlt`  
+ [in] *hMenuAlt*  
  Дескриптор альтернативных меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1663,7 +1663,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  `TRUE` Чтобы добавить заголовок активного документа в строке заголовка окна фрейма; в противном случае `FALSE.`  
   
 ### <a name="remarks"></a>Примечания  
@@ -1676,7 +1676,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCmdUI`  
+ [in] *pCmdUI*  
  Указатель на объект области пользовательского интерфейса.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1689,7 +1689,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpwndpos`  
+ [in] *lpwndpos*  
  Указатель на [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) структуру, содержащую новый размер и положение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1712,28 +1712,28 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты экрана точки для проверки.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Разверните ограничивающего прямоугольника каждую панель элементов управления на указанное значение при поиске точки.  
   
- [in] `bExactBar`  
- `TRUE` Чтобы игнорировать `nSensitivity` параметр; в противном случае `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` Чтобы игнорировать *nSensitivity* параметр; в противном случае `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  В противном случае `NULL`, метод выполняет поиск только панелей элементов управления указанного типа.  
   
- [выходной] `dwAlignment`  
+ [out] *dwAlignment*  
  В случае успешного выполнения, этот параметр содержит части панели элементов управления, ближайший к заданной точке. В противном случае этот параметр не инициализирован.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель элементов управления, содержащий `point`; `NULL` Если элемент управления не найден.  
+ Указатель на панель элементов управления, содержащий *точки*; `NULL` Если элемент управления не найден.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод выполняет поиск всех панелей элементов управления в приложении для `point`.  
+ Этот метод выполняет поиск всех панелей элементов управления в приложении для *точки*.  
   
- Используйте `nSensitivity` для увеличения размера области поиска. Используйте `pRTCBarType` , чтобы ограничить типы панели элементов управления, метод выполняет поиск.  
+ Используйте *nSensitivity* увеличить размер области поиска. Используйте *pRTCBarType* , чтобы ограничить типы панели элементов управления, метод выполняет поиск.  
   
 ##  <a name="pretranslatemessage"></a>  CFrameWndEx::PreTranslateMessage  
  Обрабатывает конкретное окно сообщения перед их отправкой.  
@@ -1743,7 +1743,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
  Указатель на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1759,7 +1759,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNotify`  
+ [in] *bNotify*  
  Включение уведомления об изменении макета элемент клиента OLE.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1778,19 +1778,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область панели управления для удаления.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  `TRUE` Чтобы удалить панель элементов управления после удаления. `FALSE` в противном случае.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` для настройки макета закрепления; `FALSE` в противном случае.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  `TRUE` Если панель элементов управления находится в режиме автоматического скрытия. `FALSE` в противном случае.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Указатель на область, которая заменяет области удален.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1806,7 +1806,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `state`  
+ *state*  
  Состояние закрепления. Этот параметр не учитывается.  
   
 ##  <a name="setprintpreviewframe"></a>  CFrameWndEx::SetPrintPreviewFrame  
@@ -1817,7 +1817,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель кадра окна предварительного просмотра печати.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1833,17 +1833,17 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `menu`  
+ [in] *меню*  
  Объект `CMenu` объект для изменения.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Первая команда определяемой пользователем.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Последняя команда, определяемой пользователем.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа хранит пользовательские команды в списке. Используйте `uiViewUserToolbarCmdFirst` и `uiViewUserToolbarCmdList` для задания индексов команд для вставки.  
+ Платформа хранит пользовательские команды в списке. Используйте *uiViewUserToolbarCmdFirst* и *uiViewUserToolbarCmdList* для задания индексов команд для вставки.  
   
 ##  <a name="showfullscreen"></a>  CFrameWndEx::ShowFullScreen  
  Переключение между обычным и полноэкранным режимом полноэкранный главного фрейма.  
@@ -1864,16 +1864,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панели управления, чтобы показать или скрыть.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Если `TRUE`, приложение показывает панель элементов управления. В противном случае приложение скрывает панель элементов управления.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Если `TRUE`, задержки корректировки макет закрепления платформа вызывает [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Немедленно повторно вычислите макет закрепления в противном случае.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  Если `TRUE`, сделать активной панели управления. В противном случае отображения панели управления в неактивном состоянии.  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
@@ -1895,10 +1895,10 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwData`  
- Данные, зависит от `nCmd` параметра. Список возможных значений в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ *dwData*  
+ Данные, зависит от *nCmd* параметра. Список возможных значений в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
- `nCmd`  
+ *nCmd*  
  Команда help. Список возможных значений в разделе [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
   
 ### <a name="remarks"></a>Примечания  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358359"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952184"
 ---
 # <a name="cbitmapbutton-class"></a>Класс CBitmapButton
 Создает элементы управления "кнопка", на которые вместо текста помещаются растровые изображения.  
@@ -44,13 +44,13 @@ class CBitmapButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmapButton::CBitmapButton](#cbitmapbutton)|Создает объект `CBitmapButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmapButton::AutoLoad](#autoload)|Связывает кнопку в диалоговом окне с объектом `CBitmapButton` класса, загружает bitmap(s) по имени и размер кнопки в соответствии с растрового изображения.|  
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Инициализирует объект, загрузка один или несколько ресурсов именованный точечный рисунок из файла ресурсов приложения, подключив точечные рисунки объекта.|  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  В `CDialog` объекта [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) подпрограмме вызов `CBitmapButton` объекта [AutoLoad](#autoload) функции используются в качестве параметров идентификатор элемента управления кнопки и `CDialog` объекта **это** указателя.  
   
- Следует ли обрабатывать сообщения уведомления Windows, таких как **BN_CLICKED**, отправленного кнопкой растровое изображение элемента управления в родительском (обычно класс, производный от **CDialog)**, добавьте `CDialog`-производный Объект схемы сообщений входа и обработчик сообщений функцию-член для каждого сообщения. Уведомлений, отправляемых `CBitmapButton` объекта используются те же отправленных [CButton](../../mfc/reference/cbutton-class.md) объекта.  
+ Если требуется обрабатывать сообщения уведомления Windows, например BN_CLICKED, отправленных растрового изображения кнопки с родительским (обычно класс, производный от `CDialog`), добавьте `CDialog`-производного объекта члена входа и обработчик сообщений схемы сообщений функция для каждого сообщения. Уведомлений, отправляемых `CBitmapButton` объекта используются те же отправленных [CButton](../../mfc/reference/cbutton-class.md) объекта.  
   
  Класс [CToolBar](../../mfc/reference/ctoolbar-class.md) использует другой подход к кнопок с точечными рисунками.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Идентификатор элемента управления кнопки.  
   
- `pParent`  
+ *pParent*  
  Указатель на объект, которому принадлежит кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368050"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951856"
 ---
 # <a name="cdialogex-class"></a>Класс CDialogEx
 Класс `CDialogEx` задает цвет фона и фоновое изображение для диалогового окна.  
@@ -42,14 +42,14 @@ class CDialogEx : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDialogEx::CDialogEx](#cdialogex)|Создает объект `CDialogEx`.|  
 |`CDialogEx::~CDialogEx`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Задает цвет фона диалогового окна.|  
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Задает фоновое изображение диалогового окна.|  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Идентификатор ресурса шаблона диалоговых окон.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  Имя ресурса шаблона диалоговых окон.  
   
- [in] `pParent`  
+ [in] *pParent*  
  Указатель на родительское окно. Значение по умолчанию — `NULL`.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно. Значение по умолчанию — `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Значение цвета RGB.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Чтобы немедленно обновить экрана. в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Дескриптор фоновое изображение.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Идентификатор ресурса фонового изображения.  
   
- [in] `location`  
+ [in] *расположение*  
  Один из `CDialogEx::BackgroundLocation` значения, указывающие расположение образа. Допустимые значения: BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT и BACKGR_BOTTOMRIGHT. Значение по умолчанию — BACKGR_TILE.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` Чтобы автоматически удалить фоновое изображение; в противном случае `FALSE`.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` Чтобы немедленно перерисовывает диалоговое окно. в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

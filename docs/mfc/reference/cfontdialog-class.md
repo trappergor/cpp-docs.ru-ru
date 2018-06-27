@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368352"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953679"
 ---
 # <a name="cfontdialog-class"></a>Класс CFontDialog
 Позволяет включить диалоговое окно выбора шрифта в приложение.  
@@ -64,13 +64,13 @@ class CFontDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontDialog::CFontDialog](#cfontdialog)|Создает объект `CFontDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontDialog::DoModal](#domodal)|Отображает диалоговое окно и пользователь может сделать выбор.|  
 |[CFontDialog::GetCharFormat](#getcharformat)|Возвращает значение, форматирование символов выбранного шрифта.|  
@@ -87,7 +87,7 @@ class CFontDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontDialog::m_cf](#m_cf)|Структура, используемая для настройки `CFontDialog` объекта.|  
   
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- L `plfInitial`  
+ *plfInitial*  
  Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура данных, которая позволяет настроить некоторые характеристики шрифта.  
   
- `charFormat`  
+ *charFormat*  
  Указатель на [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структура данных, которая позволяет настроить некоторые характеристики шрифта в форматированного элемента управления edit.  
   
- `dwFlags`  
+ *dwFlags*  
  Указывает один или несколько флагов выбора шрифта. Одно или несколько предустановленных значений можно объединить с помощью побитового оператора OR. Если вы изменяете член структуры `m_cf.Flag`, используйте оператор OR в изменениях, чтобы сохранить поведение по умолчанию. Сведения о каждом из этих флагов см. в описании [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) структуры в Windows SDK.  
   
- pdcPrinter  
+ *pdcPrinter*  
  Указатель на контекст принтера. Если этот параметр задан, он указывает на контекст принтера, для которого выбираются шрифты.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно или окно владельца диалогового окна шрифта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  Объект [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую сведения о форматировании символов выбранного шрифта.  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

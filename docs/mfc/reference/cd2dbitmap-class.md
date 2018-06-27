@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354286"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954754"
 ---
 # <a name="cd2dbitmap-class"></a>Класс CD2DBitmap
 Программа-оболочка для ID2D1Bitmap.  
@@ -77,24 +77,24 @@ ms.locfileid: "33354286"
 class CD2DBitmap : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap из HBITMAP.|  
 |[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Деструктор Вызывается при уничтожении объекта D2D растрового изображения.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Копирует указанную область в указанном точечном рисунке в текущую битовую карту|  
@@ -112,19 +112,19 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CommonInit](#commoninit)|Инициализирует объект|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Возвращает интерфейс ID2D1Bitmap|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|Значение TRUE, если m_hBmpSrc должно быть уничтожено; в противном случае — значение FALSE.|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Дескриптор исходного растрового изображения.|  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `uiResID`  
+ *uiResID*  
  Идентификационный номер ресурса ресурса.  
   
- `lpszType`  
+ *lpszType*  
  Указатель null нулевым байтом строка, содержащая тип ресурса.  
   
- `sizeDest`  
+ *sizeDest*  
  Целевой размер растрового изображения.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
- `lpszPath`  
+ *lpszPath*  
  Указатель на завершающуюся значением null строка, содержащая имя файла.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  Дескриптор растрового изображения.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBitmap`  
+ *pBitmap*  
  Битовая карта для копирования из  
   
- `destPoint`  
+ *destPoint*  
  В текущую битовую карту копируется в верхний левый угол области, к которому области указанной srcRect  
   
- `srcRect`  
+ *srcRect*  
  Область растрового изображения для копирования  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `srcData`  
+ *srcData*  
  Данные для копирования  
   
- `pitch`  
+ *Шаг*  
  Полный шаг или шаг исходного растрового изображения, хранящиеся в srcData. Шаг является количество байтов строке пикселей (по одной строке пикселей в памяти). Шаг можно вычислить по следующей формуле: ширина в пикселях * байт на пиксель + заполнение памяти  
   
- `destRect`  
+ *destRect*  
  В текущую битовую карту копируется в верхний левый угол области, к которому области указанной srcRect  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Целевой объект отрисовки, содержащего область для копирования  
   
- `destPoint`  
+ *destPoint*  
  В текущую битовую карту копируется в верхний левый угол области, к которому области указанной srcRect  
   
- `srcRect`  
+ *srcRect*  
  Область renderTarget для копирования  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Указатель на целевой объект отрисовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74dc76f0e638cb335c8ee762908aed36a41230eb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358295"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952353"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx-класс
 Расширяет элемент управления "поле со списком", предоставляя поддержку списков изображений.  
@@ -62,17 +62,17 @@ ms.locfileid: "33358295"
 class CComboBoxEx : public CComboBox  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Создает объект `CComboBoxEx`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComboBoxEx::Create](#create)|Создает поле со списком и прикрепляет его к `CComboBoxEx` объекта.|  
 |[CComboBoxEx::CreateEx](#createex)|Создает поле со списком с указанным расширенные стили Windows и прикрепляет его к **ComboBoxEx** объекта.|  
@@ -146,16 +146,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает сочетание стили полей со списком применяются к полю со списком. В разделе **примечания** ниже дополнительные сведения о стилях.  
   
- `rect`  
+ *Rect*  
  Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которая является положение и размер комбинированного окна.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, который является родительским окном списком (обычно `CDialog`). Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -168,7 +168,7 @@ virtual BOOL Create(
   
 2.  Вызовите эту функцию-член, который создает расширенные поле со списком Windows и прикрепляет его к `CComboBoxEx` объекта.  
   
- При вызове **создать**, MFC инициализирует стандартных элементов управления.  
+ При вызове `Create`, MFC инициализирует стандартных элементов управления.  
   
  При создании поле со списком, можно указать одно или все следующие стили полей со списками:  
   
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  Все стили, передаваемого при создании окна учитываются. **ComboBoxEx** управления также поддерживает расширенные стили, которые предоставляют дополнительные возможности. Эти стили описаны в [ComboBoxEx управления расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb775742), в Windows SDK. Установка этих стилей путем вызова [SetExtendedStyle](#setextendedstyle).  
   
- Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо **создать**.  
+ Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо `Create`.  
   
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  Эта функция вызывается для создания расширенных поле со списком (дочернего окна) и связать его с `CComboBoxEx` объекта.  
@@ -199,28 +199,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль элемента управления поля со списком. В разделе [создать](#create) список стилей.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо **создать** для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
+ Используйте `CreateEx` вместо `Create` для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
- `CreateEx` Создает элемент управления с расширенные стили Windows, указанные для `dwExStyle`. Необходимо задать расширенные стили конкретных Расширенное поле со списком управления с помощью [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` задание стилей, таких как **WS_EX_CONTEXTHELP**, но использовать `SetExtendedStyle` задание стилей, таких как **CBES_EX_CASESENSITIVE**. Дополнительные сведения см. в разделе стили, описанные в разделе [стилей расширенных элементов управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) в Windows SDK.  
+ `CreateEx` Создает элемент управления с расширенные стили Windows, указанные для *dwExStyle*. Необходимо задать расширенные стили конкретных Расширенное поле со списком управления с помощью [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` задание стилей, таких как **WS_EX_CONTEXTHELP**, но использовать `SetExtendedStyle` задание стилей, таких как **CBES_EX_CASESENSITIVE**. Дополнительные сведения см. в разделе стили, описанные в разделе [стилей расширенных элементов управления ComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775742) в Windows SDK.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  Удаляет элемент из **ComboBoxEx** управления.  
@@ -230,11 +230,11 @@ int DeleteItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iIndex`  
+ *iIndex*  
  Отсчитываемый от нуля индекс удаляемого элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число элементов, оставшихся в элементе управления. Если `iIndex` является недопустимым, функция возвращает **CB_ERR**.  
+ Число элементов, оставшихся в элементе управления. Если *iIndex* является недопустимым, функция возвращает **CB_ERR**.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует функциональность сообщения [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768), как описано в Windows SDK. При вызове DeleteItem, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений с **CBEN_DELETEITEM** будет отправлено уведомление для родительского окна.  
@@ -303,7 +303,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCBItem`  
+ *pCBItem*  
  Указатель на [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) структуру, которая будет получать сведения об элементе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -333,7 +333,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCBItem`  
+ *pCBItem*  
  Указатель на [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) структуру, которая будет получать сведения об элементе. Эта структура содержит значения флага обратного вызова для элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -352,10 +352,10 @@ DWORD SetExtendedStyle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExMask`  
- Объект `DWORD` значение, указывающее, какие стили в `dwExStyles` , могут быть затронуты. Расширенные стили в `dwExMask` будет изменен. Все стили будут сохранены как есть. Если этот параметр равен нулю, то все стили в `dwExStyles` будут затронуты.  
+ *dwExMask*  
+ Объект `DWORD` значение, указывающее, какие стили в *dwExStyles* , могут быть затронуты. Расширенные стили в *dwExMask* будет изменен. Все стили будут сохранены как есть. Если этот параметр равен нулю, то все стили в *dwExStyles* будут затронуты.  
   
- `dwExStyles`  
+ *dwExStyles*  
  Объект `DWORD` значение, которое содержит поле со списком управления расширенные стили, чтобы задать для элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -374,7 +374,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pImageList`  
+ *pImageList*  
  Указатель на `CImageList` объектом, содержащим изображения для использования в `CComboBoxEx` элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -393,7 +393,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCBItem`  
+ *pCBItem*  
  Указатель на [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) структуру, которая будет получать сведения об элементе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -410,7 +410,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszSubAppName`  
+ *pszSubAppName*  
  Указатель на строку Юникода, содержит визуальный стиль Расширенное поле со списком поле для задания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

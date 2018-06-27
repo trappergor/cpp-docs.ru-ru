@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6259ee783f6964f3a4f7bd6db31688fc77c2aa26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6390c1dc25d1470cb6d0827b2b6d6e3521bee493
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377011"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957361"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 Используется для создания диалоговых окон, использующих HTML вместо ресурсов диалогового окна, чтобы реализовать собственный пользовательский интерфейс.  
@@ -146,14 +146,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Создает объект CDHtmlDialog.|  
 |[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Уничтожает объект CDHtmlDialog.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Overridable, вызывается как проверку доступа для просмотра ли объекты для сценариев на странице загрузки доступ к внешней перенаправления сайта элемента управления. Проверяет, что перенаправления является либо безопасно для сценариев или текущей зоны позволяет для объектов, которые не являются безопасными для использования в сценариях.|  
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Переопределяемый класс, используемый для создания экземпляра сайта элемента управления, чтобы разместить элемент управления WebBrowser в диалоговом окне.|  
@@ -189,7 +189,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|Вызывается платформой для оповещения приложения, когда документ достиг `READYSTATE_COMPLETE` состояния.|  
 |[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|Вызывается платформой при активации или отключении окна документа.|  
 |[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|Вызывается платформой при активации или отключении окна фрейма.|  
-|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Вызывается в ответ на **WM_INITDIALOG** сообщения.|  
+|[CDHtmlDialog::OnInitDialog](#oninitdialog)|Вызывается в ответ на сообщение WM_INITDIALOG.|  
 |[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|Вызывается платформой, после завершения события навигации.|  
 |[CDHtmlDialog::ResizeBorder](#resizeborder)|Оповещает объект о необходимости изменить размер пространства границы.|  
 |[CDHtmlDialog::SetControlProperty](#setcontrolproperty)|Задает свойство элемента управления ActiveX с новым значением.|  
@@ -206,7 +206,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Указывает, нужно ли использовать заголовок документа HTML в виде заголовка диалогового окна.|  
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Ресурс ресурса код HTML для отображения.|  
@@ -216,7 +216,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|Строковая версия идентификатор ресурса HTML.|  
   
 ## <a name="remarks"></a>Примечания  
- **CDHtmlDialog** можно загрузить из HTML для отображения из ресурс HTML или URL-адрес.  
+ `CDHtmlDialog` можно загрузить HTML для отображения из ресурс HTML или URL-адрес.  
   
  `CDHtmlDialog` Можно также данных exchange с помощью HTML-элементов управления и обработка событий элементов управления HTML, например при нажатии кнопки.  
   
@@ -288,19 +288,19 @@ CDHtmlDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Нулем строка, представляющая имя ресурса шаблона диалогового окна.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  Нулем строка, представляющая имя ресурса HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на объект window родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Содержит идентификатор ресурса шаблона диалогового окна.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Содержит идентификатор ресурса HTML.  
   
 ### <a name="remarks"></a>Примечания  
@@ -328,10 +328,10 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pContainer`  
+ *pContainer*  
  Указатель на [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) объекта  
   
- `ppSite`  
+ *ppSite*  
  Указатель на указатель на [COleControlSite](../../mfc/reference/colecontrolsite-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -359,19 +359,19 @@ void DDX_DHtml_AxControl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение параметра ID тега object в источнике HTML для элемента управления ActiveX.  
   
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчера свойства, с которой необходимо для обмена данными.  
   
- `szPropName`  
+ *szPropName*  
  Имя свойства.  
   
- `var`  
+ *var*  
  Элемент данных типа `VARIANT`, [COleVariant](../../mfc/reference/colevariant-class.md), или [CComVariant](../../atl/reference/ccomvariant-class.md), которая содержит значение, обмен которыми осуществляется с помощью свойства элемента управления ActiveX.  
   
 ### <a name="example"></a>Пример  
@@ -388,10 +388,10 @@ void DDX_DHtml_CheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
  *значение*  
@@ -454,10 +454,10 @@ void DDX_DHtml_ElementText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
  *DISPID*  
@@ -477,10 +477,10 @@ void DDX_DHtml_Radio(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
  *значение*  
@@ -497,10 +497,10 @@ void DDX_DHtml_SelectIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра id в HTML-элемент управления.  
   
  *значение*  
@@ -517,10 +517,10 @@ void DDX_DHtml_SelectString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
  *значение*  
@@ -537,10 +537,10 @@ void DDX_DHtml_SelectValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `szId`  
+ *szId*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
  *значение*  
@@ -564,8 +564,8 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fEnable`  
- В разделе `fEnable` в [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) в Windows SDK.  
+ *fEnable*  
+ В разделе *fEnable* в [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
@@ -583,11 +583,11 @@ STDMETHOD(FilterDataObject)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDO`  
- В разделе `pDO` в [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) в Windows SDK.  
+ *pDO*  
+ В разделе *pDO* в [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) в Windows SDK.  
   
- `ppDORet`  
- В разделе `ppDORet` в **IDocHostUIHandler::FilterDataObject** в Windows SDK.  
+ *ppDORet*  
+ В разделе *ppDORet* в **IDocHostUIHandler::FilterDataObject** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **S_FALSE**.  
@@ -605,7 +605,7 @@ HRESULT GetControlDispatch(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  HTML-идентификатор элемента управления ActiveX.  
   
  *ppdisp*  
@@ -634,16 +634,16 @@ VARIANT GetControlProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  HTML-идентификатор элемента управления ActiveX.  
   
- `szPropName`  
+ *szPropName*  
  Имя свойства на языке по умолчанию текущего пользователя.  
   
- `pdispControl`  
+ *pdispControl*  
  `IDispatch` Указатель элемента управления ActiveX.  
   
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчера свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -660,7 +660,7 @@ void GetCurrentUrl(CString& szUrl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szUrl`  
+ *szUrl*  
  Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект, содержащий URL-адрес для получения.  
   
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument  
@@ -687,11 +687,11 @@ STDMETHOD(GetDropTarget)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDropTarget`  
- В разделе `pDropTarget` в [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в Windows SDK.  
+ *pDropTarget*  
+ В разделе *pDropTarget* в [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в Windows SDK.  
   
- `ppDropTarget`  
- В разделе `ppDropTarget` в **IDocHostUIHandler::GetDropTarget** в Windows SDK.  
+ *ppDropTarget*  
+ В разделе *ppDropTarget* в **IDocHostUIHandler::GetDropTarget** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
@@ -700,7 +700,7 @@ STDMETHOD(GetDropTarget)(
  Эта функция-член является реализацией CDHtmlDialog [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), как описано в Windows SDK.  
   
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement  
- Возвращает интерфейс на HTML-элемента, заданного параметром `szElementId`.  
+ Возвращает интерфейс на HTML-элемента, заданного параметром *szElementId*.  
   
 ```  
 HRESULT GetElement(
@@ -715,7 +715,7 @@ HRESULT GetElement(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
  *ppdisp*  
@@ -743,14 +743,14 @@ BSTR GetElementHtml(LPCTSTR szElementId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **InnerHTML** свойство HTML-элемент, идентифицируемый `szElementId` или **NULL** Если элемент не найден.  
+ **InnerHTML** свойство HTML-элемент, идентифицируемый *szElementId* или **NULL** Если элемент не найден.  
   
 ##  <a name="getelementinterface"></a>  CDHtmlDialog::GetElementInterface  
- Извлекает указатель на запрошенный интерфейс из HTML-элемент, идентифицируемый `szElementId`.  
+ Извлекает указатель на запрошенный интерфейс из HTML-элемент, идентифицируемый *szElementId*.  
   
 ```  
 template <class Q> HRESULT GetElementInterface(
@@ -765,13 +765,13 @@ HRESULT GetElementInterface(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
- `ppvObj`  
+ *ppvObj*  
  Адрес указатель, который заполняется указатель на запрошенный интерфейс, если элемент найден и запрос завершается успешно.  
   
- `riid`  
+ *riid*  
  Интерфейс идентификатор IID запрошенного интерфейса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -781,7 +781,7 @@ HRESULT GetElementInterface(
  [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]  
   
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty  
- Возвращает значение свойства, идентифицируемого по `dispid` из HTML-элемент, идентифицируемый `szElementId`.  
+ Возвращает значение свойства, идентифицируемого по *dispid* из HTML-элемент, идентифицируемый *szElementId*.  
   
 ```  
 VARIANT GetElementProperty(
@@ -790,28 +790,28 @@ VARIANT GetElementProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчера свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение свойства или пустой вариант, если свойство или элемент не найден.  
   
 ##  <a name="getelementtext"></a>  CDHtmlDialog::GetElementText  
- Извлекает **innerText** свойство HTML-элемент, идентифицируемый `szElementId`.  
+ Извлекает **innerText** свойство HTML-элемент, идентифицируемый *szElementId*.  
   
 ```  
 BSTR GetElementText(LPCTSTR szElementId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **InnerText** свойство HTML-элемент, идентифицируемый `szElementId` или **NULL** Если свойство или элемент не найден.  
+ **InnerText** свойство HTML-элемент, идентифицируемый *szElementId* или **NULL** Если свойство или элемент не найден.  
   
 ##  <a name="getevent"></a>  CDHtmlDialog::GetEvent  
  Возвращает **IHTMLEventObj** указатель на текущий объект события.  
@@ -821,7 +821,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppEventObj`  
+ *ppEventObj*  
  Адрес указателя, который будет заполняться **IHTMLEventObj** указатель на интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -855,8 +855,8 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pInfo`  
- В разделе `pInfo` в [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) в Windows SDK.  
+ *pInfo*  
+ В разделе *pInfo* в [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK`.  
@@ -874,11 +874,11 @@ STDMETHOD(GetOptionKeyPath)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pchKey`  
- В разделе `pchKey` в [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) в Windows SDK.  
+ *pchKey*  
+ В разделе *pchKey* в [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) в Windows SDK.  
   
- `dw`  
- В разделе `dw` в **IDocHostUIHandler::GetOptionKeyPath** в Windows SDK.  
+ *dw*  
+ В разделе *dw* в **IDocHostUIHandler::GetOptionKeyPath** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
@@ -918,10 +918,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszResource`  
+ *lpszResource*  
  Указатель на строку, содержащую имя ресурса для загрузки.  
   
- `nRes`  
+ *nRes*  
  Идентификатор ресурса для загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -979,7 +979,7 @@ LPTSTR m_szHtmlResID;
  [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]  
   
 ##  <a name="navigate"></a>  CDHtmlDialog::Navigate  
- Переходит к ресурсу, определяемому URL-адрес, который задается параметром `lpszURL`.  
+ Переходит к ресурсу, определяемому URL-адрес, который задается параметром *lpszURL*.  
   
 ```  
 void Navigate(
@@ -992,22 +992,22 @@ void Navigate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  Указатель на строку, содержащую URL-адрес, для которых будет включен.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, переменной, которая указывает, следует ли добавить этот ресурс в список журнала в кэш чтения или записи из кэша и необходимость отображения ресурса в новом окне. Переменная может быть комбинацию значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Указатель на строку, содержащую имя кадра, в которой отображаются ресурса.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Указатель на значение, указывающее заголовки HTTP для отправки на сервер. Эти заголовки добавляются к заголовкам Internet Explorer по умолчанию. Заголовки можно указать такие сведения, как действия, необходимые на сервере, тип данных, передаваемых на сервер или код состояния. Этот параметр учитывается, если URL-адрес не является URL-адрес HTTP.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Указатель на данные для отправки с помощью операции HTTP POST. Например операции POST используется для отправки данных, собранных в HTML-форму. Если этот параметр не указан, все данные post **Navigate** выдает операции HTTP GET. Этот параметр учитывается, если URL-адрес не является URL-адрес HTTP.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  Данные для отправки с помощью операции HTTP POST. Например операции POST используется для отправки данных, собранных в HTML-форму. Если этот параметр не указан, все данные post **Navigate** выдает операции HTTP GET. Этот параметр учитывается, если URL-адрес не является URL-адрес HTTP.  
   
 ##  <a name="onbeforenavigate"></a>  CDHtmlDialog::OnBeforeNavigate  
@@ -1020,10 +1020,10 @@ virtual void OnBeforeNavigate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDisp`  
+ *pDisp*  
  Указатель на объект `IDispatch` .  
   
- `szUrl`  
+ *szUrl*  
  Указатель на строку, содержащую URL-адрес для перехода.  
   
 ##  <a name="ondocumentcomplete"></a>  CDHtmlDialog::OnDocumentComplete  
@@ -1036,10 +1036,10 @@ virtual void OnDocumentComplete(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDisp`  
+ *pDisp*  
  Указатель на объект `IDispatch` .  
   
- `szUrl`  
+ *szUrl*  
  Указатель на строку, содержащую URL-адрес, по которому был осуществлен переход.  
   
 ##  <a name="ondocwindowactivate"></a>  CDHtmlDialog::OnDocWindowActivate  
@@ -1050,8 +1050,8 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fActivate`  
- В разделе `fActivate` в [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) в Windows SDK.  
+ *fActivate*  
+ В разделе *fActivate* в [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
@@ -1067,8 +1067,8 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fActivate`  
- В разделе `fActivate` в [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) в Windows SDK.  
+ *fActivate*  
+ В разделе *fActivate* в [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **E_NOTIMPL**.  
@@ -1087,7 +1087,7 @@ virtual BOOL OnInitDialog();
  Реализация по умолчанию возвращает **TRUE**.  
   
 ### <a name="remarks"></a>Примечания  
- Это сообщение отправляется в диалоговое окно во время **создать**, `CreateIndirect`, или `DoModal` вызовы, которые выполняются непосредственно перед откроется диалоговое окно.  
+ Это сообщение отправляется в диалоговое окно во время `Create`, `CreateIndirect`, или `DoModal` вызовы, которые выполняются непосредственно перед откроется диалоговое окно.  
   
  Переопределите эту функцию-член, если необходимо выполнить специальную обработку при инициализации диалоговым окном. В переопределенная версия вызвать метод базового класса `OnInitDialog` , но не принимать во внимание его возвращаемое значение. Обычно вернет **TRUE** из функции переопределенному члену.  
   
@@ -1103,10 +1103,10 @@ virtual void OnNavigateComplete(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDisp`  
+ *pDisp*  
  Указатель на объект `IDispatch` .  
   
- `szUrl`  
+ *szUrl*  
  Указатель на строку, содержащую URL-адрес, по которому был осуществлен переход.  
   
 ##  <a name="resizeborder"></a>  CDHtmlDialog::ResizeBorder  
@@ -1120,13 +1120,13 @@ STDMETHOD(ResizeBorder)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prcBorder`  
- В разделе `prcBorder` в [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) в Windows SDK.  
+ *prcBorder*  
+ В разделе *prcBorder* в [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) в Windows SDK.  
   
- `pUIWindow`  
- В разделе `pUIWindow` в **IDocHostUIHandler::ResizeBorder** в Windows SDK.  
+ *pUIWindow*  
+ В разделе *pUIWindow* в **IDocHostUIHandler::ResizeBorder** в Windows SDK.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  В разделе *fFrameWindow* в **IDocHostUIHandler::ResizeBorder** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1155,19 +1155,19 @@ void SetControlProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  HTML-идентификатор элемента управления ActiveX.  
   
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчеризации задаваемого свойства.  
   
  *pVar*  
  Указатель на **VARIANT** содержащий новое значение свойства.  
   
- `pdispControl`  
+ *pdispControl*  
  Указатель на элемент управления ActiveX `IDispatch` интерфейса.  
   
- `szPropName`  
+ *szPropName*  
  Строка, содержащая имя задаваемого свойства.  
   
 ##  <a name="setelementhtml"></a>  CDHtmlDialog::SetElementHtml  
@@ -1185,13 +1185,13 @@ void SetElementHtml(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
- `bstrText`  
+ *bstrText*  
  Новое значение **innerHTML** свойство.  
   
- `punkElem`  
+ *punkElem*  
  **IUnknown** указатель HTML-элемента.  
   
 ##  <a name="setelementproperty"></a>  CDHtmlDialog::SetElementProperty  
@@ -1205,10 +1205,10 @@ void SetElementProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчеризации задаваемого свойства.  
   
  *pVar*  
@@ -1229,13 +1229,13 @@ void SetElementText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szElementId`  
+ *szElementId*  
  Идентификатор HTML-элемента.  
   
- `bstrText`  
+ *bstrText*  
  Новое значение **innerText** свойство.  
   
- `punkElem`  
+ *punkElem*  
  **IUnknown** указатель HTML-элемента.  
   
 ##  <a name="setexternaldispatch"></a>  CDHtmlDialog::SetExternalDispatch  
@@ -1257,7 +1257,7 @@ void SetHostFlags(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Возможные значения см. в разделе [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) в Windows SDK.  
   
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu  
@@ -1272,17 +1272,17 @@ STDMETHOD(ShowContextMenu)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwID`  
- В разделе `dwID` в [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в Windows SDK.  
+ *dwID*  
+ В разделе *dwID* в [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в Windows SDK.  
   
- `ppt`  
- В разделе `ppt` в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
+ *PPT*  
+ В разделе *ppt* в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
   
- `pcmdtReserved`  
- В разделе `pcmdtReserved` в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
+ *pcmdtReserved*  
+ В разделе *pcmdtReserved* в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
   
- `pdispReserved`  
- В разделе `pdispReserved` в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
+ *pdispReserved*  
+ В разделе *pdispReserved* в **IDocHostUIHandler::ShowContextMenu** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **S_FALSE**.  
@@ -1303,20 +1303,20 @@ STDMETHOD(ShowUI)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwID`  
- В разделе `dwID` в [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в Windows SDK.  
+ *dwID*  
+ В разделе *dwID* в [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в Windows SDK.  
   
- `pActiveObject`  
+ *pActiveObject*  
  В разделе *d pActiveObject* в **IDocHostUIHandler::ShowUI** в Windows SDK.  
   
- `pCommandTarget`  
- В разделе `pCommandTarget` в **IDocHostUIHandler::ShowUI** в Windows SDK.  
+ *pCommandTarget*  
+ В разделе *pCommandTarget* в **IDocHostUIHandler::ShowUI** в Windows SDK.  
   
- `pFrame`  
- В разделе `pFrame` в **IDocHostUIHandler::ShowUI** в Windows SDK.  
+ *pFrame*  
+ В разделе *pFrame* в **IDocHostUIHandler::ShowUI** в Windows SDK.  
   
- `pDoc`  
- В разделе `pDoc` в **IDocHostUIHandler::ShowUI** в Windows SDK.  
+ *pDoc*  
+ В разделе *pDoc* в **IDocHostUIHandler::ShowUI** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **S_FALSE**.  
@@ -1335,14 +1335,14 @@ STDMETHOD(TranslateAccelerator)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpMsg`  
- В разделе `lpMsg` в [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в Windows SDK.  
+ *lpMsg*  
+ В разделе *lpMsg* в [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в Windows SDK.  
   
- `pguidCmdGroup`  
- В разделе `pguidCmdGroup` в **IDocHostUIHandler::TranslateAccelerator** в Windows SDK.  
+ *параметром pguidCmdGroup*  
+ В разделе *параметром pguidCmdGroup* в **IDocHostUIHandler::TranslateAccelerator** в Windows SDK.  
   
- `nCmdID`  
- В разделе `nCmdID` в **IDocHostUIHandler::TranslateAccelerator** в Windows SDK.  
+ *nCmdID*  
+ В разделе *nCmdID* в **IDocHostUIHandler::TranslateAccelerator** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **S_FALSE**.  
@@ -1361,14 +1361,14 @@ STDMETHOD(TranslateUrl)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwTranslate`  
- В разделе `dwTranslate` в [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) в Windows SDK.  
+ *dwTranslate*  
+ В разделе *dwTranslate* в [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) в Windows SDK.  
   
- `pchURLIn`  
- В разделе `pchURLIn` в **IDocHostUIHandler::TranslateUrl** в Windows SDK.  
+ *pchURLIn*  
+ В разделе *pchURLIn* в **IDocHostUIHandler::TranslateUrl** в Windows SDK.  
   
- `ppchURLOut`  
- В разделе `ppchURLOut` в **IDocHostUIHandler::TranslateUrl** в Windows SDK.  
+ *ppchURLOut*  
+ В разделе *ppchURLOut* в **IDocHostUIHandler::TranslateUrl** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **S_FALSE**.  

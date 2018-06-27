@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352022"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953887"
 ---
 # <a name="cd2drectu-class"></a>Класс CD2DRectU
 Программа-оболочка для `D2D1_RECT_U`.  
@@ -40,19 +40,19 @@ class CD2DRectU : public D2D1_RECT_U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectU::CD2DRectU](#cd2drectu)|Перегружен. Создает `CD2DRectU` объекта из `D2D1_RECT_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DRectU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
+|[CD2DRectU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные ( **null**).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectU::operator CRect](#operator_crect)|Преобразует `CD2DRectU` для `CRect` объекта.|  
   
@@ -81,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  исходного прямоугольника  
   
- `uLeft`  
+ *uLeft*  
  Координата левой источника  
   
- `uTop`  
+ *uTop*  
  Координата верхней источника  
   
- `uRight`  
+ *uRight*  
  Источник справа координат  
   
- `uBottom`  
+ *uBottom*  
  Нижняя координата источника  
   
 ##  <a name="isnull"></a>  CD2DRectU::ISNULL  

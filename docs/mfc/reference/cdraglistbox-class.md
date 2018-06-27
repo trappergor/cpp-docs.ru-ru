@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367215"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955993"
 ---
 # <a name="cdraglistbox-class"></a>Класс CDragListBox
 Помимо предоставления функциональных возможностей списка Windows `CDragListBox` класс позволяет пользователю перемещать элементы списка, такие как имена файлов, в окне списка.  
@@ -46,17 +46,17 @@ ms.locfileid: "33367215"
 class CDragListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDragListBox::CDragListBox](#cdraglistbox)|Создает объект `CDragListBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDragListBox::BeginDrag](#begindrag)|Вызывается платформой, когда начинается операция перетаскивания.|  
 |[CDragListBox::CancelDrag](#canceldrag)|Вызывается платформой при отмене операции перетаскивания.|  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты перетаскиваемый элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты перетаскиваемый элемент.  
   
 ### <a name="remarks"></a>Примечания  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий x и y экранные координаты курсора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nItem`  
+ *nItem*  
  Отсчитываемый от нуля индекс курсора.  
   
 ### <a name="remarks"></a>Примечания  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  Задает отсчитываемый от нуля индекс удаленной строки.  
   
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , содержащий координаты узла размещения.  
   
 ### <a name="remarks"></a>Примечания  
  Поведение по умолчанию копирует элемент списка и его данные в новое расположение, а затем удаляет исходный элемент. Переопределите эту функцию для настройки поведения по умолчанию, таких как включение копии элементов списка для переноса в другие местоположения в пределах списка.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Вызов этой функции для получения отсчитываемый от нуля индекс элемента списка, расположенный `pt`.  
+ Вызов этой функции для получения отсчитываемый от нуля индекс элемента списка, расположенный *pt*.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект, содержащий координаты точки в поле списка.  
   
  *bAutoScroll*  

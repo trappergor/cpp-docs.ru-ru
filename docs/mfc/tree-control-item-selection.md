@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb08fcbb1bd77cc80fdbe014d8c9e8a0851254d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc533046695db409067ff603e30cedbe11ad5ca4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385902"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953561"
 ---
 # <a name="tree-control-item-selection"></a>Выбор элемента древовидного элемента управления
-При изменении выбора одного элемента к другому дерево ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) и [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) сообщений уведомления. Оба уведомления содержат значение, указывающее, является ли изменения в результате щелчка кнопкой мыши или нажатие клавиши. Уведомления также содержат сведения о элемента, которая получает выделение и элемент, который теряет выделение. Эти сведения можно использовать для задания атрибутов элемента, зависящих от состояния выбора элемента. Возвращение **TRUE** в ответ на **TVN_SELCHANGING** предотвращает изменение; Выбор возвращение **FALSE** можно изменить.  
+При изменении выбора одного элемента к другому дерево ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) отправляет [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) и [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) сообщений уведомления. Оба уведомления содержат значение, указывающее, является ли изменения в результате щелчка кнопкой мыши или нажатие клавиши. Уведомления также содержат сведения о элемента, которая получает выделение и элемент, который теряет выделение. Эти сведения можно использовать для задания атрибутов элемента, зависящих от состояния выбора элемента. Возвращение **TRUE** в ответ на `TVN_SELCHANGING` предотвращает изменение; Выбор возвращение **FALSE** можно изменить.  
   
  Этот выбор можно изменить приложение, вызвав [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) функции-члена.  
   

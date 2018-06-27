@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357091"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957202"
 ---
 # <a name="canimationrect-class"></a>Класс CAnimationRect
 Реализует функции прямоугольника, стороны которого могут быть анимированы.  
@@ -68,13 +68,13 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::CAnimationRect](#canimationrect)|Перегружен. Создает объект rect анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::AddTransition](#addtransition)|Добавляет переходов слева, сверху, справа и нижней координат.|  
 |[CAnimationRect::GetBottom](#getbottom)|Предоставляет доступ к CAnimationVariable, представляющий Нижняя координата.|  
@@ -87,26 +87,26 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::operator RECT](#operator_rect)|Преобразует CAnimationRect RECT.|  
 |[CAnimationRect::operator =](#operator_eq)|Назначает rect CAnimationRect.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Указывает, имеет ли прямоугольник фиксированный размер.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|Инкапсулированный анимации переменной, которая представляет нижнюю границу анимации прямоугольник.|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|Инкапсулированный анимации переменной, представляющей слева граница анимации прямоугольник.|  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLeftTransition`  
+ *pLeftTransition*  
  Задает переход на левой стороне.  
   
- `pTopTransition`  
+ *pTopTransition*  
  Задает верхнюю сторону перехода.  
   
- `pRightTransition`  
+ *pRightTransition*  
  Задает переход с правой стороны.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  Задает переход для нижнюю сторону.  
   
 ### <a name="remarks"></a>Примечания  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Указывает прямоугольник по умолчанию.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Задает определяемые пользователем данные.  
   
- `pt`  
+ *pt*  
  Координата левого верхнего угла.  
   
- `sz`  
+ *sz*  
  Размер прямоугольника.  
   
- `nLeft`  
+ *nLeft*  
  Задает координату левой границы.  
   
- `nTop`  
+ *nTop*  
  Задает координату верхнего привязан.  
   
- `nRight`  
+ *nRight*  
  Задает координату правой границы.  
   
- `nBottom`  
+ *nBottom*  
  Задает координату нижней привязан.  
   
 ### <a name="remarks"></a>Примечания  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Когда функция возвращает значение, он содержит указатели на четыре CAnimationVariable объекты, представляющие координаты прямоугольника.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Выходные данные. При возвращении этим методом, содержит текущее значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Новое значение анимации прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Указывает новые значения по умолчанию для слева, сверху, справа и нижней.  
   
 ### <a name="remarks"></a>Примечания  

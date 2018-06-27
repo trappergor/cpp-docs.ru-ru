@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354198"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956237"
 ---
 # <a name="cd2dgradientbrush-class"></a>Класс CD2DGradientBrush
 Базовый класс CD2DLinearGradientBrush и CD2DRadialGradientBrush классов.  
@@ -44,24 +44,24 @@ ms.locfileid: "33354198"
 class CD2DGradientBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Создает объект CD2DGradientBrush.|  
 |[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D градиентной кисти.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGradientBrush::destroy](#destroy)|Уничтожает объект CD2DGradientBrush. (Переопределяет [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Массив структур D2D1_GRADIENT_STOP.|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Место на диске, в какой цвет выполняется интерполяцию между позиции градиента.|  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `gradientStops`  
+ *gradientStops*  
  Указатель на массив структур D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Значение больше или равно 1, указывающее количество градиента в массиве gradientStops.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Место на диске, в какой цвет выполняется интерполяцию между позиции градиента.  
   
- `extendMode`  
+ *extendMode*  
  Поведение вне диапазона [0,1] нормализованный градиента.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Указатель непрозрачности и преобразования кисти.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::destroy  

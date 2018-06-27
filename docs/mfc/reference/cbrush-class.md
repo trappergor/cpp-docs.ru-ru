@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355893"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954108"
 ---
 # <a name="cbrush-class"></a>CBrush-класс
 Инкапсулирует кисть интерфейса графических устройств Windows (GDI).  
@@ -54,13 +54,13 @@ class CBrush : public CGdiObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|Создает объект `CBrush`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисти стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Инициализирует кисти шаблону, заданному аппаратно независимый точечный рисунок (DIB).|  
@@ -73,7 +73,7 @@ class CBrush : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[HBRUSH CBrush::operator](#operator_hbrush)|Возвращает дескриптор Windows, присоединенного к `CBrush` объекта.|  
   
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `crColor`  
+ *crColor*  
  Указывает цвет кисти в качестве цвета RGB. Если кисть hatched, этот параметр задает цвет штриховки.  
   
- `nIndex`  
+ *nIndex*  
  Задает стиль штриховки кисти. Он может быть одним из следующих значений:  
   
 - `HS_BDIAGONAL` Штриховки вниз (слева направо) на 45 градусов  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` Вертикальная штриховка  
   
- `pBitmap`  
+ *pBitmap*  
  Указывает на `CBitmap` объект, который указывает, с которой кисть рисует растровое изображение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  Конструктор с одним [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр создает сплошной кисти указанным цветом. Указывает RGB-значение цвета и могут создаваться с использованием `RGB` макрос в WINDOWS. З.  
   
- Конструктор с двумя параметрами кисть штриховки. `nIndex` Указывает индекс заштрихованного шаблон. `crColor` Параметр определяет цвет.  
+ Конструктор с двумя параметрами кисть штриховки. *NIndex* указывает индекс заштрихованного шаблон. *CrColor* параметр определяет цвет.  
   
  Конструктор с `CBitmap` параметр узором кисть. Этот параметр идентифицирует растрового изображения. Битовая карта предполагается, что были созданы с помощью [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), или [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Растровое изображение, чтобы использоваться в узора заливки минимальный размер — 8 x 8 точек.  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  Способ обработки DIB имеют две версии:  
   
--   В первой версии, чтобы получить дескриптор для файла DIB вызовите Windows **GlobalAlloc** функцию, чтобы выделить блок памяти, глобальные и затем заполнить упакованный DIB память.  
+-   В первой версии, чтобы получить дескриптор для файла DIB вызовите Windows `GlobalAlloc` функцию, чтобы выделить блок памяти, глобальные и затем заполнить упакованный DIB память.  
   
--   Во второй версии, нет необходимости вызывать **GlobalAlloc** выделить память для упакованный DIB.  
+-   Во второй версии, нет необходимости вызывать `GlobalAlloc` выделить память для упакованный DIB.  
   
  Упакованный DIB состоит из `BITMAPINFO` структуру данных, которые следовали массив байтов, определяющий пикселей растрового изображения. Растровые изображения, используемых в качестве шаблонов для заполнения должны иметь размер 8 на 8 точек. Если размер точечного рисунка, Windows создает шаблон заполнения, с использованием только биты, соответствующие первые 8 строк и столбцов 8 пикселей в левом верхнем углу растрового изображения.  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  Сведения об использовании следующих функций Windows см. в Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (эта функция предназначена только для совместимости с приложениями, созданными для версий Windows, предшествующих версии 3.0; используйте **CreateDIBPatternBrushPt** функции.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (эта функция предназначена только для совместимости с приложениями, созданными для версий Windows, предшествующих версии 3.0; используйте `CreateDIBPatternBrushPt` функции.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (эта функция должна использоваться для приложений на базе Win32.)  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Задает стиль штриховки кисти. Он может быть одним из следующих значений:  
   
 - `HS_BDIAGONAL` Штриховки вниз (слева направо) на 45 градусов  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` Вертикальная штриховка  
   
- `crColor`  
+ *crColor*  
  Указывает цвет кисти в качестве цвета RGB (Цвет штриховки). В разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в Windows SDK для получения дополнительной информации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBitmap`  
+ *pBitmap*  
  Идентифицирует растрового изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Кисть, которая впоследствии может быть выбран для любого контекста устройства, поддерживающей растровых операций. Битовая карта, определяемый `pBitmap` обычно инициализируются с помощью [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), или [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) функции.  
+ Кисть, которая впоследствии может быть выбран для любого контекста устройства, поддерживающей растровых операций. Битовая карта, определяемый *pBitmap* обычно инициализируются с помощью [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), или [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) функции.  
   
  Растровые изображения, используемых в качестве шаблонов для заполнения должны иметь размер 8 на 8 точек. Если размер точечного рисунка, Windows будет использовать только биты, относящиеся к первые 8 строк и столбцов пикселей в левом верхнем углу растрового изображения.  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `crColor`  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структура, которая задает цвет кисти. Указывает RGB-значение цвета и могут создаваться с использованием `RGB` макрос в WINDOWS. З.  
+ *crColor*  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структура, которая задает цвет кисти. Цвет указывает RGB-значение и могут создаваться с помощью макроса RGB в WINDOWS. З.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Определяет индекс как цвет. Это значение соответствует цвет, используемый для закрашивания один из элементов 21 окна. В разделе [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) в Windows SDK для списка значений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hBrush`  
+ *hBrush*  
  `HANDLE` кисти Windows GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLogBrush`  
+ *pLogBrush*  
  Указывает на [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуру, содержащую сведения о кисти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно, и `pLogBrush` является допустимым указателем, возвращаемое значение — количество байтов, сохраненных в буфере.  
+ Если функция выполняется успешно, и *pLogBrush* является допустимым указателем, возвращаемое значение — количество байтов, сохраненных в буфере.  
   
- Если функция выполняется успешно, и `pLogBrush` — **NULL**, возвращаемое значение — число байтов, необходимое для хранения информации, функция будет храниться в буфер.  
+ Если функция выполняется успешно, и *pLogBrush* — **NULL**, возвращаемое значение — число байтов, необходимое для хранения информации, функция будет храниться в буфер.  
   
  Если функция завершается с ошибкой, то возвращаемое значение — 0.  
   

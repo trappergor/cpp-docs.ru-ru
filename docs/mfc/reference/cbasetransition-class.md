@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356384"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953575"
 ---
 # <a name="cbasetransition-class"></a>Класс CBaseTransition
 Представляет базовый переход.  
@@ -70,24 +70,24 @@ ms.locfileid: "33356384"
 class CBaseTransition : public CObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-enumerations"></a>Открытые перечисления  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Перечисление CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Определяет типы перехода, в настоящее время поддерживается реализации MFC Windows API анимации.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Создает объект базового перехода.|  
 |[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Деструктор Вызывается при уничтожении объекта перехода.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Добавляет переход раскадровки.|  
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Добавляет переход раскадровки.|  
@@ -104,7 +104,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|Указывает, были ли добавлены переход раскадровки.|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Хранит указатель на ключевой кадр, который указывает конец перехода.|  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку, которой будет анимировать связанные переменной.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку, которой будет анимировать связанные переменной.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на переход библиотеку, которая создает стандартный переходов. Он может быть NULL для пользовательских переходов.  
   
- `pFactory`  
+ *pFactory*  
  Указатель на переход фабрики, создающий пользовательский переходов. Он может быть NULL для стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на переход библиотеку, которая создает стандартный переходов. Он может быть NULL для пользовательских переходов.  
   
- `pFactory`  
+ *pFactory*  
  Указатель на переход фабрики, создающий пользовательский переходов. Он может быть NULL для стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStart`  
+ *pStart*  
  Ключевой кадр, который задает начало перехода.  
   
- `pEnd`  
+ *Откладывание*  
  Ключевой кадр, который указывает конец перехода.  
   
 ### <a name="remarks"></a>Примечания  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pVariable`  
+ *pVariable*  
  Указатель на переменную связанные анимации.  
   
 ### <a name="remarks"></a>Примечания  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368411"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952206"
 ---
 # <a name="cdaofieldinfo-structure"></a>Структура CDaoFieldInfo
 `CDaoFieldInfo` Структура содержит сведения об объекте поля, определенные для объектов доступа к данным (DAO).  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Однозначно имена полей объекта. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
- `m_nType`  
+ *m_nType*  
  Значение, указывающее тип данных поля. Дополнительные сведения см. в разделе «Тип свойства» в справке DAO. Значение этого свойства может быть одно из следующих значений:  
   
 - **dbBoolean** Да/Нет, то же, что **TRUE**/**FALSE**  
@@ -86,7 +86,7 @@ struct CDaoFieldInfo
  *m_lSize*  
  Значение, указывающее максимальный размер в байтах, DAO поле объекта, который содержит текст или фиксированного размера поля объекта, который содержит текст или числовых значений. Дополнительные сведения см. в разделе «Свойства Size» в справке DAO. Размеры может принимать одно из следующих значений:  
   
-|Тип|Размер (байт)|Описание|  
+|Тип|Размер (байт)|Описание:|  
 |----------|--------------------|-----------------|  
 |**dbBoolean**|1 байт|Да/Нет (то же, как True или False)|  
 |**dbByte**|1|Byte|  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**dbMemo**|0|MEMO ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbGUID**|16|Глобально уникальный идентификатор или универсальный уникальный идентификатор, используемый для вызовов удаленных процедур.|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Задает характеристики поле объекта, находящегося tabledef, набор записей, querydef или индекс объекта. Возвращаемое значение может быть суммой эти константы, созданных с помощью C++ побитового или (**&#124;**) оператор:  
   
 - **dbFixedField** поле фиксированный размер (по умолчанию для числовых полей).  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  Значение, указывающее числовой порядок, в котором нужно поля, представленного объекта DAO поле для отображения относительно других полей. Можно задать это свойство с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield). Дополнительные сведения см. в разделе «Свойство OrdinalPosition» в справке DAO.  
   
- `m_bRequired`  
+ *m_bRequired*  
  Указывает, требуется ли поле объекта DAO непустое значение. Если это свойство имеет **TRUE**, поле не допускает значение Null. При необходимости установлен в значение **FALSE**, поле может содержать значения Null, а также значения, которые соответствуют условиям, указанным пустые строки и ValidationRule параметры свойств. Дополнительные сведения см. в разделе «Необходимые свойства» в справке DAO. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_bAllowZeroLength*  
  Указывает, является ли пустая строка ("») является допустимым значением объекта DAO поля с типом данных Text или Memo. Если это свойство имеет **TRUE**, пустая строка является допустимым значением. Это свойство можно задать **FALSE** чтобы убедиться, что нельзя использовать пустую строку для задания значения поля. Дополнительные сведения см. в разделе «Свойство пустые строки» в справке DAO. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Задает последовательность порядка сортировки в текст для сравнения строк или сортировки. Дополнительные сведения см. в разделе «Настройка Windows реестра параметры для доступа к данным» в справке DAO. Список возможных значений, возвращаемых см. в разделе **m_lCollatingOrder** членом [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) структуры. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  Значение, в связи, задает имя объекта поля DAO внешней таблицы, которая соответствует полю в таблице первичного. Дополнительные сведения см. в разделе «Свойство ForeignName» в справке DAO.  
   
  *m_strSourceField*  
@@ -137,12 +137,12 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  Указывает имя таблицы, которая является исходный источник данных для поля объекта DAO tabledef, записей или querydef объекта. Это свойство указывает исходное имя таблицы, связанный с объектом поля. Например может использовать это свойство для определения исходного источника данных в поле запроса, имя которого не соответствует имени поля в базовой таблице. Дополнительные сведения см. в разделе «SourceField свойства SourceTable» в справке DAO. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  Значение, которое проверяет данные в поле, изменить или добавить в таблицу. Дополнительные сведения см. в разделе «ValidationRule свойство» в справке DAO. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  Дополнительные сведения о tabledefs см. в разделе **m_strValidationRule** членом [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) структуры.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  Значение, указывающее текст сообщения, которое отображает приложения, если значение поля объекта DAO не удовлетворяет параметр ValidationRule свойства, заданные правила проверки. Дополнительные сведения см. в разделе «Свертыванию» в справке DAO. Можно задать это свойство для tabledef с [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield).  
   
  *m_strDefaultValue*  

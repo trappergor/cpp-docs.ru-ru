@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352116"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956363"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>Класс CAnimationVariableIntegerChangeHandler
 Реализует обратный вызов, используемый API анимации при изменении значения переменной анимации.  
@@ -44,13 +44,13 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|Создает объект `CAnimationVariableIntegerChangeHandler`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationVariableIntegerChangeHandler` обратного вызова.|  
 |[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pAnimationController`  
+ *pAnimationController*  
  Указатель на контроллер анимации, который будет получать события.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если метод выполнен успешно, возвращается значение S_OK. В противном случае возвращается код ошибки HRESULT.  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `storyboard`  
+ *раскадровки*  
  Раскадровка, анимации переменной.  
   
- `variable`  
+ *Переменная*  
  Переменной анимации, которая была обновлена.  
   
- `newValue`  
+ *новое значение*  
  Новый округленное значение.  
   
- `previousValue`  
+ *previousValue*  
  Предыдущие округленное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pAnimationController`  
+ *pAnimationController*  
  Указатель на контроллер анимации, который будет получать события.  
   
 ## <a name="see-also"></a>См. также  

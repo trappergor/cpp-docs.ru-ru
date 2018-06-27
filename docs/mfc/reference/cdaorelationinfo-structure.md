@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366266"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951296"
 ---
 # <a name="cdaorelationinfo-structure"></a>Структура CDaoRelationInfo
 `CDaoRelationInfo` Структура содержит сведения о связи, определенные между двумя таблицами в поля [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) объекта.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Однозначно называет объект отношения. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  Имена внешней таблице в связи. Внешние таблицы — это таблица, используется для включения внешних ключей. Как правило используется внешней таблицы для наложения ссылочной целостности. Внешняя таблица обычно находится на стороне "многие" связи "один ко многим". Внешние таблицы примеры таблиц, содержащих коды для штатов США или Канады республики или заказов клиента.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  Содержит сведения о типе связи. Значение этого элемента может быть одно из следующих:  
   
 - **dbRelationUnique** связи один к одному.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** удаления происходит каскадом.  
   
- `m_pFieldInfos`  
- Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. `m_nFields` Элемент данных дает число элементов массива.  
+ *m_pFieldInfos*  
+ Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. *M_nFields* член данных дает число элементов массива.  
   
- `m_nFields`  
- Число `CDaoRelationFieldInfo` объекты в `m_pFieldInfos` элемент данных.  
+ *m_nFields*  
+ Число `CDaoRelationFieldInfo` объекты в *m_pFieldInfos* члена данных.  
   
 ## <a name="remarks"></a>Примечания  
  Ссылки на первичной и вторичной выше указывают, как возвращаются сведения по [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена в классе `CDaoDatabase`.  

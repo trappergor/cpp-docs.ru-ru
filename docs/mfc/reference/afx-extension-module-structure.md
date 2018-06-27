@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349264"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951186"
 ---
 # <a name="afxextensionmodule-structure"></a>Структура AFX_EXTENSION_MODULE
 `AFX_EXTENSION_MODULE` Используется во время инициализации DLL расширения MFC для хранения состояния модуль DLL расширения MFC.  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **Значение TRUE,** при инициализации модуля DLL с `AfxInitExtensionModule`.  
   
- `hModule`  
+ *hModule*  
  Определяет дескриптор модуля DLL.  
   
  *hResource*  
@@ -60,13 +60,13 @@ struct AFX_EXTENSION_MODULE
   
 -   Вызовите [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) и проверяйте возвращаемое значение.  
   
--   Создание **CDynLinkLibrary** объекта, если библиотека DLL будет экспортироваться [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.  
+-   Создание `CDynLinkLibrary` объекта, если библиотека DLL будет экспортироваться [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.  
   
- `AFX_EXTENSION_MODULE` Структура используется для хранения копии расширения MFC DLL модуля состоянии, включая копии объектов класса среды выполнения, которые будут инициализированы с DLL расширений MFC как часть построения обычного статического объекта перед выполнением `DllMain` — введено. Например:  
+ `AFX_EXTENSION_MODULE` Структура используется для хранения копии расширения MFC DLL модуля состоянии, включая копии объектов класса среды выполнения, которые будут инициализированы с DLL расширений MFC как часть построения обычного статического объекта перед выполнением `DllMain` — введено. Пример:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- Сведения о модуле, хранящиеся в `AFX_EXTENSION_MODULE` структуры могут быть скопированы в **CDynLinkLibrary** объекта. Например:  
+ Сведения о модуле, хранящиеся в `AFX_EXTENSION_MODULE` структуры могут быть скопированы в `CDynLinkLibrary` объекта. Пример:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

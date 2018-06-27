@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353170"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955525"
 ---
 # <a name="cctrlview-class"></a>Класс CCtrlView
 Адаптирует архитектуру "документ-представление" для распространенных элементов управления, поддерживаемых Windows 98 и Windows NT (версии 3.51 и более поздние).  
@@ -46,20 +46,20 @@ class CCtrlView : public CView
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCtrlView::CCtrlView](#cctrlview)|Создает объект `CCtrlView`.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCtrlView::OnDraw](#ondraw)|Вызывается платформой для отрисовки, с помощью заданного контекста устройств.|  
 |[CCtrlView::PreCreateWindow](#precreatewindow)|Вызывается до создания окна Windows, присоединенного к данному объекту класса `CCtrlView`.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Содержит стиль по умолчанию для класса представления.|  
 |[CCtrlView::m_strClass](#m_strclass)|Содержит имя класса Windows для класса представления.|  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClass`  
+ *lpszClass*  
  Имя класса Windows класса представления.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль класса представления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства, в котором происходит рисование.  
   
 ### <a name="remarks"></a>Примечания  
- `OnDraw` обычно вызывается для отображения на экране, передавая экрана контекста устройства, заданные `pDC`.  
+ `OnDraw` обычно вызывается для отображения на экране, передавая экрана контекста устройства, заданные *pDC*.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Вызывается до создания окна Windows, присоединенного к данному объекту класса `CWnd`.  

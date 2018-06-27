@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355803"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955093"
 ---
 # <a name="ccustominterpolator-class"></a>Класс CCustomInterpolator
 Реализует базовый интерполятор.  
@@ -66,13 +66,13 @@ class CCustomInterpolator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Перегружен. Создает объект пользовательского интерполятора и инициализирует длительность и скорости указанные значения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::GetDependencies](#getdependencies)|Возвращает интерполятора зависимости.|  
 |[CCustomInterpolator::GetDuration](#getduration)|Возвращает продолжительность интерполятор.|  
@@ -85,7 +85,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|Интерполированное значение.|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Интерполированные скорости.|  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>Примечания  
  С помощью CCustomInterpolator::Init инициализировать длительность и конечное значение далее в коде.  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Выходные данные. Интерполятора аспекты, которые зависят от начального значения, передаваемые SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Выходные данные. Интерполятора аспекты, которые зависят от начальной скоростью передан SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Выходные данные. Аспекты интерполятора, зависящих от длительности передан SetDuration.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Выходные данные. Продолжительность перехода в секундах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `value`  
+ *значение*  
  Выходные данные. Конечное значение переменной в конце перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `finalValue`  
+ *finalValue*  
  Конечное значение переменной в конце перехода.  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `value`  
+ *значение*  
  Выходные данные. Интерполированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `velocity`  
+ *скорости*  
  Выходные данные. Скорость переменной с позиции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialValue`  
+ *Начальное значение*  
  Значение переменной в начале перехода.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Скорость переменной в начале перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

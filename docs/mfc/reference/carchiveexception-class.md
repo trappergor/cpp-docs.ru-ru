@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352610"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953104"
 ---
 # <a name="carchiveexception-class"></a>Класс CArchiveException
 Представляет условие исключения сериализации  
@@ -42,13 +42,13 @@ class CArchiveException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CArchiveException::CArchiveException](#carchiveexception)|Создает объект `CArchiveException`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CArchiveException::m_cause](#m_cause)|Указывает причину исключения.|  
 |[CArchiveException::m_strFileName](#m_strfilename)|Указывает имя файла для данного условия исключения.|  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **Заголовок:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Создает `CArchiveException` объекта, при сохранении значения `cause` в объекте.  
+ Создает `CArchiveException` объекта, при сохранении значения *вызвать* в объекте.  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cause`  
+ *Причина*  
  Переменной перечисляемого типа, указывающее причину создания исключения. Список перечислителей см. в разделе [m_cause](#m_cause) члена данных.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Указывает строку, содержащую имя `CArchive` объекта, вызвавшего исключение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот член данных — это открытая переменная типа `int`. Его значения определяются `CArchiveException` перечисляемый тип. Перечислители и их значение представлено далее.  
+ Этот член данных — это открытая переменная типа **int**. Его значения определяются `CArchiveException` перечисляемый тип. Перечислители и их значение представлено далее.  
   
 - **CArchiveException::none** не возникло ошибок.  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383336"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953289"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>С помощью CArchive &lt; &lt; и &gt; &gt; операторы
 `CArchive` предоставляет <\< и >> операторы для записи и чтения простых типов данных в том числе в `CObject`s, чтобы из файла.  
@@ -40,13 +40,13 @@ ms.locfileid: "33383336"
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- Обычно, сохранять и загружать данные в файл через архив в и из `Serialize` функции `CObject`-производные классы, которые должны объявлены с **DECLARE_SERIALIZE** макрос. Ссылку на `CArchive` объект передается в ваш `Serialize` функции. Можно вызвать `IsLoading` функция `CArchive` объектом, чтобы определить ли `Serialize` функция была вызвана для загрузки данных из файла или хранения данных в файле.  
+ Обычно, сохранять и загружать данные в файл через архив в и из `Serialize` функции `CObject`-производные классы, которые должен был объявлен с помощью макроса DECLARE_SERIALIZE. Ссылку на `CArchive` объект передается в ваш `Serialize` функции. Можно вызвать `IsLoading` функция `CArchive` объектом, чтобы определить ли `Serialize` функция была вызвана для загрузки данных из файла или хранения данных в файле.  
   
  `Serialize` Функции сериализуемый `CObject`-производного класса, обычно имеет следующий вид:  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- В шаблоне кода выше именно в том же создается мастером приложений для `Serialize` функция документа (класс, производный от **CDocument)**. Этот шаблон кода помогает писать код, который является читабельность, так как код сохранения и загрузки кода всегда должна параллельных, как показано в следующем примере:  
+ В шаблоне кода выше именно в том же создается мастером приложений для `Serialize` функция документа (класс, производный от `CDocument`). Этот шаблон кода помогает писать код, который является читабельность, так как код сохранения и загрузки кода всегда должна параллельных, как показано в следующем примере:  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33383336"
   
 ||||  
 |-|-|-|  
-|`CObject*`|**РАЗМЕР и CSize**|**float**|  
+|`CObject*`|**РАЗМЕР** и `CSize`|**float**|  
 |**WORD**|`CString`|**ТОЧКА** и `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` и `CRect`.|  
 |**Double**|**LONG**|`CTime` и `CTimeSpan`.|  

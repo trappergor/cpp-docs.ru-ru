@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdd6cf2f2bb76c30f4cc00d75eb55d7d2c01fa7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14da7f0e5b0adbe72b6705700c1e9298751bc345
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380423"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953613"
 ---
 # <a name="thread-specific-hot-keys"></a>Сочетания клавиш для определенного потока
-Приложение задает сочетание клавиш потоках ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью Windows **RegisterHotKey** функции. Когда пользователь нажимает сочетание клавиш потоках, Windows отправляет [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) сообщение из начала очереди сообщений для определенного потока. **WM_HOTKEY** сообщение содержит виртуального кода клавиши, состояние сдвига и определяемых пользователем идентификатор определенного сочетания клавиш, которая была нажата. Список стандартных кодов виртуального ключа см. в разделе Winuser.h. Дополнительные сведения в этом методе см. в разделе [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
+Приложение задает сочетание клавиш потоках ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью Windows `RegisterHotKey` функции. Когда пользователь нажимает сочетание клавиш потоках, Windows отправляет [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) сообщение из начала очереди сообщений для определенного потока. WM_HOTKEY сообщение содержит виртуального кода клавиши, состояние сдвига и определяемых пользователем идентификатор определенного сочетания клавиш, которая была нажата. Список стандартных кодов виртуального ключа см. в разделе Winuser.h. Дополнительные сведения в этом методе см. в разделе [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- Обратите внимание, что флаги состояния сдвига при вызове **RegisterHotKey** не совпадают, возвращаемыми [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) функция-член; вам придется преобразовать эти флаги перед вызовом **RegisterHotKey**.  
+ Обратите внимание, что флаги состояния сдвига при вызове `RegisterHotKey` не совпадают, возвращаемыми [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) функция-член; вам придется преобразовать эти флаги перед вызовом `RegisterHotKey`.  
   
 ## <a name="see-also"></a>См. также  
  [Использование CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   

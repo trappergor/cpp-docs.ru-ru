@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355464"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951420"
 ---
 # <a name="ccacheddatapathproperty-class"></a>Класс CCachedDataPathProperty
 Реализует свойство элемента управления OLE, асинхронно переданного и кэшированного в файле памяти.  
@@ -40,20 +40,20 @@ class CCachedDataPathProperty : public CDataPathProperty
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Создает объект `CCachedDataPathProperty`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` объект для кэширования данных.|  
   
 ## <a name="remarks"></a>Примечания  
  Файл памяти хранятся в оперативной памяти, а не на диске и полезен для быстрого временного передачи.  
   
- Вместе с **CAysncMonikerFile** и `CDataPathProperty`, `CCachedDataPathProperty` предоставляет функциональные возможности для использования асинхронных моникеров в элементах управления OLE. С `CCachedDataPathProperty` объектов можно асинхронно передавать данные из источника URL-адрес или файл и сохраните его в памяти файл с помощью `m_Cache` общей переменной. Все данные хранятся в файле памяти, и нет необходимости переопределять [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) Если не требуется отслеживать уведомления и ответ. Например, при передаче большого. GIF-файл и необходимо уведомить элемент управления перерисовывать себя, что получены дополнительные данные переопределения `OnDataAvailable` вносить уведомления.  
+ Вместе с `CAysncMonikerFile` и `CDataPathProperty`, `CCachedDataPathProperty` предоставляет функциональные возможности для использования асинхронных моникеров в элементах управления OLE. С `CCachedDataPathProperty` объектов можно асинхронно передавать данные из источника URL-адрес или файл и сохраните его в памяти файл с помощью `m_Cache` общей переменной. Все данные хранятся в файле памяти, и нет необходимости переопределять [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) Если не требуется отслеживать уведомления и ответ. Например, при передаче большого. GIF-файл и необходимо уведомить элемент управления перерисовывать себя, что получены дополнительные данные переопределения `OnDataAvailable` вносить уведомления.  
   
  Класс `CCachedDataPathProperty` является производным от `CDataPathProperty`.  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pControl`  
+ *pControl*  
  Указатель на объект элемента управления ActiveX, связываемое с этим `CCachedDataPathProperty` объекта.  
   
- `lpszPath`  
+ *lpszPath*  
  Путь, который может быть абсолютным или относительным, используется для создания асинхронных моникер, ссылающийся на фактическое расположение абсолютный свойства. `CCachedDataPathProperty` использует URL-адреса, не имена файлов. Если вы хотите `CCachedDataPathProperty` объекта для файла, добавить file:// в путь.  
   
 ### <a name="remarks"></a>Примечания  
- `COleControl` Объекта, на который указывает `pControl` используется [откройте](../../mfc/reference/cdatapathproperty-class.md#open) и получить производные классы. Если `pControl` — **NULL**, элемент управления, используемый с **откройте** следует задавать с [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Если `lpszPath` — **NULL**, можно передать путь через **откройте** или установите его с [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
+ `COleControl` Объекта, на который указывает *pControl* используется [откройте](../../mfc/reference/cdatapathproperty-class.md#open) и получить производные классы. Если *pControl* — **NULL**, элемент управления, используемый с `Open` следует задавать с [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Если *lpszPath* — **NULL**, можно передать путь через `Open` или установите его с [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  Содержит имя класса в памяти файла, в который кэшируются данные.  

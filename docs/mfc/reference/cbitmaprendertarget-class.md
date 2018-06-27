@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351680"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956756"
 ---
 # <a name="cbitmaprendertarget-class"></a>Класс CBitmapRenderTarget
 Программа-оболочка для ID2D1BitmapRenderTarget.  
@@ -48,13 +48,13 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Создает объект CBitmapRenderTarget.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CBitmapRenderTarget::Detach](#detach)|Отсоединяет интерфейса отрисовки целевого объекта|  
@@ -63,13 +63,13 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|Возвращает интерфейс ID2D1BitmapRenderTarget|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|Указатель на объект ID2D1BitmapRenderTarget.|  
   
@@ -91,7 +91,7 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTarget`  
+ *pTarget*  
  Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
   
 ##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
@@ -119,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bitmap`  
+ *Растровое изображение*  
  По возвращении из этого метода содержит недопустимый точечный рисунок для этой цели отрисовки. Этот рисунок может использоваться для операций рисования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

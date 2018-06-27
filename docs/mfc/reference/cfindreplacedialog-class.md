@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368986"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957082"
 ---
 # <a name="cfindreplacedialog-class"></a>Класс CFindReplaceDialog
 Позволяет реализовать стандартную строку поиска и замены диалоговые окна в приложении.  
@@ -62,13 +62,13 @@ class CFindReplaceDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Эта функция вызывается для создания `CFindReplaceDialog` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFindReplaceDialog::Create](#create)|Создает и отображает `CFindReplaceDialog` диалоговое окно.|  
 |[CFindReplaceDialog::FindNext](#findnext)|Вызывайте эту функцию, чтобы определить, будет ли пользователю необходимо найти следующее вхождение строки поиска.|  
@@ -84,7 +84,7 @@ class CFindReplaceDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFindReplaceDialog::m_fr](#m_fr)|Структура, используемая для настройки `CFindReplaceDialog` объекта.|  
   
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  Один раз `CFindReplaceDialog` объект был создан, необходимо вызвать [создать](#create) функции-члена для создания и отображения диалогового окна.  
   
- Используйте [m_fr](#m_fr) структуры для инициализации диалогового перед вызовом **создать**. `m_fr` Структуры имеет тип [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Дополнительные сведения о структуре см. в Windows SDK.  
+ Используйте [m_fr](#m_fr) структуры для инициализации диалогового перед вызовом `Create`. `m_fr` Структуры имеет тип [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Дополнительные сведения о структуре см. в Windows SDK.  
   
  Чтобы родительского окна, уведомления запросов на поиск и замену, необходимо использовать Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) функции и использовать [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) макросы схемы сообщений в кадре окно, которое обрабатывает это зарегистрированных сообщение.  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Поскольку `CFindReplaceDialog` объектов немодального диалогового окна, необходимо создать его в куче с помощью `new` оператор.  
+ Поскольку `CFindReplaceDialog` объектов немодального диалогового окна, необходимо создать его в куче с помощью **новый** оператор.  
   
- Во время удаления, предпринимает попытку выполнить `delete this` на указатель на окно. Если вы создали диалоговое окно в стеке `this` указателя не существует и может привести к неопределенному поведению.  
+ Во время удаления, предпринимает попытку выполнить **удалить этот** на указатель на окно. Если вы создали диалоговое окно в стеке, **это** указателя не существует и может привести к неопределенному поведению.  
   
  Дополнительные сведения о построении `CFindReplaceDialog` объектов, в разделе [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) Обзор. Используйте [CFindReplaceDialog::Create](#create) функции-члена для отображения диалогового окна.  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  Присвойте этому параметру значение `TRUE` для отображения **найти** диалоговое окно. Задайте для него значение `FALSE` для отображения **поиск и замена** диалоговое окно.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  Указатель на строку поиска по умолчанию, когда появится диалоговое окно. Если `NULL`, диалоговое окно не содержит строку поиска по умолчанию.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  Указатель на строку замены по умолчанию, когда появится диалоговое окно. Если `NULL`, диалоговое окно не содержит замещающей строки по умолчанию.  
   
- `dwFlags`  
+ *dwFlags*  
  Один или несколько флагов, которые можно использовать для настройки параметров диалогового окна, объединенные с помощью оператора побитового или Значение по умолчанию — `FR_DOWN`, который указывает, что поиск продолжить вниз. В разделе [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) структуры в Windows SDK, Дополнительные сведения об этих флагов.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на диалоговое окно родительского или владельца. Это окно, который получит специальное сообщение, указывающее, запрашивается действие поиска и замены. Если `NULL`, используется главного окна приложения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lParam`  
+ *lParam*  
  **Lparam** значение, передаваемое в фрейме окна **OnFindReplace** функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

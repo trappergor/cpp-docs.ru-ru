@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367234"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952291"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Структура CDaoQueryDefInfo
 `CDaoQueryDefInfo` Структура содержит сведения об объекте querydef, определенные для объектов доступа к данным (DAO).  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Дает уникальное название объекта querydef. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO. Вызовите [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) Чтобы получить это свойство напрямую.  
   
- `m_nType`  
+ *m_nType*  
  Значение, указывающее тип оперативной объекта querydef. Он может иметь одно из следующих значений:  
   
 - **dbQSelect** выберите — запрос выбирает записи.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  Дата и время создания querydef. Для получения Дата создания querydef непосредственно вызвать [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) функцию-член `CDaoTableDef` объект, связанный с таблицей. Дополнительные сведения см. примечания ниже. Также см. в разделе «DateCreated LastUpdated свойства» в справке DAO.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  Дата и время последнего изменения, внесенные в querydef. Для получения даты последнего обновления таблицы непосредственно вызвать [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef функцию-член. Дополнительные сведения см. примечания ниже. И см. в разделе «DateCreated LastUpdated свойства» в справке DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Указывает, может ли внесены изменения в объект querydef. Если это свойство имеет **TRUE**, querydef является обновляемым; в противном случае, это не так. Возможно обновление означает, что можно изменить определение запроса объекта querydef. Обновляемое свойство объекта querydef равно **TRUE** при определении запроса можно обновить, даже если результирующий набор записей, не является обновляемым. Чтобы получить это свойство напрямую, вызовите querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) функции-члена. Дополнительные сведения см. в разделе «Обновляемые свойства» в справке DAO.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  Инструкция SQL, который определяет запрос, выполняемый с помощью объекта querydef. Свойство SQL содержит инструкцию SQL, определяющую, каким образом выбраны записи, сгруппированные и упорядоченные при выполнении запроса. Запрос можно использовать для выбора записей в объекте recordset добавляющий или моментальных снимков. Можно также определить запросы массовое изменение данных без возврата записей. Значение этого свойства можно получить непосредственно, путем вызова querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) функции-члена.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Предоставляет сведения об источнике базы данных, используемой в запросе к серверу. Эта информация состоит из строки подключения. Дополнительные сведения о объединение строк и сведения о непосредственно получение значения данного свойства см. в разделе [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) функции-члена.  
   
  *m_nODBCTimeout*  

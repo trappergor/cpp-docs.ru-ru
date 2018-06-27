@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357394"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952226"
 ---
 # <a name="cconnectionpoint-class"></a>Класс CConnectionPoint
 Определяет особый тип интерфейса, используемый для взаимодействия с другими объектами OLE и называемый "точкой подключения".  
@@ -50,23 +50,23 @@ ms.locfileid: "33357394"
 class CConnectionPoint : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|Создает объект `CConnectionPoint`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConnectionPoint::GetConnections](#getconnections)|Возвращает все точки подключения на карте соединения.|  
 |[CConnectionPoint::GetContainer](#getcontainer)|Возвращает контейнер элемента управления, которому принадлежит сопоставление подключения.|  
 |[CConnectionPoint::GetIID](#getiid)|Извлекает идентификатор интерфейса точки подключения.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Возвращает максимальное число точек соединения, поддерживаемых элементом управления.|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|Извлекает указатель на элемент подключения в `pos`.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Извлекает указатель на элемент подключения в *pos*.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Начинает итерацию карты, возвращая **ПОЗИЦИИ** значение, которое может быть передан `GetNextConnection` вызова.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|Вызывается платформой при установке или разрыва соединения.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Извлекает указатель на интерфейс запрошенного приемника.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART` И `END_CONNECTION_PART` макросы объявить класс внедренных `XSampleConnPt` (производный от `CConnectionPoint`), реализующий эту точку определенного соединения. Если вы хотите изменить любой `CConnectionPoint` функций-членов или добавить собственные функции-члены, объявите их между этих двух макросов. Например `CONNECTION_IID` переопределяет макрос `CConnectionPoint::GetIID` функция-член, помещенный между этих двух макросов.  
+ Макросы BEGIN_CONNECTION_PART и END_CONNECTION_PART объявить класс внедренных `XSampleConnPt` (производный от `CConnectionPoint`), реализующий эту точку определенного соединения. Если вы хотите изменить любой `CConnectionPoint` функций-членов или добавить собственные функции-члены, объявите их между этих двух макросов. Например, переопределения CONNECTION_IID-макрос `CConnectionPoint::GetIID` функция-член, помещенный между этих двух макросов.  
   
  Второй фрагмент кода будет вставлен в файл реализации (. CPP) класса элемента управления. Этот код реализует карты подключения, которая содержит точку дополнительные подключения, `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- После вставки этих фрагментов кода образца OLE элемент управления предоставляет точку подключения для **ISampleSink** интерфейса.  
+ После вставки этих фрагментов кода образца OLE элемент управления предоставляет точку подключения для `ISampleSink` интерфейса.  
   
  Как правило точки подключения поддерживает «рассылка», — это способность вещание несколько приемников, которые подключены к тот же интерфейс. В следующем фрагменте кода показано, как выполнить многоадресной рассылки путем прохода каждый приемник в точке соединения:  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  В случае успешного выполнения указателя в контейнер; в противном случае **NULL**.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция обычно реализуют `BEGIN_CONNECTION_PART` макрос.  
+ Эта функция обычно реализуется BEGIN_CONNECTION_PART-макрос.  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  Вызывается платформой для получения идентификатора интерфейса точки подключения.  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  Переопределите эту функцию, если вы хотите ограничить число приемников, которые могут подключаться к элементу управления.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- Извлекает указатель на элемент подключения в `pos`.  
+ Извлекает указатель на элемент подключения в *pos*.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pos`  
+ *POS*  
  Указывает ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNextConnection` или [GetStartPosition](#getstartposition) вызова.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент соединение с заданным `pos`, или значение NULL.  
+ Указатель на элемент соединение с заданным *pos*, или значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция полезна для перебора всех элементов в сопоставление подключения. Во время итерации, пропустите все значения NULL, возвращаемых этой функцией.  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAdvise`  
+ *bAdvise*  
  **Значение TRUE,**, если соединение устанавливается; в противном случае **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pUnkSink`  
+ *pUnkSink*  
  Идентификатор запрашиваемого интерфейса приемника.  
   
- `ppInterface`  
- Указатель на указатель на интерфейс, определяемый `pUnkSink`. Если объект не поддерживает этот интерфейс \* `ppInterface` равно **NULL**.  
+ *ppInterface*  
+ Указатель на указатель на интерфейс, определяемый *pUnkSink*. Если объект не поддерживает этот интерфейс \* *ppInterface* равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  

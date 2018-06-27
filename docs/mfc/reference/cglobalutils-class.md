@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d5e2c1938a975da956502f3b071c8c51c6ad48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367481"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952089"
 ---
 # <a name="cglobalutils-class"></a>Класс CGlobalUtils
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -68,7 +68,7 @@ class CGlobalUtils
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||  
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||  
@@ -104,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `rect`  
- [in] `pRectDelta`  
+ [in, out] *rect*  
+ [in] *pRectDelta*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -123,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `barContainerManager`  
- [in] `pWndTodock`  
- [in] `ptMouse`  
- [выходной] `rectResult`  
- [выходной] `bDrawTab`  
- [выходной] `ppTargetBar`  
+ [in] *barContainerManager*  
+ [in] *pWndTodock*  
+ [in] *ptMouse*  
+ [out] *rectResult*  
+ [out] *bDrawTab*  
+ [out] *ppTargetBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -176,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `pBar`  
- [in] `nSensitivity`  
- [in] `pDockManager`  
- [in] `bOuterEdge`  
- [выходной] `dwAlignment`  
- [in] `dwEnabledDockBars`  
- [in] `lpRectBounds`  
+ [in] *точки*  
+ [in] *pBar*  
+ [in] *nSensitivity*  
+ [in] *pDockManager*  
+ [in] *bOuterEdge*  
+ [out] *dwAlignment*  
+ [in] *dwEnabledDockBars*  
+ [in] *lpRectBounds*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -199,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `cy`  
- [in] `psz`  
+ [out] *cy*  
+ [in] *psz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -216,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `decimal`  
- [in] `psz`  
+ [out] *десятичное число*  
+ [in] *psz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -233,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `rect`  
- [in] `nDegrees`  
+ [in, out] *rect*  
+ [in] *nDegrees*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -249,9 +249,9 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `pDockManager`  
- [in] `bForce`  
- [in] `bForceInvisible`  
+ [in, out] *pDockManager*  
+ [in] *bForce*  
+ [in] *bForceInvisible*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -277,7 +277,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlign`  
+ [in] *dwAlign*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -297,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `barContainerManager`  
- [in] `pt`  
- [выходной] `ppTargetControlBar`  
- [выходной] `dwAlignment`  
- [выходной] `bTabArea`  
- [выходной] `bCaption`  
+ [in] *barContainerManager*  
+ [in] *pt*  
+ [out] *ppTargetControlBar*  
+ [out] *dwAlignment*  
+ [out] *bTabArea*  
+ [out] *bCaption*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -333,9 +333,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lstControlBars`  
- [in] `pNewParent`  
- [in] `bCheckVisibility`  
+ [in] *lstControlBars*  
+ [in] *pNewParent*  
+ [in] *bCheckVisibility*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -349,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `str`  
- [in] `cy`  
+ [out] *str*  
+ [in] *cy*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -366,8 +366,8 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `str`  
- [in] `decimal`  
+ [out] *str*  
+ [in] *десятичное число*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

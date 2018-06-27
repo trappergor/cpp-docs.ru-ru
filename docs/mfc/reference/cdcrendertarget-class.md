@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366477"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953705"
 ---
 # <a name="cdcrendertarget-class"></a>Класс CDCRenderTarget
 Программа-оболочка для ID2D1DCRenderTarget.  
@@ -46,17 +46,17 @@ ms.locfileid: "33366477"
 class CDCRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Создает объект CDCRenderTarget.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDCRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CDCRenderTarget::BindDC](#binddc)|Привязывает целевого объекта отрисовки на контекст устройства, к которому он выдает команд рисования|  
@@ -66,13 +66,13 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Возвращает интерфейс ID2D1DCRenderTarget|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Указатель на объект ID2D1DCRenderTarget.|  
   
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTarget`  
+ *pTarget*  
  Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dc`  
+ *dc*  
  Контекст устройства, в которую целевой объект отрисовки выдает команд рисования  
   
- `rect`  
+ *Rect*  
  Размеры дескриптор контекста устройства (HDC), к которому привязан в целевом объекте отрисовки  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `props`  
+ *PROPS*  
  Режим отрисовки, формат пикселей, параметры удаленного взаимодействия, DPI сведения и Минимальная поддержка DirectX, необходимые для подготовки к просмотру оборудования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

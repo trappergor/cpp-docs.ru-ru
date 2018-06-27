@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358262"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955652"
 ---
 # <a name="canimationmanagereventhandler-class"></a>Класс CAnimationManagerEventHandler
 Реализует обратный вызов, используемый API анимации при изменении состояния диспетчера анимации.  
@@ -44,13 +44,13 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Создает объект `CAnimationManagerEventHandler`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationManagerEventHandler` объекта.|  
 |[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Вызывается при изменении состояния диспетчера анимации. (Переопределяет `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pAnimationController`  
+ *pAnimationController*  
  Указатель на контроллер анимации, который будет получать события.  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  Выходные данные. Если метод выполнен успешно, он содержит указатель на COM-объект, обрабатывающий обновления состояния диспетчера анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `newStatus`  
+ *newStatus*  
  Новое состояние.  
   
- `previousStatus`  
+ *previousStatus*  
  Предыдущее состояние.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pAnimationController`  
+ *pAnimationController*  
  Указатель на контроллер анимации, который будет получать события.  
   
 ## <a name="see-also"></a>См. также  

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356496"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955665"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget-класс
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
@@ -76,13 +76,13 @@ class CCmdTarget : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Создает объект `CCmdTarget`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Отображает курсор в виде курсор с песочными часами.|  
 |[CCmdTarget::DoOleVerb](#dooleverb)|Вызывает действие, определенное командой OLE для выполнения.|  
@@ -131,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Платформа вызывает эту функцию для представления пользователю, что он занят, например когда **CDocument** объекта загрузки или сохранения сам файл.  
+ Платформа вызывает эту функцию для представления пользователю, что он занят, например когда `CDocument` объекта загрузки или сохранения сам файл.  
   
  Действия `BeginWaitCursor` не всегда действующие вне обработчика одно сообщение как другие действия, такие как `OnSetCursor` обработки, может изменить курсор.  
   
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iVerb`  
+ *iVerb*  
  Числовой идентификатор команды.  
   
- `lpMsg`  
+ *lpMsg*  
  Указатель на [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) структура описания события (например, двойным щелчком), которое вызвало команду.  
   
- `hWndParent`  
+ *hWndParent*  
  Дескриптор окна документа, содержащего объект.  
   
- `lpRect`  
+ *lpRect*  
  Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая координаты в пикселях, которые определяют объект ограничивающий прямоугольник в *hwndParent*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  Указатель на указатель на [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) интерфейса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если объект поддерживает по крайней мере один команды OLE (в этом случае \* `ppenumOleVerb` указывает **IEnumOLEVERB** интерфейс перечислителя), в противном случае — значение FALSE.  
+ Значение TRUE, если объект поддерживает по крайней мере один команды OLE (в этом случае \* *ppenumOleVerb* указывает `IEnumOLEVERB` интерфейс перечислителя), в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член по сути является реализацией [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781).  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpDispatch`  
- Указатель на объект `IDispatch`.  
+ *lpDispatch*  
+ Указатель на объект `IDispatch` .  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CCmdTarget` объекта, связанного с `lpDispatch`. Эта функция возвращает **NULL** Если `IDispatch` объект не является Microsoft Foundation Class `IDispatch` объекта.  
+ Указатель на `CCmdTarget` объекта, связанного с *lpDispatch*. Эта функция возвращает **NULL** Если `IDispatch` объект не является Microsoft Foundation Class `IDispatch` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Результат этой функции является обратным для вызова функции-члена `GetIDispatch`.  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>Примечания  
  Эта функция-член в основном реализуется [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12).  
   
- Производные классы должны переопределить эту функцию для возврата числа интерфейсов тип сведений, предоставляемых (0 или 1). Если не переопределен, **GetTypeInfoCount** возвращает 0. Чтобы переопределить, используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeLib` и `GetTypeLibCache`.  
+ Производные классы должны переопределить эту функцию для возврата числа интерфейсов тип сведений, предоставляемых (0 или 1). Если не переопределен, `GetTypeInfoCount` возвращает 0. Чтобы переопределить, используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeLib` и `GetTypeLibCache`.  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  Извлекает описание типа, соответствующее заданному идентификатору GUID.  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lcid`  
+ *lcid*  
  Идентификатор языкового стандарта ( `LCID`).  
   
- `guid`  
+ *Идентификатор GUID*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) описания типа.  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  Указатель на указатель на `ITypeInfo` интерфейса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * `ppTypeInfo` указывает на интерфейс типа сведений.  
+ Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * *ppTypeInfo* указывает на интерфейс типа сведений.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Возвращает указатель на библиотеку типов.  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lcid`  
+ *lcid*  
  Идентификатор языкового стандарта ( `LCID`).  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  Указатель на указатель на `ITypeLib` интерфейса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * `ppTypeLib` указывает на интерфейс библиотеки типов.  
+ Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * *ppTypeLib* указывает на интерфейс библиотеки типов.  
   
 ### <a name="remarks"></a>Примечания  
  Производные классы должны переопределить эту функцию-член (если не переопределен, `GetTypeLib` возвращает TYPE_E_CANTLOADLIBRARY). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLibCache`.  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на **CTypeLibCache** объекта.  
+ Указатель на объект `CTypeLibCache`.  
   
 ### <a name="remarks"></a>Примечания  
- Производные классы должны переопределить эту функцию-член (если не переопределен, **GetTypeLibCache** возвращает значение NULL). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLib`.  
+ Производные классы должны переопределить эту функцию-член (если не переопределен, `GetTypeLibCache` возвращает значение NULL). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLib`.  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- Эта функция вызывается с реализации MFC **IDispatch::Invoke** для определения метода данного автоматизации (определяется `dispid`) может быть вызван.  
+ Эта функция вызывается с реализации MFC `IDispatch::Invoke` для определения метода данного автоматизации (определяется *dispid*) может быть вызван.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчеризации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод может быть вызванным, в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Если `IsInvokeAllowed` возвращает значение TRUE, **Invoke** выполняет вызов метода; в противном случае `Invoke` завершится ошибкой, возвращая E_UNEXPECTED.  
+ Если `IsInvokeAllowed` возвращает значение TRUE, `Invoke` выполняет вызов метода; в противном случае `Invoke` завершится ошибкой, возвращая E_UNEXPECTED.  
   
  Производные классы могут переопределить эту функцию для возврата соответствующего значения (если не переопределен, `IsInvokeAllowed` возвращает значение TRUE). См. в частности [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Содержит идентификатор команды.  
   
- `nCode`  
- Определяет код команды уведомления. В разделе **примечания** Дополнительные сведения о значениях `nCode`.  
+ *nCode*  
+ Определяет код команды уведомления. В разделе **примечания** Дополнительные сведения о значениях *nCode*.  
   
- `pExtra`  
- Используется в соответствии со значением `nCode`. В разделе **примечания** Дополнительные сведения о `pExtra`.  
+ *pExtra*  
+ Используется в соответствии со значением *nCode*. В разделе **примечания** Дополнительные сведения о *pExtra*.  
   
- `pHandlerInfo`  
- В противном случае **NULL**, `OnCmdMsg` заполняет **pTarget** и **pmf** члены `pHandlerInfo` структуры вместо команды диспетчеризации. Как правило, этот параметр должен быть **NULL**.  
+ *pHandlerInfo*  
+ В противном случае **NULL**, `OnCmdMsg` заполняет *pTarget* и *pmf* члены *pHandlerInfo* структуры вместо диспетчеризации команда. Как правило, этот параметр должен быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если сообщение обработано; в противном случае — 0.  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  В редких случаях может потребоваться переопределить эту функцию-член для расширения framework стандартной маршрутизации команд. Ссылаться на [Технические заметки 21](../../mfc/tn021-command-and-message-routing.md) расширенные сведения архитектура маршрутизации команд.  
   
- При переопределении `OnCmdMsg`, необходимо указать соответствующее значение для `nCode`, кода команды уведомления и `pExtra`, которая зависит от значения `nCode`. В следующей таблице перечислены соответствующие им значения:  
+ При переопределении `OnCmdMsg`, необходимо указать соответствующее значение для *nCode*, кода команды уведомления и *pExtra*, которая зависит от значения *nCode* . В следующей таблице перечислены соответствующие им значения:  
   
-|Значение `nCode`|Значение `pExtra`|  
+|*nCode* значение|*pExtra* значение|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

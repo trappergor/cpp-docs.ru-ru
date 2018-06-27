@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349939"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950527"
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
 Программа-оболочка для D2D1_SIZE_U.  
@@ -40,19 +40,19 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Перегружен. Создает `CD2DSizeU` объекта из `D2D1_SIZE_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DSizeU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
+|[CD2DSizeU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные ( **null**).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::operator CSize](#operator_csize)|Преобразует `CD2DSizeU` для `CSize` объекта.|  
   
@@ -79,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Размер источника  
   
- `cx`  
+ *CX*  
  исходная ширина  
   
- `cy`  
+ *CY*  
  Высота источника  
   
 ##  <a name="isnull"></a>  CD2DSizeU::ISNULL  

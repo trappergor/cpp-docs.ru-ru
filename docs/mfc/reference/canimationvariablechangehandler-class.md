@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350996"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957095"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Класс CAnimationVariableChangeHandler
 Реализует обратный вызов, используемый API анимации при изменении значения переменной анимации.  
@@ -46,7 +46,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CAnimationVariableChangeHandler::CreateInstance`|Создает экземпляр `CAnimationVariableChangeHandler` объекта.|  
 |[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `storyboard`  
+ *раскадровки*  
  Раскадровка, анимации переменной.  
   
- `variable`  
+ *Переменная*  
  Переменной анимации, которая была обновлена.  
   
- `newValue`  
+ *новое значение*  
  Новое значение.  
   
- `previousValue`  
+ *previousValue*  
  Предыдущее значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pAnimationController`  
+ *pAnimationController*  
  Указатель на контроллер анимации, который будет получать события.  
   
 ## <a name="see-also"></a>См. также  

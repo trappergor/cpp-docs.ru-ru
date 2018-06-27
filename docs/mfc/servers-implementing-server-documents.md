@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380280"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950832"
 ---
 # <a name="servers-implementing-server-documents"></a>Серверы. Реализация документов сервера
 В этой статье описаны шаги необходимо выполнить для успешной реализации серверного документа, если вы не указали параметр OLE-сервера в мастере приложений.  
   
 #### <a name="to-define-a-server-document-class"></a>Для определения класса документов сервера  
   
-1.  Создайте производный класс документа из `COleServerDoc` вместо **CDocument**.  
+1.  Создайте производный класс документа из `COleServerDoc` вместо `CDocument`.  
   
 2.  Создайте класс server элемент, производный от `COleServerItem`.  
   

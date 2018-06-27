@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369220"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952402"
 ---
 # <a name="cdaoexception-class"></a>Класс CDaoException
 Представляет условие исключения, поступающее от классов базы данных MFC на базе объектов доступа к данным (DAO).  
@@ -48,20 +48,20 @@ class CDaoException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoException::CDaoException](#cdaoexception)|Создает объект `CDaoException`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoException::GetErrorCount](#geterrorcount)|Возвращает число ошибок в коллекцию ошибок ядра СУБД.|  
 |[CDaoException::GetErrorInfo](#geterrorinfo)|Возвращает сведения об ошибке о конкретной ошибке объекте коллекции ошибок.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Содержит расширенный код ошибки для любой ошибки в классы MFC DAO.|  
 |[CDaoException::m_pErrorInfo](#m_perrorinfo)|Указатель на [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) , содержащий сведения о один объект ошибки DAO.|  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс сведения об ошибке в коллекцию ошибок ядра СУБД, для поиска по индексу.  
   
 ### <a name="remarks"></a>Примечания  
@@ -153,7 +153,7 @@ void GetErrorInfo(int nIndex);
   
 -   Исходный код  
   
--   Описание  
+-   Описание:  
   
 -   Файл справки  
   
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |CDaoErrorInfo-член|Сведения|Значение|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|Код ошибки|Код ошибки DAO|  
+|`m_lErrorCode`|Код ошибки|Код ошибки DAO|  
 |`m_strSource`|Исходный код|Имя объекта или приложения, вызвавшего ошибку|  
-|`m_strDescription`|Описание|Строку описания, связанный с ошибкой|  
+|`m_strDescription`|Описание:|Строку описания, связанный с ошибкой|  
 |`m_strHelpFile`|Файл справки|Путь к файлу справки Windows, в котором пользователь может получить сведения о данной проблеме|  
-|**m_lHelpContext**|Контекст справки|Идентификатор контекста для раздела в файле справки DAO|  
+|`m_lHelpContext`|Контекст справки|Идентификатор контекста для раздела в файле справки DAO|  
   
  Полные сведения об информации, содержащейся в `CDaoErrorInfo` см. в разделе [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) структуры.  
   

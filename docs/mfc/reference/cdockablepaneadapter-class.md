@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367296"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951037"
 ---
 # <a name="cdockablepaneadapter-class"></a>Класс CDockablePaneAdapter
 Обеспечивает поддержку прикрепления производных панелей от `CWnd`.  
@@ -44,7 +44,7 @@ class CDockablePaneAdapter : public CDockablePane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Возвращает окно в оболочке.|  
 |[CDockablePaneAdapter::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
@@ -90,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -114,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс профиля (по умолчанию используется идентификатор элемента управления окна).  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на окно для адаптера панели программы-оболочки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

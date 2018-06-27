@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45a04f81ee7419bdf45052f0f1f2746dd7866af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385087"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957176"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 В этом разделе описывается добавление кнопки панели инструментов, содержащей элемент управления Windows на панель инструментов. Кнопки панели инструментов MFC, необходимо [класса CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-производного класса, например [класса CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton класса](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Класса CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), или [CMFCToolBarMenuButton класса](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "33385087"
   
 2.  Зарезервируйте изображение кнопки панели инструментов (значок) для кнопки в все битовые карты на панели инструментов родительской.  
   
-3.  В обработчике сообщений, который обрабатывает `AFX_WM_RESETTOOLBAR` сообщение, выполните следующие действия:  
+3.  В обработчике сообщений, обрабатывает сообщение AFX_WM_RESETTOOLBAR, выполните следующие действия.  
   
     1.  Создание кнопки с помощью `CMFCToolbarButton`-производного класса.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33385087"
  При включении настройки, вы создаете **Настройка** диалоговое окно в обработчике настройки `OnViewCustomize` с помощью [CMFCToolBarsCustomizeDialog класса](../mfc/reference/cmfctoolbarscustomizedialog-class.md) класса. Прежде чем использовать **Настройка** диалоговое окно, вызвав [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), вызовите [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) для замены стандартной кнопки с помощью нового элемента управления.  
   
 ## <a name="example-creating-a-find-combo-box"></a>Пример: Создание найти поле со списком  
- В этом разделе описывается создание `Find` поле со списком, содержащие строки поиска недавно использовавшихся появляется на панели инструментов. Пользователь может введите строку в элементе управления и затем нажмите клавишу ВВОД для поиска документа или нажмите клавишу ESC для возвращения фокуса в главного фрейма. В этом примере предполагается, что документ отображается в [класс CEditView](../mfc/reference/ceditview-class.md)-производный представления.  
+ В этом разделе описывается создание **найти** поле со списком, содержащие строки поиска недавно использовавшихся появляется на панели инструментов. Пользователь может введите строку в элементе управления и затем нажмите клавишу ВВОД для поиска документа или нажмите клавишу ESC для возвращения фокуса в главного фрейма. В этом примере предполагается, что документ отображается в [класс CEditView](../mfc/reference/ceditview-class.md)-производный представления.  
   
 ### <a name="creating-the-find-control"></a>Создание элемента управления поиска  
  Сначала создайте `Find` поле со списком:  
@@ -65,9 +65,9 @@ ms.locfileid: "33385087"
   
 2.  Создайте новый класс `CFindComboBox`, который является производным от [CComboBox-класс](../mfc/reference/ccombobox-class.md).  
   
-3.  В `CFindComboBox` класса и переопределить методы `PreTranslateMessage` виртуального метода. Этот метод позволит обрабатывать поле со списком [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) сообщения. Если пользователь нажимает клавишу escape (`VK_ESCAPE`), Возврат фокуса фрейма главного окна. Если пользователь нажимает клавишу ВВОД (`VK_ENTER`), учет для фрейма главного окна `WM_COMMAND` сообщение, содержащее `ID_EDIT_FIND_COMBO` команды идентификатор.  
+3.  В `CFindComboBox` класса и переопределить методы `PreTranslateMessage` виртуального метода. Этот метод позволит обрабатывать поле со списком [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) сообщения. Если пользователь нажимает клавишу escape (`VK_ESCAPE`), Возврат фокуса фрейма главного окна. Если пользователь нажимает клавишу ВВОД (`VK_ENTER`), учет для фрейма главного окна WM_COMMAND сообщение, содержащее `ID_EDIT_FIND_COMBO` команды идентификатор.  
   
-4.  Создание класса для `Find` кнопки поля со списком, производным от [CMFCToolBarComboBoxButton класса](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере именем является `CFindComboButton`.  
+4.  Создание класса для **найти** кнопки поля со списком, производным от [CMFCToolBarComboBoxButton класса](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере именем является `CFindComboButton`.  
   
 5.  Конструктор `CMFCToolbarComboBoxButton` принимает три параметра: идентификатор команды кнопки, кнопки индекс изображения и стиль поле со списком. Задайте эти параметры следующим образом.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "33385087"
   
 7.  Используйте [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) макрос, чтобы постоянно кнопки поля со списком. Диспетчер рабочих областей автоматически загружает и сохраняет состояние кнопки в реестре Windows.  
   
-8.  Реализуйте `ID_EDIT_FIND_COMBO` обработчика в представления документа. Используйте [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) с `ID_EDIT_FIND_COMBO` для извлечения всех `Find` кнопки, кнопки поля со списком. Из-за настройки может быть несколько копий кнопки с одним и тем же Идентификатором команды.  
+8.  Реализуйте `ID_EDIT_FIND_COMBO` обработчика в представления документа. Используйте [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) с `ID_EDIT_FIND_COMBO` для извлечения всех **найти** кнопки, кнопки поля со списком. Из-за настройки может быть несколько копий кнопки с одним и тем же Идентификатором команды.  
   
-9. В обработчике сообщений ID_EDIT_FIND `OnFind`, используйте [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) чтобы определить, является ли команды поиска было отправлено из `Find` кнопки поля со списком. В этом случае найдите текст и добавьте строку поиска в поле со списком.  
+9. В обработчике сообщений ID_EDIT_FIND `OnFind`, используйте [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) чтобы определить, является ли команды поиска было отправлено из **найти** кнопки поля со списком. В этом случае найдите текст и добавьте строку поиска в поле со списком.  
   
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>Добавление поиска элемента управления главной панели инструментов  
  Чтобы добавить кнопку поле со списком на панели инструментов, выполните следующие действия:  
@@ -91,15 +91,15 @@ ms.locfileid: "33385087"
 1.  Реализуйте `AFX_WM_RESETTOOLBAR` обработчик сообщений `OnToolbarReset` в окне главного фрейма.  
   
     > [!NOTE]
-    >  Платформа отправляет сообщение в основную область окна при инициализации панели инструментов во время запуска приложения или при сбросе во время настройки панели инструментов. В любом случае необходимо заменить кнопки панели инструментов Стандартная пользовательский `Find` кнопки поля со списком.  
+    >  Платформа отправляет сообщение в основную область окна при инициализации панели инструментов во время запуска приложения или при сбросе во время настройки панели инструментов. В любом случае необходимо заменить кнопки панели инструментов Стандартная пользовательский **найти** кнопки поля со списком.  
   
-2.  В `AFX_WM_RESETTOOLBAR` обработчик, проверьте идентификатор панели инструментов, то есть, `WPARAM` из `AFX_WM_RESETTOOLBAR` сообщения. Если равно панели инструментов, которая содержит идентификатор инструментов `Find` кнопки поля со списком, вызовите [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) заменить `Find` кнопки (то есть кнопка с Идентификатором команды `ID_EDIT_FIND)` с `CFindComboButton` объекта.  
+2.  В `AFX_WM_RESETTOOLBAR` обработчик, проверьте идентификатор панели инструментов, то есть, *WPARAM* AFX_WM_RESETTOOLBAR сообщения. Если равно панели инструментов, которая содержит идентификатор инструментов **найти** кнопки поля со списком, вызовите [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) для замены **найти** кнопки (то есть Кнопка с Идентификатором команды `ID_EDIT_FIND)` с `CFindComboButton` объекта.  
   
     > [!NOTE]
     >  Можно создать `CFindComboBox` объекта в стеке, поскольку `ReplaceButton` копирует объект "Кнопка" и сохраняет копию.  
   
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Добавление элемента управления для поиска в диалоговом окне настройки  
- В обработчике настройки `OnViewCustomize`, вызовите [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) заменить `Find` кнопки (то есть кнопка с Идентификатором команды `ID_EDIT_FIND)` с `CFindComboButton` объекта.  
+ В обработчике настройки `OnViewCustomize`, вызовите [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) заменить **найти** кнопки (то есть кнопка с Идентификатором команды `ID_EDIT_FIND)` с `CFindComboButton` объекта.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../mfc/hierarchy-chart.md)   
