@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358203"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956571"
 ---
 # <a name="cchecklistbox-class"></a>Класс CCheckListBox
 Предоставляет функции поля со списком Windows.  
@@ -54,17 +54,17 @@ ms.locfileid: "33358203"
 class CCheckListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Создает объект `CCheckListBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCheckListBox::Create](#create)|Создает поля со списком Windows и прикрепляет его к `CCheckListBox` объекта.|  
 |[CCheckListBox::DrawItem](#drawitem)|Вызывается платформой при изменении вида изменяется рисуемый владельцем списка.|  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` используется только для определяемых владельцем элементов управления, поскольку этот список содержит несколько текстовых строк. В самом простом случае поля со списком содержит флажки и текстовые строки, но не обязательно должны иметь текст во всех. Например имеется список маленькие точечные рисунки с флажком рядом с каждым элементом.  
   
- Чтобы создать собственные поля со списком, должен быть производным класса из `CCheckListBox`. Для создания собственного производного класса, создание конструктора для производного класса, затем вызовите **создать**.  
+ Чтобы создать собственные поля со списком, должен быть производным класса из `CCheckListBox`. Для создания собственного производного класса, создание конструктора для производного класса, затем вызовите `Create`.  
   
  Если вы хотите обработки сообщений Windows уведомления, отправленные в поле со списком с родительским (обычно класс, производный от [CDialog](../../mfc/reference/cdialog-class.md)), добавить схему сообщений входа и обработчик сообщений функции-члена родительского класса для каждого сообщения.  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **();**  
   
- Только одна операция схему сообщений, которая относится конкретно к **CCheckListBox** (но см. также записи схемы сообщений для [CListBox](../../mfc/reference/clistbox-class.md)):  
+ Только одна операция схему сообщений, которая относится конкретно к `CCheckListBox` (но см. также записи схемы сообщений для [CListBox](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE** пользователь изменил состояние флажка элемента.  
   
@@ -126,7 +126,7 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Создании `CCheckListBox` объекта в два этапа. Сначала определите класс, производный от `CCheckListBox`, затем вызовите **создать**, который инициализирует поля со списком Windows и прикрепляет его к `CCheckListBox` объекта.  
+ Создании `CCheckListBox` объекта в два этапа. Сначала определите класс, производный от `CCheckListBox`, затем вызовите `Create`, который инициализирует поля со списком Windows и прикрепляет его к `CCheckListBox` объекта.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает стиль поля со списком. Необходимо выбрать **LBS_HASSTRINGS** и либо **LBS_OWNERDRAWFIXED** (все элементы в списке имеют одинаковую высоту) или **LBS_OWNERDRAWVARIABLE** (элементы в списке — Изменение высоты). Этот стиль можно объединять с другими [стили списков](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) за исключением **LBS_USETABSTOPS**.  
   
- `rect`  
+ *Rect*  
  Указывает поле контрольного списка размер и положение. Может быть как [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает поле контрольного списка родительскому окну (обычно `CDialog` объекта). Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления поле контрольного списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Создании `CCheckListBox` объекта в два этапа. Во-первых, определите класс, производный от **CcheckListBox** и затем вызвать **создать**, который инициализирует поля со списком Windows и прикрепляет его к `CCheckListBox`. В разделе [CCheckListBox::CCheckListBox](#cchecklistbox) образец.  
+ Создании `CCheckListBox` объекта в два этапа. Во-первых, определите класс, производный от `CcheckListBox` и затем вызвать `Create`, который инициализирует поля со списком Windows и прикрепляет его к `CCheckListBox`. В разделе [CCheckListBox::CCheckListBox](#cchecklistbox) образец.  
   
- Когда **создать** выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщений для управления поле контрольного списка.  
+ Когда `Create` выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), и [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщения в поле контрольного списка элемента управления.  
   
  Эти сообщения обрабатываются по умолчанию с помощью [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) функции-члены в `CWnd` базового класса. Чтобы расширить возможности обработки сообщений по умолчанию, добавить схему сообщений для производного класса и функции-члены переопределение предыдущий обработчик сообщений. Переопределить `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Длинный указатель [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе требуется рисования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  По умолчанию эта функция выводит список флажок по умолчанию, состоящий из список строк, каждый с размерами по умолчанию флажок рядом с. Размер списка флажок не указанным в [создать](#create).  
   
- Переопределите эту функцию-член для реализации Рисование рисуемый владельцем контрольный список полей, которые не используются по умолчанию, таких как контрольный список поля со списками, которые не являются строками, элементы переменной высоты или флажки, которые не входят в левой части экрана. Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` перед прекращением работы этой функции-члена.  
+ Переопределите эту функцию-член для реализации Рисование рисуемый владельцем контрольный список полей, которые не используются по умолчанию, таких как контрольный список поля со списками, которые не являются строками, элементы переменной высоты или флажки, которые не входят в левой части экрана. Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в *lpDrawItemStruct* перед прекращением работы этой функции-члена.  
   
- Поле контрольного списка элементов, не ту же высоту, контрольный список стилей (указанного в **создать**) должен быть **LBS_OWNERVARIABLE**, и необходимо переопределить [MeasureItem](#measureitem) функция.  
+ Поле контрольного списка элементов, не ту же высоту, контрольный список стилей (указанного в `Create`) должен быть **LBS_OWNERVARIABLE**, и необходимо переопределить [MeasureItem](#measureitem) функции.  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  Эта функция вызывается для включения или отключения элемента контрольный список.  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс элемента поле контрольного списка включения.  
   
- `bEnabled`  
+ *bEnabled*  
  Указывает, включен ли элемент.  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,13 +225,13 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс флажок, который содержится в поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Состояние указанного флажок. В следующей таблице перечислены возможные значения.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`BST_CHECKED`|Флажок установлен.|  
 |`BST_UNCHECKED`|Флажок не установлен.|  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Длинный указатель [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.  
   
 ### <a name="remarks"></a>Примечания  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  Положение и размер элемента списка.  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  По умолчанию положения и размера флажка элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -310,16 +310,16 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс флажок, который содержится в поле со списком.  
   
- `nCheck`  
+ *Проверьте*  
  Состояние кнопки для указанного флажка. Возможные значения см.  
   
 ### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены возможные значения для `nCheck` параметра.  
+ В следующей таблице перечислены возможные значения для *проверьте* параметра.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**BST_CHECKED**|Установите указанный флажок.|  
 |**BST_UNCHECKED**|Снимите флажок указанного.|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nStyle`  
+ *nStyle*  
  Определяет стиль флажки в поле контрольного списка.  
   
 ### <a name="remarks"></a>Примечания  

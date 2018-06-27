@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3afe8efa5730c3ef0f4448b1c548724b56b7cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b6d090d6ac85ecc6af36052c0c61fe74a1283c8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353420"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953747"
 ---
 # <a name="cd2dpathgeometry-class"></a>Класс CD2DPathGeometry
 Программа-оболочка для ID2D1PathGeometry.  
@@ -56,13 +56,13 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Создает объект CD2DPathGeometry.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DPathGeometry::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DPathGeometry::CREATE](#create)|Создает CD2DPathGeometry. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -75,7 +75,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Указатель на ID2D1PathGeometry.|  
   
@@ -99,7 +99,7 @@ void Attach(ID2D1PathGeometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
 ##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
@@ -112,10 +112,10 @@ CD2DPathGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DPathGeometry::CREATE  
@@ -126,7 +126,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Указатель на целевой объект отрисовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -194,7 +194,7 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `geometrySink`  
+ *geometrySink*  
  Приемник, по которому копируется содержимое по геометрическому пути. Изменив этот приемник не изменяет содержимое этой геометрическому пути.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

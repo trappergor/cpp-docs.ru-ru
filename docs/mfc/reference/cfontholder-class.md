@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367520"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954121"
 ---
 # <a name="cfontholder-class"></a>Класс CFontHolder
-Реализует свойство Font и инкапсулирует функциональность объекта шрифта Windows и интерфейса `IFont`.  
+Реализует свойство Font и инкапсулирует функциональность объекта шрифта Windows и интерфейса `IFont` .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,17 +52,17 @@ ms.locfileid: "33367520"
 class CFontHolder  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::CFontHolder](#cfontholder)|Создает объект `CFontHolder`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::GetDisplayString](#getdisplaystring)|Возвращает строку, отображаемую в браузере свойств контейнера.|  
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|Возвращает шрифт `IDispatch` интерфейса.|  
@@ -75,7 +75,7 @@ class CFontHolder
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::m_pFont](#m_pfont)|Указатель на `CFontHolder` объекта `IFont` интерфейса.|  
   
@@ -112,7 +112,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strValue`  
+ *StrValue*  
  Ссылка на [CString](../../atl-mfc-shared/reference/cstringt-class.md) , предназначенный для хранения отображаемой строки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -126,7 +126,7 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CFontHolder` объекта **IFontDisp** интерфейса. Обратите внимание, что на функцию, который вызывает `GetFontDispatch` необходимо вызвать `IUnknown::Release` на этот указатель интерфейса, когда требуется.  
+ Указатель на `CFontHolder` объекта `IFontDisp` интерфейса. Обратите внимание, что на функцию, который вызывает `GetFontDispatch` необходимо вызвать `IUnknown::Release` на этот указатель интерфейса, когда требуется.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите `InitializeFont` перед вызовом `GetFontDispatch`.  
@@ -144,19 +144,19 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cyLogical`  
+ *cyLogical*  
  Высота в логических единицах прямоугольника, в котором нарисован элемент управления.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Высота в `MM_HIMETRIC` единицы элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор объекта шрифта; в противном случае **NULL**.  
   
 ### <a name="remarks"></a>Примечания  
- Отношение `cyLogical` и `cyHimetric` используются для вычисления размера правильное отображение, в логических единицах выражается размер шрифта в `MM_HIMETRIC` единиц:  
+ Отношение *cyLogical* и *cyHimetric* используются для вычисления размера правильное отображение, в логических единицах выражается размер шрифта в `MM_HIMETRIC` единиц:  
   
- Размер изображения = ( `cyLogical`  /  `cyHimetric`) X размер шрифта  
+ Размер изображения = ( *cyLogical* / *cyHimetric*) X размер шрифта  
   
  Версия без параметров возвращает дескриптор шрифта, размера правильно для экрана.  
   
@@ -170,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pFontDesc`  
+ *pFontDesc*  
  Указатель на структуру описания шрифтов ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)), указывающий характеристики шрифта.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Указатель на внешнее свойство шрифт контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- Если `pFontDispAmbient` не **NULL**, `CFontHolder` клон подключен объект `IFont` интерфейс используется внешнее свойство шрифт контейнера.  
+ Если *pFontDispAmbient* не **NULL**, `CFontHolder` клон подключен объект `IFont` интерфейс используется внешнее свойство шрифт контейнера.  
   
- Если `pFontDispAmbient` — **NULL**, либо из описания шрифтов, на который указывает создается новый объект Font `pFontDesc` или, если `pFontDesc` — **NULL**, с помощью описания по умолчанию.  
+ Если *pFontDispAmbient* — **NULL**, либо из описания шрифтов, на который указывает создается новый объект Font *pFontDesc* или если *pFontDesc*— **NULL**, с помощью описания по умолчанию.  
   
  Эта функция вызывается после построения `CFontHolder` объекта.  
   
@@ -198,7 +198,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lptm`  
+ *lptm*  
  Указатель на [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) структуру, которая будет получать данные.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
@@ -219,20 +219,20 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Контекст устройства, в которую установлен шрифт.  
   
- `cyLogical`  
+ *cyLogical*  
  Высота в логических единицах прямоугольника, в котором нарисован элемент управления.  
   
- `cyHimetric`  
+ *cyHimetric*  
  Высота в `MM_HIMETRIC` единицы элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель шрифта, который требуется заменить.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [GetFontHandle](#getfonthandle) обсуждение `cyLogical` и `cyHimetric` параметров.  
+ В разделе [GetFontHandle](#getfonthandle) обсуждение *cyLogical* и *cyHimetric* параметров.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
  Освобождает любой существующий шрифт и подключается `CFontHolder` объект `IFont` интерфейса.  

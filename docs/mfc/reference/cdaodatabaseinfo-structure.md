@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352744"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951937"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>Структура CDaoDatabaseInfo
 `CDaoDatabaseInfo` Структура содержит сведения об объекте базы данных, определенных для объекты доступа к данным (DAO).  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Однозначно имен объектов базы данных. Для получения этого свойства непосредственно вызвать [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  Указывает, может ли внесены изменения в базу данных. Для получения этого свойства непосредственно вызвать [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). Дополнительные сведения см. в разделе «Обновляемые свойства» в справке DAO.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Указывает версию базы данных Microsoft Jet. Чтобы получить значение этого свойства напрямую, вызовите объекта базы данных [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) функции-члена. Дополнительные сведения см. в разделе «Версии свойство» в справке DAO.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  Задает последовательность порядка сортировки в текст для сравнения строк или сортировки. Возможные допустимые значения приведены ниже.  
   
 - **dbSortGeneral** использовать общий порядок сортировки (английский, французский, немецкий, португальский, итальянский и современной).  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  Количество секунд ожидания базы данных Microsoft Jet, прежде чем выдать ошибку времени ожидания происходит при запуске запроса в базе данных ODBC. Значение времени ожидания по умолчанию — 60 секунд. Когда QueryTimeout имеет значение 0, происходит без времени ожидания; Это может привести к зависанию программы. Чтобы получить значение этого свойства напрямую, вызовите объекта базы данных [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) функции-члена. Дополнительные сведения см. в разделе «QueryTimeout свойство» в справке DAO.  
   
- `m_strConnect`  
+ *m_strConnect*  
  Предоставляет сведения об источнике открытую базу данных. Для получения сведений о объединение строк и сведения о непосредственно получение значения данного свойства см. в разделе [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) функции-члена. Дополнительные сведения см. в разделе «Свойства подключения», справки DAO.  
   
 ## <a name="remarks"></a>Примечания  

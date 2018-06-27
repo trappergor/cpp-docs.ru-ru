@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369019"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956133"
 ---
 # <a name="cgdiobject-class"></a>Класс CGdiObject
 Предоставляет базовый класс для различных типов объектов интерфейса графических устройств Windows (GDI), таких как растровые изображения, области, кисти, перья, палитры и шрифты.  
@@ -60,13 +60,13 @@ class CGdiObject : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::CGdiObject](#cgdiobject)|Создает объект `CGdiObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::Attach](#attach)|Присоединяет объект Windows GDI для `CGdiObject` объекта.|  
 |[CGdiObject::CreateStockObject](#createstockobject)|Получает дескриптор Windows предопределенных стандартных перья, кисти или шрифты.|  
@@ -81,7 +81,7 @@ class CGdiObject : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::operator! =](#operator_neq)|Определяет, если два объекта GDI логически не равны.|  
 |[CGdiObject::operator ==](#operator_eq_eq)|Определяет, логически равны ли два объекта GDI.|  
@@ -89,7 +89,7 @@ class CGdiObject : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::m_hObject](#m_hobject)|Объект `HANDLE` содержащий `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, или `HFONT` присоединен к этому объекту.|  
   
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hObject`  
+ *hObject*  
  Объект `HANDLE` в объект Windows GDI (например, `HPEN` или `HBRUSH`).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Никогда не создавайте `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или **Cbrush**.  
+ Никогда не создавайте `CGdiObject` напрямую. Вместо этого объект создается из одного из его производных классов, таких как `CPen` или `Cbrush`.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  Получает дескриптор к одной из предопределенных стандартных Windows GDI перья, кисти или шрифты и присоединяет объект GDI для `CGdiObject` объекта.  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Константа, указывающая тип требуемого stock-объектом. Параметр *fnObject* для [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) в Windows SDK описание соответствующие значения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hObject`  
+ *hObject*  
  Объект `HANDLE` объект Windows GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCount`  
- Указывает число байтов для копирования в `lpObject` буфера.  
+ *nCount*  
+ Указывает число байтов для копирования в *lpObject* буфера.  
   
- `lpObject`  
+ *lpObject*  
  Указывает на буфер, предоставленный пользователем, получающего данные.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `obj`  
+ *obj*  
  Указатель на существующий `CGdiObject`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `obj`  
+ *obj*  
  Ссылка на существующий `CGdiObject`.  
   
 ### <a name="remarks"></a>Примечания  

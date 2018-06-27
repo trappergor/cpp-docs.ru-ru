@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367052"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956637"
 ---
 # <a name="cdocobjectserveritem-class"></a>Класс CDocObjectServerItem
 Реализует команды OLE-сервера специально для серверов DocObject.  
@@ -40,23 +40,23 @@ ms.locfileid: "33367052"
 class CDocObjectServerItem : public COleServerItem  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Создает объект `CDocObjectServerItem`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServerItem::GetDocument](#getdocument)|Извлекает указатель на документ, содержащий элемент.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDocObjectServerItem::OnHide](#onhide)|Вызывает исключение, если платформа framework пытается скрывать DocObject.|  
 |[CDocObjectServerItem::OnShow](#onshow)|Вызывается платформой, чтобы сделать DocObject элемента на месте active. Если элемент не DocObject, вызывает [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pServerDoc`  
+ *pServerDoc*  
  Указатель на документ, который будет содержать новый элемент DocObject.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Указывает, является ли объект может быть удален при отпускании ссылку на него. Значение аргумента **FALSE** Если `CDocObjectServerItem` объект является неотъемлемой частью данных в документе. Задайте для него значение **TRUE** Если объект является вторичной структура, используемая для определения диапазона данных в документе, могут быть удалены платформой.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

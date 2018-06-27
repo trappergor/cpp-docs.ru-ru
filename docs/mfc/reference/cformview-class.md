@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa06581dc28293073e8094dad779be0eebabbd10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366584"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953494"
 ---
 # <a name="cformview-class"></a>Класс CFormView
 Базовый класс, используемый для представлений формы.  
@@ -36,17 +36,17 @@ ms.locfileid: "33366584"
 class CFormView : public CScrollView  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFormView::CFormView](#cformview)|Создает объект `CFormView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Используется для синхронизации во время инициализации.|  
   
@@ -84,10 +84,10 @@ CFormView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Содержит строку, завершающуюся значением null, являющееся именем ресурса шаблона диалогового окна.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Содержит идентификатор ресурса шаблона диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
