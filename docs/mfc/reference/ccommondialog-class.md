@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351193"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950639"
 ---
 # <a name="ccommondialog-class"></a>Класс CCommonDialog
 Базовый класс для классов, которые инкапсулируют функцию общих диалоговых окон Windows.  
@@ -34,11 +34,11 @@ ms.locfileid: "33351193"
 class CCommonDialog : public CDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Создает объект `CCommonDialog`.|  
   
@@ -83,7 +83,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  

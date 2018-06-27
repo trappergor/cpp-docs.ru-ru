@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde8c31620f64e6201c59b7031c789caa16c4902
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a857d1cddcc78c7cfff4243b9c99194986af3d9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379812"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956490"
 ---
 # <a name="the-ccmdui-class"></a>Класс CCmdUI
 Когда он направляет его обработчик команды update, платформа передает обработчик указатель `CCmdUI` объекта (или в объект `CCmdUI`-производного класса). Этот объект представляет элемент меню или панели инструментов кнопку или другой объект пользовательского интерфейса, вызвавшего команду. Обработчик обновлений вызывает член функции `CCmdUI` структуры через указатель для обновления объекта пользовательского интерфейса. Например вот обработчика обновлений, очистить все пункта меню.  
   
  [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]  
   
- Этот обработчик вызывает **включить** функции-члена объекта с доступом к пункту меню. **Включить** делает элемент доступным для использования.  
+ Этот обработчик вызывает `Enable` функции-члена объекта с доступом к пункту меню. `Enable` Создает элемент, доступный для использования.  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Обновление объектов интерфейса пользователя](../mfc/how-to-update-user-interface-objects.md)

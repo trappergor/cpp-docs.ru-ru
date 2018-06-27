@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376575"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955080"
 ---
 # <a name="cfilefind-class"></a>Класс CFileFind
 Выполняет поиск локального файла и является базовым классом для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) и [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), которые выполняют поиск файлов Интернета.  
@@ -82,17 +82,17 @@ ms.locfileid: "33376575"
 class CFileFind : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::CFileFind](#cfilefind)|Создает объект `CFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::Close](#close)|Закрывает этот запрос поиска.|  
 |[CFileFind::FindFile](#findfile)|Осуществляет поиск указанного имени файла в каталоге.|  
@@ -119,13 +119,13 @@ class CFileFind : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::CloseContext](#closecontext)|Закрывает файл, указанный в дескрипторе текущего поиска.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|  
   
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTM`  
+ *pTM*  
  Указатель на объект CAtlTransactionManager.  
   
 ### <a name="example"></a>Пример  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>Примечания  
  Закрывает файл, указанный дескриптор поиска текущее значение. Переопределите эту функцию для изменения поведения по умолчанию.  
   
- Необходимо вызвать [FindFile](#findfile) или [FindNextFile](#findnextfile) функции по крайней мере один раз для получения дескриптора допустимые поиска. **FindFile** и `FindNextFile` функции использовать дескриптор поиска для нахождения файлов с именами, совпадающими с указанным именем.  
+ Необходимо вызвать [FindFile](#findfile) или [FindNextFile](#findnextfile) функции по крайней мере один раз для получения дескриптора допустимые поиска. `FindFile` И `FindNextFile` функции использовать дескриптор поиска для нахождения файлов с именами, совпадающими с указанным именем.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  Вызовите эту функцию-член для открытия поиска файла.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pstrName`  
- Указатель на строку, содержащую имя файла для поиска. Если передать **NULL** для `pstrName`, **FindFile** подстановочный знак (*.\*) поиска.  
+ *pstrName*  
+ Указатель на строку, содержащую имя файла для поиска. Если передать **NULL** для *pstrName*, **FindFile** подстановочный знак (*.\*) поиска.  
   
  *dwUnused*  
- Зарезервированные вносить **FindFile** полиморфного с производными классами. Должно быть 0.  
+ Зарезервированные вносить `FindFile` полиморфного с производными классами. Должно быть 0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Чтобы получить расширенные сведения об ошибке, вызовите функцию Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Примечания  
- После вызова метода **FindFile** чтобы начать поиск, вызовите [FindNextFile](#findnextfile) для получения последующих файлов. Необходимо вызвать метод `FindNextFile` по крайней мере один раз перед вызовом любого из следующих атрибутов функции-члены:  
+ После вызова метода `FindFile` чтобы начать поиск, вызовите [FindNextFile](#findnextfile) для получения последующих файлов. Необходимо вызвать метод `FindNextFile` по крайней мере один раз перед вызовом любого из следующих атрибутов функции-члены:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -238,7 +238,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -292,7 +292,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
   
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
   
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwMask`  
+ *dwMask*  
  Указывает один или несколько атрибутов файлов, указанных в [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) структуру для найденного файла. Для поиска нескольких атрибутов, используйте побитовый оператор или (&#124;) оператор. Допускается любое сочетание следующих атрибутов:  
   
 -   FILE_ATTRIBUTE_ARCHIVE файл представляет собой файл архива. Приложения используют этот атрибут, чтобы пометить файлы для резервного копирования или удаления.  

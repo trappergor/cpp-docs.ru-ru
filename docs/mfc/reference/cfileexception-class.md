@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369129"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954537"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 Представляет состояние, связанное с файлом исключения.  
@@ -54,13 +54,13 @@ class CFileException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileException::CFileException](#cfileexception)|Создает объект `CFileException`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileException::ErrnoToException](#errnotoexception)|Возвращает вызвать код, соответствующий номеру ошибки во время выполнения.|  
 |[CFileException::GetErrorMessage](#geterrormessage)|Получает сообщение, описывающее исключение.|  
@@ -70,7 +70,7 @@ class CFileException : public CException
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileException::m_cause](#m_cause)|Содержит переносимого кода, соответствующий причину исключения.|  
 |[CFileException::m_lOsError](#m_loserror)|Содержит номер ошибки связанные операционной системы.|  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cause`  
+ *Причина*  
  Переменной перечисляемого типа, указывающее причину создания исключения. В разделе [CFileException::m_cause](#m_cause) список возможных значений.  
   
- `lOsError`  
- Операционной системе конкретного причину исключения, если он доступен. `lOsError` Параметр предоставляет больше сведений, чем `cause` does.  
+ *lOsError*  
+ Операционной системе конкретного причину исключения, если он доступен. *LOsError* параметр предоставляет больше сведений, чем *вызвать* does.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  Указывает строку, содержащую имя `CFile` объекта, вызвавшего исключение.  
   
 ### <a name="remarks"></a>Примечания  
  Не используйте этот конструктор напрямую, но вместо этого вызовите глобальную функцию [AfxThrowFileException](exception-processing.md#afxthrowfileexception).  
   
 > [!NOTE]
->  Переменная `lOsError` применяется только к `CFile` и `CStdioFile` объектов. `CMemFile` Класса не может обрабатывать этот код ошибки.  
+>  Переменная *lOsError* применяется только к `CFile` и `CStdioFile` объектов. `CMemFile` Класса не может обрабатывать этот код ошибки.  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  Преобразует значение заданного библиотеки времени выполнения ошибки `CFileException` ошибки значения перечисления.  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nErrno`  
+ *nErrno*  
  Целочисленный код ошибки, определенный в файл во время выполнения включения ERRNO. З.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `lpszError`  
+ [in, out] *lpszError*  
  Указатель на буфер, получающий сообщение об ошибке.  
   
- [in] `nMaxError`  
+ [in] *nMaxError*  
  Максимальное число символов, которые может вместить указанного буфера. Это включает завершающий нуль-символ.  
   
- [in, out] `pnHelpContext`  
+ [in, out] *pnHelpContext*  
  Указатель на целое число без знака, который получает идентификатор контекста справки. Если `NULL`, идентификатор не возвращается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот член данных — это открытая переменная типа `int`. Перечислители и их значение представлено далее.  
+ Этот член данных — это открытая переменная типа **int**. Перечислители и их значение представлено далее.  
   
 - `CFileException::none` 0: не возникло ошибок.  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- Возвращает перечислитель, который соответствует данной `lOsError` значение. Если код ошибки неизвестен, то функция возвращает **CFileException::generic**.  
+ Возвращает перечислитель, который соответствует данной *lOsError* значение. Если код ошибки неизвестен, то функция возвращает **CFileException::generic**.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lOsError`  
+ *lOsError*  
  Код ошибки операционной системы уровне.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- Создает `CFileException` объект, соответствующий данной `nErrno` значение, то создается исключение.  
+ Создает `CFileException` объект, соответствующий данной *nErrno* значение, то создается исключение.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nErrno`  
+ *nErrno*  
  Целочисленный код ошибки, определенный в файл во время выполнения включения ERRNO. З.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Указатель на строку, содержащую имя файла, который вызвал исключение, если он доступен.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- Создает `CFileException` в зависимости от заданного `lOsError` значение. Если код ошибки неизвестен, то функция создает исключение, закодировано как **CFileException::generic**.  
+ Создает `CFileException` в зависимости от заданного *lOsError* значение. Если код ошибки неизвестен, то функция создает исключение, закодировано как **CFileException::generic**.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lOsError`  
+ *lOsError*  
  Код ошибки операционной системы уровне.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Указатель на строку, содержащую имя файла, который вызвал исключение, если он доступен.  
   
 ### <a name="example"></a>Пример  

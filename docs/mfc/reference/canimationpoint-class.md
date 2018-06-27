@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355166"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957407"
 ---
 # <a name="canimationpoint-class"></a>Класс CAnimationPoint
 Реализует функции точки, координаты которой могут быть анимированы.  
@@ -56,13 +56,13 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationPoint::CAnimationPoint](#canimationpoint)|Перегружен. Создает объект CAnimationPoint.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationPoint::AddTransition](#addtransition)|Добавляет переходы для X и Y координаты.|  
 |[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для X и Y координаты.|  
@@ -73,20 +73,20 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|Преобразует CAnimationPoint CPoint.|  
 |[CAnimationPoint::operator =](#operator_eq)|Назначает ptSrc CAnimationPoint.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|Инкапсулированный анимации переменной, представляющей X координат точки анимации.|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|Переменная инкапсулированный анимации, представляющее координату Y точки анимации.|  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pXTransition`  
+ *pXTransition*  
  Указатель на переход для X координат.  
   
- `pYTransition`  
+ *pYTransition*  
  Указатель на переход для Y координации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptDefault`  
+ *ptDefault*  
  Задает координаты точки по умолчанию.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Задает определяемые пользователем данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Когда функция возвращает значение, он содержит указатели на два CAnimationVariable объекты, представляющие координаты X и Y.  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptValue`  
+ *ptValue*  
  Выходные данные. При возвращении этим методом, содержит текущее значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptSrc`  
+ *ptSrc*  
  Относится к CPoint или ТОЧКИ.  
   
 ### <a name="remarks"></a>Примечания  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptDefault`  
+ *ptDefault*  
  Указывает значение по умолчанию точки.  
   
 ### <a name="remarks"></a>Примечания  
