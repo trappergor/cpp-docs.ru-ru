@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0c20de761f91f304c1d7684dbd19a03c0b8efa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 510f0416686c981682236f6d6c05ae761fe8230d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366998"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041743"
 ---
 # <a name="cmapwordtoptr-class"></a>Класс CMapWordToPtr
 Поддерживает сопоставления пустым указателям, зашифрованным 16-разрядными ключевыми словами.  
@@ -60,8 +60,8 @@ ms.locfileid: "33366998"
 class CMapWordToPtr : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
- Функции-члены `CMapWordToPtr` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`. Если вы видите `CString` или **const** указатель `char` как параметр функции или возвращаемого значения, замените **WORD**.  
+## <a name="members"></a>Участники  
+ Функции-члены `CMapWordToPtr` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель **void**. Если вы видите `CString` или **const** указатель **char** как параметр функции или возвращаемого значения, замените **WORD**.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -73,13 +73,13 @@ class CMapWordToPtr : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|  
@@ -97,7 +97,7 @@ class CMapWordToPtr : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   

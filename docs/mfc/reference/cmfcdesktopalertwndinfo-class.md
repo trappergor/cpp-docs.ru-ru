@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367455"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038094"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Класс CMFCDesktopAlertWndInfo
 `CMFCDesktopAlertWndInfo` Класс используется с [класс CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Определяет элементы управления, которые отображаются, если всплывает окно оповещения.  
@@ -40,23 +40,23 @@ ms.locfileid: "33367455"
 class CMFCDesktopAlertWndInfo  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Дескриптор значка, который отображается.|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Идентификатор команды, связанные со ссылкой на окно оповещения.|  
@@ -93,7 +93,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

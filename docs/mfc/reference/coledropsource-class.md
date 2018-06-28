@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374901"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038232"
 ---
 # <a name="coledropsource-class"></a>Класс COleDropSource
 Позволяет перетаскивать конечное расположение сброса данные.  
@@ -44,13 +44,13 @@ class COleDropSource : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDropSource::COleDropSource](#coledropsource)|Создает объект `COleDropSource`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDropSource::GiveFeedback](#givefeedback)|Изменение курсора во время операции перетаскивания и вставки.|  
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Захват мыши обрабатываются во время операции перетаскивания и вставки.|  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dropEffect`  
+ *dropEffect*  
  Эффект, который вы хотите отображать для пользователя, как правило, позволяющее определить, что произойдет при перетаскивании на этом этапе с помощью выбранных данных. Как правило, это значение, возвращаемое последний вызов [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) или [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Может быть один или несколько из следующих:  
   
 - `DROPEFFECT_NONE` Удаление не допускается.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указывает для окна, содержащего выбранные данные.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  Указывает, была ли нажата клавиша ESC с момента последнего вызова `COleDropSource::QueryContinueDrag`.  
   
- `dwKeyState`  
+ *dwKeyState*  
  Содержит состояние клавиш на клавиатуре. Это сочетание любое количество следующих: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, и **MK_RBUTTON**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374819"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042047"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс для CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Класс предоставляет функциональные возможности для элемента управления, который используется для выбора цветов.  
@@ -70,13 +70,13 @@ class CMFCColorPickerCtrl : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Создает объект `CMFCColorPickerCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Получает цвет, выбранного пользователем.|  
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлечение значений цветового тона, яркости и насыщенности цвета, выбранного пользователем.|  
@@ -96,7 +96,7 @@ class CMFCColorPickerCtrl : public CButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызывается платформой перед отображением курсор, который указывает на выбранный цвет.|  
   
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Задает прямоугольную область вокруг выбранного цвета.  
   
 ### <a name="remarks"></a>Примечания  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `hue`  
+ [out] *цветовой тон*  
  Указатель на переменную типа double, получает сведения о цветовой тон.  
   
- [выходной] `luminance`  
+ [out] *яркости*  
  Указатель на переменную типа double, получающий сведения яркости.  
   
- [выходной] `saturation`  
+ [out] *насыщенность*  
  Указатель на переменную типа double, получающий насыщенность сведения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `R`  
+ [in] *R*  
  Компонент красного цвета.  
   
- [in] `G`  
+ [in] *G*  
  Компонент зеленого цвета.  
   
- [in] `B`  
+ [in] *B*  
  Компонент синего цвета.  
   
- [in] `x`  
+ [in] *x*  
  Координата по оси x курсор, который указывает на шестиугольник ячейки.  
   
- [in] `y`  
+ [in] *y*  
  Координата по оси y курсор, который указывает на шестиугольник ячейки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Color`  
+ [in] *Цвет*  
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hue`  
+ [in] *цветовой тон*  
  Значение оттенка.  
   
- [in] `luminance`  
+ [in] *яркости*  
  Значение яркости.  
   
- [in] `saturation`  
+ [in] *насыщенность*  
  Значение насыщенности.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` Чтобы принудительно окно немедленно обновить новый цвет; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Hue`  
+ [in] *Цветовой тон*  
  Значение оттенка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Luminance`  
+ [in] *Яркости*  
  Значение яркости.  
   
 ### <a name="remarks"></a>Примечания  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `w`  
+ [in] *w*  
  Ширина полосы яркости измеряется в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы изменить размеры панели яркости, расположенного на **настраиваемый** вкладку элемента управления выбора цвета. `w` Параметр задает новую ширину панель яркости. Значение ширины учитывается, если она превышает три четверти Ширина клиентской области.  
+ Используйте этот метод, чтобы изменить размеры панели яркости, расположенного на **настраиваемый** вкладку элемента управления выбора цвета. *w* параметр задает новую ширину панель яркости. Значение ширины учитывается, если она превышает три четверти Ширина клиентской области.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  Задает начальный выбранного цвета.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ref`  
+ [in] *ref*  
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPalette`  
+ [in] *pPalette*  
  Указатель на цветовой палитры.  
   
 ### <a name="remarks"></a>Примечания  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Saturation`  
+ [in] *Насыщенность*  
  Значение насыщенности.  
   
 ### <a name="remarks"></a>Примечания  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `colorType`  
+ [in] *colorType*  
  Тип элемента управления выбора цвета.  
   
  Типы определяются `CMFCColorPickerCtrl::COLORTYPE` перечисления. Допустимые типы `LUMINANCE`, `PICKER`, `HEX` и `HEX_GREYSCALE`. Значение по умолчанию — `PICKER`.  

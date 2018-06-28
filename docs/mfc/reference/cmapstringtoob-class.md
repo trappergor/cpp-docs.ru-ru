@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375775"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042252"
 ---
 # <a name="cmapstringtoob-class"></a>Класс CMapStringToOb
 Класс коллекции словаря, который сопоставляет уникальные объекты `CString` с указателями `CObject` .  
@@ -64,13 +64,13 @@ class CMapStringToOb : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|  
@@ -88,7 +88,7 @@ class CMapStringToOb : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CMapStringToOb::operator]](#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Указывает гранулярность выделения памяти для расширения карты.  
   
 ### <a name="remarks"></a>Примечания  
- При увеличении карты в единицах выделяется память `nBlockSize` записей.  
+ При увеличении карты в единицах выделяется память *nBlockSize* записей.  
   
  В следующей таблице приведены другие члена функции, которые похожи на **CMapStringToOb:: CMapStringToOb**.  
   
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Ключ, значение которого хэш вычисляться.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hashSize`  
+ *hashSize*  
  Число записей в хэш-таблице.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Если **TRUE**, выделяет хэш-таблице при инициализации; в противном случае таблица выделяется при необходимости.  
   
 ### <a name="remarks"></a>Примечания  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Задает ключ строки, определяющий элемента, который требуется найти.  
   
- `rValue`  
+ *rValue*  
  Указывает возвращаемое значение из элемента было вверх.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Задает ключ строки, определяющий элемента, который требуется найти.  
   
- `rKey`  
+ *rKey*  
  Ссылка на связанный ключ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на указатель на `CObject` объекту или **NULL** Если сопоставление пусто или `key` выходит за пределы диапазона.  
+ Ссылка на указатель на `CObject` объекту или **NULL** Если сопоставление пусто или *ключ* выходит за пределы диапазона.  
   
 ### <a name="remarks"></a>Примечания  
  Поэтому он может использоваться только в левой части оператора присваивания (l значение). Если ни один элемент карты с указанным ключом, создается новый элемент.  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Указывает строку, которая используется для просмотра карты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Задает строку, которая является ключевым для нового элемента.  
   
- `newValue`  
+ *новое значение*  
  Указывает `CObject` указатель, который представляет значение нового элемента.  
   
 ### <a name="remarks"></a>Примечания  

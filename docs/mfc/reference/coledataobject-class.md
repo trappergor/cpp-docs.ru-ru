@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374514"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038339"
 ---
 # <a name="coledataobject-class"></a>Класс COleDataObject
 Используется в передаче данных для извлечения данных в разных форматах из буфера обмена путем перетаскивания или из встроенного элемента OLE.  
@@ -54,17 +54,17 @@ ms.locfileid: "33374514"
 class COleDataObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDataObject::COleDataObject](#coledataobject)|Создает объект `COleDataObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDataObject::Attach](#attach)|Присоединяет указанный OLE-объект данных для `COleDataObject`.|  
 |[COleDataObject::AttachClipboard](#attachclipboard)|Присоединяет объект данных, который находится в буфере обмена.|  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  Указывает на объект данных OLE.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **Значение TRUE,** Если OLE-объекта данных следует освободить после `COleDataObject` объектов уничтожено; в противном случае **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cfFormat`  
+ *cfFormat*  
  Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуру, которая будет получать данные.  
   
- `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ *lpFormatEtc*  
+ Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным *cfFormat*. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cfFormat`  
+ *cfFormat*  
  Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
   
- `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ *lpFormatEtc*  
+ Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным *cfFormat*. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый `CFile` или `CFile`-производный объект, содержащий данные, если успешно; в противном случае **NULL**.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cfFormat`  
+ *cfFormat*  
  Формат, в которой используются данные, должны быть возвращены. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
   
- `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ *lpFormatEtc*  
+ Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающие формат, в котором возвращаемых данных. Укажите значение для этого параметра, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным *cfFormat*. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор блока глобальной памяти, содержащего данные в случае успешного выполнения; в противном случае **NULL**.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуру, которая получает сведения о форматировании, при возвращении вызова функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cfFormat`  
- Формат данных буфер обмена для использования в структуре, на который указывает `lpFormatEtc`. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
+ *cfFormat*  
+ Формат данных буфер обмена для использования в структуре, на который указывает *lpFormatEtc*. Этот параметр может принимать одно из стандартных форматов буфера обмена или значения, возвращенного приложениями Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции.  
   
- `lpFormatEtc`  
- Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающий требуемого формата. Укажите значение для этого параметра только в том случае, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным `cfFormat`. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
+ *lpFormatEtc*  
+ Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры, описывающий требуемого формата. Укажите значение для этого параметра только в том случае, если вы хотите указать формат дополнительных сведений Помимо буфера обмена с форматом, заданным *cfFormat*. Если это **NULL**, используются значения по умолчанию для других полей в **FORMATETC** структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если данные недоступны в указанном формате. в противном случае — 0.  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `IDataObject` Была связана с `COleDataObject` путем вызова **присоединение** или `AttachClipboard` явным образом или платформой. Если `bAutoRelease` параметр **присоединение** — **FALSE**, `IDataObject` объект не будет освобожден. В этом случае вызывающий объект отвечает за освобождение `IDataObject` путем вызова [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
+ `IDataObject` Была связана с `COleDataObject` путем вызова `Attach` или `AttachClipboard` явным образом или платформой. Если `bAutoRelease` параметр `Attach` — **FALSE**, `IDataObject` объект не будет освобожден. В этом случае вызывающий объект отвечает за освобождение `IDataObject` путем вызова [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

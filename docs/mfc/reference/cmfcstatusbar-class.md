@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b622ca84ca73090d609cbb557096fb75802a023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376165"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041735"
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 `CMFCStatusBar` Класс реализует строку состояния, аналогичную `CStatusBar` класса. Однако класс `CMFCStatusBar` не содержит функции, предоставляемые классом `CStatusBar` , такие как возможность отображать изображения, анимации и индикаторы выполнения, а также возможность реагировать на двойные нажатия мыши. 
@@ -104,7 +104,7 @@ class CMFCStatusBar : public CPane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||  
@@ -141,7 +141,7 @@ class CMFCStatusBar : public CPane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Вызывается платформой, когда он перерисовывает области строки состояния.|  
   
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -212,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIDFind`  
+ [in] *nIDFind*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -229,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
- [in] `dwCtrlStyle`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwCtrlStyle*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -277,11 +277,11 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Если `TRUE`, включите обработку мыши дважды щелкните. В противном случае отключите обработку двойной щелчок мышью.  
   
 ### <a name="remarks"></a>Примечания  
- При включении в строке состояния для обработки двойных щелчков Windows отправляет `WM_COMMAND` уведомления вместе с идентификатора ресурса владелец строки каждый раз при двойном щелчке на панели строки состояния состояния.  
+ При включении в строке состояния для обработки двойных щелчков Windows отправляет уведомление WM_COMMAND вместе с Идентификатором ресурса владелец строки каждый раз при двойном щелчке на панели строки состояния состояния.  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
  В указанной области будет отображаться индикатор хода выполнения.  
@@ -297,28 +297,28 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает, индикатор выполнения, чтобы включить индекс области.  
   
- [in] `nTotal`  
+ [in] *nTotal*  
  Указывает максимальное значение для индикатора хода выполнения.  
   
- [in] `bDisplayText`  
+ [in] *bDisplayText*  
  Отображение индикатора текущего значения хода выполнения.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  Задает цвет фона индикатора хода выполнения.  
   
- [in] `clrBarDest`  
- Задает вторичный цвет фона панели хода выполнения. Использовать другое значение, чем `clrBar` для заливки цветом, объединяются в градиенте.  
+ [in] *clrBarDest*  
+ Задает вторичный цвет фона панели хода выполнения. Использовать другое значение, чем *clrBar* для заливки цветом, объединяются в градиенте.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Указывает цвет текста индикатора хода выполнения.  
   
 ### <a name="remarks"></a>Примечания  
- Если вы хотите отключить панель вызов выполняется `EnablePaneProgressBar` с `nTotal` задано значение -1. По умолчанию `nTotal` установлено значение 100. Таким образом не все дополнительные вычисления для отображения хода выполнения в процентах.  
+ Если вы хотите отключить панель вызов выполняется `EnablePaneProgressBar` с *nTotal* задано значение -1. По умолчанию *nTotal* установлено значение 100. Таким образом не все дополнительные вычисления для отображения хода выполнения в процентах.  
   
- Следует передавать разные значения `clrBar` и `clrBarDest` , чтобы цвет фона индикатора хода выполнения отображает цвет, объединяются в градиенте. .  
+ Следует передавать разные значения *clrBar* и *clrBarDest* , чтобы цвет фона индикатора хода выполнения отображает цвет, объединяются в градиенте. .  
   
  Чтобы задать текущий ход выполнения, вызовите [CMFCStatusBar::SetPaneProgress](#setpaneprogress) метод.  
   
@@ -351,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -365,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `lpRect`  
+ [in] *nIndex*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -413,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -427,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `s`  
+ [in] *nIndex*  
+ [in] *s*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -460,11 +460,11 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс панели строки состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ширина панели строки состояния, `nIndex` указывает; в противном случае — нуль, если в строке состояния области не существует.  
+ Ширина панели строки состояния, *nIndex* указывает; в противном случае — нуль, если в строке состояния области не существует.  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
  Получить текст подсказки для панели строки состояния.  
@@ -474,11 +474,11 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс области, для которого требуется извлечь текст подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Текст подсказки для панели строки состояния, `nIndex` указывает. В противном случае — пустой строке, если панель строки состояния не существует для указанного `nIndex` или его текст всплывающей подсказки, пустое.  
+ Текст подсказки для панели строки состояния, *nIndex* указывает. В противном случае — пустой строке, если панель строки состояния не существует для указанного *nIndex* или его текст всплывающей подсказки, пустое.  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
  Делает недоступной панели строки состояния и перерисовывает его содержимого.  
@@ -488,11 +488,11 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс область, содержимое которого является недействительным и перерисовать.  
   
 ### <a name="remarks"></a>Примечания  
- Если строка состояния становится недействительным, оно помечено для перерисовки. Windows перерисовывает его при `UpdateWindow` метод отправляет `WM_PAINT` сообщения к `OnPaint` метод.  
+ Если строка состояния становится недействительным, оно помечено для перерисовки. Windows перерисовывает его при `UpdateWindow` метод отправляет сообщение WM_PAINT `OnPaint` метод.  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
  Перерисовывает области строки состояния.  
@@ -504,14 +504,14 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для рисования.  
   
- [in] `pPane`  
+ [in] *pPane*  
  Указатель на `CMFCStatusBarPaneInfo` структуру, содержащую сведения об области перерисовку.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию `OnDrawPane` перерисовывает области с помощью контекста устройства `pDC` согласно стиля на панели и его содержимое.  
+ По умолчанию `OnDrawPane` перерисовывает области с помощью контекста устройства *pDC* согласно стиля на панели и его содержимое.  
   
  Переопределите этот метод в `CMFCStatusBar`-производного класса, чтобы настроить внешний вид области.  
   
@@ -523,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `cs`  
+ [in] *cs*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -537,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpIDArray`  
- [in] `nIDCount`  
+ [in] *lpIDArray*  
+ [in] *nIDCount*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -570,16 +570,16 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс панели, к которому вы хотите назначить в него анимации.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Задает дескриптор для списка изображений, который содержит кадров анимации.  
   
- [in] `nFrameRate`  
+ [in] *nFrameRate*  
  Указывает частоту кадров, в миллисекундах для анимации.  
   
- [in] `bUpdate`  
+ [in] *bСтратегии обновлениями*  
  Если `TRUE`, немедленно обновлять содержимое области. В противном случае содержимое панели обновляется, когда он становится недействительным.  
   
 ### <a name="remarks"></a>Примечания  
@@ -596,13 +596,13 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс области, для которого требуется задать новый цвет фона.  
   
- [in] `clrBackground`  
+ [in] *clrBackground*  
  Указывает новый цвет фона.  
   
- [in] `bUpdate`  
+ [in] *bСтратегии обновлениями*  
  Если `TRUE`, немедленно обновлять содержимое области. В противном случае не обновить содержимое области до области становится недействительным другим методом.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс области, для которого требуется задать изображение.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Указывает дескриптор значка в качестве области изображения.  
   
- [in] `bUpdate`  
+ [in] *bСтратегии обновлениями*  
  Указывает, следует немедленно обновить содержимое области.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Указывает дескриптор растрового изображения в качестве области изображения.  
   
- [in] `clrTransparent`  
- Определяет прозрачный цвет изображения, `hBmp` указывает.  
+ [in] *clrTransparent*  
+ Определяет прозрачный цвет изображения, *hBmp* указывает.  
   
 ### <a name="remarks"></a>Примечания  
  Можно передать либо `HICON` или `HBITMAP` вместе с прозрачный цвет, чтобы задать область изображения. Если вы не хотите больше отображения изображения, передайте `NULL` значение в качестве маркера изображения.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -673,13 +673,13 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс области, для которого требуется обновить индикатор хода выполнения.  
   
- [in] `nCurr`  
+ [in] *nCurr*  
  Указывает текущее значение индикатора хода выполнения.  
   
- [in] `bUpdate`  
+ [in] *bСтратегии обновлениями*  
  Указывает, является ли области должны быть обновлены сразу же.  
   
 ### <a name="remarks"></a>Примечания  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `nStyle`  
+ [in] *nIndex*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -713,9 +713,9 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- [in] `lpszNewText`  
- [in] `bUpdate`  
+ [in] *nIndex*  
+ [in] *lpszNewText*  
+ [in] *bСтратегии обновлениями*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -732,13 +732,13 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс панели, к которому вы хотите назначить новый цвет текста.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Указывает цвет текста.  
   
- [in] `bUpdate`  
+ [in] *bСтратегии обновлениями*  
  Если `TRUE`, немедленно обновлять содержимое области. В противном случае не обновить содержимое области до области становится недействительным другим методом.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
@@ -751,10 +751,10 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс панели строки состояния, для которого требуется задать новую ширину.  
   
- [in] `cx`  
+ [in] *cx*  
  Новая ширина панели строки состояния, в пикселях.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
@@ -767,10 +767,10 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс области, к которому вы хотите назначить текст всплывающей подсказки.  
   
- [in] `pszTipText`  
+ [in] *pszTipText*  
  Новый текст всплывающей подсказки.  
   
 ## <a name="see-also"></a>См. также  

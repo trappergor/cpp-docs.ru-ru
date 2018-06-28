@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd073dc7876a755a8dc309efc7e11fb63521ab5a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374088"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037906"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Класс CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -72,14 +72,14 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCOutlookBarPane::CMFCOutlookBarPane`|Конструктор по умолчанию.|  
 |`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Добавляет кнопку область панели Outlook.|  
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Определяет, можно ли прикрепить к другой панели или окне фрейма области. (Переопределяет [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|  
@@ -107,7 +107,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Указывает, какие элементы контекстного меню отображаются в режим настройки.|  
 |[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Удаляет все кнопки в область панели Outlook. (Переопределяет [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  
@@ -184,31 +184,31 @@ BOOL AddButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiImage`  
+ [in] *uiImage*  
  Указывает идентификатор ресурса точечного рисунка.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Задает текст кнопки.  
   
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Указывает идентификатор элемента управления button.  
   
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Отсчитываемый от нуля индекс указывает на страницу панели outlook, по которому следует вставить кнопку.  
   
- [in] `uiLabel`  
+ [in] *uiLabel*  
  Идентификатор строки ресурса.  
   
- [in] `szBmpFileName`  
+ [in] *szBmpFileName*  
  Задает имя файла образа диска для загрузки.  
   
- [in] `szLabel`  
+ [in] *szLabel*  
  Задает текст кнопки.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  Дескриптор для изображения кнопки.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значок кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -217,9 +217,9 @@ BOOL AddButton(
 ### <a name="remarks"></a>Примечания  
  Используйте этот метод для вставки новой кнопки панели Outlook страницу. Изображение кнопки можно загрузить из ресурсов приложения или из файла на диске.  
   
- Если идентификатор страницы, указанной `uiPageID` равно -1, кнопка будет вставлена в первой страницы.  
+ Если идентификатор страницы, указанной *uiPageID* равно -1, кнопка будет вставлена в первой страницы.  
   
- Если указанный индекс `iInsertAt` равно -1, будет добавлена кнопка в конце страницы.  
+ Если указанный индекс *iInsertAt* равно -1, будет добавлена кнопка в конце страницы.  
   
 ##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -254,16 +254,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указывает родительского окна элемента управления области панели Outlook. Значение не должно быть равно `NULL`.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль окна.  Список стилей окна см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор элемента управления. Должно быть уникальным для включения сохранения состояния элемента управления.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Указывает специальные стили, определяющие поведение элемента управления области панели Outlook при отключении из панели Outlook.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -284,10 +284,10 @@ virtual BOOL EnableContextMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов, который был щелкнут пользователем.  
   
- [in] `pPopup`  
+ [in] *pPopup*  
  Указатель в контекстном меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -309,7 +309,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPageScroll`  
+ [in] *bPageScroll*  
  Если `TRUE`, включить режим прокрутки страницы. Если `FALSE`, отключите режим прокрутки страницы.  
   
 ##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
@@ -365,7 +365,7 @@ BOOL RemoveButton(UINT iIdCommand);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIdCommand`  
+ [in] *iIdCommand*  
  Указывает идентификатор команды кнопки для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -379,7 +379,7 @@ void SetBackColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Указывает новый цвет фона.  
   
 ### <a name="remarks"></a>Примечания  
@@ -393,7 +393,7 @@ void SetBackImage(UINT uiImageID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiImageID`  
+ [in] *uiImageID*  
  Указывает идентификатор ресурса изображения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -426,10 +426,10 @@ void SetTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrRegText`  
+ [in] *clrRegText*  
  Указывает новый цвет для невыбранных текста.  
   
- [in] `clrSelText`  
+ [in] *clrSelText*  
  Указывает новый цвет для выделенного текста.  
   
 ##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
@@ -440,7 +440,7 @@ void SetTransparentColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Указывает новый прозрачный цвет.  
   
 ### <a name="remarks"></a>Примечания  

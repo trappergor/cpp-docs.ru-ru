@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378778"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039249"
 ---
 # <a name="coleserveritem-class"></a>Класс COleServerItem
 Предоставляет серверный интерфейс элементам OLE.  
@@ -104,13 +104,13 @@ class COleServerItem : public CDocItem
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerItem::COleServerItem](#coleserveritem)|Создает объект `COleServerItem`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Помещает форматов представления и преобразования в `COleDataSource` объекта.|  
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Копирование элемента в буфер обмена.|  
@@ -119,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|Возвращает серверный документ, который содержит элемент.|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Возвращает **CF_EMBEDSOURCE** данные для объекта OLE.|  
 |[COleServerItem::GetItemName](#getitemname)|Возвращает имя элемента. Используется только для связанных элементов.|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Возвращает `CF_LINKSOURCE` данные для объекта OLE.|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Возвращает **CF_LINKSOURCE** данные для объекта OLE.|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Возвращает **CF_OBJECTDESCRIPTOR** данные для объекта OLE.|  
 |[COleServerItem::IsConnected](#isconnected)|Указывает, является ли элемент в настоящее время присоединена к контейнеру active.|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Указывает, является ли этот элемент представляет связанный элемент OLE.|  
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerItem::GetDataSource](#getdatasource)|Возвращает объект, используемый для хранения форматов преобразования.|  
 |[COleServerItem::OnHide](#onhide)|Вызывается платформой для скрытия элемента OLE.|  
@@ -152,7 +152,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Сервер сообщает о какая часть элемента OLE является видимым.|  
   
@@ -185,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDataSource`  
+ *pDataSource*  
  Указатель на `COleDataSource` объект, в который следует поместить данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -201,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pServerDoc`  
+ *pServerDoc*  
  Указатель на документ, который будет содержать новый элемент.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  Флаг, указывающий, является ли объект может быть удален при отпускании ссылку на него. Задайте значение **FALSE** Если `COleServerItem` объект является составной частью данных в документе, который необходимо удалить. Задайте значение **TRUE** Если объект является вторичной структура, используемая для определения диапазона данных в документе, могут быть удалены платформой.  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -215,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bIncludeLink`  
+ *bIncludeLink*  
  Задайте значение **TRUE** Если связать данные следует копировать в буфер обмена. Задайте значение **FALSE** Если серверное приложение не поддерживает ссылки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -237,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  Прямоугольник элемента на экране, в пикселях, относительно клиентской области.  
   
- `ptOffset`  
- Смещение от `lpItemRect` положением позиции мыши во время операции перетаскивания.  
+ *ptOffset*  
+ Смещение от *lpItemRect* положением позиции мыши во время операции перетаскивания.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  Задайте значение **TRUE** Если связать данные следует копировать в буфер обмена. Задайте для него значение **FALSE** Если приложение не поддерживает ссылки.  
   
- `dwEffects`  
+ *dwEffects*  
  Определяет эффекты, которые источник перетаскивания разрешает в операции перетаскивания (сочетание копирования, перемещения и связи).  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  Указатель на прямоугольник, который определяет, где фактически начинает перетаскивание. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение из перечисления `DROPEFFECT`. Если это `DROPEFFECT_MOVE`, следует удалить исходных данных.  
   
 ### <a name="remarks"></a>Примечания  
- Операции перетаскивания и вставки не начинается немедленно. Он ожидает, пока курсор мыши выходит за пределы прямоугольника, определяемого `lpRectStartDrag` или пока не были пройдены указанного числа миллисекунд. Если `lpRectStartDrag` — **NULL**, прямоугольник по умолчанию используется, чтобы перетаскивание начинается, когда указатель мыши перемещается на один пиксель.  
+ Операции перетаскивания и вставки не начинается немедленно. Он ожидает, пока курсор мыши выходит за пределы прямоугольника, определяемого *lpRectStartDrag* или пока не были пройдены указанного числа миллисекунд. Если *lpRectStartDrag* — **NULL**, прямоугольник по умолчанию используется, чтобы перетаскивание начинается, когда указатель мыши перемещается на один пиксель.  
   
  Время задержки задается параметр раздела реестра. Время задержки можно изменить путем вызова [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) или [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Если время задержки не указан, используется значение по умолчанию 200 миллисекунд. Время задержки перетащите хранится следующим образом:  
   
@@ -277,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDataSource`  
+ *pDataSource*  
  Указатель на `COleDataSource` объект, который будет получать данные элемента OLE в любом из поддерживаемых форматов.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **Значение TRUE,** Если связать данные следует копировать в буфер обмена. **FALSE** Если серверное приложение не поддерживает ссылки.  
   
- `lpOffset`  
+ *lpOffset*  
  Смещение в пикселях от начала координат объекта указателя мыши.  
   
- `lpSize`  
+ *lpSize*  
  Размер объекта в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывает [GetEmbedSourceData](#getembedsourcedata) получить собственные данные для объекта OLE и вызывает функцию-член [AddOtherClipboardData](#addotherclipboarddata) для получения формата представления и все функции-члена Поддерживаемые форматы преобразования. Если `bIncludeLink` — **TRUE**, также вызывает функцию [GetLinkSourceData](#getlinksourcedata) для получения данных ссылки для элемента.  
+ Эта функция вызывает [GetEmbedSourceData](#getembedsourcedata) получить собственные данные для объекта OLE и вызывает функцию-член [AddOtherClipboardData](#addotherclipboarddata) для получения формата представления и все функции-члена Поддерживаемые форматы преобразования. Если *bIncludeLink* — **TRUE**, также вызывает функцию [GetLinkSourceData](#getlinksourcedata) для получения данных ссылки для элемента.  
   
  Переопределить эту функцию, если вы хотите поместить в форматах `COleDataSource` объекта до или после этих форматах, предоставляемые `CopyToClipboard`.  
   
@@ -328,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStgMedium`  
+ *lpStgMedium*  
  Указатель на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры, который получит **CF_EMBEDSOURCE** данные для объекта OLE.  
   
 ### <a name="remarks"></a>Примечания  
@@ -359,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStgMedium`  
+ *lpStgMedium*  
  Указатель на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры, который получит `CF_LINKSOURCE` данные для объекта OLE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -383,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpOffset`  
+ *lpOffset*  
  Смещение от верхнего левого угла элемента OLE щелчка мыши. Может быть **NULL**.  
   
- `lpSize`  
+ *lpSize*  
  Размер элемента OLE. Может быть **NULL**.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Указатель на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры, который получит **CF_OBJECTDESCRIPTOR** данные для объекта OLE.  
   
 ### <a name="remarks"></a>Примечания  
- Данные копируются в **STGMEDIUM** структуры, на который указывает `lpStgMedium`. Этот формат включает сведения, необходимые для диалогового окна Специальная вставка.  
+ Данные копируются в **STGMEDIUM** структуры, на который указывает *lpStgMedium*. Этот формат включает сведения, необходимые для диалогового окна Специальная вставка.  
   
  Дополнительные сведения см. в разделе [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) в Windows SDK.  
   
@@ -443,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nDrawAspect`  
+ *nDrawAspect*  
  Значение из `DVASPECT` перечисление, указывающее, какие элементы объекта OLE был изменен. Этот параметр может принимать любое из следующих значений:  
   
 - `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
@@ -465,7 +465,7 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iVerb`  
+ *iVerb*  
  Указывает команду для выполнения. Он может быть одним из следующих:  
   
 |Значение|Значение|Символ|  
@@ -495,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на [CDC](../../mfc/reference/cdc-class.md) объекта, на котором выполняется отрисовка элемента. Контекст отображения автоматически подключается к контекст отображения атрибутов, можно вызывать функции атрибута, несмотря на то, что это сделает метафайла конкретного устройства.  
   
- `rSize`  
+ *rSize*  
  Размер, в **HIMETRIC** единиц, в котором будет размещено в метафайл.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -518,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на [CDC](../../mfc/reference/cdc-class.md) объекта, на котором выполняется отрисовка элемента. Контроллер домена автоматически подключается к атрибута контроллера домена, можно вызывать функции атрибута, несмотря на то, что это сделает метафайла конкретного устройства.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Значение из перечисления `DVASPECT`. Этот параметр может принимать любое из следующих значений:  
   
 - `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
@@ -554,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bIncludeLink`  
+ *bIncludeLink*  
  Задайте значение **TRUE** Если связать данные следует копировать в буфер обмена. Задайте значение **FALSE** Если серверное приложение не поддерживает ссылки.  
   
- `lpOffset`  
+ *lpOffset*  
  Смещение курсора мыши от начала координат объекта в пикселях.  
   
- `lpSize`  
+ *lpSize*  
  Размер объекта в пикселях.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -579,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nDrawAspect`  
+ *nDrawAspect*  
  Указывает аспект объекта OLE, границы которого должны быть получены. Этот параметр может принимать любое из следующих значений:  
   
 - `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
@@ -590,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` Элемент представляется, как если бы выводились с помощью команды «Печать» из меню «файл».  
   
- `rSize`  
+ *rSize*  
  Ссылка на `CSize` объекта, который получит размер элемента OLE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -610,7 +610,7 @@ virtual void OnHide();
  По умолчанию вызывает **COleServerDoc::OnShowDocument (FALSE)**. Функция уведомляет контейнера скрытого элемента OLE. Переопределите эту функцию, если нужно выполнить специальную обработку при скрытии элемента OLE.  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- Вызывается платформой для инициализации объекта OLE, используя содержимое `pDataObject`.  
+ Вызывается платформой для инициализации объекта OLE, используя содержимое *pDataObject*.  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -619,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDataObject`  
+ *pDataObject*  
  Указатель на объект OLE данных, содержащих данные в различные форматы для инициализации объекта OLE.  
   
- `bCreation`  
+ *bCreation*  
  **Значение TRUE,** Если функция вызывается для инициализации объекта OLE, вновь создаваемого приложения-контейнера. **FALSE** Если функция вызывается для замены содержимого уже существующего элемента OLE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bCreation` — **TRUE**, эта функция вызывается в том случае, если контейнер реализует вставки нового объекта на основе текущего выбора. Данные, выбранные используется при создании нового элемента OLE. Например, если выбор диапазона ячеек в электронную, а затем создайте диаграмму с помощью вставки нового объекта на основе значений в выбранном диапазоне. Реализация по умолчанию не выполняет никаких действий. Переопределить эту функцию, чтобы выбрать допустимый формат из числа предлагаемых `pDataObject` и инициализации объекта OLE, на основе предоставленных данных. Существует расширенная overridable.  
+ Если *bCreation* — **TRUE**, эта функция вызывается в том случае, если контейнер реализует вставки нового объекта на основе текущего выбора. Данные, выбранные используется при создании нового элемента OLE. Например, если выбор диапазона ячеек в электронную, а затем создайте диаграмму с помощью вставки нового объекта на основе значений в выбранном диапазоне. Реализация по умолчанию не выполняет никаких действий. Переопределить эту функцию, чтобы выбрать допустимый формат из числа предлагаемых *pDataObject* и инициализации объекта OLE, на основе предоставленных данных. Существует расширенная overridable.  
   
  Дополнительные сведения см. в разделе [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) в Windows SDK.  
   
@@ -670,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Указывает на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структура, в которой должны быть возвращены данные.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -682,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>Примечания  
  Указанный формат является одним помещенный в `COleDataSource` с помощью [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) или [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) функции-члена для отложенной подготовки к просмотру. Реализация по умолчанию эта функция вызывает [OnRenderFileData](#onrenderfiledata) или [OnRenderGlobalData](#onrenderglobaldata), соответственно, если указанный носитель памяти или в файл. Если ни один из этих форматов предоставляется реализация по умолчанию возвращает значение 0 и не выполняет никаких действий.  
   
- Если `lpStgMedium` ->  *tymed* — **TYMED_NULL**, **STGMEDIUM** следует выделить и заполнены в соответствии с *lpFormatEtc -> tymed*. В противном случае **TYMED_NULL**, **STGMEDIUM** должно быть заполнено на месте с данными.  
+ Если *lpStgMedium*-> *tymed* — **TYMED_NULL**, **STGMEDIUM** следует выделить и заполнены в соответствии с *lpFormatEtc -> tymed*. В противном случае **TYMED_NULL**, **STGMEDIUM** должно быть заполнено на месте с данными.  
   
  Существует расширенная overridable. Переопределите эту функцию для предоставления данных в запрошенном пользователем формате и средних. В зависимости от данных может потребоваться переопределить один из версии этих функций вместо него. Если данные хранятся в малых и фиксированного размера, переопределяют `OnRenderGlobalData`. Если данные в файле или является переменного размера, переопределите `OnRenderFileData`.  
   
@@ -698,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
   
- `pFile`  
+ *pFile*  
  Указывает на `CFile` объект, в котором должен быть подготовлен к просмотру данные.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -724,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Указывает на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат, в котором запрашиваются сведения.  
   
- `phGlobal`  
+ *phGlobal*  
  Указывает дескриптор глобальной памяти, в котором данные тоже должны быть возвращены. Если выделена память, этот параметр может иметь **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -736,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>Примечания  
  Указанный формат является одним помещенный в `COleDataSource` с помощью [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) функции-члена для отложенной подготовки к просмотру. Реализация по умолчанию эта функция просто возвращает **FALSE**.  
   
- Если `phGlobal` — **NULL**, затем новый `HGLOBAL` следует выделять и возвращаются в `phGlobal`. В противном случае `HGLOBAL` заданные `phGlobal` должно быть заполнено с данными. Объем данных помещаются в `HGLOBAL` не должен превышать текущий размер блока памяти. Кроме того блок не может быть перемещен к значению большего размера.  
+ Если *phGlobal* — **NULL**, затем новый `HGLOBAL` следует выделять и возвращаются в *phGlobal*. В противном случае `HGLOBAL` заданные *phGlobal* должно быть заполнено с данными. Объем данных помещаются в `HGLOBAL` не должен превышать текущий размер блока памяти. Кроме того блок не может быть перемещен к значению большего размера.  
   
  Существует расширенная overridable. Переопределите эту функцию для предоставления данных в запрошенном пользователем формате и средних. В зависимости от данных может потребоваться переопределить один из версии этих функций вместо него. Если для обработки нескольких носителей, необходимо переопределить [OnRenderData](#onrenderdata). Если данные в файле или является переменного размера, переопределите [OnRenderFileData](#onrenderfiledata).  
   
@@ -750,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpLogPalette`  
+ *lpLogPalette*  
  Указатель на Windows [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -772,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  Указатель на [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структура, задающая формат данных.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  Указатель на [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) структуры, в которой хранятся данные.  
   
- `bRelease`  
- Указывает, кто является владельцем среды хранения после завершения вызова функции. Вызывающая сторона определяет, кто отвечает за освобождение ресурсов, выделенной среды хранения. Вызывающий объект устанавливается не `bRelease`. Если `bRelease` имеет ненулевое значение, серверный элемент принимает право на владение, освобождение среды после завершения его использования. Когда `bRelease` имеет значение 0, вызывающий объект продолжает владеть и серверный элемент можно использовать среду хранения только в течение всего вызова.  
+ *bRelease*  
+ Указывает, кто является владельцем среды хранения после завершения вызова функции. Вызывающая сторона определяет, кто отвечает за освобождение ресурсов, выделенной среды хранения. Вызывающий объект устанавливается не *bRelease*. Если *bRelease* имеет ненулевое значение, серверный элемент принимает право на владение, освобождение среды после завершения его использования. Когда *bRelease* равно 0, вызывающий объект продолжает владеть и серверный элемент можно использовать среду хранения только в течение всего вызова.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -801,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nDrawAspect`  
+ *nDrawAspect*  
  Указывает аспект объекта OLE, границы которого были указаны. Этот параметр может принимать любое из следующих значений:  
   
 - `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
@@ -812,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` Элемент представляется, как если бы выводились с помощью команды «Печать» из меню «файл».  
   
- `size`  
+ *size*  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) структуры, указав новый размер объекта OLE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если приложение-контейнер был записан с библиотеки классов Microsoft Foundation, эта функция вызывается, когда [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) функция-член соответствующего `COleClientItem` вызывается. Наборы данных для реализации по умолчанию [m_sizeExtent](#m_sizeextent) член до заданного размера Если `nDrawAspect` — `DVASPECT_CONTENT`; в противном случае возвращается значение 0. Переопределите эту функцию, чтобы выполнять специальную обработку при изменении размера элемента.  
+ Если приложение-контейнер был записан с библиотеки классов Microsoft Foundation, эта функция вызывается, когда [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) функция-член соответствующего `COleClientItem` вызывается. Наборы данных для реализации по умолчанию [m_sizeExtent](#m_sizeextent) член до заданного размера Если *nDrawAspect* — `DVASPECT_CONTENT`; в противном случае возвращается значение 0. Переопределите эту функцию, чтобы выполнять специальную обработку при изменении размера элемента.  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  Вызывается платформой для указания серверное приложение для отображения объекта OLE на месте.  
@@ -845,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pSender`  
+ *pSender*  
  Указатель на элемент, изменение в документ. Может быть **NULL**.  
   
- `lHint`  
+ *lHint*  
  Содержит сведения об изменении.  
   
- `pHint`  
+ *pHint*  
  Указатель на объект, хранения информации об изменении.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  Значение из перечисления `DVASPECT`. Этот параметр может принимать одно из следующих значений:  
   
 - `DVASPECT_CONTENT` Элемент представлен таким образом, может быть отображен как внедренный объект внутри контейнера.  
@@ -886,7 +886,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszItemName`  
+ *lpszItemName*  
  Указатель на новое имя элемента.  
   
 ### <a name="remarks"></a>Примечания  

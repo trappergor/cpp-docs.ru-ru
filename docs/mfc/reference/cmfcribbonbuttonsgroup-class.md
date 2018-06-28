@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368863"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037438"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Класс CMFCRibbonButtonsGroup
 `CMFCRibbonButtonsGroup` Позволяет организовать набор кнопок ленты в группе. Все кнопки в группе располагаются непосредственно рядом с друг с другом по горизонтали и заключены в границу.  
@@ -60,13 +60,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Создает объект `CMFCRibbonButtonsGroup`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Добавляет кнопку в группу.|  
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Добавляет список кнопок в группу.|  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку, чтобы добавить.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lstButtons`  
+ [in] *lstButtons*  
  Список указателей на состояние кнопок, которые вы хотите добавить.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Определяет кнопку, чтобы добавить только что созданный `CMFCRibbonButtonsGroup` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `i`  
+ [in] *я*  
  Отсчитываемый от нуля индекс кнопки для возврата.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства в группу ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства `CMFCRibbonButtonsGroup` объекта.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Прямоугольник, в которой рисуется изображение.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Кнопка, для которой должно быть нарисовано изображение.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Индекс изображения для отрисовки на кнопке (в один из массивов три изображения для кнопок обычный, выделенной или отключен).  
   
 ### <a name="remarks"></a>Примечания  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pImages`  
+ [in] *pImages*  
  Обычных образов.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  Наиболее часто используемыми изображениями.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  Отключенные изображения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCategory`  
+ [in] *pCategory*  
  Указатель на родительской категории, чтобы задать (групп с вкладками в элементы управления ленты, называются категории).  
   
 ### <a name="remarks"></a>Примечания  

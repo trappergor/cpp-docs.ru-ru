@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370511"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039379"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Класс CMFCRibbonFontComboBox
 Реализует поле со списком, содержащее список шрифтов. Необходимо задать поле со списком на панели ленты.  
@@ -52,19 +52,19 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|Деструктор.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|Создает и инициализирует объект `CMFCRibbonFontComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Заполняет поле со списком шрифтов на ленте на основе таких заданных параметров, как тип и семейство шрифтов, а также кодировка и шаг.|  
 |`CMFCRibbonFontComboBox::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFontType`  
+ [in] *nFontType*  
  Указывает тип шрифта шрифтов для добавления.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Указывает кодировку шрифтов для добавления.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Задает шаг и семейство шрифтов для добавления.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор команды команду, которая выполняется, когда пользователь выбирает элемент в поле со списком.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Указывает типы шрифт для отображения в поле со списком. Допустимые значения: **значения: DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, и **TRUETYPE_FONTTYPE**, или все битовые комбинации.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Фильтрует шрифтов в поле со списком теми, которые принадлежат кодировку...  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Задает шаг и семейство шрифтов, отображаемых в поле со списком.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Ширина в пикселях, поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о возможных `nFontType` значения параметров в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации пакета SDK для Windows.  
+ Дополнительные сведения о возможных *nFontType* значения параметров в разделе [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) в документации пакета SDK для Windows.  
   
- Дополнительные сведения о допустимых кодировок, которые могут быть назначены `nCharSet`и их допустимых значений, которые могут быть назначены `nPitchAndFamily`, в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) документации по пакету Windows SDK.  
+ Дополнительные сведения о допустимых кодировок, которые могут быть назначены *nCharSet*и их допустимых значений, которые могут быть назначены *nPitchAndFamily*, в разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) в Документация по Windows SDK.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszName`  
+ "lpszName *  
  Задает имя шрифта для выбора.  
   
- `nCharSet`  
+ *nCharSet*  
  Указывает кодировку для выбранного шрифта.  
   
- `bExact`  
+ *bExact*  
  `TRUE` Чтобы указать, что набор символов должно соответствовать при выборе шрифта; `FALSE` для указания того, при выборе шрифта может игнорироваться набор символов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

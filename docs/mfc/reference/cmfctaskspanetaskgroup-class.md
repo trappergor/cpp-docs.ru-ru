@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370849"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037500"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Класс CMFCTasksPaneTaskGroup
 `CMFCTasksPaneTaskGroup` Класс — это вспомогательный класс, используемый [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.  
@@ -54,20 +54,20 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Создает объект `CMFCTasksPaneTaskGroup`.|  
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей группы задач.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, является ли группа задач выравнивается по нижней части элемента управления области задач.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Определяет, свернута ли группа задач.|  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszName`  
+ *lpszName*  
  Указывает имя группы в заголовке группы.  
   
- `bIsBottom`  
+ *bIsBottom*  
  Указывает ли группе выравнивается относительно нижней части элемента управления области задач.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  Указывает, является ли группа используется в качестве *специальные* , и таким образом, является ли название группы заполняется другим цветом.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  Указывает, является ли группа свернута.  
   
- `pPage`  
+ *Физ_страница*  
  Указывает страницу свойств, к которой принадлежит эта группа задач.  
   
- `hIcon`  
+ *hIcon*  
  Задает значок, отображаемый в заголовке группы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Представляет окно родительской группы задач.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей группы задач.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `data` параметр был успешно заполненная данные специальных возможностей текущей группы задач; в противном случае — `FALSE`.  
+ `TRUE` Если *данные* параметр был успешно заполненная данные специальных возможностей текущей группы задач; в противном случае — `FALSE`.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

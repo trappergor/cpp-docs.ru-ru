@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369327"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037978"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс классе Mfceditbrowsectrl
 `CMFCEditBrowseCtrl` Класс поддерживает Обзор элемента управления редактирования, используемый редактируемых текстовых полей, которые дополнительно содержат кнопку обзора. Когда пользователь нажимает кнопку обзора, элемент управления выполняет настраиваемое действие или отображает стандартное диалоговое окно, содержащее браузер файла или папки в браузере.  
@@ -52,18 +52,18 @@ ms.locfileid: "33369327"
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Конструктор по умолчанию.|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Включает или отключает (скрывает) кнопку обзора.|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Кнопка «Обзор» и помещает в поле редактирования обзора *Обзор файлов* режим.|  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  Для предоставления пользовательского изображения для кнопки обзора, вызовите [SetBrowseButtonImage](#setbrowsebuttonimage) метода или переопределение [OnDrawBrowseButton](#ondrawbrowsebutton) метод.  
   
-7.  Чтобы удалить кнопку из элемента управления Правка обзора, вызовите [EnableBrowseButton](#enablebrowsebutton) метод с `bEnable` равным `FALSE`.  
+7.  Чтобы удалить кнопку из элемента управления Правка обзора, вызовите [EnableBrowseButton](#enablebrowsebutton) метод с *bEnable* равным `FALSE`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  `TRUE` для отображения кнопки "Обзор". `FALSE` не требуется отображать кнопку обзора. Значение по умолчанию — `TRUE`.  
   
- `szLabel`  
+ *szLabel*  
  Надпись, отображаемая на кнопку обзора. Значение по умолчанию — " **...** ".  
   
 ### <a name="remarks"></a>Примечания  
- Если `bEnable` параметр `TRUE`, реализация настраиваемого действия для выполнения, когда нажата кнопка "Обзор". Чтобы реализовать пользовательское действие, создайте класс, производный от `CMFCEditBrowseCtrl` класса, а затем переопределить ее [OnBrowse](#onbrowse) метод.  
+ Если *bEnable* параметр `TRUE`, реализация настраиваемого действия для выполнения, когда нажата кнопка "Обзор". Чтобы реализовать пользовательское действие, создайте класс, производный от `CMFCEditBrowseCtrl` класса, а затем переопределить ее [OnBrowse](#onbrowse) метод.  
   
  Если `bEnable` параметр `TRUE`, находится в режиме просмотра элемента управления `BrowseMode_Default`; в противном случае — режим просмотра `BrowseMode_None`. Дополнительные сведения о режимах просмотра см. в разделе [GetMode](#getmode) метод.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszDefExt`  
+ *lpszDefExt*  
  Указывает расширение имени файла по умолчанию, используемое в диалоговом окне выбора файла. Значение по умолчанию — `NULL`.  
   
- `lpszFilter`  
+ *lpszFilter*  
  Указывает строку фильтра по умолчанию, используемую в диалоговом окне выбора файла. Значение по умолчанию — `NULL`.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги диалогового окна. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов OFN_HIDEREADONLY и OFN_OVERWRITEPROMPT.  
   
 ### <a name="remarks"></a>Примечания  
@@ -198,7 +198,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  В следующей таблице перечислены возможные возвращаемые значения.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`. Выполняется действие, определяемые программистом.|  
 |`BrowseMode_File`|`file mode`. Откроется диалоговое окно браузера стандартный файл.|  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства.  
   
- `Rect`  
+ *Rect*  
  Ограничивающий прямоугольник "Обзор".  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` При нажатии кнопки; в противном случае `FALSE`.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` Если кнопка выделена; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hIcon`  
+ *hIcon*  
  Дескриптор значка.  
   
- `hBitmap`  
+ *hBitmap*  
  Дескриптор растрового изображения.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  Идентификатор ресурса точечного рисунка.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` для удаления указанного значка или точечного рисунка, если этот метод завершает работу; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strFileName`  
+ *strFileName*  
  Задает недопустимое имя файла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370660"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039992"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` Класс реализует функции немодального диалогового окно, которое отображается на экране, чтобы информировать пользователей о событии.  
@@ -71,11 +71,11 @@ ms.locfileid: "33370660"
 class CMFCDesktopAlertWnd : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWnd::Create](#create)|Создает и инициализирует окно оповещения.|  
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Возвращает скорость анимации.|  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  Указывает владельца окно оповещения. Этот владелец будет получать все уведомления о окно оповещения. Это значение не может быть равно `NULL`.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  Указывает идентификатор ресурса окно оповещения.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Задает меню, которое будет отображаться при нажатии кнопки меню. Если `NULL`, кнопка меню не отображается.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  Указывает начальное положение, где отображается окно оповещения, с помощью координат экрана. Если этот параметр имеет (-1, -1), в правом нижнем углу экрана отображается окно оповещения.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  Сведения о классе среды выполнения, охватывающую клиентской области окна оповещений класса настраиваемое диалоговое окно.  
   
- [in] `params`  
+ [in] *params*  
  Указывает параметры, используемые для создания окне оповещения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  Указывает новый скорость анимации в миллисекундах.  
   
 ### <a name="remarks"></a>Примечания  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `type`  
+ [in] *тип*  
  Указывает тип анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTime`  
+ [in] *nTime*  
  Время в миллисекундах, прошедшее до автоматически закрывает окно оповещения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` для указания, что окно оповещения отображает меньшего заголовка; в противном случае `FALSE` для указания, что окно оповещения отображается заголовок обычного размера.  
   
 ### <a name="remarks"></a>Примечания  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  Задает уровень прозрачности. Это значение должно быть в диапазоне от 0 до 255 включительно. Чем больше значение, более непрозрачный окна.  
   
 ### <a name="remarks"></a>Примечания  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367920"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040237"
 ---
 # <a name="cmfccolordialog-class"></a>Класс CMFCColorDialog
 `CMFCColorDialog` Класс представляет диалоговое окно выбора цвета.  
@@ -48,18 +48,18 @@ ms.locfileid: "33367920"
 class CMFCColorDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Создает объект `CMFCColorDialog`.|  
 |`CMFCColorDialog::~CMFCColorDialog`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Возвращает текущий выбранный цвет.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Возвращает цветовую палитру.|  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|`TRUE` Если в диалоговом окне выбора цвета использует свою собственную цветовую палитру или `FALSE` использует ли диалоговое окно палитры, которая указана в `CMFCColorDialog` конструктора.|  
 |`m_bPickerMode`|`TRUE` Хотя пользователь выбирает цвет в диалоговом окне выбора; в противном случае `FALSE`.|  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrInit`  
+ [in] *clrInit*  
  Выбор цвета по умолчанию. Если значение не указано, значение по умолчанию — RGB(0,0,0) (черный).  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  (Зарезервирован.)  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на диалоговое окно родительского или владельца.  
   
- [in] `hPal`  
+ [in] *hPal*  
  Дескриптор палитры цветов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rgb`  
+ [in] *rgb*  
  Значение RGB  
   
 ### <a name="remarks"></a>Примечания  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rgb`  
+ [in] *rgb*  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , указывающий цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `R`  
+ [in] *R*  
  Указывает RGB-значение красного компонента.  
   
- [in] `G`  
+ [in] *G*  
  Задает зеленый компонент значения RGB.  
   
- [in] `B`  
+ [in] *B*  
  Указывает RGB-значение синего компонента.  
   
 ### <a name="remarks"></a>Примечания  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `R`  
+ [in] *R*  
  Указывает красного компонента RGB-значение  
   
- [in] `G`  
+ [in] *G*  
  Указывает зеленого компонента RGB-значение  
   
- [in] `B`  
+ [in] *B*  
  Указывает синего компонента значение RGB  
   
 ### <a name="remarks"></a>Примечания  

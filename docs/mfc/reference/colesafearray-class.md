@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376881"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041637"
 ---
 # <a name="colesafearray-class"></a>Класс COleSafeArray
 Класс для работы с массивами произвольных типов и измерений.  
@@ -90,13 +90,13 @@ class COleSafeArray : public tagVARIANT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleSafeArray::COleSafeArray](#colesafearray)|Создает объект `COleSafeArray`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleSafeArray::AccessData](#accessdata)|Извлекает указатель на данные массива.|  
 |[COleSafeArray::AllocData](#allocdata)|Выделяет память для массива.|  
@@ -127,7 +127,7 @@ class COleSafeArray : public tagVARIANT
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|Получает доступ к базовым **VARIANT** структуры `COleSafeArray` объекта.|  
 |[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|Получает доступ к базовым **VARIANT** структуры `COleSafeArray` объекта.|  
@@ -154,7 +154,7 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppvData`  
+ *ppvData*  
  Указатель на указатель на данные массива.  
   
 ### <a name="remarks"></a>Примечания  
@@ -181,7 +181,7 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwDims`  
+ *dwDims*  
  Число измерений в безопасном массиве.  
   
 ### <a name="remarks"></a>Примечания  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `saSrc`  
+ *saSrc*  
  Существующий `COleSafeArray` объекта или **SAFEARRAY** необходимо скопировать в новый `COleSafeArray` объекта.  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE** нового `COleSafeArray` объекта.  
   
- `psaSrc`  
+ *psaSrc*  
  Указатель на **SAFEARRAY** необходимо скопировать в новый `COleSafeArray` объекта.  
   
  *varSrc*  
  Существующий **VARIANT** или `COleVariant` скопировать в новый объект `COleSafeArray` объекта.  
   
- `pSrc`  
+ *pSrc*  
  Указатель на **VARIANT** скопировать в новый объект `COleSafeArray` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Все эти конструкторы создавать новые `COleSafeArray` объектов. Если параметр не пустой `COleSafeArray` создается объект ( `VT_EMPTY`). Если `COleSafeArray` копируется из другого массива которого [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) известен неявно ( `COleSafeArray`, `COleVariant`, или **VARIANT**), **VARTYPE** из исходный массив сохраняется и не обязательно. Если `COleSafeArray` копируется из другого массива которого **VARTYPE** неизвестен ( **SAFEARRAY**), **VARTYPE** должно быть указано в `vtSrc` параметра.  
+ Все эти конструкторы создавать новые `COleSafeArray` объектов. Если параметр не пустой `COleSafeArray` создается объект ( `VT_EMPTY`). Если `COleSafeArray` копируется из другого массива которого [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) известен неявно ( `COleSafeArray`, `COleVariant`, или **VARIANT**), **VARTYPE** из исходный массив сохраняется и не обязательно. Если `COleSafeArray` копируется из другого массива которого **VARTYPE** неизвестен ( **SAFEARRAY**), **VARTYPE** должно быть указано в *vtSrc* параметра.  
   
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `vtSrc`  
- Базовый тип массива (то есть **VARTYPE** каждого элемента массива). **VARTYPE** предназначен только для подмножества типов variant. Ни **VT_ARRAY** ни **VT_BYREF** может быть установлен флаг. `VT_EMPTY` и **VT_NULL** не являются допустимым базовых типов для массива. Все другие типы являются допустимыми.  
+ *vtSrc*  
+ Базовый тип массива (то есть **VARTYPE** каждого элемента массива). **VARTYPE** предназначен только для подмножества типов variant. Ни **VT_ARRAY** ни **VT_BYREF** может быть установлен флаг. **Значение VT_EMPTY** и **VT_NULL** не являются допустимым базовых типов для массива. Все другие типы являются допустимыми.  
   
- `dwDims`  
+ *dwDims*  
  Число измерений в массиве. Это можно изменить после создания массива с [Redim](#redim).  
   
  *rgElements*  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `vtSrc`  
+ *vtSrc*  
  Базовый тип массива (то есть **VARTYPE** каждого элемента массива).  
   
- `dwElements`  
+ *dwElements*  
  Число элементов в массиве. Это можно изменить после создания массива с [ResizeOneDim](#resizeonedim).  
   
- `pvSrcData`  
+ *pvSrcData*  
  Указатель на данные, копируемые в массив.  
   
  *nLBound*  
  Нижняя граница массива.  
   
 ### <a name="remarks"></a>Примечания  
- Функция выделяет и инициализирует данные для массива, копирование указанные данные, если указатель `pvSrcData` не **NULL**.  
+ Функция выделяет и инициализирует данные для массива, копирование указанные данные, если указатель *pvSrcData* не **NULL**.  
   
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md).  
   
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bytes`  
+ *Байт*  
  Ссылку на [CByteArray](../../mfc/reference/cbytearray-class.md) объекта.  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rgIndices`  
+ *rgIndices*  
  Указатель на массив индексов для каждого измерения массива.  
   
- `pvData`  
+ *pvData*  
  Указатель на расположение элемента массива.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция автоматически вызывает функции windows `SafeArrayLock` и `SafeArrayUnlock` до и после получения элемента. Если элемент данных является строка, объект или вариант, функция копирует элемент в правильный порядок. Параметр `pvData` должен указывать на масштабное достаточно буфер содержит элемент.  
+ Эта функция автоматически вызывает функции windows `SafeArrayLock` и `SafeArrayUnlock` до и после получения элемента. Если элемент данных является строка, объект или вариант, функция копирует элемент в правильный порядок. Параметр *pvData* должен указывать на масштабное достаточно буфер содержит элемент.  
   
  В случае ошибки, функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).  
   
@@ -454,7 +454,7 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwDim`  
+ *dwDim*  
  Измерение массива, для которого нужно получить нижняя граница.  
   
  *pLBound*  
@@ -489,7 +489,7 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwDim`  
+ *dwDim*  
  Измерение массива, для которого необходимо получить значение верхней границы.  
   
  *pUBound*  
@@ -581,11 +581,11 @@ void PtrOfIndex (long * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (long * rgIndices,
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void ResizeOneDim (DWORD dwElements);
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

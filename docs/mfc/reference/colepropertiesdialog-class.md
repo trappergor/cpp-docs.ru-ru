@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371690"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040185"
 ---
 # <a name="colepropertiesdialog-class"></a>Класс COlePropertiesDialog
 Инкапсулирует стандартное диалоговое окно свойств объекта OLE Windows.  
@@ -52,20 +52,20 @@ class COlePropertiesDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Создает объект `COlePropertiesDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePropertiesDialog::DoModal](#domodal)|Отображает диалоговое окно и пользователь может сделать выбор.|  
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Вызывается платформой при изменении масштабирования элемента документа.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePropertiesDialog::m_gp](#m_gp)|Структура, используемая для инициализации страницы «Общие» `COlePropertiesDialog` объекта.|  
 |[COlePropertiesDialog::m_lp](#m_lp)|Структура, используемая для инициализации на странице «Связи» `COlePropertiesDialog` объекта.|  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указатель на элемент документа, свойства которого осуществляется доступ.  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  Максимальный масштаб в процентах для изображения элемента документа.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительский или владелец диалоговое окно «».  
   
 ### <a name="remarks"></a>Примечания  
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указатель на элемент документа, свойства которого осуществляется доступ.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  Числовое значение шкалы диалогового окна.  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  Реализация по умолчанию не выполняет никаких действий. Необходимо переопределить эту функцию, чтобы включить элементы управления масштабирования.  
   
 > [!NOTE]
->  Перед отображением стандартным диалоговым окном свойств объекта OLE, платформа вызывает эту функцию с **NULL** для `pItem` и - 1 для `nCurrentScale`. Это позволяет определить, включено ли масштабирования элементов управления.  
+>  Перед отображением стандартным диалоговым окном свойств объекта OLE, платформа вызывает эту функцию с **NULL** для *pItem* и - 1 для *nCurrentScale*. Это позволяет определить, включено ли масштабирования элементов управления.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC CIRC](../../visual-cpp-samples.md)   

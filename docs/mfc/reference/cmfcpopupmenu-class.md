@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f92f600d5005fbc85b1dd82ce66274020adb4b2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377724"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042200"
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 Реализует возможности всплывающего меню Windows и расширяет его, добавляя такие возможности как перемещаемые меню и подсказки.
@@ -191,13 +191,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Создает объект `CMFCPopupMenu`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||  
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Задает включение в пустой записей о определенные пользователем инструменты всплывающего меню.|  
@@ -275,7 +275,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||  
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||  
@@ -315,8 +315,8 @@ static BOOL __stdcall ActivatePopupMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTopFrame`  
- [in] `pPopupMenu`  
+ [in] *pTopFrame*  
+ [in] *pPopupMenu*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -330,7 +330,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Если во всплывающем меню можно отобразить пустые записи; `FALSE` в противном случае.  
   
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
@@ -352,7 +352,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ptScreen`  
+ [in] *ptScreen*  
  Точка, в экранных координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -361,17 +361,17 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ### <a name="remarks"></a>Примечания  
  Параметр MENUAREA_TYPE может иметь одно из следующих значений.  
   
--   ВНЕ - `ptScreen` находится за пределами контекстного меню.  
+-   ВНЕ - *ptScreen* находится за пределами контекстного меню.  
   
--   ЭМБЛЕМА — `ptScreen` — на пространстве логотипа.  
+-   ЭМБЛЕМА - *ptScreen* — на пространстве логотипа.  
   
--   TEAROFF_CAPTION - `ptScreen` превышает перемещаемые заголовок.  
+-   TEAROFF_CAPTION - *ptScreen* превышает перемещаемые заголовок.  
   
--   SHADOW_BOTTOM - `ptScreen` по нижней тени всплывающего меню.  
+-   SHADOW_BOTTOM - *ptScreen* по нижней тени всплывающего меню.  
   
--   SHADOW_RIGHT - `ptScreen` находится над правой тени всплывающего меню.  
+-   SHADOW_RIGHT - *ptScreen* находится над правой тени всплывающего меню.  
   
--   МЕНЮ - `ptScreen` по команде.  
+-   МЕНЮ - *ptScreen* по команде.  
   
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSetFocusToBar`  
+ [in] *bSetFocusToBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -395,10 +395,10 @@ CMFCPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCustPage`  
+ [in] *pCustPage*  
  Указатель на страницу настройки.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  Строка, содержащая заголовок меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -418,29 +418,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Родительское окно для `CMFCPopupMenu`.  
   
- [in] `x`  
+ [in] *x*  
  Горизонтальная экранная координата расположение всплывающего меню  
   
- [in] `y`  
+ [in] *y*  
  Вертикальная экранная координата расположение всплывающего меню.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор ресурса меню.  
   
- [in] `bLocked`  
+ [in] *заблокирована*  
  Логический параметр, указывает ли меню можно настраивать. `FALSE` Указывает, настраиваемые во всплывающем меню.  
   
- [in] `bOwnMessage`  
+ [in] *bOwnMessage*  
  Логический параметр, указывает, каким образом платформа перенаправляет сообщения меню. Дополнительные сведения см.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bOwnMessage` — `TRUE`, платформа перенаправляет любые сообщения, меню `pWndParent`. `pWndParent` не должно быть `NULL` Если `bOwnMessage` — `TRUE.` Если `bOwnMessage` — `FALSE`, платформа перенаправляет сообщения меню родительского во всплывающем меню.  
+ Если *bOwnMessage* — `TRUE`, платформа перенаправляет любые сообщения, меню *pWndParent*. *pWndParent* не должно быть `NULL` Если *bOwnMessage* — `TRUE.` Если *bOwnMessage* — `FALSE`, платформа перенаправляет сообщения меню родительского всплывающего меню .  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется использование `Create` метод `CMFCPopuMenu` класса. Этот фрагмент кода является частью [образец пользовательские страницы](../../visual-cpp-samples.md).  
@@ -458,9 +458,9 @@ virtual CPane* CreateTearOffBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndMain`  
- [in] `uiID`  
- [in] `lpszName`  
+ [in] *pWndMain*  
+ [in] *uiID*  
+ [in] *lpszName*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -487,16 +487,16 @@ void EnableMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iLogoSize`  
+ [in] *iLogoSize*  
  Размер эмблемы, в пикселях.  
   
- [in] `nLogoLocation`  
+ [in] *nLogoLocation*  
  Перечисляемого типа данных, указывающий расположение эмблемы.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы отобразить эмблему, реализуйте метод [CFrameWndEx::OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) в окне главного фрейма.  
   
- Возможные значения параметра `nLogoLocation` MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP и MENU_LOGO_BOTTOM.  
+ Возможные значения параметра *nLogoLocation* MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP и MENU_LOGO_BOTTOM.  
   
 ##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  Включение звука меню.  
@@ -506,7 +506,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить звук, `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
@@ -520,7 +520,7 @@ void EnableResize(CSize sizeMinResize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `sizeMinResize`  
+ [in] *sizeMinResize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -532,7 +532,7 @@ void EnableScrolling(BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `BOOL`  
+ [in] *BOOL*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -544,7 +544,7 @@ void EnableVertResize(int nMinResize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nMinResize`  
+ [in] *nMinResize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -556,7 +556,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -596,7 +596,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNoSystem`  
+ [in] *bNoSystem*  
  Логический параметр, указывающее, является ли этот метод проверяет глобальное значение. Значение FALSE, если требуется, чтобы этот метод для возврата стиль анимации для данного экземпляра [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -682,7 +682,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -722,7 +722,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectParentBtn`  
+ [in] *rectParentBtn*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -849,17 +849,17 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `button`  
+ [in] *кнопки*  
  Ссылка на элемент меню, чтобы добавить.  
   
- [in] `iInsertAt`  
- Отсчитываемый от нуля индекс для нового элемента. Если `iInsertAt` равно -1, элемент добавляется в конец меню.  
+ [in] *iInsertAt*  
+ Отсчитываемый от нуля индекс для нового элемента. Если *iInsertAt* равно -1, элемент добавляется в конец меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс позиции вставки элемента. значение -1, если метод завершается ошибкой.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод завершится ошибкой, если указано недопустимое значение для `iInsertAt`, такие как целое число больше числа элементов в данный момент всплывающего меню.  
+ Этот метод завершится ошибкой, если указано недопустимое значение для *iInsertAt*, такие как целое число больше числа элементов в данный момент всплывающего меню.  
   
 ##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  Вставляет разделитель в всплывающего меню в указанном месте.  
@@ -869,16 +869,16 @@ int InsertSeparator(int iInsertAt = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iInsertAt`  
+ [in] *iInsertAt*  
  Отсчитываемый от нуля индекс позиции, где этот метод разделителей.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс позиции вставки разделителя. значение -1, если этот метод завершается ошибкой.  
   
 ### <a name="remarks"></a>Примечания  
- Значение -1 для `iInsertAt` означает этот метод добавит разделитель в конец во всплывающем меню.  
+ Значение -1 для *iInsertAt* означает этот метод добавит разделитель в конец во всплывающем меню.  
   
- Этот метод завершается ошибкой, если `iInsertAt` является недопустимым значением.  
+ Этот метод завершается ошибкой, если *iInsertAt* не является допустимым значением.  
   
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
@@ -1013,7 +1013,7 @@ static BOOL IsSendMenuSelectMsg();
  `TRUE` Если платформа уведомляет родительского фрейма; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа уведомляет родительского фрейма путем отправки их `WM_MENUSELECT` сообщение, когда используется выбирает команду меню.  
+ Платформа уведомляет родительского фрейма путем отправки их WM_MENUSELECT сообщение, когда используется выбирает команду меню.  
   
 ##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  Указывает, во всплывающем меню отображается ли в данный момент.  
@@ -1033,7 +1033,7 @@ void MoveTo(const CPoint& pt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pt`  
+ [in] *pt*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1045,7 +1045,7 @@ virtual void OnChangeHot(int nHot);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHot`  
+ [in] *nHot*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1057,7 +1057,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uidCmdID`  
+ [in] *uidCmdID*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1073,10 +1073,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1090,7 +1090,7 @@ BOOL PostCommand(UINT uiCommandID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1104,7 +1104,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1118,7 +1118,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1137,7 +1137,7 @@ BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1163,13 +1163,13 @@ static void SetAnimationSpeed(UINT nElapse);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nElapse`  
+ [in] *nElapse*  
  Новый скорость анимации в миллисекундах.  
   
 ### <a name="remarks"></a>Примечания  
  Скорость анимации глобальное значение и влияет на всплывающих меню в приложении. Это значение указывает, сколько времени занимает анимацию для всплывающего меню завершить.  
   
- По умолчанию этот параметр имеет значение 30 миллисекунд. Диапазон допустимых значений для `nElapse` — от 0 до 200.  
+ По умолчанию этот параметр имеет значение 30 миллисекунд. Диапазон допустимых значений для *nElapse* — от 0 до 200.  
   
 ##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  Задает тип анимации для этого всплывающего меню.  
@@ -1179,11 +1179,11 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `type`  
+ [in] *тип*  
  Тип данных перечисления, указывающее тип анимации.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [CMFCPopupMenu::GetAnimationType](#getanimationtype) список допустимых значений для `type`.  
+ В разделе [CMFCPopupMenu::GetAnimationType](#getanimationtype) список допустимых значений для *типа*.  
   
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
@@ -1193,7 +1193,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1205,7 +1205,7 @@ void SetDefaultItem(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды меню новой команды по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1219,7 +1219,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bValue`  
+ [in] *bValue*  
  `TRUE` Если требуется, чтобы платформа для принудительного фокус ввода в строку меню, когда всплывающего меню отображается. `FALSE` Если вы хотите всплывающего меню, чтобы сохранить фокус.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1233,7 +1233,7 @@ static void SetForceShadow(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bValue`  
+ [in] *bValue*  
  `TRUE` Если требуется, чтобы платформа для отрисовки тени меню `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1247,7 +1247,7 @@ void SetMaxWidth(int iMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iMaxWidth`  
+ [in] *iMaxWidth*  
  Максимальная ширина всплывающего меню в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1261,7 +1261,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsgWnd`  
+ [in] *pMsgWnd*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1273,7 +1273,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElem`  
+ [in] *pElem*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1285,7 +1285,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Type`  
+ [in] *Тип*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1306,7 +1306,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bRightAlign`  
+ [in] *bRightAlign*  
  Логическое значение, указывающее выравнивание меню. `TRUE` Указывает выравнивание по правому краю, `FALSE` Указывает выравнивание по левому краю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1320,7 +1320,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Если во всплывающем меню уведомляет его родительского фрейма `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1353,7 +1353,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Прямоугольник, который задает область, чтобы обновить, в экранных координатах.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1367,7 +1367,7 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lprectScreen`  
+ [in] *lprectScreen*  
  Прямоугольник, в экранных координатах, задающая границы области, чтобы обновить.  
   
 ### <a name="remarks"></a>Примечания  

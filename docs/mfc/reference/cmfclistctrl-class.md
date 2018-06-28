@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369626"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037740"
 ---
 # <a name="cmfclistctrl-class"></a>Класс CMFCListCtrl
 `CMFCListCtrl` Класс расширяет функциональность [CListCtrl-класс](../../mfc/reference/clistctrl-class.md) класса путем поддержки функциональные возможности управления Дополнительно заголовок [CMFCHeaderCtrl класса](../../mfc/reference/cmfcheaderctrl-class.md).  
@@ -58,7 +58,7 @@ class CMFCListCtrl : public CListCtrl
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|Дает возможность пометить отсортированный столбец с другой цвет фона.|  
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|Включает несколько режим сортировки.|  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMark`  
+ [in] *bMark*  
  Логический параметр, который определяет, следует ли включить другой цвет фона.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Логического параметра, который определяет, нужно ли немедленно перерисовки элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логическое значение, указывающее, следует ли включить режим сортировки нескольких столбцов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lParam1`  
+ [in] *lParam1*  
  Первый элемент для сравнения.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  Второй элемент для сравнения.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  Индекс столбца, этот метод выполняет сортировку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nRow`  
+ [in] *nRow*  
  Строка рассматриваемой ячейки.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Столбец ячейки.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Определенные пользователем данные. Реализация по умолчанию этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nRow`  
+ [in] *nRow*  
  Строка рассматриваемой ячейки.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  Столбец ячейки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Чтобы удалить столбец.  
   
 ### <a name="remarks"></a>Примечания  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Столбец для сортировки.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Логическое значение, указывающее порядок сортировки.  
   
- [in] `bAdd`  
- Логическое значение, указывающее, добавляет ли метод столбце, обозначенном `iColumn` в список столбцов для сортировки.  
+ [in] *bAdd*  
+ Логическое значение, указывающее, добавляет ли метод столбце, обозначенном *iColumn* в список столбцов для сортировки.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод передает входные параметры для управления заголовка с помощью метода [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn).  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Столбец для сортировки.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  Логическое значение, указывающее порядок сортировки.  
   
- [in] `bAdd`  
- Логическое значение, указывающее, является ли этот метод добавляет столбец, обозначенном `iColumn` в список столбцов для сортировки.  
+ [in] *bAdd*  
+ Логическое значение, указывающее, является ли этот метод добавляет столбец, обозначенном *iColumn* в список столбцов для сортировки.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

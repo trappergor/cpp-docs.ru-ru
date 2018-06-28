@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369038"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037292"
 ---
 # <a name="cmfckeymapdialog-class"></a>Класс CMFCKeyMapDialog
 `CMFCKeyMapDialog` Класс поддерживает элемент управления, который сопоставляет команды клавишам на клавиатуре.  
@@ -52,23 +52,23 @@ ms.locfileid: "33369038"
 class CMFCKeyMapDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Создает объект `CMFCKeyMapDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::DoModal](#domodal)|Отображает диалоговое окно сопоставления клавиатуры.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::FormatItem](#formatitem)|Вызывается платформой для создания строку, описывающую сопоставления ключей. По умолчанию строка содержит имя команды, сочетания клавиш, используемые и описание ключа сочетания клавиш.|  
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Возвращает строку, содержащую список сочетаний клавиш, связанных с указанной командой.|  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  Указатель на родительское окно `CMFCKeyMapDialog` объекта.  
   
- [in] `bEnablePrint`  
- `TRUE` Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
+ [in] *bEnablePrint*  
+ `TRUE` Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nItem`  
+ [in] *nItem*  
  Отсчитываемый от нуля индекс элемента в во внутренний список сопоставлений ключей.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов, используемый для сопоставления сочетания клавиш клавиатуры для команды имя и описание. Элемент карты ключей хранится в элементе управления внутренний список.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Отсчитываемый от нуля индекс, указывающий место вставки нового элемента карты ключей в элементе управления внутренний список.  
   
 ### <a name="remarks"></a>Примечания  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dc`  
+ [in] *контроллера домена*  
  Контекст устройства принтера.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Номер страницы для печати.  
   
- [in] `cx`  
+ [in] *cx*  
  Горизонтальное смещение заголовка в пикселях.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dc`  
+ [in] *контроллера домена*  
  Контекст устройства принтера.  
   
- [in] `nItem`  
+ [in] *nItem*  
  Отсчитываемый от нуля индекс элемента для печати.  
   
- [in] `y`  
+ [in] *y*  
  Смещение по вертикали между верхним краем страницы и положение элемента.  
   
- [in] `cx`  
+ [in] *cx*  
  Смещение по горизонтали между левой части страницы и положение элемента.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` для вычисления наиболее высоту для элемента печати; `FALSE` усечение печати элемента так, чтобы по умолчанию пустое пространство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10f183ed498fde15166a6e8ee7e7d10cfe9f60d7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378627"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040939"
 ---
 # <a name="cmfctaskspane-class"></a>Класс CMFCTasksPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -226,13 +226,13 @@ class CMFCTasksPane : public CDockablePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Создает объект `CMFCTasksPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::AddGroup](#addgroup)|Добавляет новую группу задач для элемента управления области задач.|  
 |[CMFCTasksPane::AddLabel](#addlabel)|Добавляет новую статическую подпись в указанную группу задач.|  
@@ -329,7 +329,7 @@ class CMFCTasksPane : public CDockablePane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Вызывается платформой при активации новой страницы области задач.|  
   
@@ -399,19 +399,19 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Указывает индекс (с нуля).  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Указывает имя группы.  
   
- [in] `bBottomLocation`  
+ [in] *bBottomLocation*  
  `TRUE` Чтобы создать группу в нижней части элемента управления области задач; в противном случае `FALSE`.  
   
- [in] `bSpecial`  
+ [in] *bSpecial*  
  `TRUE` Чтобы пометить эту группу как *специальных* группу, в противном случае — `FALSE`. Дополнительные сведения о специальных групп см. в разделе «Примечания» `CMFCTasksPane`.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Задает значок, отображаемый в заголовке группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -434,20 +434,20 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс группы, где добавляется метка.  
   
- [in] `lpszLabelName`  
+ [in] *lpszLabelName*  
  Задает имя метки.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Задает значок, отображаемый рядом с меткой. Платформа хранит значки списка изображений. Этот параметр является индексом в этом списке.  
   
- [in] `bIsBold`  
+ [in] *bIsBold*  
  `TRUE` Чтобы отобразить метку полужирным шрифтом; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс, куда был добавлен метку группы или -1, если группа указана по `nGroup` не существует.  
+ Отсчитываемый от нуля индекс, куда был добавлен метку группы или -1, если группа указана по *разгруппировать* не существует.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа выполняет задачи и метки. Когда пользователь щелкает задачу, платформа выполняет команду. Когда пользователь выбирает метку, выполняется ни одной команды. Дополнительные сведения см. в разделе [CMFCTasksPane::AddTask](#addtask).  
@@ -462,14 +462,14 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс в группе. Этот метод добавляет в список последних Использованных файлов в группу, заданного этим параметром.  
   
- [in] `nMaxFiles`  
+ [in] *nMaxFiles*  
  Указывает количество файлов, отображаемых в списке последних Выбиравшихся файлов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс, куда был добавлен в список последних Использованных файлов группы или -1, если группа указана по `nGroup` не существует.  
+ Отсчитываемый от нуля индекс, куда был добавлен в список последних Использованных файлов группы или -1, если группа указана по *разгруппировать* не существует.  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  Добавляет страницу в области задач.  
@@ -479,7 +479,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPageLabel`  
+ [in] *lpszPageLabel*  
  Задает метку для страницы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -493,7 +493,7 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -512,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс группы, где эта задача добавлена.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Задает имя задачи.  
   
- [in] `nTaskIcon`  
+ [in] *nTaskIcon*  
  Задает значок, отображаемый рядом с задачей. Платформа хранит значки списка изображений. Этот параметр является индексом в этом списке.  
   
- [in] `uiCommandID`  
- Указывает идентификатор команды команда, которая выполняется, когда пользователь щелкает задачу. Задача рассматривается как метка `uiCommandID` — 0.  
+ [in] *uiCommandID*  
+ Указывает идентификатор команды команда, которая выполняется, когда пользователь щелкает задачу. Задача рассматривается как метка *uiCommandID* — 0.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Задает определяемые пользователем данные, следует связать с задачей.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс, куда был добавлен задачи группы или значение -1, если заданные группе `nGroup` не существует.  
+ Отсчитываемый от нуля индекс, куда был добавлен задачи группы или значение -1, если заданные группе *разгруппировать* не существует.  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  Добавляет дочернее окно в область задач.  
@@ -543,23 +543,23 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс группы, где добавляется окна.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Указывает дескриптор окна для добавления.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Указывает высоту окна.  
   
- [in] `bAutoDestroyWindow`  
+ [in] *bAutoDestroyWindow*  
  `TRUE` для уничтожения окна при удалении задачи; в противном случае `FALSE`.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Задает определяемые пользователем данные, связанные с задачей.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс, куда был добавлен окна группы или -1, если группа указана по `nGroup` не существует.  
+ Отсчитываемый от нуля индекс, куда был добавлен окна группы или -1, если группа указана по *разгруппировать* не существует.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод для добавления элемента управления в области задач. Например можно добавить элемент управления редактированием, функции, такие как панель поиска.  
@@ -584,8 +584,8 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bCollapse`  
- [in] `nPageIdx`  
+ [in] *bCollapse*  
+ [in] *nPageIdx*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -604,13 +604,13 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pGroup`  
+ [in] *pGroup*  
  Указывает группу, чтобы свернуть.  
   
- [in] `bCollapse`  
+ [in] *bCollapse*  
  `TRUE` Свернуть группу; `FALSE` чтобы развернуть группу.  
   
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс с отсчетом от группы, чтобы свернуть во внутреннем списке групп.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -627,7 +627,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectInitial`  
+ [in] *rectInitial*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -656,7 +656,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить анимации, которая возникает, когда группа задач при развертывании или сворачивает; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -670,7 +670,7 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Если пользователи можно свернуть группы задач; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -684,7 +684,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` для включения в раскрывающихся меню **Далее** и **Назад** кнопки навигации; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -706,16 +706,16 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить панель навигации; в противном случае `FALSE`.  
   
- [in] `uiToolbarBmpRes`  
+ [in] *uiToolbarBmpRes*  
  Указывает идентификатор ресурса точечного рисунка, который содержит изображения, отображаемые на панели инструментов.  
   
- [in] `sizeToolbarImage`  
+ [in] *sizeToolbarImage*  
  Указывает размер изображение кнопки панели инструментов.  
   
- [in] `sizeToolbarButton`  
+ [in] *sizeToolbarButton*  
  Задает размер кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -731,7 +731,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -743,7 +743,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` для отображения кнопок прокрутки вместо полосы прокрутки; области задач в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -757,7 +757,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы перенести текст метки, отображаемых в области задач; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -771,7 +771,7 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` программы-оболочки для задачи в области задач; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -840,10 +840,10 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pGroup`  
+ [in] *pGroup*  
  Указывает группу задач, место которого извлекается.  
   
- [выходной] `nGroup`  
+ [out] *разгруппировать*  
  Содержит отсчитываемый от нуля индекс в группу задач.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -880,7 +880,7 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lstNextPages`  
+ [in] *lstNextPages*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -894,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы задач.  
   
- [выходной] `nPage`  
+ [out] *nPage*  
  Содержит индекс страницы для указанной группы. Если группа задач содержит только страницы по умолчанию, возвращаемое значение равно 0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если группе `nGroup` существует; в противном случае `FALSE`.  
+ `TRUE` Если группе *разгруппировать* существует; в противном случае `FALSE`.  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  Возвращает количество страниц.  
@@ -921,7 +921,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lstPrevPages`  
+ [in] *lstPrevPages*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -933,7 +933,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nBar`  
+ [in] *nBar*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -949,11 +949,11 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс, содержащий задачу.  
   
- [in] `nTask`  
- Указывает отсчитываемый от нуля индекс задачи в список, указанный в `nGroup`.  
+ [in] *nTask*  
+ Указывает отсчитываемый от нуля индекс задачи в список, указанный в *разгруппировать*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Задача по указанному индексу.  
@@ -966,11 +966,11 @@ int GetTaskCount(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Указывает индекс группы задач.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число задач в указанной группе или 0, если `nGroup` является недопустимым.  
+ Число задач в указанной группе или 0, если *разгруппировать* является недопустимым.  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  Возвращает группу задач для индекса указанной группы.  
@@ -980,7 +980,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы для извлечения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1007,26 +1007,26 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Указывает идентификатор команды задачи для поиска.  
   
- [выходной] `nGroup`  
+ [out] *разгруппировать*  
  Содержит индекс группы задачи.  
   
- [выходной] `nTask`  
+ [out] *nTask*  
  Содержит индекс задачи в группе задач.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Указывает окно, связанное с задачей.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Указывает задачу, чтобы найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если найдена местонахождению задачи; `FALSE` Если указанное задание не существует.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод возвращает индекс группы и задачи индекс для указанной задачи. Если метод возвращает `FALSE`, `nGroup` и `nTask` задано значение -1.  
+ Этот метод возвращает индекс группы и задачи индекс для указанной задачи. Если метод возвращает `FALSE`, *разгруппировать* и *nTask* задано значение -1.  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  Возвращает смещение задач по горизонтали.  
@@ -1199,9 +1199,9 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1238,20 +1238,20 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroupNumber`  
+ [in] *nGroupNumber*  
  Задает отсчитываемый от нуля индекс, содержащий задачу, которую щелкнул пользователь.  
   
- [in] `nTaskNumber`  
+ [in] *nTaskNumber*  
  Задает отсчитываемый от нуля индекс выбранной задачи.  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Указывает идентификатор команды, связанные с задачей.  
   
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Содержит определяемые пользователем данные, связанные с задачей, которую щелкнул пользователь.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда пользователь щелкает задачу. По умолчанию платформа проверяет идентификатор команды, связанные с задачей, которую щелкнул пользователь и если оно не равно нулю, отправляет `WM_COMMAND` сообщения к владельцу элемента управления области задач.  
+ Этот метод вызывается платформой, когда пользователь щелкает задачу. По умолчанию платформа проверяет идентификатор команды, связанные с выбранной задачей и если не равен нулю, отправляет сообщения WM_COMMAND владельцу элемента управления области задач.  
   
  Переопределите этот метод в производном классе для выполнения пользовательского кода, при щелчке задачи.  
   
@@ -1310,8 +1310,8 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pbtn`  
- [in] `pWndOwner`  
+ [in] *pbtn*  
+ [in] *pWndOwner*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1323,7 +1323,7 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lVal`  
+ [in] *lVal*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1339,8 +1339,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1352,7 +1352,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1366,7 +1366,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bRedraw`  
+ [in] *bRedraw*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1378,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Задает отсчитываемый от нуля индекс страницы.  
   
 ### <a name="remarks"></a>Примечания  
- Удаляет все группы на страницы, указанной параметром `nPageIdx`, или для всех групп, если страница по умолчанию.  
+ Удаляет все группы на страницы, указанной параметром *nPageIdx*, или для всех групп, если страница по умолчанию.  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  Удаляет все страницы из области задач, за исключением страницы по умолчанию (первой страницы).  
@@ -1399,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы.  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1410,7 +1410,7 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы для удаления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1426,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Задает отсчитываемый от нуля индекс страницы для удаления.  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1440,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс, содержащий задачу, чтобы удалить группы задач.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Задает отсчитываемый от нуля индекс задачи для удаления.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` для повторной отрисовки области задач; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если функция выполняется успешно. `FALSE` Если `nGroup` или `nTask` является недопустимым.  
+ `TRUE` Если функция выполняется успешно. `FALSE` Если *разгруппировать* или *nTask* является недопустимым.  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1463,9 +1463,9 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
- [in] `nIndex`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *nIndex*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1479,7 +1479,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1491,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Задает отсчитываемый от нуля индекс страницы для отображения.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод подтверждает Если `nPageIdx` является недопустимым.  
+ Этот метод подтверждает Если *nPageIdx* является недопустимым.  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  Задает заголовок области задач.  
@@ -1505,7 +1505,7 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Задает имя заголовка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1519,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Указывает высоту заголовка.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод используется для настройки полей элементы панели задач.  
   
- Если `n` равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Высота заголовка по умолчанию — 25 пикселей.  
+ Если *n* равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). Высота заголовка по умолчанию — 25 пикселей.  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  Задает смещение заголовка группы по горизонтали.  
@@ -1535,7 +1535,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Задает горизонтальное смещение заголовка группы.  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
@@ -1546,7 +1546,7 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Задает смещение по вертикали в пикселях заголовка группы.  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
@@ -1559,10 +1559,10 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Задает имя группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1579,13 +1579,13 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы.  
   
- [in] `color`  
+ [in] *цвет*  
  Указывает цвет текста.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Указывает цвет текста для выделенной группы. Если значение-1, используется цвет выделения по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1599,13 +1599,13 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Задает вертикальное смещение.  
   
 ### <a name="remarks"></a>Примечания  
  Вертикальное смещение представляет собой расстояние между группу задач и границей области задач.  
   
- Этот метод используется для настройки полей элементы в области задач. Если `n` равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Смещение по умолчанию — 15 пикселей.  
+ Этот метод используется для настройки полей элементы в области задач. Если *n* равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). Смещение по умолчанию — 15 пикселей.  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  Задает горизонтальное поле.  
@@ -1615,7 +1615,7 @@ void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Указывает поле, в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1636,16 +1636,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  Указывает идентификатор ресурса для списка изображений.  
   
- [in] `cx`  
+ [in] *cx*  
  Указывает размер значков в списке изображений.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Указывает прозрачный цвет.  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Задает список изображений, содержит значки для области задач.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1663,10 +1663,10 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPageIdx`  
+ [in] *nPageIdx*  
  Задает отсчитываемый от нуля индекс страницы.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Задает текст заголовка для отображения на странице.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1683,13 +1683,13 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы задач.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Задает отсчитываемый от нуля индекс задачи.  
   
- [in] `lpszTaskName`  
+ [in] *lpszTaskName*  
  Задает имя задачи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1703,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Задает горизонтальное смещение.  
   
 ### <a name="remarks"></a>Примечания  
  Горизонтальное смещение — это расстояние в пикселях от левого и правого краев группы.  
   
- Если `n` равно -1, этот метод задает горизонтальное смещение значения, возвращенного `CMFCVisualManager::GetTasksPaneTaskHorzOffset` метод.  
+ Если *n* равно -1, этот метод задает горизонтальное смещение значения, возвращенного `CMFCVisualManager::GetTasksPaneTaskHorzOffset` метод.  
   
  Горизонтальное смещение по умолчанию — 12 пикселей.  
   
@@ -1721,7 +1721,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1733,7 +1733,7 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1749,16 +1749,16 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс, содержащий задачу группы задач.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Задает отсчитываемый от нуля индекс задачи.  
   
- [in] `color`  
+ [in] *цвет*  
  Указывает цвет текста для задачи.  
   
- [in] `colorHot`  
+ [in] *colorHot*  
  Указывает цвет текста для выделенной группы. Если значение-1, этот метод использует цвет выделения по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1772,13 +1772,13 @@ void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `n`  
+ [in] *n*  
  Указывает вертикальная поле для задания.  
   
 ### <a name="remarks"></a>Примечания  
  Вертикальная поле-это расстояние между областью задач и вертикальные края клиентской области.  
   
- Если `n` равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneVertMargin`). Поле по умолчанию — 12 пикселей.  
+ Если *n* равно -1, платформа определяет значение поля, используя диспетчер визуального представления ( `CMFCVisualManager::GetTasksPaneVertMargin`). Поле по умолчанию — 12 пикселей.  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  Задает высоту окна элемента управления.  
@@ -1796,17 +1796,17 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс, содержащий элемент управления окна.  
   
- [in] `hwndTask`  
+ [in] *hwndTask*  
  Указывает дескриптор окна элемента управления.  
   
- [in] `nWndHeight`  
+ [in] *nWndHeight*  
  Задает высоту для задания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если задано успешно высоту окна элемента управления; `FALSE` Если `nGroup` является недопустимым или если `hwndTask` не существует.  
+ `TRUE` Если задано успешно высоту окна элемента управления; `FALSE` Если *разгруппировать* является недопустимым или если *hwndTask* не существует.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовите [CMFCTasksPane::AddWindow](#addwindow) для добавления задач с помощью элементов управления окнами.  
@@ -1819,7 +1819,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1835,16 +1835,16 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroup`  
+ [in] *разгруппировать*  
  Задает отсчитываемый от нуля индекс группы.  
   
- [in] `nTask`  
+ [in] *nTask*  
  Задает отсчитываемый от нуля индекс задачи, чтобы показать или скрыть.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Чтобы отобразить задачи; `FALSE` для скрытия задачи.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` для повторной отрисовки области задач; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1864,13 +1864,13 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  Указывает идентификатор команды задачи, чтобы показать или скрыть.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Чтобы отобразить задачи; `FALSE` для скрытия задачи.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` для повторной отрисовки области задач; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

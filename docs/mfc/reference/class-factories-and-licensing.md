@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367078"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038241"
 ---
 # <a name="class-factories-and-licensing"></a>Фабрики классов и прослушивание
 Для создания экземпляра элемента управления OLE, приложение контейнера вызывает функцию-член фабрики класса элемента управления. Так как элемент управления — это фактический объект OLE, фабрика класса отвечает за создание экземпляров элемента управления. Каждый класс элементов управления OLE должен иметь фабрики класса.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hInstance`  
+ *hInstance*  
  Дескриптор экземпляра библиотеки DLL, связанные с лицензированный элемент управления.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  Указывает символом null строку, содержащую имя файла лицензии.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  Указывает последовательность байтов, которое должно соответствовать последовательности, найден в начале файла лицензии.  
   
- `cch`  
- Число символов в `pszLicFileContents`.  
+ *cch*  
+ Число символов в *pszLicFileContents*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если существует файл лицензии и начинается с последовательности знаков в `pszLicFileContents`; в противном случае — 0.  
+ Ненулевое значение, если существует файл лицензии и начинается с последовательности знаков в *pszLicFileContents*; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если `cch` равно -1, эта функция использует:  
+ Если *cch* равно -1, эта функция использует:  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

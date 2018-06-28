@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366646"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042086"
 ---
 # <a name="cmfcpropertypage-class"></a>Класс CMFCPropertyPage
 `CMFCPropertyPage` Класс поддерживает отображение всплывающих меню на странице свойств.  
@@ -38,14 +38,14 @@ class CMFCPropertyPage : public CPropertyPage
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Создает объект `CMFCPropertyPage`.|  
 |`CMFCPropertyPage::~CMFCPropertyPage`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCPropertyPage::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIDTemplate`  
+ *nIDTemplate*  
  Идентификатор ресурса шаблона для этой страницы.  
   
- `nIDCaption`  
+ *nIDCaption*  
  Идентификатор ресурса метку для размещения на вкладке этой страницы. Если значение равно 0, имя можно получить из шаблона диалогового окна поле для этой страницы. Значение по умолчанию — 0.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Указывает имя шаблона для этой страницы. Не может быть `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

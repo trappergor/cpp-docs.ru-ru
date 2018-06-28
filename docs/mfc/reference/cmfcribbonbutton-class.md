@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376422"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040042"
 ---
 # <a name="cmfcribbonbutton-class"></a>Класс CMFCRibbonButton
 Класс `CMFCRibbonButton` реализует кнопки, которые можно размещать на элементах ленты, например на панелях, панелях быстрого доступа и во всплывающих меню.  
@@ -146,13 +146,13 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Создает объект "кнопка ленты".|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|Добавляет во всплывающее меню элемент, связанный с кнопкой.|  
 |[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Переопределяет [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|  
@@ -209,7 +209,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::OnClick](#onclick)|Вызывается платформой по нажатию кнопки.|  
   
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Определяет указатель на новый элемент для добавления.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс, по которому следует добавить элемент в массив элементов меню кнопки. -1, чтобы добавить элемент в конце массив элементов меню.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,19 +318,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды кнопки.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Указывает текст метки кнопки.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Задает отсчитываемый от нуля индекс кнопки маленьких изображений в списке изображений родительской категории.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Задает отсчитываемый от нуля индекс большого изображения кнопки в списке изображений родительской категории.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Указывает дескриптор значка, который использует приложение в качестве изображения кнопки.  
   
 ### <a name="example"></a>Пример  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in] *основного контроллера домена*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in] *основного контроллера домена*  
+ [in] *тип*  
+ [in] *rectImage*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *strText*  
+ [in] *rectText*  
+ [in] *uiDTFlags*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Указывает идентификатор команды всплывающего меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс вложенным элементом, с которым связан `uiID`. -1, если такой вложенный элемент.  
+ Отсчитываемый от нуля индекс вложенным элементом, с которым связан *uiID*. -1, если такой вложенный элемент.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLargeIcon`  
+ [in] *bLargeIcon*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Если `TRUE`, возвращает индекс изображения в списке изображений, который содержит большие изображения; в противном случае возвращает индекс изображения в списке изображений, содержащий маленькие изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `type`  
+ [in] *тип*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Задает положение щелчка мыши.  
   
 ### <a name="remarks"></a>Примечания  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Задает отсчитываемый от нуля индекс элемента меню, которую требуется удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если указанный элемент был удален успешно. в противном случае `FALSE` Если `nIndex` меньше нуля или превышает число элементов меню в контекстном меню.  
+ `TRUE` Если указанный элемент был удален успешно. в противном случае `FALSE` Если *nIndex* меньше нуля или превышает число элементов меню в контекстном меню.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Задает данные специальных возможностей для кнопки ленты.  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Родительское окно для элемента ленты.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  Если `TRUE`, на кнопке отображается большое изображение. В противном случае кнопка отображает небольшое изображение.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  Если `TRUE`, кнопки можно выполнить команду его по умолчанию. Если `FALSE`, кнопки невозможно выполнить команду его по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- `bSet` имеет смысл только в том случае, когда кнопка имеет меню. Если `bSet` — `TRUE`, кнопки можно выполнить его команду по умолчанию и назначенный во всплывающем меню отображается только в том случае, когда пользователь щелкает стрелку справа от кнопки. В противном случае — кнопку невозможно выполнить команду его по умолчанию и во всплывающем меню появляется независимо от того, какие области кнопки пользователь нажимает кнопку.  
+ *bSet* действителен только в том случае, когда кнопка имеет меню. Если *bSet* — `TRUE`, кнопки можно выполнить его команду по умолчанию и назначенный во всплывающем меню отображается только в том случае, когда пользователь щелкает стрелку справа от кнопки. В противном случае — кнопку невозможно выполнить команду его по умолчанию и во всплывающем меню появляется независимо от того, какие области кнопки пользователь нажимает кнопку.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс изображения.  
   
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  Если `TRUE`, ссылается по указанному индексу из списка больших изображений. В противном случае индекс относится к списку маленькие изображения.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hMenu`  
+ *hMenu*  
  Дескриптор меню Windows.  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  Если `TRUE`, кнопки могут выполнять команды по умолчанию; в противном случае кнопка отображает всплывающее меню.  
   
- `bRightAlign`  
+ *bRightAlign*  
  Если `TRUE`, меню по правому краю. В противном случае меню по левому краю.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  Идентификатор ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
- Когда приложение назначает меню кнопки, кнопки отображает стрелку справа от него. Если `bIsDefaultCommand` — `TRUE`, меню отображается только в том случае, когда пользователь щелкает стрелку. Если пользователь нажимает кнопку, выполняется ее команды по умолчанию. Если `bIsDefaultCommand` — `FALSE`, появится меню, щелкнув в любом месте на кнопке.  
+ Когда приложение назначает меню кнопки, кнопки отображает стрелку справа от него. Если *bIsDefaultCommand* — `TRUE`, меню отображается только в том случае, когда пользователь щелкает стрелку. Если пользователь нажимает кнопку, выполняется ее команды по умолчанию. Если *bIsDefaultCommand* — `FALSE`, появится меню, щелкнув в любом месте на кнопке.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  Если `TRUE`, меню по правому краю. В противном случае меню по левому краю  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Примечания  
   

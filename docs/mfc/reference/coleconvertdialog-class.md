@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370293"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042525"
 ---
 # <a name="coleconvertdialog-class"></a>Класс COleConvertDialog
 Дополнительные сведения см. в разделе [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) структуры в Windows SDK.  
@@ -52,13 +52,13 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Создает объект `COleConvertDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleConvertDialog::DoConvert](#doconvert)|Выполняет преобразование, указанные в диалоговом окне.|  
 |[COleConvertDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменение элемента.|  
@@ -69,7 +69,7 @@ class COleConvertDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleConvertDialog::m_cv](#m_cv)|Структура, которая управляет поведением окна.|  
   
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указывает элемент, чтобы активировать или преобразовать.  
   
- `dwFlags`  
+ *dwFlags*  
  Создание флаг, который содержит произвольное количество следующие значения, объединенные с помощью битовой операции- или оператор:  
   
 - **CF_SELECTCONVERTTO** указывает, что переключатель преобразовать в выберет изначально при вызове диалогового. Это значение по умолчанию.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** задает отображение кнопки справки при вызове диалоговым окном.  
   
- `pClassID`  
- Указывает идентификатор CLSID элемента необходимо активировать или преобразованы. Если **NULL**, **CLSID** связанных с `pItem` будет использоваться.  
+ *pClassID*  
+ Указывает идентификатор CLSID элемента необходимо активировать или преобразованы. Если **NULL**, **CLSID** связанных с *pItem* будет использоваться.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указывает элемент, чтобы активировать или преобразовать. Не может быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

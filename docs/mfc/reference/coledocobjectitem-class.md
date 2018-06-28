@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373583"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042213"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 Реализует хранение активных документов.  
@@ -54,13 +54,13 @@ class COleDocObjectItem : public COleClientItem
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Для печати из приложения контейнера с использованием параметров принтера по умолчанию.|  
 |[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, заданное пользователем.|  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pContainerDoc`  
+ *pContainerDoc*  
  Указатель на `COleDocument` объект выступает в роли контейнера активного документа. Этот параметр должен быть **NULL** для включения **IMPLEMENT_SERIALIZE**. Обычно элементы OLE создаются с не поддерживающими **NULL** указатель документа.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCaller`  
+ *pCaller*  
  Указатель на [CView](../../mfc/reference/cview-class.md) объект, который отправляет команды print.  
   
- `pInfo`  
+ *pInfo*  
  Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объекта, который описывает задание на печать.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,31 +138,31 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCmdID`  
- Идентификатор команды для выполнения. Должен находиться в группе, определенной `pguidCmdGroup`.  
+ *nCmdID*  
+ Идентификатор команды для выполнения. Должен находиться в группе, определенной *параметром pguidCmdGroup*.  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  Указывает параметры выполнения команды. По умолчанию значение для выполнения команды без запроса пользователя. В разделе [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) список значений.  
   
- `pguidCmdGroup`  
- Уникальный идентификатор группы команд. По умолчанию **NULL**, который указывает стандартные группы. Команда переданный `nCmdID` должен принадлежать к группе.  
+ *параметром pguidCmdGroup*  
+ Уникальный идентификатор группы команд. По умолчанию **NULL**, который указывает стандартные группы. Переданный команда *nCmdID* должен принадлежать к группе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` в случае успешного выполнения; в противном случае возвращает с одним из следующих кодов ошибки.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|Произошла непредвиденная ошибка.|  
 |**E_FAIL**|Произошла ошибка.|  
 |**E_NOTIMPL**|Указывает MFC сам следует попытаться перевести и отправляет команду.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` не является **NULL** , но не указана группа распознано в качестве команды.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` не является допустимой команды в pGroup группы.|  
-|**OLECMDERR_DISABLED**|Команду по `nCmdID` отключена и не может быть выполнена.|  
-|**OLECMDERR_NOHELP**|Вызывающий объект запрашивает справки на команду по `nCmdID` , но Справка недоступна.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*параметром pguidCmdGroup* не является **NULL** , но не указана группа распознано в качестве команды.|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* не является допустимой команды в pGroup группы.|  
+|**OLECMDERR_DISABLED**|Команда определяется *nCmdID* отключена и не может быть выполнена.|  
+|**OLECMDERR_NOHELP**|Вызывающий объект запрашивает справки на команду по *nCmdID* , но Справка недоступна.|  
 |**OLECMDERR_CANCELLED**|Выполнение отменено пользователем.|  
   
 ### <a name="remarks"></a>Примечания  
- `pguidCmdGroup` И `nCmdID` параметров, которые совместно однозначно идентифицируют команду, вызываемую. `nCmdExecOpt` Указывает точное предпринять действия.  
+ *Параметром pguidCmdGroup* и *nCmdID* параметры, которые совместно однозначно идентифицируют команду, вызываемую. *NCmdExecOpt* указывает точное предпринять действия.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  Вызовите эту функцию-член для получения указателя на `IOleDocumentView` интерфейс активного представления.  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCaller`  
+ *pCaller*  
  Указатель на [CView](../../mfc/reference/cview-class.md) объект, который отправляет команды print.  
   
- `pInfo`  
+ *pInfo*  
  Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объекта, который описывает задание на печать.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Указывает, является ли на печать всего документа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCaller`  
+ *pCaller*  
  Указатель на объект CView, который отправляет команды print.  
   
- `pInfo`  
+ *pInfo*  
  Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объекта, который описывает задание на печать.  
   
- `bPrintAll`  
+ *bPrintAll*  
  Указывает, является ли на печать всего документа.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCmdID`  
+ *nCmdID*  
  Идентификатор команды, для которого запрашивается.  
   
- `pdwStatus`  
+ *pdwStatus*  
  Указатель на флажки, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237).  
   
- `pCmdText`  
+ *pCmdText*  
  Указатель на [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) структуры, в которой для возврата сведений о имя и состояние для одной команды. Может быть **NULL** для указания, что ему нужны эти сведения.  
   
- `pguidCmdGroup`  
+ *параметром pguidCmdGroup*  
  Уникальный идентификатор группы команд; может быть **NULL** для указания стандартной группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwCloseOption`  
+ *dwCloseOption*  
  Флаг, указывающий, при каких обстоятельствах объекта OLE сохраняется при возвращении в загруженное состояние. Список возможных значений см. в разделе [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).  
   
 ### <a name="remarks"></a>Примечания  

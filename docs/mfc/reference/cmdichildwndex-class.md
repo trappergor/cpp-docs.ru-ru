@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377627"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041894"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 `CMDIChildWndEx` Класс предоставляет функциональные возможности Windows дочернего окна многодокументного интерфейса (MDI). Он расширяет функциональные возможности [CMDIChildWnd-класс](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.  
@@ -141,11 +141,11 @@ ms.locfileid: "33377627"
 class CMDIChildWndEx : public CMDIChildWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Вызывается внутренне платформой активация рамки верхнего уровня, если приложение должно активироваться из вкладки панели задач.|  
 |`CMDIChildWndEx::AddDockSite`|Этот метод не используется и не реализован.|  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на панель.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` для добавления в конец списка областей области для диспетчера закрепления; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на панель.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hdwp`  
+ [in] *hdwp*  
  Дескриптор структуру позиции отложенное окна.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Идентификатор области.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Указатель на прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
- `lpRect` Параметр не используется.  
+ *LpRect* параметр не используется.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  Закрепляет одну область слева от другой области.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBar`  
+ *pBar*  
  Указатель на область, которую требуется закрепить.  
   
- `pLeftOf`  
+ *pLeftOf*  
  Указатель на панель, служащий контрольную точку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` в случае успешного выполнения `FALSE` при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод принимает области, определяемой `pBar` и размещает его в левой области, определяемой `pLeftOf`.  
+ Этот метод принимает области, определяемой *pBar* и размещает его в левой области, определяемой *pLeftOf*.  
   
  Этот метод вызывается, когда вы хотите закрепить несколько областей в заранее определенному порядку.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Задает стороны фрейма главного окна, в которой включена. Используйте один или несколько из следующих флагов.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Задает выравнивание закрепления для включения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления области для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для вставки.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Указатель на соседней панели.  
   
- [in] `bAfter`  
- Если `TRUE`, `pControlBar` вставляется после `pTarget`. Если `FALSE`, `pControlBar` вставляется перед `pTarget`.  
+ [in] *bAfter*  
+ Если `TRUE`, *pControlBar* вставляется после *pTarget*. Если `FALSE`, *pControlBar* вставляется перед *pTarget*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно, `FALSE` в противном случае.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указанная точка.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Задает край приближается к точке. Возможными значениями являются `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, и `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Если точка находится рядом с внешней границы сайта закрепления; `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrame`  
+ [in] *pFrame*  
  Указатель окна области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPreview`  
+ [in] *bPreview*  
  Если `TRUE`, режим предварительного просмотра печати. Если `FALSE`, выход из режима предварительного просмотра печати.  
   
- [in] `pState`  
+ [in] *состояния производительности*  
  Указатель на структуру предварительного состояния.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  Если `TRUE`, добавьте имя документа в заголовок.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указывает точку, в экранных координатах, для проверки.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Увеличьте область поиска на указанное значение. Область удовлетворяет условиям поиска, если заданная точка находится в области увеличения.  
   
- [in] `bExactBar`  
- `TRUE` Чтобы игнорировать `nSensitivity` параметр; в противном случае `FALSE`.  
+ [in] *bExactBar*  
+ `TRUE` Чтобы игнорировать *nSensitivity* параметр; в противном случае `FALSE`.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  В противном случае `NULL`, метод выполняет поиск только области заданного типа.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Если панель находится в заданной точке, этот параметр содержит части панели, ближайшей к заданной точке. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>Примечания  
  Вызовите этот метод, чтобы определить, содержит ли область заданная точка в соответствии с указанным условиям, например, класс среды выполнения и видимость.  
   
- Если область не найдена, функция возвращает `dwAlignment` содержит выравнивание по заданной точке. Например, если точка находится ближайший к верхней части области `dwAlignment` равно `CBRS_ALIGN_TOP`.  
+ Если область не найдена, функция возвращает *dwAlignment* содержит выравнивание по заданной точке. Например, если точка находится ближайший к верхней части области *dwAlignment* равно `CBRS_ALIGN_TOP`.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  Повторно вычисляет макет окна.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNotify`  
+ [in] *bNotify*  
  Если `TRUE`, активного окна на месте для окна получает уведомление об изменении макета.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для удаления.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  Если `TRUE`, уничтожается области удален.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  Если `TRUE`, настроить макет закрепления немедленно.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  Если `TRUE`, макет закрепления относится к списку автоматическое скрытие панелей. Если `FALSE`, макет закрепления связан список регулярных панелей.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Указатель на область, которая заменяет области удален.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hIcon`  
+ *hIcon*  
  Дескриптор значка для отображения на вкладке панели задач Windows 7.  
   
 ### <a name="remarks"></a>Примечания  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  Указывает, должна ли эта функция число дочерних окон MDI, зарегистрированные с вкладками MDI. Если это число равно 0, эта функция удаляет прямоугольник отсечения из эскиз задач приложения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Указывает новый прямоугольник отсечения. Если прямоугольник является пустым или иметь значение null, вырезку удаляется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Сочетание значений STPFLAG. Дополнительные сведения см. в разделе [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
 ### <a name="remarks"></a>Примечания  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWndBefore`  
+ *pWndBefore*  
  Указатель на дочернее окно MDI, эскиз которого вставляется слева. Это окно уже должны быть зарегистрированы с помощью `RegisterTaskbarTab`. Если это значение равно `NULL`, эскиз нового добавляется в конец списка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWndBefore`  
+ *pWndBefore*  
  Указатель на дочернее окно MDI, эскиз которого вставляется слева. Это окно уже должны быть зарегистрированы с помощью `RegisterTaskbarTab`. Если это значение равно `NULL`, эскиз нового добавляется в конец списка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hBmpDst`  
+ *hBmpDst*  
  Дескриптор точечный рисунок назначения.  
   
- `rectDst`  
+ *rectDst*  
  Указывает прямоугольника назначения.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  Дескриптор исходный точечный рисунок.  
   
- `rectSrc`  
+ *rectSrc*  
  Указывает исходного прямоугольника.  
   
 ### <a name="remarks"></a>Примечания  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  Определяет указатель в окно верхнего уровня родительского окна активации. Указатель может быть временным и не должны храниться.  
   
- `nHitTest`  
+ *nHitTest*  
  Код города проверки нажатия. Попадания является тест, который определяет положение курсора.  
   
- `message`  
+ *message*  
  Указывает номер сообщения мыши.  
   
 ### <a name="remarks"></a>Примечания  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nState`  
+ *nState*  
  Указывает, является ли `CWnd` активации или деактивации.  
   
- `pWndOther`  
+ *pWndOther*  
  Указатель на `CWnd` активируется или деактивируется. Указатель может быть `NULL`, и она может быть временной.  
   
- `bMinimized`  
+ *bMinimized*  
  Указывает состояние свернутое `CWnd` активируется или деактивируется. Значение `TRUE` указывает окно свернется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nWidth`  
+ *nWidth*  
  Задает ширину необходимые растрового изображения.  
   
- `nHeight`  
+ *nHeight*  
  Задает высоту необходимые растрового изображения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  Этот параметр является `TRUE` Если точечный рисунок запрашивается для дочерней MDI-формы, которое в настоящий момент активны и главное окно не свернуто. В этом случае обработки по умолчанию создает моментальный снимок главного окна.  
   
- `ptLocation`  
+ *ptLocation*  
  Указывает расположение растрового изображения в основном (верхний уровень) клиентские координаты окна. Эта точка должно предоставляться объектом вызываемого метода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли включить ( `TRUE`), или отключить ( `FALSE`) автоматический выбор часть клиентской области окна для отображения.  
   
 ### <a name="remarks"></a>Примечания  

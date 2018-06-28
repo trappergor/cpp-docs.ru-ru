@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373307"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042317"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Элемент управления "вкладка", который имеет внешний вид раздела **Область переходов** в Microsoft Outlook.  
@@ -74,14 +74,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Конструктор по умолчанию.|  
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Добавляет элемент управления Windows в виде новой вкладки панели Outlook.|  
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Вызывается платформой для определения измерения поле ввода, который появляется, если пользователь переименовывает вкладки. (Переопределяет `CMFCBaseTabCtrl::CalcRectEdit`.)|  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  Указатель на элемент управления для добавления.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Указывает имя вкладки.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Если `TRUE`, страница будет создана как отделяемой.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  Индекс образа в списке внутренней изображений для изображения для отображения в новой вкладке.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Указывает AFX_ `CBRS_`* стиль упакованного области закрепления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -168,7 +168,7 @@ void AddControl(
   
  Эта функция автоматически вызывает на [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- Если задать `bDetachable` для `TRUE`, `AddControl` внутренне создает `CDockablePaneAdapter` объекта и создает оболочку для добавленного элемента управления. Класс среды выполнения окна с вкладками автоматически переключается на класс среды выполнения `CMFCOutlookBar` и класса среды выполнения с плавающей запятой кадра к `CMultiPaneFrameWnd`.  
+ Если задать *bDetachable* для `TRUE`, `AddControl` внутренне создает `CDockablePaneAdapter` объекта и создает оболочку для добавленного элемента управления. Класс среды выполнения окна с вкладками автоматически переключается на класс среды выполнения `CMFCOutlookBar` и класса среды выполнения с плавающей запятой кадра к `CMultiPaneFrameWnd`.  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется использование `AddControl` метод `CMFCOutlookBarTabCtrl` класса. Этот фрагмент кода является частью [Outlook демонстрационный пример](../../visual-cpp-samples.md).  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Указывает исходный размер и положение, в пикселях.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно. Значение не должно быть равно `NULL`.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент управления был создан успешно. в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Как правило, элементы управления вкладка панели outlook, создаваемых при [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) элементов управления `WM_CREATE` сообщения процесса.  
+ Как правило, элементы управления вкладка панели outlook, создаваемых при [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md) управляет сообщений WM_CREATE процесса.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  Указывает, включена ли анимация, которая происходит во время переключения между активных вкладок.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Указывает, следует ли включить или отключить анимацию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Если `TRUE`, включить редактирование на месте текстовой метки. Если `FALSE`, отключите редактирования по месту.  
   
 ### <a name="remarks"></a>Примечания  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Определяет, отображаются ли кнопки прокрутки.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Определяет, отображается ли верхний полосы прокрутки.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  Определяет, отображается ли нижней полосы прокрутки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для открытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  Указывает новый размер границы в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiAlign`  
+ [in] *uiAlign*  
  Задает выравнивание текста.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Если `TRUE`, перерисовывается окно outlook.  
   
 ### <a name="remarks"></a>Примечания  
  Эту функцию можно используйте для изменения выравнивания текста для страницы кнопок.  
   
- `uiAlign` Может принимать одно из следующих значений:  
+ *uiAlign* может принимать одно из следующих значений:  
   
 |Константа|Значение|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Указывает идентификатор ресурса изображения для загрузки.  
   
- [in] `cx`  
+ [in] *cx*  
  Задает ширину изображения в списке изображений в пикселях.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Значение RGB определяет прозрачный цвет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>Примечания  
   

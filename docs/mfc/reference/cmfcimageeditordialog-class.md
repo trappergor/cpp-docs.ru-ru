@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376253"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040773"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Класс CMFCImageEditorDialog
 `CMFCImageEditorDialog` Класс поддерживает диалоговое окно редактора изображений.  
@@ -38,7 +38,7 @@ class CMFCImageEditorDialog : public CDialogEx
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Создает объект `CMFCImageEditorDialog`.|  
   
@@ -86,14 +86,14 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBitmap`  
+ *pBitmap*  
  Указатель на изображения.  
   
- `pParent`  
+ *pParent*  
  Указатель на родительское окно текущего диалогового редактора изображений.  
   
- `nBitsPixel`  
- Количество битов, используемых для представления цвета одной точки, которую также называют глубину цвета.  Если `nBitsPixel` параметра равно -1, глубину цвета является производным от изображение, указанное свойством `pBitmap` параметра. Значение по умолчанию — -1.  
+ *nBitsPixel*  
+ Количество битов, используемых для представления цвета одной точки, которую также называют глубину цвета.  Если *nBitsPixel* параметра равно -1, глубину цвета является производным от изображение, указанное свойством *pBitmap* параметра. Значение по умолчанию — -1.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Чтобы изменить изображение, передать указатель на изображения для `CMFCImageEditorDialog` конструктор. Затем вызовите `DoModal` метод для открытия модального диалогового окна. Когда `DoModal` метод возвращает растровое изображение содержит новый образ.  

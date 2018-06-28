@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370725"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042369"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Класс CMFCDynamicLayout
 Определяет порядок перемещения и изменения размеров элементов управления при изменении размеров окна.  
@@ -52,7 +52,7 @@ class CMFCDynamicLayout : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCDynamicLayout::AddItem](#additem)|Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).|  
 |[CMFCDynamicLayout::Adjust](#adjust)|Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).|  
@@ -75,7 +75,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>Вложенные типы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Структура CMFCDynamicLayout::MoveSettings](#movesettings_structure)|Инкапсулирует данные перемещения для элементов управления в динамическом макете.|  
 |[Структура CMFCDynamicLayout::SizeSettings](#sizesettings_structure)|Инкапсулирует данные об изменении размера элементов управления в динамическом макете.|  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hwnd`  
+ *HWND*  
  Дескриптор добавляемого окна.  
   
- `nID`  
+ *nID*  
  Идентификатор добавляемого дочернего элемента управления.  
   
- `moveSettings`  
+ *moveSettings*  
  Структура, описывающая перемещение элемента управления при изменении размера окна.  
   
- `sizeSettings`  
+ *sizeSettings*  
  Структура, описывающая изменение размера элемента управления при изменении размера окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- pHostWnd  
+ *pHostWnd*  
  Указатель на главное окно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  После возвращения функцией этот параметр содержит ограничивающий прямоугольник области макета. Это выходной параметр. Входное значение перезаписывается.  
   
 ### <a name="remarks"></a>Примечания  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hwnd`  
+ *HWND*  
  Дескриптор окна для элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pHostWnd`  
+ *pHostWnd*  
  Указатель на главное окно.  
   
- `lpResource`  
+ *lpResource*  
  Указатель на буфер, содержащий ресурс AFX_DIALOG_LAYOUT.  
   
- `dwSize`  
+ *dwSize*  
  Размер буфера в байтах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRatio`  
+ *nRatio*  
  Определяет расстояние (в процентах), на которое дочерний элемент управления будет перемещаться по горизонтали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nXRatio`  
+ *nXRatio*  
  Определяет расстояние (в процентах), на которое дочерний элемент управления будет перемещаться по горизонтали при изменении пользователем размера главного окна.  
   
- `nYRatio`  
+ *nYRatio*  
  Определяет расстояние (в процентах), на которое дочерний элемент управления будет перемещаться по вертикали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRatio`  
+ *nRatio*  
  Определяет расстояние (в процентах), на которое дочерний элемент управления будет перемещаться по вертикали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Необходимый минимальный размер макета.  
   
 ### <a name="remarks"></a>Примечания  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRatio`  
+ *nRatio*  
  Определяет в процентах, как будет меняться размер дочернего элемента управления по горизонтали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nXRatio`  
+ *nXRatio*  
  Определяет в процентах, как будет меняться размер дочернего элемента управления по горизонтали при изменении пользователем размера главного окна.  
   
- `nYRatio`  
+ *nYRatio*  
  Определяет в процентах, как будет меняться размер дочернего элемента управления по вертикали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRatio`  
+ *nRatio*  
  Определяет в процентах, как будет меняться размер дочернего элемента управления по вертикали при изменении пользователем размера главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

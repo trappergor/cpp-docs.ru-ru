@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8dd962a06d6c7edadcdd029bd83d44b251aec8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45e0499297c814e4a214962bc2f51404960a8c38
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377743"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039223"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-класс
 Инкапсулирует функциональность элемента управления "календарь месяца".  
@@ -116,17 +116,17 @@ ms.locfileid: "33377743"
 class CMonthCalCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonthCalCtrl::Create](#create)|Создает элемент управления Календарь месяца и прикрепляет его к `CMonthCalCtrl` объекта.|  
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Получает ширину границы элемента управления calendar текущего месяца.|  
@@ -226,19 +226,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает сочетание Windows стили, примененные к элементу управления Календарь месяца. В разделе [стили элемента управления Calendar Month](http://msdn.microsoft.com/library/windows/desktop/bb760919) в Windows SDK, Дополнительные сведения о стилях.  
   
- `rect`  
+ *Rect*  
  Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Содержит положение и размер элемента управления calendar month.  
   
- `pt`  
+ *pt*  
  Ссылку на [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая определяет расположение элемента управления Календарь месяца.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления calendar month. Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления calendar month элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -251,11 +251,11 @@ virtual BOOL Create(
   
 2.  Вызовите эту функцию-член, который создает управления Календарь месяца и прикрепляет его к `CMonthCalCtrl` объекта.  
   
- При вызове **создать**, инициализируются стандартных элементов управления. Версия **создать** вы вызова определяет способ изменения размеров:  
+ При вызове `Create`, инициализируются стандартных элементов управления. Версия `Create` вы вызова определяет способ изменения размеров:  
   
--   Чтобы MFC автоматическое изменение размера элемента управления в один месяц, вызовите переопределения, которое использует `pt` параметра.  
+-   Чтобы MFC автоматическое изменение размера элемента управления в один месяц, вызовите переопределения, которое использует *pt* параметра.  
   
--   Изменение размера элемента управления самостоятельно, вызовет переопределение этой функции, который использует `rect` параметра.  
+-   Изменение размера элемента управления самостоятельно, вызовет переопределение этой функции, который использует *rect* параметра.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CMonthCalCtrl#1](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_1.cpp)]  
@@ -295,9 +295,9 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[выходной] `pmcGridInfo`|Указатель на [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) структуры, который получает сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|  
+|[out] *pmcGridInfo*|Указатель на [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) структуры, который получает сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если этот метод выполнен успешно; в противном случае `false`.  
@@ -331,15 +331,15 @@ CALID GetCalID() const;
  Этот метод отправляет [MCM_GETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760951) сообщение, которое описано в Windows SDK.  
   
 ##  <a name="getcolor"></a>  CMonthCalCtrl::GetColor  
- Получает цвет области месяца календаря управления, указанный в `nRegion`.  
+ Получает цвет области месяца календаря управления, указанный в *nRegion*.  
   
 ```  
 COLORREF GetColor(int nRegion) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRegion`  
- Область управления Календарь месяца, из которого извлекается цвет. Список значений см. в разделе `nRegion` параметр [SetColor](#setcolor).  
+ *nRegion*  
+ Область управления Календарь месяца, из которого извлекается цвет. Список значений см. в разделе *nRegion* параметр [SetColor](#setcolor).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет, связанный с частью управления Календарь месяца, в случае успешного выполнения. В противном случае эта функция-член возвращает значение -1.  
@@ -354,7 +354,7 @@ DWORD GetCurrentView() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Текущее представление, которое указывается одним из следующих значений:  
   
-|Значение|Смысл|  
+|Значение|Значение|  
 |-----------|-------------|  
 |`MCMV_MONTH`|Месячное представление|  
 |`MCMV_YEAR`|Ежегодное представление|  
@@ -384,10 +384,10 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refDateTime`  
+ *refDateTime*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта или [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта. Получает текущее время.  
   
- `pDateTime`  
+ *pDateTime*  
  Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, которая будет получать сведения о выбранной дате. Этот параметр должен быть допустимый адрес и не может быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -420,11 +420,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   
 |Значение|День недели|  
 |-----------|---------------------|  
-|0|Понедельник|  
+|0|понедельник|  
 |1|Вторник|  
-|2|Среда|  
+|2|среда|  
 |3|Четверг|  
-|4|Пятница|  
+|4|пятница|  
 |5|Суббота|  
 |6|Воскресенье|  
   
@@ -480,7 +480,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRect`  
+ *pRect*  
  Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая будет получать сведения ограничивающего прямоугольника. Этот параметр должен быть допустимый адрес и не может быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -523,28 +523,28 @@ int GetMonthRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refMinRange`  
+ *refMinRange*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, содержащий минимальное даты, допустимое.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Ссылку на `COleDateTime` или `CTime` объект, содержащий Максимальная допустимая дата.  
   
- `pMinRange`  
+ *pMinRange*  
  Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце нижнего диапазона.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Указатель на `SYSTEMTIME` структуру, содержащую дату в конце наибольший диапазон.  
   
- `dwFlags`  
+ *dwFlags*  
  Значение, указывающее область границы диапазона, который требуется получить. Это значение должно быть одно из следующих значений.  
   
-|Значение|Смысл|  
+|Значение|Значение|  
 |-----------|-------------|  
 |GMR_DAYSTATE|Включить предшествующий и в конце месяца видимого диапазона, отображаются только частично.|  
 |GMR_VISIBLE|Включать только эти месяцы, которые отображаются полностью.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Integer, представляющее диапазона, в месяцах, занимаемых двух ограничений обозначается `refMinRange` и `refMaxRange` в версиях первого и второго или `pMinRange` и `pMaxRange` в третьей версии.  
+ Integer, представляющее диапазона, в месяцах, занимаемых двух ограничений обозначается *refMinRange* и *refMaxRange* в версиях первого и второго или *pMinRange* и *pMaxRange* в третьей версии.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [MCM_GETMONTHRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760981), как описано в Windows SDK. В реализации MFC `GetMonthRange`, можно указать `COleDateTime` использования, `CTime` использование, или `SYSTEMTIME` структуры использования.  
@@ -570,19 +570,19 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMinRange`  
+ *pMinRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце нижнего диапазона.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце наибольший диапазон.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `DWORD` , может быть равен нулю (без ограничения задаются) или сочетанием следующих значений, указанных сведений об ограничениях.  
   
-|Значение|Смысл|  
+|Значение|Значение|  
 |-----------|-------------|  
-|GDTR_MAX|Максимальное значение задано для элемента управления; `pMaxRange` является допустимым и содержит сведения о применимых дате.|  
-|GDTR_MIN|Нижний предел задается для элемента управления. `pMinRange` является допустимым и содержит сведения о применимых дате.|  
+|GDTR_MAX|Максимальное значение задано для элемента управления; *pMaxRange* является допустимым и содержит сведения о применимых дате.|  
+|GDTR_MIN|Нижний предел задается для элемента управления. *pMinRange* является допустимым и содержит сведения о применимых дате.|  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член реализует поведение сообщения Win32 [MCM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb760983), как описано в Windows SDK. В реализации MFC `GetRange`, можно указать `COleDateTime` использования, `CTime` использование, или `SYSTEMTIME` структуры использования.  
@@ -608,16 +608,16 @@ BOOL GetSelRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refMinRange`  
+ *refMinRange*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, содержащий минимальное даты, допустимое.  
   
- `refMaxRange`  
+ *refMaxRange*  
  Ссылку на `COleDateTime` или `CTime` объект, содержащий Максимальная допустимая дата.  
   
- `pMinRange`  
+ *pMinRange*  
  Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце нижнего диапазона.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Указатель на `SYSTEMTIME` структуру, содержащую дату в конце наибольший диапазон.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -638,10 +638,10 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refDateTime`  
+ *refDateTime*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , показывающий текущий день.  
   
- `pDateTime`  
+ *pDateTime*  
  Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, которая будет получать сведения о дате. Этот параметр должен быть допустимый адрес и не может быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -731,12 +731,12 @@ void SetCalendarBorder(int cxyBorder);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `cxyBorder`|Ширина границы в пикселях.|  
+|[in] *cxyBorder*|Ширина границы в пикселях.|  
   
 ### <a name="remarks"></a>Примечания  
- Если этот метод завершается успешно, ширину границы присваивается `cxyBorder` параметра. В противном случае ширину границы сбрасывается в значение по умолчанию, которая указана в текущем [темы](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), или нуль, если темы не используются.  
+ Если этот метод завершается успешно, ширину границы присваивается *cxyBorder* параметра. В противном случае ширину границы сбрасывается в значение по умолчанию, которая указана в текущем [темы](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx), или нуль, если темы не используются.  
   
  Этот метод отправляет [MCM_SETCALENDARBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760993) сообщение, которое описано в Windows SDK.  
   
@@ -771,15 +771,15 @@ BOOL SetCalID(CALID calid);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `calid`|Один из [идентификатор календаря](http://msdn.microsoft.com/library/windows/desktop/dd317732) константы.|  
+|[in] *calid*|Один из [идентификатор календаря](http://msdn.microsoft.com/library/windows/desktop/dd317732) константы.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если этот метод выполнен успешно; в противном случае `false`.  
   
 ### <a name="remarks"></a>Примечания  
- Указывает идентификатор календаря, календаре конкретного региона, например григорианский (локализованный), японский или хиджра календари. Используйте `SetCalID` метод для отображения календаря, который задается параметром `calid` параметра, если на компьютере установлен языковой стандарт с календарем.  
+ Указывает идентификатор календаря, календаре конкретного региона, например григорианский (локализованный), японский или хиджра календари. Используйте `SetCalID` метод для отображения календаря, который задается параметром *calid* параметра, если на компьютере установлен языковой стандарт с календарем.  
   
  Этот метод отправляет [MCM_SETCALID](http://msdn.microsoft.com/library/windows/desktop/bb760995) сообщение, которое описано в Windows SDK.  
   
@@ -816,10 +816,10 @@ COLORREF SetColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nRegion`  
+ *nRegion*  
  Целочисленное значение, задающее цвет календаря какие месяц для задания. Это значение может быть одно из следующих значений.  
   
-|Значение|Смысл|  
+|Значение|Значение|  
 |-----------|-------------|  
 |MCSC_BACKGROUND|Фоновый цвет, отображаемый между месяцами.|  
 |MCSC_MONTHBK|Фоновый цвет, отображаемый в области месяца.|  
@@ -828,7 +828,7 @@ COLORREF SetColor(
 |MCSC_TITLETEXT|Цвет, используемый для отображения текста в заглавии календаря.|  
 |MCSC_TRAILINGTEXT|Цвет, используемый для отображения текста заголовка и в конце дня. Завершающие и начальные дни-это дни предыдущего и следующего месяца, отображаемые на текущий календарь.|  
   
- `ref`  
+ *ref*  
  Объект **COLORREF** значение параметра новый цвет для указанного фрагмента управления Календарь месяца.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -849,9 +849,9 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `dwNewView`|Одно из следующих значений, указывающее ежемесячно, годовой десятилетия или века представления.<br /><br /> MCMV_MONTH: Представление месячного<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетия<br /><br /> MCMV_CENTURY: Представление века|  
+|[in] *dwNewView*|Одно из следующих значений, указывающее ежемесячно, годовой десятилетия или века представления.<br /><br /> MCMV_MONTH: Представление месячного<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетия<br /><br /> MCMV_CENTURY: Представление века|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если этот метод выполнен успешно; в противном случае `false`.  
@@ -869,10 +869,10 @@ BOOL SetCurSel(const CTime& refDateTime);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refDateTime`  
+ *refDateTime*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , показывающий выбранной управляющий элемент календаря.  
   
- `pDateTime`  
+ *pDateTime*  
  Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в качестве текущего выделения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -895,9 +895,9 @@ BOOL SetDayState(
   
 ### <a name="parameters"></a>Параметры  
  *nMonths*  
- Значение, указывающее, какое количество элементов в массиве, `pStates` указывает.  
+ Значение, указывающее, какое количество элементов в массиве, *pStates* указывает.  
   
- `pStates`  
+ *pStates*  
  Указатель на [MONTHDAYSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760915) массив значений, определяющих способ рисования управления Календарь месяца каждый день в его отображении. **MONTHDAYSTATE** тип данных представляет собой битовое поле, где каждый бит (от 1 до 31) представляет состояние дня в месяце. Если бит включен, соответствующий день будет отображаться полужирным шрифтом; в противном случае он будет отображаться с без выделения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -955,7 +955,7 @@ BOOL SetMaxSelCount(int nMax);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nMax`  
+ *nMax*  
  Значение, которое будет присвоено представляет максимальное число дней, доступный для выбора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1027,10 +1027,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMinRange`  
+ *pMinRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце нижнего диапазона.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или `SYSTEMTIME` структуру, содержащую дату в конце наибольший диапазон.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1062,10 +1062,10 @@ BOOL SetSelRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMinRange`  
+ *pMinRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в конце нижнего диапазона.  
   
- `pMaxRange`  
+ *pMaxRange*  
  Указатель на `COleDateTime` объекта, `CTime` объекта, или `SYSTEMTIME` структуру, содержащую дату в конце наибольший диапазон.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1084,10 +1084,10 @@ void SetToday(const CTime* pDateTime);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refDateTime`  
+ *refDateTime*  
  Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объект, который содержит текущую дату.  
   
- `pDateTime`  
+ *pDateTime*  
  Во второй версии указатель [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, содержащий сведения о текущей дате. В третьей версии указатель [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую сведения о текущей дате.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1117,7 +1117,7 @@ BOOL SizeMinReq(BOOL bRepaint = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bRepaint`  
+ *bRepaint*  
  Указывает, является ли элемент управления повторное окрашивание. По умолчанию **TRUE**. Если **FALSE**, перерисовка не происходит.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1135,15 +1135,15 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий нужное число календарей.|  
+|[in] *lpRect*|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий нужное число календарей.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, размер которых меньше или равно в прямоугольник, определяемый `lpRect` параметра.  
+ Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, размер которых меньше или равно в прямоугольник, определяемый *lpRect* параметра.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вычисляет, сколько календарей помещается в прямоугольник, задаваемый параметром `lpRect` параметр и затем возвращает наименьшее прямоугольник, который может содержать это число календарей. По сути этот метод к прямоугольнику указанного точно по размеру требуемое число календарей.  
+ Этот метод вычисляет, сколько календарей помещается в прямоугольник, задаваемый параметром *lpRect* параметра и затем возвращает наименьшее прямоугольник, который может содержать это число календарей. По сути этот метод к прямоугольнику указанного точно по размеру требуемое число календарей.  
   
  Этот метод отправляет [MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) сообщение, которое описано в Windows SDK.  
   

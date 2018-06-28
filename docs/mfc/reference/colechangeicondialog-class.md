@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375103"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041049"
 ---
 # <a name="colechangeicondialog-class"></a>Класс COleChangeIconDialog
 Используется для диалогового окна OLE "Изменить значок".  
@@ -46,13 +46,13 @@ class COleChangeIconDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeIconDialog::COleChangeIconDialog](#colechangeicondialog)|Создает объект `COleChangeIconDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|Выполняет изменения, указанные в диалоговом окне.|  
 |[COleChangeIconDialog::DoModal](#domodal)|Отображение диалогового окна OLE 2 изменить значок.|  
@@ -60,7 +60,7 @@ class COleChangeIconDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeIconDialog::m_ci](#m_ci)|Структура, которая управляет поведением окна.|  
   
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указывает элемент для преобразования.  
   
- `dwFlags`  
+ *dwFlags*  
  Создание флаг, который содержит произвольное количество следующие значения, объединенные с помощью битовой операции- или оператор:  
   
 - **CIF_SELECTCURRENT** указывает, что текущей переключатель выбирается изначально при вызове диалоговое окно. Это значение по умолчанию.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** указывает, что значок должно быть извлечено из исполняемый файл, указанный в **szIconExe** поле [m_ci](#m_ci) вместо извлечения из типа. Это полезно для внедрения или связывания для файлов, отличных от OLE.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, родительское окно диалогового окна будет присвоено главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указывает на изменение, значок элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367998"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040812"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty-класс
 Класс `CMFCPropertyGridColorProperty` поддерживает элемент управления списка свойств, открывающий диалоговое окно выбора цвета.  
@@ -46,18 +46,18 @@ ms.locfileid: "33367998"
 class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Создает объект `CMFCPropertyGridColorProperty`.|  
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Включает *автоматического* кнопку в диалоговом окне выбора цвета. (Обозначается стандартной кнопки автоматического выбора **автоматического**.)|  
 |[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Включает *других* кнопку в диалоговом окне выбора цвета. (Стандартной кнопки выбора другого помечается **Дополнительные цвета**.)|  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strName`  
+ [in] *strName*  
  Имя свойства.  
   
- [in] `color`  
+ [in] *цвет*  
  Значение цвета свойства.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  Указатель на палитру цветов. Значение по умолчанию — `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Описание свойства. Значение по умолчанию — `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные приложения, такие как целое число или указатель на другие данные, связанные со свойством. Значение по умолчанию — 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Текст метки кнопки «автоматический».  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Значение цвета RGB цвета автоматически (по умолчанию).  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить автоматическое кнопки. в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Текст метки другие кнопки.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` для отображения `CMFCColorDialog` диалоговым окном. `FALSE` для отображения диалогового окна выбора стандартной палитры. Значение по умолчанию — `TRUE`.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` для отображения кнопки. в противном случае `FALSE`.  Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  Предпочтительный количество столбцов в таблице свойств цвета.  
   
 ### <a name="remarks"></a>Примечания  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `varValue`  
+ [in] *varValue*  
  Значение.  
   
 ### <a name="remarks"></a>Примечания  

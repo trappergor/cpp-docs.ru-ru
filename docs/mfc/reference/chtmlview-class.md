@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378286"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039353"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 Предоставляет функциональные возможности элемента управления WebBrowser в контексте архитектуры документов или представлений MFC.  
@@ -224,7 +224,7 @@ class CHtmlView : public CFormView
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlView::Create](#create)|Создает элемент управления WebBrowser.|  
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Переопределяемый класс, используемый для создания экземпляра сайта элемента управления для размещения элемента управления на форме.|  
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClassName`  
+ *lpszClassName*  
  Указывает строку символом null, с именем класса Windows. Имя класса может быть любое имя, зарегистрированное в [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) глобальной функции или **RegisterClass** функции Windows. Если **NULL**, использует предопределенные по умолчанию [CFrameWnd](../../mfc/reference/cframewnd-class.md) атрибуты.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Указатель на завершающуюся значением null строка, представляющая имя окна.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает атрибуты стилей окна. По умолчанию **WS_VISIBLE** и **WS_CHILD** заданы стили Windows.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, определяя размер и положение окна. `rectDefault` Значение позволяет Windows указать размер и положение нового окна.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, определяя размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор представления. Значение по умолчанию, **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **Значение NULL,** по умолчанию.  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,16 +416,16 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pContainer`  
+ *pContainer*  
  Указатель на [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) объект, содержащий элемент управления.  
   
- `ppSite`  
+ *ppSite*  
  Указатель на указатель на [COleControlSite](../../mfc/reference/colecontrolsite-class.md) объекта, предоставляя сайта для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления для размещения.  
   
- `clsid`  
+ *Идентификатор CLSID*  
  Идентификатор CLSID для размещения элемента управления  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwCommandID`  
+ *dwCommandID*  
  Команда для выполнения. Эта команда должна принадлежать **CMDSETID3_Forms3** группы.  
   
  *pVarIn*  
@@ -472,13 +472,13 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  Команда для выполнения.  
   
  *cmdexecopt*  
  Набор параметров для выполнения команды.  
   
- `pvaIn`  
+ *pvaIn*  
  Значение типа variant, используемая для указания входных аргументов для команды.  
   
  *pvaOut*  
@@ -684,10 +684,10 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProperty`  
+ *lpszProperty*  
  Указатель на строку, содержащую извлекаемого свойства.  
   
- `strValue`  
+ *StrValue*  
  Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект, который получает текущее значение свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -759,7 +759,7 @@ BOOL GetSource(CString& strRef);
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="parameters"></a>Параметры  
- `refString`  
+ *refString*  
  Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) , будет содержать исходный код.  
   
 ### <a name="remarks"></a>Примечания  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszResource`  
+ *lpszResource*  
  Указатель на строку, содержащую имя ресурса для загрузки.  
   
- `nRes`  
+ *nRes*  
  Идентификатор буфер, содержащий имя ресурса для загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -940,19 +940,19 @@ void Navigate(
  *URL*  
  Строка, содержащая URL-адрес для перехода к выделенный вызывающим объектом, или полный путь к файлу для отображения.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, переменной, которая указывает, следует ли добавить этот ресурс в список журнала на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может быть комбинацию значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Указатель на строку, содержащую имя кадра, в которой отображаются ресурса.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Указатель на значение, указывающее заголовки HTTP для отправки на сервер. Эти заголовки добавляются к заголовкам Internet Explorer по умолчанию. Заголовки можно задать такие элементы, как действия, необходимые на сервере, тип данных, передаваемых на сервер или код состояния. Этот параметр учитывается, если *URL-адрес* не является URL-адрес HTTP.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Указатель на данные для отправки с помощью операции HTTP POST. Например операции POST используется для отправки данных, собранных в HTML-форму. Если этот параметр не указан, все данные post **Navigate** выдает операции HTTP GET. Этот параметр учитывается, если *URL-адрес* не является URL-адрес HTTP.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  Данные для отправки с помощью операции HTTP POST. Например операции POST используется для отправки данных, собранных в HTML-форму. Если этот параметр не указан, все данные post **Navigate** выдает операции HTTP GET. Этот параметр учитывается, если *URL-адрес* не является URL-адрес HTTP.  
   
 ### <a name="remarks"></a>Примечания  
@@ -989,25 +989,25 @@ void Navigate2(
  *pIDL*  
  Указатель на [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) структуры.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, переменной, которая указывает, следует ли добавить этот ресурс в список журнала на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может быть комбинацию значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Указатель на строку, содержащую имя кадра, в которой отображаются ресурса.  
   
- `lpszURL`  
+ *lpszURL*  
  Указатель на строку, содержащую URL-адрес.  
   
- `lpvPostData`  
+ *lpvPostData*  
  Данные для отправки с помощью операции HTTP POST. Например операции POST используется для отправки данных, собранных в HTML-форму. Если этот параметр не указан, все данные post `Navigate2` выдает операции HTTP GET. Этот параметр учитывается, если *URL-адрес* не является HTTP или HTTPS URL-адрес.  
   
- `dwPostDataLen`  
- Размер в байтах данных, на который указывает `lpvPostData` параметра.  
+ *dwPostDataLen*  
+ Размер в байтах данных, на который указывает *lpvPostData* параметра.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Указатель на значение, которое указывает заголовки HTTP или HTTPS для отправки на сервер. Эти заголовки добавляются к заголовкам Internet Explorer по умолчанию. Заголовки можно задать такие элементы, как действия, необходимые на сервере, тип данных, передаваемых на сервер или код состояния. Этот параметр учитывается, если *URL-адрес* не является HTTP или HTTPS URL-адрес.  
   
- `baPostedData`  
+ *baPostedData*  
  Ссылку на [CByteArray](../../mfc/reference/cbytearray-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  Указатель на строку, содержащую URL-адрес для перехода.  
   
- `nFlags`  
+ *nFlags*  
  Зарезервировано для будущего использования.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  Строка, содержащая имя кадра, в которой отображаются ресурсов, или **NULL** Если нет именованных кадра предназначена для ресурса.  
   
- `baPostedData`  
+ *baPostedData*  
  Ссылку на `CByteArray` объект, содержащий данные для отправки на сервер, если используется транзакция, HTTP POST.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  Указатель на строку, содержащую дополнительные заголовки HTTP для отправки на сервер (HTTP URL-адреса только). Заголовки можно задать такие элементы, как действия, необходимые на сервере, тип данных, передаваемых на сервер или код состояния.  
   
- `pbCancel`  
+ *pbCancel*  
  Указатель на флаг "Отмена". Приложение можно установить этот параметр в ненулевое значение, чтобы отменить операцию перемещения или до нуля, чтобы разрешить его для продолжения.  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *nCommand*  
  Идентификатор команды, состояние которого изменилось.  
   
- `bEnable`  
+ *bEnable*  
  Включенное состояние. Этот параметр имеет ненулевое значение, если команда разрешена, или нуль, если она отключена.  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  Указатель на строку, результатом которого является URL-адрес, UNC файла имя или PIDL (указатель на идентификатор элемента списка), который был открыт.  
   
 ### <a name="remarks"></a>Примечания  
  Не все кадры запустит это событие, но каждый кадр, на котором запускает [OnDownloadBegin](#ondownloadbegin) событие будет срабатывать соответствующий `OnDocumentComplete` событий.  
   
- Указывает URL-адрес `lpszURL` может отличаться от URL-адрес, браузер ответили для перехода к, так как этот URL-адрес является каноническому и полные URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет «http://www.microsoft.com/». Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адреса перенаправления будут отражены здесь.  
+ Указывает URL-адрес *lpszURL* может отличаться от URL-адрес, браузер ответили для перехода к, так как этот URL-адрес является каноническому и полные URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет «http://www.microsoft.com/». Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адреса перенаправления будут отражены здесь.  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  Вызывается из реализованного в Internet Explorer или MSHTML метода **IOleInPlaceActiveObject::OnDocWindowActivate**, который уведомляет активный встроенный объект об активации или отключении окна документа контейнера.  
@@ -1090,7 +1090,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fActivate`  
+ *fActivate*  
  Указывает состояние окна документа. Если это значение не равно нулю, окно активируется. Если это значение равно нулю, окно становится неактивным.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1124,7 +1124,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fEnable`  
+ *fEnable*  
  Указывает, если безрежимные диалоговые окна узла включены или отключены. Если это значение не равно нулю, будут включены безрежимные диалоговые окна. Если это значение равно нулю, безрежимные диалоговые окна будут отключены.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDataObject`  
+ *pDataObject*  
  Адрес [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer или MSHTML.  
   
  *ppDataObject*  
@@ -1163,7 +1163,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fActivate`  
+ *fActivate*  
  Указывает состояние окна фрейма верхнего уровня контейнера. Если это значение не равно нулю, окно активируется. Если это значение равно нулю, окно становится неактивным.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1193,10 +1193,10 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer или MSHTML предлагает для использования.  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  Адрес `IDropTarget` , получающий `IDropTarget` указатель интерфейса, которые требуется предоставить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1230,7 +1230,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pInfo`  
+ *pInfo*  
  Адрес [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) структуру, которая получает возможности пользовательского интерфейса основного приложения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1249,10 +1249,10 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pchKey`  
+ *pchKey*  
  Адрес `LPOLESTR` , принимающий строку подраздела реестра, где узел хранит его параметры по умолчанию. Этот подраздел будет в разделе HKEY_CURRENT_USER. Распределение этой памяти с помощью [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727). Вызывающее приложение отвечает за освобождение этого памяти с помощью [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722). Этот параметр всегда должен быть инициализирован для **NULL**, даже если происходит сбой метода.  
   
- `dwReserved`  
+ *dwReserved*  
  Зарезервировано для будущего использования. В настоящее время не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1313,16 +1313,16 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  URL-адрес, в котором произошел сбой навигации.  
   
  *lpszFrame*  
  Имя кадра, в котором будет отображаться или значение NULL, если нет именованных кадра была предназначена для ресурса ресурса.  
   
- `dwError`  
+ *dwError*  
  Код состояния ошибки, если он доступен. Список возможных кодов состояния HRESULT и HTTP см. в разделе [NavigateError коды состояния события.](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  Указывает необходимость отмены перехода на страницу ошибки или любые дальнейшие автоматического. Если **TRUE** (по умолчанию), продолжайте перехода на страницу ошибки или автоматического; Если **FALSE**, отменить перемещение на страницу ошибки или автоматического.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1340,10 +1340,10 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppDisp`  
+ *ppDisp*  
  Указатель на указатель интерфейса, при необходимости, получает `IDispatch` указатель на интерфейс нового объекта веб-браузер или Internet Explorer.  
   
- `Cancel`  
+ *Отмена*  
  Указатель на флаг "Отмена". Приложение можно установить этот параметр в ненулевое значение, чтобы отменить операцию перемещения или до нуля, чтобы разрешить его для продолжения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProperty`  
+ *lpszProperty*  
  Указатель на строку, содержащую имя свойства.  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,13 +1397,13 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prcBorder`  
+ *prcBorder*  
  Новый внешний прямоугольник границы пространства.  
   
- `pUIWindow`  
+ *pUIWindow*  
  Указатель на интерфейс для объекта окна области или документа, границу которого был изменен.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **Значение TRUE,** Если окно области вызывает метод [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), в противном случае **FALSE**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1424,16 +1424,16 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwID`  
+ *dwID*  
  Идентификатор для отображения контекстного меню. В разделе **IDocHostUIHandler::ShowContextMenu** в Windows SDK для списка значений.  
   
- `ppt`  
+ *PPT*  
  Экранные координаты для меню.  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) интерфейс, используемый для запроса состояния команды и выполнение команды с этим объектом.  
   
- `pdispReserved`  
+ *pdispReserved*  
  Интерфейс IDispatch объекта с экранными координатами. Это позволяет узла для различения объектов, определенного для обеспечения более узком контексте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1455,19 +1455,19 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwID`  
+ *dwID*  
  Зарезервировано для будущего использования.  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) интерфейс активного объекта.  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) интерфейс объекта.  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) интерфейс объекта. Это требуется для меню и панелей инструментов.  
   
- `pDoc`  
+ *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) интерфейс для объекта. Это необходимо для панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszText`  
+ *lpszText*  
  Строка, содержащая новый текст строки состояния.  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,7 +1517,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszText`  
+ *lpszText*  
  Новый заголовок документа.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1545,13 +1545,13 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpMsg`  
+ *lpMsg*  
  Указывает сообщение, которое необходимо преобразовать.  
   
- `pguidCmdGroup`  
+ *параметром pguidCmdGroup*  
  Идентификатор группы команд.  
   
- `nCmdID`  
+ *nCmdID*  
  Идентификатор команды.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1571,13 +1571,13 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwTranslate`  
+ *dwTranslate*  
  Зарезервировано для будущего использования.  
   
- `pchURLIn`  
+ *pchURLIn*  
  Адрес строки, предоставляемые Internet Explorer или MSHTML, представляющий URL-адреса, которые будут преобразованы.  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  Адрес указатель строки, принимающая адрес переведенные URL-адреса. Основное приложение выделяет буфер, с помощью распределения памяти для задач. Содержимое этого параметра всегда необходимо инициализировать для **NULL**, даже в том случае, если URL-адрес не преобразуется, или происходит сбой метода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1607,7 +1607,7 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bVisible`  
+ *bVisible*  
  Ненулевое значение, если объект является видимым или в противном случае — нуль.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProperty`  
+ *lpszProperty*  
  Строка, содержащая задаваемого свойства.  
   
  *vtValue*  
- Указывает новое значение свойства `lpszProperty`.  
+ Указывает новое значение свойства *lpszProperty*.  
   
  *lpszPropertyName*  
  Указатель на строку, содержащую имя задаваемого свойства.  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  Новое значение свойства.  
   
- `lValue`  
+ *lValue*  
  Новое значение свойства.  
   
- `lpszValue`  
+ *lpszValue*  
  Указатель на строку, содержащую новое значение свойства.  
   
- `nValue`  
+ *nValue*  
  Новое значение свойства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1679,17 +1679,17 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwCommandID`  
+ *dwCommandID*  
  Идентификатор команды, для которого запрашивается.  
   
  *pbSupported*  
- Указатель на **BOOL** указание Если команда (определяется `dwCommandID`) поддерживается. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
+ Указатель на **BOOL** указание Если команда (определяется *dwCommandID*) поддерживается. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
   
- `pbEnabled`  
- Указатель на **BOOL** указание Если команда (определяется `dwCommandID`) включен. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
+ *pbEnabled*  
+ Указатель на **BOOL** указание Если команда (определяется *dwCommandID*) включен. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
   
  *pbChecked*  
- Указатель на **BOOL** указание Если команда (определяется `dwCommandID`) установлен. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
+ Указатель на **BOOL** указание Если команда (определяется *dwCommandID*) установлен. Значение TRUE, если команда поддерживается; в противном случае — значение FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` . Полный список возможных значений см. в разделе [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) в Windows SDK.  
@@ -1705,7 +1705,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) значение команды, для которой вызывающая сторона должна сведения о состоянии.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1736,7 +1736,7 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLevel`  
+ *nLevel*  
  Адрес переменной, указывающие уровень обновления. Возможные значения определяются в [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1752,7 +1752,7 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение, чтобы показать адресной строкой. в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1766,7 +1766,7 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение для полноэкранного режима; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1782,7 +1782,7 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewValue`  
+ *nNewValue*  
  Высота в пикселях главного окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewValue`  
+ *nNewValue*  
  Экранная координата левого края главного окна.  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,7 +1807,7 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение, чтобы отобразить меню; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1821,7 +1821,7 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение для чтения из локального кэша; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1837,7 +1837,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Определяет, зарегистрирован ли Internet Explorer в качестве браузера верхнего уровня. Если значение ненулевое, веб-браузер будет зарегистрирована в качестве браузера верхнего уровня; Если значение равно нулю, это не браузера верхнего уровня. Значение по умолчанию равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1853,7 +1853,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Определяет, зарегистрирован ли элемент управления WebBrowser в качестве конечного расположения сброса для навигации. Если значение ненулевое, объект зарегистрирован в качестве цели перетаскивания; Если значение равно нулю, это не конечного расположения сброса.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение ненулевое, диалоговые окна не отображаться; Если значение равно нулю, будет отображаться диалоговые окна. Значение по умолчанию равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1881,7 +1881,7 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение, если в строке состояния является видимым. в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1895,7 +1895,7 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение, чтобы задать элемент управления WebBrowser в режиме театра. в противном случае значение равно нулю. Значение по умолчанию равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1911,7 +1911,7 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewValue`  
+ *nNewValue*  
  Указывает, следует ли отображать панели инструментов. Ненулевое значение, если панель инструментов для отображения; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1925,7 +1925,7 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewValue`  
+ *nNewValue*  
  Координата экрана верхнего края главного окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1939,7 +1939,7 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Ненулевое значение, если элемент управления является видимым. в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewValue`  
+ *nNewValue*  
  Ширина в пикселях главного окна Internet Explorer.  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  

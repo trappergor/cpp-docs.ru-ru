@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdd7e13e74fc3ae739c825f8aff95a79db8b5e29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371450"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041949"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
 `CMFCShellTreeCtrl` Класс расширяет [CTreeCtrl-класс](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.  
@@ -55,11 +55,11 @@ ms.locfileid: "33371450"
 class CMFCShellTreeCtrl : public CTreeCtrl  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Включает или отключает контекстное меню.|  
 |[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066).|  
@@ -104,7 +104,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логическое значение, указывающее, следует ли включить в контекстном меню.  
   
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags  
@@ -130,19 +130,19 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `strPath`  
+ [out] *strPath*  
  Ссылка на строковый параметр. Метод записывает путь элемента для данного параметра.  
   
- [in] `htreeItem`  
+ [in] *htreeItem*  
  Метод возвращает путь для элемента управления дерева.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если этот метод завершается ошибкой, `strPath` содержит пустую строку.  
+ Если этот метод завершается ошибкой, *strPath* содержит пустую строку.  
   
- Если вы не укажете `hTreeItem`, этот метод пытается получить строку для выбранного элемента. Если элемент не выбран и `hTreeItem` — `NULL`, этот метод завершается ошибкой.  
+ Если вы не укажете *hTreeItem*, этот метод пытается получить строку для выбранного элемента. Если элемент не выбран и *hTreeItem* — `NULL`, этот метод завершается ошибкой.  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  Возвращает указатель на [объект CMFCShellListCtrl класс](../../mfc/reference/cmfcshelllistctrl-class.md) объект, связанный с этим [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.  
@@ -169,10 +169,10 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `message`  
- [in] `wParam`  
- [in] `lParam`  
- [in] `pLResult`  
+ [in] *сообщения*  
+ [in] *wParam*  
+ [in] *lParam*  
+ [in] *pLResult*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -188,8 +188,8 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pItem`  
- [in] `bSelected`  
+ [in] *pItem*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -203,7 +203,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pItem`  
+ [in] *pItem*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -228,10 +228,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Строка, указывающая путь к элементу.  
   
- [in] `lpidl`  
+ [in] *lpidl*  
  PIDL, который задает удаляемый элемент  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -247,10 +247,10 @@ void SetFlags(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Флажки, которые нужно установить.  
   
- [in] `bRefresh`  
+ [in] *bRefresh*  
  Логическое значение, указывающее, является ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.  
   
 ### <a name="remarks"></a>Примечания  
@@ -264,7 +264,7 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pShellList`  
+ [in] *pShellList*  
  Указатель на объект `CMFCShellListCtrl`.  
   
 ### <a name="remarks"></a>Примечания  

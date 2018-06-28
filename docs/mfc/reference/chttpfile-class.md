@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 6e1020c8b0f2b97053951cde6eeb0724dcf60d02
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271351"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039080"
 ---
 # <a name="chttpfile-class"></a>Класс CHttpFile
 Предоставляет функции для запроса и чтения файлов на HTTP-сервере.  
@@ -109,10 +109,10 @@ BOOL AddRequestHeaders(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pstrHeaders`  
+ *pstrHeaders*  
  Указатель на строку, содержащую заголовок или заголовки, чтобы добавить в запрос. Каждый заголовок должна заканчиваться точкой пару CR/LF.  
   
- `dwFlags`  
+ *dwFlags*  
  Изменяет семантику новых заголовков. Ниже указаны доступные значения.  
   
 - `HTTP_ADDREQ_FLAG_COALESCE` Объединяет заголовки с тем же именем, с помощью флага, чтобы добавить первый заголовок найден в последующих заголовок. Например «Accept: текст /\*» следуют» Accept: аудио /\*» приводит формирование один заголовок» Accept: текст /\*аудио /\*». Именно вызывающего приложения для обеспечения целостного схему по отношению к данных, полученных запросов, отправленных с заголовками объединенное или разных.  
@@ -123,10 +123,10 @@ BOOL AddRequestHeaders(
   
 - `HTTP_ADDREQ_FLAG_ADD` Использовать with REPLACE. Добавляет заголовок, если он не существует.  
   
- `dwHeadersLen`  
- Длина в символах для `pstrHeaders`. Если это значение-1 L, затем `pstrHeaders` считается нулем и вычисляется длина.  
+ *dwHeadersLen*  
+ Длина в символах для *pstrHeaders*. Если это значение-1 L, затем *pstrHeaders* считается нулем и вычисляется длина.  
   
- `str`  
+ *str*  
  Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект, содержащий заголовка запроса или добавлять заголовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -136,7 +136,7 @@ BOOL AddRequestHeaders(
  `AddRequestHeaders` Добавляет заголовки дополнительные, произвольном формате дескриптора запроса HTTP. Он предназначен для использования сложные клиенты, которым требуется подробный контроль над запросом на точное, отправляются на сервер HTTP.  
   
 > [!NOTE]
->  Можно передать в нескольких заголовков в `pstrHeaders` или `str` для `AddRequestHeaders` вызовы с использованием `HTTP_ADDREQ_FLAG_ADD` или `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Если приложение пытается удалить или заменить заголовок с помощью **HTTP_ADDREQ_FLAG_REMOVE** или `HTTP_ADDREQ_FLAG_REPLACE`, могут быть заданы только один коннектор в `lpszHeaders`.  
+>  Можно передать в нескольких заголовков в *pstrHeaders* или *str* для `AddRequestHeaders` вызовы с использованием `HTTP_ADDREQ_FLAG_ADD` или `HTTP_ADDREQ_FLAG_ADD_IF_NEW`. Если приложение пытается удалить или заменить заголовок с помощью `HTTP_ADDREQ_FLAG_REMOVE` или `HTTP_ADDREQ_FLAG_REPLACE`, могут быть заданы только один коннектор в *lpszHeaders*.  
   
 ##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  Эта функция-член вызывается для создания `CHttpFile` объекта.  
@@ -159,25 +159,25 @@ CHttpFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hFile`  
+ *hFile*  
  Дескриптор файла Интернета.  
   
- `hSession`  
+ *hSession*  
  Дескриптор для Интернет-сеанс.  
   
  *pstrObject*  
  Указатель на строку, содержащую `CHttpFile` объекта.  
   
- `pstrServer`  
+ *pstrServer*  
  Указатель на строку, содержащую имя сервера.  
   
- `pstrVerb`  
- Указатель на строку, содержащую метод, используемый при отправке запроса. Может быть **POST**, **HEAD**, или `GET`.  
+ *pstrVerb*  
+ Указатель на строку, содержащую метод, используемый при отправке запроса. Может быть **POST**, **HEAD**, или **получить**.  
   
- dwContext  
+ *dwContext*  
  Идентификатор контекста для `CHttpFile` объекта. В разделе **примечания** Дополнительные сведения об этом параметре.  
   
- `pConnection`  
+ *pConnection*  
  Указатель на [CHttpConnection](../../mfc/reference/chttpconnection-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -196,20 +196,20 @@ BOOL EndRequest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) в Windows SDK.  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Указатель на инициализированный [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , описывающий входной буфер, используемый для операции.  
   
- `dwContext`  
+ *dwContext*  
  Идентификатор контекста для `CHttpFile` операции. Дополнительные сведения об этом параметре см. заметки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Значение по умолчанию для `dwContext` отправленных MFC, позволяющий `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CHttpFile` объекта. При вызове [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) или [CHttpConnection](../../mfc/reference/chttpconnection-class.md) для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
+ Значение по умолчанию для *dwContext* отправленных MFC, позволяющий `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CHttpFile` объекта. При вызове [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) или [CHttpConnection](../../mfc/reference/chttpconnection-class.md) для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  Вызовите эту функцию-член для получения имени файла HTTP URL-адрес.  
@@ -272,10 +272,10 @@ BOOL QueryInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwInfoLevel`  
+ *dwInfoLevel*  
  Сочетание атрибутов для запросов и следующие флаги, указывающие тип запрошенные данные:  
   
-- **HTTP_QUERY_CUSTOM** находит имя заголовка и возвращает это значение в `lpvBuffer` на выходе. **HTTP_QUERY_CUSTOM** выдает утверждение, если заголовок не найден.  
+- **HTTP_QUERY_CUSTOM** находит имя заголовка и возвращает это значение в *lpvBuffer* на выходе. **HTTP_QUERY_CUSTOM** выдает утверждение, если заголовок не найден.  
   
 - **HTTP_QUERY_FLAG_REQUEST_HEADERS** обычно приложение запрашивает заголовки ответа, но приложение также можно запрашивать с помощью этого флага заголовки запроса.  
   
@@ -285,20 +285,20 @@ BOOL QueryInfo(
   
  В разделе **примечания** раздел список возможных значений.  
   
- `lpvBuffer`  
+ *lpvBuffer*  
  Указатель на буфер, получающий данные.  
   
- `lpdwBufferLength`  
+ *lpdwBufferLength*  
  При входе в это указывает на значение, содержащее длину буфера данных, в число символов или байтов. В разделе **примечания** статьи более подробные сведения об этом параметре.  
   
- `lpdwIndex`  
- Указатель на индекс (с нуля) заголовка. Может быть **NULL**. Этот флаг используется для перечисления несколько заголовков с тем же именем. На входе `lpdwIndex` определяет индекс указанного заголовка для возврата. На выходе `lpdwIndex` указывает индекс следующий заголовок. Если не удается найти следующий индекс, **ERROR_HTTP_HEADER_NOT_FOUND** возвращается.  
+ *lpdwIndex*  
+ Указатель на индекс (с нуля) заголовка. Может быть **NULL**. Этот флаг используется для перечисления несколько заголовков с тем же именем. На входе *lpdwIndex* определяет индекс указанного заголовка для возврата. На выходе *lpdwIndex* указывает индекс следующий заголовок. Если не удается найти следующий индекс, **ERROR_HTTP_HEADER_NOT_FOUND** возвращается.  
   
- `str`  
+ *str*  
  Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта, который получает возвращенные сведения.  
   
- `dwIndex`  
- Значение индекса. См. раздел `lpdwIndex`.  
+ *dwIndex*  
+ Значение индекса. В разделе *lpdwIndex*.  
   
  *pSysTime*  
  Указатель на объект Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.  
@@ -319,7 +319,7 @@ BOOL QueryInfo(
   
  Если строка записывается в буфер, а функция-член завершается успешно, `lpdwBufferLength` содержит длину строки в символах минус 1 для завершения **NULL** символов.  
   
- Возможные `dwInfoLevel` значения включают:  
+ Возможные *dwInfoLevel* значения включают:  
   
 - **HTTP_QUERY_MIME_VERSION**  
   
@@ -368,14 +368,14 @@ BOOL QueryInfo(
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
 ##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
- Вызовите эту функцию-член, чтобы получить код состояния, связанные с HTTP-запроса и поместите его в предоставленном `dwStatusCode` параметра.  
+ Вызовите эту функцию-член, чтобы получить код состояния, связанные с HTTP-запроса и поместите его в предоставленном *dwStatusCode* параметра.  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStatusCode`  
+ *dwStatusCode*  
  Ссылка на код состояния. Коды состояния указывают успешности запрошенное событие. В разделе **примечания** для выбора описания кодов состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -422,19 +422,19 @@ BOOL SendRequest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pstrHeaders`  
+ *pstrHeaders*  
  Указатель на строку, содержащую имя заголовки для отправки.  
   
- `dwHeadersLen`  
- Длина заголовков, обозначенную `pstrHeaders`.  
+ *dwHeadersLen*  
+ Длина заголовков, обозначенную *pstrHeaders*.  
   
- `lpOptional`  
+ *lpOptional*  
  Дополнительные данные для отправки сразу после заголовков запроса. Обычно используется для **POST** и **ПОМЕСТИТЬ** операций. Это может быть **NULL** Если отсутствуют дополнительные данные для отправки.  
   
  *dwOptionalLen*  
- Длина `lpOptional`.  
+ Длина *lpOptional*.  
   
- `strHeaders`  
+ *strHeaders*  
  Строка, содержащая имя заголовки для отправляемого запроса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -461,13 +461,13 @@ BOOL SendRequestEx(
  *dwTotalLen*  
  Число байтов, отправляемых в запросе.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) в Windows SDK.  
   
- `dwContext`  
+ *dwContext*  
  Идентификатор контекста для `CHttpFile` операции. Дополнительные сведения об этом параметре см. заметки.  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  Указатель на инициализированный [INTERNET_BUFFERS](http://msdn.microsoft.com/library/windows/desktop/aa385132) , описывающий входной буфер, используемый для операции.  
   
  *lpBuffOut*  
@@ -481,7 +481,7 @@ BOOL SendRequestEx(
   
  После содержимого записывается в файл, вызовите метод [EndRequest](#endrequest) для завершения операции.  
   
- Значение по умолчанию для `dwContext` отправленных MFC, позволяющий `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CHttpFile` объекта. При вызове [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) или [CHttpConnection](../../mfc/reference/chttpconnection-class.md) для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
+ Значение по умолчанию для *dwContext* отправленных MFC, позволяющий `CHttpFile` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CHttpFile` объекта. При вызове [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) или [CHttpConnection](../../mfc/reference/chttpconnection-class.md) для создания `CHttpFile` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
 ### <a name="example"></a>Пример  
  Этот фрагмент кода библиотеки DLL с именем MFCISAPI отправляет содержимое строки. Библиотеки DLL на сервере LOCALHOST. Хотя в этом примере используется только один вызов `WriteString`, использование нескольких вызовов для отправки данных в блоках допустимо.  

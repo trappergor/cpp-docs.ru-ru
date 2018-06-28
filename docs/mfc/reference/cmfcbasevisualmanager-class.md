@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369155"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040731"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Класс CMFCBaseVisualManager
 Логический уровень между производном визуальными диспетчерами и темы Windows API.  
@@ -64,7 +64,7 @@ class CMFCBaseVisualManager: public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Создает и инициализирует объект `CMFCBaseVisualManager`.|  
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Деструктор.|  
   
@@ -72,7 +72,7 @@ class CMFCBaseVisualManager: public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Рисует элемент управления "флажок" с помощью текущей темы Windows.|  
 |[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Рисует границу поля со списком, с помощью текущей темы Windows.|  
 |[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows.|  
@@ -86,7 +86,7 @@ class CMFCBaseVisualManager: public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Вызовы `CloseThemeData` для полученных все дескрипторы `UpdateSystemColors`.|  
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Вызовы `OpenThemeData` для получения дескрипторов для рисования различных элементов: windows, панели инструментов, кнопки и т. д.|  
   
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник флажок.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Указывает, выделяется ли флажок.  
   
- [in] `nState`  
+ [in] *nState*  
  0 для флажок снят, 1 для отмеченных обычный  
   
  2 для смешанных normal.  
   
- [in] `bEnabled`  
+ [in] *bEnabled*  
  Указывает, включен ли флажок.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Указывает, нажата ли флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если включен API темы. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Значения `nState` соответствуют следующие стили флажок.  
+ Значения *nState* соответствуют следующие стили флажок.  
   
 |nState|Стиль флажка|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник границы поля со списком.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Указывает, отключен ли границы поля со списком.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Указывает, удаляется ли границы поля со списком.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Указывает, выделяется ли границы поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -213,13 +213,13 @@ virtual BOOL DrawComboDropButton(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `pDC`|Указатель на контекст устройства.|  
-|[in] `rect`|Ограничивающий прямоугольник кнопку раскрывающегося списка поля со списком.|  
-|[in] `bDisabled`|Указывает, отключен ли кнопка раскрывающегося списка поля со списком.|  
-|[in] `bIsDropped`|Указывает, удаляется ли кнопка раскрывающегося списка поля со списком.|  
-|[in] `bIsHighlighted`|Указывает, выделяется ли кнопка раскрывающегося списка поля со списком.|  
+|[in] *основного контроллера домена*|Указатель на контекст устройства.|  
+|[in] *rect*|Ограничивающий прямоугольник кнопку раскрывающегося списка поля со списком.|  
+|[in] *bDisabled*|Указывает, отключен ли кнопка раскрывающегося списка поля со списком.|  
+|[in] *bIsDropped*|Указывает, удаляется ли кнопка раскрывающегося списка поля со списком.|  
+|[in] *bIsHighlighted*|Указывает, выделяется ли кнопка раскрывающегося списка поля со списком.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если включен API темы. в противном случае `FALSE`.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник кнопки.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCButton класса](../../mfc/reference/cmfcbutton-class.md) для рисования.  
   
- [in] `uiState`  
- Не обрабатывается. Состояние берется из `pButton`.  
+ [in] *uiState*  
+ Не обрабатывается. Состояние берется из *pButton*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если включен API темы. в противном случае `FALSE`.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник "переключатель".  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Указывает, выделяется ли переключатель.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  Указывает, установлен ли переключатель.  
   
- [in] `bEnabled`  
+ [in] *bEnabled*  
  Указывает, включен ли переключатель.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  Указывает, нажата ли переключатель.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  Указатель на строку состояния. Это значение игнорируется.  
   
- [in] `rectProgress`  
- Ограничивающий прямоугольник индикатор выполнения `pDC` координаты.  
+ [in] *rectProgress*  
+ Ограничивающий прямоугольник индикатор выполнения *pDC* координаты.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  Значение общего хода выполнения.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  Текущее значение хода выполнения.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  Начальный цвет. `CMFCBaseVisualManager` игнорирует это. Производные классы могут использовать его для цветовые градиенты.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  Конечный цвет. `CMFCBaseVisualManager` игнорирует это. Производные классы могут использовать его для цветовые градиенты.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  Цвет текста хода выполнения. `CMFCBaseVisualManager` игнорирует это. Цвет текста определяется `afxGlobalData.clrBtnText`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Указывает, следует ли отображать сообщение о ходе выполнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель, фон должно отображаться.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Ограничивающий прямоугольник для заполнения области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

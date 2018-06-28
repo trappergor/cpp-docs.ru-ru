@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368297"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038605"
 ---
 # <a name="cmfcfontinfo-class"></a>Класс CMFCFontInfo
 `CMFCFontInfo` Класс описывает имя и другие атрибуты шрифта.  
@@ -54,13 +54,13 @@ class CMFCFontInfo : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCFontInfo::GetFullName](#getfullname)|Возвращает сцепленные имена шрифта и ее символ набора (сценарий).|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Значение, указывающее набор символов (сценарий), связанных с шрифтом.|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Значение, указывающее шаг и семейство шрифта.|  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
- [in] `lpszScript`  
+ [in] *lpszScript*  
  Имя шрифта сценарий (набор символов).  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Значение, указывающее набор символов (сценарий) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
- [in] `nType`  
+ [in] *nType*  
  Значение, указывающее тип шрифта. Этот параметр может иметь побитовое сочетание (OR) значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
   
- [in] `src`  
+ [in] *src*  
  Существующий `CMFCFontInfo` , члены которого используются для создания объекта `CMFCFontInfo` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nCharSet` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+ Дополнительные сведения см. в разделе *nCharSet* параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  Значение, указывающее шаг (размер) и семейство шрифта (например, serif, sans-serif и моноширинного).  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nPitchAndFamily` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+ Дополнительные сведения см. в разделе *nPitchAndFamily* параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  Значение, указывающее тип шрифта.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nType` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+ Дополнительные сведения см. в разделе *nType* параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  Имя шрифта: например, **Arial**.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `lpszName` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+ Дополнительные сведения см. в разделе *lpszName* параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  Имя набора символов (сценарий), связанных с шрифтом.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `lpszScript` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+ Дополнительные сведения см. в разделе *lpszScript* параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

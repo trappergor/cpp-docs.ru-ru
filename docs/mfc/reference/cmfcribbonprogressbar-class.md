@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369340"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040224"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Класс CMFCRibbonProgressBar
 Реализует элемент управления, который визуально показывает ход выполнения длительных операций.  
@@ -56,13 +56,13 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Создает и инициализирует объект `CMFCRibbonProgressBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Возвращает текущее состояние.|  
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Возвращает максимальное значение текущего диапазона.|  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды для индикатора ленты.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Ширина в пикселях индикатора ленты.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Высота в пикселях индикатора ленты.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` Чтобы указать, что индикатор выполнения в режиме бесконечного. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPos`  
+ [in] *nPos*  
  Задает позицию, к которой имеет значение индикатора хода выполнения.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Указывает, должны быть перерисованы индикатор выполнения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nMin`  
+ [in] *nMin*  
  Задает минимальное значение диапазона.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Указывает максимальное значение диапазона.  
   
 ### <a name="remarks"></a>Примечания  

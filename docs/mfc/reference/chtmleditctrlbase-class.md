@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378496"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039314"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 Представляет компонент редактирования HTML.  
@@ -250,7 +250,7 @@ template <class T> class CHtmlEditCtrlBase
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Добавляет запись в таблицу глиф указывает изображений, отображаемых для конкретных тегов в режиме конструктора.|  
 |[CHtmlEditCtrlBase::Bold](#bold)|Переключает состояние выбранный текст полужирным шрифтом.|  
@@ -391,7 +391,7 @@ HRESULT AddToGlyphTable(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szTag`  
+ *szTag*  
  Имя тега (например, «P» или «table»).  
   
  *szImgUrl*  
@@ -444,7 +444,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор элемента управления button.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -461,7 +461,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор элемента управления "флажок".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -530,7 +530,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор элемента управления выбора раскрывающегося списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -571,10 +571,10 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  Идентификатор команды для выполнения. Список см. в разделе [идентификаторы команд MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
- `cmdExecOpt`  
+ *cmdExecOpt*  
  Значениями, взятыми из [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) перечисления, который описывают, каким образом объект должен выполнить команду.  
   
  *pInVar*  
@@ -613,7 +613,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если свойство позиции элемента имеет значение на «абсолютный.»  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -630,7 +630,7 @@ HRESULT GetBackColor(int& nColor) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nColor`  
+ *nColor*  
  Цвет фона.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -698,7 +698,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppDoc`  
+ *ppDoc*  
  Объект документа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -712,7 +712,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szHTML`  
+ *szHTML*  
  HTML-код.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -740,7 +740,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppEventObj`  
+ *ppEventObj*  
  Объект события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -768,14 +768,14 @@ HRESULT GetFontFace(CString& strFace) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strFace`  
+ *strFace*  
  Имя шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- Если текущее выделение использует несколько шрифтов `strFace` будет пустая строка.  
+ Если текущее выделение использует несколько шрифтов *strFace* будет пустая строка.  
   
  Этот метод отправляет [идентификатор команды IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) в элемент управления WebBrowser.  
   
@@ -787,7 +787,7 @@ HRESULT GetFontSize(short& nSize) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nSize`  
+ *nSize*  
  Размер шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -804,7 +804,7 @@ HRESULT GetForeColor(int& nColor);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nColor`  
+ *nColor*  
  Цвет переднего плана.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -848,7 +848,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если глиф отображается для всех элементов, имеющих **styleFloat** свойство; значение false, если глиф не отображается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -865,7 +865,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если браузер отображает глифы для отображения расположения всех тегов в документе; значение false, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -882,7 +882,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если false отображает глиф для тегов область, если это не веб-браузера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -899,7 +899,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если браузер отображает глиф для теги br false если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -916,7 +916,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если браузер false отображает глиф для теги для комментариев, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -933,7 +933,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если браузер отображает все теги, показаны в Microsoft Internet Explorer 4.0, значение false, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -950,7 +950,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если false отображает глиф для всех тегов скрипта, если это не веб-браузера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -967,7 +967,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если false отображает глиф для всех тегов стиля, если это не веб-браузера  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -984,7 +984,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bCurValue`  
+ *bCurValue*  
  Значение true, если браузер отображает глиф для всех неизвестных тегов, false, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1018,7 +1018,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szUrl`  
+ *szUrl*  
  URL-адрес гиперссылки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1035,7 +1035,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szData`  
+ *szData*  
  Строка для вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1052,7 +1052,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для рамки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1069,7 +1069,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szUrl`  
+ *szUrl*  
  Путь и имя образ, который необходимо вставить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1099,7 +1099,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1116,7 +1116,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для элемента управления button.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1133,7 +1133,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для скрытого элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1150,7 +1150,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для элемента управления image.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1167,7 +1167,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для элемента управления пароля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1184,7 +1184,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для соответствующего элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1201,7 +1201,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для элемента управления отправки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1218,7 +1218,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для управления отправкой файлов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1235,7 +1235,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bValue`  
+ *bValue*  
  Значение true, если элемент является статически позиционированные, и false в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1252,7 +1252,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bValue`  
+ *bValue*  
  Значение true, если элемент является абсолютным позиционированием, и false в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1321,7 +1321,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для управления "список".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1338,7 +1338,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1365,7 +1365,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для упорядоченного списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1395,7 +1395,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор для абзаца.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1427,7 +1427,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Путь к шаблону печати; Если не указано, используется шаблон печати по умолчанию.  
   
  *bShowPrintDialog*  
@@ -1448,7 +1448,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  Путь к шаблону печати.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1465,11 +1465,11 @@ long QueryStatus(long cmdID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  Идентификатор команды. Идентификаторы команд, взяты из `CGID_MSHTML` группы команд. Эти команды определяются в Mshtmcid.h. Также можно найти в списке сети [идентификаторы команд MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , показывающая состояние `cmdID`, или 0 в случае ошибки.  
+ Возвращает [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , показывающая состояние *cmdID*, или 0 в случае ошибки.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  Заменяет элемент управления "переключатель" для текущего выбора.  
@@ -1479,7 +1479,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор переключателя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1522,7 +1522,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szPath`  
+ *szPath*  
  Путь и имя файла для сохранения веб-страницы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1552,7 +1552,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение равно true, элементы с абсолютным позиционированием можно переместить путем перетаскивания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1569,7 +1569,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если свойство позиции элемента «абсолютный»; Если значение равно false, это «статический».  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1586,7 +1586,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если любой элемент, имеющий атрибут ATOMICSELECTION присвоено значение TRUE, могут быть выделены только как единое целое.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1603,7 +1603,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если включено автоматическое обнаружение URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1621,11 +1621,11 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nColor`  
- Цвет. В разделе `pvaIn` в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *nColor*  
+ Цвет. В разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
- `szColor`  
- Цвет. В разделе `pvaIn` в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ *szColor*  
+ Цвет. В разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
@@ -1641,7 +1641,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szFormat`  
+ *szFormat*  
  Формат тега.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1675,7 +1675,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLevel`  
+ *nLevel*  
  Уровень CSS. Передайте 0, если не требуется поддержка CSS.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1714,10 +1714,10 @@ HRESULT SetDefaultComposeSettings(
  *bBold*  
  Передайте значение true для полужирным шрифтом.  
   
- `bItalic`  
+ *bItalic*  
  Передайте значение true, если для текста курсивом.  
   
- `bUnderline`  
+ *bUnderline*  
  Передайте значение true для подчеркнутый текст.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1734,7 +1734,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bMode`  
+ *bMode*  
  Если значение равно true, включает режим конструктора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1748,7 +1748,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если отключает штриховой границей и дескрипторы окружающей элемент, доступный для выбора узла после элемента «изменение фокуса» в режиме конструктора. то есть, когда текст или содержимое элемента можно изменить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1765,7 +1765,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szHTML`  
+ *szHTML*  
  HTML-код.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1779,7 +1779,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szFace`  
+ *szFace*  
  Имя шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1796,7 +1796,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Размер шрифта HTML (1-7). Значение 0 задает размер шрифта в 1.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1814,10 +1814,10 @@ HRESULT SetForeColor(int nColor) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szColor`  
+ *szColor*  
  Цвет.  
   
- `nColor`  
+ *nColor*  
  Цвет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1834,7 +1834,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение равно true, все операции вставки совместимы с Internet Explorer 5; Если значение равно false, операции вставки, совместимы с Internet Explorer 5.5.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1851,7 +1851,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение равно true, приводит к тому веб-браузер обновить вид элемента постоянно во время операции изменения размера или перемещения; Если значение равно false, он обновляет только по завершении перемещения или изменения размера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1868,7 +1868,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение равно true, позволяет выбирать несколько элементов можно выбрать сайт во время, когда пользователь удерживает клавишу SHIFT или CTRL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1885,7 +1885,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если браузер не изменится указатель мыши.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1902,7 +1902,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bMode`  
+ *bMode*  
  Значение true, если режим ввода текста перезаписать; Если значение равно false, режим ввода текста — insert.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1919,7 +1919,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Значение true, если все элементы, которые имеют видимости присвоено значение «hidden» или отображения свойством, имеющим значение «Нет» не отображается в режиме конструктора и режим просмотра. Если значение равно false, эти элементы отображаются только в режиме просмотра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1936,7 +1936,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех элементов, имеющих **styleFloat** свойство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1953,7 +1953,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глифы для отображения расположения всех тегов в документе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1970,7 +1970,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех тегов области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1987,7 +1987,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех тегов br.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2004,7 +2004,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех тегов комментария.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2021,7 +2021,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  Если значение равно true, отображаются все теги, показано в Microsoft Internet Explorer 4.0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2038,7 +2038,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех тегов скрипта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2055,7 +2055,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех тегов стиля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2072,7 +2072,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bNewValue`  
+ *bNewValue*  
  При значении true отображает глиф для всех неизвестных тегов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2089,7 +2089,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор элемента управления вводом многострочного текста.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2106,7 +2106,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор элемента управления text.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2162,7 +2162,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szId`  
+ *szId*  
  Идентификатор неупорядоченный список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

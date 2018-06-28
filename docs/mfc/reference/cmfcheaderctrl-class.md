@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370033"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037665"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 `CMFCHeaderCtrl` Класс поддерживает несколько столбцов сортировки в элемент управления заголовком.  
@@ -60,14 +60,14 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Создает объект `CMFCHeaderCtrl`.|  
 |`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Включает или отключает *несколько столбцов сортировки* режим для текущего заголовка элемента управления.|  
 |[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Указывает столбец не отсортирован, или сортируется в порядке возрастания или убывания.|  
@@ -81,7 +81,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Вызывается платформой для отрисовки элемента управления заголовка столбца.|  
 |[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Вызывается платформой для отрисовки стрелку сортировки.|  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить режим сортировки нескольких столбцов; `FALSE` отключить режим сортировки нескольких столбцов и удалите все столбцы из списка отсортированными столбцами. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -151,13 +151,13 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Отсчитываемый от нуля индекс столбца.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, указывающие состояние сортировки указанного столбца. В следующей таблице перечислены возможные значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |-1|Сортировка по убыванию.|  
 |0|Не отсортирован.|  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `iItem`  
+ [in] *iItem*  
  Отсчитываемый от нуля индекс элемента для рисования.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник для рисования элемента.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` для рисования элемента в нажатом состоянии; в противном случае `FALSE`.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` для рисования элемента в выделенный состоянии; в противном случае `FALSE`.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  Ограничивающий прямоугольник стрелку сортировки.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Отсчитываемый от нуля индекс столбца для удаления.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iColumn`  
+ [in] *iColumn*  
  Отсчитываемый от нуля индекс заголовка столбца элемента управления. Если этот параметр меньше нуля, этот метод удаляет все столбцы из списка столбцов сортировки.  
   
- [in] `bAscending`  
- Указывает порядок сортировки столбца, `iColumn` указывает параметр. `TRUE` Чтобы задать в возрастающем порядке; `FALSE` для задания в порядке убывания. Значение по умолчанию — `TRUE`.  
+ [in] *bAscending*  
+ Указывает порядок сортировки столбца, *iColumn* указывает параметр. `TRUE` Чтобы задать в возрастающем порядке; `FALSE` для задания в порядке убывания. Значение по умолчанию — `TRUE`.  
   
- [in] `bAdd`  
- `TRUE` Чтобы установить порядок сортировки столбца, `iColumn` указывает параметр.  
+ [in] *bAdd*  
+ `TRUE` Чтобы установить порядок сортировки столбца, *iColumn* указывает параметр.  
   
  Если в текущий элемент управления заголовка *несколько столбцов сортировки* режиме, этот метод добавляет указанного столбца в список столбцов для сортировки. Используйте [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) Чтобы задать режим сортировки нескольких столбцов.  
   

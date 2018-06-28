@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370761"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040718"
 ---
 # <a name="colecmdui-class"></a>Класс COleCmdUI
 Реализует метод для MFC, позволяющий обновлять состояние объектов ИП, связанных с зависимыми от `IOleCommandTarget`функциями вашего приложения.  
@@ -44,13 +44,13 @@ class COleCmdUI : public CCmdUI
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|Создает объект `COleCmdUI`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|Устанавливает или снимает флаг команды enable.|  
 |[COleCmdUI::SetCheck](#setcheck)|Задает состояние включения/выключения переключателя команды.|  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rgCmds`  
+ *rgCmds*  
  Список поддерживаемых команд, связанных с указанным кодом GUID. **OLECMD** структуры связывают команд с помощью командной строки.  
   
  *cCmds*  
- Количество команд в `rgCmds`.  
+ Количество команд в *rgCmds*.  
   
- `pGroup`  
+ *pGroup*  
  Указатель на GUID, который определяет набор команд.  
   
 ### <a name="remarks"></a>Примечания  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bOn`  
+ *bВ системах*  
  Указывает ли команды, связанные с `COleCmdUI` включен или отключен объект. Ненулевое значение включает команды; 0 отключает команду.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,10 +113,10 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCheck`  
+ *Проверьте*  
  Значение, определяющее, включить или выключить переключить ее состояние команды. Доступны следующие значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**1**|Задает команду, чтобы on.|  
 |**2**|Задает команду, чтобы определено; не удается определить состояние, так как атрибут этой команды на и отключение состояния в подходящий вариант выбора.|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszText`  
+ *lpszText*  
  Указатель на текст для использования с помощью команды.  
   
 ## <a name="see-also"></a>См. также  

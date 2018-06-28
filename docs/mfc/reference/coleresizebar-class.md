@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375620"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040120"
 ---
 # <a name="coleresizebar-class"></a>Класс COleResizeBar
 Тип панели элементов управления, который поддерживает изменение размера элементов OLE "на месте".  
@@ -40,13 +40,13 @@ class COleResizeBar : public CControlBar
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleResizeBar::COleResizeBar](#coleresizebar)|Создает объект `COleResizeBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleResizeBar::Create](#create)|Создает и инициализирует дочернее окно Windows и связывает его `COleResizeBar` объекта.|  
   
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно изменения размера строки.  
   
- `dwStyle`  
+ *dwStyle*  
  Указывает [стиль окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) атрибуты.  
   
- `nID`  
+ *nID*  
  Идентификатор дочернего окна панели изменения размера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

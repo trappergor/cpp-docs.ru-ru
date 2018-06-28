@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377798"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039275"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 Строка меню, которая реализует закрепление.  
@@ -133,11 +133,11 @@ ms.locfileid: "33377798"
 class CMFCMenuBar : public CMFCToolbar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Переопределяет `CMFCToolBar::AdjustLocations`.)|  
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Указывает, может ли отображаться текстовые метки в разделе изображения на кнопке панели инструментов. (Переопределяет [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwMode`  
- [in] `nLength`  
+ [in] *dwMode*  
+ [in] *nLength*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно для нового `CMFCMenuBar` объекта.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль новое меню.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор дочернего окна в строке меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно нового `CMFCMenuBar` объекта.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Дополнительные стили для новой панели меню.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Основной стиль новое меню.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  Объект `CRect` параметр, который указывает размеры для границ `CMFCMenuBar` объекта.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор дочернего окна в строке меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор ресурса меню. `CreateFromMenu` использует этот ресурс в качестве шаблона для `CMFCMenuBar`.  
   
- [in] `bDefaultMenu`  
+ [in] *bDefaultMenu*  
  Логическое значение, указывающее, является ли новое меню меню по умолчанию.  
   
- [in] `bForceUpdate`  
+ [in] *bForceUpdate*  
  Логическое значение, указывающее, является ли этот метод вызывает обновление меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор команды для кнопки **справки** поле со списком.  
   
- [in] `lpszPrompt`  
+ [in] *lpszPrompt*  
  Строка, содержащая текст, платформа отображает в поле со списком, если он является пустым и не активен. Например «введите здесь текст».  
   
- [in] `nComboBoxWidth`  
+ [in] *nComboBoxWidth*  
  Ширина кнопки для поля со списком в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
  **Справки** напоминает списком **справки** поле со списком в строке меню [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- При вызове этого метода с `uiID` задано значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается на правой панели меню. После вызова этого метода необходимо вызвать [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) для получения указателя на вставленных [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
+ При вызове этого метода с *uiID* задано значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается на правой панели меню. После вызова этого метода необходимо вызвать [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) для получения указателя на вставленных [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  Позволяет тени в контекстных меню.  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логический параметр, указывает, следует ли включить тени в контекстных меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHorz`  
+ [in] *bHorz*  
  Логический параметр, указывает, следует ли возвращать горизонтального или вертикального шрифта. `TRUE` Указывает горизонтальное шрифт.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iItem`  
+ [in] *iItem*  
  Индекс возвращаемого элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CMFCToolBarButton` объект, соответствующий индекс, заданный `iItem`. `NULL` Если индекс является недопустимым.  
+ Указатель на `CMFCToolBarButton` объект, соответствующий индекс, заданный *iItem*. `NULL` Если индекс является недопустимым.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in] *uiBtn*  
+ [in] *bByCommand*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Логический параметр, указывает ли платформа выделяет элементы меню недоступны.  
   
 ### <a name="remarks"></a>Примечания  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Строка, содержащая путь к разделу реестра Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Идентификатор элемента управления для строки меню.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Зарезервированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iHot`  
+ [in] *iHot*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор для меню присоединяется к `CMFCMenuBar` объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) объект, который требуется настроить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `pTI`  
+ [in] *точки*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Строка, содержащая путь к разделу реестра Windows.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Идентификатор элемента управления для строки меню.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Зарезервированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResId`  
+ [in] *uiResId*  
  Идентификатор ресурса для нового меню по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMax`  
+ [in] *bMax*  
  Логическое значение, указывающее режим. Дополнительные сведения см. в разделе "Примечания".  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на дочернее окно MDI, которой изменяется.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Логическое значение, указывающее, следует ли пересчитывать макета в меню сразу.  
   
 ### <a name="remarks"></a>Примечания  
- Если развернуто дочернего окна MDI, строка меню, прикрепленный к окну основного фрейма MDI отображает системное меню и **свернуть**, **развернуть** и **закрыть** кнопки. Если `bMax` — `TRUE` и `pWnd` не `NULL`, дочернее окно MDI-приложения развернуто и в меню должно содержать дополнительных элементов управления. В противном случае в меню возвращается в обычный состояние.  
+ Если развернуто дочернего окна MDI, строка меню, прикрепленный к окну основного фрейма MDI отображает системное меню и **свернуть**, **развернуть** и **закрыть** кнопки. Если *bMax* — `TRUE` и *pWnd* не `NULL`, дочернее окно MDI-приложения развернуто и в меню должно содержать дополнительных элементов управления. В противном случае в меню возвращается в обычный состояние.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  Задает сведения о классе среды выполнения, платформа использует при создании пользователем кнопки меню.  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuButtonRTC`  
+ [in] *pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) сведения для класса, производным от [класс CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Примечания  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) структура, определяющая шрифта для задания.  
   
- [in] `bHorz`  
- Значение TRUE, если `lpLogFont` параметр, используемый для вертикального шрифта, FALSE, если требуется использовать для шрифта по горизонтали.  
+ [in] *bHorz*  
+ Значение TRUE, если *lpLogFont* параметр, используемый для вертикального шрифта, FALSE, если требуется использовать для шрифта по горизонтали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOn`  
+ [in] *bВ системах*  
  Логическое значение, управляющее отображением команды меню недавно использованных.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  Логический параметр, указывает, отображаются ли всплывающие меню всех команд меню.  
   
 ### <a name="remarks"></a>Примечания  

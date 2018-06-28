@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368918"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042161"
 ---
 # <a name="cipaddressctrl-class"></a>Класс CIPAddressCtrl
 Предоставляет функциональные возможности стандартного элемента управления "IP-адрес" Windows.  
@@ -54,13 +54,13 @@ class CIPAddressCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|Создает объект `CIPAddressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|Удаляет содержимое контроль IP-адресов.|  
 |[CIPAddressCtrl::Create](#create)|Создает контроль IP-адресов и прикрепляет его к `CIPAddressCtrl` объекта.|  
@@ -119,16 +119,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Необходимо включить **WS_CHILD** стиля, так как элемент управления должен быть дочерним окном. В разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK список стилей windows.  
   
- `rect`  
+ *Rect*  
  Ссылка на размер и положение контроль IP-адресов. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно контроль IP-адресов. Он не должен быть **значение NULL.**  
   
- `nID`  
+ *nID*  
  Идентификатор контроль IP-адресов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -139,9 +139,9 @@ virtual BOOL Create(
   
 1.  Вызывает конструктор, который создает `CIPAddressCtrl` объекта.  
   
-2.  Вызовите **создать**, которая создает контроль IP-адресов.  
+2.  Вызовите `Create`, которая создает контроль IP-адресов.  
   
- Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо **создать**.  
+ Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо `Create`.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  Эта функция вызывается для создания элемента управления (дочернего окна) и связать его с `CIPAddressCtrl` объекта.  
@@ -156,19 +156,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Необходимо включить **WS_CHILD** стиля, так как элемент управления должен быть дочерним окном. В разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK список стилей windows.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -191,26 +191,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nField0`  
+ *nField0*  
  Ссылка на значение поля 0 упакованный IP-адрес.  
   
- `nField1`  
+ *nField1*  
  Ссылка на значение поля 1 упакованный IP-адрес.  
   
- `nField2`  
+ *nField2*  
  Ссылка на значение поля 2 упакованный IP-адрес.  
   
- `nField3`  
+ *nField3*  
  Ссылка на значение поля 3 упакованный IP-адрес.  
   
- `dwAddress`  
- Ссылка на адрес `DWORD` значение, которое получает IP-адрес. В разделе **примечания** для таблицы, которая показывает, как `dwAddress` заполняется.  
+ *dwAddress*  
+ Ссылка на адрес `DWORD` значение, которое получает IP-адрес. В разделе **примечания** для таблицы, которая показывает, как *dwAddress* заполняется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Количество непустых полей в контроль IP-адресов.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), как описано в Windows SDK. В первый прототип выше вправо соответственно левый чисел в полях от 0 до 3 элемента управления, чтение, заполнение четыре параметра. В приведенном выше, второй прототипе `dwAddress` заполняется следующим образом.  
+ Эта функция-член реализует поведение сообщения Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378), как описано в Windows SDK. В первый прототип выше вправо соответственно левый чисел в полях от 0 до 3 элемента управления, чтение, заполнение четыре параметра. В приведенном выше, второй прототипе *dwAddress* заполняется следующим образом.  
   
 |Поле|Биты, содержащий значение поля|  
 |-----------|-------------------------------------|  
@@ -246,23 +246,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nField0`  
+ *nField0*  
  Значение поля 0 с упакованным IP-адреса.  
   
- `nField1`  
+ *nField1*  
  Значение поля 1 с упакованным IP-адреса.  
   
- `nField2`  
+ *nField2*  
  Значение поля 2 с упакованным IP-адреса.  
   
- `nField3`  
+ *nField3*  
  Значение поля 3 с упакованным IP-адреса.  
   
- `dwAddress`  
+ *dwAddress*  
  Объект `DWORD` значение, содержащее новый IP-адрес. В разделе **примечания** для таблицы, которая показывает, как `DWORD` указано значение.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), как описано в Windows SDK. В первый прототип выше вправо соответственно левый чисел в полях от 0 до 3 элемента управления, чтение, заполнение четыре параметра. В приведенном выше, второй прототипе `dwAddress` заполняется следующим образом.  
+ Эта функция-член реализует поведение сообщения Win32 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380), как описано в Windows SDK. В первый прототип выше вправо соответственно левый чисел в полях от 0 до 3 элемента управления, чтение, заполнение четыре параметра. В приведенном выше, второй прототипе *dwAddress* заполняется следующим образом.  
   
 |Поле|Биты, содержащий значение поля|  
 |-----------|-------------------------------------|  
@@ -279,7 +279,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nField`  
+ *nField*  
  Индекс (с нуля) поля, к которому должен быть установлен фокус. Если это значение больше, чем количество полей, фокус перемещается в первое пустое поле. Если все поля, отличный от пробела, фокус перемещается к первому полю.  
   
 ### <a name="remarks"></a>Примечания  
@@ -296,17 +296,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nField`  
+ *nField*  
  Индекс (с нуля) поля, к которому будет применяться диапазона.  
   
- `nLower`  
+ *nLower*  
  Ссылка на целое число, получение нижнего предела, указанного поля в этом контроль IP-адресов.  
   
- `nUpper`  
+ *nUpper*  
  Ссылка на целое число, получение верхний предел для указанного поля в этом контроль IP-адресов.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), как описано в Windows SDK. С помощью двух параметров `nLower` и `nUpper`, чтобы указать нижняя и верхняя границы поля, а не *wRange* параметр, используемый с сообщением Win32.  
+ Эта функция-член реализует поведение сообщения Win32 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382), как описано в Windows SDK. С помощью двух параметров *nLower* и *nUpper*, чтобы указать нижняя и верхняя границы поля, а не *wRange* параметр, используемый с сообщением Win32.  
   
 ## <a name="see-also"></a>См. также  
  [CWnd-класс](../../mfc/reference/cwnd-class.md)   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373896"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038010"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Класс CMultiPageDHtmlDialog
 Многостраничное диалоговое окно последовательно отображает несколько HTML-страниц и обрабатывает события каждой страницы.  
@@ -38,7 +38,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Создает объект многостраничное диалоговое окно DHTML (мастер стиль).|  
 |[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничное диалоговое окно DHTML.|  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  Нулем строка, представляющая имя ресурса шаблона диалогового окна.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  Нулем строка, представляющая имя ресурса HTML.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на объект window родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Содержит идентификатор ресурса шаблона диалогового окна.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Содержит идентификатор ресурса HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

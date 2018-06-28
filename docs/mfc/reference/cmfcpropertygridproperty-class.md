@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ad6630f2a0debd5ab3fee30374b84f5bbe9b2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c218f38b76d70ef20fed46a502a7cc15041aa8c5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378869"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039185"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty-класс
 Объект `CMFCPropertyGridProperty` представляет элемент списка в элементе управления списком свойств.  
@@ -198,14 +198,14 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Создает объект `CMFCPropertyGridProperty`.|  
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Добавляет новый элемент списка в элементе управления списком свойств.|  
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Добавляет свойство дочернего элемента.|  
@@ -278,7 +278,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Вызывается платформой для добавления поля со списком в свойство.|  
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Указывает, содержит ли свойство кнопки.|  
@@ -291,7 +291,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Строка формата для значения типа double.|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Строка формата для значения типа float.|  
@@ -326,14 +326,14 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszOption`  
+ [in] *lpszOption*  
  (Параметр), чтобы добавить элемент списка.  
   
- [in] `bInsertUnique`  
+ [in] *bInsertUnique*  
  `TRUE` Чтобы добавить в список элемент только в том случае, если он еще не существует; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`, это означает, что добавляется элемент списка. В противном случае `FALSE`, что означает, что элемент списка не добавлен, так как `bInsertUnique` параметр `TRUE` и указанный элемент в списке `lpszOption` уже существует.  
+ `TRUE`, это означает, что добавляется элемент списка. В противном случае `FALSE`, что означает, что элемент списка не добавлен, так как *bInsertUnique* параметр `TRUE` и указанный элемент в списке *lpszOption* уже параметр существует.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -345,7 +345,7 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pProp`  
+ [in] *pProp*  
  Указатель на свойство для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -380,10 +380,10 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rectEdit`  
+ [out] *rectEdit*  
  Этот метод возвращает, прямоугольник, который определяет границы текстового поля для значения свойства.  
   
- [выходной] `rectSpin`  
+ [out] *rectSpin*  
  Этот метод возвращает, прямоугольник, который определяет границы счетчик-элемент управления для значения свойства. Или, если свойство не поддерживает счетчиком пустой прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
@@ -397,7 +397,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAllow`  
+ [in] *bAllow*  
  `TRUE` Чтобы сделать свойство доступным для редактирования; `FALSE` чтобы сделать свойство доступным только для чтения. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -423,31 +423,31 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strGroupName`  
+ [in] *strGroupName*  
  Имя группы. Объект *группы* — это коллекция связанных свойств в сетке свойств. Если элемент управления отображается иерархически *имя группы* отображается как заголовок категории в строку над группой.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные приложения, такие как целое число или указатель на другие данные, связанные со свойством. Значение по умолчанию — 0.  
   
- [in] `strName`  
+ [in] *strName*  
  Имя свойства.  
   
- [in] `varValue`  
+ [in] *varValue*  
  Значение свойства.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Описание свойства. Значение по умолчанию — `NULL`.  
   
- [in] `lpszEditMask`  
+ [in] *lpszEditMask*  
  Маска редактирования, если свойство является элемент управления masked edit. Значение по умолчанию — `NULL`.  
   
- [in] `lpszEditTemplate`  
+ [in] *lpszEditTemplate*  
  Изменить шаблон, если свойство является элемент управления masked edit. Значение по умолчанию — `NULL`.  
   
- [in] `lpszValidChars`  
+ [in] *lpszValidChars*  
  Список допустимых символов, если свойство является элемент управления masked edit. Значение по умолчанию — `NULL`.  
   
- [in] `bIsValueList`  
+ [in] *bIsValueList*  
  `TRUE` Если свойство представляет собой список значений; `FALSE` Если свойство представляет одно значение. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -462,10 +462,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно элемента поле со списком.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -483,19 +483,19 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectEdit`  
+ [in] *rectEdit*  
  Ограничивающий прямоугольник элемента управления для редактирования.  
   
- [in] `bDefaultFormat`  
+ [in] *bDefaultFormat*  
  `TRUE` для использования формата свойство по умолчанию для задания текста для редактирования элемента управления; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на элемент управления для редактирования, если этот метод выполнен успешно; в противном случае `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод использует значения `varValue`, `lpszEditMask`, `lpszEditTemplate`, и `lpszValidChars` параметры, заданные в [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) конструктора класса. По умолчанию этот метод поддерживает `varValue` типы variant. Сюда входят `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, и `VT_BOOL`.  
+ Этот метод использует значения *varValue*, *lpszEditMask*, *lpszEditTemplate*, и *lpszValidChars* параметры, которые указанный в [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) конструктора класса. По умолчанию этот метод поддерживает *varValue* типы variant. Сюда входят `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, и `VT_BOOL`.  
   
- Этот метод создает [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) управление, если один или несколько `lpszEditMask`, `lpszEditTemplate`, или `lpszValidChars` параметров; в противном случае она создает [CEdit](../../mfc/reference/cedit-class.md) элемента управления.  
+ Этот метод создает [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) управление, если один или несколько *lpszEditMask*, *lpszEditTemplate*, или *lpszValidChars* указаны параметры; в противном случае она создает [CEdit](../../mfc/reference/cedit-class.md) элемента управления.  
   
 ##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
  Вызывается платформой для создания редактируемых счетчик-элемент управления.  
@@ -505,7 +505,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectSpin`  
+ [in] *rectSpin*  
  Прямоугольник, который определяет, где создается для редактирования счетчик-элемент управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -522,7 +522,7 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить свойство; `FALSE` для отключения свойства. Отключенные свойства не отвечают на мышь или клавиатуру. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -538,19 +538,19 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить регулятор; `FALSE` отключение счетчик-элемент управления. Значение по умолчанию — `TRUE`.  
   
- [in] `nMin`  
+ [in] *nMin*  
  Минимальное значение счетчик-элемент управления. Значение по умолчанию — 0.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Максимальное значение счетчик-элемент управления. Значение по умолчанию — 0.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа автоматически создает регулятор при намерении изменить свойство.  
   
- Тип свойства, которое задается `varValue` параметр [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, не должен иметь поддерживаемый тип variant. В противном случае этот метод подтверждает, что в режиме отладки. Поддерживаемые типы: `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, и `VT_UI4`.  
+ Тип свойства, которое задается *varValue* параметр [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, не должен иметь поддерживаемый тип variant. В противном случае этот метод подтверждает, что в режиме отладки. Поддерживаемые типы: `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, и `VT_UI4`.  
   
 ##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
  Раскрытию или свертыванию свойство, содержащее вложенных свойств.  
@@ -560,7 +560,7 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bExpand`  
+ [in] *bExpand*  
  `TRUE` Чтобы развернуть свойства; Значение FALSE, чтобы свернуть свойства. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -613,9 +613,9 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `bIncludeHidden`|`TRUE` Чтобы включить скрытых вложенных элементов в счетчик; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.|  
+|[in] *bIncludeHidden*|`TRUE` Чтобы включить скрытых вложенных элементов в счетчик; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число развернутые вложенные элементы.  
@@ -666,7 +666,7 @@ LPCTSTR GetOption(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс элемента списка (параметр), чтобы получить свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -734,7 +734,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс извлекаемого свойства. Этот параметр является недопустимым, если оно меньше нуля или больше или равно числу вложенных свойств.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -742,7 +742,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
   
  - или -  
   
- В режиме retail `NULL` Если `nIndex` указан недопустимый параметр. В режиме отладки этот метод подтверждает.  
+ В режиме retail `NULL` Если *nIndex* указан недопустимый параметр. В режиме отладки этот метод подтверждает.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -810,16 +810,16 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка, чтобы проверить, в клиентских координатах. Этот параметр обычно является текущего положения указателя мыши.  
   
- [in] `pt`  
+ [in] *pt*  
  Точка, чтобы проверить, в клиентских координатах.  
   
- [выходной] `pnArea`  
+ [out] *pnArea*  
  При возвращении данного метода, указывает область, которая содержит указанную точку. Дополнительные сведения см. в разделе "Замечания". Значение по умолчанию — `NULL`.  
   
- [in] `bPropsOnly`  
+ [in] *bPropsOnly*  
  `TRUE` Чтобы проверить любую область в свойство элемента управления; `FALSE` для проверки только в области описания. Значение по умолчанию — `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -828,9 +828,9 @@ CMFCPropertyGridProperty* HitTest(
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод проверяет свойство вложенные элементы, если указанная точка не найдено в какие-либо свойства.  
   
- В следующей таблице перечислены значения, которые могут быть возвращены в `pnArea` параметра.  
+ В следующей таблице перечислены значения, которые могут быть возвращены в *pnArea* параметра.  
   
-|Область|Описание|  
+|Область|Описание:|  
 |----------|-----------------|  
 |`ClickArea::ClickExpandBox`|Поле элемента развертывания, который обозначается знак плюс (+).|  
 |`ClickArea::ClickName`|Имя свойства.|  
@@ -951,7 +951,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pProp`  
+ [in] *pProp*  
  Указатель на свойство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1025,7 +1025,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка, в клиентских координатах.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1040,9 +1040,9 @@ virtual void OnClickName(CPoint C);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `C`|Точка, в клиентских координатах.|  
+|[in] *C*|Точка, в клиентских координатах.|  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
@@ -1057,10 +1057,10 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiMsg`  
+ [in] *uiMsg*  
  Сообщение мыши.  
   
- [in] `point`  
+ [in] *точки*  
  Точка, в клиентских координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1088,10 +1088,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  (Этот параметр не используется).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1107,7 +1107,7 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка, в клиентских координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1135,10 +1135,10 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectButton`  
+ [in] *rectButton*  
  Ограничивающий прямоугольник, который указывает, где для отображения кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1153,10 +1153,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник, который указывает, где можно нарисовать описание свойства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1172,10 +1172,10 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectExpand`  
+ [in] *rectExpand*  
  Ограничивающий прямоугольник, который указывает, где поле элемента управления expand.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1191,10 +1191,10 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник, который указывает, где можно нарисовать имя свойства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1209,10 +1209,10 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник, указывающий, куда извлекается значение свойства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1225,7 +1225,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lptClick`  
+ [in] *lptClick*  
  (Этот параметр не используется). Указатель на точку, в клиентских координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1256,9 +1256,9 @@ virtual BOOL OnKillFocus(CWnd*);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `CWnd`|(Не используется.) Указатель на окно.|  
+|[in] *CWnd*|(Не используется.) Указатель на окно.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Этот метод всегда возвращает значение `TRUE`.  
@@ -1274,7 +1274,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCPropertyGridProperty*`  
+ [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
@@ -1287,7 +1287,7 @@ virtual void OnPosSizeChanged(CRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CRect`  
+ [in] *CRect*  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
@@ -1301,9 +1301,9 @@ virtual void OnRClickName(CPoint C);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `C`|Точка, в клиентских координатах.|  
+|[in] *C*|Точка, в клиентских координатах.|  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
@@ -1319,13 +1319,13 @@ virtual void OnRClickValue(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `C`|Точка, в клиентских координатах.|  
-|[in] `B`|Значение типа Boolean.|  
+|[in] *C*|Точка, в клиентских координатах.|  
+|[in] *B*|Значение типа Boolean.|  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий и `B` параметр не имеет никаких предварительно определенных целей.  
+ По умолчанию этот метод не выполняет никаких действий и *B* параметр не имеет никаких предварительно определенных целей.  
   
 ##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
  Вызывается платформой, когда пользователь выбирает элемент в поле со списком для редактирования.  
@@ -1358,7 +1358,7 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCPropertyGridProperty*`  
+ [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий.  
@@ -1383,7 +1383,7 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nChar`  
+ [in] *nChar*  
  Символ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1421,16 +1421,16 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pProp`  
+ [in] *pProp*  
  Указатель на элемент вложенного свойства.  
   
- [in] `bDelete`  
- `TRUE` Чтобы удалить объект свойства, который задается параметром `pProp` параметр; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ [in] *bDelete*  
+ `TRUE` Чтобы удалить объект свойства, который задается параметром *pProp* параметр; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Укажите `FALSE` для `bDelete` параметра, если планируется переместить указанный вложенный элемент; то есть, удалить вложенный элемент и добавить его в другом месте.  
+ Укажите `FALSE` для *bDelete* параметра, если планируется переместить указанный вложенный элемент; то есть, удалить вложенный элемент и добавить его в другом месте.  
   
 ##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue  
  Восстанавливает исходное значение измененного свойства.  
@@ -1449,7 +1449,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Значение 32-разрядного приложения, например целое число или указатель на другие данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1463,7 +1463,7 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strDescr`  
+ [in] *strDescr*  
  Текст, описывающий текущего свойства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1478,10 +1478,10 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя свойства.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Чтобы обновить свойства немедленно; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1494,7 +1494,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `varValue`  
+ [in] *varValue*  
  Значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1508,7 +1508,7 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `varValue`  
+ [in] *varValue*  
  Ссылка на значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1523,7 +1523,7 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Чтобы отобразить текущее свойство и его вложенных элементов; `FALSE` скрыть текущее свойство и его вложенные элементы. Значение по умолчанию — `TRUE`.  
   
  [in] `bAdjustLayout`  

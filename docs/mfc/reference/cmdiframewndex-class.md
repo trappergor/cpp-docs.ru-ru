@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943dc2e56b896531b7deeb14a17602c97484926c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e32b127a31cf27fa2bddb189335d2edf19a8f7de
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378231"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041199"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 Расширяет функциональность [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), окно фрейма Windows многодокументного интерфейса (MDI).  
@@ -186,7 +186,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Повторно вычисляет макет активного окна.|  
 |`CMDIFrameWndEx::AddDockSite`|Этот метод не используется.|  
@@ -268,7 +268,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Определяет, можно ли преобразовать области закрепления для дочерних MDI-окон.|  
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Включает или отключает оптимизацию перерисовку для дочерних MDI-окон.|  
@@ -314,10 +314,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для регистрации.  
   
- [in] `bTail`  
+ [in] *bTail*  
  Указывает, следует ли добавить в конец списка в этой области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -341,7 +341,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hdwp`  
+ [in] *hdwp*  
  Определяет структуру несколько положение окна. Это значение можно получить путем вызова `BeginDeferWindowPos`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -355,7 +355,7 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `pnMDITabsType`  
+ [out] *pnMDITabsType*  
  Указатель на целочисленную переменную, которая указывает, какие компоненты включены.  
   
 -   0: все компоненты отключены.  
@@ -395,7 +395,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBar`  
+ *pBar*  
  Указатель в область закрепления для преобразования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -414,10 +414,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  Текстовая строка, содержащая идентификатор документа. Как правило это полный путь файла документа.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Указатель на определяемый пользователем объект. Например разработчик может создать структуру данных приложения, описания документа и о том, как документ должен быть инициализирован во время запуска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -445,10 +445,10 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpcszDocName`  
+ [in] *lpcszDocName*  
  Имя документа.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Зарезервировано для будущего использования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -465,13 +465,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель, чтобы закрепить.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  Указывает, какие стороны окна фрейма, чтобы закрепить.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  Не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -492,17 +492,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на области закрепления.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  Указатель на область служит в качестве сайта закрепления. .  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `TRUE` , если операция выполнена успешно. В противном случае возвращает значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод, чтобы закрепить несколько объектов панели в предопределенном порядке. Этот метод закрепляет область определяется `pBar` на левой панели, определяемое `pLeftOf`.  
+ Этот метод, чтобы закрепить несколько объектов панели в предопределенном порядке. Этот метод закрепляет область определяется *pBar* на левой панели, определяемое *pLeftOf*.  
   
 ### <a name="example"></a>Пример  
  В следующем примере показан способ `DockPaneLeftOf` используется метод [VisualStudioDemo образца: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
@@ -517,7 +517,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Задает стороны фрейма главного окна, которые будут использоваться. Используйте один или несколько из следующих флагов.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -546,7 +546,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  Указывает, требуется применить стиль закрепления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -567,7 +567,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnableMenu`  
+ [in] *bEnableMenu*  
  `TRUE` для отображения в главном меню в полноэкранном режиме или `FALSE` для его скрытия.  
   
 ### <a name="remarks"></a>Примечания  
@@ -580,7 +580,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiFullScreenCmd`  
+ [in] *uiFullScreenCmd*  
  Идентификатор команды, которая включает или отключает полноэкранный режим.  
   
 ### <a name="remarks"></a>Примечания  
@@ -594,7 +594,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить загрузку состояние стыковки `FALSE` Чтобы отключить загрузку состояние закрепления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -609,10 +609,10 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Если `TRUE`, функция групп с вкладками MDI включена; Если `FALSE`, отключения групп с вкладками MDI.  
   
- [in] `params`  
+ [in] *params*  
  Указывает параметры, как платформа применила для дочерних окон, которые созданы в клиентской области MDI.  
   
 ### <a name="remarks"></a>Примечания  
@@ -628,9 +628,9 @@ void EnableMDITabbedGroups(
   
 -   Приложения можно сохранить текущий макет окон с вкладками и список документов, открытым в данный момент.  
   
- При вызове этого метода с `bEnable` значение `FALSE`, `params` учитывается.  
+ При вызове этого метода с *bEnable* значение `FALSE`, *params* игнорируется.  
   
- Даже если групп с вкладками MDI уже включена, можно вызвать этот метод еще раз, чтобы изменить параметры для дочерних окон. Вызов метода с `bEnable` значение `TRUE` и изменить элементы `CMDITabInfo` объектов, которые задаются параметром `params` параметр.  
+ Даже если групп с вкладками MDI уже включена, можно вызвать этот метод еще раз, чтобы изменить параметры для дочерних окон. Вызов метода с *bEnable* значение `TRUE` и изменить элементы `CMDITabInfo` объектов, которые задаются параметром *params* параметра.  
   
  Дополнительные сведения об использовании MDI группы с вкладками, см. в разделе [групп с вкладками MDI](../../mfc/mdi-tabbed-groups.md).  
   
@@ -654,33 +654,33 @@ void EnableMDITabs(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Указывает, включены ли вкладки.  
   
- `bIcons`  
+ *bIcons*  
  Указывает, следует ли отображать значки на вкладках.  
   
- `tabLocation`  
+ *tabLocation*  
  Указывает расположение меток вкладок.  
   
- `bTabCloseButton`  
+ *bTabCloseButton*  
  Указывает, следует ли отображать кнопки Закрыть вкладку.  
   
- `style`  
+ *Стиль*  
  Задает стиль вкладок. Используйте `STYLE_3D_SCROLLED` для обычные вкладки или `STYLE_3D_ONENOTE` для Microsoft OneNote вкладок.  
   
- `bTabCustomTooltips`  
+ *bTabCustomTooltips*  
  Указывает, включены ли настраиваемые подсказки.  
   
- `bActiveTabCloseButton`  
+ *bActiveTabCloseButton*  
  Если `TRUE`, **закрыть** кнопка отображается на активной вкладке, а не в правом углу области вкладок.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод служит для включения или отключения функции вкладок MDI окно области MDI. Если включено, все дочерние окна отображаются как вкладки.  
   
- Вкладка метки могут располагаться в верхней или нижней части фрейма, в зависимости от настройки параметра `tabLocation`. Можно указать либо `CMFCTabCtrl::LOCATION_BOTTOM` (значение по умолчанию) или `CMFCTabCtrl::LOCATION_TOP`.  
+ Вкладка метки могут располагаться в верхней или нижней части фрейма, в зависимости от настройки параметра *tabLocation*. Можно указать либо `CMFCTabCtrl::LOCATION_BOTTOM` (значение по умолчанию) или `CMFCTabCtrl::LOCATION_TOP`.  
   
- Если `bTabCustomTooltips` — `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` сообщения будут отправляться фрейма главного окна. Код можно обработать это сообщение и предоставляют платформу с настраиваемые подсказки для вкладок MDI.  
+ Если *bTabCustomTooltips* — `TRUE`, `AFX_WM_ON_GET_TAB_TOOLTIP` сообщения будут отправляться фрейма главного окна. Код можно обработать это сообщение и предоставляют платформу с настраиваемые подсказки для вкладок MDI.  
   
 ### <a name="example"></a>Пример  
  В следующем примере показан способ `EnableMDITabs` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).  
@@ -695,7 +695,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLastActiveTab`  
+ [in] *bLastActiveTab*  
  Если `TRUE`, включить активацию последней активной вкладки. Если `FALSE`, отключение активации последней активной вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -723,22 +723,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Если `TRUE`, включена автоматическая обработка меню области; Если `FALSE`, автоматическая обработка отключена.  
   
- [in] `uiCustomizeCmd`  
+ [in] *uiCustomizeCmd*  
  Идентификатор команды **Настройка** элемента меню. Обычно этот пункт меню добавляется в конец списка областей.  
   
- [in] `strCustomizeLabel`  
+ [in] *strCustomizeLabel*  
  Текст, отображаемый для **Настройка** элемента меню (в целях локализации).  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [in] *uiViewToolbarsMenuEntryID*  
  Указывает идентификатор элемента меню панели инструментов в открывшемся меню области. Обычно это **панели инструментов** подменю **представление** меню.  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [in] *bContextMenuShowsToolbarsOnly*  
  Если `TRUE`, в меню панели отображаются только список панелей инструментов. Если `FALSE`, раскроется список панелей инструментов и закрепляемых панелей.  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bViewMenuShowsToolbarsOnly*  
  Если `TRUE`, в меню панели отображаются только список панелей инструментов. Если `FALSE`, раскроется список панелей инструментов и закрепляемых панелей.  
   
 ### <a name="remarks"></a>Примечания  
@@ -768,20 +768,20 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiMenuId`  
+ [in] *uiMenuId*  
  Указывает идентификатор ресурса меню.  
   
- [in] `lpszMenuText`  
+ [in] *lpszMenuText*  
  Задает текст элемента.  
   
- [in] `bShowHelpButton`  
+ [in] *bShowHelpButton*  
  Указывает, следует ли отображать **справки** кнопку в диалоговом окне Управление windows.  
   
- [in] `uiMenuTextResId`  
+ [in] *uiMenuTextResId*  
  Строковый идентификатор ресурса, содержащее строку текста элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод служит для вставки элемента меню команд которого вызывает диалоговое окно MDI дочернего окна управления ( [CMFCWindowsManagerDialog класса](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Новый элемент вставляется в меню, определяемое `uiMenuId`. Вызовите `EnableWindowsDialog` при обработке `WM_CREATE` сообщения.  
+ Этот метод служит для вставки элемента меню команд которого вызывает диалоговое окно MDI дочернего окна управления ( [CMFCWindowsManagerDialog класса](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Новый элемент вставляется в меню, определяемое *uiMenuId*. Вызовите `EnableWindowsDialog` при обработке сообщений WM_CREATE.  
   
 ### <a name="example"></a>Пример  
  В следующем примере показан способ `EnableWindowsDialog` используется в [VisualStudioDemo образца: приложения MFC для Visual Studio](../../visual-cpp-samples.md).  
@@ -884,7 +884,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -925,10 +925,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  Текст подсказки, отображаемый на кнопке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -947,20 +947,20 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для вставки.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Указатель на панель перед или после которой нужно вставить панель.  
   
- [in] `bAfter`  
- Если `TRUE`, `pControlBar` вставляется после `pTarget`. Если `FALSE`, `pControlBar` вставляется перед `pTarget`.  
+ [in] *bAfter*  
+ Если `TRUE`, *pControlBar* вставляется после *pTarget*. Если `FALSE`, *pControlBar* вставляется перед *pTarget*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод успешно регистрирует области `FALSE` Если области уже зарегистрирована в диспетчере закрепления.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы сообщить об области, заданные в диспетчере закрепления `pControlBar`. В диспетчере закрепления будут выравниваться в этой области в соответствии с выравнивание панели и позицию в диспетчере закрепления внутренний список.  
+ Используйте этот метод, чтобы сообщить об области, заданные в диспетчере закрепления *pControlBar*. В диспетчере закрепления будут выравниваться в этой области в соответствии с выравнивание панели и позицию в диспетчере закрепления внутренний список.  
   
 ##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
  Определяет, является ли окно фрейма в полноэкранном режиме.  
@@ -996,7 +996,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на окна с вкладками.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1023,13 +1023,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Указанная точка в экранных координатах.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  Задает край приближается к точке. Возможными значениями являются `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, и `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` Если точка находится рядом с внешней границы сайта закрепления; `FALSE` в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1062,16 +1062,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIDResource`  
+ [in] *nIDResource*  
  Идентификатор общего ресурса, связанные с окном фрейма.  
   
- [in] `dwDefaultStyle`  
+ [in] *dwDefaultStyle*  
  Стиль окна фрейма.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительский опорного кадра.  
   
- [in] `pContext`  
+ [in] *pContext*  
  Указатель на [CCreateContext структуры](../../mfc/reference/ccreatecontext-structure.md). Этот параметр может иметь значение `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1085,7 +1085,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Указывает имя профиля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1115,7 +1115,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNext`  
+ [in] *bNext*  
  Если `TRUE`, перемещение вкладки в следующей группе вкладок. Если `FALSE`, переместите его в предыдущую группу вкладок.  
   
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
@@ -1126,7 +1126,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bVert`  
+ [in] *bVert*  
  Задает выравнивание по новой группы. Если `TRUE`, новая группа выравнивается по вертикали. Если `FALSE`, новая группа выравнивается по горизонтали.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1178,7 +1178,7 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nBorderCmd`  
+ [in] *nBorderCmd*  
  Содержит одно из следующих значений из перечисления `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
@@ -1187,7 +1187,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in, out] `lpRectBorder`  
+ [in, out] *lpRectBorder*  
  Указатель на [структура RECT](../../mfc/reference/rect-structure1.md) или [CRect класса](../../atl-mfc-shared/reference/crect-class.md) объект, определяющий координаты границы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1204,7 +1204,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на панель закрыт.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1223,7 +1223,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на окно области будут закрыты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1242,7 +1242,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель всплывающего меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1260,17 +1260,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор команды.  
   
- [in] `nCode`  
- Определяет код команды уведомления. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о значениях `nCode`.  
+ [in] *nCode*  
+ Определяет код команды уведомления. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о значениях *nCode*.  
   
- [in] `pExtra`  
- Используется в соответствии со значением `nCode`. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о `pExtra`.  
+ [in] *pExtra*  
+ Используется в соответствии со значением *nCode*. В разделе [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) Дополнительные сведения о *pExtra*.  
   
- [in, out] `pHandlerInfo`  
- Как правило, этот параметр должен быть `NULL`. В противном случае `NULL`, `OnCmdMsg` заполняет `pTarget` и `pmf` члены `pHandlerInfo` структуры вместо команды диспетчеризации.  
+ [in, out] *pHandlerInfo*  
+ Как правило, этот параметр должен быть `NULL`. В противном случае `NULL`, `OnCmdMsg` заполняет `pTarget` и `pmf` члены *pHandlerInfo* структуры вместо команды диспетчеризации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если сообщение обработано; в противном случае — 0.  
@@ -1286,13 +1286,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Указатель на кнопку меню.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Ограничивающий прямоугольник для изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1302,7 +1302,7 @@ virtual BOOL OnDrawMenuImage(
  Переопределите этот метод, если вы хотите настроить отрисовки изображения для пунктов меню, принадлежащих к строке меню, принадлежащих `CMDIFrameWndEx`-производного объекта. Реализация по умолчанию не выполняет никаких действий.  
   
 ##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
- Вызывается платформой при [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)процессов `WM_PAINT` сообщения.  
+ Вызывается платформой при [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)сообщения WM_PAINT.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1325,10 +1325,10 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
  `TRUE` Если приложение обрабатывает сообщение и будут удалены в фоновом режиме.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределить эту функцию-член, если вам требуется обрабатывать `WM_ERASEBKGND` сообщений в `CMDIFrameWndEx`-производного класса.  
+ Переопределить эту функцию-член, если требуется обработать сообщение WM_ERASEBKGND в `CMDIFrameWndEx`-производного класса.  
   
 ##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
- Вызывается платформой при [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)объекта процессов `WM_NCHITTEST` сообщения.  
+ Вызывается платформой при [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)объект обрабатывает сообщение WM_NCHITTEST.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1337,14 +1337,14 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Кнопка панели инструментов.  
   
- [выходной] `pTI`  
+ [out] *pTI*  
  Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если приложение заполняет `pTI` параметра. Реализация по умолчанию возвращает значение `FALSE`.  
+ `TRUE` Если приложение заполняет *pTI* параметра. Реализация по умолчанию возвращает значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, если вы хотите предоставить сведения о конкретных меню элементов которого является подсказка. Реализация по умолчанию не выполняет никаких действий.  
@@ -1357,7 +1357,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrame`  
+ [in] *pFrame*  
  Указатель окна области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1373,10 +1373,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPreview`  
+ [in] *bPreview*  
  Если `TRUE`, задает режим предварительного просмотра перед печатью. Если `FALSE`, отменяет режим предварительного просмотра.  
   
- [in] `pState`  
+ [in] *состояния производительности*  
  Указатель на `CPrintPreviewState` структуры.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1392,10 +1392,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPane`  
+ [in] *pMenuPane*  
  Указатель на панель быстрого настройки.  
   
- [in] `uiToolbarID`  
+ [in] *uiToolbarID*  
  Идентификатор элемента управления панели инструментов для настройки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1417,10 +1417,10 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Расположение меню в экранных координатах.  
   
- [in] `dwAllowedItems`  
+ [in] *dwAllowedItems*  
  Побитовый оператор или сочетанием флагов, указывающее, какие действия разрешены для текущей вкладки:  
   
 - `BCGP_MDI_CREATE_VERT_GROUP` — можно создать группу вертикальной табуляции.  
@@ -1433,7 +1433,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - `BCGP_MDI_CAN_BE_DOCKED` -Перейдите документа с вкладками в закрепленное состояние (имеет смысл для документов с вкладками).  
   
- [in] `bTabDrop`  
+ [in] *bTabDrop*  
  `TRUE` Чтобы открыть меню, в результате перетаскивания вкладки на другую группу с вкладками. `FALSE` для отображения меню в контекстное меню на активной вкладке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1455,11 +1455,11 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` для отображения панелей, `FALSE` скрытие панелей.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если состояние панели меняется в результате вызова этого метода `FALSE` Если области уже находятся в состоянии, указанном `bShow`. Например, если скрыты панели и `bShow` — `FALSE`, возвращается значение `FALSE`.  
+ `TRUE` Если состояние панели меняется в результате вызова этого метода `FALSE` Если области уже находятся в состоянии, указанном *bShow*. Например, если скрыты панели и *bShow* — `FALSE`, возвращается значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию удаляет панели инструментов в окне фрейма верхнего уровня.  
@@ -1491,10 +1491,10 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectOld`  
+ [in] *rectOld*  
  Текущий размер окна клиента MDI.  
   
- [in] `rectNew`  
+ [in] *rectNew*  
  Новый размер окна клиента MDI.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1509,10 +1509,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель во всплывающем меню.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на перемещаемой панелью.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1529,7 +1529,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenuAlt`  
+ [in] *hMenuAlt*  
  Дескриптор для меню.  
   
 ##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
@@ -1550,23 +1550,23 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка (в экранных координатах).  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Это значение прямоугольника каждого проверенного области окна увеличивается во всех направлениях.  
   
- [in] `bExactBar`  
- Если `TRUE`, `nSensitivity` параметр учитывается.  
+ [in] *bExactBar*  
+ Если `TRUE`, *nSensitivity* параметр учитывается.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  Если не `NULL`, метод выполняет итерацию только области заданного типа.  
   
- [выходной] `dwAlignment`  
+ [out] *dwAlignment*  
  При обнаружении областью, этот параметр указывается, какой стороне области наиболее близок к заданной точке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на область закрепления или `NULL` Если элемент управления не содержит точку, указанную `point`.  
+ Указатель на область закрепления или `NULL` Если элемент управления не содержит точку, указанную *точки*.  
   
 ### <a name="remarks"></a>Примечания  
  Вызов перенаправляется [CDockingManager класса](../../mfc/reference/cdockingmanager-class.md). В разделе [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) для получения дополнительной информации.  
@@ -1579,7 +1579,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNotify`  
+ [in] *bNotify*  
  Определяет, получает ли активного окна на месте для окна фрейма уведомления об изменении макета. Если `TRUE`, этот элемент является извещения; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1598,19 +1598,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  Указатель на область для удаления.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  `TRUE` для уничтожения области удален. `FALSE` Чтобы не удалить его.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  `TRUE` Чтобы настроить макет закрепления немедленно. Если `FALSE`, корректировка будет выполняться, только если события перерисовку находится по другим причинам (пользователь изменяет размер окна, перетаскивает главного фрейма, и т. д.).  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  `TRUE` Чтобы удалить область из списка автоматическое скрытие панелей. `FALSE` Чтобы удалить область из списка регулярных панелей.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  Указатель на область, которая заменяет области удален.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1626,7 +1626,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Указывает имя профиля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1660,7 +1660,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель кадра окна предварительного просмотра печати.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1676,13 +1676,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `menu`  
+ [in] *меню*  
  Ссылку на [CMenu-класс](../../mfc/reference/cmenu-class.md) объект для изменения.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Команда первого определяемой пользователем.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Команда последнего определяемой пользователем.  
   
 ##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
@@ -1706,16 +1706,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панели, чтобы быть отображены или скрыты.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Чтобы отобразить область. `FALSE` Чтобы скрыть область.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` Чтобы отложить повторное вычисление макет закрепления. `FALSE` Чтобы немедленно повторно вычислить макет закрепления.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` Чтобы показать панель должна как активный. `FALSE` Чтобы отобразить область как неактивные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1746,7 +1746,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMDIChildWnd`  
+ *pMDIChildWnd*  
  Указатель на дочернее окно MDI, содержащий закрепления панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1786,11 +1786,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
- Указывает данные, необходимые для справки, тип которой задан `nCmd`.  
+ [in] *dwData*  
+ Указывает данные, необходимые для справки, тип которой определяется *nCmd*.  
   
- [in] `nCmd`  
- Задает тип запрошенной справки. Список возможных значений и их влияние на параметр `dwData` см. в разделе [Функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в Windows SDK.  
+ [in] *nCmd*  
+ Задает тип запрошенной справки. Список возможных значений и их влияние на *dwData* параметр, в разделе [функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод переопределяет [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  

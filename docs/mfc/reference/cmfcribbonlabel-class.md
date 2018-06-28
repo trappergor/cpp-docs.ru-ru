@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370126"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042499"
 ---
 # <a name="cmfcribbonlabel-class"></a>Класс CMFCRibbonLabel
 Реализует недоступную для щелчка текстовую метку для ленты.  
@@ -40,14 +40,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Создает и инициализирует `CMFCRibbonLabel` объект с указанной текстовой строки.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonLabel::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст, отображаемый в метке.  
   
- [in] `bIsMultiLine`  
+ [in] *bIsMultiLine*  
  `TRUE` Чтобы указать, что метка Многострочная метка; в противном случае `FALSE`.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Представляет родительского окна текущую метку ленты.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей метки ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `data` параметр был заполнен данные специальных возможностей текущей метки ленты успешно, в противном случае — `FALSE`.  
+ `TRUE` Если *данные* параметр был заполнен данные специальных возможностей текущей метки ленты успешно, в противном случае — `FALSE`.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

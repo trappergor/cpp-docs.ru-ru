@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371336"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040705"
 ---
 # <a name="cmfctaskspanetask-class"></a>Класс CMFCTasksPaneTask
 `CMFCTasksPaneTask` Класс представляет вспомогательный класс, представляющий задачи для элемента управления области задач ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект задач представляет элемент в группе задач ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.  
@@ -60,20 +60,20 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|Создает и инициализирует `CMFCTasksPaneTask` объекта.|  
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей задачи.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Определяет, является ли окно «Задача», автоматически освобождается.|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Определяет, рисуется ли платформа метка задачи полужирным шрифтом.|  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указывает [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) , которому принадлежит задача.  
   
- `lpszName`  
+ *lpszName*  
  Задает имя задачи.  
   
- `nIcon`  
+ *nIcon*  
  Указывает индекс изображения задачи в списке изображений.  
   
- `uiCommandID`  
+ *uiCommandID*  
  Указывает идентификатор команды команду, которая выполняется при щелчке задачи.  
   
- `dwUserData`  
+ *dwUserData*  
  Определенные пользователем данные.  
   
- `hwndTask`  
+ *hwndTask*  
  Указывает дескриптор окна задач.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  Если `TRUE`, окно «Задача» будет удален автоматически.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  Указывает высоту окна задач.  
   
 ### <a name="remarks"></a>Примечания  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Представляет родительское окно текущей задачи.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей задачи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `data` параметр был успешно заполненная данные специальных возможностей текущей задачи; в противном случае — `FALSE`.  
+ `TRUE` Если *данные* параметр был успешно заполненная данные специальных возможностей текущей задачи; в противном случае — `FALSE`.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

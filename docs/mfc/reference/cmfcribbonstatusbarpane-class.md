@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369194"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038436"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Класс CMFCRibbonStatusBarPane
 `CMFCRibbonStatusBarPane` Класс реализует элемент ленты, можно добавить в строку статуса ленты.  
@@ -62,13 +62,13 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Создает и инициализирует объект `CMFCRibbonStatusBarPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Возвращает строку, которая определяет длинного строку текста, который может быть отображен в области без усечения.|  
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Возвращает текущее значение выравнивания текста.|  
@@ -84,7 +84,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Вызывается платформой при остановке анимации, которая назначается на панель.|  
   
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  Указывает идентификатор области.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Задает текстовую строку для отображения на панели.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  Если `TRUE`, панель состояния нельзя выделяются или выбрать, щелкнув его.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Указывает дескриптор значка, отображаемого на панели.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Указывает, максимальная длина строки текста, отображаемой области.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Задает дескриптор для списка изображений, используемое для анимации.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Ширина в пикселях значка в списке изображений, который используется для анимации.  
   
- [in] `clrTrnsp`  
+ [in] *clrTrnsp*  
  Указывает прозрачный цвет изображения в списке изображений, которые используются для анимации.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Указывает идентификатор ресурса из списка изображений, используемое для анимации.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  Указывает, максимальная длина строки, которые могут отображаться на панели строки состояния без усечения.  
   
 ### <a name="remarks"></a>Примечания  
- Библиотека вычисляет размер текста, `lpszAlmostLargeText` указывает и соответствующим образом изменяет размер панели. Текст усекается, если он по-прежнему не умещается в области.  
+ Библиотека вычисляет размер текста, *lpszAlmostLargeText* указывает и соответствующим образом изменяет размер панели. Текст усекается, если он по-прежнему не умещается в области.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  Присоединяет панели строки состояния списка изображений, который можно использовать для анимации.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  Задает дескриптор для списка изображений.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  Ширина в пикселях кадра, в списке изображений.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Указывает прозрачный цвет из списка изображений.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  Указывает идентификатор ресурса для списка изображений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nAlign`  
+ [in] *nAlign*  
  Задает выравнивание текста.  
   
 ### <a name="remarks"></a>Примечания  
- `nAlign` Может принимать одно из следующих значений:  
+ *nAlign* может иметь одно из следующих значений:  
   
 - `TA_LEFT`: левому краю  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  Указывает частоту кадров анимации, в миллисекундах.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  Определяет, как долго для воспроизведения анимации, в миллисекундах. Используйте значение -1 для бесконечный цикл.  
   
 ### <a name="remarks"></a>Примечания  

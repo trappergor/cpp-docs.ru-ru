@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49142f4ad7ea9793bbe533be6430bce929adf9cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377370"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039198"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Класс CMFCToolBarComboBoxButton
 Кнопки панели инструментов, которая содержит поле со списком ( [CComboBox-класс](../../mfc/reference/ccombobox-class.md)).  
@@ -94,13 +94,13 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Создает документ `CMFCToolBarComboBoxButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|Добавляет элемент в конец списка.|  
 |[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Добавляет элемент в списке. Порядок элементов в списке определяется `Compare`.|  
@@ -138,7 +138,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
   
  2. Создать `CMFCToolBarComboBoxButton` объекта.  
   
- 3. В обработчике сообщений, который обрабатывает `AFX_WM_RESETTOOLBAR` сообщение, заменить фиктивный кнопку «Создать» поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. В обработчике сообщений, который обрабатывает сообщение AFX_WM_RESETTOOLBAR, заменить фиктивный кнопку «Создать» поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
  Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md). Пример кнопки панели инструментов поле со списком см. пример проекта VisualStudioDemo.  
   
@@ -168,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Текст элемента для добавления в список.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элементом, чтобы добавить в список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Текст элемента для добавления в список.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элементом, чтобы добавить в список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -226,16 +226,16 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор команды «Создать».  
   
- [in] `iImage`  
+ [in] *iImage*  
  Индекс изображения, изображения, связанного с новой кнопки.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль кнопки Создать.  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Ширина в пикселях «создать».  
   
 ### <a name="remarks"></a>Примечания  
@@ -263,16 +263,16 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszItem1`  
+ [in] *lpszItem1*  
  Первая сравниваемая строка.  
   
- [in] `lpszItem2`  
+ [in] *lpszItem2*  
  Вторая сравниваемая строка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение, указывающее, с учетом регистра лексикографический связь между строками. В следующей таблице перечислены возможные значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |\<0|Первая строка имеет меньше, чем второй.|  
 |0|Первая строка равна второй.|  
@@ -306,10 +306,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно кнопки.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -326,13 +326,13 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно кнопки.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник новые поля ввода.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Поле ввода элемента управления новый стиль.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -351,13 +351,13 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс удаляемого элемента.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с удаляемого элемента.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст элемента для удаления. При наличии нескольких элементов с тем же текстом, удаляется первый элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -383,7 +383,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить поля редактирования и поле со списком; `FALSE` отключение поля редактирования и поля со списком.  
   
 ### <a name="remarks"></a>Примечания  
@@ -397,7 +397,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `menuButton`  
+ [out] *menuButton*  
  Ссылка на кнопки меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -411,7 +411,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст, который требуется найти в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -429,10 +429,10 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
- [in] `bIsFocus`  
+ [in] *bIsFocus*  
  `TRUE` для поиска только с фокусом ввода кнопок; `FALSE` для поиска всех кнопок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -482,7 +482,7 @@ static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -511,7 +511,7 @@ static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -550,7 +550,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -569,10 +569,10 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -589,7 +589,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -608,10 +608,10 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -630,10 +630,10 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -674,7 +674,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды кнопки поле указанные поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -728,7 +728,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hwnd`  
+ [in] *hwnd*  
  Дескриптор окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -765,7 +765,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  Сообщение уведомления, связанный с командой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -789,13 +789,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Контекст устройства, который отображает кнопки поля со списком.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  Размер по умолчанию, кнопки поля со списком.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Состояние закрепления панели инструментов родительского. `TRUE` Если панель закреплена горизонтально и `FALSE` при закрепления панели инструментов по вертикали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -809,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на новый родительский инструментов.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -822,10 +822,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на родительское окно кнопки поля со списком.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  Зарезервировано для использования в производном классе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -841,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Контекст устройства, который отображает кнопки поля со списком.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  Не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -869,28 +869,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Pdc`  
+ [in] *Основного контроллера домена*  
  Контекст устройства, который отображает кнопки.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник кнопки.  
   
- [in] `pImages`  
+ [in] *pImages*  
  Коллекция изображений, связанного с кнопкой.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Состояние закрепления панели инструментов родительского. `TRUE` Если панель закреплена горизонтально и `FALSE` при закрепления панели инструментов по вертикали.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  Является ли приложение в режим настройки.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Следует ли Рисование выделенной кнопкой поле со списком.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  Необходимость отображения кнопки поля со списком с границей.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` Чтобы нарисовать затененные отключенных кнопок; `FALSE` использовать отключенный образы в коллекции.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
@@ -904,13 +904,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Контекст устройства, который отображает кнопки поля со списком.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник, кнопки поля со списком.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` Если кнопка с полем со списком выбирается; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -938,7 +938,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  Следует ли скрывать или отображать кнопки поля со списком.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
@@ -949,7 +949,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iSize`  
+ [in] *iSize*  
  Новая ширина кнопки поля со списком.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
@@ -964,16 +964,16 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно для кнопки, поля со списком.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  Идентификатор кнопки поля со списком.  
   
- [in] `wndToolTip`  
+ [in] *wndToolTip*  
  Всплывающая подсказка для связи с помощью кнопки поля со списком.  
   
- [in] `str`  
+ [in] *str*  
  Текст подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1002,16 +1002,16 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
- [in] `bNotify`  
+ [in] *bNotify*  
  `TRUE` для уведомления кнопки поля со списком выбора; в противном случае `FALSE`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элементом в списке.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст элемента в поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1039,16 +1039,16 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды, кнопки поля со списком, которая содержит поле со списком.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке. Значение -1 снимает текущее выделение в поле со списком и очищает поля ввода.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные элемента в поле со списком.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст элемента в поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1064,7 +1064,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `ar`  
+ [in, out] *ar*  
  `CArchive` Объект для сериализации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1080,10 +1080,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Родительское окно кнопки поля со списком.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект `CAccessibilityData` объект, получающий данные специальных возможностей с помощью кнопки поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1097,7 +1097,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bCenterVert`  
+ [in] *bCenterVert*  
  `TRUE` Чтобы центрировать кнопки поля со списком на панели инструментов; `FALSE` выравнивание кнопки поля со списком в верхней части панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1111,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResID`  
+ [in] *uiResID*  
  Идентификатор контекстного меню ресурса.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1122,7 +1122,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHeight`  
+ [in] *nHeight*  
  Высота в пикселях списка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1136,7 +1136,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` для плоский внешний вид; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1150,7 +1150,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nStyle`  
+ [in] *nStyle*  
  Побитовое сочетание (OR) стили панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1164,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Указатель на строку, которая содержит текст для поля ввода.  
   
 ## <a name="see-also"></a>См. также  

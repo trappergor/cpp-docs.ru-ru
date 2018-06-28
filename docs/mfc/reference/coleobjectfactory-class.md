@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375941"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038213"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory-класс
 Реализует фабрику класса OLE, которая создает OLE-объекты, такие как серверы, объекты автоматизации и документы.  
@@ -66,13 +66,13 @@ class COleObjectFactory : public CCmdTarget
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleObjectFactory::COleObjectFactory](#coleobjectfactory)|Создает объект `COleObjectFactory`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleObjectFactory::GetClassID](#getclassid)|КОД объектов, создаваемых данной фабрикой класса возвращает OLE.|  
 |[COleObjectFactory::IsLicenseValid](#islicensevalid)|Определяет, является ли допустимым лицензии элемента управления.|  
@@ -87,7 +87,7 @@ class COleObjectFactory : public CCmdTarget
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleObjectFactory::GetLicenseKey](#getlicensekey)|Запрашивает уникальный ключ из библиотеки DLL элемента управления.|  
 |[COleObjectFactory::OnCreateObject](#oncreateobject)|Вызывается платформой для создания нового объекта типа для этой фабрики.|  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clsid`  
+ *Идентификатор CLSID*  
  Ссылка на идентификатор класса OLE, который представляет этот объект фабрики.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  Указатель на класс среды выполнения объектов C++, которые могут быть созданы данной фабрикой.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Указывает, является ли один экземпляр приложения может поддерживать несколько экземпляров. Если **TRUE**, запуск нескольких экземпляров приложения для каждого запроса для создания объекта.  
   
- `nFlags`  
+ *nFlags*  
  Содержит один или несколько из следующих флагов:  
   
 - **afxRegDefault** задает потоковую модель ThreadingModel = подразделения.  
   
 - **afxRegInsertable** позволяет элементу управления отображаются в **вставить объект** диалоговое окно для OLE-объекты.  
   
-- `afxRegApartmentThreading` Задает модель потоков в реестре, ThreadingModel = подразделения.  
+- **afxRegApartmentThreading** задает потоковую модель в реестре, ThreadingModel = подразделения.  
   
 - **afxRegFreeThreading** задает потоковую модель в реестре, ThreadingModel = Free.  
   
      Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` для задания ThreadingModel = Both. В разделе [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) в Windows SDK, Дополнительные сведения о потоковой модели регистрации.  
   
- `lpszProgID`  
+ *lpszProgID*  
  Указатель на строку, содержащую идентификатор устные программа, например «Microsoft Excel».  
   
 ### <a name="remarks"></a>Примечания  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в Windows SDK.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- Запрашивает уникальное лицензионный ключ из библиотеки DLL элемента управления и сохраняет его в `BSTR` , на который указывает `pbstrKey`.  
+ Запрашивает уникальное лицензионный ключ из библиотеки DLL элемента управления и сохраняет его в `BSTR` , на который указывает *pbstrKey*.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwReserved`  
+ *dwReserved*  
  Зарезервировано для будущего использования.  
   
- `pbstrKey`  
+ *pbstrKey*  
  Указатель на `BSTR` , будет хранить лицензионный ключ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszProgID`  
+ *lpszProgID*  
  Указатель на строку, содержащую идентификатор программы понятное, например «Excel.Document.5.»  
   
- `bRegister`  
+ *bЗарегистрируйтесь участия*  
  Определяет, является ли объект фабрики класса элемента управления должна быть зарегистрирована.  
   
 ### <a name="remarks"></a>Примечания  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **Функцию UpdateRegistry (** `lpszProgID` **)** регистрирует фабрику этот объект в системном реестре OLE. Эта функция обычно вызывается методом [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) при запуске приложения.  
   
-- **Функцию UpdateRegistry (** `bRegister` **)** является переопределяемым эту форму функции. Если `bRegister` — **TRUE**, эта функция регистрирует класс элемента управления в системном реестре. В противном случае — отменяет регистрацию класса.  
+- **Функцию UpdateRegistry (** `bRegister` **)** является переопределяемым эту форму функции. Если *bЗарегистрируйтесь участия* — **TRUE**, эта функция регистрирует класс элемента управления в системном реестре. В противном случае — отменяет регистрацию класса.  
   
      При использовании автоматически ActiveX MFC для создания проекта автоматически предоставляет переопределение, чтобы этот чистой виртуальной функции.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bRegister`  
+ *bЗарегистрируйтесь участия*  
  Определяет, является ли объект фабрики класса элемента управления должна быть зарегистрирована.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bstrKey`  
+ *bstrKey*  
  Объект `BSTR` хранения контейнера версию строки лицензии.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если лицензия времени выполнения является допустимым; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Версия по умолчанию вызывает [GetLicenseKey](#getlicensekey) для получения копии элемента управления по лицензии строку и сравнивает его со строки в `bstrKey`. Если две строки совпадают, функция возвращает ненулевое значение; в противном случае она возвращает 0.  
+ Версия по умолчанию вызывает [GetLicenseKey](#getlicensekey) для получения копии элемента управления по лицензии строку и сравнивает его со строкой в *bstrKey*. Если две строки совпадают, функция возвращает ненулевое значение; в противном случае она возвращает 0.  
   
  Можно переопределить эту функцию для проверки, пользовательские лицензии.  
   

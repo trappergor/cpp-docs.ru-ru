@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66bdd0cdf9e9c13ceac6eb01716ae8c859462524
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372380"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037308"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Класс CMFCColorPopupMenu
 Представляет контекстное меню, которая используется, чтобы выбрать цвета в документ или приложение.  
@@ -46,7 +46,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Создает объект `CMFCColorPopupMenu`.|  
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Деструктор.|  
   
@@ -54,7 +54,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Создает закрепляемую перемещаемые цветовую шкалу. (Переопределяет [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|  
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|  
 |`CMFCColorPopupMenu::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -64,7 +64,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
   
 |||  
 |-|-|  
-|name|Описание|  
+|name|Описание:|  
 |`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую шкалу.|  
 |`m_wndColorBar`|`CMFCColorBar` Объект, который предоставляет выбор цвета.|  
   
@@ -133,50 +133,50 @@ CMFCColorPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `colors`  
+ [in] *цвета*  
  Массив цветов, отображаемых структурой в контекстном меню.  
   
- [in] `color`  
+ [in] *цвет*  
  Значение по умолчанию выбранный цвет.  
   
- [in] `lpszAutoColor`  
+ [in] *lpszAutoColor*  
  Текстовая метка *автоматического* кнопку цвета (по умолчанию), или `NULL`.  
   
  Стандартная метки для кнопки автоматического **автоматического**.  
   
- [in] `lpszOtherColor`  
+ [in] *lpszOtherColor*  
  Текстовая метка *других* кнопку, которая отображает дополнительные параметры цветов, или `NULL`.  
   
  Метки стандартной кнопки выбора другого **Дополнительные цвета...** .  
   
- [in] `lpszDocColors`  
+ [in] *lpszDocColors*  
  Текстовая подпись кнопки цветов документа. Палитра цветов документа перечислены все цвета, которые в настоящее время используются.  
   
- [in] `lstDocColors`  
+ [in] *lstDocColors*  
  Список цветов, которые в настоящее время используются.  
   
- [in] `nColumns`  
+ [in] *nColumns*  
  Число столбцов, которые содержит массив цветов.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  Число строк, которые имеет цветовую шкалу, если она закреплена горизонтально.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  Число столбцов, которые цветовую шкалу при его закреплены по вертикали.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  Цвет по умолчанию платформа применяется при нажатии кнопки «автоматический».  
   
- [in] `uiCommandID`  
+ [in] *uiCommandID*  
  ИД команды управления цветовой шкалы.  
   
- [in] `bStdColorDlg`  
+ [in] *bStdColorDlg*  
  Логическое значение, указывающее, следует ли отображать диалоговое окно стандартный системный цвет или [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалоговое окно.  
   
- [in] `pParentBtn`  
+ [in] *pParentBtn*  
  Указатель на кнопку родительского.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор команды.  
   
 ### <a name="remarks"></a>Примечания  
@@ -201,10 +201,10 @@ virtual CPane* CreateTearOffBar(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWndMain`|Указатель на родительское окно перемещаемой панелью.|  
-|[in] `uiID`|Идентификатор команды перемещаемой панелью.|  
-|[in] `lpszName`|Текст окна перемещаемой панелью.|  
+|Параметр|Описание:|  
+|[in] *pWndMain*|Указатель на родительское окно перемещаемой панелью.|  
+|[in] *uiID*|Идентификатор команды перемещаемой панелью.|  
+|[in] *lpszName*|Текст окна перемещаемой панелью.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый объект строки перемещаемые управления.  
@@ -233,7 +233,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndList`  
+ [in] *pWndList*  
  Указатель на объект элемента управления сетки свойств.  
   
 ## <a name="see-also"></a>См. также  

@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f9006b78d90a26aa6d4a2ee2bbbb010241298e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13fa7aea135099a8e0903ef0fc5fd20ca0cca5ff
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378986"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039509"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 Обеспечивает поддержку изменению внешнего вида приложений на глобальном уровне. Класс `CMFCVisualManager` работает совместно с классом, предоставляющим инструкции по рисованию элементов управления графического интерфейса пользователя приложения с использованием последовательного стиля. Эти другие классы называются визуальными диспетчерами и наследуются от `CMFCBaseVisualManager`.  
@@ -372,17 +372,17 @@ ms.locfileid: "33378986"
 class CMFCVisualManager : public CMFCBaseVisualManager  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCVisualManager::CMFCVisualManager`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||  
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||  
@@ -650,7 +650,7 @@ CMFCVisualManager(BOOL bTemporary = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bTemporary`  
+ [in] *bTemporary*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -662,7 +662,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAutoDestroyOnly`  
+ [in] *bAutoDestroyOnly*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -678,10 +678,10 @@ void DoDrawHeaderSortArrow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsUp`  
- [in] `bDlgCtrl`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsUp*  
+ [in] *bDlgCtrl*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -697,9 +697,9 @@ virtual BOOL DrawComboBorderWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `BOOL`  
+ [in] *CDC**  
+ [in] *CRect*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -717,9 +717,9 @@ virtual BOOL DrawComboDropButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `BOOL`  
+ [in] *CDC**  
+ [in] *CRect*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -736,10 +736,10 @@ virtual BOOL DrawPushButtonWinXP(CDC*,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
- [in] `CRect`  
- [in] `CMFCButton*`  
- [in] `UINT`  
+ [in] *CDC**  
+ [in] *CRect*  
+ [in] *CMFCButton**  
+ [in] *UINT*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -759,12 +759,12 @@ virtual BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `strText`  
- [in] `rect`  
- [in] `dwFlags`  
- [in] `nGlowSize`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *strText*  
+ [in] *rect*  
+ [in] *dwFlags*  
+ [in] *nGlowSize*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -778,7 +778,7 @@ void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -790,11 +790,11 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку автоматического скрытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, определяющий цвет текста `pButton`.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, определяющий цвет текста *pButton*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить цвет текста кнопки автоматического скрытия в приложении. Чтобы сделать это, возвращают цвет, который требуется приложение для использования в качестве цвета текста.  
@@ -820,11 +820,11 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на заголовок окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в `pBar`.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в *pBar*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе позволяет настроить цвет текста для заголовка окна. В переопределенный метод возвращает нужный цвет.  
@@ -874,7 +874,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -928,9 +928,9 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
- [in] `bHighlighted`  
- [in] `bDisabled`  
+ [in] *pButton*  
+ [in] *bHighlighted*  
+ [in] *bDisabled*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -957,8 +957,8 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSmall`  
- Логический параметр, указывает ли `GetNcBtnSize` должен получить размер кнопки крупных или мелких системы. Если `bSmall` — `TRUE`, `GetNcBtnSize` возвращает размер кнопки небольшой системы. В противном случае он возвращает размер кнопки большой системы.  
+ [in] *bSmall*  
+ Логический параметр, указывает ли `GetNcBtnSize` должен получить размер кнопки крупных или мелких системы. Если *bSmall* — `TRUE`, `GetNcBtnSize` возвращает размер кнопки небольшой системы. В противном случае он возвращает размер кнопки большой системы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) параметр, который указывает размер кнопок системы.  
@@ -998,11 +998,11 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPropList`  
+ [in] *pPropList*  
  Указатель на список свойств, рисование платформу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет фона `pPropList`.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет фона *pPropList*.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы настроить цвет фона списка свойств в приложении.  
@@ -1015,7 +1015,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPropList`  
+ [in] *pPropList*  
  Указатель на список свойств.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1032,7 +1032,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pHyperLink`  
+ [in] *pHyperLink*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1046,7 +1046,7 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu*) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCRibbonPanelMenu*`  
+ [in] *CMFCRibbonPanelMenu**  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1082,7 +1082,7 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bDisabled`  
+ [in] *bDisabled*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1102,12 +1102,12 @@ virtual void GetRibbonSliderColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pSlider`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `bIsDisabled`  
- [in] `clrLine`  
- [in] `clrFill`  
+ [in] *pSlider*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
+ [in] *bIsDisabled*  
+ [in] *clrLine*  
+ [in] *clrFill*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1119,7 +1119,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1135,8 +1135,8 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `sizeDefault`  
+ [in] *основного контроллера домена*  
+ [in] *sizeDefault*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1152,8 +1152,8 @@ virtual void GetSmartDockingBaseGuideColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrBaseGroupBackground`  
- [in] `clrBaseGroupBorder`  
+ [in] *clrBaseGroupBackground*  
+ [in] *clrBaseGroupBorder*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1190,8 +1190,8 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pStatusBar`  
- [in] `pPane`  
+ [in] *pStatusBar*  
+ [in] *pPane*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1214,31 +1214,31 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на окно с вкладками, где рисует кадр вкладки.  
   
- [выходной] `clrDark`  
+ [out] *clrDark*  
  Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет Темная вкладки.  
   
- [выходной] `clrBlack`  
+ [out] *clrBlack*  
  Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет для границы окно вкладки. Цвет границы по умолчанию является black.  
   
- [выходной] `clrHighlight`  
+ [out] *clrHighlight*  
  Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет состояния выделения окно вкладки.  
   
- [выходной] `clrFace`  
+ [out] *clrFace*  
  Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет лицевой стороны окна вкладки.  
   
- [выходной] `clrDarkShadow`  
+ [out] *clrDarkShadow*  
  Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет тени окно вкладки.  
   
- [выходной] `clrLight`  
+ [out] *clrLight*  
  Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет света границы окна вкладки.  
   
- [выходной] `pbrFace`  
+ [out] *pbrFace*  
  Указатель на ссылку в качестве кисти. Этот метод сохраняет кисть, которая используется для заполнения лицевой стороны окна вкладки в этом параметре.  
   
- [выходной] `pbrBlack`  
+ [out] *pbrBlack*  
  Указатель на ссылку в качестве кисти. Этот метод сохраняет кисть, используемая для заполнения черным края окна вкладки в этом параметре.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1252,7 +1252,7 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCBaseTabCtrl*`  
+ [in] *CMFCBaseTabCtrl&#42;*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1269,9 +1269,9 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCBaseTabCtrl*`  
- [in] `int`  
- [in] `BOOL`  
+ [in] *CMFCBaseTabCtrl&#42;*  
+ [in] *int*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1386,14 +1386,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов.  
   
- [in] `state`  
+ [in] *состояния*  
  Состояние кнопки панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет текста `pButton` когда она имеет состояние, определяется `state`.  
+ Цвет текста *pButton* когда она имеет состояние, определяется *состояние*.  
   
 ### <a name="remarks"></a>Примечания  
  Цвет текста [CMFCToolBarButton класс](../../mfc/reference/cmfctoolbarbutton-class.md) объекта зависит от состояния кнопки. Возможные состояния кнопки панели инструментов `ButtonsIsRegular`, `ButtonsIsPressed`, или `ButtonsIsHighlighted`.  
@@ -1456,8 +1456,8 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `params`  
- [in] `nType`  
+ [in] *params*  
+ [in] *nType*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1492,7 +1492,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCDesktopAlertWndButton*`  
+ [in] *CMFCDesktopAlertWndButton**  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1668,7 +1668,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CMFCToolBar*`  
+ [in] *CMFCToolBar&#42;*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1695,8 +1695,8 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
- [in] `bActive`  
+ [in] *pWnd*  
+ [in] *bActive*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1712,22 +1712,22 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  Размер и расположение кнопки автоматического скрытия.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) параметр, содержащий размеры границ.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку автоматического скрытия. Платформа рисует границу для этой кнопки.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид границы кнопки автоматического скрытия. По умолчанию этот метод заполняет плоской границы цветом тени по умолчанию для вашего приложения.  
   
- `rectBorderSize` Параметр не содержит координаты границы. Он содержит размер границы в `top`, `bottom`, `left`, и `right` элементы данных. Значение меньше или равно 0 указывает на этой стороне кнопку автоматического скрытия без границы.  
+ *RectBorderSize* параметр не содержит координаты границы. Он содержит размер границы в `top`, `bottom`, `left`, и `right` элементы данных. Значение меньше или равно 0 указывает на этой стороне кнопку автоматического скрытия без границы.  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper  
  Вызывается платформой при рисовании захвата для панели элементов управления.  
@@ -1741,16 +1741,16 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для панели элементов управления.  
   
- [in] `rectGripper`  
+ [in] *rectGripper*  
  Ограничивающий прямоугольник для панели элементов управления.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Логический параметр, указывает ли панель элементов управления закреплена горизонтально или вертикально.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель элементов управления. Диспетчер визуальных рисует границу этой панели элементов управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1769,19 +1769,19 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки "Обзор".  
   
- [in] `pEdit`  
+ [in] *pEdit*  
  Указатель на элемент управления редактированием. Диспетчер визуальных Рисует кнопку обзора для этого элемента управления edit.  
   
- [in] `state`  
+ [in] *состояния*  
  Перечисляемое значение, указывающее состояние кнопки.  
   
- [выходной] `clrText`  
+ [out] *clrText*  
  Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Это значение является зарезервированным и в настоящее время не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1802,16 +1802,16 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства кнопки панели инструментов.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку панели инструментов. Платформа рисует границу этой кнопки.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки панели инструментов.  
   
- [in] `state`  
+ [in] *состояния*  
  Тип данных перечисления, указывающее текущее состояние кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1832,11 +1832,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
- [in] `bHorz`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *состояния*  
+ [in] *bHorz*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1853,19 +1853,19 @@ virtual void OnDrawCaptionBarBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на объект `CMFCCaptionBar`. Платформа рисует этого заголовка окна.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы заголовка окна.  
   
- [in] `clrBarBorder`  
+ [in] *clrBarBorder*  
  Цвет границы.  
   
- [in] `bFlatBorder`  
+ [in] *bFlatBorder*  
  Логический параметр, указывающее, имеет ли границы плоский, 2D вид.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1887,14 +1887,14 @@ virtual void OnDrawCaptionBarButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
- [in] `bIsDisabled`  
- [in] `bHasDropDownArrow`  
- [in] `bIsSysButton`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rect*  
+ [in] *bIsPressed*  
+ [in] *bIsHighlighted*  
+ [in] *bIsDisabled*  
+ [in] *bHasDropDownArrow*  
+ [in] *bIsSysButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1909,9 +1909,9 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1930,26 +1930,26 @@ virtual void OnDrawCaptionButton (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на объект `CMFCCaptionButton`. Платформа рисует этой кнопки заголовка.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Логический параметр, указывает ли кнопка активна.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Логический параметр, указывает, является ли заголовок горизонтальной.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Логический параметр, указывает ли оно развернуто в родительской области.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Логический параметр, указывает, отключена ли кнопки заголовка.  
   
- [in] `nImageID`  
- Индекс изображения, значок, используемый для кнопки. Если `nImageID` равно -1, этот метод использует индекс образа записываются в `pButton`.  
+ [in] *nImageID*  
+ Индекс изображения, значок, используемый для кнопки. Если *nImageID* равно -1, этот метод использует индекс образа записываются в *pButton*.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию этого метода отображение Маленькая кнопка с глобальный экземпляр класса `CMenuImages` класса. Кнопки, перечислены в файле заголовка для `CMenuImages`. Некоторые примеры `CMenuImages::IdClose`, `CMenuImages::IdArowLeft`, `CMenuImages::IdArowRight`, `CMenuImages::IdArowDown`, `CMenuImages::IdArowUp`, и `CMenuImages::IdPinHorz`.  
@@ -1969,11 +1969,11 @@ virtual void OnDrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bHighlighted`  
- [in] `bChecked`  
- [in] `bEnabled`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bHighlighted*  
+ [in] *bChecked*  
+ [in] *bEnabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1991,12 +1991,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `nState`  
- [in] `bHighlighted`  
- [in] `bPressed`  
- [in] `bEnabled`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *nState*  
+ [in] *bHighlighted*  
+ [in] *bPressed*  
+ [in] *bEnabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2014,22 +2014,22 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства, кнопки поля со списком.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки поля со списком.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Логический параметр, указывает ли кнопка полю со списком.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Логический параметр, указывает, удаляется ли поле со списком.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли кнопка полю со списком.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на объект `CMFCToolBarComboBoxButton`. Платформа рисует этой кнопки поля со списком.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2049,22 +2049,22 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки «drop».  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Логический параметр, указывает ли кнопка «drop» недоступна.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  Логический параметр, указывает, удаляется ли поле со списком.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли кнопка удаления.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на объект `CMFCToolBarComboBoxButton`. Платформа Рисует кнопку удаления для этой кнопки поля со списком.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2078,7 +2078,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2095,19 +2095,19 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Прямоугольник, который определяет границы изображения по умолчанию.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логический параметр, указывает ли эта кнопка на ленте.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает, нажата ли кнопка ленты.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли эта кнопка на ленте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2126,19 +2126,19 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы `CMFCToolBarEditBoxButton` объекта.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Логический параметр, указывает, является ли эта кнопка будет недоступна.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли кнопки.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на объект `CMFCToolBarEditBoxButton`. Платформа рисует границу этой кнопки поле редактирования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2156,10 +2156,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsOpened`  
- [in] `colorBox`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bIsOpened*  
+ [in] *colorBox*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2175,22 +2175,22 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pToolBar`  
+ [in] *pToolBar*  
  Указатель на панель инструментов с плавающей запятой.  
   
- [in] `rectBorder`  
+ [in] *rectBorder*  
  Прямоугольник, который определяет границы панели инструментов с плавающей запятой.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  Прямоугольник, который определяет размер границы панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
  Плавающую панель инструментов — это панель инструментов, которая отображается в виде окна области. Как правило это происходит, когда пользователь перетаскивает панели инструментов, чтобы он больше не закреплен.  
   
- Размер границы задается с соответствующим параметром `rectBorderSize`. Например, Ширина верхней границы панели инструментов определяется `rectBorderSize.top`.  
+ Задаваемый размер границы соответствующего параметра в *rectBorderSize*. Например, Ширина верхней границы панели инструментов определяется `rectBorderSize.top`.  
   
  Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида границы плавающую панель инструментов.  
   
@@ -2207,19 +2207,19 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCtrl`  
+ [in] *pCtrl*  
  Указатель на объект `CMFCHeaderCtrl`. Платформа рисует границу данного заголовка элемента управления.  
   
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который задает границы элемента управления заголовка.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает, нажата ли заголовок элемента управления.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли заголовок элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2237,20 +2237,20 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCtrl`  
+ [in] *pCtrl*  
  Указатель на элемент управления заголовком. Диспетчер визуальных Рисует стрелку сортировки этого [CMFCHeaderCtrl класс](../../mfc/reference/cmfcheaderctrl-class.md) объекта.  
   
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы стрелку сортировки.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  Логическое значение, указывающее направление стрелки сортировки.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bIsUp` — `TRUE`, наглядный диспетчер рисует сортировки со стрелкой вверх. Если это `FALSE`, наглядный диспетчер Рисует стрелку сортировки. Переопределить `OnDrawHeaderCtrlSortArrow` в производном классе, чтобы настроить внешний вид кнопки сортировки.  
+ Если *bIsUp* — `TRUE`, наглядный диспетчер рисует сортировки со стрелкой вверх. Если это `FALSE`, наглядный диспетчер Рисует стрелку сортировки. Переопределить `OnDrawHeaderCtrlSortArrow` в производном классе, чтобы настроить внешний вид кнопки сортировки.  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
 
@@ -2263,9 +2263,9 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectCommand`  
- [in] `bSelected`  
+ [in] *основного контроллера домена*  
+ [in] *rectCommand*  
+ [in] *bSelected*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2280,13 +2280,13 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCPopupMenu` объекта.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель на объект `CMFCPopupMenu`. Платформа рисует границу вокруг этого всплывающего меню.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы всплывающего меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2305,11 +2305,11 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `bHighlight`  
- [in] `bIsRadio`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *bHighlight*  
+ [in] *bIsRadio*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2326,11 +2326,11 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rectButton`  
- [in] `bHighlight`  
- [in] `bDisabled`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rectButton*  
+ [in] *bHighlight*  
+ [in] *bDisabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2344,8 +2344,8 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2362,9 +2362,9 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `nResizeFlags`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *nResizeFlags*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2382,22 +2382,22 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки прокрутки.  
   
- [in] `bIsScrollDown`  
+ [in] *bIsScrollDown*  
  Логическое значение, указывающее, какой тип кнопки рисует диспетчер визуального представления. Значение `TRUE` указывает наглядный диспетчер Рисует кнопку вниз.  
   
- [in] `bIsHighlited`  
+ [in] *bIsHighlited*  
  Логическое значение, указывающее, выделяется ли кнопки.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логическое значение, указывающее, является ли кнопка нажата.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логическое значение, указывающее, является ли кнопка отключена.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2420,15 +2420,15 @@ virtual void OnDrawMenuShadow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `rectExclude`  
- [in] `nDepth`  
- [in] `iMinBrightness`  
- [in] `iMaxBrightness`  
- [in] `pBmpSaveBottom`  
- [in] `pBmpSaveRight`  
- [in] `bRTL`  
+ [in] *основного контроллера домена*  
+ [in] *rectClient*  
+ [in] *rectExclude*  
+ [in] *nDepth*  
+ [in] *iMinBrightness*  
+ [in] *iMaxBrightness*  
+ [in] *pBmpSaveBottom*  
+ [in] *pBmpSaveRight*  
+ [in] *bRTL*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2445,19 +2445,19 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки.  
   
- [in] `uiSystemCommand`  
+ [in] *uiSystemCommand*  
  Флаг, указывающий, какие команды системы связан с помощью кнопки. Возможные значения: SC_CLOSE, SC_MINIMIZE и SC_RESTORE.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Флаг, указывающий текущий стиль кнопки. Возможные значения: TBBS_PRESSED, TBBS_DISABLED и 0.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  Логический параметр, указывает, выделяется ли кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2477,10 +2477,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pFrameWnd`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in] *основного контроллера домена*  
+ [in] *pFrameWnd*  
+ [in] *rectBorder*  
+ [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2494,10 +2494,10 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectSplitter`  
+ [in] *rectSplitter*  
  Прямоугольник, который определяет границы разделителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2515,16 +2515,16 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectBtn`  
+ [in] *rectBtn*  
  Прямоугольник, который определяет границы кнопки страницы Outlook.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логическое значение, указывающее, выделяется ли кнопки.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логическое значение, указывающее, является ли кнопка нажата.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2541,13 +2541,13 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства панели элементов управления.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель. Диспетчер визуальных рисует границу этой панели.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, определяющий границы области.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2566,19 +2566,19 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на объект `CDockablePane`. Платформа рисует заголовок для этой области.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Логический параметр, указывает, активен ли панель элементов управления.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Прямоугольник, который определяет границы заголовка.  
   
- [in] `rectButtons`  
+ [in] *rectButtons*  
  Прямоугольник, который определяет границы кнопки заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2599,10 +2599,10 @@ virtual void OnDrawPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pSlider`  
- [in] `rect`  
- [in] `bAutoHideMode`  
+ [in] *основного контроллера домена*  
+ [in] *pSlider*  
+ [in] *rect*  
+ [in] *bAutoHideMode*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2616,8 +2616,8 @@ virtual void OnDrawPopupWindowBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2632,9 +2632,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2649,9 +2649,9 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pPopupWnd`  
+ [in] *основного контроллера домена*  
+ [in] *rectCaption*  
+ [in] *pPopupWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2667,10 +2667,10 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на **главной кнопки** на ленте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2686,10 +2686,10 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) объекта. Платформа рисует границу, эта кнопка на ленте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2706,13 +2706,13 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pGroup`  
+ [in] *pGroup*  
  Указатель на группу на ленте. Платформа рисует эту группу кнопок.  
   
- [in] `rectGroup`  
+ [in] *rectGroup*  
  Прямоугольник, который определяет границы группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2733,16 +2733,16 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель ленты. Диспетчер визуальных рисует этой панели ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы панели ленты.  
   
- [in] `rectText`  
+ [in] *rectText*  
  Прямоугольник, который определяет границы для текста заголовка окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2758,10 +2758,10 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства.  
   
- `pButton`  
+ *pButton*  
  Указатель на `CMFCRibbonCaptionButton` класса. Платформа рисует этой кнопки заголовка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2778,13 +2778,13 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pCategory`  
+ [in] *pCategory*  
  Указатель на объект `CMFCRibbonCategory`. Платформа рисует эту категорию ленты.  
   
- [in] `rectCategory`  
+ [in] *rectCategory*  
  Прямоугольник, который определяет границы всех панелей категории на ленте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2802,10 +2802,10 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Графический контекст.  
   
- [in] `pContextCaption`  
+ [in] *pContextCaption*  
  Указатель на заголовок окна. Диспетчер визуальных рисует этот [CMFCRibbonContextCaption класс](../../mfc/reference/cmfcribboncontextcaption-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2824,8 +2824,8 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pScroll`  
+ [in] *основного контроллера домена*  
+ [in] *pScroll*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2840,13 +2840,13 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pTab`  
+ [in] *pTab*  
  Указатель на экземпляр `CMFCRibbonTab` класса. Платформа рисует на этой вкладке.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  Параметр типа Boolean, указывающее, активна ли вкладка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2868,11 +2868,11 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pCheckBox`  
- [in] `rect`  
- [in] `bIsSelected`  
- [in] `bHighlighted`  
+ [in] *основного контроллера домена*  
+ [in] *pCheckBox*  
+ [in] *rect*  
+ [in] *bIsSelected*  
+ [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2894,16 +2894,16 @@ virtual void OnDrawRibbonColorPaletteBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pColorButton`  
- [in] `pIcon`  
- [in] `color`  
- [in] `rect`  
- [in] `bDrawTopEdge`  
- [in] `bDrawBottomEdge`  
- [in] `bIsHighlighted`  
- [in] `bIsChecked`  
- [in] `bIsDisabled`  
+ [in] *основного контроллера домена*  
+ [in] *pColorButton*  
+ [in] *pIcon*  
+ [in] *цвет*  
+ [in] *rect*  
+ [in] *bDrawTopEdge*  
+ [in] *bDrawBottomEdge*  
+ [in] *bIsHighlighted*  
+ [in] *bIsChecked*  
+ [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2917,10 +2917,10 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку по умолчанию для панели ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2938,8 +2938,8 @@ virtual void OnDrawRibbonDefaultPaneButtonContext(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2956,11 +2956,11 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `bIsSelected`  
- [in] `bHighlighted`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *bIsSelected*  
+ [in] *bHighlighted*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2975,9 +2975,9 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rectBorder`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rectBorder*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2991,8 +2991,8 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3008,10 +3008,10 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pElement`  
- [in] `rect`  
- [in] `str`  
+ [in] *основного контроллера домена*  
+ [in] *pElement*  
+ [in] *rect*  
+ [in] *str*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3026,13 +3026,13 @@ virtual void OnDrawRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pLabel`  
+ [in] *pLabel*  
  Указатель на [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) объекта. Платформа рисует эта метка ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы панели ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3048,10 +3048,10 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на `CMFCRibbonButton` в основной панели ленты. Платформа рисует границу для этой кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3068,13 +3068,13 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на `CMFCRibbonMainPanel`.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы `CMFCRibbonMainPanel`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3091,9 +3091,9 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *pButton*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3109,16 +3109,16 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на объект `CMFCRibbonPanel`. Платформа рисует этой панели ленты.  
   
- [in] `rectPanel`  
+ [in] *rectPanel*  
  Прямоугольник, который определяет границы панели.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Прямоугольник, который определяет границы для панели заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3138,13 +3138,13 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на объект `CMFCRibbonPanel`. Платформа рисует заголовок для этой панели ленты.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Прямоугольник, который определяет границы заголовка панели ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3163,19 +3163,19 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pProgress`  
+ [in] *pProgress*  
  Указатель на объект `CMFCRibbonProgressBar`. Платформа рисует индикатора.  
   
- [in] `rectProgress`  
+ [in] *rectProgress*  
  Прямоугольник, который определяет границы индикатора хода выполнения.  
   
- [in] `rectChunk`  
+ [in] *rectChunk*  
  Прямоугольник, который определяет границы области, окружающей индикатор выполнения.  
   
- [in] `bInfiniteMode`  
+ [in] *bInfiniteMode*  
  Логический параметр, указывающий режим индикатора хода выполнения. Значение `TRUE` означает панель находится в режиме бесконечного. Реализация по умолчанию этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3192,13 +3192,13 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSeparator`  
+ [in] *pSeparator*  
  Указатель на [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) объекта. Платформа рисует этот разделитель ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы разделителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3215,13 +3215,13 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на **Main** панели на ленте.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы рамки для списка недавно открывавшихся файлов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3238,13 +3238,13 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Указатель на объект CMFCRibbonSlider. Платформа рисует канал для данного ползунка ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы для канала "ползунок" ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3264,22 +3264,22 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Указатель на `CMFCRibbonSlider`. Платформа рисует бегунка этот ползунок ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы бегунка "ползунок" ленты.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, если выделяется бегунка.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает, при нажатии элемента thumb.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логический параметр, указывает, является ли бегунок недоступен.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3300,25 +3300,25 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSlider`  
+ [in] *pSlider*  
  Указатель на объект `CMFCRibbonSlider`. Платформа рисует этот ползунок ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки масштабирования на ползунке ленты.  
   
- [in] `bIsZoomOut`  
+ [in] *bIsZoomOut*  
  Рисует платформа логического параметра, который указывает, какая кнопка. Значение `TRUE` показывает левая кнопка с «-» для уменьшения. Значение `FALSE` указывает правой кнопки с «+» для увеличения.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли кнопки.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает ли кнопка нажата.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логический параметр, указывает, является ли эта кнопка будет недоступна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3335,13 +3335,13 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель, содержащий области строки состояния.  
   
- [in] `pPane`  
+ [in] *pPane*  
  Указатель на панели строки состояния. Платформа рисует этот [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3361,13 +3361,13 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства.  
   
- `pWndRibbonBar`  
+ *pWndRibbonBar*  
  Указатель на [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) объекта. Платформа рисует кадр этой панели ленты.  
   
- `rectTab`  
+ *rectTab*  
  Прямоугольник, который определяет границы вкладок на ленте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3389,11 +3389,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `nBorderSize`  
- [in] `iImage`  
- [in] `bHilited`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *nBorderSize*  
+ [in] *iImage*  
+ [in] *bHilited*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3409,16 +3409,16 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для панели элементов управления.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на область, содержащая разделитель.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы разделителя.  
   
- [in] `bIsHoriz`  
+ [in] *bIsHoriz*  
  Логический параметр, указывающий ориентацию закрепленной панели. Значение `TRUE` указывает, что панель закреплена горизонтально. Значение `FALSE` указывает, что области закреплен по вертикали.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3435,9 +3435,9 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `state`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *состояния*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3454,23 +3454,23 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectSpin`  
+ [in] *rectSpin*  
  Прямоугольник, который задает границы элемента управления "Счетчик".  
   
- [in] `nState`  
+ [in] *nState*  
  Флаг, указывающий состояние элемента управления "Счетчик". Дополнительные сведения см. в разделе "Примечания".  
   
- [in] `bOrientation`  
+ [in] *bOrientation*  
  Логический параметр, задает ориентацию элемента управления "Счетчик". Значение `TRUE` показывает элемент управления "Счетчик" горизонтальной. В противном случае он является вертикальным.  
   
- [in] `pSpinCtrl`  
+ [in] *pSpinCtrl*  
  Указатель на элемент управления "Счетчик". Платформа рисует кнопки для этого элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
- `nState` Указывает состояние элемента управления "Счетчик". Параметр принадлежит к одному из следующих значений:  
+ *NState* указывает состояние элемента управления "Счетчик". Параметр принадлежит к одному из следующих значений:  
   
 -   AFX_SPIN_PRESSEDUP  
   
@@ -3495,13 +3495,13 @@ virtual void OnDrawSplitterBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSplitterWnd`  
+ [in] *pSplitterWnd*  
  Указатель на окно-разделитель. Платформа рисует границу для этого окна.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы окна-разделителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3518,13 +3518,13 @@ virtual void OnDrawSplitterBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSplitterWnd`  
+ [in] *pSplitterWnd*  
  Указатель на окно-разделитель. Платформа рисует флажок для этого окна-разделителя.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы окна-разделителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3543,19 +3543,19 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на объект `CMFCStatusBar`. Платформа рисует этот объект строки состояния.  
   
- [in] `rectPane`  
+ [in] *rectPane*  
  Прямоугольник, который определяет границы строки состояния.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор строки состояния.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Стиль строки состояния.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3578,31 +3578,31 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для строки состояния.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  `CMFCStatusBar` Объект, который содержит индикатор выполнения.  
   
- [in] `rectProgress`  
+ [in] *rectProgress*  
  Прямоугольник, который определяет границы индикатора хода выполнения.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  Общее количество для индикатора хода выполнения.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  Текущий ход выполнения для индикатора.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет индикатора хода выполнения. Значение является либо градиентной начала или завершения цвет индикатора хода выполнения.  
   
- [in] `clrProgressBarDest`  
- Объект `COLORREF` параметр, который указывает конец цветового градиента для индикатора. Если `clrProgressBarDest` равно -1, платформа не рисует индикатор как цветового градиента. Вместо этого он заполняет весь индикатор цвет, определенный параметром `clrBar`.  
+ [in] *clrProgressBarDest*  
+ Объект `COLORREF` параметр, который указывает конец цветового градиента для индикатора. Если *clrProgressBarDest* равно -1, платформа не рисует индикатор как цветового градиента. Вместо этого он заполняет весь индикатор цвет, определенный параметром *clrBar*.  
   
- [in] `clrProgressText`  
- Объект `COLORREF` параметр, указывающий цвет текста для текстовое представление текущего хода выполнения. Этот параметр учитывается, если `bProgressText` равно `FALSE`.  
+ [in] *clrProgressText*  
+ Объект `COLORREF` параметр, указывающий цвет текста для текстовое представление текущего хода выполнения. Этот параметр учитывается, если *bProgressText* равно `FALSE`.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  Логический параметр, указывает, следует ли отображать текстовое представление текущего хода выполнения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3619,13 +3619,13 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pStatBar`  
+ [in] *pStatBar*  
  Указатель на строку состояния. Платформа Рисует поле размер для данной строки состояния.  
   
- [in] `rectSizeBox`  
+ [in] *rectSizeBox*  
  Прямоугольник, который определяет границы прямоугольника размер.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3644,19 +3644,19 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectTab`  
+ [in] *rectTab*  
  Прямоугольник, который задает границы элемента управления tab.  
   
- [in] `iTab`  
+ [in] *iTab*  
  Индекс вкладки, которая рисует платформу.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  Логический параметр, указывает, активна ли вкладка.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на объект `CMFCBaseTabCtrl`. Платформа рисует этот набор вкладок.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3678,26 +3678,26 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы **закрыть** кнопки.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на элемент управления вкладки. Рисует платформа **закрыть** кнопки для этого элемента управления tab.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает ли **закрыть** выделенной кнопки.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает ли **закрыть** нажатии кнопки.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логический параметр, указывает ли **закрыть** кнопка отключена.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном Диспетчер визуальных для настройки внешнего вида **закрыть** кнопки на вкладке active `pTabWnd`.  
+ Переопределите этот метод в производном Диспетчер визуальных для настройки внешнего вида **закрыть** кнопки на вкладке active *pTabWnd*.  
   
 ##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent  
  Этот метод вызывается платформой при рисовании содержимое на внутреннюю часть экземпляра [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md).  
@@ -3713,22 +3713,22 @@ virtual void OnDrawTabContent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectTab`  
+ [in] *rectTab*  
  Прямоугольник, который определяет границы внутреннюю вкладку.  
   
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки. Платформа рисует внутренней части этой вкладки.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  Логический параметр, указывает, активна ли вкладка.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель элементов управления с вкладками, содержащий отрисовывается вкладки.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Цвет текста на внутреннюю часть вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3747,19 +3747,19 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки «вкладка».  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCButton](../../mfc/reference/cmfcbutton-class.md) объекта. Платформа рисует границу для данного `CMFCButton` экземпляра.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Целое число без знака, указывающее состояние кнопки.  
   
- [in] `pWndTab`  
+ [in] *pWndTab*  
  Указатель на родительское окно вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3778,23 +3778,23 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pTask`  
+ [in] *pTask*  
  Указатель на [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) объекта. Платформа рисует этой задачи.  
   
- [in] `pIcons`  
+ [in] *pIcons*  
  Указатель на список изображений, связанных с областью задач. Каждая задача содержит индекс изображения в этом списке.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли отображаемых задач.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Логический параметр, указывает, выбран ли отображаемых задач.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа отображает задачи на панели задач как значок и текст. `pIcons` Параметр содержит значок для задачи, обозначенном `pTask`.  
+ Платформа отображает задачи на панели задач как значок и текст. *PIcons* параметр содержит значок для задачи, обозначенном *pTask*.  
   
  Переопределите этот метод в производном классе, чтобы настроить внешний вид задачи на панели задач.  
   
@@ -3810,16 +3810,16 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы области группы в области задач.  
   
- [in] `bSpecial`  
+ [in] *bSpecial*  
  Логический параметр, указывает, если границы будет выделен. Значение `TRUE` указывает, что выделен границы.  
   
- [in] `bNoTitle`  
+ [in] *bNoTitle*  
  Логический параметр, указывающее, содержит ли заголовок в области группы. Значение `TRUE` указывает, что в области группы не имеет заголовка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3838,19 +3838,19 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pGroup`  
+ [in] *pGroup*  
  Указатель на объект `CMFCTasksPaneTaskGroup`. Платформа рисует заголовок для этой группы.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли группы.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Логический параметр, указывает ли в данный момент выбрана группа.  
   
- [in] `bCanCollapse`  
+ [in] *bCanCollapse*  
  Логический параметр, указывает, могут ли быть свернуты группы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3872,12 +3872,12 @@ virtual void OnDrawTasksGroupIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pGroup`  
- [in] `nIconHOffset`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
- [in] `bCanCollapse`  
+ [in] *основного контроллера домена*  
+ [in] *pGroup*  
+ [in] *nIconHOffset*  
+ [in] *bIsHighlighted*  
+ [in] *bIsSelected*  
+ [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3892,13 +3892,13 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы заголовка.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  `TRUE` Если заголовок является активным; `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
@@ -3916,8 +3916,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3931,10 +3931,10 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Прямоугольник, который определяет границы клиентской области MDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -3954,9 +3954,9 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *основного контроллера домена*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -3971,17 +3971,17 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы области вкладок.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на окно вкладки. Платформа стирает области вкладок для указанной вкладки окна.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывается платформой при [класса CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта процессов `WM_PAINT` сообщение и удаляет области вкладок.  
+ Эта функция вызывается платформой при [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md) объект сообщения WM_PAINT и удаляет области вкладок.  
   
  Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида вкладок.  
   
@@ -3997,20 +3997,20 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки «вкладка».  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку tab. Платформа удаляет текст и значок для этой кнопки.  
   
- [in] `pWndTab`  
+ [in] *pWndTab*  
  Указатель вкладок, содержащую кнопку tab.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа удаляет текст и значок для кнопки при [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта процессов `WM_ERASEBKGND` сообщения.  
+ Платформа удаляет текст и значок для кнопки при [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта во время обработки сообщения WM_ERASEBKGND.  
   
  Переопределите этот метод в производном visual manager для настройки внешнего вида кнопок вкладки.  
   
@@ -4025,20 +4025,20 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы окно вкладки.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на окно вкладки. Платформа стирает кадр для данного `CMFCBaseTabCtrl`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если метод выполнен успешно; `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод заполняет область обозначается `rect` цветом фона активной вкладки. Он вызывается, когда `CMFCBaseTabCtrl` объекта процессов `WM_PAINT` сообщение и удаляет вкладку кадра.  
+ Этот метод заполняет область обозначается *rect* цветом фона активной вкладки. Он вызывается, когда `CMFCBaseTabCtrl` объект сообщения WM_PAINT и удаляет вкладку кадра.  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManager::OnFillAutoHideButtonBackground  
  Этот метод вызывается платформой при заливке фона кнопки автоматического скрытия.  
@@ -4051,13 +4051,13 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки автоматического скрытия.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объекта. Платформа заливке фона кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4076,19 +4076,19 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для панели элементов управления.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на объект `CBasePane`. Платформа заливке фона в этой области.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Прямоугольник, который определяет границы области.  
   
- [in] `rectClip`  
+ [in] *rectClip*  
  Прямоугольник, который указывает поле области обрезки.  
   
- [in] `bNCArea`  
+ [in] *bNCArea*  
  Зарезервированное значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4111,16 +4111,16 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства кнопки панели инструментов.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Платформа заливке фона для этой кнопки.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки панели инструментов.  
   
- [in] `state`  
+ [in] *состояния*  
  Состояние кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4144,14 +4144,14 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
- [in] `bIsDisabled`  
- [in] `bHasDropDownArrow`  
- [in] `bIsSysButton`  
+ [in] *основного контроллера домена*  
+ [in] *pBar*  
+ [in] *rect*  
+ [in] *bIsPressed*  
+ [in] *bIsHighlighted*  
+ [in] *bIsDisabled*  
+ [in] *bHasDropDownArrow*  
+ [in] *bIsSysButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -4168,13 +4168,13 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Логический параметр, указывающее, выбран ли кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4194,13 +4194,13 @@ virtual void OnFillHeaderCtrlBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCtrl`  
+ [in] *pCtrl*  
  Указатель на [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Платформа заливке фона для этого заголовка элемента управления.  
   
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который задает границы элемента управления заголовка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4218,16 +4218,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Прямоугольник, который определяет границы заголовка окна.  
   
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Указатель на окно мини-рамки. Платформа рисует заголовок для этого окна.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Логический параметр, указывает, является ли активного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4247,13 +4247,13 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectCaption`  
+ [in] *rectCaption*  
  Прямоугольник, который определяет границы заголовка окна.  
   
- [выходной] `clrText`  
+ [out] *clrText*  
  Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Метод записывает цвет текста в строке заголовка для данного параметра.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4272,19 +4272,19 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы кнопки страницы Outlook.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли кнопки.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  Логический параметр, указывает ли кнопка нажата.  
   
- [выходной] `clrText`  
+ [out] *clrText*  
  Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра. Этот метод сохраняет цвет текста кнопки outlook страницы в этом параметре.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4300,10 +4300,10 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы всплывающего окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4319,14 +4319,14 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) объекта. Платформа заполняет внутреннюю часть этой кнопки на ленте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет текста для кнопки ленты, определяемое `pButton` Если эта кнопка на ленте поддерживает текст. Значение -1, если недопустимый текст для кнопки ленты.  
+ Цвет текста для кнопки ленты, определяемое *pButton* Если эта кнопка на ленте поддерживает текст. Значение -1, если недопустимый текст для кнопки ленты.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном visual manager для настройки внешнего вида кнопок ленты.  
@@ -4348,35 +4348,35 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pEdit`  
+ [in] *pEdit*  
  Указатель на объект `CMFCRibbonRichEditCtrl`. Платформа заполняет внутреннюю часть данного элемента управления edit.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который задает границы элемента управления.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  Логический параметр, указывает, выделяется ли элемент управления для редактирования.  
   
- [in] `bIsPaneHighlighted`  
+ [in] *bIsPaneHighlighted*  
  Логический параметр, указывает, выделяется ли в родительской области.  
   
- [in] `bIsDisabled`  
+ [in] *bIsDisabled*  
  Логический параметр, указывает ли элемент управления для редактирования.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Ссылка на цвет текста элемента управления.  
   
- [in] `clrSelBackground`  
+ [in] *clrSelBackground*  
  Ссылка на цвет фона элемента управления, когда он выделен.  
   
- [in] `clrSelText`  
+ [in] *clrSelText*  
  Ссылка на цвет выделенного текста в поле редактирования.  
   
 ### <a name="remarks"></a>Примечания  
- `CMFCRibbonRichEditCtrl` Обозначается `pEdit` может быть частью кнопки поля со списком на ленте.  
+ `CMFCRibbonRichEditCtrl` Обозначается *pEdit* может быть частью кнопки поля со списком на ленте.  
   
  Переопределите этот метод в производном Диспетчер визуальных для настройки внешнего вида `CMFCRibbonRichEditCtrl`.  
   
@@ -4390,14 +4390,14 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [класс CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) объекта. Платформа заполняет эту кнопку ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет текста для кнопки ленты, определяемое `pButton` Если эта кнопка на ленте поддерживает текст. Значение -1, если недопустимый текст для кнопки ленты.  
+ Цвет текста для кнопки ленты, определяемое *pButton* Если эта кнопка на ленте поддерживает текст. Значение -1, если недопустимый текст для кнопки ленты.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном Диспетчер визуальных для настройки внешнего вида кнопки ленты на **Main** панель.  
@@ -4413,13 +4413,13 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на экземпляр [CMFCRibbonMainPanel класса](../../mfc/reference/cmfcribbonmainpanel-class.md). Автоматически заполняются кадра меню для этой панели ленты.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы рамки меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4436,9 +4436,9 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `pMenuBar`  
- [in] `rect`  
+ [in] *основного контроллера домена*  
+ [in] *pMenuBar*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -4453,13 +4453,13 @@ virtual void OnFillSplitterBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pSplitterWnd`  
+ [in] *pSplitterWnd*  
  Указатель на экземпляр [CSplitterWndEx класса](csplitterwndex-class.md). Автоматически заполняются фона для окна-разделителя.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы окна-разделителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4479,22 +4479,22 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectFill`  
+ [in] *rectFill*  
  Прямоугольник, который определяет границы окно вкладки.  
   
- [in] `pbrFill`  
+ [in] *pbrFill*  
  Указатель кисти. Платформа использует этой кисти для заливки окно вкладки.  
   
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки, для которого автоматически заполняются фона.  
   
- [in] `bIsActive`  
+ [in] *bIsActive*  
  `TRUE` Если активна вкладка; в противном случае `FALSE`.  
   
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на родительский элемент управления вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4511,13 +4511,13 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы группы задач.  
   
- [in] `bSpecial`  
+ [in] *bSpecial*  
  Логическое значение, указывающее, заполняется ли внутреннюю специальные цветом.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4533,10 +4533,10 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectWorkArea`  
+ [in] *rectWorkArea*  
  Прямоугольник, который определяет границы области задач.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4554,22 +4554,22 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для меню.  
   
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) отображаемого объекта. Реализация по умолчанию этот параметр не используется.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник, который определяет границы данного элемента меню.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Текущий цвет текста пунктов меню выделенный. Реализация по умолчанию этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод не использует параметры `pButton` или `clrText`. Он заполняет прямоугольник, задаваемый параметром `rect` стандартные цвета.  
+ Реализация по умолчанию этот метод не использует параметры *pButton* или *clrText*. Он заполняет прямоугольник, задаваемый параметром *rect* стандартные цвета.  
   
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида элементов выделенного меню. Используйте `clrText` параметр, чтобы изменить цвет текста выделенного пункта меню.  
+ Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида элементов выделенного меню. Используйте *clrText* параметр, чтобы изменить цвет текста выделенного пункта меню.  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
  Этот метод вызывается платформой при рисовании выделенного меню команду.  
@@ -4581,10 +4581,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectRarelyUsed`  
+ [in] *rectRarelyUsed*  
  Прямоугольник, который определяет границы выделенной команды.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4600,8 +4600,8 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
- [in] `bActive`  
+ [in] *pWnd*  
+ [in] *bActive*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -4618,13 +4618,13 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на окно которого неклиентскую область, платформа строит.  
   
- [in] `lstSysButtons`  
+ [in] *lstSysButtons*  
  Список системных клавиш. Они также известны как кнопки заголовка.  
   
- [in] `rectRedraw`  
+ [in] *rectRedraw*  
  Прямоугольник, который определяет границы неклиентской области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4643,10 +4643,10 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на окно с регионом, изменен.  
   
- [in] `sizeWindow`  
+ [in] *sizeWindow*  
  Размер окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -4663,7 +4663,7 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой как часть обработки `WM_SYSCOLORCHANGE` сообщения. Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
+ Платформа вызывает этот метод как часть обработки сообщений WM_SYSCOLORCHANGE. Реализация по умолчанию не выполняет никаких действий. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
   
 ##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll  
  Немедленно перерисовывает все панели элементов управления в приложении.  
@@ -4680,7 +4680,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -4694,7 +4694,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRTI`  
+ [in] *pRTI*  
  Указатель на данные времени выполнения для наглядный диспетчер.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4710,7 +4710,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEmboss`  
+ [in] *bEmboss*  
  Логический параметр, указывает, следует ли включить выступающая режим для отключена изображениям значков панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4724,7 +4724,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bFade`  
+ [in] *bFade*  
  Логический параметр, указывает, следует ли включить эффект освещения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4738,7 +4738,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMenuFlatLook`  
+ [in] *bMenuFlatLook*  
  Логический параметр, указывает, отображаются ли кнопки меню плоскими.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4752,7 +4752,7 @@ void SetMenuShadowDepth(int nDepth);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nDepth`  
+ [in] *nDepth*  
  Целое число, указывающее глубину меню тени в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
@@ -4766,7 +4766,7 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShadow`  
+ [in] *bShadow*  
  Логический параметр, указывающее, отображает ли наглядный диспетчер тень под выделенной изображениями.  
   
 ### <a name="remarks"></a>Примечания  

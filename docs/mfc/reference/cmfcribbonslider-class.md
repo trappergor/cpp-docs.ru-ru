@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372701"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037733"
 ---
 # <a name="cmfcribbonslider-class"></a>Класс CMFCRibbonSlider
 `CMFCRibbonSlider` Класс реализует элемент управления "ползунок", который можно добавить на панель ленты или строки состояния ленты. Элемент управления "ползунок" ленты напоминает ползунки масштаба, отображаемые в приложениях Office 2007.  
@@ -60,13 +60,13 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonSlider::CMFCRibbonSlider](#cmfcribbonslider)|Создает и инициализирует элемент управления "ползунок" ленты.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonSlider::GetPos](#getpos)|Возвращает текущую позицию элемента управления "ползунок".|  
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Возвращает максимальное значение ползунка.|  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор ползунок.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  Ползунок ширина в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Создает ползунок ленты, `nWidth` пикселей в ширину в категории панели, куда добавляется ползунок. По умолчанию ползунка горизонтальной.  
+ Создает ползунок ленты, *nWidth* пикселей в ширину в категории панели, куда добавляется ползунок. По умолчанию ползунка горизонтальной.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  Возвращает текущую позицию элемента управления "ползунок".  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nPos`  
+ [in] *nPos*  
  Задает положение должно быть задано для ползунка. Позиция является относительно начала ползунка.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  Если `TRUE`, перерисовывается ползунок.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nMin`  
+ [in] *nMin*  
  Указывает минимальное значение элемента управления "ползунок".  
   
- [in] `nMax`  
+ [in] *nMax*  
  Указывает максимальное значение элемента управления "ползунок".  
   
 ### <a name="remarks"></a>Примечания  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` для отображения кнопок масштаба; `FALSE` Чтобы скрыть их.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  Задает шаг масштабирования элемента управления "ползунок".  
   
 ## <a name="see-also"></a>См. также  

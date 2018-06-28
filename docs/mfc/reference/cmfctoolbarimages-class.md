@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d837ec17623887eb63b49810066937fcd4bf5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34c364357ad14db2cd0ebc53e2a9cdcd5455f5ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377941"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042135"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 Изображения, на панели инструментов. `CMFCToolBarImages` Класс управляет инструментов изображения, загруженные из ресурсов приложения или из файлов.  
@@ -170,13 +170,13 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Создает объект `CMFCToolBarImages`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||  
 |[CMFCToolBarImages::AddIcon](#addicon)|Добавляет значок изображениям значков панели инструментов.|  
@@ -245,13 +245,13 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` Если альфа-truecolor смешение (32-разрядный цвет) отключена.|  
   
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrBase`  
- [in] `clrTone`  
+ [in] *clrBase*  
+ [in] *clrTone*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -297,10 +297,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значка для добавления.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` Если этот значок используется с альфа-смешение; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -320,16 +320,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hbmp`  
+ [in] *hbmp*  
  Дескриптор к растровому изображению для добавления.  
   
- [in] `bSetBitPerPixel`  
+ [in] *bSetBitPerPixel*  
  `TRUE` Если `CMFCToolBarImages` объект использует глубину цвета (в битах на пиксель) нового изображения. `FALSE` Если `CMFCToolbarImages` сохраняет текущую глубину цвета.  
   
- [in] `imageList`  
+ [in] *imageList*  
  Ссылку на `CMFCToolbarImages` объект, содержащий изображение для добавления.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс в источнике `CMFCToolbarImages` объекта изображения для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -369,7 +369,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -383,7 +383,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `imageList`  
+ [in] *imageList*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -397,7 +397,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `imageList`  
+ [in] *imageList*  
  Список изображений для использования в качестве источника для изображений на панели инструментов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bmp`  
- [in] `clrTransparent`  
+ [in] *bmp*  
+ [in] *clrTransparent*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -431,7 +431,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iImage`  
+ [in] *iImage*  
  Задает отсчитываемый от нуля индекс образа для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -455,34 +455,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `x`  
+ [in] *x*  
  Координата X левой стороны прямоугольника, в которой должен отображаться изображение.  
   
- [in] `y`  
+ [in] *y*  
  Координата Y верхней стороны прямоугольника, в которой должен отображаться изображение.  
   
- [in] `iImageIndex`  
+ [in] *iImageIndex*  
  Отсчитываемый от нуля индекс отображаемого изображения.  
   
- [in] `bHilite`  
+ [in] *bHilite*  
  `TRUE` Если изображение выделяться; в противном случае `FALSE`.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  `TRUE` Если изображение для отображения в стиле отключено; в противном случае `FALSE`.  
   
- [in] `bIndeterminate`  
+ [in] *bIndeterminate*  
  `TRUE` Если изображение в неопределенном состоянии стиль; в противном случае `FALSE`.  
   
- [in] `bShadow`  
+ [in] *bShadow*  
  `TRUE` Если изображение для отображения с тенью; в противном случае `FALSE`.  
   
- [in] `bInactive`  
+ [in] *bInactive*  
  `TRUE` Если изображение для отображения в неактивном состоянии стиль; в противном случае `FALSE`.  
   
- [in] `alphaSrc`  
+ [in] *alphaSrc*  
  Значение альфа-канала (прозрачности). Значение 255 означает изображение формируемого непрозрачный. Значение 0 означает изображение рисуется прозрачным. Это значение используется только для 32-разрядный цвет изображения, а также для изображений, отображаемых стиля стекла Windows Vista.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -506,15 +506,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `iImageIndex`  
- [in] `horzAlign`  
- [in] `vertAlign`  
- [in] `rectSrc`  
- [in] `0`  
- [in] `0)`  
- [in] `alphaSrc`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *iImageIndex*  
+ [in] *horzAlign*  
+ [in] *vertAlign*  
+ [in] *rectSrc*  
+ [in] *0*  
+ [in] *0)*  
+ [in] *alphaSrc*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -528,7 +528,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -540,7 +540,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ds`  
+ [in] *доменных служб Active Directory*  
  Ссылку на `CAfxDrawState` объект, который был передан в `PrepareDrawImage` метод.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
@@ -551,11 +551,11 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс в списке изображений, по которому находится изображение извлекается в виде значка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значок извлеченного дескриптор или `NULL` Если `nIndex` выходит за пределы диапазона.  
+ Значок извлеченного дескриптор или `NULL` Если *nIndex* выходит за пределы диапазона.  
   
 ##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  Заполняет прямоугольник с цветами фона панели инструментов.  
@@ -567,10 +567,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Координаты прямоугольника для заливки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -629,7 +629,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bDest`  
+ [in] *bDest*  
  `TRUE` Для получения размера назначения; `FALSE` для получения исходный размер изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -705,7 +705,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -719,7 +719,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResId`  
+ [in] *uiResId*  
  Идентификатор ресурса изображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -744,14 +744,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGrayImageLuminancePercentage`  
+ [in] *nGrayImageLuminancePercentage*  
  Процент яркости.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если серым цветом изображения в коллекции были успешно. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод изменяет изображениям значков панели инструментов, вычисление среднего значения красного, зеленого и синего компонентов каждого пикселя и умножением на `nGrayImageLuminancePercentage` делится на 100. Если `nGrayImageLuminancePercentage` равно нулю или отрицательное значение, значение по умолчанию 130 вместо него используется.  
+ Этот метод изменяет изображениям значков панели инструментов, вычисление среднего значения красного, зеленого и синего компонентов каждого пикселя и умножением на *nGrayImageLuminancePercentage* делится на 100. Если *nGrayImageLuminancePercentage* равно нулю или отрицательное значение, значение по умолчанию 130 вместо него используется.  
   
 > [!NOTE]
 >  Если вы хотите отменить изменения, необходимо перезагрузить изображений из источника. Это можно сделать, вызвав [CMFCToolBarImages::Load](#load) или [CMFCToolBarImages::UpdateImage](#updateimage) (только для пользовательских образов), или путем вызова [CMFCToolBarImages::Clear](#clear)и добавление изображений снова путем вызова [CMFCToolBarImages::AddIcon](#addicon) или [CMFCToolBarImages::AddImage](#addimage).  
@@ -844,19 +844,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResID`  
+ [in] *uiResID*  
  Идентификатор ресурса точечного рисунка.  
   
- [in] `hinstRes`  
+ [in] *hinstRes*  
  Экземпляр ресурса библиотеки DLL.  
   
- [in] `bAdd`  
+ [in] *bAdd*  
  `TRUE` Добавление существующего точечного рисунка, загрузить точечный рисунок или `FALSE` для замены существующего точечного рисунка.  
   
- [in] `lpszBmpFileName`  
+ [in] *lpszBmpFileName*  
  Путь к файлу диска загрузки растрового изображения.  
   
- [in] `nMaxFileSize`  
+ [in] *nMaxFileSize*  
  Максимальное число байтов в файле битовой карты. или 0, чтобы загрузить точечный рисунок, независимо от размера файла. Если размер файла превышает этот предел, метод возвращает `FALSE` и не загружает точечный рисунок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -876,9 +876,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszResourceName`  
- [in] `hinstRes`  
- [in] `bAdd`  
+ [in] *lpszResourceName*  
+ [in] *hinstRes*  
+ [in] *bAdd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *цвет*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -912,9 +912,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bUseRGBQUAD`  
- [in] `clrSrc`  
- [in] `clrDest`  
+ [in] *bUseRGBQUAD*  
+ [in] *clrSrc*  
+ [in] *clrDest*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *цвет*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -945,7 +945,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -974,10 +974,10 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `hbmp`  
+ [in, out] *hbmp*  
  Дескриптор точечного рисунка для зеркального отображения.  
   
- [in] `cxImage`  
+ [in] *cxImage*  
  Ширина изображения в пикселях.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hbmp`  
- [in] `cyImage`  
+ [in] *hbmp*  
+ [in] *cyImage*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hbmp`  
- [in] `bAutoCheckPremlt`  
+ [in] *hbmp*  
+ [in] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1066,13 +1066,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ds`  
+ [in] *доменных служб Active Directory*  
  Ссылку на `CAfxDrawState` структуру, которая хранит выделенные ресурсы между этапами подготовки образа.  
   
- [in] `sizeImageDest`  
+ [in] *sizeImageDest*  
  Указывает размер изображения назначения.  
   
- [in] `bFadeInactive`  
+ [in] *bFadeInactive*  
  `TRUE` Если требуется неактивные потеря изображения для отрисовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1089,14 +1089,14 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszBmpFileName`  
+ *lpszBmpFileName*  
  Путь к файлу диска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` Если успешно; сохранены изображениям значков панели инструментов в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для хранения пользовательских образов в файл на диске. Если `lpszBmpFileName` — `NULL`, метод сохраняет точечный рисунок в файл, из которого был загружен точечного рисунка по [CMFCToolBarImages::Load](#load) метод.  
+ Этот метод используется для хранения пользовательских образов в файл на диске. Если *lpszBmpFileName* — `NULL`, метод сохраняет точечный рисунок в файл, из которого был загружен точечного рисунка по [CMFCToolBarImages::Load](#load) метод.  
   
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
@@ -1106,7 +1106,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAlwaysLight`  
+ [in] *bAlwaysLight*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1118,7 +1118,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nValue`  
+ [in] *nValue*  
  Новое значение альфа-канала.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1132,7 +1132,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nValue`  
+ [in] *nValue*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1146,7 +1146,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `sizeImage`  
+ [in] *sizeImage*  
  Новый размер изображений на панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1160,7 +1160,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nValue`  
+ [in] *nValue*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1172,7 +1172,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMapTo3DColors`  
+ [in] *bMapTo3DColors*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1184,7 +1184,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAuto`  
+ [in] *кнопкой мыши*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1205,14 +1205,14 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  RGB-значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущие прозрачный цвет.  
   
 ### <a name="remarks"></a>Примечания  
- При вызове или платформа [CMFCToolBarImages::Draw](#draw), метод не пиксель любой, соответствующий цвет, определенный параметром `clrTransparent`.  
+ При вызове или платформа [CMFCToolBarImages::Draw](#draw), метод не пиксель любой, соответствующий цвет, определенный параметром *clrTransparent*.  
   
 ##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  Обновляет образ пользовательских панелей инструментов из растрового изображения.  
@@ -1224,10 +1224,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iImage`  
+ [in] *iImage*  
  Отсчитываемый от нуля индекс образа для обновления.  
   
- [in] `hbmp`  
+ [in] *hbmp*  
  Дескриптор к растровому изображению, из которого необходимо обновить образ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1241,7 +1241,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clrTransparent`  
+ *clrTransparent*  
  Указывает прозрачный цвет подчеркнутое точечных рисунков.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1290,7 +1290,7 @@ BOOL SmoothResize(double dblImageScale);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblImageScale`  
+ *dblImageScale*  
  Коэффициент масштабирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

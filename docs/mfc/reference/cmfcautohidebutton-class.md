@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375315"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038303"
 ---
 # <a name="cmfcautohidebutton-class"></a>Класс CMFCAutoHideButton
 Кнопка, отображающая или скрывающая [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) , настроенный на скрытие.  
@@ -77,11 +77,11 @@ ms.locfileid: "33375315"
 class CMFCAutoHideButton : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||  
 |[CMFCAutoHideButton::Create](#create)|Создает и инициализирует кнопку автоматического скрытия.|  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  Указатель на панель инструментов родительского.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Указатель на [CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. Эта кнопка автоматического скрытия скрывает и показывает, что `CDockablePane`.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Значение, указывающее выравнивание кнопки с фрейма главного окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Примечания  
  При создании `CMFCAutoHideButton` объекта кнопки автоматического скрытия необходимо связать с определенным `CDockablePane`. Пользователь может использовать кнопки автоматического скрытия, чтобы скрыть или отобразить связанный `CDockablePane`.  
   
- Параметр `dwAlignment` указывает, где в приложении находится кнопка автоматического скрытия. Параметру может быть присвоено одно из следующих значений:  
+ *DwAlignment* параметр указывает, где находится кнопка автоматического скрытия в приложении. Параметру может быть присвоено одно из следующих значений:  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  Ограничивающий прямоугольник кнопки автоматического скрытия.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  Толщина границы для каждой стороны кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  Логическое значение, указывающее, отображает ли этот метод прикрепленное `CDockablePane`.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  Логическое значение, указывающее, следует ли отображать кнопки автоматического скрытия.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  Указатель на первую строку в группе.  
   
 ### <a name="remarks"></a>Примечания  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bHighlight`  
+ *bHighlight*  
  Указывает новое Автоскрытие состояние кнопки. `TRUE` Указывает, выделяется кнопки, `FALSE` указывает кнопки не выделяется.  
   
 ### <a name="remarks"></a>Примечания  

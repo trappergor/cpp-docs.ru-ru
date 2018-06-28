@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369054"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038507"
 ---
 # <a name="cjumplist-class"></a>Класс CJumpList
 Объект `CJumpList` список ярлыков, отображаемый при щелчке правой кнопкой мыши значок в панели задач.  
@@ -66,12 +66,12 @@ class CJumpList;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CJumpList::CJumpList](#cjumplist)|Создает объект `CJumpList`.|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|Уничтожает объект `CJumpList`.|  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|Прерывает выполнение транзакции построение списка без фиксации.|  
 |[CJumpList::AddDestination](#adddestination)|Перегружен. Добавляет в список назначения.|  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  Задает имя категории. Если указанная категория не существует, он будет создан.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  Указывает путь к файлу назначения.  
   
- `strCategoryName`  
+ *strCategoryName*  
  Задает имя категории. Если указанная категория не существует, он будет создан.  
   
- `pShellItem`  
+ *pShellItem*  
  Указывает элемент оболочки, представляющий добавляемый назначения.  
   
- `pShellLink`  
+ *pShellLink*  
  Указывает ссылку оболочки, представляющий добавляемый назначения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `category`  
+ *category*  
  Указывает тип известной категории. Может быть как `KDC_RECENT`, или `KDC_KNOWN`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  Указывает путь к целевой задачи.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  Задает аргументы командной строки, заданные strTargetExecutablePath исполняемого файла.  
   
- `strTitle`  
+ *strTitle*  
  Имя задачи, которое будет отображаться в списке.  
   
- `strIconLocation`  
+ *strIconLocation*  
  Расположение значка, который будет отображаться в целевом списке, а также заголовок.  
   
- `iIconIndex`  
+ *iIconIndex*  
  Индекс значка.  
   
- `pShellLink`  
+ *pShellLink*  
  Оболочка ссылку, которая представляет задачу, которую нужно добавить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pObjectCollection`  
+ *pObjectCollection*  
  Коллекция задачи для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAutoCommit`  
+ *bAutoCommit*  
  Если этот параметр имеет значение FALSE список автоматически не зафиксированные в деструктор.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strAppID`  
+ *strAppID*  
  Строка, задающая идентификатор модели пользователя приложения.  
   
 ## <a name="see-also"></a>См. также  

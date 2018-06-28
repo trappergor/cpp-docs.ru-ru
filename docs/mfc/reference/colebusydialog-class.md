@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374374"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040916"
 ---
 # <a name="colebusydialog-class"></a>Класс COleBusyDialog
 Используется для диалоговых окон OLE "Сервер не отвечает" или "Сервер занят".  
@@ -40,24 +40,24 @@ ms.locfileid: "33374374"
 class COleBusyDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleBusyDialog::COleBusyDialog](#colebusydialog)|Создает объект `COleBusyDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleBusyDialog::DoModal](#domodal)|Отображает диалоговое окно OLE, сервер занят.|  
 |[COleBusyDialog::GetSelectionType](#getselectiontype)|Определяет, выбранных в диалоговом окне.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleBusyDialog::m_bz](#m_bz)|Структура типа **OLEUIBUSY** , управляет поведением окна.|  
   
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  Если **TRUE**, вместо диалоговым окном, сервер занят вызывает диалоговое окно не отвечает. Текст в диалоговом окне не отвечает немного отличается от формулировки в диалоговом окне, сервер занят и будет отключена кнопка "Отмена".  
   
- `dwFlags`  
+ *dwFlags*  
  Создание флага. Может содержать ноль или более из следующих значений в сочетании с помощью оператора побитового или:  
   
 - **BZ_DISABLECANCELBUTTON** отключить кнопку "Отмена", при вызове диалоговым окном.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** отключить кнопку "Повторить", при вызове диалоговое окно.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  

@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dbb6df911f0594b106f7b069a97b1fd6590c737
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378685"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042268"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Класс является базовым классом для всех элементов, которые могут быть добавлены к [панель ленты](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.  
@@ -268,7 +268,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Добавляет массив Ключевые подсказки keytip для элемента ленты.|  
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Добавляет элемент ленты в список команд указанной ленты.|  
@@ -384,7 +384,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Вызывается платформой, когда пользователь нажимает сочетание клавиш.|  
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Вызывается платформой, когда элемент ленты Получает или теряет фокус ввода.|  
@@ -423,7 +423,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `arElems`  
+ [in] *arElems*  
  Ссылка на [CArray](../../mfc/reference/carray-class.md) из Ключевые подсказки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -439,10 +439,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Указатель на поле со списком команд.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -529,7 +529,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
  Источник [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -555,19 +555,19 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `type`  
+ [in] *тип*  
  Значение перечисления тип изображения. Список возможных значений см.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Прямоугольник изображения.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод в производном классе для рисования изображения для элемента ленты.  
   
- В следующей таблице перечислены возможные значения для `type` параметр:  
+ В следующей таблице перечислены возможные значения для *тип* параметр:  
   
  `RibbonImageLarge`  
  Большой размер изображения 32 x 32 пикселя.  
@@ -583,11 +583,11 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на элемент ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты Если `pElement` указывает на текущий объект; в противном случае `NULL`.  
+ Указатель на элемент ленты Если *pElement* указывает на текущий объект; в противном случае `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -599,7 +599,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -615,7 +615,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды для элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -631,7 +631,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Указатель на элемент ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -648,7 +648,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -698,7 +698,7 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `arElements`  
+ [in, out] *arElements*  
  Массив элементов ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -713,10 +713,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды элемента ленты.  
   
- [in] `arElements`  
+ [in] *arElements*  
  Массив элементов ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -761,7 +761,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -787,10 +787,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Если для элемента ленты отображаются во всплывающем меню. в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -807,7 +807,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -825,7 +825,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `RibbonElementLocation` перечислимое значение. В следующей таблице перечислены возможные значения.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|Элемент ленты не входит в группу ленты.|  
 |`RibbonElementSingleInGroup`|Как только элемент в группу ленты отображается элемент ленты.|  
@@ -965,7 +965,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -984,7 +984,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1083,7 +1083,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1126,7 +1126,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nDelay`  
+ [in] *nDelay*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1378,7 +1378,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bWithDelay`  
+ [in] *bWithDelay*  
  `TRUE` для добавления команды уведомления к очереди сообщений родительского окна. `FALSE` для немедленной отправки сообщения в родительское окно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1394,7 +1394,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс элемента ленты в списке.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1407,7 +1407,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `qat`  
+ [in] *qat*  
  Панель быстрого доступа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1423,7 +1423,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1450,7 +1450,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1465,10 +1465,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPanelMenuBar`  
+ [in] *pPanelMenuBar*  
  Этот параметр не используется.  
   
- [in] `pHot`  
+ [in] *pHot*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1482,7 +1482,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1499,13 +1499,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник для клавишную подсказку.  
   
- [in] `bIsMenu`  
+ [in] *bIsMenu*  
  `TRUE` Если клавишную подсказку для кнопки всплывающего меню; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1520,10 +1520,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник для изображения меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1545,22 +1545,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для элемента ленты.  
   
- [in] `strText`  
+ [in] *strText*  
  Отображаемый текст.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Расстояние в пикселях с левой стороны от списка для отображения текста.  
   
- [in] `rect`  
+ [in] *rect*  
  Отображаемый прямоугольник для элемента ленты.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Этот параметр не используется.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1574,7 +1574,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Если значение свойства keytip отображаются во всплывающем меню. в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1590,7 +1590,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nUpperChar`  
+ [in] *nUpperChar*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1607,7 +1607,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nChar`  
+ [in] *nChar*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1624,7 +1624,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1648,7 +1648,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1672,7 +1672,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1698,10 +1698,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Родительское окно для элемента ленты.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1718,13 +1718,13 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bCompactMode`  
+ [in] *bCompactMode*  
  `TRUE` Чтобы уменьшить отображаемый размер элемента ленты. `FALSE` чтобы увеличить отображаемый размер элемента ленты.  
   
 ### <a name="remarks"></a>Примечания  
  В следующей таблице перечислены логику для этого метода.  
   
-|`bCompactMode`|Текущий размер элемента ленты|Новый размер элемента ленты|  
+|*bCompactMode*|Текущий размер элемента ленты|Новый размер элемента ленты|  
 |--------------------|---------------------------------|-----------------------------|  
 |`TRUE`|Compact|Без изменений.|  
 |`TRUE`|Intermediate|Сжатие, если это возможно.|  
@@ -1739,7 +1739,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Значение данных.  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1750,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsDefaultMenuLook`  
+ [in] *bIsDefaultMenuLook*  
  `TRUE` задать элемент ленты в виде всплывающих команды; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1763,7 +1763,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Описание для элемента ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1777,7 +1777,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор команды.  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1788,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOneRow`  
+ [in] *bOneRow*  
  `TRUE` Чтобы ограничить размер изображения для элемента ленты сжать или промежуточного; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1804,10 +1804,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Keytip для элемента ленты.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Keytip для контекстного меню элемента ленты.  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1818,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pOriginal`  
+ [in] *pOriginal*  
  Указатель на элемент ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1832,7 +1832,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Указатель на категорию ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1846,7 +1846,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Его родительском меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1859,7 +1859,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Указатель на панель ленты родительского.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1872,7 +1872,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Размеры прямоугольника.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1885,11 +1885,11 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст и клавишную подсказку для элемента ленты.  
   
 ### <a name="remarks"></a>Примечания  
- Для установки keytip для элемента ленты, добавьте escape-последовательность новой строки, следуют символы keytip `lpszText`.  
+ Для установки keytip для элемента ленты, добавьте escape-последовательность новой строки, следуют символы keytip *lpszText*.  
   
 ### <a name="example"></a>Пример  
   
@@ -1910,7 +1910,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` для отображения текста в правой части; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1923,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст всплывающей подсказки.  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1934,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` для отображения элемента ленты; `FALSE` для скрытия элемента ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1959,10 +1959,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Этот параметр не используется.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  Высота строки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

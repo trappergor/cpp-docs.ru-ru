@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369106"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041140"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 Управляет таблицами клавиш быстрого доступа для окна главного и дочерних фреймов.  
@@ -62,14 +62,14 @@ class CKeyboardManager : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Создает объект `CKeyboardManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CKeyboardManager::CleanUp](#cleanup)|Очистка таблиц ключа ярлык.|  
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Получает сочетание клавиш по умолчанию для указанной команды и окна.|  
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Определяет, обрабатывается ли ключ в таблице сочетаний клавиш.|  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  Идентификатор команды.  
   
- [выходной] `str`  
+ [out] *str*  
  Ссылка на объект `CString`.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  Указатель на фрейм окна.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  Указывает, является ли окно фрейма окна фрейма по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если найден ярлык; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод выполняет поиск команду, указанную параметром `uiCmd` и получает сочетание клавиш по умолчанию. Затем этот метод принимает строку, связанную с этого сочетания клавиш и записывает значение `str` параметра.  
+ Этот метод выполняет поиск команду, указанную параметром *uiCmd* и получает сочетание клавиш по умолчанию. Затем этот метод принимает строку, связанную с этого сочетания клавиш и записывает значение *str* параметра.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  Определяет, обрабатывается ли указанный ключ [CKeyboardManager класса](../../mfc/reference/ckeyboardmanager-class.md).  
@@ -167,17 +167,17 @@ static BOOL __stdcall IsKeyHandled(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `nKey`|Проверяемый ключ.|  
-|[in] `fVirt`|Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
-|[in] `pWndFrame`|Окна фрейма. Этот метод определяет, обрабатывается ли сочетания клавиш в этом кадре.|  
-|[in] `bIsDefaultFrame`|Логический параметр, указывает ли `pWndFrame` – окно рамки по умолчанию.|  
+|Параметр|Описание:|  
+|[in] *nKey*|Проверяемый ключ.|  
+|[in] *fVirt*|Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *pWndFrame*|Окна фрейма. Этот метод определяет, обрабатывается ли сочетания клавиш в этом кадре.|  
+|[in] *bIsDefaultFrame*|Логический параметр, указывает ли *pWndFrame* – окно рамки по умолчанию.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если сочетание клавиш обрабатывается. `FALSE` Если ключ еще не обработаны или `pWndFrame` — `NULL`.  
+ `TRUE` Если сочетание клавиш обрабатывается. `FALSE` Если ключ еще не обработаны или *pWndFrame* — `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Входные параметры должна совпадать с записью в таблице сочетаний клавиш как для `nKey` и `fVirt` для определения того, обрабатывается ли сочетания клавиш в `pWndFrame`.  
+ Входные параметры должна совпадать с записью в таблице сочетаний клавиш как для *nKey* и *fVirt* для определения того, обрабатывается ли сочетания клавиш в *pWndFrame*.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  Указывает, является ли символ печати.  
@@ -190,8 +190,8 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `nChar`|Символ, который проверяет, этот метод.|  
+|Параметр|Описание:|  
+|[in] *nChar*|Символ, который проверяет, этот метод.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если печатный символ, нуль, если это не так.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Путь реестра где `CKeyboardManager` данные сохраняются.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Указатель на окно фрейма для использования в качестве окна по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если состояние, к которому был успешно загружен или 0 в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Если `lpszProfileName` параметр `NULL`, этот метод выполняет проверку реестра по умолчанию для `CKeyboardManager` данных. Расположение реестра по умолчанию указывается [CWinAppEx класс](../../mfc/reference/cwinappex-class.md). Данные должны записываться ранее с помощью метода [CKeyboardManager::SaveState](#savestate).  
+ Если *lpszProfileName* параметр `NULL`, этот метод выполняет проверку реестра по умолчанию для `CKeyboardManager` данных. Расположение реестра по умолчанию указывается [CWinAppEx класс](../../mfc/reference/cwinappex-class.md). Данные должны записываться ранее с помощью метода [CKeyboardManager::SaveState](#savestate).  
   
  Если окна по умолчанию не указан, будет использоваться фрейма главного окна приложения.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Путь реестра для сохранения `CKeyboardManager` состояния.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Указатель на окно фрейма, который становится окна по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если диспетчер состояния клавиатуры был сохранен успешно, или 0 в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Если `lpszProfileName` параметр `NULL`, этот метод осуществляет запись `CKeyboardManager` состояние по умолчанию местоположении, заданном свойством [CWinAppEx класс](../../mfc/reference/cwinappex-class.md). Если расположение указано, можно загрузить данные позже с помощью метода [CKeyboardManager::LoadState](#loadstate).  
+ Если *lpszProfileName* параметр `NULL`, этот метод осуществляет запись `CKeyboardManager` состояние по умолчанию местоположении, заданном свойством [CWinAppEx класс](../../mfc/reference/cwinappex-class.md). Если расположение указано, можно загрузить данные позже с помощью метода [CKeyboardManager::LoadState](#loadstate).  
   
  Если окна по умолчанию не задан, как окна по умолчанию будет использоваться фрейма главного окна.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  Если `true`, отображаются все сочетания клавиш. Если `false`, будет отображаться только первый сочетание клавиш.  
   
- [in] `lpszDelimiter`  
+ [in] *lpszDelimiter*  
  Строка, вставляемая между сочетания клавиш. Этот разделитель имеет смысл, если только одно сочетание клавиш отображаться.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию Если команда имеет более одного сочетание клавиш, связанное с ним, только первый ключ ярлык будет отображен. Эта функция позволяет перечислять все сочетания клавиш, связанных с все команды.  
   
- Рядом с командой в строке меню будут перечислены сочетания клавиш. Если отображаются все сочетания клавиш, строки, предоставляемые `lpszDelimiter` между отдельными сочетания клавиш.  
+ Рядом с командой в строке меню будут перечислены сочетания клавиш. Если отображаются все сочетания клавиш, строки, предоставляемые *lpszDelimiter* между отдельными сочетания клавиш.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  Преобразует символ в его верхний регистр.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nChar`  
+ [in] *nChar*  
  Символ для преобразования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  Указатель на шаблон документа.  
   
- [in] `lpAccel`  
+ [in] *lpAccel*  
  Указатель на новое сочетание клавиш.  
   
- [in] `nSize`  
+ [in] *nSize*  
  Размер в новую таблицу ярлык.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  Указатель на фрейм окна по умолчанию.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  Дескриптор в новую таблицу ярлык.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370862"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039801"
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
 Реализует разделителя ленты.  
@@ -54,14 +54,14 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Создает объект `CMFCRibbonSeparator`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** списка в **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|  
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonSeparator::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -70,7 +70,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Метод копирования, который задает разделитель элементов переменные из другого объекта.|  
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Возвращает размер разделителя.|  
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Указывает, является ли разделитель.|  
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndListBox`  
+ [in] *pWndListBox*  
  Указатель на **команды** списка, куда добавляется разделителя.  
   
- [in] `bDeep`  
+ [in] *bDeep*  
  Не обрабатывается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс строки, в поле со списком, определяемое `pWndListBox`.  
+ Отсчитываемый от нуля индекс строки, в поле со списком, определяемое *pWndListBox*.  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  Создает объект `CMFCRibbonSeparator`.  
@@ -130,7 +130,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsHoriz`  
+ [in] *bIsHoriz*  
  Если `TRUE`, горизонтальный разделитель; Если `FALSE`, вертикальный разделитель.  
   
 ### <a name="remarks"></a>Примечания  
@@ -149,7 +149,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `Src`  
+ [in] *Src*  
  Исходный элемент ленты для копирования из.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
@@ -160,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на содержимое устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -197,7 +197,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
@@ -217,13 +217,13 @@ virtual void OnDrawOnList(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pDC`|Указатель на контекст устройства.|  
-|[in] `strText`|Текст, отображаемый в списке.|  
-|[in] `nTextOffset`|Интервал между текстом и левой стороны обрамляющего прямоугольника.|  
-|[in] `rect`|Указывает ограничивающий прямоугольник.|  
-|[in] `bIsSelected`|Не обрабатывается.|  
-|[in] `bHighlighted`|Не обрабатывается.|  
+|Параметр|Описание:|  
+|[in] *основного контроллера домена*|Указатель на контекст устройства.|  
+|[in] *strText*|Текст, отображаемый в списке.|  
+|[in] *nTextOffset*|Интервал между текстом и левой стороны обрамляющего прямоугольника.|  
+|[in] *rect*|Указывает ограничивающий прямоугольник.|  
+|[in] *bIsSelected*|Не обрабатывается.|  
+|[in] *bHighlighted*|Не обрабатывается.|  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

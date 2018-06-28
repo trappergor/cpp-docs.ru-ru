@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368804"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037965"
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 Объект `CMFCReBar` объект является панель элементов управления, которая предоставляет макет, сохраняемость и сведения о состоянии для элементов управления главной панели.  
@@ -58,7 +58,7 @@ class CMFCReBar : public CPane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCReBar::AddBar](#addbar)|Добавляет диапазон главной панели.|  
 |[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Указатель дочернего окна, который должен быть вставлен в главной панели. Указанный объект должен иметь **WS_CHILD** стиль окна.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Задает текст, отображаемый на главной панели. Текст не является частью дочернего окна. Вместо этого он отображается на главной панели, сам.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Указывает битовую карту для отображения на заднем плане главной панели.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании `fStyle` в [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структуры в документации пакета SDK для Windows.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Представляет цвет переднего плана для главной панели.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Представляет цвет фона главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Указатель на родительское окно элемента управления главной панели.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Задает стиль для элемента управления главной панели. Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосы в элемент управления главной панели. Список допустимых стили см. в разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) документации по пакету Windows SDK.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль окна элемента управления главной панели. Список допустимых стили см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор дочернего окна главной панели  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `pTI`  
+ [in] *точки*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>Примечания  
   

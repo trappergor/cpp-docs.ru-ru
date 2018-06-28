@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b123b5c473c834e958263edb926ef25103d788
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367800"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038917"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Класс методе CMFCPropertyGridFileProperty
 `CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, открывается диалоговое окно выбора файла.  
@@ -38,14 +38,14 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Создает объект `CMFCPropertyGridFileProperty`.|  
 |`CMFCPropertyGridFileProperty::~CMFCPropertyGridFileProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCPropertyGridFileProperty::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|  
@@ -78,28 +78,28 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strName`  
+ [in] *strName*  
  Имя свойства.  
   
- [in] `bOpenFileDialog`  
+ [in] *bOpenFileDialog*  
  `TRUE` Чтобы открыть **открыть файл** диалоговым окном. `FALSE` Открытие **сохранить файл** диалоговое окно.  
   
- [in] `strFileName`  
+ [in] *strFileName*  
  Исходное имя файла.  
   
- [in] `lpszDefExt`  
+ [in] *lpszDefExt*  
  Строка, содержащая одно или несколько расширений имен файлов. Значение по умолчанию — `NULL`.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  Флаги диалогового окна. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов `OFN_HIDEREADONLY` и `OFN_OVERWRITEPROMPT`.  
   
- [in] `lpszFilter`  
+ [in] *lpszFilter*  
  Строка, содержащая один или несколько фильтров файлов. Значение по умолчанию — `NULL`.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Описание элемента свойства. Значение по умолчанию — `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные приложения, связанные с этим элементом свойства. Например, 32-разрядное целое число или указатель на другие данные. Значение по умолчанию — 0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b19b52135678ebd798f61143b5bad953b8629a5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376116"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038153"
 ---
 # <a name="coccmanager-class"></a>Класс COccManager
 Управляет разными сайтами пользовательского элемента управления, реализованного объектами `COleControlContainer` и `COleControlSite` .  
@@ -60,9 +60,9 @@ class COccManager : public CNoTrackObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|Создает **COleContainer** объекта.|  
+|[COccManager::CreateContainer](#createcontainer)|Создает объект `COleContainer`.|  
 |[COccManager::CreateDlgControls](#createdlgcontrols)|Создает элементы управления ActiveX, размещенных в связанных `COleContainer` объекта.|  
 |[COccManager::CreateSite](#createsite)|Создает объект `COleClientSite`.|  
 |[COccManager::GetDefBtnCode](#getdefbtncode)|Извлекает код кнопкой по умолчанию.|  
@@ -76,7 +76,7 @@ class COccManager : public CNoTrackObject
 |[COccManager::SplitDialogTemplate](#splitdialogtemplate)|Разделяет все существующие элементы управления ActiveX из стандартных элементов управления в шаблоне указанное диалоговое окно.|  
   
 ## <a name="remarks"></a>Примечания  
- Базовый класс **CNoTrackObject**, недокументированные базовый класс (находится в AFXTLS. (H). Предназначен для использования платформой MFC, классы, производные от **CNoTrackObject** класса будут исключены из обнаружения утечек памяти. Не рекомендуется является производным непосредственно от **CNoTrackObject**.  
+ Базовый класс `CNoTrackObject`, недокументированные базовый класс (находится в AFXTLS. (H). Предназначен для использования платформой MFC, классы, производные от `CNoTrackObject` класса будут исключены из обнаружения утечек памяти. Не рекомендуется является производным непосредственно от `CNoTrackObject`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CNoTrackObject`  
@@ -94,7 +94,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на объект window, связанные с контейнером пользовательский узел.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -104,7 +104,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
  Дополнительные сведения о создании настраиваемых сайтов см. в разделе [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite).  
   
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
- Вызывайте эту функцию для создания элементов управления ActiveX, определяемое `pOccDialogInfo` параметра.  
+ Вызывайте эту функцию для создания элементов управления ActiveX, определяемое *pOccDialogInfo* параметра.  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -123,27 +123,27 @@ virtual BOOL CreateDlgControls(
  *pWndParent*  
  Указатель на родительский объект объекта диалогового окна.  
   
- `lpszResourceName`  
+ *lpszResourceName*  
  Имя создаваемого ресурса.  
   
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  Указатель шаблона диалогового окна, используемый для создания объекта диалогового окна.  
   
- `lpResource`  
+ *lpResource*  
  Указатель на ресурс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если элемент управления был создан успешно. в противном случае значение равно нулю.  
   
 ##  <a name="createsite"></a>  COccManager::CreateSite  
- Вызывается платформой для создания сайта элемента управления, размещенного в качестве контейнера, на который указывает `pCtrlCont`.  
+ Вызывается платформой для создания сайта элемента управления, размещенного в качестве контейнера, на который указывает *pCtrlCont*.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCtrlCont`  
+ *pCtrlCont*  
  Указатель на размещение на новом сайте управления контейнера элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -162,7 +162,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Объект window, содержащий элемент управления button.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -187,7 +187,7 @@ virtual BOOL IsDialogMessage(
  *pWndDlg*  
  Указатель на целевом диалогового окна сообщения.  
   
- `lpMsg`  
+ *lpMsg*  
  Указатель на `MSG` структуру, содержащую сообщение для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -207,7 +207,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на окно, содержащее элемент управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -231,10 +231,10 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на окно, содержащее элемент управления.  
   
- `lpMsg`  
+ *lpMsg*  
  Указатель на сообщение, содержащее мнемоническую.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -257,13 +257,13 @@ virtual BOOL OnEvent(
  *pCmdTarget*  
  Указатель на `CCmdTarget` объекта при попытке обработать событие  
   
- `idCtrl`  
+ *idCtrl*  
  Идентификатор ресурса управления.  
   
- `pEvent`  
+ *pEvent*  
  Обрабатываемого события.  
   
- `pHandlerInfo`  
+ *pHandlerInfo*  
  В противном случае **NULL**, `OnEvent` заполняет **pTarget** и **pmf** члены **AFX_CMDHANDLERINFO** структуры вместо Отправка команды. Как правило, этот параметр должен быть **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -282,7 +282,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  **_AFX_OCC_DIALOG_INFO** структуру, содержащую сведения о шаблоне диалогового окна и элементы управления ActiveX, который размещен в диалоговом окне.  
   
  *pOrigTemplate*  
@@ -304,7 +304,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  **_AFX_OCC_DIALOG_INFO** структуру, содержащую сведения о шаблоне диалогового окна и элементы управления ActiveX, который размещен в диалоговом окне.  
   
 ### <a name="remarks"></a>Примечания  
@@ -322,10 +322,10 @@ static void AFX_CDECL SetDefaultButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на окно, содержащее элемент управления.  
   
- `bDefault`  
+ *bПо умолчанию*  
  Ненулевое значение, если элемент управления должен стать кнопки по умолчанию. в противном случае значение равно нулю.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -346,17 +346,17 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTemplate`  
+ *pTemplate*  
  Указатель шаблона диалогового окна, которое необходимо проверить.  
   
- `ppOleDlgItems`  
+ *ppOleDlgItems*  
  Список указателей на элементов диалоговых окон, элементов управления ActiveX.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на структуру шаблона диалогового окна, содержащий только элементы управления, не являющееся. Если нет элементов управления ActiveX, **NULL** возвращается.  
   
 ### <a name="remarks"></a>Примечания  
- Найденные элементы управления ActiveX, выполняется анализ шаблона, и создается новый шаблон, содержащий только не-элементы управления ActiveX. Элементы управления ActiveX, найденные во время этого процесса добавляются `ppOleDlgItems`.  
+ Найденные элементы управления ActiveX, выполняется анализ шаблона, и создается новый шаблон, содержащий только не-элементы управления ActiveX. Элементы управления ActiveX, найденные во время этого процесса добавляются *ppOleDlgItems*.  
   
  Если в шаблоне, элементы управления ActiveX не **NULL** возвращается *.*  
   

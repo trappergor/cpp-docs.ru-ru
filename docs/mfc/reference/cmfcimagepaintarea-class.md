@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368326"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037386"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Класс CMFCImagePaintArea
 Предоставляет область рисунка, который позволяет изменить изображение в диалоговом окне редактора изображений.  
@@ -48,7 +48,7 @@ class CMFCImagePaintArea : public CButton
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Создает объект `CMFCImagePaintArea`.|  
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Деструктор.|  
   
@@ -56,7 +56,7 @@ class CMFCImagePaintArea : public CButton
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCImagePaintArea::GetMode](#getmode)|Возвращает текущий режим отображения.|  
 |[CMFCImagePaintArea::SetBitmap](#setbitmap)|Задает растровое изображение для области рисунка.|  
 |[CMFCImagePaintArea::SetColor](#setcolor)|Задает текущий цвет рисования.|  
@@ -97,8 +97,8 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pParentDlg`|Указатель на окно, являющийся родительским для редактора изображений.|  
+|Параметр|Описание:|  
+|[in] *pParentDlg*|Указатель на окно, являющийся родительским для редактора изображений.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Возвращает текущий режим отображения.  
@@ -121,11 +121,11 @@ void SetBitmap(CBitmap* pBitmap);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pBitmap`|Новое растровое изображение для отображения.|  
+|Параметр|Описание:|  
+|[in] *pBitmap*|Новое растровое изображение для отображения.|  
   
 ### <a name="remarks"></a>Примечания  
- Если `pBitmap` — `NULL`, этот метод задает размер области рисования изменяемой до нуля. В противном случае устанавливается размер области рисования изменяемый размер предоставленного растрового изображения.  
+ Если *pBitmap* — `NULL`, этот метод задает размер области рисования изменяемой до нуля. В противном случае устанавливается размер области рисования изменяемый размер предоставленного растрового изображения.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  Задает текущий цвет рисования.  
@@ -138,8 +138,8 @@ void SetColor(COLORREF color);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `color`|Новый цвет рисования.|  
+|Параметр|Описание:|  
+|[in] *цвет*|Новый цвет рисования.|  
   
 ### <a name="remarks"></a>Примечания  
  При выборе цвета на панели палитры редактора изображений или палитра цветов, платформа вызывает этот метод для обновления текущего цвета. Черный цвет рисования ( `COLORREF` значение 0).  
@@ -157,8 +157,8 @@ void SetMode(IMAGE_EDIT_MODE mode);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) значение, указывающее текущий режим рисования.|  
+|Параметр|Описание:|  
+|[in] *режим*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) значение, указывающее текущий режим рисования.|  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

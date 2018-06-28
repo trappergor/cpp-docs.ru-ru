@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377575"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041650"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
 Класс `COleIPFrameWndEx` реализует OLE-контейнер с поддержкой MFC. Необходимо создать встроенный класс окна фрейма для приложения, производный от класса `COleIPFrameWndEx` , вместо наследования его от класса [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md). 
@@ -121,11 +121,11 @@ ms.locfileid: "33377575"
 class COleIPFrameWndEx : public COleIPFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||  
 |[COleIPFrameWndEx::AddPane](#addpane)||  
@@ -173,7 +173,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Дает платформе команду инициализировать диапазон идентификаторов элементов управления, которые назначены панелям инструментов, определяемым пользователем.|  
   
@@ -217,8 +217,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `bTail`  
+ [in] *pControlBar*  
+ [in] *bTail*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -232,7 +232,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hdwp`  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -247,9 +247,9 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
- [in] `nDockBarID`  
- [in] `lpRect`  
+ [in] *pBar*  
+ [in] *nDockBarID*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -263,17 +263,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель, чтобы закрепить.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  Указатель на область служит в качестве источника.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `TRUE` , если операция выполнена успешно. В противном случае возвращает значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод, чтобы закрепить несколько объектов панели в предопределенном порядке. Этот метод закрепляет область определяется `pBar` на левой панели, определяемое `pLeftOf`.  
+ Этот метод, чтобы закрепить несколько объектов панели в предопределенном порядке. Этот метод закрепляет область определяется *pBar* на левой панели, определяемое *pLeftOf*.  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -283,7 +283,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -297,7 +297,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -317,12 +317,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
- [in] `uiCustomizeCmd`  
- [in] `strCustomizeLabel`  
- [in] `uiViewToolbarsMenuEntryID`  
- [in] `bContextMenuShowsToolbarsOnly`  
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bEnable*  
+ [in] *uiCustomizeCmd*  
+ [in] *strCustomizeLabel*  
+ [in] *uiViewToolbarsMenuEntryID*  
+ [in] *bContextMenuShowsToolbarsOnly*  
+ [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -417,7 +417,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -446,10 +446,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  Указатель на текст всплывающей подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -469,17 +469,17 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Запись реестра, где в библиотеке хранятся пользовательские параметры панели инструментов.  
   
- [in] `uiUserToolbarFirst`  
+ [in] *uiUserToolbarFirst*  
  Идентификатор элемента управления, назначенные первой пользовательской панели инструментов.  
   
- [in] `uiUserToolbarLast`  
+ [in] *uiUserToolbarLast*  
  Идентификатор элемента управления, назначенные последнего пользовательских панелей инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для инициализации диапазона идентификаторов элементов управления для назначения для панели инструментов, которые пользователи динамически определять. Параметры `uiUserToolbarFirst` и `uiUserToolbarLast` определить диапазон разрешенных инструментов идентификаторов элементов управления. Чтобы отключить создание пользовательских панелей инструментов, задайте `uiUserToolbarFirst` или `uiUserToolbarLast` значение -1.  
+ Эту функцию можно используйте для инициализации диапазона идентификаторов элементов управления для назначения для панели инструментов, которые пользователи динамически определять. Параметры *uiUserToolbarFirst* и *uiUserToolbarLast* определить диапазон разрешенных инструментов идентификаторов элементов управления. Чтобы отключить создание пользовательских панелей инструментов, задайте *uiUserToolbarFirst* или *uiUserToolbarLast* значение -1.  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -492,9 +492,9 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *bAfter*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -524,9 +524,9 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `dwBarAlignment`  
- [in] `bOuterEdge`  
+ [in] *точки*  
+ [in] *dwBarAlignment*  
+ [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -544,10 +544,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIDResource`  
- [in] `dwDefaultStyle`  
- [in] `pParentWnd`  
- [in] `pContext`  
+ [in] *nIDResource*  
+ [in] *dwDefaultStyle*  
+ [in] *pParentWnd*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -561,7 +561,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDockablePane*`  
+ [in] *CDockablePane**  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -575,25 +575,25 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CPaneFrameWnd*`  
+ [in] *CPaneFrameWnd\**  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
- Вызывается платформой, когда активное всплывающее меню обрабатывает `WM_DESTROY` сообщения.  
+ Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель на объект всплывающего меню.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод для получения уведомлений от `CMFCPopupMenu` объектов при обработке `WM_DESTROY` сообщений.  
+ Переопределите этот метод для получения уведомлений из `CMFCPopupMenu` объектов при обработке сообщения WM_DESTROY.  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -607,10 +607,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -627,13 +627,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Указатель на кнопку меню.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Изображение, связанное с элементом меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -643,7 +643,7 @@ virtual BOOL OnDrawMenuImage(
  Переопределите этот метод, если вы хотите настроить для пунктов меню, принадлежащих к строке меню, принадлежащих рисования изображения `COleIPFrameWndEx`-производного объекта.  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
- Вызывается платформой при [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)объекта процессов `WM_PAINT` сообщения.  
+ Вызывается платформой при обработке сообщения WM_PAINT объектом [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -653,13 +653,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель на объект всплывающего меню.  
   
- [in] `rectLogo`  
+ [in] *rectLogo*  
  Указатель эмблему для отображения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -682,7 +682,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  Указатель на структуру `TOOLINFO`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Реализация по умолчанию не выполняет никаких действий и возвращает 0. Реализации должен возвращать ненулевое значение, если он заполняет `pTI` параметра.  
+ Реализация по умолчанию не выполняет никаких действий и возвращает 0. Реализации должен возвращать ненулевое значение, если он заполняет *pTI* параметра.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для предоставления сведений всплывающей подсказки о специальный пункт меню.  
@@ -695,7 +695,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrame`  
+ [in] *pFrame*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -711,8 +711,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPreview`  
- [in] `pState`  
+ [in] *bPreview*  
+ [in] *состояния производительности*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -726,8 +726,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPane`  
- [in] `uiToolbarID`  
+ [in] *pMenuPane*  
+ [in] *uiToolbarID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -741,7 +741,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -755,7 +755,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `[in] pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель во всплывающем меню для отображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -774,10 +774,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  Указатель во всплывающем меню, выбранное пользователем.  
   
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на панель, на котором размещена меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -804,11 +804,11 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bExactBar`  
- [in] `pRTCBarType`  
- [in] `dwAlignment`  
+ [in] *точки*  
+ [in] *nSensitivity*  
+ [in] *bExactBar*  
+ [in] *pRTCBarType*  
+ [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -822,7 +822,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -836,7 +836,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -853,11 +853,11 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `bDestroy`  
- [in] `bAdjustLayout`  
- [in] `bAutoHide`  
- [in] `pBarReplacement`  
+ [in] *pControlBar*  
+ [in] *bDestroy*  
+ [in] *bAdjustLayout*  
+ [in] *bAutoHide*  
+ [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -869,7 +869,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `state`  
+ [in] *состояния*  
  Указывает состояние закрепления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -886,13 +886,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `menu`  
+ [in] *меню*  
  Ссылку на [CMenu](../../mfc/reference/cmenu-class.md) объект для изменения.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  Команда первого определяемой пользователем.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  Команда последнего определяемой пользователем.  
   
 ### <a name="remarks"></a>Примечания  
@@ -909,10 +909,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -927,10 +927,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Параметры  
  [in] dwData  
- Указывает данные, необходимые для справки, тип которой задан `nCmd`.  
+ Указывает данные, необходимые для справки, тип которой определяется *nCmd*.  
   
- [in] `nCmd`  
- Задает тип запрошенной справки. Список возможных значений и их влияние на параметр `dwData` см. в разделе [Функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в Windows SDK.  
+ [in] *nCmd*  
+ Задает тип запрошенной справки. Список возможных значений и их влияние на *dwData* параметр, в разделе [функция WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
   

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378830"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039236"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 `CMFCButton` Класс расширяет его функциональные возможности [CButton](../../mfc/reference/cbutton-class.md) класса, такие как выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и указание подсказки.  
@@ -110,14 +110,14 @@ class CMFCButton : public CButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCButton::CMFCButton`|Конструктор по умолчанию.|  
 |`CMFCButton::~CMFCButton`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCButton::CleanUp](#cleanup)|Сбрасывает внутренние переменные и освобождает ресурсы, выделенные как изображения, точечные рисунки и значки.|  
 |`CMFCButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -152,7 +152,7 @@ class CMFCButton : public CButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCButton::OnDraw](#ondraw)|Вызывается платформой для отображения кнопки.|  
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы кнопки.|  
@@ -163,7 +163,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Указывает, следует ли прямоугольник фокуса вокруг кнопки.|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Указывает, следует ли выделять BS_CHECKBOX стиль кнопки при наведении курсора.|  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOn`  
+ [in] *bВ системах*  
  `TRUE` Чтобы отобразить весь текст; `FALSE` усечение отображения текста.  
   
 ### <a name="remarks"></a>Примечания  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOn`  
+ [in] *bВ системах*  
  `TRUE` Чтобы использовать шрифт меню приложения в качестве шрифта текста кнопки; `FALSE` использовать системный шрифт. Значение по умолчанию — `TRUE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Чтобы немедленно обновить экран; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` для использования текущей темы Windows для рисования границ кнопки; `FALSE` не использует тему. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -429,7 +429,7 @@ AlignStyle m_nAlignStyle;
 ### <a name="remarks"></a>Примечания  
  Используйте один из следующих `CMFCButton::AlignStyle` значений перечисления, чтобы задать выравнивание текста кнопки:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |ALIGN_CENTER|(По умолчанию) Кнопка текст выравнивается по центру кнопки.|  
 |ALIGN_LEFT|Кнопка текст выравнивается по левой кнопки.|  
@@ -447,7 +447,7 @@ FlatStyle  m_nFlatStyle;
 ### <a name="remarks"></a>Примечания  
  В следующей таблице перечислены `CMFCButton::m_nFlatStyle` значения перечисления, которые определяют внешний вид кнопки.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |BUTTONSTYLE_3D|(По умолчанию) Кнопка для высокого уровня, трехмерного сторонами. При нажатии кнопки, кнопка нажатие в глубоких отступов.|  
 |BUTTONSTYLE_FLAT|Когда указатель мыши не наведите кнопки, кнопки кажется двухмерный и не имеет вызванное сторон. Когда указатель мыши находится над кнопкой, кнопка появляется низкий, трехмерного сторонами. При нажатии кнопки, кнопка нажатие в неполную отступов.|  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ссылка на прямоугольник, ограничивающий кнопки.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [DRAWITEMSTRUCT-структура](../../mfc/reference/drawitemstruct-structure.md) раздела.  
   
 ### <a name="remarks"></a>Примечания  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Ссылка на прямоугольник, ограничивающий кнопки.  
   
- [in] `uiState`  
+ [in] *uiState*  
  Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [DRAWITEMSTRUCT-структура](../../mfc/reference/drawitemstruct-structure.md) раздела.  
   
 ### <a name="remarks"></a>Примечания  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Ссылка на прямоугольник, ограничивающий кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rect`  
+ [in] *rect*  
  Ссылка на прямоугольник, ограничивающий кнопки.  
   
- [in] `strText`  
+ [in] *strText*  
  Текст для отрисовки.  
   
- [in] `uiDTFlags`  
- Флаги, определяющие способ форматирования текста. Дополнительные сведения см. в разделе `nFormat` параметр [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) метод.  
+ [in] *uiDTFlags*  
+ Флаги, определяющие способ форматирования текста. Дополнительные сведения см. в разделе *nFormat* параметр [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) метод.  
   
- [in] `uiState`  
+ [in] *uiState*  
  (Зарезервирован.)  
   
 ### <a name="remarks"></a>Примечания  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Ссылка на прямоугольник, ограничивающий кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTimeDelay`  
+ [in] *nTimeDelay*  
  Неотрицательное число, задающее интервал между сообщений, отправляемых в родительское окно. Интервал измеряется в миллисекундах, и значение по умолчанию равно 500 миллисекунд. Укажите ноль, чтобы отключить режим автоматического повтора сообщения.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод приводит к постоянно отправлять сообщения WM_COMMAND родительское окно до освобождения кнопки, кнопки или `nTimeDelay` параметра равным нулю.  
+ Этот метод приводит к постоянно отправлять сообщения WM_COMMAND родительское окно до освобождения кнопки, кнопки или *nTimeDelay* параметра равным нулю.  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  Задает изображение для нажатой кнопки.  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значок, который содержит точечный рисунок и маски для нового образа.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Дескриптор значок, который содержит изображение для выбранного состояния.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Дескриптор точечного рисунка, который содержит образ для невыбранных состояния.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Дескриптор точечного рисунка, который содержит образ для выбранной области.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE` Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Идентификатор ресурса для невыбранных изображения.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  Идентификатор ресурса для выбранного образа.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Дескриптор значок отключенного рисунка.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Дескриптор точечного рисунка, который содержит отключенный образ.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  Идентификатор ресурса точечного рисунка, отключено.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `crFace`  
+ [in] *crFace*  
  Значение цвета RGB.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Чтобы обновить экран немедленно; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -718,40 +718,40 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значок, который содержит точечный рисунок и маски для нового образа.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` для указания точечного рисунка ресурсы будут уничтожены автоматически; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  Дескриптор значок, который содержит изображение для выбранного состояния.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  Дескриптор точечного рисунка, который содержит образ для невыбранных состояния.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  Дескриптор точечного рисунка, который содержит образ для выбранной области.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  Идентификатор ресурса для невыбранных изображения.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  Идентификатор ресурса для выбранного образа.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  Указывает прозрачный цвет фона кнопки; то есть лицевой стороны кнопки. `TRUE` Чтобы использовать значение цвета RGB (192, 192, 192); `FALSE` использовать значение цвета, определяемые `AFX_GLOBAL_DATA::clrBtnFace`.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  Дескриптор значок отключенного рисунка.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  Дескриптор точечного рисунка, который содержит отключенный образ.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  Идентификатор ресурса точечного рисунка, отключено.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` для использования только 32-разрядные изображения, использующие альфа-канала; `FALSE`, чтобы не использовать только изображения альфа-канала. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -770,7 +770,7 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hcursor`  
+ [in] *hcursor*  
  Дескриптор курсора.  
   
 ### <a name="remarks"></a>Примечания  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `id`  
+ [in] *идентификатор*  
  Один из идентификаторов изображения кнопки, определенные в `CMenuImage::IMAGES_IDS` перечисления. Изображения, например стрелки, ПИН-кодов и переключателей определенные значения изображения.  
   
- [in] `state`  
+ [in] *состояния*  
  Один из идентификаторов состояние кнопки изображения, определенные в `CMenuImages::IMAGE_STATE` перечисления. Изображение состояния укажите кнопку цвета, например черный, серый, светло-серый белом и темно-серый. Значение по умолчанию — `CMenuImages::ImageBlack`.  
   
- [in] `idDisabled`  
+ [in] *idDisabled*  
  Один из идентификаторов изображения кнопки, определенные в `CMenuImage::IMAGES_IDS` перечисления. Изображение показывает, что кнопка отключена. Значение по умолчанию — это первый изображение кнопки ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>Примечания  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrText`  
+ [in] *clrText*  
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clrTextHot`  
+ [in] *clrTextHot*  
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszToolTipText`  
+ [in] *lpszToolTipText*  
  Указатель на текст всплывающей подсказки. Укажите NULL, чтобы отключить подсказки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  `TRUE` вычисления, но не изменять, новый размер кнопки. `FALSE` изменение размера кнопки. Значение по умолчанию — `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

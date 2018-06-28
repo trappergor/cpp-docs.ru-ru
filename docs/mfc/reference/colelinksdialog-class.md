@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368973"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042538"
 ---
 # <a name="colelinksdialog-class"></a>Класс COleLinksDialog
 Используется для диалогового окна OLE "Изменить ссылки".  
@@ -42,19 +42,19 @@ class COleLinksDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Создает объект `COleLinksDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinksDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменение связей.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinksDialog::m_el](#m_el)|Структура типа **OLEUIEDITLINKS** , управляет поведением окна.|  
   
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDoc`  
+ *pDoc*  
  Указывает документ OLE, который содержит ссылки, который нужно изменить.  
   
- `pView`  
- Указывает текущее представление на `pDoc`.  
+ *pView*  
+ Указывает текущее представление на *pDoc*.  
   
- `dwFlags`  
+ *dwFlags*  
  Создание флаг, который содержит либо 0 или **ELF_SHOWHELP** для указания, будет ли отображаться при откроется диалоговое окно "Справка".  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  

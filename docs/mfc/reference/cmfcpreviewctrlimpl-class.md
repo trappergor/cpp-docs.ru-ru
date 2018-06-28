@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370416"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040081"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Класс CMFCPreviewCtrlImpl
 Этот класс реализует окно, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.  
@@ -66,14 +66,14 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|  
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Создает объект предварительного просмотра элемента управления.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::Create](#create)|Перегружен. Вызывается обработчиком расширенного просмотра для создания окна Windows.|  
 |[CMFCPreviewCtrlImpl::Destroy](#destroy)|Вызывается обработчиком расширенного просмотра, когда необходимо удалить этот элемент управления.|  
@@ -87,13 +87,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается платформой для отрисовки на предварительную версию.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Цвет фона окна предварительного просмотра.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Цвет текста окна предварительного просмотра.|  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWndParent`  
+ *hWndParent*  
  Дескриптор главного окна, предоставленный оболочкой для расширенного просмотра.  
   
- `prc`  
+ *КНР*  
  Задает начальный размер и положение окна.  
   
- `pContext`  
+ *pContext*  
  Указатель на контекст создания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства для рисования.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDocument`  
+ *pDocument*  
  Указатель для реализации документа.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWndParent`  
+ *hWndParent*  
  Дескриптор родительского окна новый.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clrBack`  
+ *clrBack*  
  Цвет фона окна предварительного просмотра.  
   
- `clrText`  
+ *clrText*  
  Цвет текста окна предварительного просмотра.  
   
- `plf`  
+ *plf*  
  Шрифт, используемый для отображения текста в окне предварительного просмотра. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prc`  
+ *КНР*  
  Указывает новый размер и положение элемента управления для предварительного просмотра.  
   
- `bRedraw`  
+ *bRedraw*  
  Указывает, следует ли перерисовке элемента управления.  
   
 ### <a name="remarks"></a>Примечания  

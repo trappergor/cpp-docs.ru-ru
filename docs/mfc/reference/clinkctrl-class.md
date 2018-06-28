@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371703"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042382"
 ---
 # <a name="clinkctrl-class"></a>Класс классах-оболочках
 Предоставляет функциональные возможности стандартного элемента управления SysLink Windows.  
@@ -64,13 +64,13 @@ class CLinkCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinkCtrl::CLinkCtrl](#clinkctrl)|Создает объект `CLinkCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinkCtrl::Create](#create)|Создает элемент управления для связи и прикрепляет его к `CLinkCtrl` объекта.|  
 |[CLinkCtrl::CreateEx](#createex)|Создает элемент управления для связи с расширенные стили и прикрепляет его к `CLinkCtrl` объекта.|  
@@ -131,19 +131,19 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwStyle`  
+ *dwStyle*  
  Задает стиль элемента управления ссылки. Примените любое сочетание стилей элемента управления. В разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в `Windows SDK` для получения дополнительной информации.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение элемента управления ссылки. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает родительскому окну элемента управления ссылки. Он не должен быть `NULL`.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления ссылки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -152,7 +152,7 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="remarks"></a>Примечания  
  Создании `CLinkCtrl` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать `Create`, который создает ссылку элемента управления и прикрепляет его к `CLinkCtrl` объекта. Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CLinkCtrl::CreateEx](#createex) вместо `Create`.  
   
- Во второй форме `Create` метод является устаревшим. Использовать первую форму, указывающее `lpszLinkMarkup` параметра.  
+ Во второй форме `Create` метод является устаревшим. Использовать первую форму, указывающее *lpszLinkMarkup* параметра.  
   
 ### <a name="example"></a>Пример  
  В следующем примере кода определяет две переменные с именем `m_Link1` и `m_Link2`, которые используются для доступа к двух элементов управления связями.  
@@ -185,22 +185,22 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
- `dwExStyle`  
- Указывает расширенный стиль элемента управления ссылки. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль элемента управления ссылки. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает стиль элемента управления ссылки. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в Windows SDK.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение элемента управления ссылки. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает родительскому окну элемента управления ссылки. Он не должен быть `NULL`.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления ссылки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -209,7 +209,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="remarks"></a>Примечания  
  Используйте `CreateEx` вместо [создать](#create) применения расширенных констант стиль Windows.  
   
- Во второй форме `CreateEx` метод является устаревшим. Использовать первую форму, указывающее `lpszLinkMarkup` параметра.  
+ Во второй форме `CreateEx` метод является устаревшим. Использовать первую форму, указывающее *lpszLinkMarkup* параметра.  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  Извлекает идеальную высоту элемента управления ссылки.  
@@ -235,13 +235,13 @@ int GetIdealSize(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `cxMaxWidth`|Максимальная ширина ссылки, в пикселях.|  
-|[out] * `pSize`|Указатель на Windows [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. По возвращении из этого метода `cy` членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, задаваемый `cxMaxWidth`. `cx` Член структуры содержит ширину текста ссылки, которая фактически требуется.|  
+|[in] *cxMaxWidth*|Максимальная ширина ссылки, в пикселях.|  
+|[out] * *pSize*|Указатель на Windows [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. По возвращении из этого метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, задаваемый *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Предпочтительная высота текста ссылки, в пикселях. Возвращаемое значение является таким же, как значение `cy` членом `SIZE` структуры.  
+ Предпочтительная высота текста ссылки, в пикселях. Возвращаемое значение является таким же, как значение *cy* членом `SIZE` структуры.  
   
 ### <a name="remarks"></a>Примечания  
  Пример `GetIdealSize` метода, см. пример в [CLinkCtrl::Create](#create).  
@@ -256,7 +256,7 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указатель на [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) структуру для получения сведений об элементе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
  *strID*  
@@ -312,13 +312,13 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
- `pnState`  
+ *pnState*  
  Значение элемента указанного состояния.  
   
- `stateMask`  
+ *stateMask*  
  Сочетание флаги, описывающие элементы состояния для получения. Список значений, см. в описании **состояние** члена в [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) структуры. Допустимые элементы идентичны допускается в **состояние**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
- `strUrl`  
+ *strUrl*  
  Объект [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) объект, содержащий URL-адрес, представленный указанным элементом  
   
- `szUrl`  
+ *szUrl*  
  Символом null строку, содержащую URL-адрес, представленный указанным элементом  
   
  *cchUrl*  
@@ -388,7 +388,7 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указатель на [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) структуру, содержащую сведения для установки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
  *szID*  
@@ -430,13 +430,13 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
- `pnState`  
+ *pnState*  
  Значение устанавливается элемента указанного состояния.  
   
- `stateMask`  
+ *stateMask*  
  Сочетание флагов, описывающий значение элемента состояния. Список значений, см. в описании **состояние** члена в [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710) структуры. Допустимые элементы идентичны допускается в **состояние**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -455,10 +455,10 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iLink`  
+ *iLink установлен*  
  Индекс элемента управления ссылки.  
   
- `szUrl`  
+ *szUrl*  
  Символом null строку, содержащую URL-адрес, представленный указанным элементом  
   
 ### <a name="return-value"></a>Возвращаемое значение  

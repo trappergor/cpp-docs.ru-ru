@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369851"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039977"
 ---
 # <a name="colelinkingdoc-class"></a>Класс COleLinkingDoc
 Базовый класс для документов OLE-контейнера, которые поддерживают связывание со встроенными элементами, которые их содержат.  
@@ -46,20 +46,20 @@ class COleLinkingDoc : public COleDocument
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Создает объект `COleLinkingDoc`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinkingDoc::Register](#register)|Регистрирует документа OLE системные библиотеки DLL.|  
 |[COleLinkingDoc::Revoke](#revoke)|Отменяет регистрацию документа.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Находит указанный внедренный элемент.|  
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Выполняет поиск указанного связанного элемента.|  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Подключиться к `COleTemplateServer` объект шаблоны документов путем вызова объекта `ConnectTemplate` функции-члена, а также регистрировать все классы объектов в системе OLE путем вызова **COleTemplateServer::RegisterAll**:  
+ Подключиться к `COleTemplateServer` объект шаблоны документов путем вызова объекта `ConnectTemplate` функции-члена, а также регистрировать все классы объектов в системе OLE путем вызова `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszItemName`  
+ *lpszItemName*  
  Указатель на имя внедренного OLE запрошенного элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszItemName`  
+ *lpszItemName*  
  Указатель на имя связанного OLE запрошенного элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  Указатель на объект фабрики OLE (может быть **NULL**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  Указатель на полный путь документа-контейнера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

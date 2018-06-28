@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515689e4596a3a0336e73b0be7aa008d21e445ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec0fae7ceaa7b32636518f4c8a5eb5fc3836bb8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378409"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039068"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Класс CMFCToolBarMenuButton
 Кнопка панели инструментов, содержащая всплывающее меню.  
@@ -119,17 +119,17 @@ ms.locfileid: "33378409"
 class CMFCToolBarMenuButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Создает объект `CMFCToolBarMenuButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Сравнивает данный экземпляр с использованием указанного `CMFCToolBarButton` объекта. (Переопределяет [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|  
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Копирует свойства другой кнопки панели инструментов в текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
@@ -158,7 +158,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|Вызывается платформой, когда пользователь нажимает кнопку мыши. (Переопределяет [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Вызывается платформой, когда пользователь выбирает элемент контекстного меню.|  
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Вызывается платформой при обработке родительского инструментов `WM_HELPHITTEST` сообщения. (Переопределяет [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Вызывается платформой, когда родительский инструментов обрабатывает сообщение WM_HELPHITTEST. (Переопределяет [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
 |[CMFCToolBarMenuButton::OnDraw](#ondraw)|Вызывается платформой для отрисовки кнопки с помощью указанного стили и параметры. (Переопределяет [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
 |[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Вызывается платформой для отрисовки кнопки в **команды** области **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
 |[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Вызывается платформой, когда пользователь открывает во всплывающем меню.|  
@@ -174,13 +174,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Рисует значок кнопки меню.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Если `TRUE`, всегда вызывается платформой [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при рисовании кнопки.|  
   
@@ -220,26 +220,26 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
  Существующий `CMFCToolBarMenuButton` объект копируется это `CMFCToolBarMenuButton` объекта.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор команды для выполнения при нажатии кнопки. или ( `UINT`) -1 для кнопки меню, который напрямую не выполняет команду.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор для меню; или `NULL` Если нет кнопки меню.  
   
- [in] `iImage`  
- Индекс изображения для кнопки. или -1, если эта кнопка не имеет значка или использует значок для команды, заданной параметром `uiID`. Индекс является одинаковым для каждого `CMFCToolBarImages` объекта в приложении.  
+ [in] *iImage*  
+ Индекс изображения для кнопки. или -1, если эта кнопка не имеет значка или использует значок для команды, заданной параметром *uiID*. Индекс является одинаковым для каждого `CMFCToolBarImages` объекта в приложении.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Текст кнопки панели инструментов меню.  
   
- [in] `bUserButton`  
- `TRUE` Если кнопка отображает изображение, определяемых пользователем; `FALSE` Если стандартным образом, связанного с командой, заданные с помощью кнопки отобразить `uiID`.  
+ [in] *bUserButton*  
+ `TRUE` Если кнопка отображает изображение, определяемых пользователем; `FALSE` Если стандартным образом, связанного с командой, заданные с помощью кнопки отобразить *uiID*.  
   
 ### <a name="remarks"></a>Примечания  
- Если `uiID` является допустимым ИД команды, кнопка выполняет команды, когда пользователь нажимает кнопку. Если `hMenu` является дескриптором допустимым меню, кнопки предоставляет раскрывающееся меню, когда он отображается в меню находится в панели инструментов или подменю. Если оба `uiID` и `hMenu` являются допустимыми, кнопка будет Разворачивающаяся кнопка с часть, которая будет выполнять команды, когда пользователь щелкает и часть с стрелка вниз, которая будет раскрывающегося меню при щелчке на нем. Однако если `hMenu` является допустимым, и пользователь не сможет нажмите кнопку, чтобы выполнить команду при вставке в меню кнопки.  
+ Если *uiID* является допустимым ИД команды, кнопка выполняет команды, когда пользователь нажимает кнопку. Если *hMenu* — это дескриптор допустимый меню кнопки предоставляет раскрывающееся меню, когда он отображается в меню находится в панели инструментов или подменю. Если оба *uiID* и *hMenu* являются допустимыми, кнопка будет Разворачивающаяся кнопка с часть, которая будет выполнять команды, когда пользователь щелкает и часть с стрелка вниз, которая будет раскрывающегося меню при пользователя щелкает его. Однако если *hMenu* является допустимым, и пользователь не сможет нажмите кнопку, чтобы выполнить команду при вставке в меню кнопки.  
   
 ### <a name="example"></a>Пример  
  Следующий пример демонстрирует создание объекта `CMFCToolBarMenuButton` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).  
@@ -254,7 +254,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `other`  
+ [in] *других*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -268,7 +268,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -280,7 +280,7 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор для меню.  
   
 ### <a name="remarks"></a>Примечания  
@@ -327,17 +327,17 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Координаты ограничивающего прямоугольника изображения.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значка.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод принимает значок документа и отображает его на кнопке меню в области, указанной в центре `rectImage`.  
+ Этот метод принимает значок документа и отображает его на кнопке меню в области, указанной в центре *rectImage*.  
   
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize  
 
@@ -424,7 +424,7 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rectImage`  
+ [out] *rectImage*  
  Ссылку на `CRect` объекта, получающая координаты ограничивающего прямоугольника изображения.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
@@ -560,9 +560,9 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `sizeDefault`  
- [in] `bHorz`  
+ [in] *основного контроллера домена*  
+ [in] *sizeDefault*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -585,7 +585,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
- [in] `bDelay`  
+ [in] *pWnd*  
+ [in] *bDelay*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -629,7 +629,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `pImages`  
- [in] `bHorz`  
- [in] `bCustomizeMode`  
- [in] `bHighlight`  
- [in] `bDrawBorder`  
- [in] `bGrayDisabledButtons`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *pImages*  
+ [in] *bHorz*  
+ [in] *bCustomizeMode*  
+ [in] *bHighlight*  
+ [in] *bDrawBorder*  
+ [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -673,9 +673,9 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSelected`  
+ [in] *основного контроллера домена*  
+ [in] *rect*  
+ [in] *bSelected*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -689,7 +689,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Задает окно, которое получает раскрывающееся меню команд. Это может быть `NULL` только в том случае, если кнопки панели инструментов меню родительского окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -725,7 +725,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -739,10 +739,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Родительское окно для элемента ленты.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -759,11 +759,11 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMenuOnly`  
+ [in] *bMenuOnly*  
  `TRUE` для отображения кнопки меню эту кнопку, когда она имеет идентификатор допустимые команды и подменю `FALSE` для отображения Разворачивающаяся кнопка эту кнопку, когда она имеет идентификатор допустимые команды и подменю.  
   
 ### <a name="remarks"></a>Примечания  
- Как правило если кнопке панели инструментов меню подменю и идентификатор команды, меню вероятно разворачивающейся кнопки, который содержит основной кнопки и прикрепленное кнопка со стрелкой вниз. Если вызвать этот метод и `bMenuOnly` — `TRUE`, кнопки вместо кажется одного меню кнопки со стрелкой вниз на кнопке. Когда пользователь щелкает стрелку в каждом из режимов, подменю откроется, и когда пользователь щелкает часть не стрелку кнопки в режиме платформа выполняет команду.  
+ Как правило если кнопке панели инструментов меню подменю и идентификатор команды, меню вероятно разворачивающейся кнопки, который содержит основной кнопки и прикрепленное кнопка со стрелкой вниз. Если вызвать этот метод и *bMenuOnly* — `TRUE`, кнопки вместо кажется одного меню кнопки со стрелкой вниз на кнопке. Когда пользователь щелкает стрелку в каждом из режимов, подменю откроется, и когда пользователь щелкает часть не стрелку кнопки в режиме платформа выполняет команду.  
   
 ##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode  
  Указывает, является ли раскрывающееся меню в режиме палитры.  
@@ -775,14 +775,14 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMenuPaletteMode`  
+ [in] *bMenuPaletteMode*  
  Указывает, является ли раскрывающееся меню в режиме палитры.  
   
- [in] `nPaletteRows`  
+ [in] *nPaletteRows*  
  Число строк в палитре.  
   
 ### <a name="remarks"></a>Примечания  
- В режиме палитры все пункты меню отображаются как палитра по нескольким столбцам. Укажите количество строк с помощью `nPaletteRows`.  
+ В режиме палитры все пункты меню отображаются как палитра по нескольким столбцам. Укажите количество строк с помощью *nPaletteRows*.  
   
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd  
 
@@ -792,7 +792,7 @@ void SetMessageWnd(CWnd* pWndMessage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndMessage`  
+ [in] *pWndMessage*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -816,11 +816,11 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiBarID`  
+ [in] *uiBarID*  
  Указывает новый перемещаемое столбец идентификатора.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для указания идентификатора для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопки меню из строки меню. Если `uiBarID` имеет значение 0, пользователь не может создать кнопки меню.  
+ Этот метод используется для указания идентификатора для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопки меню из строки меню. Если *uiBarID* имеет значение 0, пользователь не может создать кнопки меню.  
   
  Вызовите [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) для включения функции перемещаемое меню в приложении.  
   

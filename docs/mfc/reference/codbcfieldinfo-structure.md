@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370738"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040198"
 ---
 # <a name="codbcfieldinfo-structure"></a>Структура CODBCFieldInfo
 `CODBCFieldInfo` Структура содержит сведения о полях в источник данных ODBC.  
@@ -41,7 +41,7 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Имя поля.  
   
  *m_nSQLType*  

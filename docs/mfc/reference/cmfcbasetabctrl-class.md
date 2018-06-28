@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65160e196b202abd1393555a5ada001d76292e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ee30d461bac43831bf59c19f5aac95884057eea
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378458"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042239"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Реализует базовую функциональность для окон с вкладками.  
@@ -265,11 +265,11 @@ ms.locfileid: "33378458"
 class CMFCBaseTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Добавляет новую вкладку в окно с вкладками.|  
@@ -322,7 +322,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Возвращает указатель в область, расположенную на указанной странице вкладки.|  
 |[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Возвращает прямой указатель на элемент управления, находящийся на указанной странице вкладки, даже если у этого элемента управления имеется оболочка.|  
 |[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Возвращает количество вкладок, входящих в набор вкладок.|  
-|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Возвращает ссылку на элемент управления ToolTip, связанный с объектом `CMFCBaseTabCtrl`.|  
+|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Возвращает ссылку на элемент управления ToolTip, связанный с объектом `CMFCBaseTabCtrl` .|  
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Возвращает количество видимых вкладок.|  
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||  
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Задает параметр, скрывающий вкладку окна, но только в случае, если в окне с вкладками отображается лишь одна видимая вкладка.|  
@@ -387,13 +387,13 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Создает оболочку для объекта, производного от класса [CWnd](../../mfc/reference/cwnd-class.md) и не являющегося производным от `CDockablePane`. Чтобы закрепить объект `CMFCBaseTabCtrl` , каждый внедренный элемент управления должен иметь закрепляющую оболочку или быть производным от `CDockablePane`.<br /><br /> Класс оболочки задается с помощью `SetDockingBayWrapperRTC`.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Указывает, выбираются вкладки щелчком левой или правой кнопкой мыши.|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Указывает, будут ли автоматически уничтожаться области, входящие во вкладки.|  
@@ -436,10 +436,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значка для добавления.  
   
- [in] `iIcon`  
+ [in] *iIcon*  
  Отсчитываемый от нуля индекс значка в защищенном `CImageList m_Images` член.  
   
 ### <a name="remarks"></a>Примечания  
@@ -463,23 +463,23 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTabWnd`  
+ [in] *pTabWnd*  
  Указатель на окно, этот метод представляет в виде новой вкладки.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Строка, содержащая метки новой вкладки.  
   
- [in] `uiImageId`  
+ [in] *uiImageId*  
  Идентификатор изображения из списка изображений. Вкладок элемента управления использует этот образ в качестве значка новой вкладки.  
   
- [in] `uiResTabLabel`  
+ [in] *uiResTabLabel*  
  Идентификатор ресурса для метки.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Логический параметр, который определяет, является ли новая вкладка отделяемой.  
   
 ### <a name="remarks"></a>Примечания  
- Если `pTabWnd` указывает на объект, который не является производным от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) и, если `bDetachable` — `TRUE`, платформа автоматически создает оболочку для `pTabWnd` объекта. Оболочка делает `pTabWnd` отделяемые объекта. По умолчанию оболочки является экземпляром класса [CDockablePaneAdapter класса](../../mfc/reference/cdockablepaneadapter-class.md). Если функциональные возможности, предлагаемые программы-оболочки по умолчанию это неприемлемо, используйте [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) метод, чтобы указать другой программы-оболочки.  
+ Если *pTabWnd* указывает на объект, который не является производным от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) и, если *bDetachable* — `TRUE`, платформа автоматически создает Программа-оболочка для *pTabWnd* объекта. Оболочка делает *pTabWnd* отделяемые объекта. По умолчанию оболочки является экземпляром класса [CDockablePaneAdapter класса](../../mfc/reference/cdockablepaneadapter-class.md). Если функциональные возможности, предлагаемые программы-оболочки по умолчанию это неприемлемо, используйте [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) метод, чтобы указать другой программы-оболочки.  
   
 ##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo  
 
@@ -489,7 +489,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -501,7 +501,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -513,7 +513,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectEdit`  
+ [in] *rectEdit*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -546,24 +546,24 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndToWrap`  
+ [in] *pWndToWrap*  
  Указатель на фрейм окна, которое находится в оболочке.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Строка, содержащая метки для окна.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Логический параметр, указывает, является ли окно отделяемой.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на оболочку производным от `CDockablePane` класса, если `CreateWrapper` успешно создает класс-оболочку для `pWndToWrap`. Если метод завершается ошибкой, он возвращает `pWndToWrap`.  
+ Указатель на оболочку производным от `CDockablePane` класса, если `CreateWrapper` успешно создает класс-оболочку для *pWndToWrap*. Если метод завершается ошибкой, он возвращает *pWndToWrap*.  
   
 ### <a name="remarks"></a>Примечания  
  Окна с вкладками можно закрепить любой объект, производный от `CWnd`. Тем не менее, в порядке для `CMFCBaseTabCtrl Class` объект закреплять, каждый объект `CMFCBaseTabCtrl` должен быть отделяемой. Таким образом `CMFCBaseTabCtrl` автоматически переносит все объекты, которые не являются производными от `CDockablePane`.  
   
  По умолчанию `CMFCBaseTabCtrl` создает экземпляры [CDockablePaneAdapter класса](../../mfc/reference/cdockablepaneadapter-class.md). Чтобы изменить класс оболочки по умолчанию, вызовите [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).  
   
- Если `pWndToWrap` является производным от `CDockablePane`, этот метод не создаст класс-оболочку. Вместо этого он не удастся и возвращать `pWndToWrap`.  
+ Если *pWndToWrap* является производным от `CDockablePane`, этот метод не создаст класс-оболочку. Вместо этого он не удастся и возвращать *pWndToWrap*.  
   
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab  
  Платформа вызывает этот метод, чтобы отсоединить вкладку из вкладок элемента управления.  
@@ -576,20 +576,20 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Перечисляемого типа данных, предоставляемые [CBasePane класса](../../mfc/reference/cbasepane-class.md). Этот тип данных определяет метод, который был использован для отсоединения на вкладку.  
   
- [in] `nTabNum`  
+ [in] *nTabNum*  
  Отсчитываемый от нуля индекс вкладки для отсоединения.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Логический параметр, указывает ли платформа следует скрыть вкладке отсоединения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если заданные вкладке `nTabNum` — неотделяемые, эта функция завершается неудачей и возвращает `FALSE`.  
+ Если заданные вкладке *nTabNum* — неотделяемые, эта функция завершается неудачей и возвращает `FALSE`.  
   
 ##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive  
 
@@ -599,7 +599,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLastActive`  
+ [in] *bLastActive*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -611,7 +611,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логического параметра, который определяет, использует ли платформа автоматического цвета.  
   
 ### <a name="remarks"></a>Примечания  
@@ -627,7 +627,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логическое значение, определяющее, следует ли использовать настраиваемые подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -644,7 +644,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логический параметр, указывает, следует ли включить прямое редактирование меток вкладок.  
   
 ### <a name="remarks"></a>Примечания  
@@ -664,10 +664,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  Логическое значение, указывающее, следует ли сделать отделяемые вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -681,7 +681,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  Логическое значение, указывающее, следует ли включить замену вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -695,14 +695,14 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод не оказывает влияния обозначается вкладке `iTab` уже видна.  
+ Этот метод не оказывает влияния обозначается вкладке *iTab* уже видна.  
   
  По умолчанию этот метод не поддерживается `CMFCBaseTabCtrl Class`. Необходимо реализовать эту функцию в пользовательский класс, производный от `CMFCBaseTabCtrl` Если этот элемент управления в настраиваемой вкладке поддерживает прокрутку вкладки. Этот метод поддерживается [класс CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md).  
   
@@ -723,7 +723,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pt`  
+ [in] *pt*  
  Координаты точки, которая определяется с помощью клиентской области [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -740,7 +740,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -752,7 +752,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nNewTab`  
+ [in] *nNewTab*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -830,19 +830,19 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `iTabNum`  
+ [out] *iTabNum*  
  Ссылка на целое число. Этот метод записывает отсчитываемый от нуля индекс первой видимой вкладки для данного параметра.  
   
- [in] `iStartFrom`  
+ [in] *iStartFrom*  
  Отсчитываемый от нуля индекс первой вкладки для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на первую видимую вкладку в случае успешного выполнения; в противном случае `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Если этот метод завершается ошибкой, он записывает значение -1 для `iStartFrom`.  
+ Если этот метод завершается ошибкой, он записывает значение -1 для *iStartFrom*.  
   
- Если `iStartFrom` больше или равно числу вкладок в наборе вкладок `GetFirstVisibleTab` автоматически переключается на другой.  
+ Если *iStartFrom* больше или равно числу вкладок в наборе вкладок `GetFirstVisibleTab` автоматически переключается на другой.  
   
 ##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum  
 
@@ -895,7 +895,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTabNum`  
+ [in] *iTabNum*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -935,10 +935,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectTabAreaTop`  
+ [in] *rectTabAreaTop*  
  Ссылка на объект `CRect`. `GetTabArea` использует этот объект для хранения размер и положение области вкладок в верхней.  
   
- [in] `rectTabAreaBottom`  
+ [in] *rectTabAreaBottom*  
  Ссылка на объект `CRect`. `GetTabArea` использует этот объект для хранения размер и положение области вкладок нижней.  
   
 ### <a name="remarks"></a>Примечания  
@@ -954,11 +954,11 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет фона указанной вкладки; -1, если `iTab` выходит за пределы диапазона.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, указывающее цвет фона указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Получает размер границ вкладки в элементе управления вкладками.  
@@ -981,7 +981,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `id`  
+ [in] *идентификатор*  
  Идентификатор вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1009,11 +1009,11 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hwnd`  
+ [in] *hwnd*  
  Дескриптор окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс вкладки, в случае успешного выполнения; -1, если отсутствует вкладка содержит `hwnd`.  
+ Отсчитываемый от нуля индекс вкладки, в случае успешного выполнения; -1, если отсутствует вкладка содержит *hwnd*.  
   
 ##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint  
  Возвращает вкладку, содержащую указанную точку.  
@@ -1023,11 +1023,11 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pt`  
+ [in] *pt*  
  Точка управления "Вкладка" в клиентских координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Индекс вкладки, который содержит `pt`; -1, если отсутствует вкладка содержит `pt`.  
+ Индекс вкладки, который содержит *pt*; -1, если отсутствует вкладка содержит *pt*.  
   
 ##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth  
 
@@ -1037,7 +1037,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1051,7 +1051,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс для вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1065,7 +1065,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1082,11 +1082,11 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор вкладки или -1, если `iTab` выходит за пределы диапазона.  
+ Идентификатор вкладки или -1, если *iTab* выходит за пределы диапазона.  
   
 ##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel  
  Извлекает текст метку вкладки.  
@@ -1098,17 +1098,17 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [выходной] `strLabel`  
+ [out] *strLabel*  
  Ссылка на объект `CString`. Этот метод сохраняет подпись вкладки в этом параметре.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` в случае успешного выполнения; `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод завершается ошибкой, если индекс `iTab` является недопустимым.  
+ Этот метод завершается ошибкой, если индекс *iTab* является недопустимым.  
   
  Установите метку для вкладки, при создании вкладки с помощью [CMFCBaseTabCtrl::AddTab](#addtab). Можно также изменить метку после ее создания с помощью метода [CMFCBaseTabCtrl::SetTabLabel](#settablabel).  
   
@@ -1122,10 +1122,10 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [выходной] `rect`  
+ [out] *rect*  
  Ссылка на объект `CRect`. Этот метод сохраняет размер и положение вкладки в этом параметре.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1160,7 +1160,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1172,11 +1172,11 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста указанной вкладки; -1, если `iTab` выходит за пределы диапазона.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста указанной вкладки; -1, если *iTab* выходит за пределы диапазона.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Возвращает указатель на область, расположенную на указанной вкладки.  
@@ -1186,11 +1186,11 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, который находится на вкладке, `iTab` указывает. `NULL` Если `iTab` является недопустимым.  
+ Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, который находится на вкладке, *iTab* указывает. `NULL` Если *iTab* является недопустимым.  
   
 ### <a name="remarks"></a>Примечания  
  Возвращаемый объект является тот, который при его вызове либо добавить приложение [CMFCBaseTabCtrl::AddTab](#addtab) или [CMFCBaseTabCtrl::InsertTab](#inserttab).  
@@ -1205,11 +1205,11 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, находящийся на указанной вкладки; `NULL` Если `iTab` является недопустимым.  
+ Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, находящийся на указанной вкладки; `NULL` Если *iTab* является недопустимым.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод получает прямой указатель `CWnd` объект, добавленный с помощью любого метода [CMFCBaseTabCtrl::AddTab](#addtab) или [CMFCBaseTabCtrl::InsertTab](#inserttab). `GetTabWndNoWrapper` Извлекает указатель на добавленный `CWnd`, даже если платформа добавлены оболочку для объекта. Дополнительные сведения о оболочки и [класса CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md), в разделе [CMFCBaseTabCtrl::CreateWrapper](#createwrapper).  
@@ -1244,7 +1244,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1258,7 +1258,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHide`  
+ [in] *bHide*  
  Логическое значение, указывающее, следует ли включить скрытие одной вкладки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1285,26 +1285,26 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pNewWnd`  
+ [in] *pNewWnd*  
  Указатель на окно, этот метод добавляет в виде новой вкладки.  
   
- [in] `lpszTabLabel`  
+ [in] *lpszTabLabel*  
  Строка, содержащая метки новой вкладки.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Отсчитываемый от нуля индекс вкладки «новые».  
   
- [in] `uiImageId`  
+ [in] *uiImageId*  
  Идентификатор изображения из списка изображений. Вкладок элемента управления использует этот образ в качестве значка новой вкладки.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  Логический параметр, который определяет, является ли новая вкладка отделяемой.  
   
- [in] `uiResTabLabel`  
+ [in] *uiResTabLabel*  
  Идентификатор ресурса для метки.  
   
 ### <a name="remarks"></a>Примечания  
- Если объект обозначается `pNewWnd` не является производным от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) и, если `bDetachable` параметр `TRUE`, платформа создает оболочку специальные новой вкладки. По умолчанию оболочки является экземпляром класса [CDockablePaneAdapter класса](../../mfc/reference/cdockablepaneadapter-class.md). Используйте [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) метод, чтобы создать класс-оболочку другой. Любой класс настраиваемой оболочки должен быть производным от `CDockablePaneAdapter`.  
+ Если объект обозначается *pNewWnd* не является производным от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) и, если *bDetachable* параметр `TRUE`, платформа создает специальные оболочка новой вкладки. По умолчанию оболочки является экземпляром класса [CDockablePaneAdapter класса](../../mfc/reference/cdockablepaneadapter-class.md). Используйте [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) метод, чтобы создать класс-оболочку другой. Любой класс настраиваемой оболочки должен быть производным от `CDockablePaneAdapter`.  
   
 ##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab  
 
@@ -1314,7 +1314,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hIcon`  
- [in] `iIcon`  
+ [in] *hIcon*  
+ [in] *iIcon*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1500,7 +1500,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точки для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1539,7 +1539,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1556,7 +1556,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1586,7 +1586,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nSource`  
- [in] `nDest`  
+ [in] *исходного*  
+ [in] *nDest*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1659,9 +1659,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `COleDataObject*`  
- [in] `DROPEFFECT`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DROPEFFECT*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1678,9 +1678,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1706,9 +1706,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [in] *COleDataObject**  
+ [in] *DWORD*  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `int`  
- [in] `CString&`  
+ [in] *int*  
+ [in] *CString &*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1737,7 +1737,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1773,10 +1773,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Логический параметр, указывает, следует ли повторно рассчитать компоновку вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1811,7 +1811,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1823,7 +1823,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладку `SetActiveTab` делает вкладку с данным индексом active.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1840,7 +1840,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clr`  
+ [in] *со средой clr*  
  Указывает новый цвет фона.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1854,7 +1854,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `clr`  
+ [in] *со средой clr*  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, который указывает новый цвет текста.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1868,11 +1868,11 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `arColors`  
+ [in] *arColors*  
  Массив цветов RGB.  
   
 ### <a name="remarks"></a>Примечания  
- Если предоставляется пользовательский массив цветов, массив цветов по умолчанию учитывается. Если параметр `arColors` является пустым, возвращается платформа по умолчанию массив цветов.  
+ Если предоставляется пользовательский массив цветов, массив цветов по умолчанию учитывается. Если параметр *arColors* является пустым, возвращается платформа по умолчанию массив цветов.  
   
  Чтобы включить режим autocolor, используйте [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor) метод.  
   
@@ -1884,7 +1884,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRTC`  
+ [in] *pRTC*  
  Сведения о классе среды выполнения для нового класса-оболочки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1900,10 +1900,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bNoPrefix`  
+ [in] *bNoPrefix*  
  `TRUE` Если вам требуется обрабатывать символы префикса; в противном случае `FALSE`.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` Если требуется перерисовать окна с вкладками. в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1922,16 +1922,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор ресурса точечного рисунка. `SetImageList` загружает список изображений из данного ресурса.  
   
- [in] `cx`  
+ [in] *cx*  
  Ширина каждого изображения в пикселях.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметра, который определяет прозрачный цвет изображения.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  Дескриптор в список предварительно загруженный образ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1940,7 +1940,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="remarks"></a>Примечания  
  Изображения из список изображений значка отображаемого вместе с метки для вкладки. Для отображения значка, необходимо указать его индекс, при вызове [CMFCBaseTabCtrl::AddTab](#addtab).  
   
- `SetImageList` Если был создан набор вкладок с плоский стиль завершится ошибкой. Она также завершится неудачно, если платформа не удается загрузить изображение согласно `uiID`.  
+ `SetImageList` Если был создан набор вкладок с плоский стиль завершится ошибкой. Она также завершится неудачно, если платформа не удается загрузить изображение согласно *uiID*.  
   
  Этот метод пересчитывает высоту вкладки по размерам текста и изображений.  
   
@@ -1952,7 +1952,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `location`  
+ [in] *расположение*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1966,10 +1966,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [in] `color`  
+ [in] *цвет*  
  Чтобы задать цвет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1985,10 +1985,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTabBorderSize`  
+ [in] *nTabBorderSize*  
  Новый размер границы в пикселях.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  Логический параметр, указывает ли платформа обновит элемент управления.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2001,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки. Этот метод изменяет значок на этой вкладке.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор для значка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2020,10 +2020,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для обновления.  
   
- [in] `uiIcon`  
+ [in] *uiIcon*  
  Идентификатор значка значок "Создать". Этот идентификатор ссылается на внутренний [CImageList](../../mfc/reference/cimagelist-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2040,13 +2040,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для изменения.  
   
- [in] `bIconOnly`  
+ [in] *bIconOnly*  
  Логический параметр, который определяет, следует ли отображать только значки.  
   
- [in] `bShowTooltipAlways`  
+ [in] *bShowTooltipAlways*  
  Логического параметра, который определяет, отображаются ли платформа всплывающие подсказки для метку вкладки, который отображает только те значки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2065,10 +2065,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки для обновления.  
   
- [in] `strLabel`  
+ [in] *strLabel*  
  Ссылка на строку, содержащую новый текст для метку вкладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2091,14 +2091,14 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `arOrder`  
+ [in] *arOrder*  
  Массив индексов (с нуля), определяющий новый порядок табуляции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE` в случае успешного выполнения; `FAIL` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Размер `arOrder` массива должен быть равен количество вкладок в наборе вкладок.  
+ Размер *arOrder* массива должен быть равен количество вкладок в наборе вкладок.  
   
 ##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor  
  Задает цвет текста для определенной вкладке.  
@@ -2110,10 +2110,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Отсчитываемый от нуля индекс вкладки.  
   
- [in] `color`  
+ [in] *цвет*  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, который указывает новый цвет текста.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -2131,23 +2131,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
  Индекс вкладки, `ShowTab` будет отображать или скрывать.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Логический параметр, указывает, следует ли отображать вкладку.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  Логический параметр, указывает на необходимость немедленно повторно вычислить макет окна.  
   
- [in] `bActivate`  
- Логический параметр, указывает на необходимость выбрать вкладку, указанную в `iTab`.  
+ [in] *bActivate*  
+ Логический параметр, указывает на необходимость выбрать вкладку, указанную в *iTab*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр `bActivate` применяется, только если `bShow` — `TRUE`. Если `bActivate` — `TRUE` и, если `ShowTab` прошла успешно, `ShowTab` AFX_WM_CHANGE_ACTIVE_TAB сообщение будет отправлено на родительский окно вкладки.  
+ Параметр *bActivate* применяется, только если *bShow* — `TRUE`. Если *bActivate* — `TRUE` и, если `ShowTab` прошла успешно, `ShowTab` AFX_WM_CHANGE_ACTIVE_TAB сообщение будет отправлено на родительский окно вкладки.  
   
 ##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab  
 
@@ -2157,7 +2157,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iTab`  
+ [in] *iTab*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFisrtTabID`  
- [in] `nSecondTabID`  
+ [in] *nFisrtTabID*  
+ [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Примечания  
   

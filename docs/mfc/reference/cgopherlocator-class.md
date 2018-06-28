@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366926"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041290"
 ---
 # <a name="cgopherlocator-class"></a>Класс CGopherLocator
 Получает средство «указатель» с сервера gopher, определяет тип средства поиска и делает средство поиска доступным для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -39,23 +39,23 @@ ms.locfileid: "33366926"
 class CGopherLocator : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherLocator::CGopherLocator](#cgopherlocator)|Создает объект `CGopherLocator`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherLocator::GetLocatorType](#getlocatortype)|Выполняет синтаксический анализ локатора gopher и определяет его атрибуты.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Прямой доступ к символов, сохраненных в `CGopherLocator` объект в виде строки в стиле C.|  
   
@@ -84,7 +84,7 @@ CGopherLocator(const CGopherLocator& ref);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ref`  
+ *ref*  
  Ссылка на константу `CGopherLocator` объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -107,7 +107,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="remarks"></a>Примечания  
  Ниже приведены возможные типы:  
   
-|Значение|Смысл|  
+|Значение|Значение|  
 |-----------|-------------|  
 |GOPHER_TYPE_TEXT_FILE|Текстовый файл.|  
 |GOPHER_TYPE_DIRECTORY|Каталог дополнительные элементы Gopher.|  

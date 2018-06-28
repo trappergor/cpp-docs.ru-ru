@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378244"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042395"
 ---
 # <a name="cmfcribbonbar-class"></a>Класс CMFCRibbonBar
 Класс `CMFCRibbonBar` реализует панель ленты. Аналогичная реализация использовалась в Office 2007.  
@@ -220,13 +220,13 @@ class CMFCRibbonBar : public CPane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonBar::CMFCRibbonBar`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Активирует уже видимую категорию контекста.|  
 |[CMFCRibbonBar::AddCategory](#addcategory)|Добавляет на ленту новую категорию.|  
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Идентификатор категории контекста.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если категории контекста с `uiContextID` найден и активировано; в противном случае `FALSE`.  
+ `TRUE` Если категории контекста с *uiContextID* найден и активировано; в противном случае `FALSE`.  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  Создает и инициализирует новую категорию ленты для ленты.  
@@ -376,32 +376,32 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя категории ленты.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Идентификатор списка маленьких изображений для категории ленты ресурса.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  Идентификатор ресурса для категории ленты списка больших изображений.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Задает размер изображений небольшого размера для категории ленты.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Указывает размер больших изображений для категории ленты.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  Отсчитываемый от нуля индекс расположения категории.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Указатель на [CMFCRibbonCategory класса](../../mfc/reference/cmfcribboncategory-class.md) класса среды выполнения для динамического создания категории ленты во время выполнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новую категорию ленты, если метод выполнен успешно; в противном случае `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Если `pRTI` не `NULL`, будет создана новая категория ленты, динамически с помощью класса среды выполнения.  
+ Если *pRTI* не `NULL`, будет создана новая категория ленты, динамически с помощью класса среды выполнения.  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется использование `AddCategory` метод `CMFCRibbonBar` класса.  
@@ -427,35 +427,35 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя категории.  
   
- [in] `lpszContextName`  
+ [in] *lpszContextName*  
  Имя заголовка категории контекста.  
   
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Идентификатор контекста.  
   
- [in] `clrContext`  
+ [in] *clrContext*  
  Цвет заголовка категории контекста.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Идентификатор ресурса мелкое изображение категорию контекста.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  Идентификатор ресурса крупное изображение категорию контекста.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Размер небольшое изображение.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Размер большого изображения.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Указатель на класс среды выполнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданный категории, или `NULL` Если `CreateObject` метод `pRTI` не удается создать указанной категории.  
+ Указатель на только что созданный категории, или `NULL` Если `CreateObject` метод *pRTI* не удается создать указанной категории.  
   
 ### <a name="remarks"></a>Примечания  
  Эту функцию можно используйте для добавления категории контекста. Категории контекста — это специальный тип категории, которой могут быть отображены или скрыты во время выполнения, в зависимости от текущего контекста приложения. Например при выборе объекта, можно отобразить специальные вкладок с категории контекста, которые используйте, чтобы изменить выбранный объект.  
@@ -493,19 +493,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя основную категорию ленты.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Идентификатор ресурса изображений небольшого размера.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  Идентификатор ресурса больших изображений.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Размер изображений небольшого размера.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  Размер больших изображений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -544,13 +544,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя категории.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Идентификатор ресурса из списка изображений для категории.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  Размер изображения для элементов ленты в категории.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -567,7 +567,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на элемент ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bReplaceFrameCaption`  
+ [in] *bReplaceFrameCaption*  
  `TRUE` для ленты для замены заголовок окна главного фрейма; `FALSE` найти панель ленты в области заголовка фрейма главного окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно для панели ленты.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Логический сочетание стилей для нового окна.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор нового окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно для панели ленты.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Этот параметр не используется.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Логический сочетание стилей для нового окна.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор нового окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Чтобы установить фокус на родительское окно элемента ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для кнопки меню.  
   
- [in] `pMenuItem`  
+ [in] *pMenuItem*  
  Указатель на кнопку меню панели инструментов.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Отображаемый прямоугольник для кнопки меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -700,7 +700,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить функцию Ключевые подсказки; `FALSE` отключить функцию Ключевые подсказки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить **предварительного просмотра перед печатью** компонентов; `FALSE` отключение **предварительного просмотра перед печатью** компонентов.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bEnable` — `FALSE` и категория предварительного существует, она удаляется.  
+ Если *bEnable* — `FALSE` и категория предварительного существует, она удаляется.  
   
  По умолчанию **предварительного просмотра перед печатью** функция включена.  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить подсказки на панели ленты; `FALSE` отключить всплывающие подсказки на панели ленты.  
   
- [in] `bEnableDescr`  
+ [in] *bEnableDescr*  
  `TRUE` Чтобы включить всплывающие описания на подсказке; `FALSE` отключить всплывающие описания на подсказке.  
   
 ### <a name="remarks"></a>Примечания  
- `bEnable` Параметр определяет, отображаются ли всплывающие подсказки при наведении указателя мыши на элемент ленты. `bEnableDescr` Параметр определяет, отображается ли дополнительный описательный текст с текстом всплывающей подсказки.  
+ *BEnable* параметр определяет, отображаются ли всплывающие подсказки при наведении указателя мыши на элемент ленты. *BEnableDescr* параметр определяет, отображается ли дополнительный описательный текст с текстом всплывающей подсказки.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  Извлекает указатель на элемент ленты, если она содержит указанные данные и видимость.  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элемента ленты.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` для поиска элементов отображается ленты. `FALSE` для поиска всех элементов ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды для элемента ленты.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` для поиска элементов отображается ленты. `FALSE` для поиска всех элементов ленты.  
   
- [in] `bExcludeQAT`  
+ [in] *bExcludeQAT*  
  `TRUE` Чтобы исключить из поиска; элементы панели инструментов быстрого доступа в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -799,7 +799,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с категорией ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -859,11 +859,11 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс категории ленты в списке категорий ленты, содержащаяся на панели ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на категорию ленты по указанному индексу; в противном случае `NULL` Если `nIndex` находился вне допустимого диапазона.  
+ Указатель на категорию ленты по указанному индексу; в противном случае `NULL` Если *nIndex* находился вне допустимого диапазона.  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  Возвращает число категорий ленты на панели ленты.  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCategory`  
+ [in] *pCategory*  
  Указатель на категорию ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс категории ленты, заданные `pCategory`; или значение -1, если категория ленты не найден.  
+ Отсчитываемый от нуля индекс категории ленты, заданные *pCategory*; или значение -1, если категория ленты не найден.  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  Извлекает имя заголовка категории контекста, заданного идентификатором контекста  
@@ -912,14 +912,14 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Идентификатор контекста категории ленты.  
   
- [выходной] `strName`  
+ [out] *strName*  
  Имя заголовка категории контекста.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно; в противном случае `FALSE` Если `uiContextID` равно нулю или заголовка категории контекста не найден.  
+ `TRUE` Если метод выполнен успешно; в противном случае `FALSE` Если *uiContextID* равно нулю или заголовка категории контекста не найден.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  Извлекает элемент ленты, в настоящее время удаленной работы.  
@@ -943,10 +943,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды элемента ленты.  
   
- [выходной] `arButtons`  
+ [out] *arButtons*  
  Массив указателей на элементы ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `lstItems`  
+ [out] *lstItems*  
  Список идентификаторов команд для элементов ленты, содержащиеся на панели ленты.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Чтобы исключить элементы ленты, которые выводятся на экран; `FALSE` для включения всех элементов ленты на панели ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1081,7 +1081,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `lstCommands`  
+ [out] *lstCommands*  
  Список идентификаторов команд для элементов ленты на панели быстрого доступа.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Расположение точки в координатах панели ленты.  
   
- [in] `bCheckActiveCategory`  
+ [in] *bCheckActiveCategory*  
  `TRUE` для поиска active категории; `FALSE` не следует выполнять поиск в активную категорию.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` для тестирования заголовок панели ленты точка, расположенная в нем; `FALSE` не для тестирования заголовок панели ленты точка, расположенная в нем. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на элемент ленты, расположенный в указанном месте; в противном случае `NULL` Если точка находится не в элемент ленты.  
   
 ### <a name="remarks"></a>Примечания  
- Заголовок панели ленты с точки, находящейся в нем не проверить, если `bCheckActiveCategory` параметр `TRUE`.  
+ Заголовок панели ленты с точки, находящейся в нем не проверить, если *bCheckActiveCategory* параметр `TRUE`.  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Указывает, включена ли функция Ключевые подсказки.  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку, которая была нажата.  
   
- [in] `point`  
+ [in] *точки*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pEdit`  
- [in] `point`  
+ [in] *pEdit*  
+ [in] *точки*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1356,7 +1356,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Если макет справа налево; `FALSE` Если макет справа налево.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- Long `lVal`  
+ длинное *lVal*  
  Индекс доступного объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -1431,13 +1431,13 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Указатель на родительское окно главного фрейма элемента ленты.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Виртуальному коду клавиши нажатие клавиши.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Флаги состояния клавиатуры, была нажата клавиша.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  Указатель на родительское окно главного фрейма элемента ленты.  
   
- [in] `wParam`  
+ [in] *wParam*  
  Виртуальному коду клавиши освобождение ключа.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
  Указатель на сообщение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1533,7 +1533,7 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс категории в списке категорий ленты, содержащаяся на панели ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCategory`  
+ [in] *pCategory*  
  Категория ленты, содержащаяся на панели ленты.  
   
- [in] `bForceRestore`  
+ [in] *bForceRestore*  
  `TRUE` Чтобы развернуть панель ленты, если он свернут; `FALSE` для отображения активной категории во всплывающем окне, если панель ленты свернута.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>Примечания  
  Основную категорию ленты не может быть активной категории.  
   
- Если заданная категория `pCategory` — не отображается, его нельзя задать как активную категорию.  
+ Если заданная категория *pCategory* — не отображается, его нельзя задать как активную категорию.  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  Связывает системы кнопок на панели ленты, к которой принадлежат дочернего окна многодокументного интерфейса (MDI) для указанного дочернего окна MDI.  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель дочернего окна MDI.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1589,10 +1589,10 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на кнопку ленты приложения.  
   
- [in] `sizeButton`  
+ [in] *sizeButton*  
  Размер кнопки ленты приложения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1614,13 +1614,13 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды элемента ленты.  
   
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Keytip.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  Keytip меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1639,10 +1639,10 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pLevel`  
+ [in] *pLevel*  
  Указатель на текущий объект навигации клавиатуры.  
   
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` Чтобы установить фокус на панель ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMax`  
+ [in] *bMax*  
  `TRUE` для отображения кнопок системы для дочернего окна MDI на ленте; `FALSE` удаление кнопки системы для дочернего окна MDI с панели ленты.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель фрейма главного окна для ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1677,10 +1677,10 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Список команд, чтобы разместить на панели инструментов быстрого доступа.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` Если требуется перерисовать на ленте после добавления элементов ленты; `FALSE` в противном случае.  
   
 ### <a name="example"></a>Пример  
@@ -1696,7 +1696,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `state`  
+ [in] *состояния*  
  Состояние по умолчанию панель инструментов быстрого доступа.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` Чтобы изменить расположение панели инструментов быстрого доступа над панелью ленты; `FALSE` разместить панель быстрого доступа под лентой.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,10 +1728,10 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nWidthRegular`  
+ [in] *nWidthRegular*  
  Ширина в пикселях регулярного фиксированного размера всплывающей подсказки.  
   
- [in] `nWidthLargeImage`  
+ [in] *nWidthLargeImage*  
  Ширина в пикселях большого фиксированного размера всплывающей подсказки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1747,10 +1747,10 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Индекс категории ленты.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Если `TRUE`, Показать категории ленты; в противном случае скрыть категории ленты.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  Идентификатор категории контекста.  
   
- [in] `bShow`  
+ [in] *bShow*  
  Если `TRUE`, Показать категории, которые имеют указанный идентификатор; в противном случае скрыть категории с указанным идентификатором.  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nChar`  
+ [in] *nChar*  
  Пользовательский код символа нажатия клавиши.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uiXMLResID`  
+ *uiXMLResID*  
  Указывает идентификатор XML-строку ресурса с лентой сведения.  
   
- `lpszResType`  
- Указывает тип ресурса, расположенный в `uiXMLResID`.  
+ *lpszResType*  
+ Указывает тип ресурса, расположенный в *uiXMLResID*.  
   
- `hInstance`  
- Дескриптор модуля, чьи исполняемого файла содержит ресурс. Если `hInstance` — `NULL`, система загружает ресурс из модуля, который был использован для создания текущего процесса.  
+ *hInstance*  
+ Дескриптор модуля, чьи исполняемого файла содержит ресурс. Если *hInstance* — `NULL`, система загружает ресурс из модуля, который был использован для создания текущего процесса.  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  Указывает идентификатор ресурса (в виде строки) с лентой сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppBuffer`  
- Когда эта функция возвращает, `ppBuffer` указывает на буфер, выделенный с помощью данного метода и содержит сведения о панели ленты в формате XML.  
+ *ppBuffer*  
+ Когда эта функция возвращает, *ppBuffer* указывает на буфер, выделенный с помощью данного метода и содержит сведения о панели ленты в формате XML.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `TRUE` в случае успешного выполнения; в противном случае — значение `FALSE`.  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszFilePath`  
+ *lpszFilePath*  
  Задает выходной файл.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` Задает внешний вид Windows 7; `FALSE` в противном случае.  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` повторно вычисляет макет ленты; `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  

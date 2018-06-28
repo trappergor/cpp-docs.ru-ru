@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369711"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042060"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 Класс `CMFCRibbonCheckBox` реализует флажок, который можно добавить на панель ленты, панель быстрого доступа или во всплывающее меню.  
@@ -54,13 +54,13 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Переопределяет [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-где `nID` — идентификатор команды флажка, `lpszText` — текстовая метка флажка.  
+где *nID* идентификатор флажок и *lpszText* текстовая метка флажка.  
   
  Флажок можно добавить на панель ленты с помощью [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
@@ -103,10 +103,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Указывает текст метки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на `CDC` связанного с флажком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на `CDC` связанные с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на `CDC` объект, связанный с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на `CDC` для рисования флажок.  
   
 ### <a name="remarks"></a>Примечания  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
+ [in] *CDC**  
  Указатель на `CDC` связанного с флажком.  
   
- [in] `CRect`  
+ [in] *CRect*  
  Объект `CRect` объект, указывающий прямоугольник, в котором будет рисоваться изображение меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства, в котором отображается флажок.  
   
- [in] `strText`  
+ [in] *strText*  
  Отображаемый текст.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Расстояние в пикселях с левой стороны от списка для отображения текста.  
   
- [in] `rect`  
+ [in] *rect*  
  Отображаемый прямоугольник для флажка.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` Если флажок установлен, или `FALSE` в противном случае.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` Если флажок выделяется, или `FALSE` в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Родительское окно элемента управления checkbox.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для флажка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374361"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039171"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
 Используется для диалогового окна OLE "Вставить специальный объект".  
@@ -58,17 +58,17 @@ class COlePasteSpecialDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Создает объект `COlePasteSpecialDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Добавляет в список форматов, которые можно вставить в приложение пользовательские форматы.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Добавляет новую запись в список поддерживаемых форматов буфера обмена.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Добавляет **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`и при необходимости `CF_LINKSOURCE` список форматов можно вставить приложения.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Добавляет **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**и при необходимости **CF_LINKSOURCE** список форматов можно вставить приложения .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Создает элемент в документе-контейнере, используя указанный формат.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Отображает диалоговое окно OLE Специальная вставка.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Сообщает ли рисование элементов в виде значка или нет.|  
@@ -78,7 +78,7 @@ class COlePasteSpecialDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::m_ps](#m_ps)|Структура типа **OLEUIPASTESPECIAL** , который управляет функция диалогового окна.|  
   
@@ -130,22 +130,22 @@ void AddFormat(
  *FMT*  
  Ссылка на тип данных для добавления.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Строка, описывающая формат для пользователя.  
   
  *lpszResult*  
  Строка, описывающая результат, если выбран этот формат, в диалоговом окне.  
   
- `flags`  
+ *flags*  
  Различные параметры связывания и внедрения для данного формата. Этот флаг представляет собой битовую комбинацию из одного или нескольких различных значений в **OLEUIPASTEFLAG** перечисляемый тип.  
   
- `cf`  
+ *CF*  
  Используемый формат буфера обмена.  
   
  *tymed*  
  Типы мультимедиа, доступные в этом формате. Это представляет собой битовую комбинацию из одного или нескольких значений в **TYMED** перечисляемый тип.  
   
- `nFormatID`  
+ *nFormatID*  
  Идентификатор строки, который определяет этот формат. Формат данной строки — это две отдельные строки, разделенные символом «\n». Первая строка имеет те же данные, должны быть переданы в *lpstrFormat* параметра, а вторая совпадает со значением *lpstrResult* параметра.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  Используемый формат буфера обмена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **«Внедренный объект»**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Флаг создания содержит произвольное количество комбинируются с помощью оператора побитового или следующие флаги:  
   
 - `PSF_SELECTPASTE` Указывает, что переключатель «вставить» будет проверяться изначально при вызове диалогового. Нельзя использовать в сочетании с `PSF_SELECTPASTELINK`. Это значение по умолчанию.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` Задает отображение кнопки справки при вызове диалоговым окном.  
   
- `pDataObject`  
+ *pDataObject*  
  Указывает на [COleDataObject](../../mfc/reference/coledataobject-class.md) для вставки. Если это значение равно **NULL**, он получает `COleDataObject` из буфера обмена.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371677"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041754"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Класс CMFCRibbonMiniToolBar
 Реализует контекстно-зависимую панель инструментов контекстного меню.  
@@ -46,14 +46,14 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Конструктор по умолчанию.|  
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonMiniToolBar::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
@@ -98,10 +98,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  Панель ленты, мини-панель инструментов ищет кнопки для отображения.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  Список команд, который будет отображаться на мини-панель инструментов. Все категории ленты производится поиск соответствующие кнопки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `x`  
+ [in] *x*  
  Задает горизонтальное положение мини-панель инструментов в экранных координатах.  
   
- [in] `y`  
+ [in] *y*  
  Задает вертикальное положение мини-панель инструментов в экранных координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `x`  
+ [in] *x*  
  Задает горизонтальное положение контекстного меню в экранных координатах.  
   
- [in] `y`  
+ [in] *y*  
  Задает вертикальное положение контекстного меню в экранных координатах.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Указывает идентификатор ресурса контекстного меню для отображения.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  Идентифицирует окно, которое получает сообщения из контекстного меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

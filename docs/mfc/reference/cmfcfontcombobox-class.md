@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375749"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040003"
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 `CMFCFontComboBox` Класс создает поле со списком, содержащее список шрифтов.  
@@ -42,18 +42,18 @@ ms.locfileid: "33375749"
 class CMFCFontComboBox : public CComboBox  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Создает объект `CMFCFontComboBox`.|  
 |`CMFCFontComboBox::~CMFCFontComboBox`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCFontComboBox::CompareItem`|Вызывается платформой для определения относительной позиции нового элемента в поле отсортированный список текущего шрифта поле со списком. (Переопределяет [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|  
 |`CMFCFontComboBox::DrawItem`|Вызывается платформой для отрисовки указанный элемент в текущий шрифт поле со списком. (Переопределяет [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|  
@@ -65,7 +65,7 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Указывает шрифт, используемый для отрисовки метки элемента в поле со списком текущий шрифт для платформы.|  
   
@@ -132,13 +132,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDesc`  
+ [in] *параметре pDesc*  
  Указывает на несуществующий объект описания шрифтов.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Задает имя шрифта.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Указывает набор символов. Значение по умолчанию — DEFAULT_CHARSET. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -164,13 +164,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFontType`  
+ [in] *nFontType*  
  Указывает тип шрифта. Значение по умолчанию — битовую комбинацию (OR) значения: DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Указывает кодировку шрифта. Значение по умолчанию — DEFAULT_CHARSET.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Указывает шрифт шаг и семейство. Значение по умолчанию — DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

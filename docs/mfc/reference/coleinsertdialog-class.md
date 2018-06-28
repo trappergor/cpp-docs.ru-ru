@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374885"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042174"
 ---
 # <a name="coleinsertdialog-class"></a>Класс COleInsertDialog
 Используется для диалогового окна OLE "Вставить объект".  
@@ -54,13 +54,13 @@ class COleInsertDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Создает объект `COleInsertDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleInsertDialog::CreateItem](#createitem)|Создание элемента, выбранного в диалоговом окне.|  
 |[COleInsertDialog::DoModal](#domodal)|Отображает диалоговое окно вставки объекта OLE.|  
@@ -72,7 +72,7 @@ class COleInsertDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleInsertDialog::m_io](#m_io)|Структура типа **OLEUIINSERTOBJECT** , управляет поведением окна.|  
   
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Создание флаг, который содержит любое количество следующих значений для объединения с помощью оператора побитового или:  
   
 - **IOF_SHOWHELP** задает отображение кнопки справки при вызове диалоговым окном.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** указывает, что в диалоговом окне следует проверяет классы, он добавляет в список, гарантируя, что серверы, указанные в базе данных регистрации существовать до откроется диалоговое окно. Установка этого флажка может существенно снизить общую производительность.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указывает элемент должен быть создан.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Одно из следующих значений:  
   
  `COleInsertDialog::DocObjectsOnly` вставляет только DocObjects.  

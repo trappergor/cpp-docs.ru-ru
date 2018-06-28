@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372918"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040991"
 ---
 # <a name="cmfctabdroptarget-class"></a>Класс CMFCTabDropTarget
 Предоставляет механизм взаимодействия между набор вкладок и библиотеками OLE.  
@@ -42,20 +42,20 @@ ms.locfileid: "33372918"
 class CMFCTabDropTarget : public COleDropTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Вызывается платформой, когда пользователь перетаскивает объект в окно вкладки. (Переопределяет [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|  
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Вызывается платформой при перетаскивании объекта за пределами вкладки окна, имеющий фокус. (Переопределяет [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|  
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Вызывается платформой, когда пользователь перетаскивает объект в окно вкладки, на который установлен фокус. (Переопределяет [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|  
@@ -99,14 +99,14 @@ virtual DROPEFFECT OnDragEnter(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWnd`|Не используется.|  
-|[in] `pDataObject`|Указатель на объект, который пользователь перетаскивает.|  
-|[in] `dwKeyState`|Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, и `MK_RBUTTON`.|  
-|[in] `point`|Расположение курсора в клиентских координатах.|  
+|Параметр|Описание:|  
+|[in] *pWnd*|Не используется.|  
+|[in] *pDataObject*|Указатель на объект, который пользователь перетаскивает.|  
+|[in] *dwKeyState*|Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, и `MK_RBUTTON`.|  
+|[in] *точки*|Расположение курсора в клиентских координатах.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Эффект, получаемый в случае удаления в расположении, заданном `point`. Может быть один или несколько из следующих:  
+ Эффект, получаемый в случае удаления в расположении, заданном *точки*. Может быть один или несколько из следующих:  
   
 - `DROPEFFECT_NONE`  
   
@@ -134,8 +134,8 @@ virtual void OnDragLeave(CWnd* pWnd);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWnd`|Не используется.|  
+|Параметр|Описание:|  
+|[in] *pWnd*|Не используется.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод `CMFCBaseTabCtrl::OnDragLeave` метод для выполнения операции перетаскивания.  
@@ -155,14 +155,14 @@ virtual DROPEFFECT OnDragOver(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWnd`|Не используется.|  
-|[in] `pDataObject`|Указатель на объект, который пользователь перетаскивает.|  
-|[in] `dwKeyState`|Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, и `MK_RBUTTON`.|  
-|[in] `point`|Расположение указателя мыши в клиентских координатах.|  
+|Параметр|Описание:|  
+|[in] *pWnd*|Не используется.|  
+|[in] *pDataObject*|Указатель на объект, который пользователь перетаскивает.|  
+|[in] *dwKeyState*|Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, и `MK_RBUTTON`.|  
+|[in] *точки*|Расположение указателя мыши в клиентских координатах.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Эффект, получаемый в случае удаления в расположении, заданном `point`. Может быть один или несколько из следующих:  
+ Эффект, получаемый в случае удаления в расположении, заданном *точки*. Может быть один или несколько из следующих:  
   
 - `DROPEFFECT_NONE`  
   
@@ -195,12 +195,12 @@ virtual DROPEFFECT OnDropEx(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWnd`|Не используется.|  
-|[in] `pDataObject`|Указатель на объект, который пользователь перетаскивает.|  
-|[in] `dropEffect`|Операция перетаскивания по умолчанию.|  
-|[in] `dropList`|Не используется.|  
-|[in] `point`|Расположение указателя мыши в клиентских координатах.|  
+|Параметр|Описание:|  
+|[in] *pWnd*|Не используется.|  
+|[in] *pDataObject*|Указатель на объект, который пользователь перетаскивает.|  
+|[in] *dropEffect*|Операция перетаскивания по умолчанию.|  
+|[in] *из раскрывающегося списка*|Не используется.|  
+|[in] *точки*|Расположение указателя мыши в клиентских координатах.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результирующий эффект перетаскивания. Может быть один или несколько из следующих:  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод `CMFCBaseTabCtrl::OnDrop` Если инструментов framework устанавливается в режим настройки и формат данных буфер обмена. Если вызов `CMFCBaseTabCtrl::OnDrop` возвращает ненулевое значение, этот метод возвращает эффект перетаскивания по умолчанию, определяемое `dropEffect`. В противном случае этот метод возвращает `DROPEFFECT_NONE`. Дополнительные сведения о эффектов перетаскивания см. в разделе [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
+ Этот метод вызывает метод `CMFCBaseTabCtrl::OnDrop` Если инструментов framework устанавливается в режим настройки и формат данных буфер обмена. Если вызов `CMFCBaseTabCtrl::OnDrop` возвращает ненулевое значение, этот метод возвращает эффект перетаскивания по умолчанию, определяемое *dropEffect*. В противном случае этот метод возвращает `DROPEFFECT_NONE`. Дополнительные сведения о эффектов перетаскивания см. в разделе [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex).  
   
  Дополнительные сведения о режиме настройки см. в разделе [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode). Дополнительные сведения о форматах данных буфера обмена в разделе [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable).  
   
@@ -231,8 +231,8 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pOwner`|Элемент управления вкладки для регистрации в качестве конечного расположения сброса.|  
+|Параметр|Описание:|  
+|[in] *pOwner*|Элемент управления вкладки для регистрации в качестве конечного расположения сброса.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если регистрация прошла успешно; в противном случае — 0.  

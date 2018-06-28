@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368781"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040633"
 ---
 # <a name="cmfccaptionbutton-class"></a>Класс CMFCCaptionButton
 `CMFCCaptionButton` Класс реализует кнопки, которая отображается в заголовке окна для области закрепления или окна области. Как правило, платформа создает кнопки заголовка автоматически.  
@@ -54,13 +54,13 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>Конструкторы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Создает объект CMFCCaptionButton.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCCaptionButton::GetHit](#gethit)|Возвращает команду, представленный кнопки.|  
 |[CMFCCaptionButton::GetIconID](#geticonid)|Возвращает идентификатор изображения, связанные с кнопкой.|  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHit`  
+ [in] *nHit*  
  Команда, назначенная данной кнопке.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  Указывает ли кнопки выравнивается влево.  
   
- В следующей таблице перечислены возможные значения для `nHit` параметра.  
+ В следующей таблице перечислены возможные значения для *nHit* параметра.  
   
 |Значение|Команда|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` Стрелка влево или вправо образа идентификаторы; `FALSE` для вверх или Стрелка вниз изображения идентификаторы.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` для развертывания образа идентификатора; `FALSE` для свертывания изображения идентификатор.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ptTo`  
+ [in] *ptTo*  
  Новое расположение.  
   
- [in] `bHide`  
+ [in] *bHide*  
  Следует ли отображать кнопки.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для кнопки.  
   
- [in] `bActive`  
+ [in] *bActive*  
  Следует ли рисовать изображения Активная кнопка.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  Зарезервировано для использования в производном классе.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  Следует ли нарисовать изображение кнопки в развернутом виде.  
   
- [in] `bDisabled`  
+ [in] *bDisabled*  
  Следует ли рисовать изображения включена кнопка.  
   
 ### <a name="remarks"></a>Примечания  
- `bMaximized` Параметр используется, когда кнопка находится развернуть или свернуть.  
+ *BMaximized* параметр используется, когда кнопка находится развернуть или свернуть.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  Задает размер мини-заголовке.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` для высоте строки мини-заголовка; `FALSE` для высоте строки заголовка по умолчанию.  
   
 ## <a name="see-also"></a>См. также  

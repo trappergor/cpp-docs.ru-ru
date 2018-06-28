@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b61adc98f6b6e84f5e2ef10f88ae41720e2fbf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53ec20a6fb45efc3848381d165256a429b80a386
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372724"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040016"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 Класс `CMFCPropertySheet` поддерживает таблицу свойств, каждая страница свойств в которой обозначается вкладкой, кнопкой панели инструментов, узлом элемента управления «Дерево» или элементом списка.  
@@ -70,14 +70,14 @@ class CMFCPropertySheet : public CPropertySheet
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|  
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|  
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|  
@@ -151,7 +151,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPage`  
+ [in] *Физ_страница*  
  Указатель на объект страницы. Этот параметр не может быть `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -171,20 +171,20 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCategory`  
+ [in] *pCategory*  
  Указатель на родительский узел дерева или `NULL` связываемый указанную страницу с узел верхнего уровня. Вызовите [CMFCPropertySheet::AddTreeCategory](#addtreecategory) метод, чтобы получить этот указатель.  
   
- [in] `pPage`  
+ [in] *Физ_страница*  
  Указатель на объект страницы свойств.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Отсчитываемый от нуля индекс значка или -1, если значок не используется. Значок отображается рядом со страницы свойств элемента управления дерева, когда страница не выбран. Значение по умолчанию — -1.  
   
- [in] `nSelIconNum`  
+ [in] *nSelIconNum*  
  Отсчитываемый от нуля индекс значка или -1, если значок не используется. Значок отображается рядом со страницы свойств элемента управления дерева при выборе страницы. Значение по умолчанию — -1.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод добавляет страницу свойств в качестве конечного элемента управления дерева. Добавление страницы свойств, создания `CMFCPropertySheet` , вызовите [CMFCPropertySheet::SetLook](#setlook) метод с `look` равным `CMFCPropertySheet::PropSheetLook_Tree`и затем использовать этот метод для добавления на странице свойств.  
+ Этот метод добавляет страницу свойств в качестве конечного элемента управления дерева. Добавление страницы свойств, создания `CMFCPropertySheet` , вызовите [CMFCPropertySheet::SetLook](#setlook) метод с *выглядеть* равным `CMFCPropertySheet::PropSheetLook_Tree`и затем использовать этот метод для добавления на странице свойств .  
   
 ##  <a name="addtreecategory"></a>  CMFCPropertySheet::AddTreeCategory  
  Добавляет новый узел в элемент управления «Дерево».  
@@ -198,23 +198,23 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Имя узла.  
   
- [in] `nIconNum`  
+ [in] *nIconNum*  
  Отсчитываемый от нуля индекс значка или -1, если значок не используется. Значок отображается рядом со страницы свойств элемента управления дерева, когда страница не выбран. Значение по умолчанию — -1.  
   
- [in] `nSelectedIconNum`  
+ [in] *nSelectedIconNum*  
  Отсчитываемый от нуля индекс значка или -1, если значок не используется. Значок отображается рядом со страницы свойств элемента управления дерева при выборе страницы. Значение по умолчанию — -1.  
   
- [in] `pParentCategory`  
+ [in] *pParentCategory*  
  Указатель на родительский узел дерева или `NULL` связываемый указанную страницу с узел верхнего уровня. Установите этот параметр с [CMFCPropertySheet::AddTreeCategory](#addtreecategory) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый узел в элементе управления иерархического представления.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод для добавления нового узла, которую также называют категорию, в элементе управления иерархического представления. Чтобы добавить узел, создайте `CMFCPropertySheet` , вызовите [CMFCPropertySheet::SetLook](#setlook) метод с `look` равным `CMFCPropertySheet::PropSheetLook_Tree`и этот метод используется для добавления узла.  
+ Используйте этот метод для добавления нового узла, которую также называют категорию, в элементе управления иерархического представления. Чтобы добавить узел, создайте `CMFCPropertySheet` , вызовите [CMFCPropertySheet::SetLook](#setlook) метод с *выглядеть* равным `CMFCPropertySheet::PropSheetLook_Tree`и этот метод используется для добавления узла.  
   
  Использовать возвращаемое значение этого метода в последующих вызовах [CMFCPropertySheet::AddPageToTree](#addpagetotree) и [CMFCPropertySheet::AddTreeCategory](#addtreecategory).  
   
@@ -234,16 +234,16 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszCaption`  
+ [in] *pszCaption*  
  Строка, содержащая заголовок листа свойств. Не может быть `NULL`.  
   
- [in] `nIDCaption`  
+ [in] *nIDCaption*  
  Идентификатор ресурса, содержащее заголовок листа свойств.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно страницы свойств, или `NULL` если родительское окно является главным окном приложения. Значение по умолчанию — `NULL`.  
   
- [in] `iSelectPage`  
+ [in] *iSelectPage*  
  Отсчитываемый от нуля индекс страницы свойств top. Значение по умолчанию — 0.  
   
 ### <a name="remarks"></a>Примечания  
@@ -257,11 +257,11 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHeaderHeight`  
+ [in] *nHeaderHeight*  
  Высота заголовка в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы использовать значение `nHeaderHeight` переопределить параметр для отрисовки пользовательского заголовка [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) метод.  
+ Чтобы использовать значение *nHeaderHeight* переопределить параметр для отрисовки пользовательского заголовка [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) метод.  
   
 ##  <a name="getheaderheight"></a>  CMFCPropertySheet::GetHeaderHeight  
  Получает высоту текущего заголовка.  
@@ -334,7 +334,7 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPage`  
+ [in] *Физ_страница*  
  Указатель на объект страницы свойства, представляющее страницу свойств enabled.  
   
 ### <a name="remarks"></a>Примечания  
@@ -351,13 +351,13 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Номер страницы свойств (с нуля).  
   
- [in] `rectHeader`  
+ [in] *rectHeader*  
  Ограничивающий прямоугольник, указывающий, куда для отрисовки заголовка.  
   
 ### <a name="remarks"></a>Примечания  
@@ -371,7 +371,7 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPage`  
+ [in] *Физ_страница*  
  Указатель на объект page свойство, представляющее страницу свойств для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -385,7 +385,7 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCategory`  
+ [in] *pCategory*  
  Указатель на категорию (узел) для удаления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -400,14 +400,14 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPage`  
+ [in] *Физ_страница*  
  Указатель на объект страницы свойство, представляющее страницу свойств для удаления. Не может быть `NULL`.  
   
- [in] `nPage`  
+ [in] *nPage*  
  Отсчитываемый от нуля индекс страницы для удаления.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод удаляет указанное свойство страницы и уничтожает его соответствующее окно. На странице свойств объекта, `pPage` указывает не уничтожается, пока не [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) закрытия окна.  
+ Этот метод удаляет указанное свойство страницы и уничтожает его соответствующее окно. На странице свойств объекта, *Физ_страница* указывает не уничтожается, пока не [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) закрытия окна.  
   
 ##  <a name="seticonslist"></a>  CMFCPropertySheet::SetIconsList  
  Указывает список изображений, используемых в элементе управления навигации панели Outlook.  
@@ -421,16 +421,16 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiImageListResID`  
+ [in] *uiImageListResID*  
  Идентификатор ресурса для списка изображений.  
   
- [in] `cx`  
+ [in] *cx*  
  Ширина в пикселях значки в списке изображений.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  Цвет прозрачное изображение. Части изображения, которые имеют этот цвет будет прозрачной. Значение по умолчанию — пурпурный цвет RGB(255,0,255).  
   
- [in] `hIcons`  
+ [in] *hIcons*  
  Дескриптор существующего списка изображений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -451,18 +451,18 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `look`  
+ [in] *поиска*  
  Одно из значений перечисления, которое определяет внешний вид таблицы свойств. Стиль по умолчанию для страницы свойств- `CMFCPropertySheet::PropSheetLook_Tabs`. Дополнительные сведения см. в таблице в подразделе «Примечания».  
   
- [in] `nNavControlWidth`  
+ [in] *nNavControlWidth*  
  Ширина элемента навигации в пикселях. Значение по умолчанию — 100.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы отобразить окно свойств в стиль, используемый по умолчанию, этот метод перед тем как создать окно страницы свойств.  
   
- В следующей таблице перечислены значений перечисления, которые могут быть указаны в `look` параметра.  
+ В следующей таблице перечислены значений перечисления, которые могут быть указаны в *выглядеть* параметра.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладку для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если имеется больше вкладок, чем может поместиться на одной строке.|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле панели Microsoft Outlook в левой части страницы свойств. Каждая кнопка в списке соответствует странице свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой области списка, платформа отображает стрелок прокрутки.|  

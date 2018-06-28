@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371394"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041449"
 ---
 # <a name="colestreamfile-class"></a>Класс COleStreamFile
 Представляет поток данных ( `IStream`) в составном файле как часть структурированного хранения OLE.  
@@ -50,13 +50,13 @@ class COleStreamFile : public CFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleStreamFile::COleStreamFile](#colestreamfile)|Создает объект `COleStreamFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleStreamFile::Attach](#attach)|Связывает поток с объектом.|  
 |[COleStreamFile::CreateMemoryStream](#creatememorystream)|Создает поток из глобальной памяти и связывает его с объектом.|  
@@ -92,7 +92,7 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStream`  
+ *lpStream*  
  Указывает поток OLE ( `IStream`) необходимо сопоставить с объектом. Не может быть **NULL**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -108,11 +108,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStream`  
+ *lpStream*  
  Указатель на поток OLE, связываемое с этим объектом.  
   
 ### <a name="remarks"></a>Примечания  
- Если `lpStream` — **NULL**, объект не связан с потоком OLE, в противном случае объект связан с предоставленный поток OLE.  
+ Если *lpStream* — **NULL**, объект не связан с потоком OLE, в противном случае объект связан с предоставленный поток OLE.  
   
  Дополнительные сведения см. в разделе [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) в Windows SDK.  
   
@@ -124,7 +124,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pError`  
+ *pError*  
  Указывает на [CFileException](../../mfc/reference/cfileexception-class.md) объекта или **NULL** указывает состояние завершения операции создания. Укажите этот параметр, если вы хотите отслеживать возможные исключения, возникающие при попытке создания потока.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -147,23 +147,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStorage`  
+ *lpStorage*  
  Указывает OLE-объекта хранилища, содержащий поток должен быть создан. Не может быть **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Имя потока, который должен быть создан. Не может быть **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Режим доступа для использования при открытии потока. Монопольной, чтение и запись и создайте режимов, используемых по умолчанию. Полный список доступных режимов см. в разделе [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Указывает на [CFileException](../../mfc/reference/cfileexception-class.md) объекта или **NULL**. Укажите этот параметр, если вы хотите отслеживать возможные исключения, возникающие при попытке создания потока.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если поток создан успешно. в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Файл исключение в случае открытия и `pError` не **NULL**.  
+ Файл исключение в случае открытия и *pError* не **NULL**.  
   
  Дополнительные сведения см. в разделе [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) в Windows SDK.  
   
@@ -204,23 +204,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpStorage`  
+ *lpStorage*  
  Указывает OLE-объекта хранилища, содержащий поток должен быть открыт. Не может быть **NULL**.  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  Имя потока для открытия. Не может быть **NULL**.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  Режим доступа для использования при открытии потока. Эксклюзивное и чтение и запись режимов, используемых по умолчанию. Полный список доступных режимов см. в разделе [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).  
   
- `pError`  
+ *pError*  
  Указывает на [CFileException](../../mfc/reference/cfileexception-class.md) объекта или **NULL**. Укажите этот параметр, если вы хотите отслеживать возможные исключения, возникающие при попытке открыть поток.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если поток открыт успешно. в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Файл исключение в случае открытия и `pError` не **NULL**.  
+ Файл исключение в случае открытия и *pError* не **NULL**.  
   
  Дополнительные сведения см. в разделе [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) в Windows SDK.  
   

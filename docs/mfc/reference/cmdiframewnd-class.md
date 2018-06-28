@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374043"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038894"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd-класс
 Предоставляет функции фреймового окна многодокументного интерфейса Windows (MDI) и элементы для управления окном.  
@@ -64,13 +64,13 @@ class CMDIFrameWnd : public CFrameWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Создает документ `CMDIFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMDIFrameWnd::CreateClient](#createclient)|Создается Windows **MDICLIENT** окна для этого `CMDIFrameWnd`. Вызывается методом `OnCreate` функции-члена `CWnd`.|  
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Создает новое дочернее окно.|  
@@ -91,11 +91,11 @@ class CMDIFrameWnd : public CFrameWnd
   
  Окно области MDI можно создать путем вызова [создать](../../mfc/reference/cframewnd-class.md#create) или [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) функции-члена `CFrameWnd`.  
   
- Перед вызовом метода **создать** или `LoadFrame`, следует создать объект окна фрейма в куче, с помощью C++ **новый** оператор. Перед вызовом метода **создать** можно также зарегистрировать класс окна с [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции, чтобы задать значок и класс стили рамки.  
+ Перед вызовом метода `Create` или `LoadFrame`, следует создать объект окна фрейма в куче, с помощью C++ **новый** оператор. Перед вызовом метода `Create` можно также зарегистрировать класс окна с [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции, чтобы задать значок и класс стили рамки.  
   
- Используйте **создать** функции-члена для передачи как интерпретации аргументов параметры создания фрейма.  
+ Используйте `Create` функции-члена для передачи как интерпретации аргументов параметры создания фрейма.  
   
- `LoadFrame` требуется меньшее количество аргументов, чем **создать**и вместо этого извлекает большую часть значений по умолчанию из ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню опорного кадра. Доступ к `LoadFrame`, все эти ресурсы должны иметь один и тот же идентификатор ресурса (например, **IDR_MAINFRAME**).  
+ `LoadFrame` требуется меньшее количество аргументов, чем `Create`и вместо этого извлекает большую часть значений по умолчанию из ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню опорного кадра. Доступ к `LoadFrame`, все эти ресурсы должны иметь один и тот же идентификатор ресурса (например, **IDR_MAINFRAME**).  
   
  Хотя **MDIFrameWnd** является производным от `CFrameWnd`, класс окна фрейма, производный от `CMDIFrameWnd` не требуется объявлять с `DECLARE_DYNCREATE`.  
   
@@ -145,7 +145,7 @@ CMDIFrameWnd();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите **создать** или `LoadFrame` функции-члена для создания отображается окно области MDI.  
+ Вызовите `Create` или `LoadFrame` функции-члена для создания отображается окно области MDI.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,10 +160,10 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Длинный указатель [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) структуры.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Указатель на окно во всплывающем меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -187,16 +187,16 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pClass`  
+ *pClass*  
  Класс среды выполнения дочернего окна должен быть создан.  
   
  *nResource*  
  Идентификатор общие ресурсы, связанные с дочернего окна.  
   
- `hMenu`  
+ *hMenu*  
  Меню дочернего окна.  
   
- `hAccel`  
+ *hAccel*  
  Дочернее окно сочетаний клавиш.  
   
 ### <a name="remarks"></a>Примечания  
@@ -260,7 +260,7 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nType`  
+ *nType*  
  Задает флаг cascade. Можно указать только следующий флаг: `MDITILE_SKIPDISABLED`, что предотвращает каскадно отключенные дочерние окна MDI.  
   
 ### <a name="remarks"></a>Примечания  
@@ -307,7 +307,7 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на окно, чтобы максимально увеличить.  
   
 ### <a name="remarks"></a>Примечания  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указывает для окна, чтобы восстановить.  
   
 ### <a name="example"></a>Пример  
@@ -368,7 +368,7 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  Задает меню новое меню окна фрейма. Если **NULL**, меню не меняется.  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  Задает меню нового окна во всплывающем меню. Если **NULL**, меню не меняется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nType`  
+ *nType*  
  Задает флаг мозаичное заполнение. Этот параметр может иметь одно из следующих флагов:  
   
 - `MDITILE_HORIZONTAL` Плитки дочерних MDI-окон, что одно окно появляется над другой.  
@@ -407,7 +407,7 @@ void MDITile(int nType);
 - `MDITILE_VERTICAL` Плитки дочерних MDI-окон, что одно окно появится рядом с другом.  
   
 ### <a name="remarks"></a>Примечания  
- В первой версии `MDITile`, без параметров, размещает окна по вертикали в группе Windows версии 3.1 и более поздней версии. Вторая версия плитки windows горизонтально или вертикально, в зависимости от значения `nType` параметра.  
+ В первой версии `MDITile`, без параметров, размещает окна по вертикали в группе Windows версии 3.1 и более поздней версии. Вторая версия плитки windows горизонтально или вертикально, в зависимости от значения *nType* параметра.  
   
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMDIFrameWnd::MDICascade](#mdicascade).  

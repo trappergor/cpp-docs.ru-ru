@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370924"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041809"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Класс CMFCRibbonQuickAccessToolBarDefaultState
 Вспомогательный класс, который управляет состоянием по умолчанию для быстрого доступа, расположенный на панели ленты ( [CMFCRibbonBar класса](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -44,13 +44,13 @@ class CMFCRibbonQuickAccessToolBarDefaultState
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Создает объект `CMFCRibbonQuickAccessToolbarDefaultState`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Добавляет команду в состояние по умолчанию для быстрого доступа. Сама панель остается неизменным.|  
 |[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Копирует свойства одного быстрого доступа к другому.|  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  Указывает идентификатор команды.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  Задает видимость команды, когда панель быстрого доступа находится в состоянии по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
  Ссылка на источник `CMFCRibbonQuickAccessToolBarDefaultState` объект для копирования из.  
   
 ### <a name="remarks"></a>Примечания  

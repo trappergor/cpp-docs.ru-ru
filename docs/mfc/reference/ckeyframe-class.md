@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9e9ff3d6e3e4bcccf8e9ebd46f791f60f1cc37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56fa354a46e40704ac063791931ca01d1386a558
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367189"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038462"
 ---
 # <a name="ckeyframe-class"></a>Класс CKeyFrame
 Представляет ключевой кадр анимации.  
@@ -56,13 +56,13 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CKeyFrame::CKeyFrame](#ckeyframe)|Перегружен. Создает опорный кадр, зависящий от других опорных кадров.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет опорный кадр в раскадровку. (Переопределяет [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
 |[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Добавляет кадр в раскадровку после перехода.|  
@@ -73,7 +73,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|Задает смещение данного опорного кадра из ключевого кадра, хранящиеся в m_pExistingKeyFrame.|  
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Содержит указатель на существующий keframe. Этот кадр добавляется в раскадровку с m_offset на существующий ключевой кадр.|  
@@ -102,10 +102,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Указывает, следует ли добавить ключевой кадр или переход рекурсивно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -124,10 +124,10 @@ BOOL AddToStoryboardAfterTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Указывает, следует ли добавить рекурсивно перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -146,10 +146,10 @@ virtual BOOL AddToStoryboardAtOffset(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Указывает, зависят ли от Добавление опорный кадр данного опорного кадра рекурсивно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -171,13 +171,13 @@ CKeyFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTransition`  
+ *pTransition*  
  Указатель на переход.  
   
- `pKeyframe`  
+ *параметром pKeyframe*  
  Указатель на опорный кадр.  
   
- `offset`  
+ *offset*  
  Смещение в секундах от ключевого кадра, заданного параметром pKeyframe.  
   
 ### <a name="remarks"></a>Примечания  

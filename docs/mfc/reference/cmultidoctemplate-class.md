@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371586"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040838"
 ---
 # <a name="cmultidoctemplate-class"></a>Класс CMultiDocTemplate
 Определяет шаблон документа, реализующий многодокументный интерфейс (MDI).  
@@ -38,7 +38,7 @@ class CMultiDocTemplate : public CDocTemplate
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Создает объект `CMultiDocTemplate`.|  
   
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIDResource`  
+ *nIDResource*  
  Указывает идентификатор ресурсы, используемые с типом документа. Это может включать меню, значок, таблицу сочетаний клавиш и строковые ресурсы.  
   
  Строковый ресурс состоит из до семи подстроки, разделенных знаком «\n» (символ «\n», необходимое в качестве заполнителя Если подстрока не указан; конечные символы «\n» не нужны); Эти подстроки описания типа документа. Сведения о подстроках см. в разделе [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Этот строковый ресурс находится в файле ресурсов приложения. Пример:  
@@ -104,13 +104,13 @@ CMultiDocTemplate(
   
  Дополнительные сведения об этих типах ресурсов см. в разделе [редакторы ресурсов](../../windows/resource-editors.md).  
   
- `pDocClass`  
- Указывает `CRuntimeClass` объекта класса документа. Этот класс является **CDocument**-производный класс, определенный для представления документов.  
+ *pDocClass*  
+ Указывает `CRuntimeClass` объекта класса документа. Этот класс является `CDocument`-производный класс, определенный для представления документов.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Указывает `CRuntimeClass` объекта класса окна фрейма. Этот класс может быть `CMDIChildWnd`-производного класса, или он может быть `CMDIChildWnd` себя, если требуется поведение по умолчанию для вашего окна фрейма документа.  
   
- `pViewClass`  
+ *pViewClass*  
  Указывает `CRuntimeClass` объекта класса представления. Этот класс является `CView`-производный класс, определяемый для отображения документов.  
   
 ### <a name="remarks"></a>Примечания  

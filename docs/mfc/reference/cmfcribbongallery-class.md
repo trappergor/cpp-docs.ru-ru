@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377866"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039327"
 ---
 # <a name="cmfcribbongallery-class"></a>Класс CMFCRibbonGallery
 Реализует коллекции лент в стиле Office 2007.  
@@ -105,17 +105,17 @@ ms.locfileid: "33377866"
 class CMFCRibbonGallery : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Создает и инициализирует объект `CMFCRibbonGallery`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Добавляет новую группу к коллекции.|  
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Добавляет новый пункт меню в раскрывающемся меню.|  
@@ -150,16 +150,16 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Определяет количество элементов на строку в коллекции.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Задает текст всплывающей подсказки для элемента в коллекции.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|Присоединяет палитры галереи ленты.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Определяет идентификатор команды, отправляемый в `WM_COMMAND` сообщения, если был выбран элемент коллекции.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Определяет идентификатор команды, отправляемый в сообщении WM_COMMAND, если был выбран элемент коллекции.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Вызывается платформой при рисовании значок в виде коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Кнопка коллекции работает так же, как обычное меню кнопки отображает коллекцию, когда пользователь открывает его. При выборе элемента в коллекции, платформа отправляет `WM_COMMAND` сообщения, а также идентификатор команды кнопки. При обработке сообщения, необходимо вызвать [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) для определения, какой элемент выбран из коллекции.  
+ Кнопка коллекции работает так же, как обычное меню кнопки отображает коллекцию, когда пользователь открывает его. При выборе элемента в коллекции, платформа отправляет сообщения WM_COMMAND вместе с Идентификатором команды кнопки. При обработке сообщения, необходимо вызвать [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) для определения, какой элемент выбран из коллекции.  
   
 ## <a name="example"></a>Пример  
  Следующий пример демонстрирует использование различных методов `CMFCRibbonGallery` класса, чтобы настроить `CMFCRibbonGallery` объекта. Пример показано, как указать число элементов на строку в коллекции, включить изменение размера панели меню, боковой панели слева от всплывающего меню и отображать галереи ленты как палитра непосредственно на панели ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).  
@@ -195,19 +195,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Задает имя группы.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Указывает идентификатор списка изображений с изображениями, для группы ресурсов.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Задает ширину в пикселях изображения.  
   
- [in] `imagesGroup`  
+ [in] *imagesGroup*  
  Ссылка на список изображений, содержащий группу изображений.  
   
- [in] `nIconsNum`  
+ [in] *nIconsNum*  
  Задает количество значков в группе. Этот параметр должен быть указан только для пользовательских (рисование владельцем) групп.  
   
 ### <a name="remarks"></a>Примечания  
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Указатель на элемент, чтобы добавить в меню.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает отсчитываемый от нуля индекс расположения, где для вставки элемента.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` Чтобы указать, что элемент должен быть включен перед галереи ленты; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Всплывающее окно галереи можно объединить с элементы всплывающего меню путем вызова данного метода. Пункты меню можно поместить до или после коллекции.  
   
- Чтобы вставить элемент перед коллекции, установите `bOnTop` для `TRUE`. Задать `bOnTop` для `FALSE` вставить элемент, расположенный ниже коллекции.  
+ Чтобы вставить элемент перед коллекции, установите *bOnTop* для `TRUE`. Задать *bOnTop* для `FALSE` вставить элемент, расположенный ниже коллекции.  
   
 > [!NOTE]
->  Параметр `nIndex` указывает индекс вставки, как в верхней части галереи, так и в нижней части галереи. Например, если необходимо вставить элемент на одну позицию перед коллекции, задать `nIndex` 1 и `bOnTop` для `TRUE`. Аналогичным образом, если необходимо вставить элемент на одну позицию ниже коллекции, задайте `nIndex` 1 и `bOnTop` для `FALSE`.  
+>  Параметр *nIndex* указывает индекс вставки, как в верхней части галереи, так и в нижней части галереи. Например, если необходимо вставить элемент на одну позицию перед коллекции, задать *nIndex* 1 и *bOnTop* для `TRUE`. Аналогичным образом, если необходимо вставить элемент на одну позицию ниже коллекции, задайте *nIndex* 1 и *bOnTop* для `FALSE`.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  Удаляет содержимое коллекции.  
@@ -283,34 +283,34 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Указывает идентификатор команды выполнения, когда пользователь нажимает кнопку команды.  
   
- `lpszText`  
+ *lpszText*  
  Задает текст, отображаемый на кнопке.  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  Отсчитываемый от нуля индекс мелкое изображение для отображения на кнопке.  
   
- `nLargeImageIndex`  
+ *nLargeImageIndex*  
  Отсчитываемый от нуля индекс большого изображения для отображения на кнопке.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Ссылку на [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) , содержащий изображение должно появиться в коллекции.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  Идентификатор ресурса из списка изображений для отображения в коллекции.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Ширина в пикселях образа в коллекции.  
   
- `sizeIcon`  
+ *sizeIcon*  
  Размер в пикселях образа из коллекции.  
   
- `nIconsNum`  
+ *nIconsNum*  
  Задает количество значков в галерее.  
   
- `bDefaultButtonStyle`  
+ *bDefaultButtonStyle*  
  Указывает, следует ли использовать значение по умолчанию или стиль кнопки владельцем.  
   
 ### <a name="remarks"></a>Примечания  
@@ -325,10 +325,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить изменение размера меню; в противном случае `FALSE`.  
   
- [in] `bVertcalOnly`  
+ [in] *bVertcalOnly*  
  `TRUE` Чтобы указать, что коллекции можно изменять размер только по вертикали; `FALSE` для указания, что коллекции можно изменять размер и по вертикали или горизонтали.  
   
 ### <a name="remarks"></a>Примечания  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы указать, что включен на боковой панели; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -381,7 +381,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Задает отсчитываемый от нуля индекс для группы, имя которого требуется извлечь.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -420,7 +420,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Задает отсчитываемый от нуля индекс элемента, для которого требуется извлечь текст всплывающей подсказки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -436,11 +436,11 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Указывает идентификатор команды пункта меню, который открыт галереи ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- При выборе любого элемента в коллекции ленты библиотеки отправляет `WM_COMMAND` сообщение вместе с Идентификатором команды меню кнопки, которая открывается галереи ленты.  
+ При выборе любого элемента в коллекции ленты библиотеки отправляет сообщение WM_COMMAND вместе с Идентификатором команды меню кнопки, которая открывается галереи ленты.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -576,19 +576,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства, используемого для рисования.  
   
- [in] `rectIcon`  
+ [in] *rectIcon*  
  Задает прямоугольник, ограничивающий значок для рисования.  
   
- [in] `nIconIndex`  
+ [in] *nIconIndex*  
  Задает отсчитываемый от нуля индекс в списке изображений значков в галерее значка для рисования.  
   
- [in] `pIcon`  
+ [in] *pIcon*  
  Указатель на значок отрисовывается.  
   
- [in] `clrText`  
+ [in] *clrText*  
  Задает цвет для текста элемента для рисования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
  Родительское окно окна галереи ленты.  
   
- [выходной] `data`  
+ [out] *данных*  
  Объект `CAccessibilityData` , получающий данные специальных возможностей из галереи ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -678,7 +678,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` для отображения галереи ленты в виде раскрывающегося меню кнопки; `FALSE` для отображения содержимого из галереи ленты непосредственно на ленте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -693,10 +693,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  Задает отсчитываемый от нуля индекс, для которого изменяется имя группы.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  Задает новое имя для группы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIconsInRow`  
+ [in] *nIconsInRow*  
  Указывает количество элементов для отображения в каждой строке коллекции.  
   
 ### <a name="remarks"></a>Примечания  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  Отсчитываемый от нуля индекс элемента палитры, с которым необходимо связать всплывающей подсказки.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  Текст, отображаемый на подсказке.  
   
 ### <a name="remarks"></a>Примечания  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `imagesPalette`  
+ [in] *imagesPalette*  
  Задает список изображений, содержащая значки, которые отображаются в коллекции.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  Указывает идентификатор ресурса для списка изображений, который содержит значки могут отображаться в коллекции.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  Ширина в пикселях изображения в галерее.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- Определяет идентификатор команды, отправляемый в **WM_COMMAND** сообщение, когда пользователь выбирает элемент коллекции.  
+ Определяет идентификатор команды, отправляемый в сообщении WM_COMMAND, когда пользователь выбирает элемент коллекции.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
- Указывает идентификатор команды, отправляемый в **WM_COMMAND** сообщение, когда пользователь выбирает элемент коллекции.  
+ [in] *nID*  
+ Указывает идентификатор команды, отправляемый в сообщении WM_COMMAND, когда пользователь выбирает элемент коллекции.  
   
 ### <a name="remarks"></a>Примечания  
  Чтобы определить конкретного элемента, выбранного пользователя из коллекции, вызовите [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) статический метод.  

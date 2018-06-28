@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44caf81fd73567e9c206bdfe62869f5fc145fd33
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377974"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039112"
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonCategory
 `CMFCRibbonCategory` Класс реализует вкладку ленты, которая содержит группу [панелей ленты](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -160,13 +160,13 @@ class CMFCRibbonCategory : public CObject
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Добавляет скрытый элемент в категорию ленты.|  
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Добавляет новую область в категорию ленты.|  
@@ -275,7 +275,7 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElem`  
+ [in] *pElem*  
  Указатель на элемент ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -292,20 +292,20 @@ CMFCRibbonPanel* AddPanel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPanelName`  
+ [in] *lpszPanelName*  
  Указатель на имя новой панели ленты.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значка по умолчанию для новой панели ленты.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  Указатель на сведения о классе среды выполнения для панели настраиваемой ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый панель ленты, если метод выполнен успешно; в противном случае `NULL` Если панель не была создана.  
   
 ### <a name="remarks"></a>Примечания  
- Если вы хотите создать панель настраиваемой ленты, необходимо указать его сведения о классе среды выполнения в `pRTI`. Класс настраиваемой ленты панели должен быть производным от `CMFCRibbonPanel` класса.  
+ Если вы хотите создать панель настраиваемой ленты, необходимо указать его сведения о классе среды выполнения в *pRTI*. Класс настраиваемой ленты панели должен быть производным от `CMFCRibbonPanel` класса.  
   
  Значок по умолчанию для панели ленты отображается в том случае, если недостаточно места для отображения элементов ленты.  
   
@@ -330,22 +330,22 @@ CMFCRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParenrRibbonBar`  
+ [in] *pParenrRibbonBar*  
  Указатель на панель ленты родительской категории ленты.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя категории ленты.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  Идентификатор ресурса изображения списка маленьких изображений, используемых элементов ленты в категорию ленты.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  Идентификатор ресурса изображения списка больших изображений, используемых элементов ленты в категорию ленты.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  По умолчанию размер маленькие изображения для элементов ленты в категорию ленты.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  По умолчанию размер больших изображений для элементов ленты в категорию ленты.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
@@ -356,7 +356,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
  Исходный объект `CMFCRibbonCategory`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -371,10 +371,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элемента ленты.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` Чтобы включить в поиск; элементов ленты для быстрого доступа `FALSE` для исключения элементов ленты быстрого доступа в поиск.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -392,10 +392,10 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды, связанные с элемента ленты.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` Чтобы включить в поиск; элементов ленты для быстрого доступа `FALSE` для исключения элементов ленты быстрого доступа в поиск.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -411,7 +411,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на элемент ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -463,7 +463,7 @@ void GetElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `arElements`  
+ [in, out] *arElements*  
  Ссылка на [CArray](../../mfc/reference/carray-class.md) элементов ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -479,10 +479,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  Идентификатор команды, связанные с элемента ленты.  
   
- [in, out] `arElements`  
+ [in, out] *arElements*  
  Ссылка на [CArray](../../mfc/reference/carray-class.md) элементов ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -532,7 +532,7 @@ int GetImageCount(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` число изображений в списке больших изображений. `FALSE` число изображений в списке мелкое изображение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -548,7 +548,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` для размера больших изображений. `FALSE` размера изображений небольшого размера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -567,10 +567,10 @@ void GetItemIDsList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `lstItems`  
+ [out] *lstItems*  
  Список идентификаторов команд для элементов ленты в категорию ленты.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` Чтобы исключить элементы ленты, которые отображаются на панели ленты в категории ленты; `FALSE` для включения всех элементов ленты в категорию ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -605,7 +605,7 @@ int GetMaxHeight(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для панели ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -634,14 +634,14 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс панели ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на панель ленты, расположенный по указанному индексу.  
   
 ### <a name="remarks"></a>Примечания  
- Исключение возникает, если `nIndex` выходит за пределы диапазона.  
+ Исключение возникает, если *nIndex* выходит за пределы диапазона.  
   
 ##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  Возвращает количество элементов управления ленты в категорию ленты.  
@@ -661,7 +661,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя относительно верхнего левого угла окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -678,7 +678,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPanel`  
+ [in] *pPanel*  
  Указатель на панель ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -807,7 +807,7 @@ void GetVisibleElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `arElements`  
+ *arElements*  
  Массив всех видимых элементов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -822,10 +822,10 @@ CMFCRibbonPanel* HighlightPanel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pHLPanel`  
+ [in] *pHLPanel*  
  Указатель на панель ленты, чтобы выделить.  
   
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя относительно верхнего левого угла окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -844,10 +844,10 @@ CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя мыши относительно левого верхнего угла окна.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` Чтобы проверить заголовок панели ленты; `FALSE` исключаемый заголовок панели ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -864,7 +864,7 @@ int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя мыши относительно левого верхнего угла окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -881,11 +881,11 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точки для проверки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если `point` попадает в прямоугольник, ограничивающий либо влево или кнопка прокрутки вправо категории ленты, возвращает указатель на эту кнопку или в противном случае возвращает `NULL`.  
+ Если *точки* попадает в прямоугольник, ограничивающий либо влево или кнопка прокрутки вправо категории ленты, возвращает указатель на эту кнопку или в противном случае возвращает `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -939,16 +939,16 @@ virtual BOOL NotifyControlCommand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAccelerator`  
+ [in] *bAccelerator*  
  `TRUE` Если эта команда исходит от сочетаний клавиш или `FALSE` в противном случае.  
   
- [in] `nNotifyCode`  
+ [in] *nNotifyCode*  
  Код уведомления.  
   
- [in] `wParam`  
+ [in] *wParam*  
  WPARAM поле сообщения.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Поле LPARAM сообщения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -973,7 +973,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для категории ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -992,22 +992,22 @@ virtual BOOL OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для изображения.  
   
- [in] `rect`  
+ [in] *rect*  
  Отображаемый прямоугольник для изображения.  
   
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на элемент ленты, содержащую образ.  
   
- [in] `bIsLargeImage`  
+ [in] *bIsLargeImage*  
  `TRUE` Если изображение имеет большой размер. `FALSE` Если изображение имеет небольшой размер.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  Отсчитываемый от нуля индекс в массиве образ, который содержится в категории ленты изображения.  
   
- [in] `bCenter`  
+ [in] *bCenter*  
  `TRUE` Чтобы центрировать изображения в прямоугольник отображения; `FALSE` для прорисовки изображения в верхнем левом углу прямоугольник отображения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1025,10 +1025,10 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Этот параметр не используется.  
   
- [in] `pMenuBar`  
+ [in] *pMenuBar*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1042,7 +1042,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nChar`  
+ *nChar*  
  Виртуального кода клавиши для ключа, который пользователь нажал клавиши.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1055,7 +1055,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя мыши относительно левого верхнего угла окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1071,7 +1071,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя относительно верхнего левого угла окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1084,7 +1084,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Координаты x и y указателя относительно верхнего левого угла окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1097,7 +1097,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Если макет справа налево; `FALSE` Если макет справа налево.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1113,10 +1113,10 @@ virtual BOOL OnScrollHorz(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bScrollLeft`  
+ [in] *bScrollLeft*  
  `TRUE` для прокрутки влево; `FALSE` для прокрутки вправо.  
   
- [in] `nScrollOffset`  
+ [in] *nScrollOffset*  
  Расстояние прокрутки в пикселях.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1135,13 +1135,13 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pCmdUI`  
+ [in] *pCmdUI*  
  Указатель на `CMFCRibbonCmdUI` , указывающий элементы пользовательского интерфейса, которые должны быть включены, а какие нужно отключить.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  Указатель определяет включение или отключение элементов пользовательского интерфейса.  
   
- [in] `bDisableIfNoHndler`  
+ [in] *bDisableIfNoHndler*  
  `TRUE` отключение элемента пользовательского интерфейса, если обработчик не определен в схеме сообщений; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1154,7 +1154,7 @@ virtual void RecalcLayout(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для категории ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1169,10 +1169,10 @@ BOOL RemovePanel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Номер индекса панели для удаления. Получается вызовом [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) метод.  
   
- [in] `bDelete`  
+ [in] *bDelete*  
  `TRUE` Чтобы удалить объект панели из памяти; `FALSE` удалить панель объект не удаляется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1186,7 +1186,7 @@ virtual void ReposPanels(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для панелей ленты, которые находятся в категории ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1199,7 +1199,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `arCollapseOrder`  
+ [in] *arCollapseOrder*  
  Указывает порядок свернуть. Массив содержит отсчитываемый от нуля индексы панелей ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1222,7 +1222,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwData`  
+ [in] *dwData*  
  Определенные пользователем данные.  
   
 ##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
@@ -1233,7 +1233,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Текст клавишную подсказку.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1247,11 +1247,11 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя и значение свойства keytip категории ленты.  
   
 ### <a name="remarks"></a>Примечания  
- Для установки keytip для категории ленты добавьте последовательности escape новой строки, следуют символы keytip `lpszName`.  
+ Для установки keytip для категории ленты добавьте последовательности escape новой строки, следуют символы keytip *lpszName*.  
   
 ##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
  Задает цвет категорию ленты.  
@@ -1261,7 +1261,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Указывает новый цвет категории ленты.  
   
 ### <a name="remarks"></a>Примечания  

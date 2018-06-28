@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373733"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037487"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Структура CMFCTabToolTipInfo
 Эта структура предоставляет сведения о вкладке MDI, на который наведен.  
@@ -36,14 +36,14 @@ struct CMFCTabToolTipInfo
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Указывает индекс элемента управления tab.|  
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Указатель на элемент управления вкладки.|  
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|Текст всплывающей подсказки.|  
   
 ## <a name="remarks"></a>Примечания  
- Указатель на `CMFCTabToolTipInfo` структуры передается как параметр `AFX_WM_ON_GET_TAB_TOOLTIP` сообщения. Это сообщение появляется в том случае, если включены вкладках MDI и наведении указателя мыши на элемент управления вкладки.  
+ Указатель на `CMFCTabToolTipInfo` структуры передается как параметр AFX_WM_ON_GET_TAB_TOOLTIP сообщения. Это сообщение появляется в том случае, если включены вкладках MDI и наведении указателя мыши на элемент управления вкладки.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показан способ `CMFCTabToolTipInfo` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).  

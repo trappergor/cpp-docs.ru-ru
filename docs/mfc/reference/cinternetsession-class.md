@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322411"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041114"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -422,7 +422,7 @@ CHttpConnection* GetHttpConnection(
 Указатель на строку, содержащую пароль доступа.
 
 *dwFlags*  
-Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице **примечания** раздел [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) описание `dwFlags` значения.
+Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице **примечания** раздел [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) описание *dwFlags* значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

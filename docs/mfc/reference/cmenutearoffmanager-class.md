@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105c933ee36c9bbeb634d85963d9254f3b68ebe4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367673"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041017"
 ---
 # <a name="cmenutearoffmanager-class"></a>Класс CMenuTearOffManager
 Управление перемещаемыми меню. Перемещаемое меню — это меню в строке меню. Пользователь может удалить перемещаемое меню из строки меню, превращая перемещаемое меню в плавающее.  
@@ -56,13 +56,13 @@ class CMenuTearOffManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Создает объект `CMenuTearOffManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenuTearOffManager::Build](#build)||  
 |[CMenuTearOffManager::GetRegPath](#getregpath)||  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [in] *uiTearOffBarID*  
+ [in] *strText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -136,20 +136,20 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  Строка, содержащая путь к записи реестра. Приложения сохраняет настройки перемещаемые полос в этой записи реестра.  
   
- [in] `uiTearOffMenuFirst`  
+ [in] *uiTearOffMenuFirst*  
  Первый идентификатор меню перемещаемое меню.  
   
- [in] `uiTearOffMenuLast`  
+ [in] *uiTearOffMenuLast*  
  Последний идентификатор меню перемещаемое меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Диапазон идентификаторов, меню из `uiTearOffMenuFirst` для `uiTearOffMenuLast` должен быть непрерывный интервал. Интервал определяет количество перемещаемые меню, появляющееся в то же время в приложении.  
+ Диапазон идентификаторов, меню из *uiTearOffMenuFirst* для *uiTearOffMenuLast* должен быть непрерывный интервал. Интервал определяет количество перемещаемые меню, появляющееся в то же время в приложении.  
   
 ##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
@@ -159,7 +159,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -173,7 +173,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `str`  
+ [in] *str*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -187,7 +187,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hmenu`  
+ [in] *hmenu*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [in] *uiCmdId*  
+ [in] *bUse*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -214,7 +214,7 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
   
 ### <a name="remarks"></a>Примечания  
   

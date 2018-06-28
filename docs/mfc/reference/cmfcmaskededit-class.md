@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371801"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040107"
 ---
 # <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
 `CMFCMaskedEdit` Класс поддерживает элемент управления masked edit, который проверяет введенные пользователем данные, соответствие маске и отображает установленные результаты в соответствии с шаблоном.  
@@ -54,14 +54,14 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|  
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Отключение проверки введенных пользователем данных.|  
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.|  
@@ -75,7 +75,7 @@ class CMFCMaskedEdit : public CEdit
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанный символ для соответствующего символа маски.|  
   
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы указать, что [CMFCMaskedEdit::GetWindowText](#getwindowtext) метод получить только скрытые символы; `FALSE` для указания, что метод получить весь текст. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszMask`  
- Маска строка, указывающая тип символа, который может встречаться в каждой позиции вводимых пользователем данных. Длина `lpszInputTemplate` и `lpszMask` строки параметров должны быть одинаковыми. В разделе «Примечания» для получения дополнительных сведений о символах маски.  
+ [in] *lpszMask*  
+ Маска строка, указывающая тип символа, который может встречаться в каждой позиции вводимых пользователем данных. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми. В разделе «Примечания» для получения дополнительных сведений о символах маски.  
   
- [in] `lpszInputTemplate`  
- Строка шаблона маски, указывает, что литерал символов, которое может присутствовать на Каждая позиция в вводимых пользователем данных. Используйте символ подчеркивания (_) в качестве заполнителя знак. Длина `lpszInputTemplate` и `lpszMask` строки параметров должны быть одинаковыми.  
+ [in] *lpszInputTemplate*  
+ Строка шаблона маски, указывает, что литерал символов, которое может присутствовать на Каждая позиция в вводимых пользователем данных. Используйте символ подчеркивания (_) в качестве заполнителя знак. Длина *lpszInputTemplate* и *lpszMask* строки параметров должны быть одинаковыми.  
   
- [in] `chMaskInputTemplate`  
+ [in] *chMaskInputTemplate*  
  Символ по умолчанию, который замещает платформу для каждый недопустимый символ в вводимых пользователем данных. Значение этого параметра по умолчанию является символ подчеркивания (_).  
   
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Строка, содержащая набор допустимых символов. `NULL` Указывает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы выбрать только группы; `FALSE` выделите весь текст. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` для проверки пользователя введенных только скрытые символы; `FALSE` для проверки соответствия всей маски. Значение по умолчанию — `TRUE`.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `lpszStringBuf`  
+ [out] *lpszStringBuf*  
  Указатель на буфер, получающий из элемента управления редактирования текста.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  Максимальное количество символов для получения.  
   
- [выходной] `rstrString`  
+ [out] *rstrString*  
  Ссылка на строковый объект, который получает текст из поля ввода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Первая перегрузка метода возвращает количество байт строки, в который копируется в `lpszStringBuf` буфер параметра; 0, если элемент управления masked edit не содержит текста.  
+ Первая перегрузка метода возвращает количество байт строки, в который копируется в *lpszStringBuf* буфер параметра; 0, если элемент управления masked edit не содержит текста.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод копирует текст в элемент управления masked edit для `lpszStringBuf` буфера или `rstrString` строки.  
+ Этот метод копирует текст в элемент управления masked edit для *lpszStringBuf* буфера или *rstrString* строка.  
   
  Этот метод переопределяет [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext).  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `chChar`  
+ [in] *chChar*  
  Знак, который необходимо проверить.  
   
- [in] `chMaskChar`  
+ [in] *chMaskChar*  
  Соответствующий символ из строки маски.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если `chChar` параметр имеет тип символа, допускаемой `chMaskChar` параметр; в противном случае `FALSE`.  
+ `TRUE` Если *chChar* параметр имеет тип символа, допускаемой *chMaskChar* параметр; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод для проверки ввода символов вручную. Дополнительные сведения о символах маска см. в разделе [CMFCMaskedEdit::EnableMask](#enablemask) метод.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszValid`  
+ [in] *lpszValid*  
  Строка, содержащая набор допустимых входных символов. `NULL` означает, что все символы являются допустимыми. По умолчанию этот параметр имеет значение `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszString`  
+ [in] *lpszString*  
  Указывает символом null строку, которая будет использоваться в качестве запроса.  
   
 ### <a name="remarks"></a>Примечания  

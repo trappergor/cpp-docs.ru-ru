@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367764"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041277"
 ---
 # <a name="cinterpolatorbase-class"></a>Класс CInterpolatorBase
 Реализует обратный вызов, используемый API анимации, когда требуется рассчитать новое значение переменной анимации.  
@@ -56,13 +56,13 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Создает `CInterpolatorBase` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInterpolatorBase::CreateInstance](#createinstance)|Создает экземпляр `CInterpolatorBase` и содержит указатель на пользовательские интерполятора, который будет обработки событий.|  
 |[CInterpolatorBase::GetDependencies](#getdependencies)|Возвращает интерполятора зависимости. (Переопределяет `CUIAnimationInterpolatorBase::GetDependencies`.)|  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pInterpolator`  
+ *pInterpolator*  
  Указатель на пользовательские интерполятор.  
   
- `ppHandler`  
+ *ppHandler*  
  Выходные данные. Содержит указатель на экземпляр CInterpolatorBase при возврате из функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  Выходные данные. Интерполятора аспекты, которые зависят от начального значения, передаваемые SetInitialValueAndVelocity.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  Выходные данные. Интерполятора аспекты, которые зависят от начальной скоростью передан SetInitialValueAndVelocity.  
   
- `durationDependencies`  
+ *durationDependencies*  
  Выходные данные. Аспекты интерполятора, зависящих от длительности передан SetDuration.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Выходные данные. Продолжительность перехода в секундах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `value`  
+ *значение*  
  Выходные данные. Конечное значение переменной в конце перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `offset`  
+ *offset*  
  Смещение от начала перехода. Смещение всегда больше или равно нулю и меньше, чем продолжительность для перехода. Этот метод не вызывается, если продолжительность перехода равно нулю.  
   
- `value`  
+ *значение*  
  Выходные данные. Интерполированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `offset`  
+ *offset*  
  Смещение от начала перехода. Смещение всегда больше или равно нулю и меньше или равно длительности перехода. Этот метод не вызывается, если продолжительность перехода равно нулю.  
   
- `velocity`  
+ *скорости*  
  Выходные данные. Скорость переменной с позиции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pInterpolator`  
+ *pInterpolator*  
  Указатель на пользовательские интерполятор.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initialValue`  
+ *Начальное значение*  
  Значение переменной в начале перехода.  
   
- `initialVelocity`  
+ *initialVelocity*  
  Скорость переменной в начале перехода.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

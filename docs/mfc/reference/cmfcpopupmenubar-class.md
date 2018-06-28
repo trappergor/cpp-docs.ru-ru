@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374478"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037763"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Класс CMFCPopupMenuBar
 Строка меню, внедренная в контекстное меню.  
@@ -76,7 +76,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Немедленно повторно вычисляет макет панели. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Загружает элементы всплывающего меню из меню указанного ресурса.|  
@@ -100,7 +100,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, если приложение имеет вид Windows XP.|  
   
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` автоматически пересчитать макета панели строки всплывающего меню; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Указывает идентификатор меню ресурс меню загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка на экране.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Меню, из которого импортируются кнопок всплывающего меню.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` Если необходимо импортировать все команды в меню или `FALSE` Если редко используемые из них может быть скрыт.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Дескриптор архивированные меню загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Отсчитываемый от нуля индекс кнопки на панели инструментов стиль которого требуется задать.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Стиль кнопки. В разделе [стили элемента управления панель инструментов](../../mfc/reference/toolbar-control-styles.md) список стилей кнопок панели инструментов доступны.  
   
 ### <a name="remarks"></a>Примечания  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iOffset`  
+ [in] *iOffset*  
  Число строк, всплывающее меню должен быть смещены.  
   
 ### <a name="remarks"></a>Примечания  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  Указатель на кнопку меню, для которого требуется задать таймер задержки.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  Фактор задержки, равным по крайней мере один умножение на время задержки стандартные меню (как правило, от полсекунды и пять секунд).  
   
 ### <a name="remarks"></a>Примечания  

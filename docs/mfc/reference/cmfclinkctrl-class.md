@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371732"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038358"
 ---
 # <a name="cmfclinkctrl-class"></a>Класс CMFCLinkCtrl
 `CMFCLinkCtrl` Класс отображает кнопку в виде гиперссылки и вызывает целевой объект связи при нажатии кнопки.  
@@ -44,7 +44,7 @@ class CMFCLinkCtrl : public CMFCButton
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::SetURL](#seturl)|Отображает указанный URL-адрес в виде текста кнопки.|  
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Задает протокол, неявное (например, «http:») URL-адреса.|  
@@ -52,7 +52,7 @@ class CMFCLinkCtrl : public CMFCButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Вызывается платформой перед рисованием прямоугольника фокуса кнопки.|  
   
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  Прямоугольник, ограничивающий управления ссылками.  
   
 ### <a name="remarks"></a>Примечания  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  Текст кнопки для отображения.  
   
 ### <a name="remarks"></a>Примечания  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  Префикс URL-протокол.  
   
 ### <a name="remarks"></a>Примечания  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` Чтобы центрировать текст и кнопки растрового изображения по вертикали между верхней и нижней части элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` Чтобы центрировать текст и кнопки растрового изображения по горизонтали между левой и правой стороны элемента управления ссылки; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

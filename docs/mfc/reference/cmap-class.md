@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239428"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039164"
 ---
 # <a name="cmap-class"></a>Класс CMap
 Класс коллекции словарей, который сопоставляет уникальные ключи значениям.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `KEY`  
+ *KEY*  
  Класс объекта, который используется как ключ для карты.  
   
- `ARG_KEY`  
- Тип данных, используемый для `KEY` аргументов; обычно ссылка `KEY`.  
+ *ARG_KEY*  
+ Тип данных, используемый для *ключ* аргументов; обычно ссылка *ключ*.  
   
- `VALUE`  
+ *ЗНАЧЕНИЕ*  
  Класс объекта, хранимый в сопоставлении.  
   
- `ARG_VALUE`  
- Тип данных, используемый для `VALUE` аргументов; обычно ссылка `VALUE`.  
+ *ARG_VALUE*  
+ Тип данных, используемый для *значение* аргументов; обычно ссылка *значение*.  
   
 ## <a name="members"></a>Участники  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Указывает гранулярность выделения памяти для расширения карты.  
   
 ### <a name="remarks"></a>Примечания  
- При увеличении карты в единицах выделяется память `nBlockSize` записей.  
+ При увеличении карты в единицах выделяется память *nBlockSize* записей.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rNextPosition`  
+ *rNextPosition*  
  Указывает ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNextAssoc` или `GetStartPosition` вызова.  
   
  *KEY*  
  Параметр шаблона, указывающий тип ключа карты.  
   
- `rKey`  
+ *rKey*  
  Указывает возвращаемый ключ полученного элемента.  
   
  *ЗНАЧЕНИЕ*  
  Параметр шаблона, указывающий тип значения карты.  
   
- `rValue`  
+ *rValue*  
  Указывает возвращаемое значение полученного элемента.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция полезна для перебора всех элементов в объекте map. Обратите внимание, что порядковый номер позиции не обязательно будет таким же, как последовательность значение ключа.  
   
- Если полученного элемента является последним в схеме, то новое значение `rNextPosition` равно **NULL**.  
+ Если полученного элемента является последним в схеме, то новое значение *rNextPosition* равно **NULL**.  
   
 ### <a name="example"></a>Пример  
  Далее приведен пример [CMap::SetAt](#setat).  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hashSize`  
+ *hashSize*  
  Число записей в хэш-таблице.  
   
- `bAllocNow`  
+ *bAllocNow*  
  Если **TRUE**, выделяет хэш-таблице при инициализации; в противном случае таблица выделяется при необходимости.  
   
 ### <a name="remarks"></a>Примечания  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ARG_KEY`  
- Параметр шаблона, задающее тип `key` значение.  
+ *ARG_KEY*  
+ Параметр шаблона, задающее тип *ключ* значение.  
   
- `key`  
+ *key*  
  Задает ключ, определяющий элемента, который требуется найти.  
   
  *ЗНАЧЕНИЕ*  
  Указывает тип значения, которое необходимо найти.  
   
- `rValue`  
+ *rValue*  
  Получает значение, поиск вверх.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *ЗНАЧЕНИЕ*  
  Параметр шаблона, задающее тип значения карты.  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  Параметр шаблона, указывающий тип значения ключа.  
   
- `key`  
+ *key*  
  Ключ, используемый для извлечения значения из схемы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- Извлекает элемент карты, на который указывает `pAssocRec`.  
+ Извлекает элемент карты, на который указывает *pAssocRec*.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Ключ элемента для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ARG_KEY`  
+ *ARG_KEY*  
  Параметр шаблона, определяющий тип ключа.  
   
- `key`  
+ *key*  
  Ключ элемента, который требуется удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ARG_KEY`  
- Параметр шаблона, задающее тип `key` параметр.  
+ *ARG_KEY*  
+ Параметр шаблона, задающее тип *ключ* параметра.  
   
- `key`  
+ *key*  
  Задает ключ для нового элемента.  
   
- `ARG_VALUE`  
- Параметр шаблона, задающее тип `newValue` параметр.  
+ *ARG_VALUE*  
+ Параметр шаблона, задающее тип *newValue* параметра.  
   
- `newValue`  
+ *новое значение*  
  Указывает значение нового элемента.  
   
 ### <a name="remarks"></a>Примечания  

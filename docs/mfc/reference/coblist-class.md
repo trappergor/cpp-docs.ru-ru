@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378422"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039136"
 ---
 # <a name="coblist-class"></a>Класс cObList
 упорядоченные списки неуникальные fSupports `CObject` указатели доступны последовательно или по значению указателей.  
@@ -80,13 +80,13 @@ class CObList : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::CObList](#coblist)|Создает пустой список с `CObject` указатели.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::AddHead](#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
 |[CObList::AddTail](#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  Вставка элемента является очень быстро в начало списка, обозначаемый и в известном **ПОЗИЦИИ**. Последовательный поиск необходим для поиска элемента по значению или индексу. Этот поиск может быть медленным, если список слишком длинный.  
   
- `CObList` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Если список `CObject` указатели хранится в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, каждый `CObject` элемент сериализуется в свою очередь.  
+ `CObList` включает в себя IMPLEMENT_SERIAL-макрос для поддержки сериализации и записи элементов в дамп. Если список `CObject` указатели хранится в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, каждый `CObject` элемент сериализуется в свою очередь.  
   
  Если вам требуется дамп отдельных `CObject` элементов в списке, необходимо задать глубины контекста дампа 1 или больше.  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `newElement`  
+ *newElement*  
  `CObject` Указатель для добавления в этот список.  
   
- `pNewList`  
- Указатель на другую `CObList` списка. Элементы в `pNewList` будет добавляться в этот список.  
+ *pNewList*  
+ Указатель на другую `CObList` списка. Элементы в *pNewList* будет добавляться в этот список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает первую версию **ПОЗИЦИИ** значение вставленный элемент.  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `newElement`  
+ *newElement*  
  `CObject` Указатель для добавления в этот список.  
   
- `pNewList`  
- Указатель на другую `CObList` списка. Элементы в `pNewList` будет добавляться в этот список.  
+ *pNewList*  
+ Указатель на другую `CObList` списка. Элементы в *pNewList* будет добавляться в этот список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает первую версию **ПОЗИЦИИ** значение вставленный элемент.  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Гранулярность выделения памяти для расширения списка.  
   
 ### <a name="remarks"></a>Примечания  
- При увеличении списке память выделяется в единицах `nBlockSize` записей. Если происходит сбой выделения памяти, `CMemoryException` возникает исключение.  
+ При увеличении списке память выделяется в единицах *nBlockSize* записей. Если происходит сбой выделения памяти, `CMemoryException` возникает исключение.  
   
  В следующей таблице приведены другие члена функции, которые похожи на `CObList::CObList`.  
   
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `searchValue`  
+ *searchValue*  
  Указатель на объект можно найти в этом списке.  
   
- `startAfter`  
+ *startAfter*  
  Начальное положение поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -285,18 +285,18 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- Использует значение `nIndex` как индекс в списке.  
+ Использует значение *nIndex* как индекс в списке.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс элемента списка, который требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект **ПОЗИЦИИ** значение, которое может использоваться для итерации или извлечения указатель объекта; **NULL** Если `nIndex` слишком велик. (Платформа создает утверждение, если `nIndex` является отрицательным значением.)  
+ Объект **ПОЗИЦИИ** значение, которое может использоваться для итерации или извлечения указатель объекта; **NULL** Если *nIndex* слишком велик. (Платформа создает утверждение, если *nIndex* является отрицательным значением.)  
   
 ### <a name="remarks"></a>Примечания  
  Начинает последовательного сканирования с начало списка, остановка на *n*элемент th.  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>Параметры  
  *Положение*  
- Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetHeadPosition` или **найти** вызова функции-члена.  
+ Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetHeadPosition` или `Find` вызова функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  См. в описании возвращаемое значение [GetHead](#gethead).  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для `POSITION` значение на следующую запись в списке.  
+ Возвращает элемент списка, определенный *rPosition*, затем устанавливает *rPosition* для `POSITION` значение на следующую запись в списке.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rPosition`  
+ *rPosition*  
  Ссылку на `POSITION` значение, возвращенное предыдущим `GetNext`, `GetHeadPosition`, или другим вызовом функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  Необходимо убедиться, что ваш `POSITION` значение представляет допустимую позицию в списке. Если он является недопустимым, подтверждает отладочной версии библиотеки классов Microsoft Foundation.  
   
- Если полученный элемент является последним в списке, то новое значение `rPosition` равно `NULL`.  
+ Если полученный элемент является последним в списке, то новое значение *rPosition* равно `NULL`.  
   
  Существует возможность удалить элемент во время итерации. Далее приведен пример [RemoveAt](#removeat).  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для `POSITION` значение предыдущей записи в списке.  
+ Возвращает элемент списка, определенный *rPosition*, затем устанавливает *rPosition* для `POSITION` значение предыдущей записи в списке.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rPosition`  
+ *rPosition*  
  Ссылку на `POSITION` значение, возвращенное предыдущим `GetPrev` или другим вызовом функции-члена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>Параметры  
  *Положение*  
- Значение **POSITION** , возвращенное предыдущим вызовом функции-члена `GetNext`, `GetPrev`или **Find** .  
+ Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNext`, `GetPrev`, или `Find` вызова функции-члена.  
   
  `newElement`  
  Указатель на объект для добавления в этот список.  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>Параметры  
  *Положение*  
- Значение **POSITION** , возвращенное предыдущим вызовом функции-члена `GetNext`, `GetPrev`или **Find** .  
+ Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNext`, `GetPrev`, или `Find` вызова функции-члена.  
   
- `newElement`  
+ *newElement*  
  Указатель на объект для добавления в этот список.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pos`  
+ *POS*  
  **ПОЗИЦИИ** задаваемого элемента.  
   
- `newElement`  
+ *newElement*  
  `CObject` Указатель на запись в список.  
   
 ### <a name="remarks"></a>Примечания  

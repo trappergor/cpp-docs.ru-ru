@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374669"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038107"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Класс CMFCRibbonStatusBar
 `CMFCRibbonStatusBar` Класс реализует строки состояния, который может отображать элементы ленты.  
@@ -80,7 +80,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Добавляет динамический элемент строки состояния ленты.|  
 |[CMFCRibbonStatusBar::AddElement](#addelement)|Добавляет новый элемент ленты строки состояния ленты.|  
@@ -106,7 +106,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Отображает сведения о строке, которая появляется на строке при включении режима сведения состояния ленты.|  
   
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на динамический элемент.  
   
 ### <a name="remarks"></a>Примечания  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на добавленный элемент.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Текстовая метка элемента.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Если вы хотите добавить элемент как видимый, `FALSE` Если вы хотите добавить элемент как скрытые.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
  Указатель на добавленный элемент.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Текстовая метка элемента.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` Если вы хотите добавить элемент как видимый, `FALSE` Если вы хотите добавить элемент как скрытые.  
   
 ### <a name="remarks"></a>Примечания  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Логическое или сочетание стилей элемента управления.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления в строке состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  Сочетание логического или дополнительные стили для создания объекта состояния панели.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль элемента управления строки состояния.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления в строке состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [in] *uiCmdID*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Задает отсчитываемый от нуля индекс элемента, который находится в главной области строки состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
+ [in] *nIndex*  
  Указывает индекс с нулевым основанием элемента, размещенного в расширенной области элемента управления строкой состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент, расположенный по заданному индексу в расширенной области строки состояния ленты. Значение `NULL`, если `nIndex` меньше нуля или превышает число элементов в расширенной области строки состояния ленты.  
+ Указатель на элемент, расположенный по заданному индексу в расширенной области строки состояния ленты. `NULL` Если *nIndex* меньше нуля или превышает число элементов в расширенной области строки состояния ленты.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pElement`  
+ [in] *pElement*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `strInfo`  
+ [in] *strInfo*  
  Строка с информацией.  
   
- [in] `rectInfo`  
+ [in] *rectInfo*  
  Ограничивающий прямоугольник.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид строка с информацией в строке состояния. Используйте [CMFCRibbonStatusBar::SetInformation](#setinformation) метод для размещения в строке состояния в режиме сведения. В этом режиме скрытие всех панелей строки состояния и отображает сведения строки, заданной параметром `strInfo`.  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид строка с информацией в строке состояния. Используйте [CMFCRibbonStatusBar::SetInformation](#setinformation) метод для размещения в строке состояния в режиме сведения. В этом режиме скрытие всех панелей строки состояния и отображает сведения строки, заданной параметром *strInfo*.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор элемента, удаляемого из строки состояния.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если элемент с указанным `uiID` удаляется. В противном случае — значение `FALSE`.  
+ `TRUE` Если элемент с указанным *uiID* удаляется. В противном случае — значение `FALSE`.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  Включает или отключает режим сведения для строки состояния ленты.  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszInfo`  
+ [in] *lpszInfo*  
  Строка с информацией.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод можно используйте для размещения в строке состояния в режиме сведения. В этом режиме скрытие всех панелей строки состояния и отображает сведения строки, заданной параметром `lpszInfo`.  
+ Этот метод можно используйте для размещения в строке состояния в режиме сведения. В этом режиме скрытие всех панелей строки состояния и отображает сведения строки, заданной параметром *lpszInfo*.  
   
  При lpszInfo `NULL`, в строке состояния возвращается в обычный режим.  
   

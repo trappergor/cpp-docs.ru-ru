@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376214"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042551"
 ---
 # <a name="colepropertypage-class"></a>Класс COlePropertyPage
 Используется для отображения свойств пользовательского элемента управления в графическом интерфейсе подобно диалоговому окну.  
@@ -68,13 +68,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Создает объект `COlePropertyPage`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Указывает, ли пользователь изменил значение в элементе управления.|  
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Возвращает массив объектов, изменяется на странице свойств.|  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Идентификатор элемента управления страницы свойств ресурса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pnObjects`  
+ *pnObjects*  
  Указатель на длинное целое без знака, который получит число объектов, изменяется на странице.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на массив `IDispatch` указатели, которые используются для доступа к свойствам каждого элемента управления на странице свойств. Вызывающий объект не должен освободить эти указатели на интерфейс.  
   
 ### <a name="remarks"></a>Примечания  
- Каждый объект страницы свойств поддерживает массив указателей на `IDispatch` интерфейсы объектов редактируемой страницы. Эта функция задает его `pnObjects` аргумента для числа элементов в этом массиве и возвращает указатель на первый элемент массива.  
+ Каждый объект страницы свойств поддерживает массив указателей на `IDispatch` интерфейсы объектов редактируемой страницы. Эта функция задает его *pnObjects* аргумента для числа элементов в этом массиве и возвращает указатель на первый элемент массива.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  Возвращает указатель на странице свойств `IPropertyPageSite` интерфейса.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Идентификатор элемента управления пропускаются.  
   
 ### <a name="remarks"></a>Примечания  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dispid`  
+ *DISPID*  
  Идентификатор диспетчеризации редактируемого свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Содержит идентификатор элемента управления страницы свойств.  
   
- `bDirty`  
+ *bDirty*  
  Указывает, был ли изменен поля страницы свойств. Значение **TRUE** Если поле было изменено, **FALSE** , если он не был изменен.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  Строка, содержащая краткие справочные сведения для отображения в строке состояния или в другое место.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  Имя файла справки на странице свойств.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bModified`  
+ *bModified*  
  Указывает новое значение для измененного флага на странице свойств.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

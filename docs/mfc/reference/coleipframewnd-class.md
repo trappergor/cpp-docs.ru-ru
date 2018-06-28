@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370384"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040029"
 ---
 # <a name="coleipframewnd-class"></a>Класс COleIPFrameWnd
 Основа для окна редактирования приложения "на месте".  
@@ -42,13 +42,13 @@ class COleIPFrameWnd : public CFrameWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleIPFrameWnd::COleIPFrameWnd](#coleipframewnd)|Создает объект `COleIPFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Вызывается платформой, когда элемент активируется для встроенного редактирования.|  
 |[COleIPFrameWnd::RepositionFrame](#repositionframe)|Вызывается платформой для изменения положения окна редактирования по месту.|  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpPosRect`  
+ *lpPosRect*  
  Указатель на `RECT` структуры или `CRect` объект, содержащий на месте фрейма окна текущей координаты, в пикселях, относительно клиентской области.  
   
- `lpClipRect`  
+ *lpClipRect*  
  Указатель на `RECT` структуры или `CRect` объект, содержащий на месте фрейма окна текущий прямоугольник отсечения координатами в пикселях относительно клиентской области.  
   
 ### <a name="remarks"></a>Примечания  

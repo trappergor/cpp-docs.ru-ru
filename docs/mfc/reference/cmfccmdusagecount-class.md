@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369246"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037348"
 ---
 # <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 Отслеживает загруженность сообщений Windows, например когда пользователь выбирает элемент меню.  
@@ -52,7 +52,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|  
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|  
   
@@ -60,7 +60,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Увеличивает на единицу счетчик, который связан с данной команды.|  
 |[CMFCCmdUsageCount::GetCount](#getcount)|Получает счетчик использования, связанный с данной команды.|  
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, является ли этот объект собрал минимальный объем данных отслеживания.|  
@@ -73,7 +73,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|name|Описание|  
+|name|Описание:|  
 |`m_CmdUsage`|Объект `CMap` объект, который сопоставляет команды счетчики их использования.|  
 |`m_nMinUsagePercentage`|Процент минимальное использование часто используемые команды.|  
 |`m_nStartCount`|Начало счетчик, который используется для определения, является ли этот объект собрал минимальный объем данных отслеживания.|  
@@ -103,8 +103,8 @@ void AddCmd(UINT uiCmd);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `uiCmd`|Указывает команду счетчик будет изменяться.|  
+|Параметр|Описание:|  
+|[in] *uiCmd*|Указывает команду счетчик будет изменяться.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод добавляет новую запись к структуре карты счетчики команда `m_CmdUsage`, если запись еще не существует.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   Панель инструментов framework устанавливается в режим настройки ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) метод возвращает ненулевое значение).  
   
--   Команда ссылается на разделитель меню или подменю ( `uiCmd` равно 0 или -1).  
+-   Команда ссылается на разделитель меню или подменю ( *uiCmd* равно 0 или -1).  
   
-- `uiCmd` ссылается на стандартные команды (глобальный `IsStandardCommand` функция возвращает ненулевое значение).  
+- *uiCmd* ссылается на стандартные команды (глобальный `IsStandardCommand` функция возвращает ненулевое значение).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  Получает счетчик использования, связанный с данной команды.  
@@ -128,8 +128,8 @@ UINT GetCount(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `uiCmd`|Идентификатор счетчика команду для извлечения.|  
+|Параметр|Описание:|  
+|[in] *uiCmd*|Идентификатор счетчика команду для извлечения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Счетчик использования, связанный с данной команды.  
@@ -160,8 +160,8 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `uiCmd`|Указывает команду для проверки.|  
+|Параметр|Описание:|  
+|[in] *uiCmd*|Указывает команду для проверки.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если команда часто используется; в противном случае — 0.  
@@ -192,8 +192,8 @@ virtual void Serialize(CArchive& ar);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `ar`|Объект `CArchive` объект для сериализации из или в нее.|  
+|Параметр|Описание:|  
+|[in] *ar*|Объект `CArchive` объект для сериализации из или в нее.|  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод сериализует структуре карты счетчиков команда `m_CmdUsage`и об использовании общее команды, `m_nTotalUsage`, счетчик из или в указанный архив.  
@@ -213,15 +213,15 @@ static BOOL __stdcall SetOptions(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `nStartCount`|Новое начальное количество все отслеживаемые команд.|  
-|[in] `nMinUsagePercentage`|Процент новых минимальное использование.|  
+|Параметр|Описание:|  
+|[in] *nStartCount*|Новое начальное количество все отслеживаемые команд.|  
+|[in] *nMinUsagePercentage*|Процент новых минимальное использование.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно, `FALSE` Если `nMinUsagePercentage` параметр, размер которого больше или равно 100.  
+ `TRUE` Если метод выполнен успешно, `FALSE` Если *nMinUsagePercentage* параметра больше или равно 100.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод задает общий `CMFCCmdUsageCount` данные-члены класса `m_nStartCount` и `m_nMinUsagePercentage` для `nStartCount` и `nMinUsagePercentage`соответственно. `m_nStartCount` используется [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) метод, чтобы определить, является ли этот объект собрал минимальный объем данных отслеживания. `m_nMinUsagePercentage` используется [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) метод для определения часто использование данной команды.  
+ Этот метод задает общий `CMFCCmdUsageCount` данные-члены класса `m_nStartCount` и `m_nMinUsagePercentage` для *nStartCount* и *nMinUsagePercentage*соответственно. `m_nStartCount` используется [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) метод, чтобы определить, является ли этот объект собрал минимальный объем данных отслеживания. `m_nMinUsagePercentage` используется [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) метод для определения часто использование данной команды.  
   
  В отладочных построениях этот метод создает Сбой утверждения, если `nMinUsagePercentage` параметр, размер которого больше или равно 100.  
   

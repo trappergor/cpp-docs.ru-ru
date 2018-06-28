@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373531"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040094"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Класс CMFCToolBarFontComboBox
 Кнопка панели инструментов, который содержит поле со списком, позволяющий пользователю выбрать шрифт из списка системных шрифтов.  
@@ -42,13 +42,13 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Создает объект `CMFCToolBarFontComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Возвращает указатель на `CMFCFontInfo` объект для указанного индекса в поле со списком.|  
 |[CMFCToolBarFontComboBox::SetFont](#setfont)|Выбирает шрифт в поле со списком шрифтов согласно либо имя шрифта или префикс и набор символов шрифта.|  
@@ -64,7 +64,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 2.  Создать `CMFCToolBarFontComboBox` объекта.  
   
-3.  В обработчике сообщений, который обрабатывает `AFX_WM_RESETTOOLBAR` сообщение, заменить исходного кнопки «Создать» поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+3.  В обработчик сообщений, который обрабатывает сообщение AFX_WM_RESETTOOLBAR, замените исходного кнопки «Создать» поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
 4.  Синхронизировать шрифта, выбранного в поле со списком с помощью шрифта в документ с помощью [CMFCToolBarFontComboBox::SetFont](#setfont) метод.  
   
@@ -110,13 +110,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор команды в поле со списком.  
   
- [in] `iImage`  
+ [in] *iImage*  
  Отсчитываемый от нуля индекс изображение кнопки панели инструментов. Образ, находится в [класса CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) объекта, [CMFCToolBar класс](../../mfc/reference/cmfctoolbar-class.md) поддерживает класс.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  Типы шрифтов, которые содержатся в поле со списком. Этот параметр может быть сочетанием следующих значений (логическое или):  
   
  ЗНАЧЕНИЯ: DEVICE_FONTTYPE  
@@ -125,23 +125,23 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Если задано значение DEFAULT_CHARSET, поле со списком содержит все уникальность имен шрифтов в всех наборов символов. (При наличии двух шрифтов с тем же именем, поле со списком содержит один из них.) Если набор набор Допустимое символьное значение, поле со списком содержит только шрифты в указанный набор символов. В разделе [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) список возможных символов задает.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Стиль поле со списком. (см. [стили полей со списками](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [in] `iWidth`  
+ [in] *iWidth*  
  Ширина в пикселях элемента управления.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  Если задано значение DEFAULT_PITCH, поле со списком содержит шрифты независимо от размера. Если значение FIXED_PITCH или VARIABLE_PITCH, поле со списком содержит только шрифты с этим типом шаг. Фильтрация на основе семейства шрифтов в настоящее время не поддерживается.  
   
- [выходной] `pLstFontsExternal`  
+ [out] *pLstFontsExternal*  
  Указатель на [класс CObList](../../mfc/reference/coblist-class.md) объект, который хранит доступных шрифтов.  
   
 ### <a name="remarks"></a>Примечания  
- Как правило `CMFCToolBarFontComboBox` объектов сохранить список доступных шрифтов в один общий `CObList` объекта. Если использовать вторую перегрузку конструктора и укажите допустимый указатель на `pLstFontsExternal`, `CMFCToolBarFontComboBox` объекта вместо заполнит `CObList` , `pLstFontsExternal` указывает с доступных шрифтов.  
+ Как правило `CMFCToolBarFontComboBox` объектов сохранить список доступных шрифтов в один общий `CObList` объекта. Если использовать вторую перегрузку конструктора и укажите допустимый указатель на *pLstFontsExternal*, `CMFCToolBarFontComboBox` объекта вместо заполнит `CObList` , *pLstFontsExternal* Указывает на доступные шрифты.  
   
 ### <a name="example"></a>Пример  
  Следующий пример демонстрирует `CMFCToolBarFontComboBox` объекта. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).  
@@ -156,11 +156,11 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Задает отсчитываемый от нуля индекс элемент поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на объект `CMFCFontInfo`. Если `iIndex` указывается индекс допустимый элемент, возвращается значение `NULL`.  
+ Указатель на объект `CMFCFontInfo`. Если *iIndex* указывается индекс допустимый элемент, возвращается значение `NULL`.  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  Высота в пикселях символов в поле со списком шрифтов, если поле со списком имеет стиль рисования владельцем.  
@@ -183,20 +183,20 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Задает имя шрифта или префикс.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  Указывает кодировку.  
   
- [in] `bExact`  
- Указывает, является ли `lpszName` содержит имя шрифта или префикс шрифта.  
+ [in] *bExact*  
+ Указывает, является ли *lpszName* содержит имя шрифта или префикс шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если шрифт установлен успешно. в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bExact` — `TRUE`, этот метод выбирает шрифт, который точно соответствует имени, указанного в качестве `lpszName`. Если `bExact` — `FALSE`, этот метод выбирает шрифт, который начинается с текста, указанного как `lpszName` и использует набор символов, которые указаны в качестве `nCharSet`. Если `nCharSet` задано для DEFAULT_CHARSET, набор символов будет игнорируется и только `lpszName` будет использоваться для выбора шрифта.  
+ Если *bExact* — `TRUE`, этот метод выбирает шрифт, который точно соответствует имени, указанного в качестве *lpszName*. Если *bExact* — `FALSE`, этот метод выбирает шрифт, который начинается с текста, указанного как *lpszName* и использует набор символов, которые указаны в качестве *nCharSet*. Если *nCharSet* задано для DEFAULT_CHARSET, набор символов будет игнорируется и только *lpszName* будет использоваться для выбора шрифта.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

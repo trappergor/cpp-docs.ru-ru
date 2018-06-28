@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367348"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040617"
 ---
 # <a name="chtmleditview-class"></a>Класс CHtmlEditView
 Предоставляет функции платформы редактирования WebBrowser в контексте архитектуры документов или представлений MFC.  
@@ -44,13 +44,13 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditView::CHtmlEditView](#chtmleditview)|Создает объект `CHtmlEditView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|Создает новый объект окна.|  
 |[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Возвращает **IHTMLDocument2** интерфейс для текущего документа.|  
@@ -100,25 +100,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClassName`  
+ *lpszClassName*  
  Указывает строку символом null, с именем класса Windows. Имя класса может быть любое имя, зарегистрированное в [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции или **RegisterClass** функции Windows. Если **NULL**, использует предопределенные по умолчанию [CFrameWnd](../../mfc/reference/cframewnd-class.md) атрибуты.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  Указатель на завершающуюся значением null строка, представляющая имя окна.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает атрибуты стилей окна. По умолчанию **WS_VISIBLE** и **WS_CHILD** заданы стили Windows.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, определяя размер и положение окна. `rectDefault` Значение позволяет Windows указать размер и положение нового окна.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, определяя размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор представления. Значение по умолчанию, **AFX_IDW_PANE_FIRST**.  
   
- `pContext`  
+ *pContext*  
  Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). **Значение NULL,** по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366887"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040978"
 ---
 # <a name="cgopherfile-class"></a>Класс CGopherFile
 Обеспечивает возможность поиска и чтения файлов на сервере gopher.  
@@ -41,12 +41,12 @@ class CGopherFile : public CInternetFile
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFile::CGopherFile](#cgopherfile)|Создает объект `CGopherFile`.|  
   
 ## <a name="remarks"></a>Примечания  
- Служба gopher пользователям не разрешается выполнить запись данных в файл gopher, так как эта служба работает в основном как интерфейс основе меню для поиска сведений. `CGopherFile` Функции-члены **записи**, `WriteString`, и `Flush` не реализован для `CGopherFile`. Вызов этих функций для `CGopherFile` объекта возвращает [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ Служба gopher пользователям не разрешается выполнить запись данных в файл gopher, так как эта служба работает в основном как интерфейс основе меню для поиска сведений. `CGopherFile` Функции-члены `Write`, `WriteString`, и `Flush` не реализован для `CGopherFile`. Вызов этих функций для `CGopherFile` объекта возвращает [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
  Дополнительные сведения о том, как `CGopherFile` работает с другими классами MFC Интернет, см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hFile`  
+ *hFile*  
  Дескриптор `HINTERNET` файла.  
   
- `refLocator`  
+ *refLocator*  
  Ссылку на [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) объекта.  
   
- `pConnection`  
+ *pConnection*  
  Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта.  
   
- `hSession`  
+ *hSession*  
  Дескриптор текущего сеанса Интернета.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Указатель на строку, используемую для обнаружения сервера gopher. В разделе [сеансы Gopher](cgopherlocator-class.md) Дополнительные сведения о локаторов gopher.  
   
  *dwLocLen*  
- DWORD, содержащее число байтов в `pstrLocator`.  
+ DWORD, содержащее число байтов в *pstrLocator*.  
   
- `dwContext`  
+ *dwContext*  
  Указатель на идентификатор контекста для открытого файла.  
   
 ### <a name="remarks"></a>Примечания  

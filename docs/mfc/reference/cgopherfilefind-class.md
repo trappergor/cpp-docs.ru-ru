@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369418"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038533"
 ---
 # <a name="cgopherfilefind-class"></a>Класс CGopherFileFind
 Помогает в поиске файлов Интернета на серверах gopher.  
@@ -59,13 +59,13 @@ class CGopherFileFind : public CFileFind
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFileFind::CGopherFileFind](#cgopherfilefind)|Создает объект `CGopherFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFileFind::FindFile](#findfile)|Поиск файла на сервере gopher.|  
 |[CGopherFileFind::FindNextFile](#findnextfile)|Продолжает поиск файла из предыдущего вызова [FindFile](#findfile).|  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pConnection`  
+ *pConnection*  
  Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта.  
   
- `dwContext`  
- Идентификатор контекста для операции. В разделе **примечания** Дополнительные сведения о `dwContext`.  
+ *dwContext*  
+ Идентификатор контекста для операции. В разделе **примечания** Дополнительные сведения о *dwContext*.  
   
 ### <a name="remarks"></a>Примечания  
- Значение по умолчанию для `dwContext` отправленных MFC, позволяющий `CGopherFileFind` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CGopherFileFind` объекта. При построении `CGopherFileFind` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
+ Значение по умолчанию для *dwContext* отправленных MFC, позволяющий `CGopherFileFind` объекта из [CInternetSession](../../mfc/reference/cinternetsession-class.md) объекта, который создан `CGopherFileFind` объекта. При построении `CGopherFileFind` объекта, можно переопределить значение по умолчанию для идентификатора контекста присвоено значение по своему выбору. Идентификатор контекста возвращается [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) показывают состояние для объекта, с помощью которого определяется. См. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md) Дополнительные сведения о идентификатора контекста.  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  Вызовите эту функцию-член для поиска файла gopher.  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refLocator`  
+ *refLocator*  
  Ссылку на [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) объекта.  
   
  *pstrString*  
  Указатель на строку, содержащую имя файла.  
   
- `dwFlags`  
+ *dwFlags*  
  Флаги, описывающие способ обработки этого сеанса. Ниже приведены допустимые флаги.  
   
 -   INTERNET_FLAG_RELOAD получить данные с удаленного сервера, даже если он кэшируется локально.  
@@ -186,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.  
   
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -210,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -234,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTimeStamp`  
+ *pTimeStamp*  
  Указатель на [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.  
   
- `refTime`  
+ *refTime*  
  Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

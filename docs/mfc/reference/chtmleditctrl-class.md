@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367160"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040146"
 ---
 # <a name="chtmleditctrl-class"></a>Класс CHtmlEditCtrl
 Предоставляет функциональные возможности элемента управления ActiveX WebBrowser в окне MFC.  
@@ -45,13 +45,13 @@ class CHtmlEditCtrl: public CWnd,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|Создает объект `CHtmlEditCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|Создает элемент управления WebBrowser ActiveX и прикрепляет его к `CHtmlEditCtrl` объекта. Эта функция автоматически переводит элемент управления WebBrowser ActiveX в режиме редактирования.|  
 |[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса в документе, загруженных в данный момент в элемента управления WebBrowser в контейнере.|  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszWindowName`  
+ *lpszWindowName*  
  Этот параметр не используется.  
   
- `dwStyle`  
+ *dwStyle*  
  Этот параметр не используется.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение элемента управления.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает родительскому окну элемента управления. Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления.  
   
- `pContext`  
+ *pContext*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppDocument`  
+ *ppDocument*  
  Интерфейс документа.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367618"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039048"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
 `CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, открывается диалоговое окно выбора шрифта.  
@@ -42,14 +42,14 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|  
 |`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|  
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Получает цвет шрифта, выбранного пользователем из диалогового окна шрифта.|  
@@ -83,22 +83,22 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strName`  
+ [in] *strName*  
  Имя свойства.  
   
- [in] `lf`  
+ [in] *lf*  
  Структура шрифте, определяет атрибуты шрифта.  
   
- [in] `dwFontDialogFlags`  
- Стили, примененные в диалоговом окне шрифт, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе `Flags` параметр [CHOOSEFONT структуры](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ [in] *dwFontDialogFlags*  
+ Стили, примененные в диалоговом окне шрифт, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [CHOOSEFONT структуры](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Описание свойства шрифта. Значение по умолчанию — `NULL`.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные приложения, такие как целое число или указатель на другие данные, связанные со свойством. Значение по умолчанию — 0.  
   
- [in] `color`  
+ [in] *цвет*  
  Цвет шрифта. Значением по умолчанию является цвет по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  

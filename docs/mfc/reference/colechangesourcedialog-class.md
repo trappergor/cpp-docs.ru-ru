@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376454"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037600"
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 Используется для диалогового окна OLE "Изменить источник".  
@@ -54,13 +54,13 @@ class COleChangeSourceDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|Создает объект `COleChangeSourceDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменить источник.|  
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Возвращает отображаемое имя полного исходного.|  
@@ -72,7 +72,7 @@ class COleChangeSourceDialog : public COleDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|  
   
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pItem`  
+ *pItem*  
  Указатель на связанную [COleClientItem](../../mfc/reference/coleclientitem-class.md) , источник должен быть обновлен.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, родительское окно диалогового окна будет присвоено главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  

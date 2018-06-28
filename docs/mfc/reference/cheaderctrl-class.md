@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 582ffffc4461edd41078f1a89844bdc260b2dd40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e765241029c0380dce7b28fa9fb4f9c84410d515
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376025"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041962"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "заголовок" Windows.  
@@ -94,13 +94,13 @@ class CHeaderCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Создает объект `CHeaderCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Удаляет все фильтры для заголовка элемента управления.|  
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Очистка фильтра для заголовка элемента управления.|  
@@ -196,7 +196,7 @@ BOOL ClearFilter(int nColumn);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nColumn`  
+ *nColumn*  
  Значение столбца, позволяющее определить, какой фильтр следует удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -220,23 +220,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает стиль заголовка элемента управления. Описание стили заголовка элемента управления см. [стили элемента управления заголовка](http://msdn.microsoft.com/library/windows/desktop/bb775241) в Windows SDK.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение заголовка элемента управления. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает заголовок родительского окна элемента управления, обычно `CDialog`. Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор заголовка элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если инициализация выполнена успешно; в противном случае значение равно нулю.  
   
 ### <a name="remarks"></a>Примечания  
- Создании `CHeaderCtrl` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать **создать**, который создает заголовок элемента управления и прикрепляет его к `CHeaderCtrl` объекта.  
+ Создании `CHeaderCtrl` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать `Create`, который создает заголовок элемента управления и прикрепляет его к `CHeaderCtrl` объекта.  
   
  Помимо стили элемента управления заголовка, можно использовать следующие общие стили элемента управления для определения, как элемент управления заголовка размещает и изменять свои размеры (в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) подробнее):  
   
@@ -264,7 +264,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** указывает один из любое число элементов управления с помощью которых можно перемещаться с помощью клавиши TAB. Пользователь перемещается клавишей TAB к следующему элементу управления, определяемое **WS_TABSTOP** стиля.  
   
- Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо **создать**.  
+ Если вы хотите использовать с элементом управления windows расширенных стилей, вызовите [CreateEx](#createex) вместо `Create`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_4.cpp)]  
@@ -282,26 +282,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль заголовка элемента управления. Описание стили заголовка элемента управления см. [стили элемента управления заголовка](http://msdn.microsoft.com/library/windows/desktop/bb775241) в Windows SDK. В разделе [создать](#create) список дополнительные стили.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо **создать** для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
+ Используйте `CreateEx` вместо `Create` для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage  
  Создает прозрачный версию изображения элемента в элемент управления заголовком.  
@@ -311,7 +311,7 @@ CImageList* CreateDragImage(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс элемента в элементе управления заголовка. Изображения, назначенный данному элементу является основой для прозрачное изображение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -330,7 +330,7 @@ BOOL DeleteItem(int nPos);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Задает отсчитываемый от нуля индекс элемента для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -347,7 +347,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Указатель на [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) структуры, описывающий элемент для рисования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -355,7 +355,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член для реализации отрисовки рисуемый владельцем `CHeaderCtrl` объекта.  
   
- Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` до этого элемента, функция завершается.  
+ Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в *lpDrawItemStruct* перед этим членом завершении функции.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_CHeaderCtrl#6](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_6.cpp)]  
@@ -370,10 +370,10 @@ BOOL EditFilter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nColumn`  
+ *nColumn*  
  Чтобы изменить столбец.  
   
- `bDiscardChanges`  
+ *bDiscardChanges*  
  Если пользователь находится в процессе редактирования фильтра значение, указывающее способ обработки пользователь Правка изменения при [HDM_EDITFILTER](http://msdn.microsoft.com/library/windows/desktop/bb775312) отправляется сообщение.  
   
  Укажите `true` для отмены изменений, внесенных пользователем, или `false` для принятия изменений, внесенных пользователем.  
@@ -452,10 +452,10 @@ BOOL GetItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Задает отсчитываемый от нуля индекс извлекаемого элемента.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Указатель на [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуру, которая получает новый элемент. Эта структура используется с `InsertItem` и `SetItem` функции-члены. Все флаги установлены **маска** элемента убедитесь, что значения в соответствующих элементах правильно заполняются при возврате. Если **маска** элемента устанавливается равным нулю, значения в других элементах структуры не имеют смысла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -488,10 +488,10 @@ BOOL GetItemDropDownRect(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `iItem`|Отсчитываемый от нуля индекс заголовочный элемент, стиль `HDF_SPLITBUTTON`. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуры.|  
-|[выходной] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры получать сведения ограничивающего прямоугольника.|  
+|[in] *iItem*|Отсчитываемый от нуля индекс заголовочный элемент, стиль `HDF_SPLITBUTTON`. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуры.|  
+|[out] *lpRect*|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры получать сведения ограничивающего прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если эта функция прошла успешно; в противном случае `false`.  
@@ -519,10 +519,10 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс заголовка элемента управления.  
   
- `lpRect`  
+ *lpRect*  
  Указатель на адрес [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающего прямоугольника.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -541,10 +541,10 @@ BOOL GetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `piArray`  
+ *piArray*  
  Указатель на адрес буфера, который получает значения индекса элементов в элементе управления "Заголовок", в том порядке, в котором они появляются в направлении слева направо.  
   
- `iCount`  
+ *iCount*  
  Количество элементов заголовка элемента управления. Должно быть неотрицательным.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -565,9 +565,9 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[выходной] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающего прямоугольника.|  
+|[out] *lpRect*|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает данные ограничивающего прямоугольника.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если эта функция прошла успешно; в противном случае `false`.  
@@ -596,9 +596,9 @@ int HitTest(LPHDHITTESTINFO* phdhti);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in, out] `phdhti`|Указатель на [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) структура, которая указывает точки для проверки и получает результаты теста.|  
+|[in, out] *phdhti*|Указатель на [HDHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb775245) структура, которая указывает точки для проверки и получает результаты теста.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Отсчитываемый от нуля индекс элемента заголовка, если таковая имеется, в указанной позиции; в противном случае — значение -1.  
@@ -626,7 +626,7 @@ int InsertItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Отсчитываемый от нуля индекс вставляемого элемента. Если значение равно нулю, элемент вставляется в начало заголовка элемента управления. Если значение превышает максимальное значение, элемент вставляется в конце заголовка элемента управления.  
   
  *phdi*  
@@ -683,7 +683,7 @@ int SetBitmapMargin(int nWidth);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nWidth`  
+ *nWidth*  
  Ширина в пикселях вокруг растрового изображения в существующий элемент управления заголовок поля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -724,9 +724,9 @@ BOOL SetFocusedItem(int iItem);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `iItem`|Отсчитываемый от нуля индекс заголовочный элемент.|  
+|[in] *iItem*|Отсчитываемый от нуля индекс заголовочный элемент.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true` Если этот метод выполнен успешно; в противном случае `false`.  
@@ -753,10 +753,10 @@ int SetHotDivider(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Положение указателя. Элемент управления заголовка выделяет соответствующую разделитель, исходя из позиции курсора.  
   
- `nIndex`  
+ *nIndex*  
  Индекс выделенной разделителя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -776,7 +776,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pImageList`  
+ *pImageList*  
  Указатель на `CImageList` объект, содержащий список изображений для назначения заголовка элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -798,10 +798,10 @@ BOOL SetItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Отсчитываемый от нуля индекс элемента для обработки.  
   
- `pHeaderItem`  
+ *pHeaderItem*  
  Указатель на [HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) структуру, содержащую сведения о новый элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -820,10 +820,10 @@ BOOL SetOrderArray(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iCount`  
+ *iCount*  
  Количество элементов заголовка элемента управления.  
   
- `piArray`  
+ *piArray*  
  Указатель на адрес буфера, который получает значения индекса элементов в элементе управления "Заголовок", в том порядке, в котором они появляются в направлении слева направо.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
