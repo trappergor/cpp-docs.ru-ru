@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366802"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039470"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Класс CMFCSpinButtonCtrl
 `CMFCSpinButtonCtrl` Класс поддерживает наглядный диспетчер, который рисует элемент управления "Счетчик".  
@@ -34,18 +34,18 @@ ms.locfileid: "33366802"
 class CMFCSpinButtonCtrl : public CSpinButtonCtrl  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Конструктор по умолчанию.|  
 |`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Перерисовывает текущий счетчик-элемент управления.|  
   
@@ -79,7 +79,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
 ### <a name="remarks"></a>Примечания  

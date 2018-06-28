@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370172"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041252"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Класс CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Класс реализует кнопку раскрывающегося списка, содержащий последние команды пользователя. Пользователи могут выбрать один или несколько последних команд из раскрывающегося списка, чтобы повтора или отменить их.  
@@ -46,13 +46,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Создает новое `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указать, текстовую метку и изображений из списка изображений родительского объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Добавляет новое действие в список действий.|  
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Очищает список действий, который представляет собой список раскрывающегося списка.|  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Метка действия, которое будет отображаться в раскрывающемся списке.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Указывает текст метки кнопки.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  Отсчитываемый от нуля индекс в списке изображений родительского объекта мелкое изображение кнопки.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  Отсчитываемый от нуля индекс в списке изображений родительский объект для объекта большие изображения кнопки.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  Дескриптор значка, который можно использовать в качестве изображения кнопки.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  

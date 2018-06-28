@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371518"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040758"
 ---
 # <a name="cmfcribboncombobox-class"></a>Класс CMFCRibbonComboBox
 `CMFCRibbonComboBox` Класс реализует поле со списком, можно добавить на панель ленты, панель ленты или во всплывающее меню ленты.  
@@ -70,13 +70,13 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>Конструкторы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Создает объект CMFCRibbonComboBox.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::AddItem](#additem)|Добавляет уникальный элемент списка.|  
 |[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Удаляет указанный элемент из списка.|  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  Строка добавляемый элемент.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элементом, для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Идентификатор поле со списком.  
   
- [in] `bHasEditBox`  
+ [in] *bHasEditBox*  
  `TRUE` Если требуется, чтобы поле ввода элемента управления; `FALSE` в противном случае.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Ширина в пикселях; поле со списком или -1 для ширину по умолчанию.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Метка отображаемое поле со списком.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Индекс мелкое изображение поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс удаляемого элемента.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с удаляемого элемента.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Строка удаляемого элемента. При наличии нескольких элементов с такой же строки, первый элемент удаляется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить изменение размера; `FALSE` отключение изменения размера.  
   
 ### <a name="remarks"></a>Примечания  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
  Строка элемент в поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nItem`  
+ [in] *nItem*  
  Индекс выбранного элемента.  
   
 ### <a name="remarks"></a>Примечания  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iIndex`  
+ [in] *iIndex*  
  Отсчитываемый от нуля индекс элемента в списке.  
   
- [in] `dwData`  
+ [in] *dwData*  
  Данные, связанные с элементом в списке.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Строка элемент в поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nHeight`  
+ [in] *nHeight*  
  Высота в пикселях списка.  
   
 ### <a name="remarks"></a>Примечания  

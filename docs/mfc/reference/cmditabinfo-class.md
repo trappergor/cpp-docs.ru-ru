@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368099"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040057"
 ---
 # <a name="cmditabinfo-class"></a>Класс CMDITabInfo
 `CMDITabInfo` Класс используется для передачи параметров [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) метод. Задайте элементы этого класса, чтобы контролировать поведение групп вкладок MDI.  
@@ -58,19 +58,19 @@ class CMDITabInfo
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMDITabInfo::CMDITabInfo`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMDITabInfo::Serialize](#serialize)|Считывает этот объект из архива или записывает в него.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Указывает, является ли **закрыть** кнопка отображается в метке вкладки активной вкладки.|  
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Указывает цвет вкладок MDI.|  
@@ -235,7 +235,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ar`  
+ [in] *ar*  
  Объект [CArchive-класс](../../mfc/reference/carchive-class.md) объект для сериализации.  
   
 ## <a name="see-also"></a>См. также  

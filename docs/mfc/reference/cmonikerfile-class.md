@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd166cac7d6d2cddbc12b3cbaa14b28d00c1357
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369233"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037273"
 ---
 # <a name="cmonikerfile-class"></a>Класс CMonikerFile
 Представляет поток данных ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) с именем [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
@@ -48,13 +48,13 @@ class CMonikerFile : public COleStreamFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonikerFile::CMonikerFile](#cmonikerfile)|Создает объект `CMonikerFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonikerFile::Close](#close)|Отсоединяет и освобождает поток и освобождает моникер.|  
 |[CMonikerFile::Detach](#detach)|Отсоединяет `IMoniker` из этого `CMonikerFile` объекта.|  
@@ -63,7 +63,7 @@ class CMonikerFile : public COleStreamFile
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonikerFile::CreateBindContext](#createbindcontext)|Получает контекст привязки, или создает контекст привязки по умолчанию.|  
   
@@ -113,7 +113,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pError`  
+ *pError*  
  Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -130,7 +130,7 @@ BOOL Detach(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pError`  
+ *pError*  
  Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -164,22 +164,22 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszURL`  
+ *lpszURL*  
  URL-адрес или имя файла для открытия.  
   
- `pError`  
+ *pError*  
  Указатель на исключение файлов. В случае ошибки он будет присвоено причину.  
   
- `pMoniker`  
+ *pMoniker*  
  Указатель на интерфейс моникер `IMoniker` использоваться для получения потока.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `lpszURL` Параметр нельзя использовать на компьютерах Macintosh. Только `pMoniker` форму **откройте** можно использовать на компьютерах Macintosh.  
+ *LpszURL* параметр нельзя использовать на компьютерах Macintosh. Только *pMoniker* форму **откройте** можно использовать на компьютерах Macintosh.  
   
- Можно использовать URL-адрес или имя файла для `lpszURL` параметра. Пример:  
+ Можно использовать URL-адрес или имя файла для *lpszURL* параметра. Пример:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   

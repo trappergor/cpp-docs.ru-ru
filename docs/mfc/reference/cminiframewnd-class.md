@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378386"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038591"
 ---
 # <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
 Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.  
@@ -42,13 +42,13 @@ class CMiniFrameWnd : public CFrameWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Создает объект `CMiniFrameWnd`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMiniFrameWnd::Create](#create)|Создает `CMiniFrameWnd` объект после создания экземпляра.|  
 |[CMiniFrameWnd::CreateEx](#createex)|Создает `CMiniFrameWnd` объекта (с дополнительными параметрами) после построения.|  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpClassName`  
+ *lpClassName*  
  Указывает строку символом null, с именем класса Windows. Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции. Если **NULL**, класс окна будет зарегистрирована автоматически платформой. MFC предоставляет класса по умолчанию следующие атрибуты и стили:  
   
 -   Задает стиль бит **CS_DBLCLKS**, которая отправляет дважды щелкните сообщения в процедуру при двойном щелчке мыши.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Задает окна по умолчанию размер и положение, как указано в Windows.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Указатель на завершающуюся значением null строка, содержащая имя окна.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает атрибуты стилей окна. Они могут включать стили стандартное окно и один или несколько из следующих специальных стилей:  
   
 - **MFS_MOVEFRAME** позволяет переместить, щелкнув любой границы окна, не только заголовок окна области.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  В разделе [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание значений стилей окон невозможно. Типичные сочетание, используемый для окна **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
- `rect`  
+ *Rect*  
  Объект `RECT` структуры, указав нужные размеры окна.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительское окно. Используйте **NULL** для окон верхнего уровня.  
   
- `nID`  
+ *nID*  
  Если окно области создается как дочернего окна, это идентификатор дочернего элемента управления; в противном случае — 0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -161,25 +161,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
+ *dwExStyle*  
  Задает расширенный стиль `CMiniFrameWnd` создается. Применить любой из [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) окна.  
   
- `lpClassName`  
+ *lpClassName*  
  Указывает строку символом null, с именем класса Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры). Имя класса может быть любое имя, зарегистрированное с глобальным [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) функции или какие-либо имена предопределенных класс элемента управления. Он не должен быть **NULL**.  
   
- `lpWindowName`  
+ *lpWindowName*  
  Указатель на завершающуюся значением null строка, содержащая имя окна.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает атрибуты стилей окна. В разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание возможных значений.  
   
- `rect`  
- Размер и положение окна в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Размер и положение окна в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает объект родительского окна.  
   
- `nID`  
+ *nID*  
  Идентификатор дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -194,9 +194,9 @@ virtual BOOL CreateEx(
   
  Переопределить дальнейшей **на *** сообщение* обработчиков для обеспечения дополнительной функциональности производного класса сообщений.  
   
- Если **WS_VISIBLE** задан стиль, Windows посылает окне все необходимые для активации и отображение окна сообщения. Если стиль окна указывает строку заголовка, заголовок окна указывает `lpszWindowName` параметр отображается в заголовке окна.  
+ Если **WS_VISIBLE** задан стиль, Windows посылает окне все необходимые для активации и отображение окна сообщения. Если стиль окна указывает строку заголовка, заголовок окна указывает *lpszWindowName* параметр отображается в заголовке окна.  
   
- `dwStyle` Параметр может иметь любое сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+ *DwStyle* параметр может иметь любое сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  Старый стиль windows элементов палитры больше не поддерживаются. Старый стиль, который не имел кнопки «X» закрыть, поддерживались при запуске приложения MFC в предыдущих версиях Windows, но больше не поддерживается в Visual C++ .NET. Только новые `WS_EX_TOOLWINDOW` стиль теперь поддерживается; описание этого стиля см. в разделе [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   

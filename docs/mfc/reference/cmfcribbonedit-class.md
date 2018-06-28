@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374180"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040864"
 ---
 # <a name="cmfcribbonedit-class"></a>Класс CMFCRibbonEdit
 Реализует элемент управления редактированием, расположенной на панели ленты.  
@@ -103,13 +103,13 @@ class CMFCRibbonEdit : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Указывает, является ли высота `CMFCRibbonEdit` управления может увеличиваться по вертикали в высоту строки ленты.|  
 |[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  ИД для команды `CMFCRibbonEdit` элемента управления.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  Ширина в пикселях текстового поля для `CMFCRibbonEdit` элемента управления.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Метка для `CMFCRibbonEdit` элемента управления.  
   
- [in] `nImage`  
+ [in] *nImage*  
  Индекс мелкое изображение для `CMFCRibbonEdit` элемента управления. Коллекция изображений небольшого размера, поддерживаемое родительской категории ленты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
  Исходный объект `CMFCRibbonEdit`.  
   
 ### <a name="remarks"></a>Примечания  
- `src` Параметр должен иметь тип `CMFCRibbonEdit`.  
+ *Src* параметр должен иметь тип `CMFCRibbonEdit`.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  Создает новое текстовое поле для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно `CMFCRibbonEdit` объекта.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  Задает стиль для текстового поля. Можно объединять стили окна, перечисленных в разделе "Примечания" с [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464) , описанные в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nMin`  
+ [in] *nMin*  
  Минимальное значение счетчиком.  
   
- [in] `nMax`  
+ [in] *nMax*  
  Максимальное значение счетчиком.  
   
 ### <a name="remarks"></a>Примечания  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bInFloatyMode`  
+ [in] *bInFloatyMode*  
  `TRUE` Если `CMFCRibbonEdit` управления находится в режиме с плавающей запятой; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.  
   
- [in] `strText`  
- Отображаемый текст [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit класса").  
+ [in] *strText*  
+ Отображаемый текст [cmfcribbonedit класса](../../mfc/reference/cmfcribbonedit-class.md "").  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  Расстояние в пикселях с левой стороны от списка для отображения текста.  
   
- [in] `rect`  
+ [in] *rect*  
  Прямоугольник для отображения `CMFCRibbonEdit` элемента управления.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  Этот параметр не используется.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` Чтобы включить элемент управления; `FALSE` отключение элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` Если указатель находится в границах `CMFCRibbonEdit` управления; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` Если значение свойства keytip отображаются во всплывающем меню. в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` Если макет справа налево; `FALSE` Если макет справа налево.  
   
 ### <a name="remarks"></a>Примечания  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` для отображения элемента управления. `FALSE` для скрытия элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Указатель на родительское окно для `CMFCRibbonEdit` объекта.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для `CMFCRibbonEdit` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strText`  
+ [in] *strText*  
  Текст для текстового поля.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nAlign`  
+ [in] *nAlign*  
  Значение перечисления выравнивание текста. Возможные значения см.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр `nAlign` является одним из следующих изменение стилей элемента управления:  
+ Параметр *nAlign* является одним из следующих изменение стилей элемента управления:  
   
 - **ES_LEFT** для выравнивания по левому краю  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nWidth`  
+ [in] *nWidth*  
  Ширина в пикселях, текстового поля.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` для задания ширины для режиме с плавающей запятой. `FALSE` для задания ширины для обычный режим.  
   
 ### <a name="remarks"></a>Примечания  
