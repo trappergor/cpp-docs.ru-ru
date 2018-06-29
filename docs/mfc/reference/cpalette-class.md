@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377280"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079685"
 ---
 # <a name="cpalette-class"></a>CPalette-класс
 Инкапсулирует цветовую палитру Windows.  
@@ -52,17 +52,17 @@ ms.locfileid: "33377280"
 class CPalette : public CGdiObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPalette::CPalette](#cpalette)|Создает `CPalette` объект с присоединенного палитры Windows. Необходимо инициализировать `CPalette` объекта с помощью одного из функции-члены инициализации, прежде чем можно будет использовать.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPalette::AnimatePalette](#animatepalette)|Заменяет записей в логическую палитру, обозначенную `CPalette` объекта. Приложение не нужно обновлять свою клиентскую область поскольку Windows немедленно сопоставляет новых записей в системной палитры.|  
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Создает полутоновой палитры для контекста устройства и прикрепляет его к `CPalette` объекта.|  
@@ -76,7 +76,7 @@ class CPalette : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[HPALETTE CPalette::operator](#operator_hpalette)|Возвращает `HPALETTE` присоединяется к `CPalette`.|  
   
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nStartIndex`  
+ *nStartIndex*  
  Указывает первый элемент в палитру для анимации.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Указывает количество записей в палитру для анимации.  
   
- `lpPaletteColors`  
- Указывает на первый элемент массива [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структур для замены записи палитр, обозначенную `nStartIndex` и `nNumEntries`.  
+ *lpPaletteColors*  
+ Указывает на первый элемент массива [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структур для замены записи палитр, обозначенную *nStartIndex* и *nNumEntries*.  
   
 ### <a name="remarks"></a>Примечания  
  Если приложение вызывает `AnimatePalette`, его не нужно обновлять свою клиентскую область, поскольку Windows немедленно сопоставляет новых записей в системной палитры.  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Определяет контекст устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpLogPalette`  
+ *lpLogPalette*  
  Указывает на [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) структуру, содержащую сведения о логическую палитру цветов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hPalette`  
+ *hPalette*  
  Дескриптор цветовую палитру Windows GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `crColor`  
+ *crColor*  
  Задает цвет для сравнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nStartIndex`  
+ *nStartIndex*  
  Указывает первый элемент в логическую палитру требуется получить.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Указывает количество записей в логическую палитру требуется получить.  
   
- `lpPaletteColors`  
- Указывает массив [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структуры данных для получения записи палитр. Этот массив должен содержать по крайней мере столько структуры данных в соответствии с `nNumEntries`.  
+ *lpPaletteColors*  
+ Указывает массив [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структуры данных для получения записи палитр. Этот массив должен содержать по крайней мере столько структуры данных в соответствии с *nNumEntries*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число записей, полученных из логическую палитру; 0, если не удалось выполнить функцию.  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в Windows SDK.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- Изменяет размер логическую палитру, присоединенные к `CPalette` объекта в число записей, заданные `nNumEntries`.  
+ Изменяет размер логическую палитру, присоединенные к `CPalette` объекта в число записей, заданные *nNumEntries*.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNumEntries`  
+ *nNumEntries*  
  Указывает количество записей в палитре после их изменять.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nStartIndex`  
+ *nStartIndex*  
  Указывает первый элемент в логическую палитру требуется задать.  
   
- `nNumEntries`  
+ *nNumEntries*  
  Указывает количество записей в логическую палитру требуется задать.  
   
- `lpPaletteColors`  
- Указывает массив [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структуры данных для получения записи палитр. Этот массив должен содержать по крайней мере столько структуры данных в соответствии с `nNumEntries`.  
+ *lpPaletteColors*  
+ Указывает массив [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) структуры данных для получения записи палитр. Этот массив должен содержать по крайней мере столько структуры данных в соответствии с *nNumEntries*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число записей в логическую палитру; 0, если не удалось выполнить функцию.  

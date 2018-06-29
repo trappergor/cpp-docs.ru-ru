@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374944"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078547"
 ---
 # <a name="cpanedialog-class"></a>Класс CPaneDialog
 `CPaneDialog` Класс поддерживает безрежимные, Закрепляемое окно.  
@@ -42,14 +42,14 @@ class CPaneDialog : public CDockablePane
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CPaneDialog::CPaneDialog`|Конструктор по умолчанию.|  
 |`CPaneDialog::~CPaneDialog`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneDialog::Create](#create)|Создает закрепляемую диалоговое окно и прикрепляет его к `CPaneDialog` объекта.|  
 |`CPaneDialog::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|Обрабатывает [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) сообщения. (Переопределяет [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|Обрабатывает [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) сообщения. (Переопределяет [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|Обрабатывает [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) сообщения. (Переопределяет [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|Вызывается платформой для обновления диалогового окна. (Переопределяет [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|Вызывается платформой для обновления диалогового окна. (Переопределяет [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|Обрабатывает [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) сообщения. (Переопределяет [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|Задает шаблон для диалогового окна, представляет собой контейнер элемента управления OLE.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Имя диалогового окна закрепления.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` для создания закрепления диалогового окна с заголовком (захвата); в противном случае `FALSE`.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  Имя ресурса шаблона диалогового окна.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  В стиле Windows.  
   
- [in] `nID`  
+ [in] *nID*  
  Идентификатор элемента управления.  
   
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  Идентификатор ресурса шаблона диалогового окна.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  Стиль окна с вкладками, происходящий, когда пользователь перетаскивает другую панель управления в заголовок данной панели управления. Значение по умолчанию — `AFX_CBRS_REGULAR_TABS`. Дополнительные сведения см. в разделе «Примечания» [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  Стиль дополнительные атрибуты. Значение по умолчанию — `AFX_DEFAULT_DOCKING_PANE_STYLE`. Дополнительные сведения см. в разделе «Примечания» [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `wParam`  
+ [in] *wParam*  
  Дескриптор элемента управления, получающего фокус клавиатуры по умолчанию.  
   
- [in] `lParam`  
+ [in] *lParam*  
  Задает дополнительную инициализацию данных.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если этот метод выполнен успешно; в противном случае `FALSE`. Кроме того `TRUE` устанавливает фокус на элементе управления, определяемое `wParam` параметра; `FALSE` не позволяет установить фокус клавиатуры по умолчанию.  
+ `TRUE` Если этот метод выполнен успешно; в противном случае `FALSE`. Кроме того `TRUE` устанавливает фокус на элементе управления, определяемое *wParam* параметра; `FALSE` не позволяет установить фокус клавиатуры по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа использует этот метод для инициализации элементов управления и внешний вид диалогового окна. Этот метод вызывается платформой перед отображается диалоговое окно.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pOccDialogInfo`  
+ [in] *pOccDialogInfo*  
  Указатель на шаблон диалогового окна, используемый для создания объекта поле диалогового окна. Значение этого параметра впоследствии передается в [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

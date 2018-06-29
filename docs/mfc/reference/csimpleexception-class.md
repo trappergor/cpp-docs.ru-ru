@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369929"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078240"
 ---
 # <a name="csimpleexception-class"></a>Класс CSimpleException
 Этот класс является базовым классом для исключений MFC, связанных с критическими ресурсами.  
@@ -40,13 +40,13 @@ class AFX_NOVTABLE CSimpleException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSimpleException::CSimpleException](#csimpleexception)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSimpleException::GetErrorMessage](#geterrormessage)|Содержит текст о возникшей ошибке.|  
   
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAutoDelete`  
- Укажите **TRUE** Если память для `CSimpleException` выделении объекта в куче. Это приведет к `CSimpleException` объект для удаления при **удалить** функция-член вызывается для удаления исключение. Укажите **FALSE** Если `CSimpleException` объект в стеке или — это глобальный объект. В этом случае `CSimpleException` объекта не будут удалены при **удалить** вызвать функцию-член.  
+ *bAutoDelete*  
+ Укажите **TRUE** Если память для `CSimpleException` выделении объекта в куче. Это приведет к `CSimpleException` объект для удаления при `Delete` функция-член вызывается для удаления исключение. Укажите **FALSE** Если `CSimpleException` объект в стеке или — это глобальный объект. В этом случае `CSimpleException` объекта не будут удалены при `Delete` вызове функции-члена.  
   
 ### <a name="remarks"></a>Примечания  
  Как правило, никогда не потребуется непосредственно вызвать этот конструктор. Функция, которая создает исключение следует создать экземпляр `CException`-производного класса и вызовите его конструктору, или она должна использовать один из MFC создать исключение функции, такие как [AfxThrowFileException](exception-processing.md#afxthrowfileexception), чтобы создавать предопределенные типа.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszError`  
+ *lpszError*  
  Указатель на буфер, который получит сообщение об ошибке.  
   
- `nMaxError`  
+ *nMaxError*  
  Максимальное число символов, может содержаться в буфере, включая **NULL** признака конца.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  Адрес **UINT** , получите идентификатор контекста справки. Если **NULL**, идентификатор не будут возвращены.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

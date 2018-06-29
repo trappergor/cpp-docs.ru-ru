@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378791"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079698"
 ---
 # <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -164,7 +164,7 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneFrameWnd::AddPane](#addpane)|Добавляет панель.|  
 |[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Добавляет панель в глобальный список или удаляет из него.|  
@@ -231,14 +231,14 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Определяет, требуется ли свертывание или развертывание окна области.|  
 |[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Рисует границы окна области.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Указывает, требуется ли регистрация класса окна со стилем класса `CS_SAVEBITS`.|  
   
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  На панели, чтобы добавить.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  На панели, чтобы добавить или удалить.  
   
- [in] `bAdd`  
+ [in] *bAdd*  
  Если ненулевое значение, добавления области. Если значение равно 0, удалите область.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rectBorderSize`  
+ [out] *rectBorderSize*  
  Содержит размер в пикселях границы плавающего окна.  
   
 ### <a name="remarks"></a>Примечания  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndToDock`  
+ [in] *pWndToDock*  
  Указатель на окно будет закреплено.  
   
- [in] `ptMouse`  
+ [in] *ptMouse*  
  Положение мыши.  
   
- [выходной] `rectResult`  
+ [out] *rectResult*  
  Расчетный прямоугольник.  
   
- [выходной] `bDrawTab`  
+ [out] *bDrawTab*  
  Если `TRUE`, рисование вкладки. Если `FALSE`, не отображаются вкладки.  
   
- [выходной] `ppTargetBar`  
+ [out] *ppTargetBar*  
  Указатель на нужной панели.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вычисляет прямоугольник, должны занимать окна, если пользователь перетащить окна в точке, заданной `ptMouse` и закрепленные он существует.  
+ Этот метод вычисляет прямоугольник, должны занимать окна, если пользователь перетащить окна в точке, заданной *ptMouse* и закрепленные он существует.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  Определяет, может ли текущая панель быть закреплена на другой панели или окне фрейма.  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
  Область.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если мини-рамки можно прикреплять к `pDockingBar`; в противном случае — 0.  
+ Ненулевое значение, если мини-рамки можно прикреплять к *pDockingBar*; в противном случае — 0.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Задает текст, отображаемый на плавающего окна.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Указывает стиль окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Указывает исходный размер и положение плавающего окна.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Указывает родительского фрейма для плавающего окна. Это значение не должно быть `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Указывает контекст, определяемый пользователем.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  Указывает стиль окна расширенного. Дополнительные сведения см. в разделе [расширенные стили окна](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  Задает текст, отображаемый на плавающего окна.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Указывает стиль окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] `rect`  
+ [in] *rect*  
  Указывает исходный размер и положение плавающего окна.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  Указывает родительского фрейма для плавающего окна. Это значение не должно быть `NULL`.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  Указывает контекст, определяемый пользователем.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `bWasDocked`  
+ [out] *bWasDocked*  
  `TRUE` Если область уже была закреплена; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Представляет идентификатор элемента панели управления для поиска.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pt`  
+ [in] *pt*  
  Точка в экранных координатах.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Увеличьте область поиска из окна области, этот размер. Окна области удовлетворяет условиям поиска, если заданная точка находится в области увеличения.  
   
- [in] `pFrameToExclude`  
+ [in] *pFrameToExclude*  
  Указывает окна области, чтобы исключить из поиска.  
   
- [in] `bFloatMultiOnly`  
+ [in] *bFloatMultiOnly*  
  Если `TRUE`, поиск окна, имеющие только `CBRS_FLOAT_MULTI` стиля. Если `FALSE`, найти все окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на окно области, который содержит `pt`; в противном случае `NULL`.  
+ Указатель на окно области, который содержит *pt*; в противном случае `NULL`.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  Возвращает высоту заголовка окна области.  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rectCaption`  
+ [out] *rectCaption*  
  Содержит размер и положение заголовка окна области, в экранных координатах.  
   
 ### <a name="remarks"></a>Примечания  
@@ -688,10 +688,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точки для проверки.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  Если `TRUE`, проверить точку с заголовком. Если `FALSE`, пропустить заголовок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Контекст устройства, используемого для рисования границ.  
   
 ### <a name="remarks"></a>Примечания  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Указатель на область (пропускается).  
   
- [in] `ptOffset`  
+ [in] *ptOffset*  
  Смещение, которое необходимо переместить область.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
  Области, которые отображены или скрыты.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` Если отображается области; `FALSE` Если область скрыта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bPin`  
+ [in] *bPin*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка, пользователь щелкнул в экранных координатах.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  Этот параметр не используется.  
   
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
  `TRUE` Чтобы указать, что должно возвращаться только видимых панелей; в противном случае `FALSE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWnd`  
+ [in] *pWnd*  
  Указатель на область для удаления.  
   
- [in] `bDestroy`  
- Указывает, что происходит с окна области. Если `bDestroy` — `TRUE`, этот метод немедленно удаляет окна области. Если это `FALSE`, этот метод удаляет окна области после определенных задержки.  
+ [in] *bDestroy*  
+ Указывает, что происходит с окна области. Если *bDestroy* — `TRUE`, этот метод немедленно удаляет окна области. Если это `FALSE`, этот метод удаляет окна области после определенных задержки.  
   
- [in] `bNoDelayedDestroy`  
+ [in] *bNoDelayedDestroy*  
  Если `TRUE`, отложенной уничтожения отключена. Если `FALSE`, отложенной уничтожения включен.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа для уничтожения окна сразу или после определенных задержки. Если нужно отложить уничтожение окна, передайте `FALSE` в `bNoDelayedDestroy` параметра. Отложенное удаление происходит во время обработки платформа `AFX_WM_CHECKEMPTYMINIFRAME` сообщения.  
+ Платформа для уничтожения окна сразу или после определенных задержки. Если нужно отложить уничтожение окна, передайте `FALSE` в *bNoDelayedDestroy* параметра. Отложенное удаление происходит во время обработки платформа `AFX_WM_CHECKEMPTYMINIFRAME` сообщения.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  Заменяет одну панель другой.  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBarOrg`  
+ [in] *pBarOrg*  
  Указатель на исходной области.  
   
- [in] `pBarReplaceWith`  
+ [in] *pBarReplaceWith*  
  Указатель на область, которую заменяет исходной области.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Имя профиля.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwButtons`  
+ [in] *dwButtons*  
  Побитовый оператор или сочетания из следующих значений:  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bDelayShow`  
+ [in] *bDelayShow*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pManager`  
+ [in] *pManager*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTimeOut`  
+ [in] *nTimeOut*  
  Значение времени ожидания в миллисекундах.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  Указатель на диспетчере закрепления.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ptNew`  
+ [in] *ptNew*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `preDockState`  
+ [in] *preDockState*  
  Возможные значения:  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in] *pBarToDock*  
  Указатель на панель, чтобы закрепить.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  Метод закрепления. (Этот параметр учитывается).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenu`  
+ [in] *pMenu*  
  Указатель на меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Примечания  
   

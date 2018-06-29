@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372973"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078988"
 ---
 # <a name="csinglelock-class"></a>Класс CSingleLock класса
 Класс представляет механизм контроля доступа к определенному ресурсу в многопоточных программах.  
@@ -42,13 +42,13 @@ class CSingleLock
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSingleLock::CSingleLock](#csinglelock)|Создает объект `CSingleLock`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSingleLock::IsLocked](#islocked)|Определяет, если этот объект заблокирован.|  
 |[CSingleLock::Lock](#lock)|Ожидает объекта синхронизации.|  
@@ -57,7 +57,7 @@ class CSingleLock
 ## <a name="remarks"></a>Примечания  
  `CSingleLock` не имеет базового класса.  
   
- Для использования классов синхронизации [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), и [CEvent](../../mfc/reference/cevent-class.md), необходимо создать либо `CSingleLock` или [CMultiLock](../../mfc/reference/cmultilock-class.md) объект для ожидания и освобождения объекта синхронизации. Используйте `CSingleLock` при требуется только для одного объекта во время ожидания. Используйте **CMultiLock** при наличии нескольких объектов, которые можно использовать в конкретный момент времени.  
+ Для использования классов синхронизации [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), и [CEvent](../../mfc/reference/cevent-class.md), необходимо создать либо `CSingleLock` или [CMultiLock](../../mfc/reference/cmultilock-class.md) объект для ожидания и освобождения объекта синхронизации. Используйте `CSingleLock` при требуется только для одного объекта во время ожидания. Использовать `CMultiLock` при наличии нескольких объектов, которые можно использовать в конкретный момент времени.  
   
  Для использования `CSingleLock` объекта, вызовите его конструктор внутри функции-члена в классе управляемого ресурса. Затем вызовите [IsLocked](#islocked) функции-члена для определения доступности ресурса. Если Да, продолжите остальная часть функции-члена. Если ресурс недоступен, подождите на определенное время для освобождения ресурса или возвращена ошибка. После завершения использования ресурса вызвать [Unlock](#unlock) функционировать, если `CSingleLock` должен использоваться повторно, либо разрешить `CSingleLock` объекта будут уничтожены.  
   
@@ -79,10 +79,10 @@ explicit CSingleLock(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pObject`  
+ *pObject*  
  Указывает объект синхронизации должен быть предоставлен доступ. Не может быть **NULL**.  
   
- `bInitialLock`  
+ *bInitialLock*  
  Указывает необходимость сначала пытаются получить доступ к предоставленным объектом.  
   
 ### <a name="remarks"></a>Примечания  
@@ -137,10 +137,10 @@ BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lCount`  
+ *lCount*  
  Число обращений к выпуска. Должно быть больше 0. Если указанное приводит число объектов превышает максимальный, счетчик не изменяется, и функция возвращает **FALSE**.  
   
- `lPrevCount`  
+ *lPrevCount*  
  Указывает на переменную для получения предыдущее количество в семафоре объекта синхронизации. Если **NULL**, последнее значение счетчика не возвращается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

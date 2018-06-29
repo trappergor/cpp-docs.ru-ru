@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374653"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079187"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном OLE "Параметры страницы" Windows с дополнительной поддержкой установки и изменения полей печати.  
@@ -60,13 +60,13 @@ class CPageSetupDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Создает объект `CPageSetupDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства для печати.|  
 |[CPageSetupDialog::DoModal](#domodal)|Отображает диалоговое окно и выбирать создания пользователя.|  
@@ -81,7 +81,7 @@ class CPageSetupDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPageSetupDialog::m_psd](#m_psd)|Структура, используемая для настройки `CPageSetupDialog` объекта.|  
   
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Один или несколько флагов, которые можно использовать для настройки параметров диалогового окна. Значения могут быть объединены с помощью оператора побитового или. Эти значения имеют следующий смысл:  
   
 - **PSD_DEFAULTMINMARGINS** задает минимальной ширины допустимые для поля страницы должен совпадать с принтера минимальных значений. Этот флаг учитывается, если **PSD_MARGINS** и **PSD_MINMARGINS** указаны флаги.  
@@ -162,7 +162,7 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** отключает области рисования диалогового окна.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на родительский или владелец диалоговое окно «».  
   
 ### <a name="remarks"></a>Примечания  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имя устройства, используемые **CPageSetupDialog** объекта.  
+ Имя устройства, используемые `CPageSetupDialog` объекта.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  Эта функция вызывается после вызова метода `DoModal` для получения сведений о контексте устройства принтера `CPageSetupDialog` объекта.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *контроллер домена*  
  Указатель на контекст устройства принтера.  
   
- `nMessage`  
+ *nMessage*  
  Указывает сообщение, показывающее, область страницы, в которых выводится в настоящее время. Ниже указаны доступные значения.  
   
 - **WM_PSD_FULLPAGERECT** области всей страницы.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** область для представления обратный адрес. В этой области расширяет по границам страницы область «образец».  
   
- `lpRect`  
+ *lpRect*  
  Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) объект, содержащий координаты области рисования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>Примечания  
  Это изображение отображается как часть стандартным диалоговым окном OLE страницы программы установки. Реализация по умолчанию выводит изображение страницы текста.  
   
- Переопределите эту функцию для настройки прорисовки определенной области изображения или всего изображения. Это можно сделать с помощью `switch` инструкции с **случай** инструкций, обращаясь к значению `nMessage`. Например чтобы изменить параметры отрисовки содержимого изображения страницы, можно использовать в следующем примере кода:  
+ Переопределите эту функцию для настройки прорисовки определенной области изображения или всего изображения. Это можно сделать с помощью **переключения** инструкции с **случай** инструкций, обращаясь к значению *nMessage*. Например чтобы изменить параметры отрисовки содержимого изображения страницы, можно использовать в следующем примере кода:  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Обратите внимание, что не нужно каждый случай `nMessage`. Вы можете обрабатывать один компонент изображения несколько компонентов изображения или всю область.  
+ Обратите внимание, что не нужно каждый случай *nMessage*. Вы можете обрабатывать один компонент изображения несколько компонентов изображения или всю область.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  Вызывается платформой перед рисованием экранного рисунка или напечатанной страницы.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  Задает значение, указывающее размер бумаги. Это значение может быть одним из **DMPAPER_** значений, перечисленных в описании [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуры.  
   
- `wFlags`  
+ *wFlags*  
  Указывает ориентацию бумаги или конверта, и является ли принтер матричный или HPPCL (язык управления принтера Hewlett Packard) устройства. Этот параметр может принимать одно из следующих значений:  
   
 -   0x001 бумаги в альбомной ориентации (матричного)  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f конверт в режиме книжной ориентации (матричного)  
   
- `pPSD`  
+ *pPSD*  
  Указатель на **PAGESETUPDLG** структуры. Дополнительные сведения о [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), см. в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

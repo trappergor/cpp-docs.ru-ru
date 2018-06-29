@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305817"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079803"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `multiset` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента.  
@@ -135,7 +135,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Ключ  
  Тип ключевым компонентом любого элемента в управляемой последовательности.  
 
@@ -1115,7 +1115,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение ключа для вставки.  
   
  где  

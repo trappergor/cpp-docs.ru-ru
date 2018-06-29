@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370185"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078287"
 ---
 # <a name="csharedfile-class"></a>Класс CSharedFile
 [CMemFile](../../mfc/reference/cmemfile-class.md)-производного класса, который поддерживает общие файлы памяти.  
@@ -42,13 +42,13 @@ class CSharedFile : public CMemFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSharedFile::CSharedFile](#csharedfile)|Создает объект `CSharedFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSharedFile::Detach](#detach)|Закрывает с файлом общей памяти и возвращает дескриптор блока памяти.|  
 |[CSharedFile::SetHandle](#sethandle)|Присоединяет с файлом общей памяти блок памяти.|  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>Примечания  
  Файлы памяти ведут себя как дисковые файлы, за исключением того, что файл хранится в оперативной памяти, а не на диске. Файл памяти полезен для быстрого временного хранилища для передачи необработанные байты или сериализованных объектов между независимыми процессов.  
   
- Общая память файлов отличаются от других файлов в памяти, что память для них выделяется с помощью [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) функции Windows. `CSharedFile` Класс хранит данные в глобально выделенного блока памяти (созданные с помощью **GlobalAlloc**), и этот блок памяти можно использовать совместно с помощью DDE, в буфер обмена или других OLE/COM универсальный операций передачи данных, например, с помощью `IDataObject`.  
+ Общая память файлов отличаются от других файлов в памяти, что память для них выделяется с помощью [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) функции Windows. `CSharedFile` Класс хранит данные в глобально выделенного блока памяти (созданные с помощью `GlobalAlloc`), и этот блок памяти можно использовать совместно с помощью DDE, в буфер обмена или других OLE/COM универсальный операций передачи данных, например, с помощью `IDataObject`.  
   
- **GlobalAlloc** возвращает `HGLOBAL` обработки, а не указатель на буфер, такие как указатель, возвращенный [malloc](../../c-runtime-library/reference/malloc.md). `HGLOBAL` Дескриптор необходима в некоторых приложениях. Например, поместить данные буфер обмена требуется `HGLOBAL` обработки.  
+ `GlobalAlloc` Возвращает `HGLOBAL` обработки, а не указатель на буфер, такие как указатель, возвращенный [malloc](../../c-runtime-library/reference/malloc.md). `HGLOBAL` Дескриптор необходима в некоторых приложениях. Например, поместить данные буфер обмена требуется `HGLOBAL` обработки.  
   
  Обратите внимание, что `CSharedFile` их не использовать размещенный в памяти, и данные не может передаваться напрямую между процессами.  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  Флаги, указывающее, каким образом памяти для выделения. В разделе [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) список допустимых значений флагов.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  Приращение выделения памяти в байтах.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  Дескриптор глобальную память для присоединения к `CSharedFile`.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  Указывает, является ли блок памяти может увеличиваться.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bAllowGrow` является ненулевое значение, размер блока памяти увеличивается при необходимости, например, при попытке выполнить операцию записи большее число байтов в файле не были выделены для блока памяти.  
+ Если *bAllowGrow* ненулевое значение, размер блока памяти увеличивается при необходимости, например, при попытке выполнить операцию записи большее число байтов в файле не были выделены для блока памяти.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CMemFile](../../mfc/reference/cmemfile-class.md)   

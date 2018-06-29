@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370875"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078471"
 ---
 # <a name="createstruct-structure"></a>Структура CREATESTRUCT
 `CREATESTRUCT` Структура определяет параметры инициализации, передаваемые в процедуру окна приложения.  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `lpCreateParams`  
+ *lpCreateParams*  
  Указывает на данные, который будет использоваться для создания окна.  
   
- `hInstance`  
+ *hInstance*  
  Определяет дескриптор экземпляра модуля модуля, которому принадлежит новое окно.  
   
- `hMenu`  
+ *hMenu*  
  Идентифицирует меню, чтобы использоваться в новом окне. Если дочернее окно содержит целочисленный идентификатор.  
   
- `hwndParent`  
+ *hwndParent*  
  Идентифицирует окно, которому принадлежит новое окно. Этот член представляет **NULL** Если новое окно является окном верхнего уровня.  
   
- `cy`  
+ *CY*  
  Задает высоту области окна.  
   
- `cx`  
+ *CX*  
  Задает ширину нового окна.  
   
- `y`  
+ *y*  
  Задает координату y верхнего левого угла нового окна. Координаты указываются относительно родительского окна, если новое окно дочернего окна; в противном случае координаты указываются относительно начала координат экрана.  
   
- `x`  
+ *x*  
  Задает координату x левого верхнего угла нового окна. Координаты указываются относительно родительского окна, если новое окно дочернего окна; в противном случае координаты указываются относительно начала координат экрана.  
   
- `style`  
+ *Стиль*  
  Указывает новое окно [стиль](../../mfc/reference/styles-used-by-mfc.md).  
   
- `lpszName`  
+ *lpszName*  
  Указывает нулем строка, указывающая имя нового окна.  
   
- `lpszClass`  
+ *lpszClass*  
  Указывает на строку символом null, указывающее имя класса новое окно Windows ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры; Дополнительные сведения см. в Windows SDK).  
   
- `dwExStyle`  
+ *dwExStyle*  
  Указывает [расширенный стиль](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) для нового окна.  
   
 ## <a name="requirements"></a>Требования  

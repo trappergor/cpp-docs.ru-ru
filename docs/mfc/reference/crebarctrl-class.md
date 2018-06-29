@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377591"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079466"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-класс
 Инкапсулирует функциональность элемента управления "главная панель ", который представляет собой контейнер для дочернего окна.  
@@ -128,13 +128,13 @@ class CReBarCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CReBarCtrl::BeginDrag](#begindrag)|Помещает элемент управления главной панели в режим перетаскивания и вставки.|  
 |[CReBarCtrl::Create](#create)|Создает контейнер элементов управления и прикрепляет его к `CReBarCtrl` объекта.|  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, которые влияют на операции перетаскивания и вставки.  
   
- `dwPos`  
- Объект `DWORD` значение, которое содержит начальные координаты мыши. Горизонтальная координата содержится в LOWORD и содержится в HIWORD Вертикальная координата. Если передать `(DWORD)-1`, элемент управления главной панели будет использовать позицию указателя мыши последнего элемента управления потоком, который называется **GetMessage** или **PeekMessage**.  
+ *dwPos*  
+ Объект `DWORD` значение, которое содержит начальные координаты мыши. Горизонтальная координата содержится в LOWORD и содержится в HIWORD Вертикальная координата. Если передать `(DWORD)-1`, элемент управления главной панели будет использовать позицию указателя мыши последнего элемента управления потоком, который называется `GetMessage` или `PeekMessage`.  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Создает контейнер элементов управления и прикрепляет его к `CReBarCtrl` объекта.  
@@ -252,16 +252,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает сочетание стилей элемента управления главной панели, применяемых к элементу управления. В разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в Windows SDK для получения списка поддерживаемых стили.  
   
- `rect`  
+ *Rect*  
  Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которая является положение и размер элемента управления главной панели.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления главной панели. Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления главной панели управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -292,19 +292,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает сочетание стилей элемента управления главной панели, применяемых к элементу управления. Список поддерживаемых стили см. в разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в Windows SDK.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -331,7 +331,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс диапазона для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -348,8 +348,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwPos`  
- Объект `DWORD` значение, содержащее новые координаты мыши. Горизонтальная координата содержится в LOWORD и содержится в HIWORD Вертикальная координата. Если передать `(DWORD)-1`, элемент управления главной панели будет использовать позицию указателя мыши последнего элемента управления потоком, который называется **GetMessage** или **PeekMessage**.  
+ *dwPos*  
+ Объект `DWORD` значение, содержащее новые координаты мыши. Горизонтальная координата содержится в LOWORD и содержится в HIWORD Вертикальная координата. Если передать `(DWORD)-1`, элемент управления главной панели будет использовать позицию указателя мыши последнего элемента управления потоком, который называется `GetMessage` или `PeekMessage`.  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Реализует поведение сообщения Win32 [RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435), как описано в Windows SDK.  
@@ -368,10 +368,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, для которого будет извлекаться границы.  
   
- `prc`  
+ *КНР*  
  Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получит границы диапазона. Если для элемента управления главной панели **RBS_BANDBORDERS** стиля, каждый член этой структуры будет получать количество пикселей, на стороне соответствующего диапазона, составляющих границы. Если элемент управления "Главная панель" не имеет **RBS_BANDBORDERS** стиля только левой членом этой структуры получает недопустимые данные. Описание стили элемента управления главной панели см. в разделе [стили элемента управления главной панели](http://msdn.microsoft.com/library/windows/desktop/bb774377) в Windows SDK.  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -394,10 +394,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, для которого будут извлекаться данные.  
   
- `prbbi`  
+ *prbbi*  
  Указатель на [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структуру для получения сведений о аппаратного контроллера. Необходимо задать `cbSize` структуры для `sizeof(REBARBANDINFO)` и задайте **fMask** элемента с элементами, которые необходимо получить перед отправкой этого сообщения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -435,8 +435,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prbi`  
- Указатель на [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) структуру, которая будет получать данные управления главной панели. Необходимо задать `cbSize` членом этой структуры `sizeof(REBARINFO)` перед отправкой этого сообщения.  
+ *prbi*  
+ Указатель на [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) структуру, которая будет получать данные управления главной панели. Необходимо задать *cbSize* членом этой структуры `sizeof(REBARINFO)` перед отправкой этого сообщения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -459,7 +459,7 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpcs`  
+ *lpcs*  
  Указатель на [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) структуры, как описано в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -486,7 +486,7 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Побитовое сочетание (OR) флагов, указывающих расширенные стили. Возможные флаги `RBS_EX_SPLITTER` и `RBS_EX_TRANSPARENT`. Дополнительные сведения см. в разделе `dwMask` параметр [CReBarCtrl::SetExtendedStyle](#setextendedstyle) метод.  
+ Побитовое сочетание (OR) флагов, указывающих расширенные стили. Возможные флаги `RBS_EX_SPLITTER` и `RBS_EX_TRANSPARENT`. Дополнительные сведения см. в разделе *dwMask* параметр [CReBarCtrl::SetExtendedStyle](#setextendedstyle) метод.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) сообщение, которое описано в Windows SDK.  
@@ -530,10 +530,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс диапазона в элементе управления главной панели.  
   
- `prc`  
+ *КНР*  
  Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, который получит границы области главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -636,8 +636,8 @@ BOOL InsertBand(
  *uIndex*  
  Отсчитываемый от нуля индекс места вставки аппаратного контроллера управления. Если этот параметр имеет значение -1, элемент управления добавит новый диапазон от последней позиции.  
   
- `prbbi`  
- Указатель на [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структура, определяющая аппаратного контроллера управления для вставки. Необходимо задать `cbSize` членом этой структуры `sizeof(REBARBANDINFO)` перед вызовом этой функции.  
+ *prbbi*  
+ Указатель на [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структура, определяющая аппаратного контроллера управления для вставки. Необходимо задать *cbSize* членом этой структуры `sizeof(REBARBANDINFO)` перед вызовом этой функции.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение в случае успеха, иначе — 0.  
@@ -653,7 +653,7 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, чтобы развернуть.  
   
 ### <a name="remarks"></a>Примечания  
@@ -670,7 +670,7 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, чтобы свести к минимуму.  
   
 ### <a name="remarks"></a>Примечания  
@@ -708,11 +708,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс диапазона которого шеврона — для распространения.  
   
- `lAppValue`  
- Определяется 32-разрядное значение. В разделе `lAppValue` в [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) в Windows SDK.  
+ *lAppValue*  
+ Определяется 32-разрядное значение. В разделе *lAppValue* в [RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) в Windows SDK.  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  Изменяет размер диапазона в элементе управления главной панели, чтобы его идеального размера.  
@@ -722,7 +722,7 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления, чтобы развернуть.  
   
 ### <a name="remarks"></a>Примечания  
@@ -741,10 +741,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс аппаратного контроллера управления для получения новых параметров.  
   
- `prbbi`  
+ *prbbi*  
  Указатель на [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) структура, определяющая аппаратного контроллера управления для вставки. Необходимо задать `cbSize` членом этой структуры `sizeof(REBARBANDINFO)` перед отправкой этого сообщения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -764,10 +764,10 @@ BOOL SetBandWidth(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `uBand`|Отсчитываемый от нуля индекс области главной панели.|  
-|[in] `cxWidth`|Новая ширина области главной панели, в пикселях.|  
+|[in] *uBand*|Отсчитываемый от нуля индекс области главной панели.|  
+|[in] *cxWidth*|Новая ширина области главной панели, в пикселях.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если метод выполнен успешно; в противном случае — значение `false`.  
@@ -793,7 +793,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prbi`  
+ *prbi*  
  Указатель на [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) структуру, содержащую сведения о задаваемых. Необходимо задать `cbSize` членом этой структуры `sizeof(REBARINFO)` перед отправкой этого сообщения  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -810,7 +810,7 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clr`  
+ *Среда CLR*  
  **COLORREF** значение, представляющее новый цвет фона по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -844,10 +844,10 @@ DWORD SetExtendedStyle(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
-|[in] `dwMask`|Побитовое сочетание (OR) флагов, указывающих, какие флаги в `dwStyleEx` применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображаться разделитель в нижней в горизонтальном режиме, а справа в вертикальной режиме.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) сообщение родительского окна.|  
-|[in] `dwStyleEx`|Побитовое сочетание (OR) флагов, определяющих стили для применения. Чтобы задать стиль, укажите флаг, используемый в `dwMask` параметра. Чтобы сбросить стиля, укажите двоичный нуль.|  
+|[in] *dwMask*|Побитовое сочетание (OR) флагов, указывающих, какие флаги в *dwStyleEx* применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображаться разделитель в нижней в горизонтальном режиме, а справа в вертикальной режиме.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) сообщение родительского окна.|  
+|[in] *dwStyleEx*|Побитовое сочетание (OR) флагов, определяющих стили для применения. Чтобы задать стиль, укажите флаг, используемый в *dwMask* параметра. Чтобы сбросить стиля, укажите двоичный нуль.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущий расширенный стиль.  
@@ -863,7 +863,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pImageList`  
+ *pImageList*  
  Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, содержащий список изображений для назначения элемента управления главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -877,7 +877,7 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на `CWnd` объекта, чтобы задать в качестве владельца элемента управления главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -914,7 +914,7 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clr`  
+ *Среда CLR*  
  Объект **COLORREF** цветов значение, представляющее новый текст `CReBarCtrl` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -945,7 +945,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszSubAppName`  
+ *pszSubAppName*  
  Указатель на строку Юникода, содержит визуальный стиль главной панели, чтобы задать.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -964,7 +964,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uBand`  
+ *uBand*  
  Отсчитываемый от нуля индекс диапазона в элементе управления главной панели.  
   
  *fShow*  
@@ -981,7 +981,7 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, который указывает на прямоугольник, который следует задавать управления главной панели.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305546"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079440"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Заголовок STL/CLR `<cliext/adapter>` определяет два класса шаблона (`collection_adapter` и `range_adapter`) и функцию шаблона `make_collection`.  
@@ -80,7 +80,7 @@ ms.locfileid: "36305546"
   
  **Пространство имен:** cliext 
   
-## <a name="members"></a>Участники  
+## <a name="declarations"></a>Объявления  
   
 |Класс|Описание:|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ ms.locfileid: "36305546"
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|Создает адаптер диапазона с помощью пары итератора.|   
   
+## <a name="members"></a>Участники
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 Инкапсулирует коллекцию .NET для использования в качестве контейнера STL/CLR. Объект `collection_adapter` — это класс шаблона, описывающий простого объекта-контейнера STL/CLR. Он инкапсулирует интерфейс библиотеки базовых классов (BCL) и возвращает пару итератор, который позволяет управлять управляемой последовательности.  
   

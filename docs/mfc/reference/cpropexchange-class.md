@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377344"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078412"
 ---
 # <a name="cpropexchange-class"></a>Класс CPropExchange
 Поддерживает реализацию сохранения элементов управления OLE.  
@@ -52,7 +52,7 @@ class AFX_NOVTABLE CPropExchange
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Меняет свойства больших двоичных объектов (BLOB).|  
 |[CPropExchange::ExchangeFontProp](#exchangefontprop)|Меняет свойства шрифта.|  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPropName`  
+ *pszPropName*  
  Имя свойства при обмене.  
   
- `phBlob`  
+ *phBlob*  
  Указатель на переменную, указывающую на место хранения свойство (переменная обычно является элементом класса).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  Значение по умолчанию для свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если exchange был успешным; 0, если операция завершилась неудачей.  
   
 ### <a name="remarks"></a>Примечания  
- Значение этого свойства чтение и запись к соответствующим образом ссылается переменная `phBlob`. Если `hBlobDefault` указано, оно будет использоваться как значение свойства по умолчанию. Это значение используется в том случае, если по какой-либо причине происходит сбой сериализации элемента управления.  
+ Значение этого свойства чтение и запись к соответствующим образом ссылается переменная *phBlob*. Если *hBlobDefault* указано, оно будет использоваться как значение свойства по умолчанию. Это значение используется в том случае, если по какой-либо причине происходит сбой сериализации элемента управления.  
   
  Функции **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, и **CPropsetPropExchange::ExchangeBlobProp** переопределения Это чистой виртуальной функции.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPropName`  
+ *pszPropName*  
  Имя свойства при обмене.  
   
- `font`  
+ *Шрифт*  
  Ссылку на [CFontHolder](../../mfc/reference/cfontholder-class.md) , содержащий свойства шрифта.  
   
- `pFontDesc`  
- Указатель на [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) структуру, содержащую значения для инициализации состояния свойства шрифта по умолчанию при `pFontDispAmbient` — **NULL**.  
+ *pFontDesc*  
+ Указатель на [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) структуру, содержащую значения для инициализации состояния свойства шрифта по умолчанию при *pFontDispAmbient* — **NULL**.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  Указатель на **IFontDisp** интерфейс шрифта, используемого для инициализации состояния свойства шрифта по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если exchange был успешным; 0, если операция завершилась неудачей.  
   
 ### <a name="remarks"></a>Примечания  
- Если свойство font загружается с носителя в элемент управления, характеристики шрифта, извлекаются с носителя и `CFontHolder` объект, упоминаемый в `font` инициализируется с ними. Если свойство font хранится, характеристики шрифта объекта записываются на носитель.  
+ Если свойство font загружается с носителя в элемент управления, характеристики шрифта, извлекаются с носителя и `CFontHolder` объект, упоминаемый в *шрифта* инициализируется с ними. Если свойство font хранится, характеристики шрифта объекта записываются на носитель.  
   
  Функции **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, и **CPropsetPropExchange::ExchangeFontProp** переопределения Это чистой виртуальной функции.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPropName`  
+ *pszPropName*  
  Имя свойства при обмене.  
   
- `ppUnk`  
+ *ppUnk*  
  Указатель на переменную, содержащую указатель на значение свойства **IUnknown** интерфейса (эта переменная обычно является элементом класса).  
   
- `iid`  
+ *IID*  
  Идентификатор интерфейса интерфейса в свойство, которое будет использовать элемент управления.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  Значение по умолчанию для свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPropName`  
+ *pszPropName*  
  Имя свойства при обмене.  
   
- `vtProp`  
+ *vtProp*  
  Символ, указывающий тип свойства при обмене. Доступны следующие значения:  
   
 |Символ|Тип свойства|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  Указатель на значение свойства.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  Ненулевое значение, если exchange был успешным; 0, если операция завершилась неудачей.  
   
 ### <a name="remarks"></a>Примечания  
- Если свойство загружается с носителя в элемент управления, значение свойства извлекается с носителя и хранятся в объекте, на который указывает `pvProp`. Если это свойство хранится для среды, значение объекта ссылается `pvProp` записывается на носитель.  
+ Если свойство загружается с носителя в элемент управления, значение свойства извлекается с носителя и хранятся в объекте, на который указывает *pvProp*. Если это свойство хранится для среды, значение объекта ссылается *pvProp* записывается на носитель.  
   
  Функции **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, и **CPropsetPropExchange::ExchangeProp** этом чисто переопределения виртуальная функция.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  Ссылка на переменную, в которой будет храниться номер версии постоянные данные, загружаемые.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  Текущий номер версии элемента управления.  
   
- `bConvert`  
+ *bConvert*  
  Указывает, следует ли преобразовать постоянных данных до текущей версии или сохранить его в той же версии, который был загружен.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

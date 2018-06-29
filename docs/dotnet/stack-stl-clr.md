@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305531"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079737"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к последней обслужен. Используйте адаптер контейнера `stack` управление базового контейнера, что стек принудительной передачи.  
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   

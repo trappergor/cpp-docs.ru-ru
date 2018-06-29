@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305830"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079907"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `map` для управления последовательностью элементов как упорядоченный (почти) сбалансированного дерева узлов, каждый хранения одного элемента. Элемент состоит из ключа, для упорядочения последовательности и сопоставленные значение, которое происходит расстояния.  
@@ -147,7 +147,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Ключ  
  Тип ключевым компонентом любого элемента в управляемой последовательности.  
   
@@ -1148,7 +1148,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение ключа для вставки.  
   
  где  
@@ -1516,7 +1516,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  клавиша  
  Значение ключа для использования.  
   
- Сопоставить  
+ сопоставить  
  Сопоставленное значение для поиска.  
   
 ### <a name="remarks"></a>Примечания  

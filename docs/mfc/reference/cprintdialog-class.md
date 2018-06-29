@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d72b96e0be786aab18903e95f346eccd5364dd4b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377231"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079659"
 ---
 # <a name="cprintdialog-class"></a>Класс CPrintDialog
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном Windows для печати.  
@@ -70,13 +70,13 @@ class CPrintDialog : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialog::CPrintDialog](#cprintdialog)|Создает объект `CPrintDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|  
 |[CPrintDialog::DoModal](#domodal)|Отображает диалоговое окно и пользователь может сделать выбор.|  
@@ -96,7 +96,7 @@ class CPrintDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialog::m_pd](#m_pd)|Структура, используемая для настройки `CPrintDialog` объекта.|  
   
@@ -159,13 +159,13 @@ CPrintDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bPrintSetupOnly`  
- Указывает, отображается ли стандартного диалогового окна печати Windows или параметры печати. Присвойте этому параметру значение **TRUE** для отображения стандартное диалоговое окно печати установки Windows. Задайте для него значение **FALSE** для отображения диалогового окна печати Windows. Если `bPrintSetupOnly` — **FALSE**, переключатель параметры печати по-прежнему отображается в окне «Печать».  
+ *bPrintSetupOnly*  
+ Указывает, отображается ли стандартного диалогового окна печати Windows или параметры печати. Присвойте этому параметру значение **TRUE** для отображения стандартное диалоговое окно печати установки Windows. Задайте для него значение **FALSE** для отображения диалогового окна печати Windows. Если *bPrintSetupOnly* — **FALSE**, переключатель параметры печати по-прежнему отображается в окне «Печать».  
   
- `dwFlags`  
+ *dwFlags*  
  Один или несколько флагов, которые можно использовать для настройки параметров диалогового окна, объединенные с помощью оператора побитового или Например **PD_ALLPAGES** флаг задает диапазон печати по умолчанию для всех страниц документа. В разделе [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) структуры в Windows SDK, Дополнительные сведения об этих флагов.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на диалоговое окно родительского или владельца.  
   
 ### <a name="remarks"></a>Примечания  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
   
  После вызова метода `DoModal`, можно вызывать другой член функции для получения параметров или данные, введенные пользователем в диалоговом окне.  
   
- Обратите внимание, что при вызове конструктора с `bPrintSetupOnly` значение **FALSE**, **PD_RETURNDC** флаг используется автоматически. После вызова метода `DoModal`, `GetDefaults`, или `GetPrinterDC`, будут возвращены принтера `m_pd.hDC`. Этот контроллер домена необходимо освободить с помощью вызова [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) вызывающим объектом `CPrintDialog`.  
+ Обратите внимание, что при вызове конструктора с *bPrintSetupOnly* значение **FALSE**, **PD_RETURNDC** флаг используется автоматически. После вызова метода `DoModal`, `GetDefaults`, или `GetPrinterDC`, будут возвращены принтера `m_pd.hDC`. Этот контроллер домена необходимо освободить с помощью вызова [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) вызывающим объектом `CPrintDialog`.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::CreatePrinterDC](#createprinterdc).  
@@ -243,7 +243,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>Примечания  
  Полученные значения помещаются в `m_pd` структуры.  
   
- В некоторых случаях вызов этой функции будет вызывать [конструктор](#cprintdialog) для `CPrintDialog` с `bPrintSetupOnly` значение **FALSE**. В этих случаях принтера и **hDevNames** и **hDevMode** (два маркера находится в `m_pd` элемент данных) выделяются автоматически.  
+ В некоторых случаях вызов этой функции будет вызывать [конструктор](#cprintdialog) для `CPrintDialog` с *bPrintSetupOnly* значение **FALSE**. В этих случаях принтера и **hDevNames** и **hDevMode** (два маркера находится в `m_pd` элемент данных) выделяются автоматически.  
   
  Если конструктор `CPrintDialog` был вызван с `bPrintSetupOnly` значение **FALSE**, эта функция не вернет только **hDevNames** и **hDevMode** (в папке **m_pd.hDevNames** и **m_pd.hDevMode**) вызывающему объекту, но также возвращает принтера в **m_pd.hDC**. Отвечает вызывающего объекта, чтобы удалить принтер контроллера домена, а вызовите Windows [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) функция дескрипторах при завершении работы с `CPrintDialog` объекта.  
   
@@ -345,7 +345,7 @@ HDC GetPrinterDC() const;
  Дескриптор контекста устройства принтера в случае успешного выполнения; в противном случае **NULL**.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bPrintSetupOnly` параметр `CPrintDialog` конструктор был **FALSE** (это означает, что отображается диалоговое окно «Печать»), затем `GetPrinterDC` возвращает дескриптор контекста устройства принтера. Необходимо вызвать Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) , позволяющей удалить контекст устройства после завершения его использования.  
+ Если *bPrintSetupOnly* параметр `CPrintDialog` конструктор был **FALSE** (это означает, что отображается диалоговое окно «Печать»), затем `GetPrinterDC` возвращает дескриптор устройства принтера контекст. Необходимо вызвать Windows [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) , позволяющей удалить контекст устройства после завершения его использования.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  

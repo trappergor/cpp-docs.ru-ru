@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305557"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079711"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к очереди. Используйте адаптер контейнера `queue` управление базового контейнера, как очередь.  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IQueue\<значение, контейнер >|Ведение адаптера универсального контейнера.|  
   
-### <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Примечания  
  Объект выделяет и освобождает память для им последовательность через базового контейнера, типа `Container`, в которых хранятся `Value` элементы и увеличивается по требованию. Объект ограничивает доступ к только что принудительной отправки первого элемента и выталкивания за последним элементом, реализация первым обслужен очередь (также известный как очередь FIFO или просто очереди).  
   
 ## <a name="members"></a>Участники

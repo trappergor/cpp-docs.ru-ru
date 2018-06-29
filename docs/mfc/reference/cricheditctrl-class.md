@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51d1cdb8eb803f9e76f7929f6f46279a7d4e7ea0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378817"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079933"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl-класс
 Предоставляет функции элемента управления форматированным редактированием.  
@@ -182,13 +182,13 @@ class CRichEditCtrl : public CWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Создает объект `CRichEditCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRichEditCtrl::CanPaste](#canpaste)|Определяет, если содержимое буфера обмена, можно вставить в этот элемент управления форматированным редактированием.|  
 |[CRichEditCtrl::CanRedo](#canredo)|Определяет, существуют ли все действия в очереди повторов элемента управления.|  
@@ -301,14 +301,14 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nFormat`  
+ *nFormat*  
  Формат данных буфер обмена для запроса. Этот параметр может принимать одно из стандартных форматов буфера обмена или значение, возвращаемое [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если формат буфера обмена, можно вставить; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Если `nFormat` равно 0, `CanPaste` попытается любой формат, в данный момент в буфере обмена.  
+ Если *nFormat* равно 0, `CanPaste` попытается любой формат, в данный момент в буфере обмена.  
   
  Дополнительные сведения см. в разделе [EM_CANPASTE](http://msdn.microsoft.com/library/windows/desktop/bb787993) сообщений и [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) функции в Windows SDK.  
   
@@ -347,14 +347,14 @@ BOOL CanUndo() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
 ##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
- Получает сведения о символе в точке, указанной в параметре `pt`.  
+ Получает сведения о символе в точке, указанной в параметре *pt*.  
   
 ```  
 int CharFromPos(CPoint pt) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pt`  
+ *pt*  
  Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект, содержащий координаты указанной точки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -373,7 +373,7 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Удаления, выполняемые **снимите** можно сделать, вызвав [отменить](#undo) функции-члена.  
+ Удаление выполненных `Clear` можно сделать, вызвав [отменить](#undo) функции-члена.  
   
  Чтобы удалить текущий выделенный фрагмент и поместить удаленные содержимое в буфер обмена, вызовите [Вырезать](#cut) функции-члена.  
   
@@ -407,27 +407,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Указывает стиль редактирования элемента управления. Применить сочетание стилей окна, перечисленных в **примечания** ниже, и [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464), описанных в Windows SDK.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение элемента управления edit. Может быть [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указывает родительскому окну элемента управления редактирования (часто [CDialog](../../mfc/reference/cdialog-class.md)). Он не должен быть **NULL**.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления edit.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если инициализация прошла успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Создании `CRichEditCtrl` объекта в два этапа. Сначала вызовите [CRichEditCtrl](#cricheditctrl) конструктора, затем вызовите **создать**, который создает управления редактированием Windows и прикрепляет его к `CRichEditCtrl` объекта.  
+ Создании `CRichEditCtrl` объекта в два этапа. Во-первых, вызовите [CRichEditCtrl](#cricheditctrl) конструктора, затем вызовите `Create`, который создает управления редактированием Windows и прикрепляет его к `CRichEditCtrl` объекта.  
   
  При создании элемента управления rich edit, с помощью этой функции, сначала необходимо загрузить необходимые библиотеки общих элементов управления. Чтобы загрузить библиотеку, вызовите глобальную функцию [AfxInitRichEdit](application-information-and-management.md#afxinitrichedit), который в свою очередь инициализирует библиотеки общих элементов управления. Необходимо вызвать `AfxInitRichEdit` только один раз в процессе.  
   
- Когда **создать** выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), и [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщений в поле редактирования.  
+ Когда `Create` выполняет Windows отправляет [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), и [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) сообщения в поле редактирования.  
   
  Эти сообщения обрабатываются по умолчанию с помощью [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) функции-члены в `CWnd` базового класса. Чтобы расширить возможности обработки сообщений по умолчанию, создайте класс, производный от `CRichEditCtrl`, добавить схему сообщений к новому классу и переопределить выше функции-члены обработчика сообщений. Переопределить `OnCreate`, например, для выполнения инициализации, необходимые для нового класса.  
   
@@ -461,26 +461,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Указывает стиль редактирования элемента управления. Применить сочетание стилей окна, перечисленных в **примечания** раздел [создать](#create) и [изменение стилей элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775464), описанных в Windows SDK.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо **создать** для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
+ Используйте `CreateEx` вместо `Create` для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
   
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  Создает объект `CRichEditCtrl`.  
@@ -503,7 +503,7 @@ void Cut();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Удаление выполненных **Вырезать** можно сделать, вызвав [отменить](#undo) функции-члена.  
+ Удаление выполненных `Cut` можно сделать, вызвав [отменить](#undo) функции-члена.  
   
  Чтобы удалить выбранные элементы без помещения удаляемый текст в буфер обмена, вызовите [снимите](#clear) функции-члена.  
   
@@ -520,14 +520,14 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDisplayRect`  
+ *pDisplayRect*  
  Указатель на [RECT](../../mfc/reference/rect-structure1.md) или [CRect](../../atl-mfc-shared/reference/crect-class.md) указание области устройства для отображения текста объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если отображение форматированного текста завершается успешно, в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Текст и OLE-элементы будут обрезаны по области, указанной указатель `pDisplayRect`.  
+ Текст и OLE-элементы будут обрезаны по области, указанной указатель *pDisplayRect*.  
   
  Дополнительные сведения см. в разделе [EM_DISPLAYBAND](http://msdn.microsoft.com/library/windows/desktop/bb787997) в Windows SDK.  
   
@@ -561,8 +561,8 @@ long FindText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
- Список возможных значений см. в разделе `wParam` в [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) в Windows SDK.  
+ *dwFlags*  
+ Список возможных значений см. в разделе *wParam* в [EM_FINDTEXTEXT](http://msdn.microsoft.com/library/windows/desktop/bb788011) в Windows SDK.  
   
  *pFindText*  
  Указатель на [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) структуры, задав параметры для поиска и возвращения диапазон, где было найдено соответствие.  
@@ -579,7 +579,7 @@ long FindText(
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
 ##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
- Выполняет поиск следующего разрыва word до или после позиции, указанной параметром `nStart`.  
+ Выполняет поиск следующего разрыва word до или после позиции, заданной параметром *nStart*.  
   
 ```  
 DWORD FindWordBreak(
@@ -588,14 +588,14 @@ DWORD FindWordBreak(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nCode`  
- Указывает действие, предпринимаемое. Список возможных значений, см. в описании параметра `code` в **EM_FINDWORDBREAK** в Windows SDK.  
+ *nCode*  
+ Указывает действие, предпринимаемое. Список возможных значений, см. в описании параметра *кода* в **EM_FINDWORDBREAK** в Windows SDK.  
   
- `nStart`  
+ *nStart*  
  Отсчитываемый от нуля позиция, с которого следует начать.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- На основе параметра `nCode`. Дополнительные сведения см. в разделе [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) в Windows SDK.  
+ На основе параметра *nCode*. Дополнительные сведения см. в разделе [EM_FINDWORDBREAK](http://msdn.microsoft.com/library/windows/desktop/bb788018) в Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция-член можно использовать для получения сведений о символе в заданной позиции.  
@@ -635,14 +635,14 @@ CPoint GetCharPos(long lChar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lChar`  
+ *lChar*  
  Отсчитываемый от нуля индекс символа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Расположение левого верхнего угла символ `lChar`.  
+ Расположение левого верхнего угла символ *lChar*.  
   
 ### <a name="remarks"></a>Примечания  
- Символ, указанный его индекс, отсчитываемый от нуля значение. Если `lChar` больше индекса последнего символа в этом `CRichEditCtrl` объекта, возвращаемое значение указывает координаты позиции символа сразу после последнего символа в данном `CRichEditCtrl` объекта.  
+ Символ, указанный его индекс, отсчитываемый от нуля значение. Если *lChar* больше индекса последнего символа в этом `CRichEditCtrl` объекта, возвращаемое значение указывает координаты позиции символа сразу после последнего символа в данном `CRichEditCtrl` объекта.  
   
  Дополнительные сведения см. в разделе [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) в Windows SDK.  
   
@@ -654,13 +654,13 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  В первой версии указатель **CHARFORMAT** структуру, содержащую атрибутов форматирования символов по умолчанию.  
   
  Во второй версии указатель **CHARFORMAT2** структуру, которая является расширением Rich Edit 2.0 для **CHARFORMAT** структуры, удерживая атрибутов форматирования символов по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **DwMask** данными-членом `cf`. Он указан атрибутов форматирования символов по умолчанию.  
+ **DwMask** данными-членом *cf*. Он указан атрибутов форматирования символов по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе **EM_GETCHARFORMAT** сообщений и **CHARFORMAT** и **CHARFORMAT2** структуры в Windows SDK.  
@@ -703,7 +703,7 @@ int GetFirstVisibleLine() const;
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
 ##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
- Обращается к **IRichEditOle** интерфейс для этой `CRichEditCtrl` объекта.  
+ Обращается к `IRichEditOle` интерфейс для этой `CRichEditCtrl` объекта.  
   
 ```  
 IRichEditOle* GetIRichEditOle() const;  
@@ -750,17 +750,17 @@ int GetLine(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Отсчитываемый от нуля индекс строки для извлечения.  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  Указатель на буфер для получения текста. Первое слово буфера необходимо указать максимальное число байтов, которые могут быть скопированы в буфер.  
   
- `nMaxLength`  
- Максимальное число символов, которые могут быть скопированы в `lpszBuffer`. Во второй форме `GetLine` помещает это значение в указанный буфер в первом слове `lpszBuffer`.  
+ *nMaxLength*  
+ Максимальное число символов, которые могут быть скопированы в *lpszBuffer*. Во второй форме `GetLine` помещает это значение в указанный буфер в первом слове *lpszBuffer*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число символов, которые копируются в `lpszBuffer`.  
+ Число символов, которые копируются в *lpszBuffer*.  
   
 ### <a name="remarks"></a>Примечания  
  Скопированной строке не содержит знак завершения null.  
@@ -825,16 +825,16 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pf`  
+ *Общая папка*  
  В первой версии указатель [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) структура, содержащая атрибуты текущего выделенного фрагмента форматирования абзаца.  
   
  Во второй версии указатель [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) структуру, которая является расширением Rich Edit 2.0 для **PARAFORMAT** структуры, удерживая атрибутов форматирования символов по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **DwMask** данными-членом `pf`. Указывает атрибуты, которые согласованы во всей выделенной форматирования абзаца.  
+ **DwMask** данными-членом *pf*. Указывает атрибуты, которые согласованы во всей выделенной форматирования абзаца.  
   
 ### <a name="remarks"></a>Примечания  
- Если выбрано несколько абзацев, `pf` принимает атрибуты первого абзаца. Возвращаемое значение указывает, какие атрибуты они единообразны во всем выделение.  
+ Если выбрано несколько абзацев, *pf* принимает атрибуты первого абзаца. Возвращаемое значение указывает, какие атрибуты они единообразны во всем выделение.  
   
  Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) сообщений и **PARAFORMAT** и **PARAFORMAT2** структуры в Windows SDK.  
   
@@ -851,10 +851,10 @@ BOOL GetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fType`  
- Флаг типа знаки пунктуации, как описано в `fType` параметр [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) в Windows SDK.  
+ *fType*  
+ Флаг типа знаки пунктуации, как описано в *fType* параметр [EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184) в Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Указатель на [ПУНКТУАЦИИ](http://msdn.microsoft.com/library/windows/desktop/bb787944) структуры, как описано в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -871,7 +871,7 @@ void GetRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpRect`  
+ *lpRect*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](../../mfc/reference/rect-structure1.md) для получения прямоугольника форматирования этого `CRichEditCtrl` объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -907,13 +907,13 @@ void GetSel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cr`  
+ *CR*  
  Ссылка на [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) структуру для получения границы текущего выделенного фрагмента.  
   
- `nStartChar`  
+ *nStartChar*  
  Отсчитываемый от нуля индекс первого символа в выделенном фрагменте.  
   
- `nEndChar`  
+ *nEndChar*  
  Отсчитываемый от нуля индекс последнего символа в текущем выделенном фрагменте.  
   
 ### <a name="remarks"></a>Примечания  
@@ -921,9 +921,9 @@ void GetSel(
   
 - **GetSel (** `cr` **)** использует эту форму **CHARRANGE** структура с его **cpMin** и **cpMax** элементов Возвращает границы.  
   
-- **GetSel (** `nStartChar` **,** `nEndChar` **)** эту форму возвращает границы в параметрах `nStartChar` и `nEndChar`.  
+- **GetSel (** `nStartChar` **,** `nEndChar` **)** эту форму возвращает границы в параметрах *nStartChar* и *nEndChar* .  
   
- Выделение включает все данные, если начало ( **cpMin** или `nStartChar`) имеет значение 0, а конец ( **cpMax** или `nEndChar`) — - 1.  
+ Выделение включает все данные, если начало ( **cpMin** или *nStartChar*) имеет значение 0, а конец ( **cpMax** или *nEndChar*) — - 1.  
   
  Дополнительные сведения см. в разделе [EM_EXGETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788001) сообщений и [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) структуры в Windows SDK.  
   
@@ -938,16 +938,16 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  В первой версии указатель [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру для получения атрибутов текущего выделенного фрагмента форматирование символов.  
   
  Во второй версии указатель [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, которая является расширением Rich Edit 2.0 для **CHARFORMAT** структуру для получения атрибутов текущего выделенного фрагмента форматирование символов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **DwMask** данными-членом `cf`. Он определяет символ, атрибуты форматирования, которые они единообразны во всем текущее выделение.  
+ **DwMask** данными-членом *cf*. Он определяет символ, атрибуты форматирования, которые они единообразны во всем текущее выделение.  
   
 ### <a name="remarks"></a>Примечания  
- `cf` Параметр получает атрибуты первого символа в выделенном фрагменте. Возвращаемое значение указывает, какие атрибуты они единообразны во всем выделение.  
+ *Cf* параметр получает атрибуты первого символа в выделенном фрагменте. Возвращаемое значение указывает, какие атрибуты они единообразны во всем выделение.  
   
  Дополнительные сведения см. в разделе [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) сообщений и **CHARFORMAT** и **CHARFORMAT2** структуры в Windows SDK.  
   
@@ -988,13 +988,13 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpBuf`  
+ *lpBuf*  
  Указатель на буфер для получения текста в выделенном фрагменте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Зависит от формы:  
   
-- **GetSelText (** `lpBuf` **)** число символов, которые копируются в `lpBuf`, не включая нулем.  
+- **GetSelText (** `lpBuf` **)** число символов, которые копируются в *lpBuf*, не включая нулем.  
   
 - **(GetSelText)** строка, содержащая текущее выделение.  
   
@@ -1032,14 +1032,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Значение, указывающее метод, который используется для определения длины текста. Этот элемент может иметь одно или несколько значений, приведенных в флаги членом [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) описано в Windows SDK.  
   
- `uCodePage`  
+ *uCodePage*  
  Кодовая страница для перевода (CP_ACP для кодовой страницы ANSI, 1200 Юникода).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Число символов или байтов, в поле редактирования. Если были установлены несовместимые флаги `dwFlags`, эта функция-член возвращает `E_INVALIDARG`.  
+ Число символов или байтов, в поле редактирования. Если были установлены несовместимые флаги *dwFlags*, эта функция-член возвращает `E_INVALIDARG`.  
   
 ### <a name="remarks"></a>Примечания  
  `GetTextLengthEx` Существуют дополнительные способы определения длины текста. Он поддерживает функции Rich Edit 2.0. В разделе [о элементами управления Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) в Windows SDKfor Дополнительные сведения.  
@@ -1065,13 +1065,13 @@ int GetTextRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nFirst`  
+ *nFirst*  
  Индекс позиции символа, непосредственно перед первым символом в диапазоне.  
   
- `nLast`  
+ *nLast*  
  Позиция символа сразу после последнего символа в диапазоне.  
   
- `refString`  
+ *refString*  
  Ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта, который будет получать текст.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1118,14 +1118,14 @@ void HideSelection(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bHide`  
+ *bHide*  
  Указывает, если выделение должно отображаться или скрываться, **TRUE** скрыть выделение.  
   
- `bPerm`  
+ *bPerm*  
  Указывает, если это изменение видимости для выбора должно быть постоянным.  
   
 ### <a name="remarks"></a>Примечания  
- При `bPerm` — **TRUE**, он изменяет `ECO_NOHIDESEL` параметр для этого `CRichEditCtrl` объекта. Краткое описание этого параметра см. в разделе [SetOptions](#setoptions). Эту функцию можно использовать, чтобы задать все параметры для данного `CRichEditCtrl` объекта.  
+ При *bPerm* — **TRUE**, он изменяет `ECO_NOHIDESEL` параметр для этого `CRichEditCtrl` объекта. Краткое описание этого параметра см. в разделе [SetOptions](#setoptions). Эту функцию можно использовать, чтобы задать все параметры для данного `CRichEditCtrl` объекта.  
   
  Дополнительные сведения см. в разделе [EM_HIDESELECTION](http://msdn.microsoft.com/library/windows/desktop/bb774210) в Windows SDK.  
   
@@ -1140,7 +1140,7 @@ void LimitText(long nChars = 0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nChars`  
+ *nChars*  
  Указывает длину (в байтах), пользователь может ввести текст. Если этот параметр равен 0 (значение по умолчанию), длина текста составляет 64 КБ.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1162,11 +1162,11 @@ long LineFromChar(long nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
- Содержит отсчитываемый от нуля индекс значение для требуемого символа в тексте элемента управления, или значение -1. Если `nIndex` равно -1, он задает текущую строку, то есть строки, содержащей курсор.  
+ *nIndex*  
+ Содержит отсчитываемый от нуля индекс значение для требуемого символа в тексте элемента управления, или значение -1. Если *nIndex* равно -1, он задает текущую строку, то есть строки, содержащей курсор.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля номер строки, содержащей индекс символа, заданный `nIndex`. Если `nIndex` равно -1, возвращается число строк, содержащий первый символ выделения. Если не выбрано, возвращается текущий номер строки.  
+ Отсчитываемый от нуля номер строки, содержащей индекс символа, заданный *nIndex*. Если *nIndex* равно -1, возвращается число строк, содержащий первый символ выделения. Если не выбрано, возвращается текущий номер строки.  
   
 ### <a name="remarks"></a>Примечания  
  Индекс символа — количество символов с начала элемента управления rich edit. Для подсчета символов, объект OLE подсчитывается как один символ.  
@@ -1184,11 +1184,11 @@ int LineIndex(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLine`  
- Содержит значение индекса для нужной строке в тексте элемента управления, или значение -1. Если `nLine` равно -1, он задает текущую строку, то есть строки, содержащей курсор.  
+ *Пользуйтесь*  
+ Содержит значение индекса для нужной строке в тексте элемента управления, или значение -1. Если *партнерству* равно -1, он задает текущую строку, то есть строки, содержащей курсор.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Индекс строки, указанной в `nLine` или -1, если указанный номер строки больше, то число строк в элементе управления.  
+ Индекс строки, указанной в *партнерству* или -1, если указанный номер строки больше, то число строк в элементе управления.  
   
 ### <a name="remarks"></a>Примечания  
  Индекс символа — количество символов с начала элемента управления форматированным редактированием на указанную строку.  
@@ -1206,11 +1206,11 @@ int LineLength(int nLine = -1) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLine`  
+ *Пользуйтесь*  
  Указывает символьный индекс символа в строке, длина которого требуется получить. Если этот параметр имеет значение -1, возвращается длина текущей строки (строка, в которой находится курсор), не включая длину любой выделенный текст в пределах строки. Когда `LineLength` вызывается для элемента управления редактирования однострочный, этот параметр учитывается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- При `LineLength` вызывается для элемента управления редактирования несколько строк, возвращается длина (в `TCHAR`) определяемого строки `nLine`.  Он не включает символ возврата каретки в конце строки. Когда `LineLength` вызывается для элемента управления редактирования однострочный возвращается длина (в `TCHAR`) текста в элементе управления. Если партнерству больше, чем количество символов в элементе управления, возвращаемое значение равно нулю.
+ При `LineLength` вызывается для элемента управления редактирования несколько строк, возвращается длина (в `TCHAR`) из строки, указанной в *партнерству*.  Он не включает символ возврата каретки в конце строки. Когда `LineLength` вызывается для элемента управления редактирования однострочный возвращается длина (в `TCHAR`) текста в элементе управления. Если партнерству больше, чем количество символов в элементе управления, возвращаемое значение равно нулю.
   
 ### <a name="remarks"></a>Примечания  
  Используйте [LineIndex](#lineindex) функция-член для извлечения символьный индекс для заданного номера строки в рамках этого `CRichEditCtrl` объекта.  
@@ -1230,14 +1230,14 @@ void LineScroll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLines`  
+ *nLines*  
  Указывает количество строк для прокрутки по вертикали.  
   
- `nChars`  
+ *nChars*  
  Указывает количество позиций знаков для прокрутки по горизонтали. Это значение игнорируется, если у элемента управления форматированным редактированием либо **ES_RIGHT** или **ES_CENTER** стиля. [Изменение стилей](../../mfc/reference/styles-used-by-mfc.md#edit-styles) указываются в [создать](#create).  
   
 ### <a name="remarks"></a>Примечания  
- Поле редактирования не вертикальную прокрутку, после последней строки текста в элементе управления. Если строка текущего плюс количество строк, определяемое `nLines` превышает общее число строк в элементе управления, значение корректируется, чтобы последняя строка элемента управления может прокручиваться в верхней части окна элемента управления edit.  
+ Поле редактирования не вертикальную прокрутку, после последней строки текста в элементе управления. Если текущий строки плюс количество строк, определяемое *nLines* превышает общее число строк в элементе управления, значение корректируется, чтобы последняя строка элемента управления может прокручиваться в верхней части окна элемента управления edit.  
   
  `LineScroll` используется для прокрутки по горизонтали за последним символом любой строки.  
   
@@ -1297,7 +1297,7 @@ CPoint PosFromChar(UINT nChar) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nChar`  
+ *nChar*  
  Отсчитываемый от нуля индекс символа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1329,10 +1329,10 @@ void ReplaceSel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszNewText`  
+ *lpszNewText*  
  Указатель на завершающуюся значением null строка, содержащая текст для замены.  
   
- `bCanUndo`  
+ *bCanUndo*  
  Чтобы указать, что эту функцию можно отменить, задайте значение для этого параметра значение **TRUE**. Значение по умолчанию — **FALSE**.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1367,7 +1367,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Указывает, установлен ли элемент управления автоматически определить URL-адрес. Если **TRUE**, оно включено. Если **FALSE**, она будет отключена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1389,11 +1389,11 @@ COLORREF SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bSysColor`  
- Указывает, если в системе значение должно задаваться цвет фона. Если это значение равно **TRUE**, `cr` учитывается.  
+ *bSysColor*  
+ Указывает, если в системе значение должно задаваться цвет фона. Если это значение равно **TRUE**, *cr* учитывается.  
   
- `cr`  
- Запрошенный фоновый цвет. Используется, только если `bSysColor` — **FALSE**.  
+ *CR*  
+ Запрошенный фоновый цвет. Используется, только если *bSysColor* — **FALSE**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предыдущий цвет фона для данного `CRichEditCtrl` объекта.  
@@ -1415,7 +1415,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  В первой версии указатель [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую новый атрибутов форматирования символов по умолчанию.  
   
  Во второй версии указатель [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, которая является расширением Rich Edit 2.0 для **CHARFORMAT** структуры, содержащие символ по умолчанию атрибуты форматирования.  
@@ -1424,7 +1424,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Атрибутами, заданными **dwMask** членом `cf` были изменены с помощью этой функции.  
+ Атрибутами, заданными **dwMask** членом *cf* были изменены с помощью этой функции.  
   
  Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) сообщений и **CHARFORMAT** и **CHARFORMAT2** структуры в Windows SDK.  
   
@@ -1461,7 +1461,7 @@ void SetModify(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bModified`  
+ *bModified*  
  Значение **TRUE** указывает, что текст был изменен и значение **FALSE** указывает, он не изменяется. По умолчанию имеет значение измененного флага.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1480,14 +1480,14 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCallback`  
+ *pCallback*  
  Указатель на [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) объекта этим `CRichEditCtrl` объекта будет использовать для получения ресурсы, связанные с OLE и сведения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Это `CRichEditCtrl` вызывает объект [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) увеличивается счетчик использования COM-объекта, заданного параметром `pCallback`.  
+ Это `CRichEditCtrl` вызывает объект [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) увеличивается счетчик использования COM-объекта, заданного параметром *pCallback*.  
   
  Дополнительные сведения см. в разделе [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252) сообщений и [IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) интерфейса в Windows SDK.  
   
@@ -1504,15 +1504,15 @@ void SetOptions(
  *wOp*  
  Указывает тип операции. Одно из следующих значений:  
   
-- `ECOOP_SET` Задание параметров существующим `dwFlags`.  
+- `ECOOP_SET` Задание параметров существующим *dwFlags*.  
   
-- `ECOOP_OR` Объединить текущие параметры с разрешениями, заданными в `dwFlags`.  
+- `ECOOP_OR` Объединить текущие параметры с разрешениями, заданными в *dwFlags*.  
   
-- `ECOOP_AND` Сохранять только для текущего параметры, которые также определяются `dwFlags`.  
+- `ECOOP_AND` Сохранять только для текущего параметры, которые также определяются *dwFlags*.  
   
-- `ECOOP_XOR` Логически исключающего или с разрешениями, заданными в текущем наборе параметров `dwFlags`.  
+- `ECOOP_XOR` Логически исключающего или с разрешениями, заданными в текущем наборе параметров *dwFlags*.  
   
- `dwFlags`  
+ *dwFlags*  
  Широкие возможности редактирования. Значения флагов, перечислены в разделе "Примечания".  
   
 ### <a name="remarks"></a>Примечания  
@@ -1548,7 +1548,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pf`  
+ *Общая папка*  
  В первой версии указатель [PARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787940) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.  
   
  Во второй версии указатель [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) структуру, которая является расширением Rich Edit 2.0 для **PARAFORMAT** структуры, удерживая атрибутов форматирования символов по умолчанию.  
@@ -1557,7 +1557,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Атрибутами, заданными **dwMask** членом `pf` были изменены с помощью этой функции.  
+ Атрибутами, заданными **dwMask** членом *pf* были изменены с помощью этой функции.  
   
  Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) сообщений и **PARAFORMAT** и **PARAFORMAT2** структуры в Windows SDK.  
   
@@ -1574,10 +1574,10 @@ BOOL SetPunctuation(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fType`  
- Флаг, знаки препинания. Список возможных значений см. в разделе `fType` параметр [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) в Windows SDK.  
+ *fType*  
+ Флаг, знаки препинания. Список возможных значений см. в разделе *fType* параметр [EM_SETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774278) в Windows SDK.  
   
- `lpPunc`  
+ *lpPunc*  
  Указатель на [ПУНКТУАЦИИ](http://msdn.microsoft.com/library/windows/desktop/bb787944) структуры, как описано в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1594,7 +1594,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bReadOnly`  
+ *bReadOnly*  
  Указывает, если этот `CRichEditCtrl` объект должен быть только для чтения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1616,7 +1616,7 @@ void SetRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpRect`  
+ *lpRect*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](../../mfc/reference/rect-structure1.md) указывает новые границы для прямоугольника форматирования.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1639,13 +1639,13 @@ void SetSel(CHARRANGE& cr);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nStartChar`  
+ *nStartChar*  
  Отсчитываемый от нуля индекс первого символа для выбора.  
   
- `nEndChar`  
+ *nEndChar*  
  Отсчитываемый от нуля индекс последнего символа для выбора.  
   
- `cr`  
+ *CR*  
  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) структуру, которая содержит границы выделенного фрагмента.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1653,9 +1653,9 @@ void SetSel(CHARRANGE& cr);
   
 - **SetSel (** `cr` **)** использует эту форму **CHARRANGE** структура с его **cpMin** и **cpMax** элементов Установите границы.  
   
-- **SetSel (** `nStartChar` **,** `nEndChar` **)** параметры использовать эту форму `nStartChar` и `nEndChar` для задания границы.  
+- **SetSel (** `nStartChar` **,** `nEndChar` **)** параметры использовать эту форму *nStartChar* и *nEndChar*присвоить границы.  
   
- Курсор помещается в конце соответствующий больше начала ( **cpMin** или `nStartChar`) и окончания ( **cpMax** или `nEndChar`) индексы. Эта функция прокручивает содержимое элемента `CRichEditCtrl` , чтобы курсор был виден.  
+ Курсор помещается в конце соответствующий больше начала ( **cpMin** или *nStartChar*) и окончания ( **cpMax** или *nEndChar*) индексы. Эта функция прокручивает содержимое элемента `CRichEditCtrl` , чтобы курсор был виден.  
   
  Чтобы выбрать весь текст в этом `CRichEditCtrl` , вызовите `SetSel` с начального индекса 0 и конечный индекс - 1.  
   
@@ -1673,7 +1673,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  В первой версии указатель [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую форматирование знаков атрибуты для текущего выделения.  
   
  Во второй версии указатель [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, которая является расширением Rich Edit 2.0 для **CHARFORMAT** структуры, содержащие знак новых атрибутов для текущего форматирования Выбор.  
@@ -1682,7 +1682,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Атрибутами, заданными **dwMask** членом `cf` были изменены с помощью этой функции.  
+ Атрибутами, заданными **dwMask** членом *cf* были изменены с помощью этой функции.  
   
  Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) и **CHARFORMAT** и **CHARFORMAT2** структуры в Windows SDK.  
   
@@ -1704,13 +1704,13 @@ BOOL SetTargetDevice(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hDC`  
+ *hDC*  
  Дескриптор контекста устройства для нового целевого устройства.  
   
  *lLineWidth*  
  Толщина линии, используемый для форматирования.  
   
- `dc`  
+ *dc*  
  [CDC](../../mfc/reference/cdc-class.md) для нового целевого устройства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1769,7 +1769,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
+ *CF*  
  В первой версии указатель [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) структуру, содержащую форматирование знаков атрибуты для выбранного word.  
   
  Во второй версии указатель [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) структуру, которая является расширением Rich Edit 2.0 для **CHARFORMAT** структура, содержащая форматирование знаков атрибутов для в настоящее время выделенное слово.  
@@ -1778,7 +1778,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
  Ненулевое значение, если успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Атрибутами, заданными **dwMask** членом `cf` были изменены с помощью этой функции.  
+ Атрибутами, заданными **dwMask** членом *cf* были изменены с помощью этой функции.  
   
  Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) сообщений и **CHARFORMAT** и **CHARFORMAT2** структуры в Windows SDK.  
   
@@ -1793,7 +1793,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uFlags`  
+ *uFlags*  
  Параметры, устанавливаемые для переноса и разбиение по словам. Список возможных параметров см. в разделе [EM_SETWORDWRAPMODE](http://msdn.microsoft.com/library/windows/desktop/bb774294) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -1824,17 +1824,17 @@ long StreamIn(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nFormat`  
+ *nFormat*  
  Флаги, определяющие форматы входных данных. Дополнительные сведения см. в разделе "Примечания".  
   
- `es`  
+ *ES*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) структура входного потока. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число считанных символов из входного потока.  
   
 ### <a name="remarks"></a>Примечания  
- Значение `nFormat` должно быть одним из следующих:  
+ Значение *nFormat* должен быть одним из следующих:  
   
 - `SF_TEXT` Указывает только для чтения текста.  
   
@@ -1842,7 +1842,7 @@ long StreamIn(
   
  Одно из этих значений могут быть объединены с `SFF_SELECTION`. Если `SFF_SELECTION` указано, `StreamIn` заменяет текущее выделение содержимое входного потока. Если он не указан, `StreamIn` заменяет все содержимое `CRichEditCtrl` объекта.  
   
- В **EDITSTREAM** параметр `es`, укажите функцию обратного вызова, который заполняет буфер текста. Эта функция обратного вызова вызывается несколько раз, пока не будет исчерпан входного потока.  
+ В **EDITSTREAM** параметр *es*, укажите функцию обратного вызова, который заполняет буфер текста. Эта функция обратного вызова вызывается несколько раз, пока не будет исчерпан входного потока.  
   
  Дополнительные сведения см. в разделе [EM_STREAMIN](http://msdn.microsoft.com/library/windows/desktop/bb774302) сообщений и [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) структуры в Windows SDK.  
   
@@ -1861,17 +1861,17 @@ long StreamOut(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nFormat`  
+ *nFormat*  
  Флаги, определяющие выходных форматов данных. Дополнительные сведения см. в разделе "Примечания".  
   
- `es`  
+ *ES*  
  [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) структуры, указав в выходной поток. Дополнительные сведения см. в разделе "Примечания".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Число символов, записанных в выходной поток.  
   
 ### <a name="remarks"></a>Примечания  
- Значение `nFormat` должно быть одним из следующих:  
+ Значение *nFormat* должен быть одним из следующих:  
   
 - `SF_TEXT` Указывает только текст записи.  
   
@@ -1883,7 +1883,7 @@ long StreamOut(
   
  Эти значения могут быть объединены с `SFF_SELECTION`. Если `SFF_SELECTION` указано, `StreamOut` записывает текущее выделение в выходной поток. Если он не указан, `StreamOut` записывает все содержимое `CRichEditCtrl` объекта.  
   
- В **EDITSTREAM** параметр `es`, укажите функцию обратного вызова, который заполняет буфер текста. Эта функция обратного вызова вызывается несколько раз, пока не будет исчерпан в выходной поток.  
+ В **EDITSTREAM** параметр *es*, укажите функцию обратного вызова, который заполняет буфер текста. Эта функция обратного вызова вызывается несколько раз, пока не будет исчерпан в выходной поток.  
   
  Дополнительные сведения см. в разделе [EM_STREAMOUT](http://msdn.microsoft.com/library/windows/desktop/bb774304) сообщений и [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) структуры в Windows SDK.  
   
@@ -1903,7 +1903,7 @@ BOOL Undo();
  Ненулевое значение, если операция отмены выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Также можно отменить операцию отмены. Например, можно восстановить удаленный текст с первого вызова **отменить**. При условии, что нет промежуточных операции редактирования, можно удалить текст снова с помощью второго вызова **отменить**.  
+ Также можно отменить операцию отмены. Например, можно восстановить удаленный текст с первого вызова `Undo`. При условии, что нет промежуточных операции редактирования, можно удалить текст снова с помощью второго вызова `Undo`.  
   
  Дополнительные сведения см. в разделе [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) в Windows SDK.  
   

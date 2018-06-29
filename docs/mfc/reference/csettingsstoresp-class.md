@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376055"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078703"
 ---
 # <a name="csettingsstoresp-class"></a>Класс CSettingsStoreSP
 `CSettingsStoreSP` Класс — это вспомогательный класс, который можно использовать для создания экземпляров [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
@@ -42,20 +42,20 @@ class CSettingsStoreSP
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Создает объект `CSettingsStoreSP`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSettingsStoreSP::Create](#create)|Создает экземпляр класса, который является производным от `CSettingsStore`.|  
 |[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Задает класс среды выполнения. `Create` Метод использует класс среды выполнения, чтобы определить, какому классу объектов для создания.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |`m_dwUserData`|Пользовательские данные, хранящиеся в `CSettingsStoreSP` объекта. Ввести эти данные в конструкторе `CSettingsStoreSP` объекта.|  
 |`m_pRegistry`|`CSettingsStore`-Производного объекта, `Create` методом.|  
@@ -88,10 +88,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAdmin`  
+ [in] *bAdmin*  
  Логический параметр, который определяет, является ли `CSettingsStore` объект создается в режиме администратора.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Логический параметр, который определяет, является ли `CSettingsStore` объекта создается для доступа только для чтения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -102,7 +102,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  Если вы создаете `CSettingsStore` объекта в режиме администратора, расположение по умолчанию для всех видов доступа реестра HKEY_LOCAL_MACHINE. В противном случае расположение по умолчанию для всех доступ к реестру — HKEY_CURRENT_USER.  
   
- Если `bAdmin` — `TRUE`, приложение должно иметь права администратора. В противном случае операция завершится сбоем при попытке доступа к реестру.  
+ Если *bAdmin* — `TRUE`, приложение должно иметь права администратора. В противном случае операция завершится сбоем при попытке доступа к реестру.  
   
 ### <a name="example"></a>Пример  
  В следующем примере демонстрируется использование `Create` метод `CSettingsStoreSP` класса.  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwUserData`  
+ [in] *dwUserData*  
  Определяемые пользователем данные, `CSettingsStoreSP` объекта хранилища.  
   
 ### <a name="remarks"></a>Примечания  
- `CSettingsStoreSP` Объект сохраняет данные из `dwUserData` в переменной защищенный элемент `m_dwUserData`.  
+ `CSettingsStoreSP` Объект сохраняет данные из *dwUserData* в переменной защищенный элемент `m_dwUserData`.  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  Задает класс среды выполнения. Метод [CSettingsStoreSP::Create](#create) использует класс среды выполнения для определения типа создаваемого объекта.  
@@ -131,11 +131,11 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRTI`  
+ [in] *pRTI*  
  Указатель на сведения о классе среды выполнения для класса, производного от [CSettingsStore класса](../../mfc/reference/csettingsstore-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` в случае успешного выполнения; `FALSE` Если определить класс с `pRTI` не является производным от `CSettingsStore`.  
+ `TRUE` в случае успешного выполнения; `FALSE` Если определить класс с *pRTI* не является производным от `CSettingsStore`.  
   
 ### <a name="remarks"></a>Примечания  
  Можно использовать [класса CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) для формирования классов из `CSettingsStore`. Используйте метод `SetRuntimeClass` необходимо создать пользовательский класс, производный от объектов `CSettingsStore`.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371625"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079069"
 ---
 # <a name="csingledoctemplate-class"></a>Класс CSingleDocTemplate
 Определяет шаблон документа, реализующий интерфейс одного документа (SDI).  
@@ -36,7 +36,7 @@ class CSingleDocTemplate : public CDocTemplate
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Создает объект `CSingleDocTemplate`.|  
   
@@ -45,7 +45,7 @@ class CSingleDocTemplate : public CDocTemplate
   
  Шаблон документа определяет связь между три типа классов:  
   
--   Класс документа, который можно создать производный от **CDocument**.  
+-   Класс документа, который можно создать производный от `CDocument`.  
   
 -   Класс представления отображаются данные из класса документа, перечисленных выше. Можно наследовать от этого класса `CView`, `CScrollView`, `CFormView`, или `CEditView`. (Можно также использовать `CEditView` напрямую.)  
   
@@ -81,7 +81,7 @@ CSingleDocTemplate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIDResource`  
+ *nIDResource*  
  Указывает идентификатор ресурсы, используемые с типом документа. Это может включать меню, значок, таблицу сочетаний клавиш и строковые ресурсы.  
   
  Строковый ресурс состоит из до семи подстроки, разделенных знаком «\n» (символ «\n» требуется как заполнитель, если подстрока не включено; конечные символы «\n» не нужны); Эти подстроки описания типа документа. Сведения о подстроках, см. в разделе [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Этот строковый ресурс находится в файле ресурсов приложения. Пример:  
@@ -100,13 +100,13 @@ CSingleDocTemplate(
   
  Дополнительные сведения об этих типах ресурсов см. в разделе [редактора строк](../../windows/string-editor.md).  
   
- `pDocClass`  
- Указывает `CRuntimeClass` объекта класса документа. Этот класс является **CDocument**-производный класс, определенный для представления документов.  
+ *pDocClass*  
+ Указывает `CRuntimeClass` объекта класса документа. Этот класс является `CDocument`-производный класс, определенный для представления документов.  
   
- `pFrameClass`  
+ *pFrameClass*  
  Указывает на `CRuntimeClass` объект класс окна фрейма. Этот класс может быть `CFrameWnd`-производного класса, или он может быть `CFrameWnd` себя, если требуется поведение по умолчанию для главного окна фрейма.  
   
- `pViewClass`  
+ *pViewClass*  
  Указывает `CRuntimeClass` объекта класса представления. Этот класс является `CView`-производный класс, определяемый для отображения документов.  
   
 ### <a name="remarks"></a>Примечания  

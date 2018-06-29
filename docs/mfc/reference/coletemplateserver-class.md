@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374387"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077982"
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 Используется для OLE-серверов визуального редактирования, серверов автоматизации и контейнеров связей (приложений, поддерживающих ссылки на внедряемые объекты).  
@@ -44,13 +44,13 @@ class COleTemplateServer : public COleObjectFactory
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Создает объект `COleTemplateServer`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Подключается к основному шаблон документа `COleObjectFactory` объекта.|  
 |[COleTemplateServer::Unregister](#unregister)|Отменяет регистрацию шаблона связанный документ.|  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clsid`  
+ *Идентификатор CLSID*  
  Ссылка на шаблон запрашивает идентификатора класса OLE.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  Указатель на шаблон документа.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  Указывает, является ли один экземпляр приложения может поддерживать несколько экземпляров. Если **TRUE**, запуск нескольких экземпляров приложения для каждого запроса для создания объекта.  
   
 ### <a name="remarks"></a>Примечания  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nAppType`  
+ *nAppType*  
  Значение из **OLE_APPTYPE** перечисления, который определен в AFXDISP. З. Он может иметь одно из следующих значений:  
   
 - `OAT_INPLACE_SERVER` Сервер имеет всего сервера пользовательского интерфейса.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` Объект `IDispatch`-поддержкой.  
   
-- **OAT_DOC_OBJECT_SERVER** Server поддерживает как встраивание и модели компонентов объект документа.  
+- `OAT_DOC_OBJECT_SERVER` Сервер поддерживает как встраивание и модели компонентов объект документа.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  Список записей, которые записываются в реестр только в том случае, если нет никаких записей.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  Список записей, которые записываются в реестр, независимо от того, существуют ли какие-либо предыдущей записи.  
   
- `bRegister`  
- Определяет, является ли класс должны быть зарегистрированы. Если `bRegister` — **TRUE**, класс регистрируется в системном реестре. В противном случае — отменяет регистрацию класса.  
+ *bЗарегистрируйтесь участия*  
+ Определяет, является ли класс должны быть зарегистрированы. Если *bЗарегистрируйтесь участия* — **TRUE**, класс регистрируется в системном реестре. В противном случае — отменяет регистрацию класса.  
   
 ### <a name="remarks"></a>Примечания  
  Сведения о регистрации загружается с помощью вызова [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Получить подстроки, являются определяется индексы **regFileTypeId**, **regFileTypeName**, и **fileNewName**, как описано в `GetDocString` в справочнике по.  
   
  Если **regFileTypeId** подстроки пуст или если вызов `GetDocString` завершается с ошибкой по другой причине, эта функция завершается с ошибкой и данные файла не указан в реестре.  
   
- Сведения в аргументах `rglpszRegister` и `rglpszOverwrite` записывается в реестр посредством вызова [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Сведения по умолчанию, который регистрируется, если оба аргумента **NULL**, подходит для большинства приложений. Сведения о структуре информации из этих аргументов см. в разделе `AfxOleRegisterServerClass`.  
+ Сведения в аргументах *rglpszRegister* и *rglpszOverwrite* записывается в реестр посредством вызова [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Сведения по умолчанию, который регистрируется, если оба аргумента **NULL**, подходит для большинства приложений. Сведения о структуре информации из этих аргументов см. в разделе `AfxOleRegisterServerClass`.  
   
- Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945).  
+ Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC HIERSVR](../../visual-cpp-samples.md)   

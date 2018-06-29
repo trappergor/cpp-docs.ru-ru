@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305921"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079790"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `list` управления последовательность элементов в качестве двунаправленного связанного списка узлов, в каждой хранения одного элемента.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Пространство имен:** cliext 
 
-## <a name="members"></a>Участники  
+## <a name="declarations"></a>Объявления  
   
 |Определение типа|Описание:|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  Удаление или удалении элементов вызывает деструктор для сохраненное значение. Уничтожение контейнера удаляет все элементы. Таким образом контейнера, тип элементов которого является класс ссылки гарантирует, что ни один элемент пережить контейнера. Тем не менее, делает это контейнер, содержащий дескрипторы `not` уничтожить его элементов.  
   
+## <a name="members"></a>Участники
+
 ## <a name="assign"></a> List::Assign (STL/CLR)
 Заменяет все элементы.  
   
@@ -265,7 +267,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение элемента, который требуется вставить.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1249,7 +1251,7 @@ void insert(iterator where,
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение элемента, который требуется вставить.  
   
  где  
@@ -1964,7 +1966,7 @@ void remove(value_type val);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- функция Val  
+ Функция Val  
  Значение элемента для удаления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2142,7 +2144,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  Новый размер управляемой последовательности.  
   
- функция Val  
+ Функция Val  
  Значение элемента-заполнителя.  
   
 ### <a name="remarks"></a>Примечания  

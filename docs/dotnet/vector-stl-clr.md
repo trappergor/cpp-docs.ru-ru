@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305775"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079816"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с произвольного доступа. Используйте контейнер `vector` для управления последовательностью элементов как непрерывный блок памяти. Блок реализуется как массив, который увеличивается по требованию.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  Удаление или удалении элементов вызывает деструктор для сохраненное значение. Уничтожение контейнера удаляет все элементы. Таким образом контейнера, тип элементов которого является класс ссылки гарантирует, что ни один элемент пережить контейнера. Обратите внимание, что контейнер дескрипторов уничтожит его элементов.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<cliext/vector >  
-  
- **Пространство имен:** cliext  
+## <a name="members"></a>Участники
 
 ## <a name="assign"></a> Vector::Assign (STL/CLR)
 Заменяет все элементы.  
@@ -255,7 +252,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение элемента, который требуется вставить.  
   
 ### <a name="remarks"></a>Примечания  
@@ -1337,7 +1334,7 @@ void insert(iterator where,
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение элемента, который требуется вставить.  
   
  где  
@@ -1881,7 +1878,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  Новый размер управляемой последовательности.  
   
- функция Val  
+ Функция Val  
  Значение элемента-заполнителя.  
   
 ### <a name="remarks"></a>Примечания  
@@ -2252,7 +2249,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  right  
  Объект или диапазон для вставки.  
   
- функция Val  
+ Функция Val  
  Значение элемента, который требуется вставить.  
   
 ### <a name="remarks"></a>Примечания  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370211"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078687"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Класс CSinusoidalTransitionFromRange
 Инкапсулирует переход в диапазоне синусоиды с заданной амплитудой колебаний.  
@@ -50,19 +50,19 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Создает объект перехода.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Значение переменной анимации в пиковое значение синусоидальной wave.|  
 |[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Значение переменной анимации с помощью средства синусоидальной wave.|  
@@ -93,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на переход библиотеку, которая отвечает за создание стандартной переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -112,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  Значение переменной анимации с помощью средства синусоидальной wave.  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  Значение переменной анимации в пиковое значение синусоидальной wave.  
   
- `period`  
+ *период*  
  Период колебаний из синусоидальной wave в секундах.  
   
- `slope`  
+ *Наклон*  
  Наклон, то перед началом перехода.  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

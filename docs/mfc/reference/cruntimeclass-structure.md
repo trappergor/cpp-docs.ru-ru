@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376295"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079548"
 ---
 # <a name="cruntimeclass-structure"></a>Структура CRuntimeClass
 Каждый класс, производный от `CObject` связан с `CRuntimeClass` структуру, можно использовать для получения сведений о объекта или его базовый класс во время выполнения.  
@@ -39,7 +39,7 @@ struct CRuntimeClass
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRuntimeClass::CreateObject](#createobject)|Создает объект во время выполнения.|  
 |[CRuntimeClass::FromName](#fromname)|Создает объект во время выполнения с помощью имени класса знакомы.|  
@@ -47,7 +47,7 @@ struct CRuntimeClass
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRuntimeClass::m_lpszClassName](#m_lpszclassname)|Имя класса.|  
 |[CRuntimeClass::m_nObjectSize](#m_nobjectsize)|Размер объекта в байтах.|  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClassName`  
+ *lpszClassName*  
  Имя класса, чтобы создать знакомы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClassName`  
+ *lpszClassName*  
  Знакомые имя класса, производным от `CObject`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CRuntimeClass` объект, соответствующий имени как передано `lpszClassName`. Функция возвращает **NULL** найденные соответствующее имя класса.  
+ Указатель на `CRuntimeClass` объект, соответствующий имени как передано *lpszClassName*. Функция возвращает **NULL** найденные соответствующее имя класса.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -134,7 +134,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  Связь определяется «обход» из класса элемента вверх по цепочке производных классов, вплоть до верхней. Эта функция возвращает только **FALSE** , если совпадение не найдено для базового класса.  
   
 > [!NOTE]
->  Для использования `CRuntimeClass` структуры, необходимо включить `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, или `IMPLEMENT_SERIAL` макрос в реализации класса, для которого требуется получить сведения о времени выполнения объекта.  
+>  Для использования `CRuntimeClass` структуры, необходимо включить макрос IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE или IMPLEMENT_SERIAL в реализации класса, для которого требуется получить сведения о времени выполнения объекта.  
   
  Дополнительные сведения об использовании `CRuntimeClass`, см. в статье [класс CObject: доступ к сведениям о классе во время выполнения](../../mfc/accessing-run-time-class-information.md).  
   

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376650"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079102"
 ---
 # <a name="cprintdialogex-class"></a>Класс CPrintDialogEx
 Инкапсулирует службы, предоставляемые вкладкой свойств печати Windows.  
@@ -68,13 +68,13 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|Создает объект `CPrintDialogEx`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|  
 |[CPrintDialogEx::DoModal](#domodal)|Отображает диалоговое окно и дает пользователю возможность выбора.|  
@@ -93,7 +93,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPrintDialogEx::m_pdex](#m_pdex)|Структура, используемая для настройки `CPrintDialogEx` объекта.|  
   
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
+ *dwFlags*  
  Один или несколько флагов, которые можно использовать для настройки параметров диалогового окна, объединенные с помощью оператора побитового или Например **PD_ALLPAGES** флаг задает диапазон печати по умолчанию для всех страниц документа. В разделе [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) структуры в Windows SDK, Дополнительные сведения об этих флагов.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на диалоговое окно родительского или владельца.  
   
 ### <a name="remarks"></a>Примечания  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  Объект `CString` Указание имени драйвера, определенная системой.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте указатель `CString` объект, возвращаемый `GetDriverName` в качестве значения `lpszDriverName` при обращении к [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+ Используйте указатель `CString` объект, возвращаемый `GetDriverName` в качестве значения *lpszDriverName* при обращении к [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  Эта функция вызывается после вызова метода [DoModal](#domodal) или [GetDefaults](#getdefaults) для извлечения имени выбранного порта.  

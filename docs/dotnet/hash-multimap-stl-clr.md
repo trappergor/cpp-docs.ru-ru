@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305856"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079894"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `hash_multimap` для управления последовательностью элементов хэш-таблицы, каждая запись в таблице хранения двунаправленный связанный список узлов и каждый узел хранения одного элемента. Элемент состоит из ключа, для упорядочения последовательности и сопоставленные значение, которое происходит расстояния.  
@@ -145,7 +145,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Ключ  
  Тип ключевым компонентом любого элемента в управляемой последовательности.  
   
@@ -1545,7 +1545,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  right  
  Перечисление для вставки.  
   
- функция Val  
+ Функция Val  
  Значение ключа для вставки.  
   
  где  
@@ -1983,7 +1983,7 @@ static value_type make_value(key_type key, mapped_type mapped);
  клавиша  
  Значение ключа для использования.  
   
- Сопоставить  
+ сопоставить  
  Сопоставленное значение для поиска.  
   
 ### <a name="remarks"></a>Примечания  

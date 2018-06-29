@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368635"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078262"
 ---
 # <a name="compareitemstruct-structure"></a>Структура COMPAREITEMSTRUCT
 `COMPAREITEMSTRUCT` Структура предоставляет список идентификаторов и данных приложений для двух элементов в отсортированный, определяемый владельцем список или поле со списком.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (которое указывает список рисуемый владельцем) или **ODT_COMBOBOX** (которое указывает рисуемый владельцем поле со списком).  
   
- `CtlID`  
+ *CtlID*  
  Идентификатор элемента управления для списка или поля со списком.  
   
- `hwndItem`  
+ *hwndItem*  
  Дескриптор окна элемента управления.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  Указанное приложением данных сравниваемых второго элемента. Это значение было передано в вызове, добавившего элемент в поле со списком или списка.  
   
 ## <a name="remarks"></a>Примечания  
- Каждый раз, когда приложение добавляет новый элемент — определяемый владельцем список или поле со списком создается **CBS_SORT** или **LBS_SORT** стиля, Windows отправляет владельцу `WM_COMPAREITEM` сообщения. `lParam` Сообщения содержит длинный указатель `COMPAREITEMSTRUCT` структуры. При получении сообщения, владелец сравнивает два элемента и возвращает значение, указывающее, какой элемент сортируется до другого.  
+ Каждый раз, когда приложение добавляет новый элемент — определяемый владельцем список или поле со списком создается **CBS_SORT** или **LBS_SORT** стиля, Windows отправляет владельцу WM_COMPAREITEM сообщение. *LParam* сообщения содержит длинный указатель `COMPAREITEMSTRUCT` структуры. При получении сообщения, владелец сравнивает два элемента и возвращает значение, указывающее, какой элемент сортируется до другого.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** winuser.h  

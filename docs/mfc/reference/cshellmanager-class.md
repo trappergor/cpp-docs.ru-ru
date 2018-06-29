@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378360"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079242"
 ---
 # <a name="cshellmanager-class"></a>Класс CShellManager
 Реализует несколько методов, которые позволяют работать с указателями в списках идентификаторов (PIDL).  
@@ -58,13 +58,13 @@ class CShellManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|Создает объект `CShellManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, позволяющее пользователю выбрать папки оболочки.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Сцепляет два Pidl.|  
@@ -104,29 +104,29 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `strOutFolder`  
+ [out] *strOutFolder*  
  Строка, используемая с помощью метода для сохранения пути к выбранной папке.  
   
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно.  
   
- [in] `lplszInitialFolder`  
+ [in] *lplszInitialFolder*  
  Строка, содержащая папку, выбран по умолчанию, когда появится диалоговое окно.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  Заголовок диалогового окна.  
   
- [in] `ulFlags`  
+ [in] *ulFlags*  
  Флаги, определяющие параметры для диалогового окна. В разделе [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) подробное описание.  
   
- [выходной] `piFolderImage`  
+ [out] *piFolderImage*  
  Указатель на целое значение, где метод записывает индекс образа выбранной папки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если пользователь выбирает папку из диалогового окна; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- При вызове этого метода приложение создается и отображается диалоговое окно, которое позволяет пользователю выбрать папку. Метод запишет путь к папке в `strOutFolder` параметра.  
+ При вызове этого метода приложение создается и отображается диалоговое окно, которое позволяет пользователю выбрать папку. Метод запишет путь к папке, в *strOutFolder* параметра.  
   
 ### <a name="example"></a>Пример  
  В следующем примере показано, как получить ссылку на `CShellManager` объектов с помощью `CWinAppEx::GetShellManager` метод и способ использования `BrowseForFolder` метод. Этот фрагмент кода является частью [пример анализатора](../../visual-cpp-samples.md).  
@@ -143,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl1`  
+ [in] *pidl1*  
  Первый элемент.  
   
- [in] `pidl2`  
+ [in] *pidl2*  
  Второй элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на новый список элементов, если функция выполняется успешно `NULL`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает новый [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) достаточно большим, чтобы вместить оба `pidl1` и `pidl2`. Затем копирует `pidl1` и `pidl2` в новый список.  
+ Этот метод создает новый [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) достаточно большим, чтобы вместить оба *pidl1* и *pidl2*. Затем копирует *pidl1* и *pidl2* в новый список.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Копирует список элементов.  
@@ -163,7 +163,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidlSource`  
+ [in] *pidlSource*  
  Исходный список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -180,7 +180,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `cbSize`  
+ [in] *cbSize*  
  Размер списка элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -204,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Список элементов для удаления.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -215,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -229,7 +229,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -243,7 +243,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Список элементов для перечисления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -262,10 +262,10 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpidl`  
+ [in] *lpidl*  
  PIDL, чей родительский элемент будут извлечены.  
   
- [выходной] `lpidlParent`  
+ [out] *lpidlParent*  
  Ссылка на PIDL, где метод сохранит результат.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -284,10 +284,10 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  Строка, указывающая путь к элементу.  
   
- [выходной] `pidl`  
+ [out] *pidl*  
  Ссылка на PIDL. Метод использует этот PIDL для хранения указателя для возвращаемого значения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

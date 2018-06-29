@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306038"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079535"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 Класс шаблона описывает объект, управляющий переменной длины упорядоченную последовательность элементов с ограниченным доступом. Используйте адаптер контейнера `priority_queue` управление базового контейнера, как очередь с приоритетом.  
   
  В следующем описании `GValue` совпадает со значением `Value` Если последний является типом ссылки, в этом случае он является `Value^`. Аналогичным образом `GContainer` совпадает со значением `Container` Если последний является типом ссылки, в этом случае он является `Container^`.  
   
-### <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IPriorityQueue\<значение, контейнер >|Ведение адаптера универсального контейнера.|  
   
-### <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Примечания  
  Объект выделяет и освобождает память для им последовательность через базового контейнера, типа `Container`, в которых хранятся `Value` элементы и увеличивается по требованию. Она хранит последовательности, упорядоченных в виде кучи, с наивысшим приоритетом элементом (верхний элемент) легко доступны и съемных. Объект ограничивает доступ к помещают новые элементы и извлекают только высокий приоритет элемента, реализация очередь с приоритетом.  
   
  Объект Упорядочивает управляемую последовательность путем вызова хранимых делегат типа [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md). Объект хранимых делегата можно указать при создании priority_queue; Если указан объект делегата не значение по умолчанию является сравнение `operator<(value_type, value_type)`. Доступ к этому сохраненному объекту путем вызова функции-члена [priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`.  

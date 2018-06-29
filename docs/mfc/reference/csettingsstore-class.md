@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7711e0105085f0b7af1344ce230839e90f2b6851
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376897"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079492"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Создает программу-оболочку для API-функций Windows, обеспечивая объектно-ориентированный интерфейс, который используется для доступа к реестру.  
@@ -52,13 +52,13 @@ class CSettingsStore : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Создает объект `CSettingsStore`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSettingsStore::Close](#close)|Закрывает открыть раздел реестра.|  
 |[CSettingsStore::CreateKey](#createkey)|Открывает указанный ключ или создает ее, если она не существует.|  
@@ -102,14 +102,14 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszPath`  
+ [in] *pszPath*  
  Указывает имя ключа для создания или открытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  0 в случае успешного выполнения; в противном случае ненулевое значение.  
   
 ### <a name="remarks"></a>Примечания  
- `CreateKey` использует `m_hKey` как корень реестра запросы. Он выполняет поиск `pszPath` виде подраздела `m_hKey`. Если ключ не существует, `CreateKey` его создает. В противном случае он открывает ключ. `CreateKey` Затем задает `m_hKey` для созданного или открытого ключа.  
+ `CreateKey` использует `m_hKey` как корень реестра запросы. Он выполняет поиск *pszPath* виде подраздела `m_hKey`. Если ключ не существует, `CreateKey` его создает. В противном случае он открывает ключ. `CreateKey` Затем задает `m_hKey` для созданного или открытого ключа.  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  Создает объект `CSettngsStore`.  
@@ -121,16 +121,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bAdmin`  
+ [in] *bAdmin*  
  Логический параметр, указывает ли `CSettingsStore` объект действует в режиме администратора.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  Логический параметр, указывает ли `CSettingsStore` объект создается в режиме только для чтения.  
   
 ### <a name="remarks"></a>Примечания  
- Если `bAdmin` равно `true`, `m_hKey` присвоено переменной-члена `HKEY_LOCAL_MACHINE`. Если задать `bAdmin` для `false`, `m_hKey` равно `HKEY_CURRENT_USER`.  
+ Если *bAdmin* равно `true`, `m_hKey` присвоено переменной-члена `HKEY_LOCAL_MACHINE`. Если задать *bAdmin* для `false`, `m_hKey` равно `HKEY_CURRENT_USER`.  
   
- Зависит от прав доступа `bReadOnly` параметра. Если `bReadonly` — `false`, безопасный доступ будет присвоено `KEY_ALL_ACCESS`. Если `bReadyOnly` — `true`, безопасный доступ будет присвоено сочетание `KEY_QUERY_VALUE, KEY_NOTIFY` и `KEY_ENUMERATE_SUB_KEYS`. Дополнительные сведения о безопасности доступа вместе с реестра см. в разделе [безопасности ключ реестра и права доступа](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
+ Зависит от прав доступа *bReadOnly* параметра. Если *bReadonly* — `false`, безопасный доступ будет присвоено `KEY_ALL_ACCESS`. Если *bReadyOnly* — `true`, безопасный доступ будет присвоено сочетание `KEY_QUERY_VALUE, KEY_NOTIFY` и `KEY_ENUMERATE_SUB_KEYS`. Дополнительные сведения о безопасности доступа вместе с реестра см. в разделе [безопасности ключ реестра и права доступа](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   
  Деструктор для `CSettingsStore` освобождает `m_hKey` автоматически.  
   
@@ -144,10 +144,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszPath`  
+ [in] *pszPath*  
  Имя ключа для удаления.  
   
- [in] `bAdmin`  
+ [in] *bAdmin*  
  Параметр, задающий расположение ключа для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -156,7 +156,7 @@ virtual BOOL DeleteKey(
 ### <a name="remarks"></a>Примечания  
  Этот метод завершится ошибкой, если `CSettingsStore` объект находится в режиме только для чтения.  
   
- Если параметр `bAdmin` равен нулю, `DeleteKey` ищет ключ для удаления в разделе `HKEY_CURRENT_USER`. Если `bAdmin` отлично от нуля, `DeleteKey` ищет ключ для удаления в разделе `HKEY_LOCAL_MACHINE`.  
+ Если параметр *bAdmin* равен нулю, `DeleteKey` ищет ключ для удаления в разделе `HKEY_CURRENT_USER`. Если *bAdmin* отлично от нуля, `DeleteKey` ищет ключ для удаления в разделе `HKEY_LOCAL_MACHINE`.  
   
 ##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  Удаляет значение из `m_hKey`.  
@@ -166,7 +166,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszValue`  
+ [in] *размер pszValue*  
  Задает значение поля для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -180,7 +180,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszPath`  
+ [in] *pszPath*  
  Имя раздела реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -265,59 +265,59 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszKey`  
+ [in] *pszKey*  
  Указатель на строку, завершающуюся значением null, содержащая имя значения, которое необходимо считать из реестра.  
   
- [выходной] `iVal`  
+ [out] *iVal*  
  Ссылка на целочисленную переменную, получающий значение из раздела реестра.  
   
- [выходной] `dwVal`  
+ [out] *dwVal*  
  Ссылка на 32-разрядных двойное слово переменной, которая получает значение, считанное из реестра.  
   
- [выходной] `sVal`  
+ [out] *sVal*  
  Ссылка на строковую переменную, которая получает значение, считанное из реестра.  
   
- [выходной] `scStringList`  
+ [out] *scStringList*  
  Ссылка на список строковую переменную, которая получает значение, считанное из реестра.  
   
- [выходной] `scArray`  
+ [out] *scArray*  
  Ссылка на массив строковую переменную, которая получает значение, считанное из реестра.  
   
- [выходной] `dwcArray`  
+ [out] *dwcArray*  
  Ссылка на переменную массива 32-разрядных двойное слово, получающий значение из раздела реестра.  
   
- [выходной] `wcArray`  
+ [out] *wcArray*  
  Ссылка на переменную массива 16-разрядное слово, которая получает значение, считанное из реестра.  
   
- [выходной] `bcArray`  
+ [out] *bcArray*  
  Ссылка на переменную массива байтов, которая получает значение, считанное из реестра.  
   
- [выходной] `lpPoint`  
+ [out] *lpPoint*  
  Ссылка на указатель `POINT` структуру, которая получает значение, прочитать из реестра.  
   
- [выходной] `rect`  
+ [out] *rect*  
  Ссылка на [CRect](../../atl-mfc-shared/reference/crect-class.md) считать переменную, которая получает значение из раздела реестра.  
   
- [выходной] `ppData`  
+ [out] *ppData*  
  Указатель на указатель на данные, которые получает значение чтения из раздела реестра.  
   
- [выходной] `pBytes`  
- Указатель на переменную целого числа без знака. Эта переменная принимает размер буфера, `ppData` указывает.  
+ [out] *pBytes*  
+ Указатель на переменную целого числа без знака. Эта переменная принимает размер буфера, *ppData* указывает.  
   
- [выходной] `list`  
+ [out] *список*  
  Ссылка на [CObList](../../mfc/reference/coblist-class.md) считать переменную, которая получает значение из раздела реестра.  
   
- [выходной] `obj`  
+ [out] *obj*  
  Ссылка на [CObject](../../mfc/reference/cobject-class.md) считать переменную, которая получает значение из раздела реестра.  
   
- [выходной] `pObj`  
+ [out] *pObj*  
  Ссылка на указатель `CObject` считать переменную, которая получает значение из раздела реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- `Read` проверяет наличие `pszKey` виде подраздела `m_hKey`.  
+ `Read` проверяет наличие *pszKey* виде подраздела `m_hKey`.  
   
 ##  <a name="write"></a>  CSettingsStore::Write  
  Записывает значение в реестр с открытым ключом.  
@@ -395,59 +395,59 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pszKey`  
+ [in] *pszKey*  
  Указатель на строку, содержащую имя задаваемое значение.  
   
- [in] `iVal`  
+ [in] *iVal*  
  Ссылка на целочисленная переменная, содержащая данные для хранения.  
   
- [in] `dwVal`  
+ [in] *dwVal*  
  Ссылка на 32-разрядных двойное слово переменную, которая содержит данные для хранения.  
   
- [in] `pszVal`  
+ [in] *pszVal*  
  Указатель на строку, завершающуюся значением null переменную, которая содержит данные для хранения.  
   
- [in] `scStringList`  
+ [in] *scStringList*  
  Ссылка на [CStringList](../../mfc/reference/cstringlist-class.md) переменную, которая содержит данные для хранения.  
   
- [in] `bcArray`  
+ [in] *bcArray*  
  Ссылка на переменную массива байтов, содержащий данные для хранения.  
   
- [in] `scArray`  
+ [in] *scArray*  
  Ссылка на массив строковую переменную, которая содержит данные для хранения.  
   
- [in] `dwcArray`  
+ [in] *dwcArray*  
  Ссылка на переменную массива 32-разрядных двойное слово, содержащий данные для хранения.  
   
- [in] `wcArray`  
+ [in] *wcArray*  
  Ссылка на переменную массива 16-разрядное слово, которая содержит данные для хранения.  
   
- [in] `rect`  
+ [in] *rect*  
  Ссылка на [CRect](../../atl-mfc-shared/reference/crect-class.md) переменную, которая содержит данные для хранения.  
   
- [in] `lpPoint`  
+ [in] *lpPoint*  
  Ссылка на указатель `POINT` переменную, которая содержит данные для хранения.  
   
- [in] `pData`  
+ [in] *pData*  
  Указатель на буфер, содержащий данные для хранения.  
   
- [in] `nBytes`  
- Указывает размер в байтах данных, к которому `pData` параметр точек.  
+ [in] *nBytes*  
+ Указывает размер в байтах данных, к которому *pData* параметр точек.  
   
- [in] `list`  
+ [in] *список*  
  Ссылка на [CObList](../../mfc/reference/coblist-class.md) переменную, которая содержит данные для хранения.  
   
- [in] `obj`  
+ [in] *obj*  
  Ссылка на [CObject](../../mfc/reference/cobject-class.md) переменную, которая содержит данные для хранения.  
   
- [in] `pObj`  
+ [in] *pObj*  
  Указатель на указатель на `CObject` переменную, которая содержит данные для хранения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `TRUE` в случае успешного выполнения; в противном случае — значение `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Для записи в реестр, необходимо задать `bReadOnly` ненулевое значение, при создании [CSettingsStore](../../mfc/reference/csettingsstore-class.md) объекта. Дополнительные сведения см. в разделе [CSettingsStore::CSettingsStore](#csettingsstore).  
+ Для записи в реестр, необходимо задать *bReadOnly* ненулевое значение, при создании [CSettingsStore](../../mfc/reference/csettingsstore-class.md) объекта. Дополнительные сведения см. в разделе [CSettingsStore::CSettingsStore](#csettingsstore).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

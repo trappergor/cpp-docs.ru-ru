@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368424"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078612"
 ---
 # <a name="cricheditcntritem-class"></a>Класс CRichEditCntrItem
 С [CRichEditView](../../mfc/reference/cricheditview-class.md) и [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), предоставляет функциональные возможности элемента управления форматированным редактированием в контексте архитектуры представлений документов MFC.  
@@ -36,17 +36,17 @@ ms.locfileid: "33368424"
 class CRichEditCntrItem : public COleClientItem  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Создает объект `CRichEditCntrItem`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Активирует элемент другого типа.|  
   
@@ -86,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  Указатель на [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) структуру, которая описывает элемент OLE. Новый `CRichEditCntrItem` создается объект вокруг данного элемента OLE. Если *preo* — **NULL**, клиентский элемент пуст.  
   
- `pContainer`  
- Указатель на документ контейнера, который будет содержать этот элемент. Если `pContainer` — **NULL**, необходимо явным образом вызвать [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) добавить этот элемент клиента в документ.  
+ *pContainer*  
+ Указатель на документ контейнера, который будет содержать этот элемент. Если *pContainer* — **NULL**, необходимо явным образом вызвать [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) добавить этот элемент клиента в документ.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция не выполняет инициализацию OLE.  
@@ -95,7 +95,7 @@ CRichEditCntrItem(
  Дополнительные сведения см. в разделе [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) структуры в Windows SDK.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- Эта функция вызывается для синхронизации пропорции устройства [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), это **CRichEditCntrltem** значению, указанному *reo*.  
+ Эта функция вызывается для синхронизации пропорции устройства [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), это `CRichEditCntrltem` значению, указанному *reo*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

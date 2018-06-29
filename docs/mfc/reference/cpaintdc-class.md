@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376539"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078223"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC-класс
 Класс контекста устройства, производный от [CDC](../../mfc/reference/cdc-class.md).  
@@ -38,23 +38,23 @@ ms.locfileid: "33376539"
 class CPaintDC : public CDC  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::CPaintDC](#cpaintdc)|Создает `CPaintDC` подключен к заданному [CWnd](../../mfc/reference/cwnd-class.md).|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::m_ps](#m_ps)|Содержит [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) используется для рисования клиентской области.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND` К которому `CPaintDC` присоединен объект.|  
   
@@ -83,7 +83,7 @@ explicit CPaintDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указывает на `CWnd` объекта, к которому `CPaintDC` принадлежит объект.  
   
 ### <a name="remarks"></a>Примечания  
@@ -100,7 +100,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_hWnd` защищенные переменная типа `HWND`.  
+ *m_hWnd* является защищенной переменной типа `HWND`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
