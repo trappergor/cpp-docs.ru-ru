@@ -1,7 +1,7 @@
 ---
 title: Структура CDaoRelationInfo | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951296"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122612"
 ---
 # <a name="cdaorelationinfo-structure"></a>Структура CDaoRelationInfo
 `CDaoRelationInfo` Структура содержит сведения о связи, определенные между двумя таблицами в поля [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *m_strName*  
+*m_strName*  
  Однозначно называет объект отношения. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
  *m_strTable*  
@@ -70,11 +71,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** удаления происходит каскадом.  
   
- *m_pFieldInfos*  
- Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. *M_nFields* член данных дает число элементов массива.  
+*m_pFieldInfos*  
+ Указатель на массив [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) структуры. Массив содержит один объект для каждого поля в связи. `m_nFields` Элемент данных дает число элементов массива.  
   
- *m_nFields*  
- Число `CDaoRelationFieldInfo` объекты в *m_pFieldInfos* члена данных.  
+*m_nFields*  
+ Число `CDaoRelationFieldInfo` объекты в `m_pFieldInfos` элемент данных.  
   
 ## <a name="remarks"></a>Примечания  
  Ссылки на первичной и вторичной выше указывают, как возвращаются сведения по [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена в классе `CDaoDatabase`.  

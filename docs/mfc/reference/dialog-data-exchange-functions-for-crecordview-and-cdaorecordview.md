@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377521"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123036"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 В этом разделе перечислены DDX_Field-функции, используемые для обмена данными между [CRecordset](../../mfc/reference/crecordset-class.md) и [CRecordView](../../mfc/reference/crecordview-class.md) формы или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) и [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) формы.  
@@ -77,16 +77,16 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *Индекс*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -120,16 +120,16 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -163,16 +163,16 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -189,7 +189,7 @@ void AFXAPI DDX_FieldCBStringExact(
   **Заголовок** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
- `DDX_FieldCheck` Функция управляет передачей `int` данных между управления «флажок» в диалоговом окне, представлении формы или объекте представления элемента управления и `int` данными-членом диалоговое окно, представление формы или объекте представления элемента управления.  
+ `DDX_FieldCheck` Функция управляет передачей **int** данных между управления «флажок» в диалоговом окне, представлении формы или объекте представления элемента управления и **int** член данных диалоговое окно, представление формы или элемента управления Объект представления.  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -206,16 +206,16 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор ресурса управления «флажок», связанное со свойством элемента управления.  
   
  *значение*  
  Ссылка на переменную-член диалогового, представление формы или объекте представления элемента управления при обмене данными.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -227,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
   **Заголовок** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
- `DDX_FieldLBIndex` Функция синхронизирует индекс выбранного элемента в элемент управления списком в представлении записей и `int` элемента данных поля в наборе записей, связанный с представлением записи.  
+ `DDX_FieldLBIndex` Функция синхронизирует индекс выбранного элемента в элемент управления списком в представлении записей и **int** элемента данных поля в наборе записей, связанный с представлением записи.  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -244,16 +244,16 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *Индекс*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -287,16 +287,16 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -330,16 +330,16 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -356,7 +356,7 @@ void AFXAPI DDX_FieldLBStringExact(
   **Заголовок** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
- `DDX_FieldRadio` Функция связывает начинающийся с нуля `int` переменной-члена записей представления записей с выбранного переключателя в группе переключателей в представлении записей.  
+ `DDX_FieldRadio` Функция связывает начинающийся с нуля **int** переменной-члена записей представления записей с выбранного переключателя в группе переключателей в представлении записей.  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -373,16 +373,16 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
- Идентификатор первого в группе (стилем **WS_GROUP**) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
+ *nIDC*  
+ Идентификатор первого в группу (стиля WS_GROUP) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -399,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
   **Заголовок** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
- `DDX_FieldScroll` Функция синхронизирует позицию прокрутки полосы прокрутки в представлении записей и `int` элемента данных поля в наборе записей, связанные с представления записей (или любые целочисленной переменной, необходимо сопоставить его с).  
+ `DDX_FieldScroll` Функция синхронизирует позицию прокрутки полосы прокрутки в представлении записей и **int** элемента данных поля в наборе записей, связанные с представления записей (или любые целочисленной переменной, необходимо сопоставить его с) .  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -416,16 +416,16 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
- Идентификатор первого в группе (стилем **WS_GROUP**) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
+ *nIDC*  
+ Идентификатор первого в группу (стиля WS_GROUP) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными.  
   
 ### <a name="remarks"></a>Примечания  
@@ -442,7 +442,7 @@ void AFXAPI DDX_FieldScroll(
   **Заголовок** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>Имя = «ddx_fieldslider» ></a> DDX_FieldSlider
-`DDX_FieldSlider` Функция синхронизирует положение бегунка элемента управления "ползунок" в представлении записей и `int` элемента данных поля в наборе записей, связанные с представления записей (или любые целочисленной переменной, необходимо сопоставить его с).  
+`DDX_FieldSlider` Функция синхронизирует положение бегунка элемента управления "ползунок" в представлении записей и **int** элемента данных поля в наборе записей, связанные с представления записей (или любые целочисленной переменной, необходимо сопоставить его с).  
    
 ### <a name="syntax"></a>Синтаксис  
   ```
@@ -459,16 +459,16 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор ресурса управления "ползунок".  
   
  *значение*  
  Ссылка на значение для обмена. Этот параметр содержит или будет использоваться для задания элемента управления "ползунок" текущее положение бегунка.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на связанный `CRecordset` или `CDaoRecordset` объекта при обмене данными.  
    
 ### <a name="remarks"></a>Примечания  
@@ -490,7 +490,7 @@ void AFXAPI DDX_FieldSlider(
  [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
- `DDX_FieldText` Функция управляет передачей `int`, **короткие**, **длинные**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **двойные**, **BOOL**, или **БАЙТОВ** данных между поля ввода и элементами данных полей в наборе записей.  
+ `DDX_FieldText` Функция управляет передачей **int**, **короткие**, **длинные**, DWORD, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **двойные**, **BOOL**, или **БАЙТОВ** данных между поля ввода и элементами данных полей в наборе записей.  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -603,16 +603,16 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDX`  
+ *pDX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
   
- `nIDC`  
+ *nIDC*  
  Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.  
   
  *значение*  
  Ссылка для элемента данных поля в связанном `CRecordset` или `CDaoRecordset` объекта. Тип данных значения зависит от какой из перегруженных версий `DDX_FieldText` используется.  
   
- `pRecordset`  
+ *pRecordset*  
  Указатель на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объекта при обмене данными. Этот указатель позволяет `DDX_FieldText` для обнаружения и установки значений Null.  
   
 ### <a name="remarks"></a>Примечания  

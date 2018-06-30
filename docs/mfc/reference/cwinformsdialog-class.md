@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371563"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122501"
 ---
 # <a name="cwinformsdialog-class"></a>Класс CWinFormsDialog
 Программа-оболочка для класса диалогового окна MFC, в котором размещается пользовательский элемент управления Windows Forms.  
@@ -46,17 +46,17 @@ class CWinFormsDialog :
  `TManagedControl`  
  .NET Framework пользовательский элемент управления, отображаемый в приложении MFC.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsDialog::CWinFormsDialog](#cwinformsdialog)|Создает объект `CWinFormsDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsDialog::GetControl](#getcontrol)|Извлекает ссылку на пользовательский элемент управления Windows Forms.|  
 |[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|Возвращает дескриптор окна для пользовательского элемента управления Windows Forms.|  
@@ -64,7 +64,7 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя||  
+|name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Заменяет [CWinFormsDialog::GetControl](#getcontrol) в выражениях.|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип как ссылку на пользовательский элемент управления Windows Forms.|  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIDTemplate`  
+ *nIDTemplate*  
  Содержит идентификатор ресурса шаблона диалогового окна поле. Использование редактора диалоговых окон для создания шаблона диалогового окна и сохранить его в файл скрипта ресурсов приложения. Дополнительные сведения о шаблонах диалогового окна см. в разделе [класса CDialog](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  Логическое значение, которое определяет, будет ли приложение фокус ввода для элемента управления в диалоговом окне. Если `OnInitDialog` возвращает ненулевое Windows устанавливает фокус ввода на первый элемент управления в диалоговом окне. Этот метод может вернуть 0 только в том случае, если приложение задан явно фокус ввода для элемента управления в диалоговом окне.  
   
 ### <a name="remarks"></a>Примечания  
- При создании в диалоговом окне MFC (с помощью [создать](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), или [DoModal](../../mfc/reference/cdialog-class.md#domodal) метод наследуется от [CDialog](../../mfc/reference/cdialog-class.md)), `WM_INITDIALOG` отправляется сообщение, и этот метод вызывается. Он создает экземпляр элемента управления Windows Forms в диалоговом окне и изменяет размер диалогового окна можно использовать размер пользовательского элемента управления. Затем он размещает новый элемент управления в диалоговом окне MFC.  
+ При создании в диалоговом окне MFC (с помощью [создать](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), или [DoModal](../../mfc/reference/cdialog-class.md#domodal) метод наследуется от [CDialog](../../mfc/reference/cdialog-class.md)), WM_ INITDIALOG сообщение отправляется и вызове этого метода. Он создает экземпляр элемента управления Windows Forms в диалоговом окне и изменяет размер диалогового окна можно использовать размер пользовательского элемента управления. Затем он размещает новый элемент управления в диалоговом окне MFC.  
   
  Переопределите эту функцию-член, если необходимо выполнить специальную обработку при инициализации диалоговым окном. Дополнительные сведения об использовании этого метода см. в разделе [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   

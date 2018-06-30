@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa99952daf401132768d9be5d4c589b5fdbee52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376201"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122880"
 ---
 # <a name="cusertoolsmanager-class"></a>Класс CUserToolsManager
 Поддерживает коллекцию объектов [CUserTool класс](../../mfc/reference/cusertool-class.md) объектов в приложении. Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. Объект `CUserToolsManager` позволяет пользователю или разработчику добавить в приложение новые пользовательские инструменты. Он поддерживает выполнение команд, связанных со средствами пользователя, а также сохраняет сведения о пользовательских средствах в реестре Windows.  
@@ -74,13 +74,13 @@ class CUserToolsManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Создает документ `CUserToolsManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUserToolsManager::CreateNewTool](#createnewtool)|Создает новый пользовательский инструмент.|  
 |[CUserToolsManager::FindTool](#findtool)|Возвращает указатель на `CMFCUserTool` объект, связанный с указанным идентификатором команды.|  
@@ -135,7 +135,7 @@ CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданного пользователя средства, или `NULL` если ряд средств пользователь превысил максимально. Возвращаемый тип совпадает со значением типа, передаваемый `CWinAppEx::EnableUserTools` как `pToolRTC` параметр.  
+ Указатель на только что созданного пользователя средства, или значение NULL, если число инструментов, пользователь превысил максимально. Возвращаемый тип совпадает со значением типа, передаваемый `CWinAppEx::EnableUserTools` как *pToolRTC* параметра.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод находит идентификатор первой команды меню в диапазон, указанный в вызове [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) и назначает средство пользовательского этот код.  
@@ -159,22 +159,22 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdToolsDummy`  
+ [in] *uiCmdToolsDummy*  
  Целое число без знака, она используется в качестве заполнителя для идентификатор команды меню "Сервис" пользователя.  
   
- [in] `uiCmdFirst`  
+ [in] *uiCmdFirst*  
  Идентификатор команды для первой команды средства для пользователя.  
   
- [in] `uiCmdLast`  
+ [in] *uiCmdLast*  
  Идентификатор команды для команды средство последнего пользователя.  
   
- [in] `pToolRTC`  
+ [in] *pToolRTC*  
  Класс, [CUserToolsManager::CreateNewTool](#createnewtool) создает. С помощью этого класса можно использовать производным типом [CUserTool класса](../../mfc/reference/cusertool-class.md) вместо реализация по умолчанию.  
   
- [in] `uArgMenuID`  
+ [in] *uArgMenuID*  
  Идентификатор ресурса меню аргументы всплывающего меню.  
   
- [in] `uInitDirMenuID`  
+ [in] *uInitDirMenuID*  
  Идентификатор ресурса меню всплывающего меню исходный каталог.  
   
 ### <a name="remarks"></a>Примечания  
@@ -188,14 +188,14 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Идентификатор команды меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [класса CUserTool](../../mfc/reference/cusertool-class.md) или `CUserTool`-производный объект, если успешно; в противном случае `NULL`.  
+ Указатель на [класса CUserTool](../../mfc/reference/cusertool-class.md) или `CUserTool`-производный объект, если успешно; в противном случае значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Когда `FindTool` — успешно, возвращаемый тип совпадает со значением типа `pToolRTC` параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Когда `FindTool` — успешно, возвращаемый тип совпадает со значением типа *pToolRTC* параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
  Возвращает идентификатор ресурса, который связан с **аргументы** меню **средства** вкладке **Настройка** диалоговое окно.  
@@ -208,7 +208,7 @@ UINT GetArgumentsMenuID() const;
  Идентификатор ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
- `uArgMenuID` Параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) указывает идентификатор ресурса.  
+ *UArgMenuID* параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) указывает идентификатор ресурса.  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
  Возвращает расширение по умолчанию, который **Открытие файла** диалоговое окно ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) используется в **команда** на **средства** вкладка **Настройка** диалоговое окно.  
@@ -241,7 +241,7 @@ UINT GetInitialDirMenuID() const;
  Идентификатор ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращенный идентификатор задан в `uInitDirMenuID` параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Возвращенный идентификатор задан в *uInitDirMenuID* параметр [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
  Возвращает максимальное число средства пользователей, которые могут быть распределены в приложении.  
@@ -254,7 +254,7 @@ int GetMaxTools() const;
  Максимальное число средства пользователей, которые могут быть выделены.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для извлечения максимальное число средств, которые могут быть распределены в приложении. Этот номер является номером идентификаторы в диапазоне от `uiCmdFirst` через `uiCmdLast` параметры, которые вы передаете в [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
+ Этот метод используется для извлечения максимальное число средств, которые могут быть распределены в приложении. Этот номер является номером идентификаторы в диапазоне от *uiCmdFirst* через *uiCmdLast* параметры, которые вы передаете в [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools).  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
  Возвращает идентификатор команды для средства пользователя местозаполнителя элемента меню.  
@@ -267,7 +267,7 @@ UINT GetToolsEntryCmd() const;
  Идентификатор команды заполнитель.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы включить средства пользователя, следует вызвать [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). `uiCmdToolsDummy` Указывает идентификатор команды команды средства записи. Этот метод возвращает идентификатор средства записи команды. Везде, где этот идентификатор используется в меню, он не будет заменен список пользовательских средств в появившемся меню.  
+ Чтобы включить средства пользователя, следует вызвать [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools). *UiCmdToolsDummy* указывает идентификатор команды команды средства записи. Этот метод возвращает идентификатор средства записи команды. Везде, где этот идентификатор используется в меню, он не будет заменен список пользовательских средств в появившемся меню.  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
  Возвращает ссылку на список средств пользователя.  
@@ -280,7 +280,7 @@ const CObList& GetUserTools() const;
  Константную ссылку [CObList класс](../../mfc/reference/coblist-class.md) , содержащий список средств пользователя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов этого метода для получения списка пользователей средств, предоставляемых [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) хранит объект. Объект типа представленного каждого пользовательского средства [класса CUserTool](../../mfc/reference/cusertool-class.md) или тип, производный от `CUserTool`. Тип определяется `pToolRTC` параметра при вызове [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) , чтобы позволить средствам пользователя.  
+ Вызов этого метода для получения списка пользователей средств, предоставляемых [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) хранит объект. Объект типа представленного каждого пользовательского средства [класса CUserTool](../../mfc/reference/cusertool-class.md) или тип, производный от `CUserTool`. Тип определяется *pToolRTC* параметра при вызове [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools) , чтобы позволить средствам пользователя.  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
  Выполняет приложение, связанное с помощью средства пользователь, имеющий указанный идентификатор команды.  
@@ -290,14 +290,14 @@ BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Идентификатором команды меню, связанных со средством пользователя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если команда, связанная со средством пользователя была выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Вызов этого метода для выполнения приложения, связанного с пользователем средства, имеет идентификатор команды, заданные `uiCmdId`.  
+ Вызов этого метода для выполнения приложения, связанного с пользователем средства, имеет идентификатор команды, заданные *uiCmdId*.  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
  Определяет, является ли идентификатор команды связанную со средством пользователя.  
@@ -307,7 +307,7 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiCmdId`  
+ [in] *uiCmdId*  
  Идентификатор команды для элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -324,7 +324,7 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Путь к разделу реестра Windows.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -343,14 +343,14 @@ BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTool`  
+ [in] *pTool*  
  Указывает средство пользователя для перемещения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если средство пользователя был перемещен вниз успешно. в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Метод завершается ошибкой, если средство, `pTool` указывает не во внутреннем списке или если средство является последним в списке.  
+ Метод завершается ошибкой, если средство, *pTool* указывает не во внутреннем списке или если средство является последним в списке.  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
  Перемещает средство указанного пользователя вверх в списке средства пользователя.  
@@ -360,14 +360,14 @@ BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTool`  
+ [in] *pTool*  
  Указывает средство пользователя для перемещения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если средство пользователя была перемещена; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Метод завершается ошибкой, если средство, `pTool` указывает не во внутреннем списке или если средство является первым в списке средства.  
+ Метод завершается ошибкой, если средство, *pTool* указывает не во внутреннем списке или если средство является первым в списке средства.  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  Удаляет указанного пользователя из приложения.  
@@ -377,14 +377,14 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in, out] `pTool`  
+ [in, out] *pTool*  
  Указатель на пользовательский инструмент для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если средство успешно удален. В противном случае — значение `FALSE`.  
+ Значение TRUE, если средство успешно удален. В противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Если средство успешно удален, этот метод удаляет `pTool`.  
+ Если средство успешно удален, этот метод удаляет *pTool*.  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
  Хранит сведения о пользовательских средствах в реестре Windows.  
@@ -394,7 +394,7 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Путь к разделу реестра Windows.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -413,7 +413,7 @@ void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strDefExt`  
+ [in] *strDefExt*  
  Текстовая строка, содержащая расширение имени файла по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -427,7 +427,7 @@ void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `strFilter`  
+ [in] *strFilter*  
  Задает фильтр.  
   
 ## <a name="see-also"></a>См. также  

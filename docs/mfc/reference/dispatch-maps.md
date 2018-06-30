@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322287"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122984"
 ---
 # <a name="dispatch-maps"></a>Схемы подготовки к отправке
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `DECLARE_DISPATCH_MAP` макрос в конце объявления класса. Затем в. CPP-файл, определяющий член, функции для класса, используйте `BEGIN_DISPATCH_MAP` макрос. Затем включить макрос записи для каждого класса предоставленные методы и свойства ( `DISP_FUNCTION`, `DISP_PROPERTY`и так далее). Наконец, используйте `END_DISPATCH_MAP` макрос.
+Используйте declare_dispatch_map-макрос в конце объявления класса. Затем в. CPP-файл, который определяет функции-члены класса, используйте макрос BEGIN_DISPATCH_MAP. Затем включите макрос записи для каждого класса своего предоставленные методы и свойства (DISP_FUNCTION, DISP_PROPERTY и т. д.). Наконец используйте макрос END_DISPATCH_MAP.
 
 > [!NOTE]
-> При объявлении членов после `DECLARE_DISPATCH_MAP`, необходимо указать новый тип доступа ( **открытый**, **закрытый**, или **защищенных**) для них.
+> Если после DECLARE_DISPATCH_MAP объявляет никаких элементов, необходимо указать новый тип доступа ( **открытый**, **закрытый**, или **защищенных**) для них.
 
 Мастера мастер приложения и код помочь в создании классов автоматизации и обслуживание схемы подготовки к отправке. Дополнительные сведения для подготовки к отправке карт см. в разделе [серверы автоматизации](../../mfc/automation-servers.md).
 
@@ -84,7 +84,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="remarks"></a>Примечания
 
-В файле реализации (CPP), который определяет функции-члены класса, запустить карту диспетчеризации с `BEGIN_DISPATCH_MAP` макрос, добавить макрос записи для каждой функции распределения и свойств и завершения карту диспетчеризации с `END_DISPATCH_MAP` макрос.
+В файле реализации (CPP), который определяет функции-члены класса начинаться с BEGIN_DISPATCH_MAP-макрос карту диспетчеризации, добавить макрос записи для каждой функции распределения и свойств и завершения карту диспетчеризации с END_DISPATCH_ Макрос КАРТЫ.
 
 ### <a name="requirements"></a>Требования
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Примечания
 
-Он должен использоваться в сочетании с `BEGIN_DISPATCH_MAP`.
+Он должен использоваться в сочетании с BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Требования
 
@@ -138,23 +138,23 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>Примечания
 
-*VtRetVal* аргумент имеет тип **VARTYPE**. Следующие возможные значения для этого аргумента, взяты из `VARENUM` перечисления:
+*VtRetVal* аргумент имеет тип VARTYPE. Следующие возможные значения для этого аргумента, взяты из `VARENUM` перечисления:
 
 |Символ|Тип возвращаемого значения|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|ЗНАЧЕНИЕ VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams* аргумент является разделенный пробелами список значений из `VTS_*` константы. Один или несколько из следующих значений, разделенных пробелами (не запятыми) Указывает список параметров функции. Например, примененная к объекту директива
 
@@ -166,31 +166,31 @@ DISP_FUNCTION(
 
 |Символ|Тип параметра|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` или `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` или `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__короткий\*__|
-|`VTS_PI4`|__Long\*__|
-|`VTS_PR4`|__число с плавающей запятой\*__|
-|`VTS_PR8`|__Double\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|Без параметров|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` или `CY*`|
+|VTS_DATE|DATE|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` или `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__короткий\*__|
+|VTS_PI4|__Long\*__|
+|VTS_PR4|__число с плавающей запятой\*__|
+|VTS_PR8|__Double\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|Без параметров|
 
 ### <a name="requirements"></a>Требования
 
@@ -224,22 +224,22 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>Примечания
 
-*VtPropType* аргумент имеет тип **VARTYPE**. Возможные значения для этого аргумента, взяты из `VARENUM` перечисления:
+*VtPropType* аргумент имеет тип **VARTYPE**. Возможные значения для этого аргумента берутся из перечисления VARENUM:
 
 |Символ|Тип свойства|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 При изменении свойства, значение переменной-члена, заданные в внешнего клиента *memberName* изменяет; нет уведомления об изменении.
 
@@ -281,7 +281,7 @@ DISP_PROPERTY_EX(
 
 *MemberGet* и *memberSet* функции имеют подписи определяется *vtPropType* аргумент. *MemberGet* функция не принимает аргументы и возвращает значение типа, указанного параметром *vtPropType*. *MemberSet* функция принимает аргумент типа, заданного параметром *vtPropType* и не возвращает никаких данных.
 
-*VtPropType* аргумент имеет тип `VARTYPE`. Возможные значения для этого аргумента, взяты из `VARENUM` перечисления. Список этих значений см *vtRetVal* параметр в [DISP_FUNCTION](#disp_function). Обратите внимание, что `VT_EMPTY`, упомянутую в `DISP_FUNCTION` примечания, запрещается использовать как тип данных свойства.
+*VtPropType* аргумент имеет тип VARTYPE. Возможные значения для этого аргумента берутся из перечисления VARENUM. Список этих значений см *vtRetVal* параметр в [DISP_FUNCTION](#disp_function). Обратите внимание, что VT_EMPTY, перечисленных в заметках для метода DISP_FUNCTION, запрещается использовать как тип данных свойства.
 
 ### <a name="requirements"></a>Требования
 
@@ -319,24 +319,24 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от свойства, определенные с `DISP_PROPERTY`, свойство, определенное с `DISP_PROPERTY_NOTIFY` автоматически вызывает функции, указанной *pfnAfterSet* при изменении свойства.
+В отличие от свойства, определенные с DISP_PROPERTY, свойство, определенное с DISP_PROPERTY_NOTIFY автоматически вызывает функции, указанной *pfnAfterSet* при изменении свойства.
 
-*VtPropType* аргумент имеет тип `VARTYPE`. Возможные значения для этого аргумента, взяты из `VARENUM` перечисления:
+*VtPropType* аргумент имеет тип VARTYPE. Возможные значения для этого аргумента берутся из перечисления VARENUM:
 
 |Символ|Тип свойства|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>Требования
 
@@ -378,7 +378,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от `DISP_PROPERTY_EX` макрос, этот макрос можно указать список параметров для свойства. Это полезно для реализации, параметризованные или индексированных свойств.
+В отличие от DISP_PROPERTY_EX-макрос этого макроса можно указать список параметров для свойства. Это полезно для реализации, параметризованные или индексированных свойств.
 
 ### <a name="example"></a>Пример
 
@@ -386,7 +386,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Они соответствуют следующим `DISP_PROPERTY_PARAM` макрос в карте распределения элементов управления:
+Эти методы соответствуют следующие DISP_PROPERTY_PARAM-макрос в карте распределения элементов управления:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ DISP_PROPERTY_PARAM(
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Они соответствуют следующим `DISP_PROPERTY_PARAM` макрос в карте распределения элементов управления:
+Эти методы соответствуют следующие DISP_PROPERTY_PARAM-макрос в карте распределения элементов управления:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

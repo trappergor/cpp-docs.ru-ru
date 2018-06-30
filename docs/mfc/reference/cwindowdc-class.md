@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368486"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121546"
 ---
 # <a name="cwindowdc-class"></a>Класс CWindowDC
 Производное от `CDC`.  
@@ -40,15 +40,15 @@ class CWindowDC : public CDC
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWindowDC::CWindowDC](#cwindowdc)|Создает объект `CWindowDC`.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND` К которому `CWindowDC` присоединен.|  
+|[CWindowDC::m_hWnd](#m_hwnd)|HWND, к которому `CWindowDC` присоединен.|  
   
 ## <a name="remarks"></a>Примечания  
  Вызывает функцию Windows [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx) во время удаления. Это означает, что `CWindowDC` объект производит доступ к области весь экран [CWnd](../../mfc/reference/cwnd-class.md) (клиент и неклиентской областей).  
@@ -66,14 +66,14 @@ class CWindowDC : public CDC
  Заголовок: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- Создает `CWindowDC` объект, который обращается к весь экран области (клиент и неклиентской) `CWnd` объекта, на который указывает `pWnd`.  
+ Создает `CWindowDC` объект, который обращается к весь экран области (клиент и неклиентской) `CWnd` объекта, на который указывает *pWnd*.  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Окно которого клиентской области, будут обращаться к объект контекста устройства.  
   
 ### <a name="remarks"></a>Примечания  
@@ -85,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- `HWND` Из `CWnd` указатель используется для создания `CWindowDC` объекта.  
+ HWND `CWnd` указатель используется для создания `CWindowDC` объекта.  
   
 ```  
 HWND m_hWnd;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_hWnd` защищенные переменная типа `HWND`.  
+ `m_hWnd` является защищенной переменной типа HWND.  
   
 ### <a name="example"></a>Пример  
   Далее приведен пример [CWindowDC::CWindowDC](#cwindowdc).  

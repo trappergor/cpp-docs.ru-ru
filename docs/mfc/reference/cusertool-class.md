@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374757"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121320"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. **Средства** вкладке **Настройка** диалоговое окно ( [CMFCToolBarsCustomizeDialog класса](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) позволяет пользователю добавить пользовательские средства и укажите имя, команду, аргументы, и исходный каталог для каждого пользовательского средства.  
@@ -56,11 +56,11 @@ ms.locfileid: "33374757"
 class CUserTool : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||  
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Рисует значок средства пользователя в заданном прямоугольнике.|  
@@ -73,13 +73,13 @@ class CUserTool : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Загружает значок по умолчанию для пользовательского средства.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|Аргументы командной строки для средства пользователя.|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Исходный каталог для пользовательского средства.|  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  Задает координаты области для отображения значка.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор загрузить значок ( `HICON`), или `NULL` , если не удается загрузить значок по умолчанию.  
+ Дескриптор загрузить значок (HICON) или значение NULL, если не удается загрузить значок по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
  Платформа вызывает этот метод, когда не удается загрузить значок для определяемый пользователем инструмент из исполняемого файла средства.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszCmd`  
+ [in] *lpszCmd*  
  Указывает новое приложение, необходимо сопоставить со средством пользователя.  
   
 ### <a name="remarks"></a>Примечания  

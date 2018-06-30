@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375357"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121018"
 ---
 # <a name="data-types-mfc"></a>Типы данных (MFC)
 В этом разделе перечислены типы данных, наиболее часто используются в библиотеке Microsoft Foundation Class. Большинство типов данных являются такие же, как в платформы Development Kit (SDK), а другие представляют собой уникальные для MFC.  
@@ -48,9 +48,9 @@ ms.locfileid: "33375357"
   
  Следующие типы данных, уникальный для библиотеки классов Microsoft Foundation.  
   
--   **ПОЗИЦИЯ** значение используется для обозначения позиции элемента в коллекции, используемые классы коллекций MFC.  
+-   УСТАНОВИТЕ значение, используемое для обозначения позиции элемента в коллекции. используемые классы коллекций MFC.  
   
--   **LPCRECT** 32-разрядного указателя в константу (неизменяемым) `RECT` структуры.  
+-   LPCRECT 32-разрядного указателя в константу (неизменяемым) `RECT` структуры.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../mfc/class-library-overview.md)   

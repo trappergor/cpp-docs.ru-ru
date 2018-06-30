@@ -1,7 +1,7 @@
 ---
 title: Мастер потребителя ATL OLE DB | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364954"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121693"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 Этот мастер устанавливает класс потребителя OLE DB с помощью привязки данных для доступа к указанному источнику данных через указанный поставщик OLE DB.  
@@ -111,7 +111,7 @@ ms.locfileid: "32364954"
  `Class`  
  После выбора источника данных, это поле заполняется на имя класса по умолчанию на основе таблицы или хранимую процедуру, которая выбрана (см. **выбрать источник данных** ниже). Можно изменить имя класса.  
   
- **h-файл**  
+ **H-файл**  
  После выбора источника данных, это поле заполняется именем по умолчанию заголовок класса на основе таблицы или хранимую процедуру, которая выбрана (см. **выбрать источник данных** ниже). Можно изменить имя файла заголовка или выбрать имеющийся файл заголовка.  
   
  **Атрибут**  
@@ -133,7 +133,7 @@ ms.locfileid: "32364954"
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  

@@ -1,7 +1,7 @@
 ---
 title: Создание приложения MFC в стиле браузера веб | Документы Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374527"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122557"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Создание приложения MFC в стиле браузера
 Веб-приложении обозревателя доступны сведения из Интернета (например, HTML или активные документы) или интрасети, а также папки в локальной файловой системе и в сети. Путем создания производного класса представления приложения из [CHtmlView](../../mfc/reference/chtmlview-class.md), эффективно сделать приложение веб-браузер, создавая представление с элементом управления WebBrowser.  
@@ -50,30 +50,30 @@ ms.locfileid: "33374527"
   
  `CHtmlView` действует как оболочка для элемента управления браузера, который снабжает приложение представлением веб- или HTML-страницы. Мастер создает переопределение, чтобы [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) функции в классе представления, предоставляя ссылку навигации для Microsoft Visual C++, веб-сайт:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+Вы можете заменить этот узел, или можно использовать [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) функции-члена для открытия страницы HTML, находящейся в скрипте ресурсов проекта в качестве содержимого по умолчанию для представления. Пример:  
   
- Вы можете заменить этот узел, или можно использовать [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) функции-члена для открытия страницы HTML, находящейся в скрипте ресурсов проекта в качестве содержимого по умолчанию для представления. Пример:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>См. также  

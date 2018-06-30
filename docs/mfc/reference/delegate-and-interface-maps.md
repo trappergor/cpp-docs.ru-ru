@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372986"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122696"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372986"
 |[END_DELEGATE_MAP](#end_delegate_map)|Завершает сопоставление делегатов.|
 |[END_INTERFACE_MAP](#end_interface_map)|Завершает схему интерфейсов в файле реализации. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Создает запись в схеме делегата.|
-|[INTERFACE_PART](#interface_part)|Между `BEGIN_INTERFACE_MAP` макрос и `END_INTERFACE_MAP` макрос для каждого интерфейса, которые будет поддерживать данный объект.|
+|[INTERFACE_PART](#interface_part)|Используется между макросом BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, поддерживаемого объектом.|
 |[MAKE_DELEGATE](#make_delegate)|Присоединяет обработчик событий для управляемого элемента управления.|
 
 
@@ -43,7 +43,7 @@ ms.locfileid: "33372986"
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>Параметры  
- `CLASS`  
+ *КЛАСС*  
  Класс, в котором размещен управляемый элемент управления.  
    
 ### <a name="remarks"></a>Примечания  
@@ -63,14 +63,14 @@ BEGIN_DELEGATE_MAP(  CLASS );
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>Параметры  
- `theClass`  
+ *theClass*  
  Класс, в котором определяется схема интерфейсов.  
   
- `baseClass`  
- Класс, от которого `theClass` является производным.  
+ *baseClass*  
+ Класс, от которого *theClass* является производным от.  
    
 ### <a name="remarks"></a>Примечания  
- Для каждого интерфейса, реализуемого, имеется один или несколько `INTERFACE_PART` вызовов макросов. Для каждого статистического выражения, используемого классом, имеется один **INTERFACE_AGGREGATE** вызов макроса.  
+ Для каждого интерфейса, реализуемого имеется один или несколько вызовов макросов INTERFACE_PART. Для каждого агрегата, используемого классом имеется один вызов макроса INTERFACE_AGGREGATE.  
   
  Дополнительные сведения о схемы интерфейсов см. в разделе [Технические заметки 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -85,7 +85,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  Идентификатор команды.  
    
 ### <a name="remarks"></a>Примечания  
@@ -109,10 +109,10 @@ delegate void CommandHandler(  UINT^ cmdID  );
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>Параметры  
- `cmdID`  
+ *cmdID*  
  Идентификатор команды.  
   
- `cmdUI`  
+ *cmdUI*  
  Идентификатор команды сообщения.  
    
 ### <a name="remarks"></a>Примечания  
@@ -173,20 +173,20 @@ END_INTERFACE_MAP( )
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>Параметры  
- `MEMBER`  
+ *ЧЛЕН*  
  Метод обработчика событий для присоединения к элементу управления.  
   
- `ARG0`  
- Первый аргумент управляемый обработчик событий, таких как **объекта ^**.  
+ *ARG0*  
+ Первый аргумент управляемый обработчик событий, таких как `Object^`.  
   
- `ARG1`  
- Второй аргумент управляемый обработчик событий, таких как **EventArgs ^**.  
+ *ARG1*  
+ Второй аргумент управляемый обработчик событий, таких как `EventArgs^`.  
    
 ### <a name="remarks"></a>Примечания  
  Каждая запись в схеме делегата соответствует делегата обработчика управляемого события, созданные [MAKE_DELEGATE](#make_delegate).  
    
 ### <a name="example"></a>Пример  
- В следующем примере кода показано, как использовать `EVENT_DELEGATE_ENTRY` для создания записи в схеме делегата для `OnClick` обработчик событий; см. в примере кода также `MAKE_DELEGATE`. Дополнительные сведения см. в разделе [как: приемника событий для Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
+ В следующем примере кода показано, как использовать для создания записи в схеме делегата для EVENT_DELEGATE_ENTRY `OnClick` обработчик событий; см; также в примере кода в MAKE_DELEGATE. Дополнительные сведения см. в разделе [как: приемника событий для Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-Между `BEGIN_INTERFACE_MAP` макрос и `END_INTERFACE_MAP` макрос для каждого интерфейса, которые будет поддерживать данный объект.  
+Используется между макросом BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, поддерживаемого объектом.  
    
 ### <a name="syntax"></a>Синтаксис    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>Параметры  
- `theClass`  
+ *theClass*  
  Имя класса, содержащего схему интерфейсов.    
- `iid`  
+ *IID*  
  Идентификатор IID, сопоставляемое с внедренным классом.    
  *localClass*  
  Имя локального класса.  
    
 ### <a name="remarks"></a>Примечания  
- Он позволяет сопоставить IID с членом класса, обозначенного `theClass` и *localClass*.  
+ Он позволяет сопоставить IID с членом класса, обозначенного *theClass* и *localClass*.  
   
  Дополнительные сведения о схемы интерфейсов см. в разделе [Технические заметки 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
@@ -236,14 +236,14 @@ INTERFACE_PART( theClass, iid, localClass)
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>Параметры  
- `DELEGATE`  
+ *ДЕЛЕГАТ*  
  Тип обработчика управляемых событий делегировать, таких как [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
- `MEMBER`  
+ *ЧЛЕН*  
  Имя метода обработчика событий, присоединенных к элементу управления.  
    
 ### <a name="remarks"></a>Примечания  
- Этот макрос создает делегат обработчика управляемого события типа `DELEGATE` и имени `MEMBER`. Делегата обработчика событий управляемого позволяет собственного класса для обработки управляемых событий.  
+ Этот макрос создает делегат обработчика управляемого события типа *ДЕЛЕГИРОВАТЬ* и имени *ЧЛЕН*. Делегата обработчика событий управляемого позволяет собственного класса для обработки управляемых событий.  
    
 ### <a name="example"></a>Пример  
  В следующем примере кода показано, как вызвать `MAKE_DELEGATE` для присоединения `OnClick` обработчик событий для элемента управления MFC `MyControl`. Более широкой описание того, как работает этот макрос в приложениях MFC см. в разделе [как: приемника событий для Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  

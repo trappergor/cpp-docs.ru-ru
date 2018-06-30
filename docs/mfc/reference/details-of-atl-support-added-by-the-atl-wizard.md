@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450021fd1ea05831f44dd5af7a9f1e39a9d6fc5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371788"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121383"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Сведения о добавлении поддержки ATL мастером ATL
 Когда вы [Добавление поддержки ATL в существующий исполняемый файл MFC или библиотеки DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ выполняет следующие изменения в существующий проект MFC (в этом примере используется проект с именем `MFCEXE`):  
   
 -   Добавляются два новых файла (IDL-файл и RGS-файл, используемый для регистрации сервера).  
   
--   В основное приложение заголовка и файл реализации (Mfcexe.h и Mfcexe.cpp) новый класс (производный от **CAtlMFCModule**) будет добавлен. Помимо нового класса, в код добавляется `InitInstance` для регистрации. Код также добавляется `ExitInstance` функции для объекта класса. В файле заголовка, и, наконец, два новых файла заголовка (Initguid.h и Mfcexe_i.c) включены в файл реализации, в объявлении и инициализации новый GUID для **CAtlMFCModule**-производного класса.  
+-   В основное приложение заголовка и файл реализации (Mfcexe.h и Mfcexe.cpp) новый класс (производный от `CAtlMFCModule`) будет добавлен. Помимо нового класса, в код добавляется `InitInstance` для регистрации. Код также добавляется `ExitInstance` функции для объекта класса. В файле заголовка, и, наконец, два новых файла заголовка (Initguid.h и Mfcexe_i.c) включены в файл реализации, в объявлении и инициализации новый GUID для `CAtlMFCModule`-производного класса.  
   
 -   Чтобы зарегистрировать сервер надлежащим образом, файл ресурсов проекта добавляется запись для нового RGS-файла.  
   
 ## <a name="notes-for-dll-projects"></a>Примечания для проектов DLL  
- При добавлении поддержки ATL в проект MFC DLL, вы увидите некоторые различия. Код добавляется **DLLRegisterServer** и **DLLUnregisterServer** функции для регистрации и отмены регистрации библиотеки DLL. Код также добавляется к [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) и [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
+ При добавлении поддержки ATL в проект MFC DLL, вы увидите некоторые различия. Код добавляется `DLLRegisterServer` и `DLLUnregisterServer` функции для регистрации и отмены регистрации библиотеки DLL. Код также добавляется к [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) и [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка ATL в проект MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
