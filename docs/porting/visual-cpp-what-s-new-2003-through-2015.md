@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705609"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271400"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -1585,7 +1585,7 @@ ms.locfileid: "34705609"
 
 - Добавление точки с запятой для типов классов.
 - Завершение скобок для необработанных строковых литералов.
-- Завершение многострочных комментариев (/* */)
+- Завершение многострочных комментариев (/\* \*/)
 
 Команда **Найти все ссылки** теперь автоматически разрешает и фильтрует ссылки в фоновом режиме после отображения списка текстовых совпадений.
 
