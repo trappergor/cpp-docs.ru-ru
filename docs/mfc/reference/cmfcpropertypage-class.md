@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCPropertyPage | Документы Microsoft
+title: Класс CMFCPropertyPage | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042086"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848740"
 ---
 # <a name="cmfcpropertypage-class"></a>Класс CMFCPropertyPage
 `CMFCPropertyPage` Класс поддерживает отображение всплывающих меню на странице свойств.  
@@ -48,12 +48,12 @@ class CMFCPropertyPage : public CPropertyPage
 |Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|`CMFCPropertyPage::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|`CMFCPropertyPage::OnSetActive`|Эта функция-член вызывается платформой, когда страница выбранного пользователем и станет активной. (Переопределяет [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
-|`CMFCPropertyPage::PreTranslateMessage`|Преобразует сообщения окна перед их передачей [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Дополнительные сведения и синтаксис методов см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CPropertyPage::PreTranslateMessage`.)|  
+|`CMFCPropertyPage::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|`CMFCPropertyPage::OnSetActive`|Эта функция-член вызывается платформой при страницы, выбранный пользователем и становится активной страницей. (Переопределяет [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|  
+|`CMFCPropertyPage::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Дополнительные сведения и синтаксис методов, см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CPropertyPage::PreTranslateMessage`.)|  
   
 ## <a name="remarks"></a>Примечания  
- `CMFCPropertyPage` Класс представляет отдельные страницы вкладки свойств, также известные как диалоговое окно вкладки.  
+ `CMFCPropertyPage` Класс представляет отдельные страницы вкладки свойств, также известный как диалоговое окно вкладки.  
   
  Используйте `CMFCPropertyPage` класса вместе с [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) класса. Чтобы использовать меню на странице свойств, замените все вхождения `CPropertyPage` класса `CMFCPropertyPage` класса.  
   
@@ -92,15 +92,15 @@ CMFCPropertyPage(
  Идентификатор ресурса шаблона для этой страницы.  
   
  *nIDCaption*  
- Идентификатор ресурса метку для размещения на вкладке этой страницы. Если значение равно 0, имя можно получить из шаблона диалогового окна поле для этой страницы. Значение по умолчанию — 0.  
+ Идентификатор ресурса метки для размещения на вкладке этой страницы. Если значение равно 0, то имя получается из шаблон диалогового окна для этой страницы. Значение по умолчанию — 0.  
   
  *lpszTemplateName*  
- Указывает имя шаблона для этой страницы. Не может быть `NULL`.  
+ Указывает имя шаблона для этой страницы. Не может принимать значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о параметрах конструктора см. в разделе [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
+ Дополнительные сведения о параметрах конструктора, см. в разделе [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

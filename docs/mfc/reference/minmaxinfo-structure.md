@@ -1,5 +1,5 @@
 ---
-title: Структура MINMAXINFO | Документы Microsoft
+title: Структура MINMAXINFO | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337818"
 ---
 # <a name="minmaxinfo-structure"></a>Структура MINMAXINFO
-`MINMAXINFO` Структура содержит сведения о окна исходного размера и положения его отслеживания минимальный и максимальный размер.  
+`MINMAXINFO` Структура содержит сведения о размер развернутого окна и его отслеживания минимального и максимального размера и положения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,16 +43,16 @@ typedef struct tagMINMAXINFO {
  Зарезервировано для внутреннего использования.  
   
  *ptMaxSize*  
- Указывает ширину развернутого (point.x) и максимальная высота окна (point.y).  
+ Указывает ширину развернутого (point.x) и высоту развернутого (point.y) окна.  
   
- `ptMaxPosition`  
- Задает позицию левого края развернутого окна (point.x) и положение верхнего края развернутого окна (point.y).  
+ *ptMaxPosition*  
+ Указывает положение левой части развернутого окна (point.x) и положение верхней части развернутого окна (point.y).  
   
  *ptMinTrackSize*  
  Указывает минимальную отслеживаемую ширину (point.x) и Минимальная отслеживаемая высота окна (point.y).  
   
  *ptMaxTrackSize*  
- Указывает максимально отслеживаемую ширину (point.x) и максимально отслеживаемую высоту (point.y) окна.  
+ Указывает максимально отслеживаемая ширина (point.x) и максимально отслеживаемую высоту окна (point.y).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** winuser.h  

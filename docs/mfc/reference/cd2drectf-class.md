@@ -1,5 +1,5 @@
 ---
-title: Класс CD2DRectF | Документы Microsoft
+title: Класс CD2DRectF | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338276"
 ---
 # <a name="cd2drectf-class"></a>Класс CD2DRectF
 Программа-оболочка для `D2D1_RECT_F`.  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DRectF::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные ( **null**).|  
+|[CD2DRectF::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -65,7 +65,7 @@ class CD2DRectF : public D2D1_RECT_F;
  **Заголовок:** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
- Создает объект CD2DRectF из CRect объекта.  
+ Создает CD2DRectF объект из объекта CRect.  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -82,16 +82,16 @@ CD2DRectF(
   
 ### <a name="parameters"></a>Параметры  
  *Rect*  
- исходного прямоугольника  
+ исходный прямоугольник  
   
  *fLeft*  
- Координата левой источника  
+ Левая координата источника  
   
  *fTop*  
- Координата верхней источника  
+ Верхняя координата источника  
   
  *fRight*  
- Источник справа координат  
+ Источник прямо координат  
   
  *fBottom*  
  Нижняя координата источника  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если верхней прямоугольника, левую, нижнюю и правильные значения, все равно 0; в противном случае — значение FALSE.  
+ Значение TRUE, если начало прямоугольника, левую, нижнюю и правильные значения равны 0; в противном случае — значение FALSE.  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- Преобразует CD2DRectF CRect.  
+ Преобразует CD2DRectF объект CRect.  
   
 ```  
 operator CRect();

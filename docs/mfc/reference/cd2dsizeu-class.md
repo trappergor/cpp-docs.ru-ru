@@ -1,5 +1,5 @@
 ---
-title: Класс CD2DSizeU | Документы Microsoft
+title: Класс CD2DSizeU | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335845"
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
-Программа-оболочка для D2D1_SIZE_U.  
+Оболочка для D2D1_SIZE_U.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DSizeU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные ( **null**).|  
+|[CD2DSizeU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -86,7 +86,7 @@ CD2DSizeU(
  исходная ширина  
   
  *CY*  
- Высота источника  
+ Исходная высота  
   
 ##  <a name="isnull"></a>  CD2DSizeU::ISNULL  
  Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).  
@@ -96,7 +96,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ширина и Высота пустой. в противном случае — значение FALSE.  
+ Значение TRUE, если ширина и высота являются пустыми; в противном случае — значение FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
  Преобразует CD2DSizeU CSize.  

@@ -1,5 +1,5 @@
 ---
-title: Структура LOGBRUSH | Документы Microsoft
+title: Структура LOGBRUSH | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 15b904a07eb668a59a269741973424aa30e15877
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336410"
 ---
 # <a name="logbrush-structure"></a>Структура LOGBRUSH
-`LOGBRUSH` Структура определяет стиль, цвет и шаблон физического кисти. Он используется Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) и [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) функции.  
+`LOGBRUSH` Структура определяет стиль, цвет и шаблон физических кисти. Он используется Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) и [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,49 +37,49 @@ typedef struct tag LOGBRUSH { /* lb */
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `lbStyle`  
+ *lbStyle*  
  Задает стиль кисти. `lbStyle` Член должен быть одним из следующих стилей:  
   
-- **BS_DIBPATTERN** шаблон кисти, определенные спецификацией аппаратно независимый точечный рисунок (DIB). Если `lbStyle` — **BS_DIBPATTERN**, **lbHatch** член содержит дескриптор упакованный DIB.  
+- Кисть шаблон BS_DIBPATTERN объект определяется аппаратно независимый точечный рисунок (DIB) спецификации. Если *lbStyle* является BS_DIBPATTERN, `lbHatch` член содержит дескриптор упакованного DIB.  
   
-- **BS_DIBPATTERNPT** шаблон кисти, определенные спецификацией аппаратно независимый точечный рисунок (DIB). Если `lbStyle` — **BS_DIBPATTERNPT**, **lbHatch** член содержит указатель на упакованный DIB.  
+- Кисть шаблон BS_DIBPATTERNPT объект определяется аппаратно независимый точечный рисунок (DIB) спецификации. Если *lbStyle* является BS_DIBPATTERNPT, `lbHatch` член содержит указатель на упакованный DIB.  
   
-- **BS_HATCHED** Hatched кисти.  
+- BS_HATCHED Hatched кисть.  
   
-- **BS_HOLLOW** пустая кисти.  
+- BS_HOLLOW пустой кисти.  
   
-- **BS_NULL** то же, что **BS_HOLLOW**.  
+- BS_NULL совпадение с кодом BS_HOLLOW.  
   
-- **BS_PATTERN** шаблона кисти определяется Битовая карта памяти.  
+- Шаблон BS_PATTERN кисти, определенный Битовая карта памяти.  
   
-- **BS_SOLID** сплошной кисти.  
+- BS_SOLID сплошную кисть.  
   
- `lbColor`  
- Задает цвет, в котором будет рисоваться кисти. Если `lbStyle` — **BS_HOLLOW** или **BS_PATTERN** стиля, **lbColor** учитывается. Если `lbStyle` — **BS_DIBPATTERN** или **BS_DIBPATTERNBT**, слова низкого порядка **lbColor** указывает, является ли **bmiColors**члены [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) структура содержит явное красный, зеленый, синий значений (RGB) или индексов в момент реализованных логическую палитру. **LbColor** член должен быть одним из следующих значений:  
+ *lbColor*  
+ Задает цвет, в которой кисть, которая будет отображаться. Если *lbStyle* стиль BS_HOLLOW или BS_PATTERN *lbColor* учитывается. Если *lbStyle* BS_DIBPATTERN или BS_DIBPATTERNBT младшее слово из *lbColor* указывает ли `bmiColors` членами [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) структуры в настоящее время реализованных логическую палитру содержать явные красный, зеленый, синий значений (RGB) или индексы. `lbColor` Член должен быть одним из следующих значений:  
   
-- **DIB_PAL_COLORS** таблица цветов состоит из массива 16-разрядными индексами, в момент реализованных логическую палитру.  
+- DIB_PAL_COLORS таблица цветов содержит массив 16-разрядными индексами, в настоящее время реализованных логическую палитру.  
   
-- **DIB_RGB_COLORS** таблица цветов содержит литеральные значения RGB.  
+- DIB_RGB_COLORS таблица цветов содержит литеральные значения RGB.  
   
  *lbHatch*  
- Задает стиль штриховки. Значение зависит от стиля кисти, описанного в `lbStyle`. Если `lbStyle` — **BS_DIBPATTERN**, **lbHatch** член содержит дескриптор упакованный DIB. Если `lbStyle` — **BS_DIBPATTERNPT**, **lbHatch** член содержит указатель на упакованный DIB. Если `lbStyle` — **BS_HATCHED**, **lbHatch** задает ориентацию линии, используемые для создания штриховки. Он может принимать одно из следующих значений:  
+ Задает стиль штриховки. Значение зависит от стиля кисти, определяется *lbStyle*. Если *lbStyle* является BS_DIBPATTERN, `lbHatch` член содержит дескриптор упакованного DIB. Если *lbStyle* является BS_DIBPATTERNPT, `lbHatch` член содержит указатель на упакованный DIB. Если *lbStyle* является BS_HATCHED, `lbHatch` член задает ориентацию линии, используемые для создания штриховки. Он может принимать одно из следующих значений:  
   
-- `HS_BDIAGONAL` 45 градусов штриховку вверх, слева направо  
+- HS_BDIAGONAL объект 45 градусов вверх, слева направо штриховки  
   
-- `HS_CROSS` Горизонтальные и вертикальные штриховки.  
+- HS_CROSS горизонтальной и вертикальной клетчатый  
   
-- `HS_DIAGCROSS` штриховки 45 градусов  
+- Клетчатый HS_DIAGCROSS 45 градусов  
   
-- `HS_FDIAGONAL` 45 градусов штриховку вниз, влево и вправо  
+- HS_FDIAGONAL объект 45 градусов вниз, слева направо штриховки  
   
-- `HS_HORIZONTAL` Горизонтальная штриховка  
+- HS_HORIZONTAL Горизонтальная штриховка  
   
-- `HS_VERTICAL` Вертикальная штриховка  
+- Штриховка по вертикали HS_VERTICAL  
   
- Если `lbStyle` — **BS_PATTERN**, **lbHatch** — это дескриптор для точечного рисунка, который определяет шаблон. Если `lbStyle` — **BS_SOLID** или **BS_HOLLOW**, **lbHatch** учитывается.  
+ Если *lbStyle* является BS_PATTERN, *lbHatch* — это дескриптор для точечного рисунка, который определяет шаблон. Если *lbStyle* BS_SOLID или BS_HOLLOW, *lbHatch* учитывается.  
   
 ## <a name="remarks"></a>Примечания  
- Несмотря на то что **lbColor** определяет цвет переднего плана для кистей штриховки [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) и [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) функции управления цветом фона.  
+ Несмотря на то что *lbColor* определяет цвет переднего плана штриховой кистью, [CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode) и [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) функции управления цветом фона.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** wingdi.h  

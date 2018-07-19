@@ -1,5 +1,5 @@
 ---
-title: Класс CHtmlEditCtrl | Документы Microsoft
+title: Класс CHtmlEditCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 4cc8cdc389edc8abbc424ec8277f759e7f3d81bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338572"
 ---
 # <a name="chtmleditctrl-class"></a>Класс CHtmlEditCtrl
 Предоставляет функциональные возможности элемента управления ActiveX WebBrowser в окне MFC.  
@@ -53,9 +53,9 @@ class CHtmlEditCtrl: public CWnd,
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CHtmlEditCtrl::Create](#create)|Создает элемент управления WebBrowser ActiveX и прикрепляет его к `CHtmlEditCtrl` объекта. Эта функция автоматически переводит элемент управления WebBrowser ActiveX в режиме редактирования.|  
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса в документе, загруженных в данный момент в элемента управления WebBrowser в контейнере.|  
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Получает URL-адрес для документа по умолчанию для загрузки в элемента управления WebBrowser в контейнере.|  
+|[CHtmlEditCtrl::Create](#create)|Создает элемент управления WebBrowser ActiveX и присоединяет его к `CHtmlEditCtrl` объекта. Эта функция автоматически переводит элемент управления WebBrowser ActiveX в режиме редактирования.|  
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса в документе, загруженные в элемента управления WebBrowser в контейнере.|  
+|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Извлекает URL-адрес документа по умолчанию для загрузки элемента управления WebBrowser в контейнере.|  
   
 ## <a name="remarks"></a>Примечания  
  Размещенного элемента управления WebBrowser, элемент управления автоматически переводится в режим редактирования, после его создания.  
@@ -82,7 +82,7 @@ CHtmlEditCtrl();
 ```  
   
 ##  <a name="create"></a>  CHtmlEditCtrl::Create  
- Создает элемент управления WebBrowser ActiveX и прикрепляет его к `CHtmlEditCtrl` объекта. WebBrowser ActiveX управления автоматически переходит к документ по умолчанию и затем помещается в режиме редактирования этой функцией.  
+ Создает элемент управления WebBrowser ActiveX и присоединяет его к `CHtmlEditCtrl` объекта. Режим редактирования WebBrowser ActiveX, элемент управления автоматически переходит к документа по умолчанию и затем помещается в этой функцией.  
   
 ```  
 virtual BOOL Create(
@@ -105,7 +105,7 @@ virtual BOOL Create(
  Задает размер и положение элемента управления.  
   
  *pParentWnd*  
- Указывает родительскому окну элемента управления. Он не должен быть **NULL**.  
+ Указывает родительскому окну элемента управления. Он не должен иметь значение NULL.  
   
  *nID*  
  Указывает идентификатор элемента управления.  
@@ -114,10 +114,10 @@ virtual BOOL Create(
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
- Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса в документе, загруженных в данный момент в элемента управления WebBrowser в контейнере  
+ Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса в документе, загруженные в элемента управления WebBrowser в контейнере  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
@@ -128,7 +128,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  Интерфейс документа.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
- Получает URL-адрес для документа по умолчанию для загрузки в элемента управления WebBrowser в контейнере.  
+ Извлекает URL-адрес документа по умолчанию для загрузки элемента управления WebBrowser в контейнере.  
   
 ```  
 virtual LPCTSTR GetStartDocument();

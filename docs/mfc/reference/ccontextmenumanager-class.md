@@ -1,5 +1,5 @@
 ---
-title: Класс CContextMenuManager | Документы Microsoft
+title: Класс CContextMenuManager | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9407c98183fa923a58ca2939e8c534cd56dc8ef7
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4f2bf81c2e69290feb9f9afd054286c10e42d0be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338757"
 ---
 # <a name="ccontextmenumanager-class"></a>Класс CContextMenuManager
-`CContextMenuManager` Управляет контекстные меню, также известные как контекстные меню.  
+`CContextMenuManager` Управляет контекстные меню, также известный как контекстные меню.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,27 +68,27 @@ class CContextMenuManager : public CObject
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CContextMenuManager::AddMenu](#addmenu)|Добавляет новый контекстное меню.|  
-|[CContextMenuManager::GetMenuById](#getmenubyid)|Возвращает дескриптор меню, связанное с идентификатором предоставленного ресурса.|  
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|Возвращает дескриптор для меню, которое соответствует имени указанного меню.|  
+|[CContextMenuManager::GetMenuById](#getmenubyid)|Возвращает дескриптор для меню, связанное с идентификатором предоставленного ресурса.|  
+|[CContextMenuManager::GetMenuByName](#getmenubyname)|Возвращает дескриптор для меню, которое соответствует имени предоставленного меню.|  
 |[CContextMenuManager::GetMenuNames](#getmenunames)|Возвращает список имен меню.|  
-|[CContextMenuManager::LoadState](#loadstate)|Загружает контекстные меню, хранящиеся в реестре Windows.|  
-|[CContextMenuManager::ResetState](#resetstate)|Удаляет контекстные меню из меню диспетчера контекста.|  
-|[CContextMenuManager::SaveState](#savestate)|Сохраняет контекстных меню в реестре Windows.|  
+|[CContextMenuManager::LoadState](#loadstate)|Загружает контекстных меню, хранящихся в реестре Windows.|  
+|[CContextMenuManager::ResetState](#resetstate)|Очищает контекстных меню, из меню диспетчера контекста.|  
+|[CContextMenuManager::SaveState](#savestate)|Сохраняет контекстных меню в реестр Windows.|  
 |[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Элементы управления ли `CContextMenuManager` закрывает active контекстное меню, при отображении новой контекстное меню.|  
 |[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Отображает указанное контекстное меню.|  
 |[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Отображает указанное контекстное меню. Возвращает индекс команды меню.|  
   
 ## <a name="remarks"></a>Примечания  
- `CContextMenuManager` Управляет контекстными меню и гарантирует, что они имеют согласованного внешнего вида.  
+ `CContextMenuManager` Управляет контекстных меню и гарантирует, что они имеют согласованного внешнего вида.  
   
- Не следует создавать `CContextMenuManager` объекта вручную. Платформа приложения создает `CContextMenuManager` объекта. Тем не менее, необходимо вызвать [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) при инициализации приложения. После инициализации диспетчера контекста, используйте метод [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) для получения указателя на диспетчер контекста для вашего приложения.  
+ Не следует создавать `CContextMenuManager` объект вручную. Платформа приложения создает `CContextMenuManager` объекта. Тем не менее, следует вызывать [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) при инициализации приложения. После инициализации диспетчера контекста, используйте метод [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) получить указатель на диспетчер контекста для вашего приложения.  
   
- Контекстные меню во время выполнения можно создать путем вызова `AddMenu`. Если вы хотите отобразить меню без первого получения ввода данных пользователем, вызовите `ShowPopupMenu`. `TrackPopupMenu` используется, если вы хотите создать меню и ожидает ввода пользователя. `TrackPopupMenu` Возвращает индекс выделенной команды или 0, если пользователь завершил работу без выбора элементов.  
+ Можно создать контекстное меню во время выполнения путем вызова `AddMenu`. Если вы хотите Показать меню без получения первых входных данных пользователя, вызовите `ShowPopupMenu`. `TrackPopupMenu` используется, если вы хотите создать меню и ожидает действий пользователя. `TrackPopupMenu` Возвращает индекс выбранной команды или 0, если пользователь завершил работу без выбора элементов.  
   
- `CContextMenuManager` Также можно сохранять и загружать свое состояние в реестр Windows.  
+ `CContextMenuManager` Можно также сохранять и загружать свое состояние в реестр Windows.  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как добавить меню `CContextMenuManager` , а также не удается закрыть активное всплывающее меню при `CContextMenuManager` объект отображает новое всплывающее меню. Этот фрагмент кода является частью [образец пользовательские страницы](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует добавить меню `CContextMenuManager` , а также не удается закрыть активное всплывающее меню при `CContextMenuManager` объекта отобразится новое всплывающее меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]  
   
@@ -119,16 +119,16 @@ BOOL AddMenu(
  Идентификатор ресурса для строка, содержащая имя нового меню.  
   
  [in] *uiMenuResId*  
- Идентификатор ресурса меню  
+ Идентификатор ресурса меню.  
   
  [in] *lpszName*  
  Строка, содержащая имя нового меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; 0, если происходит сбой метода.  
+ Ненулевое значение, если метод был выполнен успешно; 0, если происходит сбой метода.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод завершается ошибкой, если *uiMenuResId* недопустим или если другого меню с тем же именем уже присутствует в `CContextMenuManager`.  
+ Этот метод завершается ошибкой, если *uiMenuResId* недопустим или если другого меню с таким именем уже присутствует в `CContextMenuManager`.  
   
 ##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  Создает [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта.  
@@ -138,10 +138,10 @@ CContextMenuManager();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В большинстве случаев не следует создавать `CContextMenuManager` вручную. Платформа приложения создает `CContextMenuManager` объекта. Необходимо вызвать [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) во время инициализации приложения. Чтобы получить указатель на диспетчер контекста, вызовите [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
+ В большинстве случаев не следует создавать `CContextMenuManager` вручную. Платформа приложения создает `CContextMenuManager` объекта. Следует вызывать [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) во время инициализации приложения. Чтобы получить указатель на диспетчер контекста, вызовите [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).  
   
 ##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById  
- Возвращает дескриптор меню, связанное с идентификатором данного ресурса.  
+ Возвращает дескриптор для меню, связанное с идентификатором определенного ресурса.  
   
 ```  
 HMENU GetMenuById(UINT nMenuResId) const;  
@@ -168,16 +168,16 @@ HMENU GetMenuByName(
  Строка, содержащая имя меню, для извлечения.  
   
  [out] *puiOrigResID*  
- Указатель на `UINT`. Этот параметр содержит идентификатор ресурса указанное меню, если найден.  
+ Указатель на целое число без знака. Этот параметр содержит идентификатор ресурса указанное меню, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор для меню, которое соответствует имени, указанное в параметре *lpszName*. `NULL` Если нет, меню не вызывается *lpszName*.  
+ Дескриптор для меню, которое совпадает с именем, указанным *lpszName*. Значение NULL, если меню не вызывается *lpszName*.  
   
 ### <a name="remarks"></a>Примечания  
- Если этот метод находит меню, которое соответствует *lpszName*, `GetMenuByName` сохраняет идентификатор ресурса меню в параметре *puiOrigResID*.  
+ Если этот метод находит меню, которое соответствует *lpszName*, `GetMenuByName` хранится идентификатор ресурса меню в параметре *puiOrigResID*.  
   
 ##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
- Возвращает список Добавить имена меню [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
+ Возвращает список имен меню, добавляемые [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
 void GetMenuNames(CStringList& listOfNames) const;  
@@ -185,10 +185,10 @@ void GetMenuNames(CStringList& listOfNames) const;
   
 ### <a name="parameters"></a>Параметры  
  [out] *listOfNames*  
- Ссылку на [CStringList](../../mfc/reference/cstringlist-class.md) параметра. Этот метод записывает список названий меню для данного параметра.  
+ Ссылку на [CStringList](../../mfc/reference/cstringlist-class.md) параметра. Этот метод записывает список имен меню к данному параметру.  
   
 ##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
- Загружает данные, связанные с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md) из реестра Windows.  
+ Загружает сведения, связанные с [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) из реестра Windows.  
   
 ```  
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -196,31 +196,31 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpszProfileName*  
- Строка, содержащая относительный путь реестра.  
+ Строка, содержащая относительный путь раздела реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
+ Ненулевое значение, если метод выполнен успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- *LpszProfileName* параметр не абсолютный путь к записи реестра. Это относительный путь, который добавляется в конец раздел реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) и [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) соответственно.  
+ *LpszProfileName* параметр не абсолютный путь для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) и [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) соответственно.  
   
- Используйте метод [CContextMenuManager::SaveState](#savestate) сохранить контекстные меню в реестр.  
+ Используйте метод [CContextMenuManager::SaveState](#savestate) для сохранения контекстных меню в реестр.  
   
 ##  <a name="resetstate"></a>  CContextMenuManager::ResetState  
- Удаляет все элементы из контекстного меню, связанных с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md).  
+ Удаляет все элементы из контекстных меню, связанный с [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).  
   
 ```  
 virtual BOOL ResetState();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно; `FALSE` при возникновении сбоя.  
+ Значение TRUE, если метод выполнен успешно; Значение FALSE, если происходит сбой.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод очищает всплывающих меню и удаляет их из `CContextMenuManager`.  
   
 ##  <a name="savestate"></a>  CContextMenuManager::SaveState  
- Сохраняет сведения, связанные с [CContextMenuManager класса](../../mfc/reference/ccontextmenumanager-class.md) в реестр Windows.  
+ Сохраняет сведения, связанные с [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) в реестр Windows.  
   
 ```  
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -228,18 +228,18 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="parameters"></a>Параметры  
  [in] *lpszProfileName*  
- Строка, содержащая относительный путь реестра.  
+ Строка, содержащая относительный путь раздела реестра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
+ Ненулевое значение, если метод выполнен успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- *LpszProfileName* параметр не абсолютный путь к записи реестра. Это относительный путь, который добавляется в конец раздел реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) и [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) соответственно.  
+ *LpszProfileName* параметр не абсолютный путь для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) и [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) соответственно.  
   
- Используйте метод [CContextMenuManager::LoadState](#loadstate) для загрузки с контекстными меню из реестра.  
+ Используйте метод [CContextMenuManager::LoadState](#loadstate) загрузить контекстных меню из реестра.  
   
 ##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu  
- Элементы управления ли [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) закрывает активное всплывающее меню, при отображении новой всплывающего меню.  
+ Элементы управления ли [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) закрывает активное всплывающее меню при его отображении нового всплывающего меню.  
   
 ```  
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -247,7 +247,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] *bSet*  
- Логического параметра, который определяет, следует ли закрывать активное всплывающее меню. Значение `TRUE` указывает на активное всплывающее меню не закрыта. `FALSE` Указывает, что закрывается активное всплывающее меню.  
+ Логический параметр, указывающее, следует ли закрыть активное всплывающее меню. Значение TRUE указывает, что не закрывается активное всплывающее меню. Значение FALSE указывает, что активное всплывающее меню закрыто.  
   
 ### <a name="remarks"></a>Примечания  
  По умолчанию `CContextMenuManager` закрывает активное всплывающее меню.  
@@ -280,33 +280,33 @@ virtual CMFCPopupMenu* ShowPopupMenu(
  Идентификатор ресурса меню, которое будет отображаться этот метод.  
   
  [in] *x*  
- Горизонтальное смещение для контекстного меню в клиентских координатах.  
+ Горизонтальное смещение для контекстного меню в координатах клиентской области окна.  
   
  [in] *y*  
- Вертикальное смещение для контекстного меню в клиентских координатах  
+ Вертикальное смещение для контекстного меню в координатах клиентской области окна  
   
  [in] *pWndOwner*  
- Указатель на родительское окно элемента в контекстном меню.  
+ Указатель на родительское окно в контекстном меню.  
   
  [in] *bOwnMessage*  
- Логический параметр, указывающее способ маршрутизации сообщений. Если *bOwnMessage* — `FALSE`, используется стандартный маршрут MFC. В противном случае *pWndOwner* получает сообщения.  
+ Логический параметр, который указывает способ маршрутизации сообщений. Если *bOwnMessage* является FALSE "," стандартный MFC используется маршрут. В противном случае *pWndOwner* получает сообщения.  
   
  [in] *hmenuPopup*  
  Дескриптор меню, которое будет отображаться этот метод.  
   
  [in] *bAutoDestroy*  
- Логический параметр, указывает, будет ли автоматически уничтожается меню.  
+ Логический параметр, который указывает, будет ли автоматически уничтожается меню.  
   
  [in] *bRightAlign*  
- Логический параметр, который указывает способ выравнивания элементов меню. Если *bRightAlign* — `TRUE`, меню по правому краю порядок чтения справа налево.  
+ Логический параметр, который указывает способ выравнивания элементов меню. Если *bRightAlign* имеет значение TRUE, меню по правому краю для порядок чтения справа налево.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Первая перегрузка метода возвращает ненулевое значение, если метод успешно; показано меню в противном случае — 0. Вторая перегрузка метода возвращает указатель на [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) Если в контекстном меню отображаются правильно; в противном случае `NULL`.  
+ По первой перегрузке метода возвращает ненулевое значение, если метод успешно; показано меню в противном случае 0. Вторая перегрузка метода возвращает указатель на [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , если в контекстном меню отображаются правильно; в противном случае — NULL.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод похож на метод [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) в том, что оба метода отображения контекстного меню. Тем не менее `TrackPopupMenu` возвращает индекс команды меню.  
   
- Если параметр *bAutoDestroy* — `FALSE`, вручную необходимо вызвать наследуемого `DestroyMenu` метод для освобождения ресурсов памяти. Реализация по умолчанию `ShowPopupMenu` , не используйте параметр *bAutoDestroy*. Он предоставляется для использования в будущем или для пользовательских классов, производных от `CContextMenuManager` класса.  
+ Если параметр *bAutoDestroy* имеет значение FALSE, необходимо вручную вызвать наследуемого `DestroyMenu` метод для освобождения ресурсов памяти. Реализация по умолчанию `ShowPopupMenu` , не используйте параметр *bAutoDestroy*. Он предоставляется для использования в будущем или для пользовательских классов, производных от `CContextMenuManager` класса.  
   
 ##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  Отображает указанное контекстное меню и возвращает индекс команды выбранного контекстного меню.  
@@ -325,22 +325,22 @@ virtual UINT TrackPopupMenu(
  Дескриптор, этот метод отображает контекстное меню.  
   
  [in] *x*  
- Горизонтальное смещение для контекстного меню в клиентских координатах.  
+ Горизонтальное смещение для контекстного меню в координатах клиентской области окна.  
   
  [in] *y*  
- Вертикальная смещение для контекстного меню в клиентских координатах.  
+ Размер смещения по вертикали для контекстного меню в координатах клиентской области окна.  
   
  [in] *pWndOwner*  
- Указатель на родительское окно элемента в контекстном меню.  
+ Указатель на родительское окно в контекстном меню.  
   
  [in] *bRightAlign*  
- Логический параметр, который указывает способ выравнивания элементов меню. Если *bRightAlign* — `TRUE`, меню по правому краю порядок чтения справа налево. Если *bRightAlign* — `FALSE`, меню по левому краю порядок чтения справа налево.  
+ Логический параметр, который указывает способ выравнивания элементов меню. Если *bRightAlign* имеет значение TRUE, меню по правому краю для порядок чтения справа налево. Если *bRightAlign* имеет значение FALSE, меню по левому краю для порядок чтения слева направо.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор команды меню команды, выбранные пользователем; 0, если пользователь закрывает контекстное меню без выбора команды меню.  
+ Идентификатор команды меню, команды, когда пользователь нажимает; 0, если пользователь закрывает контекстное меню без выбора команды меню.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод работает как модальное вызов отображения контекстного меню. Приложение не будет продолжать следующая строка кода, пока пользователь закрывает контекстное меню или выбирает команду. Альтернативный метод, который можно использовать для отображения контекстного меню — [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Этот метод не является модальным вызовом и не возвращает идентификатор выбранной команды.  
+ Этот метод работает как модальное вызов отображения контекстного меню. Приложение не будет продолжать следующую строку в коде, пока пользователь закрывает контекстное меню или выбирает команду. Является альтернативным методом, можно использовать для отображения контекстного меню [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Этот метод не является модальным вызовом и не вернет идентификатор выбранной команды.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

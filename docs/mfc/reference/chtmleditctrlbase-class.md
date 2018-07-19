@@ -1,5 +1,5 @@
 ---
-title: Класс CHtmlEditCtrlBase | Документы Microsoft
+title: Класс CHtmlEditCtrlBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9ee202defce08d30f36fb0002bd1477957dd76bc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337571"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 Представляет компонент редактирования HTML.  
@@ -252,122 +252,122 @@ template <class T> class CHtmlEditCtrlBase
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Добавляет запись в таблицу глиф указывает изображений, отображаемых для конкретных тегов в режиме конструктора.|  
-|[CHtmlEditCtrlBase::Bold](#bold)|Переключает состояние выбранный текст полужирным шрифтом.|  
-|[CHtmlEditCtrlBase::Button](#button)|Заменяет элемент управления button для текущего выбора.|  
-|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Заменяет элемент управления "флажок" для текущего выбора.|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Отменяет текущее выделение.|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Добавляет запись в таблицу глифа, который задает изображения, отображаемые для конкретных тегов в режиме конструктора.|  
+|[CHtmlEditCtrlBase::Bold](#bold)|Переключает полужирным состояние выбранного текста.|  
+|[CHtmlEditCtrlBase::Button](#button)|Заменяет элемент управления button, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Заменяет элемент управления "флажок", связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Очищает текущее выделение.|  
 |[CHtmlEditCtrlBase::Copy](#copy)|Копирует текущее выделение в буфер обмена.|  
 |[CHtmlEditCtrlBase::Cut](#cut)|Копирует текущее выделение в буфер обмена, а затем удаляет его.|  
-|[CHtmlEditCtrlBase::Delete](#delete)|Удаление выбранного объекта.|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Заменяет элемент управления для выбора раскрывающегося списка для текущего выбора.|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Удаляет все записи из таблицы глифа, которое скрывает все изображения, отображаемые для тегов в режиме конструктора.|  
+|[CHtmlEditCtrlBase::Delete](#delete)|Удаляет текущее выделение.|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Заменяет элемент управления выбора раскрывающегося списка на текущую выборку.|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Удаляет все записи из таблицы глифа, которое скрывает все изображения, отображаемого для тегов в режиме конструктора.|  
 |[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Выполняет команду.|  
-|[CHtmlEditCtrlBase::Font](#font)|Откроется диалоговое окно шрифтов, чтобы пользователь мог изменить цвет текста, шрифт и размер шрифта для текущего выделения.|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Указывает, является ли свойство элемента в позиции «absolute».|  
-|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Возвращает цвет фона текущего выделенного фрагмента.|  
-|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Извлекает текущий тег формат блока.|  
+|[CHtmlEditCtrlBase::Font](#font)|Открывает диалоговое окно шрифтов, чтобы пользователь мог изменить цвет текста, шрифт и размер шрифта текущего выделенного фрагмента.|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Указывает, является ли свойство position элемента «абсолютный».|  
+|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Получает цвет фона текущего выделенного фрагмента.|  
+|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Извлекает текущий формат тега блока.|  
 |[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Извлекает строки, соответствующие теги форматирования доступного блока.|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Возвращает имя привязки закладки.|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Извлекает имя привязки закладки.|  
 |[CHtmlEditCtrlBase::GetDocument](#getdocument)|Извлекает объект документа.|  
 |[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Возвращает HTML-код текущего документа.|  
 |[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Получает название документа.|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|Получает указатель интерфейса на объект события, который содержит сведения, относящиеся к последнего события.|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Извлекает объект, инициировавший событие.|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|Извлекает указатель интерфейса на объект события, который содержит сведения, относящиеся к последнего события.|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Извлекает объект, создавший событие.|  
 |[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Извлекает имя шрифта для текущего выделения.|  
 |[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Получает размер шрифта для текущего выделения.|  
-|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Возвращает цвет переднего плана (текст) для текущего выделения.|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Возвращает зоны безопасности текущей страницы в браузере.|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Указывает, изменилось ли HTML-документа.|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Возвращает, отображается ли глиф для всех элементов, имеющих **styleFloat** свойство.|  
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Возвращает ли браузер отображает глифы конкретное расположение всех тегов в документе.|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Сообщает, является ли браузер отображает глиф для области тегов.|  
+|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Получает цвет переднего плана (текст) для текущего выделения.|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Возвращает зону безопасности текущей страницы в веб-браузере.|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Указывает, изменился ли документ HTML.|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Возвращает, отображается ли глиф для всех элементов, имеющих `styleFloat` свойство.|  
+|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Возвращает ли браузер отображает глифы для отображения положения всех тегов в документе.|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Сообщает, является ли браузер отображает глиф для тегов области.|  
 |[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Сообщает, является ли браузер отображает глиф для br тегов.|  
 |[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Сообщает, является ли браузер отображает глиф для теги для комментариев.|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Сообщает, является ли браузер отображает все теги, которые показаны в Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Сообщает, является ли браузер отображает все теги, показанный на Microsoft Internet Explorer 4.0.|  
 |[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Сообщает, является ли браузер отображает глиф для всех тегов скрипта.|  
 |[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Сообщает, является ли браузер отображает глиф для всех тегов стиля.|  
 |[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Сообщает, является ли браузер отображает глиф для всех неизвестных тегов.|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Перезаписывает горизонтальную линию для текущего выбора.|  
-|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Вставляет гиперссылку для текущего выбора.|  
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Выполняет операцию вставки, совместимые с Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|Перезаписывает встроенного фрейма для текущего выбора.|  
-|[CHtmlEditCtrlBase::Image](#image)|Перезаписывает изображения для текущего выбора.|  
-|[CHtmlEditCtrlBase::Indent](#indent)|Увеличение отступа выделенного текста на один отступ инкремента.|  
-|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Перезаписывает поле для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Заменяет элемент управления button для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Вставка скрытого элемента управления для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Перезаписывает для выделенного элемента управления image.|  
-|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Заменяет элемент управления пароль для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Перезаписывает Сброс элемента управления для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Перезаписывает кнопка отправки для текущего выбора.|  
-|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Заменяет элемент управления отправкой файлов для текущего выбора.|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Определяет, если элемент располагается статически.|  
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Определяет, если элемент имеет абсолютное положение.|  
-|[CHtmlEditCtrlBase::Italic](#italic)|Переключение между курсив и nonitalic текущее выделение.|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Центрирует форматирование блока, в которой находится текущее выделение.|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Выравнивает по левому краю форматирование блока, в которой находится текущее выделение.|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Выравнивание по правому краю форматирование блока, в которой находится текущее выделение.|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|Перезаписывает окно выбора списка для текущего выбора.|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|Перезаписывает пустая область для текущего выбора.|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Перезаписывает горизонтальную линию, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Вставка гиперссылки на текущую выборку.|  
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Выполняет операцию вставки, совместимый с Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|Заменяет собой встроенный фрейм, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::Image](#image)|Перезаписывает изображения на текущую выборку.|  
+|[CHtmlEditCtrlBase::Indent](#indent)|Увеличение отступа для выделенного текста на один отступ шаг.|  
+|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Перезаписывает Бокс, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Заменяет элемент управления button, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Вставляет скрытого элемента управления, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Перезаписывает элемент image, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Перезаписывает полем пароля, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Перезаписывает Сброс элемента управления, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Перезаписывает кнопка отправки на текущую выборку.|  
+|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Заменяет элемент управления отправкой файлов на текущую выборку.|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Определяет, расположен ли элемент статически.|  
+|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Определяет, расположен ли элемент абсолютно.|  
+|[CHtmlEditCtrlBase::Italic](#italic)|Переключает текущее выделение курсивного и nonitalic.|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Выравнивание блока format в которой находится текущее выделение.|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Выравнивает по левому краю блока format в которой находится текущее выделение.|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Выравнивает по правому краю блока format в которой находится текущее выделение.|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|Перезаписывает списка выбора для текущего выделения.|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|Перезаписывает пустую область на текущую выборку.|  
 |[CHtmlEditCtrlBase::NewDocument](#newdocument)|Создает новый документ.|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|Переключает текущий выбор между упорядоченный список и блок обычном формате.|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|Уменьшается на один шаг отступа формат блока, в которой находится текущее выделение.|  
-|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Перезаписывает разрыв строки для текущего выбора.|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|Переключает текущее выделение между упорядоченный список и обычный формат блока.|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|Уменьшается на один шаг отступа от блока format в которой находится текущее выделение.|  
+|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Перезаписывает разрыв строки, связанных с текущим выделением.|  
 |[CHtmlEditCtrlBase::Paste](#paste)|Перезаписывает содержимое буфера обмена в текущее выделение.|  
 |[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Печать текущего документа.|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Открывается окно предварительного просмотра печати для текущего документа с помощью предварительного шаблон по умолчанию или пользовательский шаблон.|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Откроется окно предварительного просмотра печати для текущего документа с помощью шаблона предварительного просмотра по умолчанию или пользовательского шаблона.|  
 |[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Вызовите этот метод, чтобы запросить состояние команды.|  
-|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Заменяет элемент управления "переключатель" для текущего выбора.|  
+|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Заменяет элемент управления "переключатель" с текущим выделением.|  
 |[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Обновляет текущий документ.|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Удаляет теги форматирования от текущего выделения.|  
-|[CHtmlEditCtrlBase::SaveAs](#saveas)|Сохранение текущей веб-страницы в файле.|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Удаляет теги форматирования из текущего выделения.|  
+|[CHtmlEditCtrlBase::SaveAs](#saveas)|Сохраняет текущий веб-страницы в файл.|  
 |[CHtmlEditCtrlBase::SelectAll](#selectall)|Выделяет весь документ.|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Позволяет элементы с абсолютным позиционированием перемещаемого путем перетаскивания.|  
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Задает свойства position элемента «абсолютный» или «статический».|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Позволяет перемещать их, перетаскивая элементы с абсолютным позиционированием.|  
+|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Задает значение свойства position элемента на «абсолютный» или «static».|  
 |[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Режим выбора atomic.|  
 |[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Включение автоматического обнаружения URL-адрес и отключение.|  
 |[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Задает цвет фона текущего выделенного фрагмента.|  
-|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Задает текущий тег формат блока.|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Создает привязку закладки для текущего выделения или места вставки.|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Выбирает, какой уровень CSS (CSS1 или CSS2) Редактор будет поддерживать, если таковые имеются.|  
-|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Вызов этого метода по умолчанию параметров создания.|  
+|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Задает формат тега текущего блока.|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Создает привязку закладку для текущего выделению или положению курсора.|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Выбирает, какой уровень CSS (CSS1 или CSS2) редактора будет поддерживать, если таковые имеются.|  
+|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Ошибка при вызове этот метод, чтобы задать значение по умолчанию параметров создания.|  
 |[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Режим конструктора.|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Отключает штриховой границей и обрабатывает вокруг элемента, в котором фокус редактирования.|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Отключает штриховой границей и обрабатывает вокруг элемента с фокусом редактирования.|  
 |[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Задает HTML-код текущего документа.|  
-|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Задает шрифт для выделенного фрагмента.|  
+|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Задает шрифт для текущего выделения.|  
 |[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Задает размер шрифта для текущего выделения.|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Задает цвет переднего плана (текст) текущего выделенного фрагмента.|  
-|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Задает операции вставки для обеспечения совместимости с Microsoft Internet Explorer 5.|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|В результате веб-браузер обновить вид элемента постоянно во время операции изменения размера или перемещения.|  
-|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Позволяет выбирать несколько элементов.|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Команды для веб-браузера никогда не изменение указателя мыши.|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Переключает режим ввода текста между вставки и перезаписать.|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Задает цвет переднего плана (текст) для текущего выделения.|  
+|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Задает операции вставки для совместимости с Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|В результате WebBrowser обновить внешний вид элемента постоянно во время операции изменения размера или перемещения.|  
+|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Позволяет выделение нескольких элементов.|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Команды WebBrowser никогда не для того, чтобы изменить указатель мыши.|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Переключает режим ввода текста между вставки и перезаписи.|  
 |[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Скрывает невидимые элементы в режиме конструктора.|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Отображает глиф для всех элементов, имеющих **styleFloat** свойство.|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Отображает глифы для отображения расположения всех тегов в документе.|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Отображает глиф для всех элементов, имеющих `styleFloat` свойство.|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Отображает глифы для отображения положения всех тегов в документе.|  
 |[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Отображает глиф для всех тегов области.|  
 |[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Отображает глиф для всех тегов br.|  
-|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Отображает глиф для всех тегов комментария.|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Отображает все теги, которые показаны в Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Отображает глиф для все теги для комментариев.|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Отображает все теги, показанный на Microsoft Internet Explorer 4.0.|  
 |[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Отображает глиф для всех тегов скрипта.|  
 |[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Отображает глиф для всех тегов стиля.|  
 |[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Отображает глиф для всех неизвестных тегов.|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|Заменяет элемент управления многострочного текстового ввода для текущего выбора.|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|Перезаписывает это текстовый элемент управления для текущего выбора.|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Удаляет все закладки из текущего выделенного фрагмента.|  
-|[CHtmlEditCtrlBase::Underline](#underline)|Переключение между подчеркнут и не подчеркнуто текущее выделение.|  
-|[CHtmlEditCtrlBase::Unlink](#unlink)|Удаляет все гиперссылки из текущего выделенного фрагмента.|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Переключает текущий выбор между упорядоченный список и блок обычном формате.|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|Заменяет элемент управления многострочного текстового ввода для текущего выделения.|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|Перезаписывает текстового элемента управления, связанных с текущим выделением.|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Удаляет все закладки из текущего выделения.|  
+|[CHtmlEditCtrlBase::Underline](#underline)|Переключает текущее выделение между подчеркнуты и не подчеркнуты.|  
+|[CHtmlEditCtrlBase::Unlink](#unlink)|Удаляет все гиперссылки из текущего выделения.|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Переключает текущее выделение между упорядоченный список и обычный формат блока.|  
   
 #### <a name="parameters"></a>Параметры  
  `T`  
  Имя производного класса.  
   
 ## <a name="remarks"></a>Примечания  
- **CHtmlEditCtrlBase** предоставляет функции-члены для команд редактирования, такие как HTML WebBrowser [Полужирный](#bold). (Кроме того, можно вызвать [ExecCommand](#execcommand) для выполнения **IDM_BOLD** команд.)  
+ `CHtmlEditCtrlBase` предоставляет функции-члены для команд редактирования, такие как HTML WebBrowser [Полужирный](#bold). (Кроме того, можно вызвать [ExecCommand](#execcommand) для выполнения команды IDM_BOLD.)  
   
- **CHtmlEditCtrlBase** не является автономной свой собственный. Она должна быть базовым классом для производных классов, которые предоставляют функциональные возможности элемента управления WebBrowser редактирования HTML (в разделе [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) и [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
+ `CHtmlEditCtrlBase` не является обоснованным. Он позволяет быть базовым классом для производных классов, предоставляющих HTML, изменение функциональных возможностей элемента управления WebBrowser (см. в разделе [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) и [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CHtmlEditCtrlBase`  
@@ -376,7 +376,7 @@ template <class T> class CHtmlEditCtrlBase
  **Заголовок:** afxhtml.h  
   
 ##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
- Добавляет запись в таблицу глиф указывает изображений, отображаемых для конкретных тегов в режиме конструктора.  
+ Добавляет запись в таблицу глифа, который задает изображения, отображаемые для конкретных тегов в режиме конструктора.  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -392,22 +392,22 @@ HRESULT AddToGlyphTable(
   
 ### <a name="parameters"></a>Параметры  
  *szTag*  
- Имя тега (например, «P» или «table»).  
+ Имя тега (например, «P» или «таблица»).  
   
  *szImgUrl*  
  URL-адрес изображения.  
   
  *nTagType*  
- Отметить тип: 0 означает изображения для открывающего тега только. 1 означает, что изображение в закрывающий тег. 2 означает, что изображение для открывающих и закрывающих тегов. Один теги, такие как Бразилия и комментарий должно быть добавлено с тега типа, равным 0.  
+ Типа тега: 0 означает, что образ предназначен для только открывающего тега. 1 означает, что образ предназначен для только закрывающий тег. 2 означает, что в образе для открывающих и закрывающих тегов. Единый теги, например br и комментарий должно быть добавлено с тип тега, равным 0.  
   
  *nAlignment*  
- Выравнивание (только прямоугольную элементы): этот параметр определяет изображения для элемента с атрибут выравнивания. Left = 0, центр = 1, право = 2 и не определено = 3. Слева, справа или center атрибуты должны задаваться явным образом в элементе.  
+ Выравнивание (только прямоугольную элементов): этот параметр указывает, что образ предназначен для элемента с атрибутом выравнивания. Слева = 0, center = 1, right = 2 и не определено = 3. Слева, справа или center атрибуты должны задаваться явным образом в элементе.  
   
  *nPosInfo*  
- Данные размещения. Определяет, какие таблицы каскадных стилей (CSS) позиционирования значение глифа, применяется там, где это статический позиционирования = 0, абсолютное позиционирование = 1, относительное позиционирование = 2, а также все = 3. Это поле позволяет указать один глиф для тега, если он не размещается и другой глиф для отображения опорную точку, при помещении тега.  
+ Данные размещения. Определяет, какие каскадные таблицы стилей (CSS) позиционирования значение применяется глифа, где статический позиционирования = 0, абсолютное позиционирование = 1, относительное позиционирование = 2 и все = 3. Это поле позволяет указать один глиф для тега, если он не позиционируется и другой глиф для отображения опорную точку, при помещении тега.  
   
  *nDirection*  
- Направление. Этот параметр задает изображение для тега, на основе порядка чтения текущего языка. значение 0 указывает, слева направо, 1 указывает справа налево, сверху вниз задает 2, 3 указывает снизу вверх и 4 указывает все. Это поле обычно устанавливается на 4.  
+ Направление. Этот параметр указывает образ для тега, на основе порядка чтения для текущего языка. значение 0 указывает, слева направо, значение 1 указывает, справа налево, 2 означает сверху вниз, 3 указывает снизу вверх и 4 указывает все. Обычно это поле равным 4.  
   
  *nImgWidth*  
  Ширина изображения в пикселях.  
@@ -416,7 +416,7 @@ HRESULT AddToGlyphTable(
  Высота изображения в пикселях.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения о параметрах см. в разделе «Формат строки таблицы глиф» в [с помощью редактирования глифы](https://msdn.microsoft.com/library/aa969614.aspx).  
@@ -424,20 +424,20 @@ HRESULT AddToGlyphTable(
  Этот метод отправляет [идентификатор команды IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
- Переключает состояние выбранный текст полужирным шрифтом.  
+ Переключает полужирным состояние выбранного текста.  
   
 ```  
 HRESULT Bold() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
- Заменяет элемент управления button для текущего выбора.  
+ Заменяет элемент управления button, связанных с текущим выделением.  
   
 ```  
 HRESULT Button(LPCTSTR szId = NULL) const;  
@@ -448,13 +448,13 @@ HRESULT Button(LPCTSTR szId = NULL) const;
  Идентификатор элемента управления button.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
- Заменяет элемент управления "флажок" для текущего выбора.  
+ Заменяет элемент управления "флажок", связанных с текущим выделением.  
   
 ```  
 HRESULT CheckBox(LPCTSTR szId = NULL) const;  
@@ -465,20 +465,20 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
  Идентификатор элемента управления "флажок".  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
- Отменяет текущее выделение.  
+ Очищает текущее выделение.  
   
 ```  
 HRESULT ClearSelection() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) в элемент управления WebBrowser.  
@@ -491,7 +491,7 @@ HRESULT Copy() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) в элемент управления WebBrowser.  
@@ -504,26 +504,26 @@ HRESULT Cut() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
- Удаление выбранного объекта.  
+ Удаляет текущее выделение.  
   
 ```  
 HRESULT Delete() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
- Заменяет элемент управления для выбора раскрывающегося списка для текущего выбора.  
+ Заменяет элемент управления выбора раскрывающегося списка на текущую выборку.  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
@@ -534,20 +534,20 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
  Идентификатор элемента управления выбора раскрывающегося списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
- Удаляет все записи из таблицы глифа, которое скрывает все изображения, отображаемые для тегов в режиме конструктора.  
+ Удаляет все записи из таблицы глифа, которое скрывает все изображения, отображаемого для тегов в режиме конструктора.  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) в элемент управления WebBrowser.  
@@ -572,10 +572,10 @@ HRESULT ExecCommand(
   
 ### <a name="parameters"></a>Параметры  
  *cmdID*  
- Идентификатор команды для выполнения. Список см. в разделе [идентификаторы команд MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
+ Идентификатор команды для выполнения. Список, см. в разделе [идентификаторы команд MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  *cmdExecOpt*  
- Значениями, взятыми из [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) перечисления, который описывают, каким образом объект должен выполнить команду.  
+ Значения, взятые из [перечислений OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) перечисления, который описывают, каким образом объект должен выполнить команду.  
   
  *pInVar*  
  Входные аргументы.  
@@ -587,26 +587,26 @@ HRESULT ExecCommand(
  Идентификатор GUID группы команд.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод предоставляет функциональные возможности [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
 ##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
- Откроется диалоговое окно шрифтов, чтобы пользователь мог изменить цвет текста, шрифт и размер шрифта для текущего выделения.  
+ Открывает диалоговое окно шрифтов, чтобы пользователь мог изменить цвет текста, шрифт и размер шрифта текущего выделенного фрагмента.  
   
 ```  
 HRESULT Font() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
- Указывает, является ли свойство элемента в позиции «absolute».  
+ Указывает, является ли свойство position элемента «абсолютный».  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
@@ -614,16 +614,16 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если свойство позиции элемента имеет значение на «абсолютный.»  
+ Значение TRUE, если свойство положение этого элемента имеет значение на «абсолютный.»  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).  
   
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
- Возвращает цвет фона текущего выделенного фрагмента.  
+ Получает цвет фона текущего выделенного фрагмента.  
   
 ```  
 HRESULT GetBackColor(int& nColor) const;  
@@ -634,13 +634,13 @@ HRESULT GetBackColor(int& nColor) const;
  Цвет фона.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
- Извлекает текущий тег формат блока.  
+ Извлекает текущий формат тега блока.  
   
 ```  
 HRESULT GetBlockFormat(CString& strFormat) const;  
@@ -648,10 +648,10 @@ HRESULT GetBlockFormat(CString& strFormat) const;
   
 ### <a name="parameters"></a>Параметры  
  *strFormat*  
- Текущий тег формат блока.  
+ Текущий формат тега блок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) в элемент управления WebBrowser.  
@@ -665,16 +665,16 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
   
 ### <a name="parameters"></a>Параметры  
  *SA*  
- Теги форматирования доступного блока как массив строк.  
+ Теги формат доступного блока, как массив строк.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [ИД команды IDM_GETBLOCKFMTS](https://msdn.microsoft.com/library/aa769884.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
- Возвращает имя привязки закладки.  
+ Извлекает имя привязки закладки.  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
@@ -685,7 +685,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
  Имя привязки закладки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).  
@@ -702,7 +702,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
  Объект документа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
  Возвращает HTML-код текущего документа.  
@@ -716,7 +716,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
  HTML-код.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
  Получает название документа.  
@@ -727,13 +727,13 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
   
 ### <a name="parameters"></a>Параметры  
  *szTitle*  
- Заголовок документа.  
+ Название документа.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
- Получает указатель интерфейса на объект события, который содержит сведения, относящиеся к последнего события.  
+ Извлекает указатель интерфейса на объект события, который содержит сведения, относящиеся к последнего события.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
@@ -744,10 +744,10 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
  Объект события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
- Извлекает объект, инициировавший событие.  
+ Извлекает объект, создавший событие.  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
@@ -758,7 +758,7 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
  Элемент, инициировавший событие.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
  Извлекает имя шрифта для текущего выделения.  
@@ -772,10 +772,10 @@ HRESULT GetFontFace(CString& strFace) const;
  Имя шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Если текущее выделение использует несколько шрифтов *strFace* будет пустая строка.  
+ Если текущее выделение использует несколько шрифтов, *strFace* будет пустая строка.  
   
  Этот метод отправляет [идентификатор команды IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) в элемент управления WebBrowser.  
   
@@ -791,13 +791,13 @@ HRESULT GetFontSize(short& nSize) const;
  Размер шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает размер шрифта HTML (1-7). Возвращает 0, если выбор содержит несколько размеров шрифта.  
+ Возвращает размер шрифта HTML (1-7). Возвращает 0, если выделение содержит несколько размеров шрифта.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
- Возвращает цвет переднего плана (текст) для текущего выделения.  
+ Получает цвет переднего плана (текст) для текущего выделения.  
   
 ```  
 HRESULT GetForeColor(int& nColor);
@@ -808,13 +808,13 @@ HRESULT GetForeColor(int& nColor);
  Цвет переднего плана.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
- Возвращает зоны безопасности текущей страницы в браузере.  
+ Возвращает зону безопасности текущей страницы в веб-браузере.  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
@@ -825,23 +825,23 @@ HRESULT GetFrameZone(short& nZone) const;
  Зоны безопасности.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
- Указывает, изменилось ли HTML-документа.  
+ Указывает, изменился ли документ HTML.  
   
 ```  
 HRESULT GetIsDirty() const;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Указывает, является ли документ был изменен. `GetIsDirty` Возвращает `HRESULT` из [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
+ Указывает, изменился ли документ. `GetIsDirty` Возвращает значение HRESULT из [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
 ##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- Возвращает, отображается ли глиф для всех элементов, имеющих **styleFloat** свойство.  
+ Возвращает, отображается ли глиф для всех элементов, имеющих `styleFloat` свойство.  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
@@ -849,16 +849,16 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если глиф отображается для всех элементов, имеющих **styleFloat** свойство; значение false, если глиф не отображается.  
+ Значение TRUE, если глиф будет отображаться для всех элементов, имеющих `styleFloat` свойство; Значение FALSE, если нет глиф будет отображаться.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).  
   
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
- Возвращает ли браузер отображает глифы конкретное расположение всех тегов в документе.  
+ Возвращает ли браузер отображает глифы для отображения положения всех тегов в документе.  
   
 ```  
 HRESULT GetShowAllTags(bool& bCurValue) const;  
@@ -866,16 +866,16 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если браузер отображает глифы для отображения расположения всех тегов в документе; значение false, если это не так.  
+ Значение TRUE, если браузер отображает глифы для отображения положения всех тегов в документе; Значение FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).  
   
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
- Сообщает, является ли браузер отображает глиф для области тегов.  
+ Сообщает, является ли браузер отображает глиф для тегов области.  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
@@ -883,10 +883,10 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если false отображает глиф для тегов область, если это не веб-браузера.  
+ Значение TRUE, если браузер отображает глиф для тегов области, FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).  
@@ -900,10 +900,10 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если браузер отображает глиф для теги br false если это не так.  
+ Значение TRUE, если браузер FALSE отображает глиф для тегов br, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).  
@@ -917,16 +917,16 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если браузер false отображает глиф для теги для комментариев, если это не так.  
+ Значение TRUE, если браузер отображает глиф для теги для комментариев, FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).  
   
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
- Сообщает, является ли браузер отображает все теги, которые показаны в Microsoft Internet Explorer 4.0.  
+ Сообщает, является ли браузер отображает все теги, показанный на Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
@@ -934,10 +934,10 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если браузер отображает все теги, показаны в Microsoft Internet Explorer 4.0, значение false, если это не так.  
+ Значение TRUE, если браузер отображает все теги, показанный на Microsoft Internet Explorer 4.0, значение FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).  
@@ -951,10 +951,10 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если false отображает глиф для всех тегов скрипта, если это не веб-браузера.  
+ Значение TRUE, если браузер отображает глиф для всех тегов сценария, FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).  
@@ -968,10 +968,10 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если false отображает глиф для всех тегов стиля, если это не веб-браузера  
+ Значение TRUE, если браузер отображает глиф для всех тегов стиль, FALSE, если это не так  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).  
@@ -985,16 +985,16 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bCurValue*  
- Значение true, если браузер отображает глиф для всех неизвестных тегов, false, если это не так.  
+ Значение TRUE, если браузер отображает глиф для всех неизвестных тегов, FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).  
   
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
- Перезаписывает горизонтальную линию для текущего выбора.  
+ Перезаписывает горизонтальную линию, связанных с текущим выделением.  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
@@ -1005,13 +1005,13 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
  Идентификатор для горизонтальной линии.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
- Вставляет гиперссылку для текущего выбора.  
+ Вставка гиперссылки на текущую выборку.  
   
 ```  
 HRESULT HyperLink(LPCTSTR szUrl = NULL) const;  
@@ -1022,7 +1022,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
  URL-адрес гиперссылки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) в элемент управления WebBrowser.  
@@ -1039,13 +1039,13 @@ HRESULT IE50Paste(LPCTSTR szData) const;
  Строка для вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
- Перезаписывает встроенного фрейма для текущего выбора.  
+ Заменяет собой встроенный фрейм, связанных с текущим выделением.  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
@@ -1056,13 +1056,13 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
  Идентификатор для рамки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
- Перезаписывает изображения для текущего выбора.  
+ Перезаписывает изображения на текущую выборку.  
   
 ```  
 HRESULT Image(LPCTSTR szUrl = NULL) const;  
@@ -1070,29 +1070,29 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szUrl*  
- Путь и имя образ, который необходимо вставить.  
+ Путь к файлу и имя образа для вставки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
- Увеличение отступа выделенного текста на один отступ инкремента.  
+ Увеличение отступа для выделенного текста на один отступ шаг.  
   
 ```  
 HRESULT Indent() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
- Перезаписывает поле для текущего выбора.  
+ Перезаписывает Бокс, связанных с текущим выделением.  
   
 ```  
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;  
@@ -1103,13 +1103,13 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
  Идентификатор для окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
- Заменяет элемент управления button для текущего выбора.  
+ Заменяет элемент управления button, связанных с текущим выделением.  
   
 ```  
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;  
@@ -1117,16 +1117,16 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szId*  
- Идентификатор для элемента управления button.  
+ Идентификатор элемента управления button.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
- Вставка скрытого элемента управления для текущего выбора.  
+ Вставляет скрытого элемента управления, связанных с текущим выделением.  
   
 ```  
 HRESULT InsInputHidden(LPCTSTR szId = NULL) const;  
@@ -1137,13 +1137,13 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
  Идентификатор для скрытого элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
- Перезаписывает для выделенного элемента управления image.  
+ Перезаписывает элемент image, связанных с текущим выделением.  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
@@ -1154,13 +1154,13 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
  Идентификатор для элемента управления image.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
- Заменяет элемент управления пароль для текущего выбора.  
+ Перезаписывает полем пароля, связанных с текущим выделением.  
   
 ```  
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;  
@@ -1171,13 +1171,13 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
  Идентификатор для элемента управления пароля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
- Перезаписывает Сброс элемента управления для текущего выбора.  
+ Перезаписывает Сброс элемента управления, связанных с текущим выделением.  
   
 ```  
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;  
@@ -1188,13 +1188,13 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
  Идентификатор для соответствующего элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
- Перезаписывает кнопка отправки для текущего выбора.  
+ Перезаписывает кнопка отправки на текущую выборку.  
   
 ```  
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;  
@@ -1205,13 +1205,13 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
  Идентификатор для элемента управления отправки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
- Заменяет элемент управления отправкой файлов для текущего выбора.  
+ Заменяет элемент управления отправкой файлов на текущую выборку.  
   
 ```  
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;  
@@ -1219,16 +1219,16 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szId*  
- Идентификатор для управления отправкой файлов.  
+ Идентификатор для элемента управления отправки файла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
- Определяет, если элемент располагается статически.  
+ Определяет, расположен ли элемент статически.  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
@@ -1236,16 +1236,16 @@ HRESULT Is1DElement(bool& bValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bValue*  
- Значение true, если элемент является статически позиционированные, и false в противном случае.  
+ Значение TRUE, если элемент статически находится, FALSE в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
- Определяет, если элемент имеет абсолютное положение.  
+ Определяет, расположен ли элемент абсолютно.  
   
 ```  
 HRESULT Is2DElement(bool& bValue) const;  
@@ -1253,68 +1253,68 @@ HRESULT Is2DElement(bool& bValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bValue*  
- Значение true, если элемент является абсолютным позиционированием, и false в противном случае.  
+ Значение TRUE, если элемент с абсолютным позиционированием FALSE в противном случае.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
- Переключение между курсив и nonitalic текущее выделение.  
+ Переключает текущее выделение курсивного и nonitalic.  
   
 ```  
 HRESULT Italic() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
- Центрирует форматирование блока, в которой находится текущее выделение.  
+ Выравнивание блока format в которой находится текущее выделение.  
   
 ```  
 HRESULT JustifyCenter() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
- Выравнивает по левому краю форматирование блока, в которой находится текущее выделение.  
+ Выравнивает по левому краю блока format в которой находится текущее выделение.  
   
 ```  
 HRESULT JustifyLeft() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
- Выравнивание по правому краю форматирование блока, в которой находится текущее выделение.  
+ Выравнивает по правому краю блока format в которой находится текущее выделение.  
   
 ```  
 HRESULT JustifyRight() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
- Перезаписывает окно выбора списка для текущего выбора.  
+ Перезаписывает списка выбора для текущего выделения.  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
@@ -1322,16 +1322,16 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szId*  
- Идентификатор для управления "список".  
+ Идентификатор списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
- Перезаписывает пустая область для текущего выбора.  
+ Перезаписывает пустую область на текущую выборку.  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
@@ -1342,7 +1342,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
  Идентификатор области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) в элемент управления WebBrowser.  
@@ -1355,10 +1355,10 @@ HRESULT NewDocument() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
- Переключает текущий выбор между упорядоченный список и блок обычном формате.  
+ Переключает текущее выделение между упорядоченный список и обычный формат блока.  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
@@ -1369,26 +1369,26 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
  Идентификатор для упорядоченного списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
- Уменьшается на один шаг отступа формат блока, в которой находится текущее выделение.  
+ Уменьшается на один шаг отступа от блока format в которой находится текущее выделение.  
   
 ```  
 HRESULT Outdent() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
- Перезаписывает разрыв строки для текущего выбора.  
+ Перезаписывает разрыв строки, связанных с текущим выделением.  
   
 ```  
 HRESULT Paragraph(LPCTSTR szId = NULL) const;  
@@ -1399,7 +1399,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
  Идентификатор для абзаца.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) в элемент управления WebBrowser.  
@@ -1412,7 +1412,7 @@ HRESULT Paste() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) в элемент управления WebBrowser.  
@@ -1428,19 +1428,19 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
   
 ### <a name="parameters"></a>Параметры  
  *szPrintTemplate*  
- Путь к шаблону печати; Если не указано, используется шаблон печати по умолчанию.  
+ Путь к шаблону печати; Если ничего не указано, используется шаблон печати по умолчанию.  
   
  *bShowPrintDialog*  
- Если значение равно true, отображает диалоговое окно печати.  
+ Если значение равно TRUE, отображает диалоговое окно печати.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
- Открывается окно предварительного просмотра печати для текущего документа с помощью предварительного шаблон по умолчанию или пользовательский шаблон.  
+ Откроется окно предварительного просмотра печати для текущего документа с помощью шаблона предварительного просмотра по умолчанию или пользовательского шаблона.  
   
 ```  
 HRESULT PrintPreview() const;  
@@ -1452,7 +1452,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
  Путь к шаблону печати.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) в элемент управления WebBrowser.  
@@ -1466,13 +1466,13 @@ long QueryStatus(long cmdID) const;
   
 ### <a name="parameters"></a>Параметры  
  *cmdID*  
- Идентификатор команды. Идентификаторы команд, взяты из `CGID_MSHTML` группы команд. Эти команды определяются в Mshtmcid.h. Также можно найти в списке сети [идентификаторы команд MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
+ Идентификатор команды. Идентификаторы команд, взяты из CGID_MSHTML группы команд. Эти команды определены в Mshtmcid.h. Также можно найти в списке online [идентификаторы команд MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , показывающая состояние *cmdID*, или 0 в случае ошибки.  
+ Возвращает [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) , показывающая состояние *cmdID*, или 0 в случае сбоя.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
- Заменяет элемент управления "переключатель" для текущего выбора.  
+ Заменяет элемент управления "переключатель" с текущим выделением.  
   
 ```  
 HRESULT RadioButton(LPCTSTR szId = NULL) const;  
@@ -1483,7 +1483,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
  Идентификатор переключателя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) в элемент управления WebBrowser.  
@@ -1496,26 +1496,26 @@ HRESULT RefreshDocument() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
- Удаляет теги форматирования от текущего выделения.  
+ Удаляет теги форматирования из текущего выделения.  
   
 ```  
 HRESULT RemoveFormat() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
- Сохранение текущей веб-страницы в файле.  
+ Сохраняет текущий веб-страницы в файл.  
   
 ```  
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;  
@@ -1526,7 +1526,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
  Путь и имя файла для сохранения веб-страницы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [ИД команды IDM_SAVEAS](https://msdn.microsoft.com/library/aa770024.aspx) в элемент управления WebBrowser.  
@@ -1539,13 +1539,13 @@ HRESULT SelectAll() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
- Позволяет элементы с абсолютным позиционированием перемещаемого путем перетаскивания.  
+ Позволяет перемещать их, перетаскивая элементы с абсолютным позиционированием.  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
@@ -1553,16 +1553,16 @@ HRESULT Set2DPosition(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Если значение равно true, элементы с абсолютным позиционированием можно переместить путем перетаскивания.  
+ Если значение равно TRUE, элементы с абсолютным позиционированием можно переместить путем перетаскивания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
- Задает свойства position элемента «абсолютный» или «статический».  
+ Задает значение свойства position элемента на «абсолютный» или «static».  
   
 ```  
 HRESULT SetAbsolutePosition(bool bNewValue) const;  
@@ -1570,10 +1570,10 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если свойство позиции элемента «абсолютный»; Если значение равно false, это «статический».  
+ Если значение равно TRUE, свойство позиции элемента «абсолютный»; Если значение равно FALSE, это «static».  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) в элемент управления WebBrowser.  
@@ -1587,10 +1587,10 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если любой элемент, имеющий атрибут ATOMICSELECTION присвоено значение TRUE, могут быть выделены только как единое целое.  
+ Если значение равно TRUE, любой элемент, содержащий атрибут ATOMICSELECTION присвоено значение TRUE, могут быть выделены, только как единое целое.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) в элемент управления WebBrowser.  
@@ -1604,10 +1604,10 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если включено автоматическое обнаружение URL-адрес.  
+ Значение TRUE, если включено автоматическое обнаружение URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) в элемент управления WebBrowser.  
@@ -1622,19 +1622,19 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
   
 ### <a name="parameters"></a>Параметры  
  *nColor*  
- Цвет. В разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
  *szColor*  
- Цвет. В разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
+ Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
- Задает текущий тег формат блока.  
+ Задает формат тега текущего блока.  
   
 ```  
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;  
@@ -1645,13 +1645,13 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
  Формат тега.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [IDM_BLOCKFMT_command идентификатор](https://msdn.microsoft.com/library/aa769883.aspx) для элемента управления WebBrowser.  
   
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
- Создает привязку закладки для текущего выделения или места вставки.  
+ Создает привязку закладку для текущего выделению или положению курсора.  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
@@ -1662,13 +1662,13 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
  Имя привязки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
- Выбирает, какой уровень CSS (CSS1 или CSS2) Редактор будет поддерживать, если таковые имеются.  
+ Выбирает, какой уровень CSS (CSS1 или CSS2) редактора будет поддерживать, если таковые имеются.  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
@@ -1679,13 +1679,13 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
  Уровень CSS. Передайте 0, если не требуется поддержка CSS.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
- Вызов этого метода по умолчанию параметров создания.  
+ Ошибка при вызове этот метод, чтобы задать значение по умолчанию параметров создания.  
   
 ```  
 HRESULT SetDefaultComposeSettings(
@@ -1712,16 +1712,16 @@ HRESULT SetDefaultComposeSettings(
  Фоновый цвет шрифта.  
   
  *bBold*  
- Передайте значение true для полужирным шрифтом.  
+ Передайте значение TRUE для полужирного текста.  
   
  *bItalic*  
- Передайте значение true, если для текста курсивом.  
+ Передайте значение TRUE для курсивного текста.  
   
  *bUnderline*  
- Передайте значение true для подчеркнутый текст.  
+ Передайте значение TRUE для подчеркнутый текст.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [ИД команды IDM_COMPOSESETTINGS](https://msdn.microsoft.com/library/aa769901.aspx) в элемент управления WebBrowser.  
@@ -1735,13 +1735,13 @@ BOOL SetDesignMode(BOOL bMode) const;
   
 ### <a name="parameters"></a>Параметры  
  *bMode*  
- Если значение равно true, включает режим конструктора.  
+ Если значение равно TRUE, включает режим конструктора.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
- Отключает штриховой границей и обрабатывает вокруг элемента, в котором фокус редактирования.  
+ Отключает штриховой границей и обрабатывает вокруг элемента с фокусом редактирования.  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
@@ -1749,10 +1749,10 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если отключает штриховой границей и дескрипторы окружающей элемент, доступный для выбора узла после элемента «изменение фокуса» в режиме конструктора. то есть, когда текст или содержимое элемента можно изменить.  
+ Если значение равно TRUE, отключает штриховой границей и дескрипторы, доступный для выбора элемента узла при элемент имеет «изменение фокуса» в режиме конструктора; то есть, когда текст или содержимое элемента можно изменить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод отправляет [идентификатор команды IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) в элемент управления WebBrowser.  
@@ -1769,10 +1769,10 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
  HTML-код.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
- Задает шрифт для выделенного фрагмента.  
+ Задает шрифт для текущего выделения.  
   
 ```  
 HRESULT SetFontFace(LPCTSTR szFace) const;  
@@ -1783,10 +1783,10 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
  Имя шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды FONTNAME IDM](https://msdn.microsoft.com/library/aa769880.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды FONTNAME IDM](https://msdn.microsoft.com/library/aa769880.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
  Задает размер шрифта для текущего выделения.  
@@ -1797,16 +1797,16 @@ HRESULT SetFontSize(unsigned short size) const;
   
 ### <a name="parameters"></a>Параметры  
  *size*  
- Размер шрифта HTML (1-7). Значение 0 задает размер шрифта в 1.  
+ Размер шрифта HTML (1-7). Значение 0 задает размер шрифта до 1.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
- Задает цвет переднего плана (текст) текущего выделенного фрагмента.  
+ Задает цвет переднего плана (текст) для текущего выделения.  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
@@ -1821,13 +1821,13 @@ HRESULT SetForeColor(int nColor) const;
  Цвет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
- Задает операции вставки для обеспечения совместимости с Microsoft Internet Explorer 5.  
+ Задает операции вставки для совместимости с Microsoft Internet Explorer 5.  
   
 ```  
 HRESULT SetIE5PasteMode(bool bNewValue) const;  
@@ -1835,16 +1835,16 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Если значение равно true, все операции вставки совместимы с Internet Explorer 5; Если значение равно false, операции вставки, совместимы с Internet Explorer 5.5.  
+ Если значение равно TRUE, все операции вставки совместимы с Internet Explorer 5; Если значение равно FALSE, операции вставки, совместимы с Internet Explorer 5.5.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
- В результате веб-браузер обновить внешний вид элемента постоянно во время операции изменения размера или перемещения, а не обновлять только после завершения перемещения или изменения размера.  
+ В результате WebBrowser обновить внешний вид элемента постоянно во время операции изменения размера или перемещения, а не обновление только по завершении перемещения или изменения размера.  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
@@ -1852,16 +1852,16 @@ HRESULT SetLiveResize(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Если значение равно true, приводит к тому веб-браузер обновить вид элемента постоянно во время операции изменения размера или перемещения; Если значение равно false, он обновляет только по завершении перемещения или изменения размера.  
+ Если значение равно TRUE, приводит к WebBrowser обновить внешний вид элемента постоянно во время операции изменения размера или перемещения; Если значение равно FALSE, он обновляет только по завершении перемещения или изменения размера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
- Позволяет выбирать несколько элементов.  
+ Позволяет выделение нескольких элементов.  
   
 ```  
 HRESULT SetMultiSelect(bool bNewValue) const;  
@@ -1869,16 +1869,16 @@ HRESULT SetMultiSelect(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Если значение равно true, позволяет выбирать несколько элементов можно выбрать сайт во время, когда пользователь удерживает клавишу SHIFT или CTRL.  
+ Если значение равно TRUE, можно выбрать из более чем одного сайта с возможностью выбора элемента за раз, когда пользователь удерживает клавишу SHIFT или CTRL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
- Команды для веб-браузера никогда не изменение указателя мыши.  
+ Команды WebBrowser никогда не для того, чтобы изменить указатель мыши.  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
@@ -1886,16 +1886,16 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если браузер не изменится указатель мыши.  
+ Значение TRUE, если браузер не изменит указатель мыши.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
- Переключает режим ввода текста между вставки и перезаписать.  
+ Переключает режим ввода текста между вставки и перезаписи.  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
@@ -1903,13 +1903,13 @@ HRESULT SetOverwriteMode(bool bMode) const;
   
 ### <a name="parameters"></a>Параметры  
  *bMode*  
- Значение true, если режим ввода текста перезаписать; Если значение равно false, режим ввода текста — insert.  
+ Если значение равно TRUE, режим ввода текста является перезаписать; Если значение равно FALSE, режим ввода текста — insert.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [ПЕРЕЗАПИСАТЬ IDM идентификатор команды](https://msdn.microsoft.com/library/aa770016.aspx) с элементом управления WebBrowser.  
+ Этот метод отправляет [ПЕРЕЗАПИСАТЬ IDM идентификатор команды](https://msdn.microsoft.com/library/aa770016.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
  Скрывает невидимые элементы в режиме конструктора.  
@@ -1920,16 +1920,16 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Значение true, если все элементы, которые имеют видимости присвоено значение «hidden» или отображения свойством, имеющим значение «Нет» не отображается в режиме конструктора и режим просмотра. Если значение равно false, эти элементы отображаются только в режиме просмотра.  
+ Если значение равно TRUE, любые элементы, которые могут видеть, в значение «hidden» или отображения свойством, имеющим значение «none», не отображается в режиме конструктора и режим просмотра. Если значение равно FALSE, эти элементы отображаются только в режиме просмотра.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- Отображает глиф для всех элементов, имеющих **styleFloat** свойство.  
+ Отображает глиф для всех элементов, имеющих `styleFloat` свойство.  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
@@ -1937,16 +1937,16 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех элементов, имеющих **styleFloat** свойство.  
+ При значении TRUE отображает глиф для всех элементов, имеющих `styleFloat` свойство.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
- Отображает глифы для отображения расположения всех тегов в документе.  
+ Отображает глифы для отображения положения всех тегов в документе.  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
@@ -1954,13 +1954,13 @@ HRESULT SetShowAllTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глифы для отображения расположения всех тегов в документе.  
+ При значении TRUE отображает глифы для отображения положения всех тегов в документе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
  Отображает глиф для всех тегов области.  
@@ -1971,13 +1971,13 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех тегов области.  
+ При значении TRUE отображает глиф для всех тегов области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
  Отображает глиф для всех тегов br.  
@@ -1988,16 +1988,16 @@ HRESULT SetShowBRTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех тегов br.  
+ При значении TRUE отображает глиф для всех тегов br.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
- Отображает глиф для всех тегов комментария.  
+ Отображает глиф для все теги для комментариев.  
   
 ```  
 HRESULT SetShowCommentTags(bool bNewValue) const;  
@@ -2005,16 +2005,16 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех тегов комментария.  
+ При значении TRUE отображает глиф для все теги для комментариев.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
- Отображает все теги, которые показаны в Microsoft Internet Explorer 4.0.  
+ Отображает все теги, показанный на Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
@@ -2022,13 +2022,13 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- Если значение равно true, отображаются все теги, показано в Microsoft Internet Explorer 4.0.  
+ При значении TRUE отображает все теги, показанный на Microsoft Internet Explorer 4.0.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
  Отображает глиф для всех тегов скрипта.  
@@ -2039,13 +2039,13 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех тегов скрипта.  
+ При значении TRUE отображает глиф для всех тегов скрипта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
  Отображает глиф для всех тегов стиля.  
@@ -2056,13 +2056,13 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех тегов стиля.  
+ При значении TRUE отображает глиф для всех тегов стиля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
  Отображает глиф для всех неизвестных тегов.  
@@ -2073,16 +2073,16 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
   
 ### <a name="parameters"></a>Параметры  
  *bNewValue*  
- При значении true отображает глиф для всех неизвестных тегов.  
+ При значении TRUE отображает глиф для всех неизвестных тегов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
- Заменяет элемент управления многострочного текстового ввода для текущего выбора.  
+ Заменяет элемент управления многострочного текстового ввода для текущего выделения.  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
@@ -2090,16 +2090,16 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szId*  
- Идентификатор элемента управления вводом многострочного текста.  
+ Идентификатор элемента управления вводом многострочный текст.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
- Перезаписывает это текстовый элемент управления для текущего выбора.  
+ Перезаписывает текстового элемента управления, связанных с текущим выделением.  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
@@ -2110,52 +2110,52 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
  Идентификатор элемента управления text.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
- Удаляет все закладки из текущего выделенного фрагмента.  
+ Удаляет все закладки из текущего выделения.  
   
 ```  
 HRESULT UnBookmark() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [IDM UNBOOKMARK идентификатор команды](https://msdn.microsoft.com/library/aa770034.aspx) с элементом управления WebBrowser.  
+ Этот метод отправляет [IDM UNBOOKMARK идентификатор команды](https://msdn.microsoft.com/library/aa770034.aspx) для элемента управления WebBrowser.  
   
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
- Переключение между подчеркнут и не подчеркнуто текущее выделение.  
+ Переключает текущее выделение между подчеркнуты и не подчеркнуты.  
   
 ```  
 HRESULT Underline() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [ПОДЧЕРКИВАНИЕ IDM идентификатор команды](https://msdn.microsoft.com/library/aa770035.aspx) с элементом управления WebBrowser.  
+ Этот метод отправляет [IDM UNDERLINE идентификатор команды](https://msdn.microsoft.com/library/aa770035.aspx) для элемента управления WebBrowser.  
   
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
- Удаляет все гиперссылки из текущего выделенного фрагмента.  
+ Удаляет все гиперссылки из текущего выделения.  
   
 ```  
 HRESULT Unlink() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [разорвать связь IDM идентификатор команды](https://msdn.microsoft.com/library/aa770037.aspx) с элементом управления WebBrowser.  
+ Этот метод отправляет [удалить связь группы IDM идентификатор команды](https://msdn.microsoft.com/library/aa770037.aspx) в элемент управления WebBrowser.  
   
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
- Переключает текущий выбор между упорядоченный список и блок обычном формате.  
+ Переключает текущее выделение между упорядоченный список и обычный формат блока.  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
@@ -2163,15 +2163,15 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *szId*  
- Идентификатор неупорядоченный список.  
+ Идентификатор неупорядоченного списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отправляет [идентификатор команды IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) для элемента управления WebBrowser.  
+ Этот метод отправляет [идентификатор команды IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) в элемент управления WebBrowser.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Образец HTMLEdit](../../visual-cpp-samples.md)
+ [Пример HTMLEdit](../../visual-cpp-samples.md)
 

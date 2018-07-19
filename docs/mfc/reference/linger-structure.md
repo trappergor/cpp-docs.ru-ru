@@ -1,5 +1,5 @@
 ---
-title: Структура LINGER | Документы Microsoft
+title: Структура LINGER | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339375"
 ---
 # <a name="linger-structure"></a>Структура LINGER
-`LINGER` Структура используется для управления **SO_LINGER** и **SO_DONTLINGER** параметры `CAsyncSocket::GetSockOpt`.  
+`LINGER` Структура используется для управления параметры SO_LINGER и SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ struct linger {
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Установка **SO_DONTLINGER** отменяет блокирование функции-члена **закрыть** при ожидании неотправленные данные для отправки. Установка этого параметра эквивалентно заданию для **SO_LINGER** с **l_onoff** присвоено значение 0.  
+ Установка параметра SO_DONTLINGER предотвращает блокировку функция-член `Close` при ожидании неотправленные данные для отправки. Установка этого параметра эквивалентно установке SO_LINGER с `l_onoff` присвоено значение 0.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** winsock2.h  

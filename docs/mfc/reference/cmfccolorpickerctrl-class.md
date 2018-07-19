@@ -1,5 +1,5 @@
 ---
-title: Класс для CMFCColorPickerCtrl | Документы Microsoft
+title: Класс CMFCColorPickerCtrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,14 +50,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042047"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849969"
 ---
-# <a name="cmfccolorpickerctrl-class"></a>Класс для CMFCColorPickerCtrl
+# <a name="cmfccolorpickerctrl-class"></a>Класс CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Класс предоставляет функциональные возможности для элемента управления, который используется для выбора цветов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -79,46 +79,46 @@ class CMFCColorPickerCtrl : public CButton
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Получает цвет, выбранного пользователем.|  
-|[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлечение значений цветового тона, яркости и насыщенности цвета, выбранного пользователем.|  
+|[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлекает значения оттенка, освещенности и насыщенность цвета, выбранного пользователем.|  
 |[CMFCColorPickerCtrl::GetHue](#gethue)|Возвращает компонент оттенок цвета, выбранного пользователем.|  
-|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|Возвращает компонент яркости цвета, выбранного пользователем.|  
+|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|Возвращает компонент освещенности, цвета, выбранного пользователем.|  
 |[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|Возвращает компонент насыщенность цвета, выбранного пользователем.|  
-|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Задает текущий цвет цвет определяется указанным компонентов цвета RGB или шестиугольник указанной ячейки.|  
+|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Задает текущий цвет цвет, определяемый указанных компонентов цвета RGB или шестиугольник указанной ячейки.|  
 |[CMFCColorPickerCtrl::SetColor](#setcolor)|Задает текущий цвет указанное значение цвета RGB.|  
-|[CMFCColorPickerCtrl::SetHLS](#sethls)|Задает текущий цвет с указанным значением цвета HLS.|  
+|[CMFCColorPickerCtrl::SetHLS](#sethls)|Задает текущий цвет указанное значение цвета HLS.|  
 |[CMFCColorPickerCtrl::SetHue](#sethue)|Изменяет компонента оттенка выбранного цвета.|  
-|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|Изменяет компонент яркости выбранный цвет.|  
-|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Задает ширину линейки яркости в средстве выбора цвета.|  
-|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Задает начальный выбранного цвета.|  
-|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Задает текущую палитру цветов.|  
-|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|Изменяет компонент насыщенности выбранного цвета.|  
+|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|Изменяет компонент освещенности выбранный цвет.|  
+|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Задает ширину панели освещенности в средстве выбора цвета.|  
+|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Задает начальное выбранного цвета.|  
+|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Задает текущую цветовую палитру.|  
+|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|Изменяет компонента насыщенности выбранного цвета.|  
 |[CMFCColorPickerCtrl::SetType](#settype)|Задает тип элемента управления выбора цвета для отображения.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызывается платформой перед отображением курсор, который указывает на выбранный цвет.|  
+|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызвано структурой перед отображением курсор, указывающий на выбранный цвет.|  
   
 ## <a name="remarks"></a>Примечания  
- Стандартные цвета выбираются из палитры цветов шестиугольник и пользовательские цвета выбираются из панель яркости где цвета задаются с помощью красного, зеленого и синего нотации или нотации оттенка/satuaration и яркости.  
+ Стандартные цвета выбираются из палитры цветов шестиугольник, а также пользовательские цвета выбираются из панели освещенности там, где цвета задаются с помощью красного, зеленого и синего нотацию или нотацию hue/satuaration/освещенности.  
   
- На следующем рисунке показаны некоторые `CMFCColorPickerCtrl` объектов.  
+ На следующем рисунке показано несколько `CMFCColorPickerCtrl` объектов.  
   
  ![Диалоговое окно для CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")  
   
- `CMFCColorPickerCtrl` Поддерживает две пары стили. Стили HEX и HEX_GREYSCALE подходят для стандартных цвет. Стили ВЫБОРА и ЯРКОСТИ подходят для выбора другой цвет.  
+ `CMFCColorPickerCtrl` Поддерживает две пары стили. Стили ШЕСТНАДЦАТЕРИЧНЫЕ и HEX_GREYSCALE подходят для стандартный цвет выделения. Средство ВЫБОРА и ЯРКОСТЬЮ стили подходят для выбора пользовательский цвет.  
   
- Выполните следующие действия для включения `CMFCColorPickerCtrl` управления диалогового окна:  
+ Выполните следующие действия для включения `CMFCColorPickerCtrl` элемента управления в диалоговое окно:  
   
-1.  При использовании **ClassWizard**, вставьте новый элемент управления button в ваш шаблон диалогового окна (потому что `CMFCColorPickerCtrl` класс, наследуемый от `CButton` класса).  
+1.  Если вы используете **ClassWizard**, вставьте новый элемент управления button в ваш шаблон диалогового окна (поскольку `CMFCColorPickerCtrl` класс, наследуемый от `CButton` класса).  
   
-2.  Вставьте переменную-член, которая связана с новый элемент управления button в классе диалогового окна. Измените тип переменной из `CButton` для `CMFCColorPickerCtrl`.  
+2.  Вставьте переменную-член, которая связана с новый элемент управления button в классе диалогового окна. Затем измените тип переменной из `CButton` для `CMFCColorPickerCtrl`.  
   
-3.  Вставить `WM_INITDIALOG` обработчик сообщений для класса диалогового окна. В обработчике задайте тип, палитры и начальный цвет выбранного `CMFCColorPickerCtrl` элемента управления.  
+3.  Вставить `WM_INITDIALOG` обработчик сообщений для класса диалогового окна. В обработчике задайте тип, палитры и начальной выбранный цвет `CMFCColorPickerCtrl` элемента управления.  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует способы настройки `CMFCColorPickerCtrl` с использованием различных методов `CMFCColorPickerCtrl` класса. В примере показано, как задать тип элемента управления выбора и как задать цвет, цветового тона, яркости и насыщенности. Пример является частью [образец новые элементы управления](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует настройку `CMFCColorPickerCtrl` объекта с помощью различных методов в `CMFCColorPickerCtrl` класса. В примере показано, как задать тип элемента управления выбора и как задать цвет, hue, освещенности и насыщенность. Пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]  
@@ -132,7 +132,7 @@ class CMFCColorPickerCtrl : public CButton
   
  [CButton](../../mfc/reference/cbutton-class.md)  
   
- [Для CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
+ [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxcolorpickerctrl.h  
@@ -149,7 +149,7 @@ CMFCColorPickerCtrl();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor  
- Вызывается платформой перед отображением курсор, который указывает на выбранный цвет.  
+ Вызвано структурой перед отображением курсор, указывающий на выбранный цвет.  
   
 ```  
 virtual void DrawCursor(
@@ -165,7 +165,7 @@ virtual void DrawCursor(
  Задает прямоугольную область вокруг выбранного цвета.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод изменить форму курсора, указывающий на выбранный цвет.  
+ Переопределите этот метод, если вам нужно изменить форму курсор, который указывает на выбранный цвет.  
   
 ##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor  
  Получает цвет, выбранного пользователем.  
@@ -180,7 +180,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS  
- Извлечение значений цветового тона, яркости и насыщенности цвета, выбранного пользователем.  
+ Извлекает значения оттенка, освещенности и насыщенность цвета, выбранного пользователем.  
   
 ```  
 void GetHLS(
@@ -190,11 +190,11 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [out] *цветовой тон*  
- Указатель на переменную типа double, получает сведения о цветовой тон.  
+ [out] *hue*  
+ Указатель на переменную типа double, получающий hue сведения.  
   
- [out] *яркости*  
- Указатель на переменную типа double, получающий сведения яркости.  
+ [out] *освещенности*  
+ Указатель на переменную типа double, получающий сведения освещенности.  
   
  [out] *насыщенность*  
  Указатель на переменную типа double, получающий насыщенность сведения.  
@@ -214,14 +214,14 @@ double GetHue() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance  
- Возвращает компонент яркости цвета, выбранного пользователем.  
+ Возвращает компонент освещенности, цвета, выбранного пользователем.  
   
 ```  
 double GetLuminance() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Компонент яркости выбранного цвета.  
+ Компонент освещенности выбранного цвета.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -238,7 +238,7 @@ double GetSaturation() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon  
- Задает текущий цвет цвет определяется указанным компонентов цвета RGB или шестиугольник указанной ячейки.  
+ Задает текущий цвет цвет, определяемый указанных компонентов цвета RGB или шестиугольник указанной ячейки.  
   
 ```  
 void SelectCellHexagon(
@@ -269,12 +269,12 @@ BOOL SelectCellHexagon(
  Координата по оси y курсор, который указывает на шестиугольник ячейки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Вторая перегрузка этого метода всегда возвращает `FALSE`.  
+ Вторая перегрузка этого метода всегда возвращает значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Первая перегрузка этого метода задает текущий цвет цвет, который соответствует элементу управления выбора цвета, заданные компонентов красного, зеленого и синего цвета.  
+ Первая перегрузка этого метода задает текущий цвет, цвет, соответствующий элемент управления для выбора цвета, заданного компонентам красного, зеленого и синего цветов.  
   
- Вторая перегрузка этого метода задает текущий цвет в цвет ячейки шестиугольник, который указывает, позиции указанного курсора.  
+ Вторая перегрузка этого метода задает текущий цвет цвету ячейки шестиугольник, которое указывает, с позиции указанного курсора.  
   
 ##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor  
  Задает текущий цвет указанное значение цвета RGB.  
@@ -290,7 +290,7 @@ void SetColor(COLORREF Color);
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS  
- Задает текущий цвет с указанным значением цвета HLS.  
+ Задает текущий цвет указанное значение цвета HLS.  
   
 ```  
 void SetHLS(
@@ -301,48 +301,48 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *цветовой тон*  
+ [in] *hue*  
  Значение оттенка.  
   
- [in] *яркости*  
- Значение яркости.  
+ [in] *освещенности*  
+ Значение освещенности.  
   
  [in] *насыщенность*  
  Значение насыщенности.  
   
  [in] *bInvalidate*  
- `TRUE` Чтобы принудительно окно немедленно обновить новый цвет; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ Значение TRUE, чтобы принудительно окно для немедленного обновления на новый цвет; в противном случае — значение FALSE. Значение по умолчанию — TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue  
- Изменяет оттенок выбранный цвет.  
+ Изменяет оттенка выбранного цвета.  
   
 ```  
 void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *Цветовой тон*  
+ [in] *Hue*  
  Значение оттенка.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance  
- Изменяет яркости выбранного цвета.  
+ Изменяет яркостью выбранный цвет.  
   
 ```  
 void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *Яркости*  
- Значение яркости.  
+ [in] *Освещенности*  
+ Значение освещенности.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth  
- Задает ширину линейки яркости в средстве выбора цвета.  
+ Задает ширину панели освещенности в средстве выбора цвета.  
   
 ```  
 void SetLuminanceBarWidth(int w);
@@ -350,13 +350,13 @@ void SetLuminanceBarWidth(int w);
   
 ### <a name="parameters"></a>Параметры  
  [in] *w*  
- Ширина полосы яркости измеряется в пикселях.  
+ Ширина панели освещенности измеряется в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы изменить размеры панели яркости, расположенного на **настраиваемый** вкладку элемента управления выбора цвета. *w* параметр задает новую ширину панель яркости. Значение ширины учитывается, если она превышает три четверти Ширина клиентской области.  
+ Используйте этот метод для изменения размера панели освещенности, которая находится на **Custom** вкладку элемента управления выбора цвета. *w* параметр задает новую ширину панели освещенности. Значение ширины учитывается, если оно превышает три четверти Ширина клиентской области.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
- Задает начальный выбранного цвета.  
+ Задает начальное выбранного цвета.  
   
 ```  
 void SetOriginalColor(COLORREF ref);
@@ -367,10 +367,10 @@ void SetOriginalColor(COLORREF ref);
  Значение цвета RGB.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается при инициализации элемента управления выбора цвета.  
+ Этот метод вызывается при инициализации управление палитрой.  
   
 ##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette  
- Задает текущую палитру цветов.  
+ Задает текущую цветовую палитру.  
   
 ```  
 void SetPalette(CPalette* pPalette);
@@ -378,10 +378,10 @@ void SetPalette(CPalette* pPalette);
   
 ### <a name="parameters"></a>Параметры  
  [in] *pPalette*  
- Указатель на цветовой палитры.  
+ Указатель на цветовую палитру.  
   
 ### <a name="remarks"></a>Примечания  
- Цветовая палитра определяет массив цветов, которые отображаются в средстве выбора цвета.  
+ Цветовая палитра определяет массив цветов, представленные в средстве выбора цвета.  
   
 ##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation  
  Изменяет насыщенности выбранного цвета.  
@@ -405,12 +405,12 @@ void SetType(COLORTYPE colorType);
   
 ### <a name="parameters"></a>Параметры  
  [in] *colorType*  
- Тип элемента управления выбора цвета.  
+ Тип элемента управления средства выбора цвета.  
   
- Типы определяются `CMFCColorPickerCtrl::COLORTYPE` перечисления. Допустимые типы `LUMINANCE`, `PICKER`, `HEX` и `HEX_GREYSCALE`. Значение по умолчанию — `PICKER`.  
+ Типы определяются `CMFCColorPickerCtrl::COLORTYPE` перечисления. Возможные типы являются ОСВЕЩЕННОСТИ "," Выбор "," HEX "и" HEX_GREYSCALE. По умолчанию используется тип ВЫБОРА.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы указать тип элемента управления выбора цвета, этот метод вызывается до создания элемента управления Windows.  
+ Чтобы указать тип элемента управления средства выбора цвета, этот метод вызывается до создания элемента управления Windows.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

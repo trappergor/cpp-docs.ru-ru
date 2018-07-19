@@ -1,5 +1,5 @@
 ---
-title: Структура RGNDATA | Документы Microsoft
+title: Структура RGNDATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591c2dd65fdb9dde00f0ac1373c39affbe82da85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b775b14cb2f6b0f87bca1c81938c1a4c05c1304
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335673"
 ---
 # <a name="rgndata-structure"></a>Структура RGNDATA
-`RGNDATA` Структура содержит заголовок и массив прямоугольников, составляющие области. Эти прямоугольники отсортированный сверху вниз слева направо, не перекрываются.  
+`RGNDATA` Структура содержит заголовок и массив прямоугольников, которые составляют регион. Эти прямоугольники, отсортированный сверху вниз слева направо, не перекрываются.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,10 +37,10 @@ typedef struct _RGNDATA { /* rgnd */
   
 #### <a name="parameters"></a>Параметры  
  *rdh*  
- Указывает [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) структуры. (Дополнительные сведения о структуре см. в Windows SDK.) Члены этой структуры, укажите тип области (если он является прямоугольный или форме трапеции), число прямоугольники, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.  
+ Указывает [RGNDATAHEADER](http://msdn.microsoft.com/library/windows/desktop/dd162941) структуры. (Дополнительные сведения об этой структуре см. в разделе Windows SDK.) Члены этой структуры укажите тип области (если он является прямоугольной или форме трапеции), количеством прямоугольников, составляющие области, размер буфера, который содержит прямоугольник структуры, и так далее.  
   
- `Buffer`  
- Указывает произвольного размера буфера, содержащего [RECT](../../mfc/reference/rect-structure1.md) структур, составляющих области.  
+ *Буфер*  
+ Указывает буфер произвольного размера, который содержит [RECT](../../mfc/reference/rect-structure1.md) структур, составляющих области.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** wingdi.h  

@@ -1,5 +1,5 @@
 ---
-title: Функции серого цвета и сглаживания точечного рисунка | Документы Microsoft
+title: Функции серого цвета и сглаживания точечного рисунка | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339401"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>функции серого цвета и сглаживания точечного рисунка
 **Функции серого растрового изображения**  
   
  MFC предоставляет две функции для придания растровому изображению вида отключенного элемента управления.  
   
- ![Сравнение серых и оригинальных значок версий](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Сравнение версий серых и оригинальных значков](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "33375178"
   
  MFC также предоставляет две функции для замены фона растрового изображения сглаженным шаблоном.  
   
- ![Сравнение сглаженных и оригинальных значок версий](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Сравнение версий сглаженных и оригинальных значков](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 |||  
 |-|-|  
@@ -62,7 +62,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *основного контроллера домена*  
  Указывает на целевой контекст устройства.  
   
  *x*  
@@ -71,16 +71,16 @@ void AFXAPI AfxDrawGrayBitmap(
  *y*  
  Целевая координата по оси y.  
   
- `rSrc`  
+ *rSrc*  
  Исходное растровое изображение.  
   
- `crBackground`  
+ *crBackground*  
  Новый цвет фона (обычно серый, например в случае с COLOR_MENU).  
   
 ### <a name="remarks"></a>Примечания  
  Растровое изображение, рисуемое с использованием `AfxDrawGrayBitmap` , будет выглядеть как отключенный элемент управления.  
   
- ![Сравнение серых и оригинальных значок версий](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Сравнение версий серых и оригинальных значков](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
@@ -99,19 +99,19 @@ void AFXAPI AfxGetGrayBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rSrc`  
+ *rSrc*  
  Исходное растровое изображение.  
   
- `pDest`  
+ *pDest*  
  Растровое изображение назначения.  
   
- `crBackground`  
+ *crBackground*  
  Новый цвет фона (обычно серый, например в случае с COLOR_MENU).  
   
 ### <a name="remarks"></a>Примечания  
  Растровое изображение, копируемое с использованием `AfxGetGrayBitmap` , будет выглядеть как отключенный элемент управления.  
   
- ![Сравнение серых и оригинальных значок версий](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Сравнение версий серых и оригинальных значков](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
@@ -120,7 +120,7 @@ void AFXAPI AfxGetGrayBitmap(
  **Заголовок:** afxwin.h  
   
 ##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- Рисует растровое изображение, замены его фона шаблоном сглаживания (проверки).  
+ Рисует растровое изображение, заменив ее фона с шаблоном сглаживания (проверка).  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -133,7 +133,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *основного контроллера домена*  
  Указывает на целевой контекст устройства.  
   
  *x*  
@@ -142,19 +142,19 @@ void AFXAPI AfxDrawDitheredBitmap(
  *y*  
  Целевая координата по оси y.  
   
- `rSrc`  
+ *rSrc*  
  Исходное растровое изображение.  
   
- `cr1`  
- Один из цветов двух сглаживания обычно белых.  
+ *cr1*  
+ Одним из цветов, два сглаживания, обычно белых.  
   
- `cr2`  
- Другие сглаживания цвет, обычно светло-серым цветом (случае с COLOR_MENU).  
+ *CR2*  
+ Другие сглаживания цвет, обычно светло-серый цвет (случае с COLOR_MENU).  
   
 ### <a name="remarks"></a>Примечания  
- Исходный точечный рисунок рисуется на конечный контроллер домена с помощью двух цветов ( `cr1` и `cr2`) клетчатого шаблон замены фона растрового изображения. Фон исходного точечного рисунка определяется как его белый точек и всех точек, соответствующих цвет пикселя в левом верхнем углу растрового изображения.  
+ Исходное растровое изображение рисуется на контроллер домена назначения с помощью двух цветов (*cr1* и *cr2*) клетчатого шаблона замены фона растрового изображения. Фон исходного растрового изображения представляет собой его белым точек и всех точек, соответствующих цвет пикселя в левом верхнем углу точечного рисунка.  
   
- ![Сравнение сглаженных и оригинальных значок версий](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Сравнение версий сглаженных и оригинальных значков](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
@@ -164,7 +164,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
- Копирует точечный рисунок, замены его фона шаблоном сглаживания (проверки).  
+ Копирует растровое изображение, заменив ее фона с шаблоном сглаживания (проверка).  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -175,22 +175,22 @@ void AFXAPI AfxGetDitheredBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rSrc`  
+ *rSrc*  
  Исходное растровое изображение.  
   
- `pDest`  
+ *pDest*  
  Растровое изображение назначения.  
   
- `cr1`  
- Один из цветов двух сглаживания обычно белых.  
+ *cr1*  
+ Одним из цветов, два сглаживания, обычно белых.  
   
- `cr2`  
- Другие сглаживания цвет, обычно светло-серым цветом (случае с COLOR_MENU).  
+ *CR2*  
+ Другие сглаживания цвет, обычно светло-серый цвет (случае с COLOR_MENU).  
   
 ### <a name="remarks"></a>Примечания  
- Точечный рисунок назначения с помощью двух цветов копируется исходный точечный рисунок ( `cr1` и `cr2`) клетчатого шаблон замены фона исходный точечный рисунок. Фон исходного точечного рисунка определяется как его белый точек и всех точек, соответствующих цвет пикселя в левом верхнем углу растрового изображения.  
+ Исходное растровое изображение копируется в точечный рисунок назначения с помощью двух цветов (*cr1* и *cr2*) клетчатого шаблона, заменив исходное растровое изображение фона. Фон исходного растрового изображения представляет собой его белым точек и всех точек, соответствующих цвет пикселя в левом верхнем углу точечного рисунка.  
   
- ![Сравнение сглаженных и оригинальных значок версий](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Сравнение версий сглаженных и оригинальных значков](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  

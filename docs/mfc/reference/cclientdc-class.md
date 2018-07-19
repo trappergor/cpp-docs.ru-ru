@@ -1,5 +1,5 @@
 ---
-title: CClientDC-класс | Документы Microsoft
+title: Класс CClientDC | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338585"
 ---
-# <a name="cclientdc-class"></a>CClientDC-класс
-Отвечает за вызов функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время удаления.  
+# <a name="cclientdc-class"></a>Класс CClientDC
+Берет на себя вызов функций Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) во время создания и [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) во время уничтожения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,18 +42,18 @@ class CClientDC : public CDC
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CClientDC::CClientDC](#cclientdc)|Создает `CClientDC` подключен объект `CWnd`.|  
+|[CClientDC::CClientDC](#cclientdc)|Создает `CClientDC` объекта, подключенных к `CWnd`.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
 |name|Описание:|  
 |----------|-----------------|  
-|[CClientDC::m_hWnd](#m_hwnd)|`HWND` Окна, для которого данный `CClientDC` является допустимым.|  
+|[CClientDC::m_hWnd](#m_hwnd)|HWND окна, для которого данный `CClientDC` является допустимым.|  
   
 ## <a name="remarks"></a>Примечания  
- Это означает, что контекст устройства, связанный с `CClientDC` объект находится в клиентской области окна.  
+ Это означает, что контекст устройства, связанный с `CClientDC` объект является клиентской области окна.  
   
- Дополнительные сведения о `CClientDC`, в разделе [контексты устройств](../../mfc/device-contexts.md).  
+ Дополнительные сведения о `CClientDC`, см. в разделе [контексты устройств](../../mfc/device-contexts.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -66,7 +66,7 @@ class CClientDC : public CDC
  **Заголовок:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- Создает `CClientDC` объекта, который обращается к клиентской области [CWnd](../../mfc/reference/cwnd-class.md) , на который указывает *pWnd*.  
+ Создает `CClientDC` объект, который обращается к клиентской области [CWnd](../../mfc/reference/cwnd-class.md) , на которые указывают *pWnd*.  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
@@ -74,12 +74,12 @@ explicit CClientDC(CWnd* pWnd);
   
 ### <a name="parameters"></a>Параметры  
  *pWnd*  
- Окно которого клиентской области, будут обращаться к объект контекста устройства.  
+ Окно которого клиентской области, будут получать доступ к объект контекста устройства.  
   
 ### <a name="remarks"></a>Примечания  
- Конструктор вызывает функции Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ Конструктор вызывает функцию Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
   
- Исключения (типа `CResourceException`) выдается, если Windows `GetDC` вызов завершается с ошибкой. На контекст устройства не могут быть доступны в том случае, если Windows уже выделена все контексты его доступных устройств. Приложение конкурирует за пять общих отображения контексты, доступные в любой момент времени в Windows.  
+ Исключения (типа `CResourceException`) создается, если Windows `GetDC` вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
@@ -95,10 +95,10 @@ HWND m_hWnd;
  *m_hWnd* является защищенной переменной.  
   
 ### <a name="example"></a>Пример  
-  Далее приведен пример [CClientDC::CClientDC](#cclientdc).  
+  См. в примере [CClientDC::CClientDC](#cclientdc).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC MDI](../../visual-cpp-samples.md)   
- [CDC-класс](../../mfc/reference/cdc-class.md)   
+ [Класс CDC](../../mfc/reference/cdc-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CDC](../../mfc/reference/cdc-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс CInternetSession | Документы Microsoft
+title: Класс CInternetSession | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/20/2018
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d8eb030bb6827fd8df5a7f4826c4c1e4b3b47b5a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337174"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -71,15 +71,15 @@ class CInternetSession : public CObject
 
 |Имя|Описание:|
 |----------|-----------------|
-|[CInternetSession::Close](#close)|Закрывает подключение к Интернету, при завершении сеанса Интернета.|
-|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Устанавливает состояние подпрограммы обратного вызова.|
-|[CInternetSession::GetContext](#getcontext)|Закрывает подключение к Интернету, при завершении сеанса Интернета.|
-|[CInternetSession::GetCookie](#getcookie)|Возвращает файлы cookie для указанного URL-адреса и всех его родительских URL-адреса.|
-|[CInternetSession::GetCookieLength](#getcookielength)|Извлекает переменную, указание длины куки-файла, сохраненного в буфере.|
-|[CInternetSession::GetFtpConnection](#getftpconnection)|Откроется FTP-сеанс с сервером. Осуществляет вход пользователя.|
+|[CInternetSession::Close](#close)|Закрывает подключение к Интернету, при завершении сеанса Интернет.|
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Устанавливает программу ответного вызова состояние.|
+|[CInternetSession::GetContext](#getcontext)|Закрывает подключение к Интернету, при завершении сеанса Интернет.|
+|[CInternetSession::GetCookie](#getcookie)|Возвращает файлы cookie для указанного URL-адрес и всех его родительских URL-адреса.|
+|[CInternetSession::GetCookieLength](#getcookielength)|Извлекает переменную, задающее длину файла cookie, сохраненного в буфере.|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Откроется сеанс FTP с сервером. Выполняет вход в систему.|
 |[CInternetSession::GetGopherConnection](#getgopherconnection)|Открывает gopher-сервер для приложения, которое пытается установить соединение.|
-|[CInternetSession::GetHttpConnection](#gethttpconnection)|Открывает HTTP-сервер для приложения, которое пытается установить соединение.|
-|[CInternetSession::OnStatusCallback](#onstatuscallback)|Обновляет статус операции, когда включен обратный вызов.|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Откроется сервер HTTP для приложения, которое пытается установить соединение.|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Обновляет состояние операции, когда включен обратный вызов.|
 |[CInternetSession::OpenURL](#openurl)|Выполняет синтаксический анализ и открывает URL-адрес.|
 |[CInternetSession::SetCookie](#setcookie)|Задает файл cookie для указанного URL-адреса.|
 |[CInternetSession::SetOption](#setoption)|Задает параметры для Интернет-сеанс.|
@@ -88,30 +88,30 @@ class CInternetSession : public CObject
 
 |Имя|Описание:|
 |----------|-----------------|
-|[CInternetSession::operator HINTERNET](#operator_hinternet)|Дескриптор текущего сеанса Интернета.|
+|[CInternetSession::operator HINTERNET](#operator_hinternet)|Дескриптор текущего сеанса Интернет.|
 
 ## <a name="remarks"></a>Примечания
 
-Если подключение к Интернету должна поддерживаться на время выполнения приложения, можно создать `CInternetSession` член класса [CWinApp](../../mfc/reference/cwinapp-class.md).
+Если в течение приложения нужно поддерживать подключение к Интернету, вы можете создать `CInternetSession` член класса [CWinApp](../../mfc/reference/cwinapp-class.md).
 
-После установления сеанса Интернета можно вызвать [OpenURL](#openurl). `CInternetSession` разбор URL-адрес можно, вызвав функцию глобального [AfxParseURL](internet-url-parsing-globals.md#afxparseurl). Независимо от его типа протокола `CInternetSession` интерпретирует URL-адрес и управляет им автоматически. Он может обрабатывать запросы для локальных файлов с «file://» URL-адрес ресурса. `OpenURL` Возвращает указатель на [CStdioFile](../../mfc/reference/cstdiofile-class.md) объекта, передавая имя он является локальным файлом.
+После установки Интернета, можно вызвать [OpenURL](#openurl). `CInternetSession` затем анализирует URL-адрес для вас, вызвав функцию глобального [AfxParseURL](internet-url-parsing-globals.md#afxparseurl). Независимо от его типа протокола `CInternetSession` интерпретирует URL-адрес и управляет им автоматически. Он может обрабатывать запросы для локальных файлов, идентифицируемое ресурс URL-адреса «file://». `OpenURL` Возвращает указатель на [CStdioFile](../../mfc/reference/cstdiofile-class.md) объекта, если имя его передавать представляет собой локальный файл.
 
-Если его открыть URL-адрес на сервере Интернета с помощью `OpenURL`, можно прочитать сведения из сайта. Если вы хотите выполнять действия с определенной службы (для, например HTTP, FTP или gopher) для файлов, расположенных на сервере, необходимо установить соответствующее соединение с этим сервером. Чтобы открыть определенного типа подключения напрямую к определенной службе, используйте один из следующих функций-членов:
+Если открыть URL-адрес на сервере Интернета с помощью `OpenURL`, может считывать сведения из сайта. Если вы хотите выполнять действия конкретной службы (для, например HTTP, FTP или gopher) в файлах, расположенных на сервере, необходимо установить соответствующее соединение с этим сервером. Чтобы открыть конкретный вид подключения непосредственно к конкретной службе, используйте один из следующих функций-членов:
 
 - [GetGopherConnection](#getgopherconnection) открыть подключение к службе gopher.
 
-- [GetHttpConnection](#gethttpconnection) открыть соединение для службы HTTP.
+- [GetHttpConnection](#gethttpconnection) открыть подключение к HTTP-службу.
 
 - [GetFtpConnection](#getftpconnection) открыть подключение к службе FTP.
 
-[SetOption](#setoption) позволяет задать параметры запроса в сеанс, например значения времени ожидания, число повторных попыток и т. д.
+[SetOption](#setoption) позволяет задать параметры запроса в сеанс, таких как значения времени ожидания, число повторных попыток и т. д.
 
 `CInternetSession` функции-члены [SetCookie](#setcookie), [GetCookie](#getcookie), и [GetCookieLength](#getcookielength) предоставляют средства для управления базой данных файлов cookie Win32, через который поддерживать серверы и сценарии сведения о состоянии о клиентской рабочей станции.
 
-Дополнительные сведения об основных задач программирования Интернета см. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md). Общие сведения об использовании классов MFC WinInet см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Дополнительные сведения об основных задачах программирования Интернета см. в статье [Internet первые шаги: WinInet](../../mfc/wininet-basics.md). Общие сведения об использовании классов MFC WinInet см. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` вызывает исключение [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) для типов службы не поддерживается. В настоящее время поддерживаются только следующие типы службы: FTP, HTTP, gopher и файл.
+> `CInternetSession` вызывает исключение [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) для типов службы не поддерживается. В настоящее время поддерживаются только следующих типов служб: FTP, HTTP, gopher и файл.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -124,7 +124,7 @@ class CInternetSession : public CObject
 
 ## <a name="cinternetsession"></a> CInternetSession::CInternetSession
 
-Эта функция-член вызывается, когда `CInternetSession` создан объект.
+Эта функция-член вызывается, когда `CInternetSession` создается объект.
 
 ```cpp
 CInternetSession(
@@ -139,48 +139,48 @@ CInternetSession(
 ### <a name="parameters"></a>Параметры
 
 *pstrAgent*  
-Указатель на строку, которая идентифицирует имя приложения или сущности, вызов функций Интернета (например, «Microsoft Интернет-браузер»). Если *pstrAgent* — **NULL** (по умолчанию), платформа вызывает функцию глобального [AfxGetAppName](application-information-and-management.md#afxgetappname), возвращающий символом null строку, содержащую приложения имя. Некоторые протоколы использовать данную строку для идентификации приложения на сервер.
+Указатель на строку, которая идентифицирует имя приложения или сущность, вызвав Интернет-функции (например, «Microsoft Интернет-браузер»). Если *pstrAgent* имеет значение NULL (по умолчанию), платформа вызывает функцию глобального [AfxGetAppName](application-information-and-management.md#afxgetappname), который возвращает заканчивающуюся нулем строку, содержащую имя приложения. Некоторые протоколы использовать эту строку для идентификации приложения на сервер.
 
 *dwContext*  
-Идентификатор контекста для операции. *dwContext* определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связана с этим идентификатором контекста.
+Идентификатор контекста для операции. *dwContext* определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](#onstatuscallback). Значение по умолчанию имеет значение 1; Тем не менее можно явно назначить идентификатор контекста для операции. Объект, а вся работа, она будет связан с этим идентификатором контекста.
 
 *dwAccessType*  
-Тип доступа. Ниже приведены допустимые значения, только один из которых может быть указано.
+Тип необходимый доступ. Ниже приведены допустимые значения, только один из которых может быть предоставлен.
 
-- `INTERNET_OPEN_TYPE_PRECONFIG` Подключение с использованием предварительно настроенных параметров в реестре. Этот тип доступа устанавливается по умолчанию. Для подключения через прокси, НАСТАЛО задать *dwAccessType* значению; при этом установить реестр соответствующим образом.
+- INTERNET_OPEN_TYPE_PRECONFIG соединиться при помощи заранее настроенные параметры в реестре. Этот тип доступа имеет значение по умолчанию. Чтобы подключаться через прокси-сервер еще ПРИВЛЕКАТЕЛЬНЕЕ, задайте *dwAccessType* этому значению; при этом установить реестра соответствующим образом.
 
-- `INTERNET_OPEN_TYPE_DIRECT` Непосредственное подключение к Интернету.
+- INTERNET_OPEN_TYPE_DIRECT подключиться непосредственно к Интернету.
 
-- `INTERNET_OPEN_TYPE_PROXY` Подключаться через прокси-сервер CERN.
+- INTERNET_OPEN_TYPE_PROXY подключаться через прокси-сервер CERN.
 
-Сведения о подключении с помощью различных типов учетных записей-посредников см. в разделе [шагов в обычном клиентском приложении FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
+Дополнительные сведения о подключении с разными типами учетных записей-посредников, см. в разделе [шагов в обычном клиентском приложении FTP](../../mfc/steps-in-a-typical-ftp-client-application.md).
 
 *pstrProxyName*  
-Имя основной прокси-сервер CERN Если *dwAccessType* задается как `INTERNET_OPEN_TYPE_PROXY`. Значение по умолчанию — **NULL**.
+Имя предпочтительной прокси CERN Если *dwAccessType* задается как INTERNET_OPEN_TYPE_PROXY. Значение по умолчанию имеет значение NULL.
 
 *pstrProxyBypass*  
-Указатель на строку, содержащую необязательный список адресов серверов. Эти адреса могут обходить при использовании прокси-доступа. Если **NULL** значение предоставляется, то список пропускаемых будет считать из реестра. Этот параметр применяется только тогда, когда *dwAccessType* равно `INTERNET_OPEN_TYPE_PROXY`.
+Указатель на строку, содержащую необязательный список адресов серверов. Эти адреса могут быть обойдены, при использовании прокси-доступа. Если задано значение NULL, в списке пропускаемых адресов будет считывать из реестра. Этот параметр имеет смысл только если *dwAccessType* присваивается INTERNET_OPEN_TYPE_PROXY.
 
 *dwFlags*  
 Указывает различные параметры кэширования. Значение по умолчанию имеет значение 0. Возможные значения включают:
 
-- `INTERNET_FLAG_DONT_CACHE` Не следует кэшировать данные, локально или серверов шлюза.
+- INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
 
-- `INTERNET_FLAG_OFFLINE` Загрузка операций удовлетворены через только постоянного кэша. Если элемент не существует в кэше, возвращается соответствующий код ошибки. Этот флаг могут объединяться с битовой операции `OR` ( **&#124;**) оператор.
+- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;**) оператор.
 
 ### <a name="remarks"></a>Примечания
 
-`CInternetSession` Первая функция Интернет вызывается приложением. Он инициализирует внутренние структуры данных и подготавливает к последующим вызовам из приложения.
+`CInternetSession` Первая функция Internet, вызывается приложением. Он инициализирует внутренние структуры данных и подготавливает для последующих вызовов из приложения.
 
-Если отсутствует подключение к Интернету может быть открыт, `CInternetSession` вызывает [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).
+Если нет подключения к Интернету может быть открыт, `CInternetSession` вызывает [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).
 
 ### <a name="example"></a>Пример
 
-Далее приведен пример [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+См. в примере [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="close"></a>  CInternetSession::Close
 
-Вызовите эту функцию-член по завершении приложения с помощью `CInternetSession` объекта.
+Вызовите эту функцию-член, когда приложение завершило использование `CInternetSession` объекта.
 
 ```cpp
 virtual void Close();
@@ -188,11 +188,11 @@ virtual void Close();
 
 ### <a name="example"></a>Пример
 
-Далее приведен пример [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+См. в примере [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback
 
-Вызовите эту функцию-член для включения состояния обратного вызова.
+Вызовите эта функция-член для включения обратного вызова состояния.
 
 ```cpp
 BOOL EnableStatusCallback(BOOL bEnable = TRUE);
@@ -201,25 +201,25 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*  
-Указывает, включен ли обратного вызова. Значение по умолчанию — **TRUE**.
+Указывает, включена ли обратного вызова. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается сбоем, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
-При обработке обратного вызова состояние, можно указать состояние о ходе выполнения операции (например, разрешения имени, подключение к серверу и т. д) в строке состояния приложения. Отображение состояния операции желательно особенно во время операции долгосрочного.
+При обработке обратного вызова состояние, можно указать состояние о ходе выполнения операции (например, разрешение имени, подключение к серверу и т. д.) в строке состояния приложения. Отображение состояния операции желательно особенно во время долгосрочной операции.
 
-Так как обратные вызовы происходят во время обработки запроса, как меньше времени обратного вызова для предотвращения снижения пропускную способность сети должна тратить от приложения. Например размещение диалоговое окно с помощью обратного вызова может быть таких длительной операции, что сервер завершает запрос.
+Так как обратные вызовы происходят во время обработки запроса, приложения следует тратить как меньше времени в обратном вызове для предотвращения снижения пропускной способности данных к сети. Например поместив откроется диалоговое окно, в обратном вызове может быть такой длительной операции, что сервер завершает запрос.
 
-Невозможно удалить состояние обратного вызова, при условии, что для любых обратных вызовов, ожидающих выполнения.
+Обратный вызов состояния нельзя удалить до тех пор, пока все обратных вызовов, ожидающих выполнения.
 
-Асинхронная обработка всех операций, необходимо создать собственный поток или используют функции WinInet без использования MFC.
+Для обработки всех операций в асинхронном режиме, необходимо создать собственный поток или использовать функции WinInet без использования MFC.
 
 ## <a name="getcontext"></a>  CInternetSession::GetContext
 
-Вызовите эту функцию-член для получения значения контекста сеанса конкретного приложения.
+Вызов этой функции-члена для получения значения контекста сеанса конкретного приложения.
 
 ```cpp
 DWORD_PTR GetContext() const;
@@ -227,17 +227,17 @@ DWORD_PTR GetContext() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Определяемые приложением контекст идентификатора.
+Определяемый приложением контекст идентификатора.
 
 ### <a name="remarks"></a>Примечания
 
-[OnStatusCallback](#onstatuscallback) использует возвращаемый идентификатор контекста `GetContext` для уведомления о состоянии конкретного приложения. Например когда пользователь активирует Интернет-запрос, включающий возвращения информации о состоянии, состояние обратного вызова использует идентификатор контекста для отчета о состоянии этого конкретного запроса. Если пользователь активирует два отдельных Интернет запросов, что оба включают возвращения информации о состоянии, `OnStatusCallback` используется для возврата состояния о своих запросах на соответствующие идентификаторы контекста. Таким образом идентификатор контекста используется для всех операций обратного вызова состояние, и она связана с сеансом до окончания сеанса.
+[OnStatusCallback](#onstatuscallback) использует идентификатор контекста возвращается `GetContext` для уведомления о состоянии конкретного приложения. Например когда пользователь активирует Интернет-запрос, который включает в себя возвращения информации о состоянии, обратный вызов состояния использует идентификатор контекста для отчета о состоянии на этого конкретного запроса. Если пользователь активирует два отдельных Internet запросов, что в обоих случаях используются возвращения информации о состоянии, `OnStatusCallback` используется для возврата состояния о своих запросах соответствующие идентификаторы контекстов управляются объектами. Следовательно идентификатор контекста используется для всех операций обратного вызова состояния, и она связана с сеансом до окончания сеанса.
 
-Дополнительные сведения об асинхронных операциях см. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md).
+Дополнительные сведения об асинхронных операциях см. в статье [Internet первые шаги: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
-Эта функция-член реализует поведение функции Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), как описано в Windows SDK.
+Эта функция-член реализует поведение функции Win32 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710), как описано в пакете Windows SDK.
 
 ```cpp
 static BOOL GetCookie(
@@ -259,29 +259,29 @@ static BOOL GetCookie(
 Указатель на строку, содержащую URL-адрес.
 
 *pstrCookieName*  
-Указатель на строку, содержащую имя файла cookie для получения указанный URL-адрес.
+Указатель на строку, содержащую имя файла cookie, чтобы получить для указанного URL-адрес.
 
 *pstrCookieData*  
-В первой перегрузке указатель на строку, содержащую адрес буфера, принимающего данные cookie. Это значение может быть **NULL**. Во второй перегрузке ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для получения данных файлов cookie.
+В первой перегрузке указатель на строку, содержащую адрес буфера, который получает данные файла cookie. Это значение может быть NULL. Во второй перегрузке, ссылку на [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для получения данных файлов cookie.
 
 *dwBufLen*  
-Переменная, определяющий размер *pstrCookieData* буфера. Если функция выполняется успешно, помещаемых в буфер, объем данных, копируемых в *pstrCookieData* буфера. Если *pstrCookieData* — **NULL**, этот параметр получает значение, указывающее размер буфера, необходимый для копирования всех данных файлов cookie.
+Переменная, указывая размер *pstrCookieData* буфера. Если функция выполняется успешно, помещаемых в буфер, объем данных, копируемых в *pstrCookieData* буфера. Если *pstrCookieData* имеет значение NULL, этот параметр получает значение, указывающее размер буфера, необходимый для копирования всех данных файлов cookie.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **TRUE** в случае успешного выполнения или **FALSE** в противном случае. Если вызов завершается неудачей, вызывается функция Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) для определения причины ошибки. Применяются следующие значения ошибки:
+В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Если вызов завершается неудачно, вызывается функция Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) для определения причины ошибки. Применяются следующие значения ошибок:
 
-- `ERROR_NO_MORE_ITEMS` Нет, объекты cookie не указанный URL-адрес и всех его родительских объектов.
+- ERROR_NO_MORE_ITEMS имеется cookie не для указанного URL-адреса и все его родительские элементы.
 
-- `ERROR_INSUFFICIENT_BUFFER` Значение, переданное в *dwBufLen* недостаточна для копирования всех данных файлов cookie. Значение, возвращаемое в *dwBufLen* требуется получить все данные, размер буфера.
+- Значение, переданное значение ERROR_INSUFFICIENT_BUFFER *dwBufLen* не позволяет скопировать все данные файла cookie. Значение, возвращаемое в *dwBufLen* — это размер буфера для получения всех данных.
 
 ### <a name="remarks"></a>Примечания
 
-Во второй перегрузке MFC извлекает данные cookie в предоставленном `CString` объекта.
+Во второй перегрузке MFC извлекает данные файла cookie в предоставленный `CString` объекта.
 
 ## <a name="getcookielength"></a>  CInternetSession::GetCookieLength
 
-Вызовите эту функцию-член получить длину куки-файла, сохраненного в буфере.
+Вызов для получения длины файла cookie, сохраненные в буфере, эта функция-член.
 
 ```cpp
 static DWORD GetCookieLength(
@@ -299,15 +299,15 @@ static DWORD GetCookieLength(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `DWORD` значение, указывающее длину файла cookie, сохраненного в буфере. Нуль, если нет куки-файл с именем, обозначенном *pstrCookieName* существует.
+Значение DWORD, указывающее длину файла cookie, сохраненного в буфере. Нуль, если нет файл cookie с именем обозначается *pstrCookieName* существует.
 
 ### <a name="remarks"></a>Примечания
 
-Это значение используется [GetCookie](#getcookie).
+Это значение используется по [GetCookie](#getcookie).
 
 ## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
-Вызовите эту функцию-член для установки FTP-соединение и получить указатель на `CFtpConnection` объект.
+Вызывайте эту функцию члена, чтобы подключиться к FTP и получить указатель на `CFtpConnection` объект.
 
 ```cpp
 CFtpConnection* GetFtpConnection(
@@ -324,39 +324,39 @@ CFtpConnection* GetFtpConnection(
 Указатель на строку, содержащую имя FTP-сервера.
 
 *pstrUserName*  
-Указатель на строку с завершающим нулем, указывающее имя пользователя для входа. Если **NULL**, значение по умолчанию является анонимным.
+Указатель на заканчивающуюся нулем строку, указывающее имя пользователя для входа. Если значение равно NULL, значение по умолчанию является анонимным.
 
 *pstrPassword*  
-Указатель символом null строку, которая указывает пароль, используемый для входа. Если оба *pstrPassword* и *pstrUserName* , **NULL**, анонимных паролей по умолчанию является имя электронной почты пользователя. Если *pstrPassword* — **NULL** (или пустую строку), но *pstrUserName* не **NULL**, используется пустой пароль. В следующей таблице описаны поведение для четыре возможные параметры *pstrUserName* и *pstrPassword*:
+Указатель на заканчивающуюся нулем строку, указывающее пароль, используемый для входа. Если оба *pstrPassword* и *pstrUserName* имеют значение NULL, анонимные пароль по умолчанию — имя электронной почты пользователя. Если *pstrPassword* имеет значение NULL (или пустую строку), но *pstrUserName* не равно NULL, используется пустой пароль. В следующей таблице описаны поведение четыре возможные параметры *pstrUserName* и *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Имя пользователя, отправленных FTP-сервер|Пароль, отправленных FTP-сервер|
+|*pstrUserName*|*pstrPassword*|Имя пользователя, отправляемые серверу FTP|Пароля, передаваемых на FTP-сервер|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|**Значение NULL** или «»|**Значение NULL** или «»|«anonymous»|Имя электронной почты пользователя|
-|Не-**NULL** строки|**Значение NULL** или «»|*pstrUserName*|" "|
-|**NULL**|Не-**NULL** строки|**ОШИБКА**|**ОШИБКА**||
-|Не-**NULL** строки|Не-**NULL** строки|*pstrUserName*|*pstrPassword*|
+|Значение NULL или ""|Значение NULL или ""|«anonymous»|Имя электронной почты пользователя|
+|НЕНУЛЕВЫЕ строковые|Значение NULL или ""|*pstrUserName*|" "|
+|NULL|НЕНУЛЕВЫЕ строковые|ОШИБКА|ОШИБКА||
+|НЕНУЛЕВЫЕ строковые|НЕНУЛЕВЫЕ строковые|*pstrUserName*|*pstrPassword*|
 
 *nPort*  
-Число, определяющее порт TCP/IP, используемый на сервере.
+Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
 *bPassive*  
-Задает пассивный или активный режим для этого сеанса FTP. Если значение **TRUE**, он задает Win32 API `dwFlag` для `INTERNET_FLAG_PASSIVE`.
+Задает пассивный или активный режим для этого сеанса FTP. Если задано значение TRUE, то он устанавливает Win32 API `dwFlag` для INTERNET_FLAG_PASSIVE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [классе CFtpConnection](../../mfc/reference/cftpconnection-class.md) объекта. При сбое вызова, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
+Указатель на [CFtpConnection](../../mfc/reference/cftpconnection-class.md) объекта. Если вызов завершается сбоем, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
-`GetFtpConnection` подключается к FTP-серверу и создает и возвращает указатель на `CFTPConnection` объект. Он не выполняет любой конкретной операции на сервере. Если вы планируете считывать или записывать файлы, например, необходимо выполнить эти операции как отдельные шаги. В разделе классы [классе CFtpConnection](../../mfc/reference/cftpconnection-class.md) и [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) сведения о поиске файлов, открытие файлов, чтение и запись в файлы. См. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) за инструкциями по выполнению типовых задач FTP-соединений.
+`GetFtpConnection` подключается к FTP-сервера и создает и возвращает указатель на `CFTPConnection` объект. Он не выполняет любой конкретной операции на сервере. Если вы планируете считывать или записывать файлы, например, необходимо выполнить эти операции отдельно. См. в разделе классы [CFtpConnection](../../mfc/reference/cftpconnection-class.md) и [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) сведения о поиске файлов, открытие файлов, чтение и запись в файлы. См. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) для выполнения действий в выполнение типичных задач подключения FTP.
 
 ### <a name="example"></a>Пример
 
-Далее приведен пример [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
+См. в примере [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
 ## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
-Вызовите эту функцию-член для создания нового подключения gopher и получить указатель на `CGopherConnection` объект.
+Вызывайте эту функцию члена, чтобы установить новое подключение gopher и получить указатель на `CGopherConnection` объект.
 
 ```cpp
 CGopherConnection* GetGopherConnection(
@@ -378,19 +378,19 @@ CGopherConnection* GetGopherConnection(
 Указатель на строку, содержащую пароль доступа.
 
 *nPort*  
-Число, определяющее порт TCP/IP, используемый на сервере.
+Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта. При сбое вызова, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
+Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта. Если вызов завершается сбоем, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
-`GetGopherConnection` подключается к серверу gopher и создает и возвращает указатель на `CGopherConnection` объект. Он не выполняет любой конкретной операции на сервере. Если вы собираетесь чтения или записи данных, например, необходимо выполнить эти операции как отдельные шаги. В разделе классы [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), и [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) сведения о поиске файлов, открытие файлов, чтение и запись в файлы. Сведения о просмотре FTP-сайта см. в разделе функция-член [OpenURL](#openurl). См. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) за инструкциями по выполнению типовых задач подключения gopher.
+`GetGopherConnection` подключается к серверу gopher и создает и возвращает указатель на `CGopherConnection` объект. Он не выполняет любой конкретной операции на сервере. Если вы собираетесь чтения или записи данных, например, необходимо выполнить эти операции отдельно. См. в разделе классы [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), и [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) сведения о поиске файлов, открытие файлов, чтение и запись в файлы. Сведения о просмотре FTP-сайта, см. в разделе функция-член [OpenURL](#openurl). См. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) для выполнения действий в выполнение типичных задач подключения gopher.
 
 ## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
-Вызовите эту функцию-член для установки соединения HTTP и получить указатель на `CHttpConnection` объект.
+Вызов этой функции-члена для установки соединения HTTP и получить указатель на `CHttpConnection` объект.
 
 ```cpp
 CHttpConnection* GetHttpConnection(
@@ -413,7 +413,7 @@ CHttpConnection* GetHttpConnection(
 Указатель на строку, содержащую имя сервера HTTP.
 
 *nPort*  
-Число, определяющее порт TCP/IP, используемый на сервере.
+Число, идентифицирующее порт TCP/IP, используемый на сервере.
 
 *pstrUserName*  
 Указатель на строку, содержащую имя пользователя.
@@ -422,15 +422,15 @@ CHttpConnection* GetHttpConnection(
 Указатель на строку, содержащую пароль доступа.
 
 *dwFlags*  
-Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице **примечания** раздел [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) описание *dwFlags* значения.
+Любое сочетание `INTERNET_FLAG_*` флаги. См. в таблице в **"Примечания"** раздел [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) описание *dwFlags* значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [CHttpConnection](../../mfc/reference/chttpconnection-class.md) объекта. При сбое вызова, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
+Указатель на [CHttpConnection](../../mfc/reference/chttpconnection-class.md) объекта. Если вызов завершается сбоем, определите причину сбоя, изучив порождается [CInternetException](../../mfc/reference/cinternetexception-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
-`GetHttpConnection` подключается к HTTP-сервера и создает и возвращает указатель на `CHttpConnection` объект. Он не выполняет любой конкретной операции на сервере. Если требуется запросить заголовка HTTP, например, необходимо выполнить эту операцию как отдельный шаг. В разделе классы [CHttpConnection](../../mfc/reference/chttpconnection-class.md) и [CHttpFile](../../mfc/reference/chttpfile-class.md) сведения об операциях, можно выполнить с помощью подключения к HTTP-серверу. Сведения о просмотре на HTTP-сайте см. в разделе функция-член [OpenURL](#openurl). См. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) за инструкциями по выполнению типовых задач подключение HTTP.
+`GetHttpConnection` подключается к серверу HTTP и создает и возвращает указатель на `CHttpConnection` объект. Он не выполняет любой конкретной операции на сервере. Например, если запросить заголовок HTTP, необходимо выполнить эту операцию как отдельный шаг. См. в разделе классы [CHttpConnection](../../mfc/reference/chttpconnection-class.md) и [CHttpFile](../../mfc/reference/chttpfile-class.md) для сведения об операциях, которые можно выполнить с помощью подключения к серверу HTTP. Сведения о просмотре на HTTP-сайте см. в разделе функция-член [OpenURL](#openurl). См. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md) для выполнения действий в выполнении обычных задач подключения HTTP.
 
 ## <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback
 
@@ -447,50 +447,50 @@ virtual void OnStatusCallback(
 ### <a name="parameters"></a>Параметры
 
 *dwContext*  
-Значение контекста, предоставляемой приложением.
+Значение контекста приложения.
 
 *dwInternetStatus*  
-Код состояния, которое указывает, почему был выполнен обратный вызов. В разделе **примечания** таблицу возможных значений.
+Код состояния, указывающий причину обратного вызова. См. в разделе **"Примечания"** таблицу возможных значений.
 
 *lpvStatusInformation*  
-Указатель на буфер, содержащий информацию, необходимую для этого обратного вызова.
+Указатель на буфер, содержащий сведения, относящиеся к этой функции обратного вызова.
 
 *dwStatusInformationLength*  
 Размер *lpvStatusInformation*.
 
 ### <a name="remarks"></a>Примечания
 
-Необходимо сначала вызвать [EnableStatusCallback](#enablestatuscallback) преимуществами состояние обратного вызова.
+Сначала необходимо вызвать [EnableStatusCallback](#enablestatuscallback) преимуществами состояние обратного вызова.
 
-*DwInternetStatus* параметр указывает, что операция выполняется и определяет, какое содержимое *lpvStatusInformation* будет. *dwStatusInformationLength* указывает длину данных, содержащихся в *lpvStatusInformation*. Значения состояния *dwInternetStatus* определяется следующим образом:
+*DwInternetStatus* параметр указывает, выполняемой операции и определяет, какое содержимое *lpvStatusInformation* будет. *dwStatusInformationLength* указывает длину данных, включенных в *lpvStatusInformation*. Значения для следующих состояния *dwInternetStatus* определяются следующим образом:
 
 |Значение|Значение|
 |-----------|-------------|
-|`INTERNET_STATUS_RESOLVING_NAME`|Поиск IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
-|`INTERNET_STATUS_NAME_RESOLVED`|Успешно найден IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
-|`INTERNET_STATUS_CONNECTING_TO_SERVER`|Подключение к адреса сокета ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)), на который указывает *lpvStatusInformation*.|
-|`INTERNET_STATUS_CONNECTED_TO_SERVER`|Успешное подключение к адреса сокета (`SOCKADDR`), на который указывает *lpvStatusInformation*.|
-|`INTERNET_STATUS_SENDING_REQUEST`|Отправка запроса сведения на сервер. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_ REQUEST_SENT`|Успешно отправлен запрос на сведения о сервере. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_RECEIVING_RESPONSE`|Ожидание ответа на запрос сервера. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_RESPONSE_RECEIVED`|Успешно получил ответ от сервера. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_CLOSING_CONNECTION`|Закрывает подключение к серверу. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_CONNECTION_CLOSED`|Успешно завершил подключение к серверу. *LpvStatusInformation* параметр **NULL**.|
-|`INTERNET_STATUS_HANDLE_CREATED`|Используемые функции Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) для указания, что он создан новый маркер. Это позволяет функции вызова Win32 приложения [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) из другого потока, если подключение выполняется слишком долго. Дополнительные сведения об этих функциях см Windows SDKfor.|
-|`INTERNET_STATUS_HANDLE_CLOSING`|Успешно завершен, это значение дескриптора.|
+|INTERNET_STATUS_RESOLVING_NAME|Поиск IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
+|INTERNET_STATUS_NAME_RESOLVED|Успешно найден IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Подключение к адреса сокета ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)), на которые указывают *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTED_TO_SERVER|Успешно подключились к адреса сокета (SOCKADDR), на которые указывают *lpvStatusInformation*.|
+|INTERNET_STATUS_SENDING_REQUEST|Отправляет запрос информации на сервер. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_ REQUEST_SENT|Успешно отправлен запрос информации на сервер. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_RECEIVING_RESPONSE|Ожидание ответа на запрос сервера. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_RESPONSE_RECEIVED|Успешно получил ответ от сервера. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_CLOSING_CONNECTION|Закрытие подключения к серверу. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_CONNECTION_CLOSED|Успешно закрыл подключение к серверу. *LpvStatusInformation* параметр имеет значение NULL.|
+|INTERNET_STATUS_HANDLE_CREATED|Функция Win32 API [InternetConnect](http://msdn.microsoft.com/library/windows/desktop/aa384363) для указания, что он создан новый маркер. Это позволяет функции вызова Win32 приложения [InternetCloseHandle](http://msdn.microsoft.com/library/windows/desktop/aa384350) из другого потока, если подключение выполняется слишком долго. Дополнительные сведения об этих функциях см. Windows SDKfor.|
+|INTERNET_STATUS_HANDLE_CLOSING|Успешно завершены, это значение дескриптора.|
 
-Переопределите эту функцию-член требуется какое-либо действие перед выполнением процедуры обратного вызова состояние.
+Переопределите эту функцию-член требуется какое-либо действие, прежде чем будет выполнено подпрограммы обратного вызова состояния.
 
 > [!NOTE]
-> Обратные вызовы состояние требуется защита состояние потока. Если вы используете MFC в общей библиотеке, добавьте следующую строку в начало переопределения:
+> Обратные вызовы состояние нуждаются в защите состояние потока. Если вы используете MFC в общей библиотеке, добавьте следующую строку в начало переопределение:
 
  [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-Дополнительные сведения об асинхронных операциях см. в статье [первые шаги в Интернете: WinInet](../../mfc/wininet-basics.md).
+Дополнительные сведения об асинхронных операциях см. в статье [Internet первые шаги: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="openurl"></a>  CInternetSession::OpenURL
 
-Этот член способ вызова функции для отправки указанного запроса HTTP-сервера и предоставить клиенту возможность указать дополнительные RFC822 MIME или заголовки HTTP для отправки вместе с запросом.
+Вызовите этот член функции для отправки указанного запроса HTTP-сервера и предоставить клиенту возможность указать дополнительные RFC822 MIME или заголовки HTTP для отправки вместе с запросом.
 
 ```cpp
 CStdioFile* OpenURL(
@@ -504,39 +504,39 @@ CStdioFile* OpenURL(
 ### <a name="parameters"></a>Параметры
 
 *pstrURL*  
-Указатель на имя URL-адрес начинается чтение. Только URL-адреса, начиная с файлом:, ftp:, gopher:, или http: поддерживаются. Утверждает, если *pstrURL* — **NULL**.
+Указатель на имя URL-адрес начинается чтение. Только URL-адреса начиная с файлом:, ftp:, gopher:, или http: поддерживаются. Утверждает, если *pstrURL* имеет значение NULL.
 
 *dwContext*  
-Определяемые приложением значения, переданного с возвращаемый дескриптор при обратном вызове.
+Возвращенный дескриптор в функции обратного вызова передается значение, определенное приложением.
 
 *dwFlags*  
-Флаги, описывающие способ обработки этого подключения. В разделе **примечания** Дополнительные сведения о Допустимые флаги. Ниже приведены допустимые флаги.
+Флаги, описывающие способ обработки этого подключения. См. в разделе **"Примечания"** Дополнительные сведения о Допустимые флаги. Ниже приведены допустимые флаги.
 
-- `INTERNET_FLAG_TRANSFER_ASCII` Значение по умолчанию. Переместите файл в виде текста ASCII.
+- INTERNET_FLAG_TRANSFER_ASCII по умолчанию. Переместите файл в виде текста ASCII.
 
-- `INTERNET_FLAG_TRANSFER_BINARY` Переместите файл в двоичном формате.
+- INTERNET_FLAG_TRANSFER_BINARY передать файл как двоичный файл.
 
-- `INTERNET_FLAG_RELOAD` Получите данные из проводной сети, даже если он кэшируется локально.
+- INTERNET_FLAG_RELOAD получение данных из сети, даже если он кэшируется локально.
 
-- `INTERNET_FLAG_DONT_CACHE` Не следует кэшировать данные, локально или в всех шлюзов.
+- INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в всех шлюзов.
 
-- `INTERNET_FLAG_SECURE` Этот флаг применим только для HTTP-запросов. Он запрашивает защиты транзакций в сети с помощью протокола SSL или использованию PCT.
+- Этот флаг INTERNET_FLAG_SECURE применим только запросы HTTP. Он запрашивает безопасные транзакции по сети с помощью Secure Sockets Layer или использованию PCT.
 
-- `INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT` Если это возможно, повторно использовать существующие подключения к серверу для новых запросов, созданные `OpenUrl` вместо создания нового сеанса для каждого запроса на подключение.
+- INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT Если это возможно, повторно использовать существующие подключения к серверу для новых запросов, создаваемых `OpenUrl` вместо создания нового сеанса для каждого запроса подключения.
 
-- `INTERNET_FLAG_PASSIVE` Используется для FTP-сайта. Использует семантику пассивный FTP. При использовании [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) из `OpenURL`.
+- INTERNET_FLAG_PASSIVE используется для FTP-сайта. Использует семантику пассивный FTP. Используется с [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) из `OpenURL`.
 
 *pstrHeaders*  
-Указатель на строку, содержащую заголовки, отправляемую на сервер HTTP.
+Указатель на строку, содержащую заголовки отправку HTTP-сервера.
 
 *dwHeadersLength*  
-Длина в символах, дополнительных заголовков. Если это значение-1 L и *pstrHeaders* не является**NULL**, затем *pstrHeaders* предполагается равным нулю завершен и вычисляется длина.
+Длина в символах, дополнительных заголовков. Если это значение-1 L и *pstrHeaders* не равно NULL, затем *pstrHeaders* предполагается, что должно быть равно нулю завершается и вычисляется длина.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор файла для FTP, GOPHER, HTTP и тип файла Internet services. Возвращает **NULL** при синтаксическом анализе завершилась неудачно.
+Возвращает дескриптор файла, для FTP, GOPHER, HTTP и типов файлов в Интернете служб. Возвращает значение NULL, если синтаксический анализ выполнен неудачно.
 
-Указатель, `OpenURL` зависит от возвращает *pstrURL*в тип службы. В таблице ниже рассмотрены возможные указатели `OpenURL` может возвращать.
+Указатель, `OpenURL` зависит от возвращает *pstrURL*тип службы. В таблице ниже показаны возможные указатели `OpenURL` может возвращать.
 
 |Тип URL-адреса|Returns|
 |--------------|-------------|
@@ -547,15 +547,15 @@ CStdioFile* OpenURL(
 
 ### <a name="remarks"></a>Примечания
 
-Параметр *dwFlags* необходимо включить `INTERNET_FLAG_TRANSFER_ASCII` или `INTERNET_FLAG_TRANSFER_BINARY`, но не оба. Остальные флаги могут объединяться с помощью битовой операции `OR` оператор ( **&#124;**).
+Параметр *dwFlags* должен включать INTERNET_FLAG_TRANSFER_ASCII или INTERNET_FLAG_TRANSFER_BINARY, но не оба. Остальные флаги можно объединить с помощью побитовой операции **или** оператор ( **&#124;**).
 
-`OpenURL`, который создает оболочку для функции Win32 `InternetOpenURL`, позволяет только загрузки, извлечения и чтение данных из веб-сервером. `OpenURL` позволяет не обработке файла в удаленном расположении, поэтому для него требуется нет [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) объекта.
+`OpenURL`, который создает оболочку для функции Win32 `InternetOpenURL`, позволяет только загрузка, получение и считывание данных с сервера в Интернете. `OpenURL` позволяет не файлами в удаленном расположении, поэтому он не требует [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) объекта.
 
-Для использования подключения (то есть протоколом) функции, такие как запись в файл, необходимо открыть сеанс, затем откройте конкретный тип соединения, и используют это подключение, чтобы открыть файл в нужном режиме. В разделе `CInternetConnection` Дополнительные сведения о функции, зависящие от подключения.
+Использовать зависящий от подключения (то есть, относящиеся к протоколу) функции, такие как запись в файл, необходимо открыть сеанс, затем откройте определенного типа подключения, а затем используйте это подключение, чтобы открыть файл в нужном режиме. См. в разделе `CInternetConnection` Дополнительные сведения о функциях зависящий от подключения.
 
 ## <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET
 
-Этот оператор используется для получения дескриптора Windows для текущего сеанса Интернета.
+Этот оператор используется для получения дескриптора Windows для текущего сеанса Интернет.
 
 ```cpp
 operator HINTERNET() const;
@@ -575,25 +575,25 @@ static BOOL SetCookie(
 ### <a name="parameters"></a>Параметры
 
 *pstrUrl*  
-Указатель символом null строку, которая указывает URL-адрес, для которого следует задать куки-файл.
+Указатель на заканчивающуюся нулем строку, которая указывает URL-адрес, для которого задается файл cookie.
 
 *pstrCookieName*  
 Указатель на строку, содержащую имя файла cookie.
 
 *pstrCookieData*  
-Указатель на строку, содержащую фактические строковых данных для связи с URL-адрес.
+Указатель на строку, содержащую фактические данные, связать с URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **TRUE** в случае успешного выполнения или **FALSE** в противном случае. Чтобы получить код ошибки, вызовите **GetLastError.**
+В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Чтобы получить конкретный код ошибки, вызовите `GetLastError.`
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует поведение сообщения Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), как описано в Windows SDK.
+Эта функция-член реализует поведение сообщение Win32 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107), как описано в пакете Windows SDK.
 
 ## <a name="setoption"></a>  CInternetSession::SetOption
 
-Вызовите эту функцию-член для задания параметров для Интернет-сеанс.
+Вызывайте эту функцию члена, чтобы задать параметры для сеанса Internet.
 
 ```cpp
 BOOL SetOption(
@@ -612,7 +612,7 @@ BOOL SetOption(
 ### <a name="parameters"></a>Параметры
 
 *dwOption*  
-Параметр Интернета. В разделе [флагам](http://msdn.microsoft.com/library/windows/desktop/aa385328) в Windows SDKfor список возможных вариантов.
+Параметр Internet. См. в разделе [флаги параметров](http://msdn.microsoft.com/library/windows/desktop/aa385328) в Windows SDKfor список возможных вариантов.
 
 *lpBuffer*  
 Буфер, содержащий значение параметра.
@@ -621,18 +621,18 @@ BOOL SetOption(
 Длина *lpBuffer* или размер *dwValue*.
 
 *dwValue*  
-Объект `DWORD` , содержащий значение параметра.
+DWORD, содержащее значение параметра.
 
 *dwFlags*  
 Указывает различные параметры кэширования. Значение по умолчанию имеет значение 0. Возможные значения включают:
 
-- `INTERNET_FLAG_DONT_CACHE` Не следует кэшировать данные, локально или серверов шлюза.
+- INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
 
-- `INTERNET_FLAG_OFFLINE` Загрузка операций удовлетворены через только постоянного кэша. Если элемент не существует в кэше, возвращается соответствующий код ошибки. Этот флаг могут объединяться с битовой операции `OR` ( **&#124;**) оператор.
+- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;**) оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если операция выполнена успешно, значение **TRUE** возвращается. Если произошла ошибка, значение **FALSE** возвращается. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.
+Если операция выполнена успешно, возвращается значение TRUE. Если произошла ошибка, возвращается значение FALSE. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
 
 ## <a name="see-also"></a>См. также
 

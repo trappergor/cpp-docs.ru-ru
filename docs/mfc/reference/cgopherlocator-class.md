@@ -1,5 +1,5 @@
 ---
-title: Класс CGopherLocator | Документы Microsoft
+title: Класс CGopherLocator | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041290"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339297"
 ---
 # <a name="cgopherlocator-class"></a>Класс CGopherLocator
-Получает средство «указатель» с сервера gopher, определяет тип средства поиска и делает средство поиска доступным для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
+Получает средство «указатель» с сервера gopher, определяет тип и делает средство поиска доступным для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
   
 > [!NOTE]
->  Классы `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` и их члены являются устаревшими, так как они не работают на платформе Windows XP, но они будут продолжать работать на более старых платформ.  
+>  Классы `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` и их члены являются устаревшими, так как они не работают на платформе Windows XP, но они будут продолжать работать на более ранние платформы.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,16 +57,16 @@ class CGopherLocator : public CObject
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Прямой доступ к символов, сохраненных в `CGopherLocator` объект в виде строки в стиле C.|  
+|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Напрямую обращается к символов, сохраненных в `CGopherLocator` объект в виде строки C-стиля.|  
   
 ## <a name="remarks"></a>Примечания  
- Приложению необходимо получить указатель на сервере gopher получать сведения с этого сервера. Получив локатора, он локаторе следует рассматривать как непрозрачный маркер.  
+ Приложение необходимо получить указатель на сервер gopher получать сведения с этого сервера. После получения указателя, он должен обрабатывать указателя как маркер является непрозрачным.  
   
- Каждый gopher указатель имеет атрибуты, определяющие тип файла или сервер найден. В разделе [GetLocatorType](#getlocatortype) список типов указателей gopher.  
+ Каждый gopher указатель имеет атрибуты, которые определяют тип файла или сервер найден. См. в разделе [GetLocatorType](#getlocatortype) список типов указателей gopher.  
   
- Приложение обычно использует локатор для вызовов [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) для получения конкретные сведения.  
+ Приложение обычно использует средство поиска для вызовов [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) для получения конкретного набора сведений.  
   
- Дополнительные сведения о том, как `CGopherLocator` работает с другими классами MFC Интернет, см. в статье [Интернет программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).  
+ Дополнительные сведения о том, как `CGopherLocator` работает с другими классами MFC Интернет, см. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -85,13 +85,13 @@ CGopherLocator(const CGopherLocator& ref);
   
 ### <a name="parameters"></a>Параметры  
  *ref*  
- Ссылка на константу `CGopherLocator` объекта.  
+ Ссылку на константу `CGopherLocator` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Никогда не создавайте `CGopherLocator` объекта напрямую. Вместо этого необходимо вызвать [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) создается и возвращается указатель `CGopherLocator` объекта.  
+ Никогда не создаст `CGopherLocator` объекта напрямую. Вместо этого необходимо вызвать [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) создается и возвращается указатель на `CGopherLocator` объект.  
   
 ##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
- Вызовите эту функцию-член для получения типа указателя.  
+ Вызов этой функции-члена для получения типа указателя.  
   
 ```  
 BOOL GetLocatorType(DWORD& dwRef) const;  
@@ -99,55 +99,55 @@ BOOL GetLocatorType(DWORD& dwRef) const;
   
 ### <a name="parameters"></a>Параметры  
  *dwRef*  
- Ссылку на `DWORD` , принимающий тип указателя. В разделе **примечания** для таблицы типов указателя.  
+ Ссылка на значение типа DWORD, который будет получать тип указателя. См. в разделе **"Примечания"** таблицу типы локаторов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызвать, чтобы определить причину ошибки.  
+ Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.  
   
 ### <a name="remarks"></a>Примечания  
  Ниже приведены возможные типы:  
   
 |Значение|Значение|  
 |-----------|-------------|  
-|GOPHER_TYPE_TEXT_FILE|Текстовый файл.|  
-|GOPHER_TYPE_DIRECTORY|Каталог дополнительные элементы Gopher.|  
-|GOPHER_TYPE_CSO|Сервер CSO телефонной книги.|  
+|GOPHER_TYPE_TEXT_FILE|Текстовый файл ASCII.|  
+|GOPHER_TYPE_DIRECTORY|Каталог дополнительных элементов Gopher.|  
+|GOPHER_TYPE_CSO|Сервер службы телефонной книги.|  
 |GOPHER_TYPE_ERROR|Указывает на ошибку.|  
-|GOPHER_TYPE_MAC_BINHEX|Файл в формате BINHEX Macintosh.|  
-|GOPHER_TYPE_DOS_ARCHIVE|Файл архива DOS.|  
-|GOPHER_TYPE_UNIX_UUENCODED|В файл в кодировке UUENCODE.|  
-|GOPHER_TYPE_INDEX_SERVER|На сервере индекса.|  
+|GOPHER_TYPE_MAC_BINHEX|Файл Macintosh в формате BINHEX.|  
+|GOPHER_TYPE_DOS_ARCHIVE|В файл архива DOS.|  
+|GOPHER_TYPE_UNIX_UUENCODED|Файл кодировке UUENCODE.|  
+|GOPHER_TYPE_INDEX_SERVER|Сервер индекса.|  
 |GOPHER_TYPE_TELNET|Telnet-сервер.|  
 |GOPHER_TYPE_BINARY|Двоичный файл.|  
-|GOPHER_TYPE_REDUNDANT|Повторяющийся сервер. Сведения, содержащиеся в является дубликатом сервера-источника. Сервер-источник является последней записи каталога, но не имеют тип GOPHER_TYPE_REDUNDANT.|  
+|GOPHER_TYPE_REDUNDANT|Повторяющийся сервер. Сведения, содержащиеся в является дубликатом сервера-источника. Сервер-источник — последней записи каталога, но не имеют тип GOPHER_TYPE_REDUNDANT.|  
 |GOPHER_TYPE_TN3270|Сервер TN3270.|  
-|GOPHER_TYPE_GIF|Графики GIF-файла.|  
+|GOPHER_TYPE_GIF|Файл GIF графики.|  
 |GOPHER_TYPE_IMAGE|Файл изображения.|  
 |GOPHER_TYPE_BITMAP|Файл точечного рисунка.|  
 |GOPHER_TYPE_MOVIE|Файл фильма.|  
 |GOPHER_TYPE_SOUND|Звуковой файл.|  
 |GOPHER_TYPE_HTML|Документ HTML.|  
-|GOPHER_TYPE_PDF|PDF-файл.|  
+|GOPHER_TYPE_PDF|PDF-файла.|  
 |GOPHER_TYPE_CALENDAR|Файл календаря.|  
-|GOPHER_TYPE_INLINE|Подставляемый файл.|  
+|GOPHER_TYPE_INLINE|Встроенного файла.|  
 |GOPHER_TYPE_UNKNOWN|Тип элемента неизвестен.|  
-|GOPHER_TYPE_ASK|Попросите + элемент.|  
+|GOPHER_TYPE_ASK|Ask + элемент.|  
 |GOPHER_TYPE_GOPHER_PLUS|Элемент Gopher +.|  
   
 ##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
- Этот оператор приведения полезные предоставляет эффективный метод для доступа к строке C нулем, содержащихся в `CGopherLocator` объекта.  
+ Этот оператор полезных приведения предоставляет эффективный способ доступа к заканчивающуюся нулем строку C, содержащихся в `CGopherLocator` объекта.  
   
 ```  
 operator LPCTSTR () const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Символ указатель строки данных.  
+ Символ указатель на строку данных.  
   
 ### <a name="remarks"></a>Примечания  
- Никакие символы копируются; возвращается только указатель.  
+ Никакие символы не копируются; возвращается только указатель.  
   
 ## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)

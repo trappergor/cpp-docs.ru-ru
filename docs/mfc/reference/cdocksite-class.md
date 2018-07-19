@@ -1,5 +1,5 @@
 ---
-title: Класс CDockSite | Документы Microsoft
+title: Класс CDockSite | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336843"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -164,7 +164,7 @@ class CDockSite: public CBasePane
 ## <a name="remarks"></a>Примечания  
  Платформа создает `CDockSite` объектов автоматически при вызове [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Окна сайта закрепления располагаются на границе области клиента в главном окне фрейма.  
   
- Обычно не нужно вызывать службы, предоставляемые на сайте закрепления, так как [CFrameWndEx класса](../../mfc/reference/cframewndex-class.md) обрабатывает эти службы.  
+ Обычно не нужно вызывать службы, предоставляемые сайтом закрепления, так как [класс CFrameWndEx](../../mfc/reference/cframewndex-class.md) обрабатывает эти службы.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показывается, как создать объект класса `CDockSite`.  
@@ -189,7 +189,7 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pos*  
+ [in] *торговых терминалов*  
  [in] *nHeight*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>Параметры  
  [in] [out] *pBarToDock*  
- Указатель на панели можно закреплять слева от *pTargetBar*.  
+ Указатель на панели, чтобы закрепить слева от *pTargetBar*.  
   
  [in] [out] *pTargetBar*  
- Указатель на нужной панели.  
+ Указатель на целевой области.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если панель закреплена успешно. в противном случае `FALSE`.  
+ Значение TRUE, если успешно; закрепленной панели в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -356,7 +356,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID  
- Возвращает область с указанным идентификатором.  
+ Возвращает область с заданным идентификатором.  
   
 ```  
 CPane* FindPaneByID(UINT nID);
@@ -364,10 +364,10 @@ CPane* FindPaneByID(UINT nID);
   
 ### <a name="parameters"></a>Параметры  
  [in] *nID*  
- Идентификатор команды области должен быть найден.  
+ Идентификатор команды панели требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на область с заданным Идентификатором команды, или `NULL` Если области не найден.  
+ Указатель на область с заданный идентификатор команды, или значение NULL, если области не найден.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ссылка только для чтения к списку панелей в данный момент закреплены в закрепляемую панель.  
+ Ссылку на список областей только для чтения, закрепленную на панели закрепления.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pos*  
+ [in] *торговых терминалов*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -531,7 +531,7 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pos*  
+ [in] *торговых терминалов*  
  [in] *bByShow*  
   
 ### <a name="remarks"></a>Примечания  
@@ -601,7 +601,7 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] *pos*  
+ [in] *торговых терминалов*  
  [in] *bShow*  
   
 ### <a name="remarks"></a>Примечания  
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>Параметры  
  [in] *pt*  
- Точка, в экранных координатах области для извлечения.  
+ Точка, в экранных координатах, для области для извлечения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель, расположенный в указанной точке или `NULL` Если области не находился в заданной точке.  
+ Указатель на панель, расположенный в указанной точке или значение NULL, если панель не находился в заданной точке.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>Параметры  
  [in] [out] *pBar*  
- Указатель на панели, чтобы быть отображены или скрыты.  
+ Указатель на панели, чтобы отображать и скрывать.  
   
  [in] *bShow*  
- `TRUE` Чтобы указать, что области для отображения; `FALSE` для указания, что область является скрытым.  
+ Значение TRUE, чтобы указать, что области будет отображаться; Значение FALSE, чтобы указать, что данная область является скрытым.  
   
  [in] *bDelay*  
- `TRUE` Чтобы указать, что макет панели должен быть задержан до наступления области отображается; в противном случае `FALSE`.  
+ Значение TRUE, чтобы указать, что макет панели должны быть отложено до тех пор области отображается; в противном случае — значение FALSE.  
   
  [in] *bActivate*  
  Этот параметр не используется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` область была видима или скрыта успешно. `FALSE` Если в указанной области не принадлежит к этому сайту закрепления.  
+ Значение TRUE, если область была показано или скрыто успешно. Значение FALSE, если указанной области не принадлежит к этому сайту закрепления.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод используется для отображения или скрытия закрепленных панелей. Как правило, не нужно вызывать `CDockSite::ShowPane` напрямую, так как он вызывается родительское окно фрейма или панели «базовый».  
+ Этот метод используется для отображения или скрытия закрепленных панелей. Как правило, нет необходимости вызывать `CDockSite::ShowPane` напрямую, так как он вызывается родительским окном фрейма или с панели «базовый».  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 
