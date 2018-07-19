@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860006"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>Константа ChainInterfaces::IidCount
 Общее количество идентификаторов, содержащихся в интерфейсах, заданные параметры шаблона интерфейса `I0` через `I9`.  

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCPopupMenuBar | Документы Microsoft
+title: Класс CMFCPopupMenuBar | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853638"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Класс CMFCPopupMenuBar
 Строка меню, внедренная в контекстное меню.  
@@ -75,39 +76,39 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Немедленно повторно вычисляет макет панели. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
+|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Загружает элементы всплывающего меню из меню указанного ресурса.|  
 |[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|Закрывает кнопки отложенной всплывающего меню.|  
-|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Выводит на экран меню с помощью кнопок всплывающего меню.|  
+|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Выполняет построение меню кнопки во всплывающем меню.|  
 |[CMFCPopupMenuBar::FindDestintationToolBar](#finddestintationtoolbar)|Находит панели инструментов, в которой находится указанная точка.|  
 |[CMFCPopupMenuBar::GetCurrentMenuImageSize](#getcurrentmenuimagesize)|Указывает размер изображения кнопки меню.|  
 |[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|Возвращает идентификатор элемента меню по умолчанию.|  
-|[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|Возвращает индекс наиболее недавно вызванной команды меню.|  
-|[CMFCPopupMenuBar::GetOffset](#getoffset)|Возвращает смещение строки всплывающего меню.|  
-|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Импортирует всплывающее меню кнопки указанного меню.|  
-|[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|Указывает, является ли всплывающего меню в раскрывающемся списке режиме.|  
-|[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|Указывает, является ли всплывающего меню в режиме палитры.|  
-|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|Указывает, является ли панель ленты ( `FALSE` по умолчанию).|  
-|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Указывает, является ли панель ленты в обычном режиме ( `FALSE` по умолчанию).|  
-|[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|Загружает архивированные меню.|  
+|[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|Получает индекс наиболее недавно вызванной команды меню.|  
+|[CMFCPopupMenuBar::GetOffset](#getoffset)|Получает смещение в строке меню всплывающего окна.|  
+|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Импортирует всплывающего меню кнопки из указанного меню.|  
+|[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|Указывает, является ли всплывающее меню в раскрывающемся списке режиме.|  
+|[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|Указывает, является ли всплывающее меню в режиме палитры.|  
+|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|Указывает, является ли это на панель ленты (по умолчанию — FALSE).|  
+|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Указывает, является ли это на панель ленты в обычном режиме (по умолчанию — FALSE).|  
+|[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|Загружает архивные меню.|  
 |[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|Восстанавливает отложенной меню кнопку для закрытия всплывающего меню.|  
 |[CMFCPopupMenuBar::SetButtonStyle](#setbuttonstyle)|Задает стиль кнопки панели инструментов по указанному индексу. (Переопределяет [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)|  
-|[CMFCPopupMenuBar::SetOffset](#setoffset)|Задает смещение строки всплывающего меню.|  
-|[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|Запускает таймер для указанной отложенной всплывающее меню кнопки.|  
+|[CMFCPopupMenuBar::SetOffset](#setoffset)|Задает смещение в строке меню всплывающего окна.|  
+|[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|Запускает таймер для кнопки указанной отложенной всплывающего меню.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, если приложение имеет вид Windows XP.|  
+|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, когда приложение имеет внешний вид Windows XP.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMFCPopupMenuBar` Создается в то же время, как [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md) и внедренные внутри него. `CMFCPopupMenuBar` Охватывает всю клиентскую область `CMFCPopupMenu` объекта. Он поддерживает клавиатуру и мышь входных данных. Он взаимодействует, что входные данные `CMFCPopupMenu` и окно фрейма верхнего уровня.  
+ `CMFCPopupMenuBar` Создается в то же время, как [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) и embedded внутри него. `CMFCPopupMenuBar` Включает всю клиентскую область `CMFCPopupMenu` объекта. Он поддерживает, клавиатуру и мышь. Он взаимодействует, что входные данные `CMFCPopupMenu` и окно фрейма верхнего уровня.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как инициализировать `CMFCPopupMenuBar` объекта из `CMFCPopupMenu` объекта. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует способы инициализации `CMFCPopupMenuBar` объекта из `CMFCPopupMenu` объекта. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]  
   
@@ -132,15 +133,15 @@ class CMFCPopupMenuBar : public CMFCToolBar
  **Заголовок:** afxpopupmenubar.h  
   
 ##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate  
- Немедленно повторно вычисляет макет панели всплывающее меню строки. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).  
+ Сразу же повторно вычисляет макет панели строки всплывающего меню. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).  
   
 ```  
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bRecalcLayout`  
- `TRUE` автоматически пересчитать макета панели строки всплывающего меню; в противном случае `FALSE`.  
+ [in] *bRecalcLayout*  
+ Значение TRUE, чтобы автоматически повторно рассчитать макет панели строки всплывающего меню; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -152,11 +153,11 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiMenuResID`  
- Указывает идентификатор меню ресурс меню загрузки.  
+ [in] *uiMenuResID*  
+ Указывает идентификатор ресурса меню меню загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` в случае успешного выполнения или `FALSE` в противном случае.  
+ Возвращает значение TRUE, в случае успешного выполнения или значение FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -170,14 +171,14 @@ virtual void CloseDelayedSubMenu();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
- Выводит на экран меню с помощью кнопок всплывающего меню.  
+ Выполняет построение меню кнопок всплывающего меню.  
   
 ```  
 virtual HMENU ExportToMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор меню «Создать».  
+ Возвращает дескриптор для меню «Создать».  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -189,11 +190,11 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Точка на экране.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор для панели инструментов где находится точка, если therei является один, или `NULL` в противном случае.  
+ Возвращает дескриптор для панели инструментов где находится точка, если таковой имеется, или значение NULL, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -217,37 +218,37 @@ UINT GetDefaultMenuId() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает идентификатор элемента меню по умолчанию всплывающее меню.  
+ Возвращает идентификатор элемента по умолчанию меню в строке меню всплывающего окна.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex  
- Возвращает индекс наиболее недавно вызванной команды меню.  
+ Получает индекс наиболее недавно вызванной команды меню.  
   
 ```  
 static int __stdcall GetLastCommandIndex();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает индекс последней команды меню, который был вызван.  
+ Возвращает индекс последней команды меню, которая была вызвана.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset  
- Возвращает смещение строки всплывающего меню.  
+ Получает смещение в строке меню всплывающего окна.  
   
 ```  
 int GetOffset() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает смещение строки всплывающего меню.  
+ Возвращает смещение в строке меню всплывающего окна.  
   
 ### <a name="remarks"></a>Примечания  
  Это значение задается с помощью [CMFCPopupMenuBar::SetOffset](#setoffset).  
   
 ##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
- Импортирует всплывающее меню кнопки указанного меню.  
+ Импортирует всплывающего меню кнопки из указанного меню.  
   
 ```  
 virtual BOOL ImportFromMenu(
@@ -256,93 +257,93 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
+ [in] *hMenu*  
  Меню, из которого импортируются кнопок всплывающего меню.  
   
- [in] `bShowAllCommands`  
- `TRUE` Если необходимо импортировать все команды в меню или `FALSE` Если редко используемые из них может быть скрыт.  
+ [in] *bShowAllCommands*  
+ Значение TRUE, если все команды в меню должны быть импортированные или значение FALSE, если редко используемых могут быть скрыты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если кнопок меню успешно импортированы в меню или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если кнопки меню были успешно импортированы в меню, или значение FALSE, если не.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode  
- Указывает, является ли всплывающего меню в раскрывающемся списке режиме.  
+ Указывает, является ли всплывающее меню в раскрывающемся списке режиме.  
   
 ```  
 BOOL IsDropDownListMode() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` если всплывающее меню находится в режиме раскрывающемся списке, или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если не в режиме раскрывающийся список, или значение FALSE, если всплывающей панели меню.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode  
- Указывает, является ли всплывающего меню в режиме палитры.  
+ Указывает, является ли всплывающее меню в режиме палитры.  
   
 ```  
 BOOL IsPaletteMode() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` при включенной палитры или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если включен режим палитре, или значение FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Когда меню устанавливается режим палитру, пункты меню отображаются в нескольких столбцах и ограниченного количества строк.  
+ Если меню будет переведена в режим палитры, пункты меню отображаются в нескольких столбцах и ограниченное число строк.  
   
 ##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel  
- Указывает, является ли панель ленты ( `FALSE` по умолчанию).  
+ Указывает, является ли это на панель ленты (по умолчанию — FALSE).  
   
 ```  
 virtual BOOL IsRibbonPanel() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `FALSE` по умолчанию, указывая, что это не панель ленты.  
+ Возвращает значение FALSE по умолчанию, указывая, что это не панель ленты.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
- Указывает, является ли панель ленты в обычном режиме ( `FALSE` по умолчанию).  
+ Указывает, является ли это на панель ленты в обычном режиме (по умолчанию — FALSE).  
   
 ```  
 virtual BOOL IsRibbonPanelInRegularMode() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `FALSE` по умолчанию, указывая, что это не панель ленты в обычном режиме.  
+ Возвращает значение FALSE по умолчанию, указывая, что это не панель ленты в обычном режиме.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash  
- Загружает архивированные меню.  
+ Загружает архивные меню.  
   
 ```  
 BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
- Дескриптор архивированные меню загрузки.  
+ [in] *hMenu*  
+ Дескриптор меню архивные для загрузки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если меню загружен успешно, или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если меню находится успешно загружен, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
- Параметр типа Boolean, указывающее, имеет ли приложение серую полосу, если он имеет вид Windows XP.  
+ Логический параметр, который указывает, имеет ли приложение серую полосу, когда он имеет вид Windows XP.  
   
 ```  
 BOOL m_bDisableSideBarInXPMode;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если имеет значение этой переменной-члена `FALSE` и ваше приложение имеет вид Windows XP, платформа рисует серую полосу в приложении.  
+ Если эта переменная-член имеет значение FALSE, и приложение имеет внешний вид Windows XP, framework рисует серую полосу в приложении.  
   
- Значение по умолчанию — `FALSE`.  
+ Значение по умолчанию — FALSE.  
   
 ##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu  
  Восстанавливает отложенной меню кнопку для закрытия всплывающего меню.  
@@ -363,29 +364,29 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- Отсчитываемый от нуля индекс кнопки на панели инструментов стиль которого требуется задать.  
+ [in] *nIndex*  
+ Отсчитываемый от нуля индекс для задается, стиль кнопки панели инструментов.  
   
- [in] `nStyle`  
- Стиль кнопки. В разделе [стили элемента управления панель инструментов](../../mfc/reference/toolbar-control-styles.md) список стилей кнопок панели инструментов доступны.  
+ [in] *nStyle*  
+ Стиль кнопки. См. в разделе [стили элемента управления панели инструментов](../../mfc/reference/toolbar-control-styles.md) список доступных инструментов стили кнопок.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
- Задает смещение строки всплывающего меню.  
+ Задает смещение в строке меню всплывающего окна.  
   
 ```  
 void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iOffset`  
- Число строк, всплывающее меню должен быть смещены.  
+ [in] *iOffset*  
+ Количество строк, что должны быть смещены всплывающей панели меню.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer  
- Запускает таймер для указанной отложенной всплывающее меню кнопки.  
+ Запускает таймер для кнопки указанной отложенной всплывающего меню.  
   
 ```  
 void StartPopupMenuTimer(
@@ -394,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuButton`  
- Указатель на кнопку меню, для которого требуется задать таймер задержки.  
+ [in] *pMenuButton*  
+ Указатель на кнопке меню, для которого требуется задать таймер задержки.  
   
- [in] `nDelayFactor`  
- Фактор задержки, равным по крайней мере один умножение на время задержки стандартные меню (как правило, от полсекунды и пять секунд).  
+ [in] *nDelayFactor*  
+ Фактор задержки, равным по крайней мере, необходимо умножить время задержки стандартное меню (как правило, от половины секунды и пять секунд).  
   
 ### <a name="remarks"></a>Примечания  
   

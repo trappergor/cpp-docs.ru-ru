@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111475"
 ---
 # <a name="finally"></a>finally
 В дополнение к `try` и `catch` предложений, поддержка обработки исключений CLR `finally` предложения. Семантика идентична `__finally` блока в структурированную обработку исключений (SEH). Объект `__finally` блок можно выполнить `try` или `catch` блока.  

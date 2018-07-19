@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385381"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Заполнение и выравнивание членов структуры
 **ANSI 3.5.2.1** Заполнение и выравнивание членов структур, а также выяснение, может ли битовое поле пересекать границу блоков хранения в памяти  

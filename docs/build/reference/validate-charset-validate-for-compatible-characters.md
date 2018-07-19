@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377392"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate-CharSet (проверки для совместимых символов)
 Проверяет, что исходного текста файла содержит только символов может быть представлен как UTF-8.  

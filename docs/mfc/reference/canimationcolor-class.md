@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951747"
 ---
 # <a name="canimationcolor-class"></a>Класс CAnimationColor
 Реализует функции цвета, красный, зеленый и синий компоненты которого могут быть анимированы.  
@@ -55,17 +56,17 @@ ms.lasthandoff: 05/04/2018
 class CAnimationColor : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Создает объект цветовой анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красного, зеленого и синего компонентов.|  
 |[CAnimationColor::GetB](#getb)|Предоставляет доступ к CAnimationVariable, представляющий синего компонента.|  
@@ -77,20 +78,20 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::operator COLORREF](#operator_colorref)||  
 |[CAnimationColor::operator =](#operator_eq)|Назначает цвет CAnimationColor.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|Инкапсулированный анимации переменной, представляющей синего компонента цвета анимации.|  
 |[CAnimationColor::m_gValue](#m_gvalue)|Инкапсулированный анимации переменной, представляющей зеленого компонента цвета анимации.|  
@@ -120,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRTransition`  
+ *pRTransition*  
  Переход для красного компонента.  
   
- `pGTransition`  
+ *pGTransition*  
  Переход для зеленого компонента.  
   
- `pBTransition`  
+ *pBTransition*  
  Переход для синего компонента.  
   
 ### <a name="remarks"></a>Примечания  
@@ -146,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Задает цвета по умолчанию.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Задает определяемые пользователем данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -169,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Когда функция возвращает значение, он содержит указатели на три CAnimationVariable объекты, представляющие красного, зеленого и синего компонентов.  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -232,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Выходные данные. При возвращении этим методом, содержит текущее значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -278,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Указывает новое значение цвета анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -292,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Указывает новые значения по умолчанию для красного, зеленого и синего компонентов.  
   
 ### <a name="remarks"></a>Примечания  

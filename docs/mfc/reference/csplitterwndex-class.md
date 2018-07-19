@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121654"
 ---
 # <a name="csplitterwndex-class"></a>Класс CSplitterWndEx
 
@@ -40,14 +41,14 @@ class CSplitterWndEx : public CSplitterWnd
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CSplitterWndEx::CSplitterWndEx`|Конструктор по умолчанию.|  
 |`CSplitterWndEx::~CSplitterWndEx`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Вызывается платформой для отрисовки окна-разделителя. (Переопределяет [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
@@ -80,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- Указатель на контекст устройства. Если этот параметр равен `NULL`, платформа перерисовывает активного окна.  
+ [in] *основного контроллера домена*  
+ Указатель на контекст устройства. Если этот параметр имеет значение NULL, платформа перерисовывает активного окна.  
   
- [in] `nType`  
+ [in] *nType*  
  Один из `CSplitterWnd::ESplitType` значений перечисления, определяющее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection`, и `splitBorder`.  
   
- [in] `rect`  
+ [in] *rect*  
  Ограничивающий прямоугольник, который указывает размеры и расположение для рисования заданного разделителя элемент-окно.  
   
 ### <a name="remarks"></a>Примечания  

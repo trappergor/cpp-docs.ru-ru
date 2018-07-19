@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854234"
 ---
 # <a name="support-for-ansi"></a>Поддержка ANSI
 Большинство классов и методов MFC поддерживают набор знаков ANSI, несмотря на то, что платформа MFC в целом постепенно эволюционирует в сторону поддержку Юникода только набор символов. Из-за текущих усовершенствований в [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] и его рекомендуется использовать общие элементы управления Windows версии 6.1, поддержка некоторых ANSI и методов.  Дополнительные сведения см. в разделе [устаревшие интерфейсы API ANSI](../mfc/deprecated-ansi-apis.md) и [поддержка Юникода](../text/support-for-unicode.md).  

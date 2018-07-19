@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380374"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Последовательность операций при создании элементов управления ActiveX
 Следующая таблица показывает роль и роль платформы при создании элементов управления ActiveX (ранее называвшиеся элементы управления OLE).  

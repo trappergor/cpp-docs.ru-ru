@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: f151bbaf692d914fa1072021e2f14262b2c72ce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 948c00f7c0b773bf366f4ea9e102c832e9878d9b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960454"
 ---
 # <a name="ltthreadgt-functions"></a>Функции &lt;thread&gt;
 
@@ -53,11 +54,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-`Rel_time` Объект [длительность](../standard-library/duration-class.md) объекта, который задает интервал времени.
+*Rel_time*  
+ Объект [duration](../standard-library/duration-class.md), задающий интервал времени.
 
 ### <a name="remarks"></a>Примечания
 
-Функция блокирует вызывающий поток по меньшей мере на время, заданное `Rel_time`. Эта функция не вызывает исключений.
+Функция блокирует вызывающий поток для по крайней мере времени, который задается параметром *Rel_time*. Эта функция не вызывает исключений.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -72,7 +74,8 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-`Abs_time` Представляет момент времени.
+*Abs_time*  
+ Представляет момент времени.
 
 ### <a name="remarks"></a>Примечания
 
@@ -80,7 +83,7 @@ void sleep_until(const xtime *Abs_time);
 
 ## <a name="swap"></a>  swap
 
-Меняет местами состояния двух объектов `thread`.
+Меняет местами состояния двух **поток** объектов.
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -88,9 +91,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `thread` объекта.
+*Слева*  
+ Слева **поток** объекта.
 
-`Right` Право `thread` объекта.
+*Справа*  
+ Справа **поток** объекта.
 
 ### <a name="remarks"></a>Примечания
 

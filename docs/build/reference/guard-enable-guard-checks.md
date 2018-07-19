@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375260"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (Включить проверки защиты)
 Указывает поддержку для проверок защиты потока управления в исполняемом образе.  

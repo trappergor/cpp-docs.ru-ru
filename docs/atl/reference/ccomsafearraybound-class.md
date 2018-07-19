@@ -1,5 +1,5 @@
 ---
-title: Класс CComSafeArrayBound | Документы Microsoft
+title: Класс CComSafeArrayBound | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455e71cd0ee323df8cfe43001f87179c649eefe5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdb0acc5059fa76531421cb261cb1d640aef3709
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954343"
 ---
 # <a name="ccomsafearraybound-class"></a>Класс CComSafeArrayBound
-Этот класс является оболочкой для [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) структуры.  
+Этот класс является оболочкой для [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) структуры.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,10 +45,10 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |||  
 |-|-|  
 |[CComSafeArrayBound](#ccomsafearraybound)|Конструктор.|  
-|[GetCount](#getcount)|Этот метод используется для возврата числа элементов.|  
-|[GetLowerBound](#getlowerbound)|Этот метод используется для получения нижней границы.|  
-|[GetUpperBound](#getupperbound)|Этот метод используется для возврата верхней границы.|  
-|[SetCount](#setcount)|Этот метод используется для указания числа элементов.|  
+|[GetCount](#getcount)|Этот метод используется для возврата количества элементов.|  
+|[GetLowerBound](#getlowerbound)|Вызовите этот метод для возврата нижняя граница.|  
+|[GetUpperBound](#getupperbound)|Вызовите этот метод для возврата верхней границы.|  
+|[SetCount](#setcount)|Вызовите этот метод, чтобы задать число элементов.|  
 |[SetLowerBound](#setlowerbound)|Этот метод используется для задания нижняя граница.|  
   
 ### <a name="operators"></a>Операторы  
@@ -57,7 +58,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |[оператор =](#operator_eq)|Наборы `CComSafeArrayBound` новое значение.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс является оболочкой для **SAFEARRAYBOUND** структура, используемая [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Он предоставляет методы для создания запросов и верхняя и нижняя границы одно измерение `CComSafeArray` объекта и количество элементов, которые он содержит. Многомерный массив `CComSafeArray` объект использует массив `CComSafeArrayBound` объектов, по одному для каждого измерения. Таким образом при использовании методов, таких как [GetCount](#getcount), имейте в виду, что этот метод не возвращает общее число элементов в многомерном массиве.  
+ Этот класс является оболочкой для `SAFEARRAYBOUND` структуру, используемую [CComSafeArray](../../atl/reference/ccomsafearray-class.md). Он предоставляет методы для создания запросов и верхней и нижней границы одного измерения из `CComSafeArray` объект и число элементов, которые он содержит. Многомерный массив `CComSafeArray` объект использует массив `CComSafeArrayBound` , по одному для каждого измерения. Таким образом при использовании методов, таких как [GetCount](#getcount), имейте в виду, что этот метод не возвращает общее число элементов в многомерном массиве.  
   
  **Заголовок:** atlsafe.h  
   
@@ -72,30 +73,30 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ulCount`  
+ *Инициализирует метод ulCount*  
  Количество элементов в массиве.  
   
- `lLowerBound`  
- Нижняя граница с номерами массива.  
+ *lLowerBound*  
+ Нижняя граница, из которого нумеруется массива.  
   
 ### <a name="remarks"></a>Примечания  
- Если массив должен быть получен из программы Visual C++, рекомендуется, нижняя граница определяется как 0. Часто бывает предпочтительнее использовать другая нижняя граница значение, если в массиве для использования с другими языками, например Visual Basic.  
+ Если массив должен быть предоставлен доступ из программы Visual C++, рекомендуется, что нижняя граница быть определен как 0. Возможно, следует использовать значение другая нижняя граница, если нужно использовать с другими языками, например Visual Basic.  
   
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount  
- Этот метод используется для возврата числа элементов.  
+ Этот метод используется для возврата количества элементов.  
   
 ```
 ULONG GetCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает количество элементов.  
+ Возвращает число элементов.  
   
 ### <a name="remarks"></a>Примечания  
- Если связанный `CComSafeArray` представляет многомерного массива, этот метод будет возвращать только общее число элементов в крайнее правое измерение. Используйте [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) получить общее число элементов.  
+ Если связанный `CComSafeArray` представляет многомерный массив, этот метод будет возвращать только общее число элементов в измерении крайний правый. Используйте [CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount) получить общее число элементов.  
   
 ##  <a name="getlowerbound"></a>  CComSafeArrayBound::GetLowerBound  
- Этот метод используется для получения нижней границы.  
+ Вызовите этот метод для возврата нижняя граница.  
   
 ```
 LONG GetLowerBound() const throw();
@@ -105,7 +106,7 @@ LONG GetLowerBound() const throw();
  Возвращает нижнюю границу `CComSafeArrayBound` объекта.  
   
 ##  <a name="getupperbound"></a>  CComSafeArrayBound::GetUpperBound  
- Этот метод используется для возврата верхней границы.  
+ Вызовите этот метод для возврата верхней границы.  
   
 ```
 LONG GetUpperBound() const throw();
@@ -115,7 +116,7 @@ LONG GetUpperBound() const throw();
  Возвращает верхнюю границу `CComSafeArrayBound` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Верхняя граница зависит от количества элементов и значение нижней границы. Например если количество элементов равно 10, нижняя граница — 0, верхняя граница будет автоматически задан до 9.  
+ Верхняя граница зависит от количества элементов и значение нижней границы. Например если нижняя граница — 0 и количество элементов равно 10, верхняя граница будет автоматически устанавливаться на 9.  
   
 ##  <a name="operator_eq"></a>  CComSafeArrayBound::operator =  
  Наборы `CComSafeArrayBound` новое значение.  
@@ -126,27 +127,27 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bound`  
+ *привязан*  
  Объект `CComSafeArrayBound`.  
   
- `ulCount`  
+ *Инициализирует метод ulCount*  
  Количество элементов  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на `CComSafeArrayBound` объект.  
   
 ### <a name="remarks"></a>Примечания  
- `CComSafeArrayBound` Объект можно назначить с помощью существующей `CComSafeArrayBound`, или указав число элементов, в которых регистр нижняя граница имеет значение 0 по умолчанию.  
+ `CComSafeArrayBound` Объект можно назначить с помощью существующего `CComSafeArrayBound`, или указав число элементов, в которых случае нижняя граница имеет значение 0 по умолчанию.  
   
 ##  <a name="setcount"></a>  CComSafeArrayBound::SetCount  
- Этот метод используется для указания числа элементов.  
+ Вызовите этот метод, чтобы задать число элементов.  
   
 ```
 ULONG SetCount(ULONG ulCount) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ulCount`  
+ *Инициализирует метод ulCount*  
  Количество элементов  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -160,16 +161,16 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lLowerBound`  
+ *lLowerBound*  
  Нижняя граница.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает новый нижняя граница `CComSafeArrayBound` объекта.  
+ Возвращает новое значение нижней границы из `CComSafeArrayBound` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Если массив должен быть получен из программы Visual C++, рекомендуется, нижняя граница определяется как 0. Часто бывает предпочтительнее использовать другая нижняя граница значение, если в массиве для использования с другими языками, например Visual Basic.  
+ Если массив должен быть предоставлен доступ из программы Visual C++, рекомендуется, что нижняя граница быть определен как 0. Возможно, следует использовать значение другая нижняя граница, если нужно использовать с другими языками, например Visual Basic.  
   
- Верхняя граница зависит от количества элементов и значение нижней границы. Например если количество элементов равно 10, нижняя граница — 0, верхняя граница будет автоматически задан до 9.  
+ Верхняя граница зависит от количества элементов и значение нижней границы. Например если нижняя граница — 0 и количество элементов равно 10, верхняя граница будет автоматически устанавливаться на 9.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

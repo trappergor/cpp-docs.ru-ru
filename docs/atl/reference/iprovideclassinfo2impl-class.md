@@ -1,5 +1,5 @@
 ---
-title: Класс IProvideClassInfo2Impl | Документы Microsoft
+title: Класс IProvideClassInfo2Impl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7e0bd440e2e4bd8d32525fe4be6aaad2c401f6a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880626"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Класс IProvideClassInfo2Impl
 Этот класс предоставляет реализацию по умолчанию [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) и [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) методы.  
@@ -48,43 +49,43 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  Указатель на идентификатор компонентного класса.  
   
  *psrcid*  
- Указатель на идентификатор для исходящих disp-интерфейс по умолчанию компонентного класса.  
+ Указатель на идентификатор компонентного класса по умолчанию исходящие disp-интерфейса.  
   
- `plibid`  
+ *plibid*  
  Указатель на идентификатор LIBID библиотеки типов, содержащий сведения об интерфейсе. По умолчанию передается библиотеки типов на уровне сервера.  
   
- `wMajor`  
+ *wMajor*  
  Основной номер версии для библиотеки типов. Значение по умолчанию — 1.  
   
- `wMinor`  
+ *wMinor*  
  Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.  
   
- `tihclass`  
- Класс, используемый для управления данными типа компонентного класса. Значение по умолчанию — `CComTypeInfoHolder`.  
+ *tihclass*  
+ Класс, используемый для управления coclass сведения о типе. Значение по умолчанию — `CComTypeInfoHolder`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="constructors"></a>Конструкторы  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Извлекает **ITypeInfo** указатель на сведения о типе coclass.|  
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|Извлекает идентификатор GUID объекта исходящих disp-интерфейса.|  
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Извлекает `ITypeInfo` указатель на сведения о типе компонентного класса.|  
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|Извлекает идентификатор GUID исходящего объекта disp-интерфейса.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::_tih](#_tih)|Управляет сведения о типе для компонентного класса.|  
   
 ## <a name="remarks"></a>Примечания  
- [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) расширяет интерфейс [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) путем добавления `GetGUID` метод. Этот метод позволяет клиенту получить объекта исходящего интерфейса IID для ее набор событий по умолчанию. Класс `IProvideClassInfo2Impl` предоставляет реализацию по умолчанию **IProvideClassInfo** и `IProvideClassInfo2` методы.  
+ [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) интерфейс расширяет [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) , добавив `GetGUID` метод. Этот метод позволяет клиенту получить объекта исходящего интерфейса IID для набора событий его по умолчанию. Класс `IProvideClassInfo2Impl` предоставляет реализацию по умолчанию `IProvideClassInfo` и `IProvideClassInfo2` методы.  
   
  `IProvideClassInfo2Impl` содержит статический член типа `CComTypeInfoHolder` , управляющий сведения о типе для компонентного класса.  
   
@@ -97,17 +98,17 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
  **Заголовок:** atlcom.h  
   
 ##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
- Извлекает `ITypeInfo` указатель на сведения о типе coclass.  
+ Извлекает `ITypeInfo` указатель на сведения о типе компонентного класса.  
   
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) в Windows SDK.  
+ См. в разделе [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) в Windows SDK.  
   
 ##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
- Извлекает идентификатор GUID объекта исходящих disp-интерфейса.  
+ Извлекает идентификатор GUID исходящего объекта disp-интерфейса.  
   
 ```
 STDMETHOD(GetGUID)(
@@ -116,7 +117,7 @@ STDMETHOD(GetGUID)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) в Windows SDK.  
+ См. в разделе [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) в Windows SDK.  
   
 ##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  Конструктор.  
@@ -126,10 +127,10 @@ IProvideClassInfo2Impl();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы `AddRef` на [_tih](#_tih) член. Деструктор вызывает **выпуска**.  
+ Вызовы `AddRef` на [_tih](#_tih) член. Деструктор вызывает `Release`.  
   
 ##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
- Статические данные-член является экземпляром типа параметра шаблона класса `tihclass`, по умолчанию — `CComTypeInfoHolder`.  
+ Статические данные-член является экземпляром класса параметр шаблона, *tihclass*, по умолчанию — `CComTypeInfoHolder`.  
   
 ```
 static  tihclass

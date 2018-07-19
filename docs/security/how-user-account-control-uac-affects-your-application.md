@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840922"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Влияние контроля учетных записей на приложение
 Возможность контроля учетных записей в Windows Vista используется для назначения учетным записям ограниченных привилегий. Подробные сведения о функции контроля учетных записей см. на следующих веб-сайтах:  

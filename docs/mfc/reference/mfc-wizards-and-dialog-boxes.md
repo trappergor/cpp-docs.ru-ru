@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376282"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Мастеры и диалоговые окна MFC
 Microsoft Foundation Class (MFC) мастер создает стандартный код для различных типов компонентов и объектов. Можно выполнить мастеров, открыв контекстное меню для проекта в **обозревателе решений** и выбрав **добавить**, **класса**.  

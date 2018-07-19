@@ -1,5 +1,5 @@
 ---
-title: Класс CTokenPrivileges | Документы Microsoft
+title: Класс CTokenPrivileges | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,14 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31e313381eac3158a6cb72c7681bc49013e92f90
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881757"
 ---
 # <a name="ctokenprivileges-class"></a>Класс CTokenPrivileges
-Этот класс является оболочкой для **TOKEN_PRIVILEGES** структуры.  
+Этот класс является оболочкой для `TOKEN_PRIVILEGES` структуры.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -50,41 +51,41 @@ class CTokenPrivileges
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Конструктор.|  
 |[CTokenPrivileges::~CTokenPrivileges](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenPrivileges::Add](#add)|Добавляет один или несколько прав для `CTokenPrivileges` объекта.|  
-|[CTokenPrivileges::Delete](#delete)|Удаление прав из `CTokenPrivileges` объекта.|  
+|[CTokenPrivileges::Delete](#delete)|Удаляет привилегию с `CTokenPrivileges` объекта.|  
 |[CTokenPrivileges::DeleteAll](#deleteall)|Удаляет все привилегии из `CTokenPrivileges` объекта.|  
-|[CTokenPrivileges::GetCount](#getcount)|Возвращает число записей прав доступа в `CTokenPrivileges` объекта.|  
+|[CTokenPrivileges::GetCount](#getcount)|Возвращает число записей привилегий в `CTokenPrivileges` объекта.|  
 |[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|Извлекает отображаемые имена для прав доступа, содержащихся в `CTokenPrivileges` объекта.|  
-|[CTokenPrivileges::GetLength](#getlength)|Возвращает размер буфера в байтах, необходимый для хранения **TOKEN_PRIVILEGES** структура представлена `CTokenPrivileges` объекта.|  
+|[CTokenPrivileges::GetLength](#getlength)|Возвращает размер буфера в байтах, необходимый для хранения `TOKEN_PRIVILEGES` представленный структуры `CTokenPrivileges` объекта.|  
 |[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|Извлекает локально уникальные идентификаторы (LUID) и флаги атрибутов из `CTokenPrivileges` объекта.|  
-|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|Возвращает имена прав доступа и флаги атрибутов из `CTokenPrivileges` объекта.|  
-|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|Возвращает указатель на **TOKEN_PRIVILEGES** структуры.|  
+|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|Извлекает имена привилегий и флаги атрибутов из `CTokenPrivileges` объекта.|  
+|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|Возвращает указатель на `TOKEN_PRIVILEGES` структуры.|  
 |[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|Получает атрибут, связанный с именем конкретное право доступа.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|Приводит значение к указателю на **TOKEN_PRIVILEGES** структуры.|  
+|[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|Приводит значение к указателю на `TOKEN_PRIVILEGES` структуры.|  
 |[CTokenPrivileges::operator =](#operator_eq)|Оператор присвоения.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, который описывает контекст безопасности процесса или потока и выделяется для каждого пользователя, зарегистрированного в системе Windows.  
+ [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows.  
   
- Токен доступа используется для описания различных прав доступа безопасности, предоставленных для каждого пользователя. Права доступа состоит из 64-разрядное число, называемое локальный уникальный идентификатор ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) и дескриптора строки.  
+ Маркер доступа используется для описания различных прав безопасности, предоставленные каждому пользователю. Права доступа состоит из 64-разрядное число, вызывается локальный уникальный идентификатор ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) и дескриптора строки.  
   
- `CTokenPrivileges` Класс является оболочкой для [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуру и содержит 0 или больше прав доступа. Можно добавить права, удаляется или запрашиваемые методами указанного класса.  
+ `CTokenPrivileges` Класс является оболочкой для [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуру и содержит 0 или больше прав доступа. Можно добавить привилегии, удаляется или запрашиваемые, используя предоставленный класс методы.  
   
- Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -98,17 +99,17 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPrivilege`  
- Указатель на строку с завершающим нулем, указывающее имя права, как определено в WINNT. Файл заголовка.  
+ *pszPrivilege*  
+ Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка.  
   
- `bEnable`  
- Значение true, если включен право доступа. Если значение равно false, право отключен.  
+ *bEnable*  
+ Значение true, если включена право доступа. Если значение равно false, привилегии отключен.  
   
- `rPrivileges`  
- Ссылка на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры. Права и атрибуты, скопированные из этой структуры и добавляются в `CTokenPrivileges` объекта.  
+ *rPrivileges*  
+ Ссылка на [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры. Права и атрибуты, копируемых из этой структуры и добавляются в `CTokenPrivileges` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В первой форме этот метод возвращает true, если права успешно добавлены, false в противном случае.  
+ В первой форме этот метод возвращает значение true, если привилегии успешно добавлены, значение false в противном случае.  
   
 ##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  Конструктор.  
@@ -120,14 +121,14 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rhs`  
+ *правая часть*  
  `CTokenPrivileges` Объекта, чтобы назначить новый объект.  
   
- `rPrivileges`  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить для нового `CTokenPrivileges` объекта.  
+ *rPrivileges*  
+ [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить новый `CTokenPrivileges` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- `CTokenPrivileges` Можно при необходимости создать объект с помощью **TOKEN_PRIVILEGES** структуры или ранее определенную `CTokenPrivileges` объекта.  
+ `CTokenPrivileges` Объекта при необходимости могут создаваться с использованием `TOKEN_PRIVILEGES` структуры или ранее определенную `CTokenPrivileges` объекта.  
   
 ##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  Деструктор  
@@ -140,21 +141,21 @@ virtual ~CTokenPrivileges() throw();
  Деструктор освобождает все выделенные ресурсы.  
   
 ##  <a name="delete"></a>  CTokenPrivileges::Delete  
- Удаление прав из `CTokenPrivileges` объекта маркера доступа.  
+ Удаляет привилегию с `CTokenPrivileges` объекта маркера доступа.  
   
 ```
 bool Delete(LPCTSTR pszPrivilege) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPrivilege`  
- Указатель на строку с завершающим нулем, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константа SE_SECURITY_NAME или его соответствующей строки «SeSecurityPrivilege».  
+ *pszPrivilege*  
+ Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константой SE_SECURITY_NAME или его соответствующую строку «SeSecurityPrivilege.»  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если право доступа успешно удален, и false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод полезен в качестве средства для создания маркеров ограниченного доступа.  
+ Этот метод полезен, как это средство для создания маркеров ограниченного доступа.  
   
 ##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
  Удаляет все привилегии из `CTokenPrivileges` объекта маркера доступа.  
@@ -174,23 +175,23 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDisplayNames`  
- Указатель на массив объектов `CString`. **Записей CNAME** определяется как typedef: **CTokenPrivileges::CAtlArray\<CString >**.  
+ *pDisplayNames*  
+ Указатель на массив объектов `CString`. `CNames` определяется как определение типа: `CTokenPrivileges::CAtlArray<CString>`.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр `pDisplayNames` является указателем на массив `CString` объекты, которые будут получать отображаемые имена, соответствующие права доступа, содержащихся в `CTokenPrivileges` объекта. Этот метод получает отображаемые имена только для прав доступа, указанных в разделе определенные права WINNT. З.  
+ Параметр `pDisplayNames` является указателем на массив `CString` объектов, которые будут получать отображаемые имена, соответствующие привилегии, содержащихся в `CTokenPrivileges` объекта. Этот метод извлекает отображаемые имена только для указанных в разделе определенные привилегии WINNT полномочий. З.  
   
- Этот метод возвращает отображаемое имя: например, если имя атрибута SE_REMOTE_SHUTDOWN_NAME, отображаемое имя — «Принудительное завершение работы из удаленной системы.» Чтобы получить имя системы, используйте [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
+ Этот метод получает отображаемое имя: например, если имя атрибута SE_REMOTE_SHUTDOWN_NAME, отображаемое имя — «Принудительное завершение работы из удаленной системы.» Чтобы получить имя системы, используйте [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
 ##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
- Возвращает число записей прав доступа в `CTokenPrivileges` объекта.  
+ Возвращает число записей привилегий в `CTokenPrivileges` объекта.  
   
 ```
 UINT GetCount() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает число привилегий, содержащихся в `CTokenPrivileges` объекта.  
+ Возвращает количество привилегии, содержащихся в `CTokenPrivileges` объекта.  
   
 ##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  Возвращает длину `CTokenPrivileges` объекта.  
@@ -200,7 +201,7 @@ UINT GetLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает число байтов, необходимое для хранения **TOKEN_PRIVILEGES** структура представлена `CTokenPrivileges` объекта, включая все записи прав доступа, он содержит.  
+ Возвращает число байтов, необходимое для хранения `TOKEN_PRIVILEGES` представленный структуры `CTokenPrivileges` объекта, включая все записи прав доступа, он содержит.  
   
 ##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
  Извлекает локально уникальные идентификаторы (LUID) и флаги атрибутов из `CTokenPrivileges` объекта.  
@@ -212,17 +213,17 @@ void GetLuidsAndAttributes(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pPrivileges`  
- Указатель на массив [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) объектов. **CLUIDArray** typedef определяется как **CAtlArray\<LUID > CLUIDArray**.  
+ *pPrivileges*  
+ Указатель на массив [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261) объектов. `CLUIDArray` typedef определяется как `CAtlArray<LUID> CLUIDArray`.  
   
- `pAttributes`  
- Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, нельзя получить атрибуты. **CAttributes** typedef определяется как **CAtlArray \<DWORD > CAttributes**.  
+ *pAttributes*  
+ Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются. `CAttributes` typedef определяется как `CAtlArray <DWORD> CAttributes`.  
   
 ### <a name="remarks"></a>Примечания  
- Данный метод перечисляет все привилегии, содержащихся в `CTokenPrivileges` объекта маркера доступа и поместите отдельных LUID и (необязательно) флаги атрибутов в массив объектов.  
+ Данный метод перечисляет все привилегии, содержащихся в `CTokenPrivileges` доступа объекта маркера и поместить отдельных LUID и (необязательно) флаги атрибутов в массиве объектов.  
   
 ##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
- Получает флаги из имени и атрибуту `CTokenPrivileges` объекта.  
+ Извлекает флаги из имени и атрибуту `CTokenPrivileges` объекта.  
   
 ```
 void GetNamesAndAttributes(
@@ -232,18 +233,18 @@ void GetNamesAndAttributes(
   
 ### <a name="parameters"></a>Параметры  
  *pNames*  
- Указатель на массив `CString` объектов. **Записей CNAME** typedef определяется как **CAtlArray \<CString > записей CNAME**.  
+ Указатель на массив `CString` объектов. `CNames` typedef определяется как `CAtlArray <CString> CNames`.  
   
- `pAttributes`  
- Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, нельзя получить атрибуты. **CAttributes** typedef определяется как **CAtlArray \<DWORD > CAttributes**.  
+ *pAttributes*  
+ Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, то атрибуты не извлекаются. `CAttributes` typedef определяется как `CAtlArray <DWORD> CAttributes`.  
   
 ### <a name="remarks"></a>Примечания  
  Данный метод перечисляет все привилегии, содержащихся в `CTokenPrivileges` объекта, поместив имя и (необязательно) флаги атрибутов в массив объектов.  
   
- Этот метод получает имя атрибута, а не отображаемое имя: например, если SE_REMOTE_SHUTDOWN_NAME имя атрибута, системное имя — «SeRemoteShutdownPrivilege.» Чтобы получить отображаемое имя, используйте метод [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
+ Этот метод получает имя атрибута, а не отображаемое имя: например, если имя атрибута SE_REMOTE_SHUTDOWN_NAME, системное имя — «SeRemoteShutdownPrivilege.» Чтобы получить отображаемое имя, используйте метод [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
 ##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
- Возвращает указатель на **TOKEN_PRIVILEGES** структуры.  
+ Возвращает указатель на `TOKEN_PRIVILEGES` структуры.  
   
 ```
 const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
@@ -262,10 +263,10 @@ bool LookupPrivilege(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszPrivilege`  
- Указатель на строку с завершающим нулем, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константа SE_SECURITY_NAME или его соответствующей строки «SeSecurityPrivilege».  
+ *pszPrivilege*  
+ Указатель на заканчивающуюся нулем строку, указывающее имя права, как определено в WINNT. Файл заголовка. Например этот параметр может указать константой SE_SECURITY_NAME или его соответствующую строку «SeSecurityPrivilege.»  
   
- `pdwAttributes`  
+ *pdwAttributes*  
  Указатель на переменную, получающую атрибуты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -280,17 +281,17 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rPrivileges`  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить для `CTokenPrivileges` объекта.  
+ *rPrivileges*  
+ [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) структуры, чтобы назначить `CTokenPrivileges` объекта.  
   
- `rhs`  
- `CTokenPrivileges` Объект для объекта назначения.  
+ *правая часть*  
+ `CTokenPrivileges` Для присваивания объекту.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CTokenPrivileges` объекта.  
   
 ##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
- Приводит значение к указателю на **TOKEN_PRIVILEGES** структуры.  
+ Приводит значение к указателю на `TOKEN_PRIVILEGES` структуры.  
   
 ```  
 operator const TOKEN_PRIVILEGES *() const throw(...);

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089722"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC. Прямой вызов функций ODBC API
 Классы баз данных предоставляют более простой интерфейс для [источника данных](../../data/odbc/data-source-odbc.md) сравнению с ODBC. В результате классы не могут инкапсулировать ODBC API. Функциональные возможности за пределами возможностей классов необходимо вызвать функций ODBC API напрямую. Например, необходимо вызывать функции каталога ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**и другие) напрямую.  

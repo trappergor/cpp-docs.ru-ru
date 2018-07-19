@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098723"
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование многие реализации интерфейсов.  

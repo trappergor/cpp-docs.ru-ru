@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357738"
 ---
 # <a name="what-is-a-host-object"></a>Что такое объект узла?
 Объект узла является COM-объект, представляющий контейнер элемента управления ActiveX, предоставляемые ATL для конкретного окна. Узел объекта подклассов окном контейнера, чтобы может отражать сообщений для элемента управления, он предоставляет интерфейсы контейнера, необходимые для использования элементом управления, а также предоставляет [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md) и [ IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md) интерфейсы, чтобы можно было настроить среду управления.  

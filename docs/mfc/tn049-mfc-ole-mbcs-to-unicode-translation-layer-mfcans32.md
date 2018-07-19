@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380745"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049. Слой трансляции MFC/OLE MBCS в Юникод (MFCANS32)
 Эта заметка, первоначально описано как MFCANS32. Библиотека предоставляет интерфейсы ANSI в основном Юникода world 32-разрядных OLE. Эта библиотека DLL MFC больше не используется.  

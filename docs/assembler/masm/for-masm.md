@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051947"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 Помечает блок, который повторяется один раз для каждого `argument`, с текущим `argument` замена `parameter` на каждом проходе.  

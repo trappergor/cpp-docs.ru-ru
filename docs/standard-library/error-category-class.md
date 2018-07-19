@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028233"
 ---
 # <a name="errorcategory-class"></a>Класс error_category
 
@@ -48,13 +49,13 @@ class error_category;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[default_error_condition](#default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|
 |[equivalent](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|
@@ -63,7 +64,7 @@ class error_category;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
 |[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|
@@ -85,9 +86,9 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`_Errval`|Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).|
+|*_Errval*|Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -109,15 +110,15 @@ virtual bool equivalent(const error_code& _Code,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`_Errval`|Значение кода ошибки для сравнения.|
-|`_Cond`|Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.|
-|`_Code`|Объект [error_code](../standard-library/error-code-class.md) для сравнения.|
+|*_Errval*|Значение кода ошибки для сравнения.|
+|*_Cond*|Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.|
+|*Фра_гменты*|Объект [error_code](../standard-library/error-code-class.md) для сравнения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если категории и значения равны; в противном случае — `false`.
+**значение true,** Если категории и значения равны; в противном случае — **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -135,13 +136,13 @@ virtual string message(error_code::value_type val) const = 0;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`val`|Значение кода ошибки для описания.|
+|*Val*|Значение кода ошибки для описания.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает описательное имя кода ошибки `val` для категории.
+Возвращает описательное имя кода ошибки *val* для категории.
 
 ### <a name="remarks"></a>Примечания
 
@@ -169,9 +170,9 @@ bool operator==(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Объект для проверки на равенство.|
+|*right*|Объект для проверки на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -191,13 +192,13 @@ bool operator!=(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Объект для проверки на неравенство.|
+|*right*|Объект для проверки на неравенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если объект `error_category` не равен объекту `error_category`, передаваемому в `right`; в противном случае — значение **false**.
+**значение true,** Если `error_category` объект не равным `error_category` переданный объект *правой*; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -213,9 +214,9 @@ bool operator<(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Сравниваемый объект `error_category`.|
+|*right*|Сравниваемый объект `error_category`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -235,7 +236,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Примечания
 
-Это определение типа — синоним для `int`.
+Это определение типа является синонимом **int**.
 
 ## <a name="see-also"></a>См. также
 

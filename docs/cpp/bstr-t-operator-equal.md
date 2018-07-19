@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::operator = | Документы Microsoft
+title: _bstr_t::operator = | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5537f4ad3abbac9686272e15d06bfa5df0bfca6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43e28aa7d7b3682c45f4f8b7a94e990374d83b46
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944163"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator =
 **Блок, относящийся только к системам Microsoft**  
@@ -32,37 +33,29 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _bstr_t& operator=(  
-   const _bstr_t& s1   
-) throw ( );  
-_bstr_t& operator=(  
-   const char* s2   
-);  
-_bstr_t& operator=(  
-   const wchar_t* s3   
-);  
-_bstr_t& operator=(  
-   const _variant_t& var   
-);  
+_bstr_t& operator=(const _bstr_t& s1) throw ( );  
+_bstr_t& operator=(const char* s2);  
+_bstr_t& operator=(const wchar_t* s3);  
+_bstr_t& operator=(const _variant_t& var);  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *S1*  
+ *s1*  
  Объект `_bstr_t`, который требуется присвоить существующему объекту `_bstr_t`.  
   
- *S2*  
+ *s2*  
  Многобайтовая строка, которую требуется присвоить существующему объекту `_bstr_t`.  
   
- `s3`  
+ *S3*  
  Строка Юникода, которую требуется присвоить существующему объекту `_bstr_t`.  
   
- `var`  
+ *var*  
  Объект `_variant_t`, который требуется присвоить существующему объекту `_bstr_t`.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="example"></a>Пример  
- В разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример использования `operator=`.  
+ См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример использования **оператор =**.  
   
 ## <a name="see-also"></a>См. также  
  [_bstr_t Class](../cpp/bstr-t-class.md)

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692786"
 ---
 # <a name="texture-class"></a>Класс texture
 Текстура — на статистических данных `accelerator_view` в домене экстента. Представляет коллекцию переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее тип-примитив C++ ( `unsigned int`, `int`, `float`, `double`), скалярный тип ( `norm`, или `unorm`), или тип короткого вектора.  

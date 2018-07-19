@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880222"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>Практическое руководство. Поиск символов в ресурсах
 ### <a name="to-find-symbols-in-resources"></a>Поиск символов в ресурсах  

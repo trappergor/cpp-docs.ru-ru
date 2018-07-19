@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105209"
 ---
 # <a name="retrieving-a-blob"></a>Извлечение двоичного объекта (BLOB)
 Можно получить большой двоичный объект (BLOB) различными способами. Можно использовать **DBTYPE_BYTES** для получения большого двоичного ОБЪЕКТА как последовательность байтов или используйте интерфейс, как `ISequentialStream`. Дополнительные сведения см. в разделе [большие двоичные ОБЪЕКТЫ и объекты OLE](https://msdn.microsoft.com/en-us/library/ms711511.aspx) в *Справочник программиста OLE DB*.  

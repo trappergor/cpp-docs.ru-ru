@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451403"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 Переменная `_environ` является указателем на массив указателей на строки многобайтовых символов, которые составляют среду процесса. Использование этой глобальной переменной не рекомендуется, поскольку существуют более безопасные функциональные версии [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) и [putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), которые следует использовать вместо нее. `_environ` объявлена в файле Stdlib.h.  

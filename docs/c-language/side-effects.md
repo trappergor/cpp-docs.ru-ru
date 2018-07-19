@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387015"
 ---
 # <a name="side-effects"></a>Побочные эффекты
 Порядок вычисления выражений определяется конкретной реализацией, за исключением случаев, когда язык гарантирует определенный порядок вычислений (как описано в статье [Приоритет и порядок оценки](../c-language/precedence-and-order-of-evaluation.md)). Например, в следующих вызовах функций возникают побочные эффекты:  

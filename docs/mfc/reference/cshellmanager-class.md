@@ -1,5 +1,5 @@
 ---
-title: Класс CShellManager | Документы Microsoft
+title: Класс CShellManager | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852390"
 ---
 # <a name="cshellmanager-class"></a>Класс CShellManager
 Реализует несколько методов, которые позволяют работать с указателями в списках идентификаторов (PIDL).  
@@ -57,29 +58,29 @@ class CShellManager : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|Создает объект `CShellManager`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, позволяющее пользователю выбрать папки оболочки.|  
+|[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, которое позволяет пользователю выбрать папку оболочки.|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|Сцепляет два Pidl.|  
-|[CShellManager::CopyItem](#copyitem)|Создает новый PIDL и копирует предоставленный PIDL на него.|  
+|[CShellManager::CopyItem](#copyitem)|Создает новый PIDL и копирует предоставленный PIDL к нему.|  
 |[CShellManager::CreateItem](#createitem)|Создает новый PIDL указанного размера.|  
-|[CShellManager::FreeItem](#freeitem)|Удаляет указанный PIDL.|  
-|[CShellManager::GetItemCount](#getitemcount)|Возвращает количество элементов в указанный PIDL.|  
+|[CShellManager::FreeItem](#freeitem)|Удаляет предоставленный PIDL.|  
+|[CShellManager::GetItemCount](#getitemcount)|Возвращает количество элементов в предоставленный PIDL.|  
 |[CShellManager::GetItemSize](#getitemsize)|Возвращает размер предоставленного PIDL.|  
 |[CShellManager::GetNextItem](#getnextitem)|Возвращает следующий элемент из PIDL.|  
-|[CShellManager::GetParentItem](#getparentitem)|Получает родительский элемент указанного элемента.|  
+|[CShellManager::GetParentItem](#getparentitem)|Извлекает родительский элемент указанного элемента.|  
 |[CShellManager::ItemFromPath](#itemfrompath)|Извлекает PIDL для элемента, определяемого по указанному пути.|  
   
 ## <a name="remarks"></a>Примечания  
  Методы `CShellManager` класса все приходится иметь дело с Pidl. PIDL — это уникальный идентификатор для объекта оболочки.  
   
- Не следует создавать `CShellManager` объекта вручную. Он будет создан автоматически платформой приложения. Тем не менее, необходимо вызвать [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) во время инициализации приложения. Чтобы получить указатель на диспетчер оболочки для приложения, вызовите [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).  
+ Не следует создавать `CShellManager` объект вручную. Он будет создаваться автоматически платформой приложения. Тем не менее, следует вызывать [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) во время инициализации приложения. Чтобы получить указатель на диспетчер оболочки для вашего приложения, вызовите [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,7 +91,7 @@ class CShellManager : public CObject
  **Заголовок:** afxshellmanager.h  
   
 ##  <a name="browseforfolder"></a>  CShellManager::BrowseForFolder  
- Отображает диалоговое окно, позволяющее пользователю выбрать папки оболочки.  
+ Отображает диалоговое окно, которое позволяет пользователю выбрать папку оболочки.  
   
 ```  
 BOOL BrowseForFolder(
@@ -103,32 +104,32 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `strOutFolder`  
- Строка, используемая с помощью метода для сохранения пути к выбранной папке.  
+ [out] *strOutFolder*  
+ Строка, используемая этим методом для сохранения пути из выбранной папки.  
   
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно.  
   
- [in] `lplszInitialFolder`  
- Строка, содержащая папку, выбран по умолчанию, когда появится диалоговое окно.  
+ [in] *lplszInitialFolder*  
+ Строка, содержащая папку, выбирается по умолчанию, когда появится диалоговое окно.  
   
- [in] `lpszTitle`  
- Заголовок диалогового окна.  
+ [in] *lpszTitle*  
+ Заголовок для диалогового окна.  
   
- [in] `ulFlags`  
- Флаги, определяющие параметры для диалогового окна. В разделе [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) подробное описание.  
+ [in] *ulFlags*  
+ Флаги, указывающие параметры для диалогового окна. См. в разделе [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) подробное описание.  
   
- [выходной] `piFolderImage`  
- Указатель на целое значение, где метод записывает индекс образа выбранной папки.  
+ [out] *piFolderImage*  
+ Указатель на целочисленное значение, где метод записывает индекс изображения выбранной папки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если пользователь выбирает папку из диалогового окна; в противном случае — 0.  
+ Ненулевое значение, если пользователь выбирает папки из диалогового окна; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- При вызове этого метода приложение создается и отображается диалоговое окно, которое позволяет пользователю выбрать папку. Метод запишет путь к папке в `strOutFolder` параметра.  
+ При вызове этого метода, приложение создает и отображает диалоговое окно, позволяющее пользователю выбрать папку. Метод запишет путь к папке в *strOutFolder* параметра.  
   
 ### <a name="example"></a>Пример  
- В следующем примере показано, как получить ссылку на `CShellManager` объектов с помощью `CWinAppEx::GetShellManager` метод и способ использования `BrowseForFolder` метод. Этот фрагмент кода является частью [пример анализатора](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как получить ссылку на `CShellManager` объекта с помощью `CWinAppEx::GetShellManager` метод и как использовать `BrowseForFolder` метод. Этот фрагмент кода является частью [пример Explorer](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
   
@@ -142,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl1`  
+ [in] *pidl1*  
  Первый элемент.  
   
- [in] `pidl2`  
+ [in] *pidl2*  
  Второй элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на новый список элементов, если функция выполняется успешно `NULL`.  
+ Указатель на новый список элементов, если функция выполняется успешно, в противном случае — значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает новый [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) достаточно большим, чтобы вместить оба `pidl1` и `pidl2`. Затем копирует `pidl1` и `pidl2` в новый список.  
+ Этот метод создает новую [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) достаточно большим, чтобы вместить оба *pidl1* и *pidl2*. Затем он копирует *pidl1* и *pidl2* в новый список.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Копирует список элементов.  
@@ -162,14 +163,14 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidlSource`  
- Исходный список элементов.  
+ [in] *pidlSource*  
+ Исходным списками элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на только что созданный элемент списка, в случае успешного выполнения; в противном случае `NULL`.  
+ Указатель на только что созданный элемент списка, если выполнение прошло успешно; в противном случае имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Вновь созданный элемент списка имеет тот же размер элемента в списке.  
+ Только что созданный элемент списка имеет тот же размер, в списке элементов.  
   
 ##  <a name="createitem"></a>  CShellManager::CreateItem  
  Создает новый PIDL.  
@@ -179,11 +180,11 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `cbSize`  
- Размер списка элементов.  
+ [in] *cbSize*  
+ Размер в списке элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на созданный элемент списка, в случае успешного выполнения; в противном случае `NULL`.  
+ Указатель на созданный элемент списка, если выполнение прошло успешно; в противном случае имеет значение NULL.  
   
 ##  <a name="cshellmanager"></a>  CShellManager::CShellManager  
  Создает объект `CShellManager`.  
@@ -193,7 +194,7 @@ CShellManager();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В большинстве случаев не нужно создавать `CShellManager` напрямую. По умолчанию платформа создает ее автоматически. Чтобы получить указатель на `CShellManager`, вызовите [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Если вы создаете `CShellManager` вручную, его необходимо инициализировать с помощью метода [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
+ В большинстве случаев не нужно создавать `CShellManager` напрямую. По умолчанию платформа создает ее автоматически. Чтобы получить указатель на `CShellManager`, вызовите [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Если вы создаете `CShellManager` вручную, необходимо инициализировать его с помощью метода [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).  
   
 ##  <a name="freeitem"></a>  CShellManager::FreeItem  
  Удаляет список элементов.  
@@ -203,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Список элементов для удаления.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -214,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -228,31 +229,31 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
+ [in] *pidl*  
  Указатель на список элементов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Размер списка элементов.  
+ Размер в списке элементов.  
   
 ##  <a name="getnextitem"></a>  CShellManager::GetNextItem  
- Извлекает следующего элемента из указателя на элемент списка идентификаторов (PIDL).  
+ Извлекает следующий элемент из указателя для элемента списка идентификаторов (PIDL).  
   
 ```  
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pidl`  
- Список элементов для перечисления.  
+ [in] *pidl*  
+ Список элементов для итерации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на следующий элемент в списке.  
   
 ### <a name="remarks"></a>Примечания  
- Если в списке нет дополнительных элементов, этот метод возвращает `NULL`.  
+ Если в списке больше нет элементов, этот метод возвращает значение NULL.  
   
 ##  <a name="getparentitem"></a>  CShellManager::GetParentItem  
- Извлекает родительское указателя на элемент списка идентификаторов (PIDL).  
+ Извлекает родительский указатель на элемент списка идентификаторов (PIDL).  
   
 ```  
 int GetParentItem(
@@ -261,20 +262,20 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpidl`  
- PIDL, чей родительский элемент будут извлечены.  
+ [in] *lpidl*  
+ PIDL, родитель которого будут извлекаться.  
   
- [выходной] `lpidlParent`  
+ [out] *lpidlParent*  
  Ссылка на PIDL, где метод сохранит результат.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Уровень PIDL родительского элемента.  
   
 ### <a name="remarks"></a>Примечания  
- Уровень PIDL задается относительно рабочего стола. Считается, что системная PIDL с уровнем 0.  
+ Уровень PIDL задается относительно рабочего стола. Уровень 0 считается PIDL рабочего стола.  
   
 ##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath  
- Извлекает указатель на элемент списка идентификаторов (PIDL) из элемента, определяется строкой пути.  
+ Извлекает указатель на элемент списка идентификаторов (PIDL) из элемента, заданный с помощью строки пути.  
   
 ```  
 HRESULT ItemFromPath(
@@ -283,14 +284,14 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszPath`  
- Строка, указывающая путь к элементу.  
+ [in] *lpszPath*  
+ Строковое значение, указывающее путь для элемента.  
   
- [выходной] `pidl`  
- Ссылка на PIDL. Метод использует этот PIDL для хранения указателя для возвращаемого значения.  
+ [out] *pidl*  
+ Ссылка на PIDL. Данный метод использует этот PIDL для хранения указателя на его возвращаемое значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `NOERROR` в случае успешного выполнения; значение ошибки, определяемой OLE.  
+ Возвращает значение NOERROR, если выполнение прошло успешно; значение ошибки, определенное OLE.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

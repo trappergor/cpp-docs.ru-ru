@@ -1,5 +1,5 @@
 ---
-title: Класс CComQIPtrElementTraits | Документы Microsoft
+title: Класс CComQIPtrElementTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879656"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Класс CComQIPtrElementTraits
-Этот класс предоставляет методы, статических функций и определения типов полезны при создании коллекции указателей интерфейса СОМ.  
+Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекции указателей интерфейса СОМ.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,22 +37,22 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I`  
+ *I*  
  COM-интерфейс, указав тип указателя для сохранения.  
   
- `piid`  
- Указатель на IID `I`.  
+ *piid*  
+ Указатель на идентификатор IID *я*.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс наследует методы, а также полезные typedef, при создании класса коллекции [CComQIPtr](../../atl/reference/ccomqiptr-class.md) указатель интерфейса COM-объектов. Этот класс используется как [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) и [CInterfaceList](../../atl/reference/cinterfacelist-class.md) классы.  
+ Этот класс является производным методы и предоставляет полезные typedef, при создании класса коллекции [CComQIPtr](../../atl/reference/ccomqiptr-class.md) указатель интерфейса COM-объектов. Этот класс используется как [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) и [CInterfaceList](../../atl/reference/cinterfacelist-class.md) классы.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -70,7 +71,7 @@ class CComQIPtrElementTraits :
  **Заголовок:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE  
- Тип данных, используемый для добавления элементов к такому объекту класса коллекции.  
+ Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef I* INARGTYPE;

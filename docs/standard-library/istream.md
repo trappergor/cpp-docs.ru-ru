@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956558"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -37,10 +38,10 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Тип `basic_iostream`, специализированный для `char`.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Тип `basic_istream`, специализированный для `char`.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Тип `basic_iostream` специализированный на **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Тип `basic_istream` специализированный на **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Тип `basic_iostream`, специализированный для **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Тип `basic_istream`, специализированный для **wchar**.|
 
@@ -53,16 +54,16 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор>>](../standard-library/istream-operators.md#op_gt_gt)|Извлекает символы и строки из потока.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Класс потока, поддерживающий ввод и вывод.|
-|[basic_istream](../standard-library/basic-istream-class.md)|Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока с элементами типа **Elem**, также известных как [char_type](../standard-library/basic-ios-class.md#char_type). Их признаки символов определяются классом **Tr**, также известным как [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока с элементами типа `Elem`, также известных как [char_type](../standard-library/basic-ios-class.md#char_type), признаки символов определяются классом `Tr`, также известных как [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>См. также
 

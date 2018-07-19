@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199019"
 ---
 # <a name="fatal-error-c1196"></a>Неустранимая ошибка C1196
 "идентификатор": идентификатор, найденный в библиотеке типов "библиотека", не является допустимым идентификатором C++  

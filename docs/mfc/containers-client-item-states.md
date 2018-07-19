@@ -17,30 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929722"
 ---
 # <a name="containers-client-item-states"></a>Контейнеры. Состояния элементов клиентов
 В этой статье описываются различные состояния, которые передает клиентский элемент времени существования.  
   
- Клиентский элемент проходит через несколько состояний, как она создается, активирован, изменены и сохранены. Изменения состояния элемента, вызывается при каждом запуске [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) с `OLE_CHANGED_STATE` уведомления. Второй параметр представляет собой значение от **COleClientItem::ItemState** перечисления. Он может принимать одно из следующих:  
+ Клиентский элемент проходит через несколько состояний, как она создается, активирован, изменены и сохранены. Изменения состояния элемента, вызывается при каждом запуске [COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange) с **OLE_CHANGED_STATE** уведомления. Второй параметр представляет собой значение от `COleClientItem::ItemState` перечисления. Он может принимать одно из следующих:  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  В пустое состояние клиентский элемент еще не полностью элемент. Выделена память для него, но он еще не был инициализирован с данными элемента OLE. Это состояние, клиентский элемент находится в, если он будет создан путем вызова **новый** , но еще не подвергся второй шаг создания обычной двухэтапный.  
   
- На втором шаге, выполняются с помощью вызова `COleClientItem::CreateFromFile` или другой **CreateFrom *** xxxx* функция, элемент полностью создан. Данные OLE (из файла или другого источника, например буфера обмена) было связано с `COleClientItem`-производного объекта. Теперь элемент находится в состоянии загрузки.  
+ На втором шаге, выполняются с помощью вызова `COleClientItem::CreateFromFile` или другой `CreateFrom` *xxxx* функция, элемент полностью создан. Данные OLE (из файла или другого источника, например буфера обмена) было связано с `COleClientItem`-производного объекта. Теперь элемент находится в состоянии загрузки.  
   
  Если элемент был открыт в окне сервера, а не открыт на месте в документе-контейнере, он находится в состоянии открыть (или полностью открыть). В этом состоянии между штриховку обычно рисуется через представление элемента в окне контейнера, чтобы указать, что элемент является активной в другом месте.  
   

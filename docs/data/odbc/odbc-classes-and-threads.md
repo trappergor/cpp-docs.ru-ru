@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090592"
 ---
 # <a name="odbc-classes-and-threads"></a>Потоки и классы ODBC
 Начиная с MFC версии 4.2, имеется поддержка многопоточности для классов MFC ODBC. Обратите внимание, что MFC не поддерживает многопоточность для классов DAO.  

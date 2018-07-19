@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870254"
 ---
 # <a name="editable-file-types-for-resources"></a>Редактируемые типы файлов для ресурсов
 Вы можете открывать файлы следующих типов и изменять ресурсы, которые они содержат.  

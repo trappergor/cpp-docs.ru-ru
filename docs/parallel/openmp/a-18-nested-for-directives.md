@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690872"
 ---
 # <a name="a18---nested-for-directives"></a>A.18   Вложенные директивы for
 В следующем примере `for` директива nesting ([разделе 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33) является совместимым из-за внутренней и внешней `for` директивы привязки в разных регионах параллельных:  

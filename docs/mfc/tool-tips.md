@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380582"
 ---
 # <a name="tool-tips"></a>Всплывающие подсказки
 Процедуры должны быть уникальными для добавление всплывающих подсказок для элементов управления, содержащихся в windows, производного от класса MFC [CFrameWnd](../mfc/reference/cframewnd-class.md) и windows не является производным от `CFrameWnd`.  

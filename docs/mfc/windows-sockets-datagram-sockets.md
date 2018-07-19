@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383946"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Сокеты Windows. Сокеты датаграмм
 В этой статье описывается сокеты датаграмм, один из двух доступных типов Windows Socket. (Другой тип — [сокета потока](../mfc/windows-sockets-stream-sockets.md).)  

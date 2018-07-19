@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375920"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ограничения библиотек DLL, загружаемых с задержкой
 Существует ряд ограничений, связанных с отложенной загрузкой файлов импорта.  

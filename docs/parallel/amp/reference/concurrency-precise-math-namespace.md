@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695383"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Пространство имен Concurrency::precise_math
 Функции в `precise_math` пространства имен являются совместимыми C99. Оба одиночной точности, а также включаются двойной точности версии каждой функции. Например `acos` версия двойной точности и `acosf` версия одиночной точности. Эти функции, включая функции одиночной точности, требуется расширенная поддержка двойной точности на сочетания клавиш. Можно использовать [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) для определения, если эти функции можно запустить на определенных сочетаний клавиш. 

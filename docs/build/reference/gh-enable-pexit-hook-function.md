@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374509"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (включить функцию-обработчик _pexit)
 Вызовы `_pexit` функции в конце каждого метода или функции.  

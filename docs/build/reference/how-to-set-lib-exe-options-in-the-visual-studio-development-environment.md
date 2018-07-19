@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372364"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Практическое руководство. Установка параметров LIB.EXE в среде разработки Visual Studio
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Установка параметров LIB. Параметры exe-файла в среде разработки Visual Studio  

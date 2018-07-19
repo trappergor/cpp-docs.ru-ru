@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871527"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>Контекстные ключевые слова (расширения компонентов C++)
 *Контекстные ключевые слова* – это языковые элементы, которые распознаются только в определенном контексте. Вне указанного контекста они могут быть символами, которые определяются пользователем.  

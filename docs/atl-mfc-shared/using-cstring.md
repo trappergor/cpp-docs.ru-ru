@@ -1,7 +1,7 @@
 ---
-title: Использование CString | Документы Microsoft
+title: Использование CString | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025848"
 ---
 # <a name="using-cstring"></a>Использование CString
-В следующих подразделах этого раздела описывается программирование с использованием `CString`. Справочную информацию о `CString` класса, см. в документации для [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
+В следующих подразделах этого раздела описывается программирование с использованием `CString`. Справочную документацию по `CString` класса, см. в документации [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
   
  Чтобы использовать `CString`, включите заголовок `atlstr.h`.  
   
- `CString`, `CStringA`, И `CStringW` классы представляют собой специализации шаблона класса [CStringT](../atl-mfc-shared/reference/cstringt-class.md) на основе типа символьных данных.  
+ `CString`, `CStringA`, И `CStringW` классы представляют собой специализации шаблона класса [CStringT](../atl-mfc-shared/reference/cstringt-class.md) на основе типа символьных данных, они поддерживают.  
   
- Объект `CStringW` содержит тип `wchar_t` и поддерживает строки Юникода. Объект `CStringA` содержит тип `char` и поддерживает строки с однобайтовой и многобайтовой кодировкой. Объект `CString` поддерживает тип `char` или тип `wchar_t` в зависимости от того, какой символ определен во время компиляции — `MBCS` или `UNICODE`.  
+ Объект `CStringW` объект содержит **wchar_t** введите и поддерживает строки Юникода. Объект `CStringA` объект содержит **char** типа и строки поддерживает с однобайтовой и многобайтовой кодировкой (MBCS). Объект `CString` объект поддерживает **char** тип или `wchar_t` тип, в зависимости от того, определен ли во время компиляции символов MBCS или символом ЮНИКОДА.  
   
- Объект `CString` хранит символьные данные в объекте `CStringData`. `CString` принимает строки с завершающим байтом `null` в стиле C, однако не сохраняет символ `null` в хранимых символьных данных. Вместо этого `CString` отслеживает длину строки. `CString` не предоставляет знак завершения NULL при экспорте строки в стиле C. Вы можете вставить `null` в `CString`, однако это может привести к непредвиденным результатам.  
+ Объект `CString` хранит символьные данные в объекте `CStringData`. `CString` принимает строки НУЛЕВЫМ байтом В стиле. `CString` отслеживает строка длины для повышения производительности, но он также сохраняет нуль-символ в хранимых символьных данных для поддержки преобразования LPCWSTR. `CString` включает знак завершения null при экспорте строка C-стиля. Можно вставить значение NULL в других местах `CString`, но он может привести к непредвиденным результатам.  
   
  Следующий набор строковых классов можно использовать без привязки библиотеки MFC, как с поддержкой CRT, так и без нее: `CAtlString`, `CAtlStringA` и `CAtlStringW`.  
   
@@ -64,7 +65,7 @@ int main() {
  Описывает операции с содержимым объекта `CString` как со строкой с завершающим нулевым байтом в стиле C.  
   
  [Выделение и освобождение памяти для BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- Описывает использование памяти для `BSTR` и COM-объектов.  
+ Описывает использование памяти для BSTR и COM-объектов.  
   
  [Очистка исключений CString](../atl-mfc-shared/cstring-exception-cleanup.md)  
  Поясняет, что явная очистка в MFC 3.0 и последующих версий больше не требуется.  
@@ -83,8 +84,8 @@ int main() {
  Содержит справочные сведения о классе `CSimpleStringT`.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+ [Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
  Содержит ссылки на разделы, в которых описаны несколько способов управления строковыми данными.  
   
- [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+ [Строки (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

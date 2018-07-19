@@ -7,11 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958558"
 ---
 # <a name="lthashmapgt-functions"></a>Функции &lt;hash_map&gt;
 
@@ -34,9 +35,9 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-`right` Hash_map, элементы которого должны поменяться местами с элементами карты `left`.
+*правом* hash_map, элементы которого должны быть заменены карты *левой*.
 
-`left` Hash_map, элементы которого должны поменяться местами с элементами карты `right`.
+*слева* hash_map, элементы которого должны быть заменены карты *правой*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -57,9 +58,9 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-`right` Hash_multimap, элементы которого должны поменяться местами с элементами карты `left`.
+*правом* hash_multimap, элементы которого должны быть заменены карты *левой*.
 
-`left` Hash_multimap, элементы которого должны поменяться местами с элементами карты `right`.
+*слева* hash_multimap, элементы которого должны быть заменены карты *правой*.
 
 ### <a name="remarks"></a>Примечания
 

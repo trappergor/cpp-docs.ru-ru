@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109577"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 Шаблоны OLE DB упрощает доступ к данным OLE DB. Visual C++ предоставляет классов, реализующих многие часто используемые интерфейсы OLE DB. Можно использовать шаблоны потребителей Visual C++, можно написать приложение клиента (покупатели) OLE DB и поставщик шаблонов написать приложение на сервере (поставщик).  

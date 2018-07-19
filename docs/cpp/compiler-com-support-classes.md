@@ -1,5 +1,5 @@
 ---
-title: Классы поддержки компилятора COM | Документы Microsoft
+title: Классы поддержки компилятора COM | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939823"
 ---
 # <a name="compiler-com-support-classes"></a>Классы поддержки компилятора COM
 **Блок, относящийся только к системам Microsoft**  
   
- Стандартные классы используются для поддержки некоторых типов модели COM. Классы определены в \<comdef.h > и файлами заголовков, создается из библиотеки типов.  
+ Стандартные классы используются для поддержки некоторых типов модели COM. Классы определены в \<comdef.h > и файлах заголовков, создаваемых из библиотеки типов.  
   
 |Класс|Цель|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|Создает программу оболочку для типа `BSTR`, предоставляя полезные операторы и методы.|  
-|[_com_error](../cpp/com-error-class.md)|Определяет объект ошибки, вызванные [_com_raise_error](../cpp/com-raise-error.md) в случае большинства сбоев.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Инкапсулирует указатели COM-интерфейса и автоматически выполняет необходимые вызовы методов `AddRef`, **выпуска**, и `QueryInterface`.|  
-|[_variant_t](../cpp/variant-t-class.md)|Создает оболочку для **VARIANT** типа, предоставляя полезные операторы и методы.|  
+|[_com_error](../cpp/com-error-class.md)|Определяет объект ошибки, порождаемые [_com_raise_error](../cpp/com-raise-error.md) в случае большинства сбоев.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Инкапсулирует указатели COM-интерфейса и автоматически выполняет необходимые вызовы `AddRef`, `Release`, и `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Создает программу оболочку для типа `VARIANT`, предоставляя полезные операторы и методы.|  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

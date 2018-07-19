@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361960"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL-классы упрощают вложения элемента управления ActiveX?
 Код, размещение элементов управления ATL не требуется использовать все классы ATL; позволяет создать **«AtlAxWin80»** окна и использование API размещение элементов управления, при необходимости (Дополнительные сведения см. в разделе **возможности API размещения элемента управления ATL**. Тем не менее следующие классы упростить вложенность функций для использования.  

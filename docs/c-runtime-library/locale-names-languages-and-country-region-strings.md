@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391819"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Строки имени языкового стандарта, языка и страны и региона
 Аргумент*Языковой стандарт* для функций `setlocale` и `_create_locale` можно задать путем использования имен языкового стандарта, языков, кодов страны или региона и кодовых страниц, которые поддерживаются API многоязыковой поддержки Windows. Аргумент *locale* принимает следующую форму:  

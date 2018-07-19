@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236822"
 ---
 # <a name="compiler-error-c2725"></a>Ошибка компилятора C2725
 exception: невозможно выдать или перехватить управляемый объект или объект WinRT по значению или ссылке  

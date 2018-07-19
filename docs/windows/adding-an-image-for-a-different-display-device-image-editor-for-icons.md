@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857367"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Добавление изображения для другого устройства отображения (редактор изображений для значков)
 ### <a name="to-add-an-image-for-a-different-display-device"></a>Добавление изображения для другого устройства отображения  

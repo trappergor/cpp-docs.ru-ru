@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366787"
 ---
 # <a name="comments-in-a-makefile"></a>Комментарии в файлах makefile
 Перед комментарием символом решетки (#). NMAKE игнорирует текст из решетки к следующему символу новой строки. Примеры  

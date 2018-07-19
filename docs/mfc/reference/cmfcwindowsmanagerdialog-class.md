@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042105"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Класс CMFCWindowsManagerDialog
 `CMFCWindowsManagerDialog` Объектов позволяет пользователю управлять дочерними окнами MDI в приложении MDI.  
@@ -37,7 +38,7 @@ class CMFCWindowsManagerDialog : public CDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Создает объект `CMFCWindowsManagerDialog`.|  
   
@@ -75,10 +76,10 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMDIFrame`  
+ [in] *pMDIFrame*  
  Указатель на окно родительского или владельца.  
   
- [in] `bHelpButton`  
+ [in] *bHelpButton*  
  Логический параметр, указывает, отображаются ли платформа **справки** кнопки.  
   
 ### <a name="remarks"></a>Примечания  

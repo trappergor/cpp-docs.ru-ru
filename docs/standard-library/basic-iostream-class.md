@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954712"
 ---
 # <a name="basiciostream-class"></a>Класс basic_iostream
 
@@ -48,19 +49,19 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[basic_iostream](#basic_iostream)|Создание объекта `basic_iostream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[swap](#swap)|Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значение указанного объекта `basic_iostream` этому объекту. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
@@ -84,9 +85,9 @@ basic_iostream();
 
 ### <a name="parameters"></a>Параметры
 
-`strbuf` Существующий `basic_streambuf` объекта.
+*strbuf* существующий `basic_streambuf` объекта.
 
-`right` Существующий `basic_iostream` объект, используемый для создания нового `basic_iostream`.
+*правом* существующий `basic_iostream` объект, используемый для создания нового `basic_iostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -104,7 +105,7 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` `rvalue` Ссылка на `basic_iostream` которого будет присвоено.
+*правом* `rvalue` ссылка `basic_iostream` для присваивания из.
 
 ### <a name="remarks"></a>Примечания
 
@@ -120,7 +121,7 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` `basic_iostream` Объект для замены.
+*правом* `basic_iostream` объект для замены.
 
 ### <a name="remarks"></a>Примечания
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354621"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Основные сведения о составном элементе управления ATL
 Составной элемент управления — это тип элемента управления ActiveX, который может содержать (аналогично диалоговое окно) другие элементы управления ActiveX или элементы управления Windows. После построения составного элемента управления, его можно было вставить везде, где можно разместить элемент управления ActiveX.  

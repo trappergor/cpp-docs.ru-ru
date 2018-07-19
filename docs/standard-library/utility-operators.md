@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962030"
 ---
 # <a name="ltutilitygt-operators"></a>Операторы &lt;utility&gt;
 
@@ -47,9 +48,11 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **пары.**
+*left*  
+ Объект типа `pair`.
 
-`right` Объект типа `pair`.
+*right*  
+ Объект типа `pair`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -117,9 +120,9 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **пары.**
+*слева* объект типа `pair`.
 
-`right` Объект типа `pair`.
+*правом* объект типа `pair`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -178,9 +181,11 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `pair` слева от оператора.
+*left*  
+ Объект типа `pair` в левой части оператора.
 
-`right` Объект типа `pair` справа от оператора.
+*right*  
+ Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -188,7 +193,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Примечания
 
-`left` `pair` Объект считается строго меньше, чем `right` `pair` объекта, если `left` меньше и не равно `right`.
+`left` `pair` Такой объект называется строго меньше, чем `right` `pair` Если *левой* меньше и не равно *правой*.
 
 При сравнении объектов pair первые элементы значений двух объектов имеют самый высокий приоритет. Если они отличаются, результат их сравнения рассматривается как результат сравнения объектов pair. Если значения первых элементов совпадают, сравниваются значения вторых элементов и результат их сравнения рассматривается как результат сравнения объектов pair.
 
@@ -253,9 +258,11 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `pair` слева от оператора.
+*left*  
+ Объект типа `pair` в левой части оператора.
 
-`right` Объект типа `pair` справа от оператора.
+*right*  
+ Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -336,9 +343,11 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `pair` слева от оператора.
+*left*  
+ Объект типа `pair` в левой части оператора.
 
-`right` Объект типа `pair` справа от оператора.
+*right*  
+ Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -346,7 +355,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>Примечания
 
-`left` `pair` Объект считается строго больше `right` `pair` объекта, если `left` больше и не равно `right`.
+`left` `pair` Говорят, что должно быть строго больше объекта `right` `pair` Если *левой* больше и не равно *правой*.
 
 При сравнении объектов pair первые элементы значений двух объектов имеют самый высокий приоритет. Если они отличаются, результат их сравнения рассматривается как результат сравнения объектов pair. Если значения первых элементов совпадают, сравниваются значения вторых элементов и результат их сравнения рассматривается как результат сравнения объектов pair.
 
@@ -421,9 +430,11 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `pair` слева от оператора.
+*left*  
+ Объект типа `pair` в левой части оператора.
 
-`right` Объект типа `pair` справа от оператора.
+*right*  
+ Объект типа `pair` в правой части оператора.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

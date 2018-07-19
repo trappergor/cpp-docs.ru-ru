@@ -40,6 +40,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451202"
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 Возвращает строку символов из консоли. Существуют более безопасные версии этих функций; см. статью [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  

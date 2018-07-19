@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383554"
 ---
 # <a name="using-cstatusbarctrl"></a>Использование CStatusBarCtrl
 Можно использовать элемент управления строки состояния ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) для создания окна элемента управления, отражающий различного рода сведения о состоянии приложения. Окно состояния можно разделить на части, отображающие более чем один тип данных.  

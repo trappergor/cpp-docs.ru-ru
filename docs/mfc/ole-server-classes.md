@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932225"
 ---
 # <a name="ole-server-classes"></a>Серверные классы OLE
-Эти классы используются серверными приложениями. Серверные документы являются производными от `COleServerDoc` , а не из **CDocument**. Обратите внимание, что поскольку `COleServerDoc` является производным от `COleLinkingDoc`, документы сервера также могут быть контейнеры, которые поддерживают связывание.  
+Эти классы используются серверными приложениями. Серверные документы являются производными от `COleServerDoc` , а не из `CDocument`. Обратите внимание, что поскольку `COleServerDoc` является производным от `COleLinkingDoc`, документы сервера также могут быть контейнеры, которые поддерживают связывание.  
   
  `COleServerItem` Класс представляет документ или фрагмент документа, могут быть внедрены в другом документе или связанные.  
   

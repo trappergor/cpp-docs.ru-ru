@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689185"
 ---
 # <a name="taskcontinuationcontext-class"></a>Класс task_continuation_context
 Класс `task_continuation_context` позволяет указать место продолжения выполнения задачи. Ключ используется только с помощью этого класса из приложения среды выполнения Windows. Для приложений Windows Runtime контекст выполнения продолжения задачи определяется средой выполнения и не настраивается.  

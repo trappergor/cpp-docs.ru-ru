@@ -1,7 +1,7 @@
 ---
-title: Установка цвета фона диалогового | Документы Microsoft
+title: Установка цвета фона диалогового окна | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,14 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57aa0dc35d2cc47eea4df072a9df7efde9812c23
+ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39034706"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Установка цвета фона диалогового окна
-Можно задать цвет фона диалоговые окна, обрабатывая `WM_CTLCOLOR` сообщения для диалогового окна. Задать цвет используется только указанного диалогового окна.  
+Можно задать цвет фона диалоговые окна, обрабатывая сообщения WM_CTLCOLOR для диалогового окна. Цветами, выбранными вами используется только указанного диалогового окна "".
+
+См. в разделе [codexpert блог](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) пример.  
   
 ## <a name="see-also"></a>См. также  
  [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)   

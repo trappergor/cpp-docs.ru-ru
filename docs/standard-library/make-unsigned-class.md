@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f121912a13d6e4dac1692d2dab1b5ffd34bd6d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f379500f9455ed9ad9a581966e0f8ed7bfed13f7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953918"
 ---
 # <a name="makeunsigned-class"></a>Класс make_unsigned
 
@@ -39,13 +40,13 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`T`|Тип для изменения.|
+|*T*|Тип для изменения.|
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр модификатора типа содержит модифицированный тип, т. е. `T`, если `is_unsigned<T>` содержит значение true. В противном случае это наименьший тип со знаком `ST`, для которого `sizeof (T) <= sizeof (ST)`.
+Экземпляр модификатора типа содержит модифицированный тип, который является *T* Если `is_unsigned<T>` содержит значение true. В противном случае это наименьший тип со знаком `ST`, для которого `sizeof (T) <= sizeof (ST)`.
 
 ## <a name="requirements"></a>Требования
 

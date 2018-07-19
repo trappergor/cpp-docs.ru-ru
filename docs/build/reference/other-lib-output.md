@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371467"
 ---
 # <a name="other-lib-output"></a>Прочие выходные данные LIB
 В режиме по умолчанию можно использовать параметр/List для отображения сведений о результирующей библиотеке. Эти выходные данные можно перенаправить в файл.  

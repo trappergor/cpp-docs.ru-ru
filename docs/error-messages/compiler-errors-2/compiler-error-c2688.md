@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236018"
 ---
 # <a name="compiler-error-c2688"></a>Ошибка компилятора C2688
 «C2::fgrv»: ковариантные возвращаемые значения с несколькими или виртуальными наследованиями не поддерживаются для функций varargs  

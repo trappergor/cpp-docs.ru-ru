@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691356"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   Использование конструкций совместной работы в конструкции critical
 В следующем примере показано использование конструкции совместной работы внутри `critical` построения. В этом примере является совместимым, поскольку совместной работы для конструирования и `critical` конструкция не привязаны к одной и той же параллельной области.  

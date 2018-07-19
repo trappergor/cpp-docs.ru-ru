@@ -35,6 +35,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451290"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 Вызывает синтаксический анализ командной строки и снова копирует аргументы в `main()` через переданные указатели.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090199"
 ---
 # <a name="odbc-administrator"></a>Администратор ODBC
 Администратор ODBC регистрирует и настраивает [источники данных](../../data/odbc/data-source-odbc.md) доступные локально или по сети. Мастера используют сведения, предоставленные администратором ODBC для создания кода в приложениях, которые подключаются к источникам данных пользователей.  

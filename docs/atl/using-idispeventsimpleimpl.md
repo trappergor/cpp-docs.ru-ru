@@ -1,5 +1,5 @@
 ---
-title: С помощью IDispEventSimpleImpl (ATL) | Документы Microsoft
+title: Использование IDispEventSimpleImpl (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdef5012288b7f5f17040f73dfac5ec1f90d4f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34fad264e222d27c82f8c1cf79f59664f2c3f601
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850787"
 ---
-# <a name="using-idispeventsimpleimpl"></a>С помощью IDispEventSimpleImpl
-При использовании `IDispEventSimpleImpl` для обработки событий, необходимо:  
+# <a name="using-idispeventsimpleimpl"></a>Использование IDispEventSimpleImpl
+При использовании `IDispEventSimpleImpl` для обработки событий, вам потребуется:  
   
--   Создайте производный класс от [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
+-   Наследование класса из [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md).  
   
--   Добавьте картой приемника событий в класс.  
+-   Добавьте картой приемника событий к классу.  
   
--   Определение [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) структуры, описывающий события.  
+-   Определение [_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md) структур, описывающих события.  
   
--   Добавить записи в карте приемник событий, используя [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) макрос.  
+-   Добавьте записи в карте приемника событий с помощью [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info) макрос.  
   
 -   Реализуйте методы, что вы заинтересованы в обработке.  
   
--   Сообщить и разъединения источника события.  
+-   Уведомлений и негативной рекомендации источника события.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере показано, как обрабатывать **DocumentChange** события, создаваемые в Word **приложения** объекта. Это событие определяется как метод на **ApplicationEvents** disp-интерфейса.  
+ В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.  
   
- Приведенный пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
+ Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -70,21 +71,21 @@ ms.lasthandoff: 05/03/2018
   
  `};`  
   
- В этом примере `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Microsoft Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код был упрощен из stdafx.h:  
+ В примере используется `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код является упрощенной версией stdafx.h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- Только сведения из библиотеки типов, фактически используемый в этом примере — это CLSID слова **приложения** объекта и идентификатор IID **ApplicationEvents** интерфейса. Эта информация используется только во время компиляции.  
+ Единственные сведения из библиотеки типов, фактически используемый в этом примере — это CLSID слова `Application` объекта и идентификатор IID `ApplicationEvents` интерфейс. Эта информация используется только во время компиляции.  
   
- Следующий код отображается в Simple.h. Комментарии в указывается соответствующий код:  
+ В Simple.h отображается следующий код. Соответствующий код указан с комментариями:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   
- Приведенный ниже код взят из Simple.cpp.  
+ Следующий код является из Simple.cpp:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Обработка событий](../atl/event-handling-and-atl.md)   
- [Образец ATLEventHandling](../visual-cpp-samples.md)
+ [Пример ATLEventHandling](../visual-cpp-samples.md)
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345717"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Создание коллекций стеков и очередей
 В этой статье описывается создание других структур данных, таких как [стеки](#_core_stacks) и [очереди](#_core_queues), списке классы MFC. В примерах используются классы, производные от `CList`, но можно использовать `CList` напрямую, если необходимо добавить функциональные возможности.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096110"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  

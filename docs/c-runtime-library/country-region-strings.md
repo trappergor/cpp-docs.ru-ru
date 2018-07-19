@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391448"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых различными версиями операционной системы Windows, см. в разделе[National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (Справочник по API многоязыковой поддержки (NLS)). В списках строка страны или региона может приобретать любое значение страны из столбца **Языковые стандарты — Language Country/Region** (Страна или регион языка) или любой из аббревиатур из столбца **Country or Region name abbreviation** (Аббревиатура названия страны или региона). Дополнительные сведения о поддержке языков по версии операционной системы Windows см. в [приложении A: поведение продуктов](http://msdn.microsoft.com/goglobal/bb896001.aspx) в статье [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: справочник по коду языка Windows).  

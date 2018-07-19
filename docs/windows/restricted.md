@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892882"
 ---
 # <a name="restricted"></a>restricted
 Указывает, что член модуле, интерфейсе или disp-интерфейса не может вызываться произвольным образом.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374912"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Общие сведения о соглашениях о вызовах для архитектуры x64
 Два важных отличия между x86 и [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] является возможность адресации 64-разрядной и плоский набор 16 64-битных регистров общего назначения. Предоставляя расширенный набор регистров, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] использует [__fastcall](../cpp/fastcall.md) соглашение о вызовах и модель RISC-архитектуры обработки исключений. `__fastcall` Соглашение использует регистры для первых четырех аргументов и кадр стека для передачи дополнительных аргументов.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093900"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC. Использование классов базы данных без документов и представлений
 Иногда вы не можете использовать архитектуры document/view framework в приложениях базы данных. Содержание раздела:  

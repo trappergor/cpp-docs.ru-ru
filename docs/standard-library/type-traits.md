@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026355"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>Примечания
 
-Классы и шаблоны в \<type_traits > используются для поддержки вывод типа, классификации и преобразование во время компиляции для выявления ошибок, связанных с типами и которые помогают оптимизировать универсальный код. Эти классы и шаблоны включают унарные признаки типов, которые описывают свойство типа, двоичные признаки типов, которые описывают связь между типами, и признаки преобразования, изменяющие свойство типа.
+Классы и шаблоны в \<type_traits > используются для поддержки вывода типа, классификации и преобразования во время компиляции, для обнаружения ошибок, связанных с типом и для оптимизации универсального кода. Эти классы и шаблоны включают унарные признаки типов, которые описывают свойство типа, двоичные признаки типов, которые описывают связь между типами, и признаки преобразования, изменяющие свойство типа.
 
 Для поддержки признаков типа определен вспомогательный класс `integral_constant`. Он имеет специализации шаблона `true_type` и `false_type`, формирующие базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является открыто производным (явно или косвенно) от [true_type](../standard-library/type-traits-typedefs.md#true_type). Если значение предиката типа равно *false*, он является открыто производным (явно или косвенно) от [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
@@ -73,7 +74,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|Проверяет, является ли тип типом `void`.|
+|[is_void](../standard-library/is-void-class.md)|Проверяет, является ли тип **void**.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|Проверяет, является ли тип типом `std::nullptr_t`.|
 |[is_integral](../standard-library/is-integral-class.md)|Проверяет, является ли тип целочисленным.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|Проверяет, является ли тип вещественным (с плавающей запятой).|
@@ -94,7 +95,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|Проверяет, является ли тип ссылкой.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|Проверяет, является ли тип арифметическим.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|Проверяет, является ли тип `void` или арифметическим типом.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|Проверяет, является ли тип **void** или арифметическим.|
 |[is_object](../standard-library/is-object-class.md)|Проверяет, является ли тип типом объекта.|
 |[is_scalar](../standard-library/is-scalar-class.md)|Проверяет, является ли тип скалярным.|
 |[is_compound](../standard-library/is-compound-class.md)|Проверяет, является ли тип нескалярным.|
@@ -104,8 +105,8 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|Проверяет, является ли тип типом `const`.|
-|[is_volatile](../standard-library/is-volatile-class.md)|Проверяет, является ли тип типом `volatile`.|
+|[is_const](../standard-library/is-const-class.md)|Проверяет, является ли тип **const**.|
+|[is_volatile](../standard-library/is-volatile-class.md)|Проверяет, является ли тип **volatile**.|
 |[is_trivial](../standard-library/is-trivial-class.md)|Проверяет, является ли тип простейшим.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|Проверяет, является ли тип тривиально копируемым.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|Проверяет, является ли тип стандартным макетом.|
@@ -141,7 +142,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Проверяет, является ли тип назначаемым с использованием типа копирования и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Проверяет, является ли тип назначаемым с использованием типа перемещения и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Проверяет, является ли тип уничтожаемым и известно ли, что деструктор не создаст исключения.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Проверяет, есть ли у типа виртуальный деструктор.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|Проверяет, есть ли у типа виртуальный деструктор.|
 
 Запросы свойств типов
 
@@ -163,9 +164,9 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Создает тип `const` из типа.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Создает тип `volatile` из типа.|
-|[add_cv](../standard-library/add-cv-class.md)|Создает тип `const volatile` из типа.|
+|[add_const](../standard-library/add-const-class.md)|Создает **const** тип из типа.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Создает **volatile** тип из типа.|
+|[add_cv](../standard-library/add-cv-class.md)|Создает **const volatile** тип из типа.|
 |[remove_const](../standard-library/remove-const-class.md)|Создает отличный от const тип из типа.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Создает отличный от volatile тип из типа.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Создает отличный от const и volatile тип из типа.|

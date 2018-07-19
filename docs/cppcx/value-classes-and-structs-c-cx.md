@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090718"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Классы и структуры значений (C++/CX)
 Объект *структура значения* или *класса значений* является Windows POD совместимой среды выполнения («plain old data structure»). Она имеет фиксированный размер и состоит только из полей только; в отличие от класса ссылки, у нее нет свойств.  

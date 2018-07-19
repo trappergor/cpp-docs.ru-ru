@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388819"
 ---
 # <a name="controlling-streams"></a>Управление потоками
 Функция [fopen](../c-runtime-library/reference/fopen-wfopen.md) возвращает адрес объекта с типом `FILE`. Этот адрес используется в качестве аргумента `stream` в нескольких библиотечных функциях для выполнения различных операций с открытым файлом. Для байтового потока ввод выполняется так, как если бы каждый символ считывался с помощью функции [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), а вывод — как если бы каждый символ записывался с помощью функции [fputc](../c-runtime-library/reference/fputc-fputwc.md). Для потока расширенных символов ввод выполняется так, как если бы каждый символ считывался с помощью функции [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), а вывод — как если бы каждый символ записывался с помощью функции [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

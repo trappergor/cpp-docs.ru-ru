@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686130"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1   Параллельное выполнение простого цикла
 Следующий пример демонстрирует параллелизации простого цикла с помощью `parallel for` директивы ([раздел 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) на странице 16). Переменная итерации цикла закрыт по умолчанию, поэтому нет необходимости явно указать в предложении закрытый.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281646"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>Предупреждение компилятора (уровень 1) C4436
 приведение dynamic_cast из виртуального базового типа «class1» в «class2» в конструктор или деструктор может завершаться с частично сконструированного объекта компиляции с параметром/vd2 или определите «класс2» с #pragma vtordisp(2) фактически  

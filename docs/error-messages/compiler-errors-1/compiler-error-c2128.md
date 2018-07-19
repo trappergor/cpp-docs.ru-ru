@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168156"
 ---
 # <a name="compiler-error-c2128"></a>Ошибка компилятора C2128
 «функция»: alloc_text и same_seg применимы только к функциям с компоновкой C  

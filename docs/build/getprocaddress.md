@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367970"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 Процессы, явно связанные до вызова функции DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) для получения адреса экспортированной функции в DLL. Используйте указатель возвращаемой вызов функции DLL. **GetProcAddress** принимает в качестве параметров дескриптор модуля DLL (возвращенных либо **LoadLibrary**, `AfxLoadLibrary`, или **GetModuleHandle**) и принимает имя нужную функцию для вызова или функции экспорта порядковый номер.  

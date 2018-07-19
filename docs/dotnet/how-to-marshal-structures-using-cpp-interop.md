@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130377"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Практическое руководство. Маршалирование структур с помощью взаимодействия C++
 В этом разделе демонстрируется один аспект возможностей взаимодействия Visual C++. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  

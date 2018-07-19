@@ -11,11 +11,12 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 7ee458d0d84b63de52a2840a7a86903afed1704d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d79e3361d58165ac356e2ef75c0a3fd1a4cb4f26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963645"
 ---
 # <a name="ltiosgt-typedefs"></a>Определения типов &lt;ios&gt;
 
@@ -34,7 +35,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа `char` с признаками символов по умолчанию.
+Тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
 
 ## <a name="streamoff"></a>  streamoff
 
@@ -50,7 +51,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Примечания
 
-Тип — целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение **streamoff(-1)** обычно указывает на ошибочное смещение.
+Тип — целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
 
 ## <a name="streampos"></a>  streampos
 
@@ -133,7 +134,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа `wchar_t` с признаками символов по умолчанию.
+Тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="wstreampos"></a>  wstreampos
 

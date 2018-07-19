@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691694"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   Примеры предложения атрибута данных copyprivate
 **Пример 1:** `copyprivate` предложение ([раздел 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) на странице 32) может использоваться для передачи значений, получена из одного потока, непосредственно ко всем экземплярам закрытые переменные в других потоков.  

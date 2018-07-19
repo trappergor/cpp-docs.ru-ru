@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880261"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Диалоговое окно "Селектор пользовательских цветов" (редактор изображений для значков)
 Это диалоговое окно позволяет настроить цвета, используемые для изображения. Дополнительные сведения см. в разделе [Настройка или изменение цвета](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  

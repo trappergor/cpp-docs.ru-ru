@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374597"
 ---
 # <a name="return-value-of-clexe"></a>Возвращаемое программой cl.exe значение
 Программа cl.exe возвращает нулевое значение в случае успешного выполнения (отсутствия ошибок) и ненулевое значение во всех остальных случаях.  

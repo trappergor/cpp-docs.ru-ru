@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686725"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 Функция omp_get_nested
 `omp_get_nested` Функция возвращает ненулевое значение, если включен вложенный параллелизм и 0, если она отключена. Дополнительные сведения о вложенных параллелизма разделе 3.1.9 на странице 40. Он следующий:  

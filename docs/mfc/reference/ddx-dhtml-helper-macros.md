@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121706"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml вспомогательных макросов
 Макросы вспомогательный DDX_DHtml обеспечения быстрого доступа к часто используемые свойства элементов управления в HTML-страницы.  
@@ -65,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -88,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -113,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -139,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -162,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене. В разделе *значение* в [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
 ## <a name="remarks"></a>Примечания  
@@ -187,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -212,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
@@ -235,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `dx`  
+ *DX*  
  Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.  
   
- `name`  
+ *name*  
  Значение, указанное для параметра ID в HTML-элемент управления.  
   
- `var`  
+ *var*  
  Значение при обмене.  
   
 ## <a name="remarks"></a>Примечания  
- При использовании `DDX_DHtml_Img_Src` макрос для извлечения свойства src для элемента образ, образ объекта Internet Explorer вернет полностью escape-URL-адрес источника изображения. Например, если вы используете `DDX_DHtml_Img_Src` макрос, чтобы задать свойство src ИЗОБРАЖЕНИЯ элемента к строке «некоторые интересные изображение» при получении этого свойства, возвращает строку «res://d:\myapplication\myapp.exe/some% Internet Explorer 20picture % 20interesting.»  
+ При использовании макроса DDX_DHtml_Img_Src для извлечения свойства src для элемента ИЗОБРАЖЕНИЯ, объекту image Internet Explorer будет возвращать полностью escape-URL-адрес источника изображения. Например при использовании макроса DDX_DHtml_Img_Src присваивается свойство src элемент ИЗОБРАЖЕНИЯ строку «некоторые интересные рисунок», при извлечении этим свойством, Internet Explorer возвращает строку «res://d:\myapplication\myapp.exe/some% 20picture % 20interesting.»  
   
  Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLIMGELEMENT_SRC отправки идентификатора.  
 

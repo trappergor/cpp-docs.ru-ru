@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348144"
 ---
 # <a name="odbc-classes"></a>Классы ODBC
 Эти классы работают с другими классами framework приложения предоставляют простой доступ к широкому спектру баз данных, для которых доступны драйверы Open Database Connectivity (ODBC).  

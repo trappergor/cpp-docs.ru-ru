@@ -2,7 +2,7 @@
 title: Установка поддержки C++ в Visual Studio | Документы Microsoft
 description: Установить поддержку Visual C++ в Visual Studio
 ms.custom: mvc
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253760"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322489"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
@@ -40,10 +40,10 @@ ms.locfileid: "35253760"
 1. Загрузите последнюю Visual Studio 2017 г. установщик Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Установить Visual Studio 2017 Community</a>
+   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Установить Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
+   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>.
 
 1. Найдите файл установщика загружаются и запустите его. Могут отображаться в браузере или может оказаться в папке загрузок. Установщик должен иметь права администратора для выполнения. Вы можете увидеть **контроль учетных записей пользователей** диалоговое окно, запрашивающее разрешение дать установщику внести изменения в систему, выбрать **Да**. Если возникают трудности, найдите загруженный файл в проводнике щелкните правой кнопкой мыши значок установщика и выберите **Запуск от имени администратора** в контекстном меню.
 

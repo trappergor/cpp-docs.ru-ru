@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383722"
 ---
 # <a name="technical-notes-by-number"></a>Технические примечания по номеру
 Технические примечания ниже перечисляются по номерам, с последней записанной техническое Примечание сначала. Для получения списка по категориям [Технические примечания по категории](../mfc/technical-notes-by-category.md).  

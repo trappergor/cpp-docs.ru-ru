@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878490"
 ---
 # <a name="opening-a-resource-for-binary-editing"></a>Открытие ресурса для редактирования в двоичном редакторе
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Открытие ресурса классического приложения Windows для редактирования в двоичном редакторе  

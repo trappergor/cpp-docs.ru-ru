@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878883"
 ---
 # <a name="override--c-component-extensions"></a>override (расширения компонентов C++)
 Контекстно-зависимое ключевое слово `override` указывает, что член типа переопределяет член базового класса или базового интерфейса.  

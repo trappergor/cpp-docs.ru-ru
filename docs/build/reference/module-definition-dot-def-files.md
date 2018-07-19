@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374730"
 ---
 # <a name="module-definition-def-files"></a>Файлы определения модуля (DEF)
 Файлы определения модуля (DEF) предоставляют компоновщику сведения о экспорты, атрибуты и другие сведения о программе должна быть установлена связь. DEF-файл может пригодиться при построении библиотеки DLL. Так как существуют [параметры компоновщика](../../build/reference/linker-options.md) может использоваться вместо операторов определения модуля, DEF-файлы обычно не требуются. Можно также использовать [__declspec(dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) как способ указания экспортированных функций.  

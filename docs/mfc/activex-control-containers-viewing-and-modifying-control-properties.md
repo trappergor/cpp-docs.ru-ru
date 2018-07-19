@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340298"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>Контейнеры элементов управления ActiveX. Просмотр и изменение свойств элементов управления
 При вставке элемента управления ActiveX в проекте полезно для просмотра и изменения свойств, поддерживаемых элементом управления ActiveX. В этой статье описывается использование редактора ресурсов Visual C++ для этого.  

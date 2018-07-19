@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930472"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Контейнеры элементов управления ActiveX. Соединение элемента управления ActiveX с переменной-членом
 Чтобы связать элемент управления ActiveX с переменной-члена класса диалогового окна, который будет содержать элемент управления является самым простым способом доступа к элемента управления ActiveX в пределах его приложение контейнера элемента управления.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  В **имя переменной** введите имя.  
   
-     Например, `m_circctl`.  
+     Например *m_circctl*.  
   
 6.  Нажмите кнопку **Готово** принимать параметры и закрыть мастер добавления переменной-члена.  
   

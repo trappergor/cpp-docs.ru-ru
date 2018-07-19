@@ -87,6 +87,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688379"
 ---
 # <a name="unorm3-class"></a>Класс unorm_3
 Представляет короткого вектора трех чисел без знака обычного.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694554"
 ---
 # <a name="thread-local-storage-tls"></a>Локальное хранилище потока (TLS)
 Локальное хранилище потока (TLS) — это механизм, с помощью которого каждый поток в указанном многопоточном процессе может выделять расположения для хранения данных определенного потока. Динамически данные привязки (во время выполнения) определенного потока поддерживаются посредством TLS API ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), и [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Дополнительные сведения о реализации локального хранилища потока в Windows см. в разделе [локальное хранилище потока (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx).  Win32 и компилятор Visual C++ теперь поддерживают статически привязываемые (во время загрузки) данные потока, в дополнение к существующей реализации API.  

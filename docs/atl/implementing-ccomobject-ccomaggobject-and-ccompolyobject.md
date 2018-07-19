@@ -1,5 +1,5 @@
 ---
-title: Реализация CComObject, CComAggObject и CComPolyObject | Документы Microsoft
+title: Реализация CComObject, CComAggObject и CComPolyObject | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,29 +21,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3b1f8a0cf466e5364907dd87eefe8bbdc0a003d
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848367"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>Реализация CComObject, CComAggObject и CComPolyObject
-Классы шаблонов [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), и [CComPolyObject](../atl/reference/ccompolyobject-class.md) всегда являются наиболее производные классы в цепочке наследования. Обрабатывать все методы в их обязанность **IUnknown**: `QueryInterface`, `AddRef`, и **выпуска**. Кроме того `CComAggObject` и `CComPolyObject` (при использовании для объектов, статистические) предоставляют специальные подсчет ссылок на и `QueryInterface` семантику, необходимые для внутреннего unknown.  
+Классы шаблонов [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), и [CComPolyObject](../atl/reference/ccompolyobject-class.md) всегда являются наиболее производные классы в цепочке наследования. Отвечает за их обрабатывать все методы в `IUnknown`: `QueryInterface`, `AddRef`, и `Release`. Кроме того `CComAggObject` и `CComPolyObject` (при использовании для агрегированных объектов) предоставляют специальные подсчетом и `QueryInterface` семантику, необходимые для внутреннего unknown.  
   
- Ли `CComObject`, `CComAggObject`, или `CComPolyObject` используется зависит от того, объявляется один (или нет) следующие макросы:  
+ Ли `CComObject`, `CComAggObject`, или `CComPolyObject` используется зависит ли объявить один (или none) из следующих макросов:  
   
 |Макрос|Действие|  
 |-----------|------------|  
-|`DECLARE_NOT_AGGREGATABLE`|Всегда использует `CComObject`.|  
-|`DECLARE_AGGREGATABLE`|Использует `CComAggObject` Если объект является статистическим выражением и `CComObject` Если это не так. `CComCoClass` Этот макрос содержит, если ни одна из **DECLARE_\*_AGGREGATABLE** макросы объявлены в классе, используется по умолчанию.|  
-|`DECLARE_ONLY_AGGREGATABLE`|Всегда использует `CComAggObject`. Возвращает ошибку, если объект не является статистическим выражением.|  
-|`DECLARE_POLY_AGGREGATABLE`|ATL создает экземпляр **CComPolyObject\<окне отслеживания TRACE появляется >** при **IClassFactory::CreateInstance** вызывается. Во время создания проверяется значение внешняя Неизвестная строка. Если это **NULL**, **IUnknown** реализуется для неагрегированные объекта. Если внешняя Неизвестная строка не **NULL**, **IUnknown** реализуется для вычисляемого объекта.|  
+|DECLARE_NOT_AGGREGATABLE|Всегда использует `CComObject`.|  
+|DECLARE_AGGREGATABLE|Использует `CComAggObject` Если объект является статистическим и `CComObject` Если это не так. `CComCoClass` содержит этот макрос, если ни одна из DECLARE_ * _AGGREGATABLE макросы объявляются в классе, это будет по умолчанию.|  
+|DECLARE_ONLY_AGGREGATABLE|Всегда использует `CComAggObject`. Возвращает ошибку, если объект не является агрегатом.|  
+|DECLARE_POLY_AGGREGATABLE|ATL создает экземпляр класса **CComPolyObject\<окне отслеживания TRACE появляется >** при `IClassFactory::CreateInstance` вызывается. Во время создания проверяется значение внешняя Неизвестная строка. Если он равен NULL, `IUnknown` реализуется для объекта неагрегированные. Если внешняя Неизвестная строка не равно NULL, `IUnknown` реализуется для объединенного объекта.|  
   
- Преимущество использования `CComAggObject` и `CComObject` это реализация **IUnknown** оптимизирован для типа создаваемого объекта. Для экземпляра неагрегированные объект достаточно подсчет ссылок, пока объект агрегированных должен счетчик ссылок для внутреннего неизвестно и указатель на внешняя Неизвестная строка.  
+ Преимущество использования `CComAggObject` и `CComObject` том, что реализация `IUnknown` оптимизирован для типа создаваемого объекта. Например объект неагрегированные достаточно подсчет ссылок, хотя объединенного объекта должен счетчик ссылок для внутреннего неизвестного и указатель на внешняя Неизвестная строка.  
   
- Преимущество использования `CComPolyObject` — избежать обладает и разрешением `CComAggObject` и `CComObject` в модуле для обработки случаев, статистические и нестатистические. Один `CComPolyObject` объект обрабатывает в обоих случаях. Это означает, что существуют только одна копия виртуальной таблице и одной копии функций в модуле. При большом вашей vtable это существенно уменьшить размер вашего модуля. Тем не менее, используемой при небольших вашей vtable `CComPolyObject` может привести к немного больший размер модуля, так как он не оптимизирован для суммирования или неагрегированные объекта, как `CComAggObject` и `CComObject`.  
+ Преимущество использования `CComPolyObject` — избежать обеих `CComAggObject` и `CComObject` в модуле для обработки вариантов, статистические и неагрегированные. Один `CComPolyObject` объект обрабатывает в обоих случаях. Это означает, что только одна копия таблицы vtable и одна копия функции существуют в модуле. Если в таблице vtable имеет большой размер, это может значительно снизить размер вашего модуля. Тем не менее, если в таблице vtable невелик, с помощью `CComPolyObject` может привести к немного больший размер модуля, поскольку метод не оптимизирован для суммирования или неагрегированные объекта, так как `CComAggObject` и `CComObject`.  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы работы COM-объекты ATL](../atl/fundamentals-of-atl-com-objects.md)   
+ [Основы COM-объектов ATL](../atl/fundamentals-of-atl-com-objects.md)   
  [Макросы агрегирования и фабрик классов](../atl/reference/aggregation-and-class-factory-macros.md)
 

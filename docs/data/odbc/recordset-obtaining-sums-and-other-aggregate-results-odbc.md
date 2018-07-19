@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092077"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Набор записей. Определение сумм и других статистических результатов (ODBC)
 Этот раздел относится к классам MFC ODBC.  

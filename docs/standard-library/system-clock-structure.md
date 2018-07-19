@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959047"
 ---
 # <a name="systemclock-structure"></a>Структура system_clock
 
@@ -47,7 +48,7 @@ struct system_clock;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`system_clock::duration`|Синоним для `duration<rep, period>`.|
 |`system_clock::period`|Синоним для типа, который используется для представления тактового периода при автономном создании экземпляра `duration`.|
@@ -56,7 +57,7 @@ struct system_clock;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Статический. Возвращает объект `time_point`, наиболее точно соответствующий указанному времени.|
 |[Теперь](#now)|Статический. Возвращает текущее время.|
@@ -64,7 +65,7 @@ struct system_clock;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Константа system_clock::is_monotonic](#is_monotonic_constant)|Указывает, являются ли часы монотонными.|
 |[Константа system_clock::is_steady](#is_steady_constant)|Указывает, являются ли часы постоянными.|
@@ -77,7 +78,7 @@ struct system_clock;
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-Статический метод, возвращающий [time_point](../standard-library/time-point-class.md), которая наиболее точно соответствует времени, представляемому `Tm`.
+Статический метод, возвращающий [time_point](../standard-library/time-point-class.md) наиболее точно соответствует времени, представленного *Tm*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -85,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Tm` Объект [time_t](../c-runtime-library/standard-types.md) объекта.
+*TM*  
+ Объект [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  Константа system_clock::is_monotonic
 
@@ -97,7 +99,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В данной реализации `system_clock::is_monotonic` всегда возвращает `false`.
+В данном случае `system_clock::is_monotonic` всегда возвращает **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -113,7 +115,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В данной реализации `system_clock::is_steady` всегда возвращает `false`.
+В данном случае `system_clock::is_steady` всегда возвращает **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -133,7 +135,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-Статический метод, возвращающий значение [time_t](../c-runtime-library/standard-types.md), которое наиболее точно соответствует времени, представляемому `Time`.
+Статический метод, возвращающий [time_t](../c-runtime-library/standard-types.md) наиболее точно соответствует времени, представленного *время*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -141,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Time` Объект [time_point](../standard-library/time-point-class.md) объекта.
+*Время*  
+ Объект [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>См. также
 

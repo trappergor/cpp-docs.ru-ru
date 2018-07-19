@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359834"
 ---
 # <a name="atl-collection-classes"></a>Классы коллекций ATL
 Библиотека ATL предоставляет множество классов для хранения и доступа к данным. Класс, который вы решили использовать зависит от нескольких факторов, включая:  

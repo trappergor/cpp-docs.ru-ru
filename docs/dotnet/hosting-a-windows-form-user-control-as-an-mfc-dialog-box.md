@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138682"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
 MFC предоставляет класс шаблона [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) , чтобы можно было разместить пользовательский элемент управления Windows Forms (<xref:System.Windows.Forms.UserControl>) в модальные и немодальные диалоговом окне MFC. `CWinFormsDialog` является производным от класса MFC [CDialog](../mfc/reference/cdialog-class.md), поэтому в диалоговом окне могут запускаться как модальное или немодальный.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891036"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Просмотр меню в виде всплывающего меню
 Обычно при работе в редакторе меню ресурс меню отображается в виде строки меню. Однако у вас могут оказаться ресурсы, добавленные в строку меню приложения, во время работы программы.  

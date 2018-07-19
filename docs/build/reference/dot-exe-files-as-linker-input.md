@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372407"
 ---
 # <a name="exe-files-as-linker-input"></a>EXE-файлы в качестве входных файлов компоновщика
 [Имя файла-заглушки MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/ STUB) задает имя файла .exe, который выполняется в MS-DOS. LINK проверяет указанный файл, чтобы убедиться в том, что это допустимый программы MS-DOS.  

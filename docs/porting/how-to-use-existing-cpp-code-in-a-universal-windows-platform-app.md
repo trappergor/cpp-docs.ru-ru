@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847976"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows
 Возможно, самым простым способом запуска классической программы в среде UWP является использование технологий Desktop Bridge. К ним относится Desktop App Converter, позволяющий преобразовывать имеющиеся классические приложения в приложения универсальной платформы Windows (UWP) без изменения кода. Дополнительные сведения см. в статье [Перенос классического приложения на универсальную платформу Windows (UWP) с помощью Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).

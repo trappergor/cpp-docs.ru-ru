@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054072"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 Создает новую метку, назначив текущее значение счетчика расположение и заданного `type` для *имя*.  

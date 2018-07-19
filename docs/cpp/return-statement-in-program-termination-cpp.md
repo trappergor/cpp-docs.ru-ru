@@ -1,5 +1,5 @@
 ---
-title: Оператор Return при прерывании программы (C++) | Документы Microsoft
+title: Оператор Return при прерывании программы (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944164"
 ---
 # <a name="return-statement-in-program-termination-c"></a>Оператор return при прерывании программы (C++)
-Выдача `return` инструкции от **основной** функционально эквивалентно вызову метода **выхода** функции. Рассмотрим следующий пример.  
+Выдача `return` инструкции от **основной** является функционально эквивалентна вызову **выйти из** функции. Рассмотрим следующий пример.  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **Выхода** и `return` инструкции в предыдущем примере функционально идентичны. Однако C++ требует, чтобы функции, которые содержат типы возвращаемых значений, отличные от `void`, возвращали значение. `return` Инструкция позволяет возвращать значение из **основной**.  
+ **Выйти из** и **возвращают** инструкции в предыдущем примере функционально идентичны. Однако C++ требует, что функции, которые имеют возвращать типы, отличные от **void** возвращают значение. **Возвращают** инструкция позволяет возвращать значение из `main`.  
   
 ## <a name="see-also"></a>См. также  
  [Завершение программы](../cpp/program-termination.md)

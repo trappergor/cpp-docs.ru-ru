@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101998"
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 Осуществляет широковещательную рассылку [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) событий все прослушиватели в точке подключения **IID_IRowsetNotify** известить пользователями изменений, влияющих на весь набор строк.  

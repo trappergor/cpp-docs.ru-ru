@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d83765309f6df860b190d3ea2114e7e0fd35724
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e0962d4a0c97db27f7d5ae31ec58eb26f20a7f7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038397"
 ---
 # <a name="chwndrendertarget-class"></a>Класс CHwndRenderTarget
 Программа-оболочка для ID2D1HwndRenderTarget.  
@@ -55,13 +56,13 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Создает объект CHwndRenderTarget из HWND.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHwndRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Указывает, является ли перекрыто HWND, связанная с этой целью отрисовки.|  
@@ -74,13 +75,13 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Возвращает интерфейс ID2D1HwndRenderTarget.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Указатель на объект ID2D1HwndRenderTarget.|  
   
@@ -102,7 +103,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTarget`  
+ *pTarget*  
  Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
   
 ##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
@@ -123,7 +124,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hwnd`  
+ *HWND*  
  HWND, связанный с этим целевым объектом прорисовки  
   
 ##  <a name="create"></a>  CHwndRenderTarget::Create  
@@ -134,7 +135,7 @@ BOOL Create(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWnd`  
+ *hWnd*  
  HWND, связанный с этим целевым объектом прорисовки  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -195,7 +196,7 @@ BOOL ReCreate(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWnd`  
+ *hWnd*  
  HWND, связанный с этим целевым объектом прорисовки  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -209,7 +210,7 @@ BOOL Resize(const CD2DSizeU& size);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Новый размер целевого объекта отрисовки в пикселях устройства  
   
 ### <a name="return-value"></a>Возвращаемое значение  

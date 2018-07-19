@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380309"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044. Поддержка MFC для DBCS
 Это техническое Примечание для «двухбайтовые кодировки» или кодировку DBCS описывается поддержка в MFC. Это сведения, а также сведения о MFC поддержка ЮНИКОДА теперь доступен в *Справочник по библиотеке классов*.  

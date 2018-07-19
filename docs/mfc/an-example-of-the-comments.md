@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340888"
 ---
 # <a name="an-example-of-the-comments"></a>Пример комментариев
 Следующая частичная класс `CChildFrame` использует большую часть стандартной комментарии, MFC использует в своих предложениях для разделения членов класса, способы их использования:  

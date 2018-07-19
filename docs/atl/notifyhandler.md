@@ -1,5 +1,5 @@
 ---
-title: NotifyHandler | Документы Microsoft
+title: NotifyHandler | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 72c6c992f2ec92bc11d6dd009649d503d3c0bd02
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848341"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
-Имя функции, определяемому третий параметр `NOTIFY_HANDLER` макрос в схему сообщений.  
+Имя функции, заданных третий параметр макроса NOTIFY_HANDLER в схему сообщения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,20 +39,20 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `idCtrl`  
+ *idCtrl*  
  Идентификатор элемента управления, отправляющего сообщения.  
   
  *pnmh*  
- Адрес [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) структура, содержащая код уведомления и Дополнительные сведения. Для некоторых сообщений уведомлений, этот параметр указывает на более крупной структуры, который имеет **NMHDR** структуру, что ее первого элемента.  
+ Адрес [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) структуру, содержащую код уведомления и Дополнительные сведения. Для некоторых сообщений уведомлений, этот параметр указывает на структуру большего размера, имеет `NMHDR` структуру, что ее первого элемента.  
   
- `bHandled`  
- Сопоставление наборов сообщений `bHandled` для **TRUE** перед *NotifyHandler* вызывается. Если *NotifyHandler* не полностью обрабатывает сообщение, он должен устанавливать `bHandled` для **FALSE** для указания сообщения требуется дополнительная обработка.  
+ *bHandled*  
+ Карта наборов сообщений *bHandled* значение TRUE перед *NotifyHandler* вызывается. Если *NotifyHandler* не полностью обрабатывает сообщение, она должна задать *bHandled* для **FALSE** для указания сообщения требуется дополнительная обработка.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Результат обработки сообщения. 0 в случае успеха.  
   
 ## <a name="remarks"></a>Примечания  
- Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
+ Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
 ## <a name="see-also"></a>См. также  
  [Реализация окна](../atl/implementing-a-window.md)   

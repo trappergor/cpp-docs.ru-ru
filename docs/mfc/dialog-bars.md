@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348811"
 ---
 # <a name="dialog-bars"></a>Диалоговые панели
 Диалоговая панель — панель инструментов, тип объекта [панель элементов управления](../mfc/control-bars.md) , может содержать любой тип элемента управления. Так как они имеют характеристики немодального диалогового [CDialogBar](../mfc/reference/cdialogbar-class.md) объект предоставляет больше возможностей панели инструментов.  

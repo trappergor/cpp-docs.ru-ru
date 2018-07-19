@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953029"
 ---
 # <a name="using-cdatetimectrl"></a>Использование CDateTimeCtrl
 Элемент управления выбора даты и времени ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) реализует интуитивно понятный способ ввода или выбора определенной даты. Это основной интерфейс управления схожую функциональность в поле со списком. Тем не менее при развертывании элемента управления, появляется элемент управления Календарь месяца (по умолчанию), что позволяет пользователю указать определенную дату. При выборе даты управления Календарь месяца автоматически исчезает.  
   
 > [!NOTE]
->  Использование обоих **CDateTimePicker** и `CMonthCalCtrl` классов в проекте, необходимо включить AFXDTCTL. H, обычно в STDAFX проекта. H-файл.  
+>  Использование обоих `CDateTimePicker` и `CMonthCalCtrl` классов в проекте, необходимо включить AFXDTCTL. H, обычно в STDAFX проекта. H-файл.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
   

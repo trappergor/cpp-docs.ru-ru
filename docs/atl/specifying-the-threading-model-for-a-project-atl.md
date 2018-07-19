@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359640"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>Указание потоковой модели для проекта (ATL)
 Чтобы указать, что потоковая модель проекта ATL доступны следующие макросы:  

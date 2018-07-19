@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689601"
 ---
 # <a name="262-critical-construct"></a>2.6.2 Конструкция critical
 **Критические** директива идентифицирует конструкцию, которая ограничивает выполнение блоку структурированных к одному потоку за раз. Синтаксис **критические** директивы таков:  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451957"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Сопоставляет одну строку символов другой, выполняя указанное преобразование, зависящее от языкового стандарта. Эту функцию можно также использовать для создания ключа сортировки для входной строки.  

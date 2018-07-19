@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121494"
 ---
 # <a name="csmoothstoptransition-class"></a>Класс CSmoothStopTransition
 Инкапсулирует переход с плавной остановкой.  
@@ -43,19 +44,19 @@ class CSmoothStopTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Переход с плавной остановкой создает и инициализирует его максимальной продолжительности и конечное значение.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSmoothStopTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|  
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Максимальная длительность перехода.|  
@@ -83,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на переход библиотеку, которая отвечает за создание стандартной переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -99,10 +100,10 @@ CSmoothStopTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `maximumDuration`  
+ *maximumDuration*  
  Максимальная длительность перехода.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  Значение переменной анимации в конце перехода.  
   
 ##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  

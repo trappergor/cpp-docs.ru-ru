@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097358"
 ---
 # <a name="cnoaccessor-class"></a>Класс CNoAccessor
 Можно использовать в качестве аргумента шаблона (`TAccessor`) для шаблона классов, таких как `CCommand` и `CTable`, которых требуется аргумент класса метода доступа.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389424"
 ---
 # <a name="indirection-and-address-of-operators"></a>Операторы косвенного обращения и адреса операнда
 

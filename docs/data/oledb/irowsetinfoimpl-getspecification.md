@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103424"
 ---
 # <a name="irowsetinfoimplgetspecification"></a>IRowsetInfoImpl::GetSpecification
 Возвращает указатель интерфейса на объект (команды или сеанса), создавшего этот набор строк.  

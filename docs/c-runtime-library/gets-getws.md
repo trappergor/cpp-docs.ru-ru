@@ -42,6 +42,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450641"
 ---
 # <a name="gets-getws"></a>gets, _getws
 Получает строку из потока `stdin` . Существуют более безопасные версии этих функций; см. статью [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  

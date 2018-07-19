@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341288"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Операции буфера обмена с использованием элементов управления "Rich Edit"
 Приложение можно вставить содержимое буфера обмена в элементе управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) с помощью лучше всего доступных формат буфера обмена или определенный формат буфера обмена. Также можно определить в элементе управления rich edit способно ли вставка формат буфера обмена.  

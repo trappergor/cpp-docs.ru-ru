@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880209"
 ---
 # <a name="interface-attributes"></a>Атрибуты интерфейса
 Следующие атрибуты, относящиеся к [interface (или __interface)](../cpp/interface.md) C++ ключевое слово.  

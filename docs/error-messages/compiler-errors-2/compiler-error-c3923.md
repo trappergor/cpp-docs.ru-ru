@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275153"
 ---
 # <a name="compiler-error-c3923"></a>Ошибка компилятора C3923
 member: в функции-члене класса WinRT или управляемого класса невозможно использовать определения локальных классов, структур или объединений  

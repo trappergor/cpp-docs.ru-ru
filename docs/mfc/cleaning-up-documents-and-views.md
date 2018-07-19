@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341330"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Очистка документов и представлений
 При закрытии документа сначала вызывается платформой его [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) функции-члена. Если выделить память в куче в процессе операции документа `DeleteContents` — это лучшее место для его освобождения.  

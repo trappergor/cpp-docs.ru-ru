@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096834"
 ---
 # <a name="cnomultipleresults-class"></a>Класс CNoMultipleResults
 Используется в качестве аргумента шаблона (*тип TMultiple*) для [CCommand](../../data/oledb/ccommand-class.md) для создания оптимизированного команды, который обрабатывает один результирующий набор.  

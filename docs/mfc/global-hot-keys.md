@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344234"
 ---
 # <a name="global-hot-keys"></a>Глобальные сочетания клавиш
 Глобальные сочетания клавиш связан с определенной nonchild окна. Он позволяет пользователям активировать окна из любой части системы. Приложение задает глобальные сочетания клавиш для определенного окна, отправляя [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284) сообщение для этого окна. Для экземпляра Если `m_HotKeyCtrl` — [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) объекта и `pMainWnd` является указателем в окно, активируемый при нажатии сочетания клавиш, следующий код может использовать для сопоставления сочетания клавиш, заданные в элементе управления с окна, на который указывает `pMainWnd`.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691278"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
 Возвращает значение, указывающее, если число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.  

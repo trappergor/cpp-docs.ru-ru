@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874084"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>Преобразование цветов в выделенной области (редактор изображений для значков)
 Редактор изображений предоставляет удобный способ инвертирования цветов в выбранной части изображения, что позволяет увидеть, как будет выглядеть изображение в инвертированных цветах.  

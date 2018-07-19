@@ -11,11 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6310281aa86c48ae0a8b0fb313e79994d0b9b538
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1193e7ab65c49f0f79aeae52ca6563310296116d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953652"
 ---
 # <a name="ltistreamgt-functions"></a>Функции &lt;istream&gt;
 
@@ -41,9 +42,9 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Поток.
+*слева* потока.
 
-`right` Поток.
+*правом* потока.
 
 ## <a name="ws"></a>  ws
 
@@ -55,7 +56,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="parameters"></a>Параметры
 
-`_Istr` Поток.
+*_Istr* потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -65,7 +66,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 Манипулятор извлекает и отбрасывает все элементы `ch`, для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) имеет значение true.
 
-Функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) при обнаружении конца файла при извлечении элементов. Он возвращает `_Istr`.
+Функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) при обнаружении конца файла при извлечении элементов. Он возвращает *_Istr*.
 
 ### <a name="example"></a>Пример
 

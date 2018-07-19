@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110449"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>Явное переопределение элемента интерфейса
 Синтаксис объявления явное переопределение элемента интерфейса в классе отличается от управляемых расширений для C++ к Visual C++.  

@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956712"
 ---
 # <a name="cbasekeyframe-class"></a>Класс CBaseKeyFrame
 Реализует базовую функциональность ключевого кадра.  
@@ -51,13 +52,13 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Создает объект опорного кадра.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет кадр в раскадровку.|  
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Возвращает базовое значение ключевого кадра.|  
@@ -66,7 +67,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|Указывает, был ли этот кадр добавлен раскадровки.|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Указывает, следует ли добавить в раскадровку со смещением от другой существующий ключевой кадр, или в конце некоторых перехода данного опорного кадра.|  
@@ -93,10 +94,10 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  Если этот параметр имеет значение TRUE и добавляемый ключевой кадр зависит от другой кадр или перехода, этот метод пытается добавить данного ключевого кадра или перехода на раскадровку сначала.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

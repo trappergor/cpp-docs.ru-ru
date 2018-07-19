@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391952"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Поля спецификации формата. Функции scanf и wscanf
 Приведенные здесь сведения относятся ко всему семейству функций `scanf`, включая безопасные версии, и описывают символы, которые используются, чтобы указать функциям `scanf` порядок анализа входного потока (например, входного потока `stdin` для функции `scanf`) с целью выделения значений, присваиваемых переменным программы.  

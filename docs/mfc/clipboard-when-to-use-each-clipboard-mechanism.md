@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341930"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Буфер обмена. Выбор механизма буфера обмена
 Придерживайтесь следующих рекомендаций в использование буфера обмена.  

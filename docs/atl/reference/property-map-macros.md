@@ -1,5 +1,5 @@
 ---
-title: Макросы схемы свойство | Документы Microsoft
+title: Макросы сопоставления свойств | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,135 +21,136 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ba1b79e7e8deb3997af58a2b0917e7e03347953
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882524"
 ---
-# <a name="property-map-macros"></a>Макросы схемы свойство
-Эти макросы определяют сопоставления свойств и записи.  
+# <a name="property-map-macros"></a>Макросы сопоставления свойств
+Эти макросы определяют сопоставления свойств и операций.  
   
 |||  
 |-|-|  
-|[BEGIN_PROP_MAP](#begin_prop_map)|Отмечает начало ATL сопоставление свойств.|  
-|[PROP_DATA_ENTRY](#prop_data_entry)|Указывает область, то размеры элемента управления ActiveX.|  
-|[PROP_ENTRY_TYPE](#prop_entry_type)|Вводит описание, идентификатор DISPID свойств и страницы свойств CLSID в схеме сопоставления свойств.|  
-|[НА PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Вводит описания свойства, свойство DISPID, страницу свойств CLSID, и `IDispatch` IID в схеме сопоставления свойств.|  
+|[BEGIN_PROP_MAP](#begin_prop_map)|Помечает начало ATL сопоставление свойств.|  
+|[PROP_DATA_ENTRY](#prop_data_entry)|Указывает, экстента или измерений, элементов управления ActiveX.|  
+|[PROP_ENTRY_TYPE](#prop_entry_type)|Описание, идентификатор DISPID свойства и свойства страницы свойств CLSID вводит в схеме сопоставления свойств.|  
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Вводит описание свойства, свойство DISPID, страницу свойств CLSID, и `IDispatch` IID в схеме сопоставления свойств.|  
 |[PROP_PAGE](#prop_page)|Вводит CLSID страницы свойств в схеме сопоставления свойств.|  
-|[END_PROP_MAP](#end_prop_map)|Отмечает конец ATL сопоставление свойств.|  
+|[END_PROP_MAP](#end_prop_map)|Помечает конец ATL сопоставление свойств.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
    
 ##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
- Отмечает начало сопоставления свойств объекта.  
+ Отмечает начало карты свойство объекта.  
   
 ```
 BEGIN_PROP_MAP(theClass)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `theClass`  
+ *theClass*  
  [in] Указывает класс, содержащий сопоставление свойств.  
   
 ### <a name="remarks"></a>Примечания  
- Описания свойств, свойства DispId, страницу свойств CLSID, хранятся в схеме сопоставления свойств и `IDispatch` IID. Классы [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), и [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)использовать в схеме сопоставления свойств для извлечения и установки этих сведений.  
+ Сопоставление свойств хранит описания свойств, DISPID свойства, страницу свойств CLSID, и `IDispatch` идентификаторы IID. Классы [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md), [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md), [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), и [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)использовать сопоставление свойств, чтобы получить и задать эти сведения.  
   
- При создании объекта с помощью мастера проектов ATL, мастер создаст пустой свойства карты, указав `BEGIN_PROP_MAP` следуют [END_PROP_MAP](#end_prop_map).  
+ При создании объекта с помощью мастера проектов ATL, мастер создаст картой пустым свойством, указав BEGIN_PROP_MAP, за которым следует [END_PROP_MAP](#end_prop_map).  
   
- `BEGIN_PROP_MAP` не сохраняет out экстент (измерения) в сопоставлении свойств, так как объект, с помощью сопоставления свойств могут не иметь пользовательский интерфейс, поэтому бы не экстента. Если объект является элементом управления ActiveX с пользовательским интерфейсом, она имеет экстент. В этом случае необходимо указать [PROP_DATA_ENTRY](#prop_data_entry) в сопоставление свойств для предоставления экстента.  
+ BEGIN_PROP_MAP не сохраняет out (измерения) степень сопоставление свойств, так как объект, используя сопоставление свойств могут не иметь пользовательский интерфейс, поэтому бы не экстента. Если объект является элементом управления ActiveX с пользовательским интерфейсом, то у экстента. В этом случае необходимо указать [PROP_DATA_ENTRY](#prop_data_entry) в сопоставление свойств для предоставления области памяти.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
 ##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
- Указывает область, то размеры элемента управления ActiveX.  
+ Указывает, экстента или измерений, элементов управления ActiveX.  
   
 ```
 PROP_DATA_ENTRY( szDesc, member, vt)
 ```    
   
 ### <a name="parameters"></a>Параметры  
- `szDesc`  
+ *szDesc*  
  [in] Описание свойства.  
   
- `member`  
- [in] Элемент данных, содержащий степени; например `m_sizeExtent`.  
+ *Член*  
+ [in] Элемент данных, содержащий экстент; например `m_sizeExtent`.  
   
  *vt*  
  [in] Указывает тип VARIANT свойства.  
   
 ### <a name="remarks"></a>Примечания  
- Этот макрос вызывает заданный элемент данных должна быть сохранена.  
+ Этот макрос вызывает заданный элемент данных для сохранения.  
   
- При создании элемента управления ActiveX, как мастер вставит этот макрос после макроса сопоставления свойства [BEGIN_PROP_MAP](#begin_prop_map) и перед макрос сопоставления свойства [END_PROP_MAP](#end_prop_map).  
+ При создании элемента управления ActiveX, мастер вставляет этот макрос после макроса карты свойство [BEGIN_PROP_MAP](#begin_prop_map) и перед макросу свойства карты [END_PROP_MAP](#end_prop_map).  
   
 ### <a name="example"></a>Пример  
- В следующем примере область объекта ( `m_sizeExtent`) сохраняется.  
+ В следующем примере, экстент объекта (`m_sizeExtent`) сохраняется.  
   
  [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]  
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
 ##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
- Используйте этот макрос, чтобы ввести описание, идентификатор DISPID свойств и страницы свойств CLSID в схеме сопоставления свойств объекта.  
+ Используйте этот макрос, чтобы ввести описание, идентификатор DISPID свойства и свойства страницы свойств CLSID в схеме сопоставления свойств объекта.  
   
 ```
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szDesc`  
+ *szDesc*  
  [in] Описание свойства.  
   
- `dispid`  
+ *Идентификатор DISPID*  
  [in] DISPID свойства.  
   
- `clsid`  
- [in] Код CLSID страницы связанного свойства. Использовать специальное значение `CLSID_NULL` для свойства, которое не имеет связанного свойства страницы.  
+ *CLSID*  
+ [in] CLSID страницы связанного свойства. Используйте значение CLSID_NULL специальное значение для свойства, которое не имеет связанного свойства страницы.  
   
- `vt`  
+ *vt*  
  [in] Тип свойства.  
   
 ### <a name="remarks"></a>Примечания  
- `PROP_ENTRY` Макрос был небезопасной и не рекомендуется. Он был заменен `PROP_ENTRY_TYPE`.  
+ Макрос PROP_ENTRY был небезопасно и не рекомендуется. Он был заменен PROP_ENTRY_TYPE.  
   
- [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
+ [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало в схеме сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [BEGIN_PROP_MAP](#begin_prop_map).  
+ См. в примере [BEGIN_PROP_MAP](#begin_prop_map).  
   
-##  <a name="prop_entry_type_ex"></a>  НА PROP_ENTRY_TYPE_EX  
- Аналогично [PROP_ENTRY_TYPE](#prop_entry_type), но позволяет вам указать определенного IID, если объект поддерживает несколько сдвоенных интерфейсов.  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX  
+ Аналогичную [PROP_ENTRY_TYPE](#prop_entry_type), но позволяет вам указать определенного IID, если объект поддерживает несколько сдвоенных интерфейсов.  
   
 ```
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ```    
   
 ### <a name="parameters"></a>Параметры  
- `szDesc`  
+ *szDesc*  
  [in] Описание свойства.  
   
- `dispid`  
+ *Идентификатор DISPID*  
  [in] DISPID свойства.  
   
- `clsid`  
- [in] Код CLSID страницы связанного свойства. Использовать специальное значение `CLSID_NULL` для свойства, которое не имеет связанного свойства страницы.  
+ *CLSID*  
+ [in] CLSID страницы связанного свойства. Используйте значение CLSID_NULL специальное значение для свойства, которое не имеет связанного свойства страницы.  
   
- `iidDispatch`  
- [in] Идентификатор IID сдвоенный интерфейс, определяющего свойство.  
+ *iidDispatch*  
+ [in] Идентификатор IID сдвоенный интерфейс, определяющий свойство.  
   
- `vt`  
+ *vt*  
  [in] Тип свойства.  
   
 ### <a name="remarks"></a>Примечания  
- `PROP_ENTRY_EX` Макрос был небезопасной и не рекомендуется. Он был заменен `PROP_ENTRY_TYPE_EX`.  
+ Макрос PROP_ENTRY_EX был небезопасно и не рекомендуется. Он был заменен на PROP_ENTRY_TYPE_EX.  
   
- [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
+ [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало в схеме сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
   
 ### <a name="example"></a>Пример  
- Следующий пример группирует записи для `IMyDual1` следуют запись для `IMyDual2`. Группирование по сдвоенный интерфейс улучшит производительность.  
+ В следующем примере группируются записи для `IMyDual1` следуют запись для `IMyDual2`. Группирование по сдвоенный интерфейс позволит повысить производительность.  
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
@@ -161,32 +162,32 @@ PROP_PAGE(clsid)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `clsid`  
- [in] Код CLSID страницы свойств.  
+ *CLSID*  
+ [in] CLSID страницы свойств.  
   
 ### <a name="remarks"></a>Примечания  
- `PROP_PAGE` Аналогично [PROP_ENTRY_TYPE](#prop_entry_type), но не требуется описание свойства или DISPID.  
+ Аналогичен PROP_PAGE [PROP_ENTRY_TYPE](#prop_entry_type), но не требует описания свойства или идентификатор DISPID.  
   
 > [!NOTE]
->  При вводе идентификатора класса CLSID со `PROP_ENTRY_TYPE` или [на PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), необходимо внести дополнительные запись с `PROP_PAGE`.  
+>  Если вы уже ввели CLSID с PROP_ENTRY_TYPE или [PROP_ENTRY_TYPE_EX](#prop_entry_type_ex), вам не нужно вносить дополнительную операцию с PROP_PAGE.  
   
- [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
+ [BEGIN_PROP_MAP](#begin_prop_map) макрос отмечает начало в схеме сопоставления свойств; [END_PROP_MAP](#end_prop_map) макрос отмечает конец.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
 ##  <a name="end_prop_map"></a>  END_PROP_MAP  
- Отмечает конец сопоставления свойств объекта.  
+ Помечает конец сопоставление свойств объекта.  
   
 ```
 END_PROP_MAP()
 ```  
   
 ### <a name="remarks"></a>Примечания  
- При создании объекта с помощью мастера проектов ATL, мастер создаст пустой свойства карты, указав [BEGIN_PROP_MAP](#begin_prop_map) следуют `END_PROP_MAP`.  
+ При создании объекта с помощью мастера проектов ATL, мастер создаст картой пустым свойством, указав [BEGIN_PROP_MAP](#begin_prop_map) следуют END_PROP_MAP.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [BEGIN_PROP_MAP](#begin_prop_map).  
+ См. в примере [BEGIN_PROP_MAP](#begin_prop_map).  
   
 ## <a name="see-also"></a>См. также  
  [Макросы](../../atl/reference/atl-macros.md)

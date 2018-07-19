@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367515"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>Функции FreeLibrary и AfxFreeLibrary
 Процессы, которые явно связать до вызова функции DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) работает, если модуль DLL больше не нужен. Это функция уменьшает значение счетчика ссылок модуля и, если счетчик ссылок равен нулю, отменяет сопоставление из адресного пространства процесса.  

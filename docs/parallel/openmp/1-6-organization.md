@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686117"
 ---
 # <a name="16-organization"></a>1.6 Организация
 -   Функции библиотеки времени выполнения ([см. раздел 3](../../parallel/openmp/3-run-time-library-functions.md)).  

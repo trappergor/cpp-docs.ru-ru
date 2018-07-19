@@ -1,5 +1,5 @@
 ---
-title: Класс CD2DRectU | Документы Microsoft
+title: Класс CD2DRectU | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336478"
 ---
 # <a name="cd2drectu-class"></a>Класс CD2DRectU
 Программа-оболочка для `D2D1_RECT_U`.  
@@ -39,19 +40,19 @@ class CD2DRectU : public D2D1_RECT_U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectU::CD2DRectU](#cd2drectu)|Перегружен. Создает `CD2DRectU` объекта из `D2D1_RECT_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DRectU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
+|[CD2DRectU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRectU::operator CRect](#operator_crect)|Преобразует `CD2DRectU` для `CRect` объекта.|  
   
@@ -64,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **Заголовок:** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- Создает объект CD2DRectU из CRect объекта.  
+ Создает объект CD2DRectU из объекта CRect.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -80,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
- исходного прямоугольника  
+ *Rect*  
+ исходный прямоугольник  
   
- `uLeft`  
- Координата левой источника  
+ *uLeft*  
+ Левая координата источника  
   
- `uTop`  
- Координата верхней источника  
+ *uTop*  
+ Верхняя координата источника  
   
- `uRight`  
- Источник справа координат  
+ *uRight*  
+ Источник прямо координат  
   
- `uBottom`  
+ *uBottom*  
  Нижняя координата источника  
   
 ##  <a name="isnull"></a>  CD2DRectU::ISNULL  
@@ -103,7 +104,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если верхней прямоугольника, левую, нижнюю и правильные значения, все равно 0; в противном случае — значение FALSE.  
+ Значение TRUE, если начало прямоугольника, левую, нижнюю и правильные значения равны 0; в противном случае — значение FALSE.  
   
 ##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
  Преобразует CD2DRectU CRect.  

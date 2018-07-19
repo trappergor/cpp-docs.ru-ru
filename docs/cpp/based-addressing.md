@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408010"
 ---
 # <a name="based-addressing"></a>Базовые адреса
 Этот раздел содержит следующие подразделы:  

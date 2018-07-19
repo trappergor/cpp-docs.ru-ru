@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358010"
 ---
 # <a name="atl-dialog-wizard"></a>Мастер диалоговых окон ATL
 Этот мастер вставляет в проект ATL объект диалогового окна, производного от [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Диалоговое окно на основе `CAxDialogImpl` элементов управления ActiveX.  

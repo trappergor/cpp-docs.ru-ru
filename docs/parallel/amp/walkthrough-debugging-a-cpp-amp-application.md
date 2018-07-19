@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463096"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Пошаговое руководство. Отладка приложения C++ AMP
 В этом разделе показано, как выполнить отладку приложения, использующего C++ Accelerated Massive Parallelism (C++ AMP), чтобы воспользоваться преимуществами графический процессор (GPU). Она использует параллельной редукции программу, которая суммирует большой массив целых чисел. В данном пошаговом руководстве рассмотрены следующие задачи:  

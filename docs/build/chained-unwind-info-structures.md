@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366956"
 ---
 # <a name="chained-unwind-info-structures"></a>Структуры связанных данных раскрутки
 Если установлен флаг UNW_FLAG_CHAININFO, затем Структура данных раскрутки является дополнительной и общего исключения обработчик или объединении в цепочку-поле содержит первичную информацию раскрутки. Следующий код извлекает основные сведения очистки, при условии, что `unwindInfo` является структура, имеющая UNW_FLAG_CHAININFO значение флага.  

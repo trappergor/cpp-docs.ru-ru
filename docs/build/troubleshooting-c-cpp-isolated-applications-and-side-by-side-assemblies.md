@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390695"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Устранение неполадок в изолированных приложениях и параллельных сборках C/C++
 Загрузка приложения C/C++ может завершиться неудачно, если не удается найти зависимые библиотеки. В этой статье описаны наиболее распространенные причины ошибок загрузки приложения C/C++, а также способы по их устранению.  

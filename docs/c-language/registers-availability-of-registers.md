@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383947"
 ---
 # <a name="registers-availability-of-registers"></a>Регистры. Доступность регистров
 **ANSI 3.5.1**. В какой степени можно управлять фактическим размещением объектов в регистрах при помощи описателя класса регистрового хранения  

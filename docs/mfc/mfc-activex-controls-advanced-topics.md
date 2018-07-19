@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930008"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Элементы управления ActiveX в MFC. Дополнительные разделы
 В этой статье представлены дополнительные разделы, относящиеся к разработке элементов управления ActiveX. Сюда входит следующее.  
@@ -78,9 +79,9 @@ ms.lasthandoff: 05/04/2018
   
 8.  В **функция Get** и **задать функция** диалоговые окна, введите уникальные имена для вашего функций Get и Set или примите имена по умолчанию.  
   
-9. Добавьте параметр с именем `row` (тип `short`), с использованием **имя параметра** и **тип параметра** элементов управления.  
+9. Добавьте параметр с именем *строки* (тип *короткие*), с использованием **имя параметра** и **тип параметра** элементов управления.  
   
-10. Добавьте второй параметр с именем `column` (типа `short`).  
+10. Добавьте второй параметр с именем *столбца* (тип *короткие*).  
   
 11. Нажмите кнопку **Готово**.  
   
@@ -108,50 +109,50 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="activex-control-error-codes"></a>Коды ошибок элементов управления ActiveX  
   
-|Error|Описание|  
+|Error|Описание:|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|Ошибочный вызов функции|  
-|**CTL_E_OVERFLOW**|Переполнение|  
-|**CTL_E_OUTOFMEMORY**|Нет памяти|  
-|**CTL_E_DIVISIONBYZERO**|Деление на ноль|  
-|**CTL_E_OUTOFSTRINGSPACE**|Место в строке|  
-|**CTL_E_OUTOFSTACKSPACE**|Место в стеке|  
-|**CTL_E_BADFILENAMEORNUMBER**|Недопустимое имя файла или номер|  
-|**CTL_E_FILENOTFOUND**|Файл не найден|  
-|**CTL_E_BADFILEMODE**|Недопустимый режим файла|  
-|**CTL_E_FILEALREADYOPEN**|Файл уже открыт|  
-|**CTL_E_DEVICEIOERROR**|Ошибка ввода-вывода устройства|  
-|**CTL_E_FILEALREADYEXISTS**|Файл уже существует|  
-|**CTL_E_BADRECORDLENGTH**|Недопустимая длина записи|  
-|**CTL_E_DISKFULL**|Нет места на диске|  
-|**CTL_E_BADRECORDNUMBER**|Неверный номер записи|  
-|**CTL_E_BADFILENAME**|Недопустимое имя файла|  
-|**CTL_E_TOOMANYFILES**|Слишком много файлов|  
-|**CTL_E_DEVICEUNAVAILABLE**|Устройство недоступно|  
-|**CTL_E_PERMISSIONDENIED**|В разрешении отказано|  
-|**CTL_E_DISKNOTREADY**|Диск не готов|  
-|**CTL_E_PATHFILEACCESSERROR**|Ошибка доступа к пути/файлу|  
-|**CTL_E_PATHNOTFOUND**|Путь не найден|  
-|**CTL_E_INVALIDPATTERNSTRING**|Недопустимая строка шаблона|  
-|**CTL_E_INVALIDUSEOFNULL**|Недопустимое использование значения NULL|  
-|**CTL_E_INVALIDFILEFORMAT**|Недопустимый формат файла|  
-|**CTL_E_INVALIDPROPERTYVALUE**|Недопустимое значение свойства|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Недопустимый индекс массива свойств|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Установка не поддерживается во время выполнения|  
-|**CTL_E_SETNOTSUPPORTED**|Set не поддерживается (свойство доступно только для чтения)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|Требуется индекс массива свойства|  
-|**CTL_E_SETNOTPERMITTED**|Функция set запрещена|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get не поддерживается во время выполнения|  
-|**CTL_E_GETNOTSUPPORTED**|Get не поддерживается (свойство доступно только для записи).|  
-|**CTL_E_PROPERTYNOTFOUND**|Свойство не найдено|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|Недопустимый формат буфера обмена|  
-|**CTL_E_INVALIDPICTURE**|Недопустимое изображение|  
-|**CTL_E_PRINTERERROR**|Ошибка принтера|  
-|**CTL_E_CANTSAVEFILETOTEMP**|Не удается сохранить файл в TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|Искомый текст не найден|  
-|**CTL_E_REPLACEMENTSTOOLONG**|Недопустимая длина замены|  
+|CTL_E_ILLEGALFUNCTIONCALL|Ошибочный вызов функции|  
+|CTL_E_OVERFLOW|Переполнение|  
+|CTL_E_OUTOFMEMORY|Нет памяти|  
+|CTL_E_DIVISIONBYZERO|Деление на ноль|  
+|CTL_E_OUTOFSTRINGSPACE|Место в строке|  
+|CTL_E_OUTOFSTACKSPACE|Место в стеке|  
+|CTL_E_BADFILENAMEORNUMBER|Недопустимое имя файла или номер|  
+|CTL_E_FILENOTFOUND|Файл не найден|  
+|CTL_E_BADFILEMODE|Недопустимый режим файла|  
+|CTL_E_FILEALREADYOPEN|Файл уже открыт|  
+|CTL_E_DEVICEIOERROR|Ошибка ввода-вывода устройства|  
+|CTL_E_FILEALREADYEXISTS|Файл уже существует|  
+|CTL_E_BADRECORDLENGTH|Недопустимая длина записи|  
+|CTL_E_DISKFULL|Нет места на диске|  
+|CTL_E_BADRECORDNUMBER|Неверный номер записи|  
+|CTL_E_BADFILENAME|Недопустимое имя файла|  
+|CTL_E_TOOMANYFILES|Слишком много файлов|  
+|CTL_E_DEVICEUNAVAILABLE|Устройство недоступно|  
+|CTL_E_PERMISSIONDENIED|В разрешении отказано|  
+|CTL_E_DISKNOTREADY|Диск не готов|  
+|CTL_E_PATHFILEACCESSERROR|Ошибка доступа к пути/файлу|  
+|CTL_E_PATHNOTFOUND|Путь не найден|  
+|CTL_E_INVALIDPATTERNSTRING|Недопустимая строка шаблона|  
+|CTL_E_INVALIDUSEOFNULL|Недопустимое использование значения NULL|  
+|CTL_E_INVALIDFILEFORMAT|Недопустимый формат файла|  
+|CTL_E_INVALIDPROPERTYVALUE|Недопустимое значение свойства|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|Недопустимый индекс массива свойств|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Установка не поддерживается во время выполнения|  
+|CTL_E_SETNOTSUPPORTED|Set не поддерживается (свойство доступно только для чтения)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|Требуется индекс массива свойства|  
+|CTL_E_SETNOTPERMITTED|Функция set запрещена|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get не поддерживается во время выполнения|  
+|CTL_E_GETNOTSUPPORTED|Get не поддерживается (свойство доступно только для записи).|  
+|CTL_E_PROPERTYNOTFOUND|Свойство не найдено|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|Недопустимый формат буфера обмена|  
+|CTL_E_INVALIDPICTURE|Недопустимое изображение|  
+|CTL_E_PRINTERERROR|Ошибка принтера|  
+|CTL_E_CANTSAVEFILETOTEMP|Не удается сохранить файл в TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|Искомый текст не найден|  
+|CTL_E_REPLACEMENTSTOOLONG|Недопустимая длина замены|  
   
- При необходимости используйте **CUSTOM_CTL_SCODE** макрос для определения пользовательских ошибок кода условие, которое не соответствует одним из стандартных кодов. Параметр этого макроса должен быть целым числом от 1000 до 32 767 включительно. Пример:  
+ При необходимости используйте макрос CUSTOM_CTL_SCODE для определения пользовательских ошибок кода условие, которое не соответствует одним из стандартных кодов. Параметр этого макроса должен быть целым числом от 1000 до 32 767 включительно. Пример:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -175,7 +176,7 @@ ms.lasthandoff: 05/04/2018
   
      - или -  
   
--   Объявите локальную переменную и подкласс как элемент диалоговое окно. Вставьте код, который имеет следующий вид (`CMyCtrl` является класс-оболочка, `IDC_MYCTRL1` — идентификатор элемента управления):  
+-   Объявите локальную переменную и подкласс как элемент диалоговое окно. Вставьте код, который имеет следующий вид (`CMyCtrl` является класс-оболочка, IDC_MYCTRL1 — идентификатор элемента управления):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

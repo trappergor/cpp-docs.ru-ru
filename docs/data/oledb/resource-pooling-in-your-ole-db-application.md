@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107491"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Создание пулов ресурсов в приложениях OLE DB
 Создание пулов в приложении необходимо проверить службы OLE DB, вызываются с помощью получения источника данных через **IDataInitialize** или **IDBPromptInitialize**. Если напрямую использовать `CoCreateInstance` для вызова поставщика на основе его CLSID, службы OLE DB не вызываются.  

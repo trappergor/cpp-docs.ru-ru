@@ -1,5 +1,5 @@
 ---
-title: _set_com_error_handler | Документы Microsoft
+title: _set_com_error_handler | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944544"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Блок, относящийся только к системам Microsoft**  
@@ -37,23 +38,23 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `pHandler`  
+ *pHandler*  
  Указатель на функцию замены.  
   
- `hr`  
- Информация о значении `HRESULT`.  
+ *hr*  
+ Информация HRESULT.  
   
- `perrinfo`  
+ *perrinfo*  
  Объект `IErrorInfo`.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию [_com_raise_error](../cpp/com-raise-error.md) обрабатывает все COM-ошибки. Это поведение можно изменить с помощью `_set_com_error_handler` для вызова собственной функции обработки ошибок.  
+ По умолчанию [_com_raise_error](../cpp/com-raise-error.md) обрабатывает все ошибки COM. Это поведение можно изменить с помощью `_set_com_error_handler` для вызова собственной функции обработки ошибок.  
   
  Функция замены должна иметь сигнатуру, эквивалентную сигнатуре `_com_raise_error`.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -95,7 +96,7 @@ Exception raised: Unable to establish the connection!
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<comdef.h >  
   
- **LIB:** Если **wchar_t — собственный тип** включен параметр компилятора, используйте comsuppw.lib или comsuppwd.lib. Если **wchar_t — собственный тип** параметр отключен, используйте comsupp.lib. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **LIB:** Если **wchar_t — собственный тип** включен параметр компилятора, используйте comsuppw.lib или comsuppwd.lib. Если **wchar_t — собственный тип** отключен, используйте comsupp.lib. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
 ## <a name="see-also"></a>См. также  
  [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

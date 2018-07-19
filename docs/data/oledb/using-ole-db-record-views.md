@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111277"
 ---
 # <a name="using-ole-db-record-views"></a>Использование представлений записей OLE DB
 Если требуется отобразить данные набора строк OLE DB в приложении MFC, следует использовать класс MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Объект представления записей создан из `COleDBRecordView` позволяет отображать записи базы данных в элементах управления MFC. Представление записей — представление формы диалогового окна, непосредственно подключенные к объекту набора строк OLE DB, созданные на основе `CRowset` класса шаблона. Получение дескриптора для объекта набора строк проста:  

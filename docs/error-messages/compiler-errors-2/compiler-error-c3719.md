@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277911"
 ---
 # <a name="compiler-error-c3719"></a>Ошибка компилятора C3719
 «интерфейс»: источник событий на основе интерфейса может использоваться только для событий COM  

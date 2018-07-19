@@ -1,5 +1,5 @@
 ---
-title: Функции-члены _com_error | Документы Microsoft
+title: Функции-члены _com_error | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b137d24d3d6500a46ceb392c79ff6f7ac5e780e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 919276e7a32399185256c38cb146158420aeded5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942020"
 ---
 # <a name="comerror-member-functions"></a>Функции-члены _com_error
-Сведения о **_com_error** функций-членов, в разделе [класс _com_error](../cpp/com-error-class.md).  
+Сведения о `_com_error` функций-членов см. в разделе [класс _com_error](../cpp/com-error-class.md).  
   
 ## <a name="see-also"></a>См. также  
  [Класс _com_error](../cpp/com-error-class.md)

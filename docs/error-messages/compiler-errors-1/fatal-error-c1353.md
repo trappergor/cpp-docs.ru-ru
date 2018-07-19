@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198850"
 ---
 # <a name="fatal-error-c1353"></a>Неустранимая ошибка C1353
 не удалось выполнить операцию с метаданными: не установлена среда выполнения или не соответствуют версии  

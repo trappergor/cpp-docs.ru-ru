@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092888"
 ---
 # <a name="use-the-odbc-cursor-library"></a>Использование библиотеки курсоров ODBC
 ODBC управляет прокруткой по наборам записей с помощью библиотеки курсоров. В этих разделах объясняется, как работать с библиотекой курсоров.  

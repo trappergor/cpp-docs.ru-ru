@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864919"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Классы и структуры (расширения компонентов C++)
 Объявляет класс или структура которого *время существования объекта* администрируется автоматически. Когда объект больше не доступен или выходит за пределы области, Visual C++ автоматически отменяет память, выделенную для этого объекта.  

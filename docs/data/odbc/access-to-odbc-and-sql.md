@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087820"
 ---
 # <a name="access-to-odbc-and-sql"></a>Доступ к ODBC и SQL
 Библиотеки классов Microsoft Foundation инкапсулирует много вызовов Windows API и по-прежнему можно напрямую вызывать любые функции Windows API. Классы баз данных предоставляют такую же гибкость, что и ODBC API. Пока классы баз данных обходить сложности ODBC, можно вызывать функции ODBC API напрямую из любого места в программе.  

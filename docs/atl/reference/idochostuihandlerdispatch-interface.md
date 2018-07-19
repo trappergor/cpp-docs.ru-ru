@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IDocHostUIHandlerDispatch | Документы Microsoft
+title: Интерфейс IDocHostUIHandlerDispatch | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07d6d861bfa4a41d7d9ee6697dd72cba0da2ceda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 936d9b30f18f5ef84c68c55a1607cfcd88d45525
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884617"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Интерфейс IDocHostUIHandlerDispatch
 Интерфейс для синтаксического анализа Microsoft HTML и механизм визуализации.  
@@ -40,36 +41,36 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Открытые методы  
   
 > [!NOTE]
->  По ссылкам в следующей таблице, INet SDK справочных разделов для членов [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) интерфейса. `IDocHostUIHandlerDispatch` имеет ту же функциональность, что **IDocUIHostHandler**, отличие состоит, `IDocHostUIHandlerDispatch` является диспетчерский интерфейс, тогда как **IDocUIHostHandler** -это пользовательский интерфейс.  
+>  Ссылки в следующей таблице являются INet SDK справочных разделов для членов [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) интерфейс. `IDocHostUIHandlerDispatch` имеет ту же функциональность, что `IDocUIHostHandler`, с той разницей, что `IDocHostUIHandlerDispatch` является disp-интерфейсом, тогда как `IDocUIHostHandler` — это пользовательский интерфейс.  
   
 |||  
 |-|-|  
 |[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115). Также вызывается, когда модальный пользовательский Интерфейс отображает MSHTML.|  
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Вызывается на узле с MSHTML, чтобы разрешить основному приложению заменить объект данных MSHTML.|  
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Вызывается MSHTML при его использовании в качестве конечного расположения сброса, чтобы разрешить основному приложению предоставить альтернативный интерфейс [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Вызывается средой MSHTML для получения интерфейса IDispatch поставщика услуг размещения.|  
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Возвращает возможности пользовательского интерфейса узла MSHTML.|  
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Возвращает раздел реестра, в котором MSHTML хранятся пользовательские настройки.|  
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Вызывается при удалении MSHTML меню и панели инструментов.|  
+|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|Вызывается в основном MSHTML, чтобы разрешить основному приложению заменить объект данных MSHTML.|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|Вызвано MSHTML, при его использовании в качестве целевого объекта перетаскивания, чтобы разрешить основному приложению предоставить альтернативный интерфейс [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679).|  
+|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|Вызывается средой MSHTML для получения интерфейса IDispatch главного приложения.|  
+|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|Возвращает возможности пользовательского интерфейса, MSHTML узла.|  
+|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|Возвращает раздел реестра, под которой MSHTML хранятся пользовательские настройки.|  
+|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|Вызывается, когда MSHTML удаляет его меню и панелей инструментов.|  
 |[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281).|  
 |[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969).|  
 |[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053).|  
 |[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|Вызывается из MSHTML, чтобы отобразить контекстное меню.|  
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Предоставляет узлу возможность заменить MSHTML меню и панелей инструментов.|  
-|[Метод TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Вызывается методом MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) или [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) вызывается.|  
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Вызывается средой MSHTML, чтобы разрешить ведущему приложению изменять URL-адрес для загрузки.|  
+|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|Позволяет узлу для замены MSHTML меню и панелей инструментов.|  
+|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|Вызывается средой MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) или [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) вызывается.|  
+|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|Вызывается средой MSHTML, чтобы разрешить основному возможность изменить URL-адрес для загрузки.|  
 |[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|Уведомляет основное приложение об изменении состояния команды.|  
   
 ## <a name="remarks"></a>Примечания  
- Узел можно заменить меню, панелей инструментов и контекстные меню, используемые разбор Microsoft HTML и механизм визуализации (MSHTML), реализовав этот интерфейс.  
+ Узел можно заменить меню, панелей инструментов и контекстные меню, используемые анализ Microsoft HTML и механизм визуализации (MSHTML), реализовав этот интерфейс.  
   
 ## <a name="requirements"></a>Требования  
- Определение этого интерфейса доступна как IDL или C++, как показано ниже.  
+ Определение этого интерфейса доступна как файл IDL или C++, как показано ниже.  
   
-|Определение типа|Файл|  
+|Тип определения|Файл|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C++|См (также входит в состав ATLBase.h)|  
+|C++|Насколько (также входит в ATLBase.h)|  
   
 ## <a name="see-also"></a>См. также  
  [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)

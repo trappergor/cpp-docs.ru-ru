@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881173"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>Оператор дескриптора объекта (^) (расширения компонентов C++)
 *Декларатор дескриптора* (`^`, произносится «крышка»), изменяет тип [описатель](../cpp/overview-of-declarators.md) означает, что объявленного объекта должен автоматически удалены, когда система определяет, что объект является больше не доступен.  

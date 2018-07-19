@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849669"
 ---
 # <a name="noregistry"></a>no_registry
 Атрибут `no_registry` сообщает компилятору, что не следует искать в реестре библиотеки типов, импортированные с помощью директивы `#import`.  

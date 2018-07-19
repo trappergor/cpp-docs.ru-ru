@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955739"
 ---
 # <a name="canimationgroup-class"></a>Класс CAnimationGroup
 Реализует группу анимации, который объединяет раскадровку анимации, объекты анимации и переходы, определяющие анимацию.  
@@ -71,18 +72,18 @@ ms.lasthandoff: 05/04/2018
 class CAnimationGroup;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Создает группу анимации.|  
 |[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Деструктор Вызывается при уничтожении группу анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationGroup::Animate](#animate)|Анимирует группы.|  
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Применяет переходы объектов анимации.|  
@@ -95,7 +96,7 @@ class CAnimationGroup;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationGroup::AddKeyframes](#addkeyframes)|Вспомогательный класс, добавляющий опорные кадры раскадровки.|  
 |[CAnimationGroup::AddTransitions](#addtransitions)|Вспомогательный класс, добавляющий переходы раскадровки.|  
@@ -103,7 +104,7 @@ class CAnimationGroup;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Указывает, как очистить переходы из анимации объектов, принадлежащих группе. Если этот элемент имеет значение TRUE, переходы удаляются автоматически при анимации был запланирован. В противном случае необходимо вручную удалить переходы.|  
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Указывает, как для уничтожения объектов анимации. Если этот параметр имеет значение TRUE, объекты анимации будут уничтожены автоматически при удалении группы. В противном случае объекты анимации необходимо удалить вручную. Значение по умолчанию — FALSE. Это значение равно TRUE только в том случае, если всех объектов анимации, принадлежащих группе выделяются динамически с помощью оператора new.|  
@@ -114,7 +115,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Уникальный идентификатор группы анимации.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Указатель на контроллер анимации, к которой принадлежит эта группа.|  
@@ -143,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на объект COM раскадровки.  
   
- `bAddDeep`  
+ *bAddDeep*  
  Указывает, является ли этот метод следует добавить в раскадровки опорные кадры, зависящие от других опорных кадров.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -159,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на объект COM раскадровки.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  Анимирует группы.  
@@ -175,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.  
@@ -203,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentController`  
+ *pParentController*  
  Указатель на контроллер анимации, который создает группу.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает GroupID.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -227,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pVariable`  
+ *pVariable*  
  Указатель на переменную анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -327,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTimer`  
+ *pTimer*  
  Указатель таймера анимации.  
   
- `time`  
+ *time*  
  Указывает время планирования анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -347,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, как для уничтожения переходов.  
   
 ### <a name="remarks"></a>Примечания  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963930"
 ---
 # <a name="tuple-class"></a>Класс tuple
 
@@ -47,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>Параметры
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ Тип N-го элемента кортежа.
 
-## Remarks
+## <a name="remarks"></a>Примечания
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+Класс шаблона описывает объект, который хранит объекты N типов `T1`, `T2`,..., `TN`, соответственно, где где `0 <= N <= Nmax`. Экстент экземпляр кортежа `tuple<T1, T2, ..., TN>` — это номер `N` его аргументов шаблона. Индекс аргумента шаблона `Ti` и соответствующего хранимые значения этого типа является `i - 1`. Таким образом хотя мы число типов от 1 до N в этой документации, соответствующего индекса допустимы значения от 0 до N – 1.
 
-## Example
+## <a name="example"></a>Пример
 
 ```cpp
 // tuple.cpp
@@ -152,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Параметры
 
-`UN` Тип n-го скопированного элемента кортежа.
+*ОТМЕНИТЬ*  
+ Тип n-го скопированного элемента кортежа.
 
-`right` Для копирования из кортежа.
+*right*  
+ Кортеж, из которого выполняется копирование.
 
 ### <a name="remarks"></a>Примечания
 
-Первые два оператора-члена назначают элементы `right` соответствующим элементам `*this`. Третий оператор-член назначает `right.first` элементу с индексом 0 в `*this` и `right.second` — элементу с индексом 1. Все три оператора-члена возвращают значение `*this`.
+Первый два оператора-члена назначают элементы *правой* к соответствующим элементам `*this`. Третий оператор-член назначает `right.first` элементу с индексом 0 в `*this` и `right.second` — элементу с индексом 1. Все три оператора-члена возвращают значение `*this`.
 
 Остальные операторы-члены являются аналогами более ранних версий, но с [деклараторами ссылок rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -223,10 +227,10 @@ template <class... Types>
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Кортеж, элементы которого должны быть заменены элементами кортежа `right`.|
-|`right`|Кортеж, элементы которого должны быть заменены элементами кортежа `left`.|
+|*left*|Кортеж, элементы которого должны быть заменены элементами кортежа *правой*.|
+|*right*|Кортеж, элементы которого должны быть заменены элементами кортежа *левой*.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -259,9 +263,11 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>Параметры
 
-`UN` Тип n-го скопированного элемента кортежа.
+*ОТМЕНИТЬ*  
+ Тип n-го скопированного элемента кортежа.
 
-`right` Для копирования из кортежа.
+*right*  
+ Кортеж, из которого выполняется копирование.
 
 ### <a name="remarks"></a>Примечания
 
@@ -269,7 +275,7 @@ template <class U1, class U2>
 
 Второй конструктор создает объект, элементы которого представляют собой копии, созданные из аргументов `P1`, `P2`, ..., `PN`, при этом каждый `Pi` инициализирует элемент с индексом `i - 1`.
 
-Третий и четвертый конструкторы создают объект, элементы которого представляют собой копии, созданные на основе соответствующего элемента `right`.
+Третий и четвертый конструкторы создают объект, элементы которого представляют собой копии, созданные из соответствующего элемента *правой*.
 
 Пятый конструктор создает объект, элемент которого с индексом 0 создан с копированием на основе `right.first`, а элемент с индексом 1 — создан копированием из `right.second`.
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367889"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Практическое руководство. Построение изолированных приложений, использующих компоненты СОМ
 Изолированные приложения представляют собой приложения, манифесты которых встроены в программу. Можно создать изолированных приложений, использующих компоненты СОМ.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345056"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Классы окна фрейма, создаваемые с помощью Мастера приложений
 При использовании [мастер приложения](../ide/creating-desktop-projects-by-using-application-wizards.md) для создания общая схема приложения, а также приложения, документа и классов представления приложения мастер создает класс производного фреймового окна для окна главного фрейма приложения. Класс называется `CMainFrame` по умолчанию, а также файлы, содержащие его именуются MAINFRM. H и MAINFRM. CPP.  

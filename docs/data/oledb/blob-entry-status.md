@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095187"
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 При использовании `BEGIN_COLUMN_MAP` или `BEGIN_ACCESSOR_MAP` для привязки больших двоичных объектов ([больших двоичных ОБЪЕКТОВ](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает состояние столбца большого двоичного ОБЪЕКТА.  

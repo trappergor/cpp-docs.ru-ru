@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025943"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<экспериментальный/filesystem > **пространство имен:** std::experimental::filesystem
+**Заголовок:** \<экспериментальная/filesystem > **пространство имен:** std::experimental:: FileSystem
 
 ## <a name="copy_options"></a>  copy_options
 
-Перечисление значений битовой маски, используемое с функциями [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) и [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60), чтобы указать поведение.
+Перечисление значений битовой маски, используемое с функциями [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) и [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), чтобы указать поведение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -58,7 +59,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Значения
 
-|`Name`|Описание|
+|`Name`|Описание:|
 |------------|-----------------|
 |`none`|Выполнять поведение по умолчанию для операции.|
 |`skip_existing`|Не копировать, если файл уже существует, не сообщать об ошибке.|
@@ -87,14 +88,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
 
 ## <a name="file_type"></a>  file_type
 
-Перечисление для типов файлов. Поддерживаемыми значениями являются regular, directory, not_found и unknown.
+Перечисление для типов файлов. Поддерживаемые значения: regular, directory, not_found и unknown.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -115,7 +116,7 @@ enum class file_type {
 
 ### <a name="values"></a>Значения
 
-|Имя|Значение|Описание|
+|Имя|Значение|Описание:|
 |----------|-----------|-----------------|
 |`not_found`|-1|Представляет несуществующий файл.|
 |`none`|0|Представляет файл, у которого нет атрибута типа. (Не поддерживается.)|

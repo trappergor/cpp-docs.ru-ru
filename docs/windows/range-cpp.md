@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877934"
 ---
 # <a name="range-c"></a>range (C++)
 Указывает диапазон допустимых значений для аргументов или поля, значения которых устанавливаются во время выполнения.  

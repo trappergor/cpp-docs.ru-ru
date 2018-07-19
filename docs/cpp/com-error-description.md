@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description | Документы Microsoft
+title: _com_error::Description | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939901"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Блок, относящийся только к системам Microsoft**  
   
- Вызовы **IErrorInfo::GetDescription** функции.  
+ Вызывает функцию `IErrorInfo::GetDescription`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает результат **IErrorInfo::GetDescription** для **IErrorInfo** записанного в `_com_error` объекта. Результирующая функция `BSTR` инкапсулируется в объект `_bstr_t`. Если не **IErrorInfo** будет записан, возвращается пустая коллекция типа `_bstr_t`.  
+ Возвращает результат `IErrorInfo::GetDescription` для `IErrorInfo` записанного в `_com_error` объекта. Результирующая функция `BSTR` инкапсулируется в объект `_bstr_t`. Если не `IErrorInfo` будет записан, возвращается пустой `_bstr_t`.  
   
 ## <a name="remarks"></a>Примечания  
- Вызовы **IErrorInfo::GetDescription** функции и извлекает **IErrorInfo** записанного в `_com_error` объекта. Любые сбои при вызове **IErrorInfo::GetDescription** метод игнорируется.  
+ Вызовы `IErrorInfo::GetDescription` и возвращает функцию `IErrorInfo` записанного в `_com_error` объекта. Любые сбои при вызове `IErrorInfo::GetDescription` метод игнорируется.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

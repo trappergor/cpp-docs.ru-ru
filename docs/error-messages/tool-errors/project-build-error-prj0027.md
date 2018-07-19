@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318991"
 ---
 # <a name="project-build-error-prj0027"></a>Ошибка построения проекта PRJ0027
 Сообщение журнала Юникода «содержимое» содержит содержимое, которое не может быть преобразована в кодовую страницу ANSI пользователя.  

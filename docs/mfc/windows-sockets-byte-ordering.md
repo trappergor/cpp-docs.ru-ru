@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956006"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Сокеты Windows. Порядок байтов
 В этой статье и в двух статей дополнительное приведены некоторые проблемы в программировании Windows Sockets. В этой статье описан порядок байтов. Другие проблемы рассматриваются в статьях: [Windows Sockets: блокирование](../mfc/windows-sockets-blocking.md) и [Windows Sockets: преобразование строки](../mfc/windows-sockets-converting-strings.md).  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="big--and-little-endian-byte-ordering"></a>И мало обратный порядок байтов  
   
-|Порядок байтов|Смысл|  
+|Порядок байтов|Значение|  
 |-------------------|-------------|  
 |Обратный порядок байтов|На левой стороне слова — самый старший байт.|  
 |Обратный порядок байтов|Самый старший байт — в правом конце слова.|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- В C++ `struct` имеет то же самое класса. `Message` Структуру может содержать функции-члены, например `Serialize` функция-член объявлены выше. `Serialize` Функция-член может выглядеть следующим образом:  
+ В C++ **структуры** имеет то же самое класса. `Message` Структуру может содержать функции-члены, например `Serialize` функция-член объявлены выше. `Serialize` Функция-член может выглядеть следующим образом:  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

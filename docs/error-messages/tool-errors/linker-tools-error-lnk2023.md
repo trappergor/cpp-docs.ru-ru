@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302611"
 ---
 # <a name="linker-tools-error-lnk2023"></a>Ошибка средств компоновщика LNK2023
 Неверная библиотека dll или точка входа \<dll или точка входа >  

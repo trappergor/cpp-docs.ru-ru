@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688415"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Практическое руководство. Создание задачи, выполняемой после задержки
 В этом примере показано, как использовать [concurrency::task](../../parallel/concrt/reference/task-class.md), [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency::timer](../../parallel/concrt/reference/timer-class.md), и [concurrency::call](../../parallel/concrt/reference/call-class.md) классы для создания задачи, выполняемой после задержки. Этот метод можно использовать для создания циклов, которые иногда запрашивают данные, используют время ожидания, задерживают обработку вводимых пользователем данных на заранее определенное время и т. д.  

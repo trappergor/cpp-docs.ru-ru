@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378461"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (проверки ошибок во время выполнения)
 Используется для включения и отключения функции проверки ошибок во время выполнения в сочетании с [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  

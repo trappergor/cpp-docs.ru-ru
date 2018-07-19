@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2461d7986e87bed846d09d6e3938a339237c8f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8f9e3f71a0d8647000f77863ecc9243b069f0521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955835"
 ---
 # <a name="isconstructible-class"></a>Класс is_constructible
 
@@ -36,13 +37,13 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
-`Args` Типы аргументов для сопоставления в конструктор `T`.
+*Args* типы аргументов для сопоставления в конструктор *T*.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `T` — конструируемый при использовании типов аргументов в `Args`, в противном случае — значение false. Тип `T` — конструируемый, если определение переменной `T t(std::declval<Args>()...);` имеет правильный формат. Как `T`, так и все типы в `Args`, должны быть полными типами, `void` либо массивами с неизвестной границей.
+Экземпляр предиката типа содержит значение true, если тип *T* — конструируемый при использовании типов аргументов в *Args*, в противном случае он содержит значение false. Тип *T* конструируемым Если определение переменной `T t(std::declval<Args>()...);` имеет правильный формат. Оба *T* и все типы в *Args* должны быть полными типами **void**, или массивами с неизвестной границей.
 
 ## <a name="requirements"></a>Требования
 

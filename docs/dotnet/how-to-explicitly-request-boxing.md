@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127348"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>Практическое руководство. Явный запрос упаковки-преобразования
 Можно явно запросить упаковка-преобразование путем присвоения переменной типа переменной `Object`.  

@@ -8,11 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954162"
 ---
 # <a name="ltrandomgt-functions"></a>Функции &lt;random&gt;
 
@@ -30,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Параметры
 
-`RealType` Значение с плавающей запятой в целочисленный тип. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType* целочисленный тип с плавающей запятой. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-`Bits` Генератор случайных чисел.
+*Биты* генератора случайных чисел.
 
-`Gen` Генератор случайных чисел.
+*Gen* генератора случайных чисел.
 
 ### <a name="remarks"></a>Примечания
 
-Функция шаблона повторно вызывает `operator()` класса `Gen` и преобразует возвращенные значения в значение с плавающей запятой `x` типа `RealType`, пока в `x` не будет получено указанное число разрядов мантиссы. Это число меньше значения `Bits` (которое не должно быть нулевым) и меньше полного количества разрядов мантиссы в `RealType`. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
+Эта функция вызывает шаблон `operator()` из *Gen* многократно и преобразует возвращенные значения в значение с плавающей запятой `x` типа *RealType* пока она собрала заданного числа бит мантиссы в `x`. Является наименьшее значение из заданного числа *Bits* (который должно быть нулевым) и полное число разрядов мантиссы в *RealType*. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
 
 ## <a name="see-also"></a>См. также
 

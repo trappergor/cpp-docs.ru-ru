@@ -1,7 +1,7 @@
 ---
-title: Предупреждение (уровень 4) C4690 компилятора | Документы Microsoft
+title: Предупреждение компилятора (уровень 4) C4690 | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c8285fd3763b93c8a320a6cb984168b88d2e9ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fb68bdab762f0f541849fad1568caff836b623
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853326"
 ---
 # <a name="compiler-warning-level-4-c4690"></a>Предупреждение компилятора (уровень 4) C4690
-[ emitidl( pop ) ] : операций извлечения (POP) больше, чем операций занесения (PUSH)  
-  
- Атрибут [emitidl](../../windows/emitidl.md) был извлечен на один раз больше, чем занесен.  
-  
-## <a name="example"></a>Пример  
- Следующий пример приводит к возникновению предупреждения C4690:  
-  
-```  
-// C4690.cpp  
-// compile with: /c /W4  
-[emitidl(pop)];   // C4690  
-class x {};  
+
+> \[ emitidl (pop)]: занесений
+
+## <a name="remarks"></a>Примечания
+
+Атрибут [emitidl](../../windows/emitidl.md) был извлечен на один раз больше, чем занесен.
+
+## <a name="example"></a>Пример
+
+Следующий пример приводит к возникновению предупреждения C4690: Чтобы устранить эту проблему, убедитесь, что атрибут извлекается точно так, как столько раз, он помещается.
+
+```cpp
+// C4690.cpp
+// compile with: /c /W4
+[emitidl(pop)];   // C4690
+class x {};
 ```

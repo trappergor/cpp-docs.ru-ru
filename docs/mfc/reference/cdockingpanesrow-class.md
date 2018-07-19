@@ -100,11 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955271"
 ---
 # <a name="cdockingpanesrow-class"></a>Класс CDockingPanesRow
 Управляет списком областей, которые находятся в той же горизонтальной или вертикальной строке (столбце) сайта закрепления.  
@@ -121,13 +122,13 @@ class CDockingPanesRow : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CDockingPanesRow::CDockingPanesRow`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockingPanesRow::AddPane](#addpane)||  
 |[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
@@ -200,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `dockMethod`  
- [in] `lpRect`  
- [in] `bAddLast`  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
+ [in] *lpRect*  
+ [in] *bAddLast*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -217,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `dockMethod`  
+ [in] *pControlBar*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -232,10 +233,10 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nMargin`  
+ [in] *nMargin*  
  Задает смещение, в пикселях области первый от верхнего левого угла строки.  
   
- [in] `nSpacing`  
+ [in] *nSpacing*  
  Задает расстояние в пикселях между областями.  
   
 ### <a name="remarks"></a>Примечания  
@@ -251,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -269,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nHeight`  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nHeight*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -314,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMoveBackToVirtualRect`  
- [in] `pBarToExclude`  
+ [in] *bMoveBackToVirtualRect*  
+ [in] *pBarToExclude*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -327,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bUseVirtualRect`  
+ [in] *bUseVirtualRect*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -341,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -353,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -389,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBar`  
- [in] `lst`  
+ [in] *pBar*  
+ [in] *lst*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -413,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSkipHiddenBars`  
+ [in] *bSkipHiddenBars*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -493,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -505,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -563,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -598,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `ptOffset`  
- [in] `bSwapControlBars`  
- [in] `hdwp`  
- [in] `rectTarget`  
- [in] `nOffset`  
- [in] `bForward`  
- [in] `nAbsolutOffset`  
+ [in] *pControlBar*  
+ [in] *ptOffset*  
+ [in] *bSwapControlBars*  
+ [in] *hdwp*  
+ [in] *rectTarget*  
+ [in] *nOffset*  
+ [in] *bForward*  
+ [in] *nAbsolutOffset*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -617,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -638,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
+ [in] *pControlBar*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -652,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pBarOld`  
- [in] `pBarNew`  
+ [in] *pBarOld*  
+ [in] *pBarNew*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -671,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rectNewParentBarArea`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+ [in] *rectNewParentBarArea*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -686,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -700,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `int`  
+ [in] *int*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -714,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -728,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nExtraSpace`  
- [in] `rowExtraAlign`  
+ [in] *nExtraSpace*  
+ [in] *rowExtraAlign*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -743,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShow`  
- [in] `bDelay`  
+ [in] *bShow*  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -759,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pControlBar`  
- [in] `bShow`  
- [in] `bDelay`  
+ [in] *pControlBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -775,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bDelay`  
+ [in] *bDelay*  
   
 ### <a name="remarks"></a>Примечания  
   

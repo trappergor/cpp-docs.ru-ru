@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098307"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 Дает возможность доступа к источнику данных, если у вас нет сведений о схеме базы данных (базовая структура).  

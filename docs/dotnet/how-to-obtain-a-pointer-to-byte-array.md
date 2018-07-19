@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127972"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>Практическое руководство. Получение указателя на массив байтов
 Вы можете получить указатель на блок массива в <xref:System.Byte> массива путем установки адрес первого элемента и присвоить его указателю.  

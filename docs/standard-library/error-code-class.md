@@ -29,11 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44de89891f3380f71e4fa590626ba4e275782f9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027236"
 ---
 # <a name="errorcode-class"></a>Класс error_code
 
@@ -51,19 +52,19 @@ class error_code;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[error_code](#error_code)|Создает объект типа `error_code`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[assign](#assign)|Присваивает коду ошибки значение кода ошибки и категорию.|
 |[category](#category)|Возвращает категорию ошибки.|
@@ -73,7 +74,7 @@ class error_code;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_code`.|
 |[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_code`.|
@@ -97,14 +98,14 @@ void assign(value_type val, const error_category& _Cat);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`val`|Значение кода ошибки для хранения в `error_code`.|
-|`_Cat`|Категория ошибки для хранения в `error_code`.|
+|*Val*|Значение кода ошибки для хранения в `error_code`.|
+|*_Cat*|Категория ошибки для хранения в `error_code`.|
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член сохраняет `val` как значение кода ошибки и указатель на `_Cat`.
+Функция-член сохраняет *val* как значение кода ошибки и указатель на *_Cat*.
 
 ## <a name="category"></a>  error_code::category
 
@@ -161,17 +162,17 @@ error_code(_Enum _Errcode,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`val`|Значение кода ошибки для хранения в `error_code`.|
-|`_Cat`|Категория ошибки для хранения в `error_code`.|
-|`_Errcode`|Значение перечисления для хранения в `error_code`.|
+|*Val*|Значение кода ошибки для хранения в `error_code`.|
+|*_Cat*|Категория ошибки для хранения в `error_code`.|
+|*_Errcode*|Значение перечисления для хранения в `error_code`.|
 
 ### <a name="remarks"></a>Примечания
 
 Первый конструктор сохраняет нулевое значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-Второй конструктор сохраняет `val` как значение кода ошибки и указатель на [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+Второй конструктор сохраняет *val* как значение кода ошибки и указатель на [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
 
 Третий конструктор сохраняет `(value_type)_Errcode` как значение кода ошибки и указатель на [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -201,9 +202,9 @@ bool operator==(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Объект для проверки на равенство.|
+|*right*|Объект для проверки на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -223,13 +224,13 @@ bool operator!=(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Объект для проверки на неравенство.|
+|*right*|Объект для проверки на неравенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true**, если объект `error_code` не равен объекту `error_code`, передаваемому в `right`; в противном случае — значение **false**.
+**значение true,** Если `error_code` объект не равным `error_code` переданный объект *правой*; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -237,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Проверяет, меньше ли объект [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) переданного для сравнения объекта `error_code`.
+Проверяет, меньше ли объект [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) переданного для сравнения объекта `error_code`.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -245,9 +246,9 @@ bool operator<(const error_code& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Объект error_code для сравнения.|
+|*right*|Объект error_code для сравнения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -259,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Присваивает новое значение перечисления объекту [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Присваивает новое значение перечисления объекту [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
 
 ```cpp
 template <class _Enum>
@@ -270,9 +271,9 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`_Errcode`|Значение перечисления для присвоения объекту `error_code`.|
+|*_Errcode*|Значение перечисления для присвоения объекту `error_code`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -296,7 +297,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Примечания
 
-Оператор возвращает значение, преобразуемое в `true`, только тогда, когда [значение](#value) не равно нулю. Тип возвращаемого значения можно преобразовать только в `bool`, а не в `void *` или другие известные скалярные типы.
+Оператор возвращает значение, преобразуемое в **true** только если [значение](#value) не равно нулю. Тип возвращаемого значения можно преобразовать только в **bool**, а не в `void *` или другие известные скалярные типы.
 
 ## <a name="value"></a>  error_code::value
 
@@ -322,7 +323,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>Примечания
 
-Это определение типа — синоним для `int`.
+Это определение типа является синонимом **int**.
 
 ## <a name="see-also"></a>См. также
 

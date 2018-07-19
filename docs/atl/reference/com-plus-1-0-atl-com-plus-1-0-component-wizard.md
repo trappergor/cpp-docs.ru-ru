@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358216"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, мастер компонентов ATL COM+ 1.0
 Позволяет указать тип интерфейса и дополнительные интерфейсы для поддержки этой странице мастер компонентов ATL COM + 1.0.  

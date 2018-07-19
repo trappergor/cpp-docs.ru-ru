@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377135"
 ---
 # <a name="mfc-extension-dlls"></a>Библиотека DLL-расширения MFC
 Расширения MFC DLL является библиотекой DLL, обычно реализуют классы многократного использования, производные от существующих классов библиотеки Microsoft Foundation Class.  

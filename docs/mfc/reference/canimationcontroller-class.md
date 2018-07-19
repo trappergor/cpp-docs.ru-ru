@@ -113,11 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955119"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 Реализует контроллер анимации, который обеспечивает центральный интерфейс для создания анимации и управления ею.  
@@ -128,18 +129,18 @@ ms.lasthandoff: 05/04/2018
 class CAnimationController : public CObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|  
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет объект анимации в группу, к которой принадлежит контроллер анимации.|  
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорный кадр.|  
@@ -182,14 +183,14 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный класс, который очищает группе.|  
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой при анимации для указанной группы только что был запланирован.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Ключевой кадр, который представляет запуск раскадровки.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот член имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|  
@@ -226,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pObject`  
+ *pObject*  
  Указатель на объект анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -245,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `pKeyframe`  
+ *параметром pKeyframe*  
  Указатель опорный кадр.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -267,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает GroupID.  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  Указывает, будет ли выполняться сразу анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -295,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает GroupID.  
   
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации для очистки.  
   
 ### <a name="remarks"></a>Примечания  
@@ -320,23 +321,23 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Задает идентификатор группы, для которой создается опорный кадр.  
   
- `pTransition`  
+ *pTransition*  
  Указатель на переход. Опорный кадр будет вставлен в раскадровку после этого перехода.  
   
- `pKeyframe`  
+ *параметром pKeyframe*  
  Указатель на базовый опорный кадр для данного опорного кадра.  
   
- `offset`  
+ *offset*  
  Смещение в секундах от базового опорного кадра, заданного параметром pKeyframe.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на только что созданный опорный кадр, если функция выполнена успешно.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращенный указатель можно сохранить и основывать другие опорные кадры на только что созданном опорном кадре (см. вторую перегрузку). Можно начинать переходы на опорных кадрах — см. раздел, посвященный CBaseTransition::SetKeyframes. Удалять созданные таким образом опорные кадры не нужно, так как они автоматически удаляются группами анимации. При создании опорных кадров на основе других опорных кадров и переходов будьте внимательны и избегайте циклических ссылок.  
+ Возвращенный указатель можно сохранить и основывать другие опорные кадры на только что созданном опорном кадре (см. вторую перегрузку). Можно начинать переходы на опорных кадрах — см. раздел, посвященный CBaseTransition::SetKeyframes. Удалять созданные таким образом опорные кадры не нужно, так как они автоматически удаляются группами анимации. При создании опорных кадров на основе других опорных кадров и переходов будьте внимательны и избегайте циклических ссылок.  
   
 ##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent  
  Задает или освобождает обработчик вызывается при изменении состояния диспетчера анимации.  
@@ -346,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли установить или снять обработчик.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -365,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли установить или снять обработчиков.  
   
- `idleBehavior`  
+ *idleBehavior*  
  Задает поведения во время ожидания для обработчика обновлений таймера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -385,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwHandlerType`  
+ *dwHandlerType*  
  Сочетание UI_ANIMATION_PHT_ флаги (см. примечания), которое указывает, какие обработчики установить или снять.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -404,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `bEnable`  
+ *bEnable*  
  Указывает, следует ли установить или снять обработчик.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -425,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает, является идентификатором GroupID.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -448,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pVariable`  
+ *pVariable*  
  Указатель на переменную анимации.  
   
- `ppObject`  
+ *ppObject*  
  Выходные данные. Содержит указатель на объект анимации или значение NULL.  
   
- `ppGroup`  
+ *ppGroup*  
  Выходные данные. Содержит указатель на анимации группа, содержащая объекта анимации, или значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -618,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации, который был запланирован.  
   
 ### <a name="remarks"></a>Примечания  
@@ -637,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации, которая содержит объекта анимации, значение которого было изменено.  
   
- `pObject`  
+ *pObject*  
  Указатель на объект анимации, содержащий переменную анимации, значение которого изменилось.  
   
- `variable`  
+ *Переменная*  
  Указатель на переменную анимации.  
   
- `newValue`  
+ *новое значение*  
  Указывает новое значение.  
   
- `prevValue`  
+ *prevValue*  
  Указывает предыдущее значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -665,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `newStatus`  
+ *newStatus*  
  Новое состояние диспетчера анимации.  
   
- `previousStatus`  
+ *previousStatus*  
  Предыдущего состояния диспетчера анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -702,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `fps`  
+ *Число кадров в секунду*  
  Частоту кадров в кадрах в секунду.  
   
 ### <a name="remarks"></a>Примечания  
@@ -721,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации, которая содержит объекта анимации, значение которого было изменено.  
   
- `pObject`  
+ *pObject*  
  Указатель на объект анимации, содержащий переменную анимации, значение которого изменилось.  
   
- `variable`  
+ *Переменная*  
  Указатель на переменную анимации.  
   
- `newValue`  
+ *новое значение*  
  Указывает новое значение.  
   
- `prevValue`  
+ *prevValue*  
  Указывает предыдущее значение.  
   
 ### <a name="remarks"></a>Примечания  
@@ -747,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации которого анимация является запуск.  
   
 ### <a name="remarks"></a>Примечания  
@@ -764,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Группа, в которую входит текущая запланированная раскадровка.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Группа, в которую входит новая раскадровка, находящаяся в состоянии конфликта с запланированной раскадровкой, входящей в группу pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Возможное действие на группу pGroupNew, если приоритет группы pGroupScheduled выше.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -790,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Группа, в которую входит текущая запланированная раскадровка.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Группа, в которую входит новая раскадровка, находящаяся в состоянии конфликта с запланированной раскадровкой, входящей в группу pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Возможное действие на группу pGroupNew, если приоритет группы pGroupScheduled выше.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -816,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Группа, в которую входит текущая запланированная раскадровка.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Группа, в которую входит новая раскадровка, находящаяся в состоянии конфликта с запланированной раскадровкой, входящей в группу pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Возможное действие на группу pGroupNew, если приоритет группы pGroupScheduled выше.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -842,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  Группа, в которую входит текущая запланированная раскадровка.  
   
- `pGroupNew`  
+ *pGroupNew*  
  Группа, в которую входит новая раскадровка, находящаяся в состоянии конфликта с запланированной раскадровкой, входящей в группу pGroupScheduled.  
   
- `priorityEffect`  
+ *priorityEffect*  
  Возможное действие на группу pGroupNew, если приоритет группы pGroupScheduled выше.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -868,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу анимации, которому принадлежит раскадровке, состояние которого было изменено.  
   
- `newStatus`  
+ *newStatus*  
  Указывает новое состояние.  
   
- `previousStatus`  
+ *previousStatus*  
  Указывает прежнее состояние.  
   
 ### <a name="remarks"></a>Примечания  
@@ -888,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGroup`  
+ *pGroup*  
  Указатель на группу, которой принадлежит раскадровке.  
   
 ### <a name="remarks"></a>Примечания  
@@ -912,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы анимации.  
   
 ### <a name="remarks"></a>Примечания  
@@ -928,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pObject`  
+ *pObject*  
  Указатель на объект анимации.  
   
- `bNoDelete`  
+ *bNoDelete*  
  Если этот параметр имеет значение TRUE объект не будет удален после удаления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -945,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -961,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы для планирования анимации.  
   
- `time`  
+ *time*  
  Указывает время планирования.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -981,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWnd`  
+ *pWnd*  
  Указатель на объект window для задания.  
   
 ### <a name="remarks"></a>Примечания  

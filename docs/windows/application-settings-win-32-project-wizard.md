@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860064"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Параметры приложения, мастер проектов типа Win 32
 Эта страница мастера для установки параметров проекта Win32.  

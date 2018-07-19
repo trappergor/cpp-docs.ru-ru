@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363325"
 ---
 # <a name="build-system-changes"></a>Изменения системы построения
 Система MSBuild используется для построения проектов Visual C++. Однако в Visual Studio 2008 и более ранних версий, использовался VCBuild системы. Определенные типы файлов и основные понятия, которые зависят от VCBuild не существуют или представлены по-разному в текущей системе. В этом документе описываются различия в текущей системе сборки.  

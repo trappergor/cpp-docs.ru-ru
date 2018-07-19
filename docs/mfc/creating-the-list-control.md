@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342050"
 ---
 # <a name="creating-the-list-control"></a>Создание элемента управления "Список"
 Как контролировать список ([CListCtrl](../mfc/reference/clistctrl-class.md)) создается зависит ли напрямую с помощью элемента управления или с помощью класса [CListView](../mfc/reference/clistview-class.md) вместо него. Если вы используете `CListView`, платформа создает представление как часть его последовательность создания документов и представлений. Создание представления списка создает список управления также (два — это то же самое). Элемент управления создается в представлении [OnCreate](../mfc/reference/cwnd-class.md#oncreate) функция-обработчик. В этом случае вы можете добавить элементы, используя вызов элемента управления [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl).  

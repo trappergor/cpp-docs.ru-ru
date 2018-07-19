@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374925"
 ---
 # <a name="setting-linker-options"></a>Настройка параметров компоновщика
 Можно задать параметры компоновщика, внутри или вне среды разработки. В этом разделе для каждого параметра компоновщика обсуждается, как это можно сделать в среде разработки. В разделе [параметры компоновщика](../../build/reference/linker-options.md) полный список.  

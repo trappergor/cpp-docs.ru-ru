@@ -1,5 +1,5 @@
 ---
-title: Классы и функции, создаваемые мастером MFC DLL | Документы Microsoft
+title: Классы и функции, создаваемые мастером MFC DLL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339583"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>Классы и функции, создаваемые мастером MFC DLL
-Код, формируемый мастером MFC DLL зависит от типа создаваемой библиотеки DLL и параметры, которые вы выбрали. Мастер библиотек DLL MFC создает тот же код для обоих видов обычные библиотеки DLL MFC.  
+Код, сформированному мастером MFC DLL зависит от типа библиотеки DLL, вы создаете и параметры, которые вы выбрали. Мастер библиотек DLL MFC создает тот же код для обоих видов обычные библиотеки DLL MFC.  
   
-|Тип библиотеки DLL|Параметр|Классы|Функции|  
+|Типа используемой библиотеки DLL|Параметр|Классы|Функции|  
 |-----------------|------------|-------------|---------------|  
 |[Расширение](../../build/extension-dlls-overview.md)|Нет|Нет|`DllMain`|  
-|[Обычный](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Нет|Приложение класс, производный от `CWinApp`|Нет|  
-|[Обычный](../../build/regular-dlls-dynamically-linked-to-mfc.md)|автоматизация|Приложение класс, производный от `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
-|[Расширение](../../build/extension-dlls-overview.md)|Сокеты окна|Нет|`DllMain`|  
-|[Обычный](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Сокеты окна|Приложение класс, производный от `CWinApp`|`InitInstance` содержит вызов `AfxSocketInit`|  
+|[Регулярные](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Нет|Приложение класс, производный от `CWinApp`|Нет|  
+|[Регулярные](../../build/regular-dlls-dynamically-linked-to-mfc.md)|автоматизация|Приложение класс, производный от `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
+|[Расширение](../../build/extension-dlls-overview.md)|Окно сокетов|Нет|`DllMain`|  
+|[Регулярные](../../build/regular-dlls-dynamically-linked-to-mfc.md)|Окно сокетов|Приложение класс, производный от `CWinApp`|`InitInstance` содержит вызов `AfxSocketInit`|  
   
 ## <a name="see-also"></a>См. также  
  [Мастер DLL MFC](../../mfc/reference/mfc-dll-wizard.md)

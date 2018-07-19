@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953150"
 ---
 # <a name="tree-control-styles"></a>Стили древовидного элемента управления
-Дерево элемента управления ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) стили определяют внешний вид элемента управления дерева. Стили начальной задается при создании элемента управления дерева. Можно извлекать и изменение стилей после создания дерева на основе [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) и [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) функции Windows, указав **GWL_STYLE** для `nIndex` параметра. Полный список стилей см. в разделе [стили окна элемента управления представления дерева](http://msdn.microsoft.com/library/windows/desktop/bb760013) в Windows SDK.  
+Дерево элемента управления ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) стили определяют внешний вид элемента управления дерева. Стили начальной задается при создании элемента управления дерева. Можно извлекать и изменение стилей после создания дерева на основе [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) и [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) функции Windows, указав **GWL_STYLE** для *nIndex* параметра. Полный список стилей см. в разделе [стили окна элемента управления представления дерева](http://msdn.microsoft.com/library/windows/desktop/bb760013) в Windows SDK.  
   
  **TVS_HASLINES** стиль расширяет графическое представление элемента управления дерева иерархии, рисование линий, которые связывают дочерних элементов с соответствующего родительского элемента. Этот стиль не содержит ссылок на элементы в корне иерархии. Чтобы сделать это, необходимо объединить **TVS_HASLINES** и **TVS_LINESATROOT** стили.  
   

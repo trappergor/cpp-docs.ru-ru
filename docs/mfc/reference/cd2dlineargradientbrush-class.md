@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957251"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Класс CD2DLinearGradientBrush
 Программа-оболочка для ID2D1LinearGradientBrush.  
@@ -59,14 +60,14 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Создает объект CD2DLinearGradientBrush.|  
 |[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Деструктор Вызывается при уничтожении объекта D2D кисти линейного градиента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DLinearGradientBrush::CREATE](#create)|Создает CD2DLinearGradientBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -80,13 +81,13 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Возвращает интерфейс ID2D1LinearGradientBrush|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Начальная и конечная точки градиента.|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Указатель на ID2D1LinearGradientBrush.|  
@@ -120,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -139,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `gradientStops`  
+ *gradientStops*  
  Указатель на массив структур D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Значение больше или равно 1, указывающее количество градиента в массиве gradientStops.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  Начальная и конечная точки градиента.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Место на диске, в какой цвет выполняется интерполяцию между позиции градиента.  
   
- `extendMode`  
+ *extendMode*  
  Поведение вне диапазона [0,1] нормализованный градиента.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Указатель непрозрачности и преобразования кисти.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::CREATE  
@@ -171,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Указатель на целевой объект отрисовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -256,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Конечные двумерные координаты для линейного градиента в координатной системе кисти  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -267,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Начальные двумерные координаты для линейного градиента в координатной системе кисти  
   
 ## <a name="see-also"></a>См. также  

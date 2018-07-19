@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369374"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Состояния модулей обычной MFC DLL, динамически компонуемые с MFC
 Возможность динамически связывать регулярных MFC DLL с библиотекой DLL MFC позволяет некоторые очень сложные конфигурации. Например регулярных DLL MFC и исполняемый файл, который его использует могут динамически связаться с библиотекой DLL MFC и для любого расширения MFC библиотеки DLL.  

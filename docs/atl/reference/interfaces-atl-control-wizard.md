@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362356"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Интерфейсы, мастер элементов управления ATL
 Эта страница мастера определяются интерфейсы, поддерживаемые элементом управления. По умолчанию поддерживаются интерфейсы, которые обычно используются большинством контейнеров.  

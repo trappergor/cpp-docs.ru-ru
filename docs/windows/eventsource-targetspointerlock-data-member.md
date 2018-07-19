@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873112"
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>Элемент данных EventSource::targetsPointerLock_
 Синхронизирует доступ к членам внутренней данных даже в том случае, когда добавляются обработчики событий для этого события EventSource, удален или вызван.  

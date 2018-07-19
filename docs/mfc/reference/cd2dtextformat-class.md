@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955473"
 ---
 # <a name="cd2dtextformat-class"></a>Класс CD2DTextFormat
 Программа-оболочка для IDWriteTextFormat.  
@@ -53,14 +54,14 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Создает объект CD2DTextFormat.|  
 |[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Деструктор Вызывается при уничтожении объекта D2D текстовый формат.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextFormat::CREATE](#create)|Создает CD2DTextFormat. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DTextFormat::destroy](#destroy)|Уничтожает объект CD2DTextFormat. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
@@ -72,13 +73,13 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|Возвращает интерфейс IDWriteTextFormat|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Указатель на IDWriteTextFormat.|  
   
@@ -116,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  Объект CString, содержащая имя семейства шрифтов.  
   
- `fontSize`  
+ *FontSize*  
  Логический размер шрифта в единицах DIP («аппаратно независимый пиксель»). DIPequals 1/96 дюйма.  
   
- `fontWeight`  
+ *FontWeight*  
  Значение, указывающее насыщенность шрифта для текста объекта.  
   
- `fontStyle`  
+ *fontStyle*  
  Значение, указывающее начертание шрифта для текста объекта.  
   
- `fontStretch`  
+ *fontStretch*  
  Значение, указывающее растяжения шрифта для текста объекта.  
   
- `strFontLocale`  
+ *strFontLocale*  
  Объект CString, содержащий имя языкового стандарта.  
   
- `pFontCollection`  
+ *pFontCollection*  
  Указатель на объект коллекции шрифтов. Если это значение NULL, указывает коллекции системных шрифтов.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextFormat::CREATE  

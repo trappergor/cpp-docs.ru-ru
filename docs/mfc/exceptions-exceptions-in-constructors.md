@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342635"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>Исключения. Исключения в конструкторах
 При создании исключения в конструкторе, очистить все объекты и выделения памяти внесенные до возникновения исключения, как описано в статье [исключения: создание исключений из свои собственные функции](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343286"
 ---
 # <a name="destroying-the-list-control"></a>Уничтожение элемента управления "Список"
 При внедрении вашей [CListCtrl](../mfc/reference/clistctrl-class.md) объекта как элемент данных, представления или диалогового окна класса, он уничтожается при уничтожении его владельца. Если вы используете [CListView](../mfc/reference/clistview-class.md), платформа уничтожает элемента управления, если она окончательно удаляет представления.  

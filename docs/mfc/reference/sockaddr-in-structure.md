@@ -1,5 +1,5 @@
 ---
-title: Структура SOCKADDR_IN | Документы Microsoft
+title: Структура SOCKADDR_IN | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885742"
 ---
 # <a name="sockaddrin-structure"></a>Структура SOCKADDR_IN
-В операционных системах семейства адресов Интернета `SOCKADDR_IN` Windows Sockets использовать структуру для указания адреса локальной или удаленной конечной точки для подключения сокета.  
+В семейство адресов Интернета `SOCKADDR_IN` структура используется Windows Sockets для указания адреса локальной или удаленной конечной точки, к которому осуществляется подключение к сокету.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>Параметры  
  *sin_family*  
- Семейство адресов (должно быть **AF_INET**).  
+ Семейство адресов (должен быть AF_INET).  
   
  *sin_port*  
  IP-порт.  
@@ -47,12 +48,12 @@ struct in_addr sin_addr;
  IP-адрес.  
   
  *Sin_Zero*  
- Дополнения, чтобы сделать структуру совпадает с размером `SOCKADDR`.  
+ Заполнение, чтобы сделать структуру тот же размер, что `SOCKADDR`.  
   
 ## <a name="remarks"></a>Примечания  
- Это является формой `SOCKADDR` структуры для семейства адресов Интернета и может быть приведен к `SOCKADDR`.  
+ Это форма `SOCKADDR` структуры для семейства адресов Интернета и может быть приведен к `SOCKADDR`.  
   
- Компонент IP адреса этой структуры имеет тип **инет_адрес**. **Инет_адрес** структура определена в файле заголовка Windows Sockets WINSOCK. H следующим образом:  
+ Компонент IP-адрес этой структуры имеет тип `IN_ADDR`. `IN_ADDR` Структура определена в файле заголовка Windows Sockets WINSOCK. H следующим образом:  
   
 ```  
 struct in_addr {

@@ -1,5 +1,5 @@
 ---
-title: Свойства и свойства страницы классов (ATL) | Документы Microsoft
+title: Свойства и свойства страницы классов (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,28 +18,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953804"
 ---
 # <a name="properties-and-property-pages-classes"></a>Свойства и классы страниц свойств
 Следующие классы поддерживают свойства и страницы свойств:  
   
--   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) Получает или задает свойства объекта с помощью `IDispatch` указателя.  
+-   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) извлекает или задает свойства объекта с помощью `IDispatch` указатель.  
   
 -   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) реализует стандартных свойств, поддерживаемых ATL.  
   
--   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) получает доступ к сведениям на страницах свойств объекта.  
+-   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) обращается к сведениям на страницах свойств объекта.  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) хранит свойства объекта в контейнер свойств, предоставленное клиентом.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) хранит свойства объекта в контейнер свойств, предоставляемых клиентом.  
   
--   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) управляет конкретную страницу свойств в окне свойств.  
+-   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) управляет заданной страницы свойств в окне свойств.  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) аналогичен `IPropertyPageImpl`, но также позволяет клиенту выбрать определенное свойство на странице свойств.  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) аналогичен `IPropertyPageImpl`, но также позволяет клиенту выбора конкретного свойства в окне свойств.  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) получает CLSID для страниц свойств, поддерживаемые объектом.  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) получает CLSID для страниц свойств, поддерживаемых объектом.  
   
 ## <a name="related-articles"></a>Связанные статьи  
  [Учебник по ATL](../atl/active-template-library-atl-tutorial.md)  

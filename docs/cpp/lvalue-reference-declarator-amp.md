@@ -1,5 +1,5 @@
 ---
-title: 'Декларатор ссылки lvalue: &amp; | Документы Microsoft'
+title: 'Декларатор ссылки lvalue: &amp; | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944801"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Декларатор ссылки lvalue: &amp;
 Содержит адрес объекта, но синтаксически ведет себя подобно объекту.  
@@ -38,12 +39,12 @@ type-id & cast-expression
   
  Любой объект, адрес которого можно преобразовать в некоторый тип указателя, можно также преобразовать в аналогичный ссылочный тип. Например, любой объект, адрес которого можно преобразовать в тип `char *`, можно также преобразовать в тип `char &`.  
   
- Не путайте объявления ссылки с использованием [оператор address-of](../cpp/address-of-operator-amp.md). Когда `&` *идентификатор* предшествуют типа, таких как `int` или `char`, *идентификатор* объявляется как ссылка на тип. Когда `&` *идентификатор* не предшествует типом, использование аналогично оператора взятия адреса.  
+ Не путайте объявления ссылки с использованием [оператор address-of](../cpp/address-of-operator-amp.md). Когда `&` *идентификатор* указан тип, например **int** или **char**, *идентификатор* объявляется как ссылка на тип. Когда `&` *идентификатор* не предшествует по типу, оно используется, оператора взятия адреса.  
   
 ## <a name="example"></a>Пример  
  В следующем примере демонстрируется декларатор ссылки путем объявления объекта `Person` и ссылки на этот объект. Поскольку `rFriend` является ссылкой на `myFriend`, при обновлении любой из этих переменных изменяется один и тот же объект.  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

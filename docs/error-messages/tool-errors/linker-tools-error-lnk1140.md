@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302741"
 ---
 # <a name="linker-tools-error-lnk1140"></a>Ошибка средств компоновщика LNK1140
 слишком много модулей для базы данных программы; связь с параметром/PDB: NONE  

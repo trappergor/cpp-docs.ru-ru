@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341301"
 ---
 # <a name="command-targets"></a>Цели команды
 Рисунок [команды в Framework](../mfc/user-interface-objects-and-command-ids.md) показано соединение между объект пользовательского интерфейса, например меню и функции обработчика, который вызывается платформой для выполнения команды, полученный при щелчке объекта.  

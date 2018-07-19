@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958147"
 ---
 # <a name="addcv-class"></a>Класс add_cv
 
-Создает константный долговременный тип из типа.
+Делает **const volatile** тип из типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,11 +40,11 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T* тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр измененного типа `add_cv<T>` имеет определение типа члена `type`, эквивалентное *T*, измененному и [add_volatile](../standard-library/add-volatile-class.md), и [add_const](../standard-library/add-const-class.md), кроме случая, когда *T* уже имеет cv-квалификаторы, является ссылкой или функцией.
+Экземпляр измененного типа `add_cv<T>` имеет `type` член **typedef** эквивалентно *T* измененному и [add_volatile](../standard-library/add-volatile-class.md) и [ add_const](../standard-library/add-const-class.md), если не *T* уже имеет cv квалификаторы, является ссылкой или является функцией.
 
 Вспомогательный тип `add_cv_t<T>` является ярлыком для доступа к определению типа `type``add_cv<T>`.
 

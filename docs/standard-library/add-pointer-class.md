@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963580"
 ---
 # <a name="addpointer-class"></a>Класс add_pointer
 
@@ -39,11 +40,11 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T* тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Определение типов `type`члена именует тот же тип как `remove_reference<T>::type*`. Псевдоним `add_pointer_t` является ярлыком для доступа к определению типа `type`.
+Элемент **typedef** `type` именует тот же тип как `remove_reference<T>::type*`. Псевдоним `add_pointer_t` является ярлыком для доступа к члену **typedef** `type`.
 
 Поскольку его нельзя использовать для создания указателя из ссылки, `add_pointer` удаляет ссылку (если таковая имеется) из указанного типа, прежде чем создать указатель на тип. Следовательно, можно использовать тип с `add_pointer` вне зависимости от того, является ли данный тип ссылкой.
 

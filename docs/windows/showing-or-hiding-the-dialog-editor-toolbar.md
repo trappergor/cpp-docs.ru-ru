@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891598"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>Отображение и скрытие панели инструментов в редакторе диалоговых окон
 При открытии редактора диалоговых окон, редактор диалоговых окон инструментов автоматически отображается в верхней части решения.  

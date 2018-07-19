@@ -1,7 +1,7 @@
 ---
 title: 'Пошаговое руководство: Добавление анимации в проект MFC | Документы Microsoft'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,420 +15,367 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ae7496daf6827a6be7769d60af10bca45f7a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f647c7621c01a18cedc8d08d1a3f344b19139a90
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121803"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Пошаговое руководство. Добавление анимации в проект MFC
-Этом пошаговом руководстве рассматриваются способы добавления основные анимированного объекта Visual C++ проект библиотеки классов Microsoft Foundation (MFC).  
-  
- Пошаговом руководстве показано, как выполнять следующие задачи:  
-  
--   Создайте приложение MFC.  
-  
--   Добавление меню и команд для запуска и остановки анимации.  
-  
--   Создание обработчиков для команд запуска и остановки.  
-  
--   Добавление анимированного объекта в проект.  
-  
--   Центрирование анимированного объекта в окне.  
-  
--   Проверка результатов.  
-  
- [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]  
-  
-## <a name="prerequisites"></a>Предварительные требования  
- Для выполнения данного пошагового руководства, необходимо иметь Visual Studio.  
-  
-### <a name="to-create-an-mfc-application"></a>Создание приложения MFC  
-  
-1.  В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.  
-  
-2.  В **новый проект** в левой области в разделе диалогового **установленные шаблоны**, разверните **Visual C++** , а затем выберите **MFC**. В средней области выберите **приложение MFC**. В поле **Имя** введите `MFCAnimationWalkthrough`. Нажмите кнопку **ОК**.  
-  
-3.  В **мастер приложений MFC** диалогового окна убедитесь, что **тип приложения** — **несколько документов**, **стиль проекта** —  **Visual Studio**и **поддержка архитектуры Document/View** выбран параметр. Нажмите кнопку **Готово**.  
-  
-### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>Чтобы добавить меню и команд для запуска и остановки анимации  
-  
-1.  На **представление** последовательно выберите пункты **другие окна** и нажмите кнопку **представление ресурсов**.  
-  
-2.  В **представление ресурсов**, перейдите к **меню** папку и откройте его. Дважды щелкните `IDR_MFCAnimationWalTYPE` ресурс, чтобы открыть его для изменения.  
-  
-3.  В строке меню в **введите здесь** введите `A&nimation` для создания анимации меню.  
-  
-4.  В разделе **анимации**в **введите здесь** введите `Start &Forward` для создания команды запустить вперед.  
-  
-5.  В разделе **запустить вперед**в **введите здесь** введите `Start &Backward`.  
-  
-6.  В разделе **запустить Назад**в **введите здесь** введите `S&top` для создания команды остановки.  
-  
-7.  Сохраните MFCAnimationWalkthrough.rc и закройте его.  
-  
-8.  В **обозревателе решений**, дважды щелкните файл MainFrm.cpp, чтобы открыть его для изменения. В `CMainFrame::OnCreate` метод, найдите раздел, содержащий несколько вызовов `lstBasicCommands.AddTail`. Сразу после этого раздела добавьте следующий код.  
-  
- ```  
+
+Этом пошаговом руководстве рассматриваются способы добавления основные анимированного объекта Visual C++ проект библиотеки классов Microsoft Foundation (MFC).
+
+Пошаговом руководстве показано, как выполнять следующие задачи:
+
+- Создайте приложение MFC.
+
+- Добавление меню и команд для запуска и остановки анимации.
+
+- Создание обработчиков для команд запуска и остановки.
+
+- Добавление анимированного объекта в проект.
+
+- Центрирование анимированного объекта в окне.
+
+- Проверка результатов.
+
+[!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
+
+## <a name="prerequisites"></a>Предварительные требования
+
+Для выполнения данного пошагового руководства, необходимо иметь Visual Studio.
+
+### <a name="to-create-an-mfc-application"></a>Создание приложения MFC
+
+1. В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.
+
+2. В **новый проект** в левой области в разделе диалогового **установленные шаблоны**, разверните **Visual C++** , а затем выберите **MFC**. В средней области выберите **приложение MFC**. В **имя** введите *MFCAnimationWalkthrough*. Нажмите кнопку **ОК**.
+
+3. В **мастер приложений MFC** диалогового окна убедитесь, что **тип приложения** — **несколько документов**, **стиль проекта** —  **Visual Studio**и **поддержка архитектуры Document/View** выбран параметр. Нажмите кнопку **Готово**.
+
+### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>Чтобы добавить меню и команд для запуска и остановки анимации
+
+1. На **представление** последовательно выберите пункты **другие окна** и нажмите кнопку **представление ресурсов**.
+
+2. В **представление ресурсов**, перейдите к **меню** папку и откройте его. Дважды щелкните `IDR_MFCAnimationWalTYPE` ресурс, чтобы открыть его для изменения.
+
+3. В строке меню в **введите здесь** введите *& анимация* для создания анимации меню.
+
+4. В разделе **анимации**в **введите здесь** введите *запустить & вперед* для создания команды запустить вперед.
+
+5. В разделе **запустить вперед**в **введите здесь** введите *запустить & назад*.
+
+6. В разделе **запустить Назад**в **введите здесь** введите *боль & ше* для создания команды остановки.
+
+7. Сохраните MFCAnimationWalkthrough.rc и закройте его.
+
+8. В **обозревателе решений**, дважды щелкните файл MainFrm.cpp, чтобы открыть его для изменения. В `CMainFrame::OnCreate` метод, найдите раздел, содержащий несколько вызовов `lstBasicCommands.AddTail`. Сразу после этого раздела добавьте следующий код.  
+
+    ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
-
- lstBasicCommands.AddTail(ID_ANIMATION_STARTBACKWARD);
-
+    lstBasicCommands.AddTail(ID_ANIMATION_STARTBACKWARD);
     lstBasicCommands.AddTail(ID_ANIMATION_STOP);
+    ```
 
- ```  
-  
-9. Сохраните файл и закройте его.  
-  
-### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>Для создания обработчиков для запуска и остановки команды  
-  
-1.  На **проекта** меню, нажмите кнопку **мастер классов**.  
-  
-2.  В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.  
-  
-3.  На **команды** вкладку в **идентификаторы объектов** выберите `ID_ANIMATION_STARTFORWARD`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик**.  
-  
-4.  В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.  
-  
-5.  В **идентификаторы объектов** выберите `ID_ANIMATION_STARTBACKWARD`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик**.  
-  
-6.  В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.  
-  
-7.  В **идентификаторы объектов** выберите `ID_ANIMATION_STOP`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик** и нажмите кнопку **ОК**.  
-  
-8.  В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.  
-  
-9. В **мастер классов MFC**, нажмите кнопку **ОК**.  
-  
-10. Сохранить MFCAnimationWalkthroughView.cpp, который открыт в редакторе, однако не закрывать.  
-  
-### <a name="to-add-an-animated-object-to-the-project"></a>Добавление анимированного объекта в проект  
-  
-1.  В обозревателе решений дважды щелкните MFCAnimationWalkthroughView.h, чтобы открыть его для изменения. Непосредственно перед определением `CMFCAnimationWalkthroughView` добавьте следующий код, чтобы создать контроллер пользовательской анимации, который будет обрабатывать конфликты расписания объекта анимации.  
-  
- ```  
-    class CCustomAnimationController : public CAnimationController  
- {  
-    public: 
-    CCustomAnimationController() 
- {  
- }  
- 
-    virtual BOOL OnHasPriorityTrim(CAnimationGroup* pGroupScheduled,
-    CAnimationGroup* pGroupNew,
-    UI_ANIMATION_PRIORITY_EFFECT priorityEffect)  
- {  
-    return TRUE;  
- }  
- };  
- ```  
-  
-2.  В конце `CMFCAnimationWalkthroughView` класса, добавьте следующий код.  
-  
- ```  
-    CCustomAnimationController m_animationController;  
-    CAnimationColor m_animationColor;   
-    CAnimationRect m_animationRect;  
- ```  
-  
-3.  После `DECLARE_MESSAGE_MAP()` строка, добавьте следующий код.  
-  
- ```  
+9. Сохраните файл и закройте его.
+
+### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>Для создания обработчиков для запуска и остановки команды
+
+1. На **проекта** меню, нажмите кнопку **мастер классов**.
+
+2. В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.
+
+3. На **команды** вкладку в **идентификаторы объектов** выберите `ID_ANIMATION_STARTFORWARD`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик**.
+
+4. В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.
+
+5. В **идентификаторы объектов** выберите `ID_ANIMATION_STARTBACKWARD`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик**.
+
+6. В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.
+
+7. В **идентификаторы объектов** выберите `ID_ANIMATION_STOP`, а затем в **сообщений** выберите `COMMAND`. Нажмите кнопку **добавить обработчик** и нажмите кнопку **ОК**.
+
+8. В **Добавление функции-члена** диалоговое окно, нажмите кнопку **ОК**.
+
+9. В **мастер классов MFC**, нажмите кнопку **ОК**.
+
+10. Сохранить MFCAnimationWalkthroughView.cpp, который открыт в редакторе, однако не закрывать.
+
+### <a name="to-add-an-animated-object-to-the-project"></a>Добавление анимированного объекта в проект
+
+1. В обозревателе решений дважды щелкните MFCAnimationWalkthroughView.h, чтобы открыть его для изменения. Непосредственно перед определением `CMFCAnimationWalkthroughView` добавьте следующий код, чтобы создать контроллер пользовательской анимации, который будет обрабатывать конфликты расписания объекта анимации.
+
+    ```cpp
+    class CCustomAnimationController : public CAnimationController
+    {
+    public:
+        CCustomAnimationController()
+        {
+        }
+
+        virtual BOOL OnHasPriorityTrim(CAnimationGroup* pGroupScheduled,
+            CAnimationGroup* pGroupNew,
+            UI_ANIMATION_PRIORITY_EFFECT priorityEffect)
+        {
+            return TRUE;
+        }
+    };
+    ```
+
+2. В конце `CMFCAnimationWalkthroughView` класса, добавьте следующий код.
+
+    ```cpp
+    CCustomAnimationController m_animationController;
+    CAnimationColor m_animationColor;
+    CAnimationRect m_animationRect;
+    ```
+
+3. После `DECLARE_MESSAGE_MAP()` строка, добавьте следующий код.
+
+    ```cpp
     void Animate(BOOL bDirection);
+    ```
 
- ```  
-  
-4.  Сохраните файл и закройте его.  
-  
-5.  В MFCAnimationWalkthroughView.cpp в верхней части файла после `#include` инструкций но прежде чем любом классе методы, добавьте следующий код.  
-  
- ```  
-    static int nAnimationGroup = 0;  
-    static int nInfoAreaHeight = 40;  
- ```  
-  
-6.  В конце конструктор `CMFCAnimationWalkthroughView`, добавьте следующий код.  
-  
- ```  
+4. Сохраните файл и закройте его.
+
+5. В MFCAnimationWalkthroughView.cpp в верхней части файла после `#include` инструкций но прежде чем любом классе методы, добавьте следующий код.
+
+    ```cpp
+    static int nAnimationGroup = 0;
+    static int nInfoAreaHeight = 40;
+    ```
+
+6. В конце конструктор `CMFCAnimationWalkthroughView`, добавьте следующий код.
+
+    ```cpp
     m_animationController.EnableAnimationTimerEventHandler();
-m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
-
- 
-    m_animationColor = RGB(255,
-    255,
-    255);
-
-    m_animationRect = CRect(0,
-    0,
-    0,
-    0);
-
- 
-    m_animationColor.SetID(-1,
-    nAnimationGroup);
-
-    m_animationRect.SetID(-1,
-    nAnimationGroup);
-
- 
+    m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
+    m_animationColor = RGB(255, 255, 255);
+    m_animationRect = CRect(0, 0, 0, 0);
+    m_animationColor.SetID(-1, nAnimationGroup);
+    m_animationRect.SetID(-1, nAnimationGroup);
     m_animationController.AddAnimationObject(&m_animationColor);
+    m_animationController.AddAnimationObject(&m_animationRect);
+    ```
 
- m_animationController.AddAnimationObject(&m_animationRect);
+7. Найдите `CAnimationWalthroughView::PreCreateWindow` метод и замените его следующим кодом.
 
- ```  
-  
-7.  Найдите `CAnimationWalthroughView::PreCreateWindow` метод и замените его следующим кодом.  
-  
- ```  
-    BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)  
- { *// TODO: Modify the Window class or styles here by modifying *//  the CREATESTRUCT cs  
- 
-    m_animationController.SetRelatedWnd(this);
+    ```cpp
+    BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
+    {
+        // TODO: Modify the Window class or styles here by modifying
+        //       the CREATESTRUCT cs
+        m_animationController.SetRelatedWnd(this);
 
- return CView::PreCreateWindow(cs);
+        return CView::PreCreateWindow(cs);
+    }
+    ```
 
- }  
- ```  
-  
-8.  Найдите `CAnimationWalkthroughView::OnDraw` метод и замените его следующим кодом.  
-  
- ```  
-    void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)  
- {  
-    CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
-ASSERT_VALID(pDoc);
+8. Найдите `CAnimationWalkthroughView::OnDraw` метод и замените его следующим кодом.
 
- if (!pDoc)  
-    return; 
- *// TODO: add draw code for native data here  
-    CMemDC dcMem(*pDC,
-    this);
+    ```cpp
+    void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
+    {
+        CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
+        ASSERT_VALID(pDoc);
+        if (!pDoc)
+            return;
 
-    CDC& dc = dcMem.GetDC();
+        // TODO: add draw code for native data here
+        CMemDC dcMem(*pDC, this);
+        CDC& dc = dcMem.GetDC();
+        CRect rect;
+        GetClientRect(rect);
 
- 
-    CRect rect;  
-    GetClientRect(rect);
+        dc.FillSolidRect(rect, GetSysColor(COLOR_WINDOW));
 
- 
-    dc.FillSolidRect(rect,
-    GetSysColor(COLOR_WINDOW));
+        CString strRGB;
+        strRGB.Format(_T("Fill Color is: %d; %d; %d"),
+            GetRValue(m_animationColor),
+            GetGValue(m_animationColor),
+            GetBValue(m_animationColor));
 
- 
-    CString strRGB;  
-    strRGB.Format(_T("Fill Color is: %d; %d; %d"),
-    GetRValue(m_animationColor),
-    GetGValue(m_animationColor),
-    GetBValue(m_animationColor));
+        dc.DrawText(strRGB, rect, DT_CENTER);
+        rect.top += nInfoAreaHeight;
 
- 
-    dc.DrawText(strRGB,
-    rect,
-    DT_CENTER);
+        CBrush br;
+        br.CreateSolidBrush(m_animationColor);
+        CBrush* pBrushOld = dc.SelectObject(&br);
 
-    rect.top += nInfoAreaHeight;  
- 
-    CBrush br;  
- 
-    br.CreateSolidBrush(m_animationColor);
+        dc.Rectangle((CRect)m_animationRect);
 
- CBrush* pBrushOld = dc.SelectObject(&br);
+        dc.SelectObject(pBrushOld);
+    }
+    ```
 
- 
-    dc.Rectangle((CRect)m_animationRect);
+9. В конце файла добавьте следующий код.
 
- dc.SelectObject(pBrushOld);
+    ```cpp
+    void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)
+    {
+        static UI_ANIMATION_SECONDS duration = 3;
+        static DOUBLE dblSpeed = 35.;
+        static BYTE nStartColor = 50;
+        static BYTE nEndColor = 255;
 
- }  
- ```  
-  
-9. В конце файла добавьте следующий код.  
-  
- ```  
-    void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)  
- {  
-    static UI_ANIMATION_SECONDS duration = 3;  
-    static DOUBLE dblSpeed = 35.;  
-    static BYTE nStartColor = 50;  
-    static BYTE nEndColor = 255;  
- 
-    BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;  
- 
-    CLinearTransition* pRedTransition = new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
+        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;
 
-    CSmoothStopTransition* pGreenTransition = new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
+        CLinearTransition* pRedTransition =
+            new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
 
-    CLinearTransitionFromSpeed* pBlueTransition = new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
+        CSmoothStopTransition* pGreenTransition =
+            new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
 
- 
-    m_animationColor.AddTransition(pRedTransition,
-    pGreenTransition,
-    pBlueTransition);
+        CLinearTransitionFromSpeed* pBlueTransition =
+            new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
 
- 
-    CRect rectClient;  
-    GetClientRect(rectClient);
+        m_animationColor.AddTransition(pRedTransition,
+            pGreenTransition,
+            pBlueTransition);
 
- rectClient.top += nInfoAreaHeight;  
- 
-    int nLeftFinal = bDirection  rectClient.left : rectClient.CenterPoint().x;  
-    int nTopFinal = bDirection  rectClient.top : rectClient.CenterPoint().y;  
-    int nRightFinal = bDirection  rectClient.right : rectClient.CenterPoint().x;  
-    int nBottomFinal = bDirection  rectClient.bottom : rectClient.CenterPoint().y;  
- 
-    CLinearTransition* pLeftTransition = new CLinearTransition(duration,
-    nLeftFinal);
+        CRect rectClient;
+        GetClientRect(rectClient);
 
-    CLinearTransition* pTopTransition = new CLinearTransition(duration,
-    nTopFinal);
+        rectClient.top += nInfoAreaHeight;
 
-    CLinearTransition* pRightTransition = new CLinearTransition(duration,
-    nRightFinal);
+        int nLeftFinal = bDirection ? rectClient.left : rectClient.CenterPoint().x;
+        int nTopFinal = bDirection ? rectClient.top : rectClient.CenterPoint().y;
+        int nRightFinal = bDirection ? rectClient.right : rectClient.CenterPoint().x;
+        int nBottomFinal = bDirection ? rectClient.bottom : rectClient.CenterPoint().y;
 
-    CLinearTransition* pBottomTransition = new CLinearTransition(duration,
-    nBottomFinal);
+        CLinearTransition* pLeftTransition =
+            new CLinearTransition(duration, nLeftFinal);
 
- 
-    m_animationRect.AddTransition(pLeftTransition,
-    pTopTransition,
-    pRightTransition,
-    pBottomTransition);
+        CLinearTransition* pTopTransition =
+            new CLinearTransition(duration, nTopFinal);
 
- 
-    CBaseKeyFrame* pKeyframeStart = CAnimationController::GetKeyframeStoryboardStart();
-CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup,
-    pBlueTransition);
+        CLinearTransition* pRightTransition =
+            new CLinearTransition(duration, nRightFinal);
 
- 
-    pLeftTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
+        CLinearTransition* pBottomTransition =
+            new CLinearTransition(duration, nBottomFinal);
 
-    pTopTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
+        m_animationRect.AddTransition(pLeftTransition,
+            pTopTransition,
+            pRightTransition,
+            pBottomTransition);
 
-    pRightTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
+        CBaseKeyFrame* pKeyframeStart =
+            CAnimationController::GetKeyframeStoryboardStart();
+        CKeyFrame* pKeyFrameEnd =
+            m_animationController.CreateKeyframe(nAnimationGroup,
+                pBlueTransition);
 
-    pBottomTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
+        pLeftTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+        pTopTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+        pRightTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+        pBottomTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
 
- 
-    m_animationController.AnimateGroup(nAnimationGroup);
+        m_animationController.AnimateGroup(nAnimationGroup);
+    }
+    ```
 
- }  
- ```  
-  
-10. На **проекта** меню, нажмите кнопку **мастер классов**.  
-  
-11. В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.  
-  
-12. На **сообщений** вкладке **сообщений** выберите `WM_ERASEBKGND`, нажмите кнопку **добавить обработчик**и нажмите кнопку **ОК**.  
-  
-13. В MFCAnimationWalkthroughView.cpp, замените реализацию `OnEraseBkgnd` на следующий код, чтобы уменьшить отравляется анимированного объекта при его обновлении.  
-  
- ```  
-    BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)  
- {  
-    return TRUE;  
- }  
- ```  
-  
-14. Замените реализации `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, и `CMFCAnimationWalkthroughView::OnAnimationStop` следующим кодом.  
-  
- ```  
-    void CMFCAnimationWalkthroughView::OnAnimationStartforward()  
- {  
-    Animate(TRUE);
+10. На **проекта** меню, нажмите кнопку **мастер классов**.
 
- }  
- 
-    void CMFCAnimationWalkthroughView::OnAnimationStartbackward()  
- {  
-    Animate(FALSE);
+11. В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.
 
- }  
- 
-    void CMFCAnimationWalkthroughView::OnAnimationStop()  
- {  
-    IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
-if (pManager != NULL)  
- {  
-    pManager->AbandonAllStoryboards();
+12. На **сообщений** вкладке **сообщений** выберите `WM_ERASEBKGND`, нажмите кнопку **добавить обработчик**и нажмите кнопку **ОК**.
 
- }  
- }  
- 
- ```  
-  
-15. Сохраните файл и закройте его.  
-  
-### <a name="to-center-the-animated-object-in-the-window"></a>Чтобы центрировать анимированного объекта в окне  
-  
-1.  В **обозревателе решений**, дважды щелкните MFCAnimationWalkthroughView.h, чтобы открыть его для изменения. В конце `CMFCAnimationWalkthroughView` класс сразу после определения `m_animationRect`, добавьте следующий код.  
-  
- ```  
-    BOOL m_bCurrentDirection;  
- ```  
-  
-2.  Сохраните файл и закройте его.  
-  
-3.  На **проекта** меню, нажмите кнопку **мастер классов**.  
-  
-4.  В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.  
-  
-5.  На **сообщений** вкладке **сообщений** выберите `WM_SIZE`, нажмите кнопку **добавить обработчик**и нажмите кнопку **ОК**.  
-  
-6.  Замените код в MFCAnimationWalkthroughView.cpp, `CMFCAnimationWalkthroughView::OnSize` следующим кодом.  
-  
- ```  
-    void CMFCAnimationWalkthroughView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
+13. В MFCAnimationWalkthroughView.cpp, замените реализацию `OnEraseBkgnd` на следующий код, чтобы уменьшить отравляется анимированного объекта при его обновлении.
 
- 
-    CRect rect;  
-    GetClientRect(rect);
+    ```cpp
+    BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
+    {
+        return TRUE;
+    }
+    ```
 
- rect.top += nInfoAreaHeight;  
- 
-    CRect rectAnim = m_animationRect;  
-    m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2,   
-    rect.CenterPoint().y - rectAnim.Height() / 2),   
-    rectAnim.Size());
+14. Замените реализации `CMFCAnimationWalkthroughView::OnAnimationStartforward`, `CMFCAnimationWalkthroughView::OnAnimationStartbackward`, и `CMFCAnimationWalkthroughView::OnAnimationStop` следующим кодом.
 
- 
-    if (m_animationController.IsAnimationInProgress())  
- {  
-    Animate(m_bCurrentDirection);
+    ```cpp
+    void CMFCAnimationWalkthroughView::OnAnimationStartforward()
+    {
+        Animate(TRUE);
+    }
 
- }  
- }  
- ```  
-  
-7.  В начале конструктор `CMFCAnimationWalkthroughView`, добавьте следующий код.  
-  
- ```  
-    m_bCurrentDirection = TRUE;  
- ```  
-  
-8.  В начале `CMFCAnimationWalkthroughView::Animate` метод, добавьте следующий код.  
-  
- ```  
-    m_bCurrentDirection = bDirection;  
- ```  
-  
-9. Сохраните файл и закройте его.  
-  
-### <a name="to-verify-the-results"></a>Проверка результатов  
-  
-1.  Выполните сборку и запуск приложения. На **анимации** меню, нажмите кнопку **запустить вперед**. Прямоугольник должен отображаться, а затем заполнить центральную область. При нажатии кнопки **запустить Назад**, следует отменить анимации, а при нажатии кнопки **остановить**, его следует остановить. Следует изменить цвет заливки прямоугольника, в ходе выполнения анимации, а текущий цвет должен отображаться в верхней части окна анимации.  
-  
-## <a name="see-also"></a>См. также  
- [Пошаговые руководства](../mfc/walkthroughs-mfc.md)
+    void CMFCAnimationWalkthroughView::OnAnimationStartbackward()
+    {
+        Animate(FALSE);
+    }
 
+    void CMFCAnimationWalkthroughView::OnAnimationStop()
+    {
+        IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
+        if (pManager != NULL)
+        {
+            pManager->AbandonAllStoryboards();
+
+        }
+    }
+    ```
+
+15. Сохраните файл и закройте его.
+
+### <a name="to-center-the-animated-object-in-the-window"></a>Чтобы центрировать анимированного объекта в окне
+
+1. В **обозревателе решений**, дважды щелкните MFCAnimationWalkthroughView.h, чтобы открыть его для изменения. В конце `CMFCAnimationWalkthroughView` класс сразу после определения `m_animationRect`, добавьте следующий код.
+
+    ```cpp
+    BOOL m_bCurrentDirection;
+    ```
+
+2. Сохраните файл и закройте его.
+
+3. На **проекта** меню, нажмите кнопку **мастер классов**.
+
+4. В **мастер классов MFC**в разделе **имя класса**выберите `CMFCAnimationWalkthroughView`.
+
+5. На **сообщений** вкладке **сообщений** выберите `WM_SIZE`, нажмите кнопку **добавить обработчик**и нажмите кнопку **ОК**.
+
+6. Замените код в MFCAnimationWalkthroughView.cpp, `CMFCAnimationWalkthroughView::OnSize` следующим кодом.
+
+    ```cpp
+    void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
+    {
+        CView::OnSize(nType, cx, cy);
+        CRect rect;
+        GetClientRect(rect);
+
+        rect.top += nInfoAreaHeight;
+
+        CRect rectAnim = m_animationRect;
+        m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2,
+        rect.CenterPoint().y - rectAnim.Height() / 2),
+        rectAnim.Size());
+
+        if (m_animationController.IsAnimationInProgress())
+        {
+            Animate(m_bCurrentDirection);
+        }
+    }
+    ```
+
+7. В начале конструктор `CMFCAnimationWalkthroughView`, добавьте следующий код.
+
+    ```cpp
+    m_bCurrentDirection = TRUE;
+    ```
+
+8. В начале `CMFCAnimationWalkthroughView::Animate` метод, добавьте следующий код.
+
+    ```cpp
+    m_bCurrentDirection = bDirection;
+    ```
+
+9. Сохраните файл и закройте его.
+
+### <a name="to-verify-the-results"></a>Проверка результатов
+
+1. Выполните сборку и запуск приложения. На **анимации** меню, нажмите кнопку **запустить вперед**. Прямоугольник должен отображаться, а затем заполнить центральную область. При нажатии кнопки **запустить Назад**, следует отменить анимации, а при нажатии кнопки **остановить**, его следует остановить. Следует изменить цвет заливки прямоугольника, в ходе выполнения анимации, а текущий цвет должен отображаться в верхней части окна анимации.
+
+## <a name="see-also"></a>См. также
+
+[Пошаговые руководства](../mfc/walkthroughs-mfc.md)  

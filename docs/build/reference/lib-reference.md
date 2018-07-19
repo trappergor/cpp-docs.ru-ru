@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371945"
 ---
 # <a name="lib-reference"></a>Справочник по LIB
 Диспетчер библиотек Майкрософт (LIB.exe) создает и управляет библиотеку общих объектов файла формат COFF объектных файлов. LIB также может использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.  

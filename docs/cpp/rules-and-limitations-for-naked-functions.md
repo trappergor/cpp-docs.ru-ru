@@ -1,5 +1,5 @@
 ---
-title: Правила и ограничения для функции с атрибутом Naked | Документы Microsoft
+title: Правила и ограничения при использовании функций Naked | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944268"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Правила и ограничения для функций с атрибутом naked
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
  Для функций с атрибутом naked действуют следующие правила и ограничения:  
   
--   Оператор `return` не допускается.  
+-   **Возвращают** инструкции не допускается.  
   
 -   Конструкции структурированной обработки исключений и обработки исключений C++ не допускаются, потому что они должны выполнять очистку в кадре стека.  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Не допускается объявление объектов класса C++ в лексической области функции. Однако можно объявлять объекты во вложенном блоке.  
   
--   `naked` Ключевого слова пропускается при компиляции с параметром [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
+-   **С атрибутом naked** ключевого слова пропускается при компиляции с параметром [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
   
--   Для [__fastcall](../cpp/fastcall.md) функции с атрибутом naked, при наличии ссылки в коде C/C++ на один из аргументов регистра, код пролога должен сохранять значения этого регистра в расположении стека для этой переменной. Пример:  
+-   Для [__fastcall](../cpp/fastcall.md) функции с атрибутом naked, каждый раз, когда имеется ссылка в коде C/C++ на один из регистровых аргументов, код пролога должен сохранять значения этого регистра в расположении стека для этой переменной. Пример:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

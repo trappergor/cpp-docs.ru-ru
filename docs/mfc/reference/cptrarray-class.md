@@ -1,5 +1,5 @@
 ---
-title: Класс CPtrArray | Документы Microsoft
+title: Класс CPtrArray | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8749e54cc42a6ae98748e8a5906cf5a5009d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851295"
 ---
 # <a name="cptrarray-class"></a>Класс CPtrArray
 Поддерживает массивы пустых указателей.  
@@ -67,8 +68,8 @@ ms.lasthandoff: 05/04/2018
 class CPtrArray : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
- Функции-члены `CPtrArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`.  
+## <a name="members"></a>Участники  
+ Функции-члены `CPtrArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель на **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -78,13 +79,13 @@ class CPtrArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -106,21 +107,21 @@ class CPtrArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
   
 ## <a name="remarks"></a>Примечания  
- `CPtrArray` включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель элементов массива, необходимо задать глубины контекста дампа 1 или выше.  
+ `CPtrArray` включает в себя implement_dynamic-макрос для поддержки доступа типа времени выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель элементов массива, необходимо задать глубины контекста дампа 1 или выше.  
   
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
   
- Массивы указателей не может быть сериализован.  
+ Массивы указатель не может быть сериализован.  
   
  При удалении указателя массива или его элементов, удаляются только указатели, не сущностями, которые они ссылаются.  
   
- Дополнительные сведения об использовании `CPtrArray`, см. в статье [коллекции](../../mfc/collections.md).  
+ Дополнительные сведения об использовании `CPtrArray`, см. в статье [коллекций](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -131,6 +132,6 @@ class CPtrArray : public CObject
  **Заголовок:** afxcoll.h  
   
 ## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CObArray](../../mfc/reference/cobarray-class.md)

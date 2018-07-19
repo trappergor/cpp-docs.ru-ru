@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196614"
 ---
 # <a name="compiler-error-c2498"></a>Ошибка компилятора C2498
 «функция»: «novtable» может применяться только к объявлениям или определениям классов  

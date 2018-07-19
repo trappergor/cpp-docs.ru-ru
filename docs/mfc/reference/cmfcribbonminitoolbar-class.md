@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonMiniToolBar | Документы Microsoft
+title: Класс CMFCRibbonMiniToolBar | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852891"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Класс CMFCRibbonMiniToolBar
 Реализует контекстно-зависимую панель инструментов контекстного меню.  
@@ -45,17 +46,17 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Конструктор по умолчанию.|  
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Переопределяет `CMFCPopupMenu::IsRibbonMiniToolBar`.)|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Задает список команд, отображаемых на панели инструментов.|  
@@ -97,17 +98,17 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pRibbonBar`  
- Панель ленты, мини-панель инструментов ищет кнопки для отображения.  
+ [in] *pRibbonBar*  
+ Панель ленты, мини-панель инструментов поиска для кнопки для отображения.  
   
- [in] `lstCommands`  
- Список команд, который будет отображаться на мини-панель инструментов. Все категории ленты производится поиск соответствующие кнопки.  
+ [in] *lstCommands*  
+ Список команд, отображаемых в мини-панель инструментов. Все категории ленты выполняется поиск соответствующие кнопки.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция используется, чтобы задать список команд, отображаемых в мини-панель инструментов.  
   
 ### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `SetCommands` метод `CMFCRibbonMiniToolBar` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как использовать `SetCommands` метод `CMFCRibbonMiniToolBar` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -121,14 +122,14 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `x`  
+ [in] *x*  
  Задает горизонтальное положение мини-панель инструментов в экранных координатах.  
   
- [in] `y`  
+ [in] *y*  
  Задает вертикальное положение мини-панель инструментов в экранных координатах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если мини-панель инструментов отображается успешно. в противном случае `FALSE`.  
+ Значение TRUE, если мини-панель инструментов отображается успешно; в противном случае — значение FALSE.  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  Отображает мини-панель инструментов вместе с контекстным меню.  
@@ -142,23 +143,23 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `x`  
+ [in] *x*  
  Задает горизонтальное положение контекстного меню в экранных координатах.  
   
- [in] `y`  
+ [in] *y*  
  Задает вертикальное положение контекстного меню в экранных координатах.  
   
- [in] `uiMenuResID`  
- Указывает идентификатор ресурса контекстного меню для отображения.  
+ [in] *uiMenuResID*  
+ Указывает идентификатор ресурса для контекстного меню для отображения.  
   
- [in] `pWndOwner`  
- Идентифицирует окно, которое получает сообщения из контекстного меню.  
+ [in] *pWndOwner*  
+ Определяет окно, которое получает сообщения из контекстного меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если в контекстном меню отображается успешно. в противном случае `FALSE`.  
+ Значение TRUE, если успешно; был отображен в контекстном меню в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция используется для отображения мини-панель инструментов, которая содержит контекстное меню. В контекстном меню — позиционированные 15 пикселей ниже мини-панель инструментов.  
+ Эту функцию можно используйте для отображения мини-панель инструментов, которая содержит контекстное меню. В контекстном меню — позиционированные 15 пикселей ниже мини-панель инструментов.  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

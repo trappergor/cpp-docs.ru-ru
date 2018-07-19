@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371087"
 ---
 # <a name="creating-an-sbr-file"></a>Создание SBR-файла
 Входные файлы для BSCMAKE можно SBR-файлов. Компилятор создает SBR-файл для каждого объекта файла (.obj), он компилируется. При построении или обновить файл доступа к информации все SBR-файлы для проекта должен быть доступен на диске.  

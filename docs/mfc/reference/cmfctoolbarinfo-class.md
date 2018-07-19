@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369366"
 ---
 # <a name="cmfctoolbarinfo-class"></a>Класс CMFCToolBarInfo
 Содержит идентификаторы ресурса изображений панели инструментов в различных состояниях. `CMFCToolBarInfo` — Это вспомогательный класс, используемый в качестве параметра [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод.  

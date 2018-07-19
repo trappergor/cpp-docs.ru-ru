@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370125"
 ---
 # <a name="compiler-command-line-syntax"></a>Синтаксис командной строки компилятора
 В командной строке компилятора используется следующий синтаксис:  

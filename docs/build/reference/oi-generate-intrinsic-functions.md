@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375845"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (создание встроенных функций)
 Заменяет вызов некоторых функций с формами внутреннего или в противном случае специальные функции, помогающие ваше приложение будет выполняться быстрее.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251599"
 ---
 # <a name="compiler-error-c3255"></a>Ошибка компилятора C3255
 «Тип значения»: не удается динамически выделить этот объект типа значения в собственной куче  

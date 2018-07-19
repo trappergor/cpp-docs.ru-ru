@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133653"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) направляет команды и сообщения пользовательского интерфейса команды update в пользовательский элемент управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов).  

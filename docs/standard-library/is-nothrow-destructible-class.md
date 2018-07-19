@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8980119a3414159018102b8a0d1ad7fb0e8fe76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee35bd9fd138dce5e9163fe1712083f5671caaa1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964327"
 ---
 # <a name="isnothrowdestructible-class"></a>Класс is_nothrow_destructible
 
@@ -36,11 +37,11 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `T` — уничтожаемый, а деструктор известен компилятору как не выдающий исключения. В противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *T* — Уничтожаемый, а деструктор известен компилятору не будет выдавать. В противном случае — значение false.
 
 ## <a name="requirements"></a>Требования
 

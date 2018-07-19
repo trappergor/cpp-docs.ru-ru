@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354173"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Создание элемента управления ATL DHTML
 Мастер элементов управления ATL автоматизирует процесс создания элемента управления DHTML. Он создает необходимыми файлами ресурсов, включая HTML-файл, содержащий образец кода.  

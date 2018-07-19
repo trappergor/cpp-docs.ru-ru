@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169729"
 ---
 # <a name="compiler-error-c2153"></a>Ошибка компилятора C2153
 шестнадцатеричные константы должны содержать по крайней мере одну шестнадцатеричную цифру  

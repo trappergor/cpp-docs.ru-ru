@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687547"
 ---
 # <a name="multithreading-with-c-and-win32"></a>Реализация многопоточности на языке C с помощью функций Win32
 Microsoft Visual C++ поддерживает создание многопоточных приложений. Можно использовать более одного потока, если приложению для выполнения ресурсоемких операций, вызывающих пользовательского интерфейса перестанет отвечать.  

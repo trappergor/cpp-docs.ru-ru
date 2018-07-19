@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881800"
 ---
 # <a name="creatormapactivationid-data-member"></a>Элемент данных CreatorMap::activationId
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871044"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Преобразование изображения из одного формата в другой (редактор изображений для значков)
 Можно открыть в редакторе изображений GIF или JPEG и сохранить их в виде точечных рисунков. Кроме того можно открыть файл точечного рисунка и сохраните его в формате GIF или JPEG. Изображения не обязаны быть частью для редактирования в интегрированной среде разработки проекта (в разделе [редактирование автономного образа](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)).  

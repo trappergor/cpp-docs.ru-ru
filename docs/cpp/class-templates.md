@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415690"
 ---
 # <a name="class-templates"></a>Шаблоны классов
 В этом разделе описываются правила, характерные для шаблонов классов C++.  

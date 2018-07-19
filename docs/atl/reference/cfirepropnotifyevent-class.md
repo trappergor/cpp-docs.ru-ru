@@ -1,5 +1,5 @@
 ---
-title: Класс CFirePropNotifyEvent | Документы Microsoft
+title: Класс CFirePropNotifyEvent | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728f4e973a7ef74dcdbb44150375df235e0d990e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20fd9c660f036c04ea2ca7d06d04315391504e3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881533"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Класс CFirePropNotifyEvent
 Этот класс предоставляет методы для уведомления контейнера приемник об изменениях свойств элемента управления.  
@@ -43,15 +44,15 @@ class CFirePropNotifyEvent
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Статический) Уведомляет контейнера приемник измененного свойства элемента управления.|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Статический) Уведомляет приемника контейнера, который будет изменено свойство элемента управления.|  
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|(Статический) Уведомляет приемника контейнера, измененного свойства элемента управления.|  
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|(Статический) Уведомляет контейнера приемника, который собираетесь изменить свойства элемента управления.|  
   
 ## <a name="remarks"></a>Примечания  
- `CFirePropNotifyEvent` есть два способа уведомления стока контейнера, свойство элемента управления был изменен или изменением.  
+ `CFirePropNotifyEvent` содержит два метода, уведомляющие приемника контейнера, который свойства элемента управления был изменен или изменением.  
   
- Если класс, реализующий элемент управления является производным от `IPropertyNotifySink`, `CFirePropNotifyEvent` методы вызываются при вызове `FireOnRequestEdit` или `FireOnChanged`. Если ваш класс элемента управления не является производным от `IPropertyNotifySink`, вызовы этих функций возвращает `S_OK`.  
+ Если класс, реализующий элемент управления является производным от `IPropertyNotifySink`, `CFirePropNotifyEvent` методы вызываются при вызове `FireOnRequestEdit` или `FireOnChanged`. Если ваш класс элемента управления не является производным от `IPropertyNotifySink`, вызовы этих функций, верните значение s_ок.  
   
  Дополнительные сведения о создании элементов управления см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md).  
   
@@ -59,7 +60,7 @@ class CFirePropNotifyEvent
  **Заголовок:** atlctl.h  
   
 ##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged  
- Уведомляет все подключения [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), которые изменилось значение свойства указанного объекта.  
+ Уведомляет все подключенные [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), свойство указанного объекта изменилось.  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -67,19 +68,19 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** объекта, отправляющего уведомление.  
+ [in] Указатель на `IUnknown` объекта отправки уведомлений.  
   
  *dispID*  
  [in] Идентификатор измененного свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Один из стандартных `HRESULT` значения.  
+ Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию можно вызвать, даже если элемент управления не поддерживает точки подключения.  
+ Эту функцию можно вызывать, даже если элемент управления не поддерживает точки подключения.  
   
 ##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit  
- Уведомляет все подключения [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), свойство указанного объекта будет изменена.  
+ Уведомляет все подключенные [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейсы (на все точки подключения объекта), свойство указанного объекта будет изменена.  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -87,16 +88,16 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** объекта, отправляющего уведомление.  
+ [in] Указатель на `IUnknown` объекта отправки уведомлений.  
   
  *dispID*  
- [in] Идентификатор свойства будет изменен.  
+ [in] Идентификатор свойства изменением.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Один из стандартных `HRESULT` значения.  
+ Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию можно вызвать, даже если элемент управления не поддерживает точки подключения.  
+ Эту функцию можно вызывать, даже если элемент управления не поддерживает точки подключения.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

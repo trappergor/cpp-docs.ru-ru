@@ -1,5 +1,5 @@
 ---
-title: Класс Win32ThreadTraits | Документы Microsoft
+title: Класс Win32ThreadTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883678"
 ---
 # <a name="win32threadtraits-class"></a>Класс Win32ThreadTraits
 Этот класс предоставляет функции создания для потока Windows. Этот класс используется в том случае, если поток не будет использовать функции CRT.  
@@ -42,26 +43,26 @@ class Win32ThreadTraits
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Win32ThreadTraits::CreateThread](#createthread)|(Статический) Эта функция вызывается для создания потока, не следует использовать функции CRT.|  
+|[Win32ThreadTraits::CreateThread](#createthread)|(Статический) Вызывайте эту функцию для создания потока, который не следует использовать функции CRT.|  
   
 ## <a name="remarks"></a>Примечания  
- Признаки потока являются классы, обеспечивающие функции создания определенного типа потока. Функции создания теми же подписи и семантику, что Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции.  
+ Поток признаки являются классы, предоставляющие функции создания для определенного типа потока. Функция создания совпадает с той же сигнатуре и семантику Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции.  
   
- Признаки потока используются следующие классы:  
+ Поток признаки используются следующие классы:  
   
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)  
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Если поток будет использовать функции CRT, используйте [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) вместо него.  
+ Если поток будет использовать функции CRT, используйте [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) вместо этого.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
 ##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
- Эта функция вызывается для создания потока, не следует использовать функции CRT.  
+ Вызывайте эту функцию для создания потока, который не следует использовать функции CRT.  
   
 ```
 static HANDLE CreateThread(
@@ -74,29 +75,29 @@ static HANDLE CreateThread(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpsa`  
+ *lpsa*  
  Атрибуты безопасности для нового потока.  
   
- `dwStackSize`  
- Размер стека нового потока.  
+ *dwStackSize*  
+ Размер стека для нового потока.  
   
- `pfnThreadProc`  
+ *pfnThreadProc*  
  Процедура потока нового потока.  
   
- `pvParam`  
+ *pvParam*  
  Параметр, передаваемый в процедуру потока.  
   
- `dwCreationFlags`  
- Создание флаги (0 или CREATE_SUSPENDED).  
+ *dwCreationFlags*  
+ Создание флагов ("0" или "CREATE_SUSPENDED").  
   
- `pdwThreadId`  
- [out] Адрес переменной типа DWORD, в случае успеха, получающий идентификатор потока для только что созданного потока.  
+ *pdwThreadId*  
+ [out] Адрес переменной DWORD, который, в случае успешного выполнения получает идентификатор только что созданному потоку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор только что созданного потока или значение NULL в случае ошибки. Вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Чтобы получить расширенные сведения об ошибке.  
+ Возвращает дескриптор в только что созданному потоку или значение NULL в случае сбоя. Вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Чтобы получить расширенные сведения об ошибке.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Дополнительные сведения о параметрах этой функции.  
+ См. в разделе [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) для получения дополнительных сведений о параметрах для этой функции.  
   
  Эта функция вызывает `CreateThread` при создании потока.  
   

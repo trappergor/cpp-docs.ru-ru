@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418843"
 ---
 # <a name="indirection-on-array-types"></a>Двойные ссылки в типах массивов
 Использование оператора косвенного обращения (**\***) на *n*-возвращает тип одномерного массива *n*-1-мерный массив. Если *n* -1, получением скаляр (или элемент массива).  

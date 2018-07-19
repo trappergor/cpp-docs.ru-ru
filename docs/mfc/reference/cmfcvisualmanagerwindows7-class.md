@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCVisualManagerWindows7 | Документы Microsoft
+title: Класс CMFCVisualManagerWindows7 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17ec3560e7faf8c49f410437c79609bfb871a9c9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849953"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Класс CMFCVisualManagerWindows7
 `CMFCVisualManagerWindows7` Придает приложению внешний вид [!INCLUDE[win7](../../build/includes/win7_md.md)] приложения.  
@@ -39,22 +40,22 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Конструктор по умолчанию.|  
 |[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Деструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|`CMFCVisualManagerWindows7::CleanStyle`|Очищает текущий визуальный стиль и сбрасывает визуальный стиль по умолчанию.|  
+|`CMFCVisualManagerWindows7::CleanStyle`|Очищает текущий стиль оформления и сбрасывает визуальный стиль по умолчанию.|  
 |`CMFCVisualManagerWindows7::CleanUp`|Очищает все объекты в пользовательском интерфейсе и сбрасывает меню.|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Рисует кнопку в неклиентской области в кадре. Использует framework, этот метод для отображения свести к минимуму, максимизировать, закройте и восстановить кнопки в правом верхнем углу окна. Этот метод не вызывается, когда программа использует-Aero темы.|  
-|`CMFCVisualManagerWindows7::DrawNcText`|Рисует текст в неклиентской области в кадре. Платформа использует этот метод для рисования заголовок приложения в строке заголовка в верхней части окна фрейма.|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|Рисует разделитель в [CMFCToolBar класса](../../mfc/reference/cmfctoolbar-class.md).|  
-|`CMFCVisualManagerWindows7::GetRibbonBar`|Извлекает [CMFCRibbonBar класса](../../mfc/reference/cmfcribbonbar-class.md) связанные с пользовательским интерфейсом.|  
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Получает цвет фона поле редактирования ленты.|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Рисует кнопку в неклиентской области в кадре. Использует framework, этот метод для отображения свести к минимуму, максимально увеличить, закройте и восстановить кнопки в правом верхнем углу окна области. Этот метод не вызывается, когда программа использует тему Aero.|  
+|`CMFCVisualManagerWindows7::DrawNcText`|Рисует текст в неклиентской области в кадре. Инфраструктура использует этот метод для рисования заголовок приложения в строке заголовка в верхней части фрейма окна.|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|Рисует разделитель на [класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|  
+|`CMFCVisualManagerWindows7::GetRibbonBar`|Извлекает [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) связанные с пользовательским интерфейсом.|  
+|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Получает цвет фона поля редактирования ленты.|  
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Переопределяет [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Переопределяет [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|  
 |`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Переопределяет [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|  
@@ -91,20 +92,20 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Переопределяет [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|  
 |`CMFCVisualManagerWindows7::OnFillBarBackground`|Переопределяет [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|  
 |`CMFCVisualManagerWindows7::OnFillButtonInterior`|Переопределяет [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|  
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Этот метод вызывается платформой при заливке область вокруг изображения элемента меню.|  
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Этот метод вызывается платформой при заливке область вокруг образов пунктов меню.|  
 |`CMFCVisualManagerWindows7::OnFillRibbonButton`|Переопределяет [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|  
 |`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Переопределяет [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|  
 |`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Переопределяет [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|  
 |`CMFCVisualManagerWindows7::OnNcActivate`|Переопределяет [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
 |`CMFCVisualManagerWindows7::OnNcPaint`|Переопределяет [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
 |`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Переопределяет [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Задает дескриптор ресурса, описывающий атрибуты диспетчер визуального представления.|  
-|`CMFCVisualManagerWindows7::SetStyle`|Задает цветовую схему `CMFCVisualManagerWindows7` графического интерфейса пользователя.|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Задает дескриптор ресурса, который описывает атрибуты класса наглядный диспетчер.|  
+|`CMFCVisualManagerWindows7::SetStyle`|Задает цветовую схему `CMFCVisualManagerWindows7` графического пользовательского интерфейса.|  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `CMFCVisualManagerWindows7` классе, чтобы изменить внешний вид приложения, чтобы имитировать значение по умолчанию [!INCLUDE[win7](../../build/includes/win7_md.md)] приложения. Этот класс не может быть допустимым, если приложение работает под управлением версии Windows более ранней, чем [!INCLUDE[win7](../../build/includes/win7_md.md)]. В этом сценарии приложение использует диспетчер visual по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
+ Используйте `CMFCVisualManagerWindows7` классе, чтобы изменить внешний вид приложения для имитации по умолчанию [!INCLUDE[win7](../../build/includes/win7_md.md)] приложения. Этот класс не может быть допустимым, если приложение работает под управлением версии Windows более ранней, чем [!INCLUDE[win7](../../build/includes/win7_md.md)]. В этом случае приложение использует наглядный диспетчер по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).  
   
- CMFCVisualManagerWindows7 несколько методов наследуется и от [класс преобразованный CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) и `CMFCVisualManager` класса. Методов, перечисленных в предыдущем разделе, представляют собой методы, которые знакомы с `CMFCVisualManagerWindows7` класса.  
+ CMFCVisualManagerWindows7 несколько методов наследует от [класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) и `CMFCVisualManager` класса. Методы, перечисленные в предыдущем разделе являются методами, которые знакомы с `CMFCVisualManagerWindows7` класса.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -137,7 +138,7 @@ CMFCVisualManagerWindows7();
 ```  
   
 ##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
- Получает цвет фона поле ввода на ленте.  
+ Получает цвет фона элемента поле ввода на ленте.  
   
 ```  
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -148,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pEdit`  
- Указатель на элемент управления для редактирования. Это значение не может быть равно `NULL`.  
+ [in] *pEdit*  
+ Указатель на поле ввода. Это значение не может иметь значение NULL.  
   
- [выходной] `bIsHighlighted`  
- Возвращает, выделяется ли поле на ленте.  
+ [out] *bIsHighlighted*  
+ Возвращает, выделена ли поле на ленте.  
   
- [выходной] `bIsPaneHighlighted`  
- Возвращает `TRUE` Если панели ленты, которая содержит `pEdit` выделяется.  
+ [out] *bIsPaneHighlighted*  
+ Возвращает значение TRUE, если панель ленты, который содержит *pEdit* будет выделен.  
   
- [выходной] `bIsDisabled`  
- Возвращает ли `pEdit` отключена.  
+ [out] *bIsDisabled*  
+ Возвращает ли *pEdit* отключена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет фона для поля ввода `pEdit`.  
+ Цвет фона поля редактирования *pEdit*.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -177,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства кнопки меню.  
   
- [in] `pButton`  
- Указатель на `CMFCToolBarButton`. Платформа заливке фона для этой кнопки.  
+ [in] *pButton*  
+ Указатель на `CMFCToolBarButton`. Автоматически заполняются фона для данной кнопки.  
   
- [in] `rect`  
- Прямоугольник, который определяет границы области изображения кнопки меню.  
+ [in] *rect*  
+ Прямоугольник, который указывает границы области изображение кнопки меню.  
   
- [in] `state`  
+ [in] *состояния*  
  Состояние кнопки.  
   
 ### <a name="remarks"></a>Примечания  

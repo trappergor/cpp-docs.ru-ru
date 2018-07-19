@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929832"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>Управление элементом управления всплывающей подсказки
 Класс `CToolTipCtrl` предоставляет функции, которые управляют различных атрибутов из группы члена `CToolTipCtrl` объекта и подсказки.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) и [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) получает и задает цвет текста средства окно подсказок.  
   
- В порядке для управления всплывающей подсказки получать уведомления о важных сообщений, таких как **WM_LBUTTONXXX** сообщений, должен пересылать сообщения для вашего управления всплывающей подсказки. Наилучший способ это ретрансляции требуется вызвать [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)в `PreTranslateMessage` функция окна-владельца. В следующем примере показан один из возможных способов (предполагается, что всплывающая подсказка называется `m_ToolTip`):  
+ В порядке для управления всплывающей подсказки получать уведомления о важных сообщений, таких как сообщения WM_LBUTTONXXX должен пересылать сообщения для вашего управления всплывающей подсказки. Наилучший способ это ретрансляции требуется вызвать [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)в `PreTranslateMessage` функция окна-владельца. В следующем примере показан один из возможных способов (предполагается, что всплывающая подсказка называется `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

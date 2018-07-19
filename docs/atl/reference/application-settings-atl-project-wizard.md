@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357409"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Параметры приложений, мастер проектов ATL
 Используйте **параметры приложения** мастера проекта ATL для создания и добавления основных функций в новый проект ATL.  

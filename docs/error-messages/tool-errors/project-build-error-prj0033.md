@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317064"
 ---
 # <a name="project-build-error-prj0033"></a>Ошибка построения проекта PRJ0033
 Свойство «Дополнительные зависимости» настраиваемого построения шаг для файла «файл» содержало «макрос», что равняется «расширение макроса».  

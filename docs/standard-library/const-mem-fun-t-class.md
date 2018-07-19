@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cc88fab5584d92d79bb0dabb816898f3925546
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc28cdb34148a525b193a93bec8d881bbbeb43f8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963005"
 ---
 # <a name="constmemfunt-class"></a>Класс const_mem_fun_t
 
@@ -39,9 +40,9 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Параметры
 
-`Pm` Указатель на функцию-член класса **типа** для преобразования в объект функции.
+*PM* указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-`Pleft` Объект, `Pm` в вызове функции-члена.
+*Pleft* объекта, *Pm* вызывается функция-член.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -49,7 +50,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет в частном члене объекта копию `Pm`, которая должна быть указателем на функцию-член класса **Type**. Он определяет свою функцию-член `operator()` как возвращающую ( `Pleft`->\* `Pm`)() **const**.
+Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( `Pleft`->\* `Pm`)() **const**.
 
 ## <a name="example"></a>Пример
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954093"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Директивы #ifdef и #ifndef (C/C++)
 **#Ifdef** и **#ifndef** директивы выполнения той же задачи, как `#if` директива при использовании с **определенные**( *идентификатор* ).  

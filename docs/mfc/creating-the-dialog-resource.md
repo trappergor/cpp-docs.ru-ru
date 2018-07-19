@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342089"
 ---
 # <a name="creating-the-dialog-resource"></a>Создание ресурса диалогового окна
 Для разработки [диалоговое окно](../mfc/dialog-boxes.md) и Создание ресурса диалогового окна, использовать [редактор диалоговых окон](../windows/dialog-editor.md). В редакторе диалоговых окон можно:  

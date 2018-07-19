@@ -1,5 +1,5 @@
 ---
-title: Класс CPtrList | Документы Microsoft
+title: Класс CPtrList | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853898"
 ---
 # <a name="cptrlist-class"></a>Класс CPtrList
 Поддерживает списки пустых указателей.  
@@ -34,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>Участники  
- Функции-члены `CPtrList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`.  
+ Функции-члены `CPtrList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель на **void**.  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -43,13 +44,13 @@ class CPtrList : public CObject
  `void*& CPtrList::GetHead() const;`  
   
 ## <a name="remarks"></a>Примечания  
- `CPtrList` включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель список элементов, необходимо задать глубины контекста дампа 1 или выше.  
+ `CPtrList` включает в себя implement_dynamic-макрос для поддержки доступа типа времени выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель на список элементов, необходимо задать глубины контекста дампа 1 или выше.  
   
  Списки указатель не может быть сериализован.  
   
- Когда `CPtrList` объект удаляется или при его элементы будут удалены, удаляются только указатели, не сущностями, которые они ссылаются.  
+ Когда `CPtrList` объект удаляется или когда его элементы удаляются, удаляются только указатели, не сущностями, которые они ссылаются.  
   
- Дополнительные сведения об использовании `CPtrList`, см. в статье [коллекции](../../mfc/collections.md).  
+ Дополнительные сведения об использовании `CPtrList`, см. в статье [коллекций](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -60,6 +61,6 @@ class CPtrList : public CObject
  **Заголовок:** afxcoll.h  
   
 ## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CObList](../../mfc/reference/coblist-class.md)

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385795"
 ---
 # <a name="using-cimagelist"></a>Использование CImageList
 Список изображений, представленный классом [CImageList](../mfc/reference/cimagelist-class.md), — это совокупность аналогичного размера изображения, каждый из которых можно ссылаться по его индексу. Списки изображений используются для эффективного управления большими наборами значков и точечных рисунков. Списки изображений — сами по себе не элементы управления, так как они не являются windows; Тем не менее, они используются с несколько разных типов элементов управления, включая элементы управления списком ([CListCtrl](../mfc/reference/clistctrl-class.md)), элементы управления дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) и табуляции элементов управления ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

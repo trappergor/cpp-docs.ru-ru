@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367086"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Вызов функций библиотек DLL из приложений Visual Basic
 Для приложений Visual Basic (или приложений в других языках, например Pascal или Fortran) для вызова функций в библиотеке DLL C/C++ функции необходимо экспортировать с помощью правильное соглашение о вызовах без декорирования имен компилятором.  

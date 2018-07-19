@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858358"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Использование типов данных TCHAR.H с кодом _MBCS
 Когда константа манифеста **_MBCS** — определена, заданного универсальную текстовую подпрограмму сопоставляется один из следующих видов:  

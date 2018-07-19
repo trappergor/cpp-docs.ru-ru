@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380907"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050. Общие диалоговые окна MFC/OLE (MFCUIx32)
 Эта заметка изначально рассмотрены некоторые проблемы и будущее OLE общих диалоговых окон предоставляются и используются с MFC. Общие диалоговые окна OLE, теперь предоставляются как компонент, встроенные в систему (OLEDLG. Библиотека DLL) и полностью описаны в документации по продукту.  

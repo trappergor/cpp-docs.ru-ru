@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957289"
 ---
 # <a name="istrstream-class"></a>Класс istrstream
 
@@ -42,13 +43,13 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[istrstream](#istrstream)|Создает объект типа `istrstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|
 |[str](#str)|Вызывает метод [freeze](../standard-library/strstreambuf-class.md#freeze), а затем возвращает указатель на начало управляемой последовательности.|
@@ -81,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>Параметры
 
-`count` Длина буфера ( `ptr`).
+*число* длину буфера (*ptr*).
 
-`ptr` Содержимое, с помощью которых буфер инициализации.
+*PTR* содержимое, с которым инициализируется буфер.
 
 ### <a name="remarks"></a>Примечания
 
-Все конструкторы инициализируют базовый класс путем вызова [istream](../standard-library/istream-typedefs.md#istream)( **sb**), где **sb** является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первые два конструктора также инициализируют **sb** путем вызова `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). Оставшиеся два конструктора вместо этого вызывают `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Все конструкторы инициализируют базовый класс путем вызова [istream](../standard-library/istream-typedefs.md#istream)(**sb**), где `sb` является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первые два конструктора также инициализируют `sb` путем вызова `strstreambuf`(( **const** `char` \*) `ptr`, 0). Оставшиеся два конструктора вместо этого вызывают `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -127,7 +128,7 @@ char *str();
 
 ### <a name="example"></a>Пример
 
-См. раздел [strstream::str](../standard-library/strstreambuf-class.md#str) с примером использования **str**.
+См. в разделе [strstream::str](../standard-library/strstreambuf-class.md#str) пример, использующий `str`.
 
 ## <a name="see-also"></a>См. также
 

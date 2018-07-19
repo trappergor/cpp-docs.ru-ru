@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d335c684ab46846e9d3c49ef45522cf7288d916a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954575"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -41,20 +42,20 @@ ms.lasthandoff: 05/08/2018
 
 - Массивы символов, оканчивающиеся нулевым символов, часто называют строками C.
 
-- Объекты класса шаблонов типа `basic_string`, обрабатывающие все аргументы шаблонов, подобные `char`.
+- Объекты класса шаблонов типа `basic_string`, обрабатывающие все **char**-, такие как аргументы шаблона.
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса шаблона `basic_string` элементами типа `char` как `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса шаблона `basic_string` элементами типа `wchar_t` как `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **char** как `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **wchar_t** как `wstring`.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char32_t`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|
 |[оператор!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |
@@ -71,25 +72,25 @@ ms.lasthandoff: 05/08/2018
 |||
 |-|-|
 |[swap](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|
-|[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в `double.`|
-|[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в `float`.|
+|[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов **двойные**.|
+|[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Преобразует последовательность символов в целое число.|
-|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов в `long double`.|
-|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов в `long long`.|
-|[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов в `unsigned long`.|
-|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов в `unsigned long long`.|
+|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов **long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов **long long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов **unsigned long**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов **long long без знака**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Преобразует значение в `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Преобразует значение в двухбайтовое `string`.|
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |-|-|
 |[getline шаблона](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[Класс basic_string](../standard-library/basic-string-class.md)|Класс шаблона, описывающий объекты, которые могут хранить последовательность произвольных символьных объектов.|
 |[Структура char_traits](../standard-library/char-traits-struct.md)|Класс шаблона, описывающий атрибуты, связанные с символом типа CharType|

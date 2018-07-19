@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419915"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Разрешение имен зависимых типов
 Используйте **typename** для полных имен в определениях шаблонов, чтобы уведомить компилятор о том, что заданное полное имя определяет тип. Дополнительные сведения см. в разделе [typename](../cpp/typename.md).  

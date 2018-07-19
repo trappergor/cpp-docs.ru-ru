@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128297"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>Практическое руководство. Определение выходного параметра
 В этом примере показано, как указать, что функция параметр является выходным параметром и способа вызова этой функции из программы на C#.  

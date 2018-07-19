@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110084"
 ---
 # <a name="overriding-provider-service-defaults"></a>Переопределение используемых по умолчанию параметров службы поставщика
 Значение реестра поставщика для **OLEDB_SERVICES** возвращается как значение по умолчанию для [DBPROP_INIT_OLEDBSERVICES, установить](https://msdn.microsoft.com/en-us/library/ms716898.aspx) свойство инициализации объекта источника данных.  

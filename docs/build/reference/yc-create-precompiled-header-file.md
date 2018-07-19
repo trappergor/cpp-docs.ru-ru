@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378666"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (создать предкомпилированный заголовочный файл)
 Указывает компилятору на необходимость создания файла предкомпилированного заголовка (PCH), представляющий состояние компиляции в определенной точке.  

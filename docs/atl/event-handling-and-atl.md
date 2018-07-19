@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354936"
 ---
 # <a name="event-handling-and-atl"></a>Обработка событий и ATL
 В этом разделе показано, как к приемнику событий с использованием библиотеки ATL. Рассматриваются принципы обработки событий COM и особенности прием событий с помощью поддержки, обеспечиваемой ATL.  

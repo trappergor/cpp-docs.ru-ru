@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlTemporaryFile | Документы Microsoft
+title: Класс CAtlTemporaryFile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,14 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49adcb572e355c62e6f21081eb033496e60e2369
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3492f71ab119bb272576fe8c67bc6d05163785fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883148"
 ---
 # <a name="catltemporaryfile-class"></a>Класс CAtlTemporaryFile
-Этот класс предоставляет методы для создания и использования временного файла.  
+Этот класс предоставляет методы для создания и использования временных файлов.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -54,44 +55,44 @@ class CAtlTemporaryFile
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Конструктор.|  
 |[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CAtlTemporaryFile::Close](#close)|Вызовите этот метод для закрытия во временный файл и либо удалите его содержимое, или сохранять их под указанным именем файла.|  
+|[CAtlTemporaryFile::Close](#close)|Вызовите этот метод, чтобы закрыть во временный файл и удалить его содержимое или сохранять их под именем указанного файла.|  
 |[CAtlTemporaryFile::Create](#create)|Вызовите этот метод, чтобы создать временный файл.|  
-|[CAtlTemporaryFile::Flush](#flush)|Этот метод используется для принудительного любые данные, оставшиеся в буфере файла для записи во временный файл.|  
+|[CAtlTemporaryFile::Flush](#flush)|Этот метод используется для принудительного любые данные, остающихся в буфере файл для записи во временный файл.|  
 |[CAtlTemporaryFile::GetPosition](#getposition)|Этот метод используется для получения текущего положения указателя файла.|  
-|[CAtlTemporaryFile::GetSize](#getsize)|Этот метод вызывается для получения размера в байтах временного файла.|  
-|[CAtlTemporaryFile::HandsOff](#handsoff)|Этот метод вызывается для отмените сопоставление файла с `CAtlTemporaryFile` объекта.|  
+|[CAtlTemporaryFile::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер в байтах временного файла.|  
+|[CAtlTemporaryFile::HandsOff](#handsoff)|Вызовите этот метод, чтобы файл отделяется от `CAtlTemporaryFile` объекта.|  
 |[CAtlTemporaryFile::HandsOn](#handson)|Вызовите этот метод, чтобы открыть существующий временный файл и поместите указатель в конец файла.|  
-|[CAtlTemporaryFile::LockRange](#lockrange)|Этот метод вызывается для блокировки области в файле, чтобы предотвратить доступ к нему другими процессами.|  
-|[CAtlTemporaryFile::Read](#read)|Этот метод используется для чтения данных из временного файла, начиная с позиции, указываемой параметром указателя файла.|  
+|[CAtlTemporaryFile::LockRange](#lockrange)|Вызовите этот метод, чтобы заблокировать регион, в файле, чтобы запретить доступ к нему другими процессами.|  
+|[CAtlTemporaryFile::Read](#read)|Этот метод используется для чтения данных из временного файла, начиная с позиции, указанной проверкой указатель файла.|  
 |[CAtlTemporaryFile::Seek](#seek)|Этот метод используется для перемещения указателя файла временный файл.|  
 |[CAtlTemporaryFile::SetSize](#setsize)|Вызовите этот метод, чтобы задать размер временного файла.|  
-|[CAtlTemporaryFile::TempFileName](#tempfilename)|Этот метод используется для получения имени временного файла.|  
-|[CAtlTemporaryFile::UnlockRange](#unlockrange)|Этот метод используется для снятия блокировки области временного файла.|  
-|[CAtlTemporaryFile::Write](#write)|Этот метод используется для записи данных во временный файл, начиная с позиции, указываемой параметром указателя файла.|  
+|[CAtlTemporaryFile::TempFileName](#tempfilename)|Этот метод используется для возврата имени временного файла.|  
+|[CAtlTemporaryFile::UnlockRange](#unlockrange)|Вызовите этот метод, чтобы разблокировать область временного файла.|  
+|[CAtlTemporaryFile::Write](#write)|Этот метод используется для записи данных во временный файл, начиная с позиции, указанной проверкой указатель файла.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CAtlTemporaryFile::operator ДЕСКРИПТОРА](#operator_handle)|Возвращает дескриптор во временный файл.|  
+|[CAtlTemporaryFile::operator ДЕСКРИПТОР](#operator_handle)|Возвращает дескриптор во временный файл.|  
   
 ## <a name="remarks"></a>Примечания  
- `CAtlTemporaryFile` упрощает процесс создания и использования временного файла. Файл является автоматически с именем, открытия, закрытия и удален. Если содержимое файла требуется закрытия файла, они могут быть сохранены в новый файл с указанным именем.  
+ `CAtlTemporaryFile` позволяет легко создавать и использовать временный файл. Файл является автоматически с именем, открытия, закрытия и удален. Если содержимое файла требуется после закрытия файла, они могут сохраняться в новый файл с указанным именем.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlfile.h  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="catltemporaryfile"></a>  CAtlTemporaryFile::CAtlTemporaryFile  
  Конструктор.  
@@ -101,7 +102,7 @@ CAtlTemporaryFile() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Файл не открыт в действительности, пока выполняется вызов [CAtlTemporaryFile::Create](#create).  
+ Файл не открыт в действительности, пока выполняется вызов для [CAtlTemporaryFile::Create](#create).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
@@ -117,7 +118,7 @@ CAtlTemporaryFile() throw();
  Деструктор вызывает [CAtlTemporaryFile::Close](#close).  
   
 ##  <a name="close"></a>  CAtlTemporaryFile::Close  
- Вызовите этот метод для закрытия во временный файл и либо удалите его содержимое, или сохранять их под указанным именем файла.  
+ Вызовите этот метод, чтобы закрыть во временный файл и удалить его содержимое или сохранять их под именем указанного файла.  
   
 ```
 HRESULT Close(LPCTSTR szNewName = NULL) throw();
@@ -125,13 +126,13 @@ HRESULT Close(LPCTSTR szNewName = NULL) throw();
   
 ### <a name="parameters"></a>Параметры  
  *szNewName*  
- Имя нового файла для хранения временных файлов в содержимое. Если этот аргумент равен NULL, содержимое временный файл удаляется.  
+ Имя для нового файла для хранения временных файлов в содержимое. Если этот аргумент равен NULL, содержимое временный файл удаляется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="create"></a>  CAtlTemporaryFile::Create  
  Вызовите этот метод, чтобы создать временный файл.  
@@ -141,33 +142,33 @@ HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) thr
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pszDir`  
- Путь для временного файла. Если это значение NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) будет вызываться для присвоения пути.  
+ *pszDir*  
+ Путь для временного файла. Если имеет значение NULL, [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992) будет вызываться для присвоения пути.  
   
- `dwDesiredAccess`  
- Необходимый доступ. В разделе `dwDesiredAccess` в [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) в Windows SDK.  
+ *dwDesiredAccess*  
+ Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858) в пакете Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="flush"></a>  CAtlTemporaryFile::Flush  
- Этот метод используется для принудительного любые данные, оставшиеся в буфере файла для записи во временный файл.  
+ Этот метод используется для принудительного любые данные, остающихся в буфере файл для записи во временный файл.  
   
 ```
 HRESULT Flush() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Аналогично [CAtlTemporaryFile::HandsOff](#handsoff), за исключением того, что файл не закрыт.  
+ Аналогичную [CAtlTemporaryFile::HandsOff](#handsoff), за исключением того, что файл не закрыт.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="getposition"></a>  CAtlTemporaryFile::GetPosition  
  Этот метод используется для получения текущего положения указателя файла.  
@@ -177,41 +178,41 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Позиция, в байтах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы изменить положение указателя файла, используйте [CAtlTemporaryFile::Seek](#seek).  
+ Для изменения положения указателя файла, используйте [CAtlTemporaryFile::Seek](#seek).  
   
 ##  <a name="getsize"></a>  CAtlTemporaryFile::GetSize  
- Этот метод вызывается для получения размера в байтах временного файла.  
+ Вызовите этот метод, чтобы получить размер в байтах временного файла.  
   
 ```
 HRESULT GetSize(ULONGLONG& nLen) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLen`  
+ *nLen*  
  Число байтов в файле.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="handsoff"></a>  CAtlTemporaryFile::HandsOff  
- Этот метод вызывается для отмените сопоставление файла с `CAtlTemporaryFile` объекта.  
+ Вызовите этот метод, чтобы файл отделяется от `CAtlTemporaryFile` объекта.  
   
 ```
 HRESULT HandsOff() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `HandsOff` и [CAtlTemporaryFile::HandsOn](#handson) используются для отмените сопоставление файла из объекта и присоединяет ее повторно, при необходимости. `HandsOff` будет принудительно любые данные, оставшиеся в буфере файла для записи во временный файл и закройте файл. Если вы хотите закрыть и окончательно удалить файл или если вы хотите закрыть и сохранить содержимое файла с заданным именем, используйте [CAtlTemporaryFile::Close](#close).  
+ `HandsOff` и [CAtlTemporaryFile::HandsOn](#handson) используются для файл отделяется от объекта и подсоедините ее при необходимости. `HandsOff` будет принудительно любые данные, остающихся в буфере файл для записи во временный файл и закройте файл. Если вы хотите закрыть и окончательно удалить файл, или если вы хотите закрыть и сохранить содержимое файла с заданным именем, используйте [CAtlTemporaryFile::Close](#close).  
   
 ##  <a name="handson"></a>  CAtlTemporaryFile::HandsOn  
  Вызовите этот метод, чтобы открыть существующий временный файл и поместите указатель в конец файла.  
@@ -221,32 +222,32 @@ HRESULT HandsOn() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- [CAtlTemporaryFile::HandsOff](#handsoff) и `HandsOn` используются для отмените сопоставление файла из объекта и присоединяет ее повторно, при необходимости.  
+ [CAtlTemporaryFile::HandsOff](#handsoff) и `HandsOn` используются для файл отделяется от объекта и подсоедините ее при необходимости.  
   
 ##  <a name="lockrange"></a>  CAtlTemporaryFile::LockRange  
- Этот метод вызывается для блокировки области во временном файле, чтобы предотвратить доступ к нему другими процессами.  
+ Вызовите этот метод, чтобы заблокировать регион, в временный файл, чтобы запретить доступ к нему другими процессами.  
   
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Позиция в файле, где должна начинаться блокировки.  
   
- `nCount`  
- Длина диапазона байтов будет заблокирован.  
+ *nCount*  
+ Длина диапазона байтов, который будет заблокирован.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать более одной области файла, но не перекрывающихся областей разрешены. Чтобы успешно разблокировать области, используйте [CAtlTemporaryFile::UnlockRange](#unlockrange), обеспечивая диапазона байтов в точности соответствует области, которая ранее была заблокирована. `LockRange` не объединять смежных областей; Если заблокированные две области располагаются рядом, необходимо разблокировать каждого отдельно.  
+ Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Вы можете заблокировать более одной области файла, но разрешены не перекрывающихся областей. Чтобы успешно разблокировать региона, используйте [CAtlTemporaryFile::UnlockRange](#unlockrange), обеспечивая диапазон байтов в точности соответствует области, который ранее был заблокирован. `LockRange` не объединяет смежные разделы; Если два заблокированных раздела являются смежными, чтобы разблокировать каждого отдельно.  
   
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator ДЕСКРИПТОРА  
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator ДЕСКРИПТОР  
  Возвращает дескриптор во временный файл.  
   
 ```  
@@ -254,7 +255,7 @@ operator HANDLE() throw();
 ```  
   
 ##  <a name="read"></a>  CAtlTemporaryFile::Read  
- Этот метод используется для чтения данных из временного файла, начиная с позиции, указываемой параметром указателя файла.  
+ Этот метод используется для чтения данных из временного файла, начиная с позиции, указанной проверкой указатель файла.  
   
 ```
 HRESULT Read(
@@ -264,23 +265,23 @@ HRESULT Read(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBuffer`  
+ *pBuffer*  
  Указатель на буфер, который будет получать данные, считанные из файла.  
   
- `nBufSize`  
+ *nBufSize*  
  Размер буфера в байтах.  
   
- `nBytesRead`  
+ *nBytesRead*  
  Количество прочитанных байтов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовы [CAtlFile::Read](../../atl/reference/catlfile-class.md#read). Чтобы изменить положение указателя файла, вызовите [CAtlTemporaryFile::Seek](#seek).  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="seek"></a>  CAtlTemporaryFile::Seek  
  Этот метод используется для перемещения указателя файла временный файл.  
@@ -290,20 +291,20 @@ HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nOffset`  
+ *nOffset*  
  Смещение в байтах от начала точки, заданной параметром *dwFrom.*  
   
- `dwFrom`  
+ *dwFrom*  
  Начальная точка (FILE_BEGIN, FILE_CURRENT или FILE_END).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek). Чтобы получить текущее положение указателя файла, вызовите [CAtlTemporaryFile::GetPosition](#getposition).  
+ Вызовы [CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek). Для получения текущего положения указателя файла, вызовите [CAtlTemporaryFile::GetPosition](#getposition).  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ##  <a name="setsize"></a>  CAtlTemporaryFile::SetSize  
  Вызовите этот метод, чтобы задать размер временного файла.  
@@ -313,50 +314,50 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nNewLen`  
+ *nNewLen*  
  Новая длина файла в байтах.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовы [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). При возвращении указатель файла помещается в конец файла.  
+ Вызовы [CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize). При возвращении указатель файла находится в конце файла.  
   
 ##  <a name="tempfilename"></a>  CAtlTemporaryFile::TempFileName  
- Этот метод используется для получения имени временного файла.  
+ Вызовите этот метод для возврата имени временного файла.  
   
 ```
 LPCTSTR TempFileName() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `LPCTSTR` указывает имя файла.  
+ Возвращает LPCTSTR, указывающий на имя файла.  
   
 ### <a name="remarks"></a>Примечания  
- Имя файла формируется в [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) вызовом [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)функции пакета SDK для Windows. Расширение файла всегда будет «TFR» для временного файла.  
+ Имя файла создается в [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile) вызовом [GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991)функции пакета SDK для Windows. Расширение файла всегда будет «TFR» для временного файла.  
   
 ##  <a name="unlockrange"></a>  CAtlTemporaryFile::UnlockRange  
- Этот метод используется для снятия блокировки области временного файла.  
+ Вызовите этот метод, чтобы разблокировать область временного файла.  
   
 ```
 HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Позиция в файле, где должна начинаться снятие блокировки.  
   
- `nCount`  
+ *nCount*  
  Длина диапазона байтов должен быть разблокирован.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовы [CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange).  
   
 ##  <a name="write"></a>  CAtlTemporaryFile::Write  
- Этот метод используется для записи данных во временный файл, начиная с позиции, указываемой параметром указателя файла.  
+ Этот метод используется для записи данных во временный файл, начиная с позиции, указанной проверкой указатель файла.  
   
 ```
 HRESULT Write(  
@@ -366,23 +367,23 @@ HRESULT Write(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBuffer`  
+ *pBuffer*  
  Буфер, содержащий данные для записи в файл.  
   
- `nBufSize`  
- Число байтов, переданных из буфера.  
+ *nBufSize*  
+ Число байтов, передаваемых из буфера.  
   
- `pnBytesWritten`  
+ *pnBytesWritten*  
  Число записанных байтов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` на успех или ошибка `HRESULT` при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Вызовы [CAtlFile::Write](../../atl/reference/catlfile-class.md#write).  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
+ См. в примере [CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile).  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)   

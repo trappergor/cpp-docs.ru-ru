@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8b4fde6668fe7901ecf75c153765302c6d770e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974cee757708b9f7b1e48ea3bec3c4af98ced558
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957660"
 ---
 # <a name="maxvariablesize-class"></a>Класс max_variable_size
 
@@ -44,13 +45,13 @@ class max_variable_size
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[max_variable_size](#max_variable_size)|Создает объект типа `max_variable_size`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[allocated](#allocated)|Увеличивает счетчик выделенных блоков памяти.|
 |[deallocated](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
@@ -74,13 +75,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`_Nx`|Значение приращения.|
+|*_Nx*|Значение приращения.|
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член добавляет `_Nx` к сохраненному значению `_Nallocs`. Она вызывается после каждого успешного вызова со стороны `cache_freelist::allocate` оператора `new`. Аргумент `_Nx` представляет число блоков памяти в блоке, выделяемом оператором `new`.
+Эта функция-член добавляет *_Nx* к сохраненному значению `_Nallocs`. Эта функция-член вызывается после каждого успешного вызова со стороны `cache_freelist::allocate` оператору **новый**. Аргумент *_Nx* — количество блоков памяти в блоке, выделяемом оператором **новый**.
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -92,13 +93,13 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`_Nx`|Значение приращения.|
+|*_Nx*|Значение приращения.|
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вычитает `_Nx` из сохраненного значения `_Nallocs`. Она вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператора `delete`. Аргумент `_Nx` представляет число блоков памяти в блоке, который освобождается оператором `delete`.
+Функция-член вычитает *_Nx* из сохраненного значения `_Nallocs`. Эта функция-член вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператору **удалить**. Аргумент *_Nx* — количество блоков памяти в блоке, который освобождается оператором **удалить**.
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -110,11 +111,11 @@ bool full();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` если `_Nallocs / 16 + 16 <= _Nblocks`.
+**значение true,** Если `_Nallocs / 16 + 16 <= _Nblocks`.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает `true`, `deallocate` помещает блок памяти в свободный список; если он возвращает false, `deallocate` вызывает оператор `delete` для освобождения блока.
+Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **true**, `deallocate` помещает блок памяти в свободный список; если он возвращает false, `deallocate` вызывает оператор **удалить** для освобождения блока.
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 

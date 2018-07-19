@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037376"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Класс CMFCRibbonMainPanel
 Реализует панель ленты, который отображается при нажатии кнопки [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
@@ -41,18 +42,18 @@ ms.lasthandoff: 05/04/2018
 class CMFCRibbonMainPanel : public CMFCRibbonPanel  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Конструктор по умолчанию.|  
 |`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonMainPanel::Add](#add)|Добавляет элемент ленты в левой части панели кнопку приложения. (Переопределяет [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|  
 |[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Добавляет текстовую строку в меню списка последних файлов.|  
@@ -89,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Указатель на элемент ленты для добавления к главной панели.  
   
 ### <a name="remarks"></a>Примечания  
@@ -105,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszLabel`  
+ *lpszLabel*  
  Указывает строку, чтобы добавить в список последних файлов.  
   
- `nWidth`  
+ *nWidth*  
  Ширина в пикселях панели списка последних файлов.  
   
 ### <a name="remarks"></a>Примечания  
@@ -121,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Указатель на элемент ленты, добавление в нижней части главной панели.  
   
 ### <a name="remarks"></a>Примечания  
@@ -136,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pElem`  
+ *pElem*  
  Указатель на элемент ленты для добавления в правой части главной панели.  
   
- `nWidth`  
+ *nWidth*  
  Ширина в пикселях правой панели.  
   
 ### <a name="remarks"></a>Примечания  

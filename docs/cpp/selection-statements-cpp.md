@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421277"
 ---
 # <a name="selection-statements-c"></a>Операторы выбора (C++)
 Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), позволяют выполнять те или иные участки кода выполнения.  

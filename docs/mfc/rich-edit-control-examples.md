@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379285"
 ---
 # <a name="rich-edit-control-examples"></a>Примеры элементов управления "Rich Edit"
 Пример MFC OLE [WORDPAD](../visual-cpp-samples.md) использует `CRichEditView`, `CRichEditDoc`, и `CRichEditCntrItem` классы. По мере расширения использует [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md). Краткое описание этих трех классов см. в разделе [классы, связанные с элементами управления Rich Edit](../mfc/classes-related-to-rich-edit-controls.md).  

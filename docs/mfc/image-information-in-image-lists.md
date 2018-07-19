@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343717"
 ---
 # <a name="image-information-in-image-lists"></a>Сведения об изображениях в списках изображений
 [CImageList](../mfc/reference/cimagelist-class.md) включает ряд функций, которые извлекают данные о из списка изображений. [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo) заполняет функция-член `IMAGEINFO` структуры со сведениями о одно изображение, включая маркеры изображения и маска точечные рисунки, число цветовых плоскостей и бита на пиксель и ограничивающий прямоугольник изображения в битовой карты изображения. Эти сведения можно использовать для прямого управления для изображения, точечные рисунки.  

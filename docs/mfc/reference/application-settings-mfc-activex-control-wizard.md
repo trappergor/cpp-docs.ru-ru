@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351606"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Параметры приложения, мастер элементов управления ActiveX MFC
 Эта страница мастера элементов управления ActiveX MFC служит для создания и добавления основных компонентов в новый проект ActiveX библиотеки MFC. Эти параметры применяются к самому приложению, а не к какому-либо конкретному компоненту или частям элемента управления.  

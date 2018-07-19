@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375956"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (задать выполнение кодировки)
 Позволяет задать кодировку выполнения для исполняемого файла.  

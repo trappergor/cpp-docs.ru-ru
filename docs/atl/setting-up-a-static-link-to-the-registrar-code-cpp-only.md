@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360192"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>Настройка статическую ссылку на код регистратора (C++)
 Клиенты C++ можно создать статическую ссылку на коде регистратора. Статическое связывание синтаксического анализа с помощью регистратора добавляет около 5 КБ для сборки выпуска.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111947"
 ---
 # <a name="for-each-in"></a>for each, in
 Выполняет итерацию по массиву или коллекции. Это нестандартное ключевое слово доступно как в C++/CLI, так и в собственных проектах C++. Однако его использование не рекомендуется. Рассмотрите возможность использования стандартного [инструкции (C++) на основе диапазонов](../cpp/range-based-for-statement-cpp.md) вместо него.  

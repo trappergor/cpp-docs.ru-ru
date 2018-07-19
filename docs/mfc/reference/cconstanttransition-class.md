@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954031"
 ---
 # <a name="cconstanttransition-class"></a>Класс CConstantTransition
 Инкапсулирует постоянный переход.  
@@ -41,19 +42,19 @@ class CConstantTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConstantTransition::CConstantTransition](#cconstanttransition)|Создает объект перехода и инициализирует его длительности.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConstantTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConstantTransition::m_duration](#m_duration)|Продолжительность перехода.|  
   
@@ -78,7 +79,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
@@ -91,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
 
 ### <a name="return-value"></a>Возвращаемое значение  

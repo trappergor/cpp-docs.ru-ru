@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345108"
 ---
 # <a name="ole-db-classes"></a>Классы OLE DB
 Поддержка OLE DB в MFC, в настоящее время состоит из класса [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Отображает записи базы данных в элементах управления, с помощью представления формы, непосредственно подключенные к [CRowset](../data/oledb/crowset-class.md) объекта. Дополнительные сведения о шаблонах потребителя OLE DB см. в разделе [список из шаблонов потребителей OLE DB](../data/oledb/ole-db-consumer-templates-reference.md).  

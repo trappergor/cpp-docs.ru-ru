@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270284"
 ---
 # <a name="compiler-error-c3920"></a>Ошибка компилятора C3920
 "оператор": не удается определить постфиксного инкремента или декремента WinRT или CLR оператор вызове постфиксного оператора WinRT или CLR вызывает соответствующий префикс WinRT или CLR operator (op_Increment/op_Decrement), но с постфиксной семантикой  

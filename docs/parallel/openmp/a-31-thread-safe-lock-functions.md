@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690446"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31   Потокобезопасные функции блокировки
 В следующем примере C++ показано, как инициализировать массив блокировки в параллельной области с помощью `omp_init_lock` ([раздел 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) на странице 42).  
