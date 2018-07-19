@@ -1,5 +1,5 @@
 ---
-title: Класс CComControlBase | Документы Microsoft
+title: Класс CComControlBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b72157db26d4cb7d576e32ca704a32b62b4c2da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366358"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882999"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
-Этот класс предоставляет методы для создания и управления ATL элементов управления.  
+Этот класс предоставляет методы для создания и управления элементами управления ATL.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -113,115 +113,115 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComControlBase::AppearanceType](#appearancetype)|Переопределите, если ваш `m_nAppearance` стандартное свойство не принадлежит типу `short`.|  
+|[CComControlBase::AppearanceType](#appearancetype)|Переопределить, если ваш `m_nAppearance` не стандартное свойство типа **короткие**.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Конструктор.|  
 |[CComControlBase:: ~ CComControlBase](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|  
-|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что `iVerb` параметр, используемый `IOleObjectImpl::DoVerb` либо активирует элемент управления пользовательского интерфейса ( `iVerb` равняется `OLEIVERB_UIACTIVATE`), определяет действие, выполняемое при двойном щелчке элемента управления ( `iVerb` равняется `OLEIVERB_PRIMARY`), отображает элемент управления ( `iVerb` равняется `OLEIVERB_SHOW`), или активирует элемент управления ( `iVerb` равняется **OLEIVERB_INPLACEACTIVATE**).|  
-|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Проверяет, что `iVerb` параметр, используемый `IOleObjectImpl::DoVerb` вызывает элемент управления пользовательского интерфейса для активации и возвращает **TRUE**.|  
-|[CComControlBase::DoVerbProperties](#doverbproperties)|Отображение страницы свойств элемента управления.|  
-|[CComControlBase::FireViewChange](#fireviewchange)|Вызвать этот метод, чтобы указать контейнер для перерисовки элемента управления, или уведомить зарегистрированных advise приемников, которые представления элемента управления изменилось.|  
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Извлекает **DISPID_AMBIENT_APPEARANCE**, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для трехмерной прорисовки.|  
-|[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Извлекает **DISPID_AMBIENT_AUTOCLIP**, флаг, указывающий, поддерживает ли контейнер автоматического обрезки область отображения элемента управления.|  
-|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Извлекает **DISPID_AMBIENT_BACKCOLOR**, цвет фона окружения для всех элементов управления, определенных в качестве контейнера.|  
-|[CComControlBase::GetAmbientCharSet](#getambientcharset)|Извлекает **DISPID_AMBIENT_CHARSET**, окружения кодировки для всех элементов управления, определенных в качестве контейнера.|  
-|[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Извлекает **DISPID_AMBIENT_CODEPAGE**, окружения кодировки для всех элементов управления, определенных в качестве контейнера.|  
-|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Извлекает **DISPID_AMBIENT_DISPLAYASDEFAULT**, флаг, который является **TRUE** Если контейнер пометил управления на этом сайте для кнопки по умолчанию, и таким образом себя с следует нарисовать элемент управления button Толщина рамки.|  
-|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Извлекает **DISPID_AMBIENT_DISPLAYNAME**, имя контейнера предоставленные элементу управления.|  
-|[CComControlBase::GetAmbientFont](#getambientfont)|Извлекает указатель на контейнер окружения `IFont` интерфейса.|  
-|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Извлекает указатель на контейнер окружения **IFontDisp** интерфейс диспетчеризации.|  
-|[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Извлекает **DISPID_AMBIENT_FORECOLOR**, цвет переднего плана окружения для всех элементов управления, определенных в качестве контейнера.|  
-|[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Извлекает **DISPID_AMBIENT_LOCALEID**, идентификатор языка, используемые контейнером.|  
-|[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Извлекает **DISPID_AMBIENT_MESSAGEREFLECT**, флаг, указывающий хочет получать сообщения окна, контейнера (например, `WM_DRAWITEM`) как события.|  
-|[CComControlBase::GetAmbientPalette](#getambientpalette)|Извлекает **DISPID_AMBIENT_PALETTE**, используемый для доступа к контейнеру `HPALETTE`.|  
-|[CComControlBase::GetAmbientProperty](#getambientproperty)|Извлекает свойства контейнера, указанного в `id`.|  
-|[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Извлекает **DISPID_AMBIENT_RIGHTTOLEFT**, направление, в котором будет показано содержимое контейнера.|  
-|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Извлекает **DISPID_AMBIENT_SCALEUNITS**, окружения единиц (таких как дюймы или сантиметры) для пометки отображает контейнера.|  
-|[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Извлекает **DISPID_AMBIENT_SHOWGRABHANDLES**, флаг, указывающий, разрешает ли контейнер элемента управления для отображения маркеры захвата для себя, когда активны.|  
-|[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Извлекает **DISPID_AMBIENT_SHOWHATCHING**, флаг, указывающий, разрешает ли контейнер элемента управления для отображения самой заштрихованного шаблоном при активном пользовательского интерфейса.|  
-|[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Извлекает **DISPID_AMBIENT_SUPPORTSMNEMONICS**, флаг, указывающий, поддерживает ли контейнер клавиши.|  
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Извлекает **DISPID_AMBIENT_TEXTALIGN**, предпочтительно контейнером выравнивание текста: 0 для обычного выравнивания (номера, текста справа налево), 1 для выравнивания по левому краю, выравнивание по центру 2 и 3 для выравнивание по правому краю.|  
-|[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Извлекает **DISPID_AMBIENT_TOPTOBOTTOM**, направление, в котором будет показано содержимое контейнера.|  
-|[CComControlBase::GetAmbientUIDead](#getambientuidead)|Извлекает **DISPID_AMBIENT_UIDEAD**, флаг, указывающий, требуется ли контейнер управления реагировать на действия пользовательского интерфейса.|  
-|[CComControlBase::GetAmbientUserMode](#getambientusermode)|Извлекает **DISPID_AMBIENT_USERMODE**, флаг, указывающий, является ли контейнер в режиме выполнения ( **TRUE**) или в режиме конструктора ( **FALSE**).|  
+|[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).|  
+|[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` заставляет элемент управления пользовательского интерфейса для активации и возвращает значение TRUE.|  
+|[CComControlBase::DoVerbProperties](#doverbproperties)|Отображает страницы свойств элемента управления.|  
+|[CComControlBase::FireViewChange](#fireviewchange)|Вызовите этот метод, чтобы указать контейнер для перерисовки элемента управления или уведомлять зарегистрированных advise, приемники представление элемента управления изменилось.|  
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Извлекает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.|  
+|[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Извлекает DISPID_AMBIENT_AUTOCLIP, флаг, указывающий, поддерживает ли контейнер автоматического обрезки отображаемой области элемента управления.|  
+|[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Извлекает DISPID_AMBIENT_BACKCOLOR, цвет фона окружения для всех элементов управления, определенные с помощью контейнера.|  
+|[CComControlBase::GetAmbientCharSet](#getambientcharset)|Извлекает DISPID_AMBIENT_CHARSET окружения кодировки для всех элементов управления, определенные с помощью контейнера.|  
+|[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Извлекает DISPID_AMBIENT_CODEPAGE окружения кодировки для всех элементов управления, определенные с помощью контейнера.|  
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Извлекает DISPID_AMBIENT_DISPLAYASDEFAULT, флаг, который имеет значение TRUE, если контейнер помечен элемент управления на этом сайте, как кнопка по умолчанию, и таким образом управления "Кнопка" следует рисовать сам полужирным фреймом.|  
+|[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Извлекает DISPID_AMBIENT_DISPLAYNAME, имя контейнера предоставил к элементу управления.|  
+|[CComControlBase::GetAmbientFont](#getambientfont)|Извлекает указатель на контейнер окружения `IFont` интерфейс.|  
+|[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Извлекает указатель на контейнер окружения `IFontDisp` интерфейс диспетчеризации.|  
+|[CComControlBase::GetAmbientForeColor](#getambientforecolor)|Извлекает DISPID_AMBIENT_FORECOLOR цвета основного цвета окружения для всех элементов управления, определенные с помощью контейнера.|  
+|[CComControlBase::GetAmbientLocaleID](#getambientlocaleid)|Извлекает DISPID_AMBIENT_LOCALEID, идентификатор языка, используемые контейнером.|  
+|[CComControlBase::GetAmbientMessageReflect](#getambientmessagereflect)|Извлекает DISPID_AMBIENT_MESSAGEREFLECT, флаг, указывающий, хочет получать сообщения окна (например, WM_DRAWITEM), как события контейнера.|  
+|[CComControlBase::GetAmbientPalette](#getambientpalette)|Извлекает DISPID_AMBIENT_PALETTE, используемый для доступа к HPALETTE контейнера.|  
+|[CComControlBase::GetAmbientProperty](#getambientproperty)|Извлекает свойства контейнера, указанного параметром *идентификатор*.|  
+|[CComControlBase::GetAmbientRightToLeft](#getambientrighttoleft)|Извлекает DISPID_AMBIENT_RIGHTTOLEFT, направление, в котором содержимое отображается в контейнере.|  
+|[CComControlBase::GetAmbientScaleUnits](#getambientscaleunits)|Извлекает DISPID_AMBIENT_SCALEUNITS окружения единицах (таких как дюймы или сантиметры) для работы с метками отображает контейнера.|  
+|[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Извлекает DISPID_AMBIENT_SHOWGRABHANDLES, флаг, указывающий, допускает ли контейнер элемента управления для отображения маркеров захвата для себя в активном состоянии.|  
+|[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Извлекает DISPID_AMBIENT_SHOWHATCHING, флаг, указывающий, допускает ли контейнер элемента управления для отображения окна с заштрихованный шаблон при активном пользовательского интерфейса.|  
+|[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Извлекает DISPID_AMBIENT_SUPPORTSMNEMONICS, флаг, указывающий, поддерживает ли контейнер клавиши.|  
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Извлекает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.|  
+|[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Извлекает DISPID_AMBIENT_TOPTOBOTTOM, направление, в котором содержимое отображается в контейнере.|  
+|[CComControlBase::GetAmbientUIDead](#getambientuidead)|Извлекает DISPID_AMBIENT_UIDEAD, флаг, указывающий, требуется ли контейнер элемента управления реагировать на действия пользовательского интерфейса.|  
+|[CComControlBase::GetAmbientUserMode](#getambientusermode)|Извлекает DISPID_AMBIENT_USERMODE, флаг, указывающий, является ли контейнер в режиме выполнения (TRUE) или в режиме конструктора (FALSE).|  
 |[CComControlBase::GetDirty](#getdirty)|Возвращает значение члена данных `m_bRequiresSave`.|  
-|[CComControlBase::GetZoomInfo](#getzoominfo)|Извлекает x и y значения числитель и знаменатель коэффициент масштаба для активации элемента управления для изменения по месту.|  
-|[CComControlBase::InPlaceActivate](#inplaceactivate)|Заставляет элемент управления для перехода из неактивного состояния в команду в состоянии `iVerb` указывает.|  
-|[CComControlBase::InternalGetSite](#internalgetsite)|Этот метод используется для запроса узла управления для указателя по указанному адресу.|  
+|[CComControlBase::GetZoomInfo](#getzoominfo)|Извлекает x и y значения числителя и знаменателя значения масштаба для активации элемента управления для редактирование на месте.|  
+|[CComControlBase::InPlaceActivate](#inplaceactivate)|Вызывает переход элемента управления из неактивного состояния в команде в состоянии *iVerb* указывает.|  
+|[CComControlBase::InternalGetSite](#internalgetsite)|Вызовите этот метод, чтобы запросить сайт элемента управления для указателя в определенный интерфейс.|  
 |[CComControlBase::OnDraw](#ondraw)|Переопределите этот метод для рисования элемента управления.|  
-|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Значение по умолчанию **OnDrawAdvanced** готовит нормализованный контекст устройства для рисования, а затем вызывает класс элемента управления `OnDraw` метод.|  
-|[CComControlBase::OnKillFocus](#onkillfocus)|Проверяет, элемент управления активен на месте и имеет допустимый элемент управления сайта, и сообщает контейнера, что элемент управления потерял фокус.|  
+|[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|Значение по умолчанию `OnDrawAdvanced` готовит нормализованный контекст устройства для рисования, а затем вызывает класс элемента управления `OnDraw` метод.|  
+|[CComControlBase::OnKillFocus](#onkillfocus)|Проверяет, что элемент управления активен на месте и имеет допустимый элемент управления сайта, а затем сообщает контейнеру, что элемент управления потерял фокус.|  
 |[CComControlBase::OnMouseActivate](#onmouseactivate)|Проверяет, что пользовательский Интерфейс в пользовательском режиме, а затем активирует элемент управления.|  
-|[CComControlBase::OnPaint](#onpaint)|Подготавливает контейнера для рисования, возвращает клиентской области элемента управления, а затем вызывает класс элемента управления `OnDraw` метод.|  
-|[CComControlBase::OnSetFocus](#onsetfocus)|Проверяет, элемент управления активен на месте и имеет допустимый элемент управления сайта, и сообщает контейнера элемента управления получило фокус.|  
-|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Переопределите этот метод, чтобы предоставить свои собственные сочетания обработчики сочетаний клавиш.|  
-|[CComControlBase::SendOnClose](#sendonclose)|Уведомляет все приемники зарегистрирована advise владельца, что элемент управления был закрыт.|  
-|[CComControlBase::SendOnDataChange](#sendondatachange)|Уведомляет все приемники зарегистрирована держатель уведомлений об изменении данных элемента управления.|  
-|[CComControlBase::SendOnRename](#sendonrename)|Уведомляет все приемники зарегистрирована advise владельца, что элемент управления имеет новый моникер.|  
-|[CComControlBase::SendOnSave](#sendonsave)|Уведомляет все приемники зарегистрирована держатель advise, сохраненное в элементе управления.|  
-|[CComControlBase::SendOnViewChange](#sendonviewchange)|Уведомляет все зарегистрированные приемники измененных представления элемента управления.|  
-|[CComControlBase::SetControlFocus](#setcontrolfocus)|Задает или удаляет фокус клавиатуры в или из элемента управления.|  
-|[CComControlBase::SetDirty](#setdirty)|Задает элемент `m_bRequiresSave` значению в `bDirty`.|  
+|[CComControlBase::OnPaint](#onpaint)|Подготавливает контейнер для рисования, получает клиентской области элемента управления, а затем вызывает класс элемента управления `OnDraw` метод.|  
+|[CComControlBase::OnSetFocus](#onsetfocus)|Проверяет, что элемент управления активен на месте и имеет допустимый элемент управления сайта, а затем информирует контейнера элемента управления получил фокус.|  
+|[CComControlBase::PreTranslateAccelerator](#pretranslateaccelerator)|Переопределите этот метод, чтобы предоставить собственные сочетания обработчики сочетаний клавиш.|  
+|[CComControlBase::SendOnClose](#sendonclose)|Уведомляет все приемники зарегистрировано владелец advise, что элемент управления был закрыт.|  
+|[CComControlBase::SendOnDataChange](#sendondatachange)|Уведомляет все приемники зарегистрировано владелец уведомлений об изменении данных элемента управления.|  
+|[CComControlBase::SendOnRename](#sendonrename)|Уведомляет все приемники зарегистрировано владелец advise, что элемент управления имеет новый моникер.|  
+|[CComControlBase::SendOnSave](#sendonsave)|Уведомляет все приемники зарегистрировано advise, которому он был сохранен.|  
+|[CComControlBase::SendOnViewChange](#sendonviewchange)|Уведомляет все зарегистрированные приемники уведомлений, представление элемента управления изменилось.|  
+|[CComControlBase::SetControlFocus](#setcontrolfocus)|Задает или удаляет фокус клавиатуры на или из элемента управления.|  
+|[CComControlBase::SetDirty](#setdirty)|Задает элемент данных `m_bRequiresSave` значению *bDirty*.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComControlBase::m_bAutoSize](#m_bautosize)|Флаг, указывающий, что элемент управления не может быть любых других размеров.|  
-|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` следует установить размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.|  
+|[CComControlBase::m_bAutoSize](#m_bautosize)|Флаг, указывающий, что элемент управления не может быть любой другой размер.|  
+|[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.|  
 |[CComControlBase::m_bDrawGetDataInHimetric](#m_bdrawgetdatainhimetric)|Флаг, указывающий, что `IDataObjectImpl::GetData` единицах HIMETRIC и пикселей не следует использовать при рисовании.|  
 |[CComControlBase::m_bInPlaceActive](#m_binplaceactive)|Флаг, указывающий, что элемент управления является активным на месте.|  
-|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Флаг, указывающий, поддерживает контейнера **IOleInPlaceSiteEx** интерфейс и OCX96 контролировать функции, такие как элементы управления без окон и мерцания.|  
-|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Флаг, указывающий ли элемент управления согласование с контейнером о поддержке функций управления OCX96 (например, мерцания без окон и элементов управления), и является ли элемент управления оконных или без окон.|  
-|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Флаг, указывающий, что элементу управления необходимо представлять их представлением, когда контейнер изменяет размер отображения элемента управления.|  
+|[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)|Флаг, указывающий, что контейнер поддерживает `IOleInPlaceSiteEx` интерфейс и OCX96 контролировать функции, такие как элементы управления без окон и без мерцания.|  
+|[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)|Флаг, указывающее, является ли элемент управления согласовано с контейнером о поддержке функций управления OCX96 (таких как элементы управления без мерцания и без окон) и является ли элемент управления оконного или без окон.|  
+|[CComControlBase::m_bRecomposeOnResize](#m_brecomposeonresize)|Флаг, указывающий, что элемент управления требует переделать это их представлением, когда контейнер изменяет отображаемый размер элемента управления.|  
 |[CComControlBase::m_bRequiresSave](#m_brequiressave)|Флаг, указывающий, что элемент управления был изменен с момента последнего сохранения.|  
-|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Флаг, указывающий, хочет изменить размер его естественное экстент (его зависимым фактический размер) элемента управления при изменении размера отображения элемента управления в контейнер.|  
-|[CComControlBase::m_bUIActive](#m_buiactive)|Флаг, указывающий элемент управления пользовательского интерфейса, например меню и панелей инструментов, активна.|  
-|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Флаг, указывающий, что элемент управления использует область окна, предоставляемый контейнера.|  
-|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Флаг, указывающий элемент управления был без окон, но могут находиться не без окон теперь.|  
-|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Флаг, указывающий, что элемент управления должен быть оконные, даже если контейнер поддерживает элементов управления без окон.|  
+|[CComControlBase::m_bResizeNatural](#m_bresizenatural)|Флаг, указывающий элемент управления хочет изменить его естественное экстент (его немасштабированным фактический размер) при изменении размера отображения элемента управления в контейнер.|  
+|[CComControlBase::m_bUIActive](#m_buiactive)|Флаг, указывающий, элемента управления пользовательского интерфейса, например меню и панелей инструментов, активна.|  
+|[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Флаг, указывающий, что элемент управления используется область окна, предоставляемую контейнера.|  
+|[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Флаг, указывающий элемент управления был без окон, но может быть не безоконный теперь.|  
+|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Флаг, указывающий, что элемент управления должен быть оконные, даже если контейнер поддерживает элементы управления без окон.|  
 |[CComControlBase::m_bWndLess](#m_bwndless)|Флаг, указывающий, что элемент управления без окон.|  
 |[CComControlBase::m_hWndCD](#m_hwndcd)|Содержит ссылку на дескриптор окна, связанный с элементом управления.|  
-|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Число раз контейнера имеет замороженную события (отказался принять события) без промежуточных Разморозить события (принятия событий).|  
-|[CComControlBase::m_rcPos](#m_rcpos)|Позиция в точках управления в координатах контейнера.|  
+|[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Число раз контейнера зафиксирован события (отказался принимать события) без промежуточных Разморозить событий (принятие события).|  
+|[CComControlBase::m_rcPos](#m_rcpos)|Позиция элемента управления, выраженная в координатах контейнера в пикселях.|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|Область элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм) для отображения.|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|Физический размер элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм).|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Прямой указатель вспомогательное соединение в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
-|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Объект `CComDispatchDriver` объект, который позволяет получить и установить свойства контейнера через `IDispatch` указателя.|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Объект `CComDispatchDriver` объект, который позволяет получать и задавать свойства контейнера через `IDispatch` указатель.|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|Указатель на сайте клиента элемента управления в контейнере.|  
-|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Предоставляет средства стандартный для хранения вспомогательных соединений между объектами данных и приемников уведомлений.|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Указатель на контейнер [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.|  
-|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Предоставляет стандартную реализацию способ сохранения соединений для рекомендаций.|  
+|[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Предоставляет стандартный средства и сохраним вспомогательных соединений между объектами данных приемниками уведомлений.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Указатель на контейнера [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.|  
+|[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Предоставляет стандартную реализацию способ сохранения вспомогательных соединений.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет методы для создания и управления ATL элементов управления. [Класс CComControl](../../atl/reference/ccomcontrol-class.md) является производным от `CComControlBase`. При создании элемента управления, стандартный элемент управления или DHTML, используя мастер элементов управления ATL, мастер автоматически будет наследовать класс от `CComControlBase`.  
+ Этот класс предоставляет методы для создания и управления элементами управления ATL. [Класс CComControl](../../atl/reference/ccomcontrol-class.md) является производным от `CComControlBase`. При создании элемента управления стандартного элемента управления или DHTML, с помощью мастера управления ATL, мастер автоматически будут производными от класса `CComControlBase`.  
   
- Дополнительные сведения о создании элемента управления см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL см. в статье [создается проект ATL](../../atl/reference/creating-an-atl-project.md).  
+ Дополнительные сведения о создании элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  
   
 ##  <a name="appearancetype"></a>  CComControlBase::AppearanceType  
- Переопределите, если ваш **m_nAppearance** стандартное свойство не принадлежит типу **короткие**.  
+ Переопределить, если ваш `m_nAppearance` не стандартное свойство типа **короткие**.  
   
 ```
 typedef short AppearanceType;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Мастер элементов управления ATL добавляет **m_nAppearance** stock свойство типа short. Переопределить `AppearanceType` при использовании другого типа данных.  
+ Мастер элементов управления ATL добавляет `m_nAppearance` свойство типа short склада. Переопределить `AppearanceType` Если вы используете другой тип данных.  
   
 ##  <a name="ccomcontrolbase"></a>  CComControlBase::CComControlBase  
  Конструктор.  
@@ -231,11 +231,11 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `h`  
+ *h*  
  Дескриптор окна, связанный с элементом управления.  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует размер элемента управления в единицы HIMETRIC 5080 X 5080 (2 "X 2») и инициализирует `CComControlBase` значения члена данных **NULL** или **FALSE**.  
+ Инициализирует размер элемента управления в единицы HIMETRIC 5080 X 5080 (2 "X 2») и инициализирует `CComControlBase` значения членов данных значение NULL или значение FALSE.  
   
 ##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase  
  Деструктор  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если элемент управления является оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Если элемент управления оконные, `~CComControlBase` уничтожает его путем вызова [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
@@ -256,58 +256,58 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  Идентификатор GUID запрашиваемого интерфейса.  
   
- `ppv`  
- Указатель на указатель на интерфейс, определяемый `iid`, или **NULL** Если интерфейс не найден.  
+ *ppv*  
+ Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.  
   
 ### <a name="remarks"></a>Примечания  
- Обрабатывает интерфейсы только в таблицу сопоставлений COM.  
+ обрабатывает интерфейсы только в таблицу сопоставлений COM.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
 ##  <a name="doesverbactivate"></a>  CComControlBase::DoesVerbActivate  
- Проверяет, что `iVerb` параметр, используемый `IOleObjectImpl::DoVerb` либо активирует элемент управления пользовательского интерфейса ( `iVerb` равняется `OLEIVERB_UIACTIVATE`), определяет действие, выполняемое при двойном щелчке элемента управления ( `iVerb` равняется `OLEIVERB_PRIMARY`), отображает элемент управления ( `iVerb` равняется `OLEIVERB_SHOW`), или активирует элемент управления ( `iVerb` равняется **OLEIVERB_INPLACEACTIVATE**).  
+ Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).  
   
 ```
 BOOL DoesVerbActivate(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iVerb`  
- Значение, указывающее действие, выполняемое по `DoVerb`.  
+ *iVerb*  
+ Значение, указывающее, действия, которые будут произведены методом `DoVerb`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** Если `iVerb` равняется `OLEIVERB_UIACTIVATE`, `OLEIVERB_PRIMARY`, `OLEIVERB_SHOW`, или **OLEIVERB_INPLACEACTIVATE**; в противном случае возвращает **FALSE**.  
+ Возвращает значение TRUE, если *iVerb* равно OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW или OLEIVERB_INPLACEACTIVATE; в противном случае возвращает FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Можно переопределить этот метод, чтобы определить собственные команды активации.  
+ Можно переопределить этот метод, чтобы определить свои собственные команды активации.  
   
 ##  <a name="doesverbuiactivate"></a>  CComControlBase::DoesVerbUIActivate  
- Проверяет, что `iVerb` параметр, используемый `IOleObjectImpl::DoVerb` вызывает элемент управления пользовательского интерфейса для активации и возвращает **TRUE**.  
+ Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` заставляет элемент управления пользовательского интерфейса для активации и возвращает значение TRUE.  
   
 ```
 BOOL DoesVerbUIActivate(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iVerb`  
- Значение, указывающее действие, выполняемое по `DoVerb`.  
+ *iVerb*  
+ Значение, указывающее, действия, которые будут произведены методом `DoVerb`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** Если `iVerb` равняется `OLEIVERB_UIACTIVATE`, `OLEIVERB_PRIMARY`, `OLEIVERB_SHOW`, или **OLEIVERB_INPLACEACTIVATE**. В противном случае метод возвращает **FALSE**.  
+ Возвращает значение TRUE, если *iVerb* равно OLEIVERB_UIACTIVATE, OLEIVERB_PRIMARY, OLEIVERB_SHOW или OLEIVERB_INPLACEACTIVATE. В противном случае метод возвращает значение FALSE.  
   
 ##  <a name="doverbproperties"></a>  CComControlBase::DoVerbProperties  
- Отображение страницы свойств элемента управления.  
+ Отображает страницы свойств элемента управления.  
   
 ```
 HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `prcPosRec`  
+ *prcPosRec*  
  Зарезервировано.  
   
  *hwndParent*  
@@ -322,7 +322,7 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
  [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
 ##  <a name="fireviewchange"></a>  CComControlBase::FireViewChange  
- Вызвать этот метод, чтобы указать контейнер для перерисовки элемента управления, или уведомить зарегистрированных advise приемников, которые представления элемента управления изменилось.  
+ Вызовите этот метод, чтобы указать контейнер для перерисовки элемента управления или уведомлять зарегистрированных advise, приемники представление элемента управления изменилось.  
   
 ```
 HRESULT FireViewChange();
@@ -332,21 +332,21 @@ HRESULT FireViewChange();
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если элемент управления является активным (элемент управления класса данных [CComControlBase::m_bInPlaceActive](#m_binplaceactive) — **TRUE**), уведомляет контейнера требуется перерисовать всего элемента управления. Если элемент управления становится неактивным, уведомляет элемент управления зарегистрированных приемников уведомлений (через элемент управления класса данных [CComControlBase::m_spAdviseSink](#m_spadvisesink)) измененного представления элемента управления.  
+ Если элемент управления активен (данные-член класса элемента управления [CComControlBase::m_bInPlaceActive](#m_binplaceactive) имеет значение TRUE), уведомляет контейнер, необходимость перерисовки всей элемента управления. Если элемент управления неактивным, уведомляет элемент управления из зарегистрированных приемников уведомлений (через данные-член класса элемента управления [CComControlBase::m_spAdviseSink](#m_spadvisesink)), представление элемента управления изменилось.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance  
- Извлекает **DISPID_AMBIENT_APPEARANCE**, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для трехмерной прорисовки.  
+ Извлекает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.  
   
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nAppearance`  
- Свойство **DISPID_AMBIENT_APPEARANCE**.  
+ *nAppearance*  
+ Свойство DISPID_AMBIENT_APPEARANCE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
@@ -355,7 +355,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
  [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
 ##  <a name="getambientautoclip"></a>  CComControlBase::GetAmbientAutoClip  
- Извлекает **DISPID_AMBIENT_AUTOCLIP**, флаг, указывающий, поддерживает ли контейнер автоматического обрезки область отображения элемента управления.  
+ Извлекает DISPID_AMBIENT_AUTOCLIP, флаг, указывающий, поддерживает ли контейнер автоматического обрезки отображаемой области элемента управления.  
   
 ```
 HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
@@ -363,27 +363,27 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
   
 ### <a name="parameters"></a>Параметры  
  *bAutoClip*  
- Свойство **DISPID_AMBIENT_AUTOCLIP**.  
+ Свойство DISPID_AMBIENT_AUTOCLIP.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientbackcolor"></a>  CComControlBase::GetAmbientBackColor  
- Извлекает **DISPID_AMBIENT_BACKCOLOR**, цвет фона окружения для всех элементов управления, определенных в качестве контейнера.  
+ Извлекает DISPID_AMBIENT_BACKCOLOR, цвет фона окружения для всех элементов управления, определенные с помощью контейнера.  
   
 ```
 HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *Цвет фона*  
- Свойство **DISPID_AMBIENT_BACKCOLOR**.  
+ *BackColor*  
+ Свойство DISPID_AMBIENT_BACKCOLOR.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientcharset"></a>  CComControlBase::GetAmbientCharSet  
- Извлекает **DISPID_AMBIENT_CHARSET**, окружения кодировки для всех элементов управления, определенных в качестве контейнера.  
+ Извлекает DISPID_AMBIENT_CHARSET окружения кодировки для всех элементов управления, определенные с помощью контейнера.  
   
 ```
 HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
@@ -391,13 +391,13 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
   
 ### <a name="parameters"></a>Параметры  
  *bstrCharSet*  
- Свойство **DISPID_AMBIENT_CHARSET**.  
+ Свойство DISPID_AMBIENT_CHARSET.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getambientcodepage"></a>  CComControlBase::GetAmbientCodePage  
- Извлекает **DISPID_AMBIENT_CODEPAGE**, окружения кодовую страницу для всех элементов управления, определенных в качестве контейнера.  
+ Извлекает DISPID_AMBIENT_CODEPAGE окружения кодовую страницу для всех элементов управления, определенные с помощью контейнера.  
   
 ```
 HRESULT GetAmbientCodePage(ULONG& ulCodePage);
@@ -405,27 +405,27 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
   
 ### <a name="parameters"></a>Параметры  
  *ulCodePage*  
- Свойство **DISPID_AMBIENT_CODEPAGE**.  
+ Свойство DISPID_AMBIENT_CODEPAGE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault  
- Извлекает **DISPID_AMBIENT_DISPLAYASDEFAULT**, флаг, который является **TRUE** Если контейнер пометил управления на этом сайте для кнопки по умолчанию, и таким образом себя с следует нарисовать элемент управления button Толщина рамки.  
+ Извлекает DISPID_AMBIENT_DISPLAYASDEFAULT, флаг, который имеет значение TRUE, если контейнер помечен элемент управления на этом сайте, как кнопка по умолчанию, и таким образом управления "Кнопка" следует рисовать сам полужирным фреймом.  
   
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bDisplayAsDefault`  
- Свойство **DISPID_AMBIENT_DISPLAYASDEFAULT**.  
+ *bDisplayAsDefault*  
+ Свойство DISPID_AMBIENT_DISPLAYASDEFAULT.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientdisplayname"></a>  CComControlBase::GetAmbientDisplayName  
- Извлекает **DISPID_AMBIENT_DISPLAYNAME**, имя контейнера предоставленные элементу управления.  
+ Извлекает DISPID_AMBIENT_DISPLAYNAME, имя контейнера предоставил к элементу управления.  
   
 ```
 HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
@@ -433,47 +433,47 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
   
 ### <a name="parameters"></a>Параметры  
  *bstrDisplayName*  
- Свойство **DISPID_AMBIENT_DISPLAYNAME**.  
+ Свойство DISPID_AMBIENT_DISPLAYNAME.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientfont"></a>  CComControlBase::GetAmbientFont  
- Извлекает указатель на контейнер окружения `IFont` интерфейса.  
+ Извлекает указатель на контейнер окружения `IFont` интерфейс.  
   
 ```
 HRESULT GetAmbientFont(IFont** ppFont);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppFont`  
- Указатель на контейнер окружения [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) интерфейса.  
+ *ppFont*  
+ Указатель на контейнер окружения [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если свойство **NULL**, указатель имеет **NULL**. Если указатель не имеет **NULL**, вызывающий объект должен освободить указатель.  
+ Если свойство имеет значение NULL, указателем является значение NULL. Если указатель не равен NULL, вызывающий объект должен освободить указатель.  
   
 ##  <a name="getambientfontdisp"></a>  CComControlBase::GetAmbientFontDisp  
- Извлекает указатель на контейнер окружения **IFontDisp** интерфейс диспетчеризации.  
+ Извлекает указатель на контейнер окружения `IFontDisp` интерфейс диспетчеризации.  
   
 ```
 HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ppFont`  
+ *ppFont*  
  Указатель на контейнер окружения [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) интерфейс диспетчеризации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Если свойство **NULL**, указатель имеет **NULL**. Если указатель не имеет **NULL**, вызывающий объект должен освободить указатель.  
+ Если свойство имеет значение NULL, указателем является значение NULL. Если указатель не равен NULL, вызывающий объект должен освободить указатель.  
   
 ##  <a name="getambientforecolor"></a>  CComControlBase::GetAmbientForeColor  
- Извлекает **DISPID_AMBIENT_FORECOLOR**, цвет переднего плана окружения для всех элементов управления, определенных в качестве контейнера.  
+ Извлекает DISPID_AMBIENT_FORECOLOR цвета основного цвета окружения для всех элементов управления, определенные с помощью контейнера.  
   
 ```
 HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
@@ -481,21 +481,21 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
   
 ### <a name="parameters"></a>Параметры  
  *Цвет переднего плана*  
- Свойство **DISPID_AMBIENT_FORECOLOR**.  
+ Свойство DISPID_AMBIENT_FORECOLOR.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientlocaleid"></a>  CComControlBase::GetAmbientLocaleID  
- Извлекает **DISPID_AMBIENT_LOCALEID**, идентификатор языка, используемые контейнером.  
+ Извлекает DISPID_AMBIENT_LOCALEID, идентификатор языка, используемые контейнером.  
   
 ```
 HRESULT GetAmbientLocaleID(LCID& lcid);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lcid`  
- Свойство **DISPID_AMBIENT_LOCALEID**.  
+ *lcid*  
+ Свойство DISPID_AMBIENT_LOCALEID.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
@@ -504,55 +504,55 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
  Элемент управления можно использовать этот идентификатор адаптировать его пользовательский интерфейс для различных языков.  
   
 ##  <a name="getambientmessagereflect"></a>  CComControlBase::GetAmbientMessageReflect  
- Извлекает **DISPID_AMBIENT_MESSAGEREFLECT**, флаг, указывающий хочет получать сообщения окна, контейнера (например, `WM_DRAWITEM`) как события.  
+ Извлекает DISPID_AMBIENT_MESSAGEREFLECT, флаг, указывающий, хочет получать сообщения окна, контейнера (такие как `WM_DRAWITEM`) как события.  
   
 ```
 HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bMessageReflect`  
- Свойство **DISPID_AMBIENT_MESSAGEREFLECT**.  
+ *bMessageReflect*  
+ Свойство DISPID_AMBIENT_MESSAGEREFLECT.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientpalette"></a>  CComControlBase::GetAmbientPalette  
- Извлекает **DISPID_AMBIENT_PALETTE**, используемый для доступа к контейнеру `HPALETTE`.  
+ Извлекает DISPID_AMBIENT_PALETTE, используемый для доступа к HPALETTE контейнера.  
   
 ```
 HRESULT GetAmbientPalette(HPALETTE& hPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hPalette`  
- Свойство **DISPID_AMBIENT_PALETTE**.  
+ *hPalette*  
+ Свойство DISPID_AMBIENT_PALETTE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientproperty"></a>  CComControlBase::GetAmbientProperty  
- Извлекает свойства контейнера, указанного в `dispid`.  
+ Извлекает свойства контейнера, указанного параметром *dispid*.  
   
 ```
 HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dispid`  
- Идентификатор свойства контейнера должны быть получены.  
+ *Идентификатор DISPID*  
+ Идентификатор извлекаемого свойства контейнера.  
   
- `var`  
+ *var*  
  Переменная для получения свойства.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Предоставляет набор вспомогательных функций для получения определенных свойств, например, ATL [CComControlBase::GetAmbientBackColor](#getambientbackcolor). Если имеется не подходящий метод, используйте `GetAmbientProperty`.  
+ Предоставляет набор вспомогательных функций для получения определенных свойств, например, ATL [CComControlBase::GetAmbientBackColor](#getambientbackcolor). Если нет подходящего метода доступен, используйте `GetAmbientProperty`.  
   
 ##  <a name="getambientrighttoleft"></a>  CComControlBase::GetAmbientRightToLeft  
- Извлекает **DISPID_AMBIENT_RIGHTTOLEFT**, направление, в котором будет показано содержимое контейнера.  
+ Извлекает DISPID_AMBIENT_RIGHTTOLEFT, направление, в котором содержимое отображается в контейнере.  
   
 ```
 HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
@@ -560,13 +560,13 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
   
 ### <a name="parameters"></a>Параметры  
  *bRightToLeft*  
- Свойство **DISPID_AMBIENT_RIGHTTOLEFT**. Значение **TRUE** Если отобразить содержимое справа налево, **FALSE** Если отображается слева направо.  
+ Свойство DISPID_AMBIENT_RIGHTTOLEFT. Значение TRUE, если содержимое отображается справа налево, FALSE, если он отображается слева направо.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getambientscaleunits"></a>  CComControlBase::GetAmbientScaleUnits  
- Извлекает **DISPID_AMBIENT_SCALEUNITS**, окружения единиц (таких как дюймы или сантиметры) для пометки отображает контейнера.  
+ Извлекает DISPID_AMBIENT_SCALEUNITS окружения единицах (таких как дюймы или сантиметры) для работы с метками отображает контейнера.  
   
 ```
 HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
@@ -574,13 +574,13 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
   
 ### <a name="parameters"></a>Параметры  
  *bstrScaleUnits*  
- Свойство **DISPID_AMBIENT_SCALEUNITS**.  
+ Свойство DISPID_AMBIENT_SCALEUNITS.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientshowgrabhandles"></a>  CComControlBase::GetAmbientShowGrabHandles  
- Извлекает **DISPID_AMBIENT_SHOWGRABHANDLES**, флаг, указывающий, разрешает ли контейнер элемента управления для отображения маркеры захвата для себя, когда активны.  
+ Извлекает DISPID_AMBIENT_SHOWGRABHANDLES, флаг, указывающий, допускает ли контейнер элемента управления для отображения маркеров захвата для себя в активном состоянии.  
   
 ```
 HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
@@ -588,13 +588,13 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
   
 ### <a name="parameters"></a>Параметры  
  *bShowGrabHandles*  
- Свойство **DISPID_AMBIENT_SHOWGRABHANDLES**.  
+ Свойство DISPID_AMBIENT_SHOWGRABHANDLES.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientshowhatching"></a>  CComControlBase::GetAmbientShowHatching  
- Извлекает **DISPID_AMBIENT_SHOWHATCHING**, флаг, указывающий, разрешает ли контейнер элемента управления для отображения самой заштрихованного шаблоном при активном пользовательский интерфейс элемента управления.  
+ Извлекает DISPID_AMBIENT_SHOWHATCHING, флаг, указывающий, допускает ли контейнер элемента управления для отображения окна с заштрихованный шаблон при активном элемента управления пользовательского интерфейса.  
   
 ```
 HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
@@ -602,13 +602,13 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
   
 ### <a name="parameters"></a>Параметры  
  *bShowHatching*  
- Свойство **DISPID_AMBIENT_SHOWHATCHING**.  
+ Свойство DISPID_AMBIENT_SHOWHATCHING.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambientsupportsmnemonics"></a>  CComControlBase::GetAmbientSupportsMnemonics  
- Извлекает **DISPID_AMBIENT_SUPPORTSMNEMONICS**, флаг, указывающий, поддерживает ли контейнер клавиши.  
+ Извлекает DISPID_AMBIENT_SUPPORTSMNEMONICS, флаг, указывающий, поддерживает ли контейнер клавиши.  
   
 ```
 HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
@@ -616,13 +616,13 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
   
 ### <a name="parameters"></a>Параметры  
  *bSupportsMnemonics*  
- Свойство **DISPID_AMBIENT_SUPPORTSMNEMONICS**.  
+ Свойство DISPID_AMBIENT_SUPPORTSMNEMONICS.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign  
- Извлекает **DISPID_AMBIENT_TEXTALIGN**, предпочтительно контейнером выравнивание текста: 0 для обычного выравнивания (номера, текста справа налево), 1 для выравнивания по левому краю, выравнивание по центру 2 и 3 для выравнивание по правому краю.  
+ Извлекает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.  
   
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -630,13 +630,13 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
   
 ### <a name="parameters"></a>Параметры  
  *nTextAlign*  
- Свойство **DISPID_AMBIENT_TEXTALIGN**.  
+ Свойство DISPID_AMBIENT_TEXTALIGN.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ##  <a name="getambienttoptobottom"></a>  CComControlBase::GetAmbientTopToBottom  
- Извлекает **DISPID_AMBIENT_TOPTOBOTTOM**, направление, в котором будет показано содержимое контейнера.  
+ Извлекает DISPID_AMBIENT_TOPTOBOTTOM, направление, в котором содержимое отображается в контейнере.  
   
 ```
 HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
@@ -644,13 +644,13 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
   
 ### <a name="parameters"></a>Параметры  
  *bTopToBottom*  
- Свойство **DISPID_AMBIENT_TOPTOBOTTOM**. Значение **TRUE** Если текст отображается сверху вниз, **FALSE** если он отображается снизу вверх.  
+ Свойство DISPID_AMBIENT_TOPTOBOTTOM. Значение TRUE, если текст отображается сверху вниз, значение FALSE, если он отображается нижней к началу страницы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="getambientuidead"></a>  CComControlBase::GetAmbientUIDead  
- Извлекает **DISPID_AMBIENT_UIDEAD**, флаг, указывающий, требуется ли контейнер управления реагировать на действия пользовательского интерфейса.  
+ Извлекает DISPID_AMBIENT_UIDEAD, флаг, указывающий, требуется ли контейнер элемента управления реагировать на действия пользовательского интерфейса.  
   
 ```
 HRESULT GetAmbientUIDead(BOOL& bUIDead);
@@ -658,24 +658,24 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
   
 ### <a name="parameters"></a>Параметры  
  *bUIDead*  
- Свойство **DISPID_AMBIENT_UIDEAD**.  
+ Свойство DISPID_AMBIENT_UIDEAD.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если **TRUE**, элемент управления не должен отвечать. Этот флаг применяется независимо от **DISPID_AMBIENT_USERMODE** флаг. В разделе [CComControlBase::GetAmbientUserMode](#getambientusermode).  
+ Значение TRUE, если элемент управления не должен возвращать. Этот флаг применяется независимо от того, флаг DISPID_AMBIENT_USERMODE. См. в разделе [CComControlBase::GetAmbientUserMode](#getambientusermode).  
   
 ##  <a name="getambientusermode"></a>  CComControlBase::GetAmbientUserMode  
- Извлекает **DISPID_AMBIENT_USERMODE**, флаг, указывающий, является ли контейнер в режиме выполнения ( **TRUE**) или в режиме конструктора ( **FALSE**).  
+ Извлекает DISPID_AMBIENT_USERMODE, флаг, указывающий, является ли контейнер в режиме выполнения (TRUE) или в режиме конструктора (FALSE).  
   
 ```
 HRESULT GetAmbientUserMode(BOOL& bUserMode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bUserMode`  
- Свойство **DISPID_AMBIENT_USERMODE**.  
+ *bUserMode*  
+ Свойство DISPID_AMBIENT_USERMODE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
@@ -694,78 +694,78 @@ BOOL GetDirty();
  Это значение задается с помощью [CComControlBase::SetDirty](#setdirty).  
   
 ##  <a name="getzoominfo"></a>  CComControlBase::GetZoomInfo  
- Извлекает x и y значения числитель и знаменатель коэффициент масштаба для активации элемента управления для изменения по месту.  
+ Извлекает x и y значения числителя и знаменателя значения масштаба для активации элемента управления для редактирование на месте.  
   
 ```
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `di`  
- Структура, которая будет содержать числитель и знаменатель коэффициента масштабирования. Дополнительные сведения см. в разделе [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).  
+ *Внедрение зависимостей*  
+ Структура, которая будет содержать числителя и знаменателя значения масштаба. Дополнительные сведения см. в разделе [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).  
   
 ### <a name="remarks"></a>Примечания  
- Масштаб представляет долю размеру элемента управления в его текущем степени.  
+ Коэффициент масштабирования — это доля естественному размеру элемента управления в его текущем степени.  
   
 ##  <a name="inplaceactivate"></a>  CComControlBase::InPlaceActivate  
- Заставляет элемент управления для перехода из неактивного состояния в команду в состоянии `iVerb` указывает.  
+ Вызывает переход элемента управления из неактивного состояния в команде в состоянии *iVerb* указывает.  
   
 ```
 HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iVerb`  
- Значение, указывающее действие, выполняемое по [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).  
+ *iVerb*  
+ Значение, указывающее, действия, которые будут произведены методом [IOleObjectImpl::DoVerb](../../atl/reference/ioleobjectimpl-class.md#doverb).  
   
  *prcPosRect*  
- Указатель на позицию элемента управления на месте.  
+ Указатель на положение элемента управления на месте.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Перед активации этот метод проверяет, что элемент управления сайта клиента, проверяет, какая часть элемента управления является видимым и возвращает расположение элемента управления в родительское окно. После активации элемента управления, этот метод активирует элемент управления пользовательского интерфейса и указывает контейнеру, чтобы сделать элемент управления видимым.  
+ Перед активацией этот метод проверяет, что элемент управления на сайте клиента, проверяет, какая часть элемента управления является видимым и возвращает расположение элемента управления в родительское окно. После активации элемента управления, этот метод активирует элемента управления пользовательского интерфейса и сообщает контейнеру, чтобы сделать элемент управления видимым.  
   
- Этот метод также возвращает `IOleInPlaceSite`, **IOleInPlaceSiteEx**, или **IOleInPlaceSiteWindowless** указатель интерфейса для элемента управления и сохраняет его в элемент данных класс элемента управления [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Данные-члены класса элемента управления [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)и [ CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) задать значение true, соответствующим образом.  
+ Этот метод также возвращает `IOleInPlaceSite`, `IOleInPlaceSiteEx`, или `IOleInPlaceSiteWindowless` указатель интерфейса для элемента управления и сохраняет его в элемент данных класса элемента управления [CComControlBase::m_spInPlaceSite](#m_spinplacesite). Данные-члены класса элемента управления [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex), [CComControlBase::m_bWndLess](#m_bwndless), [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)и [ CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) присваивается значение true, соответствующим образом.  
   
 ##  <a name="internalgetsite"></a>  CComControlBase::InternalGetSite  
- Этот метод используется для запроса узла управления для указателя по указанному адресу.  
+ Вызовите этот метод, чтобы запросить сайт элемента управления для указателя в определенный интерфейс.  
   
 ```
 HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `riid`  
- Идентификатор IID указатель интерфейса, должны быть возвращены в `ppUnkSite`.  
+ *riid*  
+ Идентификатор IID указателя интерфейса, который должен быть возвращен в *ppUnkSite*.  
   
- `ppUnkSite`  
- Адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в `riid`.  
+ *ppUnkSite*  
+ Адрес переменной указателя, получающей указатель интерфейса, запрашиваемый в *riid*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Если сайт поддерживает интерфейс, запрошенный в `riid`, указатель, возвращенный с помощью параметра `ppUnkSite`. В противном случае `ppUnkSite` имеет значение NULL.  
+ Если узел поддерживает интерфейс, запрошенный в *riid*, указатель, возвращенный с помощью параметра *ppUnkSite*. В противном случае *ppUnkSite* имеет значение NULL.  
   
 ##  <a name="m_bautosize"></a>  CComControlBase::m_bAutoSize  
- Флаг, указывающий, что элемент управления не может быть любых других размеров.  
+ Флаг, указывающий, что элемент управления не может быть любой другой размер.  
   
 ```
 unsigned m_bAutoSize:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот флаг установлен `IOleObjectImpl::SetExtent` и, если **TRUE**, функция возвращает **E_FAIL**.  
+ Этот флаг установлен по `IOleObjectImpl::SetExtent` чего, если значение равно TRUE, функция возвращает E_FAIL.  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- При добавлении **Авторазмер** параметр [свойства набора](../../atl/reference/stock-properties-atl-control-wizard.md) вкладке Мастер элементов управления ATL, мастер автоматически создает этот элемент данных в классе элемента управления, создает put и методов для свойства get и поддерживает [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) автоматическое уведомление контейнера, при изменении значения свойства.  
+ При добавлении **Авторазмер** параметр [свойства запасов](../../atl/reference/stock-properties-atl-control-wizard.md) вкладке Мастер элементов управления ATL, мастер автоматически создает эти данные-член в классе элемента управления, создает put и получения методы для свойства и поддерживает [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) автоматическое уведомление контейнера при изменении свойства.  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
- Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` следует установить размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.  
+ Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.  
   
 ```
 unsigned m_bDrawFromNatural:1;
@@ -774,7 +774,7 @@ unsigned m_bDrawFromNatural:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_bdrawgetdatainhimetric"></a>  CComControlBase::m_bDrawGetDataInHimetric  
  Флаг, указывающий, что `IDataObjectImpl::GetData` единицах HIMETRIC и пикселей не следует использовать при рисовании.  
@@ -784,10 +784,10 @@ unsigned m_bDrawGetDataInHimetric:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Каждое логическое устройство HIMETRIC равна 0,01 мм.  
+ Каждое логическое устройство HIMETRIC — 0,01 миллиметр.  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_binplaceactive"></a>  CComControlBase::m_bInPlaceActive  
  Флаг, указывающий, что элемент управления является активным на месте.  
@@ -797,13 +797,13 @@ unsigned m_bInPlaceActive:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Это означает, что элемент управления является видимым и его, если таковые имеются, отображается окно, но его меню и панелей инструментов могут быть неактивны. `m_bUIActive` Указывает флаг элемента управления пользовательского интерфейса, таких как меню, уже активен.  
+ Это означает, что элемент управления является видимым и его окно, если таковые имеются, видимо, но его меню и панелей инструментов могут быть неактивными. `m_bUIActive` Флаг указывает, пользовательский интерфейс элемента управления, таких как меню, уже активен.  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_binplacesiteex"></a>  CComControlBase::m_bInPlaceSiteEx  
- Флаг, указывающий, поддерживает контейнера **IOleInPlaceSiteEx** интерфейс и OCX96 контролировать функции, такие как элементы управления без окон и мерцания.  
+ Флаг, указывающий, что контейнер поддерживает `IOleInPlaceSiteEx` интерфейс и OCX96 контролировать функции, такие как элементы управления без окон и без мерцания.  
   
 ```
 unsigned m_bInPlaceSiteEx:1;
@@ -812,14 +812,14 @@ unsigned m_bInPlaceSiteEx:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и `m_bInPlaceSiteEx` флаги. (Элемент данных `m_bNegotiatedWnd` должно быть **TRUE** для `m_spInPlaceSite` указатель недействителен.)  
+ Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и `m_bInPlaceSiteEx` флаги. (Элемент данных `m_bNegotiatedWnd` должно быть значение TRUE для `m_spInPlaceSite` указатель недействителен.)  
   
- Если `m_bWndLess` — **FALSE** и `m_bInPlaceSiteEx` — **TRUE**, `m_spInPlaceSite` — **IOleInPlaceSiteEx** указатель на интерфейс. В разделе [m_spInPlaceSite](#m_spinplacesite) для таблицы, показывающая связь между членами этих трех данных.  
+ Если `m_bWndLess` имеет значение FALSE и `m_bInPlaceSiteEx` имеет значение TRUE, `m_spInPlaceSite` является `IOleInPlaceSiteEx` указатель на интерфейс. См. в разделе [m_spInPlaceSite](#m_spinplacesite) для таблицы, показывающая отношение между эти элементы три данных.  
   
 ##  <a name="m_bnegotiatedwnd"></a>  CComControlBase::m_bNegotiatedWnd  
- Флаг, указывающий ли элемент управления согласование с контейнером о поддержке функций управления OCX96 (например, мерцания без окон и элементов управления), и является ли элемент управления оконных или без окон.  
+ Флаг, указывающее, является ли элемент управления согласовано с контейнером о поддержке функций управления OCX96 (таких как элементы управления без мерцания и без окон) и является ли элемент управления оконного или без окон.  
   
 ```
 unsigned m_bNegotiatedWnd:1;
@@ -828,12 +828,12 @@ unsigned m_bNegotiatedWnd:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- `m_bNegotiatedWnd` Флаг должен иметь **TRUE** для `m_spInPlaceSite` указатель недействителен.  
+ `m_bNegotiatedWnd` Флаг должен иметь значение ИСТИНА для `m_spInPlaceSite` указатель недействителен.  
   
 ##  <a name="m_brecomposeonresize"></a>  CComControlBase::m_bRecomposeOnResize  
- Флаг, указывающий, что элементу управления необходимо представлять их представлением, когда контейнер изменяет размер отображения элемента управления.  
+ Флаг, указывающий, что элемент управления требует переделать это их представлением, когда контейнер изменяет отображаемый размер элемента управления.  
   
 ```
 unsigned m_bRecomposeOnResize:1;
@@ -842,9 +842,9 @@ unsigned m_bRecomposeOnResize:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Этот флаг установлен [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) и, если **TRUE**, `SetExtent` уведомляет контейнера изменения представления. Если этот флаг установлен, **OLEMISC_RECOMPOSEONRESIZE** бит в [OLEMISC, ПОЗВОЛЯЯ](http://msdn.microsoft.com/library/windows/desktop/ms678497) перечисления также должен быть установлен.  
+ Этот флаг установлен по [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) и, если значение равно TRUE, `SetExtent` уведомляет контейнер, изменения представления. Если этот флаг установлен, OLEMISC_RECOMPOSEONRESIZE бит в [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) перечисления также должен быть установлен.  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  Флаг, указывающий, что элемент управления был изменен с момента последнего сохранения.  
@@ -854,41 +854,41 @@ unsigned m_bRequiresSave:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение `m_bRequiresSave` можно задать с помощью [CComControlBase::SetDirty](#setdirty) и полученный с [CComControlBase::GetDirty](#getdirty).  
+ Значение `m_bRequiresSave` можно задать с помощью [CComControlBase::SetDirty](#setdirty) и получить с помощью [CComControlBase::GetDirty](#getdirty).  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_bresizenatural"></a>  CComControlBase::m_bResizeNatural  
- Флаг, указывающий, хочет изменить размер его естественное экстент (его зависимым фактический размер) элемента управления при изменении размера отображения элемента управления в контейнер.  
+ Флаг, указывающий элемент управления хочет изменить его естественное экстент (его немасштабированным фактический размер) при изменении размера отображения элемента управления в контейнер.  
   
 ```
 unsigned m_bResizeNatural:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот флаг установлен `IOleObjectImpl::SetExtent` и, если **TRUE**, размер передаваемого `SetExtent` назначается `m_sizeNatural`.  
+ Этот флаг установлен по `IOleObjectImpl::SetExtent` и, если значение равно TRUE, размер передаваемого `SetExtent` назначается `m_sizeNatural`.  
   
- Размер передаваемого `SetExtent` всегда назначается `m_sizeExtent`, независимо от значения `m_bResizeNatural`.  
+ Переданный размер `SetExtent` всегда назначается `m_sizeExtent`, независимо от значения `m_bResizeNatural`.  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_buiactive"></a>  CComControlBase::m_bUIActive  
- Флаг, указывающий элемент управления пользовательского интерфейса, например меню и панелей инструментов, активна.  
+ Флаг, указывающий, элемента управления пользовательского интерфейса, например меню и панелей инструментов, активна.  
   
 ```
 unsigned m_bUIActive:1;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_bInPlaceActive` Флаг указывает, что элемент управления является активной, но не, его пользовательский интерфейс активен.  
+ `m_bInPlaceActive` Флаг указывает, что элемент управления является активной, но не его пользовательский интерфейс является активным.  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_busingwindowrgn"></a>  CComControlBase::m_bUsingWindowRgn  
- Флаг, указывающий, что элемент управления использует область окна, предоставляемый контейнера.  
+ Флаг, указывающий, что элемент управления используется область окна, предоставляемую контейнера.  
   
 ```
 unsigned m_bUsingWindowRgn:1;
@@ -897,10 +897,10 @@ unsigned m_bUsingWindowRgn:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_bwasoncewindowless"></a>  CComControlBase::m_bWasOnceWindowless  
- Флаг, указывающий элемент управления был без окон, но могут находиться не без окон теперь.  
+ Флаг, указывающий элемент управления был без окон, но может быть не безоконный теперь.  
   
 ```
 unsigned m_bWasOnceWindowless:1;
@@ -909,10 +909,10 @@ unsigned m_bWasOnceWindowless:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly  
- Флаг, указывающий, что элемент управления должен быть оконные, даже если контейнер поддерживает элементов управления без окон.  
+ Флаг, указывающий, что элемент управления должен быть оконные, даже если контейнер поддерживает элементы управления без окон.  
   
 ```
 unsigned m_bWindowOnly:1;
@@ -921,7 +921,7 @@ unsigned m_bWindowOnly:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_bwndless"></a>  CComControlBase::m_bWndLess  
  Флаг, указывающий, что элемент управления без окон.  
@@ -933,11 +933,11 @@ unsigned m_bWndLess:1;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) флаги. (Элемент данных [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) должно быть **TRUE** для [CComControlBase::m_spInPlaceSite](#m_spinplacesite) указатель недействителен.)  
+ Элемент данных `m_spInPlaceSite` указывает [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) интерфейс, в зависимости от значения `m_bWndLess` и [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) флаги. (Элемент данных [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) должно быть значение TRUE для [CComControlBase::m_spInPlaceSite](#m_spinplacesite) указатель недействителен.)  
   
- Если `m_bWndLess` — **TRUE**, `m_spInPlaceSite` — **IOleInPlaceSiteWindowless** указатель на интерфейс. В разделе [CComControlBase::m_spInPlaceSite](#m_spinplacesite) для таблицы, показывающая завершения связь между этими элементами данных.  
+ Если `m_bWndLess` имеет значение TRUE, `m_spInPlaceSite` является `IOleInPlaceSiteWindowless` указатель на интерфейс. См. в разделе [CComControlBase::m_spInPlaceSite](#m_spinplacesite) таблицу с указанием на полный соотношение этих элементах данных.  
   
 ##  <a name="m_hwndcd"></a>  CComControlBase::m_hWndCD  
  Содержит ссылку на дескриптор окна, связанный с элементом управления.  
@@ -949,10 +949,10 @@ HWND& m_hWndCD;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_nfreezeevents"></a>  CComControlBase::m_nFreezeEvents  
- Число раз контейнера имеет замороженную события (отказался принять события) без промежуточных Разморозить события (принятия событий).  
+ Число раз контейнера зафиксирован события (отказался принимать события) без промежуточных Разморозить событий (принятие события).  
   
 ```
 short m_nFreezeEvents;
@@ -961,10 +961,10 @@ short m_nFreezeEvents;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_rcpos"></a>  CComControlBase::m_rcPos  
- Позиция в точках управления в координатах контейнера.  
+ Позиция элемента управления, выраженная в координатах контейнера в пикселях.  
   
 ```
 RECT m_rcPos;
@@ -973,7 +973,7 @@ RECT m_rcPos;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_sizeextent"></a>  CComControlBase::m_sizeExtent  
  Область элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм) для отображения.  
@@ -985,11 +985,11 @@ SIZE m_sizeExtent;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Этот размер масштабируется по отображения. Физический размер элемента управления указывается в `m_sizeNatural` элемент данных и является фиксированным.  
+ Этот размер масштабируется по отображения. Указан физический размер элемента управления в `m_sizeNatural` элемент данных и является фиксированным.  
   
- Размер можно преобразовать в точках с глобальной функции [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
+ Вы можете преобразовать размер пикселей с помощью глобальной функции [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_sizenatural"></a>  CComControlBase::m_sizeNatural  
  Физический размер элемента управления в единицах HIMETRIC (каждая единица равна 0,01 мм).  
@@ -1001,14 +1001,14 @@ SIZE m_sizeNatural;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Этот размер фиксирован при размер в `m_sizeExtent` умноженного на экране.  
+ Этот размер фиксирован, во время размер в `m_sizeExtent` масштабируется по отображения.  
   
- Размер можно преобразовать в точках с глобальной функции [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
+ Вы можете преобразовать размер пикселей с помощью глобальной функции [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- Прямой указатель вспомогательное соединение в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+ Прямой указатель на вспомогательного соединения в контейнере (контейнера [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
   
 ```
 CComPtr<IAdviseSink>
@@ -1018,10 +1018,10 @@ CComPtr<IAdviseSink>
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_spambientdispatch"></a>  CComControlBase::m_spAmbientDispatch  
- Объект `CComDispatchDriver` объект, который позволяет получить и задать свойства объекта через `IDispatch` указателя.  
+ Объект `CComDispatchDriver` объект, который позволяет получить и задать свойства объекта с помощью `IDispatch` указатель.  
   
 ```
 CComDispatchDriver m_spAmbientDispatch;
@@ -1030,7 +1030,7 @@ CComDispatchDriver m_spAmbientDispatch;
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_spclientsite"></a>  CComControlBase::m_spClientSite  
  Указатель на сайте клиента элемента управления в контейнере.  
@@ -1043,10 +1043,10 @@ CComPtr<IOleClientSite>
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
 ##  <a name="m_spdataadviseholder"></a>  CComControlBase::m_spDataAdviseHolder  
- Предоставляет средства стандартный для хранения вспомогательных соединений между объектами данных и приемников уведомлений.  
+ Предоставляет стандартный средства и сохраним вспомогательных соединений между объектами данных приемниками уведомлений.  
   
 ```
 CComPtr<IDataAdviseHolder>
@@ -1056,14 +1056,14 @@ CComPtr<IDataAdviseHolder>
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Объект данных — это элемент управления, который можно перенести данные и типов, реализующих [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), методы которого укажите Средний формат и передачи данных.  
+ Объект данных является элементом управления, который может передавать данные, реализующий [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), методы которого укажите среду формат и передачи данных.  
   
- Интерфейс `m_spDataAdviseHolder` реализует [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) и [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) методы для установки и удаления вспомогательных соединений для контейнера. Контейнер элемента управления должен реализовывать приемника уведомлений с помощью поддержки [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейса.  
+ Интерфейс `m_spDataAdviseHolder` реализует [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) и [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейс.  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- Указатель на контейнер [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.  
+ Указатель на контейнера [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), или [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) указатель на интерфейс.  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1073,20 +1073,20 @@ CComPtr<IOleInPlaceSiteWindowless>
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- `m_spInPlaceSite` Указатель является действительным только тогда, когда [m_bNegotiatedWnd](#m_bnegotiatedwnd) установлен флаг **TRUE**.  
+ `m_spInPlaceSite` Указатель является действительным только если [m_bNegotiatedWnd](#m_bnegotiatedwnd) флаг имеет значение TRUE.  
   
- В следующей таблице показаны как `m_spInPlaceSite` зависит от типа указателя [m_bWndLess](#m_bwndless) и [m_bInPlaceSiteEx](#m_binplacesiteex) флаги элемента данных:  
+ В следующей таблице показано как `m_spInPlaceSite` зависит от типа указателя [m_bWndLess](#m_bwndless) и [m_bInPlaceSiteEx](#m_binplacesiteex) флаги член данных:  
   
 |m_spInPlaceSite тип|m_bWndLess значение|m_bInPlaceSiteEx значение|  
 |---------------------------|-----------------------|-----------------------------|  
-|**IOleInPlaceSiteWindowless**|**ЗНАЧЕНИЕ TRUE**|**Значение TRUE,** или **FALSE**|  
-|**IOleInPlaceSiteEx**|**ЗНАЧЕНИЕ FALSE**|**ЗНАЧЕНИЕ TRUE**|  
-|`IOleInPlaceSite`|**ЗНАЧЕНИЕ FALSE**|**ЗНАЧЕНИЕ FALSE**|  
+|`IOleInPlaceSiteWindowless`|true|Значение TRUE или FALSE|  
+|`IOleInPlaceSiteEx`|false|true|  
+|`IOleInPlaceSite`|false|false|  
   
 ##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder  
- Предоставляет стандартную реализацию способ сохранения соединений для рекомендаций.  
+ Предоставляет стандартную реализацию способ сохранения вспомогательных соединений.  
   
 ```
 CComPtr<IOleAdviseHolder>
@@ -1096,9 +1096,9 @@ CComPtr<IOleAdviseHolder>
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Для использования этого элемента данных в пределах класса элемента управления, необходимо объявить его как элемента данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
+>  Чтобы использовать эти данные-член в классе элемента управления, необходимо объявить ее как член данных в классе элемента управления. Класса элемента управления не наследует эти данные-член базового класса, так как он объявлен в пределах объединения в базовом классе.  
   
- Интерфейс `m_spOleAdviseHolder` реализует [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) и [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) методы для установки и удаления вспомогательных соединений для контейнера. Контейнер элемента управления должен реализовывать приемника уведомлений с помощью поддержки [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейса.  
+ Интерфейс `m_spOleAdviseHolder` реализует [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) и [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) методы для установки и удаления вспомогательных соединений в контейнер. Контейнер элемента управления должен реализовывать приемника уведомлений, поддерживая [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) интерфейс.  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  Переопределите этот метод для рисования элемента управления.  
@@ -1108,19 +1108,19 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `di`  
- Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графическую информацию, например аспекта draw, границы элемента управления и ли Рисование оптимизирован, или нет.  
+ *Внедрение зависимостей*  
+ Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графической информации, такие как аспект draw, границы элемента управления, и ли Рисование оптимизирован или нет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
  Значение по умолчанию `OnDraw` удаляет или восстанавливает контекст устройства или не выполняет никаких действий, в зависимости от набора флагов в [CComControlBase::OnDrawAdvanced](#ondrawadvanced).  
   
- `OnDraw` Автоматически добавляется метод для класса элемента управления при создании элемента управления с помощью мастера элементов управления ATL. По умолчанию мастер `OnDraw` Рисование прямоугольника с меткой «ATL 8.0».  
+ `OnDraw` Автоматически добавляется метод к классу элемента управления при создании элемента управления с помощью мастера управления ATL. По умолчанию мастер `OnDraw` рисует прямоугольник с надписью «ATL 8.0».  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CComControlBase::GetAmbientAppearance](#getambientappearance).  
+ См. в примере [CComControlBase::GetAmbientAppearance](#getambientappearance).  
   
 ##  <a name="ondrawadvanced"></a>  CComControlBase::OnDrawAdvanced  
  Значение по умолчанию `OnDrawAdvanced` готовит нормализованный контекст устройства для рисования, а затем вызывает класс элемента управления `OnDraw` метод.  
@@ -1130,19 +1130,19 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `di`  
- Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графическую информацию, например аспекта draw, границы элемента управления и ли Рисование оптимизирован, или нет.  
+ *Внедрение зависимостей*  
+ Ссылку на [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) структуру, содержащую графической информации, такие как аспект draw, границы элемента управления, и ли Рисование оптимизирован или нет.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Стандартное значение `HRESULT` .  
+ Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод, если вы хотите принять контекст устройства контейнером без нормализации.  
   
- В разделе [CComControlBase::OnDraw](#ondraw) для получения дополнительных сведений.  
+ См. в разделе [CComControlBase::OnDraw](#ondraw) для получения дополнительных сведений.  
   
 ##  <a name="onkillfocus"></a>  CComControlBase::OnKillFocus  
- Проверяет, элемент управления активен на месте и имеет допустимый элемент управления сайта, и сообщает контейнера, что элемент управления потерял фокус.  
+ Проверяет, что элемент управления активен на месте и имеет допустимый элемент управления сайта, а затем сообщает контейнеру, что элемент управления потерял фокус.  
   
 ```
 LRESULT OnKillFocus(UINT /* nMsg */,
@@ -1152,17 +1152,17 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nMsg`  
+ *nMsg*  
  Зарезервировано.  
   
- `wParam`  
+ *wParam*  
  Зарезервировано.  
   
- `lParam`  
+ *lParam*  
  Зарезервировано.  
   
- `bHandled`  
- Флаг, указывающий, было ли сообщение окна обработано успешно. Значение по умолчанию — `FALSE`.  
+ *bHandled*  
+ Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда возвращает значение 1.  
@@ -1178,23 +1178,23 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nMsg`  
+ *nMsg*  
  Зарезервировано.  
   
- `wParam`  
+ *wParam*  
  Зарезервировано.  
   
- `lParam`  
+ *lParam*  
  Зарезервировано.  
   
- `bHandled`  
- Флаг, указывающий, было ли сообщение окна обработано успешно. Значение по умолчанию — `FALSE`.  
+ *bHandled*  
+ Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда возвращает значение 1.  
   
 ##  <a name="onpaint"></a>  CComControlBase::OnPaint  
- Подготавливает контейнера для рисования, возвращает клиентской области элемента управления, а затем вызывает класс элемента управления `OnDrawAdvanced` метод.  
+ Подготавливает контейнер для рисования, получает клиентской области элемента управления, а затем вызывает класс элемента управления `OnDrawAdvanced` метод.  
   
 ```
 LRESULT OnPaint(UINT /* nMsg */,
@@ -1204,26 +1204,26 @@ LRESULT OnPaint(UINT /* nMsg */,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nMsg`  
+ *nMsg*  
  Зарезервировано.  
   
- `wParam`  
+ *wParam*  
  HDC существующий.  
   
- `lParam`  
+ *lParam*  
  Зарезервировано.  
   
- `lResult`  
+ *lResult*  
  Зарезервировано.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда возвращает ноль.  
   
 ### <a name="remarks"></a>Примечания  
- Если `wParam` не равно NULL, `OnPaint` предполагается содержит допустимый HDC и использует его вместо [CComControlBase::m_hWndCD](#m_hwndcd).  
+ Если *wParam* не равно NULL, `OnPaint` предполагается, что он содержит допустимый HDC и использует его вместо [CComControlBase::m_hWndCD](#m_hwndcd).  
   
 ##  <a name="onsetfocus"></a>  CComControlBase::OnSetFocus  
- Проверяет, элемент управления активен на месте и имеет допустимый элемент управления сайта, и сообщает контейнера элемента управления получило фокус.  
+ Проверяет, что элемент управления активен на месте и имеет допустимый элемент управления сайта, а затем информирует контейнера элемента управления получил фокус.  
   
 ```
 LRESULT OnSetFocus(UINT /* nMsg */,
@@ -1233,17 +1233,17 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nMsg`  
+ *nMsg*  
  Зарезервировано.  
   
- `wParam`  
+ *wParam*  
  Зарезервировано.  
   
- `lParam`  
+ *lParam*  
  Зарезервировано.  
   
- `bHandled`  
- Флаг, указывающий, было ли сообщение окна обработано успешно. Значение по умолчанию — `FALSE`.  
+ *bHandled*  
+ Флаг, указывающий, было ли успешно обработано сообщение окна. Значение по умолчанию — FALSE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Всегда возвращает значение 1.  
@@ -1252,7 +1252,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
  Отправляет уведомление в контейнер, что элемент управления получил фокус.  
   
 ##  <a name="pretranslateaccelerator"></a>  CComControlBase::PreTranslateAccelerator  
- Переопределите этот метод, чтобы предоставить свои собственные сочетания обработчики сочетаний клавиш.  
+ Переопределите этот метод, чтобы предоставить собственные сочетания обработчики сочетаний клавиш.  
   
 ```
 BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
@@ -1260,30 +1260,30 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMsg`  
+ *pMsg*  
  Зарезервировано.  
   
  *hRet*  
  Зарезервировано.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- По умолчанию возвращает **FALSE**.  
+ По умолчанию возвращает значение FALSE.  
   
 ##  <a name="sendonclose"></a>  CComControlBase::SendOnClose  
- Уведомляет все приемники зарегистрирована advise владельца, что элемент управления был закрыт.  
+ Уведомляет все приемники зарегистрировано владелец advise, что элемент управления был закрыт.  
   
 ```
 HRESULT SendOnClose();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Отправляет уведомление, что элемент управления закрыл его приемники.  
+ Отправляет уведомление, что элемент управления закрыл его приемники уведомлений.  
   
 ##  <a name="sendondatachange"></a>  CComControlBase::SendOnDataChange  
- Уведомляет все приемники зарегистрирована держатель уведомлений об изменении данных элемента управления.  
+ Уведомляет все приемники зарегистрировано владелец уведомлений об изменении данных элемента управления.  
   
 ```
 HRESULT SendOnDataChange(DWORD advf = 0);
@@ -1291,13 +1291,13 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>Параметры  
  *ADVF*  
- Флаги, указывающие способ вызова [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) выполняется. Значения в диапазоне от [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) перечисления.  
+ Флаги, указывающие способ вызова [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) выполняется. Значения: от [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) перечисления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="sendonrename"></a>  CComControlBase::SendOnRename  
- Уведомляет все приемники зарегистрирована advise владельца, что элемент управления имеет новый моникер.  
+ Уведомляет все приемники зарегистрировано владелец advise, что элемент управления имеет новый моникер.  
   
 ```
 HRESULT SendOnRename(IMoniker* pmk);
@@ -1305,49 +1305,49 @@ HRESULT SendOnRename(IMoniker* pmk);
   
 ### <a name="parameters"></a>Параметры  
  *PMK*  
- Указатель на новый специальное имя элемента управления.  
+ Указатель на новый моникер элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Отправляет уведомление об изменении моникера для элемента управления.  
+ Отправляет уведомление об изменении моникер для элемента управления.  
   
 ##  <a name="sendonsave"></a>  CComControlBase::SendOnSave  
- Уведомляет все приемники зарегистрирована держатель advise, сохраненное в элементе управления.  
+ Уведомляет все приемники зарегистрировано advise, которому он был сохранен.  
   
 ```
 HRESULT SendOnSave();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Отправляет уведомление элемента управления просто сохранил свои данные.  
+ Отправляет уведомление, что элемент управления только что защитила его данные.  
   
 ##  <a name="sendonviewchange"></a>  CComControlBase::SendOnViewChange  
- Уведомляет все зарегистрированные приемники измененных представления элемента управления.  
+ Уведомляет все зарегистрированные приемники уведомлений, представление элемента управления изменилось.  
   
 ```
 HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwAspect`  
+ *dwAspect*  
  Аспект или представление элемента управления.  
   
  *Индекс*  
  Часть представления, которая была изменена. Допустимо только значение -1.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `SendOnViewChange` вызовы [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). Только значение *индекс* в настоящее время поддерживается-1, показывает, что все представление процента.  
+ `SendOnViewChange` вызовы [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). Только значение *индекс* в настоящее время поддерживается является -1, означающее, что всего представления представляет интерес.  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
- Задает или удаляет фокус клавиатуры в или из элемента управления.  
+ Задает или удаляет фокус клавиатуры на или из элемента управления.  
   
 ```
 BOOL SetControlFocus(BOOL bGrab);
@@ -1355,27 +1355,27 @@ BOOL SetControlFocus(BOOL bGrab);
   
 ### <a name="parameters"></a>Параметры  
  *bGrab*  
- Если **TRUE**, устанавливает фокус клавиатуры вызывающему элементу управления. Если **FALSE**, удаляет фокус из вызывающего элемента управления, предоставляемые в фокусе.  
+ Если значение равно TRUE, устанавливает фокус клавиатуры для вызывающего элемента управления. Если значение равно FALSE, то удаляется фокус клавиатуры из вызывающего элемента управления, предоставляемые он имеет фокус.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** Если успешно, элемент управления получает фокус; в противном случае **FALSE**.  
+ Возвращает значение TRUE, если элемент управления успешно получает фокус; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Для элемента Оконные функции Windows API [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) вызывается. Для элемента управления без окна [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) вызывается. Посредством этого вызова элемента управления без окна получает фокус клавиатуры и может отвечать на сообщения окна.  
+ Для оконного элемента управления, функции Windows API [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) вызывается. Для элемента управления без окон [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) вызывается. Через этот вызов безоконный элемент управления получает фокус клавиатуры и может отвечать на сообщения окна.  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
- Задает элемент `m_bRequiresSave` значению в `bDirty`.  
+ Задает элемент данных `m_bRequiresSave` значению *bDirty*.  
   
 ```
 void SetDirty(BOOL bDirty);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bDirty`  
+ *bDirty*  
  Значение элемента данных [CComControlBase::m_bRequiresSave](#m_brequiressave).  
   
 ### <a name="remarks"></a>Примечания  
- **SetDirty(TRUE)** должен вызываться для флага, что элемент управления изменилось с момента последнего сохранения. Значение `m_bRequiresSave` извлекается с [CComControlBase::GetDirty](#getdirty).  
+ `SetDirty(TRUE)` должен вызываться для флага, что элемент управления был изменен с момента последнего сохранения. Значение `m_bRequiresSave` возвращается с помощью [CComControlBase::GetDirty](#getdirty).  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
