@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844436"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957009"
 ---
 # <a name="isfloatingpoint-class"></a>Класс is_floating_point
 
@@ -37,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` является типом с плавающей запятой или формой `cv-qualified` типа с плавающей запятой, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* — это число с плавающей запятой или `cv-qualified` введите формы с плавающей запятой, в противном случае он содержит значение false.
 
-Тип с плавающей запятой является одним из следующих типов: `float`, `double` или `long double`.
+Объект тип с плавающей запятой является одним из **float**, **двойные**, или **long double**.
 
 ## <a name="example"></a>Пример
 

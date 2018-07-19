@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4d91cfdafcbe81d568bdfffa5ee1b7c99d6bf8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 710d7c154477320f7fb65f52f430f4c0666762c2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839487"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956951"
 ---
 # <a name="addlvaluereference-class"></a>Класс add_lvalue_reference
 
@@ -39,11 +39,11 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр модификатора типа содержит модифицированный тип, т. е. `T`, если `T` является ссылкой lvalue, в противном случае — `T&`.
+Экземпляр модификатора типа содержит модифицированный тип, который является *T* Если *T* является ссылкой lvalue, в противном случае `T&`.
 
 ## <a name="example"></a>Пример
 

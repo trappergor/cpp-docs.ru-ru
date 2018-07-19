@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861218"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958257"
 ---
 # <a name="ostreambufiterator-class"></a>Класс ostreambuf_iterator
 
@@ -45,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Параметры
 
-`CharType` Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, и значением по умолчанию является `char`.
+*CharType* тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным и значение по умолчанию — **char**.
 
-`Traits` Тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
+*Признаки* тип, представляющий тип символа для ostreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Примечания
 
@@ -55,13 +55,13 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Создает итератор `ostreambuf_iterator`, инициализированный для записи символов в поток вывода.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `ostreambuf_iterator`.|
 |[ostream_type](#ostreambuf_iterator_ostream_type)|Тип, обеспечивающий тип потока для `ostream_iterator`.|
@@ -70,13 +70,13 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[failed](#failed)|Проверяет наличие ошибок вставки в буфер потока вывода.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `i` = `x`.|
 |[оператор++](#op_add_add)|Нефункциональный оператор инкремента, возвращающий `ostreambuf_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|
@@ -98,7 +98,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Примечания
 
-Тип является синонимом для параметра-шаблона **CharType**.
+Этот тип является синонимом для параметра шаблона `CharType`.
 
 ### <a name="example"></a>Пример
 
@@ -294,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Параметры
 
-`_Char` Знак, который необходимо вставить в буфер потока.
+*_Char* символ для вставки в буфер потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Параметры
 
-`strbuf` Streambuf выходной объект, используемый для инициализации указателя буфер потока вывода.
+*strbuf* выходной объект streambuf, используемый для инициализации указателя буфера потока вывода.
 
-`Ostr` Объект потока выходных данных, используемый для инициализации указателя буфер потока вывода.
+*Ostr* выходной объект stream, используемый для инициализации указателя буфера потока вывода.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует указатель буфера потока вывода значением `strbuf`.
+Первый конструктор инициализирует указатель буфера потока вывода значением *strbuf*.
 
 Второй конструктор инициализирует указатель буфера потока вывода значением `Ostr`. `rdbuf`. Сохраненный указатель не должен быть пустым указателем (NULL).
 
@@ -415,7 +415,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Примечания
 
-Тип является синонимом`basic_streambuf`\< **CharType**, **Traits**>, класса потока для буферов ввода-вывода, который становится `streambuf` при специализации до символьного типа `char`.
+Тип является синонимом `basic_streambuf` \< **CharType**, **Traits**>, класса потока для буферов ввода-вывода, который становится `streambuf` при специализации до символьного типа **char**.
 
 ### <a name="example"></a>Пример
 
@@ -431,7 +431,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом для параметра-шаблона **Traits**.
+Этот тип является синонимом для параметра шаблона `Traits`.
 
 ### <a name="example"></a>Пример
 

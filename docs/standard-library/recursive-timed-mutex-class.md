@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863716"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957627"
 ---
 # <a name="recursivetimedmutex-class"></a>Класс recursive_timed_mutex
 
@@ -49,14 +49,14 @@ class recursive_timed_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|Создает объект `recursive_timed_mutex`, который не заблокирован.|
 |[Деструктор ~recursive_timed_mutex](#dtorrecursive_timed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_timed_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
@@ -66,7 +66,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<мьютекс >
+**Заголовок:** \<mutex >
 
 **Пространство имен:** std
 
@@ -112,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае — `false`.
+**значение true,** Если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает `true` и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, функция немедленно возвращает **true**, и предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -129,15 +129,15 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-`Rel_time` Объект [chrono::duration](../standard-library/duration-class.md) объект, который указывает максимальное количество времени, метод пытается получить права владельца объекта `mutex`.
+*Rel_time* объект [chrono::duration](../standard-library/duration-class.md) , указывающий максимальное количество времени, метод пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае — `false`.
+**значение true,** Если метод успешно получает права владения `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает значение `true` и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **true**, и предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -152,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-`Abs_time` На момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
+*Abs_time* точки во времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае — `false`.
+**значение true,** Если метод успешно получает права владения `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает значение `true` и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **true**, и предыдущая блокировка остается в силе.
 
 ## <a name="unlock"></a>  unlock
 

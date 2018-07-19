@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5066e793c58dca9ccc12ccc159a010654df3efbc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955456"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -55,7 +55,7 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|Увеличивает итератор на указанное количество позиций.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Создает итератор, может вставлять элементы с обратной стороны указанного контейнера.|
@@ -74,7 +74,7 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор!=](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|
 |[оператор==](../standard-library/iterator-operators.md#op_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|
@@ -87,24 +87,24 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа **контейнер**, к которому обращается посредством защищенного объекта-**указателя**, хранимого им и именуемого контейнером.|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой двунаправленный итератор.|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа `Container`, к которому обращается посредством защищенного `pointer` вызова объекта, он сохраняет контейнера.|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой Двунаправленный итератор.|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Класс, который обращается к массиву при помощи проверенного итератора произвольного доступа. **Примечание.** Этот класс — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой прямой итератор.|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа **контейнер**, к которому обращается посредством защищенного объекта-**указателя**, хранимого им и именуемого контейнером.|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой итератор ввода.|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа **контейнер**, к которому обращается посредством защищенного объекта-**указателя**, хранимого им и именуемого контейнером. Он также содержит защищаемый объект **iterator** класса **Container::iterator** под именем **iter**.|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|Данный класс шаблона описывает объект итератора ввода. Он извлекает объекты класса **Ty** из входного потока, доступ к которому получает через сохраненный объект типа pointer, указывающий на `basic_istream`\<**Elem**, **Tr**>.|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Данный класс шаблона описывает объект итератора ввода. Вставляет элементы класса **Elem** в буфер потокового вывода, доступ к которому получает через сохраненный объект типа **pointer**, указывающий на `basic_streambuf`\<**Elem**, **Tr**>.|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой прямой итератор.|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа `Container`, к которому обращается посредством защищенного `pointer` вызова объекта, он сохраняет контейнера.|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой итератор ввода.|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа `Container`, к которому обращается посредством защищенного `pointer` вызова объекта, он сохраняет контейнера. Он также содержит защищаемый `iterator` объекта класса `Container::iterator`, который называется `iter`.|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|Данный класс шаблона описывает объект итератора ввода. Он извлекает объекты класса `Ty` из входного потока, к которому получает через сохраненный объект, он сохраняет, тип указателя на `basic_istream` \< **Elem**, **Tr**>.|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|Данный класс шаблона описывает объект итератора ввода. Вставляет элементы класса `Elem` в буфер выходного потока, доступ к которому получает через сохраненный объект его относящийся к типу `pointer` для `basic_streambuf` \< **Elem**, **Tr** >.|
 |[iterator](../standard-library/iterator-struct.md)|Данный класс шаблона используется как базовый тип для всех итераторов.|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|Вспомогательный класс шаблона, предоставляющий критические типы, связанные с разными типами итераторов, на которые они могут ссылаться аналогичным образом.|
 |[move_iterator](../standard-library/move-iterator-class.md)|Объект `move_iterator` содержит итератор произвольного доступа типа `RandomIterator`. Его поведение аналогично поведению итератора произвольного доступа, кроме случаев отмены ссылки. Результат `operator*` неявно приводится к `value_type&&:`, чтобы обеспечить `rvalue reference`.|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Вставляет объекты класса **Type** в поток вывода, доступ к которому получает через сохраненный объект типа **pointer**, указывающий на `basic_ostream`\<**Elem**, **Tr**>.|
-|[Класс ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Вставляет элементы класса **Elem** в буфер потокового вывода, доступ к которому получает через сохраненный объект типа pointer, указывающий на `basic_streambuf`\<**Elem**, **Tr**>.|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой итератор вывода.|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой итератор произвольного доступа.|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Вставляет объекты класса `Type` в поток вывода, доступ к которому получает через сохраненный объект его относящийся к типу `pointer` для `basic_ostream` \< **Elem**, **Tr**>.|
+|[Класс ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Вставляет элементы класса `Elem` в буфер выходного потока, к которому получает через сохраненный объект, он сохраняет, тип указателя на `basic_streambuf` \< **Elem**, **Tr**>.|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой итератор вывода.|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функция, которая представляет собой итератор произвольного доступа.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|Данный класс шаблона описывает объект, поведение которого аналогично поведению итератора произвольного доступа, но в обратном порядке.|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Класс, который обращается к массиву при помощи непроверенного итератора произвольного доступа. **Примечание.** Этот класс — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.|
 

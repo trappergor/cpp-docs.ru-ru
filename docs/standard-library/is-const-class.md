@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956089"
 ---
 # <a name="isconst-class"></a>Класс is_const
 
@@ -37,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если `Ty` является `const-qualified`.
+Экземпляр предиката типа содержит значение true, если *Ty* является `const-qualified`.
 
 ## <a name="example"></a>Пример
 

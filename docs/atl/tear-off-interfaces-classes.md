@@ -1,5 +1,5 @@
 ---
-title: Перемещаемые интерфейсы классов (ATL) | Документы Microsoft
+title: Перемещаемые интерфейсы классов (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7f61a815293d27139c2739544b0e08e89583e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb7fec440902652d8ab04f688488a00340ab41aa
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361066"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956983"
 ---
 # <a name="tear-off-interfaces-classes"></a>Перемещаемые интерфейсы классов
 Следующие классы обеспечивают поддержку перемещаемые интерфейсы.  
   
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) реализует **IUnknown** перемещаемые интерфейса.  
+-   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) реализует `IUnknown` для перемещаемой интерфейса.  
   
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) реализует **IUnknown** для интерфейса «кешированные» перемещаемые.  
+-   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) реализует `IUnknown` для интерфейса «кешированные» перемещаемой.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../atl/atl-class-overview.md)

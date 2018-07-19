@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccf608b9949ad9e1502b489a237adf60a4d50a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955708"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -42,22 +42,22 @@ ms.locfileid: "33845743"
 
 ### <a name="operators"></a>Операторы
 
-|Версия hash_set|Версия hash_multiset|Описание|
+|Версия hash_set|Версия hash_multiset|Описание:|
 |-----------------------|----------------------------|-----------------|
 |[operator!= (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Проверяет неравенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|
 |[operator== (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[operator== (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Проверяет равенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|Версия hash_set|Версия hash_multiset|Описание|
+|Версия hash_set|Версия hash_multiset|Описание:|
 |-----------------------|----------------------------|-----------------|
 |[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Меняет местами элементы двух объектов hash_set или hash_multiset.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
-|[Класс hash_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любыми hash-ассоциативными контейнерами (hash_map, hash_multimap, hash_set или hash_multiset) как объект параметра **Traits** по умолчанию для сортировки и хэширования элементов в них.|
+|[Класс hash_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любым ассоциативным контейнером хэша — hash_map hash_multimap, hash_set или hash_multiset — по умолчанию `Traits` объект параметра для упорядочивания и хэширования элементов в них.|
 |[Класс hash_set](../standard-library/hash-set-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|
 |[Класс hash_multiset](../standard-library/hash-multiset-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|
 

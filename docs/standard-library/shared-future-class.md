@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac125b068de5111a2b98800956c12a0c979737f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859668"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954998"
 ---
 # <a name="sharedfuture-class"></a>Класс shared_future
 
@@ -56,23 +56,23 @@ class shared_future;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[shared_future](#shared_future)|Создает объект `shared_future`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[get](#get)|Получает результат, который хранится в *связанном асинхронном состоянии*.|
-|[Допустимые](#valid)|Указывает, является ли объект не пустым.|
+|[допустимый](#valid)|Указывает, является ли объект не пустым.|
 |[wait](#wait)|Блокирует текущий поток, пока не будет готово связанное асинхронное состояние.|
 |[wait_for](#wait_for)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не истечет указанный период времени.|
 |[wait_until](#wait_until)|Выполняет блокировку, пока не будет готово связанное асинхронное состояние или не наступит указанный момент времени.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Назначает новое связанное асинхронное состояние.|
 
@@ -102,7 +102,7 @@ void get() const;
 
 Для частичной специализации `shared_future<Ty&>` хранимое значение является ссылкой на объект, который был передан *асинхронному поставщику* как возвращаемое значение.
 
-Так как для специализации `shared_future<void>` хранимые значения не существуют, метод возвращает `void`.
+Так как сохраненные значения не существуют для специализации `shared_future<void>`, метод возвращает **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -115,7 +115,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-`Right` Объект `shared_future` объекта.
+*Справа* A `shared_future` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -123,9 +123,9 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="remarks"></a>Примечания
 
-Для первого оператора `Right` больше не имеет связанного асинхронного состояния.
+Для первого оператора *справа* больше не имеет связанного асинхронного состояния после завершения операции.
 
-Для второго метода `Right` поддерживает его связанное асинхронное состояние.
+Для второго метода *справа* поддерживает его связанное асинхронное состояние.
 
 ## <a name="shared_future"></a> Конструктор shared_future::shared_future
 
@@ -140,15 +140,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-`Right` Объект [будущих](../standard-library/future-class.md) или `shared_future` объекта.
+*Справа* объект [будущих](../standard-library/future-class.md) или `shared_future` объекта.
 
 ### <a name="remarks"></a>Примечания
 
 Первый конструктор создает объект `shared_future`, который не имеет *связанного асинхронного состояния*.
 
-Второй и третий конструкторы создают объект `shared_future` и передают связанное асинхронное состояние из `Right`. `Right` больше не имеет связанного асинхронного состояния.
+Второй и третий конструкторы создают `shared_future` объекта и передачи связанное асинхронное состояние из *справа*. *Справа* больше не имеет связанного асинхронного состояния.
 
-Четвертый конструктор создает объект `shared_future`, который имеет то же связанное асинхронное состояние, что и `Right`.
+Четвертый конструктор создает `shared_future` объект, который имеет то же связанное асинхронное состояние как *справа*.
 
 ## <a name="valid"></a>  shared_future::Valid
 
@@ -160,7 +160,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если объект имеет связанное асинхронное состояние; в противном случае — значение `false`.
+**значение true,** Если объект имеет связанное асинхронное состояние; в противном случае **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -186,7 +186,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-`Rel_time` Объект [chrono::duration](../standard-library/duration-class.md) объект, который указывает максимальный интервал времени, поток блокируется.
+*Rel_time* объект [chrono::duration](../standard-library/duration-class.md) , указывающий максимальный интервал времени, поток блокируется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -208,7 +208,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-`Abs_time` Объект [chrono::time_point](../standard-library/time-point-class.md) объекта, указывающее время, после которого можно разблокировать поток.
+*Abs_time* объект [chrono::time_point](../standard-library/time-point-class.md) объект, который указывает время, после чего поток можно разблокировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

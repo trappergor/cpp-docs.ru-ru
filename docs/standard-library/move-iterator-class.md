@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e72f9c584f818de69b0c341ff8dba66892816d8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dfbd3bc6a020dba4b6e5eb868e21ec37fcc1ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861998"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955251"
 ---
 # <a name="moveiterator-class"></a>Класс move_iterator
 
@@ -55,30 +55,30 @@ class move_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[move_iterator](#move_iterator)|Конструктор для объектов типа `move_iterator`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[iterator_type](#iterator_type)|Синоним параметра шаблона `RandomIterator`.|
-|[iterator_category](#iterator_category)|Синоним более длинного выражения `typename` с таким же именем, `iterator_category` определяет общие возможности данного итератора.|
-|[value_type](#value_type)|Синоним более длинного выражения `typename` с таким же именем, `value_type` описывает тип элементов итератора.|
-|[difference_type](#difference_type)|Синоним более длинного выражения `typename` с таким же именем, `difference_type` описывает целочисленный тип, необходимый для выражения разницы между элементами.|
+|[iterator_category](#iterator_category)|Синоним более длинного **typename** выражение с тем же именем, `iterator_category` определяет общие возможности данного итератора.|
+|[value_type](#value_type)|Синоним более длинного **typename** выражение с тем же именем, `value_type` описывает тип элементов итератора.|
+|[difference_type](#difference_type)|Синоним более длинного **typename** выражение с тем же именем, `difference_type` описывает целочисленный тип, необходимый для выражения разницы между элементами.|
 |[pointer](#pointer)|Синоним параметра шаблона `RandomIterator`.|
 |[reference](#reference)|Синоним ссылки `rvalue` `value_type&&`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[base](#base)|Функция-член возвращает сохраненный итератор, инкапсулированный данным итератором `move_iterator`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[move_iterator::operator*](#op_star)|Возвращает `(reference)*base().`.|
 |[move_iterator::operator++](#op_add_add)|Увеличивает значение сохраненного итератора. Точное поведение определяется тем, является ли операция преинкрементной или постинкрементной.|
@@ -157,7 +157,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` Итератор, который используется в качестве сохраненного итератора.
+*правом* итератор для использования в качестве сохраненного итератора.
 
 ### <a name="remarks"></a>Примечания
 
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Смещение в текущую позицию для определения новой текущей позиции.
+*_Off* смещение для добавления в текущую позицию для определения новой текущей позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -181,7 +181,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>Примечания
 
-Оператор добавляет `_Off` к сохраненному итератору. Затем возвращает `*this`.
+Добавляет оператор *_Off* к сохраненному итератору. Затем возвращает `*this`.
 
 ## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
 
@@ -299,7 +299,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Тип `pointer` — это `typedef`, основанный на произвольном итераторе `RandomIterator` для `move_iterator`, и может использоваться с ним взаимозаменяемым образом.
+Тип `pointer` — **typedef** на произвольном итераторе основе `RandomIterator` для `move_iterator`и могут быть взаимозаменяемыми.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -311,7 +311,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Тип `reference` — `typedef` на основе `value_type&&` для `move_iterator`, его можно использовать вместо `value_type&&`.
+Тип `reference` — **typedef** на основе `value_type&&` для `move_iterator`его можно использовать вместе с `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;

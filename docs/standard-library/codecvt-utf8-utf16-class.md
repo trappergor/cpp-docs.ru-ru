@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fba4925b6392969aceb1c00ac4c0f4e47b3b63a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 545fda08a027b1610f82d17c89ae98241ee5502b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842088"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958134"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -34,9 +34,9 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Параметры
 
-`Elem` Тип двухбайтового элемента.
-`Maxcode` Максимальное число символов для аспекта языкового стандарта.
-`Mode` Сведения о конфигурации для аспекта языкового стандарта.
+*Elem* тип двухбайтового элемента.
+*Maxcode* максимальное количество символов для аспекта языкового стандарта.
+*Режим* сведения о конфигурации для ограничения языкового стандарта.
 
 ## <a name="remarks"></a>Примечания
 

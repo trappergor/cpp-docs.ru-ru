@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 53f4deb0bfe9439011f75cd22d0d52b74dae9c1f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569902"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959729"
 ---
 # <a name="steadyclock-struct"></a>Структура steady_clock
 
@@ -37,15 +37,15 @@ struct steady_clock;
 
 Часы считаются *монотонными*, если значение, возвращаемое при первом вызове `now`, всегда меньше значения, возвращаемого при последующих вызовах `now`, или равно ему. Часы считаются *постоянными*, если они *монотонны* и интервал времени между соседними тактами является постоянной величиной.
 
-`high_resolution_clock` TypeDef для `steady_clock`.
+`high_resolution_clock` является определением типа для `steady_clock`.
 
-### <a name="public-typedefs"></a>Открытые определения типов
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
 |name|Описание:|
 |----------|-----------------|
-|`steady_clock::duration`|Синоним для `nanoseconds`, определенного в \<chrono >.|
-|`steady_clock::period`|Синоним для `nano`, определенного в \<отношение >.|
-|`steady_clock::rep`|Синоним для **длинные** **длинные**, тип, который используется для представления числа тактов часов при автономном создании экземпляра `duration`.|
+|`steady_clock::duration`|Синоним для `nanoseconds`, определенный в \<chrono >.|
+|`steady_clock::period`|Синоним для `nano`, определенный в \<соотношение >.|
+|`steady_clock::rep`|Синоним для **long** **long**, тип, который используется для представления числа тактов часов при автономном создании экземпляра `duration`.|
 |`steady_clock::time_point`|Синоним для `chrono::time_point<steady_clock>`.|
 
 ## <a name="public-functions"></a>Открытые функции
@@ -58,7 +58,7 @@ struct steady_clock;
 
 |name|Описание:|
 |----------|-----------------|
-|`steady_clock::is_steady`|Содержит `true`. Объект `steady_clock` — *постоянный*.|
+|`steady_clock::is_steady`|Содержит **true**. Объект `steady_clock` — *постоянный*.|
 
 ## <a name="requirements"></a>Требования
 

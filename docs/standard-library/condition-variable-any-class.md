@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0fe38031dc215f537d82fe6e06f68acf6db8e0f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 56082c63ccc64e117d9962ff35dddc01969f403b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959236"
 ---
 # <a name="conditionvariableany-class"></a>Класс condition_variable_any
 
@@ -49,13 +49,13 @@ class condition_variable_any;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|
@@ -111,9 +111,9 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-`Lck` Объект `mutex` объект любого типа.
+*LCK* объект `mutex` объект любого типа.
 
-`Pred` Любое выражение, возвращающее `true` или `false`.
+*Пред* любое выражение, возвращающее **true** или **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -140,21 +140,21 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Параметры
 
-`Lck` Объект `mutex` объект любого типа.
+*LCK* объект `mutex` объект любого типа.
 
-`Rel_time` Объект `chrono::duration` , указывающий количество времени до истечения которого поток выходит из спящего режима.
+*Rel_time* объект `chrono::duration` , указывающий количество времени до истечения которого поток выходит из спящего режима.
 
-`Pred` Любое выражение, возвращающее `true` или `false`.
+*Пред* любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый метод возвращает `cv_status::timeout`, если ожидание прекращается, когда прошло `Rel_time`. В противном случае метод возвращает значение `cv_status::no_timeout`.
+Первый метод возвращает `cv_status::timeout` Если ожидание прекращается, когда *Rel_time* истечет. В противном случае метод возвращает значение `cv_status::no_timeout`.
 
-Второй метод возвращает значение `Pred`.
+Второй метод возвращает значение *Pred*.
 
 ### <a name="remarks"></a>Примечания
 
-Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all), или до завершения временного интервала `Rel_time`. Он может также ложно активироваться.
+Первый метод блокируется до `condition_variable_any` объект переводится в сигнальное состояние при вызове [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all), или до завершения интервала времени *Rel_time* истечет. Он может также ложно активироваться.
 
 Второй метод фактически выполняет следующий код.
 
@@ -192,21 +192,21 @@ void wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-`Lck` Объект взаимного исключения.
+*LCK* объект mutex.
 
-`Abs_time` Объект [chrono::time_point](../standard-library/time-point-class.md) объекта.
+*Abs_time* объект [chrono::time_point](../standard-library/time-point-class.md) объекта.
 
-`Pred` Любое выражение, возвращающее `true` или `false`.
+*Пред* любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Методы, возвращающие тип `cv_status`, возвращают `cv_status::timeout`, если ожидание прекращается, когда истекает `Abs_time`. В противном случае эти методы возвращают `cv_status::no_timeout`.
+Методы, возвращающие `cv_status` введите возврата `cv_status::timeout` Если ожидание прекращается, когда *Abs_time* пройдет указанное время. В противном случае эти методы возвращают `cv_status::no_timeout`.
 
-Методы, возвращающие `bool` возвращают значение `Pred`.
+Методы, возвращающие `bool` возвращают значение *Pred*.
 
 ### <a name="remarks"></a>Примечания
 
-Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all)`Abs_time`. Он может также ложно активироваться.
+Первый метод блокируется до `condition_variable` объект переводится в сигнальное состояние при вызове [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all), или пока не *Abs_time*. Он может также ложно активироваться.
 
 Второй метод фактически выполняет следующий код.
 

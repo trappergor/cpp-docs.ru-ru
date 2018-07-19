@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e818c267f5fed9bd98b5c5998f4b0eac0c09f3e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4819f5b5d5d6a16720bce29dd176fd0eb873014a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955937"
 ---
 # <a name="ltostreamgt-operators"></a>Операторы &lt;ostream&gt;
 
@@ -88,17 +88,17 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-`_Ch` Символ.
+*_Ch* символ.
 
-`_Elem` Тип элемента.
+*_Elem* тип элемента.
 
-`_Ostr` Объект `basic_ostream` объекта.
+*_Ostr* A `basic_ostream` объекта.
 
-`str` Строка символов.
+*STR* строку символов.
 
-`_Tr` Признаки символа.
+*_Tr* символ признаки.
 
-`val` Тип
+*Val* тип
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -117,7 +117,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-определяет длину последовательности N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)(`str`), начиная с `str`, и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), то функция также вставляет повторение из `_Ostr.width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает `_Ostr`.
+Определяет длину N = `traits_type::` [длина](../standard-library/char-traits-struct.md#length)(`str`) из последовательности, начиная *str*и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), то функция также вставляет повторение из `_Ostr.width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает *_Ostr*.
 
 Функция-шаблон
 
@@ -128,7 +128,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-вставляет элемент `_Ch`. Если 1 < `_Ostr.width`, то функция также вставляет повторение из `_Ostr.width` – 1 символов заполнения. Повторение предшествует последовательности, если `_Ostr.flags & adjustfield != left`. В противном случае повторение следует за последовательностью. Он возвращает `_Ostr`.
+вставляет элемент `_Ch`. Если 1 < `_Ostr.width`, то функция также вставляет повторение из `_Ostr.width` – 1 символов заполнения. Повторение предшествует последовательности, если `_Ostr.flags & adjustfield != left`. В противном случае повторение следует за последовательностью. Он возвращает *_Ostr*.
 
 Функция-шаблон
 
@@ -148,7 +148,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-, за исключением того, что каждый элемент `_Ch` последовательности, начиная с `str`, преобразуется в объект типа `Elem` путем вызова `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+за исключением того, что каждый элемент *_Ch* из последовательности, начиная *str* преобразуется в тип объекта `Elem` путем вызова `_Ostr.` [поместить](../standard-library/basic-ostream-class.md#put)(`_Ostr.` [widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 Функция-шаблон
 
@@ -168,7 +168,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-за исключением того, что `_Ch` преобразуется в объект типа `Elem` путем вызова `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
+за исключением того, что *_Ch* преобразуется в тип объекта `Elem` путем вызова `_Ostr.put`( `_Ostr.widen`( `_Ch`)).
 
 Функция-шаблон
 
@@ -208,7 +208,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Она не обязательно должна расширять `_Ch` перед его вставкой.)
+(Она не обязательно должна расширять *_Ch* перед его вставкой.)
 
 Функция-шаблон
 
@@ -219,7 +219,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-возвращает `_Ostr` << (`const char *`) `str`.
+Возвращает `_Ostr` << (`const char *`) `str`.
 
 Функция-шаблон
 
@@ -230,7 +230,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-возвращает `_Ostr` << (`char`) `_Ch`.
+Возвращает `_Ostr` << (`char`) `_Ch`.
 
 Функция-шаблон:
 
@@ -241,7 +241,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-возвращает `_Ostr` << (`const char *`) `str`.
+Возвращает `_Ostr` << (`const char *`) `str`.
 
 Функция-шаблон:
 
@@ -252,7 +252,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-возвращает `_Ostr` << (`char`) `_Ch`.
+Возвращает `_Ostr` << (`char`) `_Ch`.
 
 Функция-шаблон:
 

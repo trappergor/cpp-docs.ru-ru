@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955898"
 ---
 # <a name="recursivemutex-class"></a>Класс recursive_mutex
 
@@ -45,14 +45,14 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|Создает объект `recursive_mutex`.|
 |[Деструктор ~recursive_mutex](#dtorrecursive_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|
 |[try_lock](#try_lock)|Попытки получить права владельца мьютекса без блокировки.|
@@ -60,7 +60,7 @@ class recursive_mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<мьютекс >
+**Заголовок:** \<mutex >
 
 **Пространство имен:** std
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае — `false`.
+**значение true,** Если метод успешно получает права владения `mutex` или если вызывающий поток уже владеет `mutex**; otherwise, **false`.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает `true` и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, функция немедленно возвращает **true**, и предыдущая блокировка остается в силе.
 
 ## <a name="unlock"></a>  unlock
 

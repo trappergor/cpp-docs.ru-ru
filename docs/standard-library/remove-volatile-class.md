@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1cd2b4882c4b5e62a2f6574b3011b74747e412b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e9a46294156c1f7beffecb997569221a388b3394
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957315"
 ---
 # <a name="removevolatile-class"></a>Класс remove_volatile
 
@@ -40,11 +40,11 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `remove_volatile<T>` содержит измененный тип, т. е. `T1`, если `T` имеет форму `volatile T1`; в противном случае — `T`.
+Экземпляр `remove_volatile<T>` содержит модифицированный тип, который является `T1` при *T* имеет форму `volatile T1`, в противном случае *T*.
 
 ## <a name="example"></a>Пример
 

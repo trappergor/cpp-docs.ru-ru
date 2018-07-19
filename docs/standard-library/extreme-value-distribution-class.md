@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc71c01d7527655771e3529311dc32fb4edbc525
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958023"
 ---
 # <a name="extremevaluedistribution-class"></a>Класс extreme_value_distribution
 
@@ -81,13 +81,13 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип с плавающей запятой, `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 *РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного типа с плавающей запятой или типа `double` (если тип не указан), распределенные в соответствии с распределением экстремальных значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем с плавающей запятой типа или типа **двойные** Если тип не указан, распределенные в соответствии с распределением экстремальных значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -204,7 +204,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 *b_value* `b` параметр распределения.
 
-*параметр* `param_type` структура, используемая для формирования распределения.
+*parm* `param_type` структура, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -236,7 +236,7 @@ struct param_type {
 
 *b_value* `b` параметр распределения.
 
-*правый* `param_type` объект для сравнения с.
+*правом* `param_type` объект для сравнения с данной структурой.
 
 ### <a name="remarks"></a>Примечания
 

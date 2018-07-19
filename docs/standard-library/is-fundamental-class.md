@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e210af223ffe6d3b8e0766adaaf539f0bb97f73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 63b2c11b7a5a8d48e3fe068807b641489c6aa323
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957364"
 ---
 # <a name="isfundamental-class"></a>Класс is_fundamental
 
@@ -37,11 +37,11 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` — фундаментальный тип, т. е., `void`, целочисленный тип, тип с плавающей запятой или форма `cv-qualified` одного из них. В противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* — фундаментальный тип, то есть **void**, целочисленный тип, с плавающей запятой, или `cv-qualified` форму одного из них, в противном случае он содержит значение false.
 
 ## <a name="example"></a>Пример
 

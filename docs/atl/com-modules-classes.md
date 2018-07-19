@@ -1,5 +1,5 @@
 ---
-title: Модули COM-классов (ATL) | Документы Microsoft
+title: Классы модулей COM (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abf5449135bd0220f82400aed5e1c0aba0b90591
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8485f9565c75796cdb7a10f303469c1393b9f55f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958222"
 ---
-# <a name="com-modules-classes"></a>COM-классов, модулей
+# <a name="com-modules-classes"></a>Классы модулей COM
 Следующие классы обеспечивают поддержку COM-модуля.  
   
 -   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) в каждом проекте ATL создается экземпляр этого класса.  
@@ -32,7 +32,7 @@ ms.locfileid: "32354985"
   
 -   [CAtlModule](../atl/reference/catlmodule-class.md) этот класс предоставляет методы, используемые несколькими модульные классы ATL.  
   
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) модуль ATL, реализуемого этим классом.  
+-   [CAtlModuleT](../atl/reference/catlmodulet-class.md) этот класс реализует модуль ATL.  
   
 -   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) этот класс представляет модуль для приложения.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "32354985"
   
 -   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) этот класс обеспечивает поддержку ATL компоненты управления окнами.  
   
--   [CComModule](../atl/reference/ccommodule-class.md) этот класс реализует модуль DLL или EXE. Является устаревшей в ATL 7.0.  
+-   [CComModule](../atl/reference/ccommodule-class.md) этот класс реализует модуль DLL или EXE. Устарело в ATL 7.0.  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) этот класс реализует модуль exe-файла с поддержкой нескольких подразделениях пула потоков. Является устаревшей в ATL 7.0.  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) этот класс реализует модуль exe-файла с поддержкой нескольких подразделениях, пул потоков. Устарело в ATL 7.0.  
   
 ## <a name="related-articles"></a>Связанные статьи  
  [Модульные классы ATL](../atl/atl-module-classes.md)  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../atl/atl-class-overview.md)   
- [Классы модуля](../atl/atl-module-classes.md)
+ [Модульные классы](../atl/atl-module-classes.md)
 

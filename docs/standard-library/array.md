@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2bf0a2dc049e2c3ac236af3591fddce82704b0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9dcf61895e884eeb16a6461e91675a3f1688d91d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849851"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955953"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-Определяет класс шаблонов контейнеров `array` и некоторые вспомогательные шаблоны.
+Определяет класс шаблона контейнеров **массива** и некоторые вспомогательные шаблоны.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ ms.locfileid: "33849851"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Хранит последовательность элементов фиксированной длины.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Заключает в оболочку тип элемента массива.|
@@ -43,7 +43,7 @@ ms.locfileid: "33849851"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор==](../standard-library/array-operators.md#op_eq_eq)|Сравнение массивов на равенство.|
 |[оператор!=](../standard-library/array-operators.md#op_neq)|Сравнение массивов на неравенство.|
@@ -54,7 +54,7 @@ ms.locfileid: "33849851"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Получает указанный элемент массива.|
 |[swap](../standard-library/array-functions.md#swap)|Меняет местами содержимое одного массива с содержимым другого массива.|
