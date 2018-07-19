@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach | Документы Microsoft
+title: _variant_t::Attach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944717"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Блок, относящийся только к системам Microsoft**  
   
- Присоединяет **VARIANT** объекта в `_variant_t` объекта.  
+ Присоединяет `VARIANT` в коллекцию `_variant_t` объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>Параметры  
  *varSrc*  
- Объект **VARIANT** объекта для присоединения к этому `_variant_t` объекта.  
+ Объект `VARIANT` объекта должны быть присоединены к это `_variant_t` объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Принимает право на владение **VARIANT** , инкапсулируя его. Эта функция-член освобождает все существующие инкапсулированные объекты **VARIANT**, затем копирует переданный **VARIANT**и задает его **VARTYPE** для `VT_EMPTY` для убедитесь, что его ресурсы можно освободить только `_variant_t` деструктор.  
+ Принимает владельца `VARIANT` , инкапсулируя его. Эта функция-член освобождает все существующие инкапсулированные объекты `VARIANT`, затем копирует переданный `VARIANT`и задает его `VARTYPE` значение VT_EMPTY для убедитесь, что его ресурсы можно освободить только `_variant_t` деструктор.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

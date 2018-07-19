@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c13dcadc87c23e288c7f8c8a7f5bc9752aae5db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b385d822c2f58d26938b3300207a790dc1193060
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953053"
 ---
 # <a name="resultof-class"></a>Класс result_of
 
@@ -48,13 +48,13 @@ template<class T>
 
 ### <a name="parameters"></a>Параметры
 
-`Fn` Вызываемый тип запроса.
+*Fn* вызываемому типу для запроса.
 
-`ArgTypes` Типы список аргументов для вызываемого типа для запроса.
+*ArgTypes* типы списка аргументов к вызываемому типу для запроса.
 
 ## <a name="remarks"></a>Примечания
 
-Используйте этот шаблон, чтобы определить во время компиляции тип результата `Fn`(`ArgTypes`), где `Fn` — вызываемый тип либо ссылка на функцию или вызываемый тип, вызванные с помощью списка аргументов типов в `ArgTypes`. Член `type` класса шаблонов называет тип результата `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, если неоцененное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае класс шаблона не имеет члена `type`. Тип `Fn` и все типы в пакете параметров `ArgTypes` должны быть полными типами, типами `void` или массивами с неизвестной границей.
+Этот шаблон служит для определения во время компиляции тип результата `Fn`(`ArgTypes`), где *Fn* вызываемый тип, ссылка на функцию или ссылку на вызываемый тип, вызванные с помощью списка аргументов типов в  *ArgTypes*. Член `type` класса шаблонов называет тип результата `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, если неоцененное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае класс шаблона не имеет члена `type`. Тип *Fn* и все типы в пакете параметров *ArgTypes* должны быть полными типами **void**, или массивами с неизвестной границей.
 
 ## <a name="requirements"></a>Требования
 

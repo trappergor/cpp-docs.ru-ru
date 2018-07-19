@@ -1,5 +1,5 @@
 ---
-title: Класс CSimpleArray | Документы Microsoft
+title: Класс CSimpleArray | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ef8a6a9b803cb7e1828537027bbf09b2ffd2067
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364275"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881637"
 ---
 # <a name="csimplearray-class"></a>Класс CSimpleArray
 Этот класс предоставляет методы для управления простого массива.  
@@ -44,46 +44,46 @@ class CSimpleArray
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных для хранения в массиве.  
   
- `TEqual`  
- Объект признаков, определяющий проверке равенства для элементов типа `T`.  
+ *TEqual*  
+ Объект признак, определяющий тест на равенство для элементов типа *T*.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CSimpleArray::CSimpleArray](#csimplearray)|Конструктор простого массива.|  
+|[CSimpleArray::CSimpleArray](#csimplearray)|Конструктор для простого массива.|  
 |[CSimpleArray:: ~ CSimpleArray](#dtor)|Деструктор для простого массива.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSimpleArray::Add](#add)|Добавляет новый элемент в массив.|  
-|[CSimpleArray::Find](#find)|Находит элемент в массиве.|  
-|[CSimpleArray::GetData](#getdata)|Возвращает указатель для данных, хранящихся в массиве.|  
-|[CSimpleArray::GetSize](#getsize)|Возвращает количество элементов, хранящихся в массиве.|  
+|[CSimpleArray::Find](#find)|Поиск элемента в массиве.|  
+|[CSimpleArray::GetData](#getdata)|Возвращает указатель на данные, хранящиеся в массиве.|  
+|[CSimpleArray::GetSize](#getsize)|Возвращает количество элементов, содержащихся в массиве.|  
 |[CSimpleArray::Remove](#remove)|Удаляет заданный элемент из массива.|  
 |[CSimpleArray::RemoveAll](#removeall)|Удаляет все элементы из массива.|  
 |[CSimpleArray::RemoveAt](#removeat)|Удаляет указанный элемент из массива.|  
-|[CSimpleArray::SetAtIndex](#setatindex)|Задает указанный элемент в массиве.|  
+|[CSimpleArray::SetAtIndex](#setatindex)|Присваивает заданному элементу в массиве.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSimpleArray::operator\[\]](#operator_at)|Получает элемент из массива.|  
 |[CSimpleArray::operator =](#operator_eq)|Оператор присвоения.|  
 
   
 ## <a name="remarks"></a>Примечания  
- `CSimpleArray` Предоставляет методы для создания и управления простого массива любого конкретного типа `T`.  
+ `CSimpleArray` Предоставляет методы для создания и управления простого массива, заданного типа `T`.  
   
- Параметр `TEqual` предоставляет средства определения функции проверки на равенство для двух элементов типа `T`. Путем создания класса аналогично [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), можно изменить поведение проверки равенства для любого заданного массива. Например при работе с массив указателей, может пригодиться для определения равенства, как в зависимости от значения, которые ссылаются на указатели. Реализация по умолчанию использует **operator=()**.  
+ Параметр `TEqual` предоставляет средства определения функцию проверки на равенство для двух элементов типа `T`. Путем создания класса, аналогичную [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), можно изменить поведение проверки на равенство для любого заданного массива. Например при работе с массив указателей, его можно использовать для определения равенства, как в зависимости от значения, которые ссылаются на указатели. Реализация по умолчанию использует **operator=()**.  
   
  Оба `CSimpleArray` и [CSimpleMap](../../atl/reference/csimplemap-class.md) предназначены для небольшого числа элементов. [CAtlArray](../../atl/reference/catlarray-class.md) и [CAtlMap](../../atl/reference/catlmap-class.md) следует использовать, если массив содержит большое количество элементов.  
   
@@ -111,7 +111,7 @@ BOOL Add(const T& t);
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
 ##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
- Конструктор объекта массива.  
+ Конструктор для объекта-массива.  
   
 ```
 CSimpleArray(const CSimpleArray<T, TEqual>& src);  
@@ -123,7 +123,7 @@ CSimpleArray();
  Существующий объект `CSimpleArray`.  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует элементы данных, создание новый пустой `CSimpleArray` объекта или копию существующей `CSimpleArray` объекта.  
+ Инициализирует данные-члены, создать новую пустую `CSimpleArray` объекта или копии существующего `CSimpleArray` объекта.  
   
 ##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  Деструктор  
@@ -136,7 +136,7 @@ CSimpleArray();
  Освобождает все выделенные ресурсы.  
   
 ##  <a name="find"></a>  CSimpleArray::Find  
- Находит элемент в массиве.  
+ Поиск элемента в массиве.  
   
 ```
 int Find(const T& t) const;
@@ -153,7 +153,7 @@ int Find(const T& t) const;
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
 ##  <a name="getdata"></a>  CSimpleArray::GetData  
- Возвращает указатель для данных, хранящихся в массиве.  
+ Возвращает указатель на данные, хранящиеся в массиве.  
   
 ```
 T* GetData() const;
@@ -163,14 +163,14 @@ T* GetData() const;
  Возвращает указатель на данные в массиве.  
   
 ##  <a name="getsize"></a>  CSimpleArray::GetSize  
- Возвращает количество элементов, хранящихся в массиве.  
+ Возвращает количество элементов, содержащихся в массиве.  
   
 ```
 int GetSize() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает количество элементов, хранящихся в массиве.  
+ Возвращает количество элементов, содержащихся в массиве.  
   
 ##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  Получает элемент из массива.  
@@ -180,11 +180,11 @@ T& operator[](int nindex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает элемент массива, на который указывает `nIndex`.  
+ Возвращает элемент массива ссылается *nIndex*.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
@@ -220,13 +220,13 @@ BOOL Remove(const T& t);
   
 ### <a name="parameters"></a>Параметры  
  *t*  
- Элемент, чтобы удалить из массива.  
+ Элемент, удаляемый из массива.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение TRUE, если элемент найден и удален, и FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- При удалении элемента оставшиеся элементы в массиве нумеруются для заполнения пустого пространства.  
+ Когда элемент удаляется, оставшиеся элементы в массиве нумеруются для заполнения пустого пространства.  
   
 ##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  Удаляет все элементы из массива.  
@@ -246,14 +246,14 @@ BOOL RemoveAtint nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс, указывающий на элемент для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE, если элемент был удален, и FALSE, если недопустимый индекс.  
+ Возвращает значение TRUE, если элемент был удален, и FALSE, если индекс был недопустимым.  
   
 ### <a name="remarks"></a>Примечания  
- При удалении элемента оставшиеся элементы в массиве нумеруются для заполнения пустого пространства.  
+ Когда элемент удаляется, оставшиеся элементы в массиве нумеруются для заполнения пустого пространства.  
   
 ##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  Значение указанного элемента в массиве.  
@@ -265,14 +265,14 @@ BOOL SetAtIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
+ *nIndex*  
  Индекс элемента, который требуется изменить.  
   
  *t*  
  Значение, присваиваемое указанному элементу.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает TRUE, если успешно, значение FALSE, если индекс не является допустимым.  
+ Возвращает значение TRUE при успешном выполнении и FALSE, если индекс не является допустимым.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

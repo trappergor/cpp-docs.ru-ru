@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab2de61df8c4e22b1955e9fd4798b5128a3e12be
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81f0509c6230020b586c0341e1de608981c05476
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845899"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965983"
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING
 
 Этот макрос, который был заменен макросом [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), определяет, включена ли функция отладки итераторов в отладочной сборке. По умолчанию отладка итераторов включена в отладочных сборках и отключена в окончательных сборках. Дополнительные сведения см. в статье [Debug Iterator Support](../standard-library/debug-iterator-support.md) (Поддержка итераторов при отладке).
 
 > [!IMPORTANT]
-> Непосредственное использование макроса `_HAS_ITERATOR_DEBUGGING` не рекомендуется. Вместо этого, для управления параметрами отладки итераторов используйте `_ITERATOR_DEBUG_LEVEL`. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Непосредственное использование макроса _HAS_ITERATOR_DEBUGGING является устаревшим. Вместо этого используйте _ITERATOR_DEBUG_LEVEL для управления параметрами отладки итераторов. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Примечания
 
-Чтобы включить отладку итераторов в отладочных сборках, установите для макроса `_ITERATOR_DEBUG_LEVEL` значение 2. Это эквивалентно ситуации, когда для `_HAS_ITERATOR_DEBUGGING` установлено значение 1, или макрос включен:
+Чтобы включить отладку итераторов в отладочных сборках, равным 2 _ITERATOR_DEBUG_LEVEL. Это эквивалентно _HAS_ITERATOR_DEBUGGING значение 1, или включить.
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 2
 ```
 
-для `_ITERATOR_DEBUG_LEVEL` нельзя установить значение 2 (и для `_HAS_ITERATOR_DEBUGGING` нельзя установить значение 1) в коммерческих сборках.
+_ITERATOR_DEBUG_LEVEL не может быть присвоено значение 2 (и _HAS_ITERATOR_DEBUGGING нельзя установить равным 1) в коммерческих сборках.
 
-Чтобы отключить итераторы при отладке в отладочных сборках, установите для `_ITERATOR_DEBUG_LEVEL` значение 0 или 1. Это эквивалентно ситуации, когда для `_HAS_ITERATOR_DEBUGGING` установлено значение 0, или макрос выключен:
+Чтобы отключить итераторы при отладке в отладочных сборках, установите _ITERATOR_DEBUG_LEVEL 0 или 1. Это эквивалентно _HAS_ITERATOR_DEBUGGING значение 0 или отключена.
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

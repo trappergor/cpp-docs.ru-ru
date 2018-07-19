@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149b43f0485d3717ad2f413d2519e435f0da0562
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c87975e0b27934d091e896867620011a51b78d52
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966528"
 ---
 # <a name="vectorltboolgtreference-class"></a>Класс vector&lt;bool&gt;::reference
 
@@ -40,10 +40,10 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Инвертирует логическое значение элемента вектора.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Обеспечивает неявное преобразование из `vector<bool>::reference` в `bool`.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Предоставляет неявное преобразование из `vector<bool>::reference` для **bool**.|
 |[оператор=](../standard-library/vector-bool-reference-operator-assign.md)|Присваивает биту логическое значение или значение, которое содержит элемент со ссылкой.|
 
 ## <a name="requirements"></a>Требования

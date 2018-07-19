@@ -1,5 +1,5 @@
 ---
-title: _com_error::GUID | Документы Microsoft
+title: _com_error::GUID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409695"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939030"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Блок, относящийся только к системам Microsoft**  
   
- Вызовы **IErrorInfo::GetGUID** функции.  
+ Вызывает функцию `IErrorInfo::GetGUID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,10 +37,10 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает результат **IErrorInfo::GetGUID** для **IErrorInfo** записанного в `_com_error` объекта. Если не **IErrorInfo** объекта записан, возвращается `GUID_NULL`.  
+ Возвращает результат `IErrorInfo::GetGUID` для `IErrorInfo` записанного в `_com_error` объекта. Если нет `IErrorInfo` объекта записывается, то возвращается значение GUID_NULL.  
   
 ## <a name="remarks"></a>Примечания  
- Любые сбои при вызове **IErrorInfo::GetGUID** метод игнорируется.  
+ Любые сбои при вызове `IErrorInfo::GetGUID` метод игнорируется.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

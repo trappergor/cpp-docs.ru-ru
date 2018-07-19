@@ -1,5 +1,5 @@
 ---
-title: Добавление диалогового окна ATL | Документы Microsoft
+title: Добавление диалогового окна ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0883b87ce991b08a96b1d10b4acedf8562022a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab00af6480e8893226be460a3d7c5641b8755bcf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953225"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Добавление диалогового окна ATL
-Чтобы добавить диалоговое окно ATL в проект, проект должен быть проекта ATL или проект MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
+Добавление диалогового окна ATL в проект, проект должен быть проекта ATL или в проект MFC, которая включает поддержку ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.  
   
- По умолчанию мастер диалоговых окон ATL реализует диалоговое окно, производный от [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Этот класс поддерживает размещение элементов управления ActiveX и Windows. Если нежелательно издержки, связанные с поддержкой элементов управления ActiveX, после создания кода мастером замените все вхождения `CAxDialogImpl` либо [CSimpleDialog](../../atl/reference/csimpledialog-class.md) или [CDialogImpl](../../atl/reference/cdialogimpl-class.md) качестве базового класса .  
+ По умолчанию мастер диалоговых окон ATL реализует диалоговое окно, производный от [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Этот класс поддерживает размещение элементов управления ActiveX и Windows. Если не требуется поддержка элементов управления ActiveX, затраты на после мастера создания кода, замените все вхождения `CAxDialogImpl` сочетанием [CSimpleDialog](../../atl/reference/csimpledialog-class.md) или [CDialogImpl](../../atl/reference/cdialogimpl-class.md) качестве базового класса .  
   
 > [!NOTE]
->  `CSimpleDialog` создает только модальные диалоговые окна, поддерживающие только общие элементы управления Windows. `CDialogImpl` Создает модальные и немодальные диалоговые окна.  
+>  `CSimpleDialog` создает только модальные диалоговые окна, которые поддерживают только общие элементы управления Windows. `CDialogImpl` Создает модальное или немодальное диалоговые окна.  
   
 ### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Чтобы добавить ресурс диалогового окна ATL в проект  
   
 1.  Создайте проект ATL с помощью [мастер проектов ATL](../../atl/reference/atl-project-wizard.md).  
   
-2.  Из [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта и нажмите кнопку **добавить** в контекстном меню. Нажмите кнопку **добавьте класс**.  
+2.  Из [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта и нажмите кнопку **добавить** в контекстном меню. Нажмите кнопку **добавьте класс**.  
   
-3.  В области шаблонов [добавить класс](../../ide/add-class-dialog-box.md) диалоговое окно, нажмите кнопку **диалог ATL**. Нажмите кнопку **откройте** для отображения [мастер диалоговых окон ATL](../../atl/reference/atl-dialog-wizard.md).  
+3.  В области шаблонов [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне щелкните **диалогового окна ATL**. Нажмите кнопку **откройте** для отображения [мастер диалоговых окон ATL](../../atl/reference/atl-dialog-wizard.md).  
   
- Дополнительные сведения см. в разделе [реализация диалогового](../../atl/implementing-a-dialog-box.md).  
+ Дополнительные сведения см. в разделе [реализация диалогового окна](../../atl/implementing-a-dialog-box.md).  
   
 ## <a name="see-also"></a>См. также  
  [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: Класс CStringElementTraitsI | Документы Microsoft
+title: Класс CStringElementTraitsI | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1544a2fec1c4567c301eb2c051f7455c8ca393c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d523c882754a69239ebbbfad1adcb0e91c0c4ca6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362109"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879892"
 ---
 # <a name="cstringelementtraitsi-class"></a>Класс CStringElementTraitsI
-Этот класс предоставляет статические функции, связанные с строк, хранящихся в коллекции объектов класса. Это похоже на [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), но выполняет сравнение без учета регистра.  
+Этот класс предоставляет статические функции, связанные с строк, которые хранятся в объектах класса коллекции. Это похоже на [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), но выполняет сравнение без учета регистра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,28 +40,28 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
+|[CStringElementTraitsI::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CStringElementTraitsI::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на равенство, без учета различия регистра.|  
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух строковых элементов, без учета различия регистра.|  
+|[CStringElementTraitsI::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства, без учета различий в регистре.|  
+|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух строковых элементов, без учета различий в регистре.|  
 |[CStringElementTraitsI::Hash](#hash)|Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет статические функции для сравнения строк, а также для создания хэш-значения. Эти функции полезны при использовании класс коллекции для хранения данных на основе строки. Используйте [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) когда строковые объекты будут с обрабатываться как ссылки.  
+ Этот класс предоставляет статические функции для сравнения строк, а также для создания хэш-значение. Эти функции полезны при использовании класса коллекции для хранения строковых данных. Используйте [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) при с восприниматься в качестве ссылки на объекты-строки.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -74,45 +74,45 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
  **Заголовок:** atlcoll.h  
   
 ##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements  
- Вызовите эту статическую функцию для сравнения двух строковых элементов на равенство, без учета различия регистра.  
+ Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства, без учета различий в регистре.  
   
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `str1`  
- Первая строка элемента.  
+ *str1*  
+ Первая строка, элемент.  
   
- `str2`  
+ *str2*  
  Вторая строка элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если элементы равны false в противном случае.  
+ Возвращает значение true, если элементы равны; значение false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Сравнения без учета регистра.  
+ Сравнения нечувствительны к регистру.  
   
 ##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered  
- Вызовите эту статическую функцию для сравнения двух строковых элементов, без учета различия регистра.  
+ Вызовите эту статическую функцию для сравнения двух строковых элементов, без учета различий в регистре.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `str1`  
- Первая строка элемента.  
+ *str1*  
+ Первая строка, элемент.  
   
- `str2`  
+ *str2*  
  Вторая строка элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Нуль, если строки идентичны, < 0 Если `str1` — меньше, чем `str2`, или значение > 0, если `str1` больше, чем `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
+ Нуль, если строки идентичны, < 0 Если *str1* — меньше, чем *str2*, или > 0 Если *str1* больше, чем *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
 
   
 ### <a name="remarks"></a>Примечания  
- Сравнения без учета регистра.  
+ Сравнения нечувствительны к регистру.  
   
 ##  <a name="hash"></a>  CStringElementTraitsI::Hash  
  Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.  
@@ -122,21 +122,21 @@ static ULONG Hash(INARGTYPE str) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `str`  
- Элемент строки.  
+ *str*  
+ Элемент строку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение хэша, вычисленных с помощью содержимое строки.  
+ Возвращает хэш-значение, вычисляемое с использованием содержимого строки.  
   
 ##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE  
- Тип данных, используемый для добавления элементов к такому объекту класса коллекции.  
+ Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE  
- Тип данных для использования для получения элементов из объекта класса коллекции.  
+ Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.  
   
 ```
 typedef T& OUTARGTYPE;

@@ -1,5 +1,5 @@
 ---
-title: Класс IObjectSafetyImpl | Документы Microsoft
+title: Класс IObjectSafetyImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f474c73a63c7eaeb7452e88812180a24d1321df
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364041"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881192"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Класс IObjectSafetyImpl
 Этот класс предоставляет реализацию по умолчанию `IObjectSafety` интерфейс, позволяющий клиенту получить и задать уровни безопасности объекта.  
@@ -44,37 +44,37 @@ class IObjectSafetyImpl
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Класс, производный от `IObjectSafetyImpl`.  
+ *T*  
+ Ваш класс, производный от `IObjectSafetyImpl`.  
   
  *dwSupportedSafety*  
- Задает параметры безопасности, поддерживаемые для элемента управления. Может принимать одно из следующих значений:  
+ Указывает параметры безопасности, поддерживаемых для элемента управления. Может принимать одно из следующих значений:  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER** интерфейс, определенный [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) параметр `riid` должны вноситься безопасные для использования.  
+- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_CALLER [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) параметр `riid` должно выполняться как безопасные для использования.  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA** интерфейс, определенный `SetInterfaceSafetyOptions` параметр `riid` должен выполняться безопасным для ненадежных данных во время инициализации.  
+- Интерфейс, определенный INTERFACESAFE_FOR_UNTRUSTED_DATA `SetInterfaceSafetyOptions` параметр `riid` следует выполнить безопасный для непроверенных данных во время инициализации.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Возвращает параметры безопасности, поддерживаемые объектом, а также параметры безопасности, установленным для объекта.|  
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|При этом объект становится безопасным для инициализации или сценариев.|  
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.|  
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Объект становится безопасным для инициализации или сценариев.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- Класс `IObjectSafetyImpl` предоставляет реализацию по умолчанию `IObjectSafety`. `IObjectSafety` Интерфейс позволяет клиенту получить и задать уровни безопасности объекта. Например, можно вызвать веб-браузер **IObjectSafety::SetInterfaceSafetyOptions** для создания элемента управления, инициализации или безопасные для использования.  
+ Класс `IObjectSafetyImpl` предоставляет реализацию по умолчанию `IObjectSafety`. `IObjectSafety` Интерфейс позволяет клиенту получить и задать уровни безопасности объекта. Например, можно вызвать веб-браузер `IObjectSafety::SetInterfaceSafetyOptions` для инициализации или безопасные для использования элемента управления.  
   
- Обратите внимание, что использование [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) макрос с **CATID_SafeForScripting** и **CATID_SafeForInitializing** является альтернативой категорий компонентов способ указания, что компонент безопасна.  
+ Обратите внимание, что использование [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) макрос с помощью категорий компонентов CATID_SafeForScripting и CATID_SafeForInitializing предоставляет альтернативный способ указания, что компонент безопасен.  
   
- **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [создается проект ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IObjectSafety`  
@@ -85,7 +85,7 @@ class IObjectSafetyImpl
  **Заголовок:** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
- Возвращает параметры безопасности, поддерживаемые объектом, а также параметры безопасности, установленным для объекта.  
+ Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.  
   
 ```
 HRESULT GetInterfaceSafetyOptions(  
@@ -95,12 +95,12 @@ HRESULT GetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Реализация возвращает соответствующие значения для любой интерфейс, поддерживаемый реализацию объекта **IUnknown::QueryInterface**.  
+ Реализация возвращает соответствующие значения для любого интерфейса, поддерживаемого реализацией объекта `IUnknown::QueryInterface`.  
   
 > [!IMPORTANT]
->  Любой объект, который поддерживает `IObjectSafety` отвечает за собственный уровень безопасности и что любого объекта, он делегирует. Программист должен учитывать для учетной записи вопросов, связанных с выполнением кода в контексте пользователя, межсайтовых сценариев и выполняют проверку подходящий зоны.  
+>  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.  
   
- В разделе [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) в Windows SDK.  
+ См. в разделе [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) в Windows SDK.  
   
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  Сохраняет текущий уровень безопасности объекта.  
@@ -110,7 +110,7 @@ DWORD m_dwCurrentSafety;
 ```  
   
 ##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
- При этом объект становится безопасным для инициализации или скриптов, задав [m_dwCurrentSafety](#m_dwcurrentsafety) член соответствующее значение.  
+ Объект становится безопасным для инициализации или скриптов, задав [m_dwCurrentSafety](#m_dwcurrentsafety) элемент с соответствующим значением.  
   
 ```
 HRESULT SetInterfaceSafetyOptions(  
@@ -120,12 +120,12 @@ HRESULT SetInterfaceSafetyOptions(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Реализация возвращает **E_NOINTERFACE** для любого интерфейса не поддерживает реализацию объекта **IUnknown::QueryInterface**.  
+ Реализация возвращает E_NOINTERFACE для любого интерфейса, не поддерживается реализацией объекта `IUnknown::QueryInterface`.  
   
 > [!IMPORTANT]
->  Любой объект, который поддерживает `IObjectSafety` отвечает за собственный уровень безопасности и что любого объекта, он делегирует. Программист должен учитывать для учетной записи вопросов, связанных с выполнением кода в контексте пользователя, межсайтовых сценариев и выполняют проверку подходящий зоны.  
+>  Любой объект, который поддерживает `IObjectSafety` отвечает за собственную безопасность и для любого объекта, он делегирует. Программист должен учитывать учетной записи вопросов, связанных с выполнения кода в контексте пользователя, межузловых сценариев и выполняют проверку подходящий зоны.  
   
- В разделе [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) в Windows SDK.  
+ См. в разделе [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   

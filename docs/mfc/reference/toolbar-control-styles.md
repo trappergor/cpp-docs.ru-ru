@@ -1,5 +1,5 @@
 ---
-title: Стили элемента управления панель инструментов | Документы Microsoft
+title: Стили элемента управления панели инструментов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373199"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885839"
 ---
 # <a name="toolbar-control-styles"></a>Стили элемента управления панели инструментов
-[Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) имеет набор стилей флагов, определяющих внешний вид и поведение кнопки. Сочетание этих флагов можно задать путем вызова [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). В этом разделе перечислены значения флагов стилей и их значений.  
+[Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) имеет набор флагов стилей, которые определяют внешний вид и поведение кнопки. Сочетание этих флагов можно задать путем вызова [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). В этом разделе представлены значения флагов стилей и их описания.  
   
 ## <a name="property-values"></a>Значения свойств  
- Следующие значения определить тип, представляющий элемент управления кнопки:  
+ Следующие значения определяют тип, представляющий элемент управления кнопки:  
   
  TBBS_BUTTON  
- Стандартная pushbutton (по умолчанию).  
+ Стандартный pushbutton (по умолчанию).  
   
  TBBS_CHECKBOX  
  Флажок.  
   
  TBBS_CHECKGROUP  
- Начало группы флажков.  
+ Начало у группы флажков.  
   
  TBBS_GROUP  
  Начало группе кнопок.  
@@ -56,15 +56,15 @@ ms.locfileid: "33373199"
  TBBS_PRESSED  
  Нажата кнопка.  
   
- Следующее значение изменяется макет кнопки на панели инструментов.  
+ Следующее значение изменяет макет кнопок в панели инструментов:  
   
  TBBS_BREAK  
  Помещает элемент без разделения столбцов в новой строке или в новом столбце.  
   
 ## <a name="remarks"></a>Примечания  
- Стиль текущего хранится в [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Не задано новое значение `m_nStyle` напрямую, так как некоторые производные классы дополнительной обработки при вызове `SetStyles`.  
+ Текущий стиль хранится в [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Не задано новое значение `m_nStyle` напрямую, поскольку несколько классов, производных дополнительной обработки при вызове `SetStyles`.  
   
- Диспетчер визуальных определяет внешний вид кнопок в каждом состоянии. В разделе [диспетчер визуализации](../../mfc/visualization-manager.md) для получения дополнительной информации.  
+ Наглядный диспетчер определяет внешний вид кнопок в каждом из состояний. См. в разделе [диспетчер визуализации](../../mfc/visualization-manager.md) Дополнительные сведения.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxtoolbarbutton.h  

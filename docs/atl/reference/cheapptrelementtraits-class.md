@@ -1,5 +1,5 @@
 ---
-title: Класс CHeapPtrElementTraits | Документы Microsoft
+title: Класс CHeapPtrElementTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b29f5893a0b1536a087b0c516e6340eca8449
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1aa3921f79e8c368fe4a42c3b56ede27f436e25
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360081"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884104"
 ---
 # <a name="cheapptrelementtraits-class"></a>Класс CHeapPtrElementTraits
-Этот класс предоставляет методы, статических функций и определения типов полезны при создании коллекции указателей кучи.  
+Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекций указателей кучи.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -41,23 +41,23 @@ class CHeapPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип объекта для сохранения в классе коллекции.  
+ *T*  
+ Тип объекта для сохранения в класс коллекции.  
   
- `Allocator`  
- Класс выделения памяти для использования. Значение по умолчанию — [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Распределитель*  
+ Класс выделения памяти для использования. По умолчанию используется [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет методы, статических функций и определения типов для State и используется для создания объектов класса коллекции, содержащий указатели кучи. Класс `CHeapPtrList` является производным от `CHeapPtrElementTraits`.  
+ Этот класс предоставляет методы, статические функции и определения типов для создания объектов класса коллекции, содержащие указатели кучи. Класс `CHeapPtrList` является производным от `CHeapPtrElementTraits`.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -76,14 +76,14 @@ class CHeapPtrElementTraits :
  **Заголовок:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE  
- Тип данных, используемый для добавления элементов к такому объекту класса коллекции.  
+ Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE  
- Тип данных для использования для получения элементов из объекта класса коллекции.  
+ Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.  
   
 ```
 typedef T *& OUTARGTYPE;

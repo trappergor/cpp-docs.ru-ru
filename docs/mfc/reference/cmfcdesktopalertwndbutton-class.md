@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCDesktopAlertWndButton | Документы Microsoft
+title: Класс CMFCDesktopAlertWndButton | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f9993f33386f93ef696213c1721bac5172a2436
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370338"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853599"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Класс CMFCDesktopAlertWndButton
-Позволяет кнопки для добавления рабочего стола диалогового окна предупреждения.  
+Позволяет кнопки для добавления в классических оповещений диалоговое окно.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Конструктор по умолчанию.|  
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Деструктор.|  
   
@@ -50,25 +50,25 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Определяет, является ли данная кнопка отображается в области заголовка диалогового окна предупреждения.|  
-|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Определяет, является ли кнопки закрывает диалоговое окно предупреждения.|  
+|Имя|Описание:|  
+|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Определяет, отображается ли кнопка в области заголовка диалогового окна предупреждения.|  
+|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Определяет, ли кнопки закрывает диалоговое окно предупреждения.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |||  
 |-|-|  
-|name|Описание|  
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Логическое значение, указывающее, является ли данная кнопка отображается в области заголовка диалогового окна предупреждения.|  
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Логическое значение, указывающее, является ли кнопки закрывает диалоговое окно предупреждения.|  
+|name|Описание:|  
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Логическое значение, указывающее, отображается ли кнопка в области заголовка диалогового окна предупреждения.|  
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Логическое значение, указывающее, закрывает ли кнопки диалогового окна предупреждения.|  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию конструктор устанавливает `m_bIsCaptionButton` и `m_bIsCloseButton` членов данных `FALSE`. Родительский `CMFCDesktopAlertDialog` набора объектов `m_bIsCaptionButton` для `TRUE` кнопки, находится в области заголовка диалогового окна предупреждения. `CMFCDesktopAlertDialog` Класс создает `CMFCDesktopAlertWndButton` объект, который служит в качестве кнопки, которая закрывает диалоговое окно предупреждения поле и задает `m_bIsCloseButton` для `TRUE`.  
+ По умолчанию, конструктор задает `m_bIsCaptionButton` и `m_bIsCloseButton` данные-члены в значение FALSE. Родительский `CMFCDesktopAlertDialog` набора объектов `m_bIsCaptionButton` значение true, если кнопка находится в области заголовка диалогового окна предупреждения. `CMFCDesktopAlertDialog` Класс создает `CMFCDesktopAlertWndButton` объект, который служит в качестве кнопки, которая закрывает диалоговое окно предупреждения, поле и задает `m_bIsCloseButton` значение true.  
   
- Добавить `CMFCDesktopAlertWndButton` объектов `CMFCDesktopAlertDialog` объекта при добавлении любую кнопку. Дополнительные сведения о `CMFCDesktopAlertDialog`, в разделе [CMFCDesktopAlertDialog класса](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
+ Добавить `CMFCDesktopAlertWndButton` объектов `CMFCDesktopAlertDialog` как вы добавляете любой кнопки. Дополнительные сведения о `CMFCDesktopAlertDialog`, см. в разделе [класс CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `SetImage` метод `CMFCDesktopAlertWndButton` класса. Этот фрагмент кода является частью [Desktop предупреждения демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как использовать `SetImage` метод в `CMFCDesktopAlertWndButton` класса. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
@@ -90,24 +90,24 @@ class CMFCDesktopAlertWndButton : public CMFCButton
  **Заголовок:** afxdesktopalertwnd.h  
   
 ##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
- Определяет, является ли данная кнопка отображается в области заголовка диалогового окна предупреждения.  
+ Определяет, отображается ли кнопка в области заголовка диалогового окна предупреждения.  
   
 ```  
 BOOL IsCaptionButton() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если данная кнопка отображается в области заголовка диалогового окна предупреждения; в противном случае — 0.  
+ Ненулевое значение, если кнопка отображается в области заголовка диалогового окна предупреждения; в противном случае — 0.  
   
 ##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
- Определяет, является ли кнопки закрывает диалоговое окно предупреждения.  
+ Определяет, ли кнопки закрывает диалоговое окно предупреждения.  
   
 ```  
 BOOL IsCloseButton() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если кнопке закрытия диалогового окна предупреждения; в противном случае — 0.  
+ Ненулевое значение, если кнопки закрывает окно диалоговое окно предупреждения; в противном случае — 0.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

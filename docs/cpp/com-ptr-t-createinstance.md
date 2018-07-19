@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::CreateInstance | Документы Microsoft
+title: _com_ptr_t::CreateInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ccd73980295bdda67a4c49d034b6d185d2d93c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8aca9422c4798cd798d048ce42443c4f38bd170
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944465"
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Блок, относящийся только к системам Microsoft**  
   
- Создает новый экземпляр объекта, заданного **CLSID** или **ProgID**.  
+ Создает новый экземпляр объекта, учитывая `CLSID` или `ProgID`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT CreateInstance(  
+HRESULT CreateInstance(  
    const CLSID& rclsid,  
    IUnknown* pOuter=NULL,  
    DWORD dwClsContext = CLSCTX_ALL   
@@ -49,29 +50,29 @@ HRESULT CreateInstance(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `rclsid`  
- **CLSID** объекта.  
+ *rclsid*  
+ `CLSID` Объекта.  
   
- `clsidString`  
- Строка Юникода, которая содержит либо **CLSID** (начиная с «**{**») или **ProgID**.  
+ *clsidString*  
+ Строка Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
   
- `clsidStringA`  
- Многобайтовая строка с кодовой страницей ANSI, которая содержит либо **CLSID** (начиная с «**{**») или **ProgID**.  
+ *clsidStringA*  
+ Многобайтовая строка, с помощью кодовой страницы ANSI, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Контекст для выполняющегося исполняемого кода.  
   
- `pOuter`  
+ *pOuter*  
  Внешняя Неизвестная строка для [статистической обработки](../atl/aggregation.md).  
   
 ## <a name="remarks"></a>Примечания  
- Эти функции-члены вызывают `CoCreateInstance` для создания нового COM-объект, а затем запрашивают тип интерфейса данного интеллектуального указателя. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. **Выпуск** вызывается для уменьшения числа ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение `HRESULT`, которое указывает успешность или сбой выполнения.  
+ Эти функции-члены вызывают `CoCreateInstance` для создания нового COM-объект, а затем запрашивают тип интерфейса данного интеллектуального указателя. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. `Release` вызывается для уменьшения счетчика ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение HRESULT, указывающее успех или неудачу.  
   
--   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного выполняющегося **CLSID**.        
+-   **CreateInstance (***rclsid* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая `CLSID`.        
   
--   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного строка Юникода, которая содержит либо выполняющегося **CLSID**(начиная с «**{**») или **ProgID**.        
+-   **CreateInstance (***clsidString* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая Строка Юникода, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.        
   
--   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного строку многобайтовых символов, которая содержит либо выполняющегося **CLSID**  (начиная с «**{**») или **ProgID**.       Вызовы [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.  
+-   **CreateInstance (***clsidStringA* **,***dwClsContext***)** создает новый выполняемый экземпляр объекта, учитывая строки многобайтовых символов, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.       Вызовы [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11d9d45a8bf9d2eff7f4fa8d006299045a21c116
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6238aeada530a8fc33fc98b79cba969353796ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843123"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953092"
 ---
 # <a name="allocatorsuballoc-class"></a>Класс allocator_suballoc
 
-Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_suballoc](../standard-library/cache-suballoc-class.md).
+Описывает объект, который управляет выделением и освобождением памяти для объектов типа *тип* использующих кэш типа [cache_suballoc](../standard-library/cache-suballoc-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,13 +37,13 @@ class allocator_suballoc;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Type`|Тип элементов, распределяемых распределителем.|
+|*Тип*|Тип элементов, распределяемых распределителем.|
 
 ## <a name="remarks"></a>Примечания
 
-Макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) передает этот класс как параметр `name` в следующей инструкции: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) макрос передает этот класс как *имя* параметр в следующей инструкции: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
 ## <a name="requirements"></a>Требования
 

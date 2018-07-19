@@ -1,5 +1,5 @@
 ---
-title: Класс CComSimpleThreadAllocator | Документы Microsoft
+title: Класс CComSimpleThreadAllocator | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360924"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884669"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Класс CComSimpleThreadAllocator
-Этот класс управляет выбора потока для класса `CComAutoThreadModule`.  
+Этот класс управляет выделения потока для класса `CComAutoThreadModule`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,12 +41,12 @@ class CComSimpleThreadAllocator
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComSimpleThreadAllocator::GetThread](#getthread)|Выбирает поток.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComSimpleThreadAllocator` управляет выбором потока для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` просто выполняет циклический переход по каждому потоку и возвращает следующим в последовательности.  
+ `CComSimpleThreadAllocator` Управляет Выбор потоков для [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` просто выполняет циклический переход по каждому потоку и возвращает следующим в последовательности.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -59,19 +59,19 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pApt`  
- В реализации по умолчанию ATL не используется.  
+ *pApt*  
+ Не используется в реализации библиотеки ATL по умолчанию.  
   
- `nThreads`  
+ *nThreads*  
  Максимальное число потоков в модуле exe-файла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Целое число от нуля и ( `nThreads` - 1). Определяет один из потоков в модуле exe-файла.  
+ Целое число от нуля и (*nThreads* - 1). Определяет один из потоков в модуле exe-файла.  
   
 ### <a name="remarks"></a>Примечания  
- Можно переопределить `GetThread` для предоставления другой метод выделения или использовать `pApt` параметра.  
+ Можно переопределить `GetThread` предоставить другой метод выделения или сделать использование *pApt* параметра.  
   
- `GetThread` вызывается методом [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
+ `GetThread` вызывается [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComApartment](../../atl/reference/ccomapartment-class.md)   

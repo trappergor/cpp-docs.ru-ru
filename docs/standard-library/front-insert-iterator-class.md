@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847160"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964389"
 ---
 # <a name="frontinsertiterator-class"></a>Класс front_insert_iterator
 
@@ -40,7 +40,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-`Container` Тип контейнера, в которой элементы должны быть вставлены переднюю `front_insert_iterator`.
+*Контейнер* тип контейнера на передний план, из которых элементы должны быть вставлены с `front_insert_iterator`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -48,20 +48,20 @@ class front_insert_iterator;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[front_insert_iterator](#front_insert_iterator)|Создает итератор, может вставлять элементы с передней стороны указанного объекта контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[container_type](#container_type)|Тип, представляющий контейнер, в переднюю часть которого будет осуществляться вставка.|
 |[reference](#reference)|Тип, который предоставляет ссылку на элемент последовательности под управлением связанного контейнера.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор*](#op_star)|Оператор удаления ссылки, используемый для применения выражения итератора вывода * `i` = `x` для вставки в переднюю часть.|
 |[оператор++](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
@@ -83,7 +83,7 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом для параметра-шаблона **Container**.
+Этот тип является синонимом для параметра-шаблона *Container*.
 
 ### <a name="example"></a>Пример
 
@@ -125,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-`_Cont` Объект контейнера, в который `front_insert_iterator` — для вставки элементов.
+*_Cont* объект контейнера, в котором `front_insert_iterator` вставляет элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -191,7 +191,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Примечания
 
-Используется для применения выражения итератора вывода **\*Iter** = **value**. Если **Iter** является итератором, который адресует элемент в последовательности, то  **\*Iter** = **value** заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
+Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который адресует элемент в последовательности, затем  **\*Iter** = **значение** заменяет этот элемент со значением и не изменяет общее число элементы в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -301,7 +301,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Параметры
 
-`val` Значение, присваиваемое контейнера.
+*Val* значение для привязки к контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

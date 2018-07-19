@@ -1,5 +1,5 @@
 ---
-title: Глобальные функции регистрации сервера | Документы Microsoft
+title: Глобальные функции регистрации серверов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364709"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883284"
 ---
-# <a name="server-registration-global-functions"></a>Глобальные функции для регистрации сервера
+# <a name="server-registration-global-functions"></a>Глобальные функции регистрации серверов
 Эти функции обеспечивают поддержку для регистрации и отмены регистрации серверных объектов в карте объектов.  
   
 > [!IMPORTANT]
@@ -53,20 +53,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pComModule`  
+ *pComModule*  
  Указатель на COM-модуля.  
   
- `bRegTypeLib`  
+ *bRegTypeLib*  
  Значение TRUE, если для регистрации библиотеки типов.  
   
- `pCLSID`  
- Указывает идентификатор CLSID регистрируемого объекта. Если значение равно NULL, будет зарегистрирована всех объектов в карте объектов.  
+ *pCLSID*  
+ Указывает идентификатор CLSID объекта для регистрации. Если значение равно NULL, будет зарегистрировано всех объектов в карте объектов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlComModuleRegisterServer` проходит по карте объектов ATL автоматически формируемые и регистрирует каждый объект в карте. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` зарегистрирован; в противном случае все объекты зарегистрированы.  
+ `AtlComModuleRegisterServer` проверяет карте автоматически созданных объектов ATL и регистрирует каждый объект в сопоставлении. Если *pCLSID* не NULL, то только объект, на который ссылается *pCLSID* зарегистрирован; в противном случае все объекты зарегистрированы.  
   
  Эта функция вызывается [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).  
   
@@ -81,20 +81,20 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pComModule`  
+ *pComModule*  
  Указатель на COM-модуля.  
   
- `bUnRegTypeLib`  
+ *bUnRegTypeLib*  
  Значение TRUE, если для регистрации библиотеки типов.  
   
- `pCLSID`  
+ *pCLSID*  
  Указывает идентификатор CLSID объекта для отмены регистрации. Если значение равно NULL всех объектов в карте объектов будет отменена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- `AtlComModuleUnregisterServer` проходит по схеме объекта ATL и отменяет регистрацию каждого объекта в схеме. Если `pCLSID` не является NULL, то только объект, на который ссылается `pCLSID` отменена; в противном случае все объекты, не зарегистрированы.  
+ `AtlComModuleUnregisterServer` проверяет карте объектов ATL и отменяет регистрацию каждого объекта в схеме. Если *pCLSID* не NULL, то только объект, на который ссылается *pCLSID* регистрация которой удалена; в противном случае все объекты, не зарегистрированы.  
   
  Эта функция вызывается [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).  
   
@@ -109,17 +109,17 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pComModule`  
+ *pComModule*  
  Указатель на COM-модуля.  
   
- `dwClsContext`  
- Указывает контекст, в котором будет выполняться объекта класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. В разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) для получения дополнительных сведений.  
+ *dwClsContext*  
+ Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. См. в разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) для получения дополнительных сведений.  
   
- `dwFlags`  
- Определяет типы подключения к такому объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. В разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) для получения дополнительных сведений.  
+ *dwFlags*  
+ Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. См. в разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) для получения дополнительных сведений.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).  
@@ -132,11 +132,11 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pComModule`  
+ *pComModule*  
  Указатель на COM-модуля.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).  
@@ -153,20 +153,20 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pComModule`  
+ *pComModule*  
  Указатель на COM-модуля.  
   
- `rclsid`  
- CLSID объекта должен быть создан.  
+ *rclsid*  
+ CLSID создаваемого объекта.  
   
- `riid`  
+ *riid*  
  Идентификатор IID запрошенного интерфейса.  
   
- `ppv`  
- Указатель на указатель на интерфейс, определяемый `riid`. Если объект не поддерживает этот интерфейс `ppv` имеет значение NULL.  
+ *ppv*  
+ Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Эта вспомогательная функция используемой [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (устаревший в ATL 7.0) и [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).  

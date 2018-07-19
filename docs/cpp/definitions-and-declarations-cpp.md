@@ -1,5 +1,5 @@
 ---
-title: Определения и объявления (C++) | Документы Microsoft
+title: Определения и объявления (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411771"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940915"
 ---
 # <a name="definitions-and-declarations-c"></a>Определения и объявления (C++)
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
- Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые были объявлены как `dllimport` или `dllexport`. Всех объявлениях, включенных в интерфейсе DLL необходимо указать либо `dllimport` или `dllexport` атрибута. Однако в определении должен указываться только атрибут `dllexport`. Например, следующее определение функции вызовет ошибку компилятора.
+ Интерфейс DLL относится ко всем элементам (функциям и данным), которые заведомо экспортироваться некоторой программой в системе; то есть все элементы, которые обозначаются как **dllimport** или **dllexport**. Всех объявлениях, включенных в интерфейс DLL необходимо указать либо **dllimport** или **dllexport** атрибута. Тем не менее, в определении должен указываться только **dllexport** атрибута. Например, следующее определение функции вызовет ошибку компилятора.
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- Использование `dllexport` подразумевает определение, пока `dllimport` — объявление. Для обеспечения объявления ключевое слово `extern` следует использовать с аргументом `dllexport`; в противном случае подразумевается определение. Таким образом, приведенные ниже примеры правильны.
+ Использование **dllexport** подразумевает определение, хотя **dllimport** — объявление. Необходимо использовать **extern** ключевого слова with **dllexport** для обеспечения объявления; в противном случае подразумевается определение. Таким образом, приведенные ниже примеры правильны.
 
 ```
 #define DllImport   __declspec( dllimport )

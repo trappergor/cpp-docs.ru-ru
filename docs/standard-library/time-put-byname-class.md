@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39db2ead78a123c3274405e3560bca1c67cf1f5c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 10c01fcc7c75fb3ea9abf5803f5f17d3bd378333
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854146"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953905"
 ---
 # <a name="timeputbyname-class"></a>Класс time_put_byname
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-`_Locname` Имя языкового стандарта.
+*_Locname*  
+ Имя языкового стандарта.
 
-`_Refs` Начальное значение счетчика ссылок.
+*_Refs*  
+ Начальное значение счетчика ссылок.
 
 ## <a name="remarks"></a>Примечания
 
-Его поведение определяется [именованным](../standard-library/locale-class.md#name) языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с типом [time_get](../standard-library/time-put-class.md#time_put)\<CharType, InputIterator>( `_Refs`).
+Его поведение определяется [с именем](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [time_put](../standard-library/time-put-class.md#time_put)\<CharType, Inputiterator > (`_Refs`).
 
 ## <a name="requirements"></a>Требования
 

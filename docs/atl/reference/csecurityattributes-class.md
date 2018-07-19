@@ -1,5 +1,5 @@
 ---
-title: Класс CSecurityAttributes | Документы Microsoft
+title: Класс CSecurityAttributes | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357510"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879351"
 ---
 # <a name="csecurityattributes-class"></a>Класс CSecurityAttributes
 Этот класс является тонкой оболочкой для структуры атрибуты безопасности.  
@@ -42,20 +42,20 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CSecurityAttributes::Set](#set)|Этот метод вызывается для установки атрибутов `CSecurityAttributes` объекта.|  
+|[CSecurityAttributes::Set](#set)|Вызовите этот метод для задания атрибутов `CSecurityAttributes` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- **SECURITY_ATTRIBUTES** структура содержит [дескриптор безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379561) используется для создания объекта и указывает, является ли дескриптор, полученные путем указания эта структура наследуемые.  
+ `SECURITY_ATTRIBUTES` Структура содержит [дескриптор безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379561) используется для создания объекта и указывает, наследуется ли дескриптор, полученный путем указания этой структуры.  
   
- Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в Windows SDK.  
+ Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](http://msdn.microsoft.com/library/windows/desktop/aa374860) в пакете Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `SECURITY_ATTRIBUTES`  
@@ -74,24 +74,24 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Ссылка на дескриптор безопасности.  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.  
   
 ##  <a name="set"></a>  CSecurityAttributes::Set  
- Этот метод вызывается для установки атрибутов `CSecurityAttributes` объекта.  
+ Вызовите этот метод для задания атрибутов `CSecurityAttributes` объекта.  
   
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  Ссылка на дескриптор безопасности.  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.  
   
 ### <a name="remarks"></a>Примечания  

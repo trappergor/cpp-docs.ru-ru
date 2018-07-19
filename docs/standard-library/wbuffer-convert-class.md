@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df93b54accbfdc3ff8f486c41a47af72032c3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 364ae6c544f58f09208cefeec9d3984de35120e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965220"
 ---
 # <a name="wbufferconvert-class"></a>Класс wbuffer_convert
 
@@ -37,11 +37,11 @@ class wbuffer_convert
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Codecvt`|Аспект [языкового стандарта](../standard-library/locale-class.md), представляющий объект преобразования.|
-|`Elem`|Тип двухбайтового элемента.|
-|`Traits`|Признаки, связанные с *Elem*.|
+|*codecvt*|Аспект [языкового стандарта](../standard-library/locale-class.md), представляющий объект преобразования.|
+|*Elem*|Тип двухбайтового элемента.|
+|*Признаки*|Признаки, связанные с *Elem*.|
 
 ## <a name="remarks"></a>Примечания
 

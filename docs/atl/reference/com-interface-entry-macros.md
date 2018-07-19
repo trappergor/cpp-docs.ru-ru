@@ -1,5 +1,5 @@
 ---
-title: Макросы записи COM-интерфейса | Документы Microsoft
+title: Макрос точки входа интерфейса COM | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -28,33 +28,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3ba41a05813c4112c1e5dd51bfe447d2c8debf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366592"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883379"
 ---
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
- Эти макросы ввести интерфейсы объекта в его сопоставления COM, чтобы они могли быть доступны для `QueryInterface`. Порядок записей в карте COM является интерфейсы заказа будет проверяться соответствие **IID** во время `QueryInterface`.  
+ Эти макросы ввести интерфейсы объекта в его сопоставления COM, таким образом, чтобы они обращаются `QueryInterface`. Порядок записей в карте COM является интерфейсов порядок будет проверяться сопоставления IID во время `QueryInterface`.  
 
  |||
  |-|-|
  |[COM_INTERFACE_ENTRY](#com_interface_entry)|Вводит интерфейсы COM схему интерфейсов.|  
 |[COM_INTERFACE_ENTRY2](#com_interface_entry2)|Используйте этот макрос для однозначного определения двух ветвей наследования.|  
-|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|Используйте этот макрос для входа в интерфейс в сопоставление COM и укажите его IID.|  
-|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|То же, что [COM_INTERFACE_ENTRY2](#com_interface_entry2), за исключением того, можно указать другой IID.|  
-|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Если интерфейс определяется `iid` запрашиваются, `COM_INTERFACE_ENTRY_AGGREGATE` пересылает `punk`.|  
-|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов в `punk`.|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме `punk` — **NULL**, он автоматически создает статистическое выражение, описываемое `clsid`.|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и если `punk` — **NULL**, автоматически создавая статистическое выражение, описываемое `clsid`.|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе для указанного интерфейса.|  
+|[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|Используйте этот макрос введите интерфейса в сопоставление COM и указать его идентификатор IID.|  
+|[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|Совпадение с кодом [COM_INTERFACE_ENTRY2](#com_interface_entry2), за исключением того, можно указать разные IID.|  
+|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Если интерфейс определяется *iid* запрашиваются, `COM_INTERFACE_ENTRY_AGGREGATE` пересылает `punk`.|  
+|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*.|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме *punk* имеет значение NULL, он автоматически создает статистическое выражение, описываемое *clsid*.|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*и если *punk* имеет значение NULL, автоматически создавая статистическое выражение, описываемое *clsid*.|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Сохраняет данные на уровне интерфейса для каждого экземпляра.|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Представляет перемещаемые интерфейсы.|  
-|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Выполняет сопоставление COM базового класса, когда будет достигнут этой записи в схеме COM.|  
-|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Основной механизм для прикрепления ATL `QueryInterface` логику.|  
-|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|То же, что [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос для любой IID приводит к вызову для `func`.|  
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Возвращает **E_NOINTERFACE** и завершает обработку карты COM, когда запрашиваются указанного интерфейса.|  
+|[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Выполняет сопоставление COM базового класса, когда будет достигнут эту запись в карту COM.|  
+|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Общий механизм для прикрепления ATL `QueryInterface` логики.|  
+|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос любой IID приводит к вызову для *func*.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Возвращается E_NOINTERFACE и завершения обработки COM карты при запросе указанный интерфейс.|  
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** atlcom.h
@@ -69,10 +69,10 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Параметры
 
-x [in] Имя интерфейса класса объекта является производным от напрямую.
+x [in] Имя интерфейса класс объекта является производным от напрямую.
 
 ### <a name="remarks"></a>Примечания
-Как правило это наиболее часто используемых тип операции.
+Как правило это тип записи, наиболее часто используемых.
 
 ### <a name="example"></a>Пример
 ```cpp
@@ -96,67 +96,67 @@ COM_INTERFACE_ENTRY2(x, x2)
  *x*  
  [in] Имя интерфейса, которому требуется предоставить доступ из объекта.  
   
- `x2`  
+ *x2*  
  [in] Имя ветви наследования, из которого *x* предоставляется.  
   
 ### <a name="remarks"></a>Примечания  
- Например, если вы наследуете класс объекта из двух сдвоенные интерфейсы, доступ к которым предоставляется `IDispatch` с помощью `COM_INTERFACE_ENTRY2` с момента `IDispatch` можно получить с помощью одного из интерфейсов.  
+ Например, если вы наследуете класс объекта из двух сдвоенные интерфейсы, можно предоставлять `IDispatch` с помощью COM_INTERFACE_ENTRY2 с момента `IDispatch` можно получить в любой из двух интерфейсов.  
   
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
 ##  <a name="com_interface_entry_iid"></a>  COM_INTERFACE_ENTRY_IID  
- Используйте этот макрос для входа в интерфейс в сопоставление COM и укажите его IID.  
+ Используйте этот макрос введите интерфейса в сопоставление COM и указать его идентификатор IID.  
   
 ```
 COM_INTERFACE_ENTRY_IID(iid, x)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  [in] Идентификатор GUID интерфейса, предоставляемые.  
   
  *x*  
- [in] Имя класса, чьи vtable будет представляться как интерфейс, определенный `iid`.  
+ [in] Имя класса, на которых vtable будет представляться как интерфейс, определенный *iid*.  
   
  
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
 ##  <a name="com_interface_entry2_iid"></a>  COM_INTERFACE_ENTRY2_IID  
- То же, что [COM_INTERFACE_ENTRY2](#com_interface_entry2), за исключением того, можно указать другой IID.  
+ Совпадение с кодом [COM_INTERFACE_ENTRY2](#com_interface_entry2), за исключением того, можно указать разные IID.  
   
 ```
 COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 ```   
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  [in] Идентификатор GUID, который вы указываете для интерфейса.  
   
  *x*  
- [in] Имя интерфейса, который напрямую наследует класс объекта.  
+ [in] Имя интерфейса, класс объекта является производным от напрямую.  
   
- `x2`  
- [in] Имя второй интерфейс, который напрямую наследует класс объекта.  
+ *x2*  
+ [in] Имя второй интерфейс, класс объекта является производным от напрямую.  
   
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE  
- Если интерфейс определяется `iid` запрашиваются, `COM_INTERFACE_ENTRY_AGGREGATE` пересылает `punk`.  
+ Если интерфейс определяется *iid* запрашивается для пересылает COM_INTERFACE_ENTRY_AGGREGATE *punk*.  
   
 ```
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
- [in] Идентификатор GUID интерфейса, который обрабатывает запросы.  
+ *IID*  
+ [in] Идентификатор GUID интерфейса, запрашивается.  
   
- `punk`  
- [in] Имя **IUnknown** указателя.  
+ *pUnk*  
+ [in] Имя `IUnknown` указатель.  
   
 ### <a name="remarks"></a>Примечания  
- `punk` Предполагается указывает внутреннее неизвестно статистическое выражение или значение параметра **NULL**, в этом случае операция учитывается. Как правило, вы бы **CoCreate** статистического выражения в `FinalConstruct`.  
+ *Punk* параметр предполагается, что для указания внутреннего неизвестно статистическое выражение или значение NULL, в противном случае операция учитывается. Как правило, вы бы `CoCreate` агрегатную функцию в `FinalConstruct`.  
   
   
   
@@ -164,18 +164,18 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
  [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
 ##  <a name="com_interface_entry_aggregate_blind"></a>  COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
- То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов в `punk`.  
+ Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*.  
   
 ```
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `punk`  
- [in] Имя **IUnknown** указателя.  
+ *pUnk*  
+ [in] Имя `IUnknown` указатель.  
   
 ### <a name="remarks"></a>Примечания  
- Если интерфейс запрос завершится ошибкой, обработка карты COM продолжается.  
+ Если интерфейс запрос завершится с ошибкой, обработка COM карты продолжается.  
   
   
   
@@ -184,21 +184,21 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
   
 
 ##  <a name="com_interface_entry_autoaggregate"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE  
- То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме `punk` — **NULL**, он автоматически создает статистическое выражение, описываемое `clsid`.  
+ Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме *punk* имеет значение NULL, он автоматически создает статистическое выражение, описываемое *clsid*.  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ```   
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
- [in] Идентификатор GUID интерфейса, который обрабатывает запросы.  
+ *IID*  
+ [in] Идентификатор GUID интерфейса, запрашивается.  
   
- `punk`  
- [in] Имя **IUnknown** указателя. Необходимо быть членом класса, содержащего сопоставления COM.  
+ *pUnk*  
+ [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты.  
   
- `clsid`  
- [in] Идентификатор статистическое выражение, которое создается, если `punk` — **NULL**.  
+ *CLSID*  
+ [in] Идентификатор агрегата, который будет создан в том случае, если *punk* имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -207,21 +207,21 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
 ##  <a name="com_interface_entry_autoaggregate_blind"></a>  COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
- То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и если `punk` — **NULL**, автоматически создавая статистическое выражение, описываемое `clsid`.  
+ Совпадение с кодом [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*и если *punk* имеет значение NULL, автоматически создавая статистическое выражение, описываемое *clsid*.  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `punk`  
- [in] Имя **IUnknown** указателя. Необходимо быть членом класса, содержащего сопоставления COM.  
+ *pUnk*  
+ [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты.  
   
- `clsid`  
- [in] Идентификатор статистическое выражение, которое создается, если `punk` — **NULL**.  
+ *CLSID*  
+ [in] Идентификатор агрегата, который будет создан в том случае, если *punk* имеет значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- Если интерфейс запрос завершится ошибкой, обработка карты COM продолжается.  
+ Если интерфейс запрос завершится с ошибкой, обработка COM карты продолжается.  
   
   
   
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе для указанного интерфейса.  
+ Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -240,7 +240,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
  [in] Текст, используемый для создания идентификатора интерфейса.  
   
 ### <a name="remarks"></a>Примечания  
- Будет создан путем добавления IID интерфейса *x* для `IID_`. Например если *x* — `IPersistStorage`, будет IID `IID_IPersistStorage`.  
+ Интерфейс IID будет сформировать, добавив *x* для `IID_`. Например если *x* — `IPersistStorage`, будет иметь идентификатор IID `IID_IPersistStorage`.  
   
   
   
@@ -252,17 +252,17 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ```   
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
- [in] Идентификатор GUID интерфейса перемещаемые.  
+ *IID*  
+ [in] Идентификатор GUID интерфейса перемещаемой.  
   
  *x*  
  [in] Имя класса, реализующего интерфейс.  
   
- `punk`  
- [in] Имя **IUnknown** указателя. Необходимо быть членом класса, содержащего сопоставления COM. Должен быть инициализирован для **NULL** в конструктор объекта класса.  
+ *pUnk*  
+ [in] Имя `IUnknown` указатель. Необходимо быть членом класса, содержащего COM карты. Должен быть инициализирован NULL в конструктор класса объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Если интерфейс не используется, это сокращает общий размер экземпляра объекта.  
+ Если интерфейс не используется, это уменьшает общий размер экземпляра объекта.  
   
   
   
@@ -277,14 +277,14 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
- [in] Идентификатор GUID интерфейса перемещаемые.  
+ *IID*  
+ [in] Идентификатор GUID интерфейса перемещаемой.  
   
  *x*  
  [in] Имя класса, реализующего интерфейс.  
   
 ### <a name="remarks"></a>Примечания  
- Перемещаемые интерфейс реализован как отдельный объект, экземпляр которого создается каждый раз, интерфейс, он представляет запрашиваются. Как правило вы построение интерфейс как перемещаемое интерфейс используется редко, так как это сохраняет указатель vtable в каждом из экземпляров основного объекта. Перемещаемое удаляется, если число ссылок становится равным нулю. Класс, реализующий перемещаемое должен быть производным от `CComTearOffObjectBase` и иметь собственный COM карты.  
+ Перемещаемые интерфейс реализуется как отдельный объект, экземпляр которого создается каждый раз, интерфейс, он представляет запрашиваются. Как правило вы создадите интерфейса как перемещаемые Если этот интерфейс используется редко, так как это сэкономить vtable указателя в каждом экземпляре основного объекта. Перемещаемое удаляется, когда его счетчик становится равным нулю. Класс, реализующий перемещаемой должен быть производным от `CComTearOffObjectBase` и иметь свой собственный COM карты.  
   
   
   
@@ -292,7 +292,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 ##  <a name="com_interface_entry_chain"></a>  COM_INTERFACE_ENTRY_CHAIN  
- Выполняет сопоставление COM базового класса, когда будет достигнут этой записи в схеме COM.  
+ Выполняет сопоставление COM базового класса, когда будет достигнут эту запись в карту COM.  
   
 ```
 COM_INTERFACE_ENTRY_CHAIN(classname)
@@ -300,65 +300,65 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
   
 ### <a name="parameters"></a>Параметры  
  *classname*  
- [in] Базовый класс для текущего объекта.  
+ [in] Базовый класс текущего объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Например в следующем коде:  
   
  [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
- Обратите внимание, что первая запись в схеме COM должен быть интерфейсом на объект, содержащий сопоставления COM. Таким образом, невозможно запустить на записях сопоставления COM. с `COM_INTERFACE_ENTRY_CHAIN`, чего сопоставление COM другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** отображается в сопоставление COM объекта. Поиск картой COM другого объекта в первую очередь следует добавить запись интерфейс для **IUnknown** сопоставление COM, затем цепочки сопоставления COM и другой объект. Пример:  
+ Обратите внимание на то, что первая запись в карту COM, должен быть интерфейсом на объекте, содержащем COM карты. Таким образом, не может начинаться на записях сопоставления COM. с COM_INTERFACE_ENTRY_CHAIN, что приводит к COM карты другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** отображается в ваш объект COM карты. Если вы хотите сначала поиск COM карты другого объекта, добавьте запись интерфейс для `IUnknown` в сопоставление COM, затем объединить в цепочку другой объект COM карты. Пример:  
   
  [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   
   
   
 ##  <a name="com_interface_entry_func"></a>  COM_INTERFACE_ENTRY_FUNC  
- Основной механизм для прикрепления ATL `QueryInterface` логику.  
+ Общий механизм для прикрепления ATL `QueryInterface` логики.  
   
 ```
 COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 ```   
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  [in] Идентификатор GUID интерфейса, предоставляемые.  
   
- `dw`  
- [in] Параметр, передаваемый через `func`.  
+ *dw*  
+ [in] Параметр, передаваемый через *func*.  
   
- `func`  
- [in] Указатель функции, которая вернет `iid`.  
+ *Func*  
+ [in] Указатель на функцию, которая вернет *iid*.  
   
 ### <a name="remarks"></a>Примечания  
- Если *iid* совпадает с IID этого интерфейса, запрашивать, а затем функции, указанной `func` вызывается. Объявление функции должно быть:  
+ Если *iid* соответствующий идентификатор IID интерфейса, запрашивается, а затем функцию, указанную аргументом *func* вызывается. Объявление функции должно быть:  
   
  `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`  
   
- При вызове функции `pv` указывает класс объекта. `riid` Параметр ссылается на интерфейс, запрашиваемый для, `ppv` — указатель на расположения хранения указателя на интерфейс, в функцию и `dw` имеет параметр, указанный в операции. Функция следует установить \* `ppv` для **NULL** и возвращают **E_NOINTERFACE** или **S_FALSE** желанию не для возврата интерфейса. С **E_NOINTERFACE**, завершает операцию обработки COM карты. С **S_FALSE**, COM карты обработка продолжается, несмотря на то, что указатель на интерфейс был возвращен. Если функция возвращает указатель интерфейса, он должен возвращать `S_OK`.  
+ При вызове функции `pv` указывает на объект класса. *Riid* параметр ссылается на интерфейс, запрашиваемый для, `ppv` — указатель на расположение, где функция следует хранить указатель на интерфейс, и *dw* является параметром вы указанный в записи. Необходимо задать функцию \* `ppv` значение NULL и возврата E_NOINTERFACE или S_FALSE, если он выбирает не для возврата интерфейса. С E_NOINTERFACE завершает обработку COM карты. С помощью S_FALSE, COM карты обработка продолжается, несмотря на то, что было возвращено не указатель на интерфейс. Если функция возвращает указатель интерфейса, она должна возвращать S_OK.  
   
   
   
 ##  <a name="com_interface_entry_func_blind"></a>  COM_INTERFACE_ENTRY_FUNC_BLIND  
- То же, что [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос для любой IID приводит к вызову для `func`.  
+ Совпадение с кодом [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос любой IID приводит к вызову для *func*.  
   
 ```
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dw`  
- [in] Параметр, передаваемый через `func`.  
+ *dw*  
+ [in] Параметр, передаваемый через *func*.  
   
- `func`  
- [in] Функция, которая вызывается при обработке данной записи в схеме COM.  
+ *Func*  
+ [in] Функция, которая вызывается при обработке данной записи в COM карты.  
   
 ### <a name="remarks"></a>Примечания  
- Любые сбои приведет к обработке продолжать на COM-карты. Если функция возвращает указатель интерфейса, он должен возвращать `S_OK`.  
+ Любой сбой приведет обработка будет продолжена на карте COM. Если функция возвращает указатель интерфейса, она должна возвращать S_OK.  
   
   
 ##  <a name="com_interface_entry_nointerface"></a>  COM_INTERFACE_ENTRY_NOINTERFACE  
- Возвращает **E_NOINTERFACE** и завершает обработку карты COM, когда запрашиваются указанного интерфейса.  
+ Возвращается E_NOINTERFACE и завершения обработки COM карты при запросе указанный интерфейс.  
   
 ```
 COM_INTERFACE_ENTRY_NOINTERFACE(x)
@@ -369,8 +369,8 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
  [in] Текст, используемый для создания идентификатора интерфейса.  
   
 ### <a name="remarks"></a>Примечания  
- Этот макрос можно использовать для предотвращения использования в конкретном случае интерфейс. Например, этот макрос можно вставить в ваш COM сопоставить прямо перед `COM_INTERFACE_ENTRY_AGGREGATE_BLIND` для предотвращения пересылаются на неизвестный внутреннее статистическое выражение запроса для интерфейса.  
+ Этот макрос можно использовать для предотвращения использования в конкретном случае интерфейс. Например этот макрос можно вставить в сопоставление COM непосредственно перед COM_INTERFACE_ENTRY_AGGREGATE_BLIND для предотвращения пересылки в неизвестный тип агрегата внутренний запрос для интерфейса.  
   
- Будет создан путем добавления IID интерфейса *x* для `IID_`. Например если *x* — `IPersistStorage`, будет IID `IID_IPersistStorage`.  
+ Интерфейс IID будет сформировать, добавив *x* для `IID_`. Например если *x* — `IPersistStorage`, будет иметь идентификатор IID `IID_IPersistStorage`.  
   
   

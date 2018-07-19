@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112da495673517f86a00437672ccc52429fbd251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842746"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966567"
 ---
 # <a name="isnothrowconstructible-class"></a>Класс is_nothrow_constructible
 
@@ -37,13 +37,13 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
-`Args` Типы аргументов для сопоставления в конструктор `T`.
+*Args* типы аргументов для сопоставления в конструктор *T*.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `T` — конструируемый при использовании типов аргументов в `Args`, и компилятор знает, что конструктор не выдает исключений, в противном случае — значение false. Тип `T` — конструируемый, если определение переменной `T t(std::declval<Args>()...);` имеет правильный формат. Как `T`, так и все типы в `Args`, должны быть полными типами, `void` либо массивами с неизвестной границей.
+Экземпляр предиката типа содержит значение true, если тип *T* — конструируемый при использовании типов аргументов в *Args*и конструктор известен, компилятор не будет выдавать; в противном случае он содержит значение false. Тип *T* конструируемым Если определение переменной `T t(std::declval<Args>()...);` имеет правильный формат. Оба *T* и все типы в *Args* должны быть полными типами **void**, или массивами с неизвестной границей.
 
 ## <a name="requirements"></a>Требования
 

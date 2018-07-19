@@ -1,5 +1,5 @@
 ---
-title: Изменение статистической модели и фабрики класса по умолчанию | Документы Microsoft
+title: Изменение модели агрегирования и фабрики класса по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,29 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355243"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850882"
 ---
-# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Изменение статистической модели и фабрики класса по умолчанию
-ATL использует [CComCoClass](../atl/reference/ccomcoclass-class.md) для определения модели по умолчанию класс фабрики и статистической обработки для объекта. `CComCoClass` Задает следующие два макроса:  
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>Изменение модели агрегирования и фабрики класса по умолчанию
+Использует ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) для определения модели по умолчанию класс фабрики и статистическую обработку для объекта. `CComCoClass` Задает следующие два макроса:  
   
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) объявляет фабрики класса, чтобы быть [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory) объявляет фабрики класса быть [CComClassFactory](../atl/reference/ccomclassfactory-class.md).  
   
--   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) объявляет, что объект может быть статистически вычислена.  
+-   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable) объявляет, что объект может быть агрегировано.  
   
- Одно из этих значений по умолчанию можно переопределить, указав другой макроса в определении класса. Например, чтобы использовать [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) вместо `CComClassFactory`, укажите [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) макрос:  
+ Одно из этих умолчаний можно переопределить, указав другой макроса в определении класса. Например, чтобы использовать [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) вместо `CComClassFactory`, укажите [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2) макрос:  
   
  [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
   
- Два других макроса, которые определяют фабрики класса являются [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) и [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
+ Два других макроса, которые определяют фабрику класса являются [DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) и [DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton).  
   
- Также использует ATL `typedef` механизм для реализации поведения по умолчанию. Например `DECLARE_AGGREGATABLE` использует макрос `typedef` , чтобы определить тип с именем **_CreatorClass**, который затем есть ссылка во всей библиотеки ATL. Обратите внимание, что в производном классе, `typedef` тем же именем, как базовый класс `typedef` приводит к ATL с помощью вашего определения и переопределение поведения по умолчанию.  
+ ATL также использует **typedef** механизм для реализации поведения по умолчанию. Например, используется макрос DECLARE_AGGREGATABLE **typedef** определить тип с именем `_CreatorClass`, который затем ссылка на протяжении всего ATL. Обратите внимание, что в производном классе, **typedef** тем же именем, как базовый класс **typedef** приводит ATL с помощью определения и переопределение поведения по умолчанию.  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы работы COM-объекты ATL](../atl/fundamentals-of-atl-com-objects.md)   
+ [Основы COM-объектов ATL](../atl/fundamentals-of-atl-com-objects.md)   
  [Макросы агрегирования и фабрик классов](../atl/reference/aggregation-and-class-factory-macros.md)
 

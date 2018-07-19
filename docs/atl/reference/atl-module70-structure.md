@@ -1,5 +1,5 @@
 ---
-title: Структура _ATL_MODULE70 | Документы Microsoft
+title: Структура _ATL_MODULE70 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9666d73eec770ff8231e5730e01520b0bee68012
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255470"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886223"
 ---
 # <a name="atlmodule70-structure"></a>Структура _ATL_MODULE70
-Содержит данные, используемые каждый модуль ATL.  
+Содержит данные, используемые каждого модуля ATL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,14 +47,14 @@ struct _ATL_MODULE70 {
  `m_nLockCnt`  
  Чтобы определить, как долго должны оставаться активным модуль счетчика ссылок.  
   
- **m_pTermFuncs**  
+ `m_pTermFuncs`  
  Отслеживает функции, которые были зарегистрированы для вызова при закрытии ATL.  
   
- **m_csStaticDataInitAndTypeInfo**  
- Используется для управления доступом к внутренним данным в многопоточных ситуациях.  
+ `m_csStaticDataInitAndTypeInfo`  
+ Используется для управления доступом к внутренним данным в многопоточной ситуации.  
   
 ## <a name="remarks"></a>Примечания  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef из `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef типа `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  

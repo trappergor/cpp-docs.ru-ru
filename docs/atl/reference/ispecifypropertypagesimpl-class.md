@@ -1,5 +1,5 @@
 ---
-title: Класс ISpecifyPropertyPagesImpl | Документы Microsoft
+title: Класс ISpecifyPropertyPagesImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362236"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879576"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Класс ISpecifyPropertyPagesImpl
-Этот класс реализует **IUnknown** и предоставляет реализацию по умолчанию [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейса.  
+Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейс.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -42,24 +42,24 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Класс, производный от `ISpecifyPropertyPagesImpl`.  
+ *T*  
+ Ваш класс, производный от `ISpecifyPropertyPagesImpl`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Заполняет значения подсчета массива UUID. Каждый идентификатор UUID соответствует CLSID для одного из страницы свойств, которые могут быть отображены в окне свойств объекта.|  
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Заполняет значения подсчета массив UUID. Каждый UUID соответствует CLSID для одного из страницы свойств, которые могут отображаться в окне свойств объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейс позволяет клиенту получить список идентификаторов CLSID для страницы свойств, поддерживаемые объектом. Класс `ISpecifyPropertyPagesImpl` предоставляет стандартную реализацию этого интерфейса и реализует **IUnknown** , отправляя сведения в дамп устройства в отладочных построений.  
+ [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейс позволяет клиенту получить список идентификаторов CLSID для страниц свойств, поддерживаемых объектом. Класс `ISpecifyPropertyPagesImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
 > [!NOTE]
->  Не предоставляйте **ISpecifyPropertyPages** интерфейс, если объект не поддерживает страницы свойств.  
+>  Не предоставляйте `ISpecifyPropertyPages` интерфейс, если объект поддерживает страницы свойств.  
   
- **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [создается проект ATL](../../atl/reference/creating-an-atl-project.md)  
+ **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ISpecifyPropertyPages`  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **Заголовок:** atlcom.h  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Заполняет массив [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) структуру с CLSID для страниц свойств, которые могут быть отображены в окне свойств объекта.  
+ Заполняет массив [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) структуру с CLSID для страниц свойств, которые могут отображаться в окне свойств объекта.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для получения каждого CLSID.  
   
- В разделе [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) в Windows SDK.  
+ См. в разделе [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   

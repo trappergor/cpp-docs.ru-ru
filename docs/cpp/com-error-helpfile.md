@@ -1,5 +1,5 @@
 ---
-title: _com_error::HelpFile | Документы Microsoft
+title: _com_error::HelpFile | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1f02238d228b5de4302812bacf4f9ad5cf1300c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acd909224d6a682a210e15eebf04d2c8429a8a3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409791"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939562"
 ---
 # <a name="comerrorhelpfile"></a>_com_error::HelpFile
 **Блок, относящийся только к системам Microsoft**  
   
- Вызовы **IErrorInfo::GetHelpFile** функции.  
+ Вызывает функцию `IErrorInfo::GetHelpFile`.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,10 +37,10 @@ _bstr_t HelpFile() const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает результат **IErrorInfo::GetHelpFile** для **IErrorInfo** записанного в `_com_error` объекта. Результирующая строка BSTR инкапсулируется в объект `_bstr_t`. Если не **IErrorInfo** будет записан, возвращается пустая коллекция типа `_bstr_t`.  
+ Возвращает результат `IErrorInfo::GetHelpFile` для `IErrorInfo` записанного в `_com_error` объекта. Результирующая строка BSTR инкапсулируется в объект `_bstr_t`. Если не `IErrorInfo` будет записан, возвращается пустой `_bstr_t`.  
   
 ## <a name="remarks"></a>Примечания  
- Любые сбои при вызове **IErrorInfo::GetHelpFile** метод игнорируется.  
+ Любые сбои при вызове `IErrorInfo::GetHelpFile` метод игнорируется.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

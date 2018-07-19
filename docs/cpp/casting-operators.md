@@ -1,5 +1,5 @@
 ---
-title: Операторы приведения | Документы Microsoft
+title: Операторы приведения | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4204e55811cd33fa48e2b3a07d3058100729ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d64a25475ad7ac40f63d29798768f8f57866b3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411651"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941629"
 ---
 # <a name="casting-operators"></a>Операторы приведения
 Некоторые операторы приведения типа используются только в языке C++. Эти операторы позволяют устранить неоднозначность и возможности допустить ошибку, которые характеры для приведения типов в стиле языка C. Эти операторы перечислены ниже.  
@@ -29,9 +29,9 @@ ms.locfileid: "32411651"
   
 -   [static_cast](../cpp/static-cast-operator.md) используется для преобразования неполиморфных типов.  
   
--   [const_cast](../cpp/const-cast-operator.md) используется для удаления `const`, `volatile`, и `__unaligned` атрибуты.  
+-   [const_cast](../cpp/const-cast-operator.md) используется для удаления **const**, **volatile**, и **__unaligned** атрибуты.  
   
--   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) используется для простой повторной интерпретации разрядов.  
+-   [reinterpret_cast](../cpp/reinterpret-cast-operator.md) для простой повторной интерпретации разрядов.  
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md) используется для создания проверяемых MSIL.  
   

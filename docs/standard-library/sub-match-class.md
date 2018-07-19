@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860259"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964786"
 ---
 # <a name="submatch-class"></a>Класс sub_match
 
@@ -65,7 +65,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-`BidIt` Тип итератора для подстрок соответствия.
+*BidIt*  
+ Тип итератора для подстрок соответствия.
 
 ## <a name="remarks"></a>Примечания
 
@@ -97,11 +98,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Параметры
 
-`right` Подстрока для сравнения.
+*right*  
+ Подстрока для сравнения.
 
-`str` Строка для сравнения.
+*str*  
+ Строка для сравнения.
 
-`ptr` Последовательность для сравнения с завершающим нулем.
+*ptr*  
+ Последовательность, оканчивающаяся нулевым символом, для сравнения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -373,7 +377,7 @@ bool matched;
 
 ### <a name="remarks"></a>Примечания
 
-Член содержит значение `true` только в том случае, если группа захвата, связанная с `*this` , входила в соответствие регулярного выражения.
+Член содержит **true** только в том случае, если группа захвата, связанная с `*this` входил в состав совпадения регулярного выражения.
 
 ### <a name="example"></a>Пример
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954035"
 ---
 # <a name="isintegral-class"></a>Класс is_integral
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `Ty` является одним из целочисленных типов или формой `cv-qualified` одного из целочисленных типов, , в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является одним из целочисленных типов или `cv-qualified` форму одного из целочисленных типов, в противном случае он содержит значение false.
 
-Целочисленный тип — один из типов `bool`, `char`, `unsigned char`, `signed char`, `wchar_t`, `short`, `unsigned short`, `int`, `unsigned int`, `long` и `unsigned long`. Кроме того, целочисленный тип может быть одним из `long long`, `unsigned long long`, `__int64` и `unsigned __int64` при использовании компиляторов, поддерживающих такие типы.
+Целочисленный тип данных является одним из **bool**, **char**, **unsigned char**, **автоматический char**, **wchar_t**, **короткие**, **unsigned short**, **int**, **unsigned int**, **long**и **unsigned long**. Кроме того, с помощью компиляторов, которые обеспечивают их, целочисленный тип данных может принимать одно из **long long**, **long long без знака**, **__int64**, и **unsigned __int64**.
 
 ## <a name="example"></a>Пример
 

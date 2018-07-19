@@ -1,5 +1,5 @@
 ---
-title: Класс CSimpleMapEqualHelper | Документы Microsoft
+title: Класс CSimpleMapEqualHelper | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361844"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879699"
 ---
 # <a name="csimplemapequalhelper-class"></a>Класс CSimpleMapEqualHelper
-Этот класс представляет вспомогательный класс для [CSimpleMap](../../atl/reference/csimplemap-class.md) класса.  
+Этот класс представляет вспомогательный объект для [CSimpleMap](../../atl/reference/csimplemap-class.md) класса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,23 +37,23 @@ class CSimpleMapEqualHelper
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `TKey`  
+ *TKey*  
  Ключевым элементом.  
   
- `TVal`  
+ *TVal*  
  Значение элемента.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Статический) Проверяет два ключа на равенство.|  
 |[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Статический) Сравнивает два значения на равенство.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс признаки является дополнением к `CSimpleMap` класса. Он предоставляет методы для сравнения двух `CSimpleMap` объекта элементы (в частности, ключ и значение компоненты) для проверки на равенство. По умолчанию ключи и значения сравниваются с помощью `operator==()`, но если сопоставление содержит сложные типы данных которых не хватает собственные оператор равенства, этот класс может быть переопределен для предоставления дополнительного требуемую функциональность.  
+ Этот класс признаков является дополнением к `CSimpleMap` класса. Он предоставляет методы для сравнения двух `CSimpleMap` объекта элементов (в частности, ключ и значение компоненты) на предмет равенства. По умолчанию ключи и значения сравниваются с помощью **operator==()**, но если сопоставление содержит сложные типы данных, которые не хватает собственные оператор равенства, этот класс можно переопределить, указав дополнительные необходимые функциональные возможности.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsimpcoll.h  
@@ -66,14 +66,14 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `k1`  
+ *K1*  
  Первый ключ.  
   
- `k2`  
+ *K2*  
  Второй ключ.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если ключи равны false в противном случае.  
+ Возвращает значение true, если ключи равны; значение false в противном случае.  
   
 ##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
  Сравнивает два значения на равенство.  
@@ -83,10 +83,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *V1*  
+ *версии 1*  
  Первое значение в вычитании.  
   
- *V2*  
+ *v2*  
  Второе значение в вычитании.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

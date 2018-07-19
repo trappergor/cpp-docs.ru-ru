@@ -1,5 +1,5 @@
 ---
-title: Класс CElementTraitsBase | Документы Microsoft
+title: Класс CElementTraitsBase | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b70ae03c15fcdee4510e25815e516c3e17eb1a2a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359598"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879426"
 ---
 # <a name="celementtraitsbase-class"></a>Класс CElementTraitsBase
 Этот класс предоставляет копирования по умолчанию и переместить методы для класса коллекции.  
@@ -39,27 +39,27 @@ class CElementTraitsBase
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Этот метод используется для копирования элементов в объекте класса коллекции.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Этот метод используется для перемещения элементов, хранящихся в объекте класса коллекции.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Этот метод используется для копирования элементов, хранящихся в объекте класса коллекции.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Этот метод используется для перемещения элементов, сохраненную в объекте класса коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот базовый класс определяет методы для копирования и перемещение элементов в классе коллекции. Он сейчас используется классами [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Этот базовый класс определяет методы для копирования и перемещения элементов в классе коллекции. Он используется классами [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -67,7 +67,7 @@ class CElementTraitsBase
  **Заголовок:** atlcoll.h  
   
 ##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
- Этот метод используется для копирования элементов в объекте класса коллекции.  
+ Этот метод используется для копирования элементов, хранящихся в объекте класса коллекции.  
   
 ```
 static void CopyElements(
@@ -77,34 +77,34 @@ static void CopyElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDest`  
- Указатель на первый элемент, который получит копируемых данных.  
+ *pDest*  
+ Указатель на первый элемент, который будет отправляться скопированные данные.  
   
- `pSrc`  
- Указатель на первый элемент для копирования.  
+ *pSrc*  
+ Указатель на первый элемент, для копирования.  
   
- `nElements`  
+ *nElements*  
  Число элементов для копирования.  
   
 ### <a name="remarks"></a>Примечания  
  Исходный и целевой элементы не должны перекрываться.  
   
 ##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
- Тип данных, используемый для добавления элементов в коллекцию.  
+ Тип данных, который нужно использовать для добавления элементов в коллекцию.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
- Тип данных для использования для получения элементов из коллекции.  
+ Тип данных, который нужно использовать для извлечения элементов из коллекции.  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
- Этот метод используется для перемещения элементов, хранящихся в объекте класса коллекции.  
+ Этот метод используется для перемещения элементов, сохраненную в объекте класса коллекции.  
   
 ```
 static void RelocateElements(
@@ -114,17 +114,17 @@ static void RelocateElements(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDest`  
- Указатель на первый элемент, который получит перемещенный данные.  
+ *pDest*  
+ Указатель на первый элемент, который будет получать перемещенные данные.  
   
- `pSrc`  
- Указатель на первый элемент в другое место.  
+ *pSrc*  
+ Указатель на первый элемент, чтобы переместить.  
   
- `nElements`  
- Количество элементов в другое место.  
+ *nElements*  
+ Число элементов для перемещения.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), что вполне достаточно для большинства типов данных. Перемещение объекты содержат указатели на свои собственные члены, этот метод необходимо переопределить.  
+ Этот метод вызывает метод [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), что вполне достаточно для большинства типов данных. Если перемещаемый объекты содержат указатели на свои собственные члены, этот метод необходимо переопределить.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

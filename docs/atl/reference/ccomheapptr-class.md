@@ -1,5 +1,5 @@
 ---
-title: Класс CComHeapPtr | Документы Microsoft
+title: Класс CComHeapPtr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3cc64804dbd628669b31de070b0f30aa92a77a3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359062"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884786"
 ---
 # <a name="ccomheapptr-class"></a>Класс CComHeapPtr
-Класс интеллектуальный указатель для управления указатели кучи.  
+Класс смарт-указатель для управления кучей указателей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,19 +36,19 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип объекта для сохранения в куче.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|Конструктор.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComHeapPtr` является производным от `CHeapPtr`, но использует [CComAllocator](../../atl/reference/ccomallocator-class.md) для выделения памяти с помощью COM-подпрограммы. В разделе [CHeapPtr](../../atl/reference/cheapptr-class.md) и [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) для доступных методов.  
+ `CComHeapPtr` является производным от `CHeapPtr`, но использует [CComAllocator](../../atl/reference/ccomallocator-class.md) для выделения памяти с помощью COM-подпрограммы. См. в разделе [CHeapPtr](../../atl/reference/cheapptr-class.md) и [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) для доступных методов.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -69,11 +69,11 @@ explicit CComHeapPtr(T* pData) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pData`  
+ *pData*  
  Существующий объект `CComHeapPtr`.  
   
 ### <a name="remarks"></a>Примечания  
- Указатель кучи при необходимости могут создаваться с помощью существующей `CComHeapPtr` объекта. В этом случае новый `CComHeapPtr` объект несет ответственность за управление новый указатель и ресурсы.  
+ Указатель кучи при необходимости могут создаваться с помощью существующего `CComHeapPtr` объекта. Если Да, новый `CComHeapPtr` объект несет ответственность за управление новый указатель и ресурсы.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   

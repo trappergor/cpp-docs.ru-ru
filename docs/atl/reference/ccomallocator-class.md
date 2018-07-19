@@ -1,5 +1,5 @@
 ---
-title: Класс CComAllocator | Документы Microsoft
+title: Класс CComAllocator | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358281"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881935"
 ---
 # <a name="ccomallocator-class"></a>Класс CComAllocator
 Этот класс предоставляет методы для управления памяти с помощью COM памяти подпрограммы.  
@@ -40,14 +40,14 @@ class CComAllocator
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|Вызовите статический метод для выделения памяти.|  
-|[CComAllocator::Free](#free)|Вызовите статический метод для освобождения выделенной памяти.|  
+|[CComAllocator::Free](#free)|Вызовите статический метод для освобождения памяти.|  
 |[CComAllocator::Reallocate](#reallocate)|Вызовите статический метод для перераспределения памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс используется [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) для предоставления памяти COM процедур выделения. Класс аналог [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), предоставляет те же методы, с помощью подпрограммы CRT.  
+ Этот класс используется [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) для предоставления памяти COM процедур выделения. Класс какой [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), предоставляет те же методы, с помощью подпрограммы CRT.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -60,14 +60,14 @@ static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBytes`  
+ *nBytes*  
  Количество байтов, которые необходимо выделить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель void на выделенное пространство или значение NULL, если памяти недостаточно.  
   
 ### <a name="remarks"></a>Примечания  
- Выделяет память. В разделе [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) для получения дополнительных сведений.  
+ Выделяет память. См. в разделе [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) для получения дополнительных сведений.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
  Вызовите эту статическую функцию, чтобы освободить выделенную память.  
@@ -77,11 +77,11 @@ static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
+ *p*  
  Указатель на выделенную область памяти.  
   
 ### <a name="remarks"></a>Примечания  
- Освобождает выделенную память. В разделе [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) для получения дополнительных сведений.  
+ Освобождает выделенную память. См. в разделе [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) для получения дополнительных сведений.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  Вызовите эту статическую функцию для повторного выделения памяти.  
@@ -91,17 +91,17 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
+ *p*  
  Указатель на выделенную область памяти.  
   
- `nBytes`  
+ *nBytes*  
  Количество байтов, которые необходимо выделить повторно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель void на выделенное пространство или значение NULL, если недостаточно памяти  
   
 ### <a name="remarks"></a>Примечания  
- Изменяет объем выделенной памяти. В разделе [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) для получения дополнительных сведений.  
+ Изменяет объем выделенной памяти. См. в разделе [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) для получения дополнительных сведений.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   

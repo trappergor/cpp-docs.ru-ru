@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlModuleT | Документы Microsoft
+title: Класс CAtlModuleT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dd5bd4c7bc88d0a0acc8abc18b0d7b3462b7f52
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361692"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880850"
 ---
 # <a name="catlmodulet-class"></a>Класс CAtlModuleT
-Этот класс реализует ATL модуля.  
+Этот класс реализует модуль ATL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,30 +42,30 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Ваш класс, производный от `CAtlModuleT`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlModuleT::CAtlModuleT](#catlmodulet)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlModuleT::InitLibId](#initlibid)|Инициализирует элемент данных, содержащий идентификатор GUID для текущего модуля.|  
 |[CAtlModuleT::RegisterAppId](#registerappid)|Добавляет в реестр exe-файла.|  
-|[CAtlModuleT::RegisterServer](#registerserver)|Добавляет службу в реестре.|  
+|[CAtlModuleT::RegisterServer](#registerserver)|Добавляет службу в реестр.|  
 |[CAtlModuleT::UnregisterAppId](#unregisterappid)|Удаляет exe-файла из реестра.|  
 |[CAtlModuleT::UnregisterServer](#unregisterserver)|Удаляет службу из реестра.|  
 |[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Обновляет сведения о exe-файла в реестре.|  
   
 ## <a name="remarks"></a>Примечания  
- `CAtlModuleT`, производный от [CAtlModule](../../atl/reference/catlmodule-class.md), реализующий исполняемый файл (EXE) или модуль ATL службы (EXE). Исполняемый модуль — это локальный out of process сервер, в то время как модуль службы является приложением Windows, работающей в фоновом режиме при запуске Windows.  
+ `CAtlModuleT`, производный от [CAtlModule](../../atl/reference/catlmodule-class.md), реализует исполняемый файл (EXE) или модуля ATL службы (EXE). Исполняемый модуль — это локальный вне процесса сервер, а модуль службы — это приложение Windows, которое выполняется в фоновом режиме, при запуске Windows.  
   
  `CAtlModuleT` предоставляет поддержку для инициализации, регистрация и Отмена регистрации модуля.  
   
@@ -98,7 +98,7 @@ static void InitLibId() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Вызывается конструктор [CAtlModuleT::CAtlModuleT](#catlmodulet).  
+ Вызывается конструктором [CAtlModuleT::CAtlModuleT](#catlmodulet).  
   
 ##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
  Добавляет в реестр exe-файла.  
@@ -108,10 +108,10 @@ HRESULT RegisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
- Добавляет службу в реестре.  
+ Добавляет службу в реестр.  
   
 ```
 HRESULT RegisterServer(
@@ -120,14 +120,14 @@ HRESULT RegisterServer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bRegTypeLib`  
+ *bRegTypeLib*  
  Значение TRUE, если для регистрации библиотеки типов. Значение по умолчанию — FALSE.  
   
- `pCLSID`  
- Указывает идентификатор CLSID регистрируемого объекта. Если значение NULL (значение по умолчанию), все объекты в схеме объекта будет зарегистрирована.  
+ *pCLSID*  
+ Указывает идентификатор CLSID объекта для регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет зарегистрировано.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
  Удаляет exe-файла из реестра.  
@@ -137,7 +137,7 @@ HRESULT UnregisterAppId() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
  Удаляет службу из реестра.  
@@ -149,14 +149,14 @@ HRESULT UnregisterServer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bUnRegTypeLib`  
+ *bUnRegTypeLib*  
  Значение TRUE, если библиотека типов также для отмены регистрации.  
   
- `pCLSID`  
- Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в схеме объекта будет отменена.  
+ *pCLSID*  
+ Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет отменена.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
  Обновляет сведения о exe-файла в реестре.  
@@ -166,13 +166,13 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bRegister`  
+ *bЗарегистрируйтесь участия*  
  Зарезервировано.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
+ Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlModule](../../atl/reference/catlmodule-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Классы модуля](../../atl/atl-module-classes.md)
+ [Модульные классы](../../atl/atl-module-classes.md)

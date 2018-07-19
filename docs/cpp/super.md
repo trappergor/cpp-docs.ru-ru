@@ -1,5 +1,5 @@
 ---
-title: __super | Документы Microsoft
+title: __super | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944849"
 ---
 # <a name="super"></a>__super
 **Блок, относящийся только к системам Microsoft**  
@@ -31,24 +32,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
 ## <a name="remarks"></a>Примечания  
  На этапе разрешения перегрузки учитываются все доступные методы базового класса, и вызывается функция, которая обеспечивает наилучшее совпадение.  
   
- Ключевое слово `__super` может использоваться только в теле функции-члена.  
+ **__super** может использоваться только в теле функции-члена.  
   
- Ключевое слово `__super` не может использоваться с объявлением using. В разделе [объявление using](../cpp/using-declaration.md) для получения дополнительной информации.  
+ **__super** нельзя использовать с помощью объявления. См. в разделе [объявление using](../cpp/using-declaration.md) Дополнительные сведения.  
   
- С появлением [атрибуты](../windows/cpp-attributes-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых не всегда известно, но которые содержат методы, которые требуется вызвать.  
+ С появлением [атрибуты](../windows/cpp-attributes-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых вы можете не знать, но которые содержат методы, которые должны вызываться.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  

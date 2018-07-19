@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857341"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953014"
 ---
 # <a name="syncnone-class"></a>Класс sync_none
 
@@ -42,13 +42,13 @@ class sync_none
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |`Cache`|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -70,9 +70,9 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`count`|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число элементов в массиве, которые нужно выделить.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -88,10 +88,10 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|
-|`count`|Количество объектов для освобождения из хранилища.|
+|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*count*|Количество объектов для освобождения из хранилища.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -107,14 +107,14 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Cache`|Объект кэша фильтра синхронизации.|
-|`Other`|Объект кэша для сравнения на равенство.|
+|*Кэш*|Объект кэша фильтра синхронизации.|
+|*Другое*|Объект кэша для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция-член всегда возвращает значение `true`.
+Функция-член всегда возвращает **true**.
 
 ### <a name="remarks"></a>Примечания
 

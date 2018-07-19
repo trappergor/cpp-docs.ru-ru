@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Detach | Документы Microsoft
+title: _com_ptr_t::Detach | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410584"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941357"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Блок, относящийся только к системам Microsoft**  
@@ -37,7 +37,7 @@ Interface* Detach( ) throw( );
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Извлекает и возвращает инкапсулированный указатель на интерфейс и затем очищает область хранения инкапсулированного указателя для **NULL**. Поэтому указатель на интерфейс удаляется из инкапсуляции. Можно вызвать **выпуска** на возвращенного указателя на интерфейс.  
+ Извлекает и возвращает инкапсулированный указатель на интерфейс и затем очищает область хранения инкапсулированного указателя в значение NULL. Поэтому указатель на интерфейс удаляется из инкапсуляции. Это следует вызвать метод `Release` на возвращаемый указатель интерфейса.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

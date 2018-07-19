@@ -1,5 +1,5 @@
 ---
-title: Класс COleLinksDialog | Документы Microsoft
+title: Класс COleLinksDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 5dd17c0541b573cba40146c55b46d14143209c87
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042538"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853882"
 ---
 # <a name="colelinksdialog-class"></a>Класс COleLinksDialog
 Используется для диалогового окна OLE "Изменить ссылки".  
@@ -50,21 +50,21 @@ class COleLinksDialog : public COleDialog
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменение связей.|  
+|[COleLinksDialog::DoModal](#domodal)|Отображает диалоговое окно OLE изменить ссылки.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Структура типа **OLEUIEDITLINKS** , управляет поведением окна.|  
+|[COleLinksDialog::m_el](#m_el)|Структура типа OLEUIEDITLINKS, которое управляет поведением окна.|  
   
 ## <a name="remarks"></a>Примечания  
- Создание объекта класса `COleLinksDialog` при необходимости вызовите данным диалоговым окном. После `COleLinksDialog` объект был создан, можно использовать [m_el](#m_el) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_el` Структуры имеет тип **OLEUIEDITLINKS**. Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функции-члена.  
+ Создайте объект класса `COleLinksDialog` при необходимости вызвать это диалоговое окно. После `COleLinksDialog` объект был создан, можно использовать [m_el](#m_el) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_el` Структуры имеет тип OLEUIEDITLINKS. Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функция-член.  
   
 > [!NOTE]
 >  Контейнер, созданный мастером код приложения использует этот класс.  
   
- Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -87,7 +87,7 @@ class COleLinksDialog : public COleDialog
  **Заголовок:** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
- Отображение диалогового окна OLE изменение связей.  
+ Отображает диалоговое окно OLE изменить ссылки.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -96,14 +96,14 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Возвращаемое значение  
  Состояние завершения для диалогового окна. Одно из следующих значений:  
   
-- **IDOK** Если успешно откроется диалоговое окно.  
+- IDOK, если было успешно отображено диалоговое окно.  
   
-- **IDCANCEL** Если пользователь отменил это диалоговое окно.  
+- IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- **IDABORT** Если произошла ошибка. Если **IDABORT** будет возвращен, вызовите `COleDialog::GetLastError` функции-члена для получения дополнительных сведений о типе возникшей ошибки. Для получения списка возможных ошибок [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) функции в Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные элементы управления диалоговых окон, задав члены [m_el](#m_el) структуры, необходимо сделать это перед вызовом `DoModal`, но после создания объекта диалогового окна.  
+ Если вы хотите инициализировать различных диалоговых путем определения участников [m_el](#m_el) структуры, необходимо сделать это перед вызовом `DoModal`, но после создания объекта диалогового окна.  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  Создает объект `COleLinksDialog`.  
@@ -118,22 +118,22 @@ COleLinksDialog (
   
 ### <a name="parameters"></a>Параметры  
  *pDoc*  
- Указывает документ OLE, который содержит ссылки, который нужно изменить.  
+ Указывает на документ OLE, со ссылками для редактирования.  
   
  *pView*  
- Указывает текущее представление на *pDoc*.  
+ Указывает на текущее представление на *pDoc*.  
   
  *dwFlags*  
- Создание флаг, который содержит либо 0 или **ELF_SHOWHELP** для указания, будет ли отображаться при откроется диалоговое окно "Справка".  
+ Создание флаг, который содержит 0 или ELF_SHOWHELP, чтобы указать, будет ли отображаться при откроется диалоговое окно кнопку "Справка".  
   
  *pParentWnd*  
- Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского диалогового окна.  
+ Указывает на объект окна родительский объект или владельца (типа `CWnd`), которому принадлежит объект диалогового окна. Если он имеет значение NULL, родительского окна окно присваивается главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция создает только `COleLinksDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
+ Эта функция создает только `COleLinksDialog` объекта. Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
 ##  <a name="m_el"></a>  COleLinksDialog::m_el  
- Структура типа **OLEUIEDITLINKS** используется для управления поведением диалогового окна «Изменить ссылки».  
+ Структура типа OLEUIEDITLINKS используется для управления поведением диалогового окна "Изменить ссылки".  
   
 ```  
 OLEUIEDITLINKS m_el;  
@@ -142,7 +142,7 @@ OLEUIEDITLINKS m_el;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить напрямую или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDialog](../../mfc/reference/coledialog-class.md)   

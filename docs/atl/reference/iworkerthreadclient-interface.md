@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IWorkerThreadClient | Документы Microsoft
+title: Интерфейс IWorkerThreadClient | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86e35910469128ecaf38751d6db73094adf3422e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359821"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884730"
 ---
 # <a name="iworkerthreadclient-interface"></a>Интерфейс IWorkerThreadClient
-`IWorkerThreadClient` Представляет интерфейс, реализуемый клиентами [CWorkerThread](../../atl/reference/cworkerthread-class.md) класса.  
+`IWorkerThreadClient` — Это интерфейс, реализуемый клиентами [CWorkerThread](../../atl/reference/cworkerthread-class.md) класса.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -45,10 +45,10 @@ __interface IWorkerThreadClient
 |||  
 |-|-|  
 |[CloseHandle](#closehandle)|Реализуйте этот метод, чтобы закрыть дескриптор, связанный с данным объектом.|  
-|[Выполнение](#execute)|Реализуйте этот метод для выполнения кода при сигнала дескриптор, связанный с данным объектом.|  
+|[Выполнение](#execute)|Реализуйте этот метод для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.|  
   
 ## <a name="remarks"></a>Примечания  
- Реализуйте этот интерфейс, если у вас есть код, который необходимо выполнить в рабочем потоке в ответ на сигнал дескриптор.  
+ Реализуйте этот интерфейс, когда у вас есть код, который необходимо выполнить в рабочем потоке в ответ на сигнал дескриптор.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
@@ -62,13 +62,13 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
 ### <a name="parameters"></a>Параметры  
  *hHandle*  
- Дескриптор должен быть закрыт.  
+ Дескриптор будет закрыт.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK на успех или ошибку HRESULT при сбое.  
+ Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дескриптор, переданный в этот метод был ранее связан с этим объектом, с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Дескриптор, переданный этому методу был ранее связан с данным объектом, с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Пример  
  В следующем коде показано простая реализация `IWorkerThreadClient::CloseHandle`.  
@@ -76,24 +76,24 @@ HRESULT CloseHandle(HANDLE  hHandle);
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
 ##  <a name="execute"></a>  IWorkerThreadClient::Execute  
- Реализуйте этот метод для выполнения кода при сигнала дескриптор, связанный с данным объектом.  
+ Реализуйте этот метод для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.  
   
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwParam`  
+ *dwParam*  
  Параметр user.  
   
- `hObject`  
- Дескриптор, который отправлен сигнал.  
+ *hObject*  
+ Дескриптор, который оповещения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK на успех или ошибку HRESULT при сбое.  
+ Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Дескриптор и DWORD-указатель, переданный этому методу ранее были связаны с этим объектом с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
+ Дескриптор и DWORD/указатель, переданный этому методу ранее был связан с данным объектом с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).  
   
 ### <a name="example"></a>Пример  
  В следующем коде показано простая реализация `IWorkerThreadClient::Execute`.  

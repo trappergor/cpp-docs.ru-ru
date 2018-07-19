@@ -1,5 +1,5 @@
 ---
-title: Класс COleDialog | Документы Microsoft
+title: Класс COleDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368664"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853625"
 ---
 # <a name="coledialog-class"></a>Класс COleDialog
 Предоставляет стандартные функции для диалоговых окон OLE.  
@@ -38,12 +38,12 @@ class COleDialog : public CCommonDialog
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|Получает код ошибки, возвращенный диалоговым окном.|  
+|[COleDialog::GetLastError](#getlasterror)|Получает код ошибки, возвращаемый диалоговым окном.|  
   
 ## <a name="remarks"></a>Примечания  
- Библиотеки классов Microsoft Foundation предоставляет несколько классов, производных от `COleDialog`:  
+ Библиотеки Microsoft Foundation Class предоставляет несколько классов, производных от `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -82,7 +82,7 @@ class COleDialog : public CCommonDialog
  **Заголовок:** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- Вызовите `GetLastError` функции-члена для получения дополнительных сведений об ошибке при `DoModal` возвращает **IDABORT**.  
+ Вызовите `GetLastError` функция-член для получения дополнительных сведений об ошибке при `DoModal` возвращает IDABORT.  
   
 ```  
 UINT GetLastError() const;  
@@ -92,7 +92,7 @@ UINT GetLastError() const;
  Коды ошибок, возвращенные `GetLastError` зависят от конкретного диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе `DoModal` функции-члена в производных классах, сведения о специальных сообщений об ошибках.  
+ См. в разделе `DoModal` функция-член в производных классах, сведения о специальных сообщений об ошибках.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)   

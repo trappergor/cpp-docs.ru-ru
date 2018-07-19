@@ -1,5 +1,5 @@
 ---
-title: Класс CPtrArray | Документы Microsoft
+title: Класс CPtrArray | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: c2325f95ebcd002c5a80c50316cbbf208052b78b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078030"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851295"
 ---
 # <a name="cptrarray-class"></a>Класс CPtrArray
 Поддерживает массивы пустых указателей.  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>Участники  
- Функции-члены `CPtrArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель **void**.  
+ Функции-члены `CPtrArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель на **void**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -112,16 +112,16 @@ class CPtrArray : public CObject
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
   
 ## <a name="remarks"></a>Примечания  
- `CPtrArray` включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель элементов массива, необходимо задать глубины контекста дампа 1 или выше.  
+ `CPtrArray` включает в себя implement_dynamic-макрос для поддержки доступа типа времени выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель элементов массива, необходимо задать глубины контекста дампа 1 или выше.  
   
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.  
   
- Массивы указателей не может быть сериализован.  
+ Массивы указатель не может быть сериализован.  
   
  При удалении указателя массива или его элементов, удаляются только указатели, не сущностями, которые они ссылаются.  
   
- Дополнительные сведения об использовании `CPtrArray`, см. в статье [коллекции](../../mfc/collections.md).  
+ Дополнительные сведения об использовании `CPtrArray`, см. в статье [коллекций](../../mfc/collections.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -132,6 +132,6 @@ class CPtrArray : public CObject
  **Заголовок:** afxcoll.h  
   
 ## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
+ [Класс CObject](../../mfc/reference/cobject-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CObArray](../../mfc/reference/cobarray-class.md)

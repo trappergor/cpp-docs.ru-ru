@@ -1,5 +1,5 @@
 ---
-title: Объект состояния макросы | Документы Microsoft
+title: Объект состояния макросы | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddfc28c659d0c1eb54794d8fc76a9f3a4f9e73b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360878"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883662"
 ---
-# <a name="object-status-macros"></a>Макросы состояния объекта
+# <a name="object-status-macros"></a>Макросы состояния объектов
 Этот макрос задает флаги, относящиеся к элементам управления ActiveX.  
   
 |||  
 |-|-|  
-|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Используется в элементах управления ActiveX библиотеки ATL для задания **OLEMISC, ПОЗВОЛЯЯ** флаги.|  
+|[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Используется в элементах управления ActiveX библиотеки ATL, чтобы задать флаги OLEMISC.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h  
 
 ##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- Используется в элементах управления ActiveX библиотеки ATL необходимо установить флаги OLEMISC, ПОЗВОЛЯЯ.  
+ Используется в элементах управления ActiveX библиотеки ATL, чтобы задать флаги OLEMISC.  
   
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
@@ -40,10 +40,10 @@ DECLARE_OLEMISC_STATUS( miscstatus )
   
 ### <a name="parameters"></a>Параметры  
  *MiscStatus*  
- Все установленные флаги OLEMISC, ПОЗВОЛЯЯ.  
+ Все установленные флаги OLEMISC.  
   
 ### <a name="remarks"></a>Примечания  
- Этот макрос используется для задания OLEMISC, ПОЗВОЛЯЯ флаги для элемента управления ActiveX. Ссылаться на [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) для получения дополнительных сведений.  
+ Этот макрос используется, чтобы задать флаги OLEMISC для элемента управления ActiveX. Ссылаться на [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) для получения дополнительных сведений.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

@@ -1,5 +1,5 @@
 ---
-title: Класс COleChangeSourceDialog | Документы Microsoft
+title: Класс COleChangeSourceDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ea2c87a3ce87bbf15f99609a643a9a72f6d2058e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037600"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853489"
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 Используется для диалогового окна OLE "Изменить источник".  
@@ -62,13 +62,13 @@ class COleChangeSourceDialog : public COleDialog
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[COleChangeSourceDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменить источник.|  
-|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Возвращает отображаемое имя полного исходного.|  
-|[COleChangeSourceDialog::GetFileName](#getfilename)|Возвращает имя файла из исходного имени.|  
+|[COleChangeSourceDialog::DoModal](#domodal)|Отображает диалоговое окно OLE изменение источника.|  
+|[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Получает полный исходный отображаемое имя.|  
+|[COleChangeSourceDialog::GetFileName](#getfilename)|Получает имя файла из имя источника.|  
 |[COleChangeSourceDialog::GetFromPrefix](#getfromprefix)|Получает префикс предыдущего источника.|  
-|[COleChangeSourceDialog::GetItemName](#getitemname)|Возвращает имя элемента из исходного имени.|  
+|[COleChangeSourceDialog::GetItemName](#getitemname)|Получает имя элемента, от имени исходного.|  
 |[COleChangeSourceDialog::GetToPrefix](#gettoprefix)|Получает префикс нового источника|  
-|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Указывает, является ли допустимым источником.|  
+|[COleChangeSourceDialog::IsValidSource](#isvalidsource)|Указывает, если источник является допустимым.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -77,9 +77,9 @@ class COleChangeSourceDialog : public COleDialog
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|  
   
 ## <a name="remarks"></a>Примечания  
- Создание объекта класса `COleChangeSourceDialog` при необходимости вызовите данным диалоговым окном. После `COleChangeSourceDialog` объект был создан, можно использовать [m_cs](#m_cs) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_cs` Структуры имеет тип [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функции-члена.  
+ Создайте объект класса `COleChangeSourceDialog` при необходимости вызвать это диалоговое окно. После `COleChangeSourceDialog` объект был создан, можно использовать [m_cs](#m_cs) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_cs` Структуры имеет тип [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160). Дополнительные сведения об использовании этого класса диалогового окна см. в разделе [DoModal](#domodal) функция-член.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -112,18 +112,18 @@ explicit COleChangeSourceDialog(
   
 ### <a name="parameters"></a>Параметры  
  *pItem*  
- Указатель на связанную [COleClientItem](../../mfc/reference/coleclientitem-class.md) , источник должен быть обновлен.  
+ Указатель на связанную [COleClientItem](../../mfc/reference/coleclientitem-class.md) , источник которого должен быть обновлен.  
   
  *pParentWnd*  
- Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, родительское окно диалогового окна будет присвоено главного окна приложения.  
+ Указывает на объект окна родительский объект или владельца (типа `CWnd`), которому принадлежит объект диалогового окна. Если это значение NULL, родительского окна окно будет присвоено главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
+ Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры и [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры и [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в пакете Windows SDK.  
   
 ##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
- Эта функция вызывается для отображения диалогового окна OLE изменить источник.  
+ Вызывайте эту функцию для отображения диалогового окна OLE изменение источника.  
   
 ```  
 virtual INT_PTR DoModal();
@@ -132,16 +132,16 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Возвращаемое значение  
  Состояние завершения для диалогового окна. Одно из следующих значений:  
   
-- **IDOK** Если успешно откроется диалоговое окно.  
+- IDOK, если было успешно отображено диалоговое окно.  
   
-- **IDCANCEL** Если пользователь отменил это диалоговое окно.  
+- IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- **IDABORT** Если произошла ошибка. Если **IDABORT** будет возвращен, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функции-члена для получения дополнительных сведений о типе возникшей ошибки. Для получения списка возможных ошибок [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные элементы управления диалоговых окон, задав члены [m_cs](#m_cs) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
+ Если вы хотите инициализировать различных диалоговых путем определения участников [m_cs](#m_cs) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
   
- Если `DoModal` возвращает **IDOK**, можно вызвать член функции извлечения введенных пользователем параметров или сведения из диалогового окна. В следующем списке названы типичный запрос функции:  
+ Если `DoModal` возвращает IDOK, вы можете вызов функций-членов для получения параметров, вводимых пользователем или сведения в диалоговом окне. Следующий список имен функций типичный запрос:  
   
 - [GetFileName](#getfilename)  
   
@@ -150,30 +150,30 @@ virtual INT_PTR DoModal();
 - [GetItemName](#getitemname)  
   
 ##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
- Эта функция вызывается для получения полное отображаемое имя для элемента связанного клиента.  
+ Вызывайте эту функцию, чтобы получить полное отображаемое имя для элемента связанного клиента.  
   
 ```  
 CString GetDisplayName();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отображаемое имя полного исходного (специальное имя) для [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанного в конструкторе.  
+ Полный исходный отображаемое имя (моникер) [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанный в конструкторе.  
   
 ##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
- Эта функция вызывается для получения части файла моникер отображаемое имя для элемента связанного клиента.  
+ Вызывайте эту функцию для получения часть файлов, моникер отображаемое имя для элемента связанного клиента.  
   
 ```  
 CString GetFileName();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Часть отображаемое имя исходного моникера файлов [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанного в конструкторе.  
+ Часть файлов, моникер отображаемое имя источника [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанный в конструкторе.  
   
 ### <a name="remarks"></a>Примечания  
- Моникер файла вместе с моникера элемента дает полное отображаемое имя.  
+ Моникер файла вместе с моникер элемента предоставляет полное отображаемое имя.  
   
 ##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
- Эта функция вызывается для получения предыдущей строки префикса для источника.  
+ Вызовите эту функцию для получения предыдущих строка префикса для источника.  
   
 ```  
 CString GetFromPrefix();
@@ -183,27 +183,27 @@ CString GetFromPrefix();
  Строка префикса предыдущего источника.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция только после вызова [DoModal](#domodal) возвращает **IDOK**.  
+ Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Это значение берется непосредственно из **lpszFrom** членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
+ Это значение поступает непосредственно из `lpszFrom` членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
   
 ##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
- Эта функция вызывается для получения части моникера элемента отображаемое имя для элемента связанного клиента.  
+ Вызывайте эту функцию для получения части моникер элемента отображаемое имя для элемента связанного клиента.  
   
 ```  
 CString GetItemName();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Часть элемента моникер отображаемое имя источника для [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанного в конструкторе.  
+ Моникер элемента части источника отображаемое имя для [COleClientItem](../../mfc/reference/coleclientitem-class.md) указанный в конструкторе.  
   
 ### <a name="remarks"></a>Примечания  
- Моникер файла вместе с моникера элемента дает полное отображаемое имя.  
+ Моникер файла вместе с моникер элемента предоставляет полное отображаемое имя.  
   
 ##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
- Эта функция вызывается для получения новой строки префикса для источника.  
+ Вызывайте эту функцию для получения новой строки префикса для источника.  
   
 ```  
 CString GetToPrefix();
@@ -213,38 +213,38 @@ CString GetToPrefix();
  Новая строка префикса источника.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция только после вызова [DoModal](#domodal) возвращает **IDOK**.  
+ Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Это значение берется непосредственно из **lpszTo** членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
+ Это значение поступает непосредственно из `lpszTo` членом [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
   
 ##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
- Этот член данных — структура типа [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
+ Этот элемент данных — это структура типа [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160).  
   
 ```  
 OLEUICHANGESOURCE m_cs;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `OLEUICHANGESOURCE` используется для управления поведением диалогового окна OLE изменить источник. Члены этой структуры можно изменять непосредственно.  
+ `OLEUICHANGESOURCE` используется для управления поведением диалогового окна OLE изменение источника. Члены этой структуры можно изменять непосредственно.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
   
 ##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
- Эта функция вызывается для определения допустимости нового источника.  
+ Вызывайте эту функцию для определения допустимости нового источника.  
   
 ```  
 BOOL IsValidSource();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если новый источник действителен, иначе — 0.  
+ Ненулевое значение, если новый источник допустимо; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция только после вызова [DoModal](#domodal) возвращает **IDOK**.  
+ Эта функция только после вызова [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Структура пакета SDK для Windows.  
+ Дополнительные сведения см. в разделе [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDialog](../../mfc/reference/coledialog-class.md)   

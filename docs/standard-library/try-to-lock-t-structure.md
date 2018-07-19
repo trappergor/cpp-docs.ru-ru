@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a093c42ef5783f5b838b2cdecdc9a70c3b2d56
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1650f3afe243b238b2854d77c2c3736422b809b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38952938"
 ---
 # <a name="trytolockt-structure"></a>Структура try_to_lock_t
 
-Представляет `struct`, который определяет объект [try_to_lock](../standard-library/mutex-functions.md#try_to_lock). Служит для выбора одного из перегруженных конструкторов [unique_lock](../standard-library/unique-lock-class.md).
+Представляет **структуры** , определяющий [try_to_lock](../standard-library/mutex-functions.md#try_to_lock) объекта. Служит для выбора одного из перегруженных конструкторов [unique_lock](../standard-library/unique-lock-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,7 +33,7 @@ struct try_to_lock_t;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<мьютекс >
+**Заголовок:** \<mutex >
 
 **Пространство имен:** std
 

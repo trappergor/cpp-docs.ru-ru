@@ -1,5 +1,5 @@
 ---
-title: Операторы перебора (C++) | Документы Microsoft
+title: Операторы перебора (C++) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1973223d6aab44d4c5d8652111d3e6b8251676fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8f2853189d6b31b2f3b4e371f3583d3abb6f165
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418917"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939433"
 ---
 # <a name="iteration-statements-c"></a>Операторы перебора (C++)
 Операторы итерации приводят к тому, что операторы (или составные операторы) выполняются ноль или более раз в соответствии с некоторыми критериями завершения цикла. Когда эти операторы являются составными операторами, они выполняются по порядку, если в них не встречается инструкция [break](../cpp/break-statement-cpp.md) или [continue](../cpp/continue-statement-cpp.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "32418917"
   
 |Оператор|Вычисление выражения|Инициализация|Приращение|  
 |---------------|------------------|--------------------|---------------|  
-|`while`|перед телом цикла|Нет|Нет|  
+|**while**|перед телом цикла|Нет|Нет|  
 |**do**|после тела цикла|Нет|Нет|  
 |**for**|перед телом цикла|Да|Да|  
 |**for для диапазона**|перед телом цикла|Да|Да|  

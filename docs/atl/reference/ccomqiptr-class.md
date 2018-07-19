@@ -1,5 +1,5 @@
 ---
-title: Класс CComQIPtr | Документы Microsoft
+title: Класс CComQIPtr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359183"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884835"
 ---
 # <a name="ccomqiptr-class"></a>Класс CComQIPtr
-Класс интеллектуальный указатель для управления указателей интерфейса СОМ.  
+Класс смарт-указатель для управления указателей интерфейса СОМ.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,28 +36,28 @@ class CComQIPtr: public CComPtr<T>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  COM-интерфейс, указав тип указателя для сохранения.  
   
- `piid`  
- Указатель на IID `T`.  
+ *piid*  
+ Указатель на идентификатор IID *T*.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComQIPtr::CComQIPtr](#ccomqiptr)|Конструктор.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComQIPtr::operator =](#operator_eq)|Присваивает указатель на указатель на член.|  
+|[CComQIPtr::operator =](#operator_eq)|Присваивает указатель на указатель элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- ATL использует `CComQIPtr` и [CComPtr](../../atl/reference/ccomptr-class.md) для управления указатели COM-интерфейса, которые являются производными от [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Оба класса выполнить автоматический подсчет через вызовы ссылок `AddRef` и **выпуска**. Перегруженные операторы обрабатывать операции с указателями.  
+ Использует ATL `CComQIPtr` и [CComPtr](../../atl/reference/ccomptr-class.md) для управления указателей интерфейса СОМ, оба из которых являются производными от [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Оба класса выполните подсчет через вызовы к автоматической ссылок `AddRef` и `Release`. Перегруженные операторы будут выполнять операции с указателем.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -80,14 +80,14 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lp`  
- Используется для инициализации указателя интерфейса.  
+ *к пулу журналов*  
+ Позволяет инициализировать указатель интерфейса.  
   
- `T`  
+ *T*  
  COM-интерфейса.  
   
- `piid`  
- Указатель на IID `T`.  
+ *piid*  
+ Указатель на идентификатор IID *T*.  
   
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  Оператор присваивания.  
@@ -99,14 +99,14 @@ T* operator= (IUnknown* lp) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lp`  
- Используется для инициализации указателя интерфейса.  
+ *к пулу журналов*  
+ Позволяет инициализировать указатель интерфейса.  
   
- `T`  
+ *T*  
  COM-интерфейса.  
   
- `piid`  
- Указатель на IID `T`.  
+ *piid*  
+ Указатель на идентификатор IID *T*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на обновленный `CComQIPtr` объекта.  

@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlAutoThreadModuleT | Документы Microsoft
+title: Класс CAtlAutoThreadModuleT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a54818b839f13ad9114274248cfdbfc74efa033a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361422"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883077"
 ---
 # <a name="catlautothreadmodulet-class"></a>Класс CAtlAutoThreadModuleT
-Этот класс предоставляет методы для реализации пула потоков, модели подразделения COM-сервера.  
+Этот класс предоставляет методы для реализации пула потоков, модель с подразделением COM-сервера.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -41,28 +41,28 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Класс, который реализует COM-сервера.  
   
- `ThreadAllocator`  
- Класс управления выбором потока. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
+ *ThreadAllocator*  
+ Класс управления выбора потоков. Значение по умолчанию — [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).  
   
- `dwWait`  
- Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, означающее интервал времени ожидания для метода никогда не истекает.  
+ *dwWait*  
+ Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает интервал времени ожидания для метода, никогда не истекает.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Эта статическая функция динамически вычисляет и возвращает максимальное число потоков модуля exe-файла, в зависимости от количества процессоров.|  
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Эта статическая функция динамически вычисляет и возвращает максимальное число потоков для модуля exe-файла, в зависимости от количества процессоров.|  
   
 ## <a name="remarks"></a>Примечания  
- Класс [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) является производным от `CAtlAutoThreadModuleT` для реализации пула потоков, модели подразделения COM-сервера. Он заменяет устаревший класс [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
+ Класс [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) является производным от `CAtlAutoThreadModuleT` для реализации пула потоков, модель с подразделением COM-сервера. Он заменяет устаревший класс [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).  
   
 > [!NOTE]
->  Этот класс должен не использоваться в библиотеке DLL по умолчанию `dwWait` значение INFINITE приведет к взаимоблокировке, при выгрузке библиотеки DLL.  
+>  Этот класс не следует в библиотеке DLL, по умолчанию *dwWait* значение INFINITE будет привести к взаимоблокировке при выгрузке библиотеки DLL.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IAtlAutoThreadModule`  
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  **Заголовок:** atlbase.h  
   
 ##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
- Эта статическая функция динамически вычисляет и возвращает максимальное число потоков модуля exe-файла, в зависимости от количества процессоров.  
+ Эта статическая функция динамически вычисляет и возвращает максимальное число потоков для модуля exe-файла, в зависимости от количества процессоров.  
   
 ```
 static int GetDefaultThreads();
@@ -83,10 +83,10 @@ static int GetDefaultThreads();
  Число потоков, создаваемых в модуле exe-файла.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если вы хотите использовать другой метод для подсчета количества потоков. По умолчанию число потоков зависит число процессоров.  
+ Переопределите этот метод, если вы хотите использовать другой метод для вычисления число потоков. По умолчанию число потоков зависит от количества процессоров.  
   
 ## <a name="see-also"></a>См. также  
  [Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Класс IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
- [Классы модуля](../../atl/atl-module-classes.md)
+ [Модульные классы](../../atl/atl-module-classes.md)

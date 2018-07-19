@@ -1,5 +1,5 @@
 ---
-title: Класс CComCritSecLock | Документы Microsoft
+title: Класс CComCritSecLock | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358890"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880255"
 ---
 # <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
-Этот класс предоставляет методы для блокировки и разблокировки объекта критической секции.  
+Этот класс предоставляет методы для блокировки и разблокировки объект критической секции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,20 +44,20 @@ template<class TLock> class CComCritSecLock
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCritSecLock::CComCritSecLock](#ctor)|Конструктор.|  
 |[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](#lock)|Этот метод пытается заблокировать объект критической секции.|  
+|[CComCritSecLock::Lock](#lock)|Вызовите этот метод, чтобы заблокировать объект критической секции.|  
 |[CComCritSecLock::Unlock](#unlock)|Вызовите этот метод, чтобы разблокировать объект критической секции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс используется для блокирования и разблокирования объектов более безопасным способом, чем с [класса CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) или [CComAutoCriticalSection класса](../../atl/reference/ccomautocriticalsection-class.md).  
+ Этот класс используется для блокирования и разблокирования объектов более безопасным способом, чем с [класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) или [класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -73,8 +73,8 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
  *cs*  
  Объект критической секции.  
   
- `bInitialLock`  
- Состояние блокировки начальной: **true** означает заблокирован.  
+ *bInitialLock*  
+ Состояние начального блокировки: **true** означает, что заблокирована.  
   
 ### <a name="remarks"></a>Примечания  
  Инициализирует объект критической секции.  
@@ -90,17 +90,17 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
  Разблокирует объект критической секции.  
   
 ##  <a name="lock"></a>  CComCritSecLock::Lock  
- Этот метод пытается заблокировать объект критической секции.  
+ Вызовите этот метод, чтобы заблокировать объект критической секции.  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В неудачи возвращает значение S_OK, если объект успешно заблокирована, иначе возникает ошибка HRESULT.  
+ Возвращает значение S_OK, если объект успешно заблокирован или ошибки HRESULT в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Если объект уже заблокирован, в отладочных построениях возникнет ошибка УТВЕРЖДЕНИЯ.  
+ Если объект уже заблокирован, в отладочных сборках возникнет ошибка УТВЕРЖДЕНИЯ.  
   
 ##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  Вызовите этот метод, чтобы разблокировать объект критической секции.  
@@ -110,7 +110,7 @@ void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если объект уже разблокирован, произойдет ошибка ASSERT в отладочных построениях.  
+ Если объект уже разблокирован, в отладочных сборках возникнет ошибка УТВЕРЖДЕНИЯ.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   

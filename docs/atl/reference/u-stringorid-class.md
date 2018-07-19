@@ -1,5 +1,5 @@
 ---
-title: Класс _U_STRINGorID | Документы Microsoft
+title: Класс _U_STRINGorID | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 611fecad210b9297b6c7cd16c83dbd0c6c3e41a8
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359666"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886171"
 ---
 # <a name="ustringorid-class"></a>Класс _U_STRINGorID
-Этот класс адаптера аргумент позволяет либо имена ресурсов ( `LPCTSTR`s) или идентификаторы ресурсов ( **UINT**s) должны быть переданы функции, не требуя вызывающего объекта, чтобы преобразовать идентификатор в строку с помощью **MAKEINTRESOURCE** макрос.  
+Этот класс адаптера аргумент позволяет имена ресурсов (LPCTSTRs) или идентификаторы ресурсов (единицы), должны быть переданы функции, не требуя вызывающий объект, преобразуемый в строку с помощью макроса MAKEINTRESOURCE идентификатор.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -42,33 +42,33 @@ class _U_STRINGorID
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|Конструктор.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Идентификатор ресурса.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предназначен для реализации программы-оболочки для API управления ресурса Windows, такими как [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), и [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) функций, которые принимают `LPCTSTR` аргумент, который может быть либо имя ресурса или его идентификатор.  
+ Этот класс предназначен для реализации оболочки для управления ресурсами Windows API, такие как [FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042), [LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072), и [LoadMenu](http://msdn.microsoft.com/library/windows/desktop/ms647990) функций, которые принимают Аргумент LPCTSTR, который может быть либо имя ресурса, либо его идентификатор.  
   
- Этот класс определяет две перегрузки конструктора: одна принимает `LPCTSTR` аргумент, а другой принимает **UINT** аргумент. **UINT** аргумент преобразуется в тип ресурса, совместимые с функциями управления ресурсами Windows с помощью **MAKEINTRESOURCE** макрос и результата, хранимого в едином члена класса, [m_lpstr](#_u_stringorid__m_lpstr). Аргумент `LPCTSTR` конструктор хранится непосредственно, без преобразования.  
+ Этот класс определяет две перегрузки конструктора: один принимает аргумент LPCTSTR, а другой принимает аргумент целое число без знака. Аргумент целое число без знака преобразуется в тип ресурса, совместимый с функциями управления ресурсами Windows, с помощью макроса MAKEINTRESOURCE и результата, хранимого в единый данные-член класса, [m_lpstr](#_u_stringorid__m_lpstr). Аргумент для конструктора LPCTSTR хранится непосредственно без преобразования.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
- Класс содержит значение, передаваемое в любой из его конструкторов как общего `LPCTSTR` члена данных.  
+ Класс содержит значение, передаваемое в любой из его конструкторов как открытый элемент данных LPCTSTR.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
 ##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
- **UINT** конструктор Преобразует аргумент в ресурс типа, совместимого с функциями управления ресурсами Windows с помощью **MAKEINTRESOURCE** макрос и результат сохраняется в один класс элемент данных [m_lpstr](#_u_stringorid__m_lpstr).  
+ Конструктор целое число без знака преобразует свой аргумент к типу ресурса, совместимый с функциями управления ресурсами Windows, с помощью макроса MAKEINTRESOURCE и результат сохраняется в одном данные-член класса, [m_lpstr](#_u_stringorid__m_lpstr).  
   
 ```
 _U_STRINGorID(UINT nID);  
@@ -76,14 +76,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nID`  
+ *nID*  
  Идентификатор ресурса.  
   
- `lpString`  
+ *lpString*  
  Имя ресурса.  
   
 ### <a name="remarks"></a>Примечания  
- Аргумент `LPCTSTR` конструктор хранится непосредственно, без преобразования.  
+ Аргумент для конструктора LPCTSTR хранится непосредственно без преобразования.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

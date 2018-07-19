@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862488"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966632"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
@@ -107,9 +107,9 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для объединения.
+*слева* строки в стиле C или объект типа `basic_string` для объединения.
 
-`right` Строка в стиле C или объект типа `basic_string` для объединения.
+*правом* строки в стиле C или объект типа `basic_string` для объединения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -194,9 +194,9 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -283,9 +283,9 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -372,9 +372,9 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -466,9 +466,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -557,13 +557,13 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-_Ostr записываются в выходной поток.
+*_Ostr* записываемых в выходной поток.
 
-`str` Строка должна вводиться в выходной поток.
+*STR* строки в выходной поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Записывает значение заданной строки в поток вывода `_Ostr`.
+Записывает значение заданной строки в выходной поток *_Ostr*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -592,9 +592,9 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -693,9 +693,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Строка в стиле C или объект типа `basic_string` для сравнения.
+*слева* строки в стиле C или объект типа `basic_string` для сравнения.
 
-`right` Строка в стиле C или объект типа `basic_string` для сравнения.
+*правом* строки в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -784,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-`_Istr` Входной поток, используемый для извлечения последовательности
+*_Istr* входной поток, используемый для извлечения последовательности
 
-`right` Строка, которая извлекается из входного потока.
+*правом* строка, извлекаемая из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Считывает значение указанной строки из `_Istr` и возвращает его в `right`.
+Считывает значение указанной строки из *_Istr* и возвращает его в *правой*.
 
 ### <a name="remarks"></a>Примечания
 
 Оператор пропускает начальные пробелы, если не установлен флаг `skipws`. Он считывает следующие символы до пробела или до конца файла.
 
-Функция шаблона перегружает **operator>>**, чтобы заменить последовательность, контролируемую `right`, последовательностью элементов, извлеченных из потока `_Istr`. Точки остановки извлечения:
+Функция шаблона перегружает **оператор >>** для замены последовательности, управляемой *правой* последовательностью элементов, извлеченных из потока *_Istr*. Точки остановки извлечения:
 
 - Конец файла.
 
@@ -806,7 +806,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - После того как функция извлечет элемент *ch*, для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) имеет значение true (в этом случае символ возвращается).
 
-Если функция не извлекает ни один элемент, она вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). В любом случае она вызывает **istr**. **width**(0) и возвращает \* **this**.
+Если функция не извлекает ни один элемент, он вызывает метод [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). В любом случае она вызывает **istr**. **width**(0) и возвращает \* **this**.
 
 ### <a name="example"></a>Пример
 

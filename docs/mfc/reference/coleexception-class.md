@@ -1,5 +1,5 @@
 ---
-title: Класс COleException | Документы Microsoft
+title: Класс COleException | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370475"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851396"
 ---
 # <a name="coleexception-class"></a>Класс COleException
 Представляет исключительное условие, связанное с операцией OLE.  
@@ -40,22 +40,22 @@ class COleException : public CException
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleException::Process](#process)|Преобразует перехваченного исключения в кодом возврата OLE.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[COleException::m_sc](#m_sc)|Содержит код состояния, указывающее причину создания исключения.|  
+|[COleException::m_sc](#m_sc)|Содержит код состояния, который указывает причину возникновения исключения.|  
   
 ## <a name="remarks"></a>Примечания  
- `COleException` Класс включает это открытый элемент данных, содержащий код состояния, указывающее причину создания исключения.  
+ `COleException` Класс включает открытых членов данных, содержащий код состояния, указывающее причину исключения.  
   
  В общем случае не следует создавать `COleException` объекта напрямую; вместо этого следует вызывать [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
- Дополнительные сведения об исключениях см. в статьях [обработки исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения OLE](../../mfc/exceptions-ole-exceptions.md).  
+ Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения OLE](../../mfc/exceptions-ole-exceptions.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -68,16 +68,16 @@ class COleException : public CException
  **Заголовок:** afxdisp.h  
   
 ##  <a name="m_sc"></a>  COleException::m_sc  
- Этот элемент данных содержит код состояния OLE, указывающее причину создания исключения.  
+ Этот элемент данных содержит код состояния OLE, который указывает причину возникновения исключения.  
   
 ```  
 SCODE m_sc;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение этой переменной устанавливается [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
+ Это значение этой переменной задается [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
- Дополнительные сведения о `SCODE`, в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
+ Дополнительные сведения о SCODE, см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
@@ -91,24 +91,24 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>Параметры  
  *pAnyException*  
- Указатель перехваченного исключения.  
+ Указатель на перехваченного исключения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Код состояния OLE.  
+ Ошибка с кодом состояния OLE.  
   
 ### <a name="remarks"></a>Примечания  
   
 > [!NOTE]
 >  Эта функция представляет **статических**.  
   
- Дополнительные сведения о `SCODE`, в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в Windows SDK.  
+ Дополнительные сведения о SCODE, см. в разделе [структуры из кодов ошибок модели COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) в пакете Windows SDK.  
   
 ### <a name="example"></a>Пример  
-  Далее приведен пример [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
+  См. в примере [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC CALCDRIV](../../visual-cpp-samples.md)   
- [CException-класс](../../mfc/reference/cexception-class.md)   
+ [Класс CException](../../mfc/reference/cexception-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
 
 

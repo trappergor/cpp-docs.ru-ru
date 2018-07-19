@@ -1,5 +1,5 @@
 ---
-title: Класс CGlobalHeap | Документы Microsoft
+title: Класс CGlobalHeap | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363338"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882836"
 ---
 # <a name="cglobalheap-class"></a>Класс CGlobalHeap
-Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций Win32 глобальной кучи.  
+Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции глобального кучи Win32.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -44,21 +44,21 @@ class CGlobalHeap : public IAtlMemMgr
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGlobalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|  
 |[CGlobalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|  
-|[CGlobalHeap::GetSize](#getsize)|Этот метод используется для получения размера, выделенного блока памяти, выделенной данным диспетчером памяти.|  
+|[CGlobalHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|  
 |[CGlobalHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|  
   
 ## <a name="remarks"></a>Примечания  
- `CGlobalHeap` реализует функции выделения памяти с помощью функций Win32 глобальной кучи.  
+ `CGlobalHeap` реализует функции выделения памяти, с помощью функции глобального кучи Win32.  
   
 > [!NOTE]
->  Функции глобальной кучи выполняются медленнее, чем другие функции управления памятью и не имеют меньше возможностей. Таким образом, новые приложения должны использовать [кучи функции](http://msdn.microsoft.com/library/windows/desktop/aa366711). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса. Глобальные функции по-прежнему используются DDE и функции буфера обмена.  
+>  Функции глобального кучи выполняются медленнее, чем другими функциями управления памятью и не предоставляют меньше возможностей. Таким образом, новые приложения должны использовать [функции кучи](http://msdn.microsoft.com/library/windows/desktop/aa366711). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса. Глобальные функции по-прежнему используются DDE и функций, буфер обмена.  
   
 ## <a name="example"></a>Пример  
- Далее приведен пример [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
+ См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IAtlMemMgr`  
@@ -76,16 +76,16 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBytes`  
+ *nBytes*  
  Запрошенное число байтов в новом блоке памяти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на начало выделенного блока памяти.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите [CGlobalHeap::Free](#free) или [CGlobalHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью данного метода.  
+ Вызовите [CGlobalHeap::Free](#free) или [CGlobalHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.  
   
- Реализовано с помощью [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) с параметром флага **GMEM_FIXED**.  
+ Реализовано с помощью [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) с параметром флага GMEM_FIXED.  
   
 ##  <a name="free"></a>  CGlobalHeap::Free  
  Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.  
@@ -95,21 +95,21 @@ virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
- Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым и не выполняет никаких действий.  
+ *p*  
+ Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.  
   
 ### <a name="remarks"></a>Примечания  
  Реализовано с помощью [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579).  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
- Этот метод используется для получения размера, выделенного блока памяти, выделенной данным диспетчером памяти.  
+ Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.  
   
 ```
 virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
+ *p*  
  Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -126,17 +126,17 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
+ *p*  
  Указатель на область памяти, выделенную ранее данным диспетчером памяти.  
   
- `nBytes`  
+ *nBytes*  
  Запрошенное число байтов в новом блоке памяти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на начало выделенного блока памяти.  
   
 ### <a name="remarks"></a>Примечания  
- Вызовите [CGlobalHeap::Free](#free) для освобождения памяти, выделенной с помощью данного метода.  
+ Вызовите [CGlobalHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.  
   
  Реализовано с помощью [GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
   

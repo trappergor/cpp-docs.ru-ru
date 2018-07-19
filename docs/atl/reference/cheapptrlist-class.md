@@ -1,5 +1,5 @@
 ---
-title: Класс CHeapPtrList | Документы Microsoft
+title: Класс CHeapPtrList | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358819"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879300"
 ---
 # <a name="cheapptrlist-class"></a>Класс CHeapPtrList
-Этот класс предоставляет методы, используемые при построении списка указателей кучи.  
+Этот класс предоставляет методы, используемые при построении списка указатели кучи.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -41,22 +41,22 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `E`  
- Тип объекта для сохранения в классе коллекции.  
+ *E*  
+ Тип объекта для сохранения в класс коллекции.  
   
- `Allocator`  
- Класс выделения памяти для использования. Значение по умолчанию — [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
+ *Распределитель*  
+ Класс выделения памяти для использования. По умолчанию используется [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Конструктор.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет конструктор и наследует методы из [CAtlList](../../atl/reference/catllist-class.md) и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для упрощения создания объекта класса коллекции хранения указателей кучи.  
+ Этот класс предоставляет конструктор и методы из производного [CAtlList](../../atl/reference/catllist-class.md) и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для упрощения создания объекта класса коллекции, хранение указатели кучи.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -74,11 +74,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Размер блока.  
   
 ### <a name="remarks"></a>Примечания  
- Размер блока — это мера, объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использует больше ресурсов.  
+ Размер блока — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использовать больше ресурсов.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlList](../../atl/reference/catllist-class.md)   

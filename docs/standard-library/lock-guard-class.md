@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852355"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953762"
 ---
 # <a name="lockguard-class"></a>Класс lock_guard
 
@@ -41,20 +41,20 @@ class lock_guard;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`lock_guard::mutex_type`|Синоним для аргумента шаблона `Mutex`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[lock_guard](#lock_guard)|Создает объект `lock_guard`.|
 |[Деструктор lock_guard::~lock_guard](#dtorlock_guard_destructor)|Снимает блокировку `mutex`, переданного в конструктор.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<мьютекс >
+**Заголовок:** \<mutex >
 
 **Пространство имен:** std
 
@@ -70,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Параметры
 
-`Mtx` Объект *тип мьютекса* объекта.
+*Mtx* объект *тип мьютекса* объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор создает объект типа `lock_guard` и блокирует `Mtx`. Если `Mtx` не является рекурсивным мьютексом, его необходимо разблокировать при вызове этого конструктора.
+Первый конструктор создает объект типа `lock_guard` и блокировки *Mtx*. Если *Mtx* не является рекурсивным мьютексом, его необходимо разблокировать при вызове этого конструктора.
 
-Второй конструктор не блокирует `Mtx`. `Mtx` должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.
+Второй конструктор не блокирует *Mtx*. *Mtx* должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.
 
 ## <a name="dtorlock_guard_destructor"></a>  Деструктор lock_guard::~lock_guard
 

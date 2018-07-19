@@ -1,5 +1,5 @@
 ---
-title: Класс CRBMultiMap | Документы Microsoft
+title: Класс CRBMultiMap | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ed3c8369c7102df97f828b1f306ce4b6cbc629f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365195"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881689"
 ---
 # <a name="crbmultimap-class"></a>Класс CRBMultiMap
-Этот класс представляет структуру сопоставления, которая позволяет каждый ключ может быть сопоставлен более одного значения, с помощью двоичного дерева красный-черный.  
+Этот класс представляет структуру сопоставления, которая позволяет, что каждый ключ может быть связан более одного значения, с помощью двоичного красно-черного дерева.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,49 +44,49 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```    
   
 #### <a name="parameters"></a>Параметры  
- `K`  
+ *K*  
  Тип ключа элемента.  
   
  *V*  
  Тип значения элемента.  
   
- `KTraits`  
- Код, используемый для копирования или перемещения элементов ключа. В разделе [CElementTraits класса](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.  
+ *KTraits*  
+ Код, используемый для копирования или перемещения ключевые элементы. См. в разделе [класс CElementTraits](../../atl/reference/celementtraits-class.md) для получения дополнительных сведений.  
   
- `VTraits`  
- Код, используемый для копирования или перемещения элементов значение.  
+ *VTraits*  
+ Код, используемый для копирования или перемещения элементов value.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Конструктор.|  
 |[CRBMultiMap:: ~ CRBMultiMap](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Вызовите этот метод, чтобы определить позицию первого элемента с указанным ключом.|  
-|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Этот метод вызывается для получения значения, связанного с данным ключом и обновите значение позиции.|  
-|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Этот метод вызывается для получения элемента, связанного с данным ключом и обновите значение позиции.|  
-|[CRBMultiMap::Insert](#insert)|Этот метод служит для вставки пары элементов в сопоставление.|  
-|[CRBMultiMap::RemoveKey](#removekey)|Этот метод используется для удаления всех элементов ключ значение для указанного ключа.|  
+|[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Вызовите этот метод, чтобы определить позицию первого элемента с данным ключом.|  
+|[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Вызовите этот метод, чтобы получить значение, связанное с данным ключом и обновите значение позиции.|  
+|[CRBMultiMap::GetNextWithKey](#getnextwithkey)|Вызовите этот метод для получения элемента, связанного с данным ключом и обновите значение позиции.|  
+|[CRBMultiMap::Insert](#insert)|Этот метод используется для вставки пары элементов в сопоставление.|  
+|[CRBMultiMap::RemoveKey](#removekey)|Этот метод используется для удаления всех элементов ключ значение для заданного ключа.|  
   
 ## <a name="remarks"></a>Примечания  
- `CRBMultiMap` предоставляет поддержку для массива сопоставление любого конкретного типа управления упорядоченный массив ключей элементов и значений. В отличие от [CRBMap](../../atl/reference/crbmap-class.md) класс, каждый ключ может быть сопоставлен более одного значения.  
+ `CRBMultiMap` предоставляет поддержку для сопоставления массива заданного типа, управление упорядоченный массив ключевые элементы и значения. В отличие от [CRBMap](../../atl/reference/crbmap-class.md) класс, каждый ключ может быть связан с более чем одним значением.  
   
- Элементы (состоящей из ключа и значения) хранятся в двоичное дерево структуры с помощью [CRBMultiMap::Insert](#insert) метод. Элементы можно удалить с помощью [CRBMultiMap::RemoveKey](#removekey) метод, который удаляет все элементы, которые соответствуют указанным ключом.  
+ Элементы, (состоящей из ключа и значения) хранятся в двоичном дереве структуры с помощью [CRBMultiMap::Insert](#insert) метод. Элементы можно удалить с помощью [CRBMultiMap::RemoveKey](#removekey) метод, который удаляет все элементы, которые соответствуют заданному ключу.  
   
- Обход дерева стало возможным с помощью методов например [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), и [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). Доступ к потенциально несколько значений ключа для каждого возможного использует [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), и [CRBMultiMap::GetNextWithKey ](#getnextwithkey) методы. Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap) иллюстрация это на практике.  
+ Обход дерева стало возможным с методами например [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), и [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue). Доступ к потенциально нескольких значений ключа для каждого возможного использует [CRBMultiMap::FindFirstWithKey](#findfirstwithkey), [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), и [CRBMultiMap::GetNextWithKey ](#getnextwithkey) методы. См. в примере [CRBMultiMap::CRBMultiMap](#crbmultimap) иллюстрация это на практике.  
   
- `KTraits` И `VTraits` являются классов признаки, которые содержат любой дополнительный код, необходимые для копирования или перемещения элементов.  
+ *KTraits* и *VTraits* параметры являются traits-классы, содержащие любой дополнительный код, необходимый для копирования или перемещения элементов.  
   
- `CRBMultiMap` является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует двоичного дерева с помощью алгоритма красный-черный. Это альтернатива `CRBMultiMap` и `CRBMap` предлагаемых [CAtlMap](../../atl/reference/catlmap-class.md) класса. Когда небольшое количество элементов должно быть сохранено, рассмотрите возможность использования [CSimpleMap](../../atl/reference/csimplemap-class.md) вместо этого класс.  
+ `CRBMultiMap` является производным от [CRBTree](../../atl/reference/crbtree-class.md), который реализует по двоичному дереву с помощью алгоритма красно-черного. Альтернативой `CRBMultiMap` и `CRBMap` предложенного [CAtlMap](../../atl/reference/catlmap-class.md) класса. Если только небольшое количество элементов должно быть сохранено, рассмотрите возможность использования [CSimpleMap](../../atl/reference/csimplemap-class.md) вместо этого класса.  
   
- Более полное описание различных классов коллекций и их возможности и характеристики производительности см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
+ Более полное описание различных классов коллекций и функций и характеристики производительности, см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CRBTree](../../atl/reference/crbtree-class.md)  
@@ -104,11 +104,11 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBlockSize`  
+ *nBlockSize*  
  Размер блока.  
   
 ### <a name="remarks"></a>Примечания  
- `nBlockSize` Параметр — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использует больше ресурсов. Значение по умолчанию будет выделить место для 10 элементов одновременно.  
+ *NBlockSize* параметр — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использовать больше ресурсов. Значение по умолчанию будет выделить место для 10 элементов за раз.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
@@ -123,34 +123,34 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Освобождает все ресурсы, выделенные.  
+ Освобождает все выделенные ресурсы.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
- Вызовите этот метод, чтобы определить позицию первого элемента с указанным ключом.  
+ Вызовите этот метод, чтобы определить позицию первого элемента с данным ключом.  
   
 ```
 POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Задает ключ, определяющий элемента, который требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает ПОЗИЦИЮ первого элемента ключ значение, если ключ найден, значение NULL в противном случае.  
+ Возвращает ПОЗИЦИЮ первого элемента ключ/значение, если ключ найден, значение NULL в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Ключ в `CRBMultiMap` может иметь один или несколько связанных значений. Этот метод предоставит значение позиции первое значение (которое может оказаться единственным значением), связанные с определенной разделу. Возвращаемое значение позиции затем могут использоваться с [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) или [CRBMultiMap::GetNextWithKey](#getnextwithkey) для получения значения и обновления позицию.  
+ Ключ в `CRBMultiMap` может иметь одно или несколько связанных значений. Этот метод предоставит значение позиции первого значения (это на самом деле, возможно только одно значение), связанное с этой конкретный ключ. Возвращаемое значение затем может использоваться с [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey) или [CRBMultiMap::GetNextWithKey](#getnextwithkey) для получения значения и обновляющий положение.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
+ См. в примере [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
 ##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
- Этот метод вызывается для получения значения, связанного с данным ключом и обновите значение позиции.  
+ Вызовите этот метод, чтобы получить значение, связанное с данным ключом и обновите значение позиции.  
   
 ```
 const V& GetNextValueWithKey(
@@ -162,25 +162,25 @@ V& GetNextValueWithKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pos`  
- Значение позиции, полученные с помощью вызова для [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextWithKey](#getnextwithkey), или предыдущим вызовом `GetNextValueWithKey`.  
+ *торговых терминалов*  
+ Значение позиции, полученные с помощью вызова к [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextWithKey](#getnextwithkey), или предыдущим вызовом `GetNextValueWithKey`.  
   
- `key`  
+ *key*  
  Задает ключ, определяющий элемента, который требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает пары элементов, связанных с указанным ключом.  
   
 ### <a name="remarks"></a>Примечания  
- Значение позиции обновляется и указывает на следующее значение, связанное с ключом. Если других значений не существует, значение позиции будет равно NULL.  
+ Значение позиции обновляется и указывает на следующее значение, связанное с ключом. Если других значений не существует, значение позиции присваивается значение NULL.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
+ См. в примере [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
 ##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
- Этот метод вызывается для получения элемента, связанного с данным ключом и обновите значение позиции.  
+ Вызовите этот метод для получения элемента, связанного с данным ключом и обновите значение позиции.  
   
 ```
 const CPair* GetNextWithKey(
@@ -192,64 +192,64 @@ CPair* GetNextWithKey(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pos`  
- Значение позиции, полученные с помощью вызова для [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), или предыдущим вызовом `GetNextWithKey`.  
+ *торговых терминалов*  
+ Значение позиции, полученные с помощью вызова к [CRBMultiMap::FindFirstWithKey](#findfirstwithkey) или [CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey), или предыдущим вызовом `GetNextWithKey`.  
   
- `key`  
+ *key*  
  Задает ключ, определяющий элемента, который требуется найти.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает следующий [CRBTree::CPair класса](crbtree-class.md#cpair_class) элемента, связанного с данным ключом.  
+ Возвращает следующий [CRBTree::CPair класс](crbtree-class.md#cpair_class) элемента, связанного с данным ключом.  
   
 ### <a name="remarks"></a>Примечания  
- Значение позиции обновляется и указывает на следующее значение, связанное с ключом. Если других значений не существует, значение позиции будет равно NULL.  
+ Значение позиции обновляется и указывает на следующее значение, связанное с ключом. Если других значений не существует, значение позиции присваивается значение NULL.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ##  <a name="insert"></a>  CRBMultiMap::Insert  
- Этот метод служит для вставки пары элементов в сопоставление.  
+ Этот метод используется для вставки пары элементов в сопоставление.  
   
 ```
 POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
- Чтобы добавить значение ключа `CRBMultiMap` объекта.  
+ *key*  
+ Значение ключа, чтобы добавить `CRBMultiMap` объекта.  
   
  *значение*  
- Значения для добавления в `CRBMultiMap` объекта, связанного с `key`.  
+ Значение, которое нужно добавить `CRBMultiMap` объект, связанный с *ключ*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает позицию пары ключ значение элемента в `CRBMultiMap` объекта.  
+ Возвращает позицию элемента пары ключ/значение в `CRBMultiMap` объекта.  
   
 ### <a name="remarks"></a>Примечания  
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
+ См. в примере [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
 ##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
- Этот метод используется для удаления всех элементов ключ значение для указанного ключа.  
+ Этот метод используется для удаления всех элементов ключ значение для заданного ключа.  
   
 ```
 size_t RemoveKey(KINARGTYPE key) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `key`  
+ *key*  
  Задает ключ, определяющий элементы для удаления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество значений, связанных с указанным ключом.  
   
 ### <a name="remarks"></a>Примечания  
- `RemoveKey` Удаляет все элементы ключ значение с ключом, который соответствует `key`.  
+ `RemoveKey` Удаляет все элементы ключ/значение с ключом, который соответствует *ключ*.  
   
  См. в документации для базового класса [CRBTree](../../atl/reference/crbtree-class.md) сведения о других методах, доступных.  
   
 ### <a name="example"></a>Пример  
- Далее приведен пример [CRBMultiMap::CRBMultiMap](#crbmultimap).  
+ См. в примере [CRBMultiMap::CRBMultiMap](#crbmultimap).  
   
 ## <a name="see-also"></a>См. также  
  [Класс CRBTree](../../atl/reference/crbtree-class.md)   

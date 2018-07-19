@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 7966d428dd200f0cbb280c679c4072e1ad75757a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965634"
 ---
 # <a name="ltforwardlistgt-operators"></a>Операторы &lt;forward_list&gt;
 
@@ -46,10 +46,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -67,10 +67,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -92,14 +92,14 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если список слева от оператора меньше (но не равен) списка справа от оператора; в противном случае `false`.
+**true**, если список слева от оператора меньше, чем список справа от оператора; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -117,14 +117,14 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если список слева от оператора меньше или равен списку справа от оператора; в противном случае `false`.
+**true**, если список в левой части оператора меньше или равен списку в правой части оператора; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -142,14 +142,14 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если список слева от оператора больше списка справа от оператора; в противном случае `false`.
+**true**, если список слева от оператора больше списка справа от оператора; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -167,14 +167,14 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Объект типа `forward_list`.|
-|`right`|Объект типа `forward_list`.|
+|*left*|Объект типа `forward_list`.|
+|*right*|Объект типа `forward_list`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если список слева от оператора больше или равен списку справа от оператора; в противном случае `false`.
+**значение true,** Если прямого списка слева от оператора больше или равен списку справа от оператора; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 

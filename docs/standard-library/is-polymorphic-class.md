@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de11114eafe423e80c885f3b1a5d00a70b449e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eab6d6ce44655177d20073ca5c5cda3859cb8b3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864051"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966385"
 ---
 # <a name="ispolymorphic-class"></a>Класс is_polymorphic
 
@@ -37,11 +37,11 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` является классом, объявляющим или наследующим виртуальную функцию, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, объявляющим или наследующим виртуальную функцию, в противном случае он содержит значение false.
 
 ## <a name="example"></a>Пример
 

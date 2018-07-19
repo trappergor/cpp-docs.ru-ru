@@ -1,5 +1,5 @@
 ---
-title: 'Дата и время: поддержка SYSTEMTIME | Документы Microsoft'
+title: 'Дата и время: поддержка SYSTEMTIME | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cf48881b3baeb7dc5ab48483ae9b075a9c048a38
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355404"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883571"
 ---
 # <a name="date-and-time-systemtime-support"></a>Дата и время: поддержка SYSTEMTIME
 [CTime](../atl-mfc-shared/reference/ctime-class.md) класс содержит конструкторы, которые принимают время системы и файлов из Win32. Если вы используете в этих целях объекты `CTime`, вам следует соответствующим образом изменить их инициализацию, следуя указаниям из данной статьи.  
@@ -41,17 +41,17 @@ ms.locfileid: "32355404"
   
 -   CTime (const FILETIME & `fileTime`);  
   
- Параметр `fileTime` является ссылкой на структуру `FILETIME` Win32, которая представляет время в виде 64-разрядного значения, так как этот формат более удобен для внутренней памяти, чем структура `SYSTEMTIME` и формат, использовавшийся Win32 для представления времени создания файла.  
+ *FileTime* параметр является ссылкой на Win32 `FILETIME` структуры, который представляет время в виде 64-разрядное значение, более удобный формат для внутренней памяти, чем `SYSTEMTIME` структуру и формат, используемый Win32 для — Это время создания файла.  
   
  Если ваш код содержит объект `CTime`, инициализированный с системным временем, вам следует использовать конструктор `SYSTEMTIME` в Win32.  
   
- Скорее всего, вы не будете использовать `CTime` `FILETIME` инициализации напрямую. Если вы используете `CFile` объекта для работы с файлом [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) получает метку времени файла через `CTime` объект инициализирован с `FILETIME` структуры.  
+ Скорее всего, вы не будете использовать `CTime` `FILETIME` инициализации напрямую. Если вы используете `CFile` объекта для работы с файлом [CFile::GetStatus](../mfc/reference/cfile-class.md#getstatus) получает метку времени файла через `CTime` инициализированный с помощью `FILETIME` структуры.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
   
 -   [Общие программирования даты и времени в MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Поддержка автоматизации программирования даты и времени](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Поддержка модели автоматизации для программирования даты и времени](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 -   [Классы общего назначения для программирования даты и времени](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   

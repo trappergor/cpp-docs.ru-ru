@@ -1,5 +1,5 @@
 ---
-title: Класс CMultiPaneFrameWnd | Документы Microsoft
+title: Класс CMultiPaneFrameWnd | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039210"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852352"
 ---
 # <a name="cmultipaneframewnd-class"></a>Класс CMultiPaneFrameWnd
-`CMultiPaneFrameWnd` Класс расширяет [CPaneFrameWnd класса](../../mfc/reference/cpaneframewnd-class.md). Может поддерживать несколько областей. Вместо одного внутреннего дескриптора на панели элементов управления `CMultiPaneFrameWnd` содержит [класса CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объект, который позволяет пользователю выполнять прикрепление одного `CMultiPaneFrameWnd` к другому и динамически создавать несколько с плавающей запятой, с вкладками Windows.  
+`CMultiPaneFrameWnd` Класс расширяет [класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Может поддерживать несколько областей. Вместо одного внутреннего дескриптора на панели элементов управления `CMultiPaneFrameWnd` содержит [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объект, который позволяет пользователю выполнять прикрепление одного `CMultiPaneFrameWnd` к другому и динамически создавать несколько с плавающей запятой, с вкладками Windows.  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -119,8 +119,8 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|Настраивает макет окна области. (Переопределяет [CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout).)|  
 |[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(Переопределяет [CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|  
 |[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Вычисляет ожидаемый прямоугольник закрепленного окна. (Переопределяет [CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)|  
-|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Определяет, можно ли текущую область закрепить другой панели или окне фрейма. (Переопределяет [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
-|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Определяет ли окно области можно закрепить в области. (Переопределяет [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Определяет, можно закрепить ли текущей области к другой панели или окне фрейма. (Переопределяет [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Определяет, является ли окно области можно закрепить в область. (Переопределяет [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Переопределяет [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
 |[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(Переопределяет `CPaneFrameWnd::CloseMiniFrame`.)|  
 |[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Преобразует панель в документ с вкладками. (Переопределяет [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|  
@@ -137,7 +137,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::LoadState](#loadstate)|Загружает состояние панели из реестра. (Переопределяет [CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate).)|  
 |[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Закрепляет окно области в его последней позиции. (Переопределяет [CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|  
 |[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Останавливает таймер свертки. (Переопределяет [CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Настраивает макет панели внутри окна области. (Переопределяет [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Настраивает макет области внутри окна области. (Переопределяет [CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|  
 |[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Устанавливает таймер свертки. (Переопределяет [CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|  
 |[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|Вызывается платформой при скрытии или отображении панели в окне области. (Переопределяет [CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane).)|  
 |[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области. (Переопределяет [CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint).)|  
@@ -148,21 +148,21 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::Serialize](#serialize)|(Переопределяет `CPaneFrameWnd::Serialize`.)|  
 |[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Задает состояние закрепления. (Переопределяет [CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|  
 |[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||  
-|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Задает предварительного состояния закрепления. (Переопределяет [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|  
+|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Задает состояния закрепления. (Переопределяет [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|  
 |[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(Переопределяет [CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|  
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(Переопределяет [CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|  
   
 ## <a name="remarks"></a>Примечания  
- Большинство методов в этом классе необходимо переопределить методы [CPaneFrameWnd класса](../../mfc/reference/cpaneframewnd-class.md) класса.  
+ Большинство методов в этом классе переопределите методы в [класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) класса.  
   
- Если используется панель `AFX_CBRS_AUTO_ROLLUP` стиль и пользователь закрепляет окно фрейма несколькими областями этой панели, пользователь сведение независимо от настроек стиля закрепленной панели окна.  
+ Если область имеет стиль AFX_CBRS_AUTO_ROLLUP и пользователь закрепляет этой области окна фрейма несколькими областями, пользователь может сводный окна независимо от параметров стиля из других закрепленных панелей.  
   
- Платформа автоматически создает `CMultiPaneFrameWnd` объекта, когда пользователь перемещается область, которую использует `CBRS_FLOAT_MULTI` стиля.  
+ Платформа автоматически создает `CMultiPaneFrameWnd` объекта, когда пользователь перемещается область, в которой используется стиль CBRS_FLOAT_MULTI.  
   
- Сведения о создании производных от класса `CPaneFrameWnd` класса и динамическое создание. в разделе [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
+ Сведения о класс, производный от `CPaneFrameWnd` класса и создается динамически, см. в разделе [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как получить указатель на `CMultiPaneFrameWnd` объект. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как получить указатель на `CMultiPaneFrameWnd` объект. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
@@ -384,7 +384,7 @@ CPaneContainerManager& GetPaneContainerManager();
  Ссылка на объект диспетчера внутреннего контейнера.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод можно использовать для доступа к внутреннему [CPaneContainerManager класс](../../mfc/reference/cpanecontainermanager-class.md) объекта.  
+ Этот метод можно использовать для доступа к внутреннему [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объекта.  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
 

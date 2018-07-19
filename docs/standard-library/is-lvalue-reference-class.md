@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 692c5243a7fe2984d43a1e70fc39616de5cbcc9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d21fcc27b5b4f92b690d8fae7669a18a5fcc1c46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964942"
 ---
 # <a name="islvaluereference-class"></a>Класс is_lvalue_reference
 
@@ -37,11 +37,11 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр этого предиката типа содержит значение true, если тип `Ty` является ссылкой на объект или функцию, в противном случае — значение false. Обратите внимание, что `Ty` не может быть ссылкой rvalue. Дополнительные сведения о rvalues см. в разделе [Оператор объявления ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Экземпляр этого предиката типа содержит значение true, если тип *Ty* является ссылкой на объект или функцию, в противном случае он содержит значение false. Обратите внимание, что *Ty* не может быть ссылкой rvalue. Дополнительные сведения о rvalues см. в разделе [Оператор объявления ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Требования
 

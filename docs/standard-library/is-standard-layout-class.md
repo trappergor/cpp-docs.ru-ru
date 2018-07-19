@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852088"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965517"
 ---
 # <a name="isstandardlayout-class"></a>Класс is_standard_layout
 
@@ -37,13 +37,13 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Ty`|Запрашиваемый тип.|
+|*Ty*|Запрашиваемый тип.|
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр этого предиката типа содержит значение true, если тип `Ty` является классом, имеющим стандартный макет объектов-членов; в противном случае — значение false.
+Экземпляр этого предиката типа содержит значение true, если тип *Ty* является классом, имеющим стандартный макет объектов-членов в памяти, в противном случае он содержит значение false.
 
 ## <a name="requirements"></a>Требования
 

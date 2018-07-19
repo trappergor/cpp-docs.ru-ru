@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965419"
 ---
 # <a name="isnothrowassignable-class"></a>Класс is_nothrow_assignable
 
-Проверяет, можно ли значение типа `From` назначить на тип `To` и известно ли назначение как не приводящее к проблемам.
+Проверяет, является ли значение *из* типа могут быть назначены *для* не будет выдавать известен тип и назначения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,13 +37,13 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Параметры
 
-Тип объекта, который получает назначение.
+*Чтобы* тип объекта, который получает назначение.
 
-От типа объекта, который предоставляет значение.
+*Из* тип объекта, который предоставляет значение.
 
 ## <a name="remarks"></a>Примечания
 
-Выражение `declval<To>() = declval<From>()` должно иметь правильный формат и быть известно компилятору как не вызывающее исключений. `From` и `To` должны быть полными типами, `void` или массивами с неизвестной границей.
+Выражение `declval<To>() = declval<From>()` должно иметь правильный формат и быть известно компилятору как не вызывающее исключений. Оба *из* и *для* должны быть полными типами **void**, или массивами с неизвестной границей.
 
 ## <a name="requirements"></a>Требования
 

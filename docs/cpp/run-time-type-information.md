@@ -1,5 +1,5 @@
 ---
-title: Сведения о типах времени выполнения | Документы Microsoft
+title: Сведения о типе времени выполнения | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419996"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938919"
 ---
 # <a name="run-time-type-information"></a>Сведения о типах времени выполнения
 Информация о типах времени выполнения (RTTI) — это механизм, позволяющий определить тип объекта во время выполнения программы. Функция RTTI была добавлена в язык C++, поскольку многие поставщики библиотек классов реализовывали ее самостоятельно. Это приводило к проблемам совместимости между библиотеками. Таким образом, стало очевидно, что необходима поддержка информации о типах времени выполнения на уровне языка.  
@@ -42,7 +42,7 @@ ms.locfileid: "32419996"
   
 -   [Type_info](../cpp/type-info-class.md) класса.  
   
-     Используется для хранения информации о типе, возвращенной оператором `typeid`.  
+     Используется для хранения сведений, возвращаемых методом **typeid** оператор.  
   
 ## <a name="see-also"></a>См. также  
  [Приведение](../cpp/casting.md)

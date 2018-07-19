@@ -1,5 +1,5 @@
 ---
-title: Класс CSocketAddr | Документы Microsoft
+title: Класс CSocketAddr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e63a464b68267c8202cdf47717fd1cd81db639c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363400"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884047"
 ---
 # <a name="csocketaddr-class"></a>Класс CSocketAddr
-Этот класс предоставляет методы для преобразования имен узлов в адреса узлов, поддерживающих форматы IPv4 и IPV6.  
+Этот класс предоставляет методы для преобразования имен узлов для адресов узла, которые поддерживают форматы IPv4 и IPV6.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,24 +43,24 @@ class CSocketAddr
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSocketAddr::CSocketAddr](#csocketaddr)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSocketAddr::FindAddr](#findaddr)|Вызовите этот метод, чтобы преобразовать указанное имя узла в адрес узла.|  
-|[CSocketAddr::FindINET4Addr](#findinet4addr)|Этот метод используется для преобразования имени узла IPv4 адрес узла.|  
+|[CSocketAddr::FindINET4Addr](#findinet4addr)|Этот метод используется для преобразования имени узла IPv4 в адрес узла.|  
 |[CSocketAddr::FindINET6Addr](#findinet6addr)|Этот метод используется для преобразования имени узла IPv6 в адрес узла.|  
-|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Этот метод возвращает указатель для определенных элементов в **addrinfo** списка.|  
-|[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Вызовите этот метод для возврата указателя на **addrinfo** списка.|  
+|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Вызовите этот метод для возврата указателя на определенный элемент в `addrinfo` списка.|  
+|[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Вызовите этот метод для возврата указателя на `addrinfo` списка.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет IP версии, сокеты независимые подход при поиске сетевых адресов для использования с Windows API-функций и оболочки сокета в библиотеках.  
+ Этот класс предоставляет версию IP, зависит от подход для поиска сетевых адресов для использования с Windows sockets функций API и оболочки сокета в библиотеках.  
   
- Члены этого класса, которые используются для поиска сетевых адресов используйте функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Члены этого класса, которые используются для поиска адресов сети используйте функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
   
  Этот класс поддерживает оба адреса IPv4 andIPv6 сети.  
   
@@ -99,35 +99,35 @@ int FindAddr(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szHost`  
+ *szHost*  
  Имя узла или пунктирную IP-адрес.  
   
  *szPortOrServiceName*  
  Номер порта или имя службы на узле.  
   
- `nPortNo`  
+ *nPortNo*  
  Номер порта.  
   
- `flags`  
+ *flags*  
  0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.  
   
  *addr_family*  
- Адрес семейства (например, PF_INET).  
+ Семейство (например, PF_INET) адресов.  
   
- `sock_type`  
+ *sock_type*  
  Тип сокета (например, SOCK_STREAM).  
   
  *ai_proto*  
  Протокол (например, IPPROTO_IP или IPPROTO_IPV6).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
 ##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
- Этот метод используется для преобразования имени узла IPv4 адрес узла.  
+ Этот метод используется для преобразования имени узла IPv4 в адрес узла.  
   
 ```
 int FindINET4Addr(
@@ -138,23 +138,23 @@ int FindINET4Addr(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szHost`  
+ *szHost*  
  Имя узла или пунктирную IP-адрес.  
   
- `nPortNo`  
+ *nPortNo*  
  Номер порта.  
   
- `flags`  
+ *flags*  
  0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.  
   
- `sock_type`  
+ *sock_type*  
  Тип сокета (например, SOCK_STREAM).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
 ##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  Этот метод используется для преобразования имени узла IPv6 в адрес узла.  
@@ -168,47 +168,47 @@ int FindINET6Addr(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szHost`  
+ *szHost*  
  Имя узла или пунктирную IP-адрес.  
   
- `nPortNo`  
+ *nPortNo*  
  Номер порта.  
   
- `flags`  
+ *flags*  
  0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.  
   
- `sock_type`  
+ *sock_type*  
  Тип сокета (например, SOCK_STREAM).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевой код ошибки Windows Socket в случае сбоя. Если в случае успешного выполнения, вычисляемые адрес хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
+ Этот метод вызывает функцию интерфейса API Win32 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
 ##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
- Этот метод возвращает указатель для определенных элементов в **addrinfo** списка.  
+ Вызовите этот метод для возврата указателя на определенный элемент в `addrinfo` списка.  
   
 ```
 addrinfo* const GetAddrInfoint nIndex = 0) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nIndex`  
- Ссылку на определенный элемент в [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) списка.  
+ *nIndex*  
+ Ссылка на определенный элемент в [addrinfo](http://msdn.microsoft.com/library/windows/desktop/ms737530) списка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на **addrinfo** ссылается структура `nIndex` в связанный список, содержащий ответ сведения об узле.  
+ Возвращает указатель на `addrinfo` ссылается структура *nIndex* в связанный список, содержащий ответ сведения об узле.  
   
 ##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
- Вызовите этот метод для возврата указателя на **addrinfo** списка.  
+ Вызовите этот метод для возврата указателя на `addrinfo` списка.  
   
 ```
 addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель в связанный список из одного или нескольких `addrinfo` структуры, содержащие ответа сведения об узле. Дополнительные сведения см. в разделе [addrinfo структуры](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+ Указатель в связанный список из одного или нескольких `addrinfo` структур, содержащий ответ сведения об узле. Дополнительные сведения см. в разделе [addrinfo структуры](https://msdn.microsoft.com/library/windows/desktop/ms737530).
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Отражение (C + +/ CLI) | Документы Microsoft
+title: Отражение (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,37 +15,45 @@ helpviewer_keywords:
 - .NET Framework [C++], reflection
 - data types [C++], reflection
 - reflection [C++}
+- plug-ins [C++]
+- reflection [C++}, plug-ins
+- assemblies [C++], enumerating data types in
+- public types [C++]
+- reflection [C++], external assemblies
+- assemblies [C++]
+- data types [C++], enumerating
+- public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d41d7f627a50dd1a09f4256fbd8448d82c6d5f27
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 505049d6580f41253a483dfe1c64608d0ea9ed3d
+ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705248"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110012"
 ---
 # <a name="reflection-ccli"></a>Отражение (C++/CLI)
 
-Отражение позволяет известных типов данных необходимо проверить во время выполнения. Отражение позволяет перечисление типов данных в определенной сборке и членов данного типа класса или значения могут быть обнаружены. Это верно независимо от типа был "известен" или "ссылки во время компиляции. Благодаря этому отражение полезной функцией для разработки и средства управления кода.
+Отражение позволяет известных типов данных проверять во время выполнения. Отражение позволяет перечисление типов данных в определенной сборке и элементы заданного типа класса или значения могут быть обнаружены. Это верно независимо от того, этот тип был "известен" или "указывается во время компиляции. В результате отражения полезная функция для разработки и средства управления кода.
 
-Обратите внимание, что предоставленного имени сборки со строгими именами (см. [Создание и использование сборок](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), которая содержит версию сборки, язык и региональные параметры и сведения о подписи. Обратите внимание, что имя пространства имен, в которой определен тип данных могут быть извлечены, вместе с именем базового класса.
+Обратите внимание, что предоставленного имени сборки строгим именем (см. в разделе [Создание и использование сборок со строгими именами](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), который включает версию сборки, язык и региональные параметры и сведения о подписи. Кроме того, обратите внимание, что имя пространства имен, в котором определен тип данных можно извлечь, вместе с именем базового класса.
 
-Наиболее распространенным способом доступа к функции отражения – <xref:System.Object.GetType%2A> метод. Этот метод предоставляется [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), из которого создаются все классов сбора мусора.
+Наиболее распространенным способом доступа к функции отражения – <xref:System.Object.GetType%2A> метод. Этот метод предоставляется [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx), из которого все сборщиком мусора классы являются производными.
 
 > [!NOTE]
-> Отражение на .exe созданного с помощью компилятора Visual C++ допускается только в том случае, если .exe, созданного с помощью **/CLR: pure** или **/CLR: safe** параметры компилятора. **/CLR: pure** и **/CLR: safe** параметры компилятора, устаревшие в Visual Studio 2015 и недоступен в Visual Studio 2017 г. В разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) для получения дополнительной информации.
+> Отражение на созданного с помощью компилятора Visual C++ .exe допускается только в том случае, если .exe построен с использованием **/CLR: pure** или **/CLR: safe** параметры компилятора. **/CLR: pure** и **/CLR: safe** параметры компилятора: не рекомендуется в Visual Studio 2015 и недоступна в Visual Studio 2017. См. в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) Дополнительные сведения.
 
 Дополнительные сведения см. в разделе [пространства имен System.Reflection](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)
 
 ## <a name="example-gettype"></a>Пример: GetType
 
-`GetType` Метод возвращает указатель на <xref:System.Type> объект класса, который описывает тип после при основан объект. ( **Тип** объект не содержит все сведения, относящиеся к экземпляру.) Один элемент — полное имя типа, который выглядит следующим образом:
+`GetType` Метод возвращает указатель на <xref:System.Type> объект класса, который описывает тип на при основано объекта. ( **Тип** объект не содержит все сведения, относящиеся к экземпляру.) Одна из них — полное имя типа, которое может отображаться следующим образом:
 
-Обратите внимание, что имя типа включает полную область, в которой определен тип, включая пространство имен, и что он отображается в синтаксисе .NET с точкой как оператор разрешения области.
+Обратите внимание, что имя типа включает полную область, в котором определен тип, включая пространство имен, и что он отображается в синтаксисе .NET с точкой как оператор разрешения области.
 
 ```cpp
 // vcpp_reflection.cpp
@@ -61,9 +69,9 @@ int main() {
 full type name of 'sample string' is 'System.String'
 ```
 
-## <a name="example-boxed-value-types"></a>Пример: упакованные типы значений
+## <a name="example-boxed-value-types"></a>Пример: упакованных типов значений
 
-Типы значений, которые можно использовать с `GetType` также работать, но они должны быть упакованы сначала.
+Типы значений можно использовать с `GetType` также работать, но они должны быть упакованы сначала.
 
 ```cpp
 // vcpp_reflection_2.cpp
@@ -82,9 +90,9 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Пример: typeid
 
-Как и в `GetType` метода [typeid](../windows/typeid-cpp-component-extensions.md) оператор возвращает указатель на **тип** объекта, поэтому этот код указывает имя типа **System.Int32**. Отображение имен типов является основным для отражения, но является более полезным для проверки или обнаружения действительных значений для перечислимых типов. Это можно сделать с помощью статического **Enum::GetNames** функцию, которая возвращает массив строк, каждая из которых содержит значение перечисления в виде текста.  Следующий пример возвращает массив строк, который описывает значения перечисления для **параметры** перечисления (CLR), которые отображаются в цикле.
+Как и в `GetType` метод, [typeid](../windows/typeid-cpp-component-extensions.md) оператор возвращает указатель на **тип** объекта, поэтому этот код указывает имя типа **System.Int32**. Отображение имен типов — это самый простой функции отражения, но потенциально более полезный прием — для проверки или обнаружения действительных значений для перечислимых типов. Это можно сделать с помощью статического **Enum::GetNames** функцию, которая возвращает массив строк, каждая из которых содержит значение перечисления в виде текста.  Следующий пример возвращает массив строк, описывающих значения перечисления для **параметры** enum (CLR) и отображает их в цикле.
 
-Если четвертый параметр добавляется **параметры** перечисления, код сообщит о новом параметре без повторной компиляции, даже если перечисление определено в отдельной сборке.
+Если добавляется четвертый вариант **параметры** перечисления, этот код будет о новом параметре без повторной компиляции, даже если перечисление определено в отдельной сборке.
 
 ```cpp
 // vcpp_reflection_3.cpp
@@ -119,7 +127,7 @@ value of 'o' is Option2
 
 ## <a name="example-gettype-members-and-properties"></a>Пример: GetType элементов и свойств
 
-`GetType` Объект поддерживает несколько элементов и свойств, которые могут использоваться для проверки типа. Этот код извлекает и отображает некоторые из этих сведений.
+`GetType` Объект поддерживает несколько элементов и свойств, которые могут использоваться для проверки типа. Этот код извлекает и отображает часть этой информации:
 
 ```cpp
 // vcpp_reflection_4.cpp
@@ -158,7 +166,7 @@ is class: True
 
 ## <a name="example-enumeration-of-types"></a>Пример: перечисление типов
 
-Отражение также разрешает перечисление типов в сборки и членов в классы. Чтобы продемонстрировать эту функцию, определите простой класс:
+Отражение также разрешает перечисление типов в сборки и членов в классах. Чтобы продемонстрировать эту функцию, определите простой класс:
 
 ```cpp
 // vcpp_reflection_5.cpp
@@ -182,11 +190,11 @@ public:
 
 Если приведенный выше код компилируется в DLL с именем vcpp_reflection_6.dll, можно затем использовать отражение для проверки содержимого этой сборки. При этом используется статическое отражение функции API [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) для загрузки сборки. Эта функция возвращает адрес **сборки** объект, который можно запросить о типах и модулях.
 
-Как только система отражения успешно загружает сборку, массив **тип** получить объектов с [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) функции. Каждый элемент массива содержит сведения об определенном типе, хотя в этом случае определен только один класс. С помощью цикла, каждый **тип** в этом массиве отправляется запрос об элементах типа **Type::GetMembers** функции. Эта функция возвращает массив **MethodInfo** объектов, каждый объект, содержащий сведения о функции-члена, член данных или свойство в типе.
+Как только система отражения успешно загружает сборку, массив **тип** объектов возвращается с помощью [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) функции. Каждый элемент массива содержит сведения о другой тип, несмотря на то, что в этом случае определяется только один класс. С помощью цикла, каждый **тип** в этом массиве отправляется запрос об элементах типа **Type::GetMembers** функции. Эта функция возвращает массив **MethodInfo** объектов, каждый объект, содержащий сведения о функции-члена, данные-член или свойство в типе.
 
-Примечание список методов включает функции явно определенных в **TestClass** и функции неявно наследуется от **System::Object** класса. В рамках описываемого в .NET, а не в синтаксисе Visual C++ свойства отображаются как базовому элементу данных, доступ к функции get и set. В этом списке отображаются функций get и set, как обычные методы. Отражение поддерживается через CLR, не компилятором Visual C++.
+Обратите внимание, что список методов включает функции явно определенных в **TestClass** и функции, неявно наследуется от **System::Object** класса. В рамках описываемого в .NET, а не в синтаксисе Visual C++ свойства отображаются как базового члена данных, которому принадлежит функций get и set. В этом списке отображаются функций get и set, как обычные методы. Отражение поддерживается через CLR, не с помощью компилятора Visual C++.
 
-Несмотря на то, что этот код используется для проверки сборки, которое было определено, также можно использовать для этого кода исследовать сборки .NET. Например при изменении TestAssembly на библиотеку mscorlib, будет просмотреть список все типы и метод, определенный в mscorlib.dll.
+Несмотря на то, что вы использовали этот код для проверки сборки, которое было определено, можно также использовать этот код для проверки сборок .NET. Например при изменении TestAssembly на библиотеку mscorlib, вы увидите список каждого типа и метод, определенный в библиотеке mscorlib.dll.
 
 ```cpp
 // vcpp_reflection_6.cpp
@@ -234,6 +242,167 @@ int main() {
    totalTypes, totalMembers);
 }
 ```
+
+## <a name="implement"></a> Практическое: реализация архитектуры с подключаемыми компонентами с помощью отражения
+В следующих примерах кода демонстрируется использование отражения для реализации простой архитектуры «подключаемого модуля». Первый листинг — это приложение, а второй — подключаемый модуль. Приложение является формой нескольких документов, которые заполняются с помощью любой форм классы, находящиеся в библиотеку DLL подключаемого модуля, предоставляется как аргумент командной строки.  
+  
+ Приложение пытается загрузить сборки, используя предоставленное <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> метод. Если в случае успешного выполнения типы в сборке перечисляются с помощью <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> метод. Каждый тип затем проверяется на совместимость с помощью <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> метод. В этом примере классов, содержащихся в предоставленной сборке должен быть производным от <xref:System.Windows.Forms.Form> класса было определено как подключаемый модуль.  
+  
+ Затем совместимые классы создаются с помощью <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> метод, который принимает <xref:System.Type> как аргумент и возвращает указатель на новый экземпляр. Каждый новый экземпляр затем присоединяться к форме и отображается.  
+  
+ Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A> метод не принимает имена сборок, которые включают расширение файла. Функция main в приложении удаляет любые предоставленные расширения, поэтому в следующем примере кода работает в любом случае.  
+  
+### <a name="example"></a>Пример  
+ Следующий код определяет приложение, которое принимает подключаемые модули. Имя сборки необходимо указать в качестве первого аргумента. Эта сборка должна содержать по крайней мере один открытый <xref:System.Windows.Forms.Form> производный тип.  
+  
+```cpp
+// plugin_application.cpp  
+// compile with: /clr /c  
+#using <system.dll>  
+#using <system.drawing.dll>  
+#using <system.windows.forms.dll>  
+  
+using namespace System;  
+using namespace System::Windows::Forms;  
+using namespace System::Reflection;  
+  
+ref class PluggableForm : public Form  {  
+public:  
+   PluggableForm() {}  
+   PluggableForm(Assembly^ plugAssembly) {  
+      Text = "plug-in example";  
+      Size = Drawing::Size(400, 400);  
+      IsMdiContainer = true;  
+  
+      array<Type^>^ types = plugAssembly->GetTypes( );  
+      Type^ formType = Form::typeid;  
+  
+      for (int i = 0 ; i < types->Length ; i++) {  
+         if (formType->IsAssignableFrom(types[i])) {  
+            // Create an instance given the type description.  
+            Form^ f = dynamic_cast<Form^> (Activator::CreateInstance(types[i]));  
+            if (f) {  
+               f->Text = types[i]->ToString();  
+               f->MdiParent = this;  
+               f->Show();  
+            }  
+         }  
+      }  
+   }  
+};  
+  
+int main() {  
+   Assembly^ a = Assembly::LoadFrom("plugin_application.exe");  
+   Application::Run(gcnew PluggableForm(a));  
+}  
+```  
+  
+### <a name="example"></a>Пример  
+ Следующий код определяет три класса, производного от <xref:System.Windows.Forms.Form>. Если результирующее имя сборки передается к исполняемому файлу в предыдущем примере, каждый из этих трех классов будет обнаружен и создан, несмотря на то, что все они неизвестны ведущему приложению во время компиляции.  
+  
+```cpp  
+// plugin_assembly.cpp  
+// compile with: /clr /LD  
+#using <system.dll>  
+#using <system.drawing.dll>  
+#using <system.windows.forms.dll>  
+  
+using namespace System;  
+using namespace System::Windows::Forms;  
+using namespace System::Reflection;  
+using namespace System::Drawing;  
+  
+public ref class BlueForm : public Form {  
+public:  
+   BlueForm() {  
+      BackColor = Color::Blue;  
+   }  
+};  
+  
+public ref class CircleForm : public Form {  
+protected:  
+   virtual void OnPaint(PaintEventArgs^ args) override {  
+      args->Graphics->FillEllipse(Brushes::Green, ClientRectangle);  
+   }  
+};  
+  
+public ref class StarburstForm : public Form {  
+public:  
+   StarburstForm(){  
+      BackColor = Color::Black;  
+   }  
+protected:  
+   virtual void OnPaint(PaintEventArgs^ args) override {  
+      Pen^ p = gcnew Pen(Color::Red, 2);  
+      Random^ r = gcnew Random( );  
+      Int32 w = ClientSize.Width;  
+      Int32 h = ClientSize.Height;  
+      for (int i=0; i<100; i++) {  
+         float x1 = w / 2;  
+         float y1 = h / 2;  
+         float x2 = r->Next(w);  
+         float y2 = r->Next(h);  
+         args->Graphics->DrawLine(p, x1, y1, x2, y2);  
+      }  
+   }  
+};  
+```  
+
+## <a name="enumerate"></a> Практическое: перечисление типов данных в сборках с помощью отражения
+В следующем коде показано перечисление открытых типов и членов с помощью <xref:System.Reflection>.  
+  
+ Заданному имени сборки, в локальном каталоге или в глобальном кэше СБОРОК, приведенный ниже код пытается открыть ее и получить описания. В случае успешного выполнения каждого типа отображается с открытым членам.  
+  
+ Обратите внимание, что <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> требует, чтобы использовалась без расширения файла. Таким образом используя в качестве аргумента командной строки «mscorlib.dll» завершится ошибкой, пока просто «mscorlib» приведет к Отображение типов .NET Framework. Если имя сборки не указано, код будет обнаруживать и сообщающих типы в текущей сборке (EXE-файл из этого кода).  
+  
+### <a name="example"></a>Пример  
+  
+```cpp  
+// self_reflection.cpp  
+// compile with: /clr  
+using namespace System;  
+using namespace System::Reflection;  
+using namespace System::Collections;  
+  
+public ref class ExampleType {  
+public:  
+   ExampleType() {}  
+   void Func() {}  
+};  
+  
+int main() {  
+   String^ delimStr = " ";  
+   array<Char>^ delimiter = delimStr->ToCharArray( );  
+   array<String^>^ args = Environment::CommandLine->Split( delimiter );  
+  
+// replace "self_reflection.exe" with an assembly from either the local  
+// directory or the GAC  
+   Assembly^ a = Assembly::LoadFrom("self_reflection.exe");  
+   Console::WriteLine(a);  
+  
+   int count = 0;  
+   array<Type^>^ types = a->GetTypes();  
+   IEnumerator^ typeIter = types->GetEnumerator();  
+  
+   while ( typeIter->MoveNext() ) {  
+      Type^ t = dynamic_cast<Type^>(typeIter->Current);  
+      Console::WriteLine("   {0}", t->ToString());  
+  
+      array<MemberInfo^>^ members = t->GetMembers();  
+      IEnumerator^ memberIter = members->GetEnumerator();  
+      while ( memberIter->MoveNext() ) {  
+         MemberInfo^ mi = dynamic_cast<MemberInfo^>(memberIter->Current);  
+         Console::Write("      {0}", mi->ToString( ) );  
+         if (mi->MemberType == MemberTypes::Constructor)  
+            Console::Write("   (constructor)");  
+  
+         Console::WriteLine();  
+      }  
+      count++;  
+   }  
+   Console::WriteLine("{0} types found", count);  
+}  
+```  
 
 ## <a name="see-also"></a>См. также
 

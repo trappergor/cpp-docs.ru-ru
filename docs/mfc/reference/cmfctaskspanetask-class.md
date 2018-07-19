@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCTasksPaneTask | Документы Microsoft
+title: Класс CMFCTasksPaneTask | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040705"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853973"
 ---
 # <a name="cmfctaskspanetask-class"></a>Класс CMFCTasksPaneTask
-`CMFCTasksPaneTask` Класс представляет вспомогательный класс, представляющий задачи для элемента управления области задач ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект задач представляет элемент в группе задач ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.  
+`CMFCTasksPaneTask` Класс — это вспомогательный класс, представляющий задачи для элемента управления области задач ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект задач представляет элемент в группе задач ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -75,19 +75,19 @@ class CMFCTasksPaneTask : public CObject
   
 |name|Описание:|  
 |----------|-----------------|  
-|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Определяет, является ли окно «Задача», автоматически освобождается.|  
+|[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Определяет, ли автоматически освобождается, окно «задача».|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Определяет, рисуется ли платформа метка задачи полужирным шрифтом.|  
-|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Содержит определяемые пользователем данные, которые платформа связывает с задачей. Равен нулю, если задача не содержит связанных данных.|  
+|[CMFCTasksPaneTask::m_dwUserData](#m_dwuserdata)|Содержит определяемые пользователем данные, которые платформа связывает с задачей. Присваивается нулевое значение, если задача не содержит связанных данных.|  
 |[CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)|Дескриптор окна задач.|  
 |[CMFCTasksPaneTask::m_nIcon](#m_nicon)|Индекс в списке изображений, изображения, платформа отображает рядом с задачей.|  
 |[CMFCTasksPaneTask::m_nWindowHeight](#m_nwindowheight)|Высота окна задач. Если задача не имеет задач окна, это значение равно нулю.|  
 |[CMFCTasksPaneTask::m_pGroup](#m_pgroup)|Указатель на `CMFCTasksPaneTaskGroup` , к которой принадлежит эта задача.|  
 |[CMFCTasksPaneTask::m_rect](#m_rect)|Указывает ограничивающий прямоугольник задачи.|  
 |[CMFCTasksPaneTask::m_strName](#m_strname)|Имя задачи.|  
-|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Указывает идентификатор команды, которую платформа выполняет, когда пользователь щелкает задачу. Если это значение не является допустимой командой Идентификатором, задача рассматривается как простая метка.|  
+|[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|Указывает идентификатор команды, которую платформа выполняет, когда пользователь щелкает задачу. Если это значение не является допустимой командой Идентификатором, она рассматривается как простая метка.|  
   
 ## <a name="remarks"></a>Примечания  
- На следующем рисунке группа задач, который содержит три задачи:  
+ На следующем рисунке показан группу задач, который содержит три задачи:  
   
  ![Развернутая группа задач](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
@@ -125,19 +125,19 @@ CMFCTasksPaneTask(
  Задает имя задачи.  
   
  *nIcon*  
- Указывает индекс изображения задачи в списке изображений.  
+ Задает индекс изображения задачи в списке изображений.  
   
  *uiCommandID*  
  Указывает идентификатор команды команду, которая выполняется при щелчке задачи.  
   
  *dwUserData*  
- Определенные пользователем данные.  
+ Определяемые пользователем данные.  
   
  *hwndTask*  
- Указывает дескриптор окна задач.  
+ Указывает дескриптор для окна задач.  
   
  *bAutoDestroyWindow*  
- Если `TRUE`, окно «Задача» будет удален автоматически.  
+ Значение TRUE, если окно «задача» автоматически будут уничтожены.  
   
  *nWindowHeight*  
  Указывает высоту окна задач.  
@@ -145,27 +145,27 @@ CMFCTasksPaneTask(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
- Определяет, является ли окно «Задача», автоматически освобождается.  
+ Определяет, ли автоматически освобождается, окно «задача».  
   
 ```  
 BOOL m_bAutoDestroyWindow;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение `TRUE` позволяет указать, что окно задач ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) автоматически; в противном случае следует удалить `FALSE`.  
+ Значение TRUE, чтобы указать, что окно задач ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) должны уничтожить автоматически; в противном случае — значение FALSE.  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
- Определяет, выводится ли метка задачи полужирным шрифтом.  
+ Определяет, отображается ли метка задачи полужирным шрифтом.  
   
 ```  
 BOOL m_bIsBold;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Значение этого элемента `TRUE` для отображения полужирного текста для метки задачи.  
+ Установите значение true, если полужирный текст метки задачи этого члена.  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
- Содержит определяемые пользователем данные, связанный с задачей. Равен нулю, если данные не связан с задачей.  
+ Содержит определяемые пользователем данные, связанный с задачей. Равным нулю, если данные не связан с задачей.  
   
 ```  
 DWORD m_dwUserData;  
@@ -184,7 +184,7 @@ HWND m_hwndTask;
  Чтобы добавить окно задач, вызовите [CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow).  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
- Индекс позиции в списке изображений, определяющий изображение, отображаемое рядом с указанной задачи.  
+ Индекс позиции в списке изображений, определяющий изображение, которое отображается рядом с указанной задачи.  
   
 ```  
 int m_nIcon;  
@@ -193,7 +193,7 @@ int m_nIcon;
 ### <a name="remarks"></a>Примечания  
  Список изображений задается [CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist).  
   
- Задать `m_nIcon` значение -1, если требуется отобразить задачи без изображения.  
+ Задайте `m_nIcon` значение -1, если вы хотите отобразить задачи без изображения.  
   
 ##  <a name="m_nwindowheight"></a>  CMFCTasksPaneTask::m_nWindowHeight  
  Высота окна задач. Если задача не имеет задач окна, это значение равно нулю.  
@@ -212,7 +212,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Каждая задача должна быть родительская группа. Добавить группы в области задач путем вызова [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+ Каждая задача должна быть родительская группа. Добавить группы для области задач путем вызова [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
  Указывает ограничивающий прямоугольник задачи.  
@@ -234,7 +234,7 @@ CString m_strName;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
- Указывает идентификатор команды команду, которая выполняется, когда пользователь щелкает задачу. Если это значение не является допустимой командой Идентификатором, задача рассматривается как простая метка.  
+ Указывает идентификатор команды команду, которая выполняется, когда пользователь щелкает задачу. Если это значение не является допустимой командой Идентификатором, она рассматривается как простая метка.  
   
 ```  
 UINT m_uiCommandID;  
@@ -259,7 +259,7 @@ virtual BOOL SetACCData(
  Объект типа `CAccessibilityData` заполняется данные специальных возможностей текущей задачи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если *данные* параметр был успешно заполненная данные специальных возможностей текущей задачи; в противном случае — `FALSE`.  
+ Значение TRUE, если *данных* параметр был успешно заполнен данные специальных возможностей текущей задачи; в противном случае — значение FALSE.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

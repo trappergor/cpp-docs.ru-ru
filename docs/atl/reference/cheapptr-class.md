@@ -1,5 +1,5 @@
 ---
-title: Класс CHeapPtr | Документы Microsoft
+title: Класс CHeapPtr | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a728f84a2eaa3f0138e2b0a95c25f8867c17432e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 06c66f274ab2302689afdeda195c735d7a6e5069
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359947"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884497"
 ---
 # <a name="cheapptr-class"></a>Класс CHeapPtr
-Класс интеллектуальный указатель для управления указатели кучи.  
+Класс смарт-указатель для управления кучей указателей.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -41,35 +41,35 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип объекта для сохранения в куче.  
   
- `Allocator`  
+ *Распределитель*  
  Класс выделения памяти для использования.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtr::CHeapPtr](#cheapptr)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CHeapPtr::Allocate](#allocate)|Этот метод используется для выделения памяти для хранения объектов в куче.|  
+|[CHeapPtr::Allocate](#allocate)|Этот метод используется для выделения памяти в куче для хранения объектов.|  
 |[CHeapPtr::Reallocate](#reallocate)|Этот метод вызывается для повторного выделения памяти в куче.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtr::operator =](#operator_eq)|Оператор присваивания.|  
   
 ## <a name="remarks"></a>Примечания  
- `CHeapPtr` является производным от [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) и по умолчанию использует подпрограммы CRT (в [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) для выделения и освобождения памяти. Класс [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) может использоваться для создания списка указателей кучи. См. также [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), использующий COM процедур выделения памяти.  
+ `CHeapPtr` является производным от [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) и по умолчанию использует подпрограммы CRT (в [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) для выделения и освобождения памяти. Класс [CHeapPtrList](../../atl/reference/cheapptrlist-class.md) может использоваться для создания списка указателей кучи. См. также [CComHeapPtr](../../atl/reference/ccomheapptr-class.md), который использует процедуры выделения памяти для COM.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -80,21 +80,21 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  **Заголовок:** файле atlcore.h  
   
 ##  <a name="allocate"></a>  CHeapPtr::Allocate  
- Этот метод используется для выделения памяти для хранения объектов в куче.  
+ Этот метод используется для выделения памяти в куче для хранения объектов.  
   
 ```
 bool Allocate(size_t nElements = 1) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nElements`  
+ *nElements*  
  Число элементов, используемых для вычисления объема памяти для выделения. Значение по умолчанию — 1.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если объем памяти был успешно выделен, false в случае ошибки.  
+ Возвращает значение true, если память была успешно выделен, значение false в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Подпрограммы распределителя используются для резервирование достаточного объема памяти в куче для хранения *nElement* объекты типа, определенного в конструкторе.  
+ Подпрограммы распределителя служат для резервирования недостаточно памяти в куче для хранения *nElement* объектов типа, определенного в конструкторе.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
@@ -109,11 +109,11 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
- Указатель на существующей кучи или `CHeapPtr`.  
+ *p*  
+ Существующего указателя кучи или `CHeapPtr`.  
   
 ### <a name="remarks"></a>Примечания  
- Указатель кучи при необходимости могут создаваться с помощью существующего указателя, или `CHeapPtr` объекта. В этом случае новый `CHeapPtr` объект несет ответственность за управление новый указатель и ресурсы.  
+ Указатель кучи при необходимости могут создаваться с использованием существующего указателя, или `CHeapPtr` объекта. Если Да, новый `CHeapPtr` объект несет ответственность за управление новый указатель и ресурсы.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
@@ -127,7 +127,7 @@ CHeapPtr<T, Allocator>& operator=(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `p`  
+ *p*  
  Существующий объект `CHeapPtr`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -144,11 +144,11 @@ bool Reallocate(size_t nElements) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nElements`  
- Новый номер элементы, используемые для вычисления объема памяти для выделения.  
+ *nElements*  
+ Новый номер элементов, используемый для вычисления объема памяти для выделения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если объем памяти был успешно выделен, false в случае ошибки.  
+ Возвращает значение true, если память была успешно выделен, значение false в случае сбоя.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  

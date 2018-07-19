@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57ed2b662b21425f206b0a4f07e072b723c8aae4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d90cbfd5d1f239f05d19803c9ed89ad080667f2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847433"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964818"
 ---
 # <a name="basicofstream-class"></a>Класс basic_ofstream
 
@@ -46,13 +46,13 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-`Elem` Базовый элемент буфера файла.
+*Elem* базового элемента буфера файла.
 
-`Tr` Признаки базового элемента буфера файла (обычно `char_traits` <  `Elem`>).
+*TR* признаки базового элемента буфера файла (обычно `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Примечания
 
-Если файл открыт в текстовом режиме, то при записи специализации `wchar_t` `basic_ofstream` в файл будет записана последовательность MBCS. Внутреннее представление будет использовать буфер символов `wchar_t`.
+Когда **wchar_t** специализация `basic_ofstream` записывает в файл, если файл открыт в текстовом режиме, она будет записана последовательность MBCS. Внутреннее представление будет использовать буфер символов `wchar_t`.
 
 Объект сохраняет объект класса `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -80,13 +80,13 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[basic_ofstream](#basic_ofstream)|Создает объект типа `basic_ofstream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
@@ -96,7 +96,7 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue reference`, которое не оставляет копию.|
 
@@ -129,21 +129,21 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Параметры
 
-`_Filename` Имя открываемого файла.
+*_Filename* имя открываемого файла.
 
-`_Mode` Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Открытие защиты, эквивалентно файл по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* защита, эквивалентно открытия файла по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-`right` Ссылка rvalue на `basic_ofstream` , применяемый для инициализации этого `basic_ofstream` объекта.
+*правом* ссылка rvalue `basic_ofstream` объект, используемый для инициализации это `basic_ofstream` объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует базовый класс путем вызова [basic_iostream](../standard-library/basic-ostream-class.md)( **sb**), где **sb** — сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Он также инициализирует **sb** путем вызова `basic_filebuf`< `Elem`, `Tr`>.
+Первый конструктор инициализирует базовый класс путем вызова [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), где `sb` является сохраненным объектом класса [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
 
-Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_ostream`( **sb**). Они также инициализируют **sb** путем вызова `basic_filebuf`< `Elem`, `Tr`>, а затем **sb**. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Если последняя функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_ostream`( **sb**). Он также инициализирует `sb` путем вызова `basic_filebuf` <  `Elem`, `Tr`> и затем `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Если последняя функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-Четвертый конструктор является функцией копирования. Он инициализирует объект с содержимым `right`, что рассматривается как ссылка rvalue.
+Четвертый конструктор является функцией копирования. Он инициализирует объект с содержимым *правой*, рассматривается как ссылка rvalue.
 
 ### <a name="example"></a>Пример
 
@@ -181,7 +181,7 @@ void close();
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется функция **close**, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
+Пример, в котором используется `close`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
 
 ## <a name="is_open"></a>  basic_ofstream::is_open
 
@@ -193,7 +193,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если файл открыт; в противном случае — значение `false`.
+Значение **true**, если файл открыт, или **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
@@ -247,19 +247,19 @@ void open(
 
 ### <a name="parameters"></a>Параметры
 
-`_Filename` Имя открываемого файла.
+*_Filename* имя открываемого файла.
 
-`_Mode` Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+*_Режим* одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-`_Prot` Открытие защиты, эквивалентно файл по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+*_Prot* защита, эквивалентно открытия файла по умолчанию `shflag` параметр в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Если эта функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).
+Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Если эта функция возвращает указатель null, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется функция **open**, см. в разделе [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open).
+См. в разделе [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) пример, использующий `open`.
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -271,7 +271,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` Ссылка rvalue на `basic_ofstream` объекта.
+*правом* ссылка rvalue на `basic_ofstream` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -279,7 +279,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="remarks"></a>Примечания
 
-Оператор-член заменяет содержимое объекта при помощи содержимого `right`, которое обрабатывается как ссылка rvalue.
+Оператор-член заменяет содержимое объекта с помощью содержимого *правой*, рассматривается как ссылка rvalue.
 
 ## <a name="rdbuf"></a>  basic_ofstream::rdbuf
 
@@ -307,11 +307,11 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` `lvalue` Ссылаться на другой `basic_ofstream` объекта.
+*правом* `lvalue` ссылаться на другой `basic_ofstream` объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член меняет местами содержимое этого объекта для содержимого `right`.
+Функция-член меняет местами содержимое этого объекта для содержимого *правой*.
 
 ## <a name="see-also"></a>См. также
 

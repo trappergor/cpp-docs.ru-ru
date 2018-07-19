@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t | Документы Microsoft
+title: _com_ptr_t::_com_ptr_t | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413938"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939075"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Блок, относящийся только к системам Microsoft**  
@@ -143,31 +143,31 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `pInterface`  
+ *pInterface*  
  Необработанный указатель на интерфейс.  
   
- `fAddRef`  
- Если **true**, `AddRef` вызывается, чтобы увеличить счетчик ссылок инкапсулированного указателя на интерфейс.  
+ *fAddRef*  
+ Если значение равно TRUE, `AddRef` вызывается Увеличиваемый счетчик ссылок инкапсулированного указателя на интерфейс.  
   
  *CP*  
  Объект `_com_ptr_t`.  
   
- `p`  
+ *p*  
  Необработанный указатель на интерфейс, его тип отличается от типа интеллектуального указателя этого объекта `_com_ptr_t`.  
   
  *varSrc*  
  Объект `_variant_t`.  
   
- `clsid`  
- **CLSID** компонентного класса.  
+ *CLSID*  
+ `CLSID` Компонентного класса.  
   
- `dwClsContext`  
+ *dwClsContext*  
  Контекст для выполняющегося исполняемого кода.  
   
  *lpcStr*  
- Многобайтовая строка, которая содержит либо **CLSID** (начиная с «**{**») или **ProgID**.  
+ Многобайтовая строка, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.  
   
- `pOuter`  
+ *pOuter*  
  Внешняя Неизвестная строка для [статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
   
 ## <a name="see-also"></a>См. также  

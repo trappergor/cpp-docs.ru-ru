@@ -1,5 +1,5 @@
 ---
-title: Класс интерфейс IObjectWithSiteImpl | Документы Microsoft
+title: Класс IObjectWithSiteImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a9403ed1a4ba82a1e60c42ed0e57e975e73d1dd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362043"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883792"
 ---
-# <a name="iobjectwithsiteimpl-class"></a>Интерфейс IObjectWithSiteImpl класса
-Этот класс предоставляет методы, что объект для взаимодействия со своим сайтом.  
+# <a name="iobjectwithsiteimpl-class"></a>Класс IObjectWithSiteImpl
+Этот класс предоставляет методы, что объект, для взаимодействия со своим сайтом.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,31 +40,31 @@ template <class T>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Класс, производный от `IObjectWithSiteImpl`.  
+ *T*  
+ Ваш класс, производный от `IObjectWithSiteImpl`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[IObjectWithSiteImpl::GetSite](#getsite)|Запросы на сайт для указателя на интерфейс.|  
-|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Предоставляет объект, на сайте **IUnknown** указателя.|  
-|[IObjectWithSiteImpl::SetSite](#setsite)|Предоставляет объект, на сайте **IUnknown** указателя.|  
+|[IObjectWithSiteImpl::GetSite](#getsite)|Запрашивает место для указателя на интерфейс.|  
+|[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Предоставляет объект с этим сайтом `IUnknown` указатель.|  
+|[IObjectWithSiteImpl::SetSite](#setsite)|Предоставляет объект с этим сайтом `IUnknown` указатель.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет сайта **IUnknown** указателя.|  
+|[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет веб-узла `IUnknown` указатель.|  
   
 ## <a name="remarks"></a>Примечания  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) интерфейс позволяет объекту обмениваться данными со своим сайтом. Класс `IObjectWithSiteImpl` предоставляет стандартную реализацию этого интерфейса и реализует **IUnknown** , отправляя сведения в дамп устройства в отладочных построений.  
+ [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) интерфейс позволяет объекту обмениваться данными со своим сайтом. Класс `IObjectWithSiteImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.  
   
- `IObjectWithSiteImpl` Определяет два метода. Первый клиент вызывает метод `SetSite`, передача на сайте **IUnknown** указателя. Этот указатель сохранен внутри объекта и более поздней версии можно получить путем вызова `GetSite`.  
+ `IObjectWithSiteImpl` Указывает два метода. Клиент вызывает первый `SetSite`, передав сайта `IUnknown` указатель. Этот указатель хранится в объекте и более поздней версии можно получить путем вызова `GetSite`.  
   
- Как правило, являются производными от класса `IObjectWithSiteImpl` при создании объекта, не является элементом управления. Для элементов управления, производных от класса [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), предоставляющее указатель сайта. Не являющиеся производными класса как из `IObjectWithSiteImpl` и `IOleObjectImpl`.  
+ Как правило, являются производными от класса `IObjectWithSiteImpl` при создании объекта, не является элементом управления. Для элементов управления, являются производными от класса [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md), предоставляющий указатель на узел. Является производным класса оба `IObjectWithSiteImpl` и `IOleObjectImpl`.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IObjectWithSite`  
@@ -75,7 +75,7 @@ template <class T>
  **Заголовок:** atlcom.h  
   
 ##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
- Запрашивает сайта для указателя на интерфейс, определенный `riid`.  
+ Запрашивает указатель на интерфейс, определенный на сайте `riid`.  
   
 ```
 STDMETHOD(GetSite)(
@@ -84,22 +84,22 @@ STDMETHOD(GetSite)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Если сайт поддерживает этот интерфейс, указатель, возвращенный через `ppvSite`. В противном случае `ppvSite` равно **NULL**.  
+ Если сайт поддерживает этот интерфейс, через возвращается указатель `ppvSite`. В противном случае `ppvSite` имеет значение NULL.  
   
- В разделе [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) в Windows SDK.  
+ См. в разделе [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) в Windows SDK.  
   
 ##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
- Управляет сайта **IUnknown** указателя.  
+ Управляет веб-узла `IUnknown` указатель.  
   
 ```
 CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- `m_spUnkSite` Сначала получит этот указатель посредством вызова [SetSite](#setsite).  
+ `m_spUnkSite` Сначала он получит этот указатель посредством вызова [SetSite](#setsite).  
   
 ##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
- Предоставляет объект, на сайте **IUnknown** указателя.  
+ Предоставляет объект с этим сайтом `IUnknown` указатель.  
   
 ```
 HRESULT SetChildSite(IUnknown* pUnkSite);
@@ -107,20 +107,20 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
   
 ### <a name="parameters"></a>Параметры  
  *pUnkSite*  
- [in] Указатель на **IUnknown** указатель интерфейса управления данного объекта сайта. Если значение равно NULL, объект должен вызывать `IUnknown::Release` на любой существующий сайт, на этом этапе объект больше не знает своего сайта.  
+ [in] Указатель на `IUnknown` указатель на интерфейс управления данного объекта сайта. Если значение равно NULL, объект должен вызвать `IUnknown::Release` на любой существующий сайт, после чего объект больше не знает его сайта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK`.  
+ Возвращает значение S_OK.  
   
 ##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
- Предоставляет объект, на сайте **IUnknown** указателя.  
+ Предоставляет объект с этим сайтом `IUnknown` указатель.  
   
 ```
 STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) в Windows SDK.  
+ См. в разделе [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс _U_RECT | Документы Microsoft
+title: Класс _U_RECT | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360891"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882225"
 ---
 # <a name="urect-class"></a>Класс _U_RECT
-Этот класс адаптера аргумент позволяет либо `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется с точки зрения указатели.  
+Предоставляет класс адаптера этот аргумент `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется в терминах указатели.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -35,52 +35,53 @@ ms.locfileid: "32360891"
 ## <a name="syntax"></a>Синтаксис  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>Участники  
   
-### Public Constructors  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Description|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|Конструктор.|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>Открытые члены данных  
   
-|Name|Description|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Указатель на `RECT`.|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>Примечания  
+ Этот класс определяет две перегрузки конструктора: одна принимает **RECT &** аргумент, а другой принимает `LPRECT` аргумент. Первый конструктор сохраняет адрес ссылочный аргумент в единый данные-член класса, [m_lpRect](#_u_rect__m_lprect). Аргумент для конструктора указатель хранится непосредственно без преобразования.  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atlwin.h  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ Класс содержит значение, передаваемое в любой из его конструкторов как открытый `LPRECT` элемент данных.  
   
 ```
 LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ Адрес ссылочный аргумент хранится в одном данные-член класса, [m_lpRect](#_u_rect__m_lprect).  
   
 ```
-_U_RECT RECT (rc);  
-_U_RECT (LPRECT lpRect);
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>Параметры  
+ *Версия-кандидат*  
+ Объект `RECT` ссылки.  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lpRect*  
+ Объект `RECT` указатель.  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>Примечания  
+ Аргумент для конструктора указатель хранится непосредственно без преобразования.  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../../atl/atl-class-overview.md)

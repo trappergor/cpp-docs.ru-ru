@@ -1,5 +1,5 @@
 ---
-title: Класс cUrl | Документы Microsoft
+title: Класс cUrl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb0f7abc079d699cfcf682356b88b9cc8aa2bb9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 323645a0949ddf6797f36ad9b530920ca24ffe44
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366238"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885693"
 ---
 # <a name="curl-class"></a>Класс cUrl
 Этот класс представляет URL-адрес. Он позволяет управлять каждый элемент URL-адреса независимо от других ли синтаксический анализ URL-адрес существующей строки или создании строки с нуля.  
@@ -68,59 +68,59 @@ class CUrl
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUrl::CUrl](#curl)|Конструктор.|  
 |[CUrl:: ~ CUrl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CUrl::Canonicalize](#canonicalize)|Этот метод используется для преобразования строки URL-адрес в канонической форме.|  
-|[CUrl::Clear](#clear)|Этот метод используется для очистки всех полей URL-адрес.|  
-|[CUrl::CrackUrl](#crackurl)|Этот метод вызывается для расшифровки и синтаксический анализ URL-адрес.|  
+|[CUrl::Clear](#clear)|Вызовите этот метод, чтобы очистить все поля URL-адрес.|  
+|[CUrl::CrackUrl](#crackurl)|Вызовите этот метод, чтобы декодировать и анализировать URL-адрес.|  
 |[CUrl::CreateUrl](#createurl)|Этот метод используется для создания URL-адрес.|  
-|[CUrl::GetExtraInfo](#getextrainfo)|Этот метод вызывается для получения дополнительных сведений (таких как *текст* или # *текст*) по URL-адресу.|  
-|[CUrl::GetExtraInfoLength](#getextrainfolength)|Вызовите этот метод, чтобы получить дополнительные сведения (такие как *текст* или # *текст*) для получения URL-адреса.|  
+|[CUrl::GetExtraInfo](#getextrainfo)|Вызовите этот метод, чтобы получить дополнительные данные (такие как *текст* или # *текст*) из URL-адрес.|  
+|[CUrl::GetExtraInfoLength](#getextrainfolength)|Вызовите этот метод, чтобы получить нужные дополнительные данные (такие как *текст* или # *текст*) для получения URL-адреса.|  
 |[CUrl::GetHostName](#gethostname)|Этот метод используется для получения имени узла в URL-адресе.|  
-|[CUrl::GetHostNameLength](#gethostnamelength)|Этот метод используется для получения длины имени узла.|  
-|[CUrl::GetPassword](#getpassword)|Вызовите этот метод, чтобы получить пароль по URL-адресу.|  
-|[CUrl::GetPasswordLength](#getpasswordlength)|Этот метод используется для получения длины пароля.|  
-|[CUrl::GetPortNumber](#getportnumber)|Этот метод вызывается для получения номера порта с точки зрения ATL_URL_PORT.|  
+|[CUrl::GetHostNameLength](#gethostnamelength)|Вызовите этот метод, чтобы получить длину имени узла.|  
+|[CUrl::GetPassword](#getpassword)|Вызовите этот метод, чтобы получить пароль в URL-адресе.|  
+|[CUrl::GetPasswordLength](#getpasswordlength)|Вызовите этот метод, чтобы получить длину пароля.|  
+|[CUrl::GetPortNumber](#getportnumber)|Вызовите этот метод, чтобы получить имя порта, с точки зрения ATL_URL_PORT.|  
 |[CUrl::GetScheme](#getscheme)|Вызовите этот метод, чтобы получить схему URL-адрес.|  
-|[CUrl::GetSchemeName](#getschemename)|Этот метод используется для получения имени схемы URL-адрес.|  
-|[CUrl::GetSchemeNameLength](#getschemenamelength)|Вызовите этот метод, чтобы получить длину имени схемы URL-адрес.|  
-|[CUrl::GetUrlLength](#geturllength)|Этот метод используется для получения длина URL-адреса.|  
-|[CUrl::GetUrlPath](#geturlpath)|Этот метод используется для получения URL-адрес.|  
-|[CUrl::GetUrlPathLength](#geturlpathlength)|Этот метод используется для получения длина пути URL-адреса.|  
-|[CUrl::GetUserName](#getusername)|Этот метод вызывается для получения имени пользователя из URL-адрес.|  
-|[CUrl::GetUserNameLength](#getusernamelength)|Этот метод используется для получения длины имени пользователя.|  
-|[CUrl::SetExtraInfo](#setextrainfo)|Вызовите этот метод для установки дополнительных сведений (таких как *текст* или # *текст*) URL-адреса.|  
+|[CUrl::GetSchemeName](#getschemename)|Вызовите этот метод, чтобы получить имя схемы URL-адрес.|  
+|[CUrl::GetSchemeNameLength](#getschemenamelength)|Вызовите этот метод, чтобы получить имя схемы URL-адрес.|  
+|[CUrl::GetUrlLength](#geturllength)|Вызовите этот метод, чтобы получить URL-адрес.|  
+|[CUrl::GetUrlPath](#geturlpath)|Этот метод используется для получения пути URL-адрес.|  
+|[CUrl::GetUrlPathLength](#geturlpathlength)|Этот метод используется для получения длины пути URL-адрес.|  
+|[CUrl::GetUserName](#getusername)|Этот метод используется для получения имени пользователя из URL-адрес.|  
+|[CUrl::GetUserNameLength](#getusernamelength)|Вызовите этот метод, чтобы получить длину имени пользователя.|  
+|[CUrl::SetExtraInfo](#setextrainfo)|Вызовите этот метод, чтобы задать нужные дополнительные данные (такие как *текст* или # *текст*) URL-адреса.|  
 |[CUrl::SetHostName](#sethostname)|Этот метод используется для задания имени узла.|  
-|[CUrl::SetPassword](#setpassword)|Этот метод позволяет задать пароль.|  
+|[CUrl::SetPassword](#setpassword)|Этот метод используется для установки пароля.|  
 |[CUrl::SetPortNumber](#setportnumber)|Вызовите этот метод, чтобы задать номер порта с точки зрения ATL_URL_PORT.|  
 |[CUrl::SetScheme](#setscheme)|Вызовите этот метод, чтобы задать схему URL-адрес.|  
-|[CUrl::SetSchemeName](#setschemename)|Этот метод используется для задания имени схемы URL-адрес.|  
-|[CUrl::SetUrlPath](#seturlpath)|Этот метод используется для задания URL-адрес.|  
-|[CUrl::SetUserName](#setusername)|Этот метод вызывается для задания имени пользователя.|  
+|[CUrl::SetSchemeName](#setschemename)|Вызовите этот метод, чтобы задать имя схемы URL-адрес.|  
+|[CUrl::SetUrlPath](#seturlpath)|Этот метод используется для задания URL-пути.|  
+|[CUrl::SetUserName](#setusername)|Вызовите этот метод для задания имени пользователя.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CUrl::operator =](#operator_eq)|Присваивает указанный `CUrl` объект с текущим `CUrl` объекта.|  
+|[CUrl::operator =](#operator_eq)|Назначает указанное `CUrl` объект с текущим `CUrl` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- `CUrl` позволяет управлять поля URL-адрес, например пути или номер порта. `CUrl` принимает URL-адреса следующего вида:  
+ `CUrl` позволяет управлять поля URL-адреса, такие как путь или номер порта. `CUrl` принимает URL-адреса следующего вида:  
   
- \<Схема > ://\<имя пользователя >:\<пароль > @\<HostName >:\<номер_порта > /\<UrlPath >\<ExtraInfo >  
+ \<Схема > ://\<имя пользователя >:\<пароль > @\<имя узла >:\<номер_порта > /\<UrlPath >\<ExtraInfo >  
   
- (Некоторые поля являются необязательными.) Например рассмотрим этот URL-адрес:  
+ (Некоторые поля являются обязательными). Например рассмотрим этот URL-адрес:  
   
  http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents  
   
- [CUrl::CrackUrl](#crackurl) анализирует его следующим образом:  
+ [CUrl::CrackUrl](#crackurl) разбирает его следующим образом:  
   
 -   Схема: «http» или [ATL_URL_SCHEME_HTTP](atl-url-scheme-enum.md)  
   
@@ -136,7 +136,7 @@ class CUrl
   
 -   ExtraInfo: «#contents»  
   
- Чтобы управлять UrlPath поля (например), можно использовать [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), и [SetUrlPath](#seturlpath). Следует использовать [CreateUrl](#createurl) для создания полной строки URL-адрес.  
+ Чтобы управлять UrlPath поле (например), используйте [GetUrlPath](#geturlpath), [GetUrlPathLength](#geturlpathlength), и [SetUrlPath](#seturlpath). Используется [CreateUrl](#createurl) для создания полной строки URL-адрес.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
@@ -149,53 +149,53 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
- Флаги, управляющие канонизации. Если флаги не заданы ( `dwFlags` = 0), метод преобразует всех небезопасных символов и последовательностей метаданных (например, \\., \.., и \\...) для escape-последовательности. `dwFlags` Может принимать одно из следующих значений:  
+ *dwFlags*  
+ Флаги, определяющие канонизации. Если флаги не указаны (*dwFlags* = 0), метод преобразует все небезопасные символы и последовательности meta (такие как \\., \.., и \\...) для escape-последовательности. *dwFlags* может принимать одно из следующих значений:  
   
--   ATL_URL_BROWSER_MODE: Не кодирование или декодирование символов после «#» или «» и не удаляет пробелы после «». Если это значение не задано, кодируется весь URL-адрес и удалить конечные пробелы.  
+-   ATL_URL_BROWSER_MODE: Не кодирование или декодирование символов после «#» или «» и не удаляет пробелы после «». Если это значение не указано, кодируется весь URL-адрес и конечный пробел удаляется.  
   
--   ATL_URL _DECODE: преобразует все % XX последовательности символов, включая escape-последовательностей, прежде чем разбор URL-адрес.  
+-   ATL_URL _DECODE: преобразует все % XX последовательности символов, включая escape-последовательности, прежде чем анализируется URL-адрес.  
   
--   ATL_URL _ENCODE_PERCENT: кодирует все символы процента обнаружил. По умолчанию не кодируются символы процента.  
+-   ATL_URL _ENCODE_PERCENT: кодирует все символы процента обнаружил. По умолчанию символы процента не кодируются.  
   
 -   ATL_URL _ENCODE_SPACES_ONLY: кодирует только пробелы.  
   
--   ATL_URL _NO_ENCODE: преобразования небезопасных символов в escape-последовательности.  
+-   ATL_URL _NO_ENCODE: не выполняет преобразование небезопасных символов в escape-последовательности.  
   
--   ATL_URL _NO_META: не приводит к удалению meta последовательности (такие как «. «и»..») по URL-адресу.  
+-   ATL_URL _NO_META: не приводит к удалению meta последовательности (такие как «. «и»..») из URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
  Преобразование в канонической форме включает преобразование небезопасных символов и пробелов в escape-последовательности.  
   
 ##  <a name="clear"></a>  CUrl::Clear  
- Этот метод используется для очистки всех полей URL-адрес.  
+ Вызовите этот метод, чтобы очистить все поля URL-адрес.  
   
 ```
 inline void Clear() throw();
 ```  
   
 ##  <a name="crackurl"></a>  CUrl::CrackUrl  
- Этот метод вызывается для расшифровки и синтаксический анализ URL-адрес.  
+ Вызовите этот метод, чтобы декодировать и анализировать URL-адрес.  
   
 ```
 BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszUrl`  
+ *lpszUrl*  
  URL-адрес.  
   
- `dwFlags`  
- Укажите ATL_URL_DECODE или ATL_URL_ESCAPE, чтобы преобразовать все escape-символы в `lpszUrl` реальные значения после синтаксического анализа. (До Visual C++ 2005 ATL_URL_DECODE преобразовать все escape-символы перед синтаксическим анализом.)  
+ *dwFlags*  
+ Укажите ATL_URL_DECODE или ATL_URL_ESCAPE, чтобы преобразовать все escape-символов в *lpszUrl* реальные значения после синтаксического анализа. (Ранее Visual C++ 2005 ATL_URL_DECODE преобразовать все escape-символы перед анализом.)  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="createurl"></a>  CUrl::CreateUrl  
- Этот метод создает строку URL-адрес из поля объект перелистывание компонента.  
+ Этот метод создает строку URL-адрес из поля компонентов объект CUrl.  
   
 ```
 inline BOOL CreateUrl(
@@ -206,26 +206,26 @@ inline BOOL CreateUrl(
   
 ### <a name="parameters"></a>Параметры  
  *lpszUrl*  
- Строковый буфер для хранения строки полный URL-адрес.  
+ Строковый буфер для хранения полной строки URL-адрес.  
   
- `pdwMaxLength`  
+ *pdwMaxLength*  
  Максимальная длина *lpszUrl* строковый буфер.  
   
- `dwFlags`  
- Укажите ATL_URL_ESCAPE для преобразования все escape-символы в *lpszUrl* реальные значения.  
+ *dwFlags*  
+ Укажите ATL_URL_ESCAPE для преобразования все escape-символов в *lpszUrl* реальные значения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод добавляет его отдельные поля для построения полной строки URL-адрес, используя следующий формат:  
+ Этот метод добавляет его отдельные поля для создания полной строки URL-адрес, используя следующий формат:  
   
- **\<Схема > ://\<пользователя >:\<передачи > @\<домена >:\<порт >\<путь >\<лишние >**  
+ **\<Схема > ://\<пользователя >:\<передать > @\<домена >:\<порт >\<путь >\<дополнительный >**  
   
- При вызове этого метода `pdwMaxLength` параметр должен содержать изначально Максимальная длина строкового буфера ссылается *lpszUrl* параметра. Значение `pdwMaxLength` обновляется с фактическую длину строки URL-адреса.  
+ При вызове этого метода *pdwMaxLength* параметр изначально должен содержать максимальную длину буфера строки ссылается *lpszUrl* параметра. Значение *pdwMaxLength* параметр будет дополняться фактическую длину строки URL-адреса.  
   
 ### <a name="example"></a>Пример  
- В этом примере демонстрируется создание объекта перелистывание и извлечения его строки URL-адреса  
+ В этом примере демонстрируется создание объекта CUrl и извлечения его строки URL-адрес  
   
  [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
@@ -238,7 +238,7 @@ CUrl(const CUrl& urlThat) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `urlThat`  
+ *URL-адрес*  
  `CUrl` Объект для копирования для создания URL-адрес.  
   
 ##  <a name="dtor"></a>  CUrl:: ~ CUrl  
@@ -249,24 +249,24 @@ CUrl(const CUrl& urlThat) throw();
 ```  
   
 ##  <a name="getextrainfo"></a>  CUrl::GetExtraInfo  
- Этот метод вызывается для получения дополнительных сведений (таких как *текст* или # *текст*) по URL-адресу.  
+ Вызовите этот метод, чтобы получить дополнительные данные (такие как *текст* или # *текст*) из URL-адрес.  
   
 ```
 inline LPCTSTR GetExtraInfo() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает строку, содержащую Дополнительные сведения.  
+ Возвращает строку, содержащую нужные дополнительные данные.  
   
 ##  <a name="getextrainfolength"></a>  CUrl::GetExtraInfoLength  
- Вызовите этот метод, чтобы получить дополнительные сведения (такие как *текст* или # *текст*) для получения URL-адреса.  
+ Вызовите этот метод, чтобы получить нужные дополнительные данные (такие как *текст* или # *текст*) для получения URL-адреса.  
   
 ```
 inline DWORD GetExtraInfoLength() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает длину строки, содержащее дополнительные сведения.  
+ Возвращает длину строки, содержащей дополнительную информацию.  
   
 ##  <a name="gethostname"></a>  CUrl::GetHostName  
  Этот метод используется для получения имени узла в URL-адресе.  
@@ -279,7 +279,7 @@ inline LPCTSTR GetHostName() const throw();
  Возвращает имя узла.  
   
 ##  <a name="gethostnamelength"></a>  CUrl::GetHostNameLength  
- Этот метод используется для получения длины имени узла.  
+ Вызовите этот метод, чтобы получить длину имени узла.  
   
 ```
 inline DWORD GetHostNameLength() const throw();
@@ -289,7 +289,7 @@ inline DWORD GetHostNameLength() const throw();
  Возвращает длину имени узла.  
   
 ##  <a name="getpassword"></a>  CUrl::GetPassword  
- Вызовите этот метод, чтобы получить пароль по URL-адресу.  
+ Вызовите этот метод, чтобы получить пароль в URL-адресе.  
   
 ```
 inline LPCTSTR GetPassword() const throw();
@@ -299,7 +299,7 @@ inline LPCTSTR GetPassword() const throw();
  Возвращает пароль.  
   
 ##  <a name="getpasswordlength"></a>  CUrl::GetPasswordLength  
- Этот метод используется для получения длины пароля.  
+ Вызовите этот метод, чтобы получить длину пароля.  
   
 ```
 inline DWORD GetPasswordLength() const throw();
@@ -309,7 +309,7 @@ inline DWORD GetPasswordLength() const throw();
  Возвращает длину пароля.  
   
 ##  <a name="getportnumber"></a>  CUrl::GetPortNumber  
- Этот метод вызывается для получения номера порта.  
+ Вызовите этот метод, чтобы получить имя порта.  
   
 ```
 inline ATL_URL_PORT GetPortNumber() const throw();
@@ -329,7 +329,7 @@ inline ATL_URL_SCHEME GetScheme() const throw();
  Возвращает [ATL_URL_SCHEME](atl-url-scheme-enum.md) значение, описывающее схему URL-адреса.  
   
 ##  <a name="getschemename"></a>  CUrl::GetSchemeName  
- Этот метод используется для получения имени схемы URL-адрес.  
+ Вызовите этот метод, чтобы получить имя схемы URL-адрес.  
   
 ```
 inline LPCTSTR GetSchemeName() const throw();
@@ -339,7 +339,7 @@ inline LPCTSTR GetSchemeName() const throw();
  Возвращает имя схемы URL-адрес (например, «http» или «ftp»).  
   
 ##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength  
- Вызовите этот метод, чтобы получить длину имени схемы URL-адрес.  
+ Вызовите этот метод, чтобы получить имя схемы URL-адрес.  
   
 ```
 inline DWORD GetSchemeNameLength() const throw();
@@ -349,7 +349,7 @@ inline DWORD GetSchemeNameLength() const throw();
  Возвращает длину имени схемы URL-адрес.  
   
 ##  <a name="geturllength"></a>  CUrl::GetUrlLength  
- Этот метод используется для получения длина URL-адреса.  
+ Вызовите этот метод, чтобы получить URL-адрес.  
   
 ```
 inline DWORD GetUrlLength() const throw();
@@ -359,17 +359,17 @@ inline DWORD GetUrlLength() const throw();
  Возвращает длину URL-адрес.  
   
 ##  <a name="geturlpath"></a>  CUrl::GetUrlPath  
- Этот метод используется для получения URL-адрес.  
+ Этот метод используется для получения пути URL-адрес.  
   
 ```
 inline LPCTSTR GetUrlPath() const throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает URL-адрес.  
+ Возвращает путь URL-адрес.  
   
 ##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength  
- Этот метод используется для получения длина пути URL-адреса.  
+ Этот метод используется для получения длины пути URL-адрес.  
   
 ```
 inline DWORD GetUrlPathLength() const throw();
@@ -379,7 +379,7 @@ inline DWORD GetUrlPathLength() const throw();
  Возвращает длину пути URL-адрес.  
   
 ##  <a name="getusername"></a>  CUrl::GetUserName  
- Этот метод вызывается для получения имени пользователя из URL-адрес.  
+ Этот метод используется для получения имени пользователя из URL-адрес.  
   
 ```
 inline LPCTSTR GetUserName() const throw();
@@ -389,7 +389,7 @@ inline LPCTSTR GetUserName() const throw();
  Возвращает имя пользователя.  
   
 ##  <a name="getusernamelength"></a>  CUrl::GetUserNameLength  
- Этот метод используется для получения длины имени пользователя.  
+ Вызовите этот метод, чтобы получить длину имени пользователя.  
   
 ```
 inline DWORD GetUserNameLength() const throw();
@@ -399,21 +399,21 @@ inline DWORD GetUserNameLength() const throw();
  Возвращает длину имени пользователя.  
   
 ##  <a name="operator_eq"></a>  CUrl::operator =  
- Присваивает указанный `CUrl` объект с текущим `CUrl` объекта.  
+ Назначает указанное `CUrl` объект с текущим `CUrl` объекта.  
   
 ```
 CUrl& operator= (const CUrl& urlThat) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `urlThat`  
+ *URL-адрес*  
  `CUrl` Объект для копирования в текущий объект.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на текущий объект.  
   
 ##  <a name="setextrainfo"></a>  CUrl::SetExtraInfo  
- Вызовите этот метод для установки дополнительных сведений (таких как *текст* или # *текст*) URL-адреса.  
+ Вызовите этот метод, чтобы задать нужные дополнительные данные (такие как *текст* или # *текст*) URL-адреса.  
   
 ```
 inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
@@ -421,10 +421,10 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
   
 ### <a name="parameters"></a>Параметры  
  *lpszInfo*  
- Строка, содержащая дополнительные сведения, включаемые в URL-адрес.  
+ Строка, содержащая дополнительные сведения для включения в URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="sethostname"></a>  CUrl::SetHostName  
  Этот метод используется для задания имени узла.  
@@ -434,14 +434,14 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszHost`  
+ *lpszHost*  
  Имя узла.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="setpassword"></a>  CUrl::SetPassword  
- Этот метод позволяет задать пароль.  
+ Этот метод используется для установки пароля.  
   
 ```
 inline BOOL SetPassword(LPCTSTR lpszPass) throw();
@@ -452,7 +452,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
  Пароль.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="setportnumber"></a>  CUrl::SetPortNumber  
  Вызовите этот метод, чтобы задать номер порта.  
@@ -466,7 +466,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
  Номер порта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="setscheme"></a>  CUrl::SetScheme  
  Вызовите этот метод, чтобы задать схему URL-адрес.  
@@ -476,17 +476,17 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nScheme`  
+ *nScheme*  
  Один из [ATL_URL_SCHEME](atl-url-scheme-enum.md) значения для схемы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Можно также задать схему по имени (в разделе [CUrl::SetSchemeName](#setschemename)).  
+ Можно также задать схему по имени (см. в разделе [CUrl::SetSchemeName](#setschemename)).  
   
 ##  <a name="setschemename"></a>  CUrl::SetSchemeName  
- Этот метод используется для задания имени схемы URL-адрес.  
+ Вызовите этот метод, чтобы задать имя схемы URL-адрес.  
   
 ```
 inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
@@ -497,27 +497,27 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
  Имя схемы, URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ### <a name="remarks"></a>Примечания  
- Можно также задать схему с помощью [ATL_URL_SCHEME](atl-url-scheme-enum.md) константы (см. [CUrl::SetScheme](#setscheme)).  
+ Можно также задать схему с помощью [ATL_URL_SCHEME](atl-url-scheme-enum.md) констант (см. в разделе [CUrl::SetScheme](#setscheme)).  
   
 ##  <a name="seturlpath"></a>  CUrl::SetUrlPath  
- Этот метод используется для задания URL-адрес.  
+ Этот метод используется для задания URL-пути.  
   
 ```
 inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszPath`  
+ *lpszPath*  
  URL-адрес.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ##  <a name="setusername"></a>  CUrl::SetUserName  
- Этот метод вызывается для задания имени пользователя.  
+ Вызовите этот метод для задания имени пользователя.  
   
 ```
 inline BOOL SetUserName(LPCTSTR lpszUser) throw();
@@ -528,7 +528,7 @@ inline BOOL SetUserName(LPCTSTR lpszUser) throw();
  Имя пользователя.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение TRUE при успешном выполнении FALSE в случае ошибки.  
+ Возвращает значение TRUE в случае успешного выполнения FALSE в случае сбоя.  
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../atl/reference/atl-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс CWindowImpl | Документы Microsoft
+title: Класс CWindowImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4884bbacd03675d00cb1a49b937265ab5faa2835
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c773cb242b3ac432ad5c0482bfad318c4c33b78a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366160"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883860"
 ---
 # <a name="cwindowimpl-class"></a>Класс CWindowImpl
 Предоставляет методы для создания или создание подкласса для окна.  
@@ -49,20 +49,20 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```    
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Новый класс, производный от `CWindowImpl`.  
   
  *TBase*  
  Базовый класс для класса. По умолчанию является базовым классом [CWindow](../../atl/reference/cwindow-class.md).  
   
- `TWinTraits`  
- Объект [класс характеристик](../../atl/understanding-window-traits.md) , определяющий стили для окна. Значение по умолчанию — `CControlWinTraits`.  
+ *TWinTraits*  
+ Объект [класс характеристик](../../atl/understanding-window-traits.md) , определяющий стили для окна. Значение по умолчанию — `CControlWinTraits`.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWindowImpl::Create](#create)|Создает окно.|  
   
@@ -73,43 +73,43 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |[DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|  
 |[GetCurrentMessage](#getcurrentmessage)|Возвращает текущее сообщение.|  
 |[GetWindowProc](#getwindowproc)|Возвращает текущую процедуру окна.|  
-|[OnFinalMessage](#onfinalmessage)|Вызывается после получения последнего сообщения (обычно `WM_NCDESTROY`).|  
+|[OnFinalMessage](#onfinalmessage)|Вызывается после получения последнего сообщения (обычно WM_NCDESTROY).|  
 |[SubclassWindow](#subclasswindow)|Подклассы окно.|  
-|[UnsubclassWindow](#unsubclasswindow)|Восстановление ранее подклассов окна.|  
+|[UnsubclassWindow](#unsubclasswindow)|Восстанавливает ранее подклассов окно.|  
   
 ### <a name="static-methods"></a>Статические методы  
   
 |||  
 |-|-|  
-|[GetWndClassInfo](#getwndclassinfo)|Возвращает статический экземпляр [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), который управляет сведениями о классе окна.|  
+|[GetWndClassInfo](#getwndclassinfo)|Возвращает статический экземпляр [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md), который управляет данными класса окна.|  
 |[WindowProc](#windowproc)|Обрабатывает сообщения, отправленные в окно.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
 |||  
 |-|-|  
-|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Указывает класс окна исходной процедуры окна.|  
+|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|Указывает исходную процедуру окна класс окна.|  
   
 ## <a name="remarks"></a>Примечания  
- Можно использовать `CWindowImpl` для создания окна или подкласс существующему окну. `CWindowImpl` процедуру окна использует схемы сообщений для направления сообщений для соответствующих обработчиков.  
+ Можно использовать `CWindowImpl` для создания окна или подкласс существующему окну. `CWindowImpl` окно процедура использует схему сообщений для направления сообщений соответствующих обработчиков.  
   
- `CWindowImpl::Create` Создает окно на основе сведений класса окна, под управлением [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` содержит [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макросом, который означает `CWndClassInfo` регистрирует новый класс окна. Если вы хотите суперкласса существующего класса окна, получении класса из `CWindowImpl` и включать [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос. В этом случае `CWndClassInfo` регистрирует класс окна, который основан на существующем классе, но использует `CWindowImpl::WindowProc`. Пример:  
+ `CWindowImpl::Create` Создает окно, на основе сведений класс окна, который управляется средой [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl` содержит [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макросом, который означает, что `CWndClassInfo` регистрирует новый класс окна. Если вы хотите суперкласса существующий класс окон, являются производными от класса `CWindowImpl` и включают [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос. В этом случае `CWndClassInfo` регистрирует класс окна, который основан на существующий класс, но использует `CWindowImpl::WindowProc`. Пример:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
->  Поскольку `CWndClassInfo` управляет данными только один класс окна каждого окна, созданные с помощью экземпляра `CWindowImpl` основан на один класс.  
+>  Так как `CWndClassInfo` управляет данными только один класс окна, созданного посредством экземпляра каждого окна `CWindowImpl` основан на один класс.  
   
- `CWindowImpl` также поддерживает создания подкласса окна. `SubclassWindow` Метод прикрепляет к существующему окну `CWindowImpl` объекта и изменяет процедура окна для `CWindowImpl::WindowProc`. Каждый экземпляр `CWindowImpl` можно подкласс другого окна.  
+ `CWindowImpl` также поддерживает создание подклассов окна. `SubclassWindow` Метод прикрепляет к существующему окну `CWindowImpl` объекта и изменяет процедура окна для `CWindowImpl::WindowProc`. Каждый экземпляр `CWindowImpl` можно подкласс другого окна.  
   
 > [!NOTE]
->  Для любой заданной `CWindowImpl` , либо вызовите **создать** или `SubclassWindow`. Не вызывать оба метода того же объекта.  
+>  Для любого заданного `CWindowImpl` объекта, вызовите `Create` или `SubclassWindow`. Не вызвать оба метода того же объекта.  
   
- В дополнение к `CWindowImpl`, библиотека ATL предоставляет [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) для создания окна, содержащийся в другом объекте.  
+ В дополнение к `CWindowImpl`, библиотека ATL предоставляет [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) для создания окна, которое содержится в другом объекте.  
   
- Деструктор базового класса (~ **CWindowImplRoot**) гарантирует, что окно удалены до уничтожения объекта.  
+ Деструктор базового класса (~ `CWindowImplRoot`) гарантирует, что окно будет удален перед уничтожением объекта.  
   
- `CWindowImpl` является производным от **CWindowImplBaseT**, который является производным от **CWindowImplRoot**, который является производным от **TBase** и [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ `CWindowImpl` является производным от `CWindowImplBaseT`, который является производным от `CWindowImplRoot`, который является производным от `TBase` и [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
 |Дополнительные сведения о|См.|  
 |--------------------------------|---------|  
@@ -132,7 +132,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
  **Заголовок:** atlwin.h  
   
 ##  <a name="create"></a>  CWindowImpl::Create  
- Создает окно на основе нового класса окна.  
+ Создает окно, в зависимости от нового класса окна.  
   
 ```
 HWND Create(
@@ -146,43 +146,43 @@ HWND Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWndParent`  
+ *hWndParent*  
  [in] Дескриптор окна родительского или владельца.  
   
- `rect`  
- [in] Объект [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которые задают позицию окна. `RECT` Можно передать указатель или по ссылке.  
+ *Rect*  
+ [in] Объект [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий положение окна. `RECT` Могут передаваться, указателем или по ссылке.  
   
- `szWindowName`  
- [in] Задает имя окна. Значение по умолчанию — **NULL**.  
+ *szWindowName*  
+ [in] Задает имя окна. Значение по умолчанию имеет значение NULL.  
   
- `dwStyle`  
- [in] Стиль окна. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK.  
+ *dwStyle*  
+ [in] Стиль окна. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в пакете Windows SDK.  
   
- `dwExStyle`  
- [in] Стиль окна расширенного. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ [in] Стиль окна расширенного. Это значение объединяется со стилем, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в пакете Windows SDK.  
   
- `MenuOrID`  
- [in] Для дочернего окна идентификатор окна. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
+ *MenuOrID*  
+ [in] Для дочернего окна, окна идентификатор. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
   
- `lpCreateParam`  
- [in] Указатель на окно создания данных. Полное описание см. в описании последний параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ *lpCreateParam*  
+ [in] Указатель на окно создания данных. Полное описание см. в описании для конечного параметра для [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения дескриптор для созданного окна. В противном случае **NULL**.  
+ В случае успешного выполнения дескриптор для созданного окна. В противном случае — значение NULL.  
   
 ### <a name="remarks"></a>Примечания  
- **Создание** сначала регистрирует класс окна, если он не был зарегистрирован. Вновь созданный окно автоматически присоединяется к `CWindowImpl` объекта.  
+ `Create` Регистрирует класс окна сначала в том случае, если он еще не был зарегистрирован. Вновь созданное окно автоматически присоединяется ко `CWindowImpl` объекта.  
   
 > [!NOTE]
->  Не вызывайте **создать** Если уже был вызван [SubclassWindow](#subclasswindow).  
+>  Не вызывайте `Create` уже после вызова метода [SubclassWindow](#subclasswindow).  
   
- Чтобы использовать класс окна, который основан на существующий класс окна, получении класса из `CWindowImpl` и включать [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос. Оконная функция существующий класс окна сохраняется в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Дополнительные сведения см. в разделе [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Обзор.  
+ Чтобы использовать класс окна, основанный на существующий класс окон, являются производными от класса `CWindowImpl` и включают [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос. Процедура окна существующий класс окон сохраняется в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc). Дополнительные сведения см. в разделе [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Обзор.  
   
 > [!NOTE]
->  Если используется значение 0 как значение для `MenuOrID` параметра, он должен быть указан как 0U (значение по умолчанию) для предотвращения ошибок компилятора.  
+>  Если используется значение 0 как значение для *MenuOrID* параметр, он должен быть указан как 0U (значение по умолчанию) для предотвращения ошибок компилятора.  
   
 ##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc  
- Вызывается методом [WindowProc](#windowproc) для обработки сообщений, не обработанные в схеме сообщений.  
+ Вызывается средой [WindowProc](#windowproc) для обработки сообщений, не обрабатываются в схеме сообщений.  
   
 ```
 LRESULT DefWindowProc(
@@ -194,14 +194,14 @@ LRESULT DefWindowProc();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uMsg`  
+ *uMsg*  
  [in] Сообщение, отправленное окну.  
   
- `wParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *wParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
- `lParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *lParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат обработки сообщения.  
@@ -212,7 +212,7 @@ LRESULT DefWindowProc();
  Функция без параметров автоматически извлекает необходимые параметры из текущего сообщения.  
   
 ##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage  
- Возвращает текущее сообщение, упакованные в `MSG` структуры.  
+ Возвращает текущее сообщение, содержащийся в `MSG` структуры.  
   
 ```
 const MSG* GetCurrentMessage();
@@ -232,10 +232,10 @@ virtual WNDPROC GetWindowProc();
  Текущую процедуру окна.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод для замены вашу процедуру окна.  
+ Переопределите этот метод, чтобы заменить на собственные процедуры окна.  
   
 ##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo  
- Вызывается методом [создать](#create) доступ к сведениям класс окна.  
+ Вызывается средой [создать](#create) для доступа к сведениям о классе окна.  
   
 ```
 static CWndClassInfo& GetWndClassInfo();
@@ -245,14 +245,14 @@ static CWndClassInfo& GetWndClassInfo();
  Статический экземпляр [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md).  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию `CWindowImpl` через этот метод получает [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макросом, который указывает новый класс окна.  
+ По умолчанию `CWindowImpl` получает этот метод через [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макросом, который указывает новый класс окна.  
   
- Чтобы суперкласса существующего класса окна, получении класса из `CWindowImpl` и включать [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос для переопределения `GetWndClassInfo`. Дополнительные сведения см. в разделе [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Обзор.  
+ Для суперкласса существующий класс окон, являются производными от класса `CWindowImpl` и включают [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос для переопределения `GetWndClassInfo`. Дополнительные сведения см. в разделе [CWindowImpl](../../atl/reference/cwindowimpl-class.md) Обзор.  
   
- Помимо использования `DECLARE_WND_CLASS` и `DECLARE_WND_SUPERCLASS` макросов, можно переопределить `GetWndClassInfo` собственной реализацией.  
+ Помимо использования DECLARE_WND_CLASS и DECLARE_WND_SUPERCLASS макросы, можно переопределить `GetWndClassInfo` собственной реализацией.  
   
 ##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc  
- В зависимости от окна указывает на одну из следующих процедур окна.  
+ В зависимости от окна указывает на один из следующих процедур окна.  
   
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -260,57 +260,57 @@ WNDPROC m_pfnSuperWindowProc;
   
 ### <a name="remarks"></a>Примечания  
   
-|Тип окна|Процедуры окна|  
+|Тип окна|Процедура окна|  
 |--------------------|----------------------|  
-|Окна на основании нового класса окна, указанное с помощью [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макрос.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) функции Win32.|  
-|Окна, основанного на классе окна, изменяющего существующего класса, указанное с помощью [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос.|Процедуру окна существующий класс окна.|  
-|Окно подклассов.|Окно подклассов исходной процедуры окна.|  
+|Окно на основании нового класса окна, заданные с помощью [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макрос.|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) функции Win32.|  
+|На основе окна в класс окна, который изменяет существующий класс, заданные с помощью [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос.|Процедура окна существующий класс окон.|  
+|Окно, выведенных в подклассы.|Окно выведенных в подклассы исходную процедуру окна.|  
   
- [CWindowImpl::DefWindowProc](#defwindowproc) отправляет сообщение сведения, сохраненные в процедуре окна `m_pfnSuperWindowProc`.  
+ [CWindowImpl::DefWindowProc](#defwindowproc) отправляет сообщения сведения, сохраненные в процедуре окна `m_pfnSuperWindowProc`.  
   
 ##  <a name="onfinalmessage"></a>  CWindowImpl::OnFinalMessage  
- Вызывается после получения последнего сообщения (обычно `WM_NCDESTROY`).  
+ Вызывается после получения последнего сообщения (обычно WM_NCDESTROY).  
   
 ```
 virtual void OnFinalMessage(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWnd`  
- [in] Дескриптор окна уничтожении.  
+ *hWnd*  
+ [in] Дескриптор окна уничтожения.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию `OnFinalMessage` не выполняет никаких действий, однако его можно переопределить эту функцию для обработки очистки, перед удалением окна. Если вы хотите автоматически удалить объект после уничтожения окна, можно вызвать `delete this;` в этой функции.  
+ Реализация по умолчанию `OnFinalMessage` не выполняет никаких действий, но можно переопределить эту функцию для обработки очистки перед удалением окна. Если вы хотите автоматически удалить объект после уничтожения окна, можно вызвать **; удалить** в этой функции.  
   
 ##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow  
- Подклассы окна, обозначенную `hWnd` и прикрепляет его к `CWindowImpl` объекта.  
+ Подклассы, идентифицируемый окна *hWnd* и присоединяет его к `CWindowImpl` объекта.  
   
 ```
 BOOL SubclassWindow(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWnd`  
+ *hWnd*  
  [in] Дескриптор окна подкласса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** является ли окно подклассов успешно, в противном случае — **FALSE**.  
+ Значение TRUE, если окно успешно подклассом; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Окно подклассов теперь использует [CWindowImpl::WindowProc](#windowproc). Исходной процедуры окна сохраняется в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Теперь используется окном, выведенных в подклассы [CWindowImpl::WindowProc](#windowproc). Исходный текст процедуры окна сохраняется в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 > [!NOTE]
->  Не вызывайте `SubclassWindow` Если уже был вызван [создать](#create).  
+>  Не вызывайте `SubclassWindow` уже после вызова метода [создать](#create).  
   
 ##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow  
- Отсоединяет окно подклассов `CWindowImpl` объекта и восстанавливает исходную процедуру окна, сохраненные в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Отсоединяет окно выведенных в подклассы `CWindowImpl` объекта и восстанавливает исходный текст процедуры окна, сохраненные в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ```
 HWND UnsubclassWindow();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор окна ранее подкласса.  
+ Дескриптор окна ранее подклассов.  
   
 ##  <a name="windowproc"></a>  CWindowImpl::WindowProc  
  Эта статическая функция реализует процедуру окна.  
@@ -324,25 +324,25 @@ static LRESULT CALLBACK WindowProc(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWnd`  
+ *hWnd*  
  [in] Дескриптор окна.  
   
- `uMsg`  
+ *uMsg*  
  [in] Сообщение, отправленное окну.  
   
- `wParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *wParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
- `lParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *lParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Результат обработки сообщения.  
   
 ### <a name="remarks"></a>Примечания  
- `WindowProc` использует схему сообщений по умолчанию (объявлено с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) для направления сообщений для соответствующих обработчиков. При необходимости `WindowProc` вызовы [DefWindowProc](#defwindowproc) для обработки дополнительных сообщений. Если сообщение последним не обрабатывается, `WindowProc` делает следующее:  
+ `WindowProc` использует схему сообщений по умолчанию (объявлен с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) для направления сообщений соответствующих обработчиков. При необходимости `WindowProc` вызовы [DefWindowProc](#defwindowproc) для обработки дополнительных сообщений. Если окончательное сообщение не обработано, `WindowProc` делает следующее:  
   
--   Выполняет unsubclassing, если окно было unsubclassed.  
+-   Выполняет unsubclassing в том случае, если окно было unsubclassed.  
   
 -   Очищает `m_hWnd`.  
   

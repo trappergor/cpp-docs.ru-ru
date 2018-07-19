@@ -1,5 +1,5 @@
 ---
-title: Класс CInterfaceArray | Документы Microsoft
+title: Класс CInterfaceArray | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359466"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882726"
 ---
 # <a name="cinterfacearray-class"></a>Класс CInterfaceArray
-Этот класс предоставляет методы, используемые при создании массива указателей интерфейса СОМ.  
+Этот класс предоставляет методы, используемые при создании массива указателей COM-интерфейса.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,22 +38,22 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `I`  
+ *I*  
  COM-интерфейс, указав тип указателя для сохранения.  
   
- `piid`  
- Указатель на IID `I`.  
+ *piid*  
+ Указатель на идентификатор IID *я*.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Конструктор для интерфейса массива.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет конструктор и производные методы для создания массива указателей интерфейса СОМ. Используйте [CInterfaceList](../../atl/reference/cinterfacelist-class.md) Если список является обязательным.  
+ Этот класс предоставляет конструктор и производные методы для создания массива указателей интерфейса СОМ. Используйте [CInterfaceList](../../atl/reference/cinterfacelist-class.md) когда необходима списка.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -73,7 +73,7 @@ CInterfaceArray() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует массив интеллектуального указателя.  
+ Инициализирует этот массив смарт-указатель.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlArray](../../atl/reference/catlarray-class.md)   

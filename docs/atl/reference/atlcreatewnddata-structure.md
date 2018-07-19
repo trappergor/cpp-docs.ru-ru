@@ -1,5 +1,5 @@
 ---
-title: Структура _AtlCreateWndData | Документы Microsoft
+title: Структура _AtlCreateWndData | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255799"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880012"
 ---
 # <a name="atlcreatewnddata-structure"></a>Структура _AtlCreateWndData
-Эта структура содержит данные экземпляра класса в коде над окнами в ATL  
+Эта структура содержит данные экземпляра класса в коде управления окнами в ATL  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,13 +40,13 @@ ms.locfileid: "34255799"
 ```  
   
 ## <a name="members"></a>Участники  
- **m_pThis**  
- **Это** указатель используется для получения доступа к экземпляру класса в процедуры окна.  
+ `m_pThis`  
+ **Это** указатель, используемый для получения доступа к экземпляру класса в процедуры окна.  
   
  `m_dwThreadID`  
- Идентификатор потока текущего экземпляра класса.  
+ Идентификатор текущего экземпляра класса.  
   
- **m_pNext**  
+ `m_pNext`  
  Указатель на следующий `_AtlCreateWndData` объекта.  
   
 ## <a name="requirements"></a>Требования  

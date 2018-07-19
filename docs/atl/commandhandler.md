@@ -1,5 +1,5 @@
 ---
-title: CommandHandler | Документы Microsoft
+title: CommandHandler | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355142"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850645"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` является функция, определяемая третий параметр `COMMAND_HANDLER` макрос в схему сообщений.  
+`CommandHandler` функция, определяемая параметром третий параметр макроса COMMAND_HANDLER в схему сообщения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,23 +40,23 @@ ms.locfileid: "32355142"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `wNotifyCode`  
+ *wNotifyCode*  
  Код уведомления.  
   
  *wID*  
- Идентификатор элемента меню, элемент управления или сочетаний клавиш.  
+ Идентификатор пункта меню, элемент управления или сочетаний клавиш.  
   
  *hWndCtl*  
  Дескриптор окна элемента управления.  
   
- `bHandled`  
- Сопоставление наборов сообщений `bHandled` для **TRUE** перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, он должен устанавливать `bHandled` для **FALSE** для указания сообщения требуется дополнительная обработка.  
+ *bHandled*  
+ Карта наборов сообщений *bHandled* значение TRUE перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Результат обработки сообщения. 0 в случае успеха.  
   
 ## <a name="remarks"></a>Примечания  
- Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
+ Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).  
   
 ## <a name="see-also"></a>См. также  
  [Реализация окна](../atl/implementing-a-window.md)   

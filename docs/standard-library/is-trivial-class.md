@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b30b634a84dc47d839e1288bc34437b440e914c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4eef350723dd8658bfc349495e905466e8179db1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864126"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965923"
 ---
 # <a name="istrivial-class"></a>Класс is_trivial
 
@@ -37,11 +37,11 @@ struct is_trivial;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `T` является тривиальным, в противном случае — значение false. К тривиальным типам относятся скалярные типы, типы тривиально копируемых классов, массивы этих типов и версии типов с квалификатором cv.
+Экземпляр предиката типа содержит значение true, если тип *T* является тривиальным, в противном случае он содержит значение false. К тривиальным типам относятся скалярные типы, типы тривиально копируемых классов, массивы этих типов и версии типов с квалификатором cv.
 
 ## <a name="requirements"></a>Требования
 

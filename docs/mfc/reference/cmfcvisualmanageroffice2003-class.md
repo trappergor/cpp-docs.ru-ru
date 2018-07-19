@@ -1,5 +1,5 @@
 ---
-title: Класс преобразованный CMFCVisualManagerOffice2003 | Документы Microsoft
+title: Класс CMFCVisualManagerOffice2003 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -102,15 +102,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3757aaced6fd9fe27c91da8f4382a133801fb2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: dbfa31831fd2db73fb1154c20cd9d246efad4917
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039366"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854139"
 ---
-# <a name="cmfcvisualmanageroffice2003-class"></a>Класс преобразованный CMFCVisualManagerOffice2003
-`CMFCVisualManagerOffice2003` придает приложению внешний вид Microsoft Office 2003.  
+# <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
+`CMFCVisualManagerOffice2003` Придает приложению внешний вид Microsoft Office 2003.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -124,28 +124,28 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Рисует границу поля со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
-|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Рисует кнопку раскрывающегося списка поля со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
+|[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Рисует границу поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|  
+|[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|  
 |[CMFCVisualManagerOffice2003::DrawCustomizeButton](#drawcustomizebutton)|Рисует кнопку настроить.|  
-|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Рисует кнопку push с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
-|[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Возвращает цвет базовый темы.|  
-|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Возвращает цвет, используемый для выделенного пункта меню.|  
-|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Платформа вызывает этот метод, чтобы получить список свойств цвет фона. (Переопределяет `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|  
+|[CMFCVisualManagerOffice2003::DrawPushButtonWinXP](#drawpushbuttonwinxp)|Рисует кнопку Push-уведомлений с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|  
+|[CMFCVisualManagerOffice2003::GetBaseThemeColor](#getbasethemecolor)|Получает цвет базовый темы.|  
+|[CMFCVisualManagerOffice2003::GetHighlightMenuItemColor](#gethighlightmenuitemcolor)|Получает цвет, используемый для выделенного пункта меню.|  
+|[CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|Платформа вызывает этот метод, чтобы получить цвет фона элемента списка свойств. (Переопределяет `CMFCVisualManagerOfficeXP::GetPropertyGridGroupColor`.)|  
 |[CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|Платформа вызывает этот метод, чтобы получить список свойств цвет текста. (Переопределяет `CMFCVisualManagerOfficeXP::GetPropertyGridGroupTextColor`.)|  
 |[CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight](#getshowallmenuitemsheight)|Возвращает высоту всех элементов меню. (Переопределяет [CMFCVisualManager::GetShowAllMenuItemsHeight](../../mfc/reference/cmfcvisualmanager-class.md#getshowallmenuitemsheight).)|  
-|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Задает цвет фона для указанной базовой группы и цвет границы. (Переопределяет `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|  
-|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Возвращает цвет выделения тон. (Переопределяет [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|  
-|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Платформа вызывает эту функцию, когда требуется получить набор цветов для рисования окно вкладки. (Переопределяет [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|  
-|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Возвращает поле Настройка кнопки панели инструментов. (Переопределяет `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|  
-|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Возвращает цвет отключенного для панели инструментов. (Переопределяет `CMFCVisualManager::GetToolbarDisabledColor`.)|  
-|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Вызывается платформой для получения сведений всплывающей подсказки. (Переопределяет [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|  
+|[CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors](#getsmartdockingbaseguidecolors)|Задает указанную группу базовый цвет фона и цвет границы. (Переопределяет `CMFCVisualManagerOfficeXP::GetSmartDockingBaseGuideColors`.)|  
+|[CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)|Получает цвет выделения тон. (Переопределяет [CMFCVisualManager::GetSmartDockingHighlightToneColor](../../mfc/reference/cmfcvisualmanager-class.md#getsmartdockinghighlighttonecolor).)|  
+|[CMFCVisualManagerOffice2003::GetTabFrameColors](#gettabframecolors)|Платформа вызывает эту функцию, когда ее нужно получить набор цветов для рисования вкладки окна. (Переопределяет [CMFCVisualManager::GetTabFrameColors](../../mfc/reference/cmfcvisualmanager-class.md#gettabframecolors).)|  
+|[CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin](#gettoolbarcustomizebuttonmargin)|Получает поля Настройка кнопки панели инструментов. (Переопределяет `CMFCVisualManager::GetToolBarCustomizeButtonMargin`.)|  
+|[CMFCVisualManagerOffice2003::GetToolbarDisabledColor](#gettoolbardisabledcolor)|Получает цвет отключен для панели инструментов. (Переопределяет `CMFCVisualManager::GetToolbarDisabledColor`.)|  
+|[CMFCVisualManagerOffice2003::GetToolTipInfo](#gettooltipinfo)|Вызывается платформой для получения во всплывающей подсказке. (Переопределяет [CMFCVisualManager::GetToolTipInfo](../../mfc/reference/cmfcvisualmanager-class.md#gettooltipinfo).)|  
 |[CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled](#isdefaultwinxpcolorsenabled)|Указывает, использует ли Диспетчер визуальных собственные цвета темы Windows XP.|  
-|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Возвращает ли текущий Диспетчер визуальных рисует границы вокруг области, которые закреплены и с вкладками. (Переопределяет [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|  
-|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Указывает, должны быть выделены OneNote вкладки. (Переопределяет `CMFCVisualManager::IsHighlightOneNoteTabs`.)|  
-|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Вызывается платформой при рисовании кнопки панели инструментов. (Переопределяет `CMFCVisualManager::IsOffsetPressedButton`.)|  
-|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Указывает, существует ли строка состояния с внешний вид Microsoft Office XP.|  
-|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Указывает, имеет ли указанная панель инструментов круглой фигуры. (Переопределяет [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|  
-|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Указывает, следует ли использовать глобальную тему Windows XP.|  
+|[CMFCVisualManagerOffice2003::IsDockingTabHasBorder](#isdockingtabhasborder)|Возвращает ли текущий наглядный диспетчер рисует границы вокруг области, закреплено и с вкладками. (Переопределяет [CMFCVisualManager::IsDockingTabHasBorder](../../mfc/reference/cmfcvisualmanager-class.md#isdockingtabhasborder).)|  
+|[CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs](#ishighlightonenotetabs)|Указывает, должны быть выделены вкладки OneNote. (Переопределяет `CMFCVisualManager::IsHighlightOneNoteTabs`.)|  
+|[CMFCVisualManagerOffice2003::IsOffsetPressedButton](#isoffsetpressedbutton)|Вызывается платформой при рисовании кнопки на панели инструментов. (Переопределяет `CMFCVisualManager::IsOffsetPressedButton`.)|  
+|[CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook](#isstatusbarofficexplook)|Указывает, существует ли строка состояния с с возможностями Office XP.|  
+|[CMFCVisualManagerOffice2003::IsToolbarRoundShape](#istoolbarroundshape)|Указывает, имеет ли указанный инструментов круглой фигуры. (Переопределяет [CMFCVisualManager::IsToolbarRoundShape](../../mfc/reference/cmfcvisualmanager-class.md#istoolbarroundshape).)|  
+|[CMFCVisualManagerOffice2003::IsUseGlobalTheme](#isuseglobaltheme)|Указывает, следует ли использовать глобальные темы Windows XP.|  
 |[CMFCVisualManagerOffice2003::IsWindowsThemingSupported](#iswindowsthemingsupported)|Указывает, поддерживается ли темы Windows. (Переопределяет [CMFCVisualManager::IsWindowsThemingSupported](../../mfc/reference/cmfcvisualmanager-class.md#iswindowsthemingsupported).)|  
 |[CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|Этот метод вызывается платформой при рисовании границ кнопки автоматического скрытия. (Переопределяет [CMFCVisualManager::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawautohidebuttonborder).)|  
 |[CMFCVisualManagerOffice2003::OnDrawBarGripper](#ondrawbargripper)|Вызывается платформой при рисовании захвата для панели элементов управления. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|  
@@ -153,68 +153,68 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerOffice2003::OnDrawButtonBorder](#ondrawbuttonborder)|Этот метод вызывается платформой при рисовании границ кнопки панели инструментов. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder](#ondrawcaptionbarborder)|Этот метод вызывается платформой при рисовании границы [класс CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawCaptionBarBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcaptionbarborder).)|  
 |[CMFCVisualManagerOffice2003::OnDrawCheckBoxEx](#ondrawcheckboxex)|Этот метод вызывается платформой при рисовании флажок. (Переопределяет [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|  
-|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Этот метод вызывается платформой при рисовании границ вокруг [CMFCToolBarComboBoxButton класс](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Этот метод вызывается платформой при рисовании кнопки сброса [CMFCToolBarComboBoxButton класса](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Этот метод вызывается платформой при рисовании границ элемента управления. (Переопределяет [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Этот метод вызывается платформой при рисовании виде раскрывающегося списка. (Переопределяет [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
-|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Этот метод вызывается платформой при рисовании границ вокруг экземпляр [CMFCHeaderCtrl класса](../../mfc/reference/cmfcheaderctrl-class.md). (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Этот метод вызывается платформой при рисовании границы [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md). (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawComboBorder](#ondrawcomboborder)|Этот метод вызывается платформой при рисовании границы вокруг [класс CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawComboDropButton](#ondrawcombodropbutton)|Этот метод вызывается платформой при рисовании кнопки раскрывающегося [класс CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md). (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawControlBorder](#ondrawcontrolborder)|Этот метод вызывается платформой при рисовании границы элемента управления. (Переопределяет [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawExpandingBox](#ondrawexpandingbox)|Этот метод вызывается платформой при рисовании раскрывающемся поле. (Переопределяет [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|  
+|[CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Этот метод вызывается платформой при рисовании границы вокруг экземпляр [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|  
+|[CMFCVisualManagerOffice2003::OnDrawMenuBorder](#ondrawmenuborder)|Этот метод вызывается платформой при рисовании границы [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md). (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Этот метод вызывается платформой при рисовании разделителя для панель Outlook. (Переопределяет [CMFCVisualManager::OnDrawOutlookBarSplitter](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookbarsplitter).)|  
 |[CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Вызывается платформой при рисовании границ кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|  
-|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Этот метод вызывается платформой при рисовании границы [класса CPane](../../mfc/reference/cpane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPaneBorder](#ondrawpaneborder)|Этот метод вызывается платформой при рисовании границы [класс CPane](../../mfc/reference/cpane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawPaneCaption](#ondrawpanecaption)|Этот метод вызывается платформой при рисовании заголовок [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Этот метод вызывается платформой при рисовании границ всплывающего окна. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)|Этот метод вызывается платформой при рисовании границы всплывающего окна. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPopupWindowBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|Этот метод вызывается платформой при рисовании границ кнопки во всплывающем окне. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption](#ondrawpopupwindowcaption)|Этот метод вызывается платформой при рисовании заголовок всплывающего окна. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPopupWindowCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Этот метод вызывается платформой при рисовании группу кнопки на ленте. (Переопределяет [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|Этот метод вызывается платформой при рисовании группу кнопок на ленте. (Переопределяет [CMFCVisualManager::OnDrawRibbonButtonsGroup](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonsgroup).)|  
 |[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|Этот метод вызывается платформой при рисовании заголовок для категории ленты. (Переопределяет [CMFCVisualManager::OnDrawRibbonCategoryCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorycaption).)|  
 |[CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab](#ondrawribboncategorytab)|Этот метод вызывается платформой при рисовании вкладку категории ленты. (Переопределяет [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Этот метод вызывается платформой при рисовании [CMFCRibbonProgressBar класса](../../mfc/reference/cmfcribbonprogressbar-class.md). (Переопределяет [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Этот метод вызывается платформой при рисовании разделителя на панели инструментов быстрого доступа к ленте. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Этот метод вызывается платформой при рисовании канала [CMFCRibbonSlider класса](../../mfc/reference/cmfcribbonslider-class.md). (Переопределяет [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|Этот метод вызывается платформой при рисовании [класс CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md). (Переопределяет [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar).)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|Этот метод вызывается платформой при рисовании разделителя на панели инструментов быстрого доступа ленты. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawRibbonQuickAccessToolBarSeparator`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|Этот метод вызывается платформой при рисовании канала [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). (Переопределяет [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel).)|  
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|Этот метод вызывается платформой при рисовании ползунка [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb).)|  
 |[CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|Этот метод вызывается платформой при рисовании кнопки масштаба для [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton).)|  
-|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Этот метод вызывается платформой при рисовании панели в строке состояния. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|Этот метод вызывается платформой при рисовании панель строки состояния. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawRibbonStatusBarPane`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawScrollButtons](#ondrawscrollbuttons)|Этот метод вызывается платформой при рисовании кнопки прокрутки. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawSeparator](#ondrawseparator)|Этот метод вызывается платформой при рисовании разделителя. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Этот метод вызывается платформой при рисовании всех элементов меню. (Переопределяет [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|  
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Этот метод вызывается платформой при рисовании границ для [CMFCStatusBar класс](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Этот метод вызывается платформой при рисовании индикатор хода выполнения [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
+|[CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)|Этот метод вызывается платформой при рисовании все элементы в меню. (Переопределяет [CMFCVisualManager::OnDrawShowAllMenuItems](../../mfc/reference/cmfcvisualmanager-class.md#ondrawshowallmenuitems).)|  
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|Этот метод вызывается платформой при рисовании границы [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Этот метод вызывается платформой при рисовании индикатора хода выполнения [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|  
 |[CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Этот метод вызывается платформой при рисовании поле размер для [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Переопределяет [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|  
-|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Этот метод вызывается платформой при рисовании вкладки для [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTab](#ondrawtab)|Этот метод вызывается платформой при рисовании вкладки для [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTab`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|Этот метод вызывается платформой при рисовании границ кнопки вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawTask](#ondrawtask)|Этот метод вызывается платформой при рисовании [класс CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTask`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Этот метод вызывается платформой при рисовании границ вокруг группы [CMFCTasksPane класс](../../mfc/reference/cmfctaskspane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|  
+|[CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|Этот метод вызывается платформой при рисовании границы вокруг группы [класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|  
 |[CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|Этот метод вызывается платформой при рисовании заголовок [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Этот метод вызывается платформой при рисовании заголовок [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|  
-|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Платформа вызывает этот метод, когда он удаляет кнопку во всплывающем окне. (Переопределяет `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Платформа вызывает этот метод при его стирает области вкладок окно вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Платформа вызывает этот метод при она удаляет текст и значок кнопки вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
-|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Платформа вызывает этот метод при она удаляет кадра на [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md). (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
+|[CMFCVisualManagerOffice2003::OnDrawTearOffCaption](#ondrawtearoffcaption)|Этот метод вызывается платформой при рисовании заголовок [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|  
+|[CMFCVisualManagerOffice2003::OnErasePopupWindowButton](#onerasepopupwindowbutton)|Этот метод вызывается платформой, когда она удаляет кнопки во всплывающем окне. (Переопределяет `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsArea](#onerasetabsarea)|Платформа вызывает этот метод при его стирает области вкладок окна вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsButton](#onerasetabsbutton)|Платформа вызывает этот метод, когда она удаляет текст и значок кнопки вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|  
+|[CMFCVisualManagerOffice2003::OnEraseTabsFrame](#onerasetabsframe)|Этот метод вызывается платформой при его стирает кадр на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|  
 |[CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|Этот метод вызывается платформой при заливке фона кнопки автоматического скрытия. (Переопределяет [CMFCVisualManager::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillautohidebuttonbackground).)|  
-|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Этот метод вызывается платформой при заливке фона [CBasePane класс](../../mfc/reference/cbasepane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
+|[CMFCVisualManagerOffice2003::OnFillBarBackground](#onfillbarbackground)|Этот метод вызывается платформой при заливке фона [класс CBasePane](../../mfc/reference/cbasepane-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|  
 |[CMFCVisualManagerOffice2003::OnFillButtonInterior](#onfillbuttoninterior)|Этот метод вызывается платформой при заливке фона кнопки панели инструментов. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|  
 |[CMFCVisualManagerOffice2003::OnFillCommandsListBackground](#onfillcommandslistbackground)|Этот метод вызывается платформой при заливке фона кнопки панели инструментов, к которой принадлежит список команд. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|  
 |[CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|Этот метод вызывается платформой при заливке фона заголовка элемента управления. (Переопределяет [CMFCVisualManager::OnFillHeaderCtrlBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillheaderctrlbackground).)|  
 |[CMFCVisualManagerOffice2003::OnFillHighlightedArea](#onfillhighlightedarea)|Этот метод вызывается платформой при заливке выделенную область кнопки панели инструментов. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillHighlightedArea`.)|  
 |[CMFCVisualManagerOffice2003::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Этот метод вызывается платформой при заливке фона строки заголовка Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookBarCaption](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookbarcaption).)|  
-|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Платформа вызывает этот метод, когда он заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
-|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Этот метод вызывается платформой при заливке фона во всплывающем окне. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Этот метод вызывается платформой при заливке фона окно вкладки. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillTab`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Платформа вызывает этот метод, когда он заполняет внутреннюю часть [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
-|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Этот метод вызывается платформой при заливке фона [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) управления. (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
-|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Платформа вызывает этот метод при рисовании выделенный быстрого Настройка кнопки меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
-|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Этот метод вызывается платформой при рисовании выделенного меню команду. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
+|[CMFCVisualManagerOffice2003::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Этот метод вызывается платформой при его заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|  
+|[CMFCVisualManagerOffice2003::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|Этот метод вызывается платформой при заливке фона всплывающего окна. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillPopupWindowBackground`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTab](#onfilltab)|Этот метод вызывается платформой при заливке фона вкладки окна. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillTab`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|Этот метод вызывается платформой при заливке внутреннюю часть [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта. (Переопределяет `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|  
+|[CMFCVisualManagerOffice2003::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Этот метод вызывается платформой при заливке фона [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|  
+|[CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton](#onhighlightquickcustomizemenubutton)|Платформа вызывает этот метод при рисовании выделенный quick Настройка кнопки меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightQuickCustomizeMenuButton`.)|  
+|[CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|Этот метод вызывается платформой при рисовании команды выделенного меню. (Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|  
 |[CMFCVisualManagerOffice2003::OnUpdateSystemColors](#onupdatesystemcolors)|Эта функция вызывается платформой при изменении системных цветов. (Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|  
-|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или получить цвета из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
-|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Указывает, что должна использоваться глобальной темы Windows XP.|  
-|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Указывает, использует ли Диспетчер визуальных глобальной темы.|  
+|[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)|Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).|  
+|[CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook](#setstatusbarofficexplook)|Указывает, что следует использовать глобальные темы Windows XP.|  
+|[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)|Указывает, использует ли наглядный диспетчер глобальной темы.|  
   
 ## <a name="remarks"></a>Примечания  
- Вы используете `CMFCVisualManagerOffice2003` классе, чтобы изменить внешний вид приложения для сходства с Microsoft Office 2003.  
+ Использовании `CMFCVisualManagerOffice2003` классе, чтобы изменить внешний вид приложения, чтобы он напоминал Microsoft Office 2003.  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует установите наглядный диспетчер Microsoft office 2003. Этот фрагмент кода является частью [Desktop предупреждения демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует установите наглядный диспетчер, office 2003. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]  
   
@@ -233,7 +233,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
  **Заголовок:** afxvisualmanageroffice2003.h  
   
 ##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
- Рисует границу поля со списком, с помощью текущей темы Windows XP.  
+ Рисует границу поле со списком, с помощью текущей темы Windows XP.  
   
 ```  
 virtual BOOL DrawComboBorderWinXP(
@@ -252,21 +252,21 @@ virtual BOOL DrawComboBorderWinXP(
  Ограничивающий прямоугольник границы поля со списком.  
   
  [in] *bDisabled*  
- Указывает, отключен ли границы поля со списком.  
+ Указывает, отключен ли граница поля со списком.  
   
  [in] *bIsDropped*  
- Указывает, удаляется ли границы поля со списком.  
+ Указывает, удаляется ли граница поля со списком.  
   
  [in] *bIsHighlighted*  
- Указывает, выделяется ли границы поля со списком.  
+ Указывает, выделена ли граница поля со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` активна темы API или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если тема API может быть включен или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
- Рисует кнопку раскрывающегося списка поля со списком, с помощью текущей темы Windows XP.  
+ Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows XP.  
   
 ```  
 virtual BOOL DrawComboDropButtonWinXP(
@@ -282,19 +282,19 @@ virtual BOOL DrawComboDropButtonWinXP(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Ограничивающий прямоугольник кнопку раскрывающегося списка поля со списком.  
+ Ограничивающий прямоугольник кнопки раскрывающегося списка поле со списком.  
   
  [in] *bDisabled*  
- Указывает, отключен ли кнопка раскрывающегося списка поля со списком.  
+ Указывает, отключен ли кнопка раскрывающегося списка поле со списком.  
   
  [in] *bIsDropped*  
- Указывает, удаляется ли кнопка раскрывающегося списка поля со списком.  
+ Указывает, удаляется ли кнопка раскрывающегося списка поле со списком.  
   
  [in] *bIsHighlighted*  
- Указывает, выделяется ли кнопка раскрывающегося списка поля со списком.  
+ Указывает, выделена ли кнопка раскрывающегося списка поле со списком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` активна темы API или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если тема API может быть включен или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -319,21 +319,21 @@ virtual void DrawCustomizeButton(
  Ограничивающий прямоугольник кнопки  
   
  [in] *bIsHorz*  
- `TRUE` Если кнопка горизонтальной, или `FALSE` при вертикальной.  
+ Значение TRUE, если кнопки по горизонтали, или FALSE, если он является вертикальным.  
   
  [in] *состояния*  
- Состояние кнопки, как оно является отрисовки (обычный, нажатая или выделенной).  
+ Состояние кнопки, так как он будет отображаться (обычный, нажатом или выделенные).  
   
  [in] *bIsCustomize*  
- `TRUE` Если настройка стрелка вниз или Стрелка влево изображение должно отображаться в прямоугольнике кнопки или `FALSE` в противном случае.  
+ Значение TRUE, если настройка стрелка вниз или Стрелка влево изображение должно отображаться в прямоугольнике кнопки, или значение FALSE, если это не так.  
   
  [in] *bIsMoreButtons*  
- `TRUE` Если горизонтальное или вертикальное настраивать дополнительные кнопки изображение должно отображаться в прямоугольнике кнопки или `FALSE` в противном случае.  
+ Значение TRUE, если настроить горизонтальное или вертикальное изображение кнопки более должно отображаться в прямоугольнике кнопки, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
- Рисует кнопку push с помощью текущей темы Windows XP.  
+ Рисует кнопку Push-уведомлений с помощью текущей темы Windows XP.  
   
 ```  
 virtual BOOL DrawPushButtonWinXP(
@@ -351,30 +351,30 @@ virtual BOOL DrawPushButtonWinXP(
  Ограничивающий прямоугольник кнопки.  
   
  [in] *pButton*  
- Указатель на [CMFCButton класса](../../mfc/reference/cmfcbutton-class.md) для рисования.  
+ Указатель на [класс CMFCButton](../../mfc/reference/cmfcbutton-class.md) для рисования.  
   
  [in] *uiState*  
  Не обрабатывается. Состояние берется из *pButton*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если включен API темы. в противном случае `FALSE`.  
+ Значение TRUE, если включен интерфейс API темы оформления. в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getbasethemecolor"></a>  CMFCVisualManagerOffice2003::GetBaseThemeColor  
- Возвращает цвет базовый темы.  
+ Получает цвет базовый темы.  
   
 ```  
 virtual COLORREF GetBaseThemeColor();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает базовый темы, если он задан цвет темы или цвет лицевой стороны для цветовой шкалы.  
+ Возвращает цвет темы базовый темы, если он задан, или цвет лицевой стороны цветовой полосы.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gethighlightmenuitemcolor"></a>  CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
- Возвращает цвет, используемый для выделенного пункта меню.  
+ Получает цвет, используемый для выделенного пункта меню.  
   
 ```  
 virtual COLORREF GetHighlightMenuItemColor() const;  
@@ -386,7 +386,7 @@ virtual COLORREF GetHighlightMenuItemColor() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
- Платформа вызывает этот метод, чтобы получить список свойств цвет фона.  
+ Платформа вызывает этот метод, чтобы получить цвет фона элемента списка свойств.  
   
 ```  
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -394,7 +394,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
   
 ### <a name="parameters"></a>Параметры  
  [in] *pPropList*  
- Указатель на список свойств, рисование платформу.  
+ Указатель на список свойств, который рисует платформы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает цвет фона *pPropList*.  
@@ -414,7 +414,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
  Указатель на список свойств.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает цвет текста в списке указанное свойство.  
+ Возвращает цвет текста, списка указанное свойство.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию, чтобы настроить цвет текста в список свойств в приложении.  
@@ -433,15 +433,15 @@ virtual int GetShowAllMenuItemsHeight(
  Указатель на контекст устройства.  
   
  [in] *sizeDefault*  
- Размер по умолчанию меню.  
+ Размер меню по умолчанию.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- По умолчанию возвращает высоту всех образов меню вместе с полями.  
+ По умолчанию возвращает высоту всех меню изображений, а также поля.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
- Задает цвет фона для указанной базовой группы и цвет границы.  
+ Задает указанную группу базовый цвет фона и цвет границы.  
   
 ```  
 virtual void GetSmartDockingBaseGuideColors(
@@ -454,7 +454,7 @@ virtual void GetSmartDockingBaseGuideColors(
  Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) для задания цвета фона.  
   
  [in] *clrBaseGroupBorder*  
- Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Чтобы задать цвет границы.  
+ Ссылка на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) устанавливать цвет границы.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -466,12 +466,12 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий тон цвет выделения.  
+ Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет выделения тон.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2003::GetTabFrameColors  
- Платформа вызывает эту функцию, когда требуется получить набор цветов для рисования окно вкладки.  
+ Платформа вызывает эту функцию, когда ее нужно получить набор цветов для рисования вкладки окна.  
   
 ```  
 virtual void GetTabFrameColors(
@@ -488,36 +488,36 @@ virtual void GetTabFrameColors(
   
 ### <a name="parameters"></a>Параметры  
  [in] *pTabWnd*  
- Указатель на окно с вкладками, где рисует кадр вкладки.  
+ Указатель на окно с вкладками, где кадр Рисует вкладку.  
   
  [out] *clrDark*  
- Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет Темная вкладки.  
+ Ссылку на [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, где этот метод сохраняет цвет темной границей вкладки.  
   
  [out] *clrBlack*  
- Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет для границы окно вкладки. Цвет границы по умолчанию является black.  
+ Ссылка на параметр COLORREF, где этот метод сохраняет цвет для границы вкладки окна. Цвет по умолчанию для границы черного.  
   
  [out] *clrHighlight*  
- Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет состояния выделения окно вкладки.  
+ Ссылка на параметр COLORREF, где этот метод сохраняет цвет для состояния выделения части окна вкладку.  
   
  [out] *clrFace*  
- Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет лицевой стороны окна вкладки.  
+ Ссылка на параметр COLORREF, где этот метод сохраняет цвет лицевой стороны окна вкладку.  
   
  [out] *clrDarkShadow*  
- Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет тени окно вкладки.  
+ Ссылка на параметр COLORREF, где этот метод сохраняет цвет тени вкладки окна.  
   
  [out] *clrLight*  
- Ссылку на `COLORREF` параметр, где этот метод сохраняет цвет света границы окна вкладки.  
+ Ссылка на параметр COLORREF, где этот метод сохраняет цвет света края окна вкладку.  
   
  [out] *pbrFace*  
- Указатель на ссылку в качестве кисти. Этот метод сохраняет кисть, которая используется для заполнения лицевой стороны окна вкладки в этом параметре.  
+ Указатель на ссылку для кисти. Этот метод хранит кисть, которая используется для заполнения лицевой стороны окна вкладку в этом параметре.  
   
  [out] *pbrBlack*  
- Указатель на ссылку в качестве кисти. Этот метод сохраняет кисть, используемая для заполнения черным края окна вкладки в этом параметре.  
+ Указатель на ссылку для кисти. Этот метод хранит кисти, используемой для заполнения, черный края окна вкладку в этом параметре.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
- Возвращает поле Настройка кнопки панели инструментов.  
+ Получает поля Настройка кнопки панели инструментов.  
   
 ```  
 virtual int GetToolBarCustomizeButtonMargin() const;  
@@ -529,19 +529,19 @@ virtual int GetToolBarCustomizeButtonMargin() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManagerOffice2003::GetToolbarDisabledColor  
- Возвращает цвет отключенного для панели инструментов.  
+ Получает цвет отключен для панели инструментов.  
   
 ```  
 virtual COLORREF GetToolbarDisabledColor() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет отключено.  
+ Возвращает [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) , содержащий цвет отключен.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2003::GetToolTipInfo  
- Вызывается платформой для получения сведений всплывающей подсказки.  
+ Вызывается платформой для получения во всплывающей подсказке.  
   
 ```  
 virtual BOOL GetToolTipInfo(
@@ -551,55 +551,55 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="parameters"></a>Параметры  
  [out] *params*  
- Ссылку на [CMFCToolTipInfo класс](../../mfc/reference/cmfctooltipinfo-class.md) объекта, когда этот метод возвращает сведения всплывающей подсказки.  
+ Ссылку на [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объекта, когда этот метод возвращает во всплывающей подсказке.  
   
  [in] *nType*  
- Введите сведения во всплывающей подсказке, должны быть возвращены.  
+ Сведения о типе для во всплывающей подсказке должны быть возвращены.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` подсказка возвращаются ли данные, и `FALSE` в противном случае.  
+ В противном случае возвращает значение TRUE, если возвращается во всплывающей подсказке и FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isdefaultwinxpcolorsenabled"></a>  CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
- Указывает, использует ли Диспетчер визуальных цветовые схемы, которые являются собственными для Windows XP.  
+ Указывает, использует ли Диспетчер визуальных цвета темы, являющиеся собственными для Windows XP.  
   
 ```  
 static BOOL IsDefaultWinXPColorsEnabled();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если наглядный диспетчер использует собственные цвета; в противном случае `FALSE`.  
+ Значение TRUE, если наглядный диспетчер использует собственные цвета; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о собственном цветов см. в разделе [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors).  
+ Дополнительные сведения о собственном цветов, см. в разделе [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors).  
   
 ##  <a name="isdockingtabhasborder"></a>  CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
- Возвращает ли текущий Диспетчер визуальных рисует границы вокруг области, которые закреплены и с вкладками.  
+ Возвращает ли текущий наглядный диспетчер рисует границы вокруг области, закреплено и с вкладками.  
   
 ```  
 virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если Диспетчер визуальных Рисование границы вокруг области, которые закреплены и с вкладками; `FALSE` в противном случае.  
+ Значение TRUE, если наглядный диспетчер рисует границы вокруг области, закреплено и с вкладками; Значение FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
- Указывает, должны быть выделены OneNote вкладки.  
+ Указывает, должны быть выделены вкладки OneNote.  
   
 ```  
 virtual BOOL IsHighlightOneNoteTabs() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE`.  
+ Возвращает значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManagerOffice2003::IsOffsetPressedButton  
- Вызывается платформой при рисовании кнопки панели инструментов.  
+ Вызывается платформой при рисовании кнопки на панели инструментов.  
   
 ```  
 virtual BOOL IsOffsetPressedButton() const;  
@@ -608,10 +608,10 @@ virtual BOOL IsOffsetPressedButton() const;
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию возвращает значение `FALSE`.  
+ Реализация по умолчанию возвращает значение FALSE.  
   
 ##  <a name="isstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
- Указывает, существует ли строка состояния с внешний вид Microsoft Office XP.  
+ Указывает, существует ли строка состояния с с возможностями Office XP.  
   
 ```  
 static BOOL __stdcall IsStatusBarOfficeXPLook();
@@ -620,7 +620,7 @@ static BOOL __stdcall IsStatusBarOfficeXPLook();
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Возвращает `TRUE` при наличии строки состояния вид Microsoft Office XP или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если имеется строка состояния с возможностями Office XP, или FALSE, если это не так.  
   
 ##  <a name="istoolbarroundshape"></a>  CMFCVisualManagerOffice2003::IsToolbarRoundShape  
  Указывает, является ли round указанной панели инструментов.  
@@ -634,7 +634,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
  Указатель на панели инструментов в вопросе.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если панель инструментов имеет круглую форму, или `FALSE` их в случае строки меню.  
+ Возвращает значение TRUE, если панель инструментов округлить, или значение FALSE, если это строки меню.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -646,7 +646,7 @@ static BOOL IsUseGlobalTheme();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если наглядный диспетчер использует тему Windows XP; в противном случае `FALSE`.  
+ Значение TRUE, если наглядный диспетчер использует тему Windows XP; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте метод [CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme) изменение ли ваш наглядный диспетчер использует тему Windows XP.  
@@ -659,7 +659,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` если темы Windows поддерживается, или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если темы Windows поддерживается, или значение FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -685,12 +685,12 @@ virtual void OnDrawAutoHideButtonBorder(
  Размеры границы.  
   
  [in] *pButton*  
- Указатель на кнопку автоматического скрытия. Платформа рисует границу для этой кнопки.  
+ Указатель на кнопку автоматического скрытия. Платформа рисует границу для данной кнопки.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид границы кнопки автоматического скрытия. По умолчанию этот метод заполняет плоской границы цветом тени по умолчанию для вашего приложения.  
+ Переопределите этот метод в производном классе, если вы хотите настроить внешний вид границы кнопки автоматического скрытия. По умолчанию этот метод заполняет плоской границы с цвет тени по умолчанию для вашего приложения.  
   
- *RectBorderSize* параметр не содержит координаты границы. Он содержит размер границы в `top`, `bottom`, `left`, и `right` элементы данных. Значение меньше или равно 0 указывает на этой стороне кнопку автоматического скрытия без границы.  
+ *RectBorderSize* параметр не содержит координаты границы. Он содержит размер границы в `top`, `bottom`, `left`, и `right` данные-члены. Значение меньше или равно 0 указывает без границы на одной стороне кнопки автоматического скрытия.  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper  
  Вызывается платформой при рисовании захвата для панели элементов управления.  
@@ -711,13 +711,13 @@ virtual void OnDrawBarGripper(
  Ограничивающий прямоугольник для панели элементов управления.  
   
  [in] *bHorz*  
- Логический параметр, указывает ли панель элементов управления закреплена горизонтально или вертикально.  
+ Логический параметр, который указывает, закреплена ли панель элементов управления по горизонтали или вертикали.  
   
  [in] *pBar*  
- Указатель на панель элементов управления. Диспетчер визуальных рисует границу этой панели элементов управления.  
+ Указатель на панель элементов управления. Наглядный диспетчер рисует границу панели управления.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод отображает стандартные захвата. Чтобы настроить внешний вид захвата, переопределите этот метод в пользовательский класс, производный от [преобразованный CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) класса.  
+ Реализация по умолчанию этот метод отображает стандартные захвата. Чтобы настроить внешний вид захвата, переопределите этот метод в пользовательский класс, производный от [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) класса.  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -755,21 +755,21 @@ virtual void OnDrawButtonBorder(
   
 ### <a name="parameters"></a>Параметры  
  [in] *основного контроллера домена*  
- Указатель на контекст устройства кнопки панели инструментов.  
+ Указатель на контекст устройства, кнопки панели инструментов.  
   
  [in] *pButton*  
- Указатель на кнопку панели инструментов. Платформа рисует границу этой кнопки.  
+ Указатель на кнопку панели инструментов. Платформа рисовал границу этой кнопки.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки панели инструментов.  
+ Прямоугольник, который указывает границы кнопки панели инструментов.  
   
  [in] *состояния*  
- Тип данных перечисления, указывающее текущее состояние кнопки панели инструментов.  
+ Тип перечислимых данных, который указывает текущее состояние кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод отображает Стандартная граница. Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида границы кнопки панели инструментов.  
+ Реализация по умолчанию этот метод отображает Стандартная граница. Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид границы кнопки панели инструментов.  
   
- Возможные состояния кнопки панели инструментов `ButtonsIsRegular`, `ButtonsIsPressed`, или `ButtonsIsHighlighted`.  
+ Возможны следующие состояния кнопки панели инструментов `ButtonsIsRegular`, `ButtonsIsPressed`, или `ButtonsIsHighlighted`.  
   
 ##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
  Этот метод вызывается платформой при рисовании границы [класс CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) объекта.  
@@ -788,19 +788,19 @@ virtual void OnDrawCaptionBarBorder(
  Указатель на контекст устройства.  
   
  [in] *pBar*  
- Указатель на [класс CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) объекта. Платформа рисует этого заголовка окна.  
+ Указатель на [класс CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md) объекта. Платформа рисует этот заголовок.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы заголовка окна.  
+ Прямоугольник, который указывает границы заголовка окна.  
   
  [in] *clrBarBorder*  
  Цвет границы.  
   
  [in] *bFlatBorder*  
- `TRUE` Если границы должны иметь плоский 2D внешний вид или `FALSE` в противном случае.  
+ Значение TRUE, если границы должны иметь плоский, 2D внешний, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид границы заголовка окна.  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид границы заголовка.  
   
 ##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
  Вызывается платформой при рисовании флажок.  
@@ -823,21 +823,21 @@ virtual void OnDrawCheckBoxEx(
  Ограничивающий прямоугольник элемента управления checkbox.  
   
  [in] *nState*  
- Состояние элемента управления checkbox: 0, если этот флажок снят, 1, если этот флажок установлен, 2, если установлен смешанный.  
+ Состояние установки флажка: 0, если флажок не установлен, 1, если этот флажок установлен, 2, если флажок установлен смешанный.  
   
  [in] *bHighlighted*  
- `TRUE` Если флажок выделяется, или `FALSE` в противном случае.  
+ Значение TRUE, если флажок выделенная, или FALSE, если это не так.  
   
  [in] *bPressed*  
- `TRUE` Если флажок нажата, или `FALSE` в противном случае.  
+ Значение TRUE, если флажок находится в нажатом состоянии, или FALSE, если это не так.  
   
  [in] *bEnabled*  
- `TRUE` Если флажок включен, или `FALSE` в противном случае.  
+ Значение TRUE, если флажок включен, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2003::OnDrawComboBorder  
- Этот метод вызывается платформой при рисовании границ вокруг экземпляр [CMFCToolBarComboBoxButton класса](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
+ Этот метод вызывается платформой при рисовании границы вокруг экземпляр [класс CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
 virtual void OnDrawComboBorder(
@@ -854,25 +854,25 @@ virtual void OnDrawComboBorder(
  Указатель на контекст устройства, кнопки поля со списком.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки поля со списком.  
+ Прямоугольник, который указывает границы кнопки поля со списком.  
   
  [in] *bDisabled*  
- Логический параметр, указывает ли кнопка полю со списком.  
+ Логический параметр, который указывает, является ли поле со списком поле кнопка недоступна.  
   
  [in] *bIsDropped*  
- Логический параметр, указывает, удаляется ли поле со списком.  
+ Логический параметр, который указывает, удаляется ли поле со списком.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли кнопка полю со списком.  
+ Логический параметр, указывающее, выделена ли кнопки поля со списком.  
   
  [in] *pButton*  
- Указатель на объект `CMFCToolBarComboBoxButton`. Платформа рисует этой кнопки поля со списком.  
+ Указатель на объект `CMFCToolBarComboBoxButton`. Платформа рисует эту кнопку, поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual диспетчера настроить внешний вид границы поле со списком.  
+ Переопределите этот метод в ваш производный наглядный диспетчер, чтобы настроить внешний вид границы поля со списком.  
   
 ##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2003::OnDrawComboDropButton  
- Этот метод вызывается платформой при рисовании кнопки сброса [CMFCToolBarComboBoxButton класса](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
+ Этот метод вызывается платформой при рисовании кнопки раскрывающегося [класс CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md).  
   
 ```  
 virtual void OnDrawComboDropButton(
@@ -889,25 +889,25 @@ virtual void OnDrawComboDropButton(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки «drop».  
+ Прямоугольник, который указывает границы кнопки «drop».  
   
  [in] *bDisabled*  
  Логический параметр, указывает ли кнопка «drop» недоступна.  
   
  [in] *bIsDropped*  
- Логический параметр, указывает, удаляется ли поле со списком.  
+ Логический параметр, который указывает, удаляется ли поле со списком.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли кнопка удаления.  
+ Логический параметр, указывающее, выделена ли кнопку сброса.  
   
  [in] *pButton*  
- Указатель на объект `CMFCToolBarComboBoxButton`. Платформа Рисует кнопку удаления для этой кнопки поля со списком  
+ Указатель на объект `CMFCToolBarComboBoxButton`. Платформа Рисует кнопку раскрывающегося для данной кнопки поля со списком  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual диспетчера настройки внешнего вида кнопки раскрывающегося кнопки поля со списком.  
+ Переопределите этот метод в производном visual начальника настроить внешний вид кнопки раскрывающегося кнопки поля со списком.  
   
 ##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerOffice2003::OnDrawControlBorder  
- Этот метод вызывается платформой при рисовании границ элемента управления.  
+ Этот метод вызывается платформой при рисовании границы элемента управления.  
   
 ```  
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -920,7 +920,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerOffice2003::OnDrawExpandingBox  
- Вызывается платформой при рисовании виде раскрывающегося списка.  
+ Вызывается платформой при рисовании раскрывающемся поле.  
   
 ```  
 virtual void OnDrawExpandingBox(
@@ -932,21 +932,21 @@ virtual void OnDrawExpandingBox(
   
 ### <a name="parameters"></a>Параметры  
  [in] *основного контроллера домена*  
- Указатель на контекст отображения, в котором будет рисоваться раскрывающегося списка.  
+ Указатель для контекста отображения, в котором раскрывающемся поле будет отображаться.  
   
  [in] *rect*  
- Ограничивающий прямоугольник раскрывающегося списка для отображения.  
+ Ограничивающий прямоугольник из раскрывающегося списка для отображения.  
   
  [in] *bIsOpened*  
- `TRUE` Если открывается окно для отображения или `FALSE` в противном случае.  
+ Значение TRUE, если поле для отображения открыт, или FALSE, если это не так.  
   
  [in] *colorBox*  
- Цвет внешней границы поля для отображения.  
+ Цвет внешней границы элемента поле для отображения.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
- Этот метод вызывается платформой при рисовании границ вокруг экземпляр [CMFCHeaderCtrl класса](../../mfc/reference/cmfcheaderctrl-class.md).  
+ Этот метод вызывается платформой при рисовании границы вокруг экземпляр [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).  
   
 ```  
 virtual void OnDrawHeaderCtrlBorder(
@@ -959,23 +959,23 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="parameters"></a>Параметры  
  [in] *pCtrl*  
- Указатель на [CMFCHeaderCtrl класс](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Платформа рисует границу данного заголовка элемента управления.  
+ Указатель на [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Платформа рисует границы данного элемента управления заголовка.  
   
  [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который задает границы элемента управления заголовка.  
+ Прямоугольник, который указывает границы элемента управления заголовка.  
   
  [in] *bIsPressed*  
  [in] *bIsHighlighted*  
- Логический параметр, указывает, нажата ли заголовок элемента управления.  
+ Логический параметр, который указывает, нажата ли в элементе управления заголовком.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки границы элемента управления заголовка.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить границы элемента управления заголовка.  
   
 ##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2003::OnDrawMenuBorder  
- Этот метод вызывается платформой при рисовании границы [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md).  
+ Этот метод вызывается платформой при рисовании границы [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md).  
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -986,16 +986,16 @@ virtual void OnDrawMenuBorder(
   
 ### <a name="parameters"></a>Параметры  
  [in] *основного контроллера домена*  
- Указатель на контекст устройства для [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
+ Указатель на контекст устройства для [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
   
  [in] *pMenu*  
- Указатель на [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта. Платформа рисует границу вокруг этого всплывающего меню.  
+ Указатель на [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта. Платформа рисует границу вокруг этого во всплывающем меню.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы всплывающего меню.  
+ Прямоугольник, который указывает границы во всплывающем меню.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод отображает границы стандартного меню. Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида границы меню.  
+ Реализация по умолчанию этот метод отображает граница стандартное меню. Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид границы меню.  
   
 ##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
  Этот метод вызывается платформой при рисовании разделителя для панель Outlook.  
@@ -1011,10 +1011,10 @@ virtual void OnDrawOutlookBarSplitter(
  Указатель на контекст устройства.  
   
  [in] *rectSplitter*  
- Прямоугольник, который определяет границы разделителя.  
+ Прямоугольник, который указывает границы разделителя.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида разделителей на панель Outlook.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид разделителей на панель Outlook.  
   
 ##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
  Вызывается платформой при рисовании границ кнопки страницы Outlook.  
@@ -1032,19 +1032,19 @@ virtual void OnDrawOutlookPageButtonBorder(
  Указатель на контекст устройства.  
   
  [in] *rectBtn*  
- Прямоугольник, который определяет границы кнопки страницы Outlook.  
+ Прямоугольник, который указывает границы кнопки страницы Outlook.  
   
  [in] *bIsHighlighted*  
- Логическое значение, указывающее, выделяется ли кнопки.  
+ Логическое значение, указывающее, выделена ли кнопки.  
   
  [in] *bIsPressed*  
- Логическое значение, указывающее, является ли кнопка нажата.  
+ Логическое значение, указывающее, нажата ли кнопка.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в пользовательский диспетчер visual, чтобы изменить внешний вид кнопки страницы Outlook.  
+ Переопределите этот метод в пользовательских наглядный диспетчер, чтобы изменить внешний вид кнопки страницы Outlook.  
   
 ##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawPaneBorder  
- Этот метод вызывается платформой при рисовании границы [класса CPane](../../mfc/reference/cpane-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании границы [класс CPane](../../mfc/reference/cpane-class.md) объекта.  
   
 ```  
 virtual void OnDrawPaneBorder(
@@ -1055,13 +1055,13 @@ virtual void OnDrawPaneBorder(
   
 ### <a name="parameters"></a>Параметры  
  [in] *основного контроллера домена*  
- Указатель на контекст устройства панели элементов управления.  
+ Указатель на контекст устройства на панели элементов управления.  
   
  [in] *pBar*  
- Указатель на панель. Диспетчер визуальных рисует границу этой панели.  
+ Указатель на область. Наглядный диспетчер рисует границу в этой области.  
   
  [in] *rect*  
- Прямоугольник, определяющий границы области.  
+ Прямоугольник, который указывает границы области.  
   
 ### <a name="remarks"></a>Примечания  
  Реализация по умолчанию этот метод отображает Стандартная граница. Переопределите этот метод в производном классе, чтобы настроить внешний вид границы.  
@@ -1083,16 +1083,16 @@ virtual COLORREF OnDrawPaneCaption(
  Указатель на контекст устройства.  
   
  [in] *pBar*  
- Указатель на [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. Платформа рисует заголовок для этой области.  
+ Указатель на [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) объекта. Платформа рисует заголовок для данной области.  
   
  [in] *bActive*  
- Логический параметр, указывает, активен ли панель элементов управления.  
+ Логический параметр, который указывает, активен ли панель элементов управления.  
   
  [in] *rectCaption*  
- Прямоугольник, который определяет границы заголовка.  
+ Прямоугольник, который указывает границы заголовка.  
   
  [in] *rectButtons*  
- Прямоугольник, который определяет границы кнопки заголовка.  
+ Прямоугольник, который указывает границы кнопок заголовка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста заголовка.  
@@ -1100,7 +1100,7 @@ virtual COLORREF OnDrawPaneCaption(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
- Этот метод вызывается платформой при рисовании границ всплывающего окна.  
+ Этот метод вызывается платформой при рисовании границы всплывающего окна.  
   
 ```  
 virtual void OnDrawPopupWindowBorder(
@@ -1135,7 +1135,7 @@ virtual void OnDrawPopupWindowButtonBorder(
  Ограничивающий прямоугольник кнопки.  
   
  [in] *pButton*  
- Указатель на кнопку ( [CMFCDesktopAlertWndButton класс](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) объекта).  
+ Указатель на кнопку ( [класс CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md) объекта).  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1157,16 +1157,16 @@ virtual COLORREF OnDrawPopupWindowCaption(
  Ограничивающий прямоугольник заголовка.  
   
  [in] *pPopupWnd*  
- Указатель во всплывающем окне, для которого будет отображаться заголовок.  
+ Указатель на всплывающее окно, для которого заголовок будет отображаться.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Цвет текста заголовка.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида заголовков всплывающего окна.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид заголовков всплывающее окно.  
   
 ##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
- Этот метод вызывается платформой при рисовании группу кнопки на ленте.  
+ Этот метод вызывается платформой при рисовании группу кнопок на ленте.  
   
 ```  
 virtual COLORREF OnDrawRibbonButtonsGroup(
@@ -1180,16 +1180,16 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
  Указатель на контекст устройства.  
   
  [in] *pGroup*  
- Указатель на группу на ленте. Платформа рисует эту группу кнопок.  
+ Указатель на группу кнопок на ленте. Платформа рисует эту группу кнопок.  
   
  [in] *rectGroup*  
- Прямоугольник, который определяет границы группы.  
+ Прямоугольник, который указывает границы группы.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Зарезервированное значение. Реализация по умолчанию возвращает значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида группу на ленте.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид группу кнопок на ленте.  
   
 ##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
  Этот метод вызывается платформой при рисовании заголовок для категории ленты.  
@@ -1205,13 +1205,13 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  Указатель на контекст устройства категорию ленты.  
   
  [in] *pContextCaption*  
- Указатель на заголовок окна. Диспетчер визуальных рисует этот [CMFCRibbonContextCaption класса](../../mfc/reference/cmfcribboncontextcaption-class.md).  
+ Указатель на заголовок окна. Рисует наглядный диспетчер, это [класс CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в строке заголовка.  
+ Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр, указывающий цвет текста в заголовке окна.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид заголовка окна для категории ленты.  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид строки заголовка для категории ленты.  
   
 ##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
  Этот метод вызывается платформой при рисовании вкладку категории ленты.  
@@ -1231,16 +1231,16 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  Указатель на объект вкладки ленты. Платформа рисует на этой вкладке.  
   
  [in] *bIsActive*  
- `TRUE` Если активна вкладка или `FALSE` в противном случае.  
+ Значение TRUE, если вкладка не активно, или значение FALSE, если это не так.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет, используемый для текста на вкладке ленты категории.  
+ Цвет, используемый для текста на вкладке категорию ленты.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида категории вкладки ленты.  
   
 ##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
- Этот метод вызывается платформой при рисовании [CMFCRibbonProgressBar класс](../../mfc/reference/cmfcribbonprogressbar-class.md)объекта.  
+ Этот метод вызывается платформой при рисовании [класс CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)объекта.  
   
 ```  
 virtual void OnDrawRibbonProgressBar(
@@ -1256,22 +1256,22 @@ virtual void OnDrawRibbonProgressBar(
  Указатель на контекст устройства.  
   
  [in] *pProgress*  
- Указатель на [CMFCRibbonProgressBar класс](../../mfc/reference/cmfcribbonprogressbar-class.md) объекта. Платформа рисует индикатора.  
+ Указатель на [класс CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) объекта. Платформа рисует индикатора.  
   
  [in] *rectProgress*  
- Прямоугольник, который определяет границы индикатора хода выполнения.  
+ Прямоугольник, который указывает границы индикатора.  
   
  [in] *rectChunk*  
- Прямоугольник, который определяет границы области, окружающей индикатор выполнения.  
+ Прямоугольник, который указывает границы вокруг индикатор хода выполнения.  
   
  [in] *bInfiniteMode*  
- `TRUE` Если панель находится в режиме бесконечного или `FALSE` в противном случае. Реализация по умолчанию этот параметр не используется.  
+ Значение TRUE, если панель не в бесконечную режиме, или значение FALSE, если. Реализация по умолчанию этот параметр не используется.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид индикатора хода выполнения  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид индикатор хода выполнения  
   
 ##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
- Этот метод вызывается платформой при рисовании разделителя на панели инструментов быстрого доступа к ленте.  
+ Этот метод вызывается платформой при рисовании разделителя на панели инструментов быстрого доступа ленты.  
   
 ```  
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -1285,16 +1285,16 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
  Указатель на контекст устройства.  
   
  [in] *pSeparator*  
- Указатель на [CMFCRibbonSeparator класс](../../mfc/reference/cmfcribbonseparator-class.md) объекта. Платформа рисует этот разделитель ленты.  
+ Указатель на [класс CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) объекта. Платформа рисует этот разделитель ленты.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы разделителя.  
+ Прямоугольник, который указывает границы разделителя.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы настроить внешний вид разделители ленты на панели инструментов быстрого доступа.  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид разделители ленты на панели быстрого доступа.  
   
 ##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
- Этот метод вызывается платформой при рисовании канала [CMFCRibbonSlider класса](../../mfc/reference/cmfcribbonslider-class.md).  
+ Этот метод вызывается платформой при рисовании канала [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md).  
   
 ```  
 virtual void OnDrawRibbonSliderChannel(
@@ -1308,16 +1308,16 @@ virtual void OnDrawRibbonSliderChannel(
  Указатель на контекст устройства.  
   
  [in] *pSlider*  
- Указатель на [CMFCRibbonSlider класс](../../mfc/reference/cmfcribbonslider-class.md) объекта. Платформа рисует канал для данного ползунка ленты.  
+ Указатель на [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта. Платформа рисует канала для данного ползунка ленты.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы для канала "ползунок" ленты.  
+ Прямоугольник, который указывает границы для канала "ползунок" ленты.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить внешний вид канала "ползунок" ленты.  
   
 ##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
- Этот метод вызывается платформой при рисовании ползунка [CMFCRibbonSlider класс](../../mfc/reference/cmfcribbonslider-class.md) объекта  
+ Этот метод вызывается платформой при рисовании ползунка [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта  
   
 ```  
 virtual void OnDrawRibbonSliderThumb(
@@ -1334,25 +1334,25 @@ virtual void OnDrawRibbonSliderThumb(
  Указатель на контекст устройства.  
   
  [in] *pSlider*  
- Указатель на [CMFCRibbonSlider класса](../../mfc/reference/cmfcribbonslider-class.md). Платформа рисует бегунка этот ползунок ленты.  
+ Указатель на [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md). Платформа рисует бегунка этот ползунок ленты.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы бегунка "ползунок" ленты.  
+ Прямоугольник, который указывает границы ползунка полосы прокрутки для "ползунок" ленты.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли бегунка.  
+ Логический параметр, указывающее, выделена ли бегунка.  
   
  [in] *bIsPressed*  
- Логический параметр, указывает, нажата ли бегунка.  
+ Логический параметр, который указывает, нажата ли бегунка.  
   
  [in] *bIsDisabled*  
- Логический параметр, указывает ли бегунка.  
+ Логический параметр, который указывает, является ли бегунок недоступен.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида бегунка ползунок ленты.  
+ Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида бегунка для ползунка ленты.  
   
 ##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
- Этот метод вызывается платформой при рисовании кнопки масштаба для [CMFCRibbonSlider класс](../../mfc/reference/cmfcribbonslider-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании кнопки масштаба для [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта.  
   
 ```  
 virtual void OnDrawRibbonSliderZoomButton(
@@ -1370,28 +1370,28 @@ virtual void OnDrawRibbonSliderZoomButton(
  Указатель на контекст устройства.  
   
  [in] *pSlider*  
- Указатель на [CMFCRibbonSlider класс](../../mfc/reference/cmfcribbonslider-class.md) объекта. Платформа рисует этот ползунок ленты.  
+ Указатель на [класс CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md) объекта. Платформа Рисует ползунок этой ленты.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки масштабирования на ползунке ленты.  
+ Прямоугольник, который указывает границы кнопки масштаба на ползунке ленты.  
   
  [in] *bIsZoomOut*  
- `TRUE` Если платформа отображать левую кнопку с» **-**» для уменьшения, или `FALSE` Если платформа отображать правой кнопки с « **+**» для увеличения.  
+ Значение TRUE, если платформа должна нарисовать левой кнопки с " **-**" для zoom out, или значение FALSE, если платформа должна нарисовать кнопку справа с " **+**" для zoom в.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли кнопки.  
+ Логический параметр, указывающее, выделена ли кнопки.  
   
  [in] *bIsPressed*  
- Логический параметр, указывает ли кнопка нажата.  
+ Логический параметр, который указывает, нажата ли кнопка.  
   
  [in] *bIsDisabled*  
- Логический параметр, указывает, является ли эта кнопка будет недоступна.  
+ Логический параметр, который указывает, является ли кнопка недоступна.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию содержит кнопки масштаба "ползунок" ленты, круг с либо **+** или **-** входа в центре. Чтобы настроить внешний вид кнопок масштабирования, переопределите этот метод в производном диспетчер визуального представления.  
+ По умолчанию кнопок масштабирования на ползунке ленты, круг с либо **+** или **-** войти в центре. Чтобы настроить внешний вид кнопки масштаба, переопределите этот метод в производном наглядный диспетчер.  
   
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
- Этот метод вызывается платформой при рисовании панели в строке состояния.  
+ Этот метод вызывается платформой при рисовании панель строки состояния.  
   
 ```  
 virtual COLORREF OnDrawRibbonStatusBarPane(
@@ -1405,16 +1405,16 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
  Указатель на контекст устройства.  
   
  [in] *pBar*  
- Указатель, содержащий области строки состояния.  
+ Указатель на строке состояния, содержащий область.  
   
  [in] *pPane*  
- Указатель на панели строки состояния. Платформа рисует этот [CMFCRibbonStatusBarPane класс](../../mfc/reference/cmfcribbonstatusbarpane-class.md) объекта.  
+ Указатель на панель строки состояния. Платформа рисует это [класс CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Зарезервированное значение. Реализация по умолчанию возвращает значение -1.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида панели в строке состояния.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид панели в строке состояния.  
   
 ##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2003::OnDrawScrollButtons  
  Этот метод вызывается платформой при рисовании кнопки прокрутки.  
@@ -1436,13 +1436,13 @@ virtual void OnDrawScrollButtons(
  Ограничивающий прямоугольник кнопки прокрутки.  
   
  [in] *nBorderSize*  
- Размер границы, чтобы нарисовать вокруг кнопки прокрутки.  
+ Размер границу, чтобы нарисовать вокруг кнопки прокрутки.  
   
  [in] *iImage*  
- Идентификатор изображения для отрисовки в кнопки прокрутки.  
+ Идентификатор изображения для рисования в кнопки прокрутки.  
   
  [in] *bHilited*  
- `TRUE` Если выделяются кнопки прокрутки, или `FALSE` в противном случае.  
+ Значение TRUE, если кнопки прокрутки выделенная, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -1465,13 +1465,13 @@ virtual void OnDrawSeparator(
  Указатель на область, содержащая разделитель.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы разделителя.  
+ Прямоугольник, который указывает границы разделителя.  
   
  [in] *bIsHoriz*  
- `TRUE` Если панель закреплена горизонтально, или `FALSE` Если панель закреплена вертикально.  
+ Значение TRUE, если панель закреплена горизонтально, или FALSE закрепленной панели по вертикали.  
   
 ### <a name="remarks"></a>Примечания  
- На панели элементов управления для отдельных групп связанных значков используются разделители. Реализация по умолчанию для этого метода отображает стандартные разделителя. Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида разделителя.  
+ Разделители используются на панели элементов управления для разделения групп соответствующие значки. Реализация по умолчанию для этого метода отображает стандартный разделитель. Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида разделителя.  
   
 ##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
  Этот метод вызывается платформой при рисовании все элементы в меню  
@@ -1488,7 +1488,7 @@ virtual void OnDrawShowAllMenuItems(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Ограничивающий прямоугольник для отрисовки меню.  
+ Ограничивающий прямоугольник для отображения меню.  
   
  [in] *состояния*  
  Состояние кнопки.  
@@ -1496,7 +1496,7 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
- Этот метод вызывается платформой при рисовании границ для [CMFCStatusBar класс](../../mfc/reference/cmfcstatusbar-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании границы [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта.  
   
 ```  
 virtual void OnDrawStatusBarPaneBorder(
@@ -1512,10 +1512,10 @@ virtual void OnDrawStatusBarPaneBorder(
  Указатель на контекст устройства.  
   
  [in] *pBar*  
- Указатель на [CMFCStatusBar класс](../../mfc/reference/cmfcstatusbar-class.md) объекта. Платформа рисует этот объект строки состояния.  
+ Указатель на [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. Платформа рисует этот объект строки состояния.  
   
  [in] *rectPane*  
- Прямоугольник, который определяет границы строки состояния.  
+ Прямоугольник, который указывает границы строки состояния.  
   
  [in] *uiID*  
  Идентификатор строки состояния.  
@@ -1524,10 +1524,10 @@ virtual void OnDrawStatusBarPaneBorder(
  Стиль строки состояния.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида границы для `CMFCStatusBar` объекта.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид границы `CMFCStatusBar` объекта.  
   
 ##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
- Этот метод вызывается платформой при рисовании индикатор хода выполнения [CMFCStatusBar класс](../../mfc/reference/cmfcstatusbar-class.md) объекта  
+ Этот метод вызывается платформой при рисовании индикатора хода выполнения [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта  
   
 ```  
 virtual void OnDrawStatusBarProgress(
@@ -1547,19 +1547,19 @@ virtual void OnDrawStatusBarProgress(
  Указатель на контекст устройства для строки состояния  
   
  [in] *pStatusBar*  
- [CMFCStatusBar класс](../../mfc/reference/cmfcstatusbar-class.md) , содержащий индикатор выполнения.  
+ [Класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объект, который содержит индикатор хода выполнения.  
   
  [in] *rectProgress*  
- Прямоугольник, который определяет границы индикатора хода выполнения.  
+ Прямоугольник, который указывает границы индикатора.  
   
  [in] *nProgressTotal*  
- Общее количество для индикатора хода выполнения.  
+ Общее количество для индикатора выполнения.  
   
  [in] *nProgressCurr*  
- Текущий ход выполнения для индикатора.  
+ Текущий ход выполнения для индикатора выполнения.  
   
  [in] *clrBar*  
- Начальный цвет индикатора хода выполнения. Значение является либо градиентной начала или завершения цвет индикатора хода выполнения.  
+ Цвет для индикатора выполнения. Значение равно либо начала цветным градиентом, либо полный цвет индикатора хода выполнения.  
   
  [in] *clrProgressBarDest*  
  [in] *clrProgressText*  
@@ -1569,7 +1569,7 @@ virtual void OnDrawStatusBarProgress(
  Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид индикатора хода выполнения в строке состояния.  
   
 ##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
- Этот метод вызывается платформой при рисовании поле размер для [CMFCStatusBar класса](../../mfc/reference/cmfcstatusbar-class.md).  
+ Этот метод вызывается платформой при рисовании поле размер для [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md).  
   
 ```  
 virtual void OnDrawStatusBarSizeBox(
@@ -1583,16 +1583,16 @@ virtual void OnDrawStatusBarSizeBox(
  Указатель на контекст устройства.  
   
  [in] *pStatBar*  
- Указатель на строку состояния. Платформа Рисует поле размер для данной строки состояния.  
+ Указатель на строку состояния. Платформа Рисует поле «размер» для данной строки состояния.  
   
  [in] *rectSizeBox*  
- Прямоугольник, который определяет границы прямоугольника размер.  
+ Прямоугольник, который указывает границы размер поля.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида прямоугольника размер в строке состояния.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид поле "размер" в строке состояния.  
   
 ##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2003::OnDrawTab  
- Этот метод вызывается платформой при рисовании вкладки для [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании вкладки для [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта.  
   
 ```  
 virtual void OnDrawTab(
@@ -1608,19 +1608,19 @@ virtual void OnDrawTab(
  Указатель на контекст устройства.  
   
  [in] *rectTab*  
- Прямоугольник, который задает границы элемента управления tab.  
+ Прямоугольник, который указывает границы элемента управления вкладки.  
   
  [in] *iTab*  
- Индекс вкладки, которая рисует платформу.  
+ Индекс вкладки, которая рисует платформы.  
   
  [in] *bIsActive*  
- Логический параметр, указывает, активна ли вкладка.  
+ Логический параметр, который указывает, активна ли вкладка.  
   
  [in] *pTabWnd*  
- Указатель на [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. Платформа рисует этот набор вкладок.  
+ Указатель на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. Платформа рисует данной вкладки.  
   
 ### <a name="remarks"></a>Примечания  
- Объект `CMFCBaseTabCtrl` объект вызывает этот метод при обработке сообщения WM_PAINT. Переопределите этот метод в производном классе, чтобы изменять внешний вид вкладок.  
+ Объект `CMFCBaseTabCtrl` объекта вызывает этот метод при обработке сообщения WM_PAINT. Переопределите этот метод в производном классе, чтобы настроить внешний вид вкладок.  
   
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
  Этот метод вызывается платформой при рисовании границ кнопки вкладки.  
@@ -1639,19 +1639,19 @@ virtual void OnDrawTabsButtonBorder(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки «вкладка».  
+ Прямоугольник, который указывает границы кнопки вкладки.  
   
  [in] *pButton*  
- Указатель на [CMFCButton класса](../../mfc/reference/cmfcbutton-class.md) для которого платформа рисует границу.  
+ Указатель на [класс CMFCButton](../../mfc/reference/cmfcbutton-class.md) для которого платформа рисовал границу.  
   
  [in] *uiState*  
- Состояние кнопки (см. [CButton::GetState](../../mfc/reference/cbutton-class.md#getstate)).  
+ Состояние кнопки (см. в разделе [CButton::GetState](../../mfc/reference/cbutton-class.md#getstate)).  
   
  [in] *pWndTab*  
  Указатель на родительское окно вкладки.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида границы табулятора.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид границы кнопки вкладки.  
   
 ##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2003::OnDrawTask  
  Этот метод вызывается платформой при рисовании [класс CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) объекта.  
@@ -1673,19 +1673,19 @@ virtual void OnDrawTask(
  Указатель на [класс CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md) объекта. Платформа рисует этой задачи.  
   
  [in] *pIcons*  
- Указатель на список изображений, связанных с областью задач. Каждая задача содержит индекс изображения в этом списке.  
+ Указатель на список изображений, связанных с областью задач. Каждая задача содержит индекс для изображения в этом списке.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли отображаемых задач.  
+ Логический параметр, указывающее, выделена ли она отображается.  
   
  [in] *bIsSelected*  
- Логический параметр, указывает, выбран ли отображаемых задач.  
+ Логический параметр, который указывает, выбран ли отображаемых задач.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа отображает задачи на панели задач как значок и текст. `pIcons` Параметр содержит значок для задачи, обозначенном `pTask`. Переопределите этот метод в производном классе, чтобы настроить внешний вид задачи на панели задач.  
+ Платформа отображает задачи на панели задач, как значок и текст. *PIcons* параметр содержит значок для задачи, обозначается *pTask*. Переопределите этот метод в производном классе, чтобы настроить внешний вид задачи на панели задач.  
   
 ##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
- Этот метод вызывается платформой при рисовании границ вокруг группы [CMFCTasksPane класс](../../mfc/reference/cmfctaskspane-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании границы вокруг группы [класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) объекта.  
   
 ```  
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1700,13 +1700,13 @@ virtual void OnDrawTasksGroupAreaBorder(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы области группы в области задач.  
+ Прямоугольник, который указывает границы области группы в области задач.  
   
  [in] *bSpecial*  
- Логический параметр, указывает, если границы будет выделен. Значение `TRUE` указывает, что выделен границы.  
+ Логический параметр, который указывает, если границы будет выделен. Значение TRUE указывает, что выделен границы.  
   
  [in] *bNoTitle*  
- Логический параметр, указывающее, содержит ли заголовок в области группы. Значение `TRUE` указывает, что в области группы не имеет заголовка.  
+ Логический параметр, который указывает, имеет ли область группы заголовок. Значение TRUE указывает, что в области группы не имеет заголовка.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите эту функцию в производном классе, чтобы настроить границы вокруг области группы в области задач.  
@@ -1731,19 +1731,19 @@ virtual void OnDrawTasksGroupCaption(
  Указатель на [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта. Платформа рисует заголовок для этой группы.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли группы.  
+ Логический параметр, указывающее, выделена ли группы.  
   
  [in] *bIsSelected*  
- Логический параметр, указывает ли в данный момент выбрана группа.  
+ Логический параметр, который указывает, выделен ли в данный момент группы.  
   
  [in] *bCanCollapse*  
- Логический параметр, указывает, могут ли быть свернуты группы.  
+ Логический параметр, который указывает, можно ли свернуть группу.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном классе, чтобы настроить заголовок для `CMFCTasksPaneTaskGroup`.  
   
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
- Этот метод вызывается платформой при рисовании заголовок [CMFCPopupMenu класс](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
+ Этот метод вызывается платформой при рисовании заголовок [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта.  
   
 ```  
 virtual void OnDrawTearOffCaption(
@@ -1757,18 +1757,18 @@ virtual void OnDrawTearOffCaption(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы заголовка.  
+ Прямоугольник, который указывает границы заголовка.  
   
  [in] *bIsActive*  
- `TRUE` Если заголовок является активным; `FALSE` в противном случае.  
+ Значение TRUE, если заголовок является активным; Значение FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывается платформой при [CMFCPopupMenu класса](../../mfc/reference/cmfcpopupmenu-class.md) объект сообщения WM_PAINT и необходимо нарисовать перемещаемые заголовок.  
+ Эта функция вызывается платформой при [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объект сообщения WM_PAINT и необходимо нарисовать перемещаемой заголовок.  
   
- Переопределите этот метод в производном классе для настройки внешнего вида заголовки для перемещаемой полосы.  
+ Переопределите этот метод в производном классе, чтобы настроить внешний вид заголовков для перемещаемой полос.  
   
 ##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
- Платформа вызывает этот метод, когда он удаляет кнопку во всплывающем окне.  
+ Этот метод вызывается платформой, когда она удаляет кнопки во всплывающем окне.  
   
 ```  
 virtual void OnErasePopupWindowButton(
@@ -1790,7 +1790,7 @@ virtual void OnErasePopupWindowButton(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2003::OnEraseTabsArea  
- Платформа вызывает этот метод при его стирает области вкладок окно вкладки.  
+ Платформа вызывает этот метод при его стирает области вкладок окна вкладки.  
   
 ```  
 virtual void OnEraseTabsArea(
@@ -1804,18 +1804,18 @@ virtual void OnEraseTabsArea(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы области вкладок.  
+ Прямоугольник, который указывает границы области вкладок.  
   
  [in] *pTabWnd*  
- Указатель на окно вкладки. Платформа стирает области вкладок для указанной вкладки окна.  
+ Указатель на вкладке окна. Платформа стирает области вкладок для указанной вкладки окна.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция вызывается платформой при [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md) объект сообщения WM_PAINT и удаляет области вкладок.  
+ Эта функция вызывается платформой при [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объект сообщения WM_PAINT и стирает области вкладок.  
   
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида вкладок.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид вкладок.  
   
 ##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2003::OnEraseTabsButton  
- Платформа вызывает этот метод при она удаляет текст и значок кнопки вкладки.  
+ Платформа вызывает этот метод, когда она удаляет текст и значок кнопки вкладки.  
   
 ```  
 virtual void OnEraseTabsButton(
@@ -1830,21 +1830,21 @@ virtual void OnEraseTabsButton(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки «вкладка».  
+ Прямоугольник, который указывает границы кнопки вкладки.  
   
  [in] *pButton*  
- Указатель на кнопку tab. Платформа удаляет текст и значок для этой кнопки.  
+ Указатель на кнопку tab. Платформа стирает текст и значок для данной кнопки.  
   
  [in] *pWndTab*  
- Указатель вкладок, содержащую кнопку tab.  
+ Указатель к элементу управления вкладки, содержащей кнопку tab.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа удаляет текст и значок для кнопки при [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта во время обработки сообщения WM_ERASEBKGND  
+ Платформа стирает текста и значка для кнопки при [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта во время обработки сообщения WM_ERASEBKGND  
   
- Переопределите этот метод в производном visual manager для настройки внешнего вида кнопок вкладки.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид кнопок вкладки.  
   
 ##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2003::OnEraseTabsFrame  
- Платформа вызывает этот метод при она удаляет кадра на [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта.  
+ Этот метод вызывается платформой при его стирает кадр на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта.  
   
 ```  
 virtual BOOL OnEraseTabsFrame(
@@ -1858,16 +1858,16 @@ virtual BOOL OnEraseTabsFrame(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы окно вкладки.  
+ Прямоугольник, который указывает границы вкладки окна.  
   
  [in] *pTabWnd*  
- Указатель на окно вкладки. Платформа стирает кадр для данного [CMFCBaseTabCtrl класса](../../mfc/reference/cmfcbasetabctrl-class.md).  
+ Указатель на вкладке окна. Платформа стирает кадр для данного [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно или `FALSE` в противном случае.  
+ Значение TRUE, если метод является успешным или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод заполняет область обозначается *rect* цветом фона активной вкладки. Он вызывается, когда `CMFCBaseTabCtrl` объект сообщения WM_PAINT и удаляет вкладку кадра.  
+ Этот метод заполняет область обозначается *rect* цветом фона активной вкладки. Он вызывается, когда `CMFCBaseTabCtrl` объект сообщения WM_PAINT и стирает кадр вкладки.  
   
 ##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
  Этот метод вызывается платформой при заливке фона кнопки автоматического скрытия.  
@@ -1884,16 +1884,16 @@ virtual void OnFillAutoHideButtonBackground(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки автоматического скрытия.  
+ Прямоугольник, который указывает границы кнопки автоматического скрытия.  
   
  [in] *pButton*  
- Указатель на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объекта. Платформа заливке фона кнопки автоматического скрытия.  
+ Указатель на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объекта. Автоматически заполняются фон для этой кнопки автоматического скрытия.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида кнопки автоматического скрытия.  
   
 ##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2003::OnFillBarBackground  
- Этот метод вызывается платформой при заливке фона [CBasePane класс](../../mfc/reference/cbasepane-class.md) объекта.  
+ Этот метод вызывается платформой при заливке фона [класс CBasePane](../../mfc/reference/cbasepane-class.md) объекта.  
   
 ```  
 virtual void OnFillBarBackground(
@@ -1909,21 +1909,21 @@ virtual void OnFillBarBackground(
  Указатель на контекст устройства для панели элементов управления.  
   
  [in] *pBar*  
- Указатель на [CBasePane класс](../../mfc/reference/cbasepane-class.md) объекта. Платформа заливке фона в этой области.  
+ Указатель на [класс CBasePane](../../mfc/reference/cbasepane-class.md) объекта. Автоматически заполняются фон в этой области.  
   
  [in] *rectClient*  
- Прямоугольник, который определяет границы области.  
+ Прямоугольник, который указывает границы области.  
   
  [in] *rectClip*  
- Прямоугольник, который указывает поле области обрезки.  
+ Прямоугольник, который указывает область отсечения области.  
   
  [in] *bNCArea*  
  Зарезервированное значение.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод заполняет фон полосы 3d цветом фона из глобальной переменной `afxGlobalData`.  
+ Реализация по умолчанию этот метод заполняет фона строки, цветом фона 3d из глобальной переменной `afxGlobalData`.  
   
- Переопределите этот метод в производном visual manager для настройки фона области.  
+ Переопределите этот метод в производном наглядный диспетчер для настройки фона области.  
   
 ##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2003::OnFillButtonInterior  
  Этот метод вызывается платформой при заливке фона кнопки панели инструментов.  
@@ -1938,22 +1938,22 @@ virtual void OnFillButtonInterior(
   
 ### <a name="parameters"></a>Параметры  
  [in] *основного контроллера домена*  
- Указатель на контекст устройства кнопки панели инструментов.  
+ Указатель на контекст устройства, кнопки панели инструментов.  
   
  [in] *pButton*  
  Указатель на кнопку, для которого платформа заполнен фон.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки панели инструментов.  
+ Прямоугольник, который указывает границы кнопки панели инструментов.  
   
  [in] *состояния*  
- Состояние кнопки панели инструментов (возможные состояния кнопки панели инструментов `ButtonsIsRegular`, `ButtonsIsPressed`, или `ButtonsIsHighlighted`).  
+ Состояние кнопки панели инструментов (возможны следующие состояния кнопки панели инструментов `ButtonsIsRegular`, `ButtonsIsPressed`, или `ButtonsIsHighlighted`).  
   
 ### <a name="remarks"></a>Примечания  
- Реализация этого метода по умолчанию использует по умолчанию цвет для заливки фона. Переопределите этот метод в производном visual manager для настройки фона кнопки панели инструментов.  
+ Реализация по умолчанию этот метод используется по умолчанию цвет для заливки фона. Переопределите этот метод в производном наглядный диспетчер для настройки фона кнопки панели инструментов.  
   
 ##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
- Этот метод вызывается платформой при заливке фона кнопки панели инструментов, к которой принадлежит список команд. Этот список команд входит в диалоговом окне настройки.  
+ Этот метод вызывается платформой при заливке фона кнопки панели инструментов, к которой принадлежит список команд. Этот список команд является частью в диалоговом окне настройки.  
   
 ```  
 virtual COLORREF OnFillCommandsListBackground(
@@ -1967,16 +1967,16 @@ virtual COLORREF OnFillCommandsListBackground(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки.  
+ Прямоугольник, который указывает границы кнопки.  
   
  [in] *bIsSelected*  
- Логический параметр, указывающее, выбран ли кнопки.  
+ Логический параметр, который указывает, выбран ли кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Цвет текста кнопки панели инструментов.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения о списке настройки см. в разделе [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Реализация по умолчанию для этого метода заливке фона, на основе цветовой схемы выбранного обложки.  
+ Дополнительные сведения о списке настройки, см. в разделе [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist). Реализация по умолчанию этот метод заполняет фона, на основе схемы цвет текущего выбранного обложки.  
   
 ##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
  Этот метод вызывается платформой при заливке фона заголовка элемента управления.  
@@ -1990,16 +1990,16 @@ virtual void OnFillHeaderCtrlBackground(
   
 ### <a name="parameters"></a>Параметры  
  [in] *pCtrl*  
- Указатель на [CMFCHeaderCtrl класс](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Платформа заливке фона для этого заголовка элемента управления.  
+ Указатель на [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Автоматически заполняются фона для данного элемента управления заголовка.  
   
  [in] *основного контроллера домена*  
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который задает границы элемента управления заголовка.  
+ Прямоугольник, который указывает границы элемента управления заголовка.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида элемента заголовка.  
+ Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида элемента управления заголовка.  
   
 ##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2003::OnFillHighlightedArea  
  Этот метод вызывается платформой при заливке выделенную область кнопки панели инструментов.  
@@ -2020,10 +2020,10 @@ virtual void OnFillHighlightedArea(
  Ограничивающий прямоугольник выделенную область для заливки.  
   
  [in] *pBrush*  
- Кисть для использования заполнения выделенной области.  
+ Кисть заполнения выделенной области.  
   
  [in] *pButton*  
- Указатель на [CMFCToolBarButton класса](../../mfc/reference/cmfctoolbarbutton-class.md) объект, для которого для заполнения выделенной области.  
+ Указатель на [класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) объект, для которого для заполнения выделенной области.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -2042,18 +2042,18 @@ virtual void OnFillOutlookBarCaption(
  Указатель на контекст устройства.  
   
  [in] *rectCaption*  
- Прямоугольник, который определяет границы заголовка окна.  
+ Прямоугольник, который указывает границы заголовка окна.  
   
  [out] *clrText*  
- Ссылку на `COLORREF` объекта, на который этот метод записывает цвет текста в строке заголовка.  
+ Ссылка на объект COLORREF, к которому этот метод записывает цвет текста в заголовке окна.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этот метод заполняет строки заголовка с цвет тени, исходя из текущей обложки.  
+ Реализация по умолчанию этот метод заполняет заголовок с цвет тени в зависимости от текущего обложки.  
   
- Переопределите этот метод в производном visual manager, чтобы настроить цвет заголовка окна Outlook.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить цвет заголовка окна Outlook.  
   
 ##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
- Платформа вызывает этот метод, когда он заполняет внутреннюю часть кнопки страницы Outlook.  
+ Этот метод вызывается платформой при его заполняет внутреннюю часть кнопки страницы Outlook.  
   
 ```  
 virtual void OnFillOutlookPageButton(
@@ -2069,22 +2069,22 @@ virtual void OnFillOutlookPageButton(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы кнопки страницы Outlook.  
+ Прямоугольник, который указывает границы кнопки страницы Outlook.  
   
  [in] *bIsHighlighted*  
- Логический параметр, указывает, выделяется ли кнопки.  
+ Логический параметр, указывающее, выделена ли кнопки.  
   
  [in] *bIsPressed*  
- Логический параметр, указывает ли кнопка нажата.  
+ Логический параметр, который указывает, нажата ли кнопка.  
   
  [out] *clrText*  
- Ссылку на `COLORREF` объекта, где этот метод сохраняет цвет текста кнопки страницы outlook.  
+ Ссылка на объект COLORREF, где этот метод сохраняет цвет текста кнопки страницы outlook.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите эту функцию в производном visual manager для настройки внешнего вида кнопки страницы Outlook.  
+ Переопределите эту функцию в производном наглядный диспетчер, чтобы настроить внешний вид кнопок страниц Outlook.  
   
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
- Этот метод вызывается платформой при заливке фона во всплывающем окне.  
+ Этот метод вызывается платформой при заливке фона всплывающего окна.  
   
 ```  
 virtual void OnFillPopupWindowBackground(
@@ -2097,13 +2097,13 @@ virtual void OnFillPopupWindowBackground(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы всплывающего окна.  
+ Прямоугольник, который указывает границы всплывающего окна.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида всплывающие окна.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид всплывающие окна.  
   
 ##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2003::OnFillTab  
- Этот метод вызывается платформой при заливке фона окно вкладки.  
+ Этот метод вызывается платформой при заливке фона вкладки окна.  
   
 ```  
 virtual void OnFillTab(
@@ -2120,25 +2120,25 @@ virtual void OnFillTab(
  Указатель на контекст устройства.  
   
  [in] *rectFill*  
- Прямоугольник, который определяет границы окно вкладки.  
+ Прямоугольник, который указывает границы вкладки окна.  
   
  [in] *pbrFill*  
- Указатель кисть, которая использует платформу для заполнения окно вкладки.  
+ Указатель на кисть, которая framework используется для заполнения вкладки окна.  
   
  [in] *iTab*  
- Отсчитываемый от нуля индекс вкладки, для которого автоматически заполняются фона.  
+ Индекс (с нуля) перехода, для которого автоматически заполняются фон вкладки.  
   
  [in] *bIsActive*  
- `TRUE` Если активна вкладка или `FALSE` в противном случае.  
+ Значение TRUE, если вкладке active или FALSE, если это не так.  
   
  [in] *pTabWnd*  
  Указатель на родительский элемент управления вкладки.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида вкладок.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид вкладок.  
   
 ##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
- Платформа вызывает этот метод, когда он заполняет внутреннюю часть [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта.  
+ Этот метод вызывается платформой при заливке внутреннюю часть [класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) объекта.  
   
 ```  
 virtual void OnFillTasksGroupInterior(
@@ -2152,16 +2152,16 @@ virtual void OnFillTasksGroupInterior(
  Указатель на контекст устройства.  
   
  [in] *rect*  
- Прямоугольник, который определяет границы группы задач.  
+ Прямоугольник, который указывает границы группы задач.  
   
  [in] *bSpecial*  
- Логическое значение, указывающее, заполняется ли внутреннюю специальные цветом.  
+ Логическое значение, указывающее, если внутренняя область заполняется цветом, специальные.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном visual manager для настройки внешнего вида группу задач.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид группу задач.  
   
 ##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
- Этот метод вызывается платформой при заливке фона [CMFCTasksPane класса](../../mfc/reference/cmfctaskspane-class.md) элемента управления.  
+ Этот метод вызывается платформой при заливке фона [класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления.  
   
 ```  
 virtual void OnFillTasksPaneBackground(
@@ -2174,13 +2174,13 @@ virtual void OnFillTasksPaneBackground(
  Указатель на контекст устройства.  
   
  [in] *rectWorkArea*  
- Прямоугольник, который определяет границы области задач.  
+ Прямоугольник, который указывает границы области задач.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном Диспетчер визуальных для настройки внешнего вида [CMFCTasksPane класс](../../mfc/reference/cmfctaskspane-class.md) объекта.  
+ Переопределите этот метод в производном наглядный диспетчер, чтобы настроить внешний вид [класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) объекта.  
   
 ##  <a name="onhighlightquickcustomizemenubutton"></a>  CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
- Платформа вызывает этот метод при рисовании выделенный быстрого Настройка кнопки меню.  
+ Платформа вызывает этот метод при рисовании выделенный quick Настройка кнопки меню.  
   
 ```  
 virtual void OnHighlightQuickCustomizeMenuButton(
@@ -2202,7 +2202,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
- Этот метод вызывается платформой при рисовании выделенного меню команду.  
+ Этот метод вызывается платформой при рисовании команды выделенного меню.  
   
 ```  
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -2215,10 +2215,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
  Указатель на контекст устройства.  
   
  [in] *rectRarelyUsed*  
- Прямоугольник, который определяет границы выделенной команды.  
+ Прямоугольник, который указывает границы выделенной команды.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном наглядный диспетчер настройки внешнего вида выделенного меню команд.  
+ Переопределите этот метод в производном наглядный диспетчер для настройки внешнего вида команды выделенного меню.  
   
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2003::OnUpdateSystemColors  
  Эта функция вызывается платформой при изменении системных цветов.  
@@ -2228,10 +2228,10 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод как часть обработки сообщений WM_SYSCOLORCHANGE. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
+ Платформа вызывает этот метод как часть обработки WM_SYSCOLORCHANGE сообщения. Переопределите этот метод в производном наглядный диспетчер, если вы хотите выполнять пользовательский код, при изменении цветов в приложении.  
   
 ##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
- Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или получить цвета из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
+ Определяет, наглядный диспетчер следует использовать собственные цвета темы Windows XP или цветов получен из [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371).  
   
 ```  
 static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
@@ -2239,15 +2239,15 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] *bDefaultWinXPColors*  
- Указывает, использует ли диспетчер визуального представления собственного цветов Windows XP.  
+ Указывает, будет ли наглядный диспетчер использовать собственные цвета Windows XP.  
   
 ### <a name="remarks"></a>Примечания  
- Если *bDefaultWinXPColors* — `TRUE`, наглядный диспетчер будет использовать собственный цветов Windows XP, например blue, оливковую или silver. В противном случае диспетчер визуального представления будет использовать цвета, полученные из `GetSysColor`. Наглядный диспетчер использует визуальные элементы, такие как `COLOR_3DFACE`, `COLOR_3DSHADOW`, `COLOR_3DHIGHLIGHT`, `COLOR_3DDKSHADOW`, и `COLOR_3DLIGHT`.  
+ Если *bDefaultWinXPColors* имеет значение TRUE, наглядный диспетчер будет использовать собственный цвета Windows XP, например blue, Оливковый или silver. В противном случае — наглядный диспетчер будет использовать цвета, полученный из `GetSysColor`. Наглядный диспетчер использует визуальные элементы, такие как COLOR_3DFACE, COLOR_3DSHADOW, COLOR_3DHIGHLIGHT, COLOR_3DDKSHADOW и COLOR_3DLIGHT.  
   
  По умолчанию `CMFCVisualManagerOffice2003` объект использует собственные цвета темы Windows XP.  
   
 ##  <a name="setstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
- Указывает, что должна использоваться глобальной темы Windows XP.  
+ Указывает, что следует использовать глобальные темы Windows XP.  
   
 ```  
 static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRUE);
@@ -2255,12 +2255,12 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
   
 ### <a name="parameters"></a>Параметры  
  [in] *bStatusBarOfficeXPLook*  
- `TRUE` Если глобальной темы Windows XP следует использовать (по умолчанию), или `FALSE` в противном случае.  
+ Значение TRUE, если глобальные темы Windows XP следует использовать (по умолчанию), или значение FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setuseglobaltheme"></a>  CMFCVisualManagerOffice2003::SetUseGlobalTheme  
- Указывает, использует ли Диспетчер визуальных глобальной темы.  
+ Указывает, использует ли наглядный диспетчер глобальной темы.  
   
 ```  
 static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
@@ -2268,16 +2268,16 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  [in] *bUseGlobalTheme*  
- `TRUE` Если требуется, чтобы диспетчер визуального представления для использования глобальной темы; `FALSE` в противном случае.  
+ Значение TRUE, если наглядный диспетчер использовать глобальные темы; Значение FALSE в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Если `CMFCVisualManagerOffice2003` объект использует глобальную тему, он выводит элементы графического пользовательского интерфейса с помощью [преобразованный CMFCVisualManagerWindows класса](../../mfc/reference/cmfcvisualmanagerwindows-class.md).  
+ Если `CMFCVisualManagerOffice2003` объект использует глобальные темы, выполняется рисование элементов графического пользовательского интерфейса с помощью [класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md).  
   
- Если `CMFCVisualManagerOffice2003` объект не использовал глобальной темы, он выводит элементы графического пользовательского интерфейса с помощью [преобразованный CMFCVisualManagerOfficeXP класса](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).  
+ Если `CMFCVisualManagerOffice2003` объект не использовал глобальной темы, выполняется рисование элементов графического пользовательского интерфейса с помощью [класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Классы](../../mfc/reference/mfc-classes.md)   
  [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)   
- [Класс преобразованный CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
+ [Класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)   
  [Класс CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

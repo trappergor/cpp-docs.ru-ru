@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eea1a8fe89e9cabcfbe1bf9aa69f1c3fda775c0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dde45090a534fc8d5aff09ee12b1b4fe838d9492
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966280"
 ---
 # <a name="allocatornewdel-class"></a>Класс allocator_newdel
 
-Реализует распределитель, который использует `operator delete` для освобождения блока памяти и `operator new` для выделения блока памяти.
+Реализует распределитель, который использует **оператор delete** для освобождения памяти блок и **оператор new** выделить блок памяти.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,13 +39,13 @@ class allocator_newdel;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Type`|Тип элементов, распределяемых распределителем.|
+|*Тип*|Тип элементов, распределяемых распределителем.|
 
 ## <a name="remarks"></a>Примечания
 
-Макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) передает этот класс как параметр `name` в следующей инструкции: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) макрос передает этот класс как *имя* параметр в следующей инструкции: `ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>Требования
 

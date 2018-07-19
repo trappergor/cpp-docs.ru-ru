@@ -1,5 +1,5 @@
 ---
-title: Класс CComEnum | Документы Microsoft
+title: Класс CComEnum | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dd8fe2120ad42d7df223d05a43591937ffcce6e2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362867"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885393"
 ---
 # <a name="ccomenum-class"></a>Класс CComEnum
-Этот класс определяет COM-объект перечислителя, на основе массива.  
+Этот класс определяет перечислитель COM-объекта на основе массива.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,35 +39,35 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `Base`  
- Перечислитель COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) интерфейса.  
+ *Base*  
+ Перечислителя COM ( [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx)) интерфейса.  
   
- `piid`  
- Указатель на идентификатор интерфейса интерфейс перечислителя.  
+ *piid*  
+ Указатель на идентификатор интерфейса интерфейса перечислителя.  
   
- `T`  
+ *T*  
  Тип элемента, доступные в интерфейсе перечислителя.  
   
- `Copy`  
+ *Копировать*  
  Однородную [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).  
   
- `ThreadModel`  
- Потоковая модель класса. Этот параметр по умолчанию модели глобальный объект потока, используемые в вашем проекте.  
+ *ThreadModel*  
+ Потоковая модель класса. Значение по умолчанию потоковую модель глобальный объект, используемый в проекте.  
   
 ## <a name="remarks"></a>Примечания  
- `CComEnum` Определяет COM-объект перечислителя, на основе массива. Этот класс является аналогом [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) которого реализует перечислитель, основанное на контейнере стандартной библиотеки C++. Ниже описаны типичные действия по использованию этого класса. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).  
+ `CComEnum` Определяет объект перечислителя COM на основе массива. Этот класс является аналогом [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) реализующий перечислитель, основанное на контейнере стандартной библиотеки C++. Стандартная последовательность действий при помощи этого класса приводятся ниже. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).  
   
-## <a name="to-use-this-class"></a>С помощью этого класса:  
+## <a name="to-use-this-class"></a>Чтобы использовать этот класс:  
   
-- `typedef` специализации этого класса.  
+- **TypeDef** специализации этого класса.  
   
--   Используйте `typedef` в качестве аргумента шаблона в специализации `CComObject`.  
+-   Используйте **typedef** в качестве аргумента шаблона в специализации `CComObject`.  
   
--   Создайте экземпляр класса `CComObject` специализации.  
+-   Создайте экземпляр `CComObject` специализации.  
   
 -   Инициализируйте объект перечислителя, вызвав [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).  
   
--   Возвращает интерфейс перечислителя клиенту.  
+-   Возвращает интерфейс перечислителя для клиента.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CComObjectRootBase`  
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  **Заголовок:** atlcom.h  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже код предоставляет функцию для повторного использования, для создания и инициализации объекта перечислителя.  
+ Приведенный ниже код предоставляет функцию многократно используемых для создания и инициализации объект перечислителя.  
   
  [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  
   
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]  
   
- Этот код создает `typedef` для `CComEnum` , представляет собой вектор **VARIANT**s через **IEnumVariant** интерфейса. **CVariantArrayCollection** класс уточняет **CreateEnumerator** для работы с объектами перечислитель данного типа и передает необходимые аргументы.  
+ Этот код создает **typedef** для `CComEnum` , предоставляющий вектор вариантов через `IEnumVariant` интерфейс. `CVariantArrayCollection` Класс уточняет `CreateEnumerator` для работы с объектами перечислитель данного типа и передает необходимые аргументы.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)   

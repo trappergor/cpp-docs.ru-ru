@@ -1,5 +1,5 @@
 ---
-title: Макросы точки подключения | Документы Microsoft
+title: Макросы точки подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88789bef4bbcce3df99d90d736974377c9bca5fd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362934"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882940"
 ---
 # <a name="connection-point-macros"></a>Макросы точки подключения
 Эти макросы определяют схемы точки подключения и записи.  
@@ -30,9 +30,9 @@ ms.locfileid: "32362934"
 |||  
 |-|-|  
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Отмечает начало карты записей точки подключения.|  
-|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Вводит карты точки подключения.|  
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017 г.) Аналогично CONNECTION_POINT_ENTRY, но принимает указатель на iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Отмечает конец записей карты точки подключения.|  
+|[CONNECTION_POINT_ENTRY](#connection_point_entry)|Вводит точки подключения в схеме.|  
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017 г.) Но, похоже на CONNECTION_POINT_ENTRY принимает указатель на iid.|
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Помечает конец записи подключения точки карты.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcom.h 
@@ -49,15 +49,15 @@ BEGIN_CONNECTION_POINT_MAP(x)
  [in] Имя класса, содержащего точки подключения.  
   
 ### <a name="remarks"></a>Примечания  
- Запуск на сопоставление точки подключения с `BEGIN_CONNECTION_POINT_MAP` макрос, добавьте записи для каждой из точек соединения с [CONNECTION_POINT_ENTRY](#connection_point_entry) макрос и выполнить сопоставление с [END_CONNECTION_POINT_MAP](#end_connection_point_map) макрос.  
+ Запустите на сопоставление точки подключения с помощью макроса BEGIN_CONNECTION_POINT_MAP, добавьте записи для каждого из вашей точки подключения с [CONNECTION_POINT_ENTRY](#connection_point_entry) макрос и выполнить сопоставление с [END_CONNECTION_ POINT_MAP](#end_connection_point_map) макрос.  
   
- Дополнительные сведения о точках подключения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).  
+ Дополнительные сведения о точках подключения библиотеки ATL, см. в статье [точек подключения](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
 ##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY и CONNECTION_POINT_ENTRY_P  
- Вводит точку подключения в сопоставление точки подключения, чтобы он был доступен для указанного интерфейса.  
+ Вводит точку подключения для указанного интерфейса в сопоставление точки подключения, чтобы он был доступен.  
   
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -65,33 +65,33 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
- [in] Идентификатор GUID интерфейса, добавляется сопоставление точки подключения. 
+ *IID*  
+ [in] Идентификатор GUID интерфейса, добавляемое сопоставление точки подключения. 
  
- `piid`  
- [in] Указатель на идентификатор GUID интерфейса, который добавляет.   
+ *piid*  
+ [in] Указатель на идентификатор GUID интерфейса, добавить.   
   
 ### <a name="remarks"></a>Примечания  
- Записи точки соединения в схеме используются [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Класс, содержащий сопоставление точки подключения должен наследовать от `IConnectionPointContainerImpl`.  
+ Записи точки подключения в схеме используются [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md). Класс, содержащий сопоставление точки подключения должен наследовать из `IConnectionPointContainerImpl`.  
   
- Запуск на сопоставление точки подключения с [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) макрос, добавьте записи для каждой из точек соединения с `CONNECTION_POINT_ENTRY` макрос и выполнить сопоставление с [END_CONNECTION_POINT_MAP ](#end_connection_point_map) макрос.  
+ Запуск на сопоставление точки подключения с [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) макрос, добавьте записи для каждого из вашей точки подключения с помощью макроса CONNECTION_POINT_ENTRY и выполнить сопоставление с [END_CONNECTION_ POINT_MAP](#end_connection_point_map) макрос.  
   
- Дополнительные сведения о точках подключения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).  
+ Дополнительные сведения о точках подключения библиотеки ATL, см. в статье [точек подключения](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
 ##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
- Отмечает конец записей карты точки подключения.  
+ Помечает конец записи подключения точки карты.  
   
 ```
 END_CONNECTION_POINT_MAP()
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Запуск на сопоставление точки подключения с [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) макрос, добавьте записи для каждой из точек соединения с [CONNECTION_POINT_ENTRY](#connection_point_entry) макрос и выполнить сопоставление с `END_CONNECTION_POINT_MAP` макрос.  
+ Запуск на сопоставление точки подключения с [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) макрос, добавьте записи для каждого из вашей точки подключения с [CONNECTION_POINT_ENTRY](#connection_point_entry) макрос и выполнить сопоставление с END_ Макрос CONNECTION_POINT_MAP.  
   
- Дополнительные сведения о точках подключения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).  
+ Дополнительные сведения о точках подключения библиотеки ATL, см. в статье [точек подключения](../../atl/atl-connection-points.md).  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  
