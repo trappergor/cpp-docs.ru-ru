@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6f4a8779bcc92b48896fa016944df27c58903
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 366a0ec46b69567e9f03f1e0667555acd08f31be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850708"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960958"
 ---
 # <a name="cauchydistribution-class"></a>Класс cauchy_distribution
 
@@ -80,13 +80,13 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип с плавающей запятой, `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 *РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение Коши, которое формирует значения указанного пользователем типа с плавающей запятой или типа `double`, если тип не указан. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем с плавающей запятой типа или типа **двойные** Если тип не указан, распределенные в соответствии с распределением Коши. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -263,7 +263,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 *b* `b` параметр распределения.
 
-*параметр* `param_type` структура, используемая для формирования распределения.
+*parm* `param_type` структура, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -295,7 +295,7 @@ struct param_type {
 
 *b* `b` параметр распределения.
 
-*правый* `param_type` объект для сравнения с.
+*правом* `param_type` объект для сравнения с данной структурой.
 
 ### <a name="remarks"></a>Примечания
 

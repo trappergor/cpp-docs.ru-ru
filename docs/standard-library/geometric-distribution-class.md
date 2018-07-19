@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846874"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960298"
 ---
 # <a name="geometricdistribution-class"></a>Класс geometric_distribution
 
@@ -76,7 +76,7 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType* целочисленный тип результата, по умолчанию `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*IntType* целочисленный тип результата, по умолчанию **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 *РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
@@ -230,7 +230,7 @@ explicit geometric_distribution(const param_type& parm);
 
 *p* `p` параметр распределения.
 
-*параметр* структура параметров, используемая для формирования распределения.
+*parm* структуру параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -259,7 +259,7 @@ struct param_type {
 
 *p* `p` параметр распределения.
 
-*правый* `param_type` экземпляр для сравнения.
+*правом* `param_type` экземпляр для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

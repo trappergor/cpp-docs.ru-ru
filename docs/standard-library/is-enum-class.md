@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 493c3dc0faf42e0f08f88afd3ac405cfbd7404aa
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac1a6c39f25e42237265964ae1bfb0214aaa9087
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844885"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961003"
 ---
 # <a name="isenum-class"></a>Класс is_enum
 
@@ -37,11 +37,11 @@ struct is_enum;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `Ty` является типом перечисления или формой `cv-qualified` типа перечисления, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является типом перечисления или `cv-qualified` форму типа перечисления, в противном случае он содержит значение false.
 
 ## <a name="example"></a>Пример
 

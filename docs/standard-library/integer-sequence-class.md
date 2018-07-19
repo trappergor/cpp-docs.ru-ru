@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960743"
 ---
 # <a name="integersequence-class"></a>Класс integer_sequence
 
@@ -44,9 +44,9 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Параметры
 
-T тип значений; должен быть целочисленный тип: bool, char, char16_t, char32_t, wchar_t или подписанные или не подписанные целочисленных типов.
+*T* тип значений; должен быть целочисленный тип: bool, char, char16_t, char32_t, wchar_t или подписанные или не подписанные целочисленные типы.
 
-Пакет не параметр типа ывать объект, представляющий последовательность значений целочисленного типа T.
+*Ывать* пакет параметров не являющийся типом, который представляет последовательность значений целочисленного типа T.
 
 ## <a name="members"></a>Участники
 

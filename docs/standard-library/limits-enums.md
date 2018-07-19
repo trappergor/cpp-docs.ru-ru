@@ -7,12 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858163"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960652"
 ---
 # <a name="ltlimitsgt-enums"></a>Перечисления &lt;limits&gt;
 
@@ -35,11 +35,11 @@ enum float_denorm_style {
 
 Перечисление возвращает:
 
-- **denorm_indeterminate**, если не удается определить наличие или отсутствие денормализованных форм во время преобразования.
+- `denorm_indeterminate` Если не удается определить наличие или отсутствие денормализованных форм во время преобразования.
 
-- **denorm_absent**, если денормализованные формы отсутствуют.
+- `denorm_absent` Если денормализованные формы отсутствуют.
 
-- **denorm_present**, если денормализованные формы присутствуют.
+- `denorm_present` Если денормализованные формы присутствуют.
 
 ### <a name="example"></a>Пример
 
@@ -62,15 +62,15 @@ enum float_round_style {
 
 Перечисление возвращает:
 
-- **round_indeterminate**, если метод округления определить не удается.
+- `round_indeterminate` Если метод округления невозможно определить.
 
-- **round_toward_zero**, если округление к нолю.
+- `round_toward_zero` Если округление к нулю.
 
-- **round_to_nearest**, если округление до ближайшего целого числа.
+- `round_to_nearest` Если округление до ближайшего целого числа.
 
-- **round_toward_infinity**, если округление от ноля.
+- `round_toward_infinity` Если округление от ноля.
 
-- **round_toward_neg_infinity**, если округление к более отрицательному целому числу.
+- `round_toward_neg_infinity` Если округление к более отрицательному целому.
 
 ### <a name="example"></a>Пример
 
