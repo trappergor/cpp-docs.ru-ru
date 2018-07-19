@@ -30,16 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97ead548caa56a28e81d96204d459bab6b7d6c28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be74641b229fbf888504df72a97f8a5c025d9b7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963720"
 ---
 # <a name="basicostream-class"></a>Класс basic_ostream
 
-Этот класс шаблона описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока с элементами типа **Elem**, также известных как [char_type](../standard-library/basic-ios-class.md#char_type). Их признаки символов определяются классом **Tr**, также известным как [traits_type](../standard-library/basic-ios-class.md#traits_type).
+Этот класс шаблона описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока с элементами типа `Elem`, также известных как [char_type](../standard-library/basic-ios-class.md#char_type), признаки символов определяются классом `Tr`, также известных как [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,9 +50,9 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-`Elem` ОБЪЕКТ `char_type`.
+*Elem* объект `char_type`.
 
-`Tr` Символ `traits_type`.
+*TR* символ `traits_type`.
 
 ## <a name="remarks"></a>Примечания
 
@@ -108,7 +108,7 @@ setstate(state);
 return (*this);
 ```
 
-Обе группы функций вызывают [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** при обнаружении ошибки вставки элементов.
+Обе группы функций вызывают [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) при обнаружении ошибки вставки элементов.
 
 Объект класса basic_istream\< **Elem**, **Tr**> хранит только виртуальный открытый базовый объект класса [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>**.
 
@@ -118,13 +118,13 @@ return (*this);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[basic_ostream](#basic_ostream)|Создает объект `basic_ostream`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[flush](#flush)|Очищает буфер.|
 |[put](#put)|Помещает символ в поток.|
@@ -136,7 +136,7 @@ return (*this);
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#basic_ostream_operator_eq)|Присваивает значение указанного параметра объекта `basic_ostream` этому объекту.|
 |[оператор<<](#basic_ostream_operator_lt_lt)|Записывает данные в поток.|
@@ -161,11 +161,11 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-`strbuf` Объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf* объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-`_Isstd` `true` Если это стандартный поток; в противном случае `false`.
+*_Isstd* **true** Если это стандартный поток; в противном случае **false**.
 
-`right` Ссылка rvalue на объект типа `basic_ostream`.
+*правом* ссылка rvalue на объект типа `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -242,11 +242,11 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Параметры
 
-`Pfn` Указатель на функцию.
+*Pfn* указателя функции.
 
-`strbuf` Указатель на **stream_buf** объекта.
+*strbuf* указатель на `stream_buf` объект.
 
-`val` Элемент для записи в поток.
+*Val* элемент, записываемый в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -254,9 +254,9 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="remarks"></a>Примечания
 
-\<Ostream > заголовок также определяет несколько операторов глобального курсора. Дополнительные сведения см. в разделе [оператор <<](../standard-library/ostream-operators.md#op_lt_lt).
+\<Ostream > заголовок также определяет несколько глобальных операторов вставки. Дополнительные сведения см. в разделе [оператор <<](../standard-library/ostream-operators.md#op_lt_lt).
 
-Первая функция-член обеспечивает, чтобы выражение в форме **ostr << endl** вызывало [endl](../standard-library/ostream-functions.md#endl)**(ostr)**, а затем возвращалось **\*this**. Вторая и третья функции обеспечивают аналогичное поведение других манипуляторов, таких как [hex](../standard-library/ios-functions.md#hex). Все остальные функции являются форматированными выходными функциями.
+Первая функция-член обеспечивает, чтобы выражение в форме `ostr << endl` вызовы [endl](../standard-library/ostream-functions.md#endl)**(ostr)**, а затем возвращает  **\*это**. Вторая и третья функции обеспечивают аналогичное поведение других манипуляторов, таких как [hex](../standard-library/ios-functions.md#hex). Все остальные функции являются форматированными выходными функциями.
 
 Функция
 
@@ -264,7 +264,7 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-извлекает элементы из `strbuf`, если `strbuf`не является пустым указателем, и вставляет их. Извлечение останавливается в конце файла или если оно создает исключение (которое создается повторно). Оно также останавливается без извлечения соответствующего элемента, если вставка завершается неудачно. Если функция не вставляет элементы или если вставка создает исключение, эта функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае эта функция возвращает **\*this**.
+Извлекает элементы из *strbuf*, если *strbuf* не является указателем null и вставляет их. Извлечение останавливается в конце файла или если оно создает исключение (которое создается повторно). Оно также останавливается без извлечения соответствующего элемента, если вставка завершается неудачно. Если функция не вставляет элементы или если вставка создает исключение, эта функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае эта функция возвращает **\*this**.
 
 Функция
 
@@ -272,7 +272,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-Преобразует `_Val` логическое поле и вставляет его путем вызова [use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Здесь **OutIt** определяется как [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr>**. Функция возвращает **\*this**.
+Преобразует `_Val` в логическое поле и вставляет его путем вызова [use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Здесь `OutIt` определяется как [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr >**. Функция возвращает **\*this**.
 
 Каждая из функций
 
@@ -288,7 +288,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-преобразует `val` в числовое поле и вставляет его путем вызова **use_facet<num_put\<Elem, OutIt>**(`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Здесь **OutIt** определяется как **ostreambuf_iterator\<Elem, Tr>**. Функция возвращает **\*this**.
+Преобразует *val* в числовое поле и вставляет его путем вызова **use_facet < num_put\<Elem, OutIt >**(`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Здесь **OutIt** определяется как **ostreambuf_iterator\<Elem, Tr>**. Функция возвращает **\*this**.
 
 Каждая из функций
 
@@ -298,7 +298,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-преобразует `val` в числовое поле и вставляет его путем вызова **use_facet<num_put\<Elem, OutIt>**(`getloc`)**. put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Здесь **OutIt** определяется как **ostreambuf_iterator\<Elem, Tr>**. Функция возвращает **\*this**.
+Преобразует *val* в числовое поле и вставляет его путем вызова **use_facet < num_put\<Elem, OutIt >**(`getloc`)**. Поместите**(**OutIt**(`rdbuf`),  **\*это**, `getloc`, **val**). Здесь **OutIt** определяется как **ostreambuf_iterator\<Elem, Tr>**. Функция возвращает **\*this**.
 
 ### <a name="example"></a>Пример
 
@@ -360,7 +360,7 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` `rvalue` Ссылка на `basic_ostream` объекта.
+*правом* `rvalue` ссылка `basic_ostream` объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -376,7 +376,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-`_Ch` Символ.
+*_Ch* символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -384,7 +384,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="remarks"></a>Примечания
 
-Неформатированная выходная функция вставляет элемент `_Ch`. Она возвращает **\*this**.
+Неформатированная выходная функция вставляет элемент *_Ch*. Она возвращает **\*this**.
 
 ### <a name="example"></a>Пример
 
@@ -419,11 +419,11 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Параметры
 
-`_Pos` Позиция в потоке.
+*_Pos* позицию в потоке.
 
-`_Off` Смещение относительно `_Way`.
+*_Off* смещение относительно *_Way*.
 
-`_Way` Один из [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) перечисления.
+*_Way* один из [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) перечисления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -431,7 +431,7 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="remarks"></a>Примечания
 
-Если [ошибкой](../standard-library/basic-ios-class.md#fail) — **false**, первая функция-член вызывает **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*), для некоторых `pos_type` временный объект **newpos**. Если **fail** имеет значение false, вторая функция-член вызывает **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*). В любом случае, если (`off_type`)**newpos ==** (`off_type`)(–1) (операция размещения завершается неудачно), функция вызывает **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Обе функции возвращают **\*this**.
+Если [ошибкой](../standard-library/basic-ios-class.md#fail) — **false**, первая функция-член вызывает **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*), для некоторых `pos_type` временный объект `newpos`. Если `fail` имеет значение false, вторая функция вызывает **newpos = rdbuf - >** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*). В любом случае, если (`off_type`)**newpos ==** (`off_type`)(–1) (операция размещения завершается неудачно), функция вызывает **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Обе функции возвращают **\*this**.
 
 ### <a name="example"></a>Пример
 
@@ -467,11 +467,11 @@ int main()
 
 Вложенный класс описывает объект, объявление которого структурирует форматированные и неформатированные выходные функции.
 
-Класс sentry {открытые: явное sentry (basic_ostream\<Elem, Tr > & _Ostr); bool() оператор const; ~ sentry();};
+Класс sentry {открытый: явные sentry (basic_ostream\<Elem, Tr > & _Ostr); operator bool() const; ~ sentry();};
 
 ### <a name="remarks"></a>Примечания
 
-Вложенный класс описывает объект, объявление которого структурирует форматированные и неформатированные выходные функции. Если **ostr.**[good](../standard-library/basic-ios-class.md#good) имеет значение **true**, и **ostr.**[tie](../standard-library/basic-ios-class.md#tie) не является пустым указателем, конструктор вызывает **ostr.tie->**[flush](#flush). Затем конструктор сохраняет значение, возвращенное **ostr.good**, в объекте **status**. Последующий вызов **operator bool** предоставляет это сохраненное значение.
+Вложенный класс описывает объект, объявление которого структурирует форматированные и неформатированные выходные функции. Если **ostr.**[good](../standard-library/basic-ios-class.md#good) имеет значение **true**, и **ostr.**[tie](../standard-library/basic-ios-class.md#tie) не является пустым указателем, конструктор вызывает **ostr.tie->**[flush](#flush). Затем конструктор сохраняет значение, возвращенное `ostr.good` в `status`. Последующий вызов `operator bool` предоставляет это сохраненное значение.
 
 Если `uncaught_exception` возвращает **false** и [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) не равно нулю, деструктор вызывает [flush](#flush).
 
@@ -485,11 +485,11 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` Ссылку на `basic_ostream` объекта.
+*правом* ссылку `basic_ostream` объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член вызывает [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`, чтобы поменять местами содержимое этого объекта и содержимое `right`.
+Функция-член вызывает [basic_ios::swap](../standard-library/basic-ios-class.md#swap) `(right)` для обмена содержимое этого объекта для содержимого *правой*.
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -521,9 +521,9 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-`count` Число символов для вставки в поток.
+*число* количество символов для помещения в поток.
 
-`str` Символы, попадают в поток.
+*STR* символов для помещения в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -531,7 +531,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="remarks"></a>Примечания
 
-[Неформатированная выходная функция](../standard-library/basic-ostream-class.md) вставляет последовательность элементов `count`, начиная с `str`.
+[Неформатированная выходная функция](../standard-library/basic-ostream-class.md) вставляет последовательность *число* элементы, начиная с *str*.
 
 ### <a name="example"></a>Пример
 

@@ -1,5 +1,5 @@
 ---
-title: Класс _bstr_t | Документы Microsoft
+title: Класс _bstr_t | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415287"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027252"
 ---
 # <a name="bstrt-class"></a>Класс _bstr_t
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_bstr_t` объект инкапсулирует [данные типа BSTR](http://msdn.microsoft.com/en-us/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Этот класс управляет выделением и освобождением посредством вызовов функций для ресурсов **SysAllocString** и **SysFreeString** и других `BSTR` API-интерфейсы, когда это необходимо. Класс `_bstr_t` использует подсчет ссылок во избежание слишком большой нагрузки.  
+ Объект `_bstr_t` инкапсулирует [данные типа BSTR](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228). Этот класс управляет выделением и освобождением посредством вызовов функций для ресурсов `SysAllocString` и `SysFreeString` и других `BSTR` API-интерфейсы, когда это необходимо. Класс `_bstr_t` использует подсчет ссылок во избежание слишком большой нагрузки.  
   
 ### <a name="construction"></a>Создание экземпляра  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32415287"
   
 |||  
 |-|-|  
-|[Назначение](../cpp/bstr-t-assign.md)|Копирует строку `BSTR` в строку `BSTR`, инкапсулированную объектом `_bstr_t`.|  
+|[назначить](../cpp/bstr-t-assign.md)|Копирует строку `BSTR` в строку `BSTR`, инкапсулированную объектом `_bstr_t`.|  
 |[Attach](../cpp/bstr-t-attach.md)|Связывает упаковщик `_bstr_t` со строкой `BSTR`.|  
 |[copy](../cpp/bstr-t-copy.md)|Создает копию инкапсулированного объекта `BSTR`.|  
 |[Detach](../cpp/bstr-t-detach.md)|Возвращает строку `BSTR`, инкапсулированную объектом `_bstr_t`, и отсоединяет ее (`BSTR`) от этого объекта (`_bstr_t`).|  
@@ -55,7 +55,7 @@ ms.locfileid: "32415287"
 |[оператор =](../cpp/bstr-t-operator-equal.md)|Присваивает новое значение существующему объекту `_bstr_t`.|  
 |[оператор +=](../cpp/bstr-t-operator-add-equal-plus.md)|Добавляет символы в конец объекта `_bstr_t`.|  
 |[Оператор +](../cpp/bstr-t-operator-add-equal-plus.md)|Объединяет две строки.|  
-|[Оператор !](../cpp/bstr-t-operator-logical-not.md)|Проверяет, если инкапсулированный `BSTR` — **NULL** строки.|  
+|[Оператор !](../cpp/bstr-t-operator-logical-not.md)|Проверяет Если инкапсулированный `BSTR` ПУСТАЯ строка.|  
 |[оператор ==,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Сравнивает два объекта `_bstr_t`.|  
 |[оператор wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Извлекает указатели на инкапсулированный объект Юникода или многобайтовый объект `BSTR`.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "32415287"
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<comutil.h >  
   
- **LIB:** comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
+ **LIB:** comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)  
   
 ## <a name="see-also"></a>См. также  
  [Классы поддержки модели COM компилятора](../cpp/compiler-com-support-classes.md)

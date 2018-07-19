@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961643"
 ---
-# <a name="logicalnot-struct"></a>Структура logical_not
+# <a name="logicalnot-struct"></a>logical_not - структура
 
-Предопределенный объект функции, который выполняет над своими аргументами операцию логического отрицания ( `operator!`).
+Стандартный объект функции, выполняющий логическую операцию не (`operator!`) над своими аргументами.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>Параметры
 
-`Type` Любой тип, поддерживающий `operator!` , который принимает операнд указанного или выводимого типа.
+*Тип* любой тип, поддерживающий `operator!` , принимающий операнды указанного или выводимого типа.
 
-`Left` Операнд логическую операцию не. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `Type`.
+*Слева* операнд логического не операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

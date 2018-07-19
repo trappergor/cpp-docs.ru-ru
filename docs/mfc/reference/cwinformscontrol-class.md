@@ -1,5 +1,5 @@
 ---
-title: Класс CWinFormsControl | Документы Microsoft
+title: Класс CWinFormsControl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 797903c3f558cff9a0ff5addb689e31ae2adbed7
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121641"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026378"
 ---
 # <a name="cwinformscontrol-class"></a>Класс CWinFormsControl
 Предоставляет базовую функцию для размещения элементов управления Windows Forms.  
@@ -51,7 +51,7 @@ class CWinFormsControl : public CWnd
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Создает объект оболочки элемента управления MFC Windows Forms.|  
+|[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Создает объект управления оболочки MFC Windows Forms.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -59,24 +59,24 @@ class CWinFormsControl : public CWnd
 |----------|-----------------|  
 |[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Создает элемент управления Windows Forms в контейнере MFC.|  
 |[CWinFormsControl::GetControl](#getcontrol)|Извлекает указатель на элемент управления Windows Forms.|  
-|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Получает дескриптор элемента управления Windows Forms.|  
+|[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Извлекает дескриптор элемента управления в Windows Forms.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsControl::operator-&gt;](#operator_-_gt)|Заменяет [CWinFormsControl::GetControl](#getcontrol) в выражениях.|  
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип как указатель на элемент управления Windows Forms.|  
+|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип указателя на элемент управления Windows Forms.|  
   
 ## <a name="remarks"></a>Примечания  
- `CWinFormsControl` Класс предоставляет базовые функциональные возможности для размещения элементов управления Windows Forms.  
+ `CWinFormsControl` Класс предоставляет основные функциональные возможности для размещения элементов управления Windows Forms.  
   
- Дополнительные сведения об использовании Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
- Код MFC не следует кэшировать маркеры окно (обычно хранятся в `m_hWnd`). Требуется, чтобы некоторые свойства элемента управления Windows Forms базового Win32 `Window` быть уничтожается и создается заново с помощью `DestroyWindow` и `CreateWindow`. Реализация обрабатывает MFC Windows Forms `Destroy` и `Create` события элементов управления для обновления `m_hWnd` член.  
+ Код MFC не следует кэшировать дескрипторов окон (обычно хранится в `m_hWnd`). Некоторые свойства элемента управления Windows Forms требуют базовых Win32 `Window` быть уничтожается и создается заново с помощью `DestroyWindow` и `CreateWindow`. Реализация обрабатывает MFC Windows Forms `Destroy` и `Create` событий элементов управления, чтобы обновить `m_hWnd` член.  
   
 > [!NOTE]
->  Интеграция MFC Windows Forms работает только в тех проектах, которые динамически связываются с MFC (в котором определен AFXDLL).  
+>  Интеграция MFC Windows Forms работает только в проектах, которые динамически связываются с MFC (в котором определен AFXDLL).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwinforms.h  
@@ -114,44 +114,44 @@ inline BOOL CreateManagedControl(
   
 ### <a name="parameters"></a>Параметры  
  *pType*  
- Тип данных элемента управления должен быть создан. Должно быть [тип](https://msdn.microsoft.com/en-us/library/system.type) тип данных.  
+ Тип данных создаваемого элемента управления. Должно быть [тип](https://msdn.microsoft.com/library/system.type) тип данных.  
   
  *dwStyle*  
- Стиль окна, чтобы применить к элементу управления. Задать сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). В настоящее время поддерживаются только следующие стили: WS_TABSTOP, WS_VISIBLE, WS_DISABLED и WS_GROUP.  
+ Стиль окна, чтобы применить к элементу управления. Укажите сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). В настоящее время поддерживаются только следующие стили: WS_TABSTOP, WS_VISIBLE, WS_DISABLED и WS_GROUP.  
   
  *Rect*  
- Объект [структура RECT](../../mfc/reference/rect-structure1.md) , определяющий координаты левого верхнего и нижнего правого угла элемента управления (сначала перегрузка только).  
+ Объект [структура RECT](../../mfc/reference/rect-structure1.md) , определяющий координаты верхнего левого и правого нижнего углов элемента управления (первая перегрузка только).  
   
  *nPlaceHolderID*  
- Дескриптор элемента управления владельца статических месте помещаются в редакторе ресурсов. Только что созданный элемент управления Windows Forms заменяет статический элемент управления, при условии, что его позиции z порядка и стили (второй перегрузка только).  
+ Дескриптор элемента управления держатель статический месте помещаются в редакторе ресурсов. Вновь созданный элемент управления Windows Forms заменяет статический элемент управления, при условии, что его позиции z порядок и стили (вторая перегрузка только).  
   
  *pParentWnd*  
  Указатель на родительское окно.  
   
  *nID*  
- Идентификатор ресурса для назначения только что созданный элемент управления.  
+ Идентификатор ресурса должен назначаться только что созданный элемент управления.  
   
  *pControl*  
- Экземпляр элемента управления Windows Forms, должны быть связаны с [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) объекта (только для четвертого перегрузку).  
+ Экземпляр элемента управления Windows Forms должно быть связано с [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) объекта (только для четвертая перегрузки).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В случае успешного выполнения возвращает ненулевое значение. В случае неудачи возвращает ноль.  
+ В случае успешного выполнения возвращает ненулевое значение. Если операция завершилась неудачей, возвращает нуль.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод создает элемент управления .NET Framework Windows Forms в контейнере MFC.  
+ Этот метод создает экземпляр элемента управления .NET Framework Windows Forms в контейнеров MFC.  
   
- Первый перегруженный метод принимает тип данных .NET Framework *pType* , чтобы MFC можно создать экземпляр объекта этого типа. *pType* должно быть [тип](https://msdn.microsoft.com/en-us/library/system.type) тип данных.  
+ Первая перегрузка метода принимает тип данных .NET Framework *pType* таким образом, чтобы MFC можно создать новый объект этого типа. *pType* должно быть [тип](https://msdn.microsoft.com/library/system.type) тип данных.  
   
- Вторая перегрузка метода создает элемент управления Windows Forms на основе `TManagedControl` параметр шаблона `CWinFormsControl` класса. Размер и положение элемента управления основан на `RECT` структуры передается в метод. Только *dwStyle* имеет значение для стилей.  
+ Вторая перегрузка метода создает элемент управления Windows Forms, на основе `TManagedControl` параметр шаблона `CWinFormsControl` класса. Размер и положение элемента управления основан на `RECT` структуры передается в метод. Только *dwStyle* имеет значение для стилей.  
   
- Третья перегрузка метода создает элемент управления Windows Forms, заменяет статический элемент управления, его уничтожение и при условии, что его позиции z порядка и стили. Статический элемент управления используется только как заполнитель для элемента управления Windows Forms. При создании элемента управления, эта перегрузка объединяет стили из *dwStyle* со стилями ресурса статического элемента управления.  
+ Третья перегрузка метода создает элемент управления Windows Forms, который заменяет статический элемент управления, его уничтожение и при условии, что его позиции z порядок и стили. Статический элемент управления используется только как заполнитель для элемента управления Windows Forms. При создании элемента управления, эта перегрузка сочетание стилей из *dwStyle* с использованием стилей ресурсов статический элемент управления.  
   
- Четвертый перегрузка метода позволяет передавать в элементе управления Windows Forms готовый *pControl* , будет переносить MFC. Он должен быть того же типа, что `TManagedControl` параметр шаблона `CWinFormsControl` класса.  
+ Четвертый перегрузка метода позволяет передавать в готовый элемент управления Windows Forms *pControl* , будет переносить MFC. Он должен иметь тот же тип, что `TManagedControl` параметр шаблона `CWinFormsControl` класса.  
   
- В разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) примеры формы Windows Forms с помощью элементов управления.  
+ См. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) примеры с использованием формы Windows управляет.  
   
 ##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
- Создает объект оболочки элемента управления MFC Windows Forms.  
+ Создает объект управления оболочки MFC Windows Forms.  
   
 ```  
 CWinFormsControl();
@@ -171,20 +171,20 @@ inline TManagedControl^ GetControl() const;
  Возвращает указатель на элемент управления Windows Forms.  
   
 ### <a name="example"></a>Пример  
-  В разделе [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
+  См. в разделе [CWinFormsControl::CreateManagedControl](#createmanagedcontrol).  
   
 ##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
- Получает дескриптор элемента управления Windows Forms.  
+ Извлекает дескриптор элемента управления в Windows Forms.  
   
 ```  
 inline HWND GetControlHandle() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор для элемента управления Windows Forms.  
+ Возвращает дескриптор элемента управления в Windows Forms.  
   
 ### <a name="remarks"></a>Примечания  
- `GetControlHandle` — Это вспомогательный метод, который возвращает дескриптор окна, сохраненные в свойствах элементов управления .NET Framework. Значение дескриптора окна копируется [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) при вызове [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
+ `GetControlHandle` — Это вспомогательный метод, который возвращает дескриптор окна, хранятся в свойствах элемента управления .NET Framework. Копируется значение дескриптора окна [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) во время вызова [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  Заменяет [CWinFormsControl::GetControl](#getcontrol) в выражениях.  
@@ -194,19 +194,19 @@ inline TManagedControl^  operator->() const;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот оператор обеспечивает удобный синтаксис, который заменяет `GetControl` в выражениях.  
+ Этот оператор предоставляет удобный синтаксис, который заменяет `GetControl` в выражениях.  
   
- Дополнительные сведения о Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Дополнительные сведения о Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
- Приводит тип как указатель на элемент управления Windows Forms.  
+ Приводит тип указателя на элемент управления Windows Forms.  
   
 ```  
 inline operator TManagedControl^() const;  
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот оператор передает `CWinFormsControl<TManagedControl>` для функции, которые принимают указатель на элемент управления Windows Forms.  
+ Этот оператор передает `CWinFormsControl<TManagedControl>` функций, которые принимают указатель на элемент управления Windows Forms.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CWinFormsDialog](../../mfc/reference/cwinformsdialog-class.md)   

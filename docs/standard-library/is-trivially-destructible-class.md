@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89215ac3d7b1035ef4326d73b21d540aada5fba6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0e2fb16ad96ba102295981b9f9d56fda810ddff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961062"
 ---
 # <a name="istriviallydestructible-class"></a>Класс is_trivially_destructible
 
@@ -37,11 +37,11 @@ struct is_trivially_destructible;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `T` — уничтожаемый, а деструктор известен компилятору как не использующий нетривиальные операции. В противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *T* — Уничтожаемый, а деструктор известен компилятору использовать не нетривиальные операции. В противном случае — значение false.
 
 ## <a name="requirements"></a>Требования
 

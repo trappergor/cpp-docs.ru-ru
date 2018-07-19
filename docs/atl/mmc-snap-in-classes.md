@@ -1,5 +1,5 @@
 ---
-title: MMC оснастку классов (ATL) | Документы Microsoft
+title: MMC Snap-In классов (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3b5c1786695c9bf48189c6ff350d721a5bdac74
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 571cee9a309f1e980e62521215a717e6af432b08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355497"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964120"
 ---
-# <a name="mmc-snap-in-classes"></a>Классы оснастки MMC
+# <a name="mmc-snap-in-classes"></a>Классы оснасток MMC
 Следующие классы обеспечивают поддержку разработки компонентов оснастки консоли управления (MMC).  
   
--   [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) реализует объект оснастки узла, например добавление пунктов меню и панелей инструментов и команд для узла оснастки в соответствующий обработчик функцию перенаправления.  
+-   [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) реализует объект узла оснастки, например добавление элементов меню и панелей инструментов и пересылки команд для узла – – оснастка к соответствующим функциям обработки.  
   
 -   [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md) реализует объект страницы свойств оснастки.  
   

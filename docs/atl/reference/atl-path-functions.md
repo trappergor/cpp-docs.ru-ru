@@ -1,5 +1,5 @@
 ---
-title: Функции ATL пути | Документы Microsoft
+title: Функции пути ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -47,22 +47,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38286d169591dd55f7a2618332b6f5d5c9c86719
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad0db4641731f4c92550fad075b759957383c52a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366540"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027581"
 ---
 # <a name="atl-path-functions"></a>Функции пути ATL
 
-Библиотека ATL предоставляет класс ATLPath для манипулирования пути в виде [CPathT](cpatht-class.md). Этот код можно найти в atlpath.h.  
+Библиотека ATL предоставляет класс ATLPath для управления путями в виде [CPathT](cpatht-class.md). Этот код можно найти в atlpath.h.  
   
 ### <a name="related-classes"></a>Связанные классы  
   
 |||  
 |-|-|  
-|[Класс CPathT](cpatht-class.md)|Этот класс представляет путь.|  
+|[Класс CPathT](cpatht-class.md)|Этот класс представляет собой путь.|  
 
 ### <a name="related-typedefs"></a>Связанные определения типов  
   
@@ -128,7 +128,7 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) подробные сведения.  
+ См. в разделе [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) сведения.  
   
  
   
@@ -144,7 +144,7 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) подробные сведения. 
+ См. в разделе [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) сведения. 
   
 ## <a name="append"></a> ATLPath::Append
  Эта функция представляет собой перегруженную оболочку для [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
@@ -157,7 +157,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) подробные сведения.  
+ См. в разделе [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) сведения.  
   
  
   
@@ -173,7 +173,7 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) подробные сведения.  
+ См. в разделе [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) сведения.  
   
  
   
@@ -189,13 +189,13 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) подробные сведения.  
+ См. в разделе [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) сведения.  
   
  
   
 
 ## <a name="combine"></a> ATLPath::Combine 
-Эта функция представляет собой перегруженную оболочку для [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
+Эта функция представляет собой перегруженную оболочку для [PathCombine](https://msdn.microsoft.com/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Синтаксис  
 ```
@@ -232,7 +232,7 @@ inline int CommonPrefix(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) подробные сведения.  
+ См. в разделе [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) сведения.  
   
  
   
@@ -255,7 +255,7 @@ inline BOOL CompactPath(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) подробные сведения.  
+ См. в разделе [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) сведения.  
   
  
   
@@ -280,7 +280,7 @@ inline BOOL CompactPathEx(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) подробные сведения.  
+ См. в разделе [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) сведения.  
   
  
   
@@ -296,7 +296,7 @@ inline BOOL FileExists(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) подробные сведения.  
+ См. в разделе [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) сведения.  
   
  
   
@@ -312,7 +312,7 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) подробные сведения.  
+ См. в разделе [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) сведения.  
   
  
   
@@ -328,7 +328,7 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) подробные сведения.  
+ См. в разделе [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) сведения.  
   
  
   
@@ -344,13 +344,13 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) подробные сведения.  
+ См. в разделе [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) сведения.  
   
  
 
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory 
-Эта функция представляет собой перегруженную оболочку для [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
+Эта функция представляет собой перегруженную оболочку для [PathIsDirectory](https://msdn.microsoft.com/library/windows/desktop/bb773621).
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);
@@ -370,7 +370,7 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) подробные сведения.  
+ См. в разделе [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) сведения.  
   
  
   
@@ -386,7 +386,7 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) подробные сведения.  
+ См. в разделе [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) сведения.  
   
  
   
@@ -402,7 +402,7 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) подробные сведения.  
+ См. в разделе [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) сведения.  
   
  
   
@@ -418,7 +418,7 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) подробные сведения.  
+ См. в разделе [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) сведения.  
   
  
   
@@ -434,7 +434,7 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) подробные сведения.  
+ См. в разделе [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) сведения.  
   
  
   
@@ -450,7 +450,7 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) подробные сведения.  
+ См. в разделе [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) сведения.  
   
  
   
@@ -466,7 +466,7 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) подробные сведения.  
+ См. в разделе [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) сведения.  
   
  
   
@@ -482,7 +482,7 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) подробные сведения.  
+ См. в разделе [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) сведения.  
   
  
   
@@ -498,7 +498,7 @@ inline BOOL MakePretty(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) подробные сведения.  
+ См. в разделе [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) сведения.  
   
  
   
@@ -514,7 +514,7 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) подробные сведения.  
+ См. в разделе [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) сведения.  
   
  
   
@@ -530,7 +530,7 @@ inline void QuoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) подробные сведения.  
+ См. в разделе [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) сведения.  
   
  
   
@@ -557,7 +557,7 @@ inline BOOL RelativePathTo(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) подробные сведения.  
+ См. в разделе [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) сведения.  
   
  
   
@@ -573,7 +573,7 @@ inline void RemoveArgs(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) подробные сведения.  
+ См. в разделе [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) сведения.  
   
  
   
@@ -589,7 +589,7 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) подробные сведения.  
+ См. в разделе [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) сведения.  
   
  
   
@@ -605,7 +605,7 @@ inline void RemoveBlanks(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) подробные сведения.  
+ См. в разделе [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) сведения.  
   
  
   
@@ -621,7 +621,7 @@ inline void RemoveExtension(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) подробные сведения.  
+ См. в разделе [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) сведения.  
   
  
   
@@ -637,7 +637,7 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) подробные сведения.  
+ См. в разделе [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) сведения.  
   
  
   
@@ -653,7 +653,7 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) подробные сведения.  
+ См. в разделе [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) сведения.  
   
  
   
@@ -669,7 +669,7 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) подробные сведения.  
+ См. в разделе [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) сведения.  
   
  
   
@@ -685,7 +685,7 @@ inline void StripPath(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) подробные сведения.  
+ См. в разделе [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) сведения.  
   
  
   
@@ -702,7 +702,7 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) подробные сведения.  
+ См. в разделе [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) сведения.  
   
  
   
@@ -718,7 +718,7 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) подробные сведения.  
+ См. в разделе [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) сведения.  
   
  
   

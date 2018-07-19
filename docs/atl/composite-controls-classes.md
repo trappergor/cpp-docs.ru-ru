@@ -1,5 +1,5 @@
 ---
-title: Составное управляет классов (ATL) | Документы Microsoft
+title: Классы (ATL) составных элементов управления | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c421b385564299035e0045dac275859afc5a222
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acfbf8379512513e59528a6eb2855b9caed7d298
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355368"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964201"
 ---
-# <a name="composite-controls-classes"></a>Классы составные элементы управления
+# <a name="composite-controls-classes"></a>Классы составных элементов управления
 Следующий класс предоставляет поддержку для создания составных элементов управления  
   
--   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) элементов управления ActiveX, производных от `CComCompositeControl` размещенных стандартное диалоговое окно. Следующие типы элементов управления, называются составные элементы управления, так как они имеют возможность размещения других элементов управления (собственные элементы управления Windows и элементы управления ActiveX).  
+-   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) элементы управления ActiveX, производный от `CComCompositeControl` размещенных стандартное диалоговое окно. Эти типы элементов управления, называются составных элементов управления, так как они смогут размещать другие элементы (собственные элементы управления Windows и элементы управления ActiveX).  
   
 ## <a name="related-articles"></a>Связанные статьи  
- [Принципы работы составного элемента управления](../atl/atl-composite-control-fundamentals.md)  
+ [Основы составного элемента управления](../atl/atl-composite-control-fundamentals.md)  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../atl/atl-class-overview.md)   

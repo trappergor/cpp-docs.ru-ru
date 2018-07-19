@@ -1,5 +1,5 @@
 ---
-title: Класс _com_error | Документы Microsoft
+title: Класс _com_error | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415729"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026638"
 ---
 # <a name="comerror-class"></a>Класс _com_error
 **Блок, относящийся только к системам Microsoft**  
   
- Объект `_com_error` представляет условие исключения, обнаруженное функциями оболочки обработки ошибок в файлах заголовков, создаваемых из библиотеки типов, или одним из классов поддержки COM. Класс `_com_error` инкапсулирует код ошибки `HRESULT` и любой связанный объект `IErrorInfo Interface`.  
+ Объект `_com_error` представляет условие исключения, обнаруженное функциями оболочки обработки ошибок в файлах заголовков, создаваемых из библиотеки типов, или одним из классов поддержки COM. `_com_error` Класс инкапсулирует код ошибки HRESULT и все связанные `IErrorInfo Interface` объекта.  
   
 ### <a name="construction"></a>Создание экземпляра  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32415729"
   
 |||  
 |-|-|  
-|[Ошибка](../cpp/com-error-error.md)|Получает элемент `HRESULT`, переданный конструктору.|  
+|[Ошибка](../cpp/com-error-error.md)|Возвращает значение HRESULT, переданный в конструктор.|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Получает объект `IErrorInfo`, переданный конструктору.|  
-|[WCode](../cpp/com-error-wcode.md)|Извлекает 16-битный код ошибки, сопоставленный инкапсулированному значению `HRESULT`.|  
+|[WCode](../cpp/com-error-wcode.md)|Получает код ошибки 16-разрядное, сопоставленный в инкапсулированном виде HRESULT.|  
   
 ### <a name="ierrorinfo-functions"></a>Функции IErrorInfo  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32415729"
 |-|-|  
 |[Описание](../cpp/com-error-description.md)|Вызывает функцию `IErrorInfo::GetDescription`.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|Вызывает функцию `IErrorInfo::GetHelpContext`.|  
-|[Файл справки](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
+|[HelpFile](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
 |[Source](../cpp/com-error-source.md)|Вызывает функцию `IErrorInfo::GetSource`.|  
 |[GUID](../cpp/com-error-guid.md)|Вызывает функцию `IErrorInfo::GetGUID`.|  
   
@@ -68,16 +68,16 @@ ms.locfileid: "32415729"
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Сопоставляет 32-разрядный `HRESULT` с 16-разрядным `wCode`.|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-разрядный `wCode` с 32-разрядным `HRESULT`.|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Сопоставляется 16-разрядное в 32-разрядное значение HRESULT `wCode`.|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-разрядный `wCode` 32-разрядное значение HRESULT.|  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<comdef.h >  
   
- `Lib:` comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
+ `Lib:` comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)  
   
 ## <a name="see-also"></a>См. также  
  [Классы поддержки компилятора COM](../cpp/compiler-com-support-classes.md)   
- [Интерфейс IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [Интерфейс IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

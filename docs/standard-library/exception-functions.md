@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 4aab46fa771b88d1baad311aa631a57afce4911e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847833"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962277"
 ---
 # <a name="ltexceptiongt-functions"></a>Функции &lt;exception&gt;
 
@@ -58,9 +58,9 @@ exception_ptr current_exception();
 
 Вызовите функцию `current_exception` в блоке catch. Если исключение находится в полете и блок перехвата может перехватить это исключение, функция `current_exception` возвращает объект `exception_ptr`, который ссылается на это исключение. В противном случае функция возвращает объект `exception_ptr` со значением null.
 
-Функция `current_exception` перехватывает исключение, находящееся в полете, независимо от того, определяет ли `catch` оператор [объявления исключения](../cpp/try-throw-and-catch-statements-cpp.md).
+`current_exception` Функция перехватывает исключение, которое находится в полете, независимо от того, следует ли **catch** инструкция указывает [объявления исключения](../cpp/try-throw-and-catch-statements-cpp.md) инструкции.
 
-Деструктор для текущего исключения вызывается в конце блока `catch`, если не требуется повторно создавать исключение. Но даже при вызове функции `current_exception` в деструкторе эта функция возвращает объект `exception_ptr`, который ссылается на текущее исключение.
+Деструктор для текущего исключения вызывается в конце **catch** блокировать, если не требуется повторно создавать исключение. Но даже при вызове функции `current_exception` в деструкторе эта функция возвращает объект `exception_ptr`, который ссылается на текущее исключение.
 
 Последующие вызовы функции `current_exception` возвращают объекты `exception_ptr`, которые ссылаются на различные копии текущего исключения. Соответственно, при сравнении объекты не признаются равными, поскольку они ссылаются на различные копии, даже если эти копии имеют одинаковые бинарные значения.
 
@@ -75,11 +75,11 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Параметры
 
-`Except` Класс с исключением для копирования. Обычно объект [класс исключений](../standard-library/exception-class.md) указывается в качестве аргумента функции `make_exception_ptr`, однако аргументом может быть любой объект класса.
+*За исключением* класс с исключением, подлежащим копированию. Обычно объект [класс исключений](../standard-library/exception-class.md) указывается в качестве аргумента функции `make_exception_ptr`, однако аргументом может быть любой объект класса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), указывающий на копию текущего исключения для `Except`.
+[Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) объект, указывающий на копию текущего исключения для *за исключением*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -97,7 +97,7 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Параметры
 
-`P` Перехваченное исключение для повторного вызова. Если `P` является исключением [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) со значением null, функция создает исключение [std::bad_exception](../standard-library/bad-exception-class.md).
+*P* перехваченное исключение для повторного вызова. Если *P* равно null, [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), функция создает [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -121,7 +121,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-`fnew` Функция, вызываемая при завершении.
+*fnew* функция, которая вызывается при завершении.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -129,7 +129,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Функция устанавливает новый [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) в качестве функции * `fnew`. Таким образом, `fnew` не должен быть пустым указателем. Функция возвращает адрес предыдущего обработчика завершения.
+Функция устанавливает новый [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) в качестве функции * *fnew*. Таким образом *fnew* не должно быть пустым указателем. Функция возвращает адрес предыдущего обработчика завершения.
 
 ### <a name="example"></a>Пример
 
@@ -178,7 +178,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-`fnew` Функция, вызываемая при обнаружении непредвиденное исключение.
+*fnew* функция, которая вызывается при обнаружении непредвиденного исключения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -186,7 +186,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="remarks"></a>Примечания
 
-`fnew` не должен быть пустым указателем.
+*fnew* не должно быть пустым указателем.
 
 Стандарт C++ требует вызова `unexpected` в том случае, когда функция создает исключение, которого нет в ее списке throw. Текущая реализация это не поддерживает. В следующем примере `unexpected` вызывается напрямую, который затем вызывает `unexpected_handler`.
 
@@ -226,17 +226,17 @@ void terminate();
 
 ### <a name="remarks"></a>Примечания
 
-Функция вызывает обработчик завершения, функцию типа `void`. Если функция **terminate** вызывается непосредственно программой, в качестве обработчика используется самый последний обработчик завершения, установленный вызовом метода [set_terminate](../standard-library/exception-functions.md#set_terminate). Если функция **terminate** вызывается по одной из других причин во время вычисления выражения throw, обработчик завершения действует сразу же после вычисления выражения throw.
+Эта функция вызывает обработчик завершения, функцию типа **void**. Если `terminate` вызывается непосредственно программой, обработчик завершения недавно заданное вызовом [set_terminate](../standard-library/exception-functions.md#set_terminate). Если `terminate` вызывается для любых других причин во время вычисления выражения throw, обработчик завершения действует тот сразу же после вычисления выражения throw.
 
-Обработчик завершения не может вернуть значение в вызывающий его объект. При запуске программы обработчик завершения представляет собой функцию, которая вызывает функцию **abort**.
+Обработчик завершения не может вернуть значение в вызывающий его объект. При запуске программы обработчик завершения — это функция, которая вызывает `abort`.
 
 ### <a name="example"></a>Пример
 
-См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования функции **terminate**.
+См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `terminate`.
 
 ## <a name="uncaught_exception"></a>  uncaught_exception
 
-Возвращает `true`, только если созданное исключение в настоящий момент обрабатывается.
+Возвращает **true**, только если созданное исключение в настоящий момент обрабатывается.
 
 ```cpp
 bool uncaught_exception();
@@ -244,7 +244,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает `true` после вычисления выражения throw и до завершения инициализации объявления исключения в соответствующем обработчике или вызова функции [unexpected](../standard-library/exception-functions.md#unexpected) в результате выражения throw. В частности, `uncaught_exception` вернет `true` при вызове из деструктора, который вызывается во время очистки исключения. На устройствах `uncaught_exception` поддерживается только на платформе Windows CE 5.00 и более поздних версий, включая Windows Mobile 2005.
+Возвращает **true** после вычисления выражения throw и до завершения инициализации объявления исключения в соответствующем обработчике или вызова [Непредвиденная](../standard-library/exception-functions.md#unexpected) в результате использования выражение throw. В частности `uncaught_exception` вернет **true** при вызове из деструктора, который вызывается во время очистки исключения. На устройствах `uncaught_exception` поддерживается только на платформе Windows CE 5.00 и более поздних версий, включая Windows Mobile 2005.
 
 ### <a name="example"></a>Пример
 
@@ -311,7 +311,7 @@ void unexpected();
 
 Стандарт C++ требует вызова `unexpected` в том случае, когда функция создает исключение, которого нет в ее списке throw. Текущая реализация это не поддерживает. В данном примере `unexpected` вызывается напрямую, что вызывает обработчик неожиданных исключений.
 
-Функция вызывает обработчик неожиданных исключений, функцию типа `void`. Если `unexpected` вызывается непосредственно программой, в качестве обработчика неожиданных исключений используется последний обработчик, установленный вызовом метода [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+Эта функция вызывает обработчик неожиданных исключений, функцию типа **void**. Если `unexpected` вызывается непосредственно программой, в качестве обработчика неожиданных исключений используется последний обработчик, установленный вызовом метода [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 Обработчик неожиданных исключений не может вернуть значение в вызывающий его объект. Он может завершить выполнение следующим образом:
 
@@ -319,13 +319,13 @@ void unexpected();
 
 - Создание объекта типа [bad_exception](../standard-library/bad-exception-class.md).
 
-- Вызов [terminate](../standard-library/exception-functions.md#terminate), **abort** или **exit**( `int`).
+- Вызов [завершить](../standard-library/exception-functions.md#terminate), `abort` или **выйти из**(`int`).
 
 При запуске программы обработчик неожиданных исключений — это функция, которая вызывает функцию [terminate](../standard-library/exception-functions.md#terminate).
 
 ### <a name="example"></a>Пример
 
-См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования **unexpected**.
+См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `unexpected`.
 
 ## <a name="see-also"></a>См. также
 

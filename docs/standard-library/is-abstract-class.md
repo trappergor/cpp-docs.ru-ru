@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65939df15feeb7654f48246d75d128237c393b10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6f58436bb281af2746197e5d979e1b038a6a5ce1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961699"
 ---
 # <a name="isabstract-class"></a>Класс is_abstract
 
@@ -37,11 +37,11 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` является классом, имеющим по крайней мере одну чистую виртуальную функцию, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, который имеет по крайней мере один чистой виртуальной функции, в противном случае он содержит значение false.
 
 ## <a name="example"></a>Пример
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 83a1d50c0041c3cd66abbd3d52d2e2b49231c81c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847082"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027401"
 ---
 # <a name="ltfuturegt-functions"></a>Функции &lt;future&gt;
 
@@ -46,7 +46,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Параметры
 
-`policy` Объект [запуска](../standard-library/future-enums.md#launch) значение.
+*политика* объект [запуска](../standard-library/future-enums.md#launch) значение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -64,11 +64,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 Пока `decay<Fn>::type` не станет типом, отличным от launch, вторая функция не участвует в разрешении перегрузки.
 
-Если `policy` — `launch::any`, функция может выбрать `launch::async` или `launch::deferred`. В этой реализации функция использует `launch::async`.
+Стандарт C++ указывает, что, если параметр launch::async, функция создает новый поток. Тем не менее реализация Майкрософт в настоящее время не соответствующий требованиям. Он получает его потоков Windows ThreadPool, что в некоторых случаях может предоставлять перезапущен поток, а не ее заново. Это означает, что `launch::async` политики фактически реализуется как `launch::async|launch::deferred`.  Другой реализации на основе ThreadPool подразумевается, что нет гарантии того, что локальные переменные потока, уничтожается после завершения потока. Если поток уничтожен и передается новый вызов `async`, старый переменных по-прежнему будет существовать. Поэтому рекомендуется не использовать локальные переменные потока с `async`.
 
-Если `policy` — `launch::async`, функция создает поток, который вычисляет `INVOKE(dfn, dargs..., Ty)`. Функция выполняет возврат после создания потока, не ожидая результатов. Если система не может запустить новый поток, функция создает [system_error](../standard-library/system-error-class.md) с кодом ошибки `resource_unavailable_try_again`.
-
-Если `policy` — `launch::deferred`, функция помечает свое связанное асинхронное состояние как имеющую *отложенную функцию* и возвращается. Первый вызов любой функции без учета времени, которая ожидает наступления связанного асинхронного состояния "ready", фактически вызывает отложенную функцию путем оценки `INVOKE(dfn, dargs..., Ty)`.
+Если *политики* — `launch::deferred`, функция помечает свое связанное асинхронное состояние как имеющую *отложенную функцию* и возвращает. Первый вызов любой функции без учета времени, которая ожидает наступления связанного асинхронного состояния "ready", фактически вызывает отложенную функцию путем оценки `INVOKE(dfn, dargs..., Ty)`.
 
 Во всех случаях связанное асинхронное состояние объекта `future` не становится *ready* до завершения оценки `INVOKE(dfn, dargs..., Ty)` либо путем создания исключения, либо путем обычного возвращения. Результатом связанного асинхронного состояния получается исключение, если таковое было создано, или любое значение, возвращаемое при оценке.
 
@@ -95,7 +93,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Errno` Объект [future_errc](../standard-library/future-enums.md#future_errc) значение, которое идентифицирует ошибку.
+*Errno* объект [future_errc](../standard-library/future-enums.md#future_errc) значение, идентифицирующее ошибку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -111,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Errno` Объект [future_errc](../standard-library/future-enums.md#future_errc) значение, которое идентифицирует ошибку.
+*Errno* объект [future_errc](../standard-library/future-enums.md#future_errc) значение, идентифицирующее ошибку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -131,9 +129,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Параметры
 
-`Left` Слева `promise` объекта.
+*Слева* слева `promise` объекта.
 
-`Right` Право `promise` объекта.
+*Справа* справа `promise` объекта.
 
 ## <a name="see-also"></a>См. также
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964136"
 ---
 # <a name="syncperthread-class"></a>Класс sync_per_thread
 
@@ -42,9 +42,9 @@ class sync_per_thread
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Cache`|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Примечания
 
@@ -52,7 +52,7 @@ class sync_per_thread
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -74,9 +74,9 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`count`|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число элементов в массиве, которые нужно выделить.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -92,10 +92,10 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|
-|`count`|Количество объектов для освобождения из хранилища.|
+|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*count*|Количество объектов для освобождения из хранилища.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -111,14 +111,14 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Cache`|Объект кэша фильтра синхронизации.|
-|`Other`|Объект кэша для сравнения на равенство.|
+|*Кэш*|Объект кэша фильтра синхронизации.|
+|*Другое*|Объект кэша для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `false`, если объект кэша не выделен для этого объекта или для `Other` в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
+**false** Если объект кэша не выделен для этого объекта или для *других* в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
 
 ### <a name="remarks"></a>Примечания
 

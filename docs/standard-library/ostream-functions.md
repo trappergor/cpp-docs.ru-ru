@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: e85ce2728aaaa8ae9b23067bfb1dcbb3ff2db7d0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962326"
 ---
 # <a name="ltostreamgt-functions"></a>Функции &lt;ostream&gt;
 
-Это глобальный шаблон функции, определенные в &lt;ostream&gt;. Для функций-членов, в разделе [класс basic_ostream](basic-ostream-class.md) документации.
+Это глобальный шаблон функции, определенные в &lt;ostream&gt;. Для функций-членов см. в разделе [класс basic_ostream](basic-ostream-class.md) документации.
 
 ||||
 |-|-|-|
@@ -46,7 +46,7 @@ basic_ostream<Elem, Tr>& endl(
 
 *Ostr* объект типа **basic_ostream**.
 
-*TR* признаки символов.
+*TR* символ признаки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -54,7 +54,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы манипулятор *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ Увеличьте ширину](../standard-library/basic-ios-class.md#widen)(«\n»)), а затем вызывает *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
+Манипулятор вызывает *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ расширить](../standard-library/basic-ios-class.md#widen)(«\n»)), а затем вызывает *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
 
 ### <a name="example"></a>Пример
 
@@ -88,17 +88,17 @@ basic_ostream<Elem, Tr>& ends(
 
 *Elem* тип элемента.
 
-*Ostr* объект типа **basic_ostream**.
+*Ostr* объект типа `basic_ostream`.
 
-*TR* признаки символов.
+*TR* символ признаки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект типа **basic_ostream**.
+Объект типа `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы манипулятор *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Elem*(«\0»)). Он возвращает *Ostr*.
+Манипулятор вызывает *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Elem*(«\0»)). Он возвращает *Ostr*.
 
 ### <a name="example"></a>Пример
 
@@ -134,17 +134,17 @@ basic_ostream<Elem, Tr>& flush(
 
 *Elem* тип элемента.
 
-*Ostr* объект типа **basic_ostream**.
+*Ostr* объект типа `basic_ostream`.
 
-*TR* признаки символов.
+*TR* символ признаки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект типа **basic_ostream**.
+Объект типа `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы манипулятор *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
+Манипулятор вызывает *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
 
 ### <a name="example"></a>Пример
 
@@ -166,7 +166,7 @@ testing
 
 ## <a name="swap"></a>swap
 
-Меняет местами значения двух **basic_ostream** объектов.
+Меняет местами значения двух объектов `basic_ostream`.
 
 ```cpp
 template <class Elem, class Tr>
@@ -179,15 +179,15 @@ void swap(
 
 *Elem* тип элемента.
 
-*TR* признаки символов.
+*TR* символ признаки.
 
-*левый* ссылка lvalue на **basic_ostream** объекта.
+*слева* ссылка lvalue на `basic_ostream` объекта.
 
-*правый* ссылка lvalue на **basic_ostream** объекта.
+*правом* ссылка lvalue на `basic_ostream` объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Функция шаблона **swap** выполняет `left.swap(right)`.
+Функция шаблона `swap` выполняет `left.swap(right)`.
 
 ## <a name="see-also"></a>См. также
 

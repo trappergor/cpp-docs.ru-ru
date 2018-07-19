@@ -50,12 +50,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be3b8fc232c6d692dd6e4f80018ab571e4e0cb34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9bae212ec3d8edfacc7cd3afb37ab3c13dc11aef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962455"
 ---
 # <a name="allocatortraits-class"></a>Класс allocator_traits
 
@@ -70,7 +70,7 @@ class allocator_traits;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_traits::allocator_type`|Этот тип является синонимом для параметра-шаблона `Alloc`.|
 |`allocator_traits::const_pointer`|Этот тип — `Alloc::const_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -88,7 +88,7 @@ class allocator_traits;
 
 Следующие статические методы вызывают соответствующий метод в указанном параметре распределителя.
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[allocate](#allocate)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|
 |[construct](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|
@@ -116,11 +116,11 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
-`count` Количество элементов для выделения.
+*число* число элементов для выделения.
 
-`hint` Объект `const_pointer` , может помочь объект распределителя в выполнении запроса для хранения, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.
+*Указание* объект `const_pointer` , может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -141,11 +141,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
-`ptr` Указатель на расположение, где будет создаваться объект.
+*PTR* указатель на расположение, где будет создаваться объект.
 
-`args` Список аргументов, который передается в конструктор объекта.
+*args* список аргументов, передаваемый в конструктор объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -163,11 +163,11 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
-`ptr` Указатель начальной позиции освобождение объектов.
+*PTR* указатель на начальное расположение освобождаемых объектов.
 
-`count` Количество объектов для освобождения.
+*число* количество освобождаемых объектов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -186,9 +186,9 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
-`ptr` Указатель на расположение объекта.
+*PTR* указатель на расположение объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -204,7 +204,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
 ### <a name="remarks"></a>Примечания
 
@@ -220,11 +220,11 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Параметры
 
-`al` Объект распределителя.
+*Al* объект распределителя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Данный метод возвращает `al.select_on_container_copy_construction()`, если этот тип правильно сформирован; в противном случае возвращается `al`.
+Этот метод возвращает `al.select_on_container_copy_construction()`, если это тип правильно сформировано; в противном случае возвращается *al*.
 
 ### <a name="remarks"></a>Примечания
 

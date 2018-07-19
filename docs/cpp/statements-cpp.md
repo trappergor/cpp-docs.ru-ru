@@ -1,5 +1,5 @@
 ---
-title: Операторы (C++) | Документы Microsoft
+title: Операторы (C++) | Документация Майкрософт
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3d3c8f5d9f08c4dce370d49dc5a43bbc45b479e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422785"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025761"
 ---
 # <a name="statements-c"></a>Операторы (C++)
 Операторы C++ представляют собой элементы программы, которые контролируют способ и порядок обработки объектов. Этот раздел состоит из следующих частей.  
@@ -42,9 +42,9 @@ ms.locfileid: "32422785"
   
     -   [Операторы перехода](../cpp/jump-statements-cpp.md). Эти операторы либо передают управление непосредственно в другое место функции, либо возвращают управление из функции.  
   
-    -   [Операторы объявления](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9). Объявления вводят имя в программу. ([Объявления и определения](declarations-and-definitions-cpp.md) предоставляет более подробные сведения об объявлениях.)  
+    -   [Операторы объявления](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). Объявления вводят имя в программу. ([Объявления и определения](declarations-and-definitions-cpp.md) содержатся более подробные сведения об объявлениях.)  
   
- Сведения об операторах обработки исключений в разделе [обработка исключений](../cpp/exception-handling-in-visual-cpp.md).  
+ Сведения об операторах обработки исключений см. в разделе [обработка исключений](../cpp/exception-handling-in-visual-cpp.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по языку C++](../cpp/cpp-language-reference.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7ae83cd92ac8441d842e704446d519f57d4f65
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847732"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961487"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -37,7 +37,7 @@ ms.locfileid: "33847732"
 
 ## <a name="remarks"></a>Примечания
 
-Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг формата `ios_base::skipws` в объекте **str**, который может быть одного из этих типов.
+Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг формата `ios_base::skipws` в объекте `str`, который может быть одного из этих типов.
 
 Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Пример:
 
@@ -49,7 +49,7 @@ istr>> noskipws;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Поддерживает класс ios из старой библиотеки iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Поддерживает внутренние операции.|
@@ -88,7 +88,7 @@ istr>> noskipws;
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Класс шаблона описывает хранилище и функции-члены, общие для обоих потоков (потока ввода — класс шаблона [basic_istream](../standard-library/basic-istream-class.md) и потока вывода — класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), зависящих от параметров шаблона.|
 |[fpos](../standard-library/fpos-class.md)|Класс шаблона описывает объект, который может хранить все сведения, необходимые для восстановления произвольного указателя позиции файла в любом потоке.|

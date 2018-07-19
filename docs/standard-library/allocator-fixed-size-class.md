@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc1b13fefbb48ebd28b27f87e0a5622fd3cd5ec4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94207895eb88e0d799289e2c730f99668ca32cef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33849864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963200"
 ---
 # <a name="allocatorfixedsize-class"></a>Класс allocator_fixed_size
 
-Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой классом [max_fixed_size](../standard-library/max-fixed-size-class.md).
+Описывает объект, который управляет выделением и освобождением памяти для объектов типа *тип* использующих кэш типа [cache_freelist](../standard-library/cache-freelist-class.md) с длиной, управляемой классом [max_fixed_size](../standard-library/max-fixed-size-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,13 +39,13 @@ class allocator_fixed_size;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Type`|Тип элементов, распределяемых распределителем.|
+|*Тип*|Тип элементов, распределяемых распределителем.|
 
 ## <a name="remarks"></a>Примечания
 
-Макрос [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) передает этот класс как параметр `name` в следующей инструкции: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) макрос передает этот класс как *имя* параметр в следующей инструкции: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_fixed_size<10>), SYNC_DEFAULT, allocator_fixed_size);`
 
 ## <a name="requirements"></a>Требования
 

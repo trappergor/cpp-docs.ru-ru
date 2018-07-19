@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IRegistrar | Документы Microsoft
+title: Интерфейс IRegistrar | Документация Майкрософт
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363756"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993572"
 ---
 # <a name="iregistrar-interface"></a>Интерфейс IRegistrar
-Этот интерфейс определяется см и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Этот интерфейс определяется насколько и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,13 +41,13 @@ ms.locfileid: "32363756"
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Примечания
-См. в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
+См. в разделе [с помощью подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
 
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Регистрирует ресурс. |  
 |[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Отменяет регистрацию ресурса.|  
@@ -144,5 +144,5 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ## <a name="see-also"></a>См. также  
  [Использование подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
- [Классы модуля](../../atl/atl-module-classes.md)   
+ [Модульные классы](../../atl/atl-module-classes.md)   
  [Компонент реестра (регистратор)](../../atl/atl-registry-component-registrar.md)  

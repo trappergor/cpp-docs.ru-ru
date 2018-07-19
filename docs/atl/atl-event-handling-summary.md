@@ -1,5 +1,5 @@
 ---
-title: Обработка Сводка событий ATL | Документы Microsoft
+title: Обработка Сводка событий ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,45 +14,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 743939683d212de529816a165907e12063df03be
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356527"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027197"
 ---
-# <a name="atl-event-handling-summary"></a>Сводка обработки событий ATL
+# <a name="atl-event-handling-summary"></a>Сводка по обработке событий ATL
 Как правило обработка событий COM — это относительно простой процесс. Существует три основных этапа:  
   
--   Реализует интерфейс событий объекта.  
+-   Реализация событий интерфейса для объекта.  
   
--   Рекомендуется использовать источник события объекта хочет получать события.  
+-   Уведомить источник события, объект хочет получать события.  
   
--   Разъединения источника события, если объект больше не нужна для получения событий.  
+-   Когда объект больше не нужно получать события негативной рекомендации источника события.  
   
 ## <a name="implementing-the-interface"></a>Реализация интерфейса  
- Существует четыре основных способа реализации интерфейса с использованием библиотеки ATL.  
+ Существует четыре основных способа реализации интерфейса с помощью ATL.  
   
-|Производные от|Подходит для типа интерфейса|Необходимо реализовать все методы *|Требуется библиотеку типов во время выполнения|  
+|Являются производными от|Подходит для типа интерфейса|Необходимо реализовать все методы *|Требуется библиотеку типов во время выполнения|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
-|Интерфейс|Таблицы vtable|Да|Нет|  
-|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Два двухъядерных|Да|Да|  
+|Интерфейс|Vtable|Да|Нет|  
+|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Dual|Да|Да|  
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Disp-интерфейс|Нет|Да|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Disp-интерфейс|Нет|Нет|  
   
- \* При использовании классов поддержки ATL, никогда не требуется реализовывать **IUnknown** или `IDispatch` методы вручную.  
+ \* При использовании вспомогательных классов ATL, никогда не требуется реализовывать `IUnknown` или `IDispatch` методы вручную.  
   
-## <a name="advising-and-unadvising-the-event-source"></a>О том и Unadvising источник события  
- Существует три основных способа о том, и unadvising источник событий, с использованием библиотеки ATL.  
+## <a name="advising-and-unadvising-the-event-source"></a>О том и Unadvising источника события  
+ Существует три основных способа спроса и unadvising источник событий, с использованием ATL.  
   
-|Уведомить функции|Функция разъединения|Наиболее подходящий для использования с|Требуется для отслеживания куки-файл|Комментарии|  
-|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
-
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable или сдвоенные интерфейсы | Да | `AtlAdvise` глобальная функция ATL. `CComPtrBase::Advise` используется [CComPtr](../atl/reference/ccomptr-class.md) и [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
-
-|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) или [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Не | Меньшее число параметров, чем `AtlAdvise` , так как большую часть работы выполняет базовый класс. |  
-|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Элементы управления ActiveX в составных элементах управления | Не | `CComCompositeControl::AdviseSinkMap` будет указано, все операции приемника событий карты. Функция с тем же unadvises записи. Этот метод автоматически вызывается `CComCompositeControl` класс. |  
-|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| Элементы управления ActiveX в диалоговое окно | Не | `CAxDialogImpl::AdviseSinkMap` будет указано и unadvises все элементы управления ActiveX в диалоговом окне ресурса. Это выполняется автоматически для вас. |  
+|Уведомить функции|Негативной рекомендации функции|Наиболее подходящий для использования с|Требуется отслеживать файл cookie|Комментарии|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable или сдвоенные интерфейсы|Да|`AtlAdvise` — это глобальная функция ATL. `CComPtrBase::Advise` используется [CComPtr](../atl/reference/ccomptr-class.md) и [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
+|[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) или [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Нет|Меньше параметров, чем `AtlAdvise` , так как большую часть работы выполняет базовый класс.|  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|Элементы управления ActiveX в составных элементов управления|Нет|`CComCompositeControl::AdviseSinkMap` будет указано, что все записи событий приемника карты. Ту же функцию не рекомендуйте записи. Этот метод вызывается автоматически `CComCompositeControl` класса.|  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|Элементы управления ActiveX в диалоговое окно|Нет|`CAxDialogImpl::AdviseSinkMap` будет указано и дает негативную рекомендацию все элементы управления ActiveX в ресурс диалогового окна. Это выполняется автоматически для вас.|  
   
 ## <a name="see-also"></a>См. также  
  [Обработка событий](../atl/event-handling-and-atl.md)   

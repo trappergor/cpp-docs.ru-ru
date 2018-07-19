@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5b1eeef0e5f07b0867eb79afc76ba9037a95e7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4e6e14e0b94000972873b6050f0e8154891b4e57
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846900"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026803"
 ---
 # <a name="file-system-navigation"></a>Навигация по файловой системе
 
-Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает `false` в Windows.
+Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает **false** на Windows.
 
 ## <a name="overview"></a>Обзор
 

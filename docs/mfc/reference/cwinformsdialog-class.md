@@ -1,5 +1,5 @@
 ---
-title: Класс CWinFormsDialog | Документы Microsoft
+title: Класс CWinFormsDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 324df7657be7f74cade6fc4b50b98d6790245ab4
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122501"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027093"
 ---
 # <a name="cwinformsdialog-class"></a>Класс CWinFormsDialog
 Программа-оболочка для класса диалогового окна MFC, в котором размещается пользовательский элемент управления Windows Forms.  
@@ -59,7 +59,7 @@ class CWinFormsDialog :
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsDialog::GetControl](#getcontrol)|Извлекает ссылку на пользовательский элемент управления Windows Forms.|  
-|[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|Возвращает дескриптор окна для пользовательского элемента управления Windows Forms.|  
+|[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|Извлекает дескриптор окна для пользовательского элемента управления Windows Forms.|  
 |[CWinFormsDialog::OnInitDialog](#oninitdialog)|Инициализирует диалоговое окно MFC, создание и размещение пользовательского элемента управления Windows Forms на нем.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
@@ -70,9 +70,9 @@ class CWinFormsDialog :
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип как ссылку на пользовательский элемент управления Windows Forms.|  
   
 ## <a name="remarks"></a>Примечания  
- `CWinFormsDialog` Представляет оболочку для класса диалогового окна MFC ( [CDialog](../../mfc/reference/cdialog-class.md)), на котором размещается пользовательский элемент управления Windows Forms. Это позволяет отображать модальные и немодальные диалоговом окне MFC элементов управления .NET Framework.  
+ `CWinFormsDialog` является оболочкой для класса диалогового окна MFC ( [CDialog](../../mfc/reference/cdialog-class.md)), на котором размещается пользовательский элемент управления Windows Forms. Это позволяет отображать элементы управления .NET Framework в модальное или немодальное диалоговое окно MFC.  
   
- Дополнительные сведения об использовании Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) и [размещение пользовательского элемента управления формы Windows в диалоговом окне MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
+ Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md) и [размещение элемента управления формы пользователя Windows в диалоговом окне MFC](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxwinforms.h  
@@ -86,7 +86,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
   
 ### <a name="parameters"></a>Параметры  
  *nIDTemplate*  
- Содержит идентификатор ресурса шаблона диалогового окна поле. Использование редактора диалоговых окон для создания шаблона диалогового окна и сохранить его в файл скрипта ресурсов приложения. Дополнительные сведения о шаблонах диалогового окна см. в разделе [класса CDialog](../../mfc/reference/cdialog-class.md).  
+ Содержит идентификатор ресурса шаблона диалогового окна поле. Использование редактора диалоговых окон для создания шаблона диалогового окна и сохранить его в файл скрипта ресурсов приложения. Дополнительные сведения о шаблонах диалоговое окно, см. в разделе [класса CDialog](../../mfc/reference/cdialog-class.md).  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Извлекает ссылку на пользовательский элемент управления Windows Forms.  
@@ -99,7 +99,7 @@ inline TManagedControl^ GetControl() const;
  Возвращает ссылку на элемент управления Windows Forms в диалоговом окне MFC.  
   
 ##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
- Возвращает дескриптор окна для пользовательского элемента управления Windows Forms.  
+ Извлекает дескриптор окна для пользовательского элемента управления Windows Forms.  
   
 ```  
 inline HWND GetControlHandle() const throw();
@@ -116,12 +116,12 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Логическое значение, которое определяет, будет ли приложение фокус ввода для элемента управления в диалоговом окне. Если `OnInitDialog` возвращает ненулевое Windows устанавливает фокус ввода на первый элемент управления в диалоговом окне. Этот метод может вернуть 0 только в том случае, если приложение задан явно фокус ввода для элемента управления в диалоговом окне.  
+ Логическое значение, указывающее, является ли приложение установило фокус ввода к одному из элементов управления в диалоговом окне. Если `OnInitDialog` возвращает ненулевое значение, Windows устанавливает фокус ввода на первый элемент управления в диалоговом окне. Этот метод может возвращать значение 0 только в том случае, если приложение явно задает фокус ввода к одному из элементов управления в диалоговом окне.  
   
 ### <a name="remarks"></a>Примечания  
- При создании в диалоговом окне MFC (с помощью [создать](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), или [DoModal](../../mfc/reference/cdialog-class.md#domodal) метод наследуется от [CDialog](../../mfc/reference/cdialog-class.md)), WM_ INITDIALOG сообщение отправляется и вызове этого метода. Он создает экземпляр элемента управления Windows Forms в диалоговом окне и изменяет размер диалогового окна можно использовать размер пользовательского элемента управления. Затем он размещает новый элемент управления в диалоговом окне MFC.  
+ При создании в диалоговом окне MFC (с помощью [создать](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), или [DoModal](../../mfc/reference/cdialog-class.md#domodal) метод наследуется от [CDialog](../../mfc/reference/cdialog-class.md)), WM_ INITDIALOG будет отправлено, и этот метод вызывается. Он создает экземпляр элемента управления Windows Forms в диалоговом окне и изменяет размер окна, чтобы вместить в размер пользовательского элемента управления. Затем он размещает новый элемент управления в диалоговом окне MFC.  
   
- Переопределите эту функцию-член, если необходимо выполнить специальную обработку при инициализации диалоговым окном. Дополнительные сведения об использовании этого метода см. в разделе [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
+ Переопределите эту функцию-член, если необходимо выполнять специальную обработку при инициализации диалоговое окно. Дополнительные сведения об использовании этого метода см. в разделе [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  Заменяет [CWinFormsDialog::GetControl](#getcontrol) в выражениях.  
@@ -131,9 +131,9 @@ inline TManagedControl^  operator->() const throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот оператор обеспечивает удобный синтаксис, который заменяет `GetControl` в выражениях.  
+ Этот оператор предоставляет удобный синтаксис, который заменяет `GetControl` в выражениях.  
   
- Сведения об использовании Windows Forms см. в разделе [с помощью пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+ Сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 ##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Приводит тип как ссылку на пользовательский элемент управления Windows Forms.  
@@ -143,9 +143,9 @@ inline operator TManagedControl^() const throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот оператор приводит тип как ссылку на элемент управления Windows Forms. Используется для передачи `CWinFormsDialog<TManagedControl>` для функции, которые принимают указатель на объект элемента управления Windows Forms пользователя используется диалоговое окно.  
+ Этот оператор приводит тип как ссылку на элемент управления Windows Forms. Он используется для передачи `CWinFormsDialog<TManagedControl>` диалоговое окно для функции, которые принимают указатель на объект элемента управления Windows Forms пользователя.  
   
 ## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
+ [Класс CWnd](../../mfc/reference/cwnd-class.md)   
  [Класс CWinFormsView](../../mfc/reference/cwinformsview-class.md)   
  [Класс CDialog](../../mfc/reference/cdialog-class.md)

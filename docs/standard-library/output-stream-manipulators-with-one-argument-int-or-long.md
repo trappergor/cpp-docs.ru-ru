@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3238ffcbd03f40c6eac0423d0212a65719fb33d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f569b064d2ee5de5bd1aa39c9d443c8a49ca2677
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961855"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Манипуляторы потока вывода с одним аргументом (int или long)
 
-Библиотека классов iostream предоставляет набор макросов для создания параметризованных манипуляторов. Манипуляторы с одним аргументом `int` или `long` представляют собой особый случай. Для создания манипулятора потока вывода, принимающего один аргумент `int` или `long` (как `setw`), необходимо использовать макрос _Smanip, который определен в \<iomanip>. В этом примере определяется манипулятор `fillblank`, который вставляет в поток заданное число пробелов.
+Библиотека классов iostream предоставляет набор макросов для создания параметризованных манипуляторов. Манипуляторы с одним **int** или **long** аргумент представляют собой особый случай. Для создания манипулятора потока вывода, принимающего один **int** или **long** аргумент (например `setw`), необходимо использовать макрос _Smanip, который определен в \<iomanip >. В этом примере определяется манипулятор `fillblank`, который вставляет в поток заданное число пробелов.
 
 ## <a name="example"></a>Пример
 

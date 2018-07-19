@@ -1,5 +1,5 @@
 ---
-title: Класс CDockablePaneAdapter | Документы Microsoft
+title: Класс CDockablePaneAdapter | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951037"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026310"
 ---
 # <a name="cdockablepaneadapter-class"></a>Класс CDockablePaneAdapter
 Обеспечивает поддержку прикрепления производных панелей от `CWnd`.  
@@ -47,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Возвращает окно в оболочке.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(Переопределяет [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(Переопределяет [CDockablePane::LoadState](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(Переопределяет [CDockablePane::SaveState](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Примечания  
  Как правило, платформа создает экземпляры объектов этого класса при использовании [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) или [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) методы.  
   
- Если вы хотите настроить `CDockablePaneAdapter` поведение, просто создайте новый класс, производный от него и информация о классе среды выполнения для окна с вкладками, используя [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
+ Если вы хотите настроить `CDockablePaneAdapter` поведение, просто создать новый класс, производный от него и задать сведения о классе среды выполнения в окно с вкладками с помощью [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -77,7 +77,7 @@ virtual CWnd* GetWrappedWnd() const;
  Указатель на окно в оболочке.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для доступа к окну оболочку.  
+ Эту функцию можно используйте для доступа к окно в оболочке.  
   
 ##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  Загружает состояние панели из реестра.  
@@ -118,7 +118,7 @@ virtual BOOL SaveState(
  Имя профиля.  
   
  [in] *nIndex*  
- Индекс профиля (по умолчанию используется идентификатор элемента управления окна).  
+ Индекс профиля (по умолчанию — идентификатор элемента управления окна).  
   
  [in] *uiID*  
  Идентификатор области.  
@@ -128,7 +128,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
- Задает базового окна для адаптера закрепляемую панель.  
+ Задает нижележащего окна для адаптера закрепляемую панель.  
   
 ```  
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -136,7 +136,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
   
 ### <a name="parameters"></a>Параметры  
  [in] *pWnd*  
- Указатель на окно для адаптера панели программы-оболочки.  
+ Указатель на окно для адаптера области программы-оболочки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   

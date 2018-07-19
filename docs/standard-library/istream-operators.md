@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853064"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961117"
 ---
 # <a name="ltistreamgt-operators"></a>Операторы &lt;istream&gt;
 
@@ -64,13 +64,13 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-`Ch` Символ.
+*CH* символ.
 
-`Istr` Поток.
+*ISTR* потока.
 
-`str` Строка.
+*STR* строка.
 
-`val` Тип.
+*Val* типом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **width**; в противном случае это будет размер самого большого массива из **Elem**, который может быть объявлен. Функция всегда сохраняет значение **Elem()** после любого извлеченного и сохраненного элемента. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае она вызывает `Istr`. **width**(0) и возвращает `Istr`.
+извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **Ширина**; в противном случае это будет размер самого большого массива из `Elem` , могут быть объявлены. Функция всегда сохраняет значение `Elem()` после сохранения всех извлеченных элементов сохраняется. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае она вызывает `Istr`. **Ширина**(0) и возвращает *Istr*.
 
-**Примечание о безопасности.** Заканчивающаяся нулем строка, извлекаемая из входного потока, не должна превышать размер буфера назначения `str`. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
+**Примечание по безопасности** нулем строка, извлекаемая из входного потока не должна превышать размер буфера назначения *str*. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).
 
 Функция-шаблон:
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-извлекает элемент, если это возможно, и сохраняет его в `Ch`. В противном случае она вызывает **is**. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае она возвращает `Istr`.
+Извлекает элемент, в том случае, если он возможен и сохраняет его в *Ch*. В противном случае она вызывает **is**. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае он возвращает *Istr*.
 
 Функция-шаблон:
 

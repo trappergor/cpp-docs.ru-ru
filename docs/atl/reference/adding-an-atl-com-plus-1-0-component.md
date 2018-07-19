@@ -1,5 +1,5 @@
 ---
-title: Добавление компонентов ATL COM + 1.0 | Документы Microsoft
+title: Добавление компонента COM + 1.0 библиотеки ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0375c0c098d3e8328cb8c8a678b266053ef7e89
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963567"
 ---
-# <a name="adding-an-atl-com-10-component"></a>Добавление компонентов ATL COM + 1.0
-Этот мастер добавляет объект в проект, которая поддерживает службы COM + 1.0, в том числе транзакции.  
+# <a name="adding-an-atl-com-10-component"></a>Добавление компонента COM + 1.0 библиотеки ATL
+Этот мастер добавляет объект в проект, который поддерживает службы COM + 1.0, включая транзакции.  
   
 ### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Чтобы добавить компонент ATL COM + 1.0 в проект  
   
-1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому требуется добавить компонент ATL COM + 1.0.  
+1.  В любом **обозревателе решений** или [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить компонент ATL COM + 1.0.  
   
-2.  В контекстном меню выберите **добавить**, а затем нажмите кнопку **Добавление класса**.  
+2.  В контекстном меню, щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.  
   
-3.  В [добавить класс](../../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **компонент ATL COM + 1.0**и нажмите кнопку **откройте** для отображения [мастер компонентов, ATL COM + 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
+3.  В [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне в области «Шаблоны» щелкните **компонент ATL COM + 1.0**и нажмите кнопку **откройте** для отображения [мастер компонентов, ATL COM + 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
   
 ## <a name="see-also"></a>См. также  
  [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   

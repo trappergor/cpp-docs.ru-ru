@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3d2c37b73d79619aeb16e7b1b81ad71819b09b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 101d987574ca789ce674c7ed01726847a66a4747
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962017"
 ---
 # <a name="isfinal-class"></a>Класс is_final
 
@@ -37,11 +37,11 @@ struct is_final;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Запрашиваемый тип.
+*T* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа имеет значение true, если тип `T` является типом класса, отмеченным `final`, в противном случае — значение false. Если `T` является типом класса, он должен быть полным типом.
+Экземпляр предиката типа содержит значение true, если тип *T* помечен типом класса `final`, в противном случае он содержит значение false. Если *T* является типом класса, он должен быть полным типом.
 
 ## <a name="requirements"></a>Требования
 

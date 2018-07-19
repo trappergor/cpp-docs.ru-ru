@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06959bd5a22c65077f447f0f0e776025cbe5ced5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961419"
 ---
 # <a name="atomicflag-structure"></a>Структура atomic_flag
 
-Описывает объект, который автоматически устанавливает и очищает флаг `bool`. Операции с атомарными флагами всегда неблокирующие.
+Описывает объект, который автоматически устанавливает и очищает **bool** флаг. Операции с атомарными флагами всегда неблокирующие.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,10 +37,10 @@ struct atomic_flag;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[clear](#clear)|Устанавливает сохраненный флаг в значение `false`.|
-|[test_and_set](#test_and_set)|Устанавливает сохраненный флаг в значение `true` и возвращает начальное значение флага.|
+|[clear](#clear)|Устанавливает сохраненный флаг **false**.|
+|[test_and_set](#test_and_set)|Устанавливает сохраненный флаг **true** и возвращает начальное значение флага.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -54,7 +54,7 @@ struct atomic_flag;
 
 ## <a name="clear"></a>  atomic_flag::Clear
 
-Устанавливает флаг `bool`, хранящийся в объекте `*this``false` с соблюдением указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Наборы **bool** флаг, который хранится в `*this` для **false**, в течение указанного [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничения.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -63,11 +63,11 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Order` Объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-Устанавливает флаг `bool`, хранящийся в объекте `*this``true` с соблюдением указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Наборы **bool** флаг, который хранится в `*this` для **true**, в течение указанного [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничения.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -76,7 +76,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Параметры
 
-`Order` Объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+*Порядок* объект [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
