@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122719"
 ---
 # <a name="cstringlist-class"></a>Класс CStringList
 Поддерживает списки объектов `CString` .  
@@ -94,13 +95,13 @@ class CStringList : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Создает пустой список.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  
@@ -127,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>Примечания  
  Все сравнения выполняются по значению, это означает, что вместо адресов строк сравниваются символы в строке.  
   
- `CStringList` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Если список `CString` объекты хранятся в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, каждый `CString` элемент сериализуется в свою очередь.  
+ `CStringList` включает в себя IMPLEMENT_SERIAL-макрос для поддержки сериализации и записи элементов в дамп. Если список `CString` объекты хранятся в архив с помощью перегруженного оператора вставки или `Serialize` функция-член, каждый `CString` элемент сериализуется в свою очередь.  
   
  Если вам требуется дамп отдельных `CString` элементов, необходимо задать глубины контекста дампа 1 или больше.  
   

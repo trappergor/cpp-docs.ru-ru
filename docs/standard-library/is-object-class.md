@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3eaae998f1ca975e8eb4d102c8f7793ac8ab3b34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413223636efb735303ec600b09803472370ff306
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965595"
 ---
 # <a name="isobject-class"></a>Класс is_object
 
@@ -36,11 +37,11 @@ struct is_object;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение false, если тип `Ty` является типом ссылки, типом функции, типом void или формой `cv-qualified` одного из них. В противном случае он содержит значение true.
+Экземпляр предиката типа содержит значение false, если тип *Ty* является ссылочным типом, тип функции или тип void, или `cv-qualified` форму одного из них, в противном случае содержит значение true.
 
 ## <a name="example"></a>Пример
 

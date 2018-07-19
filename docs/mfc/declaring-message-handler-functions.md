@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341714"
 ---
 # <a name="declaring-message-handler-functions"></a>Объявление функций обработчиков сообщений
 Некоторые правила и условия, указывающие имена функций обработчиков сообщений. Они зависят от категории сообщения, как описано в следующих разделах:  

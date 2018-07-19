@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379194"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Прокрутка, расположение, сортировка и поиск в элементах управления "Список"
 Список элементов управления ([CListCtrl](../mfc/reference/clistctrl-class.md)) могут быть прокручены по умолчанию. Дополнительные сведения см. в разделе [позиции прокрутки](http://msdn.microsoft.com/library/windows/desktop/bb774736) в Windows SDK и [прокрутки](../mfc/reference/clistctrl-class.md#scroll) функции-члена.  

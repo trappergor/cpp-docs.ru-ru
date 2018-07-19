@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881529"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Практическое руководство. Завершение асинхронных операций с использованием WRL
 В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для запуска асинхронных операций и выполнения работы при завершении операций.  

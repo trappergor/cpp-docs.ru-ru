@@ -1,5 +1,5 @@
 ---
-title: С помощью IDispEventImpl (ATL) | Документы Microsoft
+title: Использование IDispEventImpl (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 520d1129234a26ff6eb4c402154969ad7e166211
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 38ac64a99c3523f174c62c9788aeab867aa8758b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848932"
 ---
-# <a name="using-idispeventimpl"></a>С помощью IDispEventImpl
-При использовании `IDispEventImpl` для обработки событий, необходимо:  
+# <a name="using-idispeventimpl"></a>Использование IDispEventImpl
+При использовании `IDispEventImpl` для обработки событий, вам потребуется:  
   
--   Создайте производный класс от [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
+-   Наследование класса из [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   Добавьте картой приемника событий в класс.  
+-   Добавьте картой приемника событий к классу.  
   
--   Добавить записи в карте приемник событий, используя [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) макрос.  
+-   Добавьте записи в карте приемника событий с помощью [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) макрос.  
   
 -   Реализуйте методы, что вы заинтересованы в обработке.  
   
--   Сообщить и разъединения источника события.  
+-   Уведомлений и негативной рекомендации источника события.  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере показано, как обрабатывать **DocumentChange** события, создаваемые в Word **приложения** объекта. Это событие определяется как метод на **ApplicationEvents** disp-интерфейса.  
+ В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.  
   
- Приведенный пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
+ Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -68,15 +69,15 @@ ms.lasthandoff: 05/03/2018
   
  `};`  
   
- В этом примере `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Microsoft Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код был упрощен из stdafx.h:  
+ В примере используется `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код является упрощенной версией stdafx.h:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- Следующий код отображается в NotSoSimple.h. Комментарии в указывается соответствующий код:  
+ В NotSoSimple.h отображается следующий код. Соответствующий код указан с комментариями:  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   
 ## <a name="see-also"></a>См. также  
  [Обработка событий](../atl/event-handling-and-atl.md)   
- [Образец ATLEventHandling](../visual-cpp-samples.md)
+ [Пример ATLEventHandling](../visual-cpp-samples.md)
 

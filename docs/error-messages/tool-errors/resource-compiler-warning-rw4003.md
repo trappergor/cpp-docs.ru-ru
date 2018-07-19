@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322004"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Предупреждение компилятора ресурсов RW4003
 Клавиша SHIFT или CONTROL использовалась VIRTKEY  

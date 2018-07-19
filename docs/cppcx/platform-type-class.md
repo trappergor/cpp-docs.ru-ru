@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255542"
 ---
 # <a name="platformtype-class"></a>Класс Platform::Type
 Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом [Object::GetType](../cppcx/platform-object-class.md#gettype) в любом объекте или или с помощью [typeid](../windows/typeid-cpp-component-extensions.md) оператора в имени класса или структуры.  

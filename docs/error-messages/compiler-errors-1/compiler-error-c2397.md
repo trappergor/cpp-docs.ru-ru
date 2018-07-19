@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196887"
 ---
 # <a name="compiler-error-c2397"></a>C2397 ошибки компилятора
 Преобразование «тип_1» в «тип2» требует сужающего преобразования  

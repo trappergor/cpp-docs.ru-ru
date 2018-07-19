@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372000"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 CL-компилятор автоматически вызывает LINK, если не указан параметр/c. CL предоставляет определенные возможности управления компоновщиком с помощью командной строки для параметров и аргументов. В следующей таблице перечислены возможности CL компоновщиком.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686299"
 ---
 # <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 Функции omp_destroy_lock и omp_destroy_nest_lock
 Эти функции убедитесь, что указывает на блокировку переменной *блокировки* не инициализирован. Он следующий:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346650"
 ---
 # <a name="dynamic-object-creation"></a>Динамическое создание объектов
 В этой статье объясняется, как создать объект динамически во время выполнения. Процедура использует сведения о классе во время выполнения, как описано в статье [доступ к сведениям о классе во время выполнения](../mfc/accessing-run-time-class-information.md).  

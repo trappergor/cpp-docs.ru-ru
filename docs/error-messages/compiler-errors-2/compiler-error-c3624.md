@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257544"
 ---
 # <a name="compiler-error-c3624"></a>Ошибка компилятора C3624
 «Тип»: использование этого типа необходима ссылка на сборку «сборка»  

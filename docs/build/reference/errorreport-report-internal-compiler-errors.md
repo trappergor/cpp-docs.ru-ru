@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377252"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>Параметр /errorReport (отчет о внутренних ошибках компилятора)
 Разрешает передавать данные о внутренних ошибках компилятора (ICE) непосредственно в корпорацию Майкрософт.  

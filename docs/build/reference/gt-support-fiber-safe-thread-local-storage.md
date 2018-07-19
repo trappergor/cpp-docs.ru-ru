@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373833"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (поддержка локальной памяти потока, безопасной относительно волокон)
 Поддерживает безопасность относительно волокон для данных, размещаемых с помощью статических локальной памяти потока, то есть данных, размещаемых с `__declspec(thread)`.  

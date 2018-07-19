@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371857"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Изменения вспомогательной функции отложенной загрузки библиотек DLL по сравнению с Visual C++ версии 6.0
 Если на компьютере имеется несколько версий Visual C++, или если вы определили собственную вспомогательную функцию, вы может затронуть изменения, внесенные в библиотеки DLL вспомогательной функции отложенной загрузки. Пример:  

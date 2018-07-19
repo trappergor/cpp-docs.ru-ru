@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268335"
 ---
 # <a name="compiler-error-c3815"></a>Ошибка компилятора C3815
 Тип возвращаемого значения метода доступа «get_accessor» должен соответствовать типу последнего параметра метода set  

@@ -1,5 +1,5 @@
 ---
-title: 'Форматирования времени: Классы автоматизации | Документы Microsoft'
+title: 'Форматирование времени: Классы автоматизации | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b3ca1bf5c716be10d079beaec3e49ae014df0932
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882102"
 ---
-# <a name="formatting-time-automation-classes"></a>Форматирования времени: Классы автоматизации
+# <a name="formatting-time-automation-classes"></a>Форматирование времени: Классы автоматизации
 #### <a name="to-format-a-time"></a>Форматирование времени  
   
-1.  Используйте **формат** функцию-член либо [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) или [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) Создание символьную строку, содержащую время или время, затраченное.  
+ Используйте `Format` функцию-член либо [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) или [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) создать символьную строку, содержащую времени или времени.  
   
      [!code-cpp[NVC_ATLMFC_Utilities#179](../atl-mfc-shared/codesnippet/cpp/formatting-time-automation-classes_1.cpp)]  
   
  Дополнительные сведения см. в разделе класса [COleVariant](../mfc/reference/colevariant-class.md).  
   
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений  
   
 -   [Общие программирования даты и времени в MFC](../atl-mfc-shared/date-and-time.md)  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319082"
 ---
 # <a name="project-build-error-prj0034"></a>Ошибка построения проекта PRJ0034
 Свойство «Дополнительные зависимости» для пользовательского уровня проекта построения содержится шаг «макрос» что равняется «расширение макроса».  

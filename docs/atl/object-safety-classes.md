@@ -1,5 +1,5 @@
 ---
-title: Объект безопасности классов (ATL) | Документы Microsoft
+title: Классы безопасности (ATL) объектов | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46d7297f1f66ac1eccb08fba1dff2a897d54e2b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69caa94136268ef29258b11b324dbda86e3cf270
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953708"
 ---
 # <a name="object-safety-classes"></a>Классы безопасности объектов
 Следующий класс обеспечивает поддержку безопасности объектов:  
   
--   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) позволяющий объекту быть помечен как безопасный для инициализации или безопасные для использования.  
+-   [IObjectSafetyImpl](../atl/reference/iobjectsafetyimpl-class.md) позволяет объекту быть помечены как безопасные для инициализации или безопасные для использования.  
   
 ## <a name="related-articles"></a>Связанные статьи  
  [Учебник по ATL](../atl/active-template-library-atl-tutorial.md)  

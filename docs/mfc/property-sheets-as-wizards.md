@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347335"
 ---
 # <a name="property-sheets-as-wizards"></a>Вкладки свойств как мастера
 Основной характеристикой таблицы свойств мастера является предоставление навигации с кнопками Далее или Готово и Отмена вместо символов табуляции. Необходимо вызвать [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) перед вызовом [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) на объект вкладки свойств, чтобы воспользоваться преимуществами этой функции.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387854"
 ---
 # <a name="direction-flag"></a>Флаг направления
 Флаг направления — это флаг ЦП, относящийся к процессорам Intel 80x86. Он применяется для всех инструкций сборки, которые используют префикс REP (повтор), например для MOVS, MOVSD, MOVSW и др. Если флаг направления не установлен, предоставляемые этим инструкциям адреса увеличиваются.  

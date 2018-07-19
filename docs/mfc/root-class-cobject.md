@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385074"
 ---
 # <a name="root-class-cobject"></a>Корневой класс: CObject
 Большинство классов в библиотеке Microsoft Foundation Class (MFC) являются производными от одного базового класса в корне иерархии классов. `CObject` предоставляет ряд полезных возможностей для всех классов, производных от него, с очень низкими издержками. Дополнительные сведения о `CObject` и просмотреть его возможности [использование CObject](../mfc/using-cobject.md).  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290690"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>Предупреждение компилятора (уровень 3) C4608
 "union_member": инициализация уже выполнена другим членом объединения в списке инициализации — "union_member"  

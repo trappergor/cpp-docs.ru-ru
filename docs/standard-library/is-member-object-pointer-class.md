@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955420"
 ---
 # <a name="ismemberobjectpointer-class"></a>Класс is_member_object_pointer
 
@@ -36,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` является указателем на объект члена или указателем `cv-qualified` на объект члена, в противном случае — значение false. Обратите внимание, что `is_member_object_pointer` содержит значение false, если `Ty` является указателем на функцию-член.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является указателем на объект члена или `cv-qualified` указатель на объект-член, в противном случае он содержит значение false. Обратите внимание, что `is_member_object_pointer` содержит значение false, если *Ty* является указателем на функцию-член.
 
 ## <a name="example"></a>Пример
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341369"
 ---
 # <a name="adding-items-to-the-control"></a>Добавление элементов в элемент управления
 Для добавления элементов управления "список" ([CListCtrl](../mfc/reference/clistctrl-class.md)), вызовите один из нескольких версий [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) функция-член, в зависимости от того, какая информация имеется. Принимает одну версию [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) структуры, который вы подготавливаете. Поскольку `LV_ITEM` структура содержит много элементов, получить больший контроль над атрибуты для элемента управления.  

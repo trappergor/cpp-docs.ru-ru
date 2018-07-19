@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890714"
 ---
 # <a name="windows-desktop-applications-c"></a>Классические приложения Windows (C++)
 В этом разделе описывается создание классических приложений C++, выполните в окне.  

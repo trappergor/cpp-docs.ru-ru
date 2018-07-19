@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368630"
 ---
 # <a name="mxcsr"></a>Регистр MxCsr
 Состояние регистра включает MxCsr. Соглашение о вызове разделяет регистр volatile часть и защищенную. Изменяемая часть состоит из 6 флагов состояния, MXCSR [0:5], а остальная часть регистр MXCSR [6:15] считается энергонезависимого.  

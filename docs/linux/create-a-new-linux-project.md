@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339233"
 ---
 # <a name="create-a-new-linux-project"></a>Создание нового проекта Linux
 При написании кода для Linux можно выбрать создаваемый проект: проект Visual Studio или проект CMake. В этом разделе описывается создание проекта Visual Studio. Сведения о проектах CMake см. в разделе [Настройка проекта CMake Linux](cmake-linux-project.md).

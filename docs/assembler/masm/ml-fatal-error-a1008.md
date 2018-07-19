@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053817"
 ---
 # <a name="ml-fatal-error-a1008"></a>Неустранимая ошибка ML A1008
 **вложения несовпадающие макросов**  

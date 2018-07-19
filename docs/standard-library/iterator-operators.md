@@ -21,11 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954699"
 ---
 # <a name="ltiteratorgt-operators"></a>Операторы &lt;iterator&gt;
 
@@ -52,9 +53,9 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **итератор**.
+*слева* объект типа `iterator`.
 
-`right` Объект типа **итератор**.
+*правом* объект типа `iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -154,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа iterator.
+*слева* объект типа iterator.
 
-`right` Объект типа iterator.
+*правом* объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если итераторы равны; `false`, если итераторы не равны.
+**значение true,** Если итераторы равны; **false** Если итераторы не равны.
 
 ### <a name="remarks"></a>Примечания
 
 Один итератор равен другому, если они адресуют одни и те же элементы в контейнере. Если два итератора указывают на различные элементы в контейнере, они не равны.
 
-Первые два оператора-шаблона возвращают значение true, только если `left` и `right` хранят один и тот же итератор. Третий оператор-шаблон возвращает значение true, только если `left` и `right` хранят один и тот же указатель на поток. Четвертый оператор-шаблон возвращает ` left.equal ( right)`.
+Первые два шаблона оператора возвращает значение true, только если оба *левой* и *правой* сохранить тот же итератор. Третий оператор шаблона возвращает значение true, только если оба *левой* и *правой* хранить один и тот же указатель потока. Четвертый оператор-шаблон возвращает ` left.equal ( right)`.
 
 ### <a name="example"></a>Пример
 
@@ -241,9 +242,9 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **итератор**.
+*слева* объект типа `iterator`.
 
-`right` Объект типа **итератор**.
+*правом* объект типа `iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -330,9 +331,9 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа iterator.
+*слева* объект типа iterator.
 
-`right` Объект типа iterator.
+*правом* объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -423,9 +424,9 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа iterator.
+*слева* объект типа iterator.
 
-`right` Объект типа iterator.
+*правом* объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -510,9 +511,9 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа iterator.
+*слева* объект типа iterator.
 
-`right` Объект типа iterator.
+*правом* объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -612,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Число позиций, const move_iterator или const reverse_iterator должен быть смещены.
+*_Off* количество позиций, const move_iterator или const reverse_iterator — смещение.
 
-`right` Итератор, который смещаться.
+*правом* итератор для смещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает сумму `right` + `_Off`.
+Возвращает сумму *правой* + *_Off*.
 
 ### <a name="example"></a>Пример
 
@@ -687,9 +688,9 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Параметры
 
-`left` Итератор.
+*слева* итератор.
 
-`right` Итератор.
+*правом* итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

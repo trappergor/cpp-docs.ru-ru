@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368490"
 ---
 # <a name="precedence-in-inference-rules"></a>Приоритет правил вывода
 Если правило определения определяется многократно, NMAKE использует определение наивысшего приоритета. Следующий список показывает порядок приоритета от самого высокого до самого низкого:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418904"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr лямбда-выражения в C++
 **Visual Studio 2017 г 15,3 и более поздних версий** (с [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): лямбда-выражение может быть объявлен как `constexpr` или использовать в выражении contant при инициализации каждого элемента данных, чтобы он захватывает или вводит может в константном выражении.  

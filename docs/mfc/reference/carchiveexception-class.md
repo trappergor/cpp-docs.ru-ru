@@ -1,5 +1,5 @@
 ---
-title: Класс CArchiveException | Документы Microsoft
+title: Класс CArchiveException | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53e82838ba952656d7067ce2294d9abdde11479c
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335748"
 ---
 # <a name="carchiveexception-class"></a>Класс CArchiveException
 Представляет условие исключения сериализации  
@@ -41,21 +42,21 @@ class CArchiveException : public CException
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CArchiveException::CArchiveException](#carchiveexception)|Создает объект `CArchiveException`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CArchiveException::m_cause](#m_cause)|Указывает причину исключения.|  
 |[CArchiveException::m_strFileName](#m_strfilename)|Указывает имя файла для данного условия исключения.|  
   
 ## <a name="remarks"></a>Примечания  
- `CArchiveException` Класс включает это открытый элемент данных, указывающее причину исключения.  
+ `CArchiveException` Класс включает в себя членом открытых данных, которые указывают на причину исключения.  
   
- `CArchiveException` создания объектов и вызывается внутри [CArchive](../../mfc/reference/carchive-class.md) функции-члены. Эти объекты в области доступны **ПЕРЕХВАТЫВАТЬ** выражение. Код причины не зависит от операционной системы. Дополнительные сведения об обработке исключений см. в разделе [обработки исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ `CArchiveException` объекты конструирования и исключения внутри [CArchive](../../mfc/reference/carchive-class.md) функций-членов. Эти объекты в пределах доступны **CATCH** выражение. Код причины не зависит от операционной системы. Дополнительные сведения об обработке исключений см. в разделе [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -68,7 +69,7 @@ class CArchiveException : public CException
  **Заголовок:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- Создает `CArchiveException` объекта, при сохранении значения `cause` в объекте.  
+ Создает `CArchiveException` объекта, при сохранении значения *вызвать* в объекте.  
   
 ```  
 CArchiveException(
@@ -77,14 +78,14 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cause`  
- Переменной перечисляемого типа, указывающее причину создания исключения. Список перечислителей см. в разделе [m_cause](#m_cause) члена данных.  
+ *Причина*  
+ Переменной перечисляемого типа, указывающее причину возникновения исключения. Список перечислителей, см. в разделе [m_cause](#m_cause) данные-член.  
   
- `lpszArchiveName`  
- Указывает строку, содержащую имя `CArchive` объекта, вызвавшего исключение.  
+ *lpszArchiveName*  
+ Указывает на строку, содержащую имя `CArchive` объекта, вызвавшего исключение.  
   
 ### <a name="remarks"></a>Примечания  
- Можно создать `CArchiveException` объекта в куче и создают его или разрешить глобальную функцию [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) его дескриптор.  
+ Можно создать `CArchiveException` объекта в куче и передать его самостоятельно или позволить глобальную функцию [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) обработать его для вас.  
   
  Не используйте этот конструктор напрямую. Вместо этого вызовите глобальную функцию `AfxThrowArchiveException`.  
   
@@ -96,29 +97,29 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот член данных — это открытая переменная типа `int`. Его значения определяются `CArchiveException` перечисляемый тип. Перечислители и их значение представлено далее.  
+ Этот элемент данных — это открытая переменная типа **int**. Его значения определяются `CArchiveException` перечисляемый тип. Перечислители и их значение представлено далее.  
   
-- **CArchiveException::none** не возникло ошибок.  
+- `CArchiveException::none` Ошибки не обнаружены.  
   
-- **CArchiveException::genericException** Неизвестная ошибка.  
+- `CArchiveException::genericException` Неизвестная ошибка.  
   
-- **CArchiveException::readOnly** попытка записи в архиве, открытом для загрузки.  
+- `CArchiveException::readOnly` Попытка записи в архиве, открытом для загрузки.  
   
-- **CArchiveException::endOfFile** достигнута конец файла при чтении объекта.  
+- `CArchiveException::endOfFile` Достигнут конец файла при чтении объекта.  
   
-- **CArchiveException::writeOnly** попытка чтения из архиве, открытом для хранения.  
+- `CArchiveException::writeOnly` Попытка чтения из архива открыт для хранения.  
   
-- **CArchiveException::badIndex** недопустимый формат файла.  
+- `CArchiveException::badIndex` Недопустимый формат файла.  
   
-- **CArchiveException::badClass** попытался считать объект в объект неправильного типа.  
+- `CArchiveException::badClass` Предпринята попытка считать объект в объект неверного типа.  
   
-- **CArchiveException::badSchema** попытался считать объект с помощью другой версии класса.  
+- `CArchiveException::badSchema` Предпринята попытка считать объект с другой версией класса.  
   
     > [!NOTE]
     >  Перечислители причины `CArchiveException` отличаются от перечислителей причины `CFileException`.  
   
     > [!NOTE]
-    > **CArchiveException::generic** является устаревшим. Используйте **genericException** вместо него. Если **универсального** приложения и построения с/CLR, будет синтаксических ошибок, которые не являются нелегко расшифровать.  
+    > `CArchiveException::generic` не рекомендуется к использованию. Взамен рекомендуется использовать `genericException`. Если **универсального** приложения и построения с/CLR, будет синтаксических ошибок, которые не являются нелегко расшифровать.  
   
 ##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  Указывает имя файла для данного условия исключения.  
@@ -128,7 +129,7 @@ CString m_strFileName;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [CException-класс](../../mfc/reference/cexception-class.md)   
+ [Класс CException](../../mfc/reference/cexception-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [CArchive-класс](../../mfc/reference/carchive-class.md)   
  [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)   

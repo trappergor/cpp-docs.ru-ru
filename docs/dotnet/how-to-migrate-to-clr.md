@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138444"
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Переход на /clr
 В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) для получения дополнительной информации). **/ CLR** позволяет модулям Visual C++ для вызова неуправляемого кода и вызывать из сборок .NET, сохраняя совместимость с неуправляемыми модулями. В разделе [сборки смешанный (машинный и управляемый код)](../dotnet/mixed-native-and-managed-assemblies.md) и [машинного кода и .NET-взаимодействии](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.  

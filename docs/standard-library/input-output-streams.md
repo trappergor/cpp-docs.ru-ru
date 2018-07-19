@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955726"
 ---
 # <a name="inputoutput-streams"></a>Потоки ввода/вывода
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/07/2018
 
 Производным из `basic_iostream` является шаблон класса `basic_fstream`, который используется для потоковой передачи символьных данных в файлы и из них.
 
-Также имеются определения типов, которые предоставляют специальные для символов специализации для `basic_fstream`. К ним относятся `fstream`, представляющая собой поток файлового ввода-вывода, основанный на `char`, и `wfstream`, представляющая собой поток файлового ввода-вывода, основанный на `wchar_t`. Дополнительные сведения см. в разделах [Класс basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) и [wfstream](../standard-library/basic-fstream-class.md). Применение этих определений типов требует включения файла заголовка \<fstream>.
+Также имеются определения типов, которые предоставляют специальные для символов специализации для `basic_fstream`. Они являются `fstream`, который представляет собой поток файлового ввода-вывода, на основе **char**, и `wfstream`, который представляет собой поток файлового ввода-вывода, на основе **wchar_t**. Дополнительные сведения см. в разделах [Класс basic_fstream](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) и [wfstream](../standard-library/basic-fstream-class.md). Применение этих определений типов требует включения файла заголовка \<fstream>.
 
 > [!NOTE]
 > Если объект `basic_fstream` используется для выполнения файлового ввода-вывода, хотя базовый буфер содержит отдельно назначенные позиции для чтения и записи, текущие позиции ввода и вывода связываются друг с другом, поэтому, чтение некоторых данных перемещает позицию вывода.

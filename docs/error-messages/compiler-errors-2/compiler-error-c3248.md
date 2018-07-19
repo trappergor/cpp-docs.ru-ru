@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251783"
 ---
 # <a name="compiler-error-c3248"></a>Ошибка компилятора C3248
 "функция1": функцию, объявленную как "__sealed", нельзя переопределить с помощью "функция2"  

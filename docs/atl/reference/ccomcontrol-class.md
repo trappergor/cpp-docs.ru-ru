@@ -1,5 +1,5 @@
 ---
-title: Класс CComControl | Документы Microsoft
+title: Класс CComControl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,14 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883454"
 ---
 # <a name="ccomcontrol-class"></a>Класс CComControl
-Этот класс предоставляет методы для создания и управления ATL элементов управления.  
+Этот класс предоставляет методы для создания и управления элементами управления ATL.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -50,36 +51,36 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Класс, реализующий элемент управления.  
+ *T*  
+ Класс, реализация элемента управления.  
   
  *WinBase*  
- Базовый класс, реализующий Ранжирующие функции. По умолчанию используется значение [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
+ Базовый класс, реализующий функции управления окнами. По умолчанию используется [CWindowImpl](../../atl/reference/cwindowimpl-class.md).  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComControl::CComControl](#ccomcontrol)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|Создает окно для элемента управления.|  
-|[CComControl::FireOnChanged](#fireonchanged)|Уведомляет контейнера приемник измененного свойства элемента управления.|  
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Уведомляет контейнера приемник, свойство элемента управления изменением, и что объект запрашивает приемник дальнейших действий.|  
+|[CComControl::FireOnChanged](#fireonchanged)|Уведомляет приемника контейнера, измененного свойства элемента управления.|  
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Уведомляет приемника контейнера, что свойство элемента управления является изменением и что объект запрашивает приемника дальнейшие действия.|  
 |[CComControl::MessageBox](#messagebox)|Этот метод используется для создания, отображения и работы окно сообщения.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComControl` — Это набор полезных управления вспомогательные функции и необходимые данные членов для элементов управления ATL. При создании стандартного элемента управления или элемента управления DHTML, используя мастер элементов управления ATL, мастер автоматически будет наследовать класс от `CComControl`. `CComControl` Большинство методов из производного [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
+ `CComControl` — Это набор полезных управления вспомогательные функции и важные данные-члены для элементов управления ATL. При создании стандартного элемента управления или элемент управления DHTML, с помощью мастера управления ATL, мастер автоматически будут производными от класса `CComControl`. `CComControl` является производным большинство методов из [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).  
   
- Дополнительные сведения о создании элемента управления см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL см. в статье [создается проект ATL](../../atl/reference/creating-an-atl-project.md).  
+ Дополнительные сведения о создании элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).  
   
- Демонстрацию `CComControl` методы и элементы данных. в разделе [CIRC](../../visual-cpp-samples.md) образца.  
+ С примером `CComControl` методы и элементы данных, см. в разделе [Кр](../../visual-cpp-samples.md) образца.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `WinBase`  
@@ -109,40 +110,40 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `iid`  
+ *IID*  
  [in] Идентификатор GUID запрашиваемого интерфейса.  
   
- `ppv`  
- [out] Указатель на указатель на интерфейс, определяемый `iid`, или **NULL** Если интерфейс не найден.  
+ *ppv*  
+ [out] Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.  
   
 ### <a name="remarks"></a>Примечания  
- Обрабатывает интерфейсы только в таблицу сопоставлений COM.  
+ обрабатывает интерфейсы только в таблицу сопоставлений COM.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
 ##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
- По умолчанию создает окна для элемента управления путем вызова `CWindowImpl::Create`.  
+ По умолчанию создает окно для элемента управления путем вызова `CWindowImpl::Create`.  
   
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hWndParent`  
- [in] Дескриптор окна родительского или владельца. Необходимо указать действительный дескриптор окна. Окно управления сводится к области родительского окна.  
+ *hWndParent*  
+ [in] Дескриптор окна родительского или владельца. Необходимо указать действительный дескриптор окна. Окно управления сводится к области его родительского окна.  
   
- `rcPos`  
- [in] Исходный размер и положение окна должен быть создан.  
+ *rcPos*  
+ [in] Первоначальный размер и положение окна должен быть создан.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если вы хотите сделать что-либо отличное от создания одного окна, например, чтобы создать два окна, один из которых становится инструментов для элемента управления.  
+ Переопределите этот метод, если вы хотите сделать что-то отличное от создания одного окна, например, чтобы создать два окна, один из которых становится панель инструментов для элемента управления.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
- Уведомляет контейнера приемник измененного свойства элемента управления.  
+ Уведомляет приемника контейнера, измененного свойства элемента управления.  
   
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -156,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) известить всех подключенных `IPropertyNotifySink` интерфейсы, которые указанного элемента управления изменилось значение свойства. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает `S_OK`. 
+ Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного элемента управления Свойство изменилось. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK. 
   
  Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.  
   
@@ -164,7 +165,7 @@ HRESULT FireOnChanged(DISPID dispID);
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
- Уведомляет контейнера приемник, свойство элемента управления изменением, и что объект запрашивает приемник дальнейших действий.  
+ Уведомляет приемника контейнера, что свойство элемента управления является изменением и что объект запрашивает приемника дальнейшие действия.  
   
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -172,13 +173,13 @@ HRESULT FireOnRequestEdit(DISPID dispID);
   
 ### <a name="parameters"></a>Параметры  
  *dispID*  
- [in] Идентификатор свойства будет изменен.  
+ [in] Идентификатор свойства изменением.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Одно из стандартных значений HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) известить всех подключенных `IPropertyNotifySink` интерфейсы, которые указанного требуется изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает `S_OK`.  
+ Если класса элемента управления является производным от [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.  
 
   
  Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.  
@@ -197,20 +198,20 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszText`  
+ *lpszText*  
  Текст, отображаемый в окне сообщения.  
   
- `lpszCaption`  
- Заголовок диалогового окна. Если значение NULL (по умолчанию), заголовок, используемый «Ошибка».  
+ *lpszCaption*  
+ Заголовок диалогового окна. Если значение NULL (по умолчанию), заголовок, используемый «Error».  
   
- `nType`  
- Указывает содержимое и поведение диалогового окна. В разделе [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) запись в документации по пакету SDK Windows для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.  
+ *nType*  
+ Указывает содержимое и поведение диалогового окна. См. в разделе [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) запись в документации по Windows SDK для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает целочисленное значение, указав одно из значений пунктов меню, перечисленных в разделе [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) документации по пакету Windows SDK.  
+ Возвращает значение типа integer, указав одно из значений пунктов меню, списке [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) в документации по Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- `MessageBox` полезно во время разработки и как простой способ отображения ошибок и предупреждений для пользователя.  
+ `MessageBox` полезно как во время разработки, так и с легкостью для отображения ошибки или сообщение с предупреждением для пользователя.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   

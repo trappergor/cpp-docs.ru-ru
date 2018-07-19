@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954797"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Два способа создать объект CArchive
 Существует два способа создания `CArchive` объекта:  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  Создает `CArchive` объект, указывающий на это `CFile` объекта. При создании `CArchive` объекта платформа режиму «store» (записи, сериализации), в отличие от «загрузки» (чтение, выполнить десериализацию).  
   
-4.  Вызовы `Serialize` функции, определенной в вашей **CDocument**-производного класса, передавая ему ссылку на `CArchive` объекта.  
+4.  Вызовы `Serialize` функции, определенной в вашей `CDocument`-производного класса, передавая ему ссылку на `CArchive` объекта.  
   
  В документе `Serialize` функция затем записывает данные в `CArchive` объекта, как описано в ближайшее время. После возврата из вашего `Serialize` функции, платформа уничтожает `CArchive` объекта и затем `CFile` объекта.  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301350"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Предупреждение компилятора (уровень 4) C4571
 Информация: семантика catch(...) изменилась, начиная с версии Visual C++ 7.1; структурированные исключения (SEH) более не перехватываются  

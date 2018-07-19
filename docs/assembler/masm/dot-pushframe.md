@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053208"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 Приводит к возникновению ошибки `UWOP_PUSH_MACHFRAME` входа код очистки. Если необязательный `code` указан, операция очистки кода получает модификатор 1. В противном случае модификатор — 0.  

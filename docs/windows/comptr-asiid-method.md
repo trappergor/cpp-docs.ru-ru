@@ -1,7 +1,7 @@
 ---
-title: Метод ComPtr::AsIID | Документы Microsoft
+title: Метод ComPtr::AsIID | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025907"
 ---
 # <a name="comptrasiid-method"></a>Метод ComPtr::AsIID
 Возвращает объект ComPtr, представляющий интерфейс, определенный указанным идентификатором интерфейса.  
@@ -40,7 +41,7 @@ WRL_NOTHROW HRESULT AsIID(
  Идентификатор интерфейса.  
   
  `p`  
- Если поддерживается двойной косвенный указатель интерфейса, указанного параметром `riid` параметр; в противном случае — указатель на интерфейс IUnknown.  
+ Если объект имеет интерфейс, идентификатор которой равняется `riid`, двойной косвенный указатель на интерфейс, определенный следующим `riid` параметра; в противном случае указатель на интерфейс IUnknown.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  

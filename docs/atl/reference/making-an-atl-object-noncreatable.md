@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358265"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Делая Noncreatable объекта ATL
 Атрибуты на основе ATL COM-объекта можно изменить, чтобы клиент не может напрямую создать объект. В этом случае объект будет возвращенные с помощью вызова метода для другого объекта, а не создан напрямую.  

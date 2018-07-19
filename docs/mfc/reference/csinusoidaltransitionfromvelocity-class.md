@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078583"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Класс CSinusoidalTransitionFromVelocity
 Инкапсулирует переход с синусоидальной скоростью, амплитуда которого определяется начальной скоростью переменной анимации.  
@@ -43,19 +44,19 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Создает объект перехода.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Продолжительность перехода.|  
 |[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Период колебаний из синусоидальной wave в секундах.|  
@@ -83,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pLibrary`  
+ *pLibrary*  
  Указатель на переход библиотеку, которая отвечает за создание стандартной переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -99,10 +100,10 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `period`  
+ *период*  
  Период колебаний из синусоидальной wave в секундах.  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  

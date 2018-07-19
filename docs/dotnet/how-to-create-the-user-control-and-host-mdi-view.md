@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136487"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI
 Ниже показано, как создать пользовательский элемент управления .NET Framework, создать пользовательский элемент управления в библиотеке классов (в частности, в проекте библиотеки элементов управления Windows) и затем скомпилировать проект в сборку. Элемент управления может быть обработано из приложения MFC, который использует классы, производные от [CView Class](../mfc/reference/cview-class.md) и [CWinFormsView класс](../mfc/reference/cwinformsview-class.md).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382894"
 ---
 # <a name="default-signals"></a>Сигналы по умолчанию
 **ANSI 4.7.1.1** Если эквивалент **signal (***sig***, SIG_DFL)** не выполняется до вызова обработчика сигнала, выполняется блокировка этого сигнала  

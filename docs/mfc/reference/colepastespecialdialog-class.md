@@ -1,5 +1,5 @@
 ---
-title: Класс COlePasteSpecialDialog | Документы Microsoft
+title: Класс COlePasteSpecialDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851437"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
 Используется для диалогового окна OLE "Вставить специальный объект".  
@@ -57,34 +58,34 @@ class COlePasteSpecialDialog : public COleDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Создает объект `COlePasteSpecialDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Добавляет в список форматов, которые можно вставить в приложение пользовательские форматы.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Добавляет новую запись в список поддерживаемых форматов буфера обмена.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Добавляет **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`и при необходимости `CF_LINKSOURCE` список форматов можно вставить приложения.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|Добавляет CF_METAFILEPICT CF_BITMAP CF_DIB, и при необходимости CF_LINKSOURCE в список форматов приложения можно вставить.|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|Создает элемент в документе-контейнере, используя указанный формат.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|Отображает диалоговое окно OLE Специальная вставка.|  
-|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Сообщает ли рисование элементов в виде значка или нет.|  
-|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Возвращает дескриптор метафайла, связанных с формой, преобразованного в значок этого элемента.|  
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Возвращает индекс параметры вставки доступен, выбранного пользователем.|  
-|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Возвращает тип выбранного фрагмента.|  
+|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|Сообщает ли нарисовать элемент как значок или нет.|  
+|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|Получает дескриптор метафайла, связанных с формой, преобразованного в значок этого элемента.|  
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Возвращает индекс параметры доступных вставки, которая была выбрана пользователем.|  
+|[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Получает тип выделения выбранного.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::m_ps](#m_ps)|Структура типа **OLEUIPASTESPECIAL** , который управляет функция диалогового окна.|  
+|[COlePasteSpecialDialog::m_ps](#m_ps)|Структура типа OLEUIPASTESPECIAL, который управляет функция диалогового окна.|  
   
 ## <a name="remarks"></a>Примечания  
- Создание объекта класса `COlePasteSpecialDialog` при необходимости вызовите данным диалоговым окном. После `COlePasteSpecialDialog` объект был создан, можно использовать [AddFormat](#addformat) и [AddStandardFormats](#addstandardformats) функции-члены для добавления форматы буфера обмена в диалоговое окно. Можно также использовать [m_ps](#m_ps) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_ps` Структуры имеет тип **OLEUIPASTESPECIAL**.  
+ Создайте объект класса `COlePasteSpecialDialog` при необходимости вызвать это диалоговое окно. После `COlePasteSpecialDialog` объект был создан, можно использовать [AddFormat](#addformat) и [AddStandardFormats](#addstandardformats) функции-члены для добавления форматы буфера обмена в диалоговое окно. Можно также использовать [m_ps](#m_ps) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_ps` Структуры имеет тип OLEUIPASTESPECIAL.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в пакете Windows SDK.  
   
  Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -129,36 +130,36 @@ void AddFormat(
  *FMT*  
  Ссылка на тип данных для добавления.  
   
- `lpszFormat`  
+ *lpszFormat*  
  Строка, описывающая формат для пользователя.  
   
  *lpszResult*  
  Строка, описывающая результат, если выбран этот формат, в диалоговом окне.  
   
- `flags`  
- Различные параметры связывания и внедрения для данного формата. Этот флаг представляет собой битовую комбинацию из одного или нескольких различных значений в **OLEUIPASTEFLAG** перечисляемый тип.  
+ *flags*  
+ Различные связь и внедрение параметры, доступные для данного формата. Этот флаг представляет собой битовую комбинацию одного или нескольких разных значений в OLEUIPASTEFLAG перечисляемый тип.  
   
- `cf`  
- Используемый формат буфера обмена.  
+ *CF*  
+ Формат буфера обмена для добавления.  
   
- *tymed*  
- Типы мультимедиа, доступные в этом формате. Это представляет собой битовую комбинацию из одного или нескольких значений в **TYMED** перечисляемый тип.  
+ *Тип*  
+ Типы мультимедиа, доступные в этом формате. Это представляет собой битовую комбинацию одного или нескольких значений в TYMED перечисляемый тип.  
   
- `nFormatID`  
- Идентификатор строки, который определяет этот формат. Формат данной строки — это две отдельные строки, разделенные символом «\n». Первая строка имеет те же данные, должны быть переданы в *lpstrFormat* параметра, а вторая совпадает со значением *lpstrResult* параметра.  
+ *nFormatID*  
+ Идентификатор строки, который определяет этот формат. Эта строка имеет две отдельных строки, разделенные символом «\n». Первая строка имеет те же данные, будут передаваться в *lpstrFormat* параметра, а второе — совпадает со значением *lpstrResult* параметра.  
   
  *bEnableIcon*  
- Флаг, который определяет, включен ли флажок виде значка при выборе этот формат в поле со списком.  
+ Флаг, который определяет, включен ли флажок виде значка, когда этот формат выбирается в поле со списком.  
   
- *bLink*  
- Флаг, который определяет, включен ли переключатель связать при выборе этот формат в поле со списком.  
+ *включения индикатора*  
+ Флаг, который определяет, включен ли переключатель связать, когда этот формат выбирается в поле со списком.  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция может вызываться для добавления либо стандартные форматы, такие как **CF_TEXT** или **CF_TIFF** или пользовательских форматов, зарегистрированных в приложение с системой. Дополнительные сведения о вставке данных объектов в приложении см. в статье [объекты и источники данных: обработка](../../mfc/data-objects-and-data-sources-manipulation.md).  
+ Эта функция может вызываться для добавления стандартных форматах, например CF_TEXT или CF_TIFF либо пользовательских форматов, зарегистрированных в системе приложения. Дополнительные сведения о вставке данных объектов в приложении см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Дополнительные сведения см. в разделе [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) тип перечисления и [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечисляемый тип в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в пакете Windows SDK.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Добавляет новую запись в список поддерживаемых форматов буфера обмена.  
@@ -168,11 +169,11 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `cf`  
- Используемый формат буфера обмена.  
+ *CF*  
+ Формат буфера обмена для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) структуру, содержащую сведения для новой записи ссылки.  
+ [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) структуру, содержащую сведения для новой записи связи.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Вызывайте эту функцию, чтобы добавить следующие форматы буфера обмена в список форматов, которые приложение может поддерживать в Специальная вставка операции:  
@@ -183,21 +184,21 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 ### <a name="parameters"></a>Параметры  
  *bEnableLink*  
- Флаг, определяющий, следует ли добавить `CF_LINKSOURCE` список форматов можно вставить приложения.  
+ Флаг, определяющий, следует ли добавить в список форматов CF_LINKSOURCE приложения можно вставить.  
   
 ### <a name="remarks"></a>Примечания  
   
-- **CF_BITMAP**  
+- CF_BITMAP  
   
-- **CF_DIB**  
+- CF_DIB  
   
-- `CF_METAFILEPICT`  
+- CF_METAFILEPICT  
   
 - **«Внедренный объект»**  
   
 -   (необязательно) **«Связать источник»**  
   
- Эти форматы используются для поддержки внедренных и связанных объектов.  
+ Эти форматы используются для поддержки внедрения и связывания.  
   
 ##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog  
  Создает объект `COlePasteSpecialDialog`.  
@@ -210,30 +211,30 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwFlags`  
- Флаг создания содержит произвольное количество комбинируются с помощью оператора побитового или следующие флаги:  
+ *dwFlags*  
+ Флаг создания содержит любое количество следующих флагов, объединенные с помощью битового оператора или:  
   
-- `PSF_SELECTPASTE` Указывает, что переключатель «вставить» будет проверяться изначально при вызове диалогового. Нельзя использовать в сочетании с `PSF_SELECTPASTELINK`. Это значение по умолчанию.  
+- PSF_SELECTPASTE указывает, что переключатель «вставить» будет проверен изначально из при вызове диалоговое окно. Не может использоваться в сочетании с PSF_SELECTPASTELINK. Это значение по умолчанию.  
   
-- `PSF_SELECTPASTELINK` Указывает, что Вставить связь, переключатель будет проверять изначально при вызове диалоговым окном. Нельзя использовать в сочетании с `PSF_SELECTPASTE`.  
+- PSF_SELECTPASTELINK указывает, что будет связать переключатель флажок установлен изначально при вызове диалоговое окно. Не может использоваться в сочетании с PSF_SELECTPASTE.  
   
-- `PSF_CHECKDISPLAYASICON` Указывает, что флажок виде значка будет проверяться изначально при вызове диалоговым окном.  
+- PSF_CHECKDISPLAYASICON указывает, что флажок виде значка будет проверен изначально из при вызове диалоговое окно.  
   
-- `PSF_SHOWHELP` Задает отображение кнопки справки при вызове диалоговым окном.  
+- PSF_SHOWHELP указывает, что при вызове диалоговом окне будет отображаться кнопку "Справка".  
   
- `pDataObject`  
- Указывает на [COleDataObject](../../mfc/reference/coledataobject-class.md) для вставки. Если это значение равно **NULL**, он получает `COleDataObject` из буфера обмена.  
+ *pDataObject*  
+ Указывает на [COleDataObject](../../mfc/reference/coledataobject-class.md) для вставки. Если это значение равно NULL, он получает `COleDataObject` из буфера обмена.  
   
- `pParentWnd`  
- Указывает на объект window родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского диалогового окна.  
+ *pParentWnd*  
+ Указывает на объект окна родительский объект или владельца (типа `CWnd`), которому принадлежит объект диалогового окна. Если он имеет значение NULL, родительского окна окно присваивается главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  
- Только эта функция создает `COlePasteSpecialDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
+ Эта функция только создает `COlePasteSpecialDialog` объекта. Чтобы отобразить диалоговое окно, вызовите [DoModal](#domodal) функции.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечисляемый тип в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) перечислимый тип в пакете Windows SDK.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
- Создает новый элемент, который был выбран в диалоговом окне Специальная вставка.  
+ Создает новый элемент, которая была выбрана в диалоговом окне Специальная вставка.  
   
 ```  
 BOOL CreateItem(COleClientItem* pNewItem);
@@ -241,13 +242,13 @@ BOOL CreateItem(COleClientItem* pNewItem);
   
 ### <a name="parameters"></a>Параметры  
  *pNewItem*  
- Указывает `COleClientItem` экземпляра. Не может быть **NULL**.  
+ Указывает на `COleClientItem` экземпляра. Не может принимать значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент был создан успешно. в противном случае — 0.  
+ Ненулевое значение, если элемент был создан успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Эту функцию следует вызывать только после [DoModal](#domodal) возвращает **IDOK**.  
+ Эту функцию следует вызывать только после [DoModal](#domodal) возвращает IDOK.  
   
 ##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
  Отображает диалоговое окно OLE Специальная вставка.  
@@ -259,58 +260,58 @@ virtual INT_PTR DoModal();
 ### <a name="return-value"></a>Возвращаемое значение  
  Состояние завершения для диалогового окна. Одно из следующих значений:  
   
-- **IDOK** Если успешно откроется диалоговое окно.  
+- IDOK, если было успешно отображено диалоговое окно.  
   
-- **IDCANCEL** Если пользователь отменил это диалоговое окно.  
+- IDCANCEL, если пользователь отменил диалоговое окно.  
   
-- **IDABORT** Если произошла ошибка. Если **IDABORT** будет возвращен, вызовите `COleDialog::GetLastError` функции-члена для получения дополнительных сведений о типе возникшей ошибки. Для получения списка возможных ошибок [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) функции в Windows SDK.  
+- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите `COleDialog::GetLastError` функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) функции в пакете Windows SDK.  
   
 ### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные элементы управления диалоговых окон, задав члены [m_ps](#m_ps) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
+ Если вы хотите инициализировать различных диалоговых путем определения участников [m_ps](#m_ps) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
   
- Если `DoModal` возвращает **IDOK**, можно вызывать другой член функции для получения параметров или данные, введенные пользователем в диалоговом окне.  
+ Если `DoModal` возвращает IDOK, можно вызвать другой член функции, чтобы получить параметры или данные, введенные пользователем в диалоговом окне.  
   
 ##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
- Определяет, если пользователь выбрал Отображение выбранного элемента в виде значка.  
+ Определяет, если пользователь решает отображения выбранного элемента в виде значка.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Метод требуется для отображения объекта.  
+ Метод, необходимых для отображения объекта.  
   
-- `DVASPECT_CONTENT` Возвращается, если флажок виде значка не был установлен при отклонении диалоговым окном.  
+- DVASPECT_CONTENT возвращается, если флажок виде значка не проверяются, когда диалоговое окно было закрыть.  
   
-- `DVASPECT_ICON` Возвращается, если был установлен флажок виде значка, когда диалоговое окно было отклонено.  
+- DVASPECT_ICON возвращается, если был установлен флажок виде значка, когда диалоговое окно было отклонено.  
   
 ### <a name="remarks"></a>Примечания  
- Только эта функция после [DoModal](#domodal) возвращает **IDOK**.  
+ Только вызывайте эту функцию после [DoModal](#domodal) возвращает IDOK.  
   
- Дополнительные сведения о рисовании аспект см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в Windows SDK.  
+ Дополнительные сведения о рисовании аспект, см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры в пакете Windows SDK.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
- Возвращает метафайла, связанные с элемента, выбранного пользователем.  
+ Получает метафайл, связанный с элементом, выбранного пользователем.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор метафайла, содержащий преобразованного в значок аспектом выбранного элемента, если был установлен флажок виде значка, когда диалоговое окно было отклонено, выбрав **ОК**; в противном случае **NULL**.  
+ Дескриптор метафайла, содержащий аспект, преобразованного в значок выбранного элемента, в том случае, если был установлен флажок виде значка, когда диалоговое окно было отклонено, выбрав **ОК**; в противном случае — NULL.  
   
 ##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
- Возвращает индекс значение, связанное с записью выбрал пользователь.  
+ Получает индекс значение, связанное с записью выбрал пользователь.  
   
 ```  
 int GetPasteIndex() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Индекс в массиве **OLEUIPASTEENTRY** структуры, выбранные пользователем. Следует использовать формат, который соответствует индексу, выбранного при выполнении операции вставки.  
+ Индекс в массиве `OLEUIPASTEENTRY` структур, выбранные пользователем. Формат, который соответствует выбранного индекса следует использовать при выполнении операции вставки.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) структуры в пакете Windows SDK.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Определяет тип выбора, сделанного пользователем.  
@@ -320,10 +321,10 @@ UINT GetSelectionType() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает тип выбора объектов.  
+ Возвращает тип Выбор, сделанный.  
   
 ### <a name="remarks"></a>Примечания  
- Тип возвращаемого значения задаются **выбора** тип перечисления, объявленный в `COlePasteSpecialDialog` класса.  
+ Тип возвращаемого значения задаются `Selection` тип перечисления, объявленный в `COlePasteSpecialDialog` класса.  
   
 ```  
 enum Selection {
@@ -334,18 +335,18 @@ enum Selection {
     };  
 ```  
   
- Выполните краткое desccriptions из следующих значений:  
+ Выполните краткие desccriptions из следующих значений.  
   
-- **COlePasteSpecialDialog::pasteLink** установлен переключатель, связать и выбранным форматом был стандартный формат OLE.  
+- `COlePasteSpecialDialog::pasteLink` Установлен переключатель, связать и выбранного формата был стандартный формат OLE.  
   
-- **COlePasteSpecialDialog::pasteNormal** установлен переключатель, вставки и выбранным форматом был стандартный формат OLE.  
+- `COlePasteSpecialDialog::pasteNormal` Переключатель «вставить» был извлечен и выбранного формата был стандартный формат OLE.  
   
-- **COlePasteSpecialDialog::pasteOther** выбранный формат не стандартный формат OLE.  
+- `COlePasteSpecialDialog::pasteOther` Выбранный формат не стандартный формат OLE.  
   
-- **COlePasteSpecialDialog::pasteStatic** выбранным форматом был метафайл.  
+- `COlePasteSpecialDialog::pasteStatic` Выбранный формат был метафайл.  
   
 ##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
- Структура типа **OLEUIPASTESPECIAL** используется для управления поведением Специальная вставка диалогового окна.  
+ Структура типа OLEUIPASTESPECIAL используется для управления поведением диалогового окна "Специальная вставка".  
   
 ```  
 OLEUIPASTESPECIAL m_ps;  
@@ -354,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Примечания  
  Члены этой структуры можно изменить непосредственно или с помощью функций-членов.  
   
- Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в Windows SDK.  
+ Дополнительные сведения см. в разделе [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) структуры в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [Пример MFC OCLIENT](../../visual-cpp-samples.md)   

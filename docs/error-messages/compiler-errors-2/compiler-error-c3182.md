@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254626"
 ---
 # <a name="compiler-error-c3182"></a>Ошибка компилятора C3182
 «класс»: объявление члена с помощью объявления или доступа недопустимо в пределах управляемого типа или WinRTtype  

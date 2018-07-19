@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889549"
 ---
 # <a name="testing-a-dialog-box"></a>Проверка диалогового окна
 При разработке диалогового окна можно смоделировать и протестировать его поведение во время выполнения, не компилируя программу. В этом режиме можно выполнять следующие действия:  

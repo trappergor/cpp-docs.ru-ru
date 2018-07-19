@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338186"
 ---
 # <a name="arm-intrinsics"></a>Встроенные объекты ARM
 Компилятор Visual C++ создает следующие встроенные функции на архитектуре ARM. Подробнее об ARM см. в разделе [справочных руководствах по архитектуре ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) и [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) на веб-сайте справочного центра ARM.  

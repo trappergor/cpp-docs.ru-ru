@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127839"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>Практическое руководство. Преобразование стандартной строки к типу System::String
 В этом разделе показано, как преобразовать строку стандартной библиотеки C++ ([\<строка >](../standard-library/string.md)) для <xref:System.String>.  

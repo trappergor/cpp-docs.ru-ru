@@ -58,11 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74dc0fde7ea066707bb6e93592420009b882ee21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966645"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/07/2018
 
 **C ++ 11**: в обработчиках сигналов можно выполнять атомарные операции с объектом `obj`, если `obj.is_lock_free()` или `atomic_is_lock_free(x)` имеет значение true.
 
-Класс [atomic_flag](../standard-library/atomic-flag-structure.md) предоставляет минимальный атомарный тип, который содержит флаг `bool`. Его операции всегда являются неблокирующими.
+Класс [atomic_flag](../standard-library/atomic-flag-structure.md) предоставляет минимальный атомарный тип, содержащий **bool** флаг. Его операции всегда являются неблокирующими.
 
 Класс шаблона `atomic<T>` хранит объект типа его аргумента `T` и предоставляет атомарный доступ к этому сохраненному значению. Его можно создать с помощью любого типа, который может быть скопирован с помощью [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) и проверен на равенство с помощью [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). В частности, его можно использовать с пользовательскими типами, которые соответствуют этим требованиям, и во многих случаях с типами с плавающей запятой.
 
@@ -109,20 +110,20 @@ ms.lasthandoff: 05/07/2018
 
 |Тип `atomic_integral`|Целочисленный тип|Макрос `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_char16_t`|`char16_t`|`ATOMIC_CHAR16_T_LOCK_FREE`|
-|`atomic_char32_t`|`char32_t`|`ATOMIC_CHAR32_T_LOCK_FREE`|
-|`atomic_wchar_t`|`wchar_t`|`ATOMIC_WCHAR_T_LOCK_FREE`|
-|`atomic_short`|`short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_ushort`|`unsigned short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_int`|`int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_uint`|`unsigned int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_long`|`long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_ulong`|`unsigned long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|
-|`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|
+|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**char со знаком**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**long long без знака**|ATOMIC_LLONG_LOCK_FREE|
 
 Имена typedef существуют для специализаций атомарного шаблона для некоторых типов, определенных в заголовке \<inttypes.h>.
 
@@ -161,14 +162,14 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="structs"></a>Структуры
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Структура atomic](../standard-library/atomic-structure.md)|Описывает объект, который выполняет атомарные операции с сохраненным значением.|
-|[Структура atomic_flag](../standard-library/atomic-flag-structure.md)|Описывает объект, который автоматически устанавливает и очищает флаг `bool`.|
+|[Структура atomic_flag](../standard-library/atomic-flag-structure.md)|Описывает объект, который автоматически устанавливает и очищает **bool** флаг.|
 
 ## <a name="enums"></a>перечислениям;
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Перечисление memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Предоставляет символьные имена для операций синхронизации в областях памяти. Эти операции влияют на то, как присвоения в одном потоке становятся видимыми в другом.|
 
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/07/2018
 
 В следующем списке функции, которые не заканчиваются на `_explicit`, имеют семантику соответствующего `_explicit`, за исключением того, что они имеют неявные аргументы [memory_order](../standard-library/atomic-enums.md#memory_order_enum) `memory_order_seq_cst`.
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Выполняет *атомарную операцию сравнения и обмена*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Выполняет *атомарную операцию сравнения и обмена*.|
@@ -194,10 +195,10 @@ ms.lasthandoff: 05/07/2018
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Вычитает указанное значение из существующего хранимого значения.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Выполняет побитовую операцию `exclusive or` с указанным значением и существующим хранимым значением.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Выполняет побитовую операцию `exclusive or` с указанным значением и существующим хранимым значением.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Устанавливает флаг в объекте `atomic_flag` в значение `false`.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Устанавливает флаг в объекте `atomic_flag` в значение `false`.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Устанавливает флаг в объекте `atomic_flag` в значение `true`.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Устанавливает флаг в объекте `atomic_flag` в значение `true`.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Устанавливает флаг в `atomic_flag` объект **false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Устанавливает флаг в `atomic_flag` объект **false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Устанавливает флаг в `atomic_flag` объект **true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Устанавливает флаг в `atomic_flag` объект **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Задает сохраненное значение в объекте `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Указывает, являются ли атомарные операции с указанным объектом неблокирующими.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Атомарным образом получает значение.|

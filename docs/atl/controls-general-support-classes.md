@@ -1,5 +1,5 @@
 ---
-title: 'Элементов управления ATL: Классы поддержки общих | Документы Microsoft'
+title: 'Элементы управления ATL: Общие вспомогательные классы | Документация Майкрософт'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,24 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0aa30487edb3a5998a0b9777017015aeb7b675
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6674bbdc29a6945cb26ea6b2caa03cc8c72be230
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958521"
 ---
-# <a name="controls-general-support-classes"></a>Элементы управления: Классы поддержки Общие
-Следующие классы предоставляют общую поддержку для элементов управления ATL:  
+# <a name="controls-general-support-classes"></a>Элементы управления: Общие вспомогательные классы
+Перечисленные ниже классы предоставляют общую поддержку для элементов управления ATL:  
   
--   [CComControl](../atl/reference/ccomcontrol-class.md) состоит из вспомогательные методы функции и данные, которые необходимы для элементов управления ATL.  
+-   [CComControl](../atl/reference/ccomcontrol-class.md) состоит из вспомогательных функций и данным-членам, которые необходимы для элементов управления ATL.  
   
 -   [IOleControlImpl](../atl/reference/iolecontrolimpl-class.md) предоставляет методы, необходимые для элементов управления.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) предоставляет основные методы, через которые контейнер связывается с элементом управления. Управляет активацией и деактивацией элементов управления на месте.  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) предоставляет основные методы, через которые контейнер взаимодействует с элементом управления. Управляет активацией и деактивацией встроенных элементов управления на месте.  
   
 -   [IQuickActivateImpl](../atl/reference/iquickactivateimpl-class.md) объединяет инициализации в один вызов, чтобы помочь избежать задержек при загрузке элементов управления контейнеров.  
   
--   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) обеспечивает взаимодействие с минимальными мышью для элемента управления, в противном случае неактивные.  
+-   [IPointerInactiveImpl](../atl/reference/ipointerinactiveimpl-class.md) предоставляет взаимодействия с минимальными мышью для элемента управления, в противном случае неактивной.  
   
 ## <a name="sample-program"></a>Пример программы  
  [ATLFire](../visual-cpp-samples.md)  

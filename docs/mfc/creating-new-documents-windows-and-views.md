@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d929f4d7419e027a1018c4b0b33a4e42416613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931210"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Создание новых документов, окон и представлений
 На следующих рисунках обзора процесса создания для документов, представлений и фреймов. Другие статьи, посвященные участвующие объекты указать дополнительные сведения.  
@@ -54,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  ![Последовательность создания представления](../mfc/media/vc387l3.gif "vc387l3")  
 Последовательность создания представления  
   
- Сведения о как платформа Инициализирует новый документ, представления и окна фрейма объектов содержатся классы [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) в справочнике по библиотеке MFC. См. также [Технические заметки 22](../mfc/tn022-standard-commands-implementation.md), где рассмотрены далее процессы создания и инициализации его рассматриваются стандартные команды framework для `New` и **откройте** элементы на **Файл** меню.  
+ Сведения о как платформа Инициализирует новый документ, представления и окна фрейма объектов содержатся классы [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) в справочнике по библиотеке MFC. См. также [Технические заметки 22](../mfc/tn022-standard-commands-implementation.md), где рассмотрены далее процессы создания и инициализации его рассматриваются стандартные команды framework для **New** и **откройте** элементы на **файл** меню.  
   
 ##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> Инициализация добавления пользователя к этим классам  
- Предыдущий фигур также предложит точек, в которых можно переопределить функции-члены для инициализации объектов приложения. Переопределение `OnInitialUpdate` в представлении класса — это лучшее место для инициализации представления. `OnInitialUpdate` Вызов происходит сразу после создания окна фрейма и представления в фрейме окна вложенный документ, его. Например, если представление — это представление прокрутки (производный от `CScrollView` вместо `CView`), необходимо задать размер представления, исходя из размера документа в вашей `OnInitialUpdate` переопределения. (Этот процесс описан в описании класса [CScrollView](../mfc/reference/cscrollview-class.md).) Можно переопределить **CDocument** функции-члены `OnNewDocument` и `OnOpenDocument` для обеспечения инициализации приложения документа. Как правило и необходимо переопределить, так как документ можно создавать двумя способами.  
+ Предыдущий фигур также предложит точек, в которых можно переопределить функции-члены для инициализации объектов приложения. Переопределение `OnInitialUpdate` в представлении класса — это лучшее место для инициализации представления. `OnInitialUpdate` Вызов происходит сразу после создания окна фрейма и представления в фрейме окна вложенный документ, его. Например, если представление — это представление прокрутки (производный от `CScrollView` вместо `CView`), необходимо задать размер представления, исходя из размера документа в вашей `OnInitialUpdate` переопределения. (Этот процесс описан в описании класса [CScrollView](../mfc/reference/cscrollview-class.md).) Можно переопределить `CDocument` функции-члены `OnNewDocument` и `OnOpenDocument` для обеспечения инициализации приложения документа. Как правило и необходимо переопределить, так как документ можно создавать двумя способами.  
   
  В большинстве случаев переопределение должно вызывать версии базового класса. Дополнительные сведения см. в разделе функции-члены именованного классов [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), и [CWinApp](../mfc/reference/cwinapp-class.md) в MFC Справочник по библиотеке.  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372683"
 ---
 # <a name="nmake-reference"></a>Справочник по программе NMAKE
 Утилита построения программ Майкрософт (NMAKE. (EXE) — это средство командной строки, входящее в состав [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], которое выполняет построение проектов на основе команд, содержащихся в файле описания.  

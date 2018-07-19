@@ -1,5 +1,5 @@
 ---
-title: Класс CD2DSizeU | Документы Microsoft
+title: Класс CD2DSizeU | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0c3792ec315f21298cffa166777af61750fbd06
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335845"
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
-Программа-оболочка для D2D1_SIZE_U.  
+Оболочка для D2D1_SIZE_U.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,19 +40,19 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Перегружен. Создает `CD2DSizeU` объекта из `D2D1_SIZE_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CD2DSizeU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
+|[CD2DSizeU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::operator CSize](#operator_csize)|Преобразует `CD2DSizeU` для `CSize` объекта.|  
   
@@ -78,14 +79,14 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Размер источника  
   
- `cx`  
+ *CX*  
  исходная ширина  
   
- `cy`  
- Высота источника  
+ *CY*  
+ Исходная высота  
   
 ##  <a name="isnull"></a>  CD2DSizeU::ISNULL  
  Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).  
@@ -95,7 +96,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ширина и Высота пустой. в противном случае — значение FALSE.  
+ Значение TRUE, если ширина и высота являются пустыми; в противном случае — значение FALSE.  
   
 ##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
  Преобразует CD2DSizeU CSize.  

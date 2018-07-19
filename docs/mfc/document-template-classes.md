@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343547"
 ---
 # <a name="document-template-classes"></a>Классы шаблонов документов
 Шаблон документа объекты координации создания документов, представления и объекты окон фрейма, при создании нового документа или создать представление.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292689"
 ---
 # <a name="compiler-warning-level-3-c4334"></a>Предупреждение компилятора (уровень 3) C4334
 «оператор»: результат 32-разрядного смещения неявно преобразуется в 64 бита (предполагалось 64-разрядное смещение?)  

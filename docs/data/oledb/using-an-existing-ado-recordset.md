@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103568"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Использование существующего набора записей ADO
 Чтобы смешать шаблоны потребителя OLE DB и Active Data Objects (ADO), используйте ADO для открытия набора записей (соответствующего набору строк в шаблоны потребителей OLE DB). Если у вас есть набор записей, выполните следующие действия для подключения к набору строк OLE DB:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691502"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Примеры неправильного вложения директив совместной работы
 В этом разделе примерах директив вложенности правила. Дополнительные сведения о директива nesting см. в разделе [разделе 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33.  

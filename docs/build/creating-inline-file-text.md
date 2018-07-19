@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367502"
 ---
 # <a name="creating-inline-file-text"></a>Создание встроенных текстовых стилей
 Встроенные файлы являются постоянными или временными.  

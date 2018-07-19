@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688262"
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>Многопоточность. Использование классов синхронизации
 Многопоточные классов, предоставляемых с MFC делятся на две категории: объекты синхронизации ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), и [CEvent](../mfc/reference/cevent-class.md)) и синхронизации доступа к объектам ([CMultiLock](../mfc/reference/cmultilock-class.md) и [класс CSingleLock](../mfc/reference/csinglelock-class.md)).  

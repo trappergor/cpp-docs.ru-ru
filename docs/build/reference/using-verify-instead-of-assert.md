@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376563"
 ---
 # <a name="using-verify-instead-of-assert"></a>Использование VERIFY вместо ASSERT
 Предположим, что при запуске отладочной версии приложения MFC, нет никаких проблем. Однако версии того же приложения аварийно завершает работу, возвращает неверные результаты и не функционирует других Аномальное поведение.  

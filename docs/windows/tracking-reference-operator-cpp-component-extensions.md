@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890874"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>Оператор отслеживания ссылок (расширения компонентов C++)
 Объект *отслеживаемая ссылка* (`%`) ведет себя как обычная ссылка C++ (`&`) за исключением того, когда объекту назначается отслеживаемую ссылку, счетчик ссылок объекта увеличивается.  

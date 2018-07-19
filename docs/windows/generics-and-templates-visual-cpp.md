@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878909"
 ---
 # <a name="generics-and-templates-visual-c"></a>Универсальные типы и шаблоны (Visual C++)
 Универсальные и обычные шаблоны — это возможности языков программирования, обеспечивающие поддержку параметризированных типов. Однако они отличаются и имеют разные применения. В этом разделе дан обзор многих отличий.  

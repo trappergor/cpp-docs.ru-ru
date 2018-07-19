@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379566"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms и /vmv (представление общего назначения)
 Используется, когда [/vmb, / vmg (метод представления)](../../build/reference/vmb-vmg-representation-method.md) выбран в качестве [метод представления](../../build/reference/vmb-vmg-representation-method.md). Эти параметры указывают модель наследования определения класса, но не обнаружена.  

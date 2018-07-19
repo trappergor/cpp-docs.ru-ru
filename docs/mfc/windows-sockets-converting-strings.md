@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383764"
 ---
 # <a name="windows-sockets-converting-strings"></a>Сокеты Windows. Преобразование строк
 В этой статье и в двух статей дополнительное приведены некоторые проблемы в программировании Windows Sockets. В этой статье рассматриваются преобразования строк. Другие проблемы рассматриваются в [Windows Sockets: блокирование](../mfc/windows-sockets-blocking.md) и [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md).  

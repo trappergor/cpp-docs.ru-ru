@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222297"
 ---
 # <a name="compiler-error-c2346"></a>Ошибка компилятора C2346
 «функция» не может быть скомпилирована как управляемая: причина  

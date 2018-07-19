@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121868"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap-класс
 Предоставляет типобезопасную "программу-оболочку" для объектов классов карты указателей `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`и `CMapStringToPtr`.  
@@ -41,20 +42,20 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Базовый класс для класса map типизированных указателей; должен быть классом карты указатель ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, или `CMapStringToPtr`).  
   
- `KEY`  
+ *KEY*  
  Класс объекта, который используется как ключ для карты.  
   
- `VALUE`  
+ *ЗНАЧЕНИЕ*  
  Класс объекта, хранимый в сопоставлении.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Получает следующий элемент для выполнения итерации.|  
 |[CTypedPtrMap::Lookup](#lookup)|Возвращает `KEY` на основе `VALUE`.|  
@@ -63,7 +64,7 @@ class CTypedPtrMap : public BASE_CLASS
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CTypedPtrMap::operator]](#operator_at)|Вставляет элемент в сопоставление.|  
   
@@ -93,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rPosition`  
- Указывает ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNextAssoc` или `BASE_CLASS` **:: GetStartPosition** вызова.  
+ *rPosition*  
+ Указывает ссылку на значение ПОЗИЦИИ, возвращенное предыдущим `GetNextAssoc` или `BASE_CLASS` **:: GetStartPosition** вызова.  
   
  *KEY*  
  Параметр шаблона, определяющий тип сопоставления ключей.  
   
- `rKey`  
+ *rKey*  
  Указывает возвращаемый ключ полученного элемента.  
   
  *ЗНАЧЕНИЕ*  
  Параметр шаблона, указывающий тип значений карты.  
   
- `rValue`  
+ *rValue*  
  Указывает возвращаемое значение полученного элемента.  
   
 ### <a name="remarks"></a>Примечания  
  Эта функция полезна для перебора всех элементов в объекте map. Обратите внимание, что порядковый номер позиции не обязательно будет таким же, как последовательность значение ключа.  
   
- Если полученного элемента является последним в схеме, то новое значение `rNextPosition` равно **NULL**.  
+ Если полученного элемента является последним в схеме, то новое значение `rNextPosition` имеет значение NULL.  
   
  Это встроенная функция вызывает `BASE_CLASS` **:: GetNextAssoc**.  
   
@@ -123,16 +124,16 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Параметр шаблона, указывающий на этой карте класса базового класса.  
   
- `key`  
+ *key*  
  Ключ элемента, который требуется найти.  
   
  *ЗНАЧЕНИЕ*  
  Параметр шаблона, указывающий тип значения, хранящиеся в этой схеме.  
   
- `rValue`  
+ *rValue*  
  Указывает возвращаемое значение полученного элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -152,10 +153,10 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *ЗНАЧЕНИЕ*  
  Параметр шаблона, указывающий тип значения, хранящиеся в этой схеме.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  Параметр шаблона, указывающий на этой карте класса базового класса.  
   
- `key`  
+ *key*  
  Ключ элемента для поиска или создания в схеме.  
   
 ### <a name="remarks"></a>Примечания  
@@ -172,7 +173,7 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  Параметр шаблона, определяющий тип сопоставления ключей.  
   
- `key`  
+ *key*  
  Ключ элемента, который требуется удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,10 +193,10 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  Параметр шаблона, определяющий тип сопоставления ключей.  
   
- `key`  
+ *key*  
  Указывает значение ключа новое значение.  
   
- `newValue`  
+ *новое значение*  
  Задает указатель на объект, являющийся значением нового элемента.  
   
 ### <a name="remarks"></a>Примечания  

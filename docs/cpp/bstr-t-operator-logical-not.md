@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940236"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Блок, относящийся только к системам Microsoft**  
   
- Проверяет, если инкапсулированный `BSTR` — **NULL** строки.  
+ Проверяет Если инкапсулированный `BSTR` ПУСТАЯ строка.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Он возвращает **true** Если Да, **false** в противном случае.  
+ Возвращает значение TRUE, если да, и FALSE, если это не так.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

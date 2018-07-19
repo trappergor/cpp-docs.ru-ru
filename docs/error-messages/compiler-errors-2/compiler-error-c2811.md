@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236083"
 ---
 # <a name="compiler-error-c2811"></a>Ошибка компилятора C2811
 «тип1»: не может наследовать от «тип2» ref класс может наследовать только от ссылочного класса или класса интерфейса  

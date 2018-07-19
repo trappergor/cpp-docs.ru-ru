@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931656"
 ---
 # <a name="relationships-among-mfc-objects"></a>Отношения между объектами MFC
 Для облегчения восприятия процесс создания документов и представлений в перспективе, рассмотрите возможность выполняющейся программе: документ, фрейм окна, содержащий представление и представление, связанное с документом.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
  Как правило окно фрейма имеет одно представление, но в некоторых случаях окно фрейма как окна разделителей содержит несколько представлений. Окна фрейма сохраняет указатель на текущий активный представления; указатель обновляется каждый раз, когда активируется другое представление.  
   
 > [!NOTE]
->  Указатель на главное окно хранится в [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) переменной-члена объекта приложения. Вызов `OnFileNew` в переопределении `InitInstance` функцию-член `CWinApp` задает `m_pMainWnd` для вас. Если вы не вызываете `OnFileNew`, необходимо задать значение переменной в `InitInstance` самостоятельно. (SDI COM-компонент (сервера) приложения не могут устанавливать переменной Если в командной строке параметры/Embedding.) Обратите внимание, что `m_pMainWnd` является членом класса `CWinThread` вместо `CWinApp`.  
+>  Указатель на главное окно хранится в [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) переменной-члена объекта приложения. Вызов `OnFileNew` в переопределении `InitInstance` функцию-член `CWinApp` задает *m_pMainWnd* для вас. Если вы не вызываете `OnFileNew`, необходимо задать значение переменной в `InitInstance` самостоятельно. (SDI COM-компонент (сервера) приложения не могут устанавливать переменной Если в командной строке параметры/Embedding.) Обратите внимание, что *m_pMainWnd* является членом класса `CWinThread` вместо `CWinApp`.  
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны документов и процесс создания документов и представлений](../mfc/document-templates-and-the-document-view-creation-process.md)   

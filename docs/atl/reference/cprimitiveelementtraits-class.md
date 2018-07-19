@@ -1,5 +1,5 @@
 ---
-title: Класс CPrimitiveElementTraits | Документы Microsoft
+title: Класс CPrimitiveElementTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885813"
 ---
 # <a name="cprimitiveelementtraits-class"></a>Класс CPrimitiveElementTraits
-Этот класс предоставляет методы по умолчанию и функции для класса коллекции, составленный из примитивных типов данных.  
+Этот класс предоставляет методы по умолчанию и функции для класса коллекции состоят из примитивных типов данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +37,20 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Тип данных, хранимых в объекте класса коллекции.  
+ *T*  
+ Тип данных для сохранения в объекте класса коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет по умолчанию статические функции и методы для перемещения, копирования, сравнение и хэширования элементы типа примитивных данных, хранящихся в объекте класса коллекции.  
+ Этот класс предоставляет статические функции по умолчанию и методы для перемещения, копирования, сравнение и хэширования элементов типа примитивных данных, хранящихся в объекте класса коллекции.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -68,14 +69,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
  **Заголовок:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
- Тип данных, используемый для добавления элементов к такому объекту класса коллекции.  
+ Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.  
   
 ```
 typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- Тип данных для использования для получения элементов из объекта класса коллекции.  
+ Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.  
   
 ```
 typedef T& OUTARGTYPE;

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369751"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Экспорт из библиотеки DLL с использованием DEF-файлов
 Файл определения модуля (DEF) является текстовый файл, содержащий один или несколько операторов модуля, описывающих различные атрибуты библиотеки DLL. Если вы не используете **__declspec(dllexport)** ключевое слово для экспорта функций DLL, необходимой библиотеке DLL DEF-файла.  

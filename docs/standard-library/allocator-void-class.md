@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953558"
 ---
 # <a name="allocatorltvoidgt-class"></a>Класс allocator&lt;void&gt;
 
-Специализация класса шаблона allocator для типа `void`, определяющая типы, имеющие смысл в данном контексте.
+Специализация класса шаблона allocator для ввода **void**, определение типов, которые имеют смысл в данном контексте.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,7 +51,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс явно специализирует класс шаблона [allocator](../standard-library/allocator-class.md) для типа *void.* Его конструкторы и оператор присваивания ведут себя так же, как для класса шаблона, но он определяет только следующие типы:
+Этот класс явно специализирует класс шаблона [распределителя](../standard-library/allocator-class.md) для типа **void**. Его конструкторы и оператор присваивания ведут себя так же, как для класса шаблона, но он определяет только следующие типы:
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer);
 

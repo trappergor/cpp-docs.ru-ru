@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83180020c20f78c16af0b1b33bada91936b6af9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f065f7c00d3853d00c1063cd5b2838ec6d1d27b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953001"
 ---
 # <a name="identity-structure"></a>Структура identity
 
@@ -37,15 +38,15 @@ struct identity {
 ```
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`left`|Значение, которое необходимо идентифицировать.|
+|*left*|Значение, которое необходимо идентифицировать.|
 
 ## <a name="remarks"></a>Примечания
 
 Класс содержит определение открытого типа `type`, которое совпадает с типом параметра-шаблона. Он используется в сочетании с функцией шаблона [forward](../standard-library/utility-functions.md#forward) для проверки того, что параметр функции имеет требуемый тип.
 
-Для обеспечения совместимости со старым кодом этот класс также определяет функцию identity `operator()`, которая возвращает свой аргумент `left`.
+Для совместимости со старым кодом этот класс также определяет функцию identity `operator()` которая возвращает свой аргумент *левой*.
 
 ## <a name="requirements"></a>Требования
 

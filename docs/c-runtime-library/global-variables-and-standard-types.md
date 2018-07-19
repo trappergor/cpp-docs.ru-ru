@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388998"
 ---
 # <a name="global-variables-and-standard-types"></a>Глобальные переменные и стандартные типы
 Библиотека времени выполнения Microsoft содержит определения [глобальных переменных](../c-runtime-library/global-variables.md), [управляющих флагов](../c-runtime-library/control-flags.md) и [стандартных типов](../c-runtime-library/standard-types.md), используемых подпрограммами библиотеки. Для доступа к этим переменным, флагам и типам объявите их в программе или включите в нее необходимые заголовочные файлы.  

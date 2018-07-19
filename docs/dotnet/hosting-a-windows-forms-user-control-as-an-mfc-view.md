@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137631"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC
 MFC использует класс CWinFormsView для пользовательского элемента управления Windows Forms в представления MFC. Представления MFC Windows Forms, элементы управления ActiveX. Пользовательский элемент управления размещен как дочерние элементы собственного представления и занимает всю клиентскую область собственного представления.  

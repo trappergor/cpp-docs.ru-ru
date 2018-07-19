@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954071"
 ---
 # <a name="addconst-class"></a>Класс add_const
 
@@ -36,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Тип для изменения.
+*Ty* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр типа modifier содержит модифицированный тип, который является `Ty`, если `Ty` является ссылкой, функцией или типом с квалификатором const; в противном случае — `const Ty`.
+Экземпляр модификатора типа содержит модифицированный тип, который является *Ty* Если *Ty* является ссылкой, функцией или типом с квалификатором const, в противном случае `const Ty`.
 
 ## <a name="example"></a>Пример
 

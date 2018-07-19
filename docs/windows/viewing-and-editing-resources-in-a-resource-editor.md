@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891822"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Просмотр и редактирование ресурсов в редакторе ресурсов
 Каждый тип ресурса имеет редактор ресурсов, связанных с этим типом ресурса. Можно изменить, изменить размер, добавление элементов управления и компонентов или изменять другие характеристики ресурса с помощью специализированного редактора. Можно также изменить ресурс в [текстовом формате](../windows/how-to-open-a-resource-script-file-in-text-format.md) и [двоичный формат](../windows/opening-a-resource-for-binary-editing.md).  

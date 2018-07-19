@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379618"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 Позволяет приложениям и компонентам использовать возможности из среды CLR.  

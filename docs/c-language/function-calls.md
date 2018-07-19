@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387867"
 ---
 # <a name="function-calls"></a>Вызовы функций
 *Вызовом функции* называется выражение, которое передает функции управление и аргументы (если они есть). Такие выражения имеют следующую форму:  

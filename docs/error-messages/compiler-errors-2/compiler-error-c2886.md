@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243467"
 ---
 # <a name="compiler-error-c2886"></a>Ошибка компилятора C2886
 «класс::идентификатор»: символ не может использоваться в с помощью объявление члена  

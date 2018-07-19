@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879852"
 ---
 # <a name="how-to-copy-resources"></a>Практическое руководство. Копирование ресурсов
 Можно копировать ресурсы из одного файла в другой без изменений или вы можете [измените язык или условие ресурса при копировании](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  

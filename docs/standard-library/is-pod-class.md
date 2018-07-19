@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b52479cc433f59d76dd40cfb752550e51652892d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c655ea4adec0364f35d0b43c637eae9c270cdb0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962069"
 ---
 # <a name="ispod-class"></a>Класс is_pod
 
@@ -40,7 +41,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>Примечания
 
-`is_pod<T>::value` — это `true`, если тип *T* — POD. В противном случае — `false`.
+`is_pod<T>::value` — **true** Если тип *T* — Plain Old Data (POD). В противном случае это **false**.
 
 К типам POD относятся арифметические типы, типы перечисления, типы указателей и указатели на типы-члены.
 

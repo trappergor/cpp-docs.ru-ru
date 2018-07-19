@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369309"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 Можно использовать **MSBuild** средство для построения приложения Visual C++ из командной строки. Процесс построения управляется сведения в файл проекта (VCXPROJ), можно создавать и изменять. Файл проекта указывает параметры построения на основе сборки этапов, условий и событий.  

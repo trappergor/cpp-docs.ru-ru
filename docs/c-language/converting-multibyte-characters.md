@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381789"
 ---
 # <a name="converting-multibyte-characters"></a>Преобразование многобайтовых символов
 **ANSI 3.1.3.4** Текущий языковой стандарт, используемый для преобразования многобайтовых символов в соответствующие расширенные символы (коды) для расширенной символьной константы  

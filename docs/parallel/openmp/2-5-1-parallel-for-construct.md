@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687157"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 Конструкция parallel for
 **Параллельных для** директива является ярлыком для **параллельных** область, которая содержит только один **для** директивы. Синтаксис **параллельных для** директивы таков:  

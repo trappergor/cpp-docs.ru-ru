@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392365"
 ---
 # <a name="initializing-scalar-types"></a>Инициализация скалярных типов
 При инициализации скалярных типов значение *assignment-expression* присваивается переменной. Применяются правила преобразования для присваивания. (См. сведения о правилах преобразования в статье [Преобразования типов (C)](../c-language/type-conversions-c.md).)  

@@ -1,5 +1,5 @@
 ---
-title: Перечислители и коллекции классов (ATL) | Документы Microsoft
+title: Классы перечислителей и коллекций (ATL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe8dfb4610b88b9a53e90b7af5f52b4d1c2807f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37847886"
 ---
-# <a name="enumerators-and-collections-classes"></a>Классы коллекций и перечислителей
-Следующие классы обеспечивают поддержку COM-коллекции и перечисления.  
+# <a name="enumerators-and-collections-classes"></a>Классы перечислителей и коллекций
+Следующие классы обеспечивают поддержку COM-коллекций и перечислений.  
   
--   [CComEnum](../atl/reference/ccomenum-class.md) объектов COM определяет перечислитель на основе массива.  
+-   [CComEnum](../atl/reference/ccomenum-class.md) объекта-перечислителя: Определяет COM на основе массива.  
   
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) предоставляет реализацию для COM-интерфейса перечислителя, где перечисляемые элементы хранятся в массиве.  
+-   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) предоставляет реализацию для COM-интерфейс перечислителя, где хранятся перечисляемых элементов в массиве.  
   
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) объектов COM определяет перечислитель на основе стандартной библиотеки C++ коллекции.  
+-   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) объекта-перечислителя: Определяет COM на основе стандартной библиотеки C++ коллекции.  
   
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) предоставляет реализацию для COM-интерфейса перечислителя, где перечисляемые элементы хранятся в контейнере совместимое библиотеки C++ Standard.  
+-   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) предоставляет реализацию для COM-интерфейс перечислителя, где перечисляемые элементы хранятся в контейнере совместимые библиотеки C++ Standard.  
   
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) обеспечивает реализацию **число**, **элемент**, и `_NewEnum` свойства интерфейса коллекции.  
+-   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) предоставляет реализацию для `Count`, `Item`, и `_NewEnum` свойства интерфейса коллекции.  
   
 ## <a name="related-articles"></a>Связанные статьи  
  [Коллекции и перечислители ATL](../atl/atl-collections-and-enumerators.md)  

@@ -1,5 +1,5 @@
 ---
-title: Класс CCtrlView | Документы Microsoft
+title: Класс CCtrlView | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336336"
 ---
 # <a name="cctrlview-class"></a>Класс CCtrlView
 Адаптирует архитектуру "документ-представление" для распространенных элементов управления, поддерживаемых Windows 98 и Windows NT (версии 3.51 и более поздние).  
@@ -45,26 +46,26 @@ class CCtrlView : public CView
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCtrlView::CCtrlView](#cctrlview)|Создает объект `CCtrlView`.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CCtrlView::OnDraw](#ondraw)|Вызывается платформой для отрисовки, с помощью заданного контекста устройств.|  
+|[CCtrlView::OnDraw](#ondraw)|Вызывается платформой для рисования с помощью заданного контекста устройств.|  
 |[CCtrlView::PreCreateWindow](#precreatewindow)|Вызывается до создания окна Windows, присоединенного к данному объекту класса `CCtrlView`.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Содержит стиль по умолчанию для класса представления.|  
 |[CCtrlView::m_strClass](#m_strclass)|Содержит имя класса Windows для класса представления.|  
   
 ## <a name="remarks"></a>Примечания  
- Класс `CCtrlView` и его производные [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), и [CRichEditView](../../mfc/reference/cricheditview-class.md), адаптировать архитектуру представления документов для новых общих элементов управления поддерживаются Windows 95/98 и Windows NT 3.51 и более поздних версиях. Дополнительные сведения о архитектуру представления документов см. в разделе [архитектуры Document/View](../../mfc/document-view-architecture.md).  
+ Класс `CCtrlView` и его производные [CEditView](../../mfc/reference/ceditview-class.md), [CListView](../../mfc/reference/clistview-class.md), [CTreeView](../../mfc/reference/ctreeview-class.md), и [CRichEditView](../../mfc/reference/cricheditview-class.md), адаптировать архитектуру представления документов, чтобы новые общие элементы управления поддерживаются Windows 95/98 и Windows NT 3.51 и более поздних версиях. Дополнительные сведения о архитектуру представления документов, см. в разделе [архитектуры Document/View](../../mfc/document-view-architecture.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,14 +91,14 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszClass`  
+ *lpszClass*  
  Имя класса Windows класса представления.  
   
- `dwStyle`  
+ *dwStyle*  
  Стиль класса представления.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа вызывает конструктор, когда создается новый объект окна или разделить окна. Переопределить [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) для инициализации представления после присоединения документа. Вызовите [CWnd::Create](../../mfc/reference/cwnd-class.md#create) или [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) для создания объекта Windows.  
+ Конструктор вызывается платформой при создании нового окна области или разделить окна. Переопределить [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) для инициализации представления после присоединения документа. Вызовите [CWnd::Create](../../mfc/reference/cwnd-class.md#create) или [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) для создания объекта Windows.  
   
 ##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
  Содержит имя класса Windows для класса представления.  
@@ -117,18 +118,18 @@ DWORD m_dwDefaultStyle;
  Этот стиль применяется при создании окна.  
   
 ##  <a name="ondraw"></a>  CCtrlView::OnDraw  
- Вызывается платформой для отрисовки содержимого `CCtrlView` объекта с помощью заданного контекста устройств.  
+ Вызывается платформой для отрисовки содержимого `CCtrlView` с помощью заданного контекста устройств.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pDC`  
+ *основного контроллера домена*  
  Указатель на контекст устройства, в котором происходит рисование.  
   
 ### <a name="remarks"></a>Примечания  
- `OnDraw` обычно вызывается для отображения на экране, передавая экрана контекста устройства, заданные `pDC`.  
+ `OnDraw` обычно вызывается для отображения на экране, передача контекста экрана устройства, указываемого параметром *pDC*.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  Вызывается до создания окна Windows, присоединенного к данному объекту класса `CWnd`.  
@@ -142,20 +143,20 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
  Объект [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если следует продолжить создание окна; 0 для указания сбой при создании.  
+ Ненулевое значение, если следует продолжить создание окна; 0, указывающее на ошибку создания.  
   
 ### <a name="remarks"></a>Примечания  
- Невозможно напрямую вызвать эту функцию.  
+ Никогда не вызывать эту функцию напрямую.  
   
- Реализация по умолчанию эта функция проверяет наличие **NULL** имя класса окна и замещает соответствующее значение по умолчанию. Переопределить эту функцию-член для изменения `CREATESTRUCT` структуру перед созданием окна.  
+ Реализация по умолчанию эта функция проверяет имя класса окна значение NULL и заменяет соответствующее значение по умолчанию. Переопределите эту функцию-член для изменения `CREATESTRUCT` структуры перед созданием окна.  
   
- Каждый класс, производный от `CCtrlView` добавляет свои собственные функции для его переопределения `PreCreateWindow`. Макеты этих наследниками `PreCreateWindow` не документированы. Чтобы определить подходящие для каждого класса и взаимозависимости между стили стили, можно проверить исходный код MFC для базового класса приложения. Если выбрать переопределение `PreCreateWindow`, чтобы выяснить, обеспечивают ли стили, используемые в базовом классе приложения необходимые функции с помощью сведений из исходного кода MFC.  
+ Каждый класс, производный от `CCtrlView` добавляет свои собственные функции для его переопределения `PreCreateWindow`. По умолчанию эти наследниками `PreCreateWindow` не документированы. Чтобы определить, стили, подходящие для каждого класса и взаимозависимости между стилями, можно просмотреть исходный код MFC для базового класса приложения. Если вы решили переопределить `PreCreateWindow`, можно определить, обеспечивают ли стилей, которые используются в базовом классе приложения необходимые функции, используя информацию, собранную из исходного кода MFC.  
   
- Дополнительные сведения об изменении стилей окна см. в разделе [изменение стилей окна, созданные с MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
+ Дополнительные сведения об изменении стилей окна, см. в разделе [изменение стилей окна созданного MFC](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md).  
   
 ## <a name="see-also"></a>См. также  
- [CView-класс](../../mfc/reference/cview-class.md)   
+ [Класс CView](../../mfc/reference/cview-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CTreeView-класс](../../mfc/reference/ctreeview-class.md)   
- [CListView-класс](../../mfc/reference/clistview-class.md)   
+ [Класс CTreeView](../../mfc/reference/ctreeview-class.md)   
+ [Класс CListView](../../mfc/reference/clistview-class.md)   
  [Класс CRichEditView](../../mfc/reference/cricheditview-class.md)

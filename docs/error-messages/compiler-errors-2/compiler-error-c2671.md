@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233139"
 ---
 # <a name="compiler-error-c2671"></a>Ошибка компилятора C2671
 «функция»: статические функции-члены не имеют указателей «this»  

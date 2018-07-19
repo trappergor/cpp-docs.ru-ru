@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944244"
 ---
 # <a name="while-statement-c"></a>Оператор while (C++)
 Выполняет *statement* (инструкции) циклически, пока *expression* (выражение) не станет равно нулю.  
@@ -34,13 +35,13 @@ while ( expression )
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Проверка *expression* выполняется перед каждым выполнением цикла; таким образом, цикл `while` выполняется ноль или более раз. Выражение *expression* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
+ Тест на *выражение* выполняется перед каждым выполнением цикла; таким образом, **хотя** цикл выполняется ноль или более раз. Выражение *expression* должно иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
   
- Цикл `while`  также может прерываться, когда внутри его тела выполняется инструкция [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [return](../cpp/return-statement-cpp.md). Используйте [continue](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода из цикла `while`: **continue** передает управление следующей итерации цикла `while`.  
+ Объект **хотя** цикл прерывается, если [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [возвращают](../cpp/return-statement-cpp.md) в операторе выполняется тело. Используйте [по-прежнему](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода из **хотя** цикла. **по-прежнему** передает управление следующей итерации **хотя** цикла.  
   
- В следующем коде цикл `while` используется для усечения символов подчеркивания в конце строки.  
+ В следующем коде используется **хотя** цикла, чтобы удалить конечные символы подчеркивания из строки:  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

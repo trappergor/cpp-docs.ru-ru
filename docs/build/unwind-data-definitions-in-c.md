@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380707"
 ---
 # <a name="unwind-data-definitions-in-c"></a>Описание раскрутки данных в языке C
 Ниже приведен описание раскрутки данных в языке C.  

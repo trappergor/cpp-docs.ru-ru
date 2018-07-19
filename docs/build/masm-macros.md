@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368698"
 ---
 # <a name="masm-macros"></a>Макросы MASM
 Чтобы упростить использование [Необработанные псевдооперации](../build/raw-pseudo-operations.md), существует ряд макросы, определенные в файле ksamd64.inc, который можно использовать для создания типичных прологов и эпилогов.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347777"
 ---
 # <a name="mfc-com"></a>MFC COM
 Подмножество MFC предназначен для поддержки модели COM, хотя большинство из Active Template Library (ATL) предназначен для программирования в модели COM. Подразделы в этом разделе описывается поддержка MFC для модели COM.  

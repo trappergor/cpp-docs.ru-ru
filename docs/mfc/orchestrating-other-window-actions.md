@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345645"
 ---
 # <a name="orchestrating-other-window-actions"></a>Оркестрация других действий окна
 Окна фрейма организует полумодальные состояния, например контекстную справку и предварительный просмотр. Описание роли окна фрейма в режиме предварительного просмотра см. в разделе [печать и предварительный](../mfc/printing-and-print-preview.md).  

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962404"
 ---
 # <a name="conditional-class"></a>Класс conditional
 
@@ -39,15 +40,15 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Параметры
 
-`B` Значение, определяющее выбранный тип.
+*B* значение, определяющее выбранный тип.
 
-`T1` Результат типа, если B — true.
+*T1* результат типа, если B — true.
 
-`T2` Результат типа, если B — false.
+*T2* результат типа, если B — false.
 
 ## <a name="remarks"></a>Примечания
 
-Член шаблона typedef `conditional<B, T1, T2>::type` равен `T1` , если параметр `B` равен `true`, или `T2` , если параметр `B` равен `false`.
+Член шаблона typedef `conditional<B, T1, T2>::type` принимает значение *T1* при *B* принимает значение **true**и дает в результате *T2* при  *B* принимает значение **false**.
 
 ## <a name="requirements"></a>Требования
 

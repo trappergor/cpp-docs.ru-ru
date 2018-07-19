@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372486"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Создание контейнеров элементов управления MFC ActiveX
 Контейнер элементов управления ActiveX является родительской программой, которая предоставляет среду для элемента управления ActiveX (ранее OLE) для запуска. Можно создать приложение может содержать элементы управления ActiveX с или без MFC, но гораздо проще сделать с помощью MFC.  

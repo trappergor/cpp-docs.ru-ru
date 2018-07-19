@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856505"
 ---
 # <a name="accelerator-type-property"></a>Свойство "Тип" сочетания клавиш
 Сочетания клавиш **тип** свойство определяет, является ли сочетание клавиш, связанное с Идентификатором ускорителя виртуальным сочетанием клавиш или значением ключа ASCII/ANSI:  

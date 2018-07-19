@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344095"
 ---
 # <a name="creating-the-tab-control"></a>Создание элемента управления "Вкладка"
 Способ создания вкладок элемента управления зависит от того, с помощью элемента управления в диалоговом окне или его создания в окне nondialog.  

@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddd48c51e1e9b5d206cefa56e2879dfb3ace3b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c284f5d5fdfee09349cc6eb9cbde38da21918d25
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040965"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Класс CMFCPropertyGridToolTipCtrl
 Реализует подсказку, управления, [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) используется для отображения подсказки.  
@@ -51,7 +52,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|Создает объект `CMFCPropertyGridToolTipCtrl`.|  
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|Деструктор.|  
   
@@ -59,7 +60,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCPropertyGridToolTipCtrl::Create](#create)|Создает окно для элемента управления всплывающей подсказки.|  
 |[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Отключает и скрывает элемент управления tooltip.|  
 |[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Возвращает координаты последней позиции элемента управления tooltip.|  
@@ -105,7 +106,7 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  Указатель на родительское окно.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -129,7 +130,7 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [выходной] `rect`  
+ [out] *rect*  
  Содержит последней позиции элемента управления tooltip.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
@@ -147,7 +148,7 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nTextMargin`  
+ [in] *nTextMargin*  
  Задает расстояние между текст всплывающей подсказки элемента управления и границей окна всплывающей подсказки. Значение по умолчанию — 10 точек.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
@@ -160,14 +161,14 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `rect`  
+ [in] *rect*  
  Задает положение и размер элемента управления tooltip.  
   
- [in] `strText`  
+ [in] *strText*  
  Задает текст, отображаемый во всплывающей подсказке.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод отображает элемент управления tooltip в положение и размер, указанный параметром `rect`. Если расположение, размер и текст не изменились со времени последнего вызова этого метода, этот метод не оказывает влияния.  
+ Этот метод отображает элемент управления tooltip в положение и размер, указанный параметром *rect*. Если расположение, размер и текст не изменились со времени последнего вызова этого метода, этот метод не оказывает влияния.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

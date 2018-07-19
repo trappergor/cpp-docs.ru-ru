@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954680"
 ---
 # <a name="canimationsize-class"></a>Класс CAnimationSize
 Реализует функции объекта размера, размеры которого могут быть анимированы.  
@@ -55,13 +56,13 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::CAnimationSize](#canimationsize)|Перегружен. Создает объект размера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::AddTransition](#addtransition)|Добавляет переходы для ширины и высоты.|  
 |[CAnimationSize::GetCX](#getcx)|Предоставляет доступ к CAnimationVariable, представляющее ширину.|  
@@ -72,20 +73,20 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::operator CSize](#operator_csize)|Преобразует CAnimationSize CSize.|  
 |[CAnimationSize::operator =](#operator_eq)|Назначает szSrc CAnimationSize.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|Инкапсулированный анимации переменной, представляющей шириной анимации.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|Переменная инкапсулированный анимации, представляющий высоту анимации.|  
@@ -113,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pCXTransition`  
+ *pCXTransition*  
  Указатель на переход для ширины.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Указатель на переход для высоты.  
   
 ### <a name="remarks"></a>Примечания  
@@ -137,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szDefault`  
+ *szDefault*  
  Задает размер по умолчанию.  
   
- `nGroupID`  
+ *nGroupID*  
  Указывает идентификатор группы.  
   
- `nObjectID`  
+ *nObjectID*  
  Указывает идентификатор объекта.  
   
- `dwUserData`  
+ *dwUserData*  
  Задает определяемые пользователем данные.  
   
 ### <a name="remarks"></a>Примечания  
@@ -162,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lst`  
+ *lst*  
  Когда функция возвращает значение, он содержит указатели на два объекта CAnimationVariable, представляющая ширину и высоту.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -212,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szValue`  
+ *szValue*  
  Выходные данные. При возвращении этим методом, содержит текущее значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -256,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szSrc`  
+ *szSrc*  
  Относится к CSize или размер.  
   
 ### <a name="remarks"></a>Примечания  
@@ -270,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `szDefault`  
+ *szDefault*  
  Указывает новый размер по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  

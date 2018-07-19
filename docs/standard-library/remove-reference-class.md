@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957906"
 ---
 # <a name="removereference-class"></a>Класс remove_reference
 
@@ -39,11 +40,11 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `remove_reference<T>` содержит измененный тип, т. е. `T1`, если `T` имеет форму `T1&`; в противном случае — `T`.
+Экземпляр `remove_reference<T>` содержит модифицированный тип, который является `T1` при *T* имеет форму `T1&`, в противном случае *T*.
 
 ## <a name="example"></a>Пример
 

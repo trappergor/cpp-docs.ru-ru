@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368334"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Практическое руководство. Добавление пользовательских средств построения в проекты MSBuild
 Пользовательскому средству сборки является определяемой пользователем программа командной строки, связанный с конкретного файла.  

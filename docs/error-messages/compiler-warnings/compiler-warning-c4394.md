@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276225"
 ---
 # <a name="compiler-warning-c4394"></a>Предупреждение компилятора C4394
 «функция»: символ по доменам приложения не следует помечать с помощью __declspec(dllexport)  

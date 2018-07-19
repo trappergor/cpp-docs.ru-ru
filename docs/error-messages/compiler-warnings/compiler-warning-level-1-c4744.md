@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282832"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Предупреждение компилятора (уровень 1) C4744
 «переменная» имеет различные типы в «файл1» и «файл2»: «тип1» и «тип2»  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375588"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Поддержка компоновщика для DLLs, загружаемых с задержкой
 Компоновщик Visual C++ теперь поддерживает отложенной загрузкой библиотек DLL. Это снимает необходимость использования функций Windows SDK **LoadLibrary** и **GetProcAddress** для реализации отложенная загрузка библиотеки DLL.  

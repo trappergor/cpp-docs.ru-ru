@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327097"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Ошибка компилятора ресурсов RC2175
 Имя файла ресурсов не соответствует формату 3.00  

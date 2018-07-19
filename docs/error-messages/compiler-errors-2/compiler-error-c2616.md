@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233673"
 ---
 # <a name="compiler-error-c2616"></a>Ошибка компилятора C2616
 «Преобразование»: не удается неявно преобразовать не с левосторонними значениями «тип1» в «тип2», не являющееся константным  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301139"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Предупреждение средств компоновщика LNK4219
 Переполнение адресной привязки имя адресной привязки. Целевой «имя целевого символа» находится за пределами диапазона, вносится преобразователь  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd7ab0593d3a8d6486f2f29cd796656407e14cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1883f051a1df74256da533cf2aba19626b9f19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959463"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>Класс is_nothrow_move_constructible
 
@@ -35,11 +36,11 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип `Ty` имеет конструктор перемещения nothrow, в противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* имеет nothrow конструктор перемещения, в противном случае он содержит значение false.
 
 ## <a name="requirements"></a>Требования
 

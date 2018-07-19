@@ -18,15 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961075"
 ---
 # <a name="ltarraygt-functions"></a>Функции &lt;array&gt;
 
-Заголовок \<array> содержит две функции, не являющиеся членами, `get` и `swap`, которые работают с объектами `array`.
+\<Массива > Заголовок содержит две функции, не являющиеся членами, `get` и `swap`, которые работают с **массива** объектов.
 
 |||
 |-|-|
@@ -49,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-`Index` Смещение элемента.
+*Индекс* смещение элемента.
 
-`T` Тип элемента.
+*T* тип элемента.
 
-`N` Число элементов в массиве.
+*N* число элементов в массиве.
 
-`arr` Массив для выбора.
+*arr* массив для выбора.
 
 ### <a name="example"></a>Пример
 
@@ -91,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Не являющаяся членом специализация шаблона `std::swap`, которая меняет местами два объекта `array`.
+Специализация шаблона, не являющиеся членами `std::swap` , меняет местами два **массива** объектов.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,13 +101,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Тип элемента.
+*Ty* тип элемента.
 
-`N` Размер массива.
+*N* размер массива.
 
-`left` Первый массив поменять местами.
+*слева* первый массив для обмена.
 
-`right` Второй массив для замены.
+*правом* второй массив для обмена.
 
 ### <a name="remarks"></a>Примечания
 

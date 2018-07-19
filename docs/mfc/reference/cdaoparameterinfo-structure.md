@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951604"
 ---
 # <a name="cdaoparameterinfo-structure"></a>Структура CDaoParameterInfo
 `CDaoParameterInfo` Структура содержит сведения об объекте параметров, определенных для объекты доступа к данным (DAO).  
@@ -38,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `m_strName`  
+ *m_strName*  
  Однозначно называет объект параметра. Дополнительные сведения см. в разделе «Имя свойства» в справке DAO.  
   
- `m_nType`  
- Значение, указывающее тип данных объекта parameter. Список возможных значений см. в разделе `m_nType` членом [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) структуры. Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
+ *m_nType*  
+ Значение, указывающее тип данных объекта parameter. Список возможных значений см. в разделе *m_nType* членом [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) структуры. Дополнительные сведения см. в разделе «Тип свойства» в справке DAO.  
   
  *m_varValue*  
  Значение параметра, хранящиеся в [COleVariant](../../mfc/reference/colevariant-class.md) объекта.  

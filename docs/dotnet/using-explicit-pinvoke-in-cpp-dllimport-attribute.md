@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169508"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>Использование явного вызова Pinvoke в C++ (атрибут DllImport)
 .NET Framework предоставляет функции вызова неуправляемого кода (или PInvoke) с `Dllimport` атрибут позволяет управляемым приложениям вызывать неуправляемые функции, поставляемые в библиотеках DLL. Явный вызов PInvoke необходим для ситуациях, когда неуправляемый API-интерфейсы упаковываются как библиотеки DLL и исходный код недоступен. Например, вызов функции Win32 требует PInvoke. В противном случае используйте неявные P {Invoke см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) для получения дополнительной информации.  

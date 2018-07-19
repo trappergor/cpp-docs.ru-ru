@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379929"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Потоковые операции с использованием элементов управления "Rich Edit"
 Потоки можно использовать для передачи данных в таблицу или из элемента управления rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Поток определяется [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) структуру, которая задает функцию обратного вызова, определяемые приложением и буфер.  

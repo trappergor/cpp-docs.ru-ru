@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122971"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl-класс
 Предоставляет функциональные возможности стандартного элемента управления "счетчик" Windows.  
@@ -57,17 +58,17 @@ ms.lasthandoff: 05/04/2018
 class CSpinButtonCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Создает объект `CSpinButtonCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::Create](#create)|Создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.|  
 |[CSpinButtonCtrl::CreateEx](#createex)|Создает счетчик-элемент управления с указанным расширенные стили Windows и прикрепляет его к `CSpinButtonCtrl` объекта.|  
@@ -119,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwStyle`  
+ *dwStyle*  
  Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стилей элемента управления "Счетчик" кнопку примените к элементу управления. Эти стили описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в Windows SDK.  
   
- `rect`  
+ *Rect*  
  Задает размер и положение элемента управления "Счетчик" кнопки. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры  
   
- `pParentWnd`  
- Указатель на кнопку элемента управления "Счетчик" родительского окна, обычно `CDialog`. Он не должен быть **значение NULL.**  
+ *pParentWnd*  
+ Указатель на кнопку элемента управления "Счетчик" родительского окна, обычно `CDialog`. Оно не должно быть NULL.  
   
- `nID`  
+ *nID*  
  Указывает идентификатор элемента управления "Счетчик" кнопки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если инициализация выполнена успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Создании `CSpinButtonCtrl` объекта сначала в два этапа, вызовите конструктор, а затем вызвать **создать**, который создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.  
+ Создании `CSpinButtonCtrl` объекта сначала в два этапа, вызовите конструктор, а затем вызвать `Create`, который создает счетчик-элемент управления и прикрепляет его к `CSpinButtonCtrl` объекта.  
   
- Чтобы создать счетчик-элемент управления с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо **создать**.  
+ Чтобы создать счетчик-элемент управления с расширенные стили окна, вызовите [CSpinButtonCtrl::CreateEx](#createex) вместо `Create`.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  Создает элемент управления (дочернего окна) и связывает его с `CSpinButtonCtrl` объекта.  
@@ -152,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список windows расширенных стилей см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
+ *dwExStyle*  
+ Указывает расширенный стиль создаваемого элемента управления. Список windows расширенных стилей см. в разделе *dwExStyle* параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
- `dwStyle`  
+ *dwStyle*  
  Задает стиль кнопки элемента управления "Счетчик". Любое сочетание стилей элемента управления "Счетчик" кнопку примените к элементу управления. Эти стили описаны в [стили элемента управления вверх / вниз](http://msdn.microsoft.com/library/windows/desktop/bb759885) в Windows SDK.  
   
- `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ *Rect*  
+ Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты *pParentWnd*.  
   
- `pParentWnd`  
+ *pParentWnd*  
  Указатель на окно, который является родительским для элемента управления.  
   
- `nID`  
+ *nID*  
  Идентификатор элемента управления дочернего окна.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
+ Используйте `CreateEx` вместо [создать](#create) расширенные стили Windows, заданные вводной части расширенный стиль Windows WS_EX_ вступили в силу.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  Создает объект `CSpinButtonCtrl`.  
@@ -190,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nAccel`  
- Количество элементов массива, заданного параметром `pAccel`.  
+ *nAccel*  
+ Количество элементов массива, заданного параметром *pAccel*.  
   
- `pAccel`  
+ *pAccel*  
  Указатель на массив [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структуры, которые получает данные для ускорения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -228,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>Параметры  
  *lpbError*  
- Указатель на значение типа boolean, значение равно нулю, если значение успешно получены, или ненулевое значение, если произошла ошибка. Если этот параметр имеет значение **NULL**, ошибки не отображаются.  
+ Указатель на значение типа boolean, значение равно нулю, если значение успешно получены, или ненулевое значение, если произошла ошибка. Если этот параметр имеет значение NULL, ошибки не отображаются.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Первая версия возвращает 16-разрядное текущую позицию в младшее слово. Старшее слово ненулевое значение, если произошла ошибка.  
@@ -276,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nAccel`  
- Число [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структур, указанных `pAccel`.  
+ *nAccel*  
+ Число [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) структур, указанных *pAccel*.  
   
- `pAccel`  
- Указатель на массив `UDACCEL` структуры, которые содержат сведения для ускорения. Элементы должны быть отсортированы по возрастанию на основе **nSec** член.  
+ *pAccel*  
+ Указатель на массив структур UDACCEL, которые содержат информацию ускорение. Элементы должны быть отсортированы в возрастающем порядке, основанном на `nSec` член.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
@@ -293,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nBase`  
+ *nBase*  
  Новый базовое значение для элемента управления. Он может быть 10 в качестве десятичного или 16 для шестнадцатеричной.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -310,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pWndBuddy`  
+ *pWndBuddy*  
  Указатель на окно нового контакта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -328,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nPos`  
+ *nPos*  
  Новое положение элемента управления. Это значение должно быть в диапазоне, определяемом верхняя и нижняя границы для элемента управления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -352,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `nLower` и `nUpper`.  
- Верхняя и нижняя границы для элемента управления. Для `SetRange`, ни ограничение может быть больше, чем **UD_MAXVAL** или меньше, чем **UD_MINVAL**; Кроме того, не может превышать разницу между двумя ограничениями **UD_MAXVAL**. `SetRange32` не накладывает ограничений на ограничения; Используйте любой целых чисел.  
+ *nLower* и *nUpper*  
+ Верхняя и нижняя границы для элемента управления. Для `SetRange`, ни ограничение может быть больше, чем UD_MAXVAL или меньше, чем UD_MINVAL; Кроме того, разница между двумя ограничениями не может превышать UD_MAXVAL. `SetRange32` не накладывает ограничений на ограничения; Используйте любой целых чисел.  
   
 ### <a name="remarks"></a>Примечания  
  Функция-член `SetRange32` задает 32-разрядным диапазоном для кнопки элемента управления "Счетчик".  

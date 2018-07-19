@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331078"
 ---
 # <a name="activation-verbs"></a>Активация. Команды
 В этой статье описываются play команд первичной и вторичной роли в OLE [активации](../mfc/activation-cpp.md).  

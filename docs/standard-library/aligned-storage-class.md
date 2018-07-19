@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958878"
 ---
 # <a name="alignedstorage-class"></a>Класс aligned_storage
 
@@ -39,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Параметры
 
-`Len` Размер объекта.
+*Len* размер объекта.
 
-`Align` Выравнивание объекта.
+*Выровнять* выравнивание объекта.
 
 ## <a name="remarks"></a>Примечания
 
-Определение типа `type` члена шаблона является синонимом типа POD с выравниванием `Align` и размером `Len`. `Align` должно быть равно `alignment_of<T>::value` для определенного типа `T` или выравниванию по умолчанию.
+Член шаблона typedef `type` является синонимом типа POD с выравниванием *выровнять* и размер *Len*. *Выровнять* должно быть равно `alignment_of<T>::value` для некоторого типа `T`, или выравниванию по умолчанию.
 
 ## <a name="example"></a>Пример
 

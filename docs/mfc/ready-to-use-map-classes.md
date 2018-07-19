@@ -18,26 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d9e21589fde2ff53d56908342620fe23aca5b1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e52cdb6e72825bbb2d4824123837ce9630bcb1b3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931714"
 ---
 # <a name="ready-to-use-map-classes"></a>Готовые классы сопоставления
 Следующие классы являются классы сопоставления готовые к использованию.  
   
  [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md)  
- Использует `void` указатели в качестве ключей для поиска других `void` указатели.  
+ Использует **void** указатели в качестве ключей для поиска других **void** указатели.  
   
  [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)  
- Использует `void` указатели в качестве ключей для поиска данных типа **WORD**.  
+ Использует **void** указатели в качестве ключей для поиска данных типа **WORD**.  
   
  [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)  
  Использует `CString` объектов в качестве ключей при поиске `CObject` указатели.  
   
  [CMapStringToPtr](../mfc/reference/cmapstringtoptr-class.md)  
- Использует `CString` объектов в качестве ключей при поиске `void` указатели.  
+ Использует `CString` объектов в качестве ключей при поиске **void** указатели.  
   
  [CMapStringToString](../mfc/reference/cmapstringtostring-class.md)  
  Использует `CString` объектов в качестве ключей для поиска других `CString` объектов.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
  Использует данные типа **WORD** найти `CObject` указатели.  
   
  [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)  
- Использует данные типа **WORD** найти `void` указатели.  
+ Использует данные типа **WORD** найти **void** указатели.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../mfc/class-library-overview.md)

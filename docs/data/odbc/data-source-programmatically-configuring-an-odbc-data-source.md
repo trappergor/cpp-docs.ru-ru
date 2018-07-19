@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091976"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Источник данных. Программная настройка источника данных ODBC
 В этом разделе объясняется, как программным образом можно настроить имена источников данных Open Database Connectivity (ODBC). Это обеспечивает гибкость для доступа к данным без перезагрузки пользователю явно использовать администратор ODBC или другие программы, чтобы указать имена источников данных.  

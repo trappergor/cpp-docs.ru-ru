@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052106"
 ---
 # <a name="data"></a>.DATA?
 При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), запускает near сегмента данных для неинициализированных данных (_BSS имя сегмента).  

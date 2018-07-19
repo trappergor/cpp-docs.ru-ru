@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849734"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Обновление проектов, созданных в предыдущих версиях Visual C++
 В большинстве случаев можно открыть проект, созданный в более ранней версии Visual Studio. Однако для этого Visual Studio обновляет проект. Если сохранить этот обновленный проект, его нельзя будет открыть в более ранней версии.  

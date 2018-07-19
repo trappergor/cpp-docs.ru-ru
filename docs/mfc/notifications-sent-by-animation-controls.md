@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345254"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Уведомления, отправленные элементами управления "Анимация"
 Элемент управления анимации ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) отправляет два различных типа сообщений уведомления. Уведомления отправляются в виде [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщений.  

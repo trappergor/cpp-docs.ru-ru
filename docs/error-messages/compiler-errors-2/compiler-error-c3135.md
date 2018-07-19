@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245739"
 ---
 # <a name="compiler-error-c3135"></a>Ошибка компилятора C3135
 «свойство»: свойство не может иметь тип «const» или «volatile» введите  

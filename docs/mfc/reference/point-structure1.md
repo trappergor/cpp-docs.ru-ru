@@ -1,5 +1,5 @@
 ---
-title: ТОЧКА Structure1 | Документы Microsoft
+title: ТОЧКА Structure1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a31af23b336e5a911b62d23d0cce2795aa66f0f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de172814db04ab8d057f84a29ce505896f89adc9
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335338"
 ---
 # <a name="point-structure1"></a>ТОЧКА Structure1
-**ТОЧКИ** структура определяет x*-* и координаты y точки.  
+`POINT` Структура определяет x*-* и координаты y точки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,10 +39,10 @@ typedef struct tagPOINT {
   
 #### <a name="parameters"></a>Параметры  
  *x*  
- Задает координату x точки.  
+ Задает координату по оси x точки.  
   
  *y*  
- Задает координату y точки.  
+ Задает координату по оси y точки.  
   
 ## <a name="example"></a>Пример  
  [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  

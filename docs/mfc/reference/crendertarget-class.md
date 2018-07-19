@@ -124,11 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7550e3e3d8bf7e49f9f93ea6e9a931d6567ef0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ab1f4a056e1a65475a71ede0b51db45189d2dd9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079764"
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 Программа-оболочка для ID2D1RenderTarget.  
@@ -143,14 +144,14 @@ class CRenderTarget : public CObject;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::CRenderTarget](#crendertarget)|Создает объект CRenderTarget.|  
 |[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CRenderTarget::BeginDraw](#begindraw)|Инициирует рисования в этом целевом объекте отрисовки.|  
@@ -204,19 +205,19 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::VerifyResource](#verifyresource)|Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Возвращает интерфейс ID2D1RenderTarget|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|Список указателей на объекты CD2DResource.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Указатель на объект ID2D1RenderTarget.|  
@@ -245,7 +246,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Существующий интерфейс цели отрисовки. Не может иметь значение NULL  
   
 ##  <a name="begindraw"></a>  CRenderTarget::BeginDraw  
@@ -263,7 +264,7 @@ void Clear(D2D1_COLOR_F color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  Цвет, который очищается области рисования.  
   
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR  
@@ -276,10 +277,10 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `color`  
+ *Цвет*  
  RGB-значение.  
   
- `nAlpha`  
+ *nAlpha*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение D2D1_COLOR_F.  
@@ -297,19 +298,19 @@ BOOL CreateCompatibleRenderTarget(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bitmapTarget`  
+ *bitmapTarget*  
  По возвращении из этого метода содержит адрес указателя на новый целевой объект отрисовки растрового изображения. Этот параметр передается неинициализированным.  
   
- `sizeDesired`  
+ *sizeDesired*  
  По размеру нового целевого объекта отрисовки в аппаратно независимых пикселях, если он должен отличаться от исходного целевым объектом прорисовки или NULL. Дополнительные сведения см. в разделе "Примечания".  
   
- `sizePixelDesired`  
+ *sizePixelDesired*  
  По размеру нового целевого объекта отрисовки в пикселях, если он должен отличаться от исходного целевым объектом прорисовки или NULL. Дополнительные сведения см. в разделе "Примечания".  
   
- `desiredFormat`  
+ *desiredFormat*  
  Формат нужную точку и альфа-режим нового целевым объектом прорисовки или NULL. Если формат пикселей для DXGI_FORMAT_UNKNOWN или если этот параметр имеет значение null, новый целевой объект отрисовки использует тот же формат пикселей, как исходный целевым объектом прорисовки. Если альфа-режим — D2D1_ALPHA_MODE_UNKNOWN или этот параметр имеет значение NULL, альфа-режим нового целевого объекта отрисовки по умолчанию D2D1_ALPHA_MODE_PREMULTIPLIED. Сведения о поддерживаемых форматов пикселей см. Поддерживаемые форматы точек и режимов альфа-канал.  
   
- `options`  
+ *Параметры*  
  Значение, указывающее, является ли новый целевой объект отрисовки должен быть совместим с GDI.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -330,7 +331,7 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bDeleteResources`  
+ *bDeleteResources*  
  Если bDeleteResources имеет значение TRUE, все ресурсы, расположенные в m_lstResources будет автоматически удаляется.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -359,19 +360,19 @@ void DrawBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pBitmap`  
+ *pBitmap*  
  Битовая карта для подготовки к просмотру.  
   
- `rectDest`  
+ *rectDest*  
  Размер и положение в аппаратно независимых пикселях в целевом объекте отрисовки системы координат, области, в которую рисуется растровое изображение. Если не упорядоченный прямоугольника, не выводится ничего, но целевой объект отрисовки не переходят в состояние ошибки.  
   
- `fOpacity`  
+ *fOpacity*  
  Значение в диапазоне от 0, 0f до 1, 0f, включительно, указывающее значение непрозрачности для применения к растровому изображению; Это значение умножается на альфа-значения содержимого растрового изображения.  
   
- `interpolationMode`  
+ *interpolationMode*  
  Режим интерполяции, используемый Если растровое изображение масштабируется или поворачивать операции рисования.  
   
- `pRectSrc`  
+ *pRectSrc*  
  Размер и положение в аппаратно независимых пикселях в координатное пространство растрового изображения, области в растровое изображение для отрисовки.  
   
 ##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse  
@@ -386,16 +387,16 @@ void DrawEllipse(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ellipse`  
+ *эллипс*  
  Положение и радиус эллипса для отрисовки в аппаратно независимых пикселях.  
   
- `pBrush`  
+ *pBrush*  
  Кисть, используемую для рисования контура эллипса.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Толщина контура эллипса. Штриха центрируется на контура эллипса.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха для применения контура эллипса, или значение NULL для закрашивания сплошной штриха.  
   
 ##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry  
@@ -410,16 +411,16 @@ void DrawGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGeometry`  
+ *pGeometry*  
  Geometry для отрисовки.  
   
- `pBrush`  
+ *pBrush*  
  Кисть для отрисовки обводки геометрии.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Толщину обводки геометрии. Штриха центрируется на геометрии структуры.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха для применения структуры геометрии, или значение NULL для закрашивания сплошной штриха.  
   
 ##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun  
@@ -434,16 +435,16 @@ void DrawGlyphRun(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptBaseLineOrigin`  
+ *ptBaseLineOrigin*  
  Источник в аппаратно независимых пикселях Базовые глифы в объекте.  
   
- `glyphRun`  
+ *glyphRun*  
  Глифы для отображения.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Кисть для отрисовки указанного глифов.  
   
- `measuringMode`  
+ *measuringMode*  
  Значение, указывающее, как метрики глифа используются для определения текста, при форматировании. Значение по умолчанию — DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawline"></a>  CRenderTarget::DrawLine  
@@ -459,19 +460,19 @@ void DrawLine(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptFrom`  
+ *ptFrom*  
  Начальная точка строки в аппаратно независимых пикселях.  
   
- `ptTo`  
+ *ptTo*  
  Конечная точка строки в аппаратно независимых пикселях.  
   
- `pBrush`  
+ *pBrush*  
  Кисть для отрисовки линии обводки.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Значение больше или равно 0, 0f, указывающее толщину обводки. Если этот параметр не указан, то по умолчанию 1, 0f. Штриха выравнивается по центру в строке.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха рисования, или значение NULL для закрашивания сплошная линия.  
   
 ##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle  
@@ -486,16 +487,16 @@ void DrawRectangle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Размеры прямоугольника для рисования в аппаратно независимых пикселях  
   
- `pBrush`  
+ *pBrush*  
  Кисть, используемую для отрисовки прямоугольника штриха  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Значение больше или равно 0, 0f, указывающее толщину обводки прямоугольника. Штриха центрируется на контура прямоугольника.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха рисования, или значение NULL для закрашивания сплошной штриха.  
   
 ##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle  
@@ -510,16 +511,16 @@ void DrawRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rectRounded`  
+ *rectRounded*  
  Размеры прямоугольника с закругленными углами для отрисовки в аппаратно независимых пикселях.  
   
- `pBrush`  
+ *pBrush*  
  Кисть для отрисовки структуры Скругленный прямоугольник.  
   
- `fStrokeWidth`  
+ *fStrokeWidth*  
  Толщина штриха Скругленный прямоугольник. Штриха центрируется на структуры Скругленный прямоугольник. Значение по умолчанию — 1, 0f.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха Скругленный прямоугольник, или значение NULL для закрашивания сплошной штриха. Значение по умолчанию — NULL.  
   
 ##  <a name="drawtext"></a>  CRenderTarget::DrawText  
@@ -536,22 +537,22 @@ void DrawText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strText`  
+ *strText*  
  Указатель на массив знаков Юникода для рисования.  
   
- `rect`  
+ *Rect*  
  Размер и положение области, в которой рисуется текст.  
   
- `pForegroundBrush`  
+ *pForegroundBrush*  
  Кисть для отрисовки текста.  
   
- `textFormat`  
+ *textFormat*  
  Объект, который описывает форматирование сведений текст для отрисовки, например шрифт, размер шрифта и направление потока.  
   
- `options`  
+ *Параметры*  
  Значение, указывающее, должны быть привязаны текст к границам ячейки и должно быть обрезано текст в прямоугольник размещения. Значение по умолчанию — D2D1_DRAW_TEXT_OPTIONS_NONE, который указывает, что текст должны быть привязаны к границам ячейки, и он не будет обрезано в прямоугольник размещения.  
   
- `measuringMode`  
+ *measuringMode*  
  Значение, указывающее, как метрики глифа используются для определения текста, при форматировании. Значение по умолчанию — DWRITE_MEASURING_MODE_NATURAL.  
   
 ##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout  
@@ -566,16 +567,16 @@ void DrawTextLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ptOrigin`  
+ *ptOrigin*  
  Точка, описанные в аппаратно независимых пикселях, на которых строится верхнего левого угла описываемого textLayout текста.  
   
- `textLayout`  
+ *textLayout*  
  Форматированный текст для отрисовки. Все эффекты рисования, которые не наследуются от ID2D1Resource игнорируются. При наличии эффекты рисования, наследующие от ID2D1Resource, не кисти, этот метод завершается ошибкой, и в целевом объекте отрисовки помещается в состоянии ошибки.  
   
- `pBrushForeground`  
+ *pBrushForeground*  
  Кисть для отрисовки любой текст в textLayout, не имеет кисть, связанную с ним как эффекта рисования (указанный с помощью метода IDWriteTextLayout::SetDrawingEffect).  
   
- `options`  
+ *Параметры*  
  Значение, указывающее, должны быть привязаны текст к границам ячейки и должно быть обрезано текст в прямоугольник размещения. Значение по умолчанию — D2D1_DRAW_TEXT_OPTIONS_NONE, который указывает, что текст должны быть привязаны к границам ячейки, и он не будет обрезано в прямоугольник размещения.  
   
 ##  <a name="enddraw"></a>  CRenderTarget::EndDraw  
@@ -598,10 +599,10 @@ void FillEllipse(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `ellipse`  
+ *эллипс*  
  Положение и radius в аппаратно независимых пикселях для рисования эллипса.  
   
- `pBrush`  
+ *pBrush*  
  Кисть, используемую для рисования внутренней части эллипса.  
   
 ##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry  
@@ -615,13 +616,13 @@ void FillGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pGeometry`  
+ *pGeometry*  
  Geometry для рисования.  
   
- `pBrush`  
+ *pBrush*  
  Кисть, используемая для закрашивания геометрию внутренними.  
   
- `pOpacityBrush`  
+ *pOpacityBrush*  
  Маски непрозрачности для применения к геометрии; Значение NULL для маски непрозрачности отсутствуют. Если указан маски непрозрачности (параметр opacityBrush), кисти должен быть ID2D1BitmapBrush, который имеет значение D2D1_EXTEND_MODE_CLAMP режимов расширить x и y. Дополнительные сведения см. в разделе "Примечания".  
   
 ##  <a name="fillmesh"></a>  CRenderTarget::FillMesh  
@@ -634,10 +635,10 @@ void FillMesh(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pMesh`  
+ *pMesh*  
  Сетка для рисования.  
   
- `pBrush`  
+ *pBrush*  
  Кисть для отрисовки сетки.  
   
 ##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask  
@@ -653,19 +654,19 @@ void FillOpacityMask(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pOpacityMask`  
+ *pOpacityMask*  
  Положение и radius в аппаратно независимых пикселях для рисования эллипса.  
   
- `pBrush`  
+ *pBrush*  
  Кисть для отрисовки области целевого объекта отрисовки, заданные destinationRectangle.  
   
- `content`  
+ *содержимое*  
  Содержит тип содержимого с маской непрозрачности. Значение используется для определения цветовое пространство, в котором смешивается маски непрозрачности.  
   
- `rectDest`  
+ *rectDest*  
  Область рисования в аппаратно независимых пикселях целевого объекта отрисовки.  
   
- `rectSrc`  
+ *rectSrc*  
  Область растрового изображения для использования в качестве маску непрозрачности в аппаратно независимых пикселях.  
   
 ##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle  
@@ -678,10 +679,10 @@ void FillRectangle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rect`  
+ *Rect*  
  Измерение прямоугольника для рисования в аппаратно независимых пикселях.  
   
- `pBrush`  
+ *pBrush*  
  Фона элемента кисть, используемую для отрисовки прямоугольника.  
   
 ##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle  
@@ -694,10 +695,10 @@ void FillRoundedRectangle(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rectRounded`  
+ *rectRounded*  
  Размеры прямоугольника с закругленными углами для отрисовки в аппаратно-независимых пикселях.  
   
- `pBrush`  
+ *pBrush*  
  Кисть, используемую для рисования внутренней прямоугольника с закругленными углами.  
   
 ##  <a name="flush"></a>  CRenderTarget::Flush  
@@ -710,10 +711,10 @@ void Flush(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `tag1`  
+ *tag1*  
  Содержит тег для рисования, вызвавших ошибки или 0, если ошибки отсутствуют. Этот параметр передается неинициализированным.  
   
- `tag2`  
+ *tag2*  
  Содержит тег для рисования, вызвавших ошибки или 0, если ошибки отсутствуют. Этот параметр передается неинициализированным.  
   
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode  
@@ -796,10 +797,10 @@ void GetTags(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `tag1`  
+ *tag1*  
  Содержит первую метку для последующих операций рисования. Этот параметр передается неинициализированным. Если задано значение NULL, значение не извлекается для этого параметра.  
   
- `tag2`  
+ *tag2*  
  Содержит второй метки для последующих операций рисования. Этот параметр передается неинициализированным. Если задано значение NULL, значение не извлекается для этого параметра.  
   
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode  
@@ -820,7 +821,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `textRenderingParams`  
+ *textRenderingParams*  
  По возвращении из этого метода textRenderingParamscontains адрес указателя в целевом объекте отрисовки текущего параметры отрисовки текста.  
   
 ##  <a name="gettransform"></a>  CRenderTarget::GetTransform  
@@ -831,7 +832,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `transform`  
+ *transform*  
  Преобразования для применения в целевом объекте отрисовки.  
   
 ##  <a name="issupported"></a>  CRenderTarget::IsSupported  
@@ -842,7 +843,7 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `renderTargetProperties`  
+ *renderTargetProperties*  
  Свойства целевого объекта отрисовки для тестирования  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -913,10 +914,10 @@ void PushAxisAlignedClip(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `rectClip`  
+ *rectClip*  
  Размер и положение области отсечения в аппаратно независимых пикселях.  
   
- `mode`  
+ *mode*  
  Режим сглаживания, который используется для отрисовки краев clip прямоугольники, имеют субточечное границы и blend клип с содержимым сцены. Наложение выполняется после при вызывается метод PopAxisAlignedClip и не относится к каждый примитив, на уровне.  
   
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer  
@@ -929,10 +930,10 @@ void PushLayer(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `layerParameters`  
+ *layerParameters*  
  Границы содержимого, геометрические маски, прозрачность, маской непрозрачности и параметры сглаживания для слоя.  
   
- `layer`  
+ *слой*  
  Уровень, который получает последующих операций рисования.  
   
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState  
@@ -943,7 +944,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  Новое состояние рисования целевого объекта отрисовки.  
   
 ##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState  
@@ -954,7 +955,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `drawingStateBlock`  
+ *drawingStateBlock*  
  По возвращении из этого метода содержит текущее состояние отображения целевого объекта отрисовки. Этот параметр необходимо инициализировать перед передачей его в метод.  
   
 ##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode  
@@ -965,7 +966,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `antialiasMode`  
+ *antialiasMode*  
  Режим сглаживания для будущих операций рисования.  
   
 ##  <a name="setdpi"></a>  CRenderTarget::SetDpi  
@@ -976,7 +977,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `sizeDPI`  
+ *sizeDPI*  
  Значение больше или равно 0, указывающее горизонтальное/verticalDPI целевого объекта отрисовки.  
   
 ##  <a name="settags"></a>  CRenderTarget::SetTags  
@@ -989,10 +990,10 @@ void SetTags(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `tag1`  
+ *tag1*  
  Метку для применения для последующих операций рисования.  
   
- `tag2`  
+ *tag2*  
  Метку для применения для последующих операций рисования.  
   
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode  
@@ -1003,7 +1004,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `textAntialiasMode`  
+ *textAntialiasMode*  
  Режим сглаживания, используемый для последующего текста и операций рисования глифов.  
   
 ##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams  
@@ -1014,7 +1015,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `textRenderingParams`  
+ *textRenderingParams*  
  Параметры отрисовки текста, применяемые ко всем весь последующий текст и глиф операции; Значение NULL, чтобы очистить текущие параметры отрисовки текста.  
   
 ##  <a name="settransform"></a>  CRenderTarget::SetTransform  
@@ -1026,7 +1027,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `transform`  
+ *transform*  
  Преобразования для применения в целевом объекте отрисовки.  
   
 ##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource  
@@ -1037,7 +1038,7 @@ BOOL VerifyResource(CD2DResource* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Указатель на объект CD2DResource.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

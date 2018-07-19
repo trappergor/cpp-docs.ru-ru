@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961595"
 ---
 # <a name="iscompound-class"></a>Класс is_compound
 
@@ -36,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>Параметры
 
-`Ty` Запрашиваемый тип.
+*Ty* запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит `false` Если тип `Ty` — фундаментальный тип (то есть, если [is_fundamental](../standard-library/is-fundamental-class.md)\<за этот год > содержит `true`); в противном случае он содержит `true`. Таким образом, предикат имеет значение `true`, если `Ty` является типом массива, типом функции, указателем на `void`, на объект или функцию, ссылкой, классом, объединением, перечислением или указателем на нестатический член класса или форму *cv-qualified* одного из них.
+Экземпляр предиката типа содержит **false** Если тип *Ty* — фундаментальный тип (то есть, в том случае, если [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > содержит  **значение true,**); в противном случае он содержит **true**. Таким образом, предикат имеет **true** Если *Ty* является типом массива, типом функции, указателем на **void** или объект или функцию, ссылку, классом, объединением, перечислением или указатель на член нестатического класса, или *квалифицированная* форму одного из них.
 
 ## <a name="example"></a>Пример
 

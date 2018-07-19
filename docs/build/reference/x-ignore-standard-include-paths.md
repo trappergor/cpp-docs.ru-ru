@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376472"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Отклонение стандартных путей включения)
 Запрещает компилятору поиск включаемых файлов в папках, указанных в переменных среды PATH и INCLUDE.  

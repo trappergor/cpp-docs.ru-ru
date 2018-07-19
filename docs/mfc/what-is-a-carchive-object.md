@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383838"
 ---
 # <a name="what-is-a-carchive-object"></a>Понятие объекта CArchive
 Объект `CArchive` объект предоставляет механизм типобезопасный буферизации для записи или чтения сериализуемых объектов в `CFile` объекта. Обычно `CFile` представляет файл на диске; Однако он также может быть файл памяти (`CSharedFile` объекта), возможно, представляющий в буфер обмена.  

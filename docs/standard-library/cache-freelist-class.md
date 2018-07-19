@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960421"
 ---
 # <a name="cachefreelist-class"></a>Класс cache_freelist
 
@@ -39,26 +40,26 @@ class cache_freelist
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Sz`|Число элементов в массиве, которые нужно выделить.|
-|`Max`|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Число элементов в массиве, которые нужно выделить.|
+|*Max*|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона cache_freelist ведет список свободных блоков памяти размером `Sz`. При заполнении списка свободных блоков он использует `operator delete` для освобождения блоков памяти. Когда список свободных блоков пустой, он использует `operator new` для выделения новых блоков памяти. Максимальный размер списка свободных блоков определяется классом max, переданным в параметре `Max`.
+Класс шаблона cache_freelist ведет список свободных блоков памяти размером *Sz*. При заполнении списка свободных блоков он использует **оператор delete** для освобождения блоков памяти. Когда список свободных пуст он использует **оператор new** для выделения новых блоков памяти. Максимальный размер списка свободных блоков определяется классом max, переданным в *Max* параметра.
 
-Каждый блок памяти содержит `Sz` байт свободной памяти и данных, которые требуются `operator new` и `operator delete`.
+Каждый блок памяти содержит *Sz* байт свободной памяти и данные, **оператор new** и **оператор delete** требуют.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[cache_freelist](#cache_freelist)|Создает объект типа `cache_freelist`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -79,9 +80,9 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`count`|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число элементов в массиве, которые нужно выделить.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -109,10 +110,10 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|
-|`count`|Количество объектов для освобождения из хранилища.|
+|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*count*|Количество объектов для освобождения из хранилища.|
 
 ### <a name="remarks"></a>Примечания
 

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonButton | Документы Microsoft
+title: Класс CMFCRibbonButton | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -124,11 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850024"
 ---
 # <a name="cmfcribbonbutton-class"></a>Класс CMFCRibbonButton
 Класс `CMFCRibbonButton` реализует кнопки, которые можно размещать на элементах ленты, например на панелях, панелях быстрого доступа и во всплывающих меню.  
@@ -145,13 +146,13 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Создает объект "кнопка ленты".|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|Добавляет во всплывающее меню элемент, связанный с кнопкой.|  
 |[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Переопределяет [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|  
@@ -208,7 +209,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::OnClick](#onclick)|Вызывается платформой по нажатию кнопки.|  
   
@@ -218,7 +219,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
 ## <a name="remarks"></a>Примечания  
- Использование кнопки "Лента" в приложении, создать объект "Кнопка" и добавьте его в нужную ленту [панель](../../mfc/reference/cmfcribbonpanel-class.md).  
+ Чтобы использовать кнопку ленты в приложении, создайте объект кнопки и его добавления нужную ленту [панели](../../mfc/reference/cmfcribbonpanel-class.md).  
   
 ```  
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -260,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  Определяет указатель на новый элемент для добавления.  
   
- [in] `nIndex`  
- Указывает индекс, по которому следует добавить элемент в массив элементов меню кнопки. -1, чтобы добавить элемент в конце массив элементов меню.  
+ [in] *nIndex*  
+ Указывает индекс, по которому следует добавить элемент в массив элементов меню, кнопки; -1, чтобы добавить элемент в конце массив элементов меню.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -317,23 +318,23 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды кнопки.  
   
- [in] `lpszText`  
- Указывает текст метки кнопки.  
+ [in] *lpszText*  
+ Задает текстовую подпись кнопки.  
   
- [in] `nSmallImageIndex`  
- Задает отсчитываемый от нуля индекс кнопки маленьких изображений в списке изображений родительской категории.  
+ [in] *nSmallImageIndex*  
+ Указывает отсчитываемый от нуля индекс кнопки небольшое изображение в списке изображений родительской категории.  
   
- [in] `nLargeImageIndex`  
- Задает отсчитываемый от нуля индекс большого изображения кнопки в списке изображений родительской категории.  
+ [in] *nLargeImageIndex*  
+ Указывает отсчитываемый от нуля индекс кнопки большое изображение в списке изображений родительской категории.  
   
- [in] `hIcon`  
- Указывает дескриптор значка, который использует приложение в качестве изображения кнопки.  
+ [in] *hIcon*  
+ Указывает дескриптор для значка, который приложение использует в качестве изображение кнопки.  
   
 ### <a name="example"></a>Пример  
- Следующий пример демонстрирует `CMFCRibbonButton` объекта.  
+ В следующем примере демонстрируется создание `CMFCRibbonButton` объекта.  
   
  [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
@@ -347,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in] *основного контроллера домена*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -365,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in] *основного контроллера домена*  
+ [in] *тип*  
+ [in] *rectImage*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -384,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in] *основного контроллера домена*  
+ [in] *strText*  
+ [in] *rectText*  
+ [in] *uiDTFlags*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -402,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
+ [in] *uiID*  
  Указывает идентификатор команды всплывающего меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс вложенным элементом, с которым связан `uiID`. -1, если такой вложенный элемент.  
+ Отсчитываемый от нуля индекс вложенным элементом, с которым связан *uiID*. -1, если такой вложенный элемент отсутствует.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -427,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -441,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLargeIcon`  
+ [in] *bLargeIcon*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -455,11 +456,11 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bLargeImage`  
- Если `TRUE`, возвращает индекс изображения в списке изображений, который содержит большие изображения; в противном случае возвращает индекс изображения в списке изображений, содержащий маленькие изображения.  
+ [in] *bLargeImage*  
+ Если значение равно TRUE, возвращает индекс изображения в списке изображений, содержащий больших изображений; в противном случае возвращает индекс изображения в списке изображений, содержащий изображений небольшого размера.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Индекс изображения кнопки в списке нужный образ.  
+ Индекс изображения, кнопки в списке нужный образ.  
   
 ##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize  
 
@@ -469,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `type`  
+ [in] *тип*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -483,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -497,7 +498,7 @@ HMENU GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор меню Windows, назначенные кнопки. `NULL` существует ли меню не назначен.  
+ Дескриптор меню Windows, назначенного кнопке панели; Значение NULL, если меню не назначен.  
   
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
@@ -518,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -646,14 +647,14 @@ virtual BOOL IsCommandAreaHighlighted() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand  
- Указывает, включена ли команда по умолчанию для кнопки на ленте.  
+ Указывает, включена ли команда по умолчанию для кнопки ленты.  
   
 ```  
 BOOL IsDefaultCommand() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если включена команда по умолчанию для кнопки на ленте; `FALSE` в противном случае.  
+ Значение TRUE, если вы включили команды по умолчанию для кнопки на ленте; Значение FALSE в противном случае.  
   
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
@@ -729,7 +730,7 @@ BOOL IsRightAlignMenu() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если меню по правому краю; в противном случае `FALSE`.  
+ Значение TRUE, если меню по правому краю; в противном случае — значение FALSE.  
   
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
@@ -750,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -762,11 +763,11 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
+ [in] *точки*  
  Задает положение щелчка мыши.  
   
 ### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, если требуется обработать это событие.  
+ Переопределите этот метод в производном классе, если вы хотите обработать это событие.  
   
 ##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw  
 
@@ -776,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -788,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -800,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -821,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- Задает отсчитываемый от нуля индекс элемента меню, которую требуется удалить.  
+ [in] *nIndex*  
+ Указывает отсчитываемый от нуля индекс пункта меню, который требуется удалить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если указанный элемент был удален успешно. в противном случае `FALSE` Если `nIndex` меньше нуля или превышает число элементов меню в контекстном меню.  
+ Значение TRUE, если указанный элемент был удален успешно; в противном случае значение FALSE, если *nIndex* является отрицательным или превышает число элементов меню в контекстном меню.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData  
  Задает данные специальных возможностей для кнопки ленты.  
@@ -837,14 +838,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
+ *pParent*  
  Родительское окно для элемента ленты.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для элемента ленты.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение `TRUE` , если успешно; в противном случае — FALSE.  
+ Возвращает значение TRUE, если выполнение прошло успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -856,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
- Если `TRUE`, на кнопке отображается большое изображение. В противном случае кнопка отображает небольшое изображение.  
+ [in] *bSet*  
+ Значение TRUE, если кнопка отображает большое изображение. В противном случае кнопка отображает небольшое изображение.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Делает для кнопки ленты доступной команду по умолчанию.  
@@ -867,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
- Если `TRUE`, кнопки можно выполнить команду его по умолчанию. Если `FALSE`, кнопки невозможно выполнить команду его по умолчанию.  
+ [in] *bSet*  
+ Если значение равно TRUE, кнопки можно выполнить команды по умолчанию. Если значение равно FALSE, кнопка не удается выполнить команду его по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
- `bSet` имеет смысл только в том случае, когда кнопка имеет меню. Если `bSet` — `TRUE`, кнопки можно выполнить его команду по умолчанию и назначенный во всплывающем меню отображается только в том случае, когда пользователь щелкает стрелку справа от кнопки. В противном случае — кнопку невозможно выполнить команду его по умолчанию и во всплывающем меню появляется независимо от того, какие области кнопки пользователь нажимает кнопку.  
+ *bSet* действителен только в том случае, когда кнопка имеет меню. Если *bSet* имеет значение TRUE, кнопки может выполнить его команду по умолчанию и назначенные всплывающее меню отображается только в том случае, когда пользователь щелкает стрелку справа от кнопки. В противном случае кнопки не удается выполнить команду его по умолчанию, и во всплывающем меню отображается, независимо от того, какие области кнопки пользователь нажимает кнопку.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -881,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -895,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nIndex`  
- Указывает индекс изображения.  
+ [in] *nIndex*  
+ Задает индекс изображения.  
   
- [in] `bLargeImage`  
- Если `TRUE`, ссылается по указанному индексу из списка больших изображений. В противном случае индекс относится к списку маленькие изображения.  
+ [in] *bLargeImage*  
+ Значение TRUE, если указанный индекс относится к списку больших изображений. В противном случае индекс относится к списку изображений небольшого размера.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Назначает всплывающее меню кнопке ленты.  
@@ -917,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hMenu`  
+ *hMenu*  
  Дескриптор меню Windows.  
   
- `bIsDefaultCommand`  
- Если `TRUE`, кнопки могут выполнять команды по умолчанию; в противном случае кнопка отображает всплывающее меню.  
+ *bIsDefaultCommand*  
+ Если значение равно TRUE, кнопки можно выполнить команды по умолчанию; в противном случае кнопка отображает раскрывающееся меню.  
   
- `bRightAlign`  
- Если `TRUE`, меню по правому краю. В противном случае меню по левому краю.  
+ *bRightAlign*  
+ Значение TRUE, если меню по правому краю. В противном случае меню по левому краю.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  Идентификатор ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
- Когда приложение назначает меню кнопки, кнопки отображает стрелку справа от него. Если `bIsDefaultCommand` — `TRUE`, меню отображается только в том случае, когда пользователь щелкает стрелку. Если пользователь нажимает кнопку, выполняется ее команды по умолчанию. Если `bIsDefaultCommand` — `FALSE`, появится меню, щелкнув в любом месте на кнопке.  
+ Когда приложение назначает меню кнопки, кнопки отображает стрелки справа от него. Если *bIsDefaultCommand* имеет значение TRUE, меню отображается только в том случае, когда пользователь щелкает стрелку. Если пользователь нажимает кнопку, выполняется его команда по умолчанию. Если *bIsDefaultCommand* имеет значение FALSE, то появится меню, щелкнув в любом на кнопке.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -940,20 +941,20 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParent`  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
- Располагает всплывающее меню края кнопки.  
+ Располагает всплывающее меню до края кнопки.  
   
 ```  
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bSet`  
- Если `TRUE`, меню по правому краю. В противном случае меню по левому краю  
+ [in] *bSet*  
+ Значение TRUE, если меню по правому краю. В противном случае меню по левому краю  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 
@@ -963,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>Примечания  
   

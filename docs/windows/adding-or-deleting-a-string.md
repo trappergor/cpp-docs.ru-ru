@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858761"
 ---
 # <a name="adding-or-deleting-a-string"></a>Добавление или удаление строки
 Можно быстро вставить новые записи в таблице строк с помощью редактора. Новые строки помещаются в конец таблицы и получают следующий доступный идентификатор. Затем можно изменить свойства идентификатора, значения или заголовка в [окно свойств](/visualstudio/ide/reference/properties-window) при необходимости.  

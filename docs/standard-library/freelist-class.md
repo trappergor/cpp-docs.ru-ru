@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9a8bf702f4373040a6f7255d67f551b5dbfa60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 05354361bd460f64daced16684e9f8b70de94898
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954116"
 ---
 # <a name="freelist-class"></a>Класс freelist
 
@@ -40,24 +41,24 @@ class freelist
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`Sz`|Число элементов в массиве, которые нужно выделить.|
-|`Max`|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
+|*sz*|Число элементов в массиве, которые нужно выделить.|
+|*Max*|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс шаблона управляет списком блоков памяти размером `Sz` с максимальной длиной списка, которая определяется классом max, переданным в `Max`.
+Этот класс шаблона управляет списком блоков памяти размером *Sz* с максимальной длиной списка, которая определяется классом max, переданный *Max*.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[freelist](#freelist)|Создает объект типа `freelist`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[pop](#pop)|Удаляет первый блок памяти из свободного списка.|
 |[push](#push)|Добавляет блок памяти в список.|
@@ -92,7 +93,7 @@ void *pop();
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает `NULL`, если список пуст. В противном случае удаляет первый блок памяти из списка.
+Функция-член возвращает значение NULL, если список пуст. В противном случае удаляет первый блок памяти из списка.
 
 ## <a name="push"></a>  freelist::push
 
@@ -104,17 +105,17 @@ bool push(void* ptr);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`ptr`|Указатель на блок памяти, которые необходимо добавить в свободный список.|
+|*ptr*|Указатель на блок памяти, которые необходимо добавить в свободный список.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если функция `full` класса max возвращает `false`; в противном случае функция `push` возвращает `false`.
+**значение true,** Если `full` функция класса max возвращает **false**; в противном случае `push` возвращает **false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если функция `full` класса max возвращает `false`, эта функция-член добавляет блок памяти, на который указывает `ptr`, в начало списка.
+Если `full` функция класса max возвращает **false**, эта функция-член добавляет блок памяти, на которые указывают *ptr* в начало списка.
 
 ## <a name="see-also"></a>См. также
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414680"
 ---
 # <a name="expressions-with-binary-operators"></a>Выражения с бинарными операторами
 Бинарные операторы действуют на два операнда в выражении. Используются следующие бинарные операторы.  

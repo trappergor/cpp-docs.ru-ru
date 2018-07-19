@@ -26,16 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950452"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Реализация строки состояния в MFC
 Объект [CStatusBar](../mfc/reference/cstatusbar-class.md) объект является панель элементов управления со строкой панелей вывода текста. Панелей вывода используются строки сообщения, а индикаторы состояния. Примеры включают справочное сообщение строки меню, которые кратко объясните команду меню и индикаторы, которые показывают состояние SCROLL LOCK, NUM LOCK и другие ключи.  
   
- Начиная с MFC версии 4.0, строки состояния реализуются с помощью класса [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), который инкапсулирует стандартного элемента управления в строке состояния. Для обеспечения обратной совместимости MFC сохраняет старые реализация строки состояния в классе **COldStatusBar**. Документация для предыдущих версий MFC описывает **COldStatusBar** под `CStatusBar`.  
+ Начиная с MFC версии 4.0, строки состояния реализуются с помощью класса [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), который инкапсулирует стандартного элемента управления в строке состояния. Для обеспечения обратной совместимости MFC сохраняет старые реализация строки состояния в классе `COldStatusBar`. Документация для предыдущих версий MFC описывает `COldStatusBar` под `CStatusBar`.  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), функция-член новые 4.0 MFC позволяет воспользоваться преимуществами общих элементов управления Windows поддержка строки дополнительные функциональные возможности и настройки состояния. `CStatusBar` функции-члены обеспечивают большую часть функций общих элементов управления Windows; Тем не менее, при вызове `GetStatusBarCtrl`, можно дать вашей строки состояния даже несколько характеристик строки состояния. При вызове `GetStatusBarCtrl`, он возвращает ссылку на `CStatusBarCtrl` объекта. Можно использовать эту ссылку для управления строки состояния.  
   

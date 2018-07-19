@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368048"
 ---
 # <a name="inferred-dependents-and-rules"></a>Выводимые зависимости и правила
 Если существует применимое правило вывода NMAKE предполагает выводимую зависимость для целевого объекта. Правило применяется, если:  

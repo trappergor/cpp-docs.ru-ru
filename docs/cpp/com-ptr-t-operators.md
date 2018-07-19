@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408475"
 ---
 # <a name="comptrt-operators"></a>Операторы _com_ptr_t
 Сведения о `_com_ptr_t` операторы, в разделе [класс _com_ptr_t](../cpp/com-ptr-t-class.md).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347169"
 ---
 # <a name="dragging-images-from-an-image-list"></a>Перетаскивание изображений из списка изображений
 [CImageList](../mfc/reference/cimagelist-class.md) включает функции для перетаскивания изображения на экране. Функции перетаскивания, переместите изображение цветом и без любой мигания курсора. Можно перетащить маскированные и немаскированные изображения.  

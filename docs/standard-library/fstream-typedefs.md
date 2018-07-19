@@ -13,11 +13,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: fc87e3182e0ee1c8cb4079dd411f54dff0b4c993
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 49c5af53c6d174e7f87f75ad8970726c526db714
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962979"
 ---
 # <a name="ltfstreamgt-typedefs"></a>Определения типов &lt;fstream&gt;
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="filebuf"></a>  filebuf
 
-Тип `basic_filebuf`, специализированный на параметрах шаблона `char`.
+Тип `basic_filebuf` специализированный на **char** параметров шаблона.
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -37,11 +38,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_filebuf](../standard-library/basic-filebuf-class.md), специализированного для элементов типа `char` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_filebuf](../standard-library/basic-filebuf-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
 
 ## <a name="fstream"></a>  fstream
 
-Тип `basic_fstream`, специализированный на параметрах шаблона `char`.
+Тип `basic_fstream` специализированный на **char** параметров шаблона.
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -49,13 +50,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_fstream](../standard-library/basic-fstream-class.md), специализированного для элементов типа `char` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_fstream](../standard-library/basic-fstream-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
 
 ## <a name="ifstream"></a>  ifstream
 
-Определяет поток, который используется для последовательного чтения однобайтовых символов из файла. `ifstream` — это определение typedef, которое специализирует класс шаблона `basic_ifstream` для `char`.
+Определяет поток, который используется для последовательного чтения однобайтовых символов из файла. `ifstream` является определением типа, который специализирует класс шаблона `basic_ifstream` для **char**.
 
-Также существует `wifstream` — определение typedef, которое специализирует `basic_ifstream` для чтения двухбайтовых символов `wchar_t`. Дополнительные сведения см. в описании [wifstream](../standard-library/fstream-typedefs.md#wifstream).
+Имеется также `wifstream`, typedef, которое специализирует `basic_ifstream` для чтения **wchar_t** двухбайтовых символов. Дополнительные сведения см. в описании [wifstream](../standard-library/fstream-typedefs.md#wifstream).
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -63,7 +64,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>Примечания
 
-Тип является синонимом класса шаблона [basic_ifstream](../standard-library/basic-ifstream-class.md), специализированного для элементов типа char с признаками символов по умолчанию. Пример:
+Тип является синонимом класса шаблона [basic_ifstream](../standard-library/basic-ifstream-class.md), специализированного для элементов типа char с признаками символа по умолчанию. Пример:
 
 `using namespace std;`
 
@@ -83,7 +84,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ## <a name="ofstream"></a>  ofstream
 
-Тип `basic_ofstream`, специализированный на параметрах шаблона `char`.
+Тип `basic_ofstream` специализированный на **char** параметров шаблона.
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -91,11 +92,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_ofstream](../standard-library/basic-ofstream-class.md), специализированного для элементов типа `char` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_ofstream](../standard-library/basic-ofstream-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
 
 ## <a name="wfstream"></a>  wfstream
 
-Тип `basic_fstream`, специализированный на параметрах шаблона `wchar_t`.
+Тип `basic_fstream` специализированный на **wchar_t** параметров шаблона.
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -103,11 +104,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_fstream](../standard-library/basic-fstream-class.md), специализированного для элементов типа `wchar_t` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_fstream](../standard-library/basic-fstream-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="wifstream"></a>  wifstream
 
-Тип `basic_ifstream`, специализированный на параметрах шаблона `wchar_t`.
+Тип `basic_ifstream` специализированный на **wchar_t** параметров шаблона.
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -115,11 +116,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_ifstream](../standard-library/basic-ifstream-class.md), специализированного для элементов типа `wchar_t` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_ifstream](../standard-library/basic-ifstream-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="wofstream"></a>  wofstream
 
-Тип `basic_ofstream`, специализированный на параметрах шаблона `wchar_t`.
+Тип `basic_ofstream` специализированный на **wchar_t** параметров шаблона.
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -127,11 +128,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_ofstream](../standard-library/basic-ofstream-class.md), специализированного для элементов типа `wchar_t` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_ofstream](../standard-library/basic-ofstream-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-Тип `basic_filebuf`, специализированный на параметрах шаблона `wchar_t`.
+Тип `basic_filebuf` специализированный на **wchar_t** параметров шаблона.
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -139,7 +140,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип является синонимом класса шаблона [basic_filebuf](../standard-library/basic-filebuf-class.md), специализированного для элементов типа `wchar_t` с признаками символа по умолчанию.
+Тип является синонимом класса шаблона [basic_filebuf](../standard-library/basic-filebuf-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="see-also"></a>См. также
 

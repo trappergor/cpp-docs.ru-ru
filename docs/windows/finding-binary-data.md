@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873567"
 ---
 # <a name="finding-binary-data"></a>Поиск двоичных данных
 Поиск строк ASCII или шестнадцатеричных байтов. Например, чтобы найти «Hello», можно производить поиск либо для строки «Hello» или для «48 65 6 c 6 C 6F» (шестнадцатеричное).  

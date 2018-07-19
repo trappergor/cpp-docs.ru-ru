@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227399"
 ---
 # <a name="fatal-error-c1207"></a>Неустранимая ошибка C1207
 Управляемые шаблоны не поддерживаются установленной версией среды выполнения  

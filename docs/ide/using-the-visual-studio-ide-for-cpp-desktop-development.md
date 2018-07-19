@@ -1,6 +1,6 @@
 ---
 title: Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++ | Документы Майкрософт
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328884"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253819"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++
 
@@ -27,7 +27,7 @@ ms.locfileid: "33328884"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Если вы еще не установили Visual Studio, сделайте это. Visual Studio можно скачать в разделе [загрузок Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Не забудьте включить средства разработки Visual C++ при установке Visual Studio, так как они не устанавливаются по умолчанию. Дополнительные сведения об установке Visual Studio см. в разделе [Установка Visual Studio](/visualstudio/install/install-visual-studio).
+Если вы еще не установили Visual Studio, сделайте это. Ссылки для загрузки и краткое пошаговое руководство см. в разделе [Установка поддержки С++ в Visual Studio](../build/vscpp-step-0-installation.md). Дополнительные сведения о том, как установить Visual Studio и устранить возможные неполадки, см. в разделе [Установка Visual Studio](/visualstudio/install/install-visual-studio). Обязательно выберите рабочую нагрузку **Разработка классических приложений на C++**, чтобы включить компиляторы, средства и библиотеки C++ при установке Visual Studio, так как они не устанавливаются по умолчанию.
 
 В этих пошаговых руководствах предполагается, что вы установили Visual Studio, а также язык Visual C++ и компоненты, необходимые для разработки классических приложений Windows. Кроме того, предполагается, что вы владеете основами языка C++. Для изучения C++ доступно множество разных книг и веб-ресурсов. Среди них можно выделить страницу [начала работы](https://isocpp.org/get-started) на веб-сайте Standard C++ Foundation.
 

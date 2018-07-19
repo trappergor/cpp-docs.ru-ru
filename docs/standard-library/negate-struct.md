@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956938"
 ---
 # <a name="negate-struct"></a>Структура negate
 
@@ -48,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>Параметры
 
-`Type` Любой тип, поддерживающий `operator-` , который принимает операнд указанного или выводимого типа.
+*Тип* любой тип, поддерживающий `operator-` , принимающий операнды указанного или выводимого типа.
 
-`Left` Операнд должен быть инвертирован. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `Type`.
+*Слева* операнд должен быть инвертирован. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

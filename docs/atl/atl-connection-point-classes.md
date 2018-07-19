@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354339"
 ---
 # <a name="atl-connection-point-classes"></a>Классы точки подключения библиотеки ATL
 ATL используются следующие классы для поддержки точек подключения:  

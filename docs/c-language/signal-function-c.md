@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385847"
 ---
 # <a name="signal-function-c"></a>Функция signal (C)
 **ANSI 4.7.1.1** Набор сигналов для функции **signal**  

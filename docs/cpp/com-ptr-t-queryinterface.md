@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::QueryInterface | Документы Microsoft
+title: _com_ptr_t::QueryInterface | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944167"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Блок, относящийся только к системам Microsoft**  
   
- Вызовы `QueryInterface` функцию-член **IUnknown** на инкапсулированный указатель на интерфейс.  
+ Вызовы `QueryInterface` функцию-член `IUnknown` на инкапсулированный указатель на интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `iid`  
- **IID** указателя на интерфейс.  
+ *IID*  
+ `IID` из указателя на интерфейс.  
   
- `p`  
+ *p*  
  Необработанный указатель на интерфейс.  
   
 ## <a name="remarks"></a>Примечания  
- Вызовы **IUnknown::QueryInterface** на инкапсулированный указатель на интерфейс с заданным **IID** и возвращает результирующее необработанный указатель на интерфейс в `p`. Эта процедура возвращает значение `HRESULT`, которое указывает успешность или сбой выполнения.  
+ Вызовы `IUnknown::QueryInterface` на инкапсулированный указатель на интерфейс с указанным `IID` и возвращает результирующее необработанный указатель на интерфейс в *p*. Эта процедура возвращает значение HRESULT, указывающее успех или неудачу.  
   
  **Завершение блока, относящегося только к системам Майкрософт**  
   

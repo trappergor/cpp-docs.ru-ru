@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957303"
 ---
 # <a name="canimationvariable-class"></a>Класс CAnimationVariable
 Представляет переменную анимации.  
@@ -73,14 +74,14 @@ class CAnimationVariable;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Создает объект переменной анимации.|  
 |[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Деструктор Вызывается при уничтожении объекта CAnimationVariable.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::AddTransition](#addtransition)|Добавляет переход.|  
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Добавляет переходы из внутреннего списка на раскадровку.|  
@@ -97,19 +98,19 @@ class CAnimationVariable;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Задает связь между переменной анимации и объекта анимации.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли удалять связанные перехода объектов.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Указывает значение по умолчанию, которое распространяется на IUIAnimationVariable.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Содержит список переходов, которого должна начаться анимация этой переменной анимации.|  
@@ -140,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pTransition`  
+ *pTransition*  
  Указатель на переход для добавления.  
   
 ### <a name="remarks"></a>Примечания  
@@ -157,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pController`  
+ *pController*  
  Указатель на родительский контроллер анимации.  
   
- `pStoryboard`  
+ *pStoryboard*  
  Указатель на раскадровку.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  Значение TRUE, если этот метод следует добавить переходы, которые зависят от ключевых кадров.  
   
 ### <a name="remarks"></a>Примечания  
@@ -177,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Указывает значение по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -191,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `bAutodestroy`  
+ *bAutodestroy*  
  Указывает, должен ли этот метод удалить объекты перехода.  
   
 ### <a name="remarks"></a>Примечания  
@@ -205,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pManager`  
+ *pManager*  
  Указатель диспетчера анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -224,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>Параметры  
-`pLibrary`  
+*pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -243,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pController`  
+ *pController*  
  Указатель на родительский контроллер.  
   
- `bEnable`  
+ *bEnable*  
  TRUE - включить события, FALSE — отключить событие.  
   
 ### <a name="remarks"></a>Примечания  
@@ -262,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pController`  
+ *pController*  
  Указатель на родительский контроллер.  
   
- `bEnable`  
+ *bEnable*  
  TRUE - включить события, FALSE — отключить событие.  
   
 ### <a name="remarks"></a>Примечания  
@@ -306,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblValue`  
+ *dblValue*  
  Текущее значение переменной анимации.  
   
- `nValue`  
+ *nValue*  
  Текущее значение переменной анимации.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -377,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  Указывает новое значение по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -391,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentObject`  
+ *pParentObject*  
  Указатель объекта анимации, который содержит эту переменную.  
   
 ### <a name="remarks"></a>Примечания  

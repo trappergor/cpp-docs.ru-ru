@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302280"
 ---
 # <a name="bscmake-error-bk1514"></a>Ошибка BSCMAKE BK1514
 все. Усечение SBR-файлы, не найдено в имя файла  

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonColorButton | Документы Microsoft
+title: Класс CMFCRibbonColorButton | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,11 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa188930f6fe80d26282252ef3aae875aa19922f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0966faee52febce026028fc6a93e611983ff61cb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853583"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>класс CMFCRibbonColorButton
 Класс `CMFCRibbonColorButton` реализует кнопку цвета, которую можно добавить на панель ленты. Кнопка цвета ленты отображает раскрывающееся меню, содержащее одну или несколько палитр.  
@@ -69,13 +70,13 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonColorButton::CMFCRibbonColorButton](#cmfcribboncolorbutton)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonColorButton::AddColorsGroup](#addcolorsgroup)|Добавляет группу цветов в стандартную область цветов.|  
 |[CMFCRibbonColorButton::EnableAutomaticButton](#enableautomaticbutton)|Указывает, нажата ли кнопка **Автоматически** .|  
@@ -127,17 +128,17 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszName`  
+ [in] *lpszName*  
  Имя группы.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Список цветов.  
   
- [in] `bContiguousColumns`  
- Управляет отображением цвет элементов в группе. Если `TRUE`, цвет элементов отображаются без вертикальный интервал. Если `FALSE`, элементы цвета отображаются с вертикальный интервал.  
+ [in] *bContiguousColumns*  
+ Управляет отображением цвет элементов в группе. Значение TRUE, если цвет элементы отображаются без интервалы по вертикали. Если значение равно FALSE, элементы цвета отображаются с интервалы по вертикали.  
   
 ### <a name="remarks"></a>Примечания  
- Воспользовавшись этой функцией, чтобы сделать цвет всплывающих отображать несколько групп цветов. Можно управлять отображением цветов в группе.  
+ Воспользовавшись этой функцией, чтобы сделать цвет всплывающее отображать несколько групп цветов. Можно управлять как цвета отображаются в группе.  
   
 ##  <a name="cmfcribboncolorbutton"></a>  CMFCRibbonColorButton::CMFCRibbonColorButton  
  Создает объект `CMFCRibbonColorButton`.  
@@ -163,23 +164,23 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды выполнения, когда пользователь нажимает кнопку команды.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  Задает текст, отображаемый на кнопке.  
   
- [in] `nSmallImageIndex`  
- Отсчитываемый от нуля индекс мелкое изображение для отображения на кнопке.  
+ [in] *nSmallImageIndex*  
+ Отсчитываемый от нуля индекс небольшое изображение, отображаемый на кнопке.  
   
- [in] `color`  
+ [in] *цвет*  
  Цвет кнопки (по умолчанию используется черный).  
   
- [in] `bSimpleButtonLook`  
- Если `TRUE`, отображенный кнопки в виде простого прямоугольника.  
+ [in] *bSimpleButtonLook*  
+ Значение TRUE, если кнопки отображенный в виде простого прямоугольника.  
   
- [in] `nLargeImageIndex`  
- Отсчитываемый от нуля индекс большого изображения для отображения на кнопке.  
+ [in] *nLargeImageIndex*  
+ Отсчитываемый от нуля индекс большого изображения, отображаемый на кнопке.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -199,23 +200,23 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  Метка для **автоматического** кнопки.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  RGB-значение, указывающее **автоматического** цвет кнопки по умолчанию.  
   
- [in] `bEnable`  
- `TRUE` Если **автоматического** кнопка включена; `FALSE` если она отключена.  
+ [in] *bEnable*  
+ Значение TRUE, если **автоматического** кнопка доступна; Значение FALSE, если она отключена.  
   
- [in] `lpszToolTip`  
- Контекстная подсказка **автоматического** кнопки.  
+ [in] *lpszToolTip*  
+ Подсказку **автоматического** кнопки.  
   
- [in] `bOnTop`  
- Указывает ли **автоматического** кнопка находится в верхней, прежде чем цветовой палитры.  
+ [in] *bOnTop*  
+ Указывает ли **автоматического** кнопку стоит первым в списке, прежде чем цветовую палитру.  
   
- [in] `bDrawBorder`  
- `TRUE` Если приложение рисует границу вокруг цветовую шкалу на кнопка цвета ленты. Цветовая панель отображает выбранный цвет. `FALSE` Если приложение не создает обрамление  
+ [in] *bDrawBorder*  
+ Значение TRUE, если приложение рисует границу вокруг цветовой полосы на кнопку цвета на ленте. Цветовая панель отображает выбранный цвет. Значение FALSE, если приложение не создает обрамление  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
  Активирует кнопку **Другие** .  
@@ -227,14 +228,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszLabel`  
- Метка кнопки.  
+ *lpszLabel*  
+ Надпись на этой кнопке.  
   
- `lpszToolTip`  
+ *lpszToolTip*  
  Текст подсказки для **других** кнопки.  
   
 ### <a name="remarks"></a>Примечания  
- **Других** кнопка является кнопкой, которая отображается под группой цветов. Когда пользователь щелкает **других** кнопка, он отображается в диалоговом окне выбора цвета.  
+ **Других** кнопка является кнопкой, который отображается ниже группы цветов. Когда пользователь щелкает **других** кнопки, он отображает диалоговое окно цвета.  
   
 ##  <a name="getautomaticcolor"></a>  CMFCRibbonColorButton::GetAutomaticColor  
  Получает текущий цвет кнопки автоматически.  
@@ -244,10 +245,10 @@ COLORREF GetAutomaticColor() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- RGB-значение цвета, представляющий текущий цвет кнопки автоматически.  
+ Значение цвета RGB, представляющий текущий цвет кнопки автоматически.  
   
 ### <a name="remarks"></a>Примечания  
- Задается цвет кнопки автоматического `colorAutomatic` передан параметр `CMFCRibbonColorButton::EnableAutomaticButton` метода.  
+ Цвет кнопки автоматически задается `colorAutomatic` параметр, передаваемый `CMFCRibbonColorButton::EnableAutomaticButton` метод.  
   
 ##  <a name="getcolor"></a>  CMFCRibbonColorButton::GetColor  
  Возвращает выбранный в данный момент цвет.  
@@ -267,10 +268,10 @@ CSize GetColorBoxSize() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Размер кнопок цвет в палитре цветов раскрывающегося списка.  
+ Размер кнопок цвет в раскрывающемся списке цветовой палитре.  
   
 ##  <a name="getcolumns"></a>  CMFCRibbonColorButton::GetColumns  
- Возвращает количество элементов в строке отображения галереи кнопка цвета ленты.  
+ Возвращает количество элементов в строке коллекции отображения кнопка цвета ленты.  
   
 ```  
 int GetColumns() const;  
@@ -282,14 +283,14 @@ int GetColumns() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gethighlightedcolor"></a>  CMFCRibbonColorButton::GetHighlightedColor  
- Возвращает цвет выбранного элемента на всплывающих цветовую палитру.  
+ Возвращает цвет для выбранного элемента на всплывающее цветовую палитру.  
   
 ```  
 COLORREF GetHighlightedColor() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Цвет выбранного элемента на всплывающих цветовую палитру.  
+ Цвет выбранного элемента на всплывающее цветовую палитру.  
   
 ##  <a name="removeallcolorgroups"></a>  CMFCRibbonColorButton::RemoveAllColorGroups  
  Удаляет все группы цветов из стандартной области цветов.  
@@ -306,7 +307,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Чтобы задать цвет.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
@@ -317,8 +318,8 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `sizeBox`  
- Новый размер кнопок цвета в цветовой палитре.  
+ [in] *sizeBox*  
+ Новый размер кнопок цвет в палитре цветов.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
  Задает новое имя для выбранного цвета.  
@@ -330,24 +331,24 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
- RGB-значение цвета.  
+ [in] *цвет*  
+ Значение цвета RGB.  
   
- [in] `strName`  
+ [in] *strName*  
  Новое имя для указанного цвета.  
   
 ### <a name="remarks"></a>Примечания  
  Так как он вызывает `CMFCColorBar::SetColorName`, этот метод изменяет имя указанного цвета во всех `CMFCColorBar` объектов в приложении.  
   
 ##  <a name="setcolumns"></a>  CMFCRibbonColorButton::SetColumns  
- Задает число столбцов, отображаемых в таблице цветов, которые отображаются для пользователя во время процесса выбора цвета для пользователя.  
+ Задает число столбцов, отображаемых в таблице цветов, представленные пользователю во время процесса выбора цвета для пользователя.  
   
 ```  
 void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nColumns`  
+ [in] *nColumns*  
  Количество цветных значков для отображения в каждой строке.  
   
 ### <a name="remarks"></a>Примечания  
@@ -362,38 +363,38 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszLabel`  
- Текст, который отображается с помощью цвета документа.  
+ [in] *lpszLabel*  
+ Текст, отображаемый с цветами документа.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  Ссылка на список значений RGB.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
- Задает стандартные цвета для отображения в таблице цветов, отображающий «цвет».  
+ Указывает стандартные цвета для отображения в таблице цветов, который отображает кнопку цвета.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pPalette`  
- Указатель на цветовой палитры.  
+ [in] *pPalette*  
+ Указатель на цветовую палитру.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="updatecolor"></a>  CMFCRibbonColorButton::UpdateColor  
- Вызывается платформой, когда пользователь выбирает цвет из цветовой таблицы отображается в случае, если пользователь нажимает кнопку цвета.  
+ Вызывается платформой, когда пользователь выбирает цвет из цветовой таблицы отображается, когда пользователь нажимает кнопку цвета.  
   
 ```  
 void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `color`  
+ [in] *цвет*  
  Цвет, выбранный пользователем.  
   
 ### <a name="remarks"></a>Примечания  
- `CMFCRibbonColorButton::UpdateColor` Метод изменяет цвет выбранного кнопки и уведомляет родительской, отправляя `WM_COMMAND` сообщений с `BN_CLICKED` уведомлений standard. Используйте [CMFCRibbonColorButton::GetColor](#getcolor) метод для извлечения выбранного цвета.  
+ `CMFCRibbonColorButton::UpdateColor` Метод изменяет цвет выбранного кнопки и уведомляет родительского, отправив сообщение WM_COMMAND с уведомлением BN_CLICKED standard. Используйте [CMFCRibbonColorButton::GetColor](#getcolor) метод для извлечения выбранного цвета.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

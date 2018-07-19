@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCDropDownToolBar | Документы Microsoft
+title: Класс CMFCDropDownToolBar | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027314"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Класс CMFCDropDownToolBar
 Панель инструментов, которая появляется, когда пользователь нажимает и удерживает кнопку верхнего уровня панели инструментов.  
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/04/2018
 class CMFCDropDownToolBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|  
 |[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(Переопределяет [CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|  
@@ -58,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(Переопределяет `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80).)|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(Переопределяет [CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80).)|  
   
 ### <a name="remarks"></a>Примечания  
- Объект `CMFCDropDownToolBar` объект объединяет внешний вид панели инструментов с поведением всплывающего меню. Когда пользователь нажимает и удерживает кнопку раскрывающегося списка на панели инструментов (в разделе [CMFCDropDownToolbarButton класса](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), появляется панель инструментов раскрывающийся список, и пользователь может выбрать кнопки на панели инструментов раскрывающийся список, то прокрутка до его и отпустить кнопку мыши кнопка. Когда пользователь выделяет кнопку на панели инструментов, раскрывающийся список, кнопки отображаются в виде текущей кнопки на панели инструментов верхнего уровня.  
+ Объект `CMFCDropDownToolBar` объект объединяет внешний вид панели инструментов с поведением во всплывающем меню. Когда пользователь нажимает и удерживает кнопку раскрывающегося списка на панели инструментов (см. в разделе [класс CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)), появляется панель инструментов раскрывающегося списка, и пользователь может выбрать кнопку из раскрывающегося списка на панели инструментов, прокрутив список к нему и отпуская кнопку мыши кнопка. После того как пользователь выберет кнопки в раскрывающемся списке панели инструментов, этой кнопки отображается как текущей кнопки на панели элементов верхнего уровня.  
   
- Инструментов раскрывающийся список не может быть настроен или закрепления и не имеет состоянии перемещения.  
+ Нельзя настроить или закрепленной панели инструментов выберите в раскрывающемся, и он не имеет состояния перемещаемой.  
   
- На следующем рисунке показана `CMFCDropDownToolBar` объекта:  
+ На следующем рисунке показано `CMFCDropDownToolBar` объекта:  
   
- ![Пример CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
+ ![Пример cmfcdropdowntoolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- Вы создаете `CMFCDropDownToolBar` объекта так же, как и обычные инструментов (см. [CMFCToolBar класса](../../mfc/reference/cmfctoolbar-class.md)).  
+ Создании `CMFCDropDownToolBar` объект так же, как и обычные инструментов (см. в разделе [класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)).  
   
- Для вставки инструментов раскрывающийся список в панели инструментов родительского:  
+ Вставляемый раскрывающегося списка на панели инструментов в родительской панели инструментов:  
   
- 1. Зарезервировать идентификатора фиктивный ресурса для кнопки в родительский ресурс панели инструментов.  
+ 1. Зарезервируйте идентификатор фиктивный ресурс для кнопки в панели инструментов к родительскому ресурсу.  
   
- 2. Создание `CMFCDropDownToolBarButton` , содержащий инструментов раскрывающегося списка (Дополнительные сведения см. в разделе [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
+ 2. Создание `CMFCDropDownToolBarButton` , содержащий раскрывающегося списка на панели инструментов (Дополнительные сведения см. в разделе [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton)).  
   
- 3. Замените фиктивный кнопка с `CMFCDropDownToolBarButton` объектов с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
+ 3. Заменить фиктивные кнопку с `CMFCDropDownToolBarButton` объекта с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
- Дополнительные сведения о кнопках панели инструментов см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md). Пример панели инструментов раскрывающегося списка см. пример проекта VisualStudioDemo.  
+ Дополнительные сведения о кнопки панели инструментов, см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md). Пример того, панель инструментов раскрывающегося списка см. в разделе примера проекта VisualStudioDemo.  
   
 ## <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `Create` метод `CMFCDropDownToolBar` класса. Этот фрагмент кода является частью [Visual Studio демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как использовать `Create` метод в `CMFCDropDownToolBar` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -132,29 +133,29 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResID`  
+ [in] *uiResID*  
  Идентификатор ресурса точечного рисунка, который относится к активным изображениям значков панели инструментов.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  Идентификатор ресурса точечного рисунка, который относится к неактивным изображениям значков панели инструментов.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  Идентификатор ресурса точечного рисунка, который относится к обычным изображениям значков меню.  
   
- [in] `bLocked`  
- `TRUE` для закрепления панели инструментов; в противном случае `FALSE`.  
+ [in] *заблокирован*  
+ Значение TRUE для закрепления панели инструментов; в противном случае — значение FALSE.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков панели инструментов.  
   
- [in] `uiMenuDisabledResID`  
+ [in] *uiMenuDisabledResID*  
  Идентификатор ресурса точечного рисунка, который относится к отключенным изображениям значков меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
   
 ### <a name="remarks"></a>Примечания  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод вызывает этот метод для загрузки изображений, которые связаны с помощью панели инструментов. Переопределите этот метод для выполнения пользовательской загрузки графических ресурсов.  
+ [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод вызывает этот метод, чтобы загрузить изображения, связанные с панелью инструментов. Переопределите этот метод для выполнения пользовательской загрузки графических ресурсов.  
   
  Вызовите метод `LoadBitmapEx` , чтобы загрузить дополнительные изображения после создания панели инструментов.  
   
@@ -173,13 +174,13 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResID`  
- [in] `uiColdResID`  
- [in] `uiMenuResID`  
- [in] `BOOL`  
- [in] `uiDisabledResID`  
- [in] `uiMenuDisabledResID`  
- [in] `uiHotResID`  
+ [in] *uiResID*  
+ [in] *uiColdResID*  
+ [in] *uiMenuResID*  
+ [in] *BOOL*  
+ [in] *uiDisabledResID*  
+ [in] *uiMenuDisabledResID*  
+ [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -195,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *точки*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -210,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nFlags`  
- [in] `point`  
+ [in] *nFlags*  
+ [in] *точки*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -223,7 +224,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -239,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Примечания  
   

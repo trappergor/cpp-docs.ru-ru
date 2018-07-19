@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053692"
 ---
 # <a name="ml-fatal-errors"></a>Неустранимые ошибки ML
 Дополнительные сведения о неустранимые ошибки ML см. в разделе [сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md).  

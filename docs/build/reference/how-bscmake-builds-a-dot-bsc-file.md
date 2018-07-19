@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373492"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Порядок построения BSC-файла с помощью программы BSCMAKE
 BSCMAKE создает или перестраивает BSC-файла в наиболее эффективный способ его можно. Чтобы избежать потенциальных проблем, важно понять процесс построения.  

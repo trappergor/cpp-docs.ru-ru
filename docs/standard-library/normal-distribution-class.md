@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959865"
 ---
 # <a name="normaldistribution-class"></a>Класс normal_distribution
 
@@ -80,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType* по умолчанию используется тип с плавающей запятой, `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType* по умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа `double` (если тип не указан), распределенные в соответствии с нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа **двойные** Если тип не указан, распределенные в соответствии с нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Функции свойств `mean()` и `stddev()` возвращают значения для хранимых параметров распределения `mean` и `stddev` соответственно.
+Функции свойств `mean()` и `stddev()` возвращаемые значения для хранимых параметров распределения *означает* и *stddev* соответственно.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -211,7 +212,7 @@ explicit normal_distribution(const param_type& parm);
 
 *Stddev* `stddev` параметр распределения.
 
-*параметр* структура параметров, используемая для формирования распределения.
+*parm* структуру параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -242,7 +243,7 @@ struct param_type {
 
 *Stddev* `stddev` параметр распределения.
 
-*правый* `param_type` структура, используемая для сравнения.
+*правом* `param_type` структура, используемая для сравнения.
 
 ### <a name="remarks"></a>Примечания
 

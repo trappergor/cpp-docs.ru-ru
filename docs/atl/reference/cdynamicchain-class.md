@@ -1,5 +1,5 @@
 ---
-title: Класс CDynamicChain | Документы Microsoft
+title: Класс CDynamicChain | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,14 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a279dac7e2a9f4e58954ac6637eaf2b56ad801b2
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884146"
 ---
 # <a name="cdynamicchain-class"></a>Класс CDynamicChain
-Этот класс предоставляет методы, поддерживающие динамические цепочки схемы сообщений.  
+Этот класс предоставляет методы, поддержки динамической цепочки схемы сообщений.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -45,31 +46,31 @@ class CDynamicChain
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Конструктор.|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDynamicChain::CallChain](#callchain)|Направляет сообщение Windows для схемы сообщений другим объектом.|  
-|[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет элемент карты сообщений из коллекции.|  
-|[CDynamicChain::SetChainEntry](#setchainentry)|Добавляет в коллекцию элемент карты сообщений или изменяет существующую запись.|  
+|[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет запись сопоставления сообщения из коллекции.|  
+|[CDynamicChain::SetChainEntry](#setchainentry)|Добавляет запись сопоставления сообщений в коллекцию или изменяет существующую запись.|  
   
 ## <a name="remarks"></a>Примечания  
- `CDynamicChain` Управляет коллекцией схемы сообщений, позволяя сообщение Windows направить во время выполнения, в схеме сообщений другим объектом.  
+ `CDynamicChain` Управляет коллекцией схемы сообщений, включение Windows сообщение направляется во время выполнения, в схеме сообщений другим объектом.  
   
- Чтобы добавить поддержку для динамического построения цепочки для схем сообщений, выполните следующее:  
+ Чтобы добавить поддержку динамической цепочки для схем сообщений, сделайте следующее:  
   
--   Создайте производный класс от `CDynamicChain`. В схеме сообщений, укажите [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос, привязанные к схеме сообщений по умолчанию другого объекта.  
+-   Наследование класса из `CDynamicChain`. В схеме сообщений, укажите [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос цепочку в схеме сообщений другим объектом по умолчанию.  
   
--   Каждый класс, который требуется существует цепочки от [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` позволяет объекту предоставлять его схемы сообщений с другими объектами.  
+-   Каждый класс, требуется цепочку сертификатов до из [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` позволяет объекту предоставлять его схемы сообщений к другим объектам.  
   
--   Вызовите `CDynamicChain::SetChainEntry` для которого объект и сопоставления сообщений, вы хотите цепочки для идентификации.  
+-   Вызовите `CDynamicChain::SetChainEntry` определить, какие объекта и сопоставление сообщений, вы хотите цепочки.  
   
- Например предположим, что класс определяется следующим образом:  
+ Например предположим, что ваш класс определяется следующим образом:  
   
  [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
@@ -77,15 +78,15 @@ class CDynamicChain
   
  [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
- где `chainedObj` цепочек объектом и является экземпляром класса, производного от `CMessageMap`. Теперь если `myCtl` получает сообщение, которое не обрабатывается `OnPaint` или `OnSetFocus`, процедуру окна направляет сообщение `chainedObj`в схеме сообщений по умолчанию.  
+ где `chainedObj` — цепного объект и является экземпляром класса, производного от `CMessageMap`. Теперь если `myCtl` получает сообщение, которое не обрабатывается `OnPaint` или `OnSetFocus`, процедура окна направляет сообщение `chainedObj`в схеме сообщений по умолчанию.  
   
- Дополнительные сведения о цепочки карты сообщения в разделе [схемы сообщений](../../atl/message-maps-atl.md) в статье «Классы окон ATL».  
+ Дополнительные сведения о цепочках map сообщения, см. в разделе [схемы сообщений](../../atl/message-maps-atl.md) в статье «Классы окон ATL».  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlwin.h  
   
 ##  <a name="callchain"></a>  CDynamicChain::CallChain  
- Направляет сообщение Windows для схемы сообщений другим объектом.  
+ Направляет сообщение Windows, схему сообщений другим объектом.  
   
 ```
 BOOL CallChain(  
@@ -98,31 +99,31 @@ BOOL CallChain(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwChainID`  
- [in] Уникальный идентификатор, связанный с объектом цепочек и схему сообщений.  
+ *dwChainID*  
+ [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.  
   
- `hWnd`  
- [in] Дескриптор окна, получаемого сообщения.  
+ *hWnd*  
+ [in] Дескриптор окна, принимающего сообщение.  
   
- `uMsg`  
+ *uMsg*  
  [in] Сообщение, отправленное окну.  
   
- `wParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *wParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
- `lParam`  
- [in] Дополнительные сведения для конкретного сообщения.  
+ *lParam*  
+ [in] Дополнительные сведения, относящиеся к сообщению.  
   
- `lResult`  
+ *lResult*  
  [out] Результат обработки сообщения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** если полностью обработан; в противном случае — сообщение **FALSE**.  
+ Значение TRUE, если оно полностью обрабатывается; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Для вызова процедуры окна `CallChain`, необходимо указать [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщений. Пример см. в разделе [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Обзор.  
+ Для вызова процедуры окна `CallChain`, необходимо указать [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщения. Например, см. в разделе [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Обзор.  
   
- `CallChain` требуется предыдущего вызова [SetChainEntry](#setchainentry) связываемый `dwChainID` значение с объектом и схему сообщений.  
+ `CallChain` требуется предыдущего вызова [SetChainEntry](#setchainentry) связываемый *dwChainID* значение с помощью объекта и схему сообщений.  
   
 ##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  Конструктор.  
@@ -149,11 +150,11 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwChainID`  
- [in] Уникальный идентификатор, связанный с объектом цепочек и схему сообщений. Первоначально определении этого значения путем вызова [SetChainEntry](#setchainentry).  
+ *dwChainID*  
+ [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений. Изначально вы определите это значение путем вызова [SetChainEntry](#setchainentry).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** Если сопоставление сообщений успешно удален из коллекции. В противном случае **FALSE**.  
+ Значение TRUE, если в схеме сообщений был успешно удален из коллекции. В противном случае — значение FALSE.  
   
 ##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  Карта указанное сообщение добавляется в коллекцию.  
@@ -166,20 +167,20 @@ BOOL SetChainEntry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `dwChainID`  
- [in] Уникальный идентификатор, связанный с объектом цепочек и схему сообщений.  
+ *dwChainID*  
+ [in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.  
   
- `pObject`  
- [in] Указатель на объект цепочек объявление схемы сообщений. Этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).  
+ *pObject*  
+ [in] Указатель на объект цепочки объявление схемы сообщений. Этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).  
   
- `dwMsgMapID`  
- [in] Идентификатор схемы сообщений в связанных объектов. Значение по умолчанию — 0, который определяет схему сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы указать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.  
+ *dwMsgMapID*  
+ [in] Идентификатор схемы сообщений в цепочке объекта. Значение по умолчанию — 0, который определяет схему сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы указать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** Если сопоставление сообщений успешно добавлен в коллекцию. В противном случае **FALSE**.  
+ Значение TRUE, если в схеме сообщений успешно добавлен в коллекцию. В противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Если `dwChainID` значение уже существует в коллекции, его связанный объект и схему сообщений заменяются `pObject` и `dwMsgMapID`соответственно. В противном случае — добавить новый элемент.  
+ Если *dwChainID* значение уже существует в коллекции, его связанный объект и схему сообщений заменяются *pObject* и *dwMsgMapID*, соответственно. В противном случае добавляется новая запись.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   

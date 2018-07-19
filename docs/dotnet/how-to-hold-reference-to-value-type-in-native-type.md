@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129792"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Практическое руководство. Сохранение ссылки на тип значения в собственном типе
 Используйте `gcroot` на упакованный тип для хранения ссылки на тип значения в собственном типе.  

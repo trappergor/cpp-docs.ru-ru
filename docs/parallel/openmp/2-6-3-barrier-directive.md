@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689796"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 Директива barrier
 **Барьера** директива синхронизирует все потоки в команде. При обнаружении, каждый поток в группе ожидает, пока все остальные достижение этой точки. Синтаксис **барьера** директивы таков:  

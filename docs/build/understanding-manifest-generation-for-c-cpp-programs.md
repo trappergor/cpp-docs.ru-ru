@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381638"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Основные сведения о создании манифестов для программ C/C++
 Объект [манифеста](http://msdn.microsoft.com/library/aa375365) внедренного XML-документ, который может быть внешним файлом XML или ресурс в приложение или сборку. Манифест [изолированное приложение](http://msdn.microsoft.com/library/aa375190) используется для управления именами и версиями совместно с параллельных сборок, к которым должно быть связано приложение во время выполнения. Манифест сборки side-by-side задает ее зависимости от имен, версий, ресурсов и других сборок.  

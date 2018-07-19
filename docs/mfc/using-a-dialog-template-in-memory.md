@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381242"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Использование шаблона диалогового окна в памяти
 Вместо использования методов, заданному в [Создание диалогового окна таблицы](../mfc/creating-a-dialog-class-with-code-wizards.md), косвенно либо вид диалогового окна можно создать из шаблона диалогового окна в памяти. Дополнительные сведения см. в разделе класса [CDialog](../mfc/reference/cdialog-class.md) в *Справочник по библиотеке MFC*.  

@@ -1,5 +1,5 @@
 ---
-title: Класс CMultiPageDHtmlDialog | Документы Microsoft
+title: Класс CMultiPageDHtmlDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e9b34252b2a3fa7d097914360b9ee24baa8301
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850869"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Класс CMultiPageDHtmlDialog
 Многостраничное диалоговое окно последовательно отображает несколько HTML-страниц и обрабатывает события каждой страницы.  
@@ -37,16 +38,16 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Создает объект многостраничное диалоговое окно DHTML (мастер стиль).|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничное диалоговое окно DHTML.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Создает объект диалогового окна DHTML многостраничной (мастер в стиле).|  
+|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничной DHTML-диалоговое окно.|  
   
 ## <a name="remarks"></a>Примечания  
- Лучше всего для этого [схема событий DHTML и URL-адрес](dhtml-event-maps.md), который содержит встроенные схемы событий для каждой страницы.  
+ — Это механизм [схема событий DHTML и URL-адрес](dhtml-event-maps.md), который содержит встроенные схемы событий для каждой страницы.  
   
 ## <a name="example"></a>Пример  
- Это многостраничное диалоговое окно предполагается три ресурса HTML, определяющих функции простого типа мастера. На первой странице `Next` кнопки, второй **Prev** и `Next` кнопки, а третья **Prev** кнопки. При нажатии одной из кнопок вызывает функцию обработчика событий [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) загрузить соответствующий новой страницы.  
+ Этот многостраничное диалоговое окно предполагает три ресурса HTML, которые определяют простые функции в стиле мастера. Первая страница содержит **Далее** кнопки, второй **Prev** и **Далее** кнопки, а третий **Prev** кнопки. При нажатии одной из кнопок, вызывает функцию обработчика событий [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) загрузить соответствующие новую страницу.  
   
  Соответствующие части объявления класса (в CMyMultiPageDlg.h):  
   
@@ -81,7 +82,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
  **Заголовок:** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Создает объект многостраничное диалоговое окно DHTML (мастер стиль).  
+ Создает объект диалогового окна DHTML многостраничной (мастер в стиле).  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -99,23 +100,23 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `lpszTemplateName`  
- Нулем строка, представляющая имя ресурса шаблона диалогового окна.  
+ *lpszTemplateName*  
+ Завершающаяся нулем строка, представляющая имя ресурса шаблона диалогового окна.  
   
- `szHtmlResID`  
- Нулем строка, представляющая имя ресурса HTML.  
+ *szHtmlResID*  
+ Завершающаяся нулем строка, представляющая имя ресурса HTML.  
   
- `pParentWnd`  
- Указатель на объект window родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
+ *pParentWnd*  
+ Указатель на объект окна родительский объект или владельца (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это значение NULL, родительское окно объекта диалогового окна будет присвоено главного окна приложения.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  Содержит идентификатор ресурса шаблона диалогового окна.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  Содержит идентификатор ресурса HTML.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- Уничтожает объект многостраничное диалоговое окно DHTML.  
+ Уничтожает объект многостраничной DHTML-диалоговое окно.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();

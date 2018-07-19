@@ -1,5 +1,5 @@
 ---
-title: Добавление простого объекта ATL | Документы Microsoft
+title: Добавление простого объекта ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cedb2da5ede01f4efee81ed4336d8a1ad4178997
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956197"
 ---
 # <a name="adding-an-atl-simple-object"></a>Добавление простого объекта ATL
-Добавление объекта ATL (библиотеки ATL) в проект, проект должен создан как приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
+Чтобы добавить объект ATL (Active Template Library) в проект, проект должен будут созданы как приложение ATL или как приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.  
   
- При создании его, или добавить их позже с помощью можно определить COM-интерфейсы для нового объекта ATL [реализовать интерфейс](../../ide/implement-interface-wizard.md) команду в контекстном меню представления классов.  
+ Можно определить COM-интерфейсы для нового объекта ATL, при создании его, или добавить их позже с помощью [реализовать интерфейс](../../ide/implement-interface-wizard.md) команду в контекстном меню представления классов.  
   
 ### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>Добавление простого объекта ATL в проект ATL COM  
   
-1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому требуется добавить простой объект ATL.  
+1.  В любом **обозревателе решений** или [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить простой объект ATL.  
   
-2.  В контекстном меню щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.  
+2.  В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.  
   
-3.  В [добавить класс](../../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **простых объектов ATL**, а затем нажмите кнопку **откройте** для отображения [мастер простых объектов ATL](../../atl/reference/atl-simple-object-wizard.md).  
+3.  В [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне в области «Шаблоны» щелкните **простой объект ATL**, а затем нажмите кнопку **откройте** для отображения [мастер простых объектов ATL](../../atl/reference/atl-simple-object-wizard.md).  
   
-4.  Задайте дополнительные параметры для проекта на [параметры](../../atl/reference/options-atl-simple-object-wizard.md) простых объектов ATL мастера.  
+4.  Задание дополнительных параметров для проекта на [параметры](../../atl/reference/options-atl-simple-object-wizard.md) странице мастера простой объект ATL.  
   
-5.  Нажмите кнопку **Готово** его добавления в проект.  
+5.  Нажмите кнопку **Готово** добавлен объект в проект.  
   
 ## <a name="see-also"></a>См. также  
  [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
  [Добавление нового интерфейса в проект ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
- [Добавление объекта точки подключения](../../atl/adding-connection-points-to-an-object.md)   
+ [Добавление точек подключения к объекту](../../atl/adding-connection-points-to-an-object.md)   
  [Добавление метода](../../ide/adding-a-method-visual-cpp.md)   
  [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Добавление универсального класса C++](../../ide/adding-a-generic-cpp-class.md)

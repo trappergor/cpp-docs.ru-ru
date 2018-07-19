@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonCheckBox | Документы Microsoft
+title: Класс CMFCRibbonCheckBox | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027184"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 Класс `CMFCRibbonCheckBox` реализует флажок, который можно добавить на панель ленты, панель быстрого доступа или во всплывающее меню.  
@@ -53,13 +54,13 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|  
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Переопределяет [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|  
@@ -76,9 +77,9 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-где `nID` — идентификатор команды флажка, `lpszText` — текстовая метка флажка.  
+где *nID* идентификатор команды "флажок" и *lpszText* — текстовая метка флажка.  
   
- Флажок можно добавить на панель ленты с помощью [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
+ Типа "флажок" можно добавить на панель ленты с помощью [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -102,118 +103,118 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nID`  
+ [in] *nID*  
  Указывает идентификатор команды.  
   
- [in] `lpszText`  
- Указывает текст метки.  
+ [in] *lpszText*  
+ Указывает текстовую метку.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Создает объект флажок ленты.  
+ Создает объект "флажок" ленты.  
   
 ### <a name="example"></a>Пример  
- Следующий пример демонстрирует создание объекта `CMFCRibbonCheckBox` класса.  
+ Следующий пример демонстрирует создание объекта класса `CMFCRibbonCheckBox` класса.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
- При переопределении получает компактный размер элемента управления checkbox.  
+ При переопределении возвращает компактный размер поля с флажком.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- Указатель на `CDC` связанного с флажком.  
+ [in] *основного контроллера домена*  
+ Указатель на CDC, связанного с флажком.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `CSize` , содержащий компактный размер элемента управления checkbox.  
+ Возвращает `CSize` , содержащий компактный размер поля с флажком.  
   
 ### <a name="remarks"></a>Примечания  
- Если не переопределен, возвращает промежуточный размер элемента управления checkbox.  
+ Если не переопределен, возвращает промежуточный размер поля с флажком.  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
- Возвращает промежуточный размер элемента управления checkbox.  
+ Возвращает промежуточный размер поля с флажком.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- Указатель на `CDC` связанные с этот флажок.  
+ [in] *основного контроллера домена*  
+ Указатель на CDC, связанные с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `CSize` объект, содержащий промежуточные размер элемента управления checkbox.  
+ Объект `CSize` объект, содержащий промежуточный размер поля с флажком.  
   
 ### <a name="remarks"></a>Примечания  
- Если не переопределен, вычисляет размер промежуточных размер по умолчанию флажок ( `AFX_CHECK_BOX_DEFAULT_SIZE`) плюс размер текста, а также поля.  
+ Если не переопределен, вычисляет промежуточный размер размер по умолчанию флажок ( `AFX_CHECK_BOX_DEFAULT_SIZE`) плюс размер текста, а также поля.  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
- Возвращает стандартный размер элемента управления checkbox.  
+ Возвращает стандартный размер поля с флажком.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- Указатель на `CDC` объект, связанный с этот флажок.  
+ [in] *основного контроллера домена*  
+ Указатель на объект CDC, связанный с этот флажок.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `CSize` , содержащий стандартный размер элемента управления checkbox.  
+ Возвращает `CSize` , содержащий стандартный размер поля с флажком.  
   
 ### <a name="remarks"></a>Примечания  
- Если не переопределен, возвращает промежуточный размер элемента управления checkbox.  
+ Если не переопределен, возвращает промежуточный размер поля с флажком.  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
- Указывает, существует ли подсказка изображения, связанного с флажком.  
+ Указывает, есть ли подсказки изображения, связанного с флажком.  
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` при наличии подсказки изображения, связанного с флажком, или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если есть изображение всплывающей подсказки, связанный с флажком, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
- Вызывается платформой для отрисовки флажок, с помощью заданного контекста устройств.  
+ Вызывается платформой для отрисовки флажка, используя задаваемые значения контекста устройства.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
- Указатель на `CDC` для рисования флажок.  
+ [in] *основного контроллера домена*  
+ Указатель на CDC, в котором отображается флажок.  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
- Вызывается платформой для отрисовки изображение меню для флажка.  
+ Вызывается платформой для отрисовки меню изображений для флажка.  
   
 ```  
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CDC*`  
- Указатель на `CDC` связанного с флажком.  
+ [in] *CDC**  
+ Указатель на CDC, связанного с флажком.  
   
- [in] `CRect`  
- Объект `CRect` объект, указывающий прямоугольник, в котором будет рисоваться изображение меню.  
+ [in] *CRect*  
+ Объект `CRect` объект, указывающий прямоугольник, в котором должно быть нарисовано изображение меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` Если рисования изображения или `FALSE` в противном случае.  
+ Возвращает значение TRUE, если для рисования изображения, или значение FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Если не переопределен, возвращает `FALSE`.  
+ Если не переопределен, возвращает значение FALSE.  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
- Вызывается платформой для отрисовки флажок в поле со списком команд.  
+ Вызывается платформой для отрисовки флажка в поле со списком команд.  
   
 ```  
 virtual void OnDrawOnList(
@@ -226,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pDC`  
+ [in] *основного контроллера домена*  
  Указатель на контекст устройства, в котором отображается флажок.  
   
- [in] `strText`  
+ [in] *strText*  
  Отображаемый текст.  
   
- [in] `nTextOffset`  
- Расстояние в пикселях с левой стороны от списка для отображения текста.  
+ [in] *nTextOffset*  
+ Расстояние в пикселях от левого края поле со списком для отображения текста.  
   
- [in] `rect`  
- Отображаемый прямоугольник для флажка.  
+ [in] *rect*  
+ Прямоугольник отображения для флажка.  
   
- [in] `bIsSelected`  
- `TRUE` Если флажок установлен, или `FALSE` в противном случае.  
+ [in] *bIsSelected*  
+ Значение TRUE, если флажок выбранных, или FALSE, если это не так.  
   
- [in] `bHighlighted`  
- `TRUE` Если флажок выделяется, или `FALSE` в противном случае.  
+ [in] *bHighlighted*  
+ Значение TRUE, если флажок имеет выделенный, или FALSE, если это не так.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -256,17 +257,17 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParent`  
- Родительское окно элемента управления checkbox.  
+ *pParent*  
+ Родительское окно поля с флажком.  
   
- `data`  
+ *data*  
  Данные специальных возможностей для флажка.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+ Всегда возвращает значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию этот метод задает данные специальных возможностей для флажка и всегда возвращает `TRUE`. Переопределите этот метод, чтобы задать данные специальных возможностей и возвращать значение, указывающее на успешное или неуспешное выполнение.  
+ По умолчанию этот метод задает данные специальных возможностей для флажка и всегда возвращает значение TRUE. Переопределите этот метод, чтобы задать данные специальных возможностей и возвращать значение, указывающее на успешное или неуспешное выполнение.  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

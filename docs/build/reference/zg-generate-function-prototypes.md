@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380538"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (создание прототипов функций)
 Удалено. Для каждой функции, определенной в исходном файле, создает прототип; компиляция исходного файла при этом не производится.  

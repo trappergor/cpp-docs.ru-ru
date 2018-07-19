@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090729"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 Извлекает и управляет строк для работы с данными в пакетном режиме путем получения нескольких дескрипторов строк с помощью одного вызова.  

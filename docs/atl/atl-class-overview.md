@@ -22,6 +22,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255932"
 ---
 # <a name="atl-class-overview"></a>Обзор класса ATL
 Классы в Active Template Library (ATL), можно классифицировать следующим образом.  

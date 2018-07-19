@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369946"
 ---
 # <a name="kinds-of-dlls"></a>Виды библиотек DLL
 В этом разделе сведения для определения типа библиотеки DLL для сборки.  

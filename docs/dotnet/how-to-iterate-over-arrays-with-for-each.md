@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130507"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>Практическое руководство. Перебор элементов массивов с использованием цикла for each
 В этом разделе показано, как использовать [для каждой из них, в](../dotnet/for-each-in.md) ключевое слово на различных типов массивов.  

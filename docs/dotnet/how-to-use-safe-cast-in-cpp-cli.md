@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136679"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>Практическое руководство. Использование safe_cast в C++/CLI
 В этой статье показано, как использовать safe_cast в C + +/ CLI приложений. Сведения о safe_cast в [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], в разделе [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  

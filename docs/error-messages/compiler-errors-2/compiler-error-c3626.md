@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266172"
 ---
 # <a name="compiler-error-c3626"></a>Ошибка компилятора C3626
 «ключевое_слово»: ключевое слово «__event» можно использовать только на интерфейсы COM, функции-члены и члены данных, которые являются указателями на делегаты  

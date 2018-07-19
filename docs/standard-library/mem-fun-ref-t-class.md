@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029fba9cc5a13569df8cc1e2e11b639e65ea24c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956102"
 ---
 # <a name="memfunreft-class"></a>Класс mem_fun_ref_t
 
-Класс адаптера, который позволяет вызывать функцию-член **non_const**, не принимающую аргументы, как объект унарной функции при инициализации с ссылочным аргументом.
+Класс адаптера, который позволяет `non_const` функция-член, не принимающую аргументы как объект унарной функции при инициализации с ссылочным аргументом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,9 +42,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>Параметры
 
-`_Pm` Указатель на функцию-член класса **типа** для преобразования в объект функции.
+*_Pm* указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-`left` Объект, `_Pm` в вызове функции-члена.
+*слева* объекта, *_Pm* вызывается функция-член.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -51,7 +52,7 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет в частном члене объекта копию `_Pm`, который должен быть указателем на функцию-член класса **тип**. Он определяет свою функцию-член `operator()` как возвращающую ( **left**.* `_Pm`)( ).
+Класс шаблона сохраняет копию *_Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( **left**.* `_Pm`)( ).
 
 ## <a name="example"></a>Пример
 

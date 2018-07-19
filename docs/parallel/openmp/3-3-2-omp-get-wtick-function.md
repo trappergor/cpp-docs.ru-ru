@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688717"
 ---
 # <a name="332-ompgetwtick-function"></a>3.3.2 Функция omp_get_wtick
 `omp_get_wtick` Функция возвращает значение двойной точности с плавающей запятой, равное количеству секунд между последовательными тактов. Он следующий:  

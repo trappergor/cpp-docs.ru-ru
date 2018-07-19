@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041264"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>Класс CMFCRibbonGalleryMenuButton
 Реализует кнопку меню ленты, которая содержит коллекцию лент.  
@@ -48,13 +49,13 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Создает и инициализирует объект `CMFCRibbonGalleryMenuButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Переопределяет [CMFCToolBarMenuButton::CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|  
 |[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Переопределяет [CMFCToolBarMenuButton::CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|  
@@ -107,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -131,22 +132,22 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `uiID`  
- Идентификатор команды кнопки. Это значение отправляется **WM_COMMAND** сообщения при нажатии этой кнопки.  
+ *uiID*  
+ Идентификатор команды кнопки. Это значение отправляется в сообщении WM_COMMAND, когда пользователь нажимает эту кнопку.  
   
- `iImage`  
- Индекс изображения, которое отображается с помощью кнопки меню коллекции. Изображения хранятся в `imagesPalette` параметра.  
+ *iImage*  
+ Индекс изображения, которое отображается с помощью кнопки меню коллекции. Изображения хранятся в *imagesPalette* параметра.  
   
- `lpszText`  
+ *lpszText*  
  Текст, отображаемый на кнопке меню.  
   
- `imagesPalette`  
+ *imagesPalette*  
  Содержит список изображений, отображаемых в галерее.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  Идентификатор ресурса из списка изображений для изображения для отображения в коллекции.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  Задает ширину в пикселях изображение, отображаемое в коллекции.  
   
 ### <a name="remarks"></a>Примечания  

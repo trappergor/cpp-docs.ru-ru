@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965647"
 ---
 # <a name="ltsetgt-operators"></a>Операторы &lt;set&gt;
 
@@ -45,9 +46,9 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -104,9 +105,9 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -163,9 +164,9 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -229,9 +230,9 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -288,9 +289,9 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -347,9 +348,9 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа **задать**.
+*слева* объект типа `set`.
 
-`right` Объект типа **задать**.
+*правом* объект типа `set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -413,9 +414,9 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -472,9 +473,9 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -535,9 +536,9 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -607,9 +608,9 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -666,9 +667,9 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -729,9 +730,9 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Параметры
 
-`left` Объект типа `multiset`.
+*слева* объект типа `multiset`.
 
-`right` Объект типа `multiset`.
+*правом* объект типа `multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955876"
 ---
 # <a name="special-cwinapp-services"></a>Специальные службы CWinApp
 Помимо выполнения цикла обработки сообщений и давая возможность инициализировать приложение и очистки после него, [CWinApp](../mfc/reference/cwinapp-class.md) предоставляет несколько служб.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/04/2018
   
  Требуется инициализация GDI + для вашего приложения (путем вызова [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) в ваш [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) функции), необходимо отключить в фоновом потоке GDI +.  
   
- Это можно сделать, задав **SuppressBackgroundThread** членом [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) структуру **TRUE**. При подавлении GDI + фоновый поток, **NotificationHook** и **NotificationUnhook** следует вызывать перед входа и выхода из цикла обработки сообщений приложения. Дополнительные сведения об этих вызовов см. в разделе [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Таким образом, поместите вызов **GdiplusStartup** и функции-обработчики уведомления будут находиться в переопределение виртуальной функции [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), как показано ниже:  
+ Это можно сделать, задав `SuppressBackgroundThread` членом [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) структуру **TRUE**. При подавлении GDI + фоновый поток, `NotificationHook` и `NotificationUnhook` следует вызывать перед входа и выхода из цикла обработки сообщений приложения. Дополнительные сведения об этих вызовов см. в разделе [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Таким образом, поместите вызов `GdiplusStartup` и функции-обработчики уведомления будут находиться в переопределение виртуальной функции [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), как показано ниже:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

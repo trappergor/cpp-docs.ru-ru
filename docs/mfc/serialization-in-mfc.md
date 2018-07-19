@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952597"
 ---
 # <a name="serialization-in-mfc"></a>Сериализация в MFC
 В этой статье объясняется механизм сериализации, предоставляемый в Microsoft Foundation Class библиотеки (MFC) позволяющие объекты сохраняется после запуска программы.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  Не следует путать `CArchive` только текст в формате классах iostream общего назначения, которые предназначены для класса. `CArchive` Класс предназначен для сериализованных объектов двоичный формат.  
   
- Если нужно, вы можете обойти сериализации MFC, чтобы создать собственный механизм для хранения постоянных данных. Необходимо переопределить функции-члены класса, инициирующие сериализации по команде пользователя. См. обсуждение в [Технические заметки 22](../mfc/tn022-standard-commands-implementation.md) из `ID_FILE_OPEN`, **ID_FILE_SAVE**, и **ID_FILE_SAVE_AS** стандартных команд.  
+ Если нужно, вы можете обойти сериализации MFC, чтобы создать собственный механизм для хранения постоянных данных. Необходимо переопределить функции-члены класса, инициирующие сериализации по команде пользователя. См. обсуждение в [Технические заметки 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN, ID_FILE_SAVE и ID_FILE_SAVE_AS стандартных команд.  
   
  Следующие статьи рассматриваются две основные задачи, необходимые для сериализации:  
   

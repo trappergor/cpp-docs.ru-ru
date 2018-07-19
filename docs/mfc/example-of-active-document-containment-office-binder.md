@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345965"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Пример вложения активного документа. Office Binder
 Microsoft Office Binder является примером контейнер активного документа. Office Binder включает две основной области, как контейнеры, как это обычно делается. Левая панель содержит значки, которые соответствуют активные документы в модуле привязки. Каждый документ называется *раздел* внутри связывателя. Например модуль привязки может содержать документы Word, PowerPoint файлы, электронные таблицы Excel и т. д.  

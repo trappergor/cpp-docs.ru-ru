@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361307"
 ---
 # <a name="atl-com-10-component-wizard"></a>Мастер компонентов ATL COM+ 1.0
 Этот мастер используется для добавления объекта в проект, которая поддерживает службы COM + 1.0, в том числе транзакции.  

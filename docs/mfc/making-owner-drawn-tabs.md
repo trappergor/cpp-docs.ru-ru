@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346507"
 ---
 # <a name="making-owner-drawn-tabs"></a>Создание определяемых владельцем вкладок
 Можно определить отдельные элементы управления "Вкладка" ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) до определяемых владельцем элементов. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](http://msdn.microsoft.com/library/windows/desktop/bb760550) в Windows SDK.  

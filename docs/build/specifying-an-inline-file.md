@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380109"
 ---
 # <a name="specifying-an-inline-file"></a>Указание встроенного файла
 Укажите две угловые скобки (<<) в команде где *filename* должна отображаться. Угловые скобки не может быть расширения макроса.  

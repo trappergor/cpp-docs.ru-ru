@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696270"
 ---
 # <a name="textureview-class"></a>Класс texture_view
 Предоставляет доступ на чтение и запись для текстуры. `texture_view` может использоваться только для чтения текстуры, тип которого значение является `int`, `unsigned int`, или `float` , имеющие bpse 32-разрядных по умолчанию. Для чтения других форматов текстур, используйте `texture_view<const value_type, _Rank>`.  

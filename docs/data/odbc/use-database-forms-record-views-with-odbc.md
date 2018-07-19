@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089821"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Использование форм баз данных (представления записей) с ODBC
 Некоторые приложения, например для ввода или просмотра данных, требуется форма, представления, используя элементы управления в стиле диалогового окна.  

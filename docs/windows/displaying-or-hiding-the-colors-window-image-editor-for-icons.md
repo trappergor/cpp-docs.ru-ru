@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872046"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Отображение или скрытие окна "Цвета" (редактор изображений для значков)
 ### <a name="to-display-colors-window"></a>Чтобы открыть окно "цвета"  

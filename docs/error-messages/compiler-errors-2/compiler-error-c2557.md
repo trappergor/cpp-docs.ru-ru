@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227412"
 ---
 # <a name="compiler-error-c2557"></a>Ошибка компилятора C2557
 "идентификатор": закрытые и защищенные члены нельзя инициализировать без конструктора  

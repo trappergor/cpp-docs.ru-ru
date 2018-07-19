@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356596"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Добавление точек подключения к объектам
 [Учебник по ATL](../atl/active-template-library-atl-tutorial.md) показано, как создать элемент управления с поддержкой точек подключения, как добавлять события и как реализовать точку подключения. ATL реализует точки подключения с [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) класса.  

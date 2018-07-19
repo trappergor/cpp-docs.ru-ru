@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCMenuBar | Документы Microsoft
+title: Класс CMFCMenuBar | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -116,11 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fb3c0295b56f394fae97be7d14e3dccb5cd46b3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853781"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 Строка меню, которая реализует закрепление.  
@@ -132,72 +133,72 @@ ms.lasthandoff: 05/04/2018
 class CMFCMenuBar : public CMFCToolbar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Переопределяет `CMFCToolBar::AdjustLocations`.)|  
-|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Указывает, может ли отображаться текстовые метки в разделе изображения на кнопке панели инструментов. (Переопределяет [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
+|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Указывает, может ли отображаться текстовые метки в списке изображений на кнопках панели инструментов. (Переопределяет [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
 |[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|  
-|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Вычисляет размер панели инструментов по горизонтали. (Переопределяет [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|  
+|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Вычисляет горизонтальный размер окна панели инструментов. (Переопределяет [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|  
 |[CMFCMenuBar::CalcLayout](#calclayout)|(Переопределяет `CMFCToolBar::CalcLayout`.)|  
-|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет Максимальная высота кнопки на панели инструментов. (Переопределяет [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|  
-|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Указывает, является ли пользователь может закрыть панель инструментов. (Переопределяет [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|  
-|[CMFCMenuBar::CanBeRestored](#canberestored)|Определяет ли система восстановить панель инструментов в исходное состояние после настройки. (Переопределяет [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
-|[CMFCMenuBar::Create](#create)|Создает элемент управления меню и прикрепляет его к `CMFCMenuBar` объекта.|  
-|[CMFCMenuBar::CreateEx](#createex)|Создает `CMFCMenuBar` объекта с дополнительными возможностями параметрами.|  
-|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Инициализирует `CMFCMenuBar` объекта. Принимает `HMENU` параметр, который выступает в качестве шаблона для заполненного `CMFCMenuBar`.|  
-|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Включает **справки** со списком, расположенный справа от строки меню.|  
-|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Указывает, следует ли отображать тени в контекстных меню.|  
+|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет максимальную высоту кнопок на панели инструментов. (Переопределяет [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|  
+|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Указывает, может ли пользователь закрыть панели инструментов. (Переопределяет [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|  
+|[CMFCMenuBar::CanBeRestored](#canberestored)|Определяет, будет ли система может восстановиться панель инструментов в исходное состояние после настройки. (Переопределяет [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
+|[CMFCMenuBar::Create](#create)|Создает элемент управления меню и присоединяет его к `CMFCMenuBar` объекта.|  
+|[CMFCMenuBar::CreateEx](#createex)|Создает `CMFCMenuBar` объекта с параметрами дополнительного стиля.|  
+|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Инициализирует `CMFCMenuBar` объекта. Принимает параметр дескриптора HMENU, который выступает в качестве шаблона для заполненного `CMFCMenuBar`.|  
+|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Позволяет **помочь** поле со списком, расположенный в правой части строки меню.|  
+|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Указывает, следует ли отображать shadows контекстных меню.|  
 |[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Переопределяет [CPane::GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|  
 |[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|Возвращает ширину кнопки панели инструментов. (Переопределяет [CMFCToolBar::GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|  
-|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|Возвращает дескриптор для исходного меню в файле ресурсов.|  
+|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|Возвращает дескриптор в исходное меню в файле ресурсов.|  
 |[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|Возвращает идентификатор ресурса для исходного меню в файле ресурсов.|  
 |[CMFCMenuBar::GetFloatPopupDirection](#getfloatpopupdirection)||  
 |[CMFCMenuBar::GetForceDownArrows](#getforcedownarrows)||  
-|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Возвращает указатель на **справки** поле со списком.|  
-|[CMFCMenuBar::GetHMenu](#gethmenu)|Возвращает дескриптор для меню, который подключен к `CMFCMenuBar` объекта.|  
+|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Возвращает указатель на **помочь** поле со списком.|  
+|[CMFCMenuBar::GetHMenu](#gethmenu)|Возвращает дескриптор для меню, к которой подключен `CMFCMenuBar` объекта.|  
 |[CMFCMenuBar::GetMenuFont](#getmenufont)|Возвращает глобальный текущий шрифт для меню объектов.|  
-|[CMFCMenuBar::GetMenuItem](#getmenuitem)|Возвращает кнопки панели инструментов, связанные с индекс указанного элемента.|  
+|[CMFCMenuBar::GetMenuItem](#getmenuitem)|Возвращает кнопки панели инструментов, связанной с индекс указанного элемента.|  
 |[CMFCMenuBar::GetRowHeight](#getrowheight)|Возвращает высоту кнопки панели инструментов. (Переопределяет [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
 |[CMFCMenuBar::GetSystemButton](#getsystembutton)||  
 |[CMFCMenuBar::GetSystemButtonsCount](#getsystembuttonscount)||  
 |[CMFCMenuBar::GetSystemMenu](#getsystemmenu)||  
-|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|Указывает, выделяются ли пунктов меню отключен.|  
-|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Определяет, можно ли панели инструментов отображаются кнопки, расширена границы. (Переопределяет [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
-|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Указывает, выделяются ли отключенные объекты.|  
-|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Указывает, отображаются ли тени в контекстных меню.|  
-|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Указывает, отображаются ли недавно используемым командам меню в строке меню.|  
-|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Указывает, отображать ли всплывающие меню всех команд.|  
-|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Указывает, является ли меню отображаются все команды после короткой задержки.|  
+|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|Указывает, выделяются ли отключенных пунктов меню.|  
+|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Определяет, может ли отображать кнопки, которые имеют дополнительные границы панели инструментов. (Переопределяет [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Указывает, выделяются ли отключенных элементов.|  
+|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Указывает, рисуются ли shadows контекстных меню.|  
+|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Указывает, отображаются ли недавно использованных команд в строке меню.|  
+|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Указывает, отображаются ли всплывающие меню всех команд.|  
+|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Указывает, отображать ли меню все команды, после короткой задержки.|  
 |[CMFCMenuBar::LoadState](#loadstate)|Загружает состояние `CMFCMenuBar` объекта из реестра.|  
 |[CMFCMenuBar::OnChangeHot](#onchangehot)|Вызывается платформой, когда пользователь выбирает кнопку на панели инструментов. (Переопределяет [CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|  
-|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Вызывается платформой, когда окно фрейма загружает меню по умолчанию из файла ресурсов.|  
+|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Вызывается платформой при загрузке окна фрейма меню по умолчанию из файла ресурсов.|  
 |[CMFCMenuBar::OnSendCommand](#onsendcommand)|(Переопределяет `CMFCToolBar::OnSendCommand`.)|  
-|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Вызывается платформой, если меню находится в режим настройки и пользователь изменяет текст пункта меню.|  
+|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Вызывается платформой, когда меню находится в режиме настройки, и пользователь изменяет текст пункта меню.|  
 |[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Переопределяет `CMFCToolBar::OnToolHitTest`.)|  
 |[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(Переопределяет `CMFCToolBar::PreTranslateMessage`.)|  
-|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Вызывается платформой, если меню находится в режим настройки и пользователь выбирает **Сброс** для строки меню.|  
+|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Вызывается платформой, когда меню находится в режиме настройки, а пользователь выбирает **Сброс** для строки меню.|  
 |[CMFCMenuBar::SaveState](#savestate)|Сохраняет состояние `CMFCMenuBar` объекта в реестр.|  
 |[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Задает исходное меню в файле ресурсов.|  
 |[CMFCMenuBar::SetForceDownArrows](#setforcedownarrows)||  
-|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|Вызывается платформой при его режим отображения дочернего окна MDI. Если дочернее окно MDI вновь развернуто или больше не развернуто, этот метод обновляет меню.|  
-|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|Задает сведения о классе среды выполнения, создается, когда пользователь создает динамически кнопки меню.|  
+|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|Вызывается платформой при его режим отображения дочернего окна MDI. Если больше не находящегося в развернутом состоянии дочернего окна интерфейса MDI вновь находящегося в развернутом состоянии, этот метод обновляет меню.|  
+|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|Задает сведения о классе среды выполнения создается, когда пользователь создает динамически кнопки меню.|  
 |[CMFCMenuBar::SetMenuFont](#setmenufont)|Задает шрифт для всех меню в приложении.|  
-|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|Указывает, отображается ли строка меню команды недавно использовавшихся меню.|  
-|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Указывает, отображает ли строка меню все команды.|  
+|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|Указывает, отображается ли строка меню недавно использованных меню команд.|  
+|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Указывает, отображает ли меню все команды.|  
   
 ## <a name="remarks"></a>Примечания  
- `CMFCMenuBar` Класс является строка меню, которая реализует функциональные возможности закрепления. Панель инструментов, как указано, несмотря на то, что он не может быть закрыт — всегда отображается.  
+ `CMFCMenuBar` Класс является строка меню, которая реализует возможности закрепления. Оно похоже на панель инструментов, несмотря на то, что он не может быть закрыт — всегда отображается.  
   
- `CMFCMenuBar` поддерживает параметр отображения объектов меню недавно использовавшихся элементов. Если этот параметр включен, `CMFCMenuBar` отображается только подмножество доступных команд на первом просмотре. После этого отображаются последние использованные команды, а также исходный набор команд. Кроме того пользователь всегда может развернуть меню, чтобы просмотреть все доступные команды. Таким образом каждая команда доступных настраивается постоянно отобразить, или для отображения только в том случае, если недавно был выбран.  
+ `CMFCMenuBar` поддерживает возможность отображения объектов меню недавно использовавшихся элементов. Если этот параметр включен, `CMFCMenuBar` отображается только подмножество доступных команд на первом просмотре. После этого отображаются последние использованные команды вместе с исходной часть команд. Кроме того пользователь всегда может развернуть меню, чтобы просмотреть все доступные команды. Таким образом каждая команда доступных настраивается для отображения постоянно или для отображения только в том случае, если недавно был выбран.  
   
- Для использования `CMFCMenuBar` объекта, внедрите его в объект фрейма главного окна. При обработке `WM_CREATE` сообщений, вызовите метод `CMFCMenuBar::Create` или `CMFCMenuBar::CreateEx`. Независимо от того, которые создают функции использовать, следует передать указатель фрейма главного окна. Затем включите закрепление путем вызова [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Закрепить это меню, вызвав [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane).  
+ Чтобы использовать `CMFCMenuBar` объекта, внедрить в объект фрейма главного окна. При обработке `WM_CREATE` сообщений, вызовите `CMFCMenuBar::Create` или `CMFCMenuBar::CreateEx`. Независимо от того, что создание функции использовать, передавать в указатель фрейма главного окна. Затем включите закрепления, вызвав [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Закрепить это меню путем вызова [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane).  
   
 ## <a name="example"></a>Пример  
- Следующий пример демонстрирует использование различных методов `CMFCMenuBar` класса. В примере показано, как задать стиль панели, включить кнопку Настройка, включение окно справки, тени в контекстных меню и обновления в меню. Этот фрагмент кода является частью [IE демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует использование различных методов `CMFCMenuBar` класса. Пример показано, как задать стиль области, включить "настроить", окно справки, включить shadows контекстных меню и обновление строки меню. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]  
@@ -232,14 +233,14 @@ virtual void AdjustLocations();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCMenuBar::AllowChangeTextLabels  
- Определяет, могут ли метки, текст под изображениями в строке меню.  
+ Определяет, разрешены ли текстовые метки в образы в строке меню.  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `TRUE` , если пользователь может выбрать для отображения текстовых меток в списке изображений.  
+ Возвращает значение TRUE, если пользователь может выбрать для отображения текстовых меток в списке изображений.  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -264,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -281,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `dwMode`  
- [in] `nLength`  
+ [in] *dwMode*  
+ [in] *nLength*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -322,7 +323,7 @@ virtual BOOL CanBeRestored() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="create"></a>  CMFCMenuBar::Create  
- Создает элемент управления меню и прикрепляет его к [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта.  
+ Создает элемент управления меню и присоединяет его к [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта.  
   
 ```  
 virtual BOOL Create(
@@ -332,20 +333,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно для нового `CMFCMenuBar` объекта.  
   
- [in] `dwStyle`  
- Стиль новое меню.  
+ [in] *dwStyle*  
+ Стиль новая строка меню.  
   
- [in] `nID`  
- Идентификатор дочернего окна в строке меню.  
+ [in] *nID*  
+ Идентификатор дочернего окна панели меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение `TRUE` в случае успешного выполнения; в противном случае — значение `FALSE`.  
+ Значение TRUE, если успешно; в противном случае — FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- После создания `CMFCMenuBar` объекта, необходимо вызвать метод `Create`. Этот метод создает `CMFCMenuBar` управления и прикрепляет его к `CMFCMenuBar` объекта.  
+ После создания `CMFCMenuBar` объекта, необходимо вызвать `Create`. Этот метод создает `CMFCMenuBar` управления и прикрепляет его к `CMFCMenuBar` объекта.  
   
  Дополнительные сведения о стилях инструментов см. в разделе [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).  
   
@@ -365,37 +366,37 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  Указатель на родительское окно нового `CMFCMenuBar` объекта.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Дополнительные стили для новой панели меню.  
   
- [in] `dwStyle`  
- Основной стиль новое меню.  
+ [in] *dwStyle*  
+ Основной стиль новая строка меню.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  Объект `CRect` параметр, который указывает размеры для границ `CMFCMenuBar` объекта.  
   
- [in] `nID`  
- Идентификатор дочернего окна в строке меню.  
+ [in] *nID*  
+ Идентификатор дочернего окна панели меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
+ Ненулевое значение, если метод выполнен успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Следует использовать эту функцию вместо [CMFCMenuBar::Create](#create) при необходимости укажите стили помимо стиля toolbar. Некоторые часто используемые дополнительные стили `TBSTYLE_TRANSPARENT` и `CBRS_TOP`.  
+ Следует использовать эту функцию вместо [CMFCMenuBar::Create](#create) при необходимости указать стили, кроме стиль панели инструментов. Некоторые часто используемые дополнительные стили: TBSTYLE_TRANSPARENT и CBRS_TOP.  
   
- Списки дополнительные стили, в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439), [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498), и [общие стили окна](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
+ Список дополнительные стили, см. в разделе [панели инструментов и стили кнопок](http://msdn.microsoft.com/library/windows/desktop/bb760439), [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498), и [общие стили окна](http://msdn.microsoft.com/library/windows/desktop/ms632600).  
   
 ### <a name="example"></a>Пример  
- В следующем примере демонстрируется использование `CreateEx` метод `CMFCMenuBar` класса. Этот фрагмент кода является частью [IE демонстрационный пример](../../visual-cpp-samples.md).  
+ Следующий пример демонстрирует, как использовать `CreateEx` метод `CMFCMenuBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]  
   
 ##  <a name="createfrommenu"></a>  CMFCMenuBar::CreateFromMenu  
- Инициализирует [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта. Этот метод моделей `CMFCMenuBar` объекта после `HMENU` параметра.  
+ Инициализирует [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта. Этот метод моделей `CMFCMenuBar` объект после параметра дескриптора HMENU.  
   
 ```  
 virtual void CreateFromMenu(
@@ -405,20 +406,20 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
- Дескриптор ресурса меню. `CreateFromMenu` использует этот ресурс в качестве шаблона для `CMFCMenuBar`.  
+ [in] *hMenu*  
+ Дескриптор для ресурса меню. `CreateFromMenu` использует этот ресурс в качестве шаблона для `CMFCMenuBar`.  
   
- [in] `bDefaultMenu`  
+ [in] *bDefaultMenu*  
  Логическое значение, указывающее, является ли новое меню меню по умолчанию.  
   
- [in] `bForceUpdate`  
+ [in] *bForceUpdate*  
  Логическое значение, указывающее, является ли этот метод вызывает обновление меню.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте этот метод, если элемент управления меню иметь одинаковые элементы меню как ресурс меню. Этот метод вызывается после вызова одной [CMFCMenuBar::Create](#create) или [CMFCMenuBar::CreateEx](#createex).  
+ Этот метод следует используйте, если элемент управления меню, чтобы иметь те же элементы меню, как ресурс меню. Этот метод вызывается после вызова либо [CMFCMenuBar::Create](#create) или [CMFCMenuBar::CreateEx](#createex).  
   
 ##  <a name="enablehelpcombobox"></a>  CMFCMenuBar::EnableHelpCombobox  
- Включает **справки** со списком, расположенный справа от строки меню.  
+ Позволяет **помочь** поле со списком, расположенный в правой части строки меню.  
   
 ```  
 void EnableHelpCombobox(
@@ -428,33 +429,33 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiID`  
- Идентификатор команды для кнопки **справки** поле со списком.  
+ [in] *uiID*  
+ Идентификатор команды для кнопки **помочь** поле со списком.  
   
- [in] `lpszPrompt`  
- Строка, содержащая текст, платформа отображает в поле со списком, если он является пустым и не активен. Например «введите здесь текст».  
+ [in] *lpszPrompt*  
+ Строка, содержащая текст, платформа отображает в поле со списком, если это пустой и не активен. Например «введите здесь текст».  
   
- [in] `nComboBoxWidth`  
+ [in] *nComboBoxWidth*  
  Ширина кнопки для поля со списком в пикселях.  
   
 ### <a name="remarks"></a>Примечания  
- **Справки** напоминает списком **справки** поле со списком в строке меню [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
+ **Помочь** похож на поле со списком **помочь** поле со списком в строке меню [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)].  
   
- При вызове этого метода с `uiID` задано значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается на правой панели меню. После вызова этого метода необходимо вызвать [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) для получения указателя на вставленных [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
+ При вызове этого метода с *uiID* значение 0, этот метод скрывает поле со списком. В противном случае этот метод поле со списком автоматически отображается в правой части панели меню. После вызова этого метода вызовите [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) получить указатель на вставленный [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) объекта.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
- Позволяет тени в контекстных меню.  
+ Позволяет shadows контекстных меню.  
   
 ```  
 static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bEnable`  
- Логический параметр, указывает, следует ли включить тени в контекстных меню.  
+ [in] *bEnable*  
+ Логический параметр, который указывает, следует ли включить shadows контекстных меню.  
   
 ### <a name="remarks"></a>Примечания  
- Алгоритм, который использует этот метод является сложной и может привести к снижению производительности приложения в медленных системах.  
+ Алгоритм, который использует этот метод сложен и может привести к снижению производительности приложения в медленных системах.  
   
 ##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize  
 
@@ -479,20 +480,20 @@ virtual int GetColumnWidth() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="getdefaultmenu"></a>  CMFCMenuBar::GetDefaultMenu  
- Получает дескриптор в исходное меню. Платформа исходное меню загружает из файла ресурсов.  
+ Извлекает дескриптор в исходное меню. Платформа загружает исходное меню из файла ресурсов.  
   
 ```  
 HMENU GetDefaultMenu() const;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор ресурса меню.  
+ Дескриптор для ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
  Если приложение настраивает меню, этот метод можно использовать для получения дескриптора в исходное меню.  
   
 ##  <a name="getdefaultmenuresid"></a>  CMFCMenuBar::GetDefaultMenuResId  
- Извлекает идентификатор ресурса для меню по умолчанию.  
+ Получает идентификатор ресурса для меню по умолчанию.  
   
 ```  
 UINT GetDefaultMenuResId() const;  
@@ -502,7 +503,7 @@ UINT GetDefaultMenuResId() const;
  Идентификатор ресурса меню.  
   
 ### <a name="remarks"></a>Примечания  
- Платформа загружает меню по умолчанию для `CMFCMenuBar` объекта из файла ресурсов.  
+ Платформа загружает меню по умолчанию для `CMFCMenuBar` объект из файла ресурсов.  
   
 ##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection  
 
@@ -512,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -530,55 +531,55 @@ BOOL GetForceDownArrows();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="gethelpcombobox"></a>  CMFCMenuBar::GetHelpCombobox  
- Возвращает указатель на **справки** поле со списком.  
+ Возвращает указатель на **помочь** поле со списком.  
   
 ```  
 CMFCToolBarComboBoxButton* GetHelpCombobox();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на **справки** поле со списком. `NULL` Если **справки** списком скрыто или не включен.  
+ Указатель на **помочь** поле со списком. Значение NULL, если **помочь** поле со списком скрыт или не включен.  
   
 ### <a name="remarks"></a>Примечания  
- **Справки** поле со списком находится справа от строки меню. Вызовите метод [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) для включения списком.  
+ **Помочь** поле со списком находится в правой части строки меню. Вызовите метод [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) для включения этого поле со списком.  
   
 ##  <a name="gethmenu"></a>  CMFCMenuBar::GetHMenu  
- Извлекает дескриптор меню, присоединенные к [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта.  
+ Получает дескриптор меню, подключенное к [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта.  
   
 ```  
 HMENU GetHMenu() const;  
 ```  
   
 ##  <a name="getmenufont"></a>  CMFCMenuBar::GetMenuFont  
- Извлекает текущий шрифт для меню.  
+ Извлекает текущий шрифт меню.  
   
 ```  
 static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHorz`  
- Логический параметр, указывает, следует ли возвращать горизонтального или вертикального шрифта. `TRUE` Указывает горизонтальное шрифт.  
+ [in] *bHorz*  
+ Логический параметр, который указывает, следует ли возвращать шрифт горизонтальную или вертикальную. Значение TRUE указывает шрифт по горизонтали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CFont](../../mfc/reference/cfont-class.md) параметра, который содержит текущий шрифт строки меню.  
+ Указатель на [CFont](../../mfc/reference/cfont-class.md) параметр, который содержит текущий шрифт панели меню.  
   
 ### <a name="remarks"></a>Примечания  
- Возвращаемый шрифт имеет глобальных параметров для приложения. Глобальные шрифты сохраняются для всех `CMFCMenuBar` объектов. Эти отдельные шрифты используются для строки меню по горизонтали и вертикали.  
+ Возвращаемый шрифт является глобальных параметров для приложения. Глобальные шрифты сохраняются для всех `CMFCMenuBar` объектов. Эти отдельные шрифты используются для меню горизонтальных и вертикальных полос.  
   
 ##  <a name="getmenuitem"></a>  CMFCMenuBar::GetMenuItem  
- Извлекает [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) в строке меню в соответствии с индекс элемента.  
+ Извлекает [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) в строке меню на основе индекс элемента.  
   
 ```  
 CMFCToolBarButton* GetMenuItem(int iItem) const;  
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iItem`  
+ [in] *iItem*  
  Индекс возвращаемого элемента меню.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CMFCToolBarButton` объект, соответствующий индекс, заданный `iItem`. `NULL` Если индекс является недопустимым.  
+ Указатель на `CMFCToolBarButton` , соответствующий индекс, заданный *iItem*. Значение NULL, если индекс недопустим.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -601,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in] *uiBtn*  
+ [in] *bByCommand*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -631,18 +632,18 @@ CMFCToolBarSystemMenuButton* GetSystemMenu() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="highlightdisableditems"></a>  CMFCMenuBar::HighlightDisabledItems  
- Определяет, выделяет ли платформа пунктов меню отключен.  
+ Определяет, выделяет ли платформа отключенных пунктов меню.  
   
 ```  
 static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bHighlight`  
- Логический параметр, указывает ли платформа выделяет элементы меню недоступны.  
+ [in] *bHighlight*  
+ Логический параметр, указывает ли платформа выделение элементов меню недоступен.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию платформа не выделяет элементы меню недоступны, при наведении указателя мыши над ними.  
+ По умолчанию платформа не выделения пунктов меню недоступны, при наведении указателя мыши над ними.  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable  
 
@@ -656,77 +657,77 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ishighlightdisableditems"></a>  CMFCMenuBar::IsHighlightDisabledItems  
- Указывает, выделяются ли платформа элементы меню недоступны.  
+ Указывает, выделяет ли платформа пунктов меню недоступен.  
   
 ```  
 static BOOL IsHighlightDisabledItems();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если элементы меню недоступны, выделяются; в противном случае `FALSE`.  
+ Значение TRUE, если выделены элементы меню недоступны; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- По умолчанию платформа не выделяет элементы меню недоступны, при наведении указателя мыши над ними. Используйте [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems) метод, чтобы включить эту функцию.  
+ По умолчанию платформа не выделения пунктов меню недоступны, при наведении указателя мыши над ними. Используйте [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems) метод, чтобы включить эту функцию.  
   
 ##  <a name="ismenushadows"></a>  CMFCMenuBar::IsMenuShadows  
- Указывает, является ли платформа, рисование с тенями в контекстных меню.  
+ Указывает ли платформа Рисование с тенями контекстных меню.  
   
 ```  
 static BOOL IsMenuShadows();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если платформа Рисование с тенями меню; в противном случае `FALSE`.  
+ Значение TRUE, если платформа допускает Рисование теней меню; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CMFCMenuBar::EnableMenuShadows](#enablemenushadows) метод, чтобы включить или отключить эту функцию.  
   
 ##  <a name="isrecentlyusedmenus"></a>  CMFCMenuBar::IsRecentlyUsedMenus  
- Указывает, отображаются ли недавно используемым командам меню в строке меню.  
+ Указывает, отображаются ли недавно использованных команд в строке меню.  
   
 ```  
 static BOOL IsRecentlyUsedMenus();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если `CMFCMenuBar` объект отображает недавно использованных команд меню; в противном случае — 0.  
+ Ненулевое значение `CMFCMenuBar` объект показано недавно использованных команд меню; в противном случае — значение 0.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте функцию [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus) для управления ли в строке меню отображается недавно использованные команды меню.  
   
 ##  <a name="isshowallcommands"></a>  CMFCMenuBar::IsShowAllCommands  
- Указывает, является ли меню отображаются все команды.  
+ Указывает, отображать ли меню все команды.  
   
 ```  
 static BOOL IsShowAllCommands();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если `CMFCMenuBar` отображает все команды; в противном случае — 0.  
+ Ненулевое значение `CMFCMenuBar` отображает все команды; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Объект `CMFCMenuBar` объект можно настроить отображение всех команд или Показать только часть команды. Дополнительные сведения об этой функции см. в разделе [CMFCMenuBar класса](../../mfc/reference/cmfcmenubar-class.md).  
+ Объект `CMFCMenuBar` объект можно настроить отображение всех команд, или Показать только подмножество команд. Дополнительные сведения об этой функции см. в разделе [класс CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).  
   
- `IsShowAllCommands` Вы узнаете, как эта функция настраивается для `CMFCMenuBar` объекта. Чтобы контролировать, какие команды меню отображаются, используйте методы [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) и [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus).  
+ `IsShowAllCommands` Вы узнаете, как этот компонент настроен для `CMFCMenuBar` объекта. Чтобы контролировать, какие команды меню отображаются, используйте методы [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) и [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus).  
   
 ##  <a name="isshowallcommandsdelay"></a>  CMFCMenuBar::IsShowAllCommandsDelay  
- Указывает, является ли [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объект отображает все команды после короткой задержки.  
+ Указывает, является ли [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта отображаются все команды, после короткой задержки.  
   
 ```  
 static BOOL IsShowAllCommandsDelay();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если в строке меню отображается полные меню после короткой задержки; в противном случае — 0.  
+ Ненулевое значение, если в строке меню отображается полные меню после короткой задержки; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- При настройке меню для отображения недавно использовавшихся элементов в меню отображает меню полностью одним из двух способов:  
+ При настройке строке меню, чтобы отображать недавно использовавшиеся элементы меню отображает полное меню одним из двух способов:  
   
--   Отображение полного меню после программируемых задержки из при наведении курсора на стрелку в нижней части меню.  
+-   Отображение полного меню после бывает программной задержки из при наведении курсора на стрелку в нижней части меню.  
   
--   Отображение полного меню, при нажатии стрелки в нижней части меню.  
+-   Отображение полного меню при нажатии стрелки в нижней части меню.  
   
- По умолчанию все `CMFCMenuBar` объекты используют этот параметр для отображения полного меню после короткой задержки. Этот параметр нельзя изменить программным способом в `CMFCMenuBar` класса. Тем не менее, пользователь может изменить поведение во время настройки панели инструментов с помощью **Настройка** диалоговое окно...  
+ По умолчанию все `CMFCMenuBar` объектов используйте параметр для отображения полного меню после короткой задержки. Этот параметр нельзя изменить в обработчике `CMFCMenuBar` класса. Тем не менее, пользователь может изменить поведение во время настройки панели инструментов с помощью **Настройка** диалоговое окно...  
   
 ##  <a name="loadstate"></a>  CMFCMenuBar::LoadState  
  Загружает состояние панели меню из реестра Windows.  
@@ -739,22 +740,22 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Строка, содержащая путь к разделу реестра Windows.  
   
- [in] `nIndex`  
- Идентификатор элемента управления для строки меню.  
+ [in] *nIndex*  
+ Идентификатор элемента управления для меню.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Зарезервированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
+ Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте [CMFCMenuBar::SaveState](#savestate) метод для сохранения состояния в меню реестр. Сохраненные данные включает элементы меню, состояние закрепления и позицию строки меню.  
+ Используйте [CMFCMenuBar::SaveState](#savestate) метод для сохранения состояния в строке меню в реестр. Сохраняется следующая информация: пункты меню, состояние закрепления и положение в строке меню.  
   
- В большинстве случаев приложения не вызывает `LoadState`. Платформа вызывает этот метод во время инициализации рабочей области.  
+ В большинстве случаев приложение не вызывает `LoadState`. Этот метод вызывается платформой при инициализации рабочей области.  
   
 ##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot  
 
@@ -764,23 +765,23 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `iHot`  
+ [in] *iHot*  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="ondefaultmenuloaded"></a>  CMFCMenuBar::OnDefaultMenuLoaded  
- Этот метод вызывается платформой при загрузке ресурсов меню из файла ресурсов.  
+ Этот метод вызывается платформой при загрузке ресурса меню из файла ресурсов.  
   
 ```  
 virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `hMenu`  
- Дескриптор для меню присоединяется к `CMFCMenuBar` объекта.  
+ [in] *hMenu*  
+ Дескриптор для меню подключен к `CMFCMenuBar` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этой функции не выполняет никаких действий. Переопределите эту функцию для выполнения пользовательского кода после платформа загружает ресурс меню из файла ресурсов.  
+ Реализация по умолчанию этой функции не выполняет никаких действий. Переопределите эту функцию для выполнения пользовательского кода, после framework загружает ресурс меню из файла ресурсов.  
   
 ##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand  
 
@@ -790,28 +791,28 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="onsetdefaultbuttontext"></a>  CMFCMenuBar::OnSetDefaultButtonText  
- Этот метод вызывается платформой, когда пользователь изменяет текст элемента в строке меню.  
+ Этот метод вызывается платформой при изменении пользователем текста элемента в строке меню.  
   
 ```  
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pButton`  
+ [in] *pButton*  
  Указатель на [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) объект, который требуется настроить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если платформа применяет изменения пользователя к строке меню; в противном случае `FALSE`.  
+ Значение TRUE, если платформа применяет изменения, внесенные пользователем в строку меню; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Реализация по умолчанию для этого метода изменения текста, где пользователь предоставляет текст кнопки.  
+ Реализация по умолчанию для этого метода изменения текста кнопки, предоставленными пользователем текста.  
   
 ##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest  
 
@@ -823,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `point`  
- [in] `pTI`  
+ [in] *точки*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -838,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -852,10 +853,10 @@ virtual BOOL RestoreOriginalstate();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод выполнен успешно; в противном случае — 0.  
+ Ненулевое значение, если метод выполнен успешно; в противном случае 0.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается, когда пользователь выбирает **Сброс** меню "настройки". Можно также вручную вызвать этот метод, чтобы программным образом сбросе состояния в меню. Этот метод загружает исходное состояние из файла ресурсов.  
+ Этот метод вызывается, когда пользователь выбирает **Сброс** из меню настройки. Можно также вручную вызвать этот метод для программного сброса состояния строки меню. Этот метод загружает исходное состояние из файла ресурсов.  
   
  Переопределите этот метод, если вы хотите сделать какой-либо обработки, когда пользователь выбирает **Сброс** параметр.  
   
@@ -870,32 +871,32 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Строка, содержащая путь к разделу реестра Windows.  
   
- [in] `nIndex`  
- Идентификатор элемента управления для строки меню.  
+ [in] *nIndex*  
+ Идентификатор элемента управления для меню.  
   
- [in] `uiID`  
+ [in] *uiID*  
  Зарезервированное значение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` в случае успешного выполнения; в противном случае `FALSE`;  
+ Значение TRUE, если выполнение прошло успешно; в противном случае FALSE.  
   
 ### <a name="remarks"></a>Примечания  
  Как правило, приложение не вызывает `SaveState`. Этот метод вызывается платформой при сериализации рабочей области. Дополнительные сведения см. в разделе [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
- Сохраненные данные включает элементы меню, состояние закрепления и позицию строки меню.  
+ Сохраняется следующая информация: пункты меню, состояние закрепления и положение в строке меню.  
   
 ##  <a name="setdefaultmenuresid"></a>  CMFCMenuBar::SetDefaultMenuResId  
- Задает меню по умолчанию для [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) в соответствии с его идентификатором ресурса.  
+ Задает меню по умолчанию для [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) объекта на основании ресурсов.  
   
 ```  
 void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `uiResId`  
+ [in] *uiResId*  
  Идентификатор ресурса для нового меню по умолчанию.  
   
 ### <a name="remarks"></a>Примечания  
@@ -911,12 +912,12 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="setmaximizemode"></a>  CMFCMenuBar::SetMaximizeMode  
- Платформа вызывает этот метод, когда MDI изменяет его режим отображения и должны быть обновлены в меню.  
+ Платформа вызывает этот метод при MDI изменяет его режим отображения, ее необходимо обновить строки меню.  
   
 ```  
 void SetMaximizeMode(
@@ -926,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bMax`  
+ [in] *bMax*  
  Логическое значение, указывающее режим. Дополнительные сведения см. в разделе "Примечания".  
   
- [in] `pWnd`  
- Указатель на дочернее окно MDI, которой изменяется.  
+ [in] *pWnd*  
+ Указатель на дочернего окна интерфейса MDI, меняется.  
   
- [in] `bRecalcLayout`  
- Логическое значение, указывающее, следует ли пересчитывать макета в меню сразу.  
+ [in] *bRecalcLayout*  
+ Логическое значение, указывающее, должны быть пересчитаны макет меню немедленно.  
   
 ### <a name="remarks"></a>Примечания  
- Если развернуто дочернего окна MDI, строка меню, прикрепленный к окну основного фрейма MDI отображает системное меню и **свернуть**, **развернуть** и **закрыть** кнопки. Если `bMax` — `TRUE` и `pWnd` не `NULL`, дочернее окно MDI-приложения развернуто и в меню должно содержать дополнительных элементов управления. В противном случае в меню возвращается в обычный состояние.  
+ Если развернуто дочернего окна MDI, строка меню, присоединенный к окну основного фрейма MDI отображает системное меню и **свернуть**, **развернуть** и **закрыть** кнопки. Если *bMax* имеет значение TRUE и *pWnd* не равно NULL, было максимальным дочернего окна интерфейса MDI, а в строке меню необходимо включить дополнительные элементы управления. В противном случае в строке меню возвращает регулярных состояние.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  Задает сведения о классе среды выполнения, платформа использует при создании пользователем кнопки меню.  
@@ -946,14 +947,14 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pMenuButtonRTC`  
+ [in] *pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) сведения для класса, производным от [класс CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).  
   
 ### <a name="remarks"></a>Примечания  
- Когда пользователь добавляет новые кнопки строки меню, платформа создает кнопки динамически. По умолчанию создает `CMFCMenuButton` объектов. Переопределите этот метод, чтобы изменить тип кнопки объектов, которые платформа создает.  
+ Когда пользователь добавляет новые кнопки в строке меню, платформа создает кнопки динамически. По умолчанию, он создает `CMFCMenuButton` объектов. Переопределите этот метод, чтобы изменить тип объектов button, создаваемые платформой.  
   
 ##  <a name="setmenufont"></a>  CMFCMenuBar::SetMenuFont  
- Задает шрифт для всех строк меню в приложении.  
+ Задает шрифт для всех меню в приложении.  
   
 ```  
 static BOOL SetMenuFont(
@@ -962,44 +963,44 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpLogFont`  
- Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) структура, определяющая шрифта для задания.  
+ [in] *lpLogFont*  
+ Указатель на [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) структура, определяющая шрифт для задания.  
   
- [in] `bHorz`  
- Значение TRUE, если `lpLogFont` параметр, используемый для вертикального шрифта, FALSE, если требуется использовать для шрифта по горизонтали.  
+ [in] *bHorz*  
+ Значение TRUE, если вы хотите *lpLogFont* параметр, используемый для вертикального шрифта, значение FALSE, если требуется, его можно использовать для горизонтального шрифта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `TRUE` Если метод выполнен успешно; в противном случае `FALSE`.  
+ Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- Шрифты, используемые для всех `CMFCMenuBar` объектов. Эти отдельные шрифты используются для строки меню по горизонтали и вертикали.  
+ Шрифты используются для всех `CMFCMenuBar` объектов. Эти отдельные шрифты используются для меню горизонтальных и вертикальных полос.  
   
- Параметры шрифта глобальные переменные и влияют на все `CMFCMenuBar` объектов.  
+ Параметры шрифта, глобальные переменные и влияют на все `CMFCMenuBar` объектов.  
   
 ##  <a name="setrecentlyusedmenus"></a>  CMFCMenuBar::SetRecentlyUsedMenus  
- Определяет, отображается ли строка меню недавно использованные команды меню.  
+ Элементы управления, отображается ли строка меню недавно использованные команды меню.  
   
 ```  
 static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bOn`  
- Логическое значение, управляющее отображением команды меню недавно использованных.  
+ [in] *bOn*  
+ Логическое значение, управляющее, отображаются ли недавно использованных меню команд.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
- Определяет, отображаются ли меню все доступные команды.  
+ Определяет, отображает ли меню все доступные команды.  
   
 ```  
 static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bShowAllCommands`  
- Логический параметр, указывает, отображаются ли всплывающие меню всех команд меню.  
+ [in] *bShowAllCommands*  
+ Логический параметр, который указывает, отображает ли приложение во всплывающем меню команд меню.  
   
 ### <a name="remarks"></a>Примечания  
- Если меню не отображает все команды меню, он скрывает команд, которые используются редко. Дополнительные сведения об отображении команды меню см. в разделе [CMFCMenuBar класса](../../mfc/reference/cmfcmenubar-class.md).  
+ Если меню не отображается все команды меню, он скрывает команды, которые используются редко. Дополнительные сведения об отображении команды меню, см. в разделе [класс CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   

@@ -1,5 +1,5 @@
 ---
-title: Класс CDefaultCharTraits | Документы Microsoft
+title: Класс CDefaultCharTraits | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881858"
 ---
 # <a name="cdefaultchartraits-class"></a>Класс CDefaultCharTraits
-Этот класс предоставляет два статические функции для преобразования символов в верхний или нижний регистр.  
+Этот класс предоставляет два статических функций для преобразования символов в верхний или нижний регистр.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,20 +37,20 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `T`  
+ *T*  
  Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CDefaultCharTraits::CharToLower](#chartolower)|(Статический) Вызывайте эту функцию для преобразования в верхний регистр символа.|  
+|[CDefaultCharTraits::CharToLower](#chartolower)|(Статический) Вызывайте эту функцию для преобразования символа в верхний регистр.|  
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|(Статический) Вызывайте эту функцию для преобразования символа в нижний регистр.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет функции, используемые классом [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Этот класс предоставляет функции, которые используются классом [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlcoll.h  
@@ -64,13 +65,13 @@ static char CharToLower(char x);
   
 ### <a name="parameters"></a>Параметры  
  *x*  
- Знак, который необходимо преобразовать в нижний регистр.  
+ Знак для преобразования в нижний регистр.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
- Вызывайте эту функцию для преобразования в верхний регистр символа.  
+ Вызывайте эту функцию для преобразования символа в верхний регистр.  
   
 ```
 static wchar_t CharToUpper(wchar_t x);  
@@ -79,7 +80,7 @@ static char CharToUpper(char x);
   
 ### <a name="parameters"></a>Параметры  
  *x*  
- Знак, который необходимо преобразовать в верхний регистр.  
+ Знак для преобразования в верхний регистр.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

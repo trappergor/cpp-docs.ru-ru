@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381622"
 ---
 # <a name="using-canimatectrl"></a>Использование CAnimateCtrl
 Элемент управления анимации, представленный классом [CAnimateCtrl](../mfc/reference/canimatectrl-class.md), — окно, которое отображает картинку в формате звука видео с чередованием (AVI) — стандартный формат видео и аудио Windows. AVI-clip представляет собой ряд кадров растрового изображения, такие как фильма.  

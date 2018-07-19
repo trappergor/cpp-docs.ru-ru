@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169092"
 ---
 # <a name="compiler-error-c2227"></a>Ошибка компилятора C2227
 выражение слева от "->член" должно указывать на тип класса, структуры или объединения либо на универсальный тип  

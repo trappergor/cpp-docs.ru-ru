@@ -104,11 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7453120d40efc05fd0dce919a7b85869710a9b18
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5ab94a9aadc40b4313995a71171d6712657e7ff0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964958"
 ---
 # <a name="basicstreambuf-class"></a>Класс basic_streambuf
 
@@ -123,13 +124,13 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Параметры
 
-`Elem` Объект [char_type](#char_type).
+*Elem* объект [char_type](#char_type).
 
-`Tr` Символ [traits_type](#traits_type).
+*TR* символ [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс шаблона описывает абстрактный базовый класс для получения буфера потока, который управляет передачей элементов в определенное представление потока и из него. Объект класса `basic_streambuf` помогает управлять потоком с элементами типа `Tr`, также называемого [char_type](#char_type), у которого признаки символа определяются классом [char_traits](../standard-library/char-traits-struct.md), также известным как [traits_type](#traits_type).
+Этот класс шаблона описывает абстрактный базовый класс для получения буфера потока, который управляет передачей элементов в определенное представление потока и из него. Объект класса `basic_streambuf` помогает управлять потоком с элементами типа *Tr*, также известных как [char_type](#char_type), признаки символов определяются классом [char_traits](../standard-library/char-traits-struct.md), также известных как [traits_type](#traits_type).
 
 В теории каждый буфер потока управляет двумя независимыми потоками: один для извлечения (ввод) и один для вставки (вывод). Однако конкретное представление может запретить один или оба эти потока. Обычно он поддерживает определенные связи между двумя потоками. То, что вы вставляете в выходной поток [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, например объект `Tr`>, вы позже извлекаете из его входного потока. При размещении одного потока объекта [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem` `Tr`> вы размещаете второй поток для образования тандема.
 
@@ -167,13 +168,13 @@ class basic_streambuf;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[basic_streambuf](#basic_streambuf)|Создает объект типа `basic_streambuf`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[char_type](#char_type)|Связывает имя типа с параметром шаблона `Elem`.|
 |[int_type](#int_type)|Сопоставляет имя типа в области `basic_streambuf` с параметром шаблона `Elem`.|
@@ -183,7 +184,7 @@ class basic_streambuf;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[eback](#eback)|Защищенная функция, возвращающая указатель на начало входного буфера.|
 |[egptr](#egptr)|Защищенная функция, возвращающая указатель на позицию сразу после конца входного буфера.|
@@ -227,7 +228,7 @@ class basic_streambuf;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значения этому объекту из другого объекта `basic_streambuf`.|
 
@@ -249,13 +250,13 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` Ссылка lvalue на `basic_streambuf` объект, используемый для задания значений для этого `basic_streambuf` объекта.
+*правом* ссылка lvalue на `basic_streambuf` объект, используемый для задания значений для данного `basic_streambuf` объекта.
 
 ### <a name="remarks"></a>Примечания
 
 Первый защищенный конструктор сохраняет указатель null во всех указателях, управляющих входным и выходным буферами. Он также сохраняет `locale::classic` в объекте языкового стандарта. Дополнительные сведения см. в разделе [locale::classic](../standard-library/locale-class.md#classic).
 
-Второй защищенный конструктор копирует указатели и языковой стандарт из `right`.
+Второй защищенный конструктор копирует указатели и языковой стандарт из *правой*.
 
 ## <a name="char_type"></a>  basic_streambuf::char_type
 
@@ -303,7 +304,7 @@ char_type *epptr() const;
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-Защищенная функция, которая добавляет `count` в следующий указатель для входного буфера.
+Защищенная функция, которая добавляет *число* в следующий указатель для входного буфера.
 
 ```cpp
 void gbump(int count);
@@ -311,7 +312,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Параметры
 
-`count` Величина, на которую переместить указатель.
+*число* величина, на которую должен переместиться указатель.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -369,7 +370,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-`_Loc` Ссылка на языковой стандарт.
+*_Loc* ссылка на языковой стандарт.
 
 ### <a name="remarks"></a>Примечания
 
@@ -389,7 +390,7 @@ streamsize in_avail();
 
 ### <a name="remarks"></a>Примечания
 
-Если [позицию чтения](../standard-library/basic-streambuf-class.md) доступен, функция-член возвращает [egptr](#egptr) - [gptr](#gptr). В противном случае она возвращает [showmanyc](#showmanyc).
+Если [позицию чтения](../standard-library/basic-streambuf-class.md) доступна, функция-член возвращает [egptr](#egptr) - [gptr](#gptr). В противном случае она возвращает [showmanyc](#showmanyc).
 
 ### <a name="example"></a>Пример
 
@@ -435,11 +436,11 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-`right` Ссылка lvalue на `basic_streambuf` объект, используемый для присвоения значений этого объекта.
+*правом* ссылка lvalue на `basic_streambuf` объект, который используется для присвоения значений этому объекту.
 
 ### <a name="remarks"></a>Примечания
 
-Защищенный оператор-член элемент копирует из `right` указатели, которые управляют входным и выходным буфером. Он также сохраняет `right.`[getloc()](#getloc) в `locale object`. Он возвращает `*this`.
+Защищенный член оператор копирует из *правой* указатели, которые управляют входным и выходным буферами. Он также сохраняет `right.`[getloc()](#getloc) в `locale object`. Он возвращает `*this`.
 
 ## <a name="overflow"></a>  basic_streambuf::overflow
 
@@ -451,7 +452,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-`_Meta` Символ, который необходимо вставить в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -485,7 +486,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-`_Meta` Символ, который необходимо вставить в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta* символ для вставки в буфер, или **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -515,7 +516,7 @@ char_type *pbase() const;
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-Защищенная функция, которая добавляет `count` в следующий указатель для выходного буфера.
+Защищенная функция, которая добавляет *число* в следующий указатель для выходного буфера.
 
 ```cpp
 void pbump(int count);
@@ -523,7 +524,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Параметры
 
-`count` Число символов, которое необходимо переместить вперед позиции записи.
+*число* число символов, которую следует переместить запись позицию вперед.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -555,7 +556,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-`_Loc` Ссылка на языковой стандарт.
+*_Loc* ссылка на языковой стандарт.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -581,11 +582,11 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Позиция поиска для относительно `_Way`.
+*_Off* позиция для поиска относительно *_Way*.
 
-`_Way` Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-`_Which` Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -593,7 +594,7 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="remarks"></a>Примечания
 
-Перемещает указатель относительно `_Way`.
+Перемещает указатель относительно *_Way*.
 
 ## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
 
@@ -605,9 +606,9 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Параметры
 
-`_Sp` Позиция для поиска.
+*_Sp* позиция для поиска.
 
-`_Which` Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -629,9 +630,9 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Параметры
 
-`_Buffer` Указатель на `char_type` для этого экземпляра.
+*_Buffer* указатель на `char_type` для этого экземпляра.
 
-`count` Размер буфера.
+*число* размер буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -663,7 +664,7 @@ int_type sbumpc();
 
 ### <a name="remarks"></a>Примечания
 
-Если позиция чтения доступна, функция-член возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **\****[gptr](#gptr)) и увеличивает следующий указатель для входного буфера. В противном случае возвращается [uflow](#uflow).
+Если позиция чтения доступна, функция-член возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**\***[gptr](#gptr)) и увеличивает следующий указатель для входного буфера. В противном случае возвращается [uflow](#uflow).
 
 ### <a name="example"></a>Пример
 
@@ -706,11 +707,11 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Параметры
 
-`_Off` Позиция поиска для относительно `_Way`.
+*_Off* позиция для поиска относительно *_Way*.
 
-`_Way` Начальная точка для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
+*_Way* отправной точкой для операций смещения. Возможные значения см. в разделе [seekdir](../standard-library/ios-base-class.md#seekdir).
 
-`_Which` Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -740,9 +741,9 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Параметры
 
-`_Sp` Позиция для поиска.
+*_Sp* позиция для поиска.
 
-`_Which` Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
+*_Which* указывает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -768,9 +769,9 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Параметры
 
-`_Buffer` Указатель на буфер.
+*_Buffer* указатель на буфер.
 
-`count` Размер буфера.
+*число* размер буфера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -794,13 +795,13 @@ void setg(char_type* _Gbeg,
 
 *_Gbeg* указатель на начало буфера.
 
-`_Gnext` Указатель на другом середине буфера.
+*_Gnext* указатель на место посередине буфера.
 
-`_Gend` Указатель конца буфера.
+*_Gend* указатель на конец буфера.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-Защищенная функция, которая сохраняет `_Pbeg` в начальном указателе и `_Pend` в конечном указателе для входного буфера.
+Защищенная функция, которая хранит *_Pbeg* в начальном указателе и *_Pend* в конечном указателе для выходного буфера.
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -808,9 +809,9 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Параметры
 
-`_Pbeg` Указатель на начало буфера.
+*_Pbeg* указатель на начало буфера.
 
-`_Pend` Указатель конца буфера.
+*_Pend* указатель на конец буфера.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -850,7 +851,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-Извлекает до `count` символов из входного буфера и сохраняет их в предоставленном буфере `ptr`.
+Извлекает до *число* символы из входного буфера и сохраняет их в предоставленном буфере *ptr*.
 
 Этот метод является потенциально опасным, так как зависит от вызывающего объекта при проверке правильности переданных значений.
 
@@ -862,9 +863,9 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Буфер для хранения извлеченных символов.
+*PTR* буфер для хранения извлеченных символов.
 
-`count` Количество элементов для чтения.
+*число* число элементов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -966,7 +967,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-`_Ch` Символ.
+*_Ch* символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -974,7 +975,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>Примечания
 
-Если позиция возврата доступна и `_Ch` при сравнении дает значение, равное символу, хранящемуся в этой позиции, функция-член уменьшает указатель для входного буфера и возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). В противном случае она возвращает [pbackfail](#pbackfail)(`_Ch`).
+Если позиция возврата доступна и *_Ch* сравнивает равное символу, хранящемуся в этой позиции, функция-член уменьшает следующий указатель для входного буфера и возвращает **traits_type::** [ to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). В противном случае она возвращает [pbackfail](#pbackfail)(`_Ch`).
 
 ### <a name="example"></a>Пример
 
@@ -1013,7 +1014,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Параметры
 
-`_Ch` Символ.
+*_Ch* символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1021,7 +1022,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>Примечания
 
-Если `write position` доступна, функция-член сохраняет `_Ch` в позиции записи, увеличивает следующий указатель для выходного буфера и возвращает **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). В противном случае она возвращает [overflow](#overflow)(`_Ch`).
+Если `write position` доступна, функция-член сохраняет *_Ch* в позиции записи, увеличивает следующий указатель для выходного буфера и возвращает **traits_type::**[to_int_type ](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). В противном случае она возвращает [overflow](#overflow)(`_Ch`).
 
 ### <a name="example"></a>Пример
 
@@ -1055,9 +1056,9 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Строка символов.
+*PTR* символьной строки.
 
-`count` Число символов.
+*число* число символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1180,13 +1181,13 @@ void swap(basic_streambuf& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|`right`|Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.|
+|*right*|Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.|
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член выполняет обмен со всеми указателями `right`, управляющими `input buffer` и `output buffer`. Она также выполняет обмен `right.`[getloc()](#getloc) с объектом `locale`.
+Защищенная функция-член меняет местами с *правой* всех указателях, управляющих `input buffer` и `output buffer`. Она также выполняет обмен `right.`[getloc()](#getloc) с объектом `locale`.
 
 ## <a name="sync"></a>  basic_streambuf::sync
 
@@ -1280,9 +1281,9 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Буфер для хранения извлеченных символов.
+*PTR* буфер для хранения извлеченных символов.
 
-`count` Число элементов для извлечения.
+*число* число элементов для извлечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1290,7 +1291,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная виртуальная функция-член извлекает до `count` элементов из входного потока, как в результате повторных вызовов [sbumpc](#sbumpc), и сохраняет их в массив начиная с `ptr`. Она возвращает число фактически извлеченных элементов.
+Защищенная функция-член извлекает до *число* элементы из входного потока, как в результате повторных вызовов [sbumpc](#sbumpc)и сохраняет их в массив, начиная с *ptr*. Она возвращает число фактически извлеченных элементов.
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1302,9 +1303,9 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Параметры
 
-`ptr` Указатель элементов для вставки.
+*PTR* указателя на элементы для вставки.
 
-`count` Количество элементов для вставки.
+*число* число элементов для вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1312,7 +1313,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная виртуальная функция-член вставляет до `count` элементов в выходной поток, как в результате повторных вызовов [sbumpc](#sputc), из массива начиная с `ptr`. Вставка символов в выходной поток останавливается, когда все `count` символов записаны, или в случае вызова `sputc( count)` возвращается `traits::eof()`. Возвращается число фактически вставленных элементов.
+Защищенная функция-член вставляет до *число* элементов в выходной поток, как в результате повторных вызовов [sputc](#sputc), в массив, начиная с *ptr*. Вставка символов в выходной поток останавливается, когда все *число* символов записаны, или в случае вызова `sputc( count)` вернет `traits::eof()`. Возвращается число фактически вставленных элементов.
 
 ## <a name="see-also"></a>См. также
 

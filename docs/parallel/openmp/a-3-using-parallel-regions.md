@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689900"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3   Использование параллельных регионов
 `parallel` Директивы ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8) можно использовать в крупных фрагментов данных параллельных программ. В следующем примере каждый поток в параллельной области решает, какую часть глобального массива `x` для работы, в зависимости от числа потоков:  

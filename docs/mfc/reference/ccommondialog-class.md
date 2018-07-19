@@ -1,5 +1,5 @@
 ---
-title: Класс CCommonDialog | Документы Microsoft
+title: Класс CCommonDialog | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335919"
 ---
 # <a name="ccommondialog-class"></a>Класс CCommonDialog
 Базовый класс для классов, которые инкапсулируют функцию общих диалоговых окон Windows.  
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/04/2018
 class CCommonDialog : public CDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCommonDialog::CCommonDialog](#ccommondialog)|Создает объект `CCommonDialog`.|  
   
@@ -82,14 +83,14 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentWnd`  
- Указывает на объект window родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
+ *pParentWnd*  
+ Указывает на объект окна родительский объект или владельца (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это значение NULL, родительское окно объекта диалогового окна будет присвоено главного окна приложения.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) полные сведения.  
+ См. в разделе [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) полные сведения.  
   
 ## <a name="see-also"></a>См. также  
- [CDialog-класс](../../mfc/reference/cdialog-class.md)   
+ [Класс CDialog](../../mfc/reference/cdialog-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Класс CFileDialog](../../mfc/reference/cfiledialog-class.md)   
  [Класс CFontDialog](../../mfc/reference/cfontdialog-class.md)   

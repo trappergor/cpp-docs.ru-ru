@@ -1,5 +1,5 @@
 ---
-title: Развертывание знаков подстановки | Документы Microsoft
+title: Развертывание знаков подстановки | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,17 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939140"
 ---
 # <a name="wildcard-expansion"></a>Развертывание знаков подстановки
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
  Задавать имена файлов и пути к ним в аргументах командной строки можно при помощи знаков подстановки — вопросительного знака (?) и звездочки (*).  
   
- Аргументы командной строки обрабатываются процедурой **_setargv** (или **_wsetargv** в среде Юникода), которая по умолчанию не развертывает знаки подстановки в отдельные строки в `argv`массив строк. Дополнительные сведения о включении подстановочных знаков см. [расширение аргументов заполнителей](../c-language/expanding-wildcard-arguments.md).  
+ Аргументы командной строки обрабатываются процедурой `_setargv` (или `_wsetargv` в среде Юникода), который по умолчанию не разворачивает подстановочные знаки, в отдельные строки в `argv` массив строк. Дополнительные сведения о включении развертывание знаков подстановки, см. [расширение аргументов заполнителей](../c-language/expanding-wildcard-arguments.md).  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

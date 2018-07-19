@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342882"
 ---
 # <a name="ole-automation-classes"></a>Классы автоматизации OLE
 Эти классы поддерживают клиенты автоматизации (приложений, управления другими приложениями). Серверы автоматизации (приложений, которыми можно управлять другими приложениями) поддерживаются с помощью [съемы](../mfc/reference/dispatch-maps.md).  

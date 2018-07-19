@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931880"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Объекты и источники данных. Создание и деструкция
 Как описано в статье [объектов данных и источники данных (OLE)](../mfc/data-objects-and-data-sources-ole.md), объекты и источники данных представляют обе стороны передачи данных. В этой статье объясняется, когда нужно создавать и уничтожать эти объекты и источники для правильной передачи данных. В том числе описываются следующие операции:  
@@ -71,14 +72,14 @@ ms.lasthandoff: 05/04/2018
   
 5.  Приложение вызывает функцию-член `SetClipboard` (или `DoDragDrop`, если это операция перетаскивания) объекта, созданного на шаге 3.  
   
-6.  Если это **Вырезать** операции или `DoDragDrop` возвращает `DROPEFFECT_MOVE`, данные, выбранные на шаге 1 удаляется из документа.  
+6.  Если это **Вырезать** операции или `DoDragDrop` возвращает **DROPEFFECT_MOVE**, данные, выбранные на шаге 1 удаляется из документа.  
   
  Этот сценарий реализуется в примерах MFC OLE [OCLIENT](../visual-cpp-samples.md) и [HIERSVR](../visual-cpp-samples.md). Посмотрите на источник производного от `CView` класса каждого приложения для всех функций, за исключением `GetClipboardData` и `OnGetClipboardData`. Эти две функции находятся в реализации производных от `COleClientItem` или `COleServerItem` классов. Эти примеры служат хорошим примером реализации этих концепций.  
   
  Еще одна ситуация, в которой может потребоваться создать объект `COleDataSource`, возникает при изменении поведения операции перетаскивания по умолчанию. Дополнительные сведения см. в разделе [перетаскивание: Настройка](../mfc/drag-and-drop-customizing.md) статьи.  
   
 ##  <a name="_core_destroying_data_sources"></a> Уничтожение источников данных.  
- Источники данных должно уничтожить приложение, которое в данный момент отвечает за них. В ситуациях, где передайте источника данных OLE, например при вызове [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), необходимо вызвать **Internalrelease -> Pdatasrc**. Пример:  
+ Источники данных должно уничтожить приложение, которое в данный момент отвечает за них. В ситуациях, где передайте источника данных OLE, например при вызове [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop), необходимо вызвать `pDataSrc->InternalRelease`. Пример:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

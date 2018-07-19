@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375205"
 ---
 # <a name="stub"></a>STUB
 При использовании в файл определения модуля, который создает драйверов виртуальных устройств (VxD), можно указать имя файла, который содержит структуру IMAGE_DOS_HEADER (определенную в файле WINNT. (H) для использования в драйверов виртуальных устройств (VxD), а не заголовок по умолчанию.  

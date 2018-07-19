@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351499"
 ---
 # <a name="derived-window-classes"></a>Производные классы окон
 Можно создать windows непосредственно из [CWnd](../mfc/reference/cwnd-class.md), или произвести новые классы окна из `CWnd`. Это обычно Создание собственных пользовательских windows. Однако большинство окон, используемые в программе framework вместо этого создаются из одного из `CWnd`-производные классы окна фрейма, предоставляемые MFC.  

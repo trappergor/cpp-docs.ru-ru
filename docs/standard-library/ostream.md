@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf7b8bf3015879643728358258cfe4a67536b3ea
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 94c84a8fd6b3aacbedf9d624fc750f98da4531e9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957939"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -37,10 +38,10 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Создает тип из `basic_ostream`, который специализируется на `char`, и `char_traits`, который специализируется на `char`.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Создает тип из `basic_ostream`, который специализируется на `wchar_t`, и `char_traits`, который специализируется на `wchar_t`.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Создает тип из `basic_ostream` который специализируется на **char** и `char_traits` специализированный на **char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Создает тип из `basic_ostream` который специализируется на **wchar_t** и `char_traits` специализированный на **wchar_t**.|
 
 ### <a name="manipulators"></a>Манипуляторы
 
@@ -53,13 +54,13 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор<<](../standard-library/ostream-operators.md#op_lt_lt)|Записывает в поток различные типы.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|Класс шаблона, который описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока.|
 

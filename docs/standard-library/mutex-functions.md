@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962192"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Функции и переменные &lt;мьютексов&gt;
 
@@ -49,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Параметры
 
-`Flag` Объект [once_flag](../standard-library/once-flag-structure.md) объект, который гарантирует, что вызываемый объект вызывается только один раз.
+*Флаг* объект [once_flag](../standard-library/once-flag-structure.md) объект, который гарантирует, что вызываемый объект вызывается только один раз.
 
-`F` Вызываемый объект.
+*F* вызываемый объект.
 
-`A` Список аргументов.
+*Объект* список аргументов.
 
 ### <a name="remarks"></a>Примечания
 
-Если `Flag` является недопустимым, функция выдает [system_error](../standard-library/system-error-class.md) с кодом ошибки `invalid_argument`. В противном случае функция-шаблон использует свой аргумент `Flag`, чтобы убедиться, что она вызывает `F(A...)` успешно ровно один раз, независимо от количества вызовов функции-шаблона. Если `F(A...)` завершает работу, создавая исключение, вызов считается неуспешным.
+Если *флаг* является недопустимым, функция создает [system_error](../standard-library/system-error-class.md) с кодом ошибки `invalid_argument`. В противном случае функция-шаблон использует его *флаг* аргумент, чтобы убедиться, что вызывает `F(A...)` успешно ровно один раз, независимо от того, сколько раз вызывается функция-шаблон. Если `F(A...)` завершает работу, создавая исключение, вызов считается неуспешным.
 
 ## <a name="defer_lock"></a>  Переменная defer_lock
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373105"
 ---
 # <a name="structure-of-a-library"></a>Структура библиотеки
 Библиотека содержит объекты COFF. Объекты в библиотеке содержат функции и данные, которые могут быть внешние ссылки другими объектами в программе. Объект в библиотеке, иногда называют члена библиотеки.  

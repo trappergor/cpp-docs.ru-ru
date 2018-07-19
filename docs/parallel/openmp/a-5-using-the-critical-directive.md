@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686260"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5   Использование директивы critical
 Следующий пример включает несколько `critical` директивы ([раздел 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) на странице 18). В примере демонстрируется очереди модели, в котором задачи из очереди и работали. Чтобы защититься от нескольких потоков локальности ту же задачу, dequeuing операция должна быть в `critical` раздела. Две очереди в этом примере независимы, они будут защищены `critical` директив с разными именами *xaxis* и *ось y*.  

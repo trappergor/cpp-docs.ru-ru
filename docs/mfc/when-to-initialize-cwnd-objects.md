@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382877"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>Время инициализации объектов CWnd
 Нельзя создавать свои собственные дочерние окна или вызывать любые функции Windows API в конструкторе `CWnd`-производного объекта. Это вызвано `HWND` для `CWnd` еще не был создан объект. Наиболее Windows инициализации, например добавление дочерних окон, должно быть выполнено в [OnCreate](../mfc/reference/cwnd-class.md#oncreate) обработчик сообщений.  

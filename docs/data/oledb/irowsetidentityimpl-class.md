@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101426"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 Реализует OLE DB [IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx) интерфейс, который позволяет тестировать для идентификации строк.  

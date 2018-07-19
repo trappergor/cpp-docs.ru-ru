@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374376"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Загрузка всех импортов для библиотеки DLL с отложенной загрузкой
 **__HrLoadAllImportsForDll** функции, которая определена в delayhlp.cpp, компоновщик должен загружать все импорты из библиотеки DLL, который был указан с [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) компоновщика.  

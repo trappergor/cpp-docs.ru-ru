@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270442"
 ---
 # <a name="compiler-warning-c4485"></a>Предупреждение компилятора C4485
 «переопределяющая_функция»: соответствует методу базового класса «базового класса», но не помеченные «new» или «override»; предполагается «new» (и «virtual»)  

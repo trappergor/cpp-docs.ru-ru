@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955106"
 ---
 # <a name="cd2dgeometry-class"></a>Класс CD2DGeometry
 Программа-оболочка для ID2D1Geometry.  
@@ -75,14 +76,14 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Создает объект CD2DGeometry.|  
 |[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Деструктор Вызывается при уничтожении объекта geometry D2D.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometry::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|Эта геометрия с заданной геометрий объединяет и сохраняет результат в ID2D1SimplifiedGeometrySink.|  
@@ -105,13 +106,13 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|Возвращает интерфейс ID2D1Geometry|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|Указатель на ID2D1Geometry.|  
   
@@ -140,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -153,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -172,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `inputGeometry`  
+ *inputGeometry*  
  Geometry для объединения с данным экземпляром.  
   
- `combineMode`  
+ *combineMode*  
  Тип выполняемой операции объединения.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Преобразование для применения к inputGeometry до объединения.  
   
- `geometrySink`  
+ *geometrySink*  
  Результат операции объединения.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрических объектов. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -201,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `inputGeometry`  
+ *inputGeometry*  
  Геометрия для проверки.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  Преобразование для применения к inputGeometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрических объектов. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -224,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `worldTransform`  
+ *worldTransform*  
  Преобразования для применения этого geometry перед вычислением его области.  
   
- `area`  
+ *Область*  
  По возвращении из этого метода содержит указатель на область преобразованный, сведенное версии эта геометрия. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -247,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к геометрии до вычисления его длину.  
   
- `length`  
+ *length*  
  По возвращении из этого метода содержит указатель на длину геометрии. Для закрытых фигур включает сегмент неявное закрытие. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -272,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `length`  
+ *length*  
  Расстояние вдоль geometry точки и тангенс для поиска. Если это расстояние меньше затем 0, этот метод вычисляет первой точки геометрии. Если это расстояние больше, чем длина геометрии, этот метод вычисляет последнюю точку геометрии.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к геометрии до расчета заданной точки и тангенс.  
   
- `point`  
+ *Точка*  
  Расположение на заданном расстоянии вдоль геометрического объекта. Если геометрия не указаны, эта точка содержит NaN как x и y значения.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  По возвращении из этого метода содержит указатель касательной вектор на заданное расстояние вдоль геометрического объекта. Если геометрия пуста, данный вектор содержит NaN как x и y значения. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -319,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Точки для проверки.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к геометрии до тестирования для включения.  
   
- `contains`  
+ *Содержит*  
  При возвращении этого метода содержит логическое значение, равное TRUE, если область, заполняемую геометрия содержит точку; в противном случае — значение FALSE. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Числовой точности, с которым точный геометрического пути и пути пересечения вычисляется. Внутри по-прежнему считаются точек отсутствующих меньше допустимого отклонения заполнения. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -353,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *границы*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -371,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strokeWidth`  
+ *strokeWidth*  
  Величина, на которую расширить область геометрии, срезом его контура.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха, который расширяется геометрии.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, выполняемое геометрии после преобразования геометрии и был нарисован геометрии.  
   
- `bounds`  
+ *границы*  
  По возвращении из этого метода содержит границы расширил геометрии. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрических объектов. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -427,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `worldTransform`  
+ *worldTransform*  
  Преобразование для применения к структуре geometry.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, к которому добавляется структуры преобразованный geometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -451,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `simplificationOption`  
+ *simplificationOption*  
  Значение, указывающее, содержат ли упрощенной геометрии кривых.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к упрощенной геометрии.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, к которому добавляется упрощенной геометрии.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -480,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Точка для проверки на включение.  
   
- `strokeWidth`  
+ *strokeWidth*  
  Толщина штриха, вступили в силу.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха, вступили в силу.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к обведенные геометрии.  
   
- `contains`  
+ *Содержит*  
  По возвращении из этого метода содержит логическое значение, значение TRUE, если обводки геометрии содержит указанную точку; в противном случае — значение FALSE. Для этого параметра необходимо выделить хранилище.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Числовой точности, с которым точный геометрического пути и пути пересечения вычисляется. Внутри по-прежнему считаются точек отсутствующих штриха меньше допустимого отклонения. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -512,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `worldTransform`  
+ *worldTransform*  
  Преобразование геометрии, или значение NULL.  
   
- `tessellationSink`  
+ *tessellationSink*  
  ID2D1TessellationSink, к которому тесселированных добавляется.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -537,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `strokeWidth`  
+ *strokeWidth*  
  Величина, на которую расширить область геометрии.  
   
- `strokeStyle`  
+ *strokeStyle*  
  Стиль штриха, чтобы применить geometry, или значение NULL.  
   
- `worldTransform`  
+ *worldTransform*  
  Преобразование, применяемое к геометрии после расширяющих его.  
   
- `geometrySink`  
+ *geometrySink*  
  ID2D1SimplifiedGeometrySink, к которому добавляется расширил geometry.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  Максимальный диапазон для расстояния между точками в аппроксимации геометрии. Небольшие значения дать более точные результаты, однако к более медленному выполнению.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

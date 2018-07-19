@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354872"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Учебник по активной библиотеке шаблонных классов (ATL)
 ATL предназначен для упрощения процесса создания эффективных, гибкий и упрощенные элементы управления. Этот учебник описывает создания элементов управления ActiveX с демонстрацией многих основы ATL и COM.  

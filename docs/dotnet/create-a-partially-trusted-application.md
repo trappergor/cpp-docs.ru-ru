@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109002"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Практическое руководство. Создание приложения с частичным доверием путем удаления зависимости от библиотеки DLL CRT
 В этом разделе описывается создание приложения с частичным доверием среды CLR, с помощью Visual C++ путем удаления зависимости от библиотеки msvcm90.dll.  

@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928026"
 ---
 # <a name="document-template-creation"></a>Создание шаблонов документов
-При создании нового документа в ответ на `New` или **откройте** из **файл** меню шаблон документа также создает новый объект окна по которому необходимо просмотреть документ.  
+При создании нового документа в ответ на **New** или **откройте** из **файл** меню шаблон документа также создает новый объект окна до которой необходимо просмотреть документ.  
   
  Конструктор шаблона документа определяет, какие типы документов, окон и представлений, которые будут иметь возможность создавать шаблон. Это определяется аргументы, передаваемые конструктору шаблона документа. В следующем коде показано создание [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) образец приложения:  
   

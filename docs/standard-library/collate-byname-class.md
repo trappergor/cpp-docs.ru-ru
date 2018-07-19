@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f619554db0a85ee8aafbdb8792d8fe233cc392a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f104736d1c8f9d0ed60f2afd374345ab227300b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964916"
 ---
 # <a name="collatebyname-class"></a>Класс collate_byname
 
@@ -48,13 +49,13 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-`_Locname` Именованный языковой стандарт.
+*_Locname* именованный языковой стандарт.
 
-`_Refs` Начальное значение счетчика ссылок.
+*_Refs* начальное значение счетчика ссылок.
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется [именованным](../standard-library/locale-class.md#name) языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется [с именем](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Требования
 

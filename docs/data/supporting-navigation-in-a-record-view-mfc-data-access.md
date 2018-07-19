@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102388"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Поддержка навигации в представлении записей (доступ к данным MFC)
 В этом разделе объясняется, как поддерживать перемещение по записям в вашей [CRecordView](../mfc/reference/crecordview-class.md) класса, включая сведения о:  

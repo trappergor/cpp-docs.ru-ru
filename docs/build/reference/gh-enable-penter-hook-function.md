@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373157"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Включение функции обработчика _penter)
 Вызывает `_penter` функции в начале каждого метода или функции.  

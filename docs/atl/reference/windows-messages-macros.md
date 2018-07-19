@@ -1,5 +1,5 @@
 ---
-title: Макросы сообщений Windows | Документы Microsoft
+title: Макросы сообщений Windows | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886210"
 ---
 # <a name="windows-messages-macros"></a>Макросы сообщений Windows
 Этот макрос пересылает сообщения окна.  
   
 |||  
 |-|-|  
-|[WM_FORWARDMSG](#wm_forwardmsg)|Используйте для пересылки сообщений, полученных в окне другого окна для обработки.|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|Используйте для пересылки сообщения окном на другое окно для обработки.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h 
    
 ##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- Этот макрос пересылает сообщение, полученное в окне другого окна для обработки.  
+ Этот макрос пересылает сообщение, полученное центром окна в другое окно для обработки.  
   
 ```
 WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если сообщение было обработано, ноль, если это не так.  
+ Ненулевое значение, если сообщение было обработано, ноль Если это не так.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте `WM_FORWARDMSG` на пересылку сообщений, полученных в окне другого окна для обработки. Параметры LPARAM и WPARAM используются следующим образом:  
+ Используйте WM_FORWARDMSG на пересылку сообщений, полученных в окне другого окна для обработки. Параметры LPARAM и WPARAM используются следующим образом:  
   
 |Параметр|Использование|  
 |---------------|-----------|  
@@ -49,7 +50,7 @@ WM_FORWARDMSG
 |LPARAM|Указатель на `MSG` структуру, содержащую сведения о сообщении|  
   
 ### <a name="example"></a>Пример  
- В следующем примере `m_hWndOther` представляет окно, получает это сообщение.  
+ В следующем примере `m_hWndOther` представляет другое окно, которое получает это сообщение.  
   
  [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   

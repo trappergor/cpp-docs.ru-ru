@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132912"
 ---
 # <a name="msclr-namespace"></a>Пространство имен msclr
 `msclr` Пространство имен содержит классы библиотека поддержки C++. Дополнительные сведения об этих классах см. в разделе [библиотека поддержки C++](../dotnet/cpp-support-library.md).  

@@ -1,5 +1,5 @@
 ---
-title: ConvertStringToBSTR | Документы Microsoft
+title: ConvertStringToBSTR | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944176"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Блок, относящийся только к системам Microsoft**  
@@ -31,18 +32,16 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      BSTR __stdcall ConvertStringToBSTR(  
-   const char* pSrc  
-)  
+BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>Параметры  
- `pSrc`  
+ *pSrc*  
  Объект **char \***  переменной.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```cpp 
 // ConvertStringToBSTR.cpp  
 #include <comutil.h>  
 #include <stdio.h>  
@@ -71,7 +70,7 @@ BSTR text: Test
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<comutil.h >  
   
- **LIB:** comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
+ **LIB:** comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)  
   
 ## <a name="see-also"></a>См. также  
  [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

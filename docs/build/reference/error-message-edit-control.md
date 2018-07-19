@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369618"
 ---
 # <a name="error-message-edit-control"></a>Элемент управления изменением сообщений об ошибке
 **Сообщение об ошибке** поле содержит текст системное сообщение об ошибке или сообщение ошибки модуля на основании введенное значение.  

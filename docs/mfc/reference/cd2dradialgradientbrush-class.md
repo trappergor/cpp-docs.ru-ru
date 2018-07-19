@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952278"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Класс CD2DRadialGradientBrush
 Программа-оболочка для ID2D1RadialGradientBrush.  
@@ -67,14 +68,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Создает объект CD2DLinearGradientBrush.|  
 |[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D кисти линейного градиента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DRadialGradientBrush::CREATE](#create)|Создает CD2DRadialGradientBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -92,13 +93,13 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Возвращает интерфейс ID2D1RadialGradientBrush|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Указатель на ID2D1RadialGradientBrush.|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Центр, смещение начала градиента и радиус x и y радиус кисти градиента.|  
@@ -132,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pResource`  
+ *pResource*  
  Интерфейс существующего ресурса. Не может иметь значение NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -151,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `gradientStops`  
+ *gradientStops*  
  Указатель на массив структур D2D1_GRADIENT_STOP.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  Значение больше или равно 1, указывающее количество градиента в массиве gradientStops.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  Центр, смещение начала градиента и радиус x и y радиус кисти градиента.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  Место на диске, в какой цвет выполняется интерполяцию между позиции градиента.  
   
- `extendMode`  
+ *extendMode*  
  Поведение вне диапазона [0,1] нормализованный градиента.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  Указатель непрозрачности и преобразования кисти.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::CREATE  
@@ -183,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pRenderTarget`  
+ *pRenderTarget*  
  Указатель на целевой объект отрисовки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -288,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *Точка*  
  Центр градиента эллипса в координатной системе кисти  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -299,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  Смещение начала градиента в центре градиента эллипса  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -310,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `radiusX`  
+ *параметрами radiusX*  
  X радиус эллипса градиента. Это значение задается в координатной системе кисти  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -321,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `radiusY`  
+ *radiusY*  
  Y радиус эллипса градиента. Это значение задается в координатной системе кисти  
   
 ## <a name="see-also"></a>См. также  

@@ -1,5 +1,5 @@
 ---
-title: Добавление элемента управления ATL | Документы Microsoft
+title: Добавление элемента управления ATL | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954686"
 ---
 # <a name="adding-an-atl-control"></a>Добавление элемента управления ATL
-Этот мастер используется для добавления объекта пользовательского интерфейса в проект, который поддерживает интерфейсы всех потенциальных контейнеров. Для поддержки этих интерфейсов проект должен быть создан как приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
+Этот мастер используется для добавления объекта пользовательского интерфейса в проект, который поддерживает интерфейсы для всех потенциальных контейнеров. Для поддержки этих интерфейсов, проект должен быть создан как приложение ATL или как приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.  
   
-### <a name="to-add-an-atl-control-to-your-project"></a>Для добавления в проект элемента управления ATL  
+### <a name="to-add-an-atl-control-to-your-project"></a>Добавление элемента управления ATL в проект  
   
-1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому требуется добавить простой объект ATL.  
+1.  В любом **обозревателе решений** или [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить простой объект ATL.  
   
 2.  Нажмите кнопку **добавить** из контекстного меню и нажмите кнопку **Добавление класса**.  
   
-3.  В [добавить класс](../../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **управления ATL**, а затем нажмите кнопку **добавить** для отображения [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md).  
+3.  В [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне в области «Шаблоны» щелкните **управления ATL**, а затем нажмите кнопку **добавить** для отображения [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md).  
   
  С помощью **мастер элементов управления ATL**, можно создать один из трех типов элементов управления:  
   
@@ -44,6 +45,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей в составной элемент управления](../../atl/adding-functionality-to-the-composite-control.md)   
- [Основные принципы работы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
- [Пример ATLFire](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)   
 

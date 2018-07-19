@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168650"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Использование проверяемых сборок вместе с SQL Server (C++/CLI)
 Расширенные хранимые процедуры, представлена в виде библиотеки динамической компоновки (DLL), позволяют расширить функциональные возможности SQL Server через функции, разработанные с помощью Visual C++. Расширенные хранимые процедуры реализуются как функции в библиотеках DLL. В дополнение к функциям, расширенные хранимые процедуры можно также определить [определяемых пользователем типов](../cpp/classes-and-structs-cpp.md) и [агрегатные функции](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (таких как SUM или AVG).  

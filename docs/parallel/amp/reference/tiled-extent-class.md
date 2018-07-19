@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688587"
 ---
 # <a name="tiledextent-class"></a>Класс tiled_extent
 Объект `tiled_extent` объект `extent` объект одного до трех измерений, разделения задачи пространства экстента на одно-, двух- или трехмерные плитки.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390522"
 ---
 # <a name="files-and-streams"></a>Файлы и потоки
 Программа взаимодействует с целевой средой путем чтения и записи файлов. Файл может представлять собой:  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054615"
 ---
 # <a name="arm-assembler-command-line-reference"></a>Справочник по командной строке ассемблера ARM
 В этой статье рассматривается командной строки ассемблеру Microsoft ARM, *armasm*, который компилирует ARMv7 Thumb языка ассемблера в реализацию корпорации Майкрософт общий объект формата файла (COFF). Компоновщик может привязывать COFF код и код объекта, созданного компилятором C вместе с библиотеки объектов, созданных библиотекарь или код на языке ассемблера ARM.  

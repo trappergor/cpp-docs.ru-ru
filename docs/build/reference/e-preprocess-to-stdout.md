@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376918"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Предварительная обработка до stdout)
 Выполняет предварительную обработку клавиатурных исходными файлами C и C++ и копирование предварительно обработанных файлов на стандартное устройство вывода.  

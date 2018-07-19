@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348684"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>Страница "Параметры приложения" мастера библиотек DLL MFC
 Эта страница мастера библиотек DLL MFC для создания и добавления основных функций в новый проект библиотеки DLL MFC.  

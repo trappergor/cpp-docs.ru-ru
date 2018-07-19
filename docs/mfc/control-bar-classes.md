@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342024"
 ---
 # <a name="control-bar-classes"></a>Классы панели элементов управления
 Панели элементов управления, присоединяются к фрейм окна. Они содержат кнопки, панели состояния или шаблона диалогового окна. Свободные панелей, также называемый палитры инструментов реализуются посредством присоединения их [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) объекта.  

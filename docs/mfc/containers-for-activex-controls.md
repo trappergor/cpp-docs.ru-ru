@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341450"
 ---
 # <a name="containers-for-activex-controls"></a>Контейнеры для элементов управления ActiveX
 Элементы управления ActiveX, разработанные в Visual C++ в других приложениях можно использовать до тех пор, пока они поддерживают включение элементов управления ActiveX. Количество приложений Майкрософт, начиная с версий, перечисленных, поддерживают включение элементов управления ActiveX.  

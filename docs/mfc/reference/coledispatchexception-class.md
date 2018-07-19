@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037874"
 ---
 # <a name="coledispatchexception-class"></a>Класс COleDispatchException
 Обрабатывает исключения, относящиеся к интерфейсу OLE `IDispatch` и являющиеся ключевой частью OLE-автоматизации.  
@@ -45,7 +46,7 @@ class COleDispatchException : public CException
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Контекст справки для ошибки.|  
 |[COleDispatchException::m_strDescription](#m_strdescription)|Ошибка словесное описание.|  
@@ -54,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-код ошибки.|  
   
 ## <a name="remarks"></a>Примечания  
- Как и другие классы исключений производными от `CException` базового класса, `COleDispatchException` может использоваться с **THROW**, `THROW_LAST`, **ПОВТОРИТЕ**, **ПЕРЕХВАТЫВАТЬ**, `AND_CATCH`, и `END_CATCH` макросы.  
+ Как и другие классы исключений производными от `CException` базового класса, `COleDispatchException` может использоваться с THROW, THROW_LAST, TRY, CATCH, AND_CATCH и END_CATCH макросы.  
   
  В общем случае следует вызывать [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) для создания и вызова `COleDispatchException` объекта.  
   

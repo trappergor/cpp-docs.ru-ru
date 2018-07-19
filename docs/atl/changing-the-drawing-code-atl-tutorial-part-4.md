@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358916"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Изменение кода отрисовки (учебник ATL, часть 4)
 По умолчанию отображается код прорисовки элемента управления квадрате и текст **PolyCtl**. На этом шаге будет изменить код, чтобы показать, что-нибудь более интересным. Участвуют следующие задачи:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257987"
 ---
 # <a name="compiler-error-c3240"></a>Ошибка компилятора C3240
 «функция»: должна быть функцией неперегруженным абстрактный член «тип»  

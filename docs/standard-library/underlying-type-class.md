@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f45af807b37294b87920b6fabac18647f170025
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f796d5039900b591c219c840d1aef94d23e8f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957585"
 ---
 # <a name="underlyingtype-class"></a>Класс underlying_type
 
@@ -36,11 +37,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Параметры
 
-`T` Тип для изменения.
+*T*  
+ Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Определение типа члена `type` для класса шаблона задает имя базового целочисленного типа `T`, где `T` имеет тип перечисления, в противном случае определение типа члена `type` отсутствует.
+`type` Определение типа члена класса шаблонов называет базового целочисленного типа *T*, когда *T* является типом перечисления, в противном случае будет не член typedef `type`.
 
 ## <a name="requirements"></a>Требования
 

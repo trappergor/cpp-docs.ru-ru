@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092435"
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 Представляет объект, имеющий MashalingBehavior = Standard, как объект Agile, который значительно снижает вероятность возникновения в среде выполнения исключений, связанных с потоками. `Agile<T>` позволяет объекту, отличному от Agile, вызывать тот же или другой поток или быть вызванным из этих потоков. Дополнительные сведения см. в разделе [работа с потоками и маршалинг](../cppcx/threading-and-marshaling-c-cx.md).  

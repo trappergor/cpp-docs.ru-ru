@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355364"
 ---
 # <a name="ole-control-classes"></a>Классы элементов управления OLE
 Это основной классы, используемые при записи элементов управления OLE. `COleControlModule` Класс в модуль управления OLE аналогичен [CWinApp](../mfc/reference/cwinapp-class.md) класс в приложении. Каждый модуль реализует один или несколько элементов управления OLE; Эти элементы управления, представляются `COleControl` объектов. Эти элементы управления взаимодействуют с помощью контейнеров `CConnectionPoint` объектов.  

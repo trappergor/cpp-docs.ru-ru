@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128031"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each
 [Универсальных шаблонов](../windows/generics-cpp-component-extensions.md) компонент Visual C++ позволяет создавать универсальные коллекции.  

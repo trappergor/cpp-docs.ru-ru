@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374470"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (тип знака по умолчанию не подписан)
 Изменяет значение по умолчанию `char` из тип `signed char` для `unsigned char`и `char` тип является нулем при расширяется для `int` типа.  

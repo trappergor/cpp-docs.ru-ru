@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861231"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 В этом разделе показано, как преобразовать различных типов строк Visual C++ в другие строки. Типы строк, охваченных включают `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), и <xref:System.String?displayProperty=fullName>. Во всех случаях строки копии при преобразовании в новый тип. Любые изменения, внесенные в новую строку не повлияет на исходную строку и наоборот.  

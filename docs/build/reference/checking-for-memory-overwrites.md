@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369855"
 ---
 # <a name="checking-for-memory-overwrites"></a>Проверка затирания памяти
 Если вы получаете нарушение прав доступа при вызове функции обработки кучи, возможно, что программа повреждены и кучи. Признаком такой ситуации будет выглядеть так:  

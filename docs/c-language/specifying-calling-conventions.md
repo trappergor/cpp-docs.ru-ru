@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387965"
 ---
 # <a name="specifying-calling-conventions"></a>Указание соглашений о вызовах
 **Блок, относящийся только к системам Microsoft**  

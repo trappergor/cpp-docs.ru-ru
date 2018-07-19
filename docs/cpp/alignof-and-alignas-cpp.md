@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407991"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof и alignas (C++)
 Спецификатор типа `alignas` — стандартный для C++ переносимый способ задания настраиваемого выравнивания переменных и пользовательских типов. Оператор `alignof` — аналогичен стандартному переносимому способу получения выравнивания указанного типа или переменной.  

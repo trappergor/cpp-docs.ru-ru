@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958894"
 ---
 # <a name="addvolatile-class"></a>Класс add_volatile
 
-Создает тип volatile из указанного типа.
+Делает **volatile** типа из указанного типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,11 +40,11 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T* тип для изменения.
+*T* введите для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `add_volatile<T>` содержит определение типа члена `type`, который является *T*, если *T* является ссылкой, функцией или типом с квалификатором volatile; в противном случае — `volatile` *T*. Псевдоним `add_volatile_t` является ярлыком для доступа к определению типа `type`.
+Экземпляр `add_volatile<T>` имеет член **typedef** `type` то есть *T* Если *T* является ссылкой, функцией или квалификатором volatile тип, в противном случае **volatile** *T*. Псевдоним `add_volatile_t` является ярлыком для доступа к члену **typedef** `type`.
 
 ## <a name="example"></a>Пример
 

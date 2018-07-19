@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880573"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Заливка цветом выделенной области изображения (редактор изображений для значков)
 Редактор изображений предоставляет **заполнения** инструмент для заполнения любые заключенные область изображения с текущего цвета или текущий цвет фона.  

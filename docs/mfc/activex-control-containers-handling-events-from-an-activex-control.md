@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930665"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Контейнеры элементов управления ActiveX. Обработка событий из элемента управления ActiveX
 В этой статье рассматриваются в окне «Свойства» для установки обработчиков событий для элементов управления ActiveX в контейнере элементов управления ActiveX. Обработчики событий позволяют получать уведомления об определенных событиях (из элемента управления), а также выполнять некоторые действия в ответ. Это уведомление вызывается событие «запуск».  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
  При использовании окна «Свойства» для добавления событий событие сопоставить запись (`ON_EVENT`) добавляется к схеме событий приемника и обработчик событий функция будет добавлена реализация контейнера (. Файл CPP).  
   
- В следующем примере объявляется обработчик событий, называемый `OnClickInCircCtrl`, для управления Circ **ClickIn** событий:  
+ В следующем примере объявляется обработчик событий, называемый `OnClickInCircCtrl`, для управления Circ `ClickIn` событий:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

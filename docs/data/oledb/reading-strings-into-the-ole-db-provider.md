@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110173"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Чтение строк в поставщике OLE DB
 `RMyProviderRowset::Execute` Функция открывает файл и читает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Поставщик получает имя файла и сохраняет его в переменной-члена `m_szCommandText`. `Execute` считывает имя файла из `m_szCommandText`. Если имя файла является недопустимым, или файл недоступен, `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызывает метод `fgets` для извлечения строк. Для каждого набора строк, его чтение, `Execute` создает экземпляр пользовательской записи (`CAgentMan`) и помещает их в массив.  

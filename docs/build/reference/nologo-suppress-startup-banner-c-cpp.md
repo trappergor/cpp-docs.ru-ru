@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373846"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>Параметр /nologo (отключение загрузочного объявление) (C/C++)
 Подавляет отображение баннер авторских прав при запуске компилятора и информационные сообщения во время компиляции.  

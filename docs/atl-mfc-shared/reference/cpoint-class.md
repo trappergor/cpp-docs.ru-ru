@@ -1,5 +1,5 @@
 ---
-title: Класс CPoint | Документы Microsoft
+title: Класс CPoint | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880105"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 Как и в структуре `POINT` Windows.  
@@ -40,23 +41,23 @@ class CPoint : public tagPOINT
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPoint::CPoint](#cpoint)|Создает документ `CPoint`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CPoint::Offset](#offset)|Значения добавляются к **x** и **y** члены `CPoint`.|  
+|[CPoint::Offset](#offset)|Добавляет значения в таблицу `x` и `y` членами `CPoint`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размер, или отрицательными значениями точку или разница размера между двумя точками или смещение с отрицательным размером.|  
-|[CPoint::operator! =](#operator_neq)|Проверяет неравенство двух точек.|  
-|[CPoint::operator +](#operator_add)|Возвращает сумму `CPoint` и размер или точку, или `CRect` смещение по размеру.|  
+|[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размером или отрицание точку или разница размера между двумя точками или смещение с отрицательным размером.|  
+|[CPoint::operator! =](#operator_neq)|Проверяет неравенство между двумя точками.|  
+|[CPoint::operator +](#operator_add)|Возвращает сумму `CPoint` и размер или точки, или `CRect` смещается на размер.|  
 |[CPoint::operator +=](#operator_add_eq)|Смещает `CPoint` путем добавления размера или точки.|  
 |[CPoint::operator-=](#operator_-_eq)|Смещает `CPoint` путем вычитания размер или точки.|  
 |[CPoint::operator ==](#operator_eq_eq)|Проверяет равенство между двумя точками.|  
@@ -64,13 +65,13 @@ class CPoint : public tagPOINT
 ## <a name="remarks"></a>Примечания  
  Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры.  
   
- Объект `CPoint` объект можно использовать везде, где `POINT` использовать структуру. Операторы этого класса, которые взаимодействуют с «размер» примите либо [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, так как они взаимозаменяемы.  
+ Объект `CPoint` объект можно использовать везде, где `POINT` используется структура. Операторы этого класса, которые взаимодействуют с «размер» допускает оба [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, так как они взаимозаменяемы.  
   
 > [!NOTE]
->  Этот класс является производным от `tagPOINT` структуры. (Имя `tagPOINT` является наименее часто используемым именем `POINT` структуры.) Это означает, что данные-члены `POINT` структуры `x` и `y`, являются членами данных `CPoint`.  
+>  Этот класс является производным от `tagPOINT` структуры. (Имя `tagPOINT` представляет собой наименее часто используемым `POINT` структуры.) Это означает, что данные-члены `POINT` структуры, `x` и `y`, являются членами доступные данные `CPoint`.  
   
 > [!NOTE]
->  Дополнительные сведения об общих служебных классов (как `CPoint`), в разделе [совместно используемые классы](../../atl-mfc-shared/atl-mfc-shared-classes.md).  
+>  Дополнительные сведения о общие служебные классы (как `CPoint`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `tagPOINT`  
@@ -92,20 +93,20 @@ CPoint(LPARAM dwPoint) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `initX`  
+ *initX*  
  Определяет значение члена `x` структуры `CPoint`.  
   
- `initY`  
+ *initY*  
  Определяет значение члена `y` структуры `CPoint`.  
   
- `initPt`  
- [ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` , задающий значения, используемые для инициализации `CPoint`.  
+ *initPt*  
+ [ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.  
   
- `initSize`  
- [РАЗМЕР](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , задающий значения, используемые для инициализации `CPoint`.  
+ *initSize*  
+ [РАЗМЕР](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , определяет значения, используемые для инициализации `CPoint`.  
   
- `dwPoint`  
- Задает член `x` для младшего слова `dwPoint` и член `y` для старшего слова `dwPoint`.  
+ *dwPoint*  
+ Наборы `x` члена младшее слово из *dwPoint* и `y` член для старшего слова из *dwPoint*.  
   
 ### <a name="remarks"></a>Примечания  
  Если аргументы не указаны, для членов `x` и `y` задается значение 0.  
@@ -138,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
 ##  <a name="offset"></a>  CPoint::Offset  
- Значения добавляются к **x** и **y** члены `CPoint`.  
+ Добавляет значения в таблицу `x` и `y` членами `CPoint`.  
   
 ```  
 void Offset(int xOffset, int yOffset) throw();
@@ -148,16 +149,16 @@ void Offset(SIZE size) throw();
   
 ### <a name="parameters"></a>Параметры  
  *Смещение*  
- Указывает число для смещения **x** членом `CPoint`.  
+ Указывает величина смещения `x` членом `CPoint`.  
   
  *Смещение*  
- Указывает число для смещения **y** членом `CPoint`.  
+ Указывает величина смещения `y` членом `CPoint`.  
   
- `point`  
- Указывает объем ( [ТОЧКИ](../../mfc/reference/point-structure1.md) или `CPoint`) по смещению `CPoint`.  
+ *точка*  
+ Указывает объем ( [ТОЧКИ](../../mfc/reference/point-structure1.md) или `CPoint`) смещения `CPoint`.  
   
- `size`  
- Указывает объем ( [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) по смещению `CPoint`.  
+ *size*  
+ Указывает объем ( [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
@@ -170,34 +171,34 @@ BOOL operator==(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *точка*  
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или `CPoint` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если точки совпадают; в противном случае — 0.  
+ Ненулевое значение, если точки совпадают; в противном случае 0.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
 ##  <a name="operator_neq"></a>  CPoint::operator! =  
- Проверяет неравенство двух точек.  
+ Проверяет неравенство между двумя точками.  
   
 ```  
 BOOL operator!=(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *точка*  
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или `CPoint` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если точки не равны. в противном случае — 0.  
+ Ненулевое значение, если точки не равны; в противном случае 0.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CPoint::operator +=  
- Первая перегрузка добавляет размер для `CPoint`.  
+ Первая перегрузка добавляет размер `CPoint`.  
   
 ```  
 void operator+=(SIZE size) throw(); 
@@ -205,18 +206,18 @@ void operator+=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Содержит [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.  
   
- `point`  
+ *точка*  
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Вторая перегрузка добавляет точку `CPoint`.  
   
- В обоих случаях добавление выполняется путем добавления **x** (или **cx**) члена для правого операнда **x** членом `CPoint` и добавление **y**  (или **cy**) члена для правого операнда **y** членом `CPoint`.  
+ В обоих случаях сложения выполняется путем добавления `x` (или `cx`) членом правый операнд для `x` членом `CPoint` и добавление `y` (или `cy`) членом правый операнд `y` членом `CPoint`.  
   
- Например, при добавлении `CPoint(5, -7)` на переменную, которая содержит `CPoint(30, 40)` изменяет переменную `CPoint(35, 33)`.  
+ Например, добавление `CPoint(5, -7)` на переменную, которая содержит `CPoint(30, 40)` изменяет переменную `CPoint(35, 33)`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
@@ -230,16 +231,16 @@ void operator-=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Содержит [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.  
   
- `point`  
+ *точка*  
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Вторая перегрузка вычитает точку с `CPoint`.  
+ Вторая перегрузка вычитает точку с помощью `CPoint`.  
   
- В обоих случаях вычитания выполняется путем вычитания **x** (или **cx**) член правого операнда из **x** членом `CPoint` и вычитания **y** (или **cy**) член правого операнда из **y** членом `CPoint`.  
+ В обоих случаях вычитания выполняется путем вычитания `x` (или `cx`) член правого операнда из `x` членом `CPoint` и вычитания `y` (или `cy`) членом справа операнд из `y` членом `CPoint`.  
   
  Например, при вычитании `CPoint(5, -7)` из переменной, которая содержит `CPoint(30, 40)` изменяет переменную `CPoint(25, 47)`.  
   
@@ -247,7 +248,7 @@ void operator-=(POINT point) throw();
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CPoint::operator +  
- Этот оператор используется для смещения `CPoint` по `CPoint` или `CSize` объекта, или по смещению `CRect` по `CPoint`.  
+ Этот оператор используется для смещения `CPoint` по `CPoint` или `CSize` объекта, или смещения `CRect` по `CPoint`.  
   
 ```  
 CPoint operator+(SIZE size) const throw();
@@ -256,28 +257,28 @@ CRect operator+(const RECT* lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `size`  
+ *size*  
  Содержит [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.  
   
- `point`  
+ *точка*  
  Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.  
   
- `lpRect`  
+ *lpRect*  
  Содержит указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `CPoint` , смещение по размеру, **CPoint** , смещением точку, или **CRect** смещением на точку.  
+ Объект `CPoint` , являющийся смещением по размеру, `CPoint` , являющийся смещением точкой, или `CRect` смещается на точку.  
   
 ### <a name="remarks"></a>Примечания  
- Например, одним из первых двух перегрузок смещения `CPoint(25, -19)` точкой `CPoint(15, 5)` или размер `CSize(15, 5)` возвращает значение `CPoint(40, -14)`.  
+ Например, с помощью одного из первых двух перегрузок смещения `CPoint(25, -19)` точкой `CPoint(15, 5)` или размер `CSize(15, 5)` возвращает значение `CPoint(40, -14)`.  
   
- Добавление прямоугольника на момент возвращает прямоугольника после выполняется компенсируется **x** и **y** значениями, указанными в точке. Например, с помощью последнего перегрузки смещения прямоугольника `CRect(125, 219, 325, 419)` точкой `CPoint(25, -19)` возвращает `CRect(150, 200, 350, 400)`.  
+ Добавление прямоугольника на момент Возвращает прямоугольник после компенсируется `x` и `y` значениями, указанными в точку. Например, используя последнюю перегрузку смещения прямоугольника `CRect(125, 219, 325, 419)` точкой `CPoint(25, -19)` возвращает `CRect(150, 200, 350, 400)`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>  CPoint::operator-  
- Используйте один из первых двух перегрузок Вычитаемый `CPoint` или `CSize` объекта из `CPoint`.  
+ Используйте один из первых двух перегрузок для вычитания `CPoint` или `CSize` объекта из `CPoint`.  
   
 ```  
 CSize operator-(POINT point) const throw();
@@ -287,28 +288,28 @@ CPoint operator-() const throw();
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `point`  
+ *точка*  
  Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.  
   
- `size`  
+ *size*  
  Объект [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.  
   
- `lpRect`  
+ *lpRect*  
  Указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `CSize` , представляющий собой разницу между двумя точками `CPoint` , смещением отрицания размера `CRect` , смещением отрицания точки, или `CPoint` именно отрицания точки.  
+ Объект `CSize` является различие между двумя точками `CPoint` , являющийся смещением путем размера `CRect` , являющийся смещением по отрицание является точкой, или `CPoint` то есть отрицание точки.  
   
 ### <a name="remarks"></a>Примечания  
- Третий перегрузки смещения `CRect` с отрицательными значениями `CPoint`. Наконец, используйте унарный оператор для отрицания `CPoint`.  
+ Третья перегрузка смещения `CRect` с отрицанием `CPoint`. Наконец, использовать унарный оператор для отрицания `CPoint`.  
   
- Например, с помощью первая перегрузка, чтобы определить разницу между двумя точками `CPoint(25, -19)` и `CPoint(15, 5)` возвращает `CSize(10, -24)`.  
+ Например, с помощью первая перегрузка найти разницу между двумя точками `CPoint(25, -19)` и `CPoint(15, 5)` возвращает `CSize(10, -24)`.  
   
- Вычитание `CSize` из `CPoint` содержит такой же расчет, как описано выше, но возвращает `CPoint` объекта, не `CSize` объекта. Например, с помощью вторую перегрузку, чтобы определить разницу между точкой `CPoint(25, -19)` и размер `CSize(15, 5)` возвращает `CPoint(10, -24)`.  
+ Вычитание `CSize` из `CPoint` выполняет те же самые вычисления, как описано выше, но возвращает `CPoint` объекта, не `CSize` объекта. Например, с помощью вторая перегрузка для нахождение разности между точкой `CPoint(25, -19)` и размер `CSize(15, 5)` возвращает `CPoint(10, -24)`.  
   
- Вычитания прямоугольник из точки Возвращает смещение прямоугольник с отрицательных из **x** и **y** значениями, указанными в точке. Например, с помощью последнего перегрузки смещения прямоугольника `CRect(125, 200, 325, 400)` точкой `CPoint(25, -19)` возвращает `CRect(100, 219, 300, 419)`.  
+ Вычитания прямоугольник из точки Возвращает смещение прямоугольника, отрицательные результаты из `x` и `y` значениями, указанными в точку. Например, используя последнюю перегрузку смещения прямоугольника `CRect(125, 200, 325, 400)` точкой `CPoint(25, -19)` возвращает `CRect(100, 219, 300, 419)`.  
   
- Используйте унарный оператор для отрицания точку. Например, использование унарного оператора с точкой `CPoint(25, -19)` возвращает `CPoint(-25, 19)`.  
+ Используйте унарный оператор для отрицания точку. Например, с помощью унарный оператор с точкой `CPoint(25, -19)` возвращает `CPoint(-25, 19)`.  
   
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  
@@ -317,7 +318,7 @@ CPoint operator-() const throw();
  [Пример MFC MDI](../../visual-cpp-samples.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [Структура POINT](../../mfc/reference/point-structure1.md)   
- [CRect-класс](../../atl-mfc-shared/reference/crect-class.md)   
+ [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)   
  [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)
 
 

@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958950"
 ---
 # <a name="mutex-class-c-standard-library"></a>Класс mutex (Стандартная библиотека C++)
 
@@ -46,14 +47,14 @@ class mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Мьютекс](#mutex)|Создает объект `mutex`.|
 |[Деструктор mutex::~mutex](#dtormutex_destructor)|Освобождает ресурсы, используемые объектом `mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор мьютекса.|
@@ -62,7 +63,7 @@ class mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<мьютекс >
+**Заголовок:** \<mutex >
 
 **Пространство имен:** std
 
@@ -120,7 +121,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если метод успешно получает права владельца `mutex`; в противном случае — значение `false`.
+**значение true,** Если метод успешно получает права владения `mutex`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376719"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (включить обработку исключений)
 Не рекомендуется. Включает синхронную обработку исключений с помощью в предположении, что функции, объявленные с помощью `extern "C"` не создают исключений.  

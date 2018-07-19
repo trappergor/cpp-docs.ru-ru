@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693111"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] предоставляет расширенную поддержку отладки и профилирования многопоточных приложений.  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357204"
 ---
 # <a name="atlmfc-shared-classes"></a>Общие классы ATL и MFC
 Эти вспомогательные классы можно использовать в любом собственном проекте C++ без использования любой библиотекой DLL MFC.  

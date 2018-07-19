@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368009"
 ---
 # <a name="macros-and-nmake"></a>Макросы и программа NMAKE
 Макросы заменяют определенную строку в файле makefile другой строкой. Использование макросов, можно:  

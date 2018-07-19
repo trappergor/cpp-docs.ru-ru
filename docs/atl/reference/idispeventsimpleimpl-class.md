@@ -1,5 +1,5 @@
 ---
-title: Класс IDispEventSimpleImpl | Документы Microsoft
+title: Класс IDispEventSimpleImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f565c1e32f1208fbb039321d26b9175596d57e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cea7c17b61f3576ed2a8f1a4daa894f5a30c8b4e
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027291"
 ---
 # <a name="idispeventsimpleimpl-class"></a>Класс IDispEventSimpleImpl
-Этот класс предоставляет реализации `IDispatch` методы без получения сведений о типе из библиотеки типов.  
+Этот класс предоставляет реализацию `IDispatch` методы без получения сведений о типе из библиотеки типов.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -45,53 +46,53 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ```    
   
 #### <a name="parameters"></a>Параметры  
- `nID`  
- Уникальный идентификатор для исходного объекта. Если `IDispEventSimpleImpl` является базовым классом для составного элемента управления, используйте идентификатор ресурса для нужного элемента управления в контейнере для этого параметра. В других случаях используйте произвольное целое положительное число.  
+ *nID*  
+ Уникальный идентификатор для исходного объекта. Когда `IDispEventSimpleImpl` является базовым классом для составного элемента управления, используйте идентификатор ресурса для нужного элемента управления в контейнере для этого параметра. В других случаях используйте произвольное целое положительное число.  
   
- `T`  
+ *T*  
  Класс пользователя, который является производным от `IDispEventSimpleImpl`.  
   
- `pdiid`  
- Указатель на IID интерфейс событий, реализованные этим классом.  
+ *pdiid*  
+ Указатель на идентификатор IID disp-интерфейс событий, реализованные этим классом.  
   
 ## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[IDispEventSimpleImpl::Advise](#advise)|Устанавливает соединение с источником событий по умолчанию.|  
+|[IDispEventSimpleImpl::Advise](#advise)|Устанавливает соединение с источником события по умолчанию.|  
 |[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Устанавливает соединение с источником события.|  
 |[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Разрывает соединение с источником события.|  
-|[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Возвращает **E_NOTIMPL**.|  
-|[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Возвращает **E_NOTIMPL**.|  
-|[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Возвращает **E_NOTIMPL**.|  
-|[IDispEventSimpleImpl::Invoke](#invoke)|Вызывает обработчики событий указанного в описании события приемником сопоставления.|  
-|[IDispEventSimpleImpl::Unadvise](#unadvise)|Разрывает соединение с источником событий по умолчанию.|  
+|[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Возвращает E_NOTIMPL.|  
+|[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Возвращает E_NOTIMPL.|  
+|[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Возвращает E_NOTIMPL.|  
+|[IDispEventSimpleImpl::Invoke](#invoke)|Вызывает обработчики событий указанного в описании события карты в качестве приемника.|  
+|[IDispEventSimpleImpl::Unadvise](#unadvise)|Разрывает соединение с источником события по умолчанию.|  
   
 ## <a name="remarks"></a>Примечания  
- `IDispEventSimpleImpl` предоставляет способ реализации диспетчерский интерфейс событий без необходимости указать код реализации для каждого метода и события в этом интерфейсе. `IDispEventSimpleImpl` предоставляет реализации `IDispatch` методы. Необходимо предоставить реализации для событий, которые нужно в обработке.  
+ `IDispEventSimpleImpl` предоставляет способ реализации диспетчерский интерфейс событий без необходимости указать код реализации для каждого метода и события в этом интерфейсе. `IDispEventSimpleImpl` предоставляет реализацию `IDispatch` методы. Необходимо предоставлять реализации для событий, что вы заинтересованы в обработке.  
   
- `IDispEventSimpleImpl` работает совместно с картой приемника событий в классе направляет события соответствующим функциям обработки. С помощью этого класса:  
+ `IDispEventSimpleImpl` работает совместно с картой приемника событий в классе события соответствующим функциям обработки. Чтобы использовать этот класс:  
   
--   Добавить [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) макрос карту приемник событий для каждого события для каждого объекта, которые требуется обработать.  
+-   Добавить [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) макрос для карты приемника событий для каждого события для каждого объекта, который необходимо обработать.  
   
--   Передавать сведения о типе для каждого события, передав указатель [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) структуру как параметр для каждой записи. На x86 платформы, `_ATL_FUNC_INFO.cc` значение должно быть CC_CDECL с помощью вызова метода __stdcall функции обратного вызова.  
+-   Передавать сведения о типе для каждого события, передав указатель на [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) структуру как параметр для каждой записи. На x86 платформы, `_ATL_FUNC_INFO.cc` значение должно быть CC_CDECL с функцией обратного вызова, вызвав метод __stdcall.  
   
--   Вызовите [DispEventAdvise](#dispeventadvise) для установления соединения между исходным объектом и базового класса.  
+-   Вызовите [DispEventAdvise](#dispeventadvise) для установления соединения между исходным объектом и базовый класс.  
   
--   Вызовите [DispEventUnadvise](#dispeventunadvise) Чтобы разорвать связь.  
+-   Вызовите [DispEventUnadvise](#dispeventunadvise) Чтобы разорвать подключение.  
   
- Должен быть производным от `IDispEventSimpleImpl` (с помощью уникальное значение для `nID`) для каждого объекта, для которого необходимы для обработки событий. Вы можете использовать базовый класс, unadvising от одного исходного объекта, затем о том, для исходного объекта, но максимальное количество объектов источников, может обрабатываться одновременно с помощью одного объекта ограничивается количество `IDispEventSimpleImpl` базовые классы.  
+ Должен быть производным от `IDispEventSimpleImpl` (с помощью уникальное значение для *nID*) для каждого объекта, для которого требуется для обработки событий. Можно повторно использовать базовый класс, unadvising от одного исходного объекта, затем о том, с объектом другого источника, но максимальное число объектов источника, которые могут обрабатываться одновременно в одном объекте ограничивается число `IDispEventSimpleImpl` базовых классов.  
   
- **IDispEventSimplImpl** предоставляет те же функциональные возможности, как [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), но он не получает сведения о типе об интерфейсе из библиотеки типов. Мастер создает код только на основе `IDispEventImpl`, но вы можете использовать `IDispEventSimpleImpl` путем добавления кода вручную. Используйте `IDispEventSimpleImpl` при не имеют библиотеку типов, описывающие интерфейса события или хотите избежать издержек, связанных с использованием библиотеки типов.  
+ `IDispEventSimplImpl` предоставляет те же функции, что [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), за исключением, что он не получает сведения о типе об интерфейсе из библиотеки типов. Мастер создает код на основе только `IDispEventImpl`, но вы можете использовать `IDispEventSimpleImpl` , добавив код вручную. Используйте `IDispEventSimpleImpl` при не имеют библиотеку типов, описывающие интерфейса событий или хотите избежать издержек, связанных с использованием библиотеки типов.  
   
 > [!NOTE]
-> `IDispEventImpl` и `IDispEventSimpleImpl` предоставить свою собственную реализацию **IUnknown::QueryInterface** включение каждого `IDispEventImpl` или `IDispEventSimpleImpl` базового класса в качестве отдельный идентификатор COM по-прежнему предоставляя прямой доступ к членам класса в основной COM-объект.  
+> `IDispEventImpl` и `IDispEventSimpleImpl` предоставляют свою собственную реализацию `IUnknown::QueryInterface` включение каждого `IDispEventImpl` или `IDispEventSimpleImpl` базового класса в качестве отдельного удостоверения COM по-прежнему предоставляя прямой доступ к членам класса в основной COM-объект.  
   
- Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из вашего методы обработчиков событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
+ Реализация CE ATL ActiveX событий приемники только поддерживает возвращаемого значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
- Дополнительные сведения см. в разделе [IDispEventImpl поддержки](../../atl/supporting-idispeventimpl.md).  
+ Дополнительные сведения см. в разделе [поддержка IDispEventImpl](../../atl/supporting-idispeventimpl.md).  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `_IDispEvent`  
@@ -104,7 +105,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **Заголовок:** atlcom.h  
   
 ##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
- Этот метод вызывается для установления соединения с источником события, представленного *pUnk*.  
+ Вызовите этот метод для установления соединения с источником события, представленного *pUnk*.  
   
 ```
 HRESULT Advise(IUnknown* pUnk);
@@ -112,21 +113,21 @@ HRESULT Advise(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** интерфейс объект источника события.  
+ [in] Указатель на `IUnknown` интерфейс объекта источника события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK` или любой сбой `HRESULT` значение.  
+ Значение S_OK или любое значение HRESULT ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- После установления соединения, события, запускаемые из *pUnk* будут направляться на обработчики класса посредством схеме приемника событий.  
+ После того как соединение установлено, событие, возникающее из *pUnk* будут направляться на обработчики в вашем классе посредством карты приемника событий.  
   
 > [!NOTE]
->  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
+>  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо будет устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
   
- `Advise` Устанавливает соединение с источником событий по умолчанию, он получает идентификатор IID источника события по умолчанию объекта определяется [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
+ `Advise` Устанавливает соединение с источником события по умолчанию, он получает IID источника события по умолчанию объекта определяется [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   
 ##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise  
- Этот метод вызывается для установления соединения с источником события, представленного *pUnk*.  
+ Вызовите этот метод для установления соединения с источником события, представленного *pUnk*.  
   
 ```
 HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
@@ -134,19 +135,19 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** интерфейс объект источника события.  
+ [in] Указатель на `IUnknown` интерфейс объекта источника события.  
   
- `piid`  
- Указатель на IID объект источника события.  
+ *piid*  
+ Указатель на идентификатор IID объект источника события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK` или любой сбой `HRESULT` значение.  
+ Значение S_OK или любое значение HRESULT ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- Следовательно, события, запускаемые из *pUnk* будут направляться на обработчики класса посредством схеме приемника событий.  
+ Как следствие, событие, возникающее из *pUnk* будут направляться на обработчики в вашем классе посредством карты приемника событий.  
   
 > [!NOTE]
->  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
+>  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо будет устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
   
  `DispEventAdvise` Устанавливает соединение с источником события, указанного в `pdiid`.  
   
@@ -159,24 +160,24 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** интерфейс объект источника события.  
+ [in] Указатель на `IUnknown` интерфейс объекта источника события.  
   
- `piid`  
- Указатель на IID объект источника события.  
+ *piid*  
+ Указатель на идентификатор IID объект источника события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK` или любой сбой `HRESULT` значение.  
+ Значение S_OK или любое значение HRESULT ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- Как только подключение разорвано, события больше не направляются в функции обработчика, перечисленный в карте приемника событий.  
+ Когда соединение является разорванным, события больше не направляются в функции обработчика, в карте приемника событий.  
   
 > [!NOTE]
->  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
+>  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо будет устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
   
  `DispEventAdvise` разрывает соединение, которое было установлено с источником события, указанного в `pdiid`.  
   
 ##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames  
- Эта реализация **:: GetIdsOfNames** возвращает **E_NOTIMPL**.  
+ Эта реализация `IDispatch::GetIDsOfNames` возвращает E_NOTIMPL.  
   
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -188,10 +189,10 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в Windows SDK.  
+ См. в разделе [IDispatch::GetIdsOfNames расширенное](http://msdn.microsoft.com/6f6cf233-3481-436e-8d6a-51f93bf91619) в Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
- Эта реализация **IDispatch::GetTypeInfo** возвращает **E_NOTIMPL**.  
+ Эта реализация `IDispatch::GetTypeInfo` возвращает E_NOTIMPL.  
   
 ```
 STDMETHOD(GetTypeInfo)(
@@ -201,20 +202,20 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) в Windows SDK.  
+ См. в разделе [IDispatch::GetTypeInfo](http://msdn.microsoft.com/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) в Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
- Эта реализация **IDispatch::GetTypeInfoCount** возвращает **E_NOTIMPL**.  
+ Эта реализация `IDispatch::GetTypeInfoCount` возвращает E_NOTIMPL.  
   
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в Windows SDK.  
+ См. в разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/da876d53-cb8a-465c-a43e-c0eb272e2a12) в Windows SDK.  
   
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
- Эта реализация **IDispatch::Invoke** вызывает обработчики событий указанного в описании события приемником сопоставления.  
+ Эта реализация `IDispatch::Invoke` вызывает обработчики событий указанного в описании события карты в качестве приемника.  
   
 ```
 STDMETHOD(Invoke)(
@@ -229,7 +230,7 @@ STDMETHOD(Invoke)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
+ См. в разделе [IDispatch::Invoke](http://msdn.microsoft.com/964ade8e-9d8a-4d32-bd47-aa678912a54d).  
   
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  Разрывает соединение с источником события, представленного *pUnk*.  
@@ -240,20 +241,20 @@ HRESULT Unadvise(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- [in] Указатель на **IUnknown** интерфейс объект источника события.  
+ [in] Указатель на `IUnknown` интерфейс объекта источника события.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK` или любой сбой `HRESULT` значение.  
+ Значение S_OK или любое значение HRESULT ошибки.  
   
 ### <a name="remarks"></a>Примечания  
- Как только подключение разорвано, события больше не направляются в функции обработчика, перечисленный в карте приемника событий.  
+ Когда соединение является разорванным, события больше не направляются в функции обработчика, в карте приемника событий.  
   
 > [!NOTE]
->  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
+>  Если класс является производным из нескольких `IDispEventSimpleImpl` классов, необходимо будет устранить неоднозначность вызова этого метода с областью, вызов с определенного базового класса, которые вас интересуют.  
   
- `Unadvise` разрывает соединение, которое было установлено с источником событий по умолчанию, указанное в `pdiid`.  
+ `Unadvise` прерывает подключение, которое было установлено с источником события по умолчанию, указанное в `pdiid`.  
   
- **Unavise** разрыве соединения с источником событий по умолчанию, он получает идентификатор IID источника события по умолчанию для объекта, как определено [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
+ `Unavise` разрывы соединения с источником события по умолчанию, он получает IID источника события по умолчанию объекта определяется [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).  
   
 ## <a name="see-also"></a>См. также  
  [Структура _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)   

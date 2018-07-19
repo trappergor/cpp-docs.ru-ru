@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367177"
 ---
 # <a name="command-modifiers"></a>Модификаторы команд
 Можно указать один или несколько модификаторов команд, предшествующих команде, также может отделяться пробелами или знаками табуляции. С помощью команд, должен иметь отступ модификаторы.  

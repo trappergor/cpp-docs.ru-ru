@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087833"
 ---
 # <a name="platformrecreateexception-method"></a>Метод Platform::ReCreateException
 Этот метод предназначен только для внутреннего использования и не предназначен для пользовательского кода. Используйте вместо этого метод Exception::CreateException.

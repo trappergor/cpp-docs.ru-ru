@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951924"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Шаги для удаления файла в типичном клиентском приложении FTP
 В следующей таблице показаны шаги, которые необходимо выполнять в обычном клиентском приложении FTP, удаляющее файл.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 |Изменения в новый каталог FTP на сервере.|Используйте [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Изменяет каталог, который в настоящий момент подключены к на сервере.|  
 |Найти первый файл в каталоге FTP.|Используйте [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Находит первый файл. Возвращает значение FALSE, если файлы не найдены.|  
 |Найти следующий файл в каталоге FTP.|Используйте [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Находит следующий файл. Возвращает значение FALSE, если файл не найден.|  
-|Удаление файла, обнаруженные **FindFile** или `FindNextFile`.|Используйте [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), возвращенные с помощью имени файла **FindFile** или `FindNextFile`.|Удаляет файл на сервере для чтения или записи.|  
+|Удаление файла, обнаруженные `FindFile` или `FindNextFile`.|Используйте [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), возвращенные с помощью имени файла `FindFile` или `FindNextFile`.|Удаляет файл на сервере для чтения или записи.|  
 |Обработка исключений.|Используйте [CInternetException](../mfc/reference/cinternetexception-class.md) класса.|Обрабатывает все общие типы исключений Интернета.|  
 |Завершение сеанса FTP.|Удалить [CInternetSession](../mfc/reference/cinternetsession-class.md) объекта.|Автоматически очищает открытые дескрипторы файлов и подключений.|  
   

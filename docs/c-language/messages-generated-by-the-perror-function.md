@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382813"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>Сообщения, созданные функцией perror
 **ANSI 4.9.10.4** Сообщения, создаваемые функцией `perror`  

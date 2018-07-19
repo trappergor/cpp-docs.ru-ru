@@ -38,11 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951615"
 ---
 # <a name="cd2dtextlayout-class"></a>Класс CD2DTextLayout
 Программа-оболочка для IDWriteTextLayout.  
@@ -57,14 +58,14 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Создает объект CD2DTextLayout.|  
 |[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Деструктор Вызывается при уничтожении объекта D2D текст макета.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextLayout::CREATE](#create)|Создает CD2DTextLayout. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
 |[CD2DTextLayout::destroy](#destroy)|Уничтожает объект CD2DTextLayout. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
@@ -78,13 +79,13 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Возвращает интерфейс IDWriteTextLayout|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Указатель на IDWriteTextLayout.|  
   
@@ -118,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pParentTarget`  
+ *pParentTarget*  
  Указатель на целевой объект отрисовки.  
   
- `strText`  
+ *strText*  
  Объект CString, содержащий строку, чтобы создать новый объект CD2DTextLayout из.  
   
- `textFormat`  
+ *textFormat*  
  Объект CString, содержащий формат, применяемый к строке.  
   
- `sizeMax`  
+ *sizeMax*  
  Размер окна макета.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  Указывает, что объект будет уничтожен владельца (pParentTarget).  
   
 ##  <a name="create"></a>  CD2DTextLayout::CREATE  
@@ -170,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `currentPosition`  
+ *currentPosition*  
  Положение текста для проверки.  
   
- `textRange`  
+ *textRange*  
  Диапазон текста, который имеет те же отформатировать как текст в позиции, указанной параметром currentPosition. Это означает, что выполнение имеет точный как заданная позиция, включая, но не ограничиваясь имя семейства шрифтов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -189,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `currentPosition`  
+ *currentPosition*  
  Положение текста для проверки.  
   
- `textRange`  
+ *textRange*  
  Диапазон текста, который имеет те же отформатировать как текст в позиции, указанной параметром currentPosition. Это означает, что выполнение имеет точный как заданная позиция, включая, но не ограничиваясь имени языкового стандарта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -245,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  Имя семейства шрифтов, который применяется к всей строки текста в диапазоне, определяемом textRange  
   
- `textRange`  
+ *textRange*  
  Текстовый диапазон, к которому применяется данное изменение  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -264,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  Строка имени языкового стандарта символом null  
   
- `textRange`  
+ *textRange*  
  Текстовый диапазон, к которому применяется данное изменение  
   
 ### <a name="return-value"></a>Возвращаемое значение  

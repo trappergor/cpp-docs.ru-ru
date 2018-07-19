@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCAutoHideBar | Документы Microsoft
+title: Класс CMFCAutoHideBar | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337027"
 ---
 # <a name="cmfcautohidebar-class"></a>Класс CMFCAutoHideBar
 Класс `CMFCAutoHideBar` — это специальный класс панели инструментов, реализующий функцию автоматического скрытия.  
@@ -64,17 +65,17 @@ ms.lasthandoff: 05/04/2018
 class CMFCAutoHideBar : public CPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|  
@@ -93,12 +94,12 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Временную задержку между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) до момента, когда платформа показано соответствующее окно.|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|Промежуток времени между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) и некоторое время, соответствующее окно отображением платформой.|  
   
 ## <a name="remarks"></a>Примечания  
- Когда пользователь переключает область закрепления в режим автоматического скрытия, платформа автоматически создает объект `CMFCAutoHideBar`. Он также создает необходимый [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) и [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объектов. Каждый объект `CAutoHideDockSite` связан с определенным объектом `CMFCAutoHideButton`.  
+ Когда пользователь переключает область закрепления в режим автоматического скрытия, платформа автоматически создает объект `CMFCAutoHideBar`. Он также создает необходимые [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) и [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) объектов. Каждый объект `CAutoHideDockSite` связан с определенным объектом `CMFCAutoHideButton`.  
   
  Класс `CMFCAutoHideBar` реализует отображение объекта `CAutoHideDockSite`, когда пользователь наводит указатель мыши на объект `CMFCAutoHideButton`. Когда панель инструментов получает сообщение WM_MOUSEMOVE, объект `CMFCAutoHideBar` запускает таймер. Когда отсчет завершается, панели инструментов отправляется уведомление о событии WM_TIMER. Панель инструментов обрабатывает это событие, проверяя, расположен ли указатель мыши на той же кнопке автоматического скрытия, на которой он находился при запуске таймера. В случае положительного результата отображается прикрепленный объект `CAutoHideDockSite`.  
   
@@ -135,24 +136,24 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  Окно, которое нужно скрыть.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  Значение, указывающее выравнивание кнопки автоматического скрытия с окном приложения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ### <a name="remarks"></a>Примечания  
- Параметр `dwAlignment` указывает, где в приложении находится кнопка автоматического скрытия. Параметру может быть присвоено одно из следующих значений:  
+ *DwAlignment* параметр указывает, где находится кнопка автоматического скрытия в приложении. Параметру может быть присвоено одно из следующих значений:  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -175,8 +176,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -206,13 +207,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *lpszClassName*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *nID*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -243,7 +244,7 @@ int GetVisibleCount();
 ### <a name="remarks"></a>Примечания  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- Временную задержку между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) до момента, когда платформа показано соответствующее окно.  
+ Промежуток времени между моментом, когда пользователь наводит указатель мыши на [класс CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) и некоторое время, соответствующее окно отображением платформой.  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
@@ -260,7 +261,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>Возвращаемое значение  
   
@@ -274,7 +275,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  Удаляемое окно автоматического скрытия.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -290,11 +291,11 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] BOOL `bActive`  
+ [in] BOOL *bActive*  
  Значение TRUE, чтобы задать как активную; в противном случае — значение FALSE.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
+ См. в разделе [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
@@ -304,7 +305,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `bState`  
+ [in] *bState*  
   
 ### <a name="remarks"></a>Примечания  
   
@@ -319,11 +320,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] CDockablePane * `pAutoHideWnd`  
- [in] BOOL `bShow`  
+ [in] CDockablePane * *pAutoHideWnd*  
+ [in] BOOL *bShow*  
  Значение TRUE для отображения окна.  
   
- [in] BOOL `bDelay`  
+ [in] BOOL *bDelay*  
  Этот параметр не учитывается.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -341,11 +342,11 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- [in] `nLength`  
+ [in] *nLength*  
  Значение не используется в базовой реализации. В производных реализациях это значение используется для указания длины панели, размер которой был изменен.  
   
- [in] `bVert`  
- Значение не используется в базовой реализации. В производных реализациях использовать `TRUE` для обработки случая, когда строка автоматического скрытия свернута по вертикали, а `FALSE` для случая, когда строка автоматического скрытия свернута по горизонтали.  
+ [in] *bVert*  
+ Значение не используется в базовой реализации. В производных реализациях используйте значение true, чтобы дескриптор случай, где строку автоматического скрытия свернута по вертикали и FALSE в случае, когда строка автоматического скрытия свернута по горизонтали.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Размер, полученный в результате изменения размера панели.  

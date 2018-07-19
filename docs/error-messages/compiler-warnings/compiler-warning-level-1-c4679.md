@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281552"
 ---
 # <a name="compiler-warning-level-1-c4679"></a>Предупреждение компилятора (уровень 1) C4679
 Компилятор обнаружил конструкцию, которая не может поддерживать, который не может быть импортирован из метаданных.  

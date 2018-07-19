@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342947"
 ---
 # <a name="creating-document-frame-windows"></a>Создание окон фрейма документа
 [Создание документов и представлений](../mfc/document-view-creation.md) показано, как [CDocTemplate](../mfc/reference/cdoctemplate-class.md) объекта организует Создание фрейм окна, документ и представление, а затем подключить их все вместе. Три [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) аргументы `CDocTemplate` конструктор укажите фрейм окна, документ и представление классов, шаблона документа создается динамически в ответ на пользователя команд, например команды Создать в файле меню или команду создания окна в меню MDI-окна. Шаблон документа, которые хранятся для последующего использования при создании окно фрейма для представления и документа.  

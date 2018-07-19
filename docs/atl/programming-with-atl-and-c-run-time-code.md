@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355879"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Программирование с использованием ATL и кода среды выполнения C
 В этом разделе рассматриваются преимущества использования библиотеки времени выполнения C (CRT) с помощью статической или динамической компоновки.  

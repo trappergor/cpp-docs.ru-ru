@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879598"
 ---
 # <a name="resource-editors"></a>редакторы ресурсов
 Редактор ресурсов представляет собой специализированную среду для создания и изменения ресурсов, включенных в проект Visual Studio. Редакторы ресурсов Visual Studio используют общий набор способов и интерфейсов, упрощая и ускоряя создание и изменение ресурсов приложения. Редакторы ресурсов позволяют [просматривать и изменять ресурсы в соответствующем редакторе](../windows/viewing-and-editing-resources-in-a-resource-editor.md) , а также [предварительно просматривать ресурсы](../windows/previewing-resources.md).  

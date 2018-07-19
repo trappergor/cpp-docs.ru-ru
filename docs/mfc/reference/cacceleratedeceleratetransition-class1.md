@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954712"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Класс CAccelerateDecelerateTransition
 Реализует переход между ускорением и замедлением.  
@@ -36,19 +37,19 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Создает объект перехода.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Отношение значения времени, затраченный на ускорение длительности.|  
 |[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Отношение значения времени, затраченный на замедление длительности.|  
@@ -80,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `duration`  
+ *Длительность*  
  Продолжительность перехода.  
   
- `finalValue`  
+ *finalValue*  
  Значение переменной анимации в конце перехода.  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  Отношение значения времени, затраченный на ускорение длительности.  
   
- `decelerationRatio`  
+ *decelerationRatio*  
  Отношение значения времени, затраченный на замедление длительности.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -102,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Параметры  
-`pLibrary`  
+*pLibrary*  
  Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), который определяет библиотеку стандартных переходов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

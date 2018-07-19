@@ -1,5 +1,5 @@
 ---
-title: Глобальные функции обработки событий | Документы Microsoft
+title: Глобальные функции обработки событий | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884003"
 ---
 # <a name="event-handling-global-functions"></a>Глобальные функции для обработки событий
 Эта функция предоставляет обработчик событий.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Ожидает объекта сигнала, в то же время диспетчеризацию сообщений о необходимости.|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Ожидает объекта сигнала, в то же время диспетчеризации сообщений окна, при необходимости.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -47,14 +48,14 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- `hEvent`  
- [in] Дескриптор объекта для ожидания.  
+ *hEvent*  
+ [in] Дескриптор объекта ожидания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при оповещении объекта.  
+ Возвращает значение TRUE, если объект оповещении.  
   
 ### <a name="remarks"></a>Примечания  
- Это полезно, если нужно дождаться события объекта и узнавать о ее повторение, но разрешить окна сообщения для отправки во время ожидания.  
+ Это полезно в том случае, если вы хотите ждать события объекта, и получать оповещения о них происходит, но разрешить окно сообщения для отправки во время ожидания.  
   
 ## <a name="see-also"></a>См. также  
  [Функции](../../atl/reference/atl-functions.md)

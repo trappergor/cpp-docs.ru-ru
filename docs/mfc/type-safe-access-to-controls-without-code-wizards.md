@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385769"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>Типобезопасный доступ к элементам управления без мастеров кода
 Первый подход к созданию типобезопасный доступ к элементам управления используется встроенная функция-член для приведения тип возврата класса `CWnd` `GetDlgItem` функции-члена для соответствующего типа элемента управления C++, как показано в примере:  

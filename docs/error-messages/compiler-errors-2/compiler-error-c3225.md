@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250583"
 ---
 # <a name="compiler-error-c3225"></a>Ошибка компилятора C3225
 Аргумент универсального типа для «аргумент» не может быть «тип», он должен быть типом значения или тип дескриптора  

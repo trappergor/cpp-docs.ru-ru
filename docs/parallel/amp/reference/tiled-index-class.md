@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692149"
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 Предоставляет индекс в [tiled_extent](tiled-extent-class.md) объекта. Этот класс содержит свойства для доступа к элементам относительно Плитка локального источника, так и относительно глобального источника. Дополнительные сведения о пространствах Мозаичная см [с помощью плитки](../../../parallel/amp/using-tiles.md).  

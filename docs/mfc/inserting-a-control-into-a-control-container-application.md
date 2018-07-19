@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346341"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>Контейнеры элементов управления ActiveX. Вставка элемента управления в приложение контейнера элемента управления
 Перед элемента ActiveX можно получить из приложения контейнера элемента управления ActiveX, необходимо добавить элемент управления ActiveX в контейнере приложения с помощью [Вставка элемента ActiveX](../windows/insert-activex-control-dialog-box.md) диалоговое окно.  

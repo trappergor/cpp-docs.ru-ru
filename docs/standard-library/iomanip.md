@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953479"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Включить `iostreams` стандартный заголовок \<iomanip > для определения манипуляторов, каждая из которых принимает один аргумент.
+Включить `iostreams` стандартный заголовок \<iomanip > для определения нескольких манипуляторов, каждый принимают один аргумент.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="remarks"></a>Примечания
 
-Все эти манипуляторы возвращают неопределенный тип с названиями от **T1** до **T10**, который перегружает как `basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt), так и `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt).
+Все эти манипуляторы возвращают неопределенный тип, с именем `T1` через `T10`, который перегружает как `basic_istream` \< **Elem**, **Tr** > `::` [оператор >>](../standard-library/istream-operators.md#op_gt_gt) и `basic_ostream` \< **Elem**, **Tr** > `::` [оператор <<](../standard-library/ostream-operators.md#op_lt_lt).
 
 ### <a name="manipulators"></a>Манипуляторы
 

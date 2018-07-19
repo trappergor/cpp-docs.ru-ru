@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354450"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>Коллекция ATL и классы перечислителя
 Библиотека ATL предоставляет следующие классы для реализации коллекции и перечислители.  

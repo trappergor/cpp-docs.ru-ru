@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368539"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Импорт вызовов функций с помощью __declspec(dllimport)
 В следующем примере кода показано, как использовать **_declspec(dllimport)** для импорта вызовов функций из библиотеки DLL в приложение. Предполагается, что `func1` является функция, которая хранится в библиотеке DLL отдельно от файла .exe, который содержит **основной** функции.  

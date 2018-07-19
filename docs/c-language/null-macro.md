@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382238"
 ---
 # <a name="null-macro"></a>Макрос NULL
 **ANSI 4.1.5** Константа пустых указателей, на которую расширяется макрос NULL  

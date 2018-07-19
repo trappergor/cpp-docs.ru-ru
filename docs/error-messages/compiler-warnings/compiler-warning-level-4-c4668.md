@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294340"
 ---
 # <a name="compiler-warning-level-4-c4668"></a>Предупреждение компилятора (уровень 4) C4668
 "символ" не определен в качестве макроса препроцессора и будет заменен в "директивах" на "0"  

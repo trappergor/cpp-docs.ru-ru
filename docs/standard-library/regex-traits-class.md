@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960935"
 ---
 # <a name="regextraits-class"></a>Класс regex_traits
 
@@ -91,11 +92,11 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-`Elem` Тип элемента символа для описания.
+*Elem* тип элемента символа для описания.
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает различные характеристики регулярного выражения для типа `Elem`. Класс шаблона [basic_regex Class](../standard-library/basic-regex-class.md) использует эти сведения для управления элементами типа `Elem`.
+Класс шаблона описывает различные характеристики регулярного выражения для типа *Elem*. Класс шаблона [класс basic_regex](../standard-library/basic-regex-class.md) использует эти сведения для управления элементами типа *Elem*.
 
 Каждый объект `regex_traits` содержит объект типа `regex_traits::locale` , используемый некоторыми из его функций-членов. Языковой стандарт по умолчанию является копией `regex_traits::locale()`. Функция-член `imbue` заменяет объект языкового стандарта, а функция-член `getloc` возвращает копию объекта языкового стандарта.
 
@@ -364,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Параметры
 
-`loc` Объект языкового стандарта для хранения.
+*Loc* объект языкового стандарта для хранения.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член копирует `loc` в сохраненный объект `locale` и возвращает копию предыдущего значения сохраненного объекта `locale` .
+Функция-член копирует *loc* сохраненному `locale` и возвращает копию предыдущего значения сохраненного `locale` объекта.
 
 ### <a name="example"></a>Пример
 
@@ -451,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Параметры
 
-`ch` Элемент для проверки.
+*CH* элемент для проверки.
 
-`cls` Классы для тестирования.
+*CLS* классы для проверки.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает значение true, только если символ `ch` находится в классе символов, указанном `cls`.
+Функция-член возвращает значение true только в том случае, если символ *ch* находится в классе символов, указанном *cls*.
 
 ### <a name="example"></a>Пример
 
@@ -532,7 +533,7 @@ hex C == 12
 
 ## <a name="length"></a>  regex_traits::length
 
-Возвращает длину последовательности, завершающуюся значением null.
+Возвращает длину последовательности, завершающаяся символом null.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -540,9 +541,9 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Параметры
 
-`str`
+*str*
 
-Последовательность, оканчивающаяся нулем.
+Завершающаяся нулем последовательность.
 
 ### <a name="remarks"></a>Примечания
 
@@ -713,9 +714,9 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-`first` Начало последовательности для поиска.
+*Первый* начало последовательности для поиска.
 
-`last` Конец последовательности для поиска.
+*последний* конец последовательности для поиска.
 
 ### <a name="remarks"></a>Примечания
 
@@ -807,9 +808,9 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-`first` Начало последовательности для поиска.
+*Первый* начало последовательности для поиска.
 
-`last` Конец последовательности для поиска.
+*последний* конец последовательности для поиска.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1148,9 +1149,9 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-`first` Начало преобразуемой последовательности.
+*Первый* начало преобразуемой последовательности.
 
-`last` Конец преобразуемой последовательности.
+*последний* конец последовательности для преобразования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1238,9 +1239,9 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-`first` Начало преобразуемой последовательности.
+*Первый* начало преобразуемой последовательности.
 
-`last` Конец преобразуемой последовательности.
+*последний* конец последовательности для преобразования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1327,7 +1328,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-`ch` Преобразуемый элемент.
+*CH* элемента, который требуется преобразовать.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1414,7 +1415,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-`ch` Преобразуемый элемент.
+*CH* элемента, который требуется преобразовать.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1501,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Параметры
 
-`ch` Преобразуемый элемент.
+*CH* элемента, который требуется преобразовать.
 
-`radix` Арифметическое основание.
+*Основание системы счисления* арифметическое основание.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает значение, представленное символом `ch` в основании `radix`, или значение -1, если `ch` не является допустимой цифрой в `radix`. Функция будет вызываться только с аргументом `radix` , равным 8, 10 или 16.
+Функция-член возвращает значение, представленное символом *ch* в базовом *основание системы счисления*, или -1, если *ch* не является допустимой цифрой в базовом *основание системы счисления*. Функция будет вызываться только с *основание системы счисления* аргумент 8, 10 или 16.
 
 ### <a name="example"></a>Пример
 
@@ -1590,5 +1591,5 @@ hex C == 12
 [Операторы \<regex>](../standard-library/regex-operators.md)<br/>
 [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
 [Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > класса](../standard-library/regex-traits-char-class.md)<br/>
+[regex_traits\<char > класс](../standard-library/regex-traits-char-class.md)<br/>
 Класс [regex_traits\<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)<br/>

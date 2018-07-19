@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863410"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>Сочетания клавиш для редактора диалоговых окон
 Ниже перечислены стандартные сочетания клавиш для команд редактора диалоговых окон. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню, выберите **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).  

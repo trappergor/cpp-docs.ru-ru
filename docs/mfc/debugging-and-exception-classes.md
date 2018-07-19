@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341765"
 ---
 # <a name="debugging-and-exception-classes"></a>Классы для отладки и работы с исключениями
 Эти классы обеспечивают поддержку для отладки динамическое выделение памяти и для передачи информации об исключении из функции, где исключения функции где перехватывается.  

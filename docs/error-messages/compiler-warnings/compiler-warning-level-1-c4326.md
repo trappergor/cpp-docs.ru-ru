@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283134"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Предупреждение компилятора (уровень 1) C4326
 возвращаемый тип «функция» должен быть «тип1» вместо «тип2»  

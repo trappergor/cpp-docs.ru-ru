@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105183"
 ---
 # <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
 Создает объект набора строк. Не вызывается непосредственно пользователем. В разделе [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx) в *справочника программиста OLE DB.*  

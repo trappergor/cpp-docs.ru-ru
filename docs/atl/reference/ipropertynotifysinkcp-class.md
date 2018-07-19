@@ -1,5 +1,5 @@
 ---
-title: Класс IPropertyNotifySinkCP | Документы Microsoft
+title: Класс IPropertyNotifySinkCP | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879193"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Класс IPropertyNotifySinkCP
-Этот класс предоставляет [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейс в качестве исходящего интерфейса доступный для соединения объект.  
+Этот класс предоставляет [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейс как исходящий интерфейс в подключаемом объекте.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -40,20 +41,20 @@ class IPropertyNotifySinkCP
 ```    
   
 #### <a name="parameters"></a>Параметры  
- `T`  
- Класс, производный от `IPropertyNotifySinkCP`.  
+ *T*  
+ Ваш класс, производный от `IPropertyNotifySinkCP`.  
   
- `CDV`  
- Класс, который управляет соединениями между точкой подключения и его журналах. Значение по умолчанию — [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное число подключений. Можно также использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который задает фиксированное число подключений.  
+ *CDV*  
+ Класс, который управляет подключениями между точкой подключения и его приемников. Значение по умолчанию — [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное количество подключений. Можно также использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который задает фиксированное количество подключений.  
   
 ## <a name="remarks"></a>Примечания  
- `IPropertyNotifySinkCP` наследует все методы через его базовый класс [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
+ `IPropertyNotifySinkCP` наследует все методы с помощью базового класса, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейс позволяет объекту приемника для получения уведомлений об изменениях свойств. Класс `IPropertyNotifySinkCP` предоставляет этот интерфейс в виде исходящего интерфейса доступный для соединения объект. Клиент должен реализовывать `IPropertyNotifySink` методы приемника.  
+ [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейс позволяет объекту приемник для получения уведомлений об изменениях свойств. Класс `IPropertyNotifySinkCP` предоставляет этот интерфейс как исходящий интерфейс в подключаемом объекте. Клиент должен реализовывать `IPropertyNotifySink` методы в приемнике.  
   
- Создайте производный класс от `IPropertyNotifySinkCP` при необходимости создать точку подключения, представляющий `IPropertyNotifySink` интерфейса.  
+ Наследование класса из `IPropertyNotifySinkCP` Если вы хотите создать точку подключения, представляющий `IPropertyNotifySink` интерфейс.  
   
- Дополнительные сведения об использовании точек соединения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).  
+ Дополнительные сведения об использовании точки подключения библиотеки ATL, см. в статье [точек подключения](../../atl/atl-connection-points.md).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlctl.h  

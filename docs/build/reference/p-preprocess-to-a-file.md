@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377148"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (вывод результатов предварительной обработки в файл)
 Выполняет предварительную обработку клавиатурных исходными файлами C и C++ и записывает предварительно обработанные выходные данные в файл.  
