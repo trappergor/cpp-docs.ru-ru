@@ -1,5 +1,5 @@
 ---
-title: Пространство имен Concurrency::Direct3D | Документы Microsoft
+title: Пространство имен Concurrency::Direct3D | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e95a0cb4b2dc8dfae7667a147dc2912cd7922c3d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687391"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207696"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Пространство имен Concurrency::direct3d
-`direct3d` Пространство имен предоставляет функции, поддерживающие взаимодействие D3D. Он обеспечивает эффективное использование ресурсов D3D для вычислений в коде AMP, а также разрешает использование ресурсов, созданные в AMP в коде D3D, не создавая промежуточные резервированием. Можно постепенно ускорения большим объемом вычислений разделы приложений DirectX с помощью C++ AMP и использовать этот API D3D в формируемые AMP вычисления данных.  
+`direct3d` Пространство имен предоставляет функции, поддерживающие взаимодействие с D3D. Оно позволяет прозрачным образом использовать D3D-ресурсы для вычислений в AMP-коде, а также использовать ресурсы, созданные в AMP в коде D3D без создания промежуточных резервных копий. Кроме того, можно постепенно ускорять вычислительно части DirectX приложений с помощью C++ AMP и использовать D3D API на данных, полученных из AMP вычислений.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,45 +40,45 @@ namespace direct3d;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Класс scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Для блокировки доступа D3D программой-оболочкой RAII `accelerator_view` объекта.|  
+|[Класс scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Оболочка RAII для блокирования доступа D3D `accelerator_view` объекта.|  
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Структура adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Тип тега для указания блокировки доступа D3D должны приняла, а не получена.|  
+|[Структура adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Тип тега, чтобы указать блокировку доступа D3D должны соблюдать, а не получена.|  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Возвращает абсолютное значение аргумента|  
-|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Перегружен. Фиксирует _X в заданный диапазон _Min и _Max|  
-|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Подсчитывает количество набор бит в _X|  
+|[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Перегружен. Ограничивает _X в заданный диапазон диапазону между _Min и _Max|  
+|[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|Подсчитывает число установленных битов в _X|  
 |[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Создает [класс accelerator_view](accelerator-view-class.md) из указателя на интерфейс устройства Direct3D|  
-|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Получает блокировку accelerator_view, чтобы безопасно выполнять операции D3D ресурсы совместно с accelerator_view|  
-|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Попытка получить блокировку доступа D3D accelerator_view без блокировки.|  
-|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Снять блокировку доступа D3D данного accelerator_view.|  
-|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Получает расположение первый набор бит _X, начиная с наивысшим бит и работа вниз|  
-|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Получает расположение первый набор бит _X, начиная с младший бит и работа вверх|  
-|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Получение интерфейса буфера D3D базовый массив.|  
-|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Сравнивает два значения и возвращает значение, которое больше.|  
-|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Сравнивает два значения и возвращает значение, которое меньше.|  
-|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Возвращает логический флаг, указывающее, запрещен ли accelerator_view указанного времени ожидания.|  
-|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Перегружен. Выполняет операцию арифметического умножения или добавления на три аргумента: _X * _Y + _Z|  
-|[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Создайте массив в указатель на интерфейс D3D буфера.|  
+|[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|Получает блокировку на accelerator_view для безопасного выполнения операций D3D на ресурсах общих с accelerator_view|  
+|[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|Попытки получить блокировку доступа D3D на accelerator_view без блокировки.|  
+|[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|Снять блокировку доступа D3D для заданного accelerator_view.|  
+|[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|Получает расположение первого установленного бита в _X, начиная с наиболее старших битов и продолжая вниз|  
+|[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|Получает расположение первого установленного бита в _X, начиная с младший бит и продолжая вверх|  
+|[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|Получите интерфейс буфера D3D, базовый массив.|  
+|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|Сравнивает два значения, возвращая значение, которое больше.|  
+|[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|Сравнивает два значения, возвращая значение, которое меньше.|  
+|[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Возвращает логический флаг, указывающее, отключено ли время ожидания для заданного accelerator_view.|  
+|[MAD](concurrency-direct3d-namespace-functions-amp.md#mad)|Перегружен. Выполняет арифметическую операцию сложения трех аргументов: _X \* _Y + _Z|  
+|[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Создайте массив из указателя интерфейса буфера D3D.|  
 |[шума](concurrency-direct3d-namespace-functions-amp.md#noise)|Создает случайное значение с помощью алгоритма шума Перлина|  
-|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Преобразование _X из градусов в радианы|  
-|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Вычисляет приблизительные, быстро обратное аргумента|  
-|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Изменяет порядок биты в _X|  
-|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Фиксирует _X в диапазоне от 0 до 1|  
-|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Перегружен. Возвращает знак значения аргумента|  
-|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Возвращает smooth интерполяции Hermite между 0 и 1, если _X находится в диапазоне [_Min, _Max].|  
-|[Шаг](concurrency-direct3d-namespace-functions-amp.md#step)|Сравнивает два значения и возвращает 0 или 1, в зависимости от того, какое значение больше.|  
-|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Сравнивает два значения без знака, возвращая значение, которое больше.|  
-|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Сравнивает два значения без знака, возвращая значение, которое меньше.|  
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Преобразовывает значение _X из градусов в радианы.|  
+|[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Вычисляет быструю, приблизительную обратную величину аргумента|  
+|[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Изменяет порядок бит в _X на обратный|  
+|[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Ограничивает _X в диапазоне от 0 до 1|  
+|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|Перегружен. Возвращает знак аргумента|  
+|[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|Возвращает гладкую Эрмитову интерполяцию между 0 и 1, если _X в диапазоне [_Min, _Max].|  
+|[Шаг](concurrency-direct3d-namespace-functions-amp.md#step)|Сравнивает два значения, возвращая 0 или 1, в зависимости от того, какое значение больше|  
+|[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|Сравнивает два беззнаковых значения, возвращая значение, которое больше.|  
+|[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|Сравнивает два беззнаковых значения, возвращая значение, которое меньше.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок** : amp.h  

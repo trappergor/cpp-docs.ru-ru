@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b51d2a3861cb26073063058aa4124244d94df40b
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37944874"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207456"
 ---
 # <a name="typeid-operator"></a>Оператор typeid
 ## <a name="syntax"></a>Синтаксис  
@@ -41,7 +41,7 @@ typeid(expression)
   
 -   Ссылка на класс  
   
--   Указатель, ссылка на который удалена с помощью *  
+-   Указатель, разыменован с \*  
   
 -   Указатель индекса (например, [ ]). (Обратите внимание, что, как правило, небезопасно использовать индекс с указателем на полиморфный тип.)  
   

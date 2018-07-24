@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0756875a799aacaf7308c406d98cbbf3a9a2a2
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 2047938e25ed235d04b7a851a21a44090194660a
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027970"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209122"
 ---
 # <a name="arm-exception-handling"></a>Обработка исключений ARM
 
@@ -248,25 +248,25 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 |Байт 1|Байт 2|Байт 3|Байт 4|Размер операции|Объяснение|
 |------------|------------|------------|------------|------------|-----------------|
-|00—7F||||16|`add   sp,sp,#X`<br /><br /> Где X равен (код & 0x7F) * 4.|
+|00—7F||||16|`add   sp,sp,#X`<br /><br /> где X равен (код & 0x7F) \* 4|
 |80—BF|00—FF|||32|`pop   {r0-r12, lr}`<br /><br /> Где LR извлекается, если "код & 0x2000" и r0—r12 извлекаются, когда соответствующий бит задан в значение "код & 0x1FFF".|
 |C0—CF||||16|`mov   sp,rX`<br /><br /> Где X равен "код & 0x0F".|
 |D0—D7||||16|`pop   {r4-rX,lr}`<br /><br /> Где X равен (код & 0x03) + 4, а LR извлекается, если "код & 0x04".|
 |D8—DF||||32|`pop   {r4-rX,lr}`<br /><br /> Где X равен (код & 0x03) + 8, а LR извлекается, если "код & 0x04".|
 |E0—E7||||32|`vpop  {d8-dX}`<br /><br /> Где X равен (код & 0x07) * 8.|
-|E8—EB|00—FF|||32|`addw  sp,sp,#X`<br /><br /> Где X равен (код & 0x03FF) * 4.|
+|E8—EB|00—FF|||32|`addw  sp,sp,#X`<br /><br /> где X равен (код & 0x03FF) \* 4|
 |EC—ED|00—FF|||16|`pop   {r0-r7,lr}`<br /><br /> Где LR извлекается, если "код & 0x0100" и r0—r7 извлекаются, когда соответствующий бит задан в значение "код & 0x00FF".|
 |EE|00—0F|||16|Специально для систем Майкрософт|
 |EE|10—FF|||16|Доступно|
-|EF|00—0F|||32|`ldr   lr,[sp],#X`<br /><br /> Где X равен (код & 0x000F) * 4.|
+|EF|00—0F|||32|`ldr   lr,[sp],#X`<br /><br /> где X равен (код & 0x000F) \* 4|
 |EF|10—FF|||32|Доступно|
 |F0—F4||||-|Доступно|
 |F5|00—FF|||32|`vpop  {dS-dE}`<br /><br /> Где S равен (код & 0x00F0) >> 4 и E равен "код & 0x000F".|
 |F6|00—FF|||32|`vpop  {dS-dE}`<br /><br /> Где S равен ((код & 0x00F0) >> 4 + 16 и E равен (код & 0x000F) + 16.|
-|F7|00—FF|00—FF||16|`add   sp,sp,#X`<br /><br /> Где X равен (код & 0x00FFFF) * 4.|
-|F8|00—FF|00—FF|00—FF|16|`add   sp,sp,#X`<br /><br /> Где X равен (код & 0x00FFFFFF) * 4.|
-|F9|00—FF|00—FF||32|`add   sp,sp,#X`<br /><br /> Где X равен (код & 0x00FFFF) * 4.|
-|FA|00—FF|00—FF|00—FF|32|`add   sp,sp,#X`<br /><br /> Где X равен (код & 0x00FFFFFF) * 4.|
+|F7|00—FF|00—FF||16|`add   sp,sp,#X`<br /><br /> где X равен (код & 0x00FFFF) \* 4|
+|F8|00—FF|00—FF|00—FF|16|`add   sp,sp,#X`<br /><br /> где X равен (код & 0x00FFFFFF) \* 4|
+|F9|00—FF|00—FF||32|`add   sp,sp,#X`<br /><br /> где X равен (код & 0x00FFFF) \* 4|
+|FA|00—FF|00—FF|00—FF|32|`add   sp,sp,#X`<br /><br /> где X равен (код & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16-разрядный)|
 |FC||||32|nop (32-разрядный)|
 |FD||||16|end + 16-разрядный nop в эпилоге|
@@ -751,3 +751,4 @@ Function:
 
 [Обзор соглашений ABI ARM](../build/overview-of-arm-abi-conventions.md)  
 [Общие вопросы использования Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)  
+

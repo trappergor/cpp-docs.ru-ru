@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964389"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207615"
 ---
 # <a name="frontinsertiterator-class"></a>Класс front_insert_iterator
 
@@ -63,9 +63,9 @@ class front_insert_iterator;
 
 |Оператор|Описание:|
 |-|-|
-|[оператор*](#op_star)|Оператор удаления ссылки, используемый для применения выражения итератора вывода * `i` = `x` для вставки в переднюю часть.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в переднюю часть.|
 |[оператор++](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для применения выражения итератора вывода * `i` = `x` для вставки в переднюю часть.|
+|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в переднюю часть.|
 
 ## <a name="requirements"></a>Требования
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator::operator\*
 
 Разыменовывает итератор вставки и возвращает адресованный элемент.
 

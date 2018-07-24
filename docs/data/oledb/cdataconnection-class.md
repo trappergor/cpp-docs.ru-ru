@@ -1,5 +1,5 @@
 ---
-title: Класс CDataConnection | Документы Microsoft
+title: Класс CDataConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,67 +9,289 @@ f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
 - CDataConnection
+- CDataConnection.CDataConnection
+- ATL.CDataConnection.CDataConnection
+- CDataConnection::CDataConnection
+- ATL::CDataConnection::CDataConnection
+- CDataConnection.Copy
+- ATL.CDataConnection.Copy
+- ATL::CDataConnection::Copy
+- CDataConnection::Copy
+- CDataConnection.Open
+- ATL.CDataConnection.Open
+- CDataConnection::Open
+- ATL::CDataConnection::Open
+- CDataConnection.OpenNewSession
+- ATL.CDataConnection.OpenNewSession
+- ATL::CDataConnection::OpenNewSession
+- OpenNewSession
+- CDataConnection::OpenNewSession
+- CDataConnection::operatorBOOL
+- ATL::CDataConnection::operatorBOOL
+- CDataConnection.operatorBOOL
+- ATL.CDataConnection.operatorBOOL
+- CDataConnection::operatorBOOL
+- ATL::CDataConnection::operatorBOOL
+- CDataConnection.operatorBOOL
+- ATL.CDataConnection.operatorBOOL
+- CDataSource&
+- CDataConnection.operatorCDataSource&
+- operatorCDataSource&
+- CDataConnection::operatorCDataSource&
+- CDataSource*
+- CDataConnection::operatorCDataSource*
+- CDataConnection.operatorCDataSource*
+- operatorCDataSource*
+- CSession&
+- CDataConnection::operatorCSession&
+- CDataConnection.operatorCSession&
+- operatorCSession&
+- CDataConnection.operatorCSession*
+- CDataConnection::operatorCSession*
+- operatorCSession*
+- CSession*
 dev_langs:
 - C++
 helpviewer_keywords:
 - CDataConnection class
+- CDataConnection class, constructor
+- Copy method
+- Open method
+- OpenNewSession method
+- BOOL operator
+- operator bool
+- BOOL operator
+- operator bool
+- CDataSource& operator
+- operator & (CDataSource)
+- CDataSource* operator
+- operator * (CDataSource)
+- operator CSession&
+- CSession& operator
+- operator CSession*
+- CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 945fed5edd59da93aabb1d22e4830417fc4a2518
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eafb9c3eb9c8d76ee0c714b6b7c7c2f4e9e7eef1
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096799"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207806"
 ---
 # <a name="cdataconnection-class"></a>Класс CDataConnection
-Управляет соединение с источником данных.  
+Управляет соединением с источником данных.  
   
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
 class CDataConnection  
 ```  
-  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h 
+
 ## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Конструктор. Создает и инициализирует `CDataConnection` объекта.|  
-|[Копировать](../../data/oledb/cdataconnection-copy.md)|Создает копию существующего соединения с данными.|  
-|[Открыть](../../data/oledb/cdataconnection-open.md)|Открывает соединение с источником данных с помощью строки инициализации.|  
-|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Открывает новый сеанс для текущего соединения.|  
+|[CDataConnection](#cdataconnection)|Конструктор. Создает и инициализирует `CDataConnection` объекта.|  
+|[Копировать](#copy)|Создает копию существующего соединения данных.|  
+|[Открыть](#open)|Открывает подключение к источнику данных с помощью строки инициализации.|  
+|[OpenNewSession](#opennewsession)|Открывает новый сеанс для текущего соединения.|  
   
 ### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[Operator BOOL](../../data/oledb/cdataconnection-operator-bool.md)|Определяет, открыт ли в текущем сеансе, или нет.|  
-|[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|Определяет, открыт ли в текущем сеансе, или нет.|  
-|[оператор CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|Возвращает ссылку на содержащиеся в нем `CDataSource` объекта.|  
-|[оператор CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|Возвращает указатель на содержащиеся в нем `CDataSource` объекта.|  
-|[оператор CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md)|Возвращает ссылку на содержащиеся в нем `CSession` объекта.|  
-|[оператор CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|Возвращает указатель на содержащиеся в нем `CSession` объекта.|  
+|[Operator BOOL](#op_bool)|Определяет, является ли текущий сеанс открытым.|  
+|[operator bool](#op_bool_ole)|Определяет, является ли текущий сеанс открытым.|  
+|[оператор CDataSource &](#op_cdata_amp)|Возвращает ссылку на вложенный `CDataSource` объекта.|  
+|[оператор CDataSource *](#op_cdata_star)|Возвращает указатель на вложенный `CDataSource` объекта.|  
+|[оператор CSession &](#op_csession_amp)|Возвращает ссылку на вложенный `CSession` объекта.|  
+|[оператор CSession *](#op_csession_star)|Возвращает указатель на вложенный `CSession` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
  `CDataConnection` Класс особенно полезен для создания клиентов, так как он инкапсулирует необходимых объектов (источника данных и сеанса) и некоторых операций, которые необходимо выполнить при подключении к источнику данных  
   
- Без `CDataConnection`, необходимо создать `CDataSource` , вызовите его [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) метод, затем создайте экземпляр класса [CSession](../../data/oledb/csession-class.md) , вызовите его [ Откройте](../../data/oledb/csession-open.md) метод, затем создайте [CCommand](../../data/oledb/ccommand-class.md) и вызовите его **откройте*** методы.  
+ Без `CDataConnection`, то необходимо создать `CDataSource` , вызовите его [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) метод, создайте экземпляр [CSession](../../data/oledb/csession-class.md) , вызовите его [ Откройте](../../data/oledb/csession-open.md) метод, создайте [CCommand](../../data/oledb/ccommand-class.md) и вызовите его `Open`* методы.  
   
- С `CDataConnection`, требуется только создать объект подключения, передавая ей строку инициализации, а затем использовать это подключение для открытия команд. Если планируется повторно использовать подключение к базе данных, рекомендуется закрывать соединение и `CDataConnection` предоставляет удобный способ сделать это.  
+ С помощью `CDataConnection`, необходимо только создать объект подключения, передайте его в строку инициализации, а затем использовать это подключение, чтобы открыть команды. Если планируется повторно использовать подключение к базе данных, рекомендуется не закрывайте подключение, и `CDataConnection` предоставляет удобный способ сделать это.  
   
 > [!NOTE]
 >  Если вы создаете приложение базы данных, который должен обрабатывать несколько сеансов, необходимо использовать [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).  
+
+## <a name="#cdataconnection"></a> CDataConnection::CDataConnection
+Создает и инициализирует `CDataConnection` объекта.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      CDataConnection();   
+
+CDataConnection(const CDataConnection &ds);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *доменных служб Active Directory*  
+ [in] Ссылка на существующее подключение к данным.  
+  
+### <a name="remarks"></a>Примечания  
+ Первое переопределение создает новую `CDataConnection` с параметрами по умолчанию.  
+  
+ Второе переопределение создает новую `CDataConnection` с параметрами, эквивалентно вами объект подключения к данным. 
+
+## <a name="#copy"></a> CDataConnection::Copy
+Создает копию существующего соединения данных.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      CDataConnection& Copy(const CDataConnection & ds) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *доменных служб Active Directory*  
+ [in] Ссылка на существующее подключение к данным для копирования. 
+
+## <a name="#open"></a> CDataConnection::Open
+Открывает подключение к источнику данных с помощью строки инициализации.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+HRESULT Open(LPCOLESTR szInitString) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *szInitString*  
+ [in] Строка инициализации источника данных.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Стандартный HRESULT.  
+
+## <a name="#opennewsession"></a> CDataConnection::OpenNewSession
+Открывает новый сеанс с использованием источника данных текущего объекта соединения.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+HRESULT OpenNewSession(CSession & session) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *Сеанс*  
+ [входные/выходные данные] Ссылка на объект нового сеанса.  
+  
+### <a name="remarks"></a>Примечания  
+ Новый сеанс использует в качестве родительского объекта источника данных, содержащихся текущего объекта соединения и доступны все те же сведения, что источник данных.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Стандартный HRESULT.  
+
+## <a name="op_bool"></a> CDataConnection::operator BOOL
+Определяет, является ли текущий сеанс открытым.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator BOOL() throw();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Возвращает **BOOL** (MFC typedef) значение. **Значение TRUE,** означает, что текущий сеанс открыт; **FALSE** означает, что текущий сеанс будет закрыт. 
+
+## <a name="op_bool_ole"></a> CDataConnection::operator bool (OLE DB)
+Определяет, является ли текущий сеанс открытым.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator bool() throw();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Возвращает **bool** значение (тип данных C++). **значение true,** означает, что текущий сеанс открыт; **false** означает, что текущий сеанс будет закрыт.  
+
+## <a name="op_cdata_amp"></a> CDataConnection::operator CDataSource&amp;
+Возвращает ссылку на вложенный `CDataSource` объекта.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator const CDataSource&() throw();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор возвращает ссылку на содержащиеся в нем `CDataSource` объекта, позволяя передавать `CDataConnection` объекта где `CDataSource` ожидается ссылка на.  
+  
+### <a name="example"></a>Пример  
+ Если у вас есть функции (такие как `func` ниже), принимающий `CDataSource` ссылки, можно использовать `CDataSource&` для передачи `CDataConnection` вместо этого.  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#3](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_1.cpp)]  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)] 
+
+## <a name="op_cdata_star"></a> CDataConnection::operator CDataSource *
+Возвращает указатель на вложенный `CDataSource` объекта.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator const CDataSource*() throw();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор возвращает указатель на вложенный `CDataSource` объекта, позволяя передавать `CDataConnection` объекта где `CDataSource` требуется указатель.  
+  
+ См. в разделе [оператор CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) пример использования.  
+
+## <a name="op_csession_amp"></a> CDataConnection::operator CSession&amp;
+Возвращает ссылку на вложенный `CSession` объекта.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator const CSession&();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор возвращает ссылку на содержащиеся в нем `CSession` объекта, позволяя передавать `CDataConnection` объекта где `CSession` ожидается ссылка на.  
+  
+### <a name="example"></a>Пример  
+ Если у вас есть функции (такие как `func` ниже), принимающий `CSession` ссылки, можно использовать `CSession&` для передачи `CDataConnection` вместо этого.  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
+  
+ [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]  
+
+## <a name="op_csession_star"></a> CDataConnection::operator CSession *
+Возвращает указатель на вложенный `CSession` объекта.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+operator const CSession*() throw();  
+  
+```  
+  
+### <a name="remarks"></a>Примечания  
+ Этот оператор возвращает указатель на вложенный `CSession` объекта, позволяя передавать `CDataConnection` объекта где `CSession` требуется указатель.  
+  
+### <a name="example"></a>Пример  
+ См. в разделе [оператор CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) пример использования.  
   
 ## <a name="see-also"></a>См. также  
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
