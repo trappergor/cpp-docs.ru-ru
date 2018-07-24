@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 98c8bd78f465054e4d86a1bd16450aba9a0d8258
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271400"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209057"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -1494,7 +1494,7 @@ ms.locfileid: "36271400"
 - Шаблоны псевдонимов.
 - Удаленные функции.
 - Инициализаторы нестатических данных-членов (NSDMI).
-- Заданные по умолчанию функции. *
+- Заданные по умолчанию функции. \*
 - Поддерживаются следующие функции языка C99 стандарта ISO:
 - _Bool
 - Составные литералы.
