@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885455"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209226"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 Этот класс предоставляет основу для классов интеллектуальных указателей, использование памяти на основе COM-подпрограммы.  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|Оператор приведения типов.|  
 |[CComPtrBase::operator!](#operator_not)|Оператор NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|& Оператор.|  
-|[CComPtrBase::operator *](#operator_star)|* Оператор.|  
+|[CComPtrBase::operator *](#operator_star)|Оператор \*.|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Меньше-оператор «больше».|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Оператор равенства.|  
 |[CComPtrBase::operator "->"](#operator_ptr)|Оператор указателя на элементы.|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает адрес объекта, на которые указывают `CComPtrBase` объекта.  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * Оператор.  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ Оператор \*.  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если указатель управляет текущий объект меньше, чем указатель, к которому он сравнивается.  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  Оператор приведения типов.  
   
 ```  

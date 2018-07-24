@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: inputiterator | Документы Microsoft'
+title: 'Класс Platform::Collections:: inputiterator | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fbd80f649b27bcb3af720871d6d1378f5fe220c8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089095"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208488"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
-Предоставляет InputIterator библиотеки стандартных шаблонов для коллекций, унаследованных от среды выполнения Windows.  
+Предоставляет InputIterator библиотеки стандартных шаблонов для коллекций, производным от среды выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +40,7 @@ class InputIterator;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`difference_type`|Различие указателя (ptrdiff_t).|  
 |`iterator_category`|Категория итератора ввода (:: std::input_iterator_tag).|  
@@ -50,13 +50,13 @@ class InputIterator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[InputIterator::InputIterator](#ctor)|Инициализирует новый экземпляр класса InputIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор InputIterator::operator!=](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|  
 |[Оператор InputIterator::operator*](#operator-decrement)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|  
@@ -102,7 +102,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  Оператор InputIterator::operator *
+## <a name="operator-dereference"></a>  InputIterator::operator\* оператор
 Извлекает ссылку на элемент, указанный текущим итератором InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -134,7 +134,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  InputIterator::operator ++-оператор
+## <a name="operator-increment"></a>  Оператор InputIterator::operator ++
 Выполняет приращение текущего итератора InputIterator.  
   
 ### <a name="syntax"></a>Синтаксис  

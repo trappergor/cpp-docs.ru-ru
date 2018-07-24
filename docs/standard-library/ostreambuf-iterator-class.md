@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958257"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207725"
 ---
 # <a name="ostreambufiterator-class"></a>Класс ostreambuf_iterator
 
@@ -78,7 +78,7 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 |Оператор|Описание:|
 |-|-|
-|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `i` = `x`.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x`.|
 |[оператор++](#op_add_add)|Нефункциональный оператор инкремента, возвращающий `ostreambuf_iterator`, обращающийся к тому же объекту, к которому он обращался до вызова операции.|
 |[оператор=](#op_eq)|Данный оператор вставляет символ в соответствующий буфер потока.|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator::operator\*
 
 Нефункциональный оператор разыменования, используемый для реализации выражения итератора вывода \* *i* = *x*.
 

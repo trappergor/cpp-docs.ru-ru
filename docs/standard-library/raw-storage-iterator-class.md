@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 470fb497bb52fa51fec06ac0edb3e1996aa1e5e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954634"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208530"
 ---
 # <a name="rawstorageiterator-class"></a>Класс raw_storage_iterator
 
@@ -69,8 +69,8 @@ class raw_storage_iterator
 
 |Оператор|Описание:|
 |-|-|
-|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `ii` = `x`.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища * `i` = `x` для сохранения в памяти.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `ii`  =  `x`.|
+|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* `i`  =  `x` для сохранения в памяти.|
 |[оператор++](#op_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|
 
 ## <a name="requirements"></a>Требования
@@ -103,7 +103,7 @@ typedef ForwardIterator iter_type;
 
 Этот тип является синонимом для параметра шаблона `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator*
+## <a name="op_star"></a>  raw_storage_iterator::operator\*
 
 Оператор разыменования, используемый для реализации выражения итератора необработанного хранилища \* *ii* = *x*.
 

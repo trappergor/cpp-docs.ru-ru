@@ -1,5 +1,5 @@
 ---
-title: _scalb _scalbf | Документы Microsoft
+title: _scalb _scalbf | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406268"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207524"
 ---
 # <a name="scalb-scalbf"></a>_scalb _scalbf
 
@@ -71,13 +71,13 @@ float _scalbf(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение экспоненты в случае успешного выполнения. При переполнении (в зависимости от знака *x*), **_scalb** возвращает **HUGE_VAL**; **errno** присваивается переменной  **ERANGE**.
+Возвращает значение экспоненты в случае успешного выполнения. При переполнении (в зависимости от знака *x*), **_scalb** возвращает +/- **HUGE_VAL**; **errno** переменной присваивается  **ERANGE**.
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Scalb** функция вычисляет значение *x* * 2<sup>*exp*</sup>.
+**_Scalb** функция вычисляет значение *x* \* 2<sup>*exp*</sup>.
 
 ## <a name="requirements"></a>Требования
 

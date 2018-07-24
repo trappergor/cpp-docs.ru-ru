@@ -1,5 +1,5 @@
 ---
-title: Предупреждение средств компоновщика LNK4237 | Документы Microsoft
+title: Предупреждение средств компоновщика LNK4237 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5acccf52d3738985c7a83432342952af03bf78b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcc109fe3ccf06e0461deed449517850271a2024
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302871"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209395"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Предупреждение средств компоновщика LNK4237
-Указан, указанный при импорте из «dll»; Используйте /SUBSYSTEM:CONSOLE или/SUBSYSTEM: Windows.  
+/SUBSYSTEM:NATIVE, указанный при импорте из «dll»; Используйте/SUBSYSTEM: Console или/SUBSYSTEM: Windows.  
   
- [Указан](../../build/reference/subsystem-specify-subsystem.md) был указан при построении приложения windows (Win32), в котором непосредственно используются один или несколько из следующих:  
+ [/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) был указан при построении приложения windows (Win32), в котором непосредственно использует один или несколько из следующих:  
   
 -   kernel32.dll  
   
@@ -34,6 +34,6 @@ ms.locfileid: "33302871"
   
 -   user32.dll  
   
--   одно из DLL-библиотеки msvcrt *.  
+-   один из необходимых компонентов msvcrt\* библиотеки DLL.  
   
- Устранить это предупреждение, не указывая **указан**.
+ Устранить это предупреждение, не указывая **/SUBSYSTEM:NATIVE**.

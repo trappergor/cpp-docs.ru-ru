@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1c64aa2139764bcb26782c344a90379bafda23
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a384f79944ace90fcb289511e18297de7a7da233
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336778"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208014"
 ---
 # <a name="clinkctrl-class"></a>Класс CLinkCtrl
 Предоставляет функциональные возможности стандартного элемента управления SysLink Windows.  
@@ -238,7 +238,7 @@ int GetIdealSize(
 |Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] *cxMaxWidth*|Максимальная ширина ссылки, в пикселях.|  
-|[out] * *pSize*|Указатель на Windows [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|  
+|[out] \* *pSize*|Указатель на Windows [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Предпочтительная высота текста ссылки, в пикселях. Возвращаемое значение является таким же, как значение *cy* членом `SIZE` структуры.  

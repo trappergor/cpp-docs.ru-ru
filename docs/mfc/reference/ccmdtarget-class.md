@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027658"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208693"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  Указатель на указатель на `ITypeInfo` интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * *ppTypeInfo* указывает на интерфейс типа сведений.  
+ Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения \* *ppTypeInfo* указывает на интерфейс типа сведений.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  Возвращает указатель на библиотеку типов.  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  Указатель на указатель на `ITypeLib` интерфейс.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения * *ppTypeLib* указывает на интерфейс библиотеки типов.  
+ Значение HRESULT, указывающее, успешно ли выполнен вызов. В случае успешного выполнения \* *ppTypeLib* указывает на интерфейс библиотеки типов.  
   
 ### <a name="remarks"></a>Примечания  
  Производные классы должны переопределить эту функцию-член (если не переопределен, `GetTypeLib` возвращает TYPE_E_CANTLOADLIBRARY). Используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeInfoCount` и `GetTypeLibCache`.  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode* значение|*pExtra* значение|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>Пример  

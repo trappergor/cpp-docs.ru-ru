@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: vectorviewiterator | Документы Microsoft'
+title: 'Класс Platform::Collections:: vectorviewiterator | Документация Майкрософт'
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee104956bdfb5c7b72d20195fb3fb7a2789e236c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093066"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207709"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Класс Platform::Collections::VectorViewIterator
-Предоставляет итератор библиотеки стандартных шаблонов для объектов, производных от среды выполнения Windows`IVectorView` интерфейса.  
+Предоставляет итератор библиотеки стандартных шаблонов для объектов, производных от среды выполнения Windows`IVectorView` интерфейс.  
   
  `ViewVectorIterator` — это итератор прокси-сервера, который хранит элементы типа `VectorProxy<T>`. Однако объект прокси-сервера практически никогда не отображается в пользовательском коде. Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
@@ -42,7 +42,7 @@ class VectorViewIterator;
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`difference_type`|Различие указателя (ptrdiff_t).|  
 |`iterator_category`|Категория итератора произвольного доступа (::std::random_access_iterator_tag).|  
@@ -52,13 +52,13 @@ class VectorViewIterator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[VectorViewIterator::VectorViewIterator](#ctor)|Инициализирует новый экземпляр класса VectorViewIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор VectorViewIterator::operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|  
 |[Оператор VectorViewIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorViewIterator.|  
@@ -100,7 +100,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>  VectorViewIterator::operator --оператор
+## <a name="operator-decrement"></a>  VectorViewIterator::operator - оператор
 Выполняет уменьшение текущего итератора VectorViewIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -116,11 +116,11 @@ VectorViewIterator operator--(int);
 ### <a name="remarks"></a>Примечания  
  Первый синтаксис выполняет уменьшение текущего итератора VectorViewIterator перед его использованием.  
   
- Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. `int` Тип во втором синтаксисе указывает операцию уменьшения после использования, не является операндом целочисленного типа.  
+ Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. `int` Тип во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.  
   
 
 
-## <a name="operator-dereference"></a>  Оператор VectorViewIterator::operator *
+## <a name="operator-dereference"></a>  VectorViewIterator::operator\* оператор
 Извлекает ссылку на элемент, указанный текущим итератором VectorViewIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -148,7 +148,7 @@ bool operator==(const VectorViewIterator& other) const;
  Другой объект VectorViewIterator.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true` Если текущий объект VectorViewIterator равен объекту `other`; в противном случае `false`.  
+ `true` Если текущий объект VectorViewIterator равен `other`; в противном случае `false`.  
   
 
 
@@ -190,7 +190,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  VectorViewIterator::operator ++-оператор
+## <a name="operator-increment"></a>  Оператор VectorViewIterator::operator ++
 Выполняет приращение текущего итератора VectorViewIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -308,7 +308,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>  VectorViewIterator::operator +-оператор
+## <a name="operator-plus"></a>  Оператор VectorViewIterator::operator +
 Возвращает объект VectorViewIterator, указывающий на элемент с заданным смещением от указанного объекта VectorViewIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -337,7 +337,7 @@ inline VectorViewIterator<T> operator+
 ### <a name="return-value"></a>Возвращаемое значение  
  В первом синтаксисе — объект VectorViewIterator, указывающий на элемент с заданным смещением от текущего объекта VectorViewIterator.  
   
- В втором синтаксисе — объект VectorViewIterator, указывающий на элемент с заданным смещением от начала параметра `i`.  
+ В втором синтаксисе — объект VectorViewIterator, который ссылается на элемент с заданным смещением от начала параметра `i`.  
   
 
 
@@ -377,7 +377,7 @@ reference operator[](difference_type n) const;
   
 
 
-## <a name="ctor"></a>  Vectorviewiterator::vectorviewiterator-конструктор
+## <a name="ctor"></a>  Конструктор VectorViewIterator::VectorViewIterator
 Инициализирует новый экземпляр класса VectorViewIterator.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -396,7 +396,7 @@ explicit VectorViewIterator(
  Интерфейс IVectorView\<T > объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Первый пример синтаксиса является конструктором по умолчанию. Второй пример синтаксиса является явным конструктором, используемым для создания экземпляра класса VectorViewIterator из IVectorView\<T > объекта.  
+ Первый пример синтаксиса является конструктором по умолчанию. Второй пример синтаксиса является явным конструктором, который используется для создания экземпляра класса VectorViewIterator из интерфейс IVectorView\<T > объекта.  
   
 
   

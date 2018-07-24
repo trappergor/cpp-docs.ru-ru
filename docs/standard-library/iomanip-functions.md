@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958482"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208836"
 ---
 # <a name="ltiomanipgt-functions"></a>Функции &lt;iomanip&gt;
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Параметры
 
-*STR* std::string, char *, строка литерал или необработанный строковый литерал или двухбайтовая версия любого из них (например, std::wstring, wchar_t\*).
+*STR* std::string, char\*, строковый литерал или необработанный строковый литерал или двухбайтовая версия любого из них (например, std::wstring, wchar_t\*).
 
 *разделитель* объект, указанный пользователем символ или двухбайтовый символ для использования в качестве разделителя для начала и конца строки.
 

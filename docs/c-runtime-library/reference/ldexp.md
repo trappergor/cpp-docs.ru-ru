@@ -1,5 +1,5 @@
 ---
-title: ldexp, ldexpf, ldexpl | Документы Microsoft
+title: ldexp, ldexpf, ldexpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401427"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208419"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -90,13 +90,13 @@ long double ldexpl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Ldexp** функции возвращают значение *x* * 2<sup>*exp* </sup> в случае успешного выполнения. При переполнении и в зависимости от знака *x*, **ldexp** возвращает **HUGE_VAL**; **errno** имеет значение **ERANGE** .
+**Ldexp** функции возвращают значение *x* \* 2<sup>*exp* </sup> при успешном выполнении. В случае переполнения и в зависимости от знака *x*, **ldexp** возвращает +/- **HUGE_VAL**; **errno** присваивается значение **ERANGE** .
 
-Дополнительные сведения о **errno** и возможна ошибка возвращаемые значения см. в разделе [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения о **errno** и возможных ошибок, которые возвращают значения, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , которые принимают **float** или **длинные** **двойные** типов. В программе на языке C **ldexp** всегда принимает **двойные** и **int** и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , принимающих **float** или **long** **двойные** типов. В программе на языке C **ldexp** всегда принимает **двойные** и **int** и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

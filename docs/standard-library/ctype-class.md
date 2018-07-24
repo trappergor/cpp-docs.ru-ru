@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49329d97343cfd210a93879961b0492454be9efa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a65008b01262ad6252e9942444a4e80602d4292
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954777"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208641"
 ---
 # <a name="ctype-class"></a>Класс ctype
 
@@ -275,7 +275,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#do_is)(`maskVal`, * `ptr`) имеет значение true.
+Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [ `first`, `last`) для которой [do_is](#do_is)( `maskVal`, \* `ptr`) имеет значение true.
 
 ### <a name="example"></a>Пример
 
@@ -306,7 +306,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [`first`, `last`), для которого [do_is](#do_is)(`maskVal`, * `ptr`) имеет значение false.
+Защищенная функция-член возвращает наименьший указатель `ptr` в диапазоне [ `first`, `last`) для которой [do_is](#do_is)( `maskVal`, \* `ptr`) имеет значение false.
 
 ### <a name="example"></a>Пример
 
