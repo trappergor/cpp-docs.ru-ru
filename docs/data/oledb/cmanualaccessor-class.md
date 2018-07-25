@@ -1,5 +1,5 @@
 ---
-title: Класс CManualAccessor | Документы Microsoft
+title: Класс CManualAccessor | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,31 +9,58 @@ f1_keywords:
 - ATL::CManualAccessor
 - ATL.CManualAccessor
 - CManualAccessor
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+- CManualAccessor::AddParameterEntry
+- ATL.CManualAccessor.AddParameterEntry
+- CManualAccessor.AddParameterEntry
+- AddParameterEntry
+- ATL::CManualAccessor::AddParameterEntry
+- ATL::CManualAccessor::CreateAccessor
+- CreateAccessor
+- ATL.CManualAccessor.CreateAccessor
+- CManualAccessor.CreateAccessor
+- CManualAccessor::CreateAccessor
+- ATL::CManualAccessor::CreateParameterAccessor
+- ATL.CManualAccessor.CreateParameterAccessor
+- CManualAccessor.CreateParameterAccessor
+- CreateParameterAccessor
+- CManualAccessor::CreateParameterAccessor
 dev_langs:
 - C++
 helpviewer_keywords:
 - CManualAccessor class
+- AddBindEntry method
+- AddParameterEntry method
+- CreateAccessor method
+- CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b8efc46971b1aa72f8c5e572aa540bfed250d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b0cf71ce31d9f4d96d2064ebafd28b7ea5ff70d
+ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098177"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233474"
 ---
 # <a name="cmanualaccessor-class"></a>Класс CManualAccessor
-Представляет тип метода доступа, предназначенных для расширенного использования.  
+Представляет тип метода доступа, предназначен для опытных пользователей.  
   
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
 class CManualAccessor : public CAccessorBase  
 ```  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
 ## <a name="members"></a>Участники  
   
@@ -41,21 +68,150 @@ class CManualAccessor : public CAccessorBase
   
 |||  
 |-|-|  
-|[AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)|Добавляет запись привязки выходных столбцов.|  
-|[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)|Добавление параметра записи для доступа к параметру.|  
-|[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)|Выделяет память для столбца структуры привязки и инициализирует элементы данных столбцов.|  
-|[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)|Выделяет память для параметра bind структуры и инициализирует параметризованные члены данных.|  
+|[AddBindEntry](#addbindentry)|Добавляет запись привязки для выходных столбцов.|  
+|[AddParameterEntry](#addparameterentry)|Добавляет запись параметра в метод доступа к параметру.|  
+|[CreateAccessor](#createaccessor)|Выделяет память для столбца структуры привязки и инициализирует элементы данных столбцов.|  
+|[CreateParameterAccessor](#createparameteraccessor)|Выделяет память для параметра привязки структур и инициализирует параметризованные члены данных.|  
   
 ## <a name="remarks"></a>Примечания  
- С помощью `CManualAccessor`, можно указать параметр и вывода привязки столбцов вызовом функции времени выполнения.  
+ С помощью `CManualAccessor`, можно указать параметр и выходная привязка столбца путем вызова функции времени выполнения.  
+
+## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+Добавляет запись привязки для выходных столбцов.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldbcli.h  
+### <a name="syntax"></a>Синтаксис  
   
+```cpp
+void AddBindEntry(DBORDINAL nOrdinal,  
+   DBTYPE wType,  DBLENGTH nColumnSize,  
+   void* pData,  
+   void* pLength = NULL,  
+   void* pStatus = NULL) throw ();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) в *справочнике программиста OLE DB*.  
+  
+ *nOrdinal*  
+ [in] Номер столбца.  
+  
+ *wType*  
+ [in] Тип данных.  
+  
+ *nColumnSize*  
+ [in] Размер столбца в байтах.  
+  
+ *pData*  
+ [in] Указатель на данные столбца, сохраненного в буфере.  
+  
+ *pLength*  
+ [in] Указатель длины поля, если это необходимо.  
+  
+ *pStatus*  
+ [in] Указатель на переменную для привязки к состояние столбца, если это необходимо.  
+  
+### <a name="remarks"></a>Примечания  
+ Чтобы использовать эту функцию, необходимо сначала вызвать [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Не удается добавить больше записей, чем количество столбцов, указанных в `CreateAccessor`. 
+  
+## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+Добавляет запись параметра запись на параметр структуры.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+void AddParameterEntry(DBORDINAL nOrdinal,  
+   DBTYPE wType,  DBLENGTH nColumnSize,  
+   void* pData,  
+   void* pLength = NULL,  
+   void* pStatus = NULL,  
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [DBBINDING](https://msdn.microsoft.com/library/ms716845.aspx) в *справочнике программиста OLE DB*.  
+  
+ *nOrdinal*  
+ [in] Номер параметра.  
+  
+ *wType*  
+ [in] Тип данных.  
+  
+ *nColumnSize*  
+ [in] Размер столбца в байтах.  
+  
+ *pData*  
+ [in] Указатель на данные столбца, сохраненного в буфере.  
+  
+ *pLength*  
+ [in] Указатель длины поля, если это необходимо.  
+  
+ *pStatus*  
+ [in] Указатель на переменную для привязки к состояние столбца, если это необходимо.  
+  
+ *eParamIO*  
+ [in] Указывает, является ли параметр, с которой связана привязка ввода, ввода вывода или вывода.  
+  
+### <a name="remarks"></a>Примечания  
+ Чтобы использовать эту функцию, необходимо сначала вызвать [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+
+## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+Выделяет память для столбца структуры привязки и инициализирует элементы данных столбцов.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+HRESULT CreateAccessor(int nBindEntries,   
+  void* pBuffer,   
+   DBLENGTH nBufferSize) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *nBindEntries*  
+ [in] Число столбцов. Это число должно соответствовать количество вызовов [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) функции.  
+  
+ *pBuffer*  
+ [in] Указатель на буфер, где хранятся выходные столбцы.  
+  
+ *nBufferSize*  
+ [in] Размер буфера в байтах.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Одно из стандартных значений HRESULT.  
+  
+### <a name="remarks"></a>Примечания  
+ Вызывайте эту функцию перед вызовом метода `CManualAccessor::AddBindEntry` функции.  
+
+## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+Выделяет память для параметра привязки структур и инициализирует параметризованные члены данных.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+HRESULT CreateParameterAccessor(int nBindEntries,   
+  void* pBuffer,   
+   DBLENGTH nBufferSize) throw();  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ *nBindEntries*  
+ [in] Число столбцов.  
+  
+ *pBuffer*  
+ [in] Указатель на буфер, где хранятся входные столбцы.  
+  
+ *nBufferSize*  
+ [in] Размер буфера в байтах.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Одно из стандартных значений HRESULT.  
+  
+### <a name="remarks"></a>Примечания  
+ Вы должны вызвать эту функцию перед вызовом [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+
 ## <a name="see-also"></a>См. также  
  [DBViewer](../../visual-cpp-samples.md)   
- [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [CAccessor-класс](../../data/oledb/caccessor-class.md)   
- [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
+ [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны OLE DB потребителя](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Класс CAccessor](../../data/oledb/caccessor-class.md)   
+ [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)
