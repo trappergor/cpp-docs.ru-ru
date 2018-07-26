@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dc319c2da652cd1c43f23c13456b32f978595199
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331023"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207961"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Распространение элементов управления ActiveX в Visual C++
 В Visual C++ 6.0 представлены элементы управления ActiveX, которые можно использовать в распространяемых приложениях. Эти элементы управления больше не входят в Visual C++. Согласно лицензионным соглашениям для Visual C++ 6.0, вы можете распространять эти элементы управления с приложениями, разработанными на Visual C++.  
@@ -34,11 +34,11 @@ ms.locfileid: "33331023"
   
 -   Asycfilt.dll  
   
--   Comcat.dll *  
+-   Comcat.dll \*  
   
--   Oleaut32.dll *  
+-   Oleaut32.dll \*  
   
--   Olepro32.dll *  
+-   Olepro32.dll \*  
   
 -   Stdole2.tlb  
   

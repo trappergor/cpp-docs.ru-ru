@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9b99dae277fec7618c2e7caeb76229edce7a78c2
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330808"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207764"
 ---
 # <a name="midl-property-pages-advanced"></a>Страницы свойств MIDL: Дополнительно
 Страница свойств **Дополнительно** в папке **MIDL** указывает следующие параметры компилятора MIDL:  
@@ -48,7 +48,7 @@ ms.locfileid: "33330808"
   
 -   Проверках данных-заглушек ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   Проверка параметров ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   Проверка параметров ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) \*  
   
 -   Выравнивание членов структур ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
