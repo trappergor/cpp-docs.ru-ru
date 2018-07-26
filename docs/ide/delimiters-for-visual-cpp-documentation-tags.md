@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe65dfec3befa15ffebde3d074081ee11364f4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337578"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208579"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Разделители для тегов документации Visual C++
 Для создания тегов документации нужно использовать разделители, по которым компилятор определяет начало и конец комментария.  
@@ -51,7 +51,7 @@ ms.locfileid: "33337578"
     /** <summary>text</summary> */  
     ```  
   
--   Компилятор применяет шаблон " * " для игнорирования в начале второй и третьей строки.  
+-   Компилятор применяет шаблон " \* " для игнорирования в начале второй и третьей строки.  
   
     ```  
     /**  

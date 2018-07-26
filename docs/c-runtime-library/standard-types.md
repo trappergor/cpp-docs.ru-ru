@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418527"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208784"
 ---
 # <a name="standard-types"></a>Стандартные типы
 Библиотека времени выполнения Microsoft определяет следующие стандартные типы и определения типов.  
@@ -218,7 +218,7 @@ ms.locfileid: "32418527"
 |`fpos_t` (длинное целое, `__int64` или структура, в зависимости от целевой платформы)|Используется в [fgetpos](../c-runtime-library/reference/fgetpos.md) и [fsetpos](../c-runtime-library/reference/fsetpos.md) для записи сведений, уникально определяющих каждую позицию в файле.|STDIO.H|  
 |`_fsize_t` (длинное целое без знака)|Используется для представления размера файла.|IO.H,<br /><br /> WCHAR.H|  
 |Структура `_HEAPINFO`|Содержит сведения о следующей записи кучи для [_heapwalk](../c-runtime-library/reference/heapwalk.md).|MALLOC.H|  
-|`_HFILE` (void *)|Дескриптор файла операционной системы.|CRTDBG.H|  
+|`_HFILE` (void \*)|Дескриптор файла операционной системы.|CRTDBG.H|  
 |`imaxdiv_t`|Тип значения, возвращаемого функцией [imaxdiv](../c-runtime-library/reference/imaxdiv.md), содержащий как частное, так и остаток.|inttypes.h|  
 |`ino_t`, `_ino_t` (short без знака)|Для возвращения информации о состоянии.|WCHAR.H|  
 |`intmax_t`|Тип целого числа со знаком, способный представлять любое значение любого типа целого числа со знаком.|stdint.h|  

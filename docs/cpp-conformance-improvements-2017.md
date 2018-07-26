@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2eb0ea67156671ac682b61cd0e105d1781bda915
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042333"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209096"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) и [15.7](#improvements_157)
 
@@ -81,7 +81,7 @@ ms.locfileid: "37042333"
 
 Теперь когда определение перечисления не вводит перечислитель, а источник перечисления использует синтаксис инициализации списка, происходит неявное и несужающее преобразование из базового типа перечисления в области в само перечисление. Дополнительные сведения см. в документе о [правилах конструкции значений класса enum](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf).
 
-### <a name="capturing-this-by-value"></a>Обращение к объекту *this по значению
+### <a name="capturing-this-by-value"></a>Захват объекта \*this по значению
 
 Теперь лямбда-выражение может обращаться к объекту `*this` по значению. Это позволяет использовать лямбда-выражения в сценариях с параллельными и асинхронными операциями, особенно на новых архитектурах компьютеров. Дополнительные сведения см. в документе о [захвате объекта \*this по значению в виде [=,\*this] в лямбда-выражении](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html).
 
