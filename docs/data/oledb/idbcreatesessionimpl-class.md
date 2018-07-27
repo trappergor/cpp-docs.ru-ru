@@ -1,5 +1,5 @@
 ---
-title: Класс IDBCreateSessionImpl | Документы Microsoft
+title: Класс IDBCreateSessionImpl | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,25 +9,29 @@ f1_keywords:
 - IDBCreateSessionImpl
 - ATL.IDBCreateSessionImpl
 - ATL::IDBCreateSessionImpl
+- IDBCreateSessionImpl::CreateSession
+- IDBCreateSessionImpl.CreateSession
+- CreateSession
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDBCreateSessionImpl class
+- CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e027faa11ec7c2a2b6c8d29ef99fe95419a7594
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02701b03de074823da3cc7fcd229056195fd9a85
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33100269"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269463"
 ---
 # <a name="idbcreatesessionimpl-class"></a>Класс IDBCreateSessionImpl
-Предоставляет реализацию для [IDBCreateSession](https://msdn.microsoft.com/en-us/library/ms724076.aspx) интерфейса.  
+Предоставляет реализацию для [IDBCreateSession](https://msdn.microsoft.com/library/ms724076.aspx) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,12 +41,15 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- `T`  
+### <a name="parameters"></a>Параметры  
+ *T*  
  КЛАСС, ПРОИЗВОДНЫЙ ОТ  
   
- `SessionClass`  
+ *SessionClass*  
  Объект сеанса.  
+
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h 
   
 ## <a name="members"></a>Участники  
   
@@ -50,13 +57,24 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
   
 |||  
 |-|-|  
-|[Создание сеанса](../../data/oledb/idbcreatesessionimpl-createsession.md)|Создает новый сеанс из объекта источника данных и возвращает запрошенный интерфейс на только что созданного сеанса.|  
+|[Создание сеанса](#createsession)|Создает новый сеанс из объекта источника данных и возвращает запрошенный интерфейс на вновь созданный сеанс.|  
   
 ## <a name="remarks"></a>Примечания  
- Обязательный интерфейс объекты источника данных.  
+ Обязательный интерфейс для объектов источника данных.  
+
+## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+Создает новый сеанс из объекта источника данных и возвращает запрошенный интерфейс на вновь созданный сеанс.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** atldb.h  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp
+      STDMETHOD(CreateSession)(IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppDBSession);  
+```  
+  
+#### <a name="parameters"></a>Параметры  
+ См. в разделе [IDBCreateSession::CreateSession](https://msdn.microsoft.com/library/ms714942.aspx) в *справочнике программиста OLE DB*.   
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
